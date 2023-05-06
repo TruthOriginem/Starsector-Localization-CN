@@ -1,0 +1,49 @@
+{
+    "displayName": "Balanced",
+    "fluxCapacitors": 14,
+    "fluxVents": 20,
+    "hullId": "enforcer",
+    "hullMods": [
+        "auxiliarythrusters",
+        "blast_doors",
+        "fluxdistributor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "enforcer_Balanced",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 007": "harpoon",
+                "WS 008": "harpoon"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 006": "reaper",
+                "WS 009": "reaper"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "arbalest",
+                "WS 003": "arbalest",
+                "WS 005": "arbalest"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "heavymortar",
+                "WS 004": "heavymortar"
+            }
+        }
+    ]
+}

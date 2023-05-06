@@ -1,0 +1,22 @@
+{
+	"baseHullId":"sunder",
+	"skinHullId":"sunder_d",
+	"hullName":"Sunder (D)",
+	"descriptionId":"sunder",
+	"descriptionPrefix":"Ships that would be decommissioned in quieter times now see widespread use throughout the Sector. The hull designation for such ships is usually tagged with a \"D\", for \"damaged\" or \"defective\".",
+	"restoreToBaseHull":true,
+	"baseValueMult":.5,
+	"spriteName":"graphics/ships/sunder_ca.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["faulty_grid"],
+	"builtInWeapons":{
+    },
+	"weaponSlotChanges":{
+		"WS 003":{
+            "size": "MEDIUM",
+		}	
+	},    
+}

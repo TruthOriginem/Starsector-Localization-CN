@@ -1,0 +1,200 @@
+{
+	# Specifically for spawning high-quality mercenaries. Actual fleet faction will be set to "independent".
+	# Other mercs may also be spawned using another faction's fleet data/doctrine/etc, this is
+	# just for more elite-tier mercs and contains a mix of the better ships/weapons from all sources
+	# specified using the "merc" tag in ship_data, weapon_data, etc.
+	
+	id:"mercenary",
+	"color":[150,150,150,255],
+	"displayName":"雇佣兵",
+	"displayNameWithArticle":"雇佣兵",
+	"displayNameLong":"雇佣兵",
+	"displayNameLongWithArticle":"雇佣兵",
+	"entityNamePrefix":"",
+	"personNamePrefix":"雇佣兵",
+	"personNamePrefixAOrAn":"一个",
+	"displayNameIsOrAre":"",
+	"logo":"graphics/factions/neutral_traders.png",
+	"crest":"graphics/factions/crest_neutral_traders.png",
+	"shipNamePrefix":"ISS",
+	"showInIntelTab":false,
+	"shipNameSources":{
+		"GREEK":4,
+		"BRITISH_NAVY":4,
+		"SPACE":4,
+		"CELTIC":2,
+		"GENERAL":1,
+	},
+	"names":{
+		"modern":1,
+		"world":1,
+		"future":1,
+		"myth":1,
+	},
+	# variantOverrides restricts hulls to listed variants and adjusts their probability
+	"variantOverrides":{
+	},
+	# multiplier for how often hulls show up in the faction's fleets
+	"hullFrequency":{
+		"tags":{
+		},
+		"hulls":{
+			"buffalo2":0,
+			"gremlin":0,
+			"venture":0,
+		},
+	},
+	# ships the faction gets access to when importing S&W out-of-faction
+	"shipsWhenImporting":{
+		"tags":["merc"],
+		"hulls":[
+		],
+	},
+	"knownShips":{
+		"tags":["merc"],
+		"hulls":[
+		],
+	},
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	"priorityShips":{
+		"tags":[],
+		"hulls":[
+		],
+	},
+	"knownFighters":{
+		"tags":["merc"],
+		"fighters":[
+		],
+	},
+	"priorityFighters":{
+		"tags":[],
+		"fighters":[
+		],
+	},
+	"knownWeapons":{
+		"tags":["merc"],
+		"weapons":[
+		],
+	},
+	"priorityWeapons":{
+		"tags":[],
+		"weapons":[
+		],
+	},
+	"knownHullMods":{
+		"tags":["merc"],
+		"hullMods":[
+		],
+	},
+	"factionDoctrine":{
+		"warships":4,
+		"carriers":2,
+		"phaseShips":1,
+		
+		"officerQuality":5,
+		"shipQuality":5,
+		"numShips":5,
+		
+		"shipSize":4,
+		
+		"aggression":3,
+		
+		"combatFreighterProbability":0.5,     				# instead of some portion of the freighters in a fleet
+		"combatFreighterCombatUseFraction":0,				# as part of the normal combat lineup
+		"combatFreighterCombatUseFractionWhenPriority":0,   # as part of normal combat lineup, when marked as priority ship
+		"autofitRandomizeProbability":0.25,
+
+		"commanderSkillsShuffleProbability":1,
+		"commanderSkills":[
+			"crew_training",
+			"officer_training",
+			"coordinated_maneuvers",
+			"electronic_warfare",
+			"fighter_uplink",
+			"carrier_group",
+			"flux_regulation",
+		],
+	},
+	"illegalCommodities":[
+	],
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/portrait_mercenary01.png",
+			"graphics/portraits/portrait_mercenary03.png",
+			"graphics/portraits/portrait_mercenary04.png",
+			"graphics/portraits/portrait_mercenary06.png",
+			"graphics/portraits/portrait_mercenary08.png",
+			"graphics/portraits/portrait12.png",
+			"graphics/portraits/portrait13.png",
+			"graphics/portraits/portrait15.png",
+			"graphics/portraits/portrait17.png",
+			"graphics/portraits/portrait18.png",
+			"graphics/portraits/portrait20.png",
+			"graphics/portraits/portrait25.png",
+			"graphics/portraits/portrait26.png",
+			"graphics/portraits/portrait30.png",
+			"graphics/portraits/portrait31.png",
+			"graphics/portraits/portrait33.png",
+			"graphics/portraits/portrait35.png",
+			"graphics/portraits/portrait36.png",
+			"graphics/portraits/portrait40.png",
+			"graphics/portraits/portrait43.png",	
+			"graphics/portraits/portrait44.png",	
+		],
+		"standard_female":[
+			"graphics/portraits/portrait_mercenary02.png",
+			"graphics/portraits/portrait_mercenary05.png",
+			"graphics/portraits/portrait_mercenary07.png",
+			"graphics/portraits/portrait14.png",
+			"graphics/portraits/portrait16.png",
+			"graphics/portraits/portrait21.png",
+			"graphics/portraits/portrait22.png",
+			"graphics/portraits/portrait27.png",
+			"graphics/portraits/portrait28.png",
+			"graphics/portraits/portrait29.png",
+			"graphics/portraits/portrait32.png",
+			"graphics/portraits/portrait34.png",
+			"graphics/portraits/portrait37.png",
+			"graphics/portraits/portrait39.png",
+			"graphics/portraits/portrait41.png",		
+			"graphics/portraits/portrait42.png",	
+			"graphics/portraits/portrait45.png",	
+			"graphics/portraits/portrait46.png",	
+		],
+	},
+	"voices":{
+		"LOW":{
+			"soldier":10,
+			"spacer":5,
+		},
+		"MEDIUM":{
+			"soldier":10,
+			"official":5,
+			"business":5,
+		},
+		"HIGH":{
+			"soldier":10,
+			"official":5,
+			"business":5,
+		},
+	},	
+	"custom":{
+		"spawnsAsIndependent":true,
+	},
+	"fleetTypeNames":{
+		"patrolSmall":"佣兵中队",
+		"patrolMedium":"佣兵连队",
+		"patrolLarge":"佣兵公司",
+		
+		"mercScout":"雇佣兵侦察舰队",
+		"mercBountyHunter":"赏金猎人",
+		"mercPrivateer":"私掠舰队",
+		"mercPatrol":"雇佣军巡逻队",
+		"mercArmada":"雇佣军舰队",
+	},
+},
+
+
+
+
+

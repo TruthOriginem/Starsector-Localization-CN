@@ -1,0 +1,45 @@
+{
+    "displayName": "Close Support",
+    "fluxCapacitors": 5,
+    "fluxVents": 10,
+    "hullId": "lasher_d",
+    "hullMods": [
+        "heavyarmor",
+        "blast_doors",
+        "auxiliarythrusters"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "lasher_d_CS",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "lightac",
+                "WS 003": "lightac"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "harpoon_single",
+                "WS 004": "harpoon_single"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 007": "lightag"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "lightmg",
+                "WS 006": "lightmg"
+            }
+        }
+    ]
+}

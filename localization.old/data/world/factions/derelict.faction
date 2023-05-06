@@ -1,0 +1,219 @@
+{
+	id:"derelict",
+	"displayName":"遗弃船",
+	"displayNameWithArticle":"遗弃船",
+	"displayNameLong":"遗弃的人之领勘探舰",
+	"displayNameLongWithArticle":"遗弃的人之领勘探舰",
+	"entityNamePrefix":"",
+	"personNamePrefix":"",
+	"personNamePrefixAOrAn":"",
+	"displayNameIsOrAre":"",
+	
+	"logo":"graphics/factions/domain_explorarium.png",
+	"crest":"graphics/factions/crest_domain_explorarium.png",
+	"shipNamePrefix":"DSS",
+	
+	"color":[100,100,100,255],
+	"baseUIColor":[155,155,155,255],
+	#"darkUIColor":[31,94,112,175],
+	#"gridUIColor":[70,200,255,75],
+	
+	"showInIntelTab":false,
+	
+	"shipNameSources":{
+		"DERELICT_DRONE":1,
+	},
+	"names":{
+		"ai":1,
+	},
+	"variantOverrides":{
+	},
+	# multiplier for how often hulls show up in the faction's fleets
+	"hullFrequency":{
+		"tags":{
+		},
+		"hulls":{
+		},
+	},
+	# ships the faction gets access to when importing S&W out-of-faction
+	"shipsWhenImporting":{
+		"tags":["derelict"],
+		"hulls":[
+		],
+	},
+	"knownShips":{
+		"tags":["derelict"],
+		"hulls":[
+		],
+	},
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	"priorityShips":{
+		"tags":[],
+		"hulls":[
+		],
+	},
+	"knownFighters":{
+		"tags":["derelict"],
+		"fighters":[
+		],
+	},
+	"priorityFighters":{
+		"tags":[],
+		"fighters":[
+		],
+	},
+	"knownWeapons":{
+		"tags":["derelict"],
+		"weapons":[
+			"lightmg",
+			"lightdualmg",
+			"lightmortar",
+			"vulcan",
+			"lightac",
+			"lightdualac",
+			"lightag",
+			"railgun",
+			"shredder",
+			"heavymg",
+			"heavymortar",
+			"flak",
+			"arbalest",
+			"dualflak",
+			"chaingun",
+			"heavymauler",
+			"heavyac",
+			"hveldriver",
+			"gauss",
+			"hephag",
+			"mark9",
+			"devastator",
+			"hellbore",
+			"mjolnir",
+			"multineedler",
+			"reaper",
+			"atropos",
+			"atropos_single",
+			"hammer",
+			"hammer_single",
+			"swarmer",
+			"annihilator",
+			"heatseeker",
+			"harpoon",
+			"harpoon_single",
+			"sabot",
+			"sabot_single",
+			"harpoonpod",
+			"breachpod",
+			"sabotpod",
+			"salamanderpod",
+			"annihilatorpod",
+			"pilum",
+			"typhoon",
+			"cyclone",
+			"hurricane",
+			"squall",
+			"locust",
+			"hammerrack",
+			"mininglaser",
+			"pdlaser",
+			"irpulse",
+			"lrpdlaser",
+			"miningblaster",
+			"plasma",
+		],
+	},
+	"priorityWeapons":{
+		"tags":[],
+		"weapons":[
+		],
+	},
+	"knownHullMods":{
+		"tags":["base_bp", "derelict"],
+		"hullMods":[
+			"advancedshieldemitter", # accelerated
+			"advancedoptics",
+			"turretgyros",
+			"armoredweapons",
+			"augmentedengines",
+			"autorepair",
+			#"converted_hangar",
+			"eccm",
+			"ecm",
+			"magazines",
+			"missleracks",
+			"extendedshieldemitter",
+			"frontemitter",
+			"frontshield",  # makeshift
+			"heavyarmor",
+			"insulatedengine",
+			"pointdefenseai",
+			"nav_relay",
+			"fluxbreakers",
+			"solar_shielding",
+			"stabilizedshieldemitter",
+			"surveying_equipment",
+		],
+	},
+	"factionDoctrine":{
+		"warships":4,
+		"carriers":2,
+		"phaseShips":1,
+		
+		"officerQuality":3,
+		"shipQuality":1,
+		"numShips":3,
+		
+		"shipSize":3,
+		
+		"aggression":2,
+		
+		"combatFreighterProbability":0,     				# instead of some portion of the freighters in a fleet
+		"combatFreighterCombatUseFraction":1,				# as part of the normal combat lineup
+		"combatFreighterCombatUseFractionWhenPriority":1,   # as part of normal combat lineup, when marked as priority ship
+		"autofitRandomizeProbability":0.75,
+
+		"commanderSkillsShuffleProbability":0,
+		"commanderSkills":[
+		],
+	},
+	"shipRoles":{
+		"derelictMothership":{
+			"station_derelict_survey_mothership_Standard":10,
+		},
+	},
+	"illegalCommodities":[
+	],
+	"music":{
+		#"encounter_hostile":"music_default_encounter_hostile",
+		"theme":"music_none",
+		"market_neutral":"music_none",
+		"market_hostile":"music_none",
+		"market_friendly":"music_none",
+		"encounter_neutral":"music_none",
+		"encounter_hostile":"music_none",
+		"encounter_friendly":"music_none",
+	},
+	#"internalComms":"hegemony_internal",
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/portrait_ai1b.png",
+			#"graphics/portraits/portrait_ai3b.png",
+		],
+		"standard_female":[
+			"graphics/portraits/portrait_ai1b.png",
+			#"graphics/portraits/portrait_ai3b.png",
+		],
+	},
+	"ranks":{
+		"ranks":{
+		},
+		"posts":{
+		},
+	},
+	"custom":{
+		"engageWhenEvenStrength":true,
+		"allowsTransponderOffTrade":true, # to prevent cargoscan dialog from "patrols"
+		"postsNoBounties":true,
+		"fightToTheLast":true, # order a full assault instead of retreating, in most cases
+	},
+},

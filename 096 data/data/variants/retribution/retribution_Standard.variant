@@ -1,0 +1,66 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 27,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "retribution",
+    "hullMods": [
+        "ballistic_rangefinder",
+        "armoredweapons",
+        "missleracks",
+        "fluxdistributor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "retribution_Standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "mark9",
+                "WS 001": "mark9"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "breach",
+                "WS 008": "breach",
+                "WS 009": "breach",
+                "WS 010": "breach",
+                "WS 020": "breach",
+                "WS 021": "breach"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "hellbore"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "arbalest",
+                "WS 004": "arbalest",
+                "WS 011": "lightdualac",
+                "WS 012": "lightdualac",
+                "WS 015": "lightdualac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "flak",
+                "WS 006": "flak",
+                "WS 013": "vulcan",
+                "WS 014": "vulcan",
+                "WS 016": "vulcan",
+                "WS 017": "vulcan"
+            }
+        }
+    ]
+}

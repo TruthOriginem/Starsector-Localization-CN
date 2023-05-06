@@ -1,0 +1,17 @@
+{
+	"baseHullId":"enforcer",
+	"skinHullId":"enforcer_d_pirates",
+	"hullName":"执法者 (P)",
+	"descriptionId":"enforcer",
+	"descriptionPrefix":"这艘船遭受了海盗船员的重度改装和低劣维护 ",
+	"tags":["pirate_bp"],
+	"tech":"海盗",
+	"spriteName":"graphics/ships/enforcer/enforcer_pirates.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	#"builtInMods":["degraded_engines","comp_armor","faulty_grid"],
+	"builtInWeapons":{
+    },
+}

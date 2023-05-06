@@ -1,0 +1,74 @@
+{
+    "bounds": [
+        12,
+        0,
+        -7,
+        7,
+        -7,
+        -7
+    ],
+    "center": [
+        9,
+        9
+    ],
+    "collisionRadius": 14,
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 16,
+            "location": [
+                -8,
+                7
+            ],
+            "style": "MIDLINE",
+            "width": 4
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 16,
+            "location": [
+                -8,
+                4
+            ],
+            "style": "MIDLINE",
+            "width": 4
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 16,
+            "location": [
+                -8,
+                -3
+            ],
+            "style": "MIDLINE",
+            "width": 4
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 16,
+            "location": [
+                -8,
+                -6
+            ],
+            "style": "MIDLINE",
+            "width": 4
+        }
+    ],
+    "height": 22,
+    "hullId": "shuttlepod",
+    "hullName": "Shuttle Pod",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        0,
+        0
+    ],
+    "shieldRadius": 14,
+    "spriteName": "graphics/ships/shuttle.png",
+    "style": "MIDLINE",
+    "viewOffset": 0,
+    "width": 18
+}

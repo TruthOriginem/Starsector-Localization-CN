@@ -1,0 +1,39 @@
+{
+    "displayName": "标准",
+    "fluxCapacitors": 0,
+    "fluxVents": 26,
+    "goalVariant": true,
+    "hullId": "rampart",
+    "hullMods": [
+        "armoredweapons",
+        "insulatedengine"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "rampart_Standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 000": "devastator"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "hephag"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "arbalest",
+                "WS 004": "arbalest"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "hammerrack"}
+        }
+    ]
+}

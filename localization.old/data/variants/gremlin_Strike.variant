@@ -1,0 +1,29 @@
+{
+    "displayName": "打击",
+    "fluxCapacitors": 10,
+    "fluxVents": 3,
+    "goalVariant": true,
+    "hullId": "gremlin",
+    "hullMods": ["missleracks"],
+    "permaMods": [],
+    "quality": 0.75,
+    "variantId": "gremlin_Strike",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 002": "hammer",
+                "WS 003": "hammer"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "lightag",
+                "WS 001": "lightag"
+            }
+        }
+    ]
+}

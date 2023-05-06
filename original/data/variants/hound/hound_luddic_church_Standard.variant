@@ -1,0 +1,21 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 8,
+    "fluxVents": 10,
+    "hullId": "hound_luddic_church",
+    "hullMods": ["auxiliarythrusters"],
+    "permaMods": [],
+    "variantId": "hound_luddic_church_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "chaingun"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "lightdualmg"}
+        }
+    ]
+}

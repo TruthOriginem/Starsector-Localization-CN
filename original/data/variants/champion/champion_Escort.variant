@@ -1,0 +1,49 @@
+{
+    "displayName": "Escort",
+    "fluxCapacitors": 2,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "champion",
+    "hullMods": [
+        "dedicated_targeting_core",
+        "pointdefenseai",
+        "magazines"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "champion_Escort",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 006": "hveldriver",
+                "WS 007": "hveldriver"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "locust"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 008": "guardian"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "pdburst",
+                "WS 001": "pdburst",
+                "WS 002": "pdlaser",
+                "WS 003": "pdlaser",
+                "WS 004": "pdlaser",
+                "WS 005": "pdlaser",
+                "WS 010": "pdburst",
+                "WS 011": "pdburst"
+            }
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "displayName": "轨道站",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "hullId": "station1",
+    "hullMods": [],
+    "quality": 0.5,
+    "variantId": "station1_Standard",
+    "weaponGroups": [],
+    "modules": [
+    
+     # defense modules
+		{"WS 009": "module_large1_lowtech_Standard"},
+		{"WS 010": "module_large2_lowtech_Standard"},
+		{"WS 011": "module_large2_lowtech_Standard"},
+    
+    # armour struts
+		{"WS 006": "module_armour3_Standard"},
+		{"WS 007": "module_armour3_Standard"},
+		{"WS 008": "module_armour3_Standard"},
+
+	# under decor
+	#	{"WS 000": "module_decor_under1_Standard"},
+	#	{"WS 001": "module_decor_under2_Standard"},
+	#	{"WS 002": "module_decor_under3_Standard"},
+	#	{"WS 003": "module_decor_under2_Standard"},
+	#	{"WS 004": "module_decor_under1_Standard"},
+	#	{"WS 005": "module_decor_under3_Standard"},
+		
+    ],
+}

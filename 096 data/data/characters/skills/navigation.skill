@@ -1,0 +1,20 @@
+{
+	"id":"navigation",
+	"governingAptitude":"technology",
+	"compressHullmods":false,
+	"scope":"FLEET",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				#{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.Navigation$Level4"},
+				{"type":"CHARACTER_STATS", "script":"com.fs.starfarer.api.impl.campaign.skills.Navigation$Level1"},
+				#{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.Navigation$Level2"},
+				{"type":"FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.Navigation$Level3A"},
+				{"type":"FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.Navigation$Level3B"},
+				{"type":"ABILITY_UNLOCK", "abilities":["fracture_jump"]},
+			]
+		},
+	],
+}

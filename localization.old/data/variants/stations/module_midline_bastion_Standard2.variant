@@ -1,0 +1,30 @@
+{
+    "displayName": "标准",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "hullId": "module_midline_bastion",
+    "hullMods": [],
+    "permaMods": [],
+    "variantId": "module_midline_bastion_Standard2",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "dualflak",
+                "WS 003": "dualflak",
+                "WS 005": "vulcan",
+                "WS 006": "vulcan",
+                "WS 007": "vulcan"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "hurricane",
+                "WS 002": "hurricane"
+            }
+        }
+    ]
+}

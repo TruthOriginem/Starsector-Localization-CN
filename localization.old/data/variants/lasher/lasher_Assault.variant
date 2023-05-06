@@ -1,0 +1,40 @@
+{
+    "displayName": "突击",
+    "fluxCapacitors": 8,
+    "fluxVents": 10,
+    "hullId": "lasher",
+    "hullMods": [
+        "heavyarmor",
+        "blast_doors"
+    ],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "lasher_Assault",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "lightdualmg",
+                "WS 003": "lightdualmg"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "sabot",
+                "WS 004": "sabot"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "lightmortar",
+                "WS 006": "lightmortar",
+                "WS 007": "lightmortar"
+            }
+        }
+    ]
+}

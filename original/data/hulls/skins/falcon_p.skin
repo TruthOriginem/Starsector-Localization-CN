@@ -1,0 +1,51 @@
+{
+	"baseHullId":"falcon",
+	"skinHullId":"falcon_p",
+	"hullName":"Falcon (P)",
+	"descriptionId":"falcon",
+	"descriptionPrefix":"This Falcon's propulsion system has been given impractical yet showy 'improvements' by some enthusiastic pirate crew; the patchwork of engine components, somehow persuaded to work toward ungainly common purpose, conform to zero safety standards.",
+	"tags":["rare_bp"],
+	"tech":"Pirate",
+	#"restoreToBaseHull":true,
+	"suppliesToRecover":20,
+	"suppliesPerMonth":20,
+	"baseValueMult":1.25,
+	"spriteName":"graphics/ships/falcon/falcon_p.png",
+	"removeWeaponSlots":["WS 003","WS 004"], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"weaponSlotChanges":{
+    	"WS 005":{
+			#"angle": 0,
+            #"arc": 210,
+            #"mount": "TURRET",
+            #"size": "SMALL",
+            "type": "COMPOSITE"
+		},	
+		"WS 006":{
+			#"angle": 0,
+            #"arc": 210,
+            #"mount": "TURRET",
+            #"size": "SMALL",
+            "type": "COMPOSITE"
+        },
+		"WS 007":{
+			#"angle": 0,
+            #"arc": 210,
+            #"mount": "TURRET",
+            #"size": "SMALL",
+            "type": "MISSILE"
+		},	
+		"WS 008":{
+			#"angle": 0,
+            #"arc": 210,
+            #"mount": "TURRET",
+            #"size": "SMALL",
+            "type": "MISSILE"
+		},
+	},
+	"builtInMods":["augmentedengines","unstable_injector"],
+	"builtInWeapons":{
+    },
+}

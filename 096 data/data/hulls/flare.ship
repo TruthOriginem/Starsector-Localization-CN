@@ -1,0 +1,115 @@
+{
+    "bounds": [
+        -10,
+        16,
+        11,
+        11,
+        11,
+        -10,
+        -10,
+        -15
+    ],
+    "center": [
+        20,
+        16
+    ],
+    "collisionRadius": 26,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 16,
+            "length": 12,
+            "location": [
+                -12,
+                13
+            ],
+            "style": "HIGH_TECH",
+            "width": 4
+        },
+        {
+            "angle": 180,
+            "contrailSize": 16,
+            "length": 12,
+            "location": [
+                -10,
+                9
+            ],
+            "style": "HIGH_TECH",
+            "width": 4
+        },
+        {
+            "angle": 180,
+            "contrailSize": 16,
+            "length": 12,
+            "location": [
+                -12,
+                -13
+            ],
+            "style": "HIGH_TECH",
+            "width": 4
+        },
+        {
+            "angle": 180,
+            "contrailSize": 16,
+            "length": 12,
+            "location": [
+                -10,
+                -9
+            ],
+            "style": "HIGH_TECH",
+            "width": 4
+        }
+    ],
+    "height": 34,
+    "hullId": "flare",
+    "hullName": "Flare",
+    "hullSize": "FIGHTER",
+    "shieldCenter": [
+        0,
+        0
+    ],
+    "shieldRadius": 26,
+    "spriteName": "graphics/ships/remnants/flare.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 4,
+            "id": "WS 001",
+            "locations": [
+                8,
+                1
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 0,
+            "arc": 6,
+            "id": "WS 002",
+            "locations": [
+                8,
+                -8
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 0,
+            "arc": 6,
+            "id": "WS 003",
+            "locations": [
+                8,
+                10
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        }
+    ],
+    "width": 40
+}

@@ -1,0 +1,227 @@
+{
+    "bounds": [
+        -10,
+        32,
+        16,
+        33,
+        16,
+        20,
+        30,
+        21,
+        30,
+        10,
+        48,
+        15,
+        61,
+        0,
+        48,
+        -12,
+        30,
+        -9,
+        30,
+        -20,
+        16,
+        -20,
+        15,
+        -32,
+        -14,
+        -29,
+        -11,
+        -20,
+        -23,
+        -21,
+        -32,
+        1,
+        -22,
+        21,
+        -9,
+        22
+    ],
+    "builtInMods": ["ballistic_rangefinder"],
+    "center": [
+        34,
+        35
+    ],
+    "collisionRadius": 75,
+    "coversColor": "255,188,175,255",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -34,
+                0
+            ],
+            "style": "LOW_TECH",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -28,
+                14
+            ],
+            "style": "LOW_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -26,
+                19
+            ],
+            "style": "LOW_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -28,
+                -13
+            ],
+            "style": "LOW_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -26,
+                -18
+            ],
+            "style": "LOW_TECH",
+            "width": 8
+        }
+    ],
+    "height": 96,
+    "hullId": "lasher",
+    "hullName": "Lasher",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        11,
+        0
+    ],
+    "shieldRadius": 64,
+    "spriteName": "graphics/ships/lasher/lasher_base.png",
+    "style": "LOW_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 001",
+            "locations": [
+                11,
+                27
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 002",
+            "locations": [
+                24,
+                16
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 003",
+            "locations": [
+                24,
+                -15
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 004",
+            "locations": [
+                11,
+                -27
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 60,
+            "arc": 270,
+            "id": "WS 005",
+            "locations": [
+                4,
+                10
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": -60,
+            "arc": 270,
+            "id": "WS 006",
+            "locations": [
+                4,
+                -10
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 270,
+            "id": "WS 007",
+            "locations": [
+                37,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 160,
+            "arc": 60,
+            "id": "WS 008",
+            "locations": [
+                -15,
+                29
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        },
+        {
+            "angle": 200,
+            "arc": 60,
+            "id": "WS 009",
+            "locations": [
+                -15,
+                -29
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        }
+    ],
+    "width": 68
+}

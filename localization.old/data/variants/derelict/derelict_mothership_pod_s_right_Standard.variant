@@ -1,0 +1,21 @@
+{
+    "displayName": "标准",
+    "fluxCapacitors": 2,
+    "fluxVents": 6,
+    "hullId": "derelict_mothership_pod_s_right",
+    "hullMods": [],
+    "quality": 0.5,
+    "variantId": "derelict_mothership_pod_s_right_Standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 021": "mininglaser"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 022": "pdlaser"}
+        }
+    ]
+}

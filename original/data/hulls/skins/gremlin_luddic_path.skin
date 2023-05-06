@@ -1,0 +1,19 @@
+{
+	"baseHullId":"gremlin",
+	"skinHullId":"gremlin_luddic_path",
+	"hullName":"Gremlin (LP)",
+	"descriptionId":"gremlin",
+	"descriptionPrefix":"Fanatics of the Luddic Path have made this ship their own, stripping out all unnecessary furnishing and transforming it into a haphazard vehicle of holy war.",
+	"tags":["LP_bp"],
+	"tech":"Luddic Path",
+	"baseValueMult":.8,
+	#"ordnancePoints":40,
+	"spriteName":"graphics/ships/phase/gremlin_pather.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["safetyoverrides","ill_advised"],
+	"builtInWeapons":{
+    },
+}

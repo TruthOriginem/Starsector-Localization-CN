@@ -1,0 +1,47 @@
+{
+    "displayName": "Balanced",
+    "fluxCapacitors": 0,
+    "fluxVents": 11,
+    "goalVariant": true,
+    "hullId": "venture",
+    "hullMods": [
+        "targetingunit",
+        "missleracks",
+        "militarized_subsystems"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "venture_Balanced",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 005": "harpoonpod",
+                "WS 006": "harpoonpod"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 004": "sabot",
+                "WS 007": "sabot"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "heavyac",
+                "WS 003": "heavyac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "gravitonbeam"}
+        }
+    ],
+    "wings": []
+}

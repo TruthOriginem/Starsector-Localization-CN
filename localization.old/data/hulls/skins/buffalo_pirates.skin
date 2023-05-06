@@ -1,0 +1,26 @@
+{
+	"baseHullId":"buffalo",
+	"skinHullId":"buffalo_pirates",
+	"hullName":"水牛 (P)",
+	"descriptionId":"buffalo",  # optional
+	"descriptionPrefix":"这艘船遭受了海盗船员的重度改装和低劣维护 ",
+	"tags":["pirate_bp"],
+	"tech":"海盗",
+	"spriteName":"graphics/ships/buffalo/buffalo_pirates.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":["degraded_engines"], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"weaponSlotChanges":{
+		"WS 001":{
+			#"angle": 0,
+            #"arc": 210,
+            #"mount": "TURRET",
+            #"size": "SMALL",
+            "type": "BALLISTIC"
+		}	
+	},
+	"builtInMods":["shielded_holds"],
+	"builtInWeapons":{
+	},
+}

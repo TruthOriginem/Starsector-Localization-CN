@@ -1,0 +1,21 @@
+{
+	"id":"fighter_uplink",
+	"governingAptitude":"leadership",
+	"compressHullmods":false,
+	#"scope":"ALL_FIGHTERS",
+	"scope":CUSTOM,
+	"scopeStr":"所有战机",
+	"scope2":CUSTOM,
+	"scopeStr2":"对配备有军官的舰船, 包括旗舰, 给予高额增益",	
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.FighterUplink$Level1"},
+				{"type":"ALL_FIGHTERS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.FighterUplink$Level2"},
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"recovery_shuttles":1}},
+			]
+		},
+	],
+}

@@ -1,0 +1,355 @@
+{
+	id:"tritachyon",
+	"color":[135,206,255,255],
+	"displayName":"Tri-Tachyon",
+	"displayNameWithArticle":"Tri-Tachyon",
+	"displayNameLong":"Tri-Tachyon Corporation",
+	"displayNameLongWithArticle":"the Tri-Tachyon Corporation",
+	"logo":"graphics/factions/tritachyon.png",
+	"crest":"graphics/factions/crest_tritachyon.png",
+	"shipNamePrefix":"TTS",
+	"shipNameSources":{
+		"JAPANESE":2,
+		"EGYPTIAN":2,
+		"NORDIC":1,
+		"MERCANTILE":2,
+		"SPACE":2,
+		"GENERAL":2,
+	},
+	"names":{
+		"modern":1,
+		"world":1,
+		"future":1,
+		"myth":1,
+	},
+	# variantOverrides restricts hulls to listed variants and adjusts their probability
+	"variantOverrides":{
+	},
+	# multiplier for how often hulls show up in the faction's fleets
+	"hullFrequency":{
+		"tags":{
+		},
+		"hulls":{
+			"scarab":0.25,
+			"hyperion":0.25,
+			"brawler_tritachyon":0.5,
+		},
+	},
+	# ships the faction gets access to when importing S&W out-of-faction
+	"shipsWhenImporting":{
+		"tags":[],
+		"hulls":[
+		],
+	},
+	"knownShips":{
+		"tags":["tritachyon"],
+		"hulls":[
+			"crig",
+			"ox",
+			"dram",
+			"phaeton",
+			"prometheus",
+			"gemini",
+			"atlas",
+			"mercury",
+			"hermes",
+			"kite_original",
+			"mudskipper",
+			"wayfarer",
+			"nebula",
+			"valkyrie",
+			"starliner",
+			"buffalo_tritachyon",
+			"phantom",
+			"revenant",
+
+    		"brawler_tritachyon",
+			"omen",
+			"tempest",
+			"scarab",
+			"hyperion",
+			"afflictor",
+			"shade",
+			
+			"shrike",
+			"medusa",
+			"harbinger",
+			
+			"fury",
+			"aurora",
+			"doom",
+			
+			"astral",
+			"odyssey",
+			"paragon",
+		],
+	},
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	# listing capitals as priority will make them be picked even when they're the wrong "type" re: warship/carrier/phase ship
+	"priorityShips":{
+		"tags":[],
+		"hulls":[
+			"astral",
+			"odyssey",
+			"paragon",
+		],
+	},
+	"knownFighters":{
+		"tags":["tritachyon"],
+		"fighters":[
+			"broadsword_wing",
+			"dagger_wing",
+			"trident_wing",
+			"wasp_wing",
+			"xyphos_wing",
+			"claw_wing",
+			"trident_wing",
+			"cobra_wing",
+			"longbow_wing",
+		],
+	},
+	"priorityFighters":{
+		"tags":[],
+		"fighters":[
+		],
+	},
+	"knownWeapons":{
+		"tags":["tritachyon"],
+		"weapons":[
+			"pdlaser",
+			"taclaser",
+			"ioncannon",
+			"irpulse",
+			"lrpdlaser",
+			"pdburst",
+			"amblaster",
+			
+			"phasebeam",
+			"gravitonbeam",
+			"pulselaser",
+			"heavyblaster",
+			"heavyburst",
+			"ionpulser",
+			"ionbeam",
+			
+			"plasma",
+			"hil",
+			"autopulse",
+			"guardian",
+			"tachyonlance",
+			
+			
+			"reaper",
+			"atropos",
+			"atropos_single",
+			"swarmer",
+			"annihilator",
+			"heatseeker",
+			"harpoon",
+			"harpoon_single",
+			"breach",
+			"sabot",
+			"sabot_single",
+			
+			"harpoonpod",
+			"breachpod",
+			"sabotpod",
+			"salamanderpod",
+			"phasecl",
+			"typhoon",
+			
+			"cyclone",
+			"hurricane",
+			"squall",
+			"locust",
+			
+			"railgun",
+			"lightneedler",
+			"hveldriver",
+			"heavyneedler",
+			"mjolnir",
+			"multineedler",
+		],
+	},
+	"priorityWeapons":{
+		"tags":[],
+		"weapons":[
+		],
+	},
+	"knownHullMods":{
+		"tags":["standard", "tritachyon"],
+		"hullMods":[
+		],
+	},
+	"weaponSellFrequency":{
+		"amblaster":5,
+		"ioncannon":5,
+		
+		"gravitonbeam":5,
+		"phasebeam":5,
+		"pulselaser":5,
+		"heavyblaster":10,
+		"ionpulser":10,
+		"ionbeam":5,
+		
+		"hil":5,
+		"guardian":5,
+		"plasma":10,
+		"autopulse":10,
+		"tachyonlance":10,
+		
+		"atropos":5,
+		"breachpod":5,
+		"typhoon":5,
+		
+		"cyclone":5,
+		"squall":10,
+		"locust":10,
+	},
+	"fighterSellFrequency":{
+	},
+	"hullmodSellFrequency":{
+		"adaptive_coils":10,
+		"phase_anchor":10,
+		"hardenedshieldemitter":10,
+		"pointdefenseai":10,
+		"hiressensors":10,
+	},		
+	"factionDoctrine":{
+		"warships":4,
+		"carriers":0,
+		"phaseShips":3,
+		
+		"officerQuality":1,
+		"shipQuality":5,
+		"numShips":1,
+		
+		"shipSize":4,
+		
+		"aggression":2,
+		
+		"combatFreighterProbability":0,     				# instead of some portion of the freighters in a fleet
+		"combatFreighterCombatUseFraction":0,  				# as part of the normal combat lineup
+		"combatFreighterCombatUseFractionWhenPriority":0.33,# as part of normal combat lineup, when marked as priority ship
+		"autofitRandomizeProbability":0.1,
+
+		"officerSkillsShuffleProbability":1f,
+		"officerSkills":[
+			"energy_weapon_mastery",
+			"field_modulation",
+		],
+		"commanderSkillsShuffleProbability":1,
+		"commanderSkills":[
+			"electronic_warfare",
+			"flux_regulation",
+			"cybernetic_augmentation",
+		],
+	},
+	"illegalCommodities":[
+		"ai_cores", # only due to treaty w/ Hegemony
+	],
+	"music":{
+		"theme":"music_tritach_encounter_neutral",
+		"market_neutral":"music_tritach_market_neutral",
+		"market_hostile":"music_tritach_market_hostile",
+		"market_friendly":"music_tritach_market_friendly",
+		"encounter_neutral":"music_tritach_encounter_neutral",
+		"encounter_hostile":"music_tritach_encounter_hostile",
+		"encounter_friendly":"music_tritach_encounter_friendly",
+	},
+	"internalComms":"tritachyon_internal",
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/portrait_corporate01.png",
+			"graphics/portraits/portrait_corporate03.png",
+			"graphics/portraits/portrait_corporate05.png",
+			"graphics/portraits/portrait_corporate06.png",
+			"graphics/portraits/portrait_corporate08.png",
+			"graphics/portraits/portrait_corporate10.png",
+			"graphics/portraits/portrait13.png",
+			"graphics/portraits/portrait18.png",
+			"graphics/portraits/portrait25.png",
+			"graphics/portraits/portrait26.png",
+			"graphics/portraits/portrait30.png",
+			"graphics/portraits/portrait35.png",
+		],
+		"standard_female":[
+			"graphics/portraits/portrait_corporate02.png",
+			"graphics/portraits/portrait_corporate04.png",
+			"graphics/portraits/portrait_corporate07.png",
+			"graphics/portraits/portrait_corporate09.png",
+			"graphics/portraits/portrait_mercenary02.png",
+			"graphics/portraits/portrait_mercenary08.png",
+			"graphics/portraits/portrait16.png",
+			"graphics/portraits/portrait21.png",
+			"graphics/portraits/portrait28.png",
+			"graphics/portraits/portrait32.png",
+			"graphics/portraits/portrait34.png",
+			"graphics/portraits/portrait41.png",
+		],
+	},
+	"ranks":{
+		"ranks":{
+			"spaceAdmiral":{"name":"Senior Operation Manager"},
+			"spaceCommander":{"name":"Operation Manager"},
+			"factionLeader":{"name":"CEO"},
+		},
+		"posts":{
+			"factionLeader":{"name":"CEO"},
+			"patrolCommander":{"name":"Patrol Director"},
+			"fleetCommander":{"name":"Fleet Director"},
+			"baseCommander":{"name":"Base Director"},
+		},
+	},
+	"voices":{
+		"LOW":{
+			"soldier":10,
+			"spacer":5,
+		},
+		"MEDIUM":{
+			"business":10,
+		},
+		"HIGH":{
+			"business":10,
+			"aristo":10,
+			"scientist":3,
+		},
+	},		
+	"custom":{
+		"offersCommissions":true,
+		"engagesInHostilities":true,
+		"buysAICores":true,
+		"AICoreValueMult":3,
+		"AICoreRepMult":0.5,
+		"buysSurveyData":true,
+		"hostilityImpactOnGrowth":true,
+		"punitiveExpeditionData":{
+			"vsCompetitors":true,
+			"vsFreePort":false,
+			"canBombard":true,
+			"territorial":true,
+		},
+	},	
+	"fleetTypeNames":{
+		"trade":"Corporate Trader",
+		"tradeLiner":"TriWay Spaceline Flight",
+		"tradeSmuggler":"Expedited Trader",
+		"smallTrader":"Distribution Convoy",
+		
+		"patrolSmall":"Security Patrol",
+		"patrolMedium":"Security Flotilla",
+		"patrolLarge":"Capital Assurance Fleet",
+		
+		"inspectionFleet":"QA Inspector",
+		"taskForce":"Special Affairs Fleet",
+		
+		"foodReliefFleet":"Relief Convoy",
+		
+		#"mercScout":"Contract Scout",
+		"mercBountyHunter":"Retrieval Contractor",
+		"mercPrivateer":"Security Contractor",
+		#"mercPatrol":"Contracted Patrol",
+		#"mercArmada":"Contracted Armada",
+	}
+},
+

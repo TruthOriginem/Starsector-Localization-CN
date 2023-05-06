@@ -1,0 +1,63 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "module_large1_lowtech",
+    "hullMods": [],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "module_large1_lowtech_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 011": "sabotpod",
+                "WS 012": "sabotpod"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "mark9",
+                "WS 003": "mark9"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "typhoon",
+                "WS 008": "typhoon"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "hellbore",
+                "WS 002": "hellbore"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "dualflak",
+                "WS 006": "dualflak",
+                "WS 007": "dualflak",
+                "WS 009": "dualflak",
+                "WS 010": "phasecl",
+                "WS 013": "phasecl",
+                "WS 015": "vulcan",
+                "WS 018": "vulcan",
+                "WS 020": "vulcan",
+                "WS 021": "vulcan",
+                "WS 023": "vulcan",
+                "WS 026": "vulcan"
+            }
+        }
+    ]
+}

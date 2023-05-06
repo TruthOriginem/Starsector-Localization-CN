@@ -1,0 +1,20 @@
+{
+	"baseHullId":"kite",
+	"skinHullId":"kite_original",
+	"hullName":"Kite (S)",
+	"descriptionId":"kite",  # optional
+	"descriptionPrefix":"An unmodified original civilian model in pristine stock condition, this ship is a collector's item from a more civilized age.",
+	"tags":["rare_bp"],
+	"spriteName":"graphics/ships/aeroshuttle/aeroshuttle_original.png",
+	"addHints":[CIVILIAN],
+	"ordnancePoints":30,
+	"fleetPoints":2,
+	"baseValueMult":1.5,
+	"removeWeaponSlots":["WS 001", "WS 002", "WS 003"], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":[],
+	"builtInWeapons":{
+    },
+}

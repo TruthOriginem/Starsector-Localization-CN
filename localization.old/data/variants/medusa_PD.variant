@@ -1,0 +1,40 @@
+{
+    "displayName": "点防御",
+    "fluxCapacitors": 15,
+    "fluxVents": 15,
+    "goalVariant": true,
+    "hullId": "medusa",
+    "hullMods": ["turretgyros"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "medusa_PD",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 006": "pulselaser",
+                "WS 007": "pulselaser"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 008": "swarmer",
+                "WS 009": "swarmer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "pdburst",
+                "WS 002": "pdburst",
+                "WS 003": "pdburst",
+                "WS 004": "pdburst",
+                "WS 005": "pdburst"
+            }
+        }
+    ]
+}

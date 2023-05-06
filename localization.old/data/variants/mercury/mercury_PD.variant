@@ -1,0 +1,19 @@
+{
+    "displayName": "点防御",
+    "fluxCapacitors": 10,
+    "fluxVents": 2,
+    "hullId": "mercury",
+    "hullMods": [],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "mercury_PD",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {
+            "WS 001": "lrpdlaser",
+            "WS 002": "lrpdlaser",
+            "WS 003": "lrpdlaser"
+        }
+    }]
+}

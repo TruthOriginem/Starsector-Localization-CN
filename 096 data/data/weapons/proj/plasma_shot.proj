@@ -1,0 +1,17 @@
+{
+	"id":"plasma_shot",
+	"specClass":"projectile",
+	"spawnType":"PLASMA",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	#"width":45.0,
+	"width":45.0,
+	"fadeTime":0.5,
+	#"hitGlowRadius":38,
+	"fringeColor":[0,0,255,255],
+	"coreColor":[255,100,100,255],
+	#"fringeColor":[255,0,0,255],
+	#"coreColor":[255,100,255,255],
+	"passThroughMissiles":true,	
+	"passThroughFighters":true,	
+}

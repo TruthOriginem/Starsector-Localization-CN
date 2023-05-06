@@ -1,0 +1,51 @@
+{
+	"displayName": "Battlestation",
+	"fluxCapacitors": 0,
+	"fluxVents": 0,
+	"hullId": "station2",
+	"hullMods": [],
+	"quality": 0.5,
+	"variantId": "station2_Standard",
+	"weaponGroups": [],
+	"modules": [
+    
+    #under plates
+    
+	# armoured struts
+	# citadel strut - first part
+		{"WS 018": "module_armour3_Standard"}, 
+		{"WS 019": "module_armour3_Standard"},
+		{"WS 020": "module_armour3_Standard"},
+		
+	# citadel strut - second part
+		{"WS 007": "module_armour4_Standard"},
+		{"WS 008": "module_armour4_Standard"},
+		{"WS 006": "module_armour4_Standard"}, 
+		
+   	# armour plates
+		{"WS 015": "module_armour2_Standard"},
+		{"WS 016": "module_armour2_Standard"},
+		{"WS 017": "module_armour2_Standard"},
+		
+     # defense modules
+		{"WS 009": "module_large1_lowtech_Standard"}, # south-facing
+		{"WS 010": "module_large2_lowtech_Standard"},
+		{"WS 011": "module_large2_lowtech_Standard"},
+    
+	# bastions, PD and otherwise
+		{"WS 012": "module_bastion1_lowtech_Standard"},
+		{"WS 013": "module_citadel1_lowtech_Standard"}, # north-facing
+		{"WS 014": "module_bastion1_lowtech_Standard"},
+    
+
+
+	# under decor
+	#	{"WS 000": "module_decor_under1_Standard"},
+	#	{"WS 001": "module_decor_under2_Standard"},
+	#	{"WS 002": "module_decor_under3_Standard"},
+	#	{"WS 003": "module_decor_under2_Standard"},
+	#	{"WS 004": "module_decor_under1_Standard"},
+	#	{"WS 005": "module_decor_under3_Standard"},
+		
+    ],
+}

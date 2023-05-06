@@ -1,0 +1,246 @@
+{
+	id:"lions_guard",
+	#"color":[255,235,225,255],
+	"color":[160,0,95,255],
+	"displayName":"Lion's Guard",
+	"logo":"graphics/factions/sindrian_diktat.png",
+	"displayNameWithArticle":"the Lion's Guard",
+	"shipNamePrefix":"LGS",
+	"showInIntelTab":false,
+	"shipNameSources":{
+		"DIKTAT":2,
+		"BRITISH_NAVY":1, 
+		"ROMAN":1,
+		"GREEK":1,
+		"EGYPTIAN":1,
+		"PERSIAN":1,
+		"SPACE":1,
+	},
+	"names":{
+		"old english":1,
+		"world":1,
+		"future":1,
+		"myth":1,
+	},
+	# variantOverrides restricts hulls to listed variants and adjusts their probability
+	"variantOverrides":{
+		"executor_Elite":10,
+	},
+	# multiplier for how often hulls show up in the faction's fleets
+	"hullFrequency":{
+		"tags":{
+		},
+		"hulls":{
+		},
+	},
+	# ships the faction gets access to when importing S&W out-of-faction
+	"shipsWhenImporting":{
+		"tags":[],
+		"hulls":[
+		],
+	},
+	"knownShips":{
+		"tags":["sindrian_diktat", "lions_guard", "LG_bp"],
+		"hulls":[
+			"crig",
+			"ox",
+			"dram",
+			"phaeton",
+			"prometheus",
+			"gemini",
+			"atlas",
+			"mercury",
+			"hermes",
+			"kite_original",
+			"mudskipper",
+			"wayfarer",
+			"nebula",
+			"valkyrie",
+			"starliner",
+			"buffalo",
+			"colossus",
+			
+			"brawler_LG",
+			"centurion_LG",
+			
+			"hammerhead_LG",
+			"sunder_LG",
+			
+			"falcon_LG",
+			"eagle_LG",
+			
+			"executor",
+		],
+	},
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	"priorityShips":{
+		"tags":[],
+		"hulls":[
+		],
+	},
+	"knownFighters":{
+		"tags":["sindrian_diktat", "lions_guard"],
+		"fighters":[
+			"talon_wing",
+		],
+	},
+	"priorityFighters":{
+		"tags":[],
+		"fighters":[
+		],
+	},
+	"knownWeapons":{
+		"tags":["sindrian_diktat", "lions_guard"],
+		"weapons":[
+			"lightmg",
+			"lightdualmg",
+			"vulcan",
+			"lightac",
+			"lightdualac",
+			"lightag",
+			"lightneedler",
+			"railgun",
+
+			"hveldriver",
+			"heavymauler",
+			"heavyneedler",
+			"heavymortar",
+			"chaingun",
+			"heavyac",
+			"flak",
+			"dualflak",
+			
+			"hephag",
+			"mark9",
+			"devastator",
+			
+			"reaper",
+			"atropos",
+			"atropos_single",
+			"swarmer",
+			"annihilator",
+			"heatseeker",
+			"harpoon",
+			"harpoon_single",
+			"breach",
+			"sabot",
+			"sabot_single",
+			
+			"pilum",
+			"breachpod",
+			"harpoonpod",
+			"sabotpod",
+			"phasecl",
+			"typhoon",
+			
+			"squall",
+			"locust",
+			
+			"amblaster",
+			"taclaser",
+			"pdlaser",
+			"lrpdlaser",
+			"ioncannon",
+			
+			"gravitonbeam",
+			"pulselaser",
+			"phasebeam",
+			"heavyblaster",
+			
+			"hil",
+			"autopulse",
+			
+			"kineticblaster",
+			"gigacannon",
+		],
+	},
+	"priorityWeapons":{
+		"tags":[],
+		"weapons":[
+			#"amblaster",
+			#"heavyblaster",
+			#"kineticblaster",
+			#"gigacannon",
+		],
+	},
+	"knownHullMods":{
+		"tags":["standard", "sindrian_diktat", "lions_guard"],
+		"hullMods":[
+		],
+	},
+	"weaponSellFrequency":{
+	},
+	"fighterSellFrequency":{
+	},
+	"hullmodSellFrequency":{
+	},	
+	"factionDoctrine":{
+		"warships":5,
+		"carriers":0,		# "the individualism often displayed by the so-called "fighter jocks" detracts from all working together to fulfill the Supreme Executor's Great Plan"
+		"phaseShips":0,
+		
+		"officerQuality":1,
+		"shipQuality":5,
+		"numShips":1,
+		
+		"shipSize":5,
+		
+		"aggression":4,
+		
+		"combatFreighterProbability":0,      				# instead of some portion of the freighters in a fleet
+		"combatFreighterCombatUseFraction":0,  				# as part of the normal combat lineup
+		"combatFreighterCombatUseFractionWhenPriority":0,   # as part of normal combat lineup, when marked as priority ship
+		"autofitRandomizeProbability":0,					# there is no room for chance in the Supreme Executor's Great Plan
+		
+		"commanderSkillsShuffleProbability":0,
+		"commanderSkills":[
+			"coordinated_maneuvers",
+			"crew_training",
+			"tactical_drills",
+		],
+	},
+	"illegalCommodities":[
+		"drugs",
+		"organs",
+		"hand_weapons",
+		"ai_cores",	
+	],
+	"internalComms":"sindrian_diktat_internal",
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/portrait_diktat01.png",
+			"graphics/portraits/portrait_diktat03.png",
+			"graphics/portraits/portrait_diktat04.png",
+			"graphics/portraits/portrait_diktat07.png",
+
+		],
+		"standard_female":[
+			"graphics/portraits/portrait_diktat02.png",
+			"graphics/portraits/portrait_diktat05.png",
+			"graphics/portraits/portrait_diktat06.png",
+			"graphics/portraits/portrait_diktat08.png",
+		],
+	},
+	"voices":{
+		"LOW":{
+			"soldier":10,
+			"official":5,
+			"spacer":5,
+		},
+		"MEDIUM":{
+			"soldier":10,
+			"official":10,
+		},
+		"HIGH":{
+			"soldier":5,
+			"official":10,
+			"aristo":3,
+		},
+	},
+	"fleetTypeNames":{
+		"patrolSmall":"Lion's Guard Recon",
+		"patrolMedium":"Lion's Guard Patrol",
+		"patrolLarge":"Lion's Guard Detachment",
+	},
+
+},

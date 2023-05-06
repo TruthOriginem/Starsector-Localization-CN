@@ -1,0 +1,53 @@
+{
+    "displayName": "实验性",
+    "fluxCapacitors": 40,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "ziggurat",
+    "hullMods": [
+        "targetingunit",
+        "fluxbreakers",
+        "high_frequency_attractor"
+    ],
+    "permaMods": ["high_frequency_attractor"],
+    "sMods": [],
+    "variantId": "ziggurat_Experimental",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "plasma",
+                "WS 001": "plasma"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 006": "reaper",
+                "WS 007": "reaper",
+                "WS 008": "reaper",
+                "WS 009": "reaper",
+                "WS 010": "reaper",
+                "WS 011": "reaper"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "disintegrator",
+                "WS 005": "disintegrator"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "heavyneedler",
+                "WS 004": "heavyneedler"
+            }
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "displayName": "标准",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "hullId": "module_midline_broadside",
+    "hullMods": [],
+    "permaMods": [],
+    "variantId": "module_midline_broadside_Standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "hephag",
+                "WS 002": "hephag",
+                "WS 003": "mjolnir",
+                "WS 005": "mjolnir",
+                "WS 006": "hephag",
+                "WS 008": "hephag"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "multineedler",
+                "WS 004": "multineedler",
+                "WS 007": "multineedler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 010": "gravitonbeam",
+                "WS 011": "gravitonbeam",
+                "WS 012": "gravitonbeam",
+                "WS 013": "gravitonbeam",
+                "WS 014": "gravitonbeam",
+                "WS 015": "gravitonbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 016": "vulcan",
+                "WS 017": "vulcan",
+                "WS 018": "vulcan",
+                "WS 019": "vulcan",
+                "WS 020": "vulcan",
+                "WS 021": "vulcan",
+                "WS 022": "vulcan"
+            }
+        }
+    ]
+}

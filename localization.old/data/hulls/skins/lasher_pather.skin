@@ -1,0 +1,18 @@
+{
+	"baseHullId":"lasher",
+	"skinHullId":"lasher_pather",
+	"hullName":"征伐 (LP)",
+	"descriptionId":"lasher",  # optional
+	"baseValueMult":0.8,
+	"spriteName":"graphics/ships/lasher/lasher_pather.png",
+	"descriptionPrefix":"被}卢德左径}的狂热分子们强行占用并着重改装，通过剔除掉所有非必要的设备，来将其改造成一个随时与意外相伴的圣战船 ",
+	"tags":["LP_bp"],
+	"tech":"卢德左径",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["safetyoverrides","ill_advised"],
+	"builtInWeapons":{
+    },
+}

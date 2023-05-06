@@ -1,0 +1,33 @@
+{
+	"quality":0.5,
+	"displayName":"Assault Fighter",
+	"hullId":"warthog",
+	"variantId":"warthog_Fighter",
+	"fluxVents":0,
+	"fluxCapacitors":0,
+	"hullMods":["insulatedengine"], # array of strings
+	
+	# mode is either LINKED or ALTERNATING
+	# slot ids (WS ***) must match what's in the .ship file
+	"weaponGroups":[
+		{"mode":"LINKED",
+		 "weapons":{
+		 			#"WS 001":"lightmg",
+		 			#"WS 002":"lightmg",
+		 			"WS 001":"lightmortar",
+		 			"WS 002":"lightmortar",
+		 			#"WS 001":"vulcan",
+		 			#"WS 002":"vulcan",
+		 			#"WS 002":"lightmg",
+		 			#"WS 003":"shredder",
+		 		   },
+		},
+		{"mode":"LINKED",
+		 "weapons":{
+		 			#"WS 003":"lightag",
+		 			#"WS 003":"vulcan",
+		 			#"WS 003":"lightmortar",
+		 		   },
+		},
+	],
+}

@@ -1,0 +1,50 @@
+{
+    "displayName": "标准",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "hullId": "module_citadel1_lowtech",
+    "hullMods": [],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "module_citadel1_lowtech_Standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 015": "mjolnir",
+                "WS 016": "mjolnir"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "gauss",
+                "WS 014": "gauss"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "heavymauler",
+                "WS 010": "heavymauler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "dualflak",
+                "WS 002": "vulcan",
+                "WS 006": "dualflak",
+                "WS 007": "vulcan",
+                "WS 008": "vulcan",
+                "WS 009": "dualflak",
+                "WS 012": "vulcan",
+                "WS 013": "dualflak"
+            }
+        }
+    ]
+}

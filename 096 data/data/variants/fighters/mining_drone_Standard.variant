@@ -1,0 +1,19 @@
+{
+	"quality":0,
+	"displayName":"Auxiliary",
+	"hullId":"mining_drone",
+	"variantId":"mining_drone_Standard",
+	"fluxVents":0,
+	"fluxCapacitors":0,
+	"mods":[], # array of strings
+	
+	# mode is either LINKED or ALTERNATING
+	# slot ids (WS ***) must match what's in the .ship file
+	"weaponGroups":[
+		{"mode":"LINKED",
+		 "weapons":{
+		 			"WS 001":"mininglaser",
+		 		   },
+		},
+	],
+}

@@ -1,0 +1,26 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 4,
+    "fluxVents": 4,
+    "hullId": "vigilance",
+    "hullMods": [
+        "missleracks",
+        "eccm",
+        "extendedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vigilance_Support1",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "heavyac"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "gorgonpod"}
+        }
+    ]
+}

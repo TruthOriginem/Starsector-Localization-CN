@@ -1,0 +1,21 @@
+{
+	"baseHullId":"brawler",
+	"skinHullId":"brawler_pather",
+	"hullName":"Brawler (LP)",
+	"descriptionId":"brawler",  # optional
+	"descriptionPrefix":"Fanatics of the Luddic Path have made this ship their own, stripping out all unnecessary furnishing and transforming it into a haphazard vehicle of holy war.",
+	"tags":["LP_bp"],
+	"tech":"Luddic Path",
+	"spriteName":"graphics/ships/brawler/brawler_pather.png",
+	"baseValueMult":0.75,
+	"suppliesToRecover":6,
+	"suppliesPerMonth":6,
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"systemId":"ammofeed",
+	"builtInMods":["ill_advised","safetyoverrides"],
+	"builtInWeapons":{
+    },
+}

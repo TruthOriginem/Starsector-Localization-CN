@@ -1,0 +1,22 @@
+{
+    "hullId": "spark",
+    "variantId": "spark_Interceptor",
+    "displayName": "无人截击机",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "quality": 1,
+    "hullMods":[],
+	"weaponGroups":[
+		{"mode":"LINKED",
+		 "weapons":{
+		 			"WS 001":"pdburst_fighter",
+		 			#"WS 002":"pdburst",
+		 		   },
+		},
+		#{"mode":"LINKED",
+		# "weapons":{
+		# 			#"WS 002":"fragbomb",
+		# 		   },
+		#},
+	],
+}

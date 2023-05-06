@@ -1,0 +1,17 @@
+{
+	"baseHullId":"mule",
+	"skinHullId":"mule_d",
+	"hullName":"骡子 (D)",
+	"descriptionId":"mule",  # optional
+	"descriptionPrefix":"这些在和平时期应该除役的受损船只如今早已随处可见。这类船通常标有\"D\"，表示\"受损\"或\"有缺陷\" ",
+	"restoreToBaseHull":true,
+	"spriteName":"graphics/ships/mule/mule_d.png",
+	"baseValueMult":.65,
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["degraded_engines","erratic_injector","increased_maintenance"],
+	"builtInWeapons":{
+    },
+}

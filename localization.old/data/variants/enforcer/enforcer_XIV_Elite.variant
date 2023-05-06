@@ -1,0 +1,46 @@
+{
+    "displayName": "精英",
+    "fluxCapacitors": 3,
+    "fluxVents": 20,
+    "hullId": "enforcer_xiv",
+    "hullMods": [
+        "auxiliarythrusters",
+        "heavyarmor"
+    ],
+    "permaMods": [],
+    "quality": 1,
+    "variantId": "enforcer_XIV_Elite",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 006": "harpoon",
+                "WS 007": "harpoon",
+                "WS 008": "harpoon",
+                "WS 009": "harpoon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "heavyac",
+                "WS 004": "heavyac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "heavyneedler"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "flak",
+                "WS 005": "flak"
+            }
+        }
+    ]
+}

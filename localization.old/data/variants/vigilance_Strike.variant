@@ -1,0 +1,23 @@
+{
+    "displayName": "打击",
+    "fluxCapacitors": 6,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "vigilance",
+    "hullMods": ["fluxdistributor"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vigilance_Strike",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {"WS 002": "typhoon"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "heavyneedler"}
+        }
+    ]
+}

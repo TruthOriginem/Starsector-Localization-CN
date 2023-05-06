@@ -1,0 +1,148 @@
+{
+	"codex":{
+		"damage_kinetic":{
+			"title":"Kinetic Damage",
+			"body":"Kinetic damage is great against shields, but poor against armor.",
+		},
+		"damage_highexplosive":{
+			"title":"High Explosive Damage",
+			"body":"High explosive damage is great against armor, but poor against shields.",
+		},
+		"damage_fragmentation":{
+			"title":"Fragmentation Damage",
+			"body":"Fragmentation damage is very poor against both armor and shields. However, weapons dealing fragmentation damage usually have a very high DPS, making them devastating vs lightly-armored, unshielded targets such as light fighters and missiles.\n\nIt can also be highly effective against a ship whose armor is stripped away by battle damage.",
+		}, 
+		"damage_energy":{
+			"title":"Energy Damage",
+			"body":"Energy damage is equally effective against shields and armor.",
+		},
+		"damage_other":{
+			"title":"Other Damage",
+			"body":"This weapon is special. In reality, though, if you're seeing this, it's probably a bug.",
+		}, 
+	},
+	"warroom":{
+		#"fleetPoints":{
+		#	"title":"Deployment points",
+		#	"body":"You need available deployment points to deploy your reserves into battle. Retreating or losing ships gives you back the points used to deploy them.",
+		#},
+		#"commandPoints":{
+		#	"title":"Command Points",
+		#	"body":"You need command points to create assignments and give direct orders to your fleet.\n\nOnce you run out, you won't be able to give any more orders, but can still order your fleet to engage the enemy at will by cancelling all existing assignments.\n\nYou gain a few command points every time your forces capture an objective.",
+		#},
+		"pause":{
+			"title":"Pause",
+			"body":"Pauses the game.",
+		},
+		"play":{
+			"title":"Unpause",
+			"body":"Unpauses the game.",
+		},
+		"combatTime":"Time elapsed with both fleets in contact with each other.\n\nThe peak performance time of reinforcements is reduced by half of the combat time.",
+	},
+	
+	"fleetScreen":{
+		"tooltipCaptain":{
+			"title":"Assign Captain",
+			"body":"Assign a captain (yourself or an officer) to this ship. The ship will benefit from the captain's skills.",
+		},
+		"tooltipAdmin":{
+			"title":"Assign Administrator",
+			"body":"Assign an administrator (or yourself) to govern this colony, which will then benefit from the assigned administrator's skills.",
+		},
+		"tooltipAdminNonPlayer":{
+			"title":"Administrator",
+			"body":"This colony is not governed by an administrator of any note.",
+		},
+		"tooltipBuy":{
+			"title":"Buy",
+			"body":"Buy this %s for %d credits.",
+		},
+		"tooltipSell":{
+			"title":"Sell",
+			"body":"Sell this %s for %d credits.",
+		},
+		"tooltipTake":{
+			"title":"Take",
+			"body":"Take this %s.",
+		},
+		"tooltipGive":{
+			"title":"Store",
+			"body":"Transfer this %s from your fleet. Its combat readiness will remain unchanged while it's in storage.",
+		},
+		"tooltipMothball":{
+			"title":"Mothball",
+			"body":"Mothballed %ss can't be used in combat or repaired, and do not provide any fuel, cargo, or personnel capacity.\n\nMothballing a ship will reduce its combat readiness to zero; restoring it will require time and supplies.",
+		},
+		"tooltipUnmothball":{
+			"title":"Mothball",
+			"body":"Mothballed %ss can't be used in combat or repaired, and do not provide any fuel, cargo, or personnel capacity.\n\nRestoring this ship's combat readiness after unmothballing it will consume %s supplies over %s day(s).",
+		},
+		"tooltipScuttle":{
+			"title":"Scuttle",
+			"body":"Strip this %s of anything useful, gaining %d supplies, %d fuel, and %d heavy machinery.",
+		},
+		"tooltipSuspendRepairs":{
+			"title":"Suspend Repairs & Recovery",
+			"body":"Prevents this %s from performing repairs or recovering combat readiness. Full repairs and CR recovery will consume approximately %s supplies over %s days if allowed to proceed.",
+		},
+		"tooltipSuspendRepairsNotNeeded":{
+			"title":"Suspend Repairs & Recovery",
+			"body":"Prevents this %s from performing repairs or recovering combat readiness. This %s does not currently require repairs or CR recovery.",
+		},
+		"tooltipRefit":{
+			"title":"Refit",
+			"body":"Change the weapons and hullmods equipped on this ship.",
+		},
+		"tooltipLogisticalPriority":{
+			"title":"Logistical Priority",
+			"body":"%ss with logistical priority get first pick of crew and supplies available for repairs.",
+		},
+		"tooltipCrewElite":{
+			"title":"Elite",
+			"body":"Crew this %s with the best personnel available.",
+		},
+		"tooltipCrewVeteran":{
+			"title":"Veteran",
+			"body":"Crew this %s with only veteran crew and below, if possible.", 
+		},
+		"tooltipCrewRegular":{
+			"title":"Regular",
+			"body":"Crew this %s with only regular crew and below, if possible.",
+		},
+		"tooltipCrewGreen":{
+			"title":"Green",
+			"body":"Crew this %s only with green crew, if possible.",
+		},
+		"tooltipCrewBar":{
+			"title":"",
+			"body":"Crew fraction on this %s.",
+		},
+	},
+	"logistics":{
+		"marines":"Number of marines in the fleet.",
+		"crew":"Number of crew in the fleet, and the number needed to meet the minimum requirements on all ships in the fleet.",
+		"supplies":"Available supplies and supply use per day.",
+		"credits":"Available credits.",
+	},
+	"misc":{
+		"jumpPointNormal":"Jump points can be used to transit between hyperspace and normal space. Some jump points also lead to other destinations.",
+		"jumpPointStar":"The gravity well of a star is deep enough to provide a one-way exit from hyperspace. Using one is, however, extremely difficult and dangerous.",
+		"jumpPointGasGiant":"The gravity well of a gas giant is often deep enough to provide a one-way exit from hyperspace.",
+	},
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

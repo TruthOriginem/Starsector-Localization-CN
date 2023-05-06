@@ -1,0 +1,23 @@
+{
+	"id":"best_of_the_best",
+	"governingAptitude":"leadership",
+	"compressHullmods":false,
+	"scope":CUSTOM,
+	"scopeStr":"舰队",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":0,
+			"effects":[
+				{"type":"DESCRIPTION", "script":"com.fs.starfarer.api.impl.campaign.skills.BestOfTheBest$Level0"},
+			]
+		},
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.BestOfTheBest$Level1"},
+				{"type":"CHARACTER_STATS", "script":"com.fs.starfarer.api.impl.campaign.skills.BestOfTheBest$Level2"},
+			]
+		},
+	],
+}

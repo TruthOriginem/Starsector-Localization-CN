@@ -1,0 +1,36 @@
+{
+    "displayName": "Overdriven",
+    "fluxCapacitors": 14,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "enforcer",
+    "hullMods": ["safetyoverrides"],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "enforcer_Overdriven",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 006": "annihilator",
+                "WS 007": "annihilator",
+                "WS 008": "annihilator",
+                "WS 009": "annihilator"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "chaingun"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "heavymg",
+                "WS 004": "heavymg"
+            }
+        }
+    ]
+}

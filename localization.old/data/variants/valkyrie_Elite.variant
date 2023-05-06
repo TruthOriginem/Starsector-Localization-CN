@@ -1,0 +1,31 @@
+{
+    "displayName": "精英",
+    "fluxCapacitors": 5,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "valkyrie",
+    "hullMods": [],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "valkyrie_Elite",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 005": "irpulse",
+                "WS 006": "irpulse"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "lightdualmg",
+                "WS 002": "lightdualmg",
+                "WS 003": "lightdualmg",
+                "WS 004": "lightdualmg"
+            }
+        }
+    ]
+}

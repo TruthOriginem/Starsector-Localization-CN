@@ -1,0 +1,42 @@
+{
+    "displayName": "Pather",
+    "fluxCapacitors": 0,
+    "fluxVents": 6,
+    "goalVariant": true,
+    "hullId": "colossus2",
+    "hullMods": ["insulatedengine"],
+    "permaMods": [],
+    "quality": 0,
+    "variantId": "colossus2_Pather",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {"WS 017": "hammerrack"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "lightag",
+                "WS 012": "lightag",
+                "WS 013": "lightac",
+                "WS 014": "lightac",
+                "WS 015": "lightmortar",
+                "WS 016": "lightmortar"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "lightmg",
+                "WS 002": "lightmg",
+                "WS 003": "lightmg",
+                "WS 004": "lightmg",
+                "WS 009": "lightmg",
+                "WS 010": "lightmg"
+            }
+        }
+    ]
+}

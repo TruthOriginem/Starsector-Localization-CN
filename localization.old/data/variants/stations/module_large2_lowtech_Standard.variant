@@ -1,0 +1,51 @@
+{
+    "displayName": "标准",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "hullId": "module_large2_lowtech",
+    "hullMods": [],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "module_large2_lowtech_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 008": "salamanderpod",
+                "WS 009": "salamanderpod"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "pilum",
+                "WS 003": "pilum"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "hveldriver",
+                "WS 004": "hveldriver"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "dualflak",
+                "WS 005": "vulcan",
+                "WS 007": "vulcan",
+                "WS 010": "vulcan",
+                "WS 012": "vulcan"
+            }
+        }
+    ],
+    "wings": [
+        "broadsword_wing",
+        "piranha_wing"
+    ]
+}

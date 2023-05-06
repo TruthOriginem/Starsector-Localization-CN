@@ -1,0 +1,60 @@
+{
+    "displayName": "突击",
+    "fluxCapacitors": 0,
+    "fluxVents": 25,
+    "goalVariant": true,
+    "hullId": "eradicator",
+    "hullMods": [
+        "dedicated_targeting_core",
+        "missleracks",
+        "armoredweapons"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "eradicator_Assault",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 005": "heavymortar"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 000": "harpoon",
+                "WS 001": "harpoon",
+                "WS 002": "harpoon",
+                "WS 003": "harpoon",
+                "WS 004": "harpoon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 006": "heavyac",
+                "WS 007": "heavyac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 010": "railgun",
+                "WS 011": "railgun"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "vulcan",
+                "WS 009": "vulcan",
+                "WS 012": "vulcan",
+                "WS 013": "vulcan",
+                "WS 014": "vulcan"
+            }
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "displayName": "标准",
+    "fluxCapacitors": 10,
+    "fluxVents": 5,
+    "goalVariant": true,
+    "hullId": "mercury",
+    "hullMods": [],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "mercury_Standard",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {
+            "WS 001": "pdlaser",
+            "WS 002": "pdlaser",
+            "WS 003": "pdlaser"
+        }
+    }]
+}

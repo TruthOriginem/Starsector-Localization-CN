@@ -1,0 +1,60 @@
+{
+    "displayName": "Strike",
+    "fluxCapacitors": 4,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "eradicator",
+    "hullMods": [
+        "dedicated_targeting_core",
+        "missleracks",
+        "armoredweapons"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "eradicator_Strike",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "heavyac",
+                "WS 006": "heavyac"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 000": "reaper",
+                "WS 001": "reaper",
+                "WS 002": "reaper",
+                "WS 003": "reaper",
+                "WS 004": "reaper"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "lightneedler"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 010": "lightag",
+                "WS 011": "lightag"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "flak",
+                "WS 008": "vulcan",
+                "WS 012": "vulcan",
+                "WS 013": "vulcan",
+                "WS 014": "vulcan"
+            }
+        }
+    ]
+}

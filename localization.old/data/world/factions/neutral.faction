@@ -1,0 +1,27 @@
+{
+	id:"neutral",
+	"color":[100,100,100,255],
+	
+	"baseUIColor":[155,155,155,255],
+	#"darkUIColor":[31,94,112,175],
+	#"gridUIColor":[70,200,255,75],
+	
+	"displayName":"中立",
+	"displayNameWithArticle":"中立",
+	"logo":"graphics/factions/neutral.png",
+	"showInIntelTab":false,
+	"names":{
+	},
+	"portraits":{
+	},
+	"music":{
+		"theme":"music_none",
+		"market_neutral":"music_none",
+		"market_hostile":"music_none",
+		"market_friendly":"music_none",
+		"encounter_neutral":"music_none",
+		"encounter_hostile":"music_none",
+		"encounter_friendly":"music_none",
+	},
+
+},

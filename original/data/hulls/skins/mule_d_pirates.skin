@@ -1,0 +1,23 @@
+{
+	"baseHullId":"mule",
+	"skinHullId":"mule_d_pirates",
+	"hullName":"Mule (P)",
+	"descriptionId":"mule",  # optional
+	"descriptionPrefix":"This ship has been heavily modified - and poorly maintained - by its pirate crew.",
+	"tags":["pirate_bp"],
+	"tech":"Pirate",
+	"baseValueMult":1.2,
+	"spriteName":"graphics/ships/mule/mule_pirates.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"weaponSlotChanges":{
+		"WS 003":{
+            "type": "UNIVERSAL"
+		}	
+	},
+	"builtInMods":["shielded_holds"],
+	"builtInWeapons":{
+    },
+}

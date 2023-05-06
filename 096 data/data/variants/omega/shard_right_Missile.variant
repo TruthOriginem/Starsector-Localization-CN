@@ -1,0 +1,21 @@
+{
+    "displayName": "Missile",
+    "fluxCapacitors": 4,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "shard_right",
+    "hullMods": ["missleracks"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "shard_right_Missile",
+    "weaponGroups": [{
+        "autofire": false,
+        "mode": "ALTERNATING",
+        "weapons": {
+            "WS 000": "amsrm",
+            "WS 001": "amsrm",
+            "WS 002": "amsrm",
+            "WS 003": "amsrm"
+        }
+    }]
+}

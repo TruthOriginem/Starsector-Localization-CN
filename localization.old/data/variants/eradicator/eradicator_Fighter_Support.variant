@@ -1,0 +1,59 @@
+{
+    "displayName": "战机支援",
+    "fluxCapacitors": 0,
+    "fluxVents": 1,
+    "goalVariant": true,
+    "hullId": "eradicator",
+    "hullMods": [
+        "dedicated_targeting_core",
+        "missleracks",
+        "converted_hangar"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "eradicator_Fighter_Support",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 005": "heavymortar"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 000": "hammer",
+                "WS 001": "hammer",
+                "WS 002": "hammer",
+                "WS 003": "hammer",
+                "WS 004": "hammer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 006": "arbalest"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 010": "lightac",
+                "WS 011": "lightac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "flak",
+                "WS 008": "lightmg",
+                "WS 009": "vulcan",
+                "WS 012": "lightmg",
+                "WS 013": "vulcan",
+                "WS 014": "vulcan"
+            }
+        }
+    ],
+    "wings": ["perdition_wing"]
+}

@@ -1,0 +1,48 @@
+{
+    "displayName": "Escort",
+    "fluxCapacitors": 15,
+    "fluxVents": 20,
+    "hullId": "enforcer",
+    "hullMods": [
+        "auxiliarythrusters",
+        "blast_doors"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "enforcer_Escort",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 007": "harpoon",
+                "WS 008": "harpoon"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 006": "sabot",
+                "WS 009": "sabot"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "flak",
+                "WS 003": "flak",
+                "WS 005": "flak"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "heavymortar",
+                "WS 004": "heavyac"
+            }
+        }
+    ]
+}

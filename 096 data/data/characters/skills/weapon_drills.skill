@@ -1,0 +1,16 @@
+{
+	"id":"weapon_drills",
+	"governingAptitude":"leadership",
+	"compressHullmods":false,
+	"scope":"ALL_COMBAT_SHIPS",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.WeaponDrills$Level1"},
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"turretgyros":1}},
+			]
+		},
+	],
+}

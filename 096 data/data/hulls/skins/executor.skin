@@ -1,0 +1,34 @@
+{
+	"baseHullId":"pegasus",
+	"skinHullId":"executor",
+	"hullName":"Executor",
+	"ordnancePoints":350,
+	#"incompatibleWithBaseHull":true, # for the autofit dialog
+	#"systemId":"",
+	"descriptionPrefix":"A modified Pegasus blueprint, adjusted for efficient operation in the Askonia system. Incorporates special modifications based on the suggestions of the Supreme Executor himself. The crews and officers are drawn from the internal security forces, even when the ship is deployed to reinforce the Diktat's military rather than the Lion's Guard.",
+	"tags":["LG_bp"],
+	#"tech":"",
+	"builtInWings": [],
+	"fighterBays":0,
+	"spriteName":"graphics/ships/pegasus/executor.png",
+	"baseValueMult":1.25,
+	"removeWeaponSlots":[], 			# ids
+	"removeEngineSlots":[], 			# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 			# hullmod ids
+	"removeBuiltInWeapons":[], 			# weapon slot ids
+	"systemId":"highenergyfocus",
+	"builtInMods":["solar_shielding", "andrada_mods", "coherer"],
+	#"builtInMods":["solar_shielding", "andrada_mods"],
+	"builtInWeapons":{
+    },
+    "weaponSlotChanges":{
+		"WS 000":{
+			"type": "ENERGY"
+			#"angle": 0,
+            #"arc": 210,
+		},
+		"WS 001":{
+			"type": "ENERGY"
+		},
+	},
+}

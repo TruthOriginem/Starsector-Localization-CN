@@ -1,0 +1,24 @@
+{
+	"baseHullId":"shrike",
+	"skinHullId":"shrike_pirates",
+	"hullName":"Shrike (P)",
+	"descriptionId":"shrike",  # optional
+	"descriptionPrefix":"This ship has been heavily modified - and poorly maintained - by its pirate crew.",
+	"tags":["pirate_bp"],
+	"tech":"Pirate",
+	"baseValueMult":1,
+	"ordnancePoints":75,
+	"spriteName":"graphics/ships/shrike/shrike_p.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"weaponSlotChanges":{
+		"WS 001":{
+            "type": "HYBRID"
+		}	
+	},
+	"builtInMods":[],
+	"builtInWeapons":{
+    },
+}

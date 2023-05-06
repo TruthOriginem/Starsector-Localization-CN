@@ -1,0 +1,28 @@
+{
+	"quality":0.5,
+	"displayName":"突击战斗机",
+	"hullId":"warthog",
+	"variantId":"warthog_Fighter",
+	"fluxVents":0,
+	"fluxCapacitors":0,
+	"hullMods":[], # array of strings
+	
+	# mode is either LINKED or ALTERNATING
+	# slot ids (WS ***) must match what's in the .ship file
+	"weaponGroups":[
+		{"mode":"LINKED",
+		 "weapons":{
+		 			#"WS 001":"lightmg",
+		 			#"WS 002":"lightmg",
+		 			"WS 001":"lightmortar",
+		 			"WS 002":"lightmortar",
+		 			#"WS 003":"shredder",
+		 		   },
+		},
+		{"mode":"LINKED",
+		 "weapons":{
+		 			#"WS 003":"lightag",
+		 		   },
+		},
+	],
+}

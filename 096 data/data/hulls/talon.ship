@@ -1,0 +1,93 @@
+{
+    "bounds": [
+        9,
+        2,
+        -5,
+        11,
+        -5,
+        -8,
+        9,
+        -4
+    ],
+    "center": [
+        13,
+        10
+    ],
+    "collisionRadius": 16,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 24,
+            "location": [
+                -9,
+                6
+            ],
+            "style": "LOW_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 24,
+            "location": [
+                -9,
+                -4
+            ],
+            "style": "LOW_TECH",
+            "width": 8
+        }
+    ],
+    "height": 24,
+    "hullId": "talon",
+    "hullName": "Talon",
+    "hullSize": "FIGHTER",
+    "shieldCenter": [
+        1,
+        1
+    ],
+    "shieldRadius": 16,
+    "spriteName": "graphics/ships/talon/talon.png",
+    "style": "LOW_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 001",
+            "locations": [
+                0,
+                4
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 180,
+            "arc": 5,
+            "id": "WS 002",
+            "locations": [
+                -8,
+                2
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 003",
+            "locations": [
+                6,
+                1
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "MISSILE"
+        }
+    ],
+    "width": 24
+}

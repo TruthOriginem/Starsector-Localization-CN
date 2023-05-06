@@ -1,0 +1,54 @@
+{
+    "displayName": "Elite",
+    "fluxCapacitors": 10,
+    "fluxVents": 30,
+    "hullId": "dominator_xiv",
+    "hullMods": [
+        "armoredweapons",
+        "targetingunit",
+        "fluxdistributor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "dominator_XIV_Elite",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 012": "gauss",
+                "WS 013": "gauss"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 014": "breachpod",
+                "WS 015": "breachpod",
+                "WS 016": "breachpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 010": "hveldriver",
+                "WS 011": "hveldriver"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "vulcan",
+                "WS 003": "vulcan",
+                "WS 004": "vulcan",
+                "WS 005": "vulcan",
+                "WS 007": "vulcan",
+                "WS 008": "vulcan",
+                "WS 009": "vulcan"
+            }
+        }
+    ]
+}

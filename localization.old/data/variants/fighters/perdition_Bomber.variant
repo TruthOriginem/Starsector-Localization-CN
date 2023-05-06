@@ -1,0 +1,19 @@
+{
+	"quality":0.5,
+	"displayName":"鱼雷轰炸机",
+	"hullId":"perdition",
+	"variantId":"perdition_Bomber",
+	"fluxVents":0,
+	"fluxCapacitors":0,
+	"mods":[], # array of strings
+	
+	# mode is either LINKED or ALTERNATING
+	# slot ids (WS ***) must match what's in the .ship file
+	"weaponGroups":[
+		{"mode":"LINKED",
+		 "weapons":{
+		 			"WS 000":"hammer_single",
+		 		   },
+		},
+	],
+}

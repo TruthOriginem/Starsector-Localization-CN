@@ -1,0 +1,316 @@
+{
+	id:"tritachyon",
+	"color":[135,206,255,255],
+	"displayName":"速子科技",
+	"displayNameWithArticle":"速子科技",
+	"displayNameLong":"速子科技",
+	"displayNameLongWithArticle":"速子科技",
+	"logo":"graphics/factions/tritachyon.png",
+	"crest":"graphics/factions/crest_tritachyon.png",
+	"shipNamePrefix":"TTS",
+	"shipNameSources":{
+		"JAPANESE":2,
+		"EGYPTIAN":2,
+		"NORDIC":1,
+		"MERCANTILE":2,
+		"SPACE":2,
+		"GENERAL":2,
+	},
+	"description":"No description yet.",
+	"names":{
+		"modern":1,
+		"world":1,
+		"future":1,
+		"myth":1,
+	},
+	# variantOverrides restricts hulls to listed variants and adjusts their probability
+	"variantOverrides":{
+	},
+	# multiplier for how often hulls show up in the faction's fleets
+	"hullFrequency":{
+		"tags":{
+		},
+		"hulls":{
+			"buffalo2":0,
+			"brawler":0, # since there's a TT-specific skin
+			"gremlin":0, # otherwise can end up with too many gremlins and no other phase ships when importing
+			"fury":10,
+			"aurora":10,
+			"scarab":10,
+			"monitor":10,
+			"odyssey":10,
+			"hyperion":10,
+			"omen":10,
+			"medusa":10,
+			"shrike":10,
+			"astral":10,
+			"paragon":10,
+			"tempest":10,
+			"buffalo_tritachyon":5,
+			"brawler_tritachyon":5,
+		},
+	},
+	# ships the faction gets access to when importing S&W out-of-faction
+	"shipsWhenImporting":{
+		"tags":["base_bp", "midline_bp", "hightech_bp"],
+		"hulls":[
+			"apogee",
+			"eagle",
+		],
+	},
+	"knownShips":{
+		"tags":["base_bp", "midline_bp", "hightech_bp", "tritachyon"],
+		"hulls":[
+			"aurora",
+			"apogee",
+			"fury",
+			"astral",
+			"atlas",
+			"kite_original",
+			"scarab",
+			#"monitor",
+			"odyssey",
+			"doom",
+			"afflictor",
+			"prometheus",
+			"buffalo_tritachyon",
+			"hyperion",
+			"brawler_tritachyon",
+			"omen",
+			"shade",
+			"medusa",
+			"paragon",
+			"tempest",
+			"eagle",
+			"harbinger",
+		],
+	},
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	"priorityShips":{
+		"tags":[],
+		"hulls":[
+			"doom",
+			"afflictor",
+			"shade",
+			"harbinger",
+			"drover",
+			"heron",
+			"astral",
+			#"odyssey",
+			"paragon",
+		],
+	},
+	"knownFighters":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "tritachyon"],
+		"fighters":[
+			"xyphos_wing",
+			"thunder_wing",
+			"claw_wing",
+			"trident_wing",
+			"cobra_wing",
+			"longbow_wing",
+		],
+	},
+	"priorityFighters":{
+		"tags":[],
+		"fighters":[
+		],
+	},
+	"knownWeapons":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "missile_bp", "hightech_bp", "tritachyon"],
+		"weapons":[
+			"lightneedler",
+			"hveldriver",
+			"heavyneedler",
+			"mjolnir",
+			"multineedler",
+			"breachpod",
+			"sabotpod",
+			"phasecl",
+			"cyclone",
+			"hurricane",
+			"squall",
+			"locust",
+			"pdburst",
+			"amblaster",
+			"phasebeam",
+			"heavyblaster",
+			"heavyburst",
+			"ionpulser",
+			"ionbeam",
+			"plasma",
+			"guardian",
+			"tachyonlance",
+		],
+	},
+	"priorityWeapons":{
+		"tags":[],
+		"weapons":[
+		],
+	},
+	"knownHullMods":{
+		"tags":["base_bp", "tritachyon"],
+		"hullMods":[
+			"advancedshieldemitter", # accelerated
+			"advancedoptics",
+			"turretgyros",
+			"augmentedengines",
+			"eccm",
+			"ecm",
+			"expanded_deck_crew",
+			"magazines",
+			"missleracks",
+			"extendedshieldemitter",
+			"frontemitter",
+			"frontshield",  # makeshift
+			"hardenedshieldemitter",
+			"insulatedengine",
+			"pointdefenseai",
+			"targetingunit",
+			"nav_relay",
+			"adaptiveshields", # omni
+			"operations_center",
+			"fluxbreakers",
+			"stabilizedshieldemitter",
+			"hiressensors",
+			"efficiency_overhaul",
+			"adaptive_coils",
+			"phase_anchor",
+		],
+	},
+	"factionDoctrine":{
+		"warships":3,
+		"carriers":3,
+		"phaseShips":3,
+		
+		"officerQuality":1,
+		"shipQuality":5,
+		"numShips":1,
+		
+		"shipSize":4,
+		
+		"aggression":2,
+		
+		"combatFreighterProbability":0,     				# instead of some portion of the freighters in a fleet
+		"combatFreighterCombatUseFraction":0,  				# as part of the normal combat lineup
+		"combatFreighterCombatUseFractionWhenPriority":0.33,# as part of normal combat lineup, when marked as priority ship
+		"autofitRandomizeProbability":0.1,
+
+		"commanderSkillsShuffleProbability":1,
+		"commanderSkills":[
+			"coordinated_maneuvers",
+			"electronic_warfare",
+			"fighter_uplink",
+			"carrier_group",
+			"flux_regulation",
+			"cybernetic_augmentation",
+		],
+	},
+	"illegalCommodities":[
+		"ai_cores", # only due to treaty w/ Hegemony
+	],
+	"music":{
+		"theme":"music_tritach_encounter_neutral",
+		"market_neutral":"music_tritach_market_neutral",
+		"market_hostile":"music_tritach_market_hostile",
+		"market_friendly":"music_tritach_market_friendly",
+		"encounter_neutral":"music_tritach_encounter_neutral",
+		"encounter_hostile":"music_tritach_encounter_hostile",
+		"encounter_friendly":"music_tritach_encounter_friendly",
+	},
+	"internalComms":"tritachyon_internal",
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/portrait_corporate01.png",
+			"graphics/portraits/portrait_corporate03.png",
+			"graphics/portraits/portrait_corporate05.png",
+			"graphics/portraits/portrait_corporate06.png",
+			"graphics/portraits/portrait_corporate08.png",
+			"graphics/portraits/portrait_corporate10.png",
+			"graphics/portraits/portrait13.png",
+			"graphics/portraits/portrait18.png",
+			"graphics/portraits/portrait25.png",
+			"graphics/portraits/portrait26.png",
+			"graphics/portraits/portrait30.png",
+			"graphics/portraits/portrait35.png",
+		],
+		"standard_female":[
+			"graphics/portraits/portrait_corporate02.png",
+			"graphics/portraits/portrait_corporate04.png",
+			"graphics/portraits/portrait_corporate07.png",
+			"graphics/portraits/portrait_corporate09.png",
+			"graphics/portraits/portrait_mercenary02.png",
+			"graphics/portraits/portrait_mercenary08.png",
+			"graphics/portraits/portrait16.png",
+			"graphics/portraits/portrait21.png",
+			"graphics/portraits/portrait28.png",
+			"graphics/portraits/portrait32.png",
+			"graphics/portraits/portrait34.png",
+			"graphics/portraits/portrait41.png",
+		],
+	},
+	"ranks":{
+		"ranks":{
+			"spaceAdmiral":{"name":"高级营运经理"},
+			"spaceCommander":{"name":"运营经理"},
+			"factionLeader":{"name":"首席执行官"},
+		},
+		"posts":{
+			"factionLeader":{"name":"首席执行官"},
+			"patrolCommander":{"name":"巡逻主管"},
+			"fleetCommander":{"name":"舰队主管"},
+			"baseCommander":{"name":"基地主管"},
+		},
+	},
+	"voices":{
+		"LOW":{
+			"soldier":10,
+			"spacer":5,
+		},
+		"MEDIUM":{
+			"business":10,
+		},
+		"HIGH":{
+			"business":10,
+			"aristo":10,
+			"scientist":3,
+		},
+	},		
+	"custom":{
+		"offersCommissions":true,
+		"engagesInHostilities":true,
+		"buysAICores":true,
+		"AICoreValueMult":3,
+		"AICoreRepMult":0.5,
+		"buysSurveyData":true,
+		"hostilityImpactOnGrowth":true,
+		"punitiveExpeditionData":{
+			"vsCompetitors":true,
+			"vsFreePort":false,
+			"canBombard":true,
+			"territorial":true,
+		},
+	},	
+	"fleetTypeNames":{
+		"trade":"企业商队",
+		"tradeLiner":"速子空间旅游舰队",
+		"tradeSmuggler":"运输舰队",
+		"smallTrader":"配送舰队",
+		
+		"patrolSmall":"安全巡逻队",
+		"patrolMedium":"安全护卫队",
+		"patrolLarge":"商业保障舰队",
+		
+		"inspectionFleet":"QA 巡视员",
+		"taskForce":"特别事务行动小组",
+		
+		"foodReliefFleet":"救援舰队",
+		
+		#"mercScout":"外包侦察队",
+		"mercBountyHunter":"回收承包商",
+		"mercPrivateer":"安保承包商",
+		#"mercPatrol":"受雇巡逻队",
+		#"mercArmada":"受雇无敌舰队",
+	}
+},
+

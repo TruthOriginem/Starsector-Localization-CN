@@ -1,0 +1,22 @@
+{
+	"baseHullId":"hound",
+	"skinHullId":"hound_hegemony",
+	"hullName":"Hound (A)",
+	"incompatibleWithBaseHull":false, # for the autofit dialog
+	"descriptionId":"hound",
+	"descriptionPrefix":"This ship is on the Hegemony auxiliary list and as such its systems have been upgraded to military standard and a rigorous schedule of servicing enforced with the expectation that it can be pressed into military service during emergencies.",
+	"tags":["heg_aux_bp"],
+	"tech":"Hegemony",
+	"fleetPoints":4,
+	"ordnancePoints":42,
+	"baseValueMult":1.5,
+	"spriteName":"graphics/ships/hound/hound_hegemony.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	#"builtInMods":["heg_militarized"],
+	"builtInMods":["armoredweapons"],
+	"builtInWeapons":{
+    },
+}

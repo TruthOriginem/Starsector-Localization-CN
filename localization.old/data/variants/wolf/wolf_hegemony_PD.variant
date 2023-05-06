@@ -1,0 +1,37 @@
+{
+    "displayName": "点防御",
+    "fluxCapacitors": 8,
+    "fluxVents": 10,
+    "hullId": "wolf_hegemony",
+    "hullMods": [
+        "turretgyros",
+        "fluxdistributor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "wolf_hegemony_PD",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "pulselaser"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 005": "swarmer",
+                "WS 006": "swarmer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "lrpdlaser",
+                "WS 002": "lrpdlaser",
+                "WS 003": "lrpdlaser"
+            }
+        }
+    ]
+}

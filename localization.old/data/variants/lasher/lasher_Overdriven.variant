@@ -1,0 +1,47 @@
+{
+    "displayName": "超载",
+    "fluxCapacitors": 0,
+    "fluxVents": 3,
+    "goalVariant": true,
+    "hullId": "lasher",
+    "hullMods": [
+        "safetyoverrides",
+        "auxiliarythrusters",
+        "unstable_injector",
+        "heavyarmor"
+    ],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "lasher_Overdriven",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "lightmg",
+                "WS 003": "lightmg"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "hammer",
+                "WS 004": "hammer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "lightmortar",
+                "WS 006": "lightmortar"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 007": "lightdualmg"}
+        }
+    ]
+}

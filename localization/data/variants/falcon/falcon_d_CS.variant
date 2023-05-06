@@ -1,0 +1,49 @@
+{
+    "displayName": "Close Support",
+    "fluxCapacitors": 0,
+    "fluxVents": 26,
+    "hullId": "falcon_d",
+    "hullMods": [
+        "heavyarmor",
+        "dedicated_targeting_core"
+    ],
+    "permaMods": [],
+    "quality": 0,
+    "variantId": "falcon_d_CS",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "heavyac",
+                "WS 008": "heavyac",
+                "WS 009": "taclaser",
+                "WS 010": "taclaser"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "harpoon",
+                "WS 002": "harpoon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "pulselaser",
+                "WS 006": "pulselaser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "pdlaser",
+                "WS 004": "pdlaser"
+            }
+        }
+    ]
+}

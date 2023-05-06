@@ -1,0 +1,29 @@
+{
+    "displayName": "截击机",
+    "fluxCapacitors": 4,
+    "fluxVents": 7,
+    "goalVariant": true,
+    "hullId": "kite_hegemony",
+    "hullMods": [
+        "turretgyros",
+        "missleracks"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "kite_hegemony_Interceptor",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "swarmer",
+                "WS 002": "swarmer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "lightdualmg"}
+        }
+    ]
+}

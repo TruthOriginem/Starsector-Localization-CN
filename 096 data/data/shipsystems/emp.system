@@ -1,0 +1,29 @@
+{
+	"id":"emp",
+	"type":"EMP",
+	"aiType":"EMP",
+	
+	"range":500,
+	
+	"empDamage":500,
+	"damage":100,
+	"damageType":ENERGY,
+	
+	#"effectColor1":[150,150,255,200],
+	#"effectColor2":[175,175,255,255],
+	"effectColor1":[255,150,255,200],
+	"effectColor2":[255,175,255,255],
+
+
+	"useSound":"system_emp_emitter_activate",
+	"loopSound":"system_emp_emitter_loop",
+	"impactSound":"system_emp_emitter_impact",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+		"threatRange":600,
+		"threatAmount":4,
+		"threatAngle":0,
+		"threatArc":360,
+	}
+}

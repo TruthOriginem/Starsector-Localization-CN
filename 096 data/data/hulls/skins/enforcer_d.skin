@@ -1,0 +1,17 @@
+{
+	"baseHullId":"enforcer",
+	"skinHullId":"enforcer_d",
+	"hullName":"Enforcer (D)",
+	"descriptionId":"enforcer",
+	"descriptionPrefix":"Ships that would be decommissioned in quieter times now see widespread use throughout the Sector. The hull designation for such ships is usually tagged with a \"D\", for \"damaged\" or \"defective\".",
+	"restoreToBaseHull":true,
+	"baseValueMult":.67,
+	"spriteName":"graphics/ships/enforcer/enforcer_d.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["degraded_engines","comp_armor","faulty_grid"],
+	"builtInWeapons":{
+    },
+}

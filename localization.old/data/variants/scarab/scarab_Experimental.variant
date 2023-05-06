@@ -1,0 +1,36 @@
+{
+    "displayName": "实验性",
+    "fluxCapacitors": 3,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "scarab",
+    "hullMods": [
+        "hardened_subsystems",
+        "stabilizedshieldemitter",
+        "fluxdistributor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "scarab_Experimental",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "ioncannon",
+                "WS 002": "taclaser",
+                "WS 003": "taclaser",
+                "WS 005": "pdlaser",
+                "WS 010": "pdlaser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "pdlaser",
+                "WS 009": "pdlaser"
+            }
+        }
+    ]
+}

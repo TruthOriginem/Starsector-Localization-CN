@@ -1,0 +1,28 @@
+{
+    "displayName": "支援",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "glimmer",
+    "hullMods": ["advancedoptics"],
+    "permaMods": [],
+    "quality": 0,
+    "variantId": "glimmer_Support",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "gravitonbeam"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "taclaser",
+                "WS 003": "taclaser",
+                "WS 004": "taclaser",
+                "WS 005": "taclaser"
+            }
+        }
+    ]
+}

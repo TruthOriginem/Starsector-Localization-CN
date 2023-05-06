@@ -1,0 +1,163 @@
+{
+	id:"omega", # ... or is it?
+	"displayName":"欧米伽",
+	"displayNameWithArticle":"欧米伽",
+	"displayNameLong":"欧米伽",
+	"displayNameLongWithArticle":"欧米伽",
+	"entityNamePrefix":"",
+	"personNamePrefix":"",
+	"personNamePrefixAOrAn":"一个",
+	"displayNameIsOrAre":"",
+	
+	"logo":"graphics/factions/ai_remnant.png",
+	"crest":"graphics/factions/crest_ai_remnant.png",
+	"shipNamePrefix":"01011001",
+	
+	"color":[70,255,235,255],
+	"baseUIColor":[70,255,235,255],
+	
+	"showInIntelTab":false,
+	
+	"shipNameSources":{
+		"OMEGA":1,
+	},
+	"names":{
+		"ai":1,
+	},
+	"variantOverrides":{
+	},
+	# multiplier for how often hulls show up in the faction's fleets
+	"hullFrequency":{
+		"tags":{
+		},
+		"hulls":{
+		},
+	},
+	# ships the faction gets access to when importing S&W out-of-faction
+	"shipsWhenImporting":{
+		"tags":["omega"],
+		"hulls":[
+		],
+	},
+	"knownShips":{
+		"tags":["omega"],
+		"hulls":[
+		],
+	},
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	"priorityShips":{
+		"tags":[],
+		"hulls":[
+		],
+	},
+	"knownFighters":{
+		"tags":["omega"],
+		"fighters":[
+		],
+	},
+	"priorityFighters":{
+		"tags":[],
+		"fighters":[
+		],
+	},
+	"knownWeapons":{
+		"tags":["omega"],
+		"weapons":[
+		],
+	},
+	"priorityWeapons":{
+		"tags":[],
+		"weapons":[
+		],
+	},
+	"knownHullMods":{
+		"tags":["base_bp", "omega"],
+		"hullMods":[
+			"advancedshieldemitter", # accelerated
+			"advancedoptics",
+			"turretgyros",
+			"armoredweapons",
+			"augmentedengines",
+			"autorepair",
+			"converted_hangar",
+			"eccm",
+			"ecm",
+			"expanded_deck_crew",
+			"magazines",
+			"missleracks",
+			"extendedshieldemitter",
+			"frontemitter",
+			"frontshield",  # makeshift
+			"hardenedshieldemitter",
+			"heavyarmor",
+			"insulatedengine",
+			"pointdefenseai",
+			"targetingunit",
+			"nav_relay",
+			"adaptiveshields", # omni
+			"operations_center",
+			"recovery_shuttles",
+			"fluxbreakers",
+			"solar_shielding",
+			"stabilizedshieldemitter",
+			"surveying_equipment",
+		],
+	},
+	"factionDoctrine":{
+		"warships":5,
+		"carriers":0,
+		"phaseShips":0,
+		
+		"officerQuality":5,
+		"shipQuality":5,
+		"numShips":1,
+		
+		"shipSize":5,
+		
+		"aggression":5, # doesn't matter since automated ships are super aggressive regardless
+		
+		"combatFreighterProbability":0,     				# instead of some portion of the freighters in a fleet
+		"combatFreighterCombatUseFraction":1,				# as part of the normal combat lineup
+		"combatFreighterCombatUseFractionWhenPriority":1,   # as part of normal combat lineup, when marked as priority ship
+		"autofitRandomizeProbability":0.25,
+
+		"commanderSkillsShuffleProbability":1,
+		"commanderSkills":[
+		],
+	},
+	#"shipRoles":{
+	#},
+	"illegalCommodities":[
+	],
+	"music":{
+		"encounter_hostile":"music_tritach_encounter_hostile",
+	},	
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/characters/omega.png",
+		],
+		"standard_female":[
+			"graphics/portraits/characters/omega.png",
+		],
+	},
+	"ranks":{
+		"ranks":{
+		},
+		"posts":{
+		},
+	},
+	"custom":{
+		"engageWhenEvenStrength":true,
+		"allowsTransponderOffTrade":true, # to prevent cargoscan dialog from "patrols"
+		"postsNoBounties":true,
+		"fightToTheLast":true, # order a full assault instead of retreating, in most cases
+		"noAICoresFromAutomatedDefenses":true,
+		"officersOnAutomatedDefenses":true,
+	},	
+	"fleetTypeNames":{
+		"patrolSmall":"虚影", 
+		"patrolMedium":"显灵", 
+		"patrolLarge":"主要介入", 
+		"battlestation":"稳固侵进",
+	},
+},

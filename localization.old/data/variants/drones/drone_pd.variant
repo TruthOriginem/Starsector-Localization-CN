@@ -1,0 +1,18 @@
+{
+	"displayName":"标准",
+	"hullId":"drone_pd",
+	"variantId":"drone_pd",
+	"fluxVents":0,
+	"fluxCapacitors":0,
+	"mods":[], # array of strings
+	
+	# mode is either LINKED or ALTERNATING
+	# slot ids (WS ***) must match what's in the .ship file
+	"weaponGroups":[
+		{"mode":"LINKED",
+		 "weapons":{
+		 			"WS 001":"pdlaser",
+		 		   },
+		},
+	],
+}

@@ -1,0 +1,14 @@
+{
+	"baseHullId":"module_hightech_attack",
+	"skinHullId":"module_hightech_attack_minelayer",
+	"descriptionPrefix":"升级安装了空雷传送系统 ",
+	"restoreToBaseHull":true,
+	"systemId":"mine_strike_station",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":[],
+	"builtInWeapons":{
+    },
+}

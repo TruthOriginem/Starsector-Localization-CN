@@ -1,0 +1,17 @@
+{
+	"id":"wolfpack_tactics",
+	"governingAptitude":"leadership",
+	"compressHullmods":false,
+	"scope":CUSTOM,
+	"scopeStr":"all frigates and destroyers with officers, including flagship",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.WolfpackTactics$Level1A"},
+				#{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.WolfpackTactics$Level1B"},
+			]
+		},
+	],
+}

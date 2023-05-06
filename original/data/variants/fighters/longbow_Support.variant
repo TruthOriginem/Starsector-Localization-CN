@@ -1,0 +1,24 @@
+{
+	"quality":0.5,
+	"displayName":"Kinetic Bomber",
+	"hullId":"longbow",
+	"variantId":"longbow_Support",
+	"fluxVents":0,
+	"fluxCapacitors":0,
+	"hullMods":["no_weapon_flux"], # array of strings
+	
+	# mode is either LINKED or ALTERNATING
+	# slot ids (WS ***) must match what's in the .ship file
+	"weaponGroups":[
+		{"mode":"LINKED",
+		 "weapons":{
+		 			"WS 001":"pdburst",
+		 		   },
+		},
+		{"mode":"LINKED",
+		 "weapons":{
+		 			"WS 002":"sabot_fighter",
+		 		   },
+		},
+	],
+}

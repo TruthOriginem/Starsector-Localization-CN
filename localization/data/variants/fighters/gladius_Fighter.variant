@@ -1,0 +1,29 @@
+{
+	"quality":0.75,
+	"displayName":"Heavy Interceptor",
+	"hullId":"gladius",
+	"variantId":"gladius_Fighter",
+	"fluxVents":0,
+	"fluxCapacitors":0,
+	"mods":[], # array of strings
+	
+	# mode is either LINKED or ALTERNATING
+	# slot ids (WS ***) must match what's in the .ship file
+	"weaponGroups":[
+		{"mode":"LINKED",
+		 "weapons":{
+		 			#"WS 001":"irpulse",
+		 			#"WS 002":"irpulse",
+		 			"WS 001":"lightmg",
+		 			"WS 002":"lightmg",
+		 		   },
+		},
+		{"mode":"LINKED",
+		 "weapons":{
+		 			#"WS 003":"lightdualmg",
+		 			#"WS 003":"irpulse",
+		 			"WS 003":"irpulse_fighter",
+		 		   },
+		},
+	],
+}

@@ -1,0 +1,43 @@
+{
+    "displayName": "防御",
+    "fluxCapacitors": 17,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "facet",
+    "hullMods": [
+        "pointdefenseai",
+        "targetingunit"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "facet_Defense",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "riftbeam",
+                "WS 003": "riftbeam",
+                "WS 004": "riftbeam"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "amsrm",
+                "WS 002": "amsrm"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "shockrepeater",
+                "WS 006": "shockrepeater",
+                "WS 007": "shockrepeater",
+                "WS 008": "shockrepeater"
+            }
+        }
+    ]
+}

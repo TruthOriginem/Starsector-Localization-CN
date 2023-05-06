@@ -1,0 +1,29 @@
+{
+	"id":"missile_specialization",
+	"governingAptitude":"combat",
+	"compressHullmods":false,
+	"elite":true,
+	"scope":"PILOTED_SHIP",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.MissileSpecialization$Level1"},
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.MissileSpecialization$Level2"},
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"eccm":1}},		
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"missleracks":1}},		
+			]
+		},
+		{
+			"name":"精英",
+			"requiredSkillLevel":2,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.MissileSpecialization$Level3"},
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.MissileSpecialization$Level4"},
+			]
+		},
+	],
+}
+

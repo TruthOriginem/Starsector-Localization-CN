@@ -1,0 +1,42 @@
+{
+    "displayName": "Damaged",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "hullId": "remnant_station2",
+    "hullMods": [],
+    "quality": 0.5,
+    "variantId": "remnant_station2_Damaged",
+    "weaponGroups": [],
+    "modules": [
+    	# top plus armor
+		{"WS 024": "remnant_armour3_Standard"},
+		{"WS 001": "remnant_weapon_platform1_Standard"},
+		
+		# bottom right plus armor
+		{"WS 030": "remnant_armour3_Standard"},
+		{"WS 007": "remnant_weapon_platform1_Standard"},
+		
+		# bottom left plus armor
+		{"WS 027": "remnant_armour3_Standard"},
+		{"WS 016": "remnant_weapon_platform1_Standard"},
+		
+		# bottom PD/shield
+		#{"WS 032": "remnant_shield2_Standard"},
+		
+		# left PD/shield
+		#{"WS 033": "remnant_shield2_Standard"},
+		
+		# right PD/shield
+		#{"WS 034": "remnant_shield2_Standard"},
+		
+		# left side weapon platforms
+		{"WS 036": "remnant_weapon_platform2_Standard"},
+		
+		# right side weapon platforms
+		{"WS 038": "remnant_weapon_platform2_Standard"},
+		
+		# hangars
+		{"WS 039": "remnant_hangar1_Standard"},
+		#{"WS 040": "remnant_hangar1_Strike"},
+    ],
+}

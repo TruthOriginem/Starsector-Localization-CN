@@ -1,0 +1,27 @@
+{
+	"quality":0.5,
+	"displayName":"Rocket Bomber",
+	"hullId":"hoplon",
+	"variantId":"hoplon_Escort",
+	"fluxVents":0,
+	"fluxCapacitors":0,
+	"mods":[],
+	
+	# mode is either LINKED or ALTERNATING
+	# slot ids (WS ***) must match what's in the .ship file
+	"weaponGroups":[
+		{"mode":"ALTERNATING",
+		 "weapons":{
+		 			#"WS 001":"vulcan",
+		 			#"WS 002":"vulcan",
+		 			"WS 003":"annihilator_fighter",
+		 			"WS 004":"annihilator_fighter",
+		 		   },
+		},
+		#{"mode":"LINKED",
+		#"weapons":{
+		# 			"WS 003":"lightag",
+		# 		   },
+		#},
+	],
+}

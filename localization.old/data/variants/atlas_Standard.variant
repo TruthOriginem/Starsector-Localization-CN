@@ -1,0 +1,19 @@
+{
+    "displayName": "标准",
+    "fluxCapacitors": 20,
+    "fluxVents": 11,
+    "goalVariant": true,
+    "hullId": "atlas",
+    "hullMods": ["auxiliarythrusters"],
+    "permaMods": [],
+    "variantId": "atlas_Standard",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {
+            "WS 001": "lightmg",
+            "WS 002": "lightmg",
+            "WS 003": "lightmg"
+        }
+    }]
+}

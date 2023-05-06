@@ -1,0 +1,45 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 17,
+    "fluxVents": 20,
+    "hullId": "sunder_d",
+    "hullMods": [
+        "fluxdistributor",
+        "fluxcoil"
+    ],
+    "permaMods": [],
+    "quality": 0,
+    "variantId": "sunder_d_Assault",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "pulselaser",
+                "WS 003": "pulselaser",
+                "WS 004": "pulselaser"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "sabot",
+                "WS 005": "sabot"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 006": "lightdualac",
+                "WS 007": "lightdualac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 008": "vulcan"}
+        }
+    ]
+}

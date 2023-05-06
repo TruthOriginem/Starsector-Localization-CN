@@ -1,0 +1,25 @@
+{
+	"id":"skimmer_drone",
+	"type":"DISPLACER",
+	"aiType":"PHASE_DISPLACER",
+	
+	"jitterColor":[100,165,255,155],
+	"jitterCopies":10,
+	"jitterRange":0,
+	"jitterRangeRadiusFraction":0.5,
+	
+	"weaponGlowColor":[100,165,255,0],
+	"weaponTypes":[ENERGY],
+	
+	"engineGlowColor":[100,165,255,125],
+
+	"range":200,
+	"randomRange":25,
+	
+	"useSound":"system_phase_skimmer",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+		"averageSpeedIncrease":15,
+	}
+}

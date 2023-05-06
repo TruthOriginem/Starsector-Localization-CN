@@ -1,0 +1,29 @@
+{
+    "displayName": "支援",
+    "fluxCapacitors": 8,
+    "fluxVents": 15,
+    "goalVariant": true,
+    "hullId": "condor",
+    "hullMods": [],
+    "permaMods": [],
+    "variantId": "condor_Support",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {"WS 003": "salamanderpod"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "lightac",
+                "WS 002": "lightac"
+            }
+        }
+    ],
+    "wings": [
+        "talon_wing",
+        "talon_wing"
+    ]
+}

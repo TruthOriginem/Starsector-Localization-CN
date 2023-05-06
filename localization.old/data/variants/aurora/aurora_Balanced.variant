@@ -1,0 +1,54 @@
+{
+    "displayName": "平衡",
+    "fluxCapacitors": 22,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "aurora",
+    "hullMods": [
+        "targetingunit",
+        "fluxdistributor"
+    ],
+    "permaMods": [],
+    "quality": 1,
+    "variantId": "aurora_Balanced",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 010": "amblaster",
+                "WS 012": "amblaster"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "heavyblaster"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "heavyblaster",
+                "WS 008": "ionpulser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "ioncannon",
+                "WS 013": "ioncannon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "pdburst",
+                "WS 004": "pdburst",
+                "WS 005": "pdburst"
+            }
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "displayName": "Rocket",
+    "fluxCapacitors": 13,
+    "fluxVents": 20,
+    "hullId": "enforcer",
+    "hullMods": [
+        "missleracks",
+        "reinforcedhull",
+        "fluxdistributor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "enforcer_Outdated",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "shredder",
+                "WS 003": "shredder",
+                "WS 005": "shredder"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 006": "annihilator",
+                "WS 007": "annihilator",
+                "WS 008": "annihilator",
+                "WS 009": "annihilator"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "lightdualmg",
+                "WS 004": "lightdualmg"
+            }
+        }
+    ]
+}

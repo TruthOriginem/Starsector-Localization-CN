@@ -1,0 +1,41 @@
+{
+    "displayName": "Raider",
+    "fluxCapacitors": 9,
+    "fluxVents": 10,
+    "hullId": "lasher_pather",
+    "hullMods": [
+        "armoredweapons",
+        "targetingunit",
+        "blast_doors"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "lasher_luddic_path_Raider",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "lightag",
+                "WS 003": "lightag"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "reaper",
+                "WS 004": "reaper"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "lightmg",
+                "WS 006": "lightmg",
+                "WS 007": "lightdualac"
+            }
+        }
+    ]
+}

@@ -1,0 +1,105 @@
+{
+    "bounds": [
+        104,
+        13,
+        104,
+        -11,
+        15,
+        -33,
+        3,
+        -50,
+        -11,
+        -47,
+        -25,
+        -52,
+        -67,
+        -10,
+        -105,
+        0,
+        -64,
+        7,
+        -41,
+        30,
+        -5,
+        32,
+        2,
+        43,
+        17,
+        38,
+        28,
+        24
+    ],
+    "builtInMods": [
+        "supercomputer",
+        "reduced_explosion"
+    ],
+    "center": [
+        120,
+        120
+    ],
+    "collisionRadius": 140,
+    "coversColor": "",
+    "height": 240,
+    "hullId": "remnant_weapon_platform1",
+    "hullName": "Remnant Weapon Platform 1",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        0,
+        0
+    ],
+    "shieldRadius": 140,
+    "spriteName": "graphics/ships/remnants/remnant_weapon_platform1.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": -15,
+            "arc": 150,
+            "id": "WS 001",
+            "locations": [
+                -23,
+                3
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "SYNERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 200,
+            "id": "WS 002",
+            "locations": [
+                26,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 0,
+            "arc": 6,
+            "id": "WS 004",
+            "locations": [
+                90,
+                0
+            ],
+            "mount": "HARDPOINT",
+            "size": "LARGE",
+            "type": "MISSILE"
+        },
+        {
+            "angle": -50,
+            "arc": 8,
+            "id": "WS 007",
+            "locations": [
+                45,
+                -26
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        }
+    ],
+    "width": 240
+}

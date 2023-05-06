@@ -1,0 +1,73 @@
+{
+	"starSystem":"magec",
+	"markets":[
+		{
+			"entities":["new_maxios"],
+			"faction":"independent",
+			"size":5,
+			"startingConditions":[
+				#"hydroponics_complex",
+				"population_5",
+				"ore_moderate",
+			],
+			"industries":[
+				"population",
+				"spaceport",
+				"mining",
+				#"lightindustry",
+				"orbitalstation",
+				"grounddefenses",
+				"commerce",
+				["orbitalworks", "corrupted_nanoforge"],
+			],
+		},
+		{
+			"entities":["kantas_den"],
+			"faction":"pirates",
+			"size":4,
+			"startingConditions":[
+				#"organized_crime",
+				#"stealth_minefields",
+				#"ore_moderate",
+				"population_4",
+			],
+			"industries":[
+				"population",
+				"spaceport",
+				#"mining",
+				"heavybatteries",
+				"battlestation",
+				"commerce",
+				"lightindustry",
+			],
+		},
+		{
+			"entities":["tibicena", "achaman_enterprise_station"],
+			"faction":"tritachyon",
+			"size":5,
+			"freePort":true,
+			"startingConditions":[
+				"population_5",
+				"tectonic_activity",
+				"no_atmosphere",
+				"high_gravity",
+				"ore_rich",
+				"rare_ore_rich",
+			],
+			"industries":[
+				"population",
+				"megaport",
+				"mining",
+				"grounddefenses",
+				"patrolhq",
+				"orbitalstation",
+				"commerce",
+			],
+		},		
+	],
+
+
+}
+
+
+

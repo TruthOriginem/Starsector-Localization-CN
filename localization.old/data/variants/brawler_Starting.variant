@@ -1,0 +1,28 @@
+{
+    "displayName": "征召",
+    "fluxCapacitors": 9,
+    "fluxVents": 10,
+    "hullId": "brawler",
+    "hullMods": ["fluxbreakers"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "brawler_Starting",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "heavymortar",
+                "WS 002": "heavymortar"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "railgun",
+                "WS 004": "railgun"
+            }
+        }
+    ]
+}

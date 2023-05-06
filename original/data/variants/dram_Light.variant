@@ -1,0 +1,26 @@
+{
+    "displayName": "Light",
+    "fluxCapacitors": 10,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "dram",
+    "hullMods": ["missile_autoloader"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "dram_Light",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {"WS 003": "harpoon"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "vulcan",
+                "WS 002": "vulcan"
+            }
+        }
+    ]
+}

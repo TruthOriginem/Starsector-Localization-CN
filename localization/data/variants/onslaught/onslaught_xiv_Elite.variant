@@ -1,0 +1,80 @@
+{
+    "displayName": "Elite",
+    "fluxCapacitors": 44,
+    "fluxVents": 50,
+    "hullId": "onslaught_xiv",
+    "hullMods": [
+        "heavyarmor",
+        "armoredweapons",
+        "targetingunit"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "onslaught_xiv_Elite",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 016": "tpc",
+                "WS 017": "tpc"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 021": "typhoon",
+                "WS 022": "typhoon",
+                "WS 023": "typhoon",
+                "WS 024": "typhoon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 019": "multineedler"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "heavyac",
+                "WS 003": "heavyac",
+                "WS 008": "lightac",
+                "WS 009": "lightac",
+                "WS 014": "heavyac",
+                "WS 015": "heavyac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 012": "hveldriver",
+                "WS 013": "hveldriver"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 018": "devastator",
+                "WS 020": "devastator"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "vulcan",
+                "WS 004": "vulcan",
+                "WS 005": "vulcan",
+                "WS 006": "vulcan",
+                "WS 007": "dualflak",
+                "WS 010": "flak",
+                "WS 011": "flak"
+            }
+        }
+    ]
+}

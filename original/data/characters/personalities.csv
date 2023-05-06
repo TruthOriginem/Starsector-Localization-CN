@@ -1,0 +1,6 @@
+id,name,desc,bravery,CAPTURE,PATROL,INTERCEPT,ASSAULT,DEFEND,STRIKE,HARASS,FIRE_SUPPORT,CARRIER_GROUP,CIVILIAN_CRAFT,STRIKE_FORCE,LIGHT_ESCORT,DESTROYER_ESCORT
+timid,Timid,"In combat, this officer will attempt to avoid direct engagements if at all possible, even if commanding a combat vessel.",5,0.5,0.5,0.1,0,1,0,0,3,3,3,1,1,1
+cautious,Cautious,"In combat, this officer will prefer to stay out of enemy range, only occasionally moving in if out-ranged by the enemy.",5,1,0.7,0.3,0.3,2,0.3,0.3,2,2,2,1,1,1
+steady,Steady,"In combat, this officer will favor a balanced approach with tactics matching the current situation.",5,1,1,1,1,1,1,1,1,1,1,1,1,1
+aggressive,Aggressive,"In combat, this officer will prefer to engage at a range that allows the use of all of their ship's weapons, will pilot civilian ships as if they were combat ships, and will employ any fighters under their command aggressively.",5,1.5,1,2,2,0.5,2,2,0.5,0.5,0.5,1,0.5,0.5
+reckless,Reckless,"In combat, this officer is aggressive to a fault, often disregarding the safety of their ship entirely in an effort to engage the enemy.",5,1.5,1,2,2,0.5,2,2,0.5,0.5,0.5,1,0.5,0.5

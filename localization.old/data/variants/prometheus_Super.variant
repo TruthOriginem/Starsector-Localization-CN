@@ -1,0 +1,35 @@
+{
+    "displayName": "超级",
+    "fluxCapacitors": 0,
+    "fluxVents": 21,
+    "goalVariant": true,
+    "hullId": "prometheus",
+    "hullMods": [
+        "turretgyros",
+        "armoredweapons"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "prometheus_Super",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "railgun",
+                "WS 004": "railgun",
+                "WS 006": "lightneedler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "lightdualmg",
+                "WS 003": "dualflak",
+                "WS 005": "lightdualmg",
+                "WS 007": "lightdualmg"
+            }
+        }
+    ]
+}

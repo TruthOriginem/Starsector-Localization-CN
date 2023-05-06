@@ -1,0 +1,297 @@
+{
+	id:"sindrian_diktat",
+	# I'm doing it, I'm making them purple! No one can stop me! -dgb
+	"color":[180,0,120,255],
+	"baseUIColor":[200,0,125,255],
+	"darkUIColor":[100,0,60,175],
+	"gridUIColor":[200,0,125,75],
+	"brightUIColor":[231,98,206,255],
+	
+	#"darkUIColor":[100,100,100,175],
+	#"gridUIColor":[120,120,120,75],
+	
+	#"color":[170,0,110,255],
+	"displayName":"辛达强权",
+	"logo":"graphics/factions/sindrian_diktat.png",
+	"crest":"graphics/factions/crest_sindrian_diktat.png",
+	"displayNameWithArticle":"辛达强权",
+	"shipNamePrefix":"SDS",
+	"shipNameSources":{
+		"DIKTAT":2,
+		"BRITISH_NAVY":1, 
+		"ROMAN":1,
+		"GREEK":1,
+		"EGYPTIAN":1,
+		"PERSIAN":1,
+		"SPACE":1,
+		"GENERAL":1,
+	},
+	"names":{
+		"old english":1,
+		"world":1,
+		"future":1,
+		"myth":1,
+	},
+	# variantOverrides restricts hulls to listed variants and adjusts their probability
+	"variantOverrides":{
+	},
+	# multiplier for how often hulls show up in the faction's fleets
+	"hullFrequency":{
+		"tags":{
+		},
+		"hulls":{
+			"buffalo2":0, # just say no
+			"apogee":0, # too civilian
+			"shrike":0, # too light
+		},
+	},
+	# ships the faction gets access to when importing S&W out-of-faction
+	"shipsWhenImporting":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp"],
+		"hulls":[
+		],
+	},
+	"knownShips":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "sindrian_diktat"],
+		"hulls":[
+			"fury",
+			"doom",
+			"harbinger",
+			"afflictor",
+			"shade",
+			"atlas",
+			"kite_original",
+			"monitor",
+			"odyssey",
+			"prometheus",
+			"conquest",
+			"gryphon",
+			"eagle",
+			"valkyrie",
+		],
+	},
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	"priorityShips":{
+		"tags":[],
+		"hulls":[
+			"drover",
+			#"heron",
+			#"odyssey",
+			#"dominator",
+			"conquest",
+		],
+	},
+	"knownFighters":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "sindrian_diktat"],
+		"fighters":[
+			"xyphos_wing",
+			"thunder_wing",
+			"claw_wing",
+			"longbow_wing",
+		],
+	},
+	"priorityFighters":{
+		"tags":[],
+		"fighters":[
+		],
+	},
+	"knownWeapons":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "missile_bp", "sindrian_diktat"],
+		"weapons":[
+			"lightneedler",
+			"railgun",
+			"dualflak",
+			"heavymauler",
+			"hveldriver",
+			"heavyneedler",
+			"gauss",
+			"mjolnir",
+			"multineedler",
+			"breachpod",
+			"sabotpod",
+			"phasecl",
+			"cyclone",
+			"hurricane",
+			"squall",
+			"locust",
+			"pdburst",
+			"amblaster",
+			"phasebeam",
+			"heavyblaster",
+			"heavyburst",
+			"ionpulser",
+			"ionbeam",
+			"plasma",
+			"guardian",
+			"tachyonlance",
+		],
+	},
+	"priorityWeapons":{
+		"tags":[],
+		"weapons":[
+		],
+	},
+	"knownHullMods":{
+		"tags":["base_bp", "sindrian_diktat"],
+		"hullMods":[
+			"advancedshieldemitter", # accelerated
+			"advancedoptics",
+			"turretgyros",
+			"armoredweapons",
+			"augmentedengines",
+			"autorepair",
+			"converted_hangar",
+			"eccm",
+			"ecm",
+			"expanded_deck_crew",
+			"magazines",
+			"missleracks",
+			"extendedshieldemitter",
+			"frontemitter",
+			"frontshield",  # makeshift
+			"hardenedshieldemitter",
+			"heavyarmor",
+			"insulatedengine",
+			"pointdefenseai",
+			"targetingunit",
+			"nav_relay",
+			"adaptiveshields", # omni
+			"operations_center",
+			"recovery_shuttles",
+			"fluxbreakers",
+			"solar_shielding",
+			"stabilizedshieldemitter",
+			"surveying_equipment",
+			"hiressensors",
+			"efficiency_overhaul",
+		],
+	},
+	"factionDoctrine":{
+		"warships":5,
+		"carriers":1,
+		"phaseShips":1,
+		
+		"officerQuality":1,
+		"shipQuality":3,
+		"numShips":3,
+		
+		"shipSize":4,
+		
+		"aggression":3,
+		
+		"combatFreighterProbability":0.1,      				# instead of some portion of the freighters in a fleet
+		"combatFreighterCombatUseFraction":0,  				# as part of the normal combat lineup
+		"combatFreighterCombatUseFractionWhenPriority":0,   # as part of normal combat lineup, when marked as priority ship
+		"autofitRandomizeProbability":0.1,
+		
+		"commanderSkillsShuffleProbability":0,
+		"commanderSkills":[
+			"coordinated_maneuvers",
+			"crew_training",
+		],
+	},
+	"illegalCommodities":[
+		"drugs",
+		"organs",
+		"hand_weapons",
+		"ai_cores",	
+	],
+	"music":{
+		"theme":"music_diktat_market_neutral",
+		"market_neutral":"music_diktat_market_neutral",
+		"market_hostile":"music_diktat_market_hostile",
+		"market_friendly":"music_diktat_market_friendly",
+		"encounter_neutral":"music_diktat_encounter_neutral",
+		"encounter_hostile":"music_diktat_encounter_hostile",
+		"encounter_friendly":"music_diktat_encounter_friendly",
+	},
+	"internalComms":"sindrian_diktat_internal",
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/portrait_diktat01.png",
+			"graphics/portraits/portrait_diktat03.png",
+			"graphics/portraits/portrait_diktat04.png",
+			"graphics/portraits/portrait_diktat07.png",
+			"graphics/portraits/portrait_mercenary01.png",
+			"graphics/portraits/portrait_mercenary03.png",
+			"graphics/portraits/portrait_mercenary04.png",
+			"graphics/portraits/portrait12.png",
+			"graphics/portraits/portrait13.png",
+			"graphics/portraits/portrait15.png",
+			"graphics/portraits/portrait23.png",
+			"graphics/portraits/portrait33.png",
+			"graphics/portraits/portrait35.png",
+			"graphics/portraits/portrait38.png",
+		],
+		"standard_female":[
+			"graphics/portraits/portrait_diktat02.png",
+			"graphics/portraits/portrait_diktat05.png",
+			"graphics/portraits/portrait_diktat06.png",
+			"graphics/portraits/portrait_diktat08.png",
+			"graphics/portraits/portrait_mercenary02.png",
+			"graphics/portraits/portrait_mercenary08.png",
+			"graphics/portraits/portrait16.png",
+			"graphics/portraits/portrait21.png",
+			"graphics/portraits/portrait22.png",
+			"graphics/portraits/portrait28.png",
+			"graphics/portraits/portrait29.png",
+			"graphics/portraits/portrait34.png",
+			"graphics/portraits/portrait37.png",
+		],
+	},
+	"voices":{
+		"LOW":{
+			"soldier":10,
+			"official":5,
+			"spacer":5,
+		},
+		"MEDIUM":{
+			"soldier":10,
+			"official":10,
+		},
+		"HIGH":{
+			"soldier":5,
+			"official":10,
+		},
+	},	
+	"custom":{
+		"offersCommissions":true,
+		"engagesInHostilities":true,
+		"buysAICores":true,
+		"AICoreValueMult":2,
+		"AICoreRepMult":1,
+		"buysSurveyData":true,
+		"hostilityImpactOnGrowth":true,
+		#"makesPirateBases":true, # testing
+		"punitiveExpeditionData":{
+			"vsCompetitors":true,
+			"vsFreePort":false,
+			"canBombard":true,
+			"territorial":true,
+		},
+	},	
+	"ranks":{
+		"ranks":{
+			"factionLeader":{"name":"辛达瑞亚之狮"},
+		},
+		"posts":{
+			"factionLeader":{"name":"辛达瑞亚之狮"},
+		},
+	},
+	"fleetTypeNames":{
+		"trade":"贸易舰队",
+		"tradeLiner":"客运舰队",
+		"smallTrader":"商队",
+		
+		"patrolSmall":"纠察队",
+		"patrolMedium":"巡逻队",
+		"patrolLarge":"特遣队",
+		
+		"inspectionFleet":"内部安防舰队",
+		"taskForce":"特别行动组",
+		
+		"foodReliefFleet":"救援舰队",
+	},
+},
+
+

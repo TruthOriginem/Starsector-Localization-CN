@@ -1,0 +1,37 @@
+{
+    "displayName": "导弹",
+    "fluxCapacitors": 10,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "facet",
+    "hullMods": [
+        "eccm",
+        "missleracks"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "facet_Missile",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 000": "resonatormrm",
+                "WS 003": "resonatormrm",
+                "WS 004": "resonatormrm"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "amsrm",
+                "WS 002": "amsrm",
+                "WS 005": "amsrm",
+                "WS 006": "amsrm",
+                "WS 007": "amsrm",
+                "WS 008": "amsrm"
+            }
+        }
+    ]
+}

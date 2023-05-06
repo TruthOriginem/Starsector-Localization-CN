@@ -1,0 +1,40 @@
+{
+    "displayName": "支援",
+    "fluxCapacitors": 5,
+    "fluxVents": 19,
+    "goalVariant": true,
+    "hullId": "scintilla",
+    "hullMods": [],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "scintilla_Support",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {"WS 006": "pilum"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 007": "heatseeker",
+                "WS 008": "heatseeker"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "lrpdlaser",
+                "WS 001": "lrpdlaser",
+                "WS 002": "pdlaser",
+                "WS 003": "pdlaser"
+            }
+        }
+    ],
+    "wings": [
+        "spark_wing",
+        "spark_wing"
+    ]
+}

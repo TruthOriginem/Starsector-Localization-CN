@@ -1,0 +1,26 @@
+{
+    "displayName": "Patrol",
+    "fluxCapacitors": 0,
+    "fluxVents": 8,
+    "hullId": "vigilance",
+    "hullMods": [
+        "fluxdistributor",
+        "missleracks",
+        "eccm"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vigilance_AP",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "heavyac"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "breachpod"}
+        }
+    ]
+}

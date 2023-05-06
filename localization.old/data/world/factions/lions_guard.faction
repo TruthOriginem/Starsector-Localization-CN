@@ -1,0 +1,226 @@
+{
+	id:"lions_guard",
+	#"color":[255,235,225,255],
+	"color":[160,0,95,255],
+	"displayName":"狮心守卫",
+	"logo":"graphics/factions/sindrian_diktat.png",
+	"displayNameWithArticle":"狮心守卫",
+	"shipNamePrefix":"LGS",
+	"showInIntelTab":false,
+	"shipNameSources":{
+		"DIKTAT":2,
+		"BRITISH_NAVY":1, 
+		"ROMAN":1,
+		"GREEK":1,
+		"EGYPTIAN":1,
+		"PERSIAN":1,
+		"SPACE":1,
+	},
+	"names":{
+		"old english":1,
+		"world":1,
+		"future":1,
+		"myth":1,
+	},
+	# variantOverrides restricts hulls to listed variants and adjusts their probability
+	"variantOverrides":{
+	},
+	
+	# multiplier for how often hulls show up in the faction's fleets
+	"hullFrequency":{
+		"tags":{
+		},
+		"hulls":{
+			"buffalo2":0, # just say no
+			"apogee":0, # too civilian.
+		},
+	},
+	# ships the faction gets access to when importing S&W out-of-faction
+	"shipsWhenImporting":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp"],
+		"hulls":[
+		],
+	},
+	"knownShips":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "sindrian_diktat", "lions_guard"],
+		"hulls":[
+			"apogee",
+			"doom",
+			"harbinger",
+			"afflictor",
+			"shade",
+			"atlas",
+			"kite_original",
+			"monitor",
+			"odyssey",
+			"prometheus",
+			"conquest",
+			"gryphon",
+			"eagle",
+			"valkyrie",
+			"manticore",
+		],
+	},
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	"priorityShips":{
+		"tags":[],
+		"hulls":[
+			"drover",
+			#"heron",
+			#"odyssey",
+			#"dominator",
+			"conquest",
+		],
+	},
+	"knownFighters":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "sindrian_diktat", "lions_guard"],
+		"fighters":[
+			"xyphos_wing",
+			"thunder_wing",
+			"claw_wing",
+			"longbow_wing",
+		],
+	},
+	"priorityFighters":{
+		"tags":[],
+		"fighters":[
+		],
+	},
+	"knownWeapons":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "missile_bp", "sindrian_diktat", "lions_guard"],
+		"weapons":[
+			"lightneedler",
+			"railgun",
+			"dualflak",
+			"heavymauler",
+			"hveldriver",
+			"heavyneedler",
+			"gauss",
+			"mjolnir",
+			"multineedler",
+			"breachpod",
+			"sabotpod",
+			"phasecl",
+			"cyclone",
+			"hurricane",
+			"squall",
+			"locust",
+			"pdburst",
+			"amblaster",
+			"phasebeam",
+			"heavyblaster",
+			"heavyburst",
+			"ionpulser",
+			"ionbeam",
+			"plasma",
+			"guardian",
+			"tachyonlance",
+		],
+	},
+	"priorityWeapons":{
+		"tags":[],
+		"weapons":[
+		],
+	},
+	"knownHullMods":{
+		"tags":["base_bp", "sindrian_diktat", "lions_guard"],
+		"hullMods":[
+			"advancedshieldemitter", # accelerated
+			"advancedoptics",
+			"turretgyros",
+			"armoredweapons",
+			"augmentedengines",
+			"autorepair",
+			"converted_hangar",
+			"eccm",
+			"ecm",
+			"expanded_deck_crew",
+			"magazines",
+			"missleracks",
+			"extendedshieldemitter",
+			"frontemitter",
+			"frontshield",  # makeshift
+			"hardenedshieldemitter",
+			"heavyarmor",
+			"insulatedengine",
+			"pointdefenseai",
+			"targetingunit",
+			"nav_relay",
+			"adaptiveshields", # omni
+			"operations_center",
+			"recovery_shuttles",
+			"fluxbreakers",
+			"solar_shielding",
+			"stabilizedshieldemitter",
+			"surveying_equipment",
+		],
+	},
+	"factionDoctrine":{
+		"warships":5,
+		"carriers":1,
+		"phaseShips":1,
+		
+		"officerQuality":5,
+		"shipQuality":5,
+		"numShips":1,
+		
+		"shipSize":4,
+		
+		"aggression":3,
+		
+		"combatFreighterProbability":0.1,      				# instead of some portion of the freighters in a fleet
+		"combatFreighterCombatUseFraction":0,  				# as part of the normal combat lineup
+		"combatFreighterCombatUseFractionWhenPriority":0,   # as part of normal combat lineup, when marked as priority ship
+		"autofitRandomizeProbability":0.1,
+		
+		"commanderSkillsShuffleProbability":0,
+		"commanderSkills":[
+			"crew_training",
+			"officer_training",
+		],
+	},
+	"illegalCommodities":[
+		"drugs",
+		"organs",
+		"hand_weapons",
+		"ai_cores",	
+	],
+	"internalComms":"sindrian_diktat_internal",
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/portrait_diktat01.png",
+			"graphics/portraits/portrait_diktat03.png",
+			"graphics/portraits/portrait_diktat04.png",
+			"graphics/portraits/portrait_diktat07.png",
+
+		],
+		"standard_female":[
+			"graphics/portraits/portrait_diktat02.png",
+			"graphics/portraits/portrait_diktat05.png",
+			"graphics/portraits/portrait_diktat06.png",
+			"graphics/portraits/portrait_diktat08.png",
+		],
+	},
+	"voices":{
+		"LOW":{
+			"soldier":10,
+			"official":5,
+			"spacer":5,
+		},
+		"MEDIUM":{
+			"soldier":10,
+			"official":10,
+		},
+		"HIGH":{
+			"soldier":5,
+			"official":10,
+			"aristo":3,
+		},
+	},
+	"fleetTypeNames":{
+		"patrolSmall":"狮心守卫侦察舰队",
+		"patrolMedium":"狮心守卫巡逻舰队",
+		"patrolLarge":"狮心守卫特遣舰队",
+	},
+
+},

@@ -1,0 +1,110 @@
+{
+    "bounds": [
+        7,
+        27,
+        21,
+        6,
+        21,
+        -19,
+        -16,
+        -21,
+        -18,
+        20
+    ],
+    "builtInMods": [
+        "automated",
+        "rugged"
+    ],
+    "center": [
+        28,
+        23
+    ],
+    "collisionRadius": 34,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 36,
+            "length": 28,
+            "location": [
+                -21,
+                15
+            ],
+            "style": "LOW_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 48,
+            "length": 32,
+            "location": [
+                -21,
+                1
+            ],
+            "style": "LOW_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 36,
+            "length": 28,
+            "location": [
+                -21,
+                -13
+            ],
+            "style": "LOW_TECH",
+            "width": 8
+        }
+    ],
+    "height": 50,
+    "hullId": "sentry",
+    "hullName": "Sentry",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        1,
+        0
+    ],
+    "shieldRadius": 36,
+    "spriteName": "graphics/ships/derelict/derelict_sentry.png",
+    "style": "LOW_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 2,
+            "arc": 10,
+            "id": "WS 001",
+            "locations": [
+                16,
+                19
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 2,
+            "arc": 10,
+            "id": "WS 002",
+            "locations": [
+                21,
+                1
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 2,
+            "arc": 10,
+            "id": "WS 003",
+            "locations": [
+                21,
+                -14
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        }
+    ],
+    "width": 52
+}

@@ -1,0 +1,49 @@
+{
+    "displayName": "打击",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "vanguard",
+    "hullMods": [
+        "armoredweapons",
+        "heavyarmor",
+        "missleracks",
+        "fluxbreakers",
+        "insulatedengine"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vanguard_Strike",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 005": "lightneedler",
+                "WS 006": "lightneedler"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 000": "reaper",
+                "WS 001": "reaper",
+                "WS 002": "reaper"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 007": "lightag"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "vulcan",
+                "WS 004": "vulcan"
+            }
+        }
+    ]
+}

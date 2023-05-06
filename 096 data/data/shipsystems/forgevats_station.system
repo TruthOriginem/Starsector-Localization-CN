@@ -1,0 +1,11 @@
+{
+	"id":"forgevats_station",
+	"type":"AMMO_RELOAD",
+	"aiType":"AMMO_RELOAD",
+	
+	"weaponTypes":[MISSILE],
+	"minFractionToReload":0.5,
+	
+	"useSound":"system_forgevats",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

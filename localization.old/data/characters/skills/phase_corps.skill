@@ -1,0 +1,26 @@
+{
+	"id":"phase_corps",
+	"governingAptitude":"technology",
+	"compressHullmods":false,
+	"scope":CUSTOM,
+	"scopeStr":"所有战斗相位舰船",
+	#"scopeStr":"all combat phase ships in fleet",
+	#"scopeStr":"all phase ships with officers, including flagship",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":0,
+			"effects":[
+				{"type":"DESCRIPTION", "script":"com.fs.starfarer.api.impl.campaign.skills.PhaseCorps$Level0"},
+			]
+		},
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.PhaseCorps$Level3"},
+				#{"type":"FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.PhaseCorps$Level4"},
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"adaptive_coils":1, "phase_anchor":1}},
+			]
+		},
+	],
+}

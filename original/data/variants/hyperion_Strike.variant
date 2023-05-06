@@ -1,0 +1,30 @@
+{
+    "displayName": "Strike",
+    "fluxCapacitors": 7,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "hyperion",
+    "hullMods": [
+        "magazines",
+        "missleracks",
+        "hardened_subsystems"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "hyperion_Strike",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "ionpulser",
+                "WS 002": "ionpulser"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "typhoon"}
+        }
+    ]
+}

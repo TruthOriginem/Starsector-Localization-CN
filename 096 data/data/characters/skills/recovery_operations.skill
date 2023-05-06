@@ -1,0 +1,41 @@
+{
+	"id":"recovery_operations",
+	"governingAptitude":"industry",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":0,
+			"effects":[
+				{"type":"DESCRIPTION", "script":"com.fs.starfarer.api.impl.campaign.skills.RecoveryOperations$Level0"},
+			]
+		},
+		{
+			"name":"Level 1",
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				#{"type":"FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.RecoveryOperations$Level1"},
+				{"type":"FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.RecoveryOperations$Level1B"},
+				#{"type":"FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.RecoveryOperations$Level2"},
+			]
+		},
+		{
+			"name":"Level 2",
+			"requiredSkillLevel":2,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.RecoveryOperations$Level2"},
+				#{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.RecoveryOperations$Level2A"},
+				#{"type":"FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.RecoveryOperations$Level2B"},
+			]
+		},
+		{
+			"name":"Level 3",
+			"requiredSkillLevel":3,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.RecoveryOperations$Level3"},
+				{"type":"FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.RecoveryOperations$Level3B"}
+			]
+		},
+	],
+}

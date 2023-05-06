@@ -1,0 +1,28 @@
+{
+	"id":"lightmg",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"SMALL",
+	"turretSprite":"graphics/weapons/mg_light_turret_base.png",
+	"turretGunSprite":"graphics/weapons/mg_light_turret_recoil.png",
+	"hardpointSprite":"graphics/weapons/mg_light_hardpoint_base.png",
+	"hardpointGunSprite":"graphics/weapons/mg_light_hardpoint_recoil.png",
+	"visualRecoil":3.0,  # the gun sprites are only used if this is non-0
+	"turretOffsets":[12, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[17, 0],
+	"hardpointAngleOffsets":[0],
+	"renderHints":[RENDER_BARREL_BELOW],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"MUZZLE_FLASH",
+	"muzzleFlashSpec":{"length":20.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":6.0,
+					   "particleSizeMin":6.0,
+					   "particleSizeRange":8.0,
+					   "particleDuration":0.15,
+					   "particleCount":7,
+					   "particleColor":[255,240,165,200]},
+	"projectileSpecId":"lightmg_shot",  # projectile that will be fired
+	#"fireSoundOne":"light_machinegun_intro",
+	"fireSoundTwo":"light_machinegun_fire",
+}

@@ -1,0 +1,37 @@
+{
+    "displayName": "战机支援",
+    "fluxCapacitors": 0,
+    "fluxVents": 16,
+    "hullId": "mule",
+    "hullMods": [
+        "converted_hangar",
+        "missleracks"
+    ],
+    "permaMods": [],
+    "variantId": "mule_Fighter_Support",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "annihilator",
+                "WS 002": "annihilator"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "annihilatorpod",
+                "WS 004": "lightac",
+                "WS 006": "lightac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 005": "vulcan"}
+        }
+    ],
+    "wings": ["broadsword_wing"]
+}

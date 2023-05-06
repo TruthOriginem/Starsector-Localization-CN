@@ -1,0 +1,85 @@
+{
+	"starSystem":"corvus",
+	"markets":[
+		{
+			"entities":["asharu"],
+			"faction":"independent",
+			"size":4,
+			"startingConditions":[
+				#"frontier",
+				#"desert",
+				#"hydroponics_complex",
+				"population_4",
+				"hot",
+				"ore_moderate",
+				"farmland_poor",
+				"ruins_scattered",
+				"habitable",
+				#"spaceport",
+			],
+			"industries":[
+				"population",
+				"farming",
+				"spaceport",
+			],
+		},
+		{
+			"entities":["jangala", "corvus_hegemony_station"],
+			"faction":"hegemony",
+			"size":6,
+			#"submarkets":["open_market", "black_market"],
+			#"tariff":0.5,
+			"startingConditions":[
+				"habitable",
+				#"urbanized_polity",
+				#"regional_capital",
+				#"orbital_station",
+				#"military_base",
+				#"orbital_burns",
+				#"luddic_majority",
+				#"organics_complex",
+				#"jungle",
+				"population_6",
+				"inimical_biosphere",
+				"organics_plentiful",
+				"farmland_adequate",
+				"extreme_weather",
+			],
+			"industries":[
+				"population",
+				"farming",
+				"spaceport",
+				"mining",
+				"heavybatteries",
+				"militarybase",
+				"starfortress_mid",
+			],
+		},
+		{
+			"entities":["corvus_IIIa", "corvus_pirate_station"], # Garnir
+			"faction":"pirates",
+			"size":3,
+			"freePort":true,
+			"startingConditions":[
+				#"volatiles_complex",
+				#"vice_demand",
+				"population_3",
+				"no_atmosphere",
+				#"volatiles_diffuse",
+				"volatiles_plentiful",
+				"cold",
+			],
+			"industries":[
+				"population",
+				"spaceport",
+				"mining",
+				"grounddefenses",
+				#"orbitalstation",
+			],
+		},
+	],
+
+}
+
+
+

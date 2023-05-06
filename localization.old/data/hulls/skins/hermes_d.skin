@@ -1,0 +1,17 @@
+{
+	"baseHullId":"hermes",
+	"skinHullId":"hermes_d",
+	"hullName":"赫耳墨斯 (D)",
+	"descriptionId":"hermes",  # optional
+	"descriptionPrefix":"这些在和平时期应该除役的受损船只如今早已随处可见。这类船通常标有\"D\"，表示\"受损\"或\"有缺陷\" ",
+	"restoreToBaseHull":true,
+	"spriteName":"graphics/ships/hermes/hermes_substandard.png",
+	"baseValueMult":.65,
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["degraded_engines"],
+	"builtInWeapons":{
+    },
+}

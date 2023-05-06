@@ -1,0 +1,28 @@
+{
+    "displayName": "打击",
+    "fluxCapacitors": 10,
+    "fluxVents": 3,
+    "hullId": "gremlin_luddic_path",
+    "hullMods": ["missleracks"],
+    "permaMods": [],
+    "quality": 0.75,
+    "variantId": "gremlin_luddic_path_Strike",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 002": "hammer",
+                "WS 003": "hammer"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "lightag",
+                "WS 001": "lightag"
+            }
+        }
+    ]
+}

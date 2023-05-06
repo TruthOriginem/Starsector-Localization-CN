@@ -1,0 +1,22 @@
+{
+	"baseHullId":"kite",
+	"skinHullId":"kite_hegemony",
+	"hullName":"风筝 (A)",
+	"ordnancePoints":32,
+	"descriptionId":"kite",  # optional
+	"descriptionPrefix":"由于该舰位列}霸主}备用舰的名单之上，因此它的系统已经升级到军用标准，并执行了严格的定期维护，以便它在紧急情况下能被投入军事使用 ",
+	"tags":["heg_aux_bp"],
+	"tech":"霸主",
+	"spriteName":"graphics/ships/aeroshuttle/aeroshuttle_hegemony.png",
+	"fleetPoints":4,
+	"baseValueMult":1.5,
+	"removeHints":[CIVILIAN],
+	"addHints":[],
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	#"removeBuiltInMods":["civgrade"], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["militarized_subsystems"],
+	"builtInWeapons":{
+    },
+}

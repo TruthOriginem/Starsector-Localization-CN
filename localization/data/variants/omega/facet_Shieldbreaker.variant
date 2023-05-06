@@ -1,0 +1,44 @@
+{
+    "displayName": "Shieldbreaker",
+    "fluxCapacitors": 0,
+    "fluxVents": 18,
+    "goalVariant": true,
+    "hullId": "facet",
+    "hullMods": [
+        "targetingunit",
+        "missleracks",
+        "eccm"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "facet_Shieldbreaker",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 000": "resonatormrm",
+                "WS 003": "resonatormrm",
+                "WS 004": "resonatormrm"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "minipulser",
+                "WS 002": "minipulser",
+                "WS 005": "minipulser",
+                "WS 008": "minipulser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 006": "shockrepeater",
+                "WS 007": "shockrepeater"
+            }
+        }
+    ]
+}

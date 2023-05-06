@@ -1,0 +1,27 @@
+{
+    "displayName": "标准",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "hullId": "remnant_weapon_platform1",
+    "hullMods": [],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "remnant_weapon_platform1_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {"WS 004": "squall"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "hil"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "gauss"}
+        }
+    ]
+}

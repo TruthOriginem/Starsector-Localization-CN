@@ -1,0 +1,141 @@
+[
+  {
+    "path": "data/campaign/abilities.csv",
+    "id_column_name": "id",
+    "text_column_names": [
+      "name",
+      "desc"
+    ]
+  },
+  {
+    "path": "data/campaign/commodities.csv",
+    "id_column_name": "id",
+    "text_column_names": [
+      "name"
+    ]
+  },
+  {
+    "path": "data/campaign/industries.csv",
+    "id_column_name": "id",
+    "text_column_names": [
+      "name",
+      "desc"
+    ]
+  },
+  {
+    "path": "data/campaign/market_conditions.csv",
+    "id_column_name": "id",
+    "text_column_names": [
+      "name",
+      "desc"
+    ]
+  },
+  {
+    "path": "data/campaign/special_items.csv",
+    "id_column_name": "id",
+    "text_column_names": [
+      "name",
+      "tech/manufacturer",
+      "desc"
+    ]
+  },
+  {
+    "path": "data/campaign/submarkets.csv",
+    "id_column_name": "id",
+    "text_column_names": [
+      "name",
+      "desc"
+    ]
+  },
+  {
+    "path": "data/campaign/rules.csv",
+    "id_column_name": "id",
+    "text_column_names": [
+      "script",
+      "text",
+      "options"
+    ]
+  },
+  {
+    "path": "data/characters/skills/aptitude_data.csv",
+    "id_column_name": "id",
+    "text_column_names": [
+      "name",
+      "description"
+    ]
+  },
+  {
+    "path": "data/characters/skills/skill_data.csv",
+    "id_column_name": "id",
+    "text_column_names": [
+      "name",
+      "description",
+      "author"
+    ]
+  },
+  {
+    "path": "data/characters/personalities.csv",
+    "id_column_name": "id",
+    "text_column_names": [
+      "name",
+      "desc"
+    ]
+  },
+  {
+    "path": "data/hullmods/hull_mods.csv",
+    "id_column_name": "id",
+    "text_column_names": [
+      "name",
+      "desc",
+      "short"
+    ]
+  },
+  {
+    "path": "data/hulls/ship_data.csv",
+    "id_column_name": "id",
+    "text_column_names": [
+      "name",
+      "designation",
+      "tech/manufacturer"
+    ]
+  },
+  {
+    "path": "data/hulls/wing_data.csv",
+    "id_column_name": "id",
+    "text_column_names": [
+      "role desc"
+    ]
+  },
+  {
+    "path": "data/shipsystems/ship_systems.csv",
+    "id_column_name": "id",
+    "text_column_names": [
+      "name"
+    ]
+  },
+  {
+    "path": "data/strings/descriptions.csv",
+    "id_column_name": ["id", "type"],
+    "text_column_names": [
+      "text1",
+      "text2",
+      "text3"
+    ]
+  },
+  {
+    "path": "data/weapons/weapon_data.csv",
+    "id_column_name": "id",
+    "text_column_names": [
+      "name",
+      "tech/manufacturer",
+      "primaryRoleStr",
+      "speedStr",
+      "trackingStr",
+      "turnRateStr",
+      "accuracyStr",
+      "customPrimary",
+      "customAncillary",
+      "customAncillaryHL"
+    ]
+  }
+]

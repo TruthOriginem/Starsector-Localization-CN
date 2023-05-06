@@ -1,0 +1,25 @@
+{
+	"id":"phase_mastery",
+	"governingAptitude":"combat",
+	"compressHullmods":false,
+	"elite":true,
+	"permanent":true,
+	"scope":"PILOTED_SHIP",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.PhaseMastery$Level2"},
+			]
+		},
+		{
+			"name":"精英",
+			"requiredSkillLevel":2,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.PhaseMastery$Level3"},
+			]
+		},
+	],
+}

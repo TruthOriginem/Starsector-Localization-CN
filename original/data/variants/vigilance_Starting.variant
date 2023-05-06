@@ -1,0 +1,25 @@
+{
+    "displayName": "Custom",
+    "fluxCapacitors": 7,
+    "fluxVents": 10,
+    "hullId": "vigilance",
+    "hullMods": [
+        "blast_doors",
+        "fluxdistributor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vigilance_Starting",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "pulselaser"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "harpoonpod"}
+        }
+    ]
+}

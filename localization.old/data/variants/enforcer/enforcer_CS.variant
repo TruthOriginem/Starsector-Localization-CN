@@ -1,0 +1,49 @@
+{
+    "displayName": "密接支援",
+    "fluxCapacitors": 10,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "enforcer",
+    "hullMods": [
+        "missleracks",
+        "auxiliarythrusters"
+    ],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "enforcer_CS",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 007": "harpoon",
+                "WS 008": "harpoon"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 006": "heatseeker",
+                "WS 009": "heatseeker"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "arbalest",
+                "WS 003": "arbalest",
+                "WS 005": "arbalest"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "flak",
+                "WS 004": "flak"
+            }
+        }
+    ]
+}

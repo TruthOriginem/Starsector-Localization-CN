@@ -1,0 +1,26 @@
+{
+	"baseHullId":"buffalo",
+	"skinHullId":"buffalo_tritachyon",
+	"hullName":"Buffalo (TT)",
+	"descriptionId":"buffalo",  # optional
+	"descriptionPrefix":"This ship has been given Tri-Tachyon markings. Systems modifications are otherwise superficial.",
+	"tags":["rare_bp"],
+	"tech":"Tri-Tachyon",
+	"fleetPoints":5,
+	"spriteName":"graphics/ships/buffalo/buffalo_tritachyon.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":[],
+	"builtInWeapons":{
+    },
+    "engineSlotChanges":{
+		"0":{"style":"HIGH_TECH"},
+		"1":{"style":"HIGH_TECH"},
+		"2":{"style":"HIGH_TECH"},
+		"3":{"style":"HIGH_TECH"},
+		"4":{"style":"HIGH_TECH"},
+		"5":{"style":"HIGH_TECH"},
+	},
+}

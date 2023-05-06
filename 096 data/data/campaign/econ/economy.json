@@ -1,0 +1,35 @@
+{
+	"version":2.0,
+	
+	# each step is 3 game days
+	"initialStepsToRun":20,
+	
+	"maxExoticUtilityAtRange":14000,
+	"defaultTariff":0.3,
+	
+	"starSystems":[
+		"askonia.json",
+		"aztlan.json",
+		"samarra.json",
+		"corvus.json",
+		"valhalla.json",
+		"arcadia.json",
+		"magec.json",
+		"eos.json",
+		"hybrasil.json",
+		"yma.json",
+		"tyle.json",
+		"naraka.json",
+		"canaan.json",
+		"mayasura.json",
+		"westernesse.json",
+		"zagan.json",
+		"thule.json",
+		"algebbar.json",
+		"kumarikandam.json",
+		"isirah.json",
+	],
+	
+	"map":"../starmap.json",
+
+}

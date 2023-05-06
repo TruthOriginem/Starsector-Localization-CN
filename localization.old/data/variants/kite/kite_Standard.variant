@@ -1,0 +1,28 @@
+{
+    "displayName": "标准",
+    "fluxCapacitors": 5,
+    "fluxVents": 6,
+    "goalVariant": true,
+    "hullId": "kite",
+    "hullMods": [],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "kite_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {"WS 001": "harpoon"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "heatseeker"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "lightdualac"}
+        }
+    ]
+}

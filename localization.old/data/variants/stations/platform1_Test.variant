@@ -1,0 +1,26 @@
+{
+    "displayName": "测试",
+    "fluxCapacitors": 0,
+    "fluxVents": 8,
+    "hullId": "platform1",
+    "hullMods": [],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "platform1_Test",
+    "goalVariant": true,
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "heavyac",
+                "WS 003": "heavyac"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "mjolnir"}
+        }
+    ]
+}

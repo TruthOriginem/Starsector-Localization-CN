@@ -1,0 +1,46 @@
+{
+	"id":"sabot_warhead",
+	"specClass":"missile",	
+	"missileType":"NO_AI",
+	#"missileType":"ROCKET",
+	"sprite":"graphics/missiles/missile_sabot_warhead.png",
+	"glowColor":[255,200,100,40],
+	"glowRadius":30,
+	"size":[7,14],	
+	"center":[3.5,7],
+	"collisionRadius":12,
+	"collisionClass":"PROJECTILE_FIGHTER",
+	"collisionClassAfterFlameout":"PROJECTILE_FIGHTER",
+	"explosionColor":[235,255,215,195],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":75, # purely visual
+	"maxFlightTime":1,
+	"engineSpec":{"turnAcc":240,
+				  "turnRate":240,
+				  "maxSpeed":270,
+				  "acc":0,
+				  "dec":0},
+#	"engineSlots":[{"id":"ES1",
+#					"loc":[-7, 0],
+#					"style":"CUSTOM",
+#					"styleSpec":{
+#						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+#						"engineColor":[255,255,255,0],
+#						"contrailDuration":1,
+#						"contrailWidthMult":1,
+#						"contrailWidthAddedFractionAtEnd":0,  # can be negative. makes trail spread out/narrow at the end
+#						"contrailMinSeg":15, # min segment length, in pixels
+#						"contrailMaxSpeedMult":0,
+#						"contrailAngularVelocityMult":0,
+#						"contrailColor":[255,255,255,255],
+#						"type":"SMOKE" # GLOW or SMOKE; additive or regular blend mode
+#					},
+#				    "width":2.0,
+#				    "length":0.0,
+#				    "angle":180.0}]
+	#"engineSlots":[{"id":"ES1",
+	#				"loc":[-7, 0],
+	#			    "style":"MISSILE_MIDLINE",
+	#			    "width":4.0,
+	#			    "length":20.0,
+	#			    "angle":180.0}]					
+}

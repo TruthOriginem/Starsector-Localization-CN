@@ -1,0 +1,83 @@
+{
+    "displayName": "标准",
+    "fluxCapacitors": 28,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "onslaught",
+    "hullMods": [
+        "insulatedengine",
+        "armoredweapons",
+        "dedicated_targeting_core",
+        "auxiliarythrusters",
+        "fluxdistributor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "onslaught_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 016": "tpc",
+                "WS 017": "tpc"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 021": "annihilatorpod",
+                "WS 022": "annihilatorpod",
+                "WS 023": "annihilatorpod",
+                "WS 024": "annihilatorpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 019": "mark9"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "lightac",
+                "WS 009": "lightac",
+                "WS 014": "heavyac",
+                "WS 015": "heavyac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 012": "hveldriver",
+                "WS 013": "hveldriver"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 018": "devastator",
+                "WS 020": "devastator"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "flak",
+                "WS 002": "vulcan",
+                "WS 003": "flak",
+                "WS 004": "vulcan",
+                "WS 005": "vulcan",
+                "WS 006": "vulcan",
+                "WS 007": "dualflak",
+                "WS 010": "flak",
+                "WS 011": "flak"
+            }
+        }
+    ]
+}

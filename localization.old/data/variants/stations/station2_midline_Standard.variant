@@ -1,0 +1,41 @@
+{
+	"displayName": "作战基地",
+	"fluxCapacitors": 0,
+	"fluxVents": 0,
+	"hullId": "station2_midline",
+	"hullMods": [],
+	"quality": 0.5,
+	"variantId": "station2_midline_Standard",
+	"weaponGroups": [],
+	"modules": [
+		# decor add-ons
+		{"WS 007": "module_decor_midline1_Standard"},
+		{"WS 009": "module_decor_midline1_Standard"},
+		
+		# armour spurs
+		{"WS 003": "module_blocker2b_Standard"},
+		{"WS 004": "module_blocker2b_Standard"},
+		{"WS 005": "module_blocker2b_Standard"},
+		{"WS 006": "module_blocker2b_Standard"},
+		
+		# gun batteries
+		#{"WS 000": "module_midline_citadel_Standard"},
+		#{"WS 001": "module_midline_citadel_Standard"},
+		{"WS 011": "module_midline_broadside_Standard"},
+		
+		# hangar
+		{"WS 002": "module_midline_support_Standard"},
+		
+		# left and right bastions
+		{"WS 008": "module_midline_bastion_Standard1"},
+		{"WS 010": "module_midline_bastion_Standard2"},
+		
+		# under decor, MAYBE use.
+		# yeah, maybe not. Do something else with these!
+		#{"WS 011": "module_decor_under2_Standard"},
+		#{"WS 012": "module_decor_under2_Standard"},
+		#{"WS 013": "module_decor_under2_Standard"},
+		#{"WS 014": "module_decor_under2_Standard"},
+		
+	],
+}

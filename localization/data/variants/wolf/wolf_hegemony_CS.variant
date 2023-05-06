@@ -1,0 +1,37 @@
+{
+    "displayName": "Close Support",
+    "fluxCapacitors": 7,
+    "fluxVents": 6,
+    "hullId": "wolf_hegemony",
+    "hullMods": [
+        "missleracks",
+        "advancedoptics"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "wolf_hegemony_CS",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "gravitonbeam"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 005": "harpoon",
+                "WS 006": "harpoon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "taclaser",
+                "WS 002": "taclaser",
+                "WS 003": "taclaser"
+            }
+        }
+    ]
+}

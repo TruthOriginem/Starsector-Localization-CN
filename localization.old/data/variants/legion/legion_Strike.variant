@@ -1,0 +1,54 @@
+{
+    "displayName": "打击",
+    "fluxCapacitors": 0,
+    "fluxVents": 15,
+    "goalVariant": true,
+    "hullId": "legion",
+    "hullMods": [
+        "heavyarmor",
+        "missleracks",
+        "dedicated_targeting_core"
+    ],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "legion_Strike",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 002": "sabotpod",
+                "WS 003": "sabotpod",
+                "WS 004": "sabotpod",
+                "WS 005": "sabotpod",
+                "WS 007": "sabotpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "mark9",
+                "WS 001": "mark9"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "vulcan",
+                "WS 009": "vulcan",
+                "WS 018": "vulcan",
+                "WS 019": "vulcan",
+                "WS 020": "vulcan",
+                "WS 021": "vulcan"
+            }
+        }
+    ],
+    "wings": [
+        "piranha_wing",
+        "piranha_wing",
+        "piranha_wing",
+        "piranha_wing"
+    ]
+}

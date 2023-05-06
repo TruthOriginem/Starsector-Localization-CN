@@ -1,0 +1,57 @@
+name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaidDanger,icon,sound id,sound id drop,plugin,plugin params,desc,order
+基础船体插件,modspec,modspec,,,1,1000,1,,graphics/icons/cargo/modspec2.png,ui_chip_pickup,ui_modspec_drop,com.fs.starfarer.api.campaign.impl.items.ModSpecItemPlugin,,一组说明，实例与指导方针，使用户能够将此修改适配并应用于各种船体中。,50
+,,,,,,,,,,,,,,,
+# industry-slotted items,,,,,,,,,,,,,,,
+受损的纳米锻炉,corrupted_nanoforge,"nanoforge, pather4",人之领管制科技,,50000,1000,1,HIGH,graphics/icons/cargo/nanoforge_corrupted.png,ui_cargo_special_industrial_pickup,ui_cargo_special_industrial_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,"heavyindustry, orbitalworks","全能而高效的制造设施，同时也是一个内部原理不明的 ""黑箱"" 装置。只需在足够的原材料与人力的帮助下，它就足以成为无可匹敌的工业巨兽。
+
+这台纳米锻炉当前状态不佳，无法可靠地生产无缺陷的零部件。但对于制造星际飞船来说，能够使用纳米锻炉就是一个巨大的进步。",139
+全新的纳米锻炉,pristine_nanoforge,"nanoforge, hist3t, pather4",人之领管制科技,,250000,1000,1,EXTREME,graphics/icons/cargo/nanoforge_pristine.png,ui_cargo_special_industrial_pickup,ui_cargo_special_industrial_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,"heavyindustry, orbitalworks","全能而高效的制造设施，同时也是一个内部原理不明的 ""黑箱"" 装置。只需在足够的原材料与人力的帮助下，它就足以成为无可匹敌的工业巨兽。
+
+从主控板提供的诊断结果来看，这台锻炉几乎完好如初。鉴于当前星域的整体制造水平，在实际生产中获得毫无缺陷的星舰组件仍是一种挑战。但没有什么能比获得这样的一台纳米锻炉更能提高生产质量了。",139.1
+同步加速器核心,synchrotron,"hist3t, pather4",人之领管制科技,,250000,1000,1,EXTREME,graphics/icons/cargo/synchrotron_core.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,fuelprod,特化型纳米锻炉。其预载的固件和基本纳米技术群将其自身构建成一个同步加速器，用于开展工业规模的反物质生产。,139.2
+轨道聚变射灯,orbital_fusion_lamp,"hist3t, pather4",轨道工厂制造公司,,150000,1000,1,EXTREME,graphics/icons/cargo/fusion_lamp.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,population,"一座输出可控的微型化聚变反应堆，能够为一整颗星球带来光和热。
+
+因该射灯需消耗大量的挥发物来确保其能安全运转，一旦供给不足，则可能使该设备失稳，进而让失控的能量输出激增。直到 大崩塌 发生时，人之领 的法庭里，关于该设备到底是存在设计缺陷还是使用不当的诉讼仍未终止。",135
+超分流阀门,coronal_portal,"hist3t, pather8",人之领管制科技,,300000,1000,1,EXTREME,graphics/icons/cargo/hypershunt_tap.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,population,"能与附近星冕分流器相连的微型虫洞连接器，可给殖民地提供近乎无限的能源
+
+装置的运作需要工业规模的稀有金属供应来维持。这些稀有金属首先被用来打开虫洞，并在虫洞的产能可以自维持后继续用于稳定虫洞。这些稀有金属在这期间会经历极其复杂的烧蚀过程最终被损耗掉。如果稀有金属供应不足，分流器就必须完全关闭。",137
+全自动地幔钻机,mantle_bore,"hist3t, pather4",天苑四-乌托邦地貌改造集团,,80000,1000,1,EXTREME,graphics/icons/cargo/terraforming_bore.png,ui_cargo_special_industrial_pickup,ui_cargo_special_industrial_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,mining,虽然星区中应该已经没有还能正常运作的钻机控制单元了，但这种钻机可以托管独立运作 —— 尽管有时会没法预见它要往哪儿钻。自动模式的保险装置使这台钻机无法在宜居星球上运行。,140
+催化核心,catalytic_core,"hist3t, pather4",Ko 联合实业,,100000,1000,1,EXTREME,graphics/icons/cargo/catalytic_core.png,ui_cargo_special_industrial_pickup,ui_cargo_special_industrial_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,refining,通过应用几个渗透物理学上的古怪技术，这颗催化核心能极大地提高冶炼作业的效率。然而，这种技术操作对于真空环境的需求极为苛刻，而在有大气的行星上几乎不可能达到这样的条件。,145
+土壤纳米物质,soil_nanites,"hist3t, pather4",天苑四-乌托邦地貌改造集团,,60000,1000,1,EXTREME,graphics/icons/cargo/soil_nanites.png,ui_cargo_special_biotech_pickup,ui_cargo_special_tech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,farming,可将土壤增肥并使水土恢复速度提高至自然过程远无法达到的程度。[人之领纳米物质安全规定] 第 4324 条 第 81 款规定，纳米物质不得在有稀有矿石矿床或挥发物储量的星球上使用，而它内置的安全保险看上去并未失效。,150
+生物化工厂胚胎,biofactory_embryo,"hist3t, pather4",艾克索达因生物科技,,120000,1000,1,EXTREME,graphics/icons/cargo/biofactory_embryo.png,ui_cargo_special_biotech_pickup,ui_cargo_special_bio_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,lightindustry,能使形形色色的日用品经由培育获得，而非用流水线制造。只有在宜居星球提供的适当光照、土壤和大气环境中，生物工厂内部的幼体才能蓬勃生长。在人造环境中模拟这种条件的情况无一成功，均以工厂状况恶化告终，而这或许是编码在胚胎基因里的保险所导致的。,155
+富勒烯线轴,fullerene_spool,"hist3t, pather4",轨道工厂制造公司,,150000,1000,1,EXTREME,graphics/icons/cargo/fullerene_spool.png,ui_cargo_special_biotech_pickup,ui_cargo_special_tech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,"spaceport, megaport",一种极为坚固的碳纳米网线缆，是太空梯的关键建材。能大幅提高行星地表和低轨道之间的物流效率。,160
+等离子发电机,plasma_dynamo,"hist3t, pather4",轨道工厂制造公司,,100000,1000,1,EXTREME,graphics/icons/cargo/plasma_dynamo.png,ui_cargo_special_biotech_pickup,ui_cargo_special_tech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,mining,这个带有超导体轮的等离子发电机，是一种特殊工业系统的核心组件，它不仅能在整颗星球上生成庞大的等离子网络，还能利用其特性对气态巨行星中所蕴藏的挥发物进行高效率、大规模的开采。,165
+低温运算引擎,cryoarithmetic_engine,"hist3t, pather4",人之领管制科技,,200000,1000,1,EXTREME,graphics/icons/cargo/cryoarithmetic_engine.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,"patrolhq, militarybase, highcommand","一台违背热力学第二定律的量子计算机。该计算机进行运算时非但不产生热量，反而还吸收热量。
+
+需由热管和散热片组成的行星规模级吸热网络，来源源不断地向它供应热量，才能满足它进行巨量计算时所需的能源。行星表面越热，该运算引擎的效率也就越高。这种无与伦比的算力能够极大提高后勤与战略方面的规划能力。",170
+无人战舰复制器,drone_replicator,"hist3t, pather4",Ko 联合实业,,60000,1000,1,EXTREME,graphics/icons/cargo/combat_drone_replicator.png,ui_cargo_special_military_pickup,ui_cargo_special_military_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,"grounddefenses, heavybatteries","能大量制造各种型号的无人舰，非常适合抵抗劫掠和入侵，也对行星防御和安保有着极大的帮助。
+
+这种复制器早在 大崩塌 之前，就已被 人之领 禁止了很长时间。因此能在 英仙座星域 找到一台状态良好的复制器，是非常令人惊讶的。",175
+全息交易撮合套件,dealmaker_holosuite,"hist3t, pather4",姆巴耶-果戈尔,,120000,1000,1,EXTREME,graphics/icons/cargo/holosuite.png,ui_cargo_special_biotech_pickup,ui_cargo_special_tech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,commerce,"这款全息套组能生成一个交互式环境，用来模拟和潜在商业伙伴进行谈判时的场景。此外，这款高端 VR 设备内置了自适应型智能微感情传感器，可提供实时的表情分析数据，从而用一种从技术层面来讲还算道德的行为，为设施运营者带来商业方面的优势。
+
+该套件内置的广告经常强调本设备并不是 AI，只是一种极其复杂的加权网络，并且绝对没有违反任何 人之领 的相关规定。",180
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# blueprints,,,,,,,,,,,,,,,
+主宰纪元蓝图包,low_tech_package,package_bp,,,20000,1000,1,,graphics/icons/cargo/blueprint_lowtech.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,lowtech_bp,使重工业设施能够制造 主宰纪元 设计中的常规船体，武器以及战机 LPC。,200
+核心纪元蓝图包,midline_package,package_bp,,,25000,1000,1,,graphics/icons/cargo/blueprint_midline.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,midline_bp,使重工业设施能够制造 核心纪元 设计中的常规船体，武器以及战机 LPC。,210
+扩展纪元蓝图包,high_tech_package,package_bp,,,30000,1000,1,,graphics/icons/cargo/blueprint_hightech.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,hightech_bp,使重工业设施能够制造 扩展纪元 设计中的常规船体，武器以及战机 LPC。,220
+导弹蓝图包,missile_package,package_bp,,,20000,1000,1,,graphics/icons/cargo/blueprint_missile.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,missile_bp,使重工业设施能制造出一系列的常规导弹武器。,230
+海盗蓝图包,pirate_package,package_bp,,,15000,1000,1,,graphics/icons/cargo/blueprint_basic.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,pirate_bp,一些由非法改装结果、二手改造方案与蓝图残片恢复产物所组成的大杂烩。使重工业设施能够制造出这些质量低劣但颇具威胁的船体，它们通常都被海盗与其他不法之徒采用。,240
+卢德左径蓝图包,LP_package,package_bp,,,18000,1000,1,,graphics/icons/cargo/blueprint_basic.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,LP_bp,使重工业设施能够制造出这些经蓝图黑客非法改装后的 卢德左径 船体。,250
+卢德教会蓝图包,LC_package,package_bp,,,15000,1000,1,,graphics/icons/cargo/blueprint_basic.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,LC_bp,使重工业设施能够制造出这些涂装有 卢德教会 标志的蓝图。由于这些修改均以装饰性为主，所以船体生产与其他设计基本都保持原样。,260
+第十四战斗群蓝图包,XIV_package,"package_bp, no_drop",,,1000000,1000,1,,graphics/icons/cargo/blueprint_basic.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,XIV_bp,一整套使重工业设施能够制造出充满传奇色彩的 第十四战斗群 战舰的蓝图。而关于这些蓝图是依旧存在以及隐藏何处仍是当前酒吧内的热议话题。,270
+霸主军事配件蓝图包,heg_aux_package,package_bp,,,20000,1000,1,,graphics/icons/cargo/blueprint_basic.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,heg_aux_bp,一整套将民用舰船升级至军用标准或仅涂装有 霸主 标志的蓝图。由于是在 大崩塌 不久后为了改善舰队性能而创造的，因此合理的设计规范才杜绝了因后期蓝图黑客非法改装而形成的 D 插件。,280
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+基础舰船蓝图,ship_bp,single_bp,,,10000,1000,1,,graphics/icons/cargo/blueprint_shiphull.png,ui_chip_pickup,ui_ship_bp_drop,com.fs.starfarer.api.campaign.impl.items.ShipBlueprintItemPlugin,,使重工业设施能够制造出该蓝图所描述的船体。,300
+基础武器蓝图,weapon_bp,single_bp,,,2000,1000,1,,graphics/icons/cargo/blueprint_weapons.png,ui_chip_pickup,ui_weapon_bp_drop,com.fs.starfarer.api.campaign.impl.items.WeaponBlueprintItemPlugin,,使重工业设施能够制造出该蓝图所描述的武器。,310
+基础战机蓝图,fighter_bp,single_bp,,,3000,1000,1,,graphics/icons/cargo/blueprint_fighter.png,ui_chip_pickup,ui_fighter_bp_drop,com.fs.starfarer.api.campaign.impl.items.FighterBlueprintItemPlugin,,使重工业设施能够制造出该蓝图所描述的战机 LPC。,320
+,,,,,,,,,,,,,,,
+基础工业蓝图,industry_bp,,,,20000,1000,1,,graphics/icons/cargo/blueprint_industry.png,ui_chip_pickup,ui_industry_bp_drop,com.fs.starfarer.api.campaign.impl.items.IndustryBlueprintItemPlugin,,包含了构建行星工业设施或其他建筑所需的技术规范。,400
+,,,,,,,,,,,,,,,
+# other items,,,,,,,,,,,,,,,
+"""双面神""装置",janus,mission_item,,,100000,1000,1,,graphics/icons/cargo/janus_device.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.JanusDevicePlugin,,"这是 Elissa Zal 基于 Scylla Coureuse 等人发展的理论而创建的第一代 ""双面神"" 装置。
+
+与超空间驱动器整合之后，这个装置能根据出发星门和目标星门独特的共振信号特征，向星门环传输调制过的超波脉冲。随后消耗大量燃料产生巨大的能量，在两个星门之间建立一条临时连接，使整个舰队能运用星门网络进行移动。",0

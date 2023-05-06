@@ -1,0 +1,26 @@
+{
+	"displayName": "Orbital Station",
+	"fluxCapacitors": 0,
+	"fluxVents": 0,
+	"hullId": "station1_midline",
+	"hullMods": [],
+	"quality": 0.5,
+	"variantId": "station1_midline_Standard",
+	"weaponGroups": [],
+	"modules": [
+	
+		# armour spurs
+		{"WS 003": "module_blocker2b_Standard"},
+		{"WS 004": "module_blocker2b_Standard"},
+		{"WS 005": "module_blocker2b_Standard"},
+		{"WS 006": "module_blocker2b_Standard"},
+		
+		# gun batteries
+		#{"WS 000": "module_midline_citadel_Standard"},
+		#{"WS 001": "module_midline_citadel_Standard"},
+		{"WS 007": "module_midline_broadside_Standard"},
+		
+		# hangar
+		{"WS 002": "module_midline_support_Standard"},
+	],
+}

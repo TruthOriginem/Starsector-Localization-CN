@@ -1,0 +1,43 @@
+{
+    "displayName": "Strike",
+    "fluxCapacitors": 14,
+    "fluxVents": 20,
+    "hullId": "enforcer_d",
+    "hullMods": [
+        "heavyarmor",
+        "fluxdistributor",
+        "fluxcoil"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "enforcer_d_Strike",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 006": "hammer",
+                "WS 007": "hammer",
+                "WS 008": "hammer",
+                "WS 009": "hammer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "shredder",
+                "WS 003": "heavymortar",
+                "WS 005": "shredder"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "flak",
+                "WS 004": "flak"
+            }
+        }
+    ]
+}

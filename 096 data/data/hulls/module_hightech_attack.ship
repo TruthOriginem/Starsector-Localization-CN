@@ -1,0 +1,202 @@
+{
+    "bounds": [
+        -39,
+        137,
+        -39,
+        -137,
+        33,
+        -129,
+        79,
+        -44,
+        79,
+        46,
+        32,
+        130
+    ],
+    "builtInMods": [
+        "supercomputer",
+        "reduced_explosion",
+        "missile_reload"
+    ],
+    "center": [
+        166,
+        67
+    ],
+    "collisionRadius": 180,
+    "coversColor": "",
+    "height": 160,
+    "hullId": "module_hightech_attack",
+    "hullName": "Attack Module",
+    "hullSize": "FRIGATE",
+    "moduleAnchor": [
+        -76,
+        1
+    ],
+    "shieldCenter": [
+        -12,
+        1
+    ],
+    "shieldRadius": 180,
+    "spriteName": "graphics/ships/stations/module_hightech_attack.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 30,
+            "arc": 160,
+            "id": "WS 000",
+            "locations": [
+                40,
+                67
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 160,
+            "id": "WS 001",
+            "locations": [
+                53,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -30,
+            "arc": 160,
+            "id": "WS 002",
+            "locations": [
+                40,
+                -67
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 40,
+            "arc": 140,
+            "id": "WS 003",
+            "locations": [
+                -3,
+                125
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "SYNERGY"
+        },
+        {
+            "angle": 40,
+            "arc": 120,
+            "id": "WS 004",
+            "locations": [
+                19,
+                98
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "SYNERGY"
+        },
+        {
+            "angle": -40,
+            "arc": 120,
+            "id": "WS 005",
+            "locations": [
+                19,
+                -98
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "SYNERGY"
+        },
+        {
+            "angle": -40,
+            "arc": 140,
+            "id": "WS 006",
+            "locations": [
+                -3,
+                -125
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "SYNERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 4,
+            "id": "WS 007",
+            "locations": [
+                31,
+                121
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 30,
+            "arc": 150,
+            "id": "WS 008",
+            "locations": [
+                44,
+                98
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 25,
+            "arc": 150,
+            "id": "WS 009",
+            "locations": [
+                74,
+                42
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -25,
+            "arc": 150,
+            "id": "WS 010",
+            "locations": [
+                74,
+                -42
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -30,
+            "arc": 150,
+            "id": "WS 011",
+            "locations": [
+                44,
+                -95
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 4,
+            "id": "WS 012",
+            "locations": [
+                31,
+                -121
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        }
+    ],
+    "width": 330
+}

@@ -1,0 +1,17 @@
+{
+	"id":"recalldevice",
+	"type":"STAT_MOD",
+	"aiType":"RECALL_DEVICE",
+	
+	"statsScript":"com.fs.starfarer.api.impl.combat.RecallDeviceStats",
+	
+	"useSound":"system_recall_device",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+	}
+}
+
+
+
+

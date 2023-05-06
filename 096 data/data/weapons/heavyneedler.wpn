@@ -1,0 +1,30 @@
+{
+	"id":"heavyneedler",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/weapons/flechette_heavy_turret_base.png",
+	"turretGunSprite":"graphics/weapons/flechette_heavy_turret_recoil.png",
+	"hardpointSprite":"graphics/weapons/flechette_heavy_hardpoint_base.png",
+	"hardpointGunSprite":"graphics/weapons/flechette_heavy_hardpoint_recoil.png",	
+	"visualRecoil":3.0,  # the gun sprites are only used if this is non-0
+	"renderHints":["RENDER_BARREL_BELOW"],
+	"turretOffsets":[17, -3, 17, 3],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[24, -3, 24, 3],
+	"hardpointAngleOffsets":[0],
+	"specialWeaponGlowWidth":10,
+	"specialWeaponGlowHeight":30,
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	#"separateRecoilForLinkedBarrels":true,
+	"animationType":"MUZZLE_FLASH",
+	"muzzleFlashSpec":{"length":30.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":0.0,
+					   "particleSizeMin":7.0,
+					   "particleSizeRange":7.0,
+					   "particleDuration":0.2,
+					   "particleCount":12,
+					   "particleColor":[255,255,255,175]},
+	"projectileSpecId":"heavyneedler_shot",  # projectile that will be fired
+	"fireSoundTwo":"needler_fire",
+}

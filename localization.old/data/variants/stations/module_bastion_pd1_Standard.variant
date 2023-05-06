@@ -1,0 +1,24 @@
+{
+    "displayName": "标准",
+    "fluxCapacitors": 0,
+    "fluxVents": 2,
+    "hullId": "module_bastion_pd1",
+    "hullMods": ["turretgyros"],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "module_bastion_pd1_Standard",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {
+            "WS 000": "vulcan",
+            "WS 001": "flak",
+            "WS 002": "flak",
+            "WS 003": "vulcan",
+            "WS 004": "vulcan",
+            "WS 005": "vulcan",
+            "WS 006": "vulcan",
+            "WS 007": "vulcan"
+        }
+    }]
+}

@@ -1,0 +1,26 @@
+{
+    "displayName": "Defense",
+    "fluxCapacitors": 7,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "shard_left",
+    "hullMods": ["fluxdistributor"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "shard_left_Defense",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 000": "riftbeam"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "shockrepeater",
+                "WS 002": "shockrepeater"
+            }
+        }
+    ]
+}

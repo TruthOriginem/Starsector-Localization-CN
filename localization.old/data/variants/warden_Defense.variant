@@ -1,0 +1,23 @@
+{
+    "displayName": "防御",
+    "fluxCapacitors": 8,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "warden",
+    "hullMods": [],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "warden_Defense",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "shredder"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "lightag"}
+        }
+    ]
+}

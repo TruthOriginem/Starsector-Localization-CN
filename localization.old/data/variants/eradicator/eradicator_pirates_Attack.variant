@@ -1,0 +1,59 @@
+{
+    "displayName": "进攻",
+    "fluxCapacitors": 0,
+    "fluxVents": 18,
+    "goalVariant": true,
+    "hullId": "eradicator_pirates",
+    "hullMods": [
+        "dedicated_targeting_core",
+        "missleracks",
+        "armoredweapons",
+        "unstable_injector"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "eradicator_pirates_Attack",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 005": "heavymortar"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 000": "annihilator",
+                "WS 001": "annihilator",
+                "WS 002": "annihilator",
+                "WS 003": "annihilator",
+                "WS 004": "annihilator"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 006": "arbalest"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 010": "lightdualac",
+                "WS 011": "lightag"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "flak",
+                "WS 008": "vulcan",
+                "WS 009": "vulcan",
+                "WS 012": "vulcan",
+                "WS 013": "vulcan",
+                "WS 014": "vulcan"
+            }
+        }
+    ]
+}

@@ -1,0 +1,136 @@
+{
+    "bounds": [
+        23,
+        42,
+        31,
+        23,
+        45,
+        11,
+        25,
+        10,
+        23,
+        -9,
+        43,
+        -11,
+        35,
+        -19,
+        34,
+        -38,
+        10,
+        -45,
+        3,
+        -29,
+        -11,
+        -36,
+        -19,
+        -16,
+        -24,
+        -1,
+        -22,
+        19,
+        -13,
+        23,
+        -11,
+        43,
+        1,
+        36,
+        6,
+        49
+    ],
+    "builtInMods": [
+        "high_maintenance",
+        "delicate"
+    ],
+    "center": [
+        54,
+        34
+    ],
+    "collisionRadius": 80,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -25,
+                16
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -28,
+                0
+            ],
+            "style": "HIGH_TECH",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -25,
+                -15
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        }
+    ],
+    "height": 90,
+    "hullId": "hyperion",
+    "hullName": "Hyperion",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        10,
+        0
+    ],
+    "shieldRadius": 65,
+    "spriteName": "graphics/ships/hyperion/hyperion2.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 001",
+            "locations": [
+                21,
+                31
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 002",
+            "locations": [
+                26,
+                -29
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 003",
+            "locations": [
+                15,
+                0
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "UNIVERSAL"
+        }
+    ],
+    "width": 108
+}

@@ -1,0 +1,25 @@
+{
+    "displayName": "突击",
+    "fluxCapacitors": 9,
+    "fluxVents": 7,
+    "hullId": "shade_d_pirates",
+    "hullMods": ["fluxcoil"],
+    "permaMods": [],
+    "quality": 0.75,
+    "variantId": "shade_d_pirates_Assault",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "irpulse",
+                "WS 002": "irpulse"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "irpulse"}
+        }
+    ]
+}

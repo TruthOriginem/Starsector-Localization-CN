@@ -1,0 +1,62 @@
+{
+    "displayName": "反航母",
+    "fluxCapacitors": 3,
+    "fluxVents": 30,
+    "hullId": "dominator",
+    "hullMods": [
+        "heavyarmor",
+        "dedicated_targeting_core",
+        "ballistic_rangefinder"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "dominator_AntiCV",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "lightac",
+                "WS 004": "lightdualac",
+                "WS 005": "lightac"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 014": "annihilatorpod",
+                "WS 015": "annihilatorpod",
+                "WS 016": "annihilatorpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 012": "devastator",
+                "WS 013": "devastator"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "lightmg",
+                "WS 002": "lightmg",
+                "WS 006": "lightmg",
+                "WS 007": "lightmg",
+                "WS 008": "lightmg",
+                "WS 009": "lightmg"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 010": "flak",
+                "WS 011": "flak"
+            }
+        }
+    ]
+}

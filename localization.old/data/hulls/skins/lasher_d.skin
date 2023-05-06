@@ -1,0 +1,17 @@
+{
+	"baseHullId":"lasher",
+	"skinHullId":"lasher_d",
+	"hullName":"征伐 (D)",
+	"descriptionId":"lasher",
+	"descriptionPrefix":"这些在和平时期应该除役的受损船只如今早已随处可见。这类船通常标有\"D\"，表示\"受损\"或\"有缺陷\" ",
+	"restoreToBaseHull":true,
+	"baseValueMult":.7,
+	"spriteName":"graphics/ships/lasher/lasher_substandard.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[2, 4], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["degraded_engines","faulty_grid"],
+	"builtInWeapons":{
+    },
+}

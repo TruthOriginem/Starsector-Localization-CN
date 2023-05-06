@@ -1,0 +1,27 @@
+{
+    "displayName": "Raider",
+    "fluxCapacitors": 6,
+    "fluxVents": 7,
+    "hullId": "kite_luddic_path",
+    "hullMods": [],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "kite_luddic_path_Raider",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {"WS 001": "hammer"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {"WS 002": "heatseeker"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "lightdualac"}
+        }
+    ]
+}

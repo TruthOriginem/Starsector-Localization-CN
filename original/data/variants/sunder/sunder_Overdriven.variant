@@ -1,0 +1,35 @@
+{
+    "displayName": "Overdriven",
+    "fluxCapacitors": 13,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "sunder",
+    "hullMods": ["safetyoverrides"],
+    "permaMods": [],
+    "quality": 1,
+    "variantId": "sunder_Overdriven",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "miningblaster",
+                "WS 003": "miningblaster",
+                "WS 004": "miningblaster"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "sabot",
+                "WS 005": "sabot"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 008": "vulcan"}
+        }
+    ]
+}

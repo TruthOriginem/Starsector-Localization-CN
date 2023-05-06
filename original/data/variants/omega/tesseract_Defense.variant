@@ -1,0 +1,43 @@
+{
+    "displayName": "Defense",
+    "fluxCapacitors": 0,
+    "fluxVents": 24,
+    "goalVariant": true,
+    "hullId": "tesseract",
+    "hullMods": [
+        "pointdefenseai",
+        "targetingunit"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "tesseract_Defense",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "riftcascade"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "shockrepeater",
+                "WS 001": "shockrepeater",
+                "WS 002": "shockrepeater",
+                "WS 003": "shockrepeater",
+                "WS 004": "shockrepeater",
+                "WS 005": "shockrepeater"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 006": "riftbeam",
+                "WS 007": "riftbeam",
+                "WS 008": "riftbeam",
+                "WS 010": "riftbeam"
+            }
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "displayName": "打击",
+    "fluxCapacitors": 0,
+    "fluxVents": 13,
+    "goalVariant": true,
+    "hullId": "doom",
+    "hullMods": [
+        "fluxbreakers",
+        "missleracks",
+        "targetingunit"
+    ],
+    "permaMods": [],
+    "quality": 1,
+    "variantId": "doom_Strike",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 003": "sabot",
+                "WS 004": "sabot",
+                "WS 005": "sabot",
+                "WS 006": "sabot"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "typhoon",
+                "WS 002": "typhoon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "heavyblaster",
+                "WS 008": "heavyblaster"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 009": "pdburst",
+                "WS 010": "pdburst",
+                "WS 011": "pdburst",
+                "WS 012": "pdburst"
+            }
+        }
+    ]
+}

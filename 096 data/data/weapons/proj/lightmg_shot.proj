@@ -1,0 +1,16 @@
+{
+	"id":"lightmg_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":35.0,
+	"hitGlowRadius":15,
+	"width":3.5,
+	"fadeTime":0.3,
+	"fringeColor":[240,220,220,200],
+	"coreColor":[245,245,245,80],
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/missiles/shell_small_yellow.png"
+}

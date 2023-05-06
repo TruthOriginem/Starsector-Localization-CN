@@ -1,0 +1,26 @@
+{
+    "displayName": "Fire Support",
+    "fluxCapacitors": 0,
+    "fluxVents": 5,
+    "goalVariant": true,
+    "hullId": "sentry",
+    "hullMods": [],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "sentry_FS",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {"WS 001": "annihilator"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "swarmer",
+                "WS 003": "swarmer"
+            }
+        }
+    ]
+}

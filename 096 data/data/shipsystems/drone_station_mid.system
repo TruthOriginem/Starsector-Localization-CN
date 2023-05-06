@@ -1,0 +1,34 @@
+{
+	"id":"drone_station_mid",
+	"type":"DRONE_LAUNCHER",
+	"aiType":"DRONE_LAUNCHER_PD",
+	
+	"droneVariant":"ravelin_Standard",
+	#"droneVariant":"gargoyle_Standard",
+	
+	
+	"allowFreeRoam":false,
+	
+	"launchSpeed":300,
+	"launchDelay":2,
+	"maxDrones":3,
+	"droneBehavior":[
+		{"droneIndex":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+		 "defaultFacing":"AWAY_FROM_SHIP",	# MATCH_DRONE_HEADING, MATCH_SHIP_HEADING, MATCH_SHIP_FACING, AWAY_FROM_SHIP
+		 "faceEnemy":false,
+		 "holdRoamRange":0,
+		 "freeRoamRange":0,
+		 "targetPriority":[SHIP, FIGHTER, MISSILE], # also SHIP_TARGET to prefer targeting the mothership's target
+		 "initialOrbitAngle":0,
+		 "orbitRadius":650, 				# plus ship radius
+		 "orbitDir":1, 					# -1 or 1
+		 "orbitSpeed":150, 				# pixels/second
+		},
+	],
+	
+	"useSound":"drone_launch",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+	}
+}

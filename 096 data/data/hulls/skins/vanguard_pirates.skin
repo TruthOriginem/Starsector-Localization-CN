@@ -1,0 +1,17 @@
+{
+	"baseHullId":"vanguard",
+	"skinHullId":"vanguard_pirates",
+	"hullName":"Vanguard (P)",
+	"descriptionId":"vanguard",
+	"descriptionPrefix":"This ship has been heavily modified - and poorly maintained - by its pirate crew.",
+	#"tags":["pirate_bp", "special_allows_system_use", "system_allows_special_use"],
+	"tags":["rare_bp", "special_allows_system_use", "system_allows_special_use"],
+	"tech":"Pirate",
+	"spriteName":"graphics/ships/vanguard/vanguard_pirate.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInWeapons":{
+    },    
+}

@@ -1,0 +1,19 @@
+{
+    "displayName": "Point Defense",
+    "fluxCapacitors": 10,
+    "fluxVents": 5,
+    "hullId": "mercury",
+    "hullMods": [],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "mercury_PD",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {
+            "WS 001": "lrpdlaser",
+            "WS 002": "lrpdlaser",
+            "WS 003": "lrpdlaser"
+        }
+    }]
+}

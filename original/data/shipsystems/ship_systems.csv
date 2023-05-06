@@ -1,0 +1,59 @@
+name,id,flux/second,f/s (base rate),f/s (base cap),flux/use,f/u (base rate),f/u (base cap),cr/u,max uses,regen,charge up,active,down,cooldown,toggle,noDissipation,noHardDissipation,hardFlux,noFiring,noTurning,noStrafing,noAccel,noShield,noVent,isPhaseCloak,tags,icon
+Flare Launcher,flarelauncher,,,,,,,,5,,,,,5,,,,,,,,,,,,,graphics/icons/hullsys/flare_launcher.png
+Canister Flak,canister_flak,,,,,,,,2,0.05,,,,3,,,,,,,,,,,,,
+Decoy Flare Launcher,flarelauncher_fighter,,,,,,,,1,0.033,,,,5,,,,,,,,,,,,,graphics/icons/hullsys/flare_launcher.png
+Decoy Flare Launcher (Single),flarelauncher_single,,,,,,,,1,0.033,,,,5,,,,,,,,,,,,,graphics/icons/hullsys/flare_launcher.png
+Active Flare Launcher,flarelauncher_active,,,,,,0.1,,,,,,,5,,,,,,,,,,,,,graphics/icons/hullsys/active_flare_launcher.png
+Burn Drive,burndrive,1,,,,,,,,,2,5,1,10,TRUE,,,,,TRUE,TRUE,TRUE,TRUE,,,,graphics/icons/hullsys/burn_drive.png
+Plasma Burn,microburn,1,,,,,,,2,0.1,0.5,0.5,0.5,,,,,,,,TRUE,TRUE,,,,,graphics/icons/hullsys/burn_drive.png
+Microburn,microburn_omega,1,,,,,,,3,0.1,0.5,0.5,0.5,,,,,,,,TRUE,TRUE,,,,restricted,graphics/icons/hullsys/burn_drive.png
+Maneuvering Jets,maneuveringjets,,,,,,,,,,1,5,1,5,,,,,,,,,,,,,graphics/icons/hullsys/maneuvering_jets.png
+Dynamic Stabilizer,dynamic_stabilizer,,,,,,,,,,1,5,1,5,,,,,,,,,,,,,graphics/icons/hullsys/maneuvering_jets.png
+Infernium Injector,inferniuminjector,1,,,,,,,,,1,,1,1,TRUE,,,,,,,TRUE,,,,,graphics/icons/hullsys/infernium_injector.png
+Fast Missile Racks,fastmissileracks,,,,,,0.25,,3,0.1,1,0,0,0,,,,,,,,,,,,,graphics/icons/hullsys/missile_racks.png
+Fortress Shield,fortressshield,,,0.025,,,,,,,1.5,,1.5,0,TRUE,,,TRUE,TRUE,,,,,,,,graphics/icons/hullsys/fortress_shield.png
+High Energy Focus,highenergyfocus,1,,,,,,,3,0.05,0.25,3,0.25,,,,,,,,,,,,,,graphics/icons/hullsys/high_energy_focus.png
+Phase Teleporter,phaseteleporter,,,,,,,,,,0.5,0,0.5,15,,,,TRUE,,,,,,,,,graphics/icons/hullsys/displacer.png
+Phase Skimmer,displacer,,,,,,,,3,0.1,0.25,,0.25,0,,TRUE,,TRUE,,,,,,,,,graphics/icons/hullsys/displacer.png
+Point Defense Drones,drone_pd,,,,,,,,20,,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_high.png
+Point Defense Drones,drone_pd_x2,,,,,,,,10,,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_mid.png
+Borer Drones,drone_borer,,,,,,,,15,,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/drone_borer.png
+Sensor Drones,drone_sensor,,,,,,,,5,,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/drone_sensor.png
+Terminator Drone,drone_terminator,,,,,,,,1,0.0333,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_high.png
+Accelerated Ammo Feeder,ammofeed,,,,,,,,,,1,5,1,10,,,,,,,,,,,,,graphics/icons/hullsys/ammo_feeder.png
+Lidar Array,lidararray,1,,,,,,,,,3.25,5,1,10,,,,,,,,,,,,,graphics/icons/hullsys/lidar_barrage.png
+EMP Emitter,emp,1,,,,,0.2,,,,0.5,4,0.5,3,,,,,TRUE,,,,,,,,graphics/icons/hullsys/emp_emitter.png
+Missile Autoforge,forgevats,,,,,,0.9,,1,,1,0,0,0,,,,,,,,,,,,,graphics/icons/hullsys/missile_autoforge.png
+Damper Field,damper,1,,,,,,,2,0.05,0.25,3,0.25,0,,,,,TRUE,,,,TRUE,TRUE,,uses_damper_ai,graphics/icons/hullsys/damper_field.png
+Entropy Damper,damper_omega,1,,,,,,,2,0.05,0.25,3,0.25,0,,,,,,,,,TRUE,TRUE,,uses_damper_ai,graphics/icons/hullsys/damper_field.png
+Temporal Shell,temporalshell,1,,,,,0.25,,,,4,10,2,10,,,,,,,,,,,,,graphics/icons/hullsys/temporal_shell.png
+Quantum Disruptor,acausaldisruptor,,,,,,0.25,,,,0.5,,1,20,,,,,,,,,,,,,graphics/icons/hullsys/quantum_disruptor.png
+Entropy Amplifier,entropyamplifier,,,,,,0.2,,,,0.5,10,1,10,,,,,,,,,,,,,graphics/icons/hullsys/entropy_amplifier.png
+Interdictor Array,interdictor,,,,,,0.25,,,,0.5,,0.5,20,,,,,,,,,,,,,graphics/icons/hullsys/interdictor_array.png
+Mine Strike,mine_strike,,,,,,0.1,,5,0.2,0.25,,0.25,0,,,,,,,,,,,,,graphics/icons/hullsys/interdictor_array.png
+Cryoflux Transducer,cryoflux,,,,,,0.75,,,,0.5,,0.5,,TRUE,,,,,,,,,,,restricted,graphics/icons/hullsys/quantum_disruptor.png
+Reserve Deployment,reservewing,,,,,,0.5,,,,0.1,,3,60,,,,,,,,,,,,,graphics/icons/hullsys/reserve_deployment.png
+Targeting Feed,targetingfeed,,,,,,0.5,,,,0.5,20,0.5,10,,,,,,,,,,,,,graphics/icons/hullsys/targeting_feed.png
+Recall Device,recalldevice,,,,,,0.5,,,,0.5,,0.5,30,,,,,,,,,,,,,graphics/icons/hullsys/recall_device.png
+Plasma Jets,plasmajets,,,,,,,,,,1,3,2,5,,,,,,,,,,,,,graphics/icons/hullsys/infernium_injector.png
+Orion Device,orion_device,,,,,,,,4,0.2,0,0.001,0,1,,,,,,,,,,,,,graphics/icons/hullsys/infernium_injector.png
+Nova Burst,nova_burst,,,,,,,,2,0.1,0.5,0.001,0,1,,,,,,,,,,,,,graphics/icons/hullsys/infernium_injector.png
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Energy Conversion,energy_conversion,,,,,,0,,3,0.1,0.5,,2,0,,TRUE,,TRUE,,,,,,,,restricted,graphics/icons/hullsys/displacer.png
+Chiral Figment,chiral_figment,,,,,,,,,,0.5,,0.5,30,,,,,,,,,,,,restricted,graphics/icons/hullsys/interdictor_array.png
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Phase Cloak,phasecloak,,,,,,,,,,0.5,,0.5,2,TRUE,,TRUE,TRUE,TRUE,,,,TRUE,,TRUE,,graphics/icons/hullsys/phase_cloak.png
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Phase Skimmer (Drone),skimmer_drone,,,,,,0.05,,3,0.25,0.25,,0.25,,,TRUE,,TRUE,,,,,,,,,graphics/icons/hullsys/displacer.png
+Degraded Phase Skimmer,displacer_degraded,,,,,,,,2,0.067,0.25,,0.25,0,,TRUE,,TRUE,,,,,,,,,graphics/icons/hullsys/displacer.png
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Full Burn,traveldrive,1,,,,,,,,,2,,2,0,TRUE,,,,TRUE,TRUE,TRUE,TRUE,TRUE,,,,graphics/icons/hullsys/burn_drive.png
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Missile Autoforge,forgevats_station,,,,,,0,,,,1,0,0,30,,,,,,,,,,,,,graphics/icons/hullsys/missile_autoforge.png
+Merlon Drones,drone_station_lt,,,,,,,,5,,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_high.png
+Ravelin Drones,drone_station_mid,,,,,,,,3,,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_high.png
+Gargoyle Drones,drone_station_high,,,,,,,,4,,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_high.png
+Mine Strike,mine_strike_station,,,,,,0,,7,0.33,0.25,,0.25,0,,,,,,,,,,,,,graphics/icons/hullsys/interdictor_array.png
+Mote Attractor,mote_control,,,,,,0,,,,0.1,,0.4,,,,,,,,,,,,,restricted,graphics/icons/hullsys/reserve_deployment.png
+Termination Sequence,drone_strike,,,,600,,,,,,0,0.05,0.2,0,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_high.png

@@ -1,0 +1,21 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 10,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "phaeton",
+    "hullMods": ["heavyarmor"],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "phaeton_Standard",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {
+            "WS 001": "lightdualmg",
+            "WS 002": "lightdualmg",
+            "WS 003": "lightdualmg",
+            "WS 004": "lightdualmg"
+        }
+    }]
+}

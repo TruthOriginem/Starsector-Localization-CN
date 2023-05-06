@@ -1,0 +1,30 @@
+{
+	"id":"point_defense",
+	"governingAptitude":"combat",
+	"compressHullmods":false,
+	"elite":true,
+	"scope":"PILOTED_SHIP",
+	"scope2":"SHIP_FIGHTERS",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.PointDefense$Level1"},
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.PointDefense$Level2"},
+				{"type":"SHIP_FIGHTERS", "script":"com.fs.starfarer.api.impl.campaign.skills.PointDefense$Level1"},
+				{"type":"SHIP_FIGHTERS", "script":"com.fs.starfarer.api.impl.campaign.skills.PointDefense$Level2"},
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"pointdefenseai":1}},
+			]
+		},
+		{
+			"name":"精英",
+			"requiredSkillLevel":2,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.PointDefense$Level3"},
+				{"type":"SHIP_FIGHTERS", "script":"com.fs.starfarer.api.impl.campaign.skills.PointDefense$Level3"},
+			]
+		},
+	],
+}

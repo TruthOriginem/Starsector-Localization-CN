@@ -1,0 +1,47 @@
+{
+    "displayName": "密接支援",
+    "fluxCapacitors": 10,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "falcon",
+    "hullMods": ["dedicated_targeting_core"],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "falcon_CS",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "heavyac",
+                "WS 008": "heavyac"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "harpoon",
+                "WS 002": "harpoon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "ionbeam",
+                "WS 006": "ionbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "pdlaser",
+                "WS 004": "pdlaser",
+                "WS 009": "lrpdlaser",
+                "WS 010": "lrpdlaser"
+            }
+        }
+    ]
+}
