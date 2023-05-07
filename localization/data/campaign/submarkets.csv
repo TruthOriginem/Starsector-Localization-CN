@@ -1,23 +1,20 @@
 id,name,faction,desc,script,icon,order
-open_market,"Open
-Market",,"The open market. Only legal goods may be traded here, and transactions are subject to tariffs. More goods are available when stability is high.
+open_market,开放市场,,"开放性市场，只有合法的货物可在此交易，且有关税。当稳定性较高时，此处的商品数量将会增加。
 
-Selling enough of a commodity will temporarily resolve a shortage.",com.fs.starfarer.api.impl.campaign.submarkets.OpenMarketPlugin,,0
-black_market,"Black
-Market",pirates,"The black market. Anything and everything can be bought or sold, and there are no tariffs. More goods are available when stability is low.
+出售足够多的商品可以暂时解决当地短缺。",com.fs.starfarer.api.impl.campaign.submarkets.OpenMarketPlugin,,0
+black_market,黑市,pirates,"地下黑市。任何东西都可在此交易，且没有关税。当稳定性较低时，黑市的商品数量将会增加。
 
-Selling a commodity will not resolve a shortage.
+将商品出售给黑市无法解决当地短缺问题。
 
-Black market transactions may catch the eye of authorities, resulting in cargo scans and reduced faction standing, unless the trades are carried out with the transponder turned off.
+黑市交易可能会引起当局的注意，除非在关闭应答器的情况下交易，否则将很可能导致当地巡逻队强制扫描你的货物且让声望降低。
 
-Engaging in legitimate trade as a ""cover"" also reduces the probability of attracting the attention of authorities.",com.fs.starfarer.api.impl.campaign.submarkets.BlackMarketPlugin,graphics/factions/black_market.png,999
-storage,Storage,player,Storage space for ships and cargo.,com.fs.starfarer.api.impl.campaign.submarkets.StoragePlugin,graphics/factions/storage.png,1000
-generic_military,,,"Trade with $theFaction military base.
+关闭应答器进行交易，或在公开市场进行交易作为 ""合法"" 掩护，即可降低吸引当局注意的几率。",com.fs.starfarer.api.impl.campaign.submarkets.BlackMarketPlugin,graphics/factions/black_market.png,999
+storage,仓库,player,可以储存舰船或货物的仓库。,com.fs.starfarer.api.impl.campaign.submarkets.StoragePlugin,graphics/factions/storage.png,1000
+generic_military,,,"与 $theFaction 的军事基地贸易。
 
-Weapons and other military hardware can be bought and sold here even if they're illegal on the open market. A commission and better standing with $theFaction results in higher-grade hardware being available.
+武器和各类军用产品可以在这里交易，即便它们在公开市场属于非法货物。拥有雇佣协议并与 $theFaction 享有着更好的关系，就能够买更多/更好的军方产品。
 
-Will buy locally illegal goods as part of a no-questions-asked buyback program.
+会收购当地的非法商品，作为特权回购计划的一部分。
 
-Selling enough of a commodity will temporarily resolve a shortage.",com.fs.starfarer.api.impl.campaign.submarkets.MilitarySubmarketPlugin,,100
-local_resources,"Resource
-Stockpiles",,,com.fs.starfarer.api.impl.campaign.submarkets.LocalResourcesSubmarketPlugin,,200
+出售足够多的商品可以暂时解决当地短缺。",com.fs.starfarer.api.impl.campaign.submarkets.MilitarySubmarketPlugin,,100
+local_resources,资源库存,,,com.fs.starfarer.api.impl.campaign.submarkets.LocalResourcesSubmarketPlugin,,200
