@@ -4,8 +4,8 @@
       - 可以从 [这里下载](https://www.python.org/downloads/)
     - 安装`Git`版本管理系统。
       - 可以从 [这里下载](https://git-scm.com/downloads)
-    - 克隆 [远行星号翻译存储库](https://github.com/TruthOriginem/Starsector-095-Localization) 到本地。
-      - 命令：`git clone https://github.com/TruthOriginem/Starsector-095-Localization.git`
+    - 克隆 [远行星号翻译存储库](https://github.com/TruthOriginem/Starsector-096-Localization) 到本地。
+      - 命令：`git clone https://github.com/TruthOriginem/Starsector-096-Localization.git`
 - 脚本将假设：
   - 游戏原文文件位于 `项目目录/original` 文件夹
   - 游戏译文文件位于 `项目目录/localization` 文件夹
@@ -120,8 +120,8 @@
 - 0：未翻译
 - 1：已翻译
 - 2：有疑问
-- 3：已检查
-- 5：已审核（二校）
+- 3：已检查（二校才有）
+- 5：已审核
 - 9：已锁定，此状态下仅管理员可解锁，词条强制按译文导出
 - -1：已隐藏，此状态下词条强制按原文导出
 
