@@ -3182,7 +3182,7 @@ lppVolturnOfficialResponseBribe,LPPVolturnOfficialConvo,,,,"lpp_volturnOfficialB
 lppVolturnOfficialResponseCommission,LPPVolturnOfficialConvo,$player.fcm_faction == sindrian_diktat,,,lpp_volturnOfficialCommission1:Explain that you are commissioned by the Sindrian Diktat,
 lppVolturnOfficialResponseLie,LPPVolturnOfficialConvo,$player.fcm_faction != sindrian_diktat,"SetStoryOption lpp_volturnOfficialLie1 general ""Told official on Volturn that you were on a secret mission from the Supreme Executor to access the Luddic Shrine""",,lpp_volturnOfficialLie1:Explain that you are on a secret mission from the Supreme Executor (lie),
 lppVolturnOfficialResponseLeave,LPPVolturnOfficialConvo,,,,lpp_volturnOfficialEarlyLeave:Leave,
-lppVolturnOfficialEarlyLeave,,$option == lpp_volturnOfficialEarlyLeave,"ShowDefaultVisual
+lppVolturnOfficialEarlyLeave,DialogOptionSelected,$option == lpp_volturnOfficialEarlyLeave,"ShowDefaultVisual
 FireAll PopulateOptions","You return to your shuttle, taking a final breath of sea-air, the stink of rotten material that's encrusted itself on these platforms still in your nostrils.
 
 The flight in your return shuttle is uneventful.",,
@@ -3873,13 +3873,19 @@ $menuState == main
 !$global.lpp_inProgress
 $global.lpp_missionCompleted
 !$global.lpp_didJangalaProtest
-!$justVisitedShrine",,,3:lpp_jangalaVisitStart:Take a shuttle to visit the Luddic shrine,# started mission to visit shrines
+!$justVisitedShrine",,,3:lpp_jangalaVisitStart:Take a shuttle to visit the Luddic shrine,# finished mission to visit shrines
 lppJangalaVisitOptionCheckProtest,PopulateOptions,"$market.id == jangala
 $menuState == main
 !$global.lpp_inProgress
 !$global.lpp_missionCompleted
 $global.lpp_didJangalaProtest
 !$justVisitedShrine",,,3:lpp_jangalaVisitStart:Take a shuttle to visit the Luddic shrine,"# Saw protest, haven't started mission OR completed mission"
+lppJangalaVisitOptionCheckProtest2,PopulateOptions,"$market.id == jangala
+$menuState == main
+$global.lpp_inProgress
+!$global.lpp_missionCompleted
+$global.lpp_didJangalaProtest
+!$justVisitedShrine",,,3:lpp_jangalaVisitStart:Take a shuttle to visit the Luddic shrine,"# Saw protest, mission in progress"
 lppJangalaVisitAgain,DialogOptionSelected,"$option == lpp_jangalaVisitStart
 $didFirstVisit","ShowLargePlanet
 ShrineCMD playMusic","Your shuttle descends toward verdant continents crowned by lethargically churning storm systems. The orbital burn lasers flicker from the spark of Jangala station, invisible until they cut lines of plasma through the atmosphere.
@@ -5054,6 +5060,7 @@ lkeChalcedonBarReturnNextDay0,DialogOptionSelected,"$option == marketVisitBar
 $market.lkeMeetingSet 
 !$market.lkeMeetingWait","FireBest BarShuttleDownPrintDesc
 FireBest BarPrintDesc
+unset $market.lkeMeetingSet
 $option = lke_chalcedonBarMeetM
 FireBest DialogOptionSelected",,,
 lkeChalcedonBarReturnNextDay1,DialogOptionSelected,$option == lke_chalcedonBarMeetM,,"It's the next day. You see the Mammonite as you walk in and he greets you from the bar - a little worse for the wear after a night of drinking, it seems. 
@@ -6648,14 +6655,14 @@ FireAll LKEvirensRaidOptions","Virens closes his eyes for a long moment, like th
 ""You. You did. You asked everyone on Mazalot where to find Jethro Bornanew.""
 
 He opens his eyes again. ""When the captain of an independent $shipOrFleet comes to Mazalot and asks for someone, I hear of it. Especially after they've done the same thing on Chalcedon.""",,
-LKEvirensRaidJethro,DialogOptionSelected,$option == lke_virensRaidJethro,$askedJethro = true 0FireAll LKEvirensRaidOptions,"He smirks wearily.
+LKEvirensRaidJethro,DialogOptionSelected,$option == lke_virensRaidJethro,"$askedJethro = true 0
+FireAll LKEvirensRaidOptions","He smirks wearily.
 
 ""Yes,"" he says, ""I can see that all too well, Captain $playerName. You appear to believe that I have him stashed away somewhere.""",,
 LKEvirensRaidWalked,DialogOptionSelected,$option == lke_virensRaidWalked,"$saidWalked = true 0
 $heSaidJethro = true 0
 $wasNice--
-FireAll LKEvirensRaidOptions
-","He smirks, though his eyes remain fixed on yours with... yes, that looks like rage long-suppressed, held in a little ball; a spark to light fires for years and years.
+FireAll LKEvirensRaidOptions","He smirks, though his eyes remain fixed on yours with... yes, that looks like rage long-suppressed, held in a little ball; a spark to light fires for years and years.
 
 ""Captain $playerName. I can see that you are not unaccustomed to the use of force. I am not so young a man as I was and have found I have little patience for theater when it comes to matters of... business.""
 
@@ -22773,11 +22780,11 @@ sdtuReturnNewsEnd2,DialogOptionSelected,$option == sdtu_returnNewsEnd2,FireAll P
 # anh - A New Hope aka Passage to Volturn,,,,,,
 devAnhStartOption,PopulateOptions,"$global.isDevMode
 $market.id == asharu
-!$global.anh_completed
+!$global.anh_missionCompleted
 !$global.anh_inProgress",SetOptionColor anh_cantinaAsk gray,,"20:anh_cantinaAsk:DEV start ""Passage to Volturn"" / ANH",
 anhCantinaStartInBar,AddBarEvents,"!$market.isHidden
 $market.id == asharu
-!$global.anh_completed
+!$global.anh_missionCompleted
 !$global.anh_inProgress
 $player.fcm_faction != sindrian_diktat
 $player.maxCombatHullSize < 4
