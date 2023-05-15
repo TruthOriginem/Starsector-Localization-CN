@@ -7,7 +7,7 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 public class ExpandedMissileRacks extends BaseHullMod {
 
 	public static float AMMO_BONUS = 100f;
-	public static float SMOD_ROF_MULT = 0.9f;
+	public static float SMOD_ROF_MULT = 0.8f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		stats.getMissileAmmoBonus().modifyPercent(id, AMMO_BONUS);

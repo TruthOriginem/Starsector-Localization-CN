@@ -4,9 +4,10 @@
 	"hullName":"Manticore (LP)",
 	"descriptionId":"manticore",
 	"descriptionPrefix":"Fanatics of the Luddic Path have crudely modified this ship, overloading the engines and power systems then replacing the original ballistic turret mount with a massive missile launcher, the better to execute bold alpha-strikes upon capital ships and cruisers.",
-	#"tags":["pirate_bp"],
 	"tags":["rare_bp"],
-	"tech":"Pirate",
+	"tech":"Luddic Path",
+	"suppliesToRecover":14,
+	"suppliesPerMonth":14,
 	"spriteName":"graphics/ships/manticore/manticore_pather.png",
 	"removeWeaponSlots":[],
 	"weaponSlotChanges":{

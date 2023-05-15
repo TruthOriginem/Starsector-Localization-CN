@@ -104,57 +104,57 @@ item_modspec:{},misc_test,1000
 item_:{},misc_test,1000
 "item_:{tags:[modspec], p:{tier:3, tags:[engines]}}",misc_test,1000
 ,,
-"wpn_:{tags:[omega, !no_drop], weaponSize:SMALL}",omega_weapons_small,100
-"wpn_:{tags:[omega, !no_drop], weaponSize:MEDIUM}",omega_weapons_medium,100
-"wpn_:{tags:[omega, !no_drop], weaponSize:LARGE}",omega_weapons_large,100
+"wpn_:{tags:[omega, !no_drop, !no_drop_salvage], weaponSize:SMALL}",omega_weapons_small,100
+"wpn_:{tags:[omega, !no_drop, !no_drop_salvage], weaponSize:MEDIUM}",omega_weapons_medium,100
+"wpn_:{tags:[omega, !no_drop, !no_drop_salvage], weaponSize:LARGE}",omega_weapons_large,100
 ,,
 ,,
 ,,
 nothing,rem_weapons1,355
-"wpn_:{tags:[remnant, !no_drop, !restricted], weaponSize:SMALL, weaponType:BALLISTIC}",rem_weapons1,100
-"wpn_:{weaponSize:SMALL, weaponType:MISSILE, tags:[!no_drop, !restricted]}",rem_weapons1,100
-"wpn_:{weaponSize:SMALL, weaponType:ENERGY, tags:[!no_drop, !restricted]}",rem_weapons1,100
-"ftr_:{tags:[!remnant, !no_drop, !restricted]}",rem_weapons1,50
-"ftr_:{tags:[remnant, !no_drop, !restricted]}",rem_weapons1,5
+"wpn_:{tags:[remnant, !no_drop, !restricted, !no_drop_salvage], weaponSize:SMALL, weaponType:BALLISTIC}",rem_weapons1,100
+"wpn_:{weaponSize:SMALL, weaponType:MISSILE, tags:[!no_drop, !restricted, !no_drop_salvage]}",rem_weapons1,100
+"wpn_:{weaponSize:SMALL, weaponType:ENERGY, tags:[!no_drop, !restricted, !no_drop_salvage]}",rem_weapons1,100
+"ftr_:{tags:[!remnant, !no_drop, !restricted, !no_drop_salvage]}",rem_weapons1,50
+"ftr_:{tags:[remnant, !no_drop, !restricted, !no_drop_salvage]}",rem_weapons1,5
 ,,
 nothing,rem_weapons2,410
-"wpn_:{tags:[remnant, !no_drop, !restricted], weaponType:BALLISTIC}",rem_weapons2,100
-"wpn_:{weaponType:MISSILE, tags:[!no_drop, !restricted]}",rem_weapons2,100
-"wpn_:{weaponType:ENERGY, tags:[!no_drop, !restricted]}",rem_weapons2,100
-"ftr_:{tags:[!remnant, !no_drop, !restricted]}",rem_weapons2,100
-"ftr_:{tags:[remnant, !no_drop, !restricted]}",rem_weapons2,10
+"wpn_:{tags:[remnant, !no_drop, !restricted, !no_drop_salvage], weaponType:BALLISTIC}",rem_weapons2,100
+"wpn_:{weaponType:MISSILE, tags:[!no_drop, !restricted, !no_drop_salvage]}",rem_weapons2,100
+"wpn_:{weaponType:ENERGY, tags:[!no_drop, !restricted, !no_drop_salvage]}",rem_weapons2,100
+"ftr_:{tags:[!remnant, !no_drop, !restricted, !no_drop_salvage]}",rem_weapons2,100
+"ftr_:{tags:[remnant, !no_drop, !restricted, !no_drop_salvage]}",rem_weapons2,10
 ,,
 nothing,high_weapons1,250
-"wpn_:{weaponSize:SMALL, weaponType:MISSILE, tags:[!no_drop, !restricted]}",high_weapons1,100
-"wpn_:{weaponSize:SMALL, weaponType:ENERGY, tags:[!no_drop, !restricted]}",high_weapons1,100
-"ftr_:{tags:[high, !no_drop, !restricted]}",high_weapons1,50
+"wpn_:{weaponSize:SMALL, weaponType:MISSILE, tags:[!no_drop, !restricted, !no_drop_salvage]}",high_weapons1,100
+"wpn_:{weaponSize:SMALL, weaponType:ENERGY, tags:[!no_drop, !restricted, !no_drop_salvage]}",high_weapons1,100
+"ftr_:{tags:[high, !no_drop, !restricted, !no_drop_salvage]}",high_weapons1,50
 ,,
 nothing,high_weapons2,300
-"wpn_:{weaponType:MISSILE, tags:[!no_drop, !restricted]}",high_weapons2,100
-"wpn_:{weaponType:ENERGY, tags:[!no_drop, !restricted]}",high_weapons2,100
-"ftr_:{tags:[high, !no_drop, !restricted]}",high_weapons2,100
+"wpn_:{weaponType:MISSILE, tags:[!no_drop, !restricted, !no_drop_salvage]}",high_weapons2,100
+"wpn_:{weaponType:ENERGY, tags:[!no_drop, !restricted, !no_drop_salvage]}",high_weapons2,100
+"ftr_:{tags:[high, !no_drop, !restricted, !no_drop_salvage]}",high_weapons2,100
 ,,
 nothing,low_weapons1,250
-"wpn_:{weaponSize:SMALL, weaponType:BALLISTIC, tags:[!no_drop, !restricted]}",low_weapons1,100
-"wpn_:{weaponSize:SMALL, weaponType:MISSILE, tags:[!no_drop, !restricted]}",low_weapons1,100
-"ftr_:{tags:[low, !no_drop, !restricted]}",low_weapons1,50
+"wpn_:{weaponSize:SMALL, weaponType:BALLISTIC, tags:[!no_drop, !restricted, !no_drop_salvage]}",low_weapons1,100
+"wpn_:{weaponSize:SMALL, weaponType:MISSILE, tags:[!no_drop, !restricted, !no_drop_salvage]}",low_weapons1,100
+"ftr_:{tags:[low, !no_drop, !restricted, !no_drop_salvage]}",low_weapons1,50
 ,,
 nothing,low_weapons2,300
-"wpn_:{weaponType:BALLISTIC, tags:[!no_drop, !restricted]}",low_weapons2,100
-"wpn_:{weaponType:MISSILE, tags:[!no_drop, !restricted]}",low_weapons2,100
-"ftr_:{tags:[low, !no_drop, !restricted]}",low_weapons2,100
+"wpn_:{weaponType:BALLISTIC, tags:[!no_drop, !restricted, !no_drop_salvage]}",low_weapons2,100
+"wpn_:{weaponType:MISSILE, tags:[!no_drop, !restricted, !no_drop_salvage]}",low_weapons2,100
+"ftr_:{tags:[low, !no_drop, !restricted, !no_drop_salvage]}",low_weapons2,100
 ,,
 nothing,weapons1,350
-"wpn_:{weaponSize:SMALL, weaponType:BALLISTIC, tags:[!no_drop, !restricted]}",weapons1,100
-"wpn_:{weaponSize:SMALL, weaponType:MISSILE, tags:[!no_drop, !restricted]}",weapons1,100
-"wpn_:{weaponSize:SMALL, weaponType:ENERGY, tags:[!no_drop, !restricted]}",weapons1,100
-"ftr_:{tags:[!remnant, !no_drop, !restricted]}",weapons1,50
+"wpn_:{weaponSize:SMALL, weaponType:BALLISTIC, tags:[!no_drop, !restricted, !no_drop_salvage]}",weapons1,100
+"wpn_:{weaponSize:SMALL, weaponType:MISSILE, tags:[!no_drop, !restricted, !no_drop_salvage]}",weapons1,100
+"wpn_:{weaponSize:SMALL, weaponType:ENERGY, tags:[!no_drop, !restricted, !no_drop_salvage]}",weapons1,100
+"ftr_:{tags:[!remnant, !no_drop, !restricted, !no_drop_salvage]}",weapons1,50
 ,,
 nothing,weapons2,400
-"wpn_:{weaponType:BALLISTIC, tags:[!no_drop, !restricted]}",weapons2,100
-"wpn_:{weaponType:MISSILE, tags:[!no_drop, !restricted]}",weapons2,100
-"wpn_:{weaponType:ENERGY, tags:[!no_drop, !restricted]}",weapons2,100
-"ftr_:{tags:[!remnant, !no_drop, !restricted]}",weapons2,100
+"wpn_:{weaponType:BALLISTIC, tags:[!no_drop, !restricted, !no_drop_salvage]}",weapons2,100
+"wpn_:{weaponType:MISSILE, tags:[!no_drop, !restricted, !no_drop_salvage]}",weapons2,100
+"wpn_:{weaponType:ENERGY, tags:[!no_drop, !restricted, !no_drop_salvage]}",weapons2,100
+"ftr_:{tags:[!remnant, !no_drop, !restricted, !no_drop_salvage]}",weapons2,100
 ,,
 nothing,any_hullmod_low,100
 "item_modspec:{tags:[!no_drop_salvage, !restricted]}",any_hullmod_low,10
@@ -245,4 +245,4 @@ item_corrupted_nanoforge,techmining_first_find,2
 alpha_core,techmining_first_find,1
 beta_core,techmining_first_find,2
 gamma_core,techmining_first_find,5
-"wpn_:{tags:[rare_bp, !restricted]}",techmining_first_find,20
+"wpn_:{tags:[rare_bp, !restricted, !no_drop_salvage]}",techmining_first_find,20
