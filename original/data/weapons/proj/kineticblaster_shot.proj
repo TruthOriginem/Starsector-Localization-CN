@@ -1,0 +1,29 @@
+{
+	"id":"kineticblaster_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	#"length":45.0,
+	#"length":70.0,
+	#"width":5,
+	#"fadeTime":0.3,
+	#"fringeColor":[155,155,155,255],
+	#"coreColor":[255,255,255,255],
+	#"glowColor":[255,255,255,75],
+	#"glowRadius":15,
+	#"hitGlowRadius":75,	
+	#"textureScrollSpeed":64.0,
+	#"pixelsPerTexel":5.0,
+	#"bulletSprite":"graphics/missiles/shell_gauss_cannon.png",
+	
+	"hitGlowRadius":75,
+	"length":125.0,
+	"width":15.0,
+	"fadeTime":0.25,
+	"fringeColor":[155,155,155,255],
+	"coreColor":[255,255,255,200],
+	"textureType":"ROUGH",  # only needed for BEAM spawnType
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":1.0
+}

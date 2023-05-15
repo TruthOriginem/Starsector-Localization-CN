@@ -1,0 +1,228 @@
+{
+    "bounds": [
+        -56,
+        25,
+        -20,
+        43,
+        6,
+        45,
+        8,
+        33,
+        44,
+        21,
+        58,
+        36,
+        86,
+        8,
+        74,
+        -35,
+        40,
+        -27,
+        -15,
+        -29,
+        -21,
+        -40,
+        -57,
+        -26,
+        -51,
+        0
+    ],
+    "builtInMods": ["civgrade"],
+    "center": [
+        50,
+        64
+    ],
+    "collisionRadius": 135,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -60,
+                25
+            ],
+            "style": "LOW_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -61,
+                16
+            ],
+            "style": "LOW_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -62,
+                7
+            ],
+            "style": "LOW_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -62,
+                -6
+            ],
+            "style": "LOW_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -61,
+                -15
+            ],
+            "style": "LOW_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -60,
+                -24
+            ],
+            "style": "LOW_TECH",
+            "width": 12
+        }
+    ],
+    "height": 150,
+    "hullId": "buffalo2",
+    "hullName": "Buffalo Mk.II",
+    "hullSize": "DESTROYER",
+    "shieldCenter": [
+        14,
+        0
+    ],
+    "shieldRadius": 115,
+    "spriteName": "graphics/ships/buffalo_dd.png",
+    "style": "LOW_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 210,
+            "id": "WS 001",
+            "locations": [
+                69,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 90,
+            "arc": 210,
+            "id": "WS 002",
+            "locations": [
+                -4,
+                37
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": -90,
+            "arc": 210,
+            "id": "WS 003",
+            "locations": [
+                20,
+                -24
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 90,
+            "arc": 5,
+            "id": "WS 004",
+            "locations": [
+                20,
+                31
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 90,
+            "arc": 5,
+            "id": "WS 005",
+            "locations": [
+                39,
+                25
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": -90,
+            "arc": 5,
+            "id": "WS 006",
+            "locations": [
+                39,
+                -24
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 007",
+            "locations": [
+                67,
+                28
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 008",
+            "locations": [
+                69,
+                -24
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "MISSILE"
+        },
+        {
+            "angle": -45,
+            "arc": 5,
+            "id": "WS 010",
+            "locations": [
+                -16,
+                -29
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        }
+    ],
+    "width": 100
+}

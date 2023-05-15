@@ -1,0 +1,94 @@
+{
+    "bounds": [
+        -10,
+        14,
+        12,
+        8,
+        12,
+        -8,
+        -10,
+        -14
+    ],
+    "builtInMods": ["no_weapon_flux"],
+    "center": [
+        16,
+        14
+    ],
+    "collisionRadius": 21,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 20,
+            "length": 14,
+            "location": [
+                -11,
+                9
+            ],
+            "style": "HIGH_TECH",
+            "width": 5
+        },
+        {
+            "angle": 180,
+            "contrailSize": 20,
+            "length": 14,
+            "location": [
+                -11,
+                -9
+            ],
+            "style": "HIGH_TECH",
+            "width": 5
+        }
+    ],
+    "height": 30,
+    "hullId": "lux",
+    "hullName": "Lux",
+    "hullSize": "FIGHTER",
+    "shieldCenter": [
+        1,
+        0
+    ],
+    "shieldRadius": 21,
+    "spriteName": "graphics/ships/remnants/lux.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 4,
+            "id": "WS 001",
+            "locations": [
+                12,
+                0
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYNERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 4,
+            "id": "WS 002",
+            "locations": [
+                12,
+                3
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 4,
+            "id": "WS 003",
+            "locations": [
+                12,
+                -3
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "ENERGY"
+        }
+    ],
+    "width": 32
+}

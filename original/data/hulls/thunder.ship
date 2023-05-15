@@ -1,0 +1,91 @@
+{
+    "bounds": [
+        28,
+        -3,
+        -1,
+        10,
+        -9,
+        -7
+    ],
+    "center": [
+        13,
+        13
+    ],
+    "collisionRadius": 35,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -12,
+                7
+            ],
+            "style": "MIDLINE",
+            "width": 14
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -12,
+                -6
+            ],
+            "style": "MIDLINE",
+            "width": 14
+        }
+    ],
+    "height": 43,
+    "hullId": "thunder",
+    "hullName": "Thunder",
+    "hullSize": "FIGHTER",
+    "shieldCenter": [
+        8,
+        0
+    ],
+    "shieldRadius": 28,
+    "spriteName": "graphics/ships/thunder2.png",
+    "style": "MIDLINE",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 15,
+            "id": "WS 001",
+            "locations": [
+                20,
+                6
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 15,
+            "id": "WS 002",
+            "locations": [
+                20,
+                -5
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 120,
+            "id": "WS 003",
+            "locations": [
+                15,
+                0
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "MISSILE"
+        }
+    ],
+    "width": 26
+}

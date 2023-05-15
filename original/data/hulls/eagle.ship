@@ -1,0 +1,358 @@
+{
+    "bounds": [
+        -16,
+        80,
+        -11,
+        65,
+        4,
+        68,
+        131,
+        29,
+        129,
+        9,
+        118,
+        7,
+        118,
+        -8,
+        127,
+        -9,
+        129,
+        -28,
+        6,
+        -68,
+        -12,
+        -66,
+        -14,
+        -78,
+        -29,
+        -78,
+        -47,
+        -48,
+        -76,
+        -52,
+        -81,
+        -11,
+        -45,
+        -9,
+        -45,
+        9,
+        -79,
+        11,
+        -76,
+        53,
+        -45,
+        46,
+        -29,
+        79
+    ],
+    "center": [
+        84,
+        86
+    ],
+    "collisionRadius": 182,
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 80,
+            "location": [
+                -82,
+                42
+            ],
+            "style": "MIDLINE",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 80,
+            "location": [
+                -84,
+                31
+            ],
+            "style": "MIDLINE",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 80,
+            "location": [
+                -85,
+                20
+            ],
+            "style": "MIDLINE",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 80,
+            "location": [
+                -85,
+                -20
+            ],
+            "style": "MIDLINE",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 80,
+            "location": [
+                -84,
+                -31
+            ],
+            "style": "MIDLINE",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 80,
+            "location": [
+                -83,
+                -41
+            ],
+            "style": "MIDLINE",
+            "width": 16
+        },
+        {
+            "angle": 160,
+            "contrailSize": 128,
+            "length": 24,
+            "location": [
+                -37,
+                78
+            ],
+            "style": "MIDLINE",
+            "width": 8
+        },
+        {
+            "angle": 165,
+            "contrailSize": 128,
+            "length": 28,
+            "location": [
+                -42,
+                67
+            ],
+            "style": "MIDLINE",
+            "width": 8
+        },
+        {
+            "angle": 170,
+            "contrailSize": 128,
+            "length": 32,
+            "location": [
+                -48,
+                55
+            ],
+            "style": "MIDLINE",
+            "width": 8
+        },
+        {
+            "angle": 200,
+            "contrailSize": 128,
+            "length": 24,
+            "location": [
+                -37,
+                -78
+            ],
+            "style": "MIDLINE",
+            "width": 8
+        },
+        {
+            "angle": 195,
+            "contrailSize": 128,
+            "length": 28,
+            "location": [
+                -42,
+                -67
+            ],
+            "style": "MIDLINE",
+            "width": 8
+        },
+        {
+            "angle": 190,
+            "contrailSize": 128,
+            "length": 32,
+            "location": [
+                -48,
+                -55
+            ],
+            "style": "MIDLINE",
+            "width": 8
+        }
+    ],
+    "height": 218,
+    "hullId": "eagle",
+    "hullName": "Eagle",
+    "hullSize": "CRUISER",
+    "shieldCenter": [
+        25,
+        0
+    ],
+    "shieldRadius": 155,
+    "spriteName": "graphics/ships/eagle/eagle_base.png",
+    "style": "MIDLINE",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 001",
+            "locations": [
+                -15,
+                73
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 002",
+            "locations": [
+                -15,
+                -73
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 155,
+            "arc": 190,
+            "id": "WS 003",
+            "locations": [
+                -62,
+                30
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 205,
+            "arc": 190,
+            "id": "WS 004",
+            "locations": [
+                -62,
+                -30
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 60,
+            "arc": 170,
+            "id": "WS 005",
+            "locations": [
+                13,
+                42
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -60,
+            "arc": 170,
+            "id": "WS 006",
+            "locations": [
+                13,
+                -42
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 007",
+            "locations": [
+                119,
+                26
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 008",
+            "locations": [
+                119,
+                -25
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 210,
+            "id": "WS 009",
+            "locations": [
+                34,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 65,
+            "arc": 180,
+            "id": "WS 010",
+            "locations": [
+                53,
+                33
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 150,
+            "id": "WS 011",
+            "locations": [
+                70,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -65,
+            "arc": 180,
+            "id": "WS 012",
+            "locations": [
+                53,
+                -33
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 013",
+            "locations": [
+                110,
+                0
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "BALLISTIC"
+        }
+    ],
+    "width": 168
+}

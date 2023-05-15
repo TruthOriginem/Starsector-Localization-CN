@@ -1,0 +1,51 @@
+{
+    "bounds": [
+        4,
+        -7,
+        4,
+        8,
+        -4,
+        0
+    ],
+    "center": [
+        10,
+        6
+    ],
+    "collisionRadius": 15,
+    "engineSlots": [{
+        "angle": 180,
+        "contrailSize": 64,
+        "length": 12,
+        "location": [
+            -6,
+            0
+        ],
+        "style": "HIGH_TECH",
+        "width": 5
+    }],
+    "height": 13,
+    "hullId": "drone_sensor",
+    "hullName": "Sensor Drone",
+    "hullSize": "FIGHTER",
+    "shieldCenter": [
+        0,
+        0
+    ],
+    "shieldRadius": 15,
+    "spriteName": "graphics/ships/drones/drone_com.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [{
+        "angle": 0,
+        "arc": 30,
+        "id": "WS 001",
+        "locations": [
+            0,
+            0
+        ],
+        "mount": "HIDDEN",
+        "size": "SMALL",
+        "type": "ENERGY"
+    }],
+    "width": 20
+}

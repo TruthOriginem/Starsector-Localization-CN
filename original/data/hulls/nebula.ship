@@ -1,0 +1,167 @@
+{
+    "bounds": [
+        91,
+        16,
+        91,
+        -16,
+        67,
+        -38,
+        2,
+        -38,
+        -8,
+        -28,
+        -19,
+        -51,
+        -88,
+        -19,
+        -88,
+        19,
+        -19,
+        51,
+        -8,
+        28,
+        2,
+        39,
+        67,
+        39
+    ],
+    "builtInMods": ["civgrade"],
+    "center": [
+        60,
+        99
+    ],
+    "collisionRadius": 121,
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 92,
+            "length": 92,
+            "location": [
+                -92,
+                12
+            ],
+            "style": "MIDLINE",
+            "width": 24
+        },
+        {
+            "angle": 180,
+            "contrailSize": 92,
+            "length": 92,
+            "location": [
+                -92,
+                -12
+            ],
+            "style": "MIDLINE",
+            "width": 24
+        },
+        {
+            "angle": 170,
+            "contrailSize": 32,
+            "length": 32,
+            "location": [
+                -90,
+                20
+            ],
+            "style": "MIDLINE",
+            "width": 8
+        },
+        {
+            "angle": 190,
+            "contrailSize": 32,
+            "length": 32,
+            "location": [
+                -90,
+                -19
+            ],
+            "style": "MIDLINE",
+            "width": 8
+        }
+    ],
+    "height": 200,
+    "hullId": "nebula",
+    "hullName": "Nebula",
+    "hullSize": "DESTROYER",
+    "shieldCenter": [
+        1,
+        0
+    ],
+    "shieldRadius": 120,
+    "spriteName": "graphics/ships/nebula/nebula.png",
+    "style": "MIDLINE",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 60,
+            "arc": 200,
+            "id": "WS 001",
+            "locations": [
+                76,
+                29
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": -60,
+            "arc": 200,
+            "id": "WS 002",
+            "locations": [
+                75,
+                -29
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 110,
+            "arc": 180,
+            "id": "WS 003",
+            "locations": [
+                -27,
+                37
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 250,
+            "arc": 180,
+            "id": "WS 004",
+            "locations": [
+                -27,
+                -38
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 150,
+            "arc": 30,
+            "id": "WS 005",
+            "locations": [
+                -56,
+                39
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        },
+        {
+            "angle": 210,
+            "arc": 30,
+            "id": "WS 006",
+            "locations": [
+                -56,
+                -38
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        }
+    ],
+    "width": 120
+}

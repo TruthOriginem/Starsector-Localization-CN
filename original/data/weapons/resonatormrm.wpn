@@ -1,0 +1,20 @@
+{
+	"id":"resonatormrm",
+	"specClass":"projectile",
+	"type":"MISSILE",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/weapons/resonator_turret_base.png",
+	"hardpointSprite":"graphics/weapons/resonator_hardpoint_base.png",
+	# glow sprites?
+	#"glowColor":[235,255,215,255],
+	"hardpointOffsets":[-1, 5.5, 10, 1.5, -1, -3.5, 10, -7.5],
+	"turretOffsets":[-4, 5.5, 7, 1.5, -4, -3.5, 7, -7.5],
+	"hardpointAngleOffsets":[0, 0, 0, 0],
+	"turretAngleOffsets":[0, 0, 0, 0],
+	"renderHints":[RENDER_LOADED_MISSILES],
+	"barrelMode":"ALTERNATING",
+	"animationType":"NONE",
+	"interruptibleBurst":false,
+	"projectileSpecId":"resonatormrm_shot",
+	"fireSoundTwo":"resonator_fire",
+}

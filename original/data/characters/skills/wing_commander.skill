@@ -1,0 +1,32 @@
+{
+	"id":"wing_commander",
+	"governingAptitude":"leadership",
+	"compressHullmods":false,
+	"effectGroups":[
+		{
+			"name":"Level 1",
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP_FIGHTERS", "script":"com.fs.starfarer.api.impl.campaign.skills.WingCommander$Level1"},
+			]
+		},
+		{
+			"name":"Level 2",
+			"requiredSkillLevel":2,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP_FIGHTERS", "script":"com.fs.starfarer.api.impl.campaign.skills.WingCommander$Level2A"},
+				{"type":"SHIP_FIGHTERS", "script":"com.fs.starfarer.api.impl.campaign.skills.WingCommander$Level2B"},
+			]
+		},
+		{
+			"name":"Level 3",
+			"requiredSkillLevel":3,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP_FIGHTERS", "script":"com.fs.starfarer.api.impl.campaign.skills.WingCommander$Level3"},
+			]
+		},
+	],
+}

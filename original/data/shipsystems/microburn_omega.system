@@ -1,0 +1,33 @@
+{
+	"id":"microburn_omega",
+	"type":"ENGINE_MOD",
+	"aiType":"BURN_DRIVE",
+	
+	"statsScript":"data.shipsystems.scripts.MicroBurnOmegaStats",
+	
+	"engineGlowColor":[150,50,255,255],
+	"engineGlowLengthMult":3,
+	"engineGlowWidthMult":1.5,
+	"engineGlowGlowMult":3,
+	
+	"flameoutOnImpactChance":0.5,
+
+	"clampTurnRateAfter":true,
+	"clampMaxSpeedAfter":true,
+	"alwaysAccelerate":true,
+
+	#"useSound":"system_burn_drive_activate",
+	#"loopSound":"system_burn_drive_loop",
+	#"deactivateSound":"system_burn_drive_deactivate",
+	#"outOfUsesSound":"engine_disabled",
+	
+	"useSound":"system_plasma_burn",
+	"loopSound":"system_plasma_burn_loop",
+	"outOfUsesSound":"engine_disabled",
+	
+	"aiHints":{
+		"activeSpeedIncrease":0,
+		"burstMovementPotential":400,
+		"averageSpeedIncrease":50,
+	}
+}

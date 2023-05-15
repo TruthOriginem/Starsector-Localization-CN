@@ -1,0 +1,306 @@
+{
+    "bounds": [
+        41,
+        66,
+        51,
+        50,
+        41,
+        45,
+        46,
+        35,
+        49,
+        0,
+        47,
+        -32,
+        42,
+        -45,
+        52,
+        -50,
+        41,
+        -65,
+        -32,
+        -63,
+        -44,
+        -56,
+        -41,
+        -11,
+        -29,
+        0,
+        -41,
+        12,
+        -43,
+        56,
+        -33,
+        63
+    ],
+    "builtInMods": ["bdeck"],
+    "center": [
+        70,
+        49
+    ],
+    "collisionRadius": 115,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 44,
+            "length": 30,
+            "location": [
+                -49,
+                51
+            ],
+            "style": "MIDLINE",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 50,
+            "length": 40,
+            "location": [
+                -48,
+                40
+            ],
+            "style": "MIDLINE",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 54,
+            "length": 50,
+            "location": [
+                -47,
+                17
+            ],
+            "style": "MIDLINE",
+            "width": 18
+        },
+        {
+            "angle": 180,
+            "contrailSize": 44,
+            "length": 30,
+            "location": [
+                -49,
+                -51
+            ],
+            "style": "MIDLINE",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 50,
+            "length": 40,
+            "location": [
+                -48,
+                -40
+            ],
+            "style": "MIDLINE",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 54,
+            "length": 50,
+            "location": [
+                -47,
+                -17
+            ],
+            "style": "MIDLINE",
+            "width": 18
+        }
+    ],
+    "height": 108,
+    "hullId": "drover",
+    "hullName": "Drover",
+    "hullSize": "DESTROYER",
+    "shieldCenter": [
+        0,
+        0
+    ],
+    "shieldRadius": 110,
+    "spriteName": "graphics/ships/drover/drover.png",
+    "style": "MIDLINE",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 10,
+            "arc": 140,
+            "id": "WS 000",
+            "locations": [
+                20,
+                58
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": -10,
+            "arc": 140,
+            "id": "WS 001",
+            "locations": [
+                20,
+                -58
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 4,
+            "id": "WS 002",
+            "locations": [
+                43,
+                60
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 0,
+            "arc": 4,
+            "id": "WS 003",
+            "locations": [
+                45,
+                13
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 0,
+            "arc": 4,
+            "id": "WS 004",
+            "locations": [
+                45,
+                -12
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 0,
+            "arc": 4,
+            "id": "WS 005",
+            "locations": [
+                43,
+                -59
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 135,
+            "arc": 4,
+            "id": "WS 006",
+            "locations": [
+                -34,
+                62
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "DECORATIVE"
+        },
+        {
+            "angle": 225,
+            "arc": 4,
+            "id": "WS 007",
+            "locations": [
+                -34,
+                -61
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "DECORATIVE"
+        },
+        {
+            "angle": -45,
+            "arc": 4,
+            "id": "WS 008",
+            "locations": [
+                28,
+                -67
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "DECORATIVE"
+        },
+        {
+            "angle": 45,
+            "arc": 4,
+            "id": "WS 009",
+            "locations": [
+                28,
+                68
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "DECORATIVE"
+        },
+        {
+            "angle": 0,
+            "arc": 30,
+            "id": "WS 010",
+            "locations": [
+                28,
+                42,
+                33,
+                26,
+                21,
+                30,
+                18,
+                8
+            ],
+            "mount": "HIDDEN",
+            "size": "MEDIUM",
+            "type": "LAUNCH_BAY"
+        },
+        {
+            "angle": 0,
+            "arc": 30,
+            "id": "WS 012",
+            "locations": [
+                33,
+                -26,
+                28,
+                -42,
+                18,
+                -8,
+                20,
+                -37
+            ],
+            "mount": "HIDDEN",
+            "size": "MEDIUM",
+            "type": "LAUNCH_BAY"
+        },
+        {
+            "angle": 110,
+            "arc": 10,
+            "id": "WS 013",
+            "locations": [
+                0,
+                63
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        },
+        {
+            "angle": 250,
+            "arc": 10,
+            "id": "WS 014",
+            "locations": [
+                1,
+                -62
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        }
+    ],
+    "width": 140
+}

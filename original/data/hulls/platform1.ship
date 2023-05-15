@@ -1,0 +1,75 @@
+{
+    "bounds": [
+        32,
+        -1,
+        7,
+        79,
+        -25,
+        70,
+        -25,
+        -70,
+        6,
+        -80
+    ],
+    "builtInMods": [
+        "supercomputer",
+        "reduced_explosion"
+    ],
+    "center": [
+        100,
+        45
+    ],
+    "collisionRadius": 150,
+    "coversColor": "",
+    "height": 96,
+    "hullId": "platform1",
+    "hullName": "",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        -222,
+        -1
+    ],
+    "shieldRadius": 300,
+    "spriteName": "graphics/ships/stations/station_module_generic.png",
+    "style": "MIDLINE",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 150,
+            "id": "WS 001",
+            "locations": [
+                14,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 0,
+            "arc": 150,
+            "id": "WS 002",
+            "locations": [
+                1,
+                45
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 0,
+            "arc": 150,
+            "id": "WS 003",
+            "locations": [
+                1,
+                -43
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "UNIVERSAL"
+        }
+    ],
+    "width": 200
+}

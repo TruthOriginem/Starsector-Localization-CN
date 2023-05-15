@@ -1,0 +1,191 @@
+{
+    "bounds": [
+        -96,
+        192,
+        1,
+        233,
+        31,
+        199,
+        66,
+        3,
+        27,
+        -199,
+        3,
+        -222,
+        -100,
+        -190,
+        -32,
+        0
+    ],
+    "builtInMods": [
+        "vastbulk",
+        "axialrotation",
+        "supercomputer",
+        "shared_flux_sink"
+    ],
+    "center": [
+        256,
+        256
+    ],
+    "collisionRadius": 200,
+    "coversColor": "",
+    "height": 512,
+    "hullId": "station2_midline",
+    "hullName": "Battlestation",
+    "hullSize": "CAPITAL_SHIP",
+    "shieldCenter": [
+        0,
+        0
+    ],
+    "shieldRadius": 200,
+    "spriteName": "graphics/ships/stations/station_level1_midline.png",
+    "style": "MIDLINE",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 15,
+            "arc": 8,
+            "id": "WS 000",
+            "locations": [
+                40,
+                123
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "STATION_MODULE"
+        },
+        {
+            "angle": -15,
+            "arc": 8,
+            "id": "WS 001",
+            "locations": [
+                40,
+                -124
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "STATION_MODULE"
+        },
+        {
+            "angle": 180,
+            "arc": 8,
+            "id": "WS 002",
+            "locations": [
+                -67,
+                1
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "STATION_MODULE"
+        },
+        {
+            "angle": 30,
+            "arc": 8,
+            "id": "WS 003",
+            "locations": [
+                42,
+                214
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "STATION_MODULE"
+        },
+        {
+            "angle": 150,
+            "arc": 8,
+            "id": "WS 004",
+            "locations": [
+                -42,
+                214
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "STATION_MODULE"
+        },
+        {
+            "angle": -30,
+            "arc": 8,
+            "id": "WS 005",
+            "locations": [
+                42,
+                -215
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "STATION_MODULE"
+        },
+        {
+            "angle": 210,
+            "arc": 8,
+            "id": "WS 006",
+            "locations": [
+                -42,
+                -214
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "STATION_MODULE"
+        },
+        {
+            "angle": -90,
+            "arc": 8,
+            "id": "WS 007",
+            "locations": [
+                0,
+                -243
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "STATION_MODULE"
+        },
+        {
+            "angle": -90,
+            "arc": 8,
+            "id": "WS 008",
+            "locations": [
+                1,
+                -384
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "STATION_MODULE"
+        },
+        {
+            "angle": 90,
+            "arc": 8,
+            "id": "WS 009",
+            "locations": [
+                0,
+                245
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "STATION_MODULE"
+        },
+        {
+            "angle": 90,
+            "arc": 8,
+            "id": "WS 010",
+            "locations": [
+                0,
+                384
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "STATION_MODULE"
+        },
+        {
+            "angle": 0,
+            "arc": 8,
+            "id": "WS 011",
+            "locations": [
+                58,
+                0
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "STATION_MODULE"
+        }
+    ],
+    "width": 512
+}

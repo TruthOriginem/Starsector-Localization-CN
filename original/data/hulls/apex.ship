@@ -1,0 +1,297 @@
+{
+    "bounds": [
+        34,
+        119,
+        63,
+        60,
+        47,
+        49,
+        66,
+        43,
+        67,
+        -41,
+        46,
+        -48,
+        59,
+        -64,
+        33,
+        -118,
+        5,
+        -124,
+        -1,
+        -107,
+        -22,
+        -124,
+        -57,
+        -100,
+        -63,
+        -33,
+        -36,
+        0,
+        -63,
+        34,
+        -57,
+        97,
+        -22,
+        125,
+        0,
+        104,
+        3,
+        123
+    ],
+    "builtInMods": [
+        "automated",
+        "coherer"
+    ],
+    "builtInWings": [
+        "terminator_wing",
+        "terminator_wing"
+    ],
+    "center": [
+        139,
+        71
+    ],
+    "collisionRadius": 170,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 46,
+            "length": 36,
+            "location": [
+                -70,
+                72
+            ],
+            "style": "HIGH_TECH",
+            "width": 14
+        },
+        {
+            "angle": 180,
+            "contrailSize": 46,
+            "length": 38,
+            "location": [
+                -71,
+                55
+            ],
+            "style": "HIGH_TECH",
+            "width": 14
+        },
+        {
+            "angle": 180,
+            "contrailSize": 50,
+            "length": 40,
+            "location": [
+                -71,
+                37
+            ],
+            "style": "HIGH_TECH",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 50,
+            "length": 40,
+            "location": [
+                -71,
+                -37
+            ],
+            "style": "HIGH_TECH",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 46,
+            "length": 38,
+            "location": [
+                -71,
+                -54
+            ],
+            "style": "HIGH_TECH",
+            "width": 14
+        },
+        {
+            "angle": 180,
+            "contrailSize": 46,
+            "length": 36,
+            "location": [
+                -70,
+                -71
+            ],
+            "style": "HIGH_TECH",
+            "width": 14
+        }
+    ],
+    "height": 160,
+    "hullId": "apex",
+    "hullName": "Apex",
+    "hullSize": "CRUISER",
+    "shieldCenter": [
+        0,
+        0
+    ],
+    "shieldRadius": 160,
+    "spriteName": "graphics/ships/remnants/remnant_apex.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 25,
+            "arc": 90,
+            "id": "WS 000",
+            "locations": [
+                17,
+                79
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -25,
+            "arc": 90,
+            "id": "WS 003",
+            "locations": [
+                17,
+                -79
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 004",
+            "locations": [
+                62,
+                34
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "SYNERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 005",
+            "locations": [
+                66,
+                12
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "SYNERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 006",
+            "locations": [
+                66,
+                -12
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "SYNERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 007",
+            "locations": [
+                62,
+                -34
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "SYNERGY"
+        },
+        {
+            "angle": 135,
+            "arc": 180,
+            "id": "WS 008",
+            "locations": [
+                -27,
+                73
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 225,
+            "arc": 180,
+            "id": "WS 009",
+            "locations": [
+                -27,
+                -73
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 40,
+            "arc": 140,
+            "id": "WS 010",
+            "locations": [
+                23,
+                106
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 30,
+            "arc": 120,
+            "id": "WS 011",
+            "locations": [
+                45,
+                65
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -30,
+            "arc": 120,
+            "id": "WS 012",
+            "locations": [
+                45,
+                -65
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -40,
+            "arc": 140,
+            "id": "WS 013",
+            "locations": [
+                23,
+                -106
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 180,
+            "arc": 5,
+            "id": "WS 014",
+            "locations": [
+                -18,
+                37,
+                -18,
+                -37
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "LAUNCH_BAY"
+        }
+    ],
+    "width": 278
+}

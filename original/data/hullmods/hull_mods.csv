@@ -104,17 +104,17 @@ Interferes with weapons targeting and other vulnerable systems, reducing non-mis
 # logistics hullmods,,,,,,,,,,,,,,,,,,,
 Additional Berthing,additional_berthing,0,,,"req_spaceport, merc, standard","Logistics, Requires Dock",3000,TRUE,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.AdditionalBerthing,"Increases maximum crew capacity by %s/%s/%s/%s, depending on hull size, or by %s, whichever is higher.
 
-For civilian-grade hulls, also increases maintenance supply use by %s.",Increases crew capacity.,"Doubles the crew capacity increase and, for, civilian hulls, negates the maintenance cost increase.",graphics/hullmods/berthing.png
+For civilian-grade hulls, also increases maintenance supply use by %s.",Increases crew capacity.,"Doubles the crew capacity increase and, for civilian hulls, negates the maintenance cost increase.",graphics/hullmods/berthing.png
 Augmented Drive Field,augmentedengines,1,,,"req_spaceport, merc, standard","Logistics, Requires Dock",8000,,,,8,16,24,40,data.hullmods.AugmentedEngines,Increases maximum burn level by %s.,Increases maximum burn level.,Increases maximum burn level by a further %s.,graphics/hullmods/augmented_drive_field2.png
 Auxiliary Fuel Tanks,auxiliary_fuel_tanks,0,,,"req_spaceport, merc, standard","Logistics, Requires Dock",4000,TRUE,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.AuxiliaryFuelTanks,"Increases maximum fuel capacity by %s/%s/%s/%s, depending on hull size, or by %s, whichever is higher.
 
-For civilian-grade hulls, also increases maintenance supply use by %s.",Increases fuel capacity.,"Doubles the fuel capacity increase and, for, civilian hulls, negates the maintenance cost increase.",graphics/hullmods/fuel_tanks.png
+For civilian-grade hulls, also increases maintenance supply use by %s.",Increases fuel capacity.,"Doubles the fuel capacity increase and, for civilian hulls, negates the maintenance cost increase.",graphics/hullmods/fuel_tanks.png
 Efficiency Overhaul,efficiency_overhaul,0,,,"req_spaceport, merc, standard","Logistics, Requires Dock",4000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.EfficiencyOverhaul,"Reduces supply use for maintenance, fuel use, and minimum crew required by %s.
 
 Increases the combat readiness recovery and repair rates by %s. The per-day supply consumption for CR recovery is increased to account for the increased recovery rate, but the total supply cost remains the same.",Reduces ongoing costs and enables more deployments.,"Reduces maintenance cost, fuel use, and minimum crew requirement by a further %s.",graphics/hullmods/efficiency.png
 Expanded Cargo Holds,expanded_cargo_holds,0,,,"req_spaceport, merc, standard","Logistics, Requires Dock",4000,TRUE,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.ExpandedCargoHolds,"Increases maximum cargo capacity by %s/%s/%s/%s, depending on hull size, or by %s, whichever is higher.
 
-For civilian-grade hulls, also increases maintenance supply use by %s.",Increases cargo capacity.,"Doubles the cargo capacity increase and, for, civilian hulls, negates the maintenance cost increase.",graphics/hullmods/expanded_cargo.png
+For civilian-grade hulls, also increases maintenance supply use by %s.",Increases cargo capacity.,"Doubles the cargo capacity increase and, for civilian hulls, negates the maintenance cost increase.",graphics/hullmods/expanded_cargo.png
 High Resolution Sensors,hiressensors,2,,,"req_spaceport, merc, standard","Logistics, Requires Dock",9000,,,,4,6,9,15,com.fs.starfarer.api.impl.hullmods.HighResSensors,<Tooltip created in script>,Increases fleet's sensor range.,"Increases the ship's in-combat vision range by %s/%s/%s/%s, based on hull size.",graphics/hullmods/high_res_sensors.png
 Insulated Engine Assembly,insulatedengine,0,,,"engines, defensive, req_spaceport, merc, standard","Engines, Logistics, Defenses, Requires Dock",2500,,,,3,6,9,15,data.hullmods.InsulatedEngines,"Increases the durability of the ship's engines by %s, and the ship's hull integrity by %s.
 
@@ -169,7 +169,7 @@ Rugged Construction,rugged,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmo
 In addition, the supply cost to recover from deployment - and to effect repairs if the ship is disabled - is reduced by %s.",Reduces impact of d-mods; ship almost always recoverable if lost.,,graphics/hullmods/rugged_construction.png
 Automated Ship,automated,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.Automated,"This ship is fully automated, and does not require - and can not take on - any human crew.
 
-Automated ships require specialized equipment and expertise to maintain, resulting in a maximum combat readiness penalty of %s. This penalty can be offset by a fleet commander skilled in the use of automated ships.",Does not require and can not support crew.,,graphics/hullmods/automated.png
+Automated ships usually require specialized equipment and expertise to maintain, resulting in a maximum combat readiness penalty of %s. This penalty can be offset by a fleet commander skilled in the use of automated ships.",Does not require and can not support crew.,,graphics/hullmods/automated.png
 Advanced Targeting Core,advancedcore,,,,,,,,TRUE,,0,0,0,0,data.hullmods.AdvancedTargetingCore,"Extends the range of ballistic and energy weapons by %s. The range of point-defense weapons is only extended by %s.
 
 Precludes the installation of a Dedicated Targeting Core or an Integrated Targeting Unit.",Greatly extends non-missile weapon range.,,graphics/hullmods/advanced_targeting_core.png
@@ -185,7 +185,7 @@ Distributed Fire Control,distributed_fire_control,,,,,,,,TRUE,,0,0,0,0,com.fs.st
 Converted Cargo Bay,converted_bay,1,,,,,,,TRUE,,0,0,0,0,data.hullmods.ConvertedCargoBay,"This ship's cargo hold has been converted to house a pair of fighter bays. The improvised manufactory that produces fighter chassis is unreliable, and most components have minor defects. Fighter speed reduced by %s, and damage taken increased by %s.",Pair of improvised fighter bays.,,graphics/hullmods/converted_hangar.png
 Special Modifications,andrada_mods,,,,dmod,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.AndradaMods,"During an inspection of an early prototype, the Supreme Executor was heard to comment unfavorably on exposed conduits running along the passageways, and the danger these must pose to the brave and loyal crew under combat conditions. 
 
-The new chief designer, a loyal officer appointed by the Supreme Executor himself, instructed the forge-programmers make accommodations for the installation of special blast-proof insulated paneling produced by Sindria itself.
+The new chief designer, a loyal officer appointed by the Supreme Executor himself, instructed the forge-programmers to make accommodations for the installation of special blast-proof insulated paneling produced by Sindria itself.
 
 If the passages are a bit narrower, conduits prone to overheating, and flush-set panels somewhat unwieldy to access, the official readiness reports include no criticism of the changes. Everyone agrees in both public and - as the Internal Security Ministry can attest - in private, that the stark grandeur of the Lion's Guard fleet is breathtaking.
 

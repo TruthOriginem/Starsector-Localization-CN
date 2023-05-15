@@ -1,0 +1,33 @@
+{
+	"id":"cryoflux",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"mountTypeOverride":"HYBRID",
+	"size":"MEDIUM",
+	"everyFrameEffect":"com.fs.starfarer.api.impl.combat.CryofluxTransducerEffect",
+	"turretSprite":"graphics/weapons/cryoflamer_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/cryoflamer_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/cryoflamer_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/cryoflamer_hardpoint_glow.png",
+	"glowColor":[100,155,255,255],
+	"turretOffsets":[15, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[15, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"unaffectedByProjectileSpeedBonuses":true,
+	#"animationType":"GLOW",
+	#"animationType":"GLOW_AND_FLASH",
+	"animationType":"GLOW",
+	"muzzleFlashSpec":{"length":30.0,   # only used if animationType = MUZZLE_FLASH or GLOW_AND_FLASH
+					   "spread":5.0,
+					   "particleSizeMin":15.0,
+					   "particleSizeRange":20.0,
+					   "particleDuration":0.12,
+					   "particleCount":10,
+					   "particleColor":[100,255,100,255]},
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"cryoflux_shot",  # projectile that will be fired
+	"noImpactSounds":true,
+	#"fireSoundTwo":"cryoflamer_fire",
+}

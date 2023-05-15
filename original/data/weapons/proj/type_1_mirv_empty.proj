@@ -1,0 +1,22 @@
+{
+	"id":"type_1_mirv_empty",
+	"specClass":"missile",	
+	"missileType":"NO_AI",
+	"sprite":"graphics/missiles/missile_MIRV_empty.png",
+	"size":[12,28],	
+	"center":[6,14],
+	"collisionRadius":16,
+	"collisionClass":"MISSILE_FF",
+	"explosionColor":[255,165,0,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":75, # purely visual
+	"engineSpec":{"turnAcc":200,
+				  "turnRate":100,
+				  "acc":100,
+				  "dec":50},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-14, 0],
+				    "style":"MISSILE_MIDLINE",
+				    "width":12.0,
+				    "length":60.0,
+				    "angle":180.0}]	    
+}

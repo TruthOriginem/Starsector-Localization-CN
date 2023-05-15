@@ -1,0 +1,217 @@
+{
+    "bounds": [
+        -40,
+        58,
+        -40,
+        86,
+        -22,
+        96,
+        19,
+        93,
+        27,
+        82,
+        79,
+        83,
+        80,
+        52,
+        66,
+        48,
+        70,
+        28,
+        86,
+        28,
+        94,
+        18,
+        94,
+        -15,
+        86,
+        -26,
+        73,
+        -27,
+        65,
+        -48,
+        82,
+        -48,
+        78,
+        -81,
+        26,
+        -84,
+        20,
+        -95,
+        -22,
+        -94,
+        -39,
+        -87,
+        -39,
+        -56,
+        -97,
+        -54,
+        -126,
+        -37,
+        -126,
+        36,
+        -96,
+        56
+    ],
+    "builtInMods": [
+        "phasefield",
+        "delicate"
+    ],
+    "center": [
+        105,
+        137
+    ],
+    "collisionRadius": 175,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -128,
+                34
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -132,
+                27
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -134,
+                19
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -134,
+                12
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -134,
+                6
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -134,
+                -5
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -134,
+                -12
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -134,
+                -18
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -132,
+                -26
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -129,
+                -33
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        }
+    ],
+    "height": 232,
+    "hullId": "revenant",
+    "hullName": "Revenant",
+    "hullSize": "CRUISER",
+    "shieldCenter": [
+        -16,
+        0
+    ],
+    "shieldRadius": 156,
+    "spriteName": "graphics/ships/phase/revenant.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 160,
+            "arc": 10,
+            "id": "WS 000",
+            "locations": [
+                -99,
+                50
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        },
+        {
+            "angle": 200,
+            "arc": 10,
+            "id": "WS 001",
+            "locations": [
+                -99,
+                -50
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        }
+    ],
+    "width": 210
+}

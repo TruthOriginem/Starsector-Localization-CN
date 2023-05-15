@@ -1,0 +1,35 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 20,
+    "fluxVents": 4,
+    "goalVariant": true,
+    "hullId": "drover",
+    "hullMods": ["missleracks"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "drover_Support",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "lightdualmg",
+                "WS 001": "lightdualmg"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 002": "gazer",
+                "WS 003": "gazer",
+                "WS 004": "gazer",
+                "WS 005": "gazer"
+            }
+        }
+    ],
+    "wings": [
+        "gladius_wing",
+        "claw_wing"
+    ]
+}

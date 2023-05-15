@@ -1,0 +1,278 @@
+{
+    "bounds": [
+        60,
+        63,
+        61,
+        41,
+        99,
+        32,
+        92,
+        15,
+        45,
+        6,
+        45,
+        -5,
+        94,
+        -14,
+        71,
+        -61,
+        32,
+        -65,
+        19,
+        -51,
+        -57,
+        -79,
+        -85,
+        -50,
+        -92,
+        -10,
+        -60,
+        0,
+        -92,
+        12,
+        -82,
+        52,
+        -57,
+        78,
+        10,
+        57,
+        20,
+        67
+    ],
+    "builtInMods": ["automated"],
+    "center": [
+        80,
+        96
+    ],
+    "collisionRadius": 140,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 60,
+            "length": 64,
+            "location": [
+                -94,
+                17
+            ],
+            "style": "HIGH_TECH",
+            "width": 20
+        },
+        {
+            "angle": 180,
+            "contrailSize": 60,
+            "length": 64,
+            "location": [
+                -94,
+                -17
+            ],
+            "style": "HIGH_TECH",
+            "width": 20
+        },
+        {
+            "angle": 180,
+            "contrailSize": 30,
+            "length": 25,
+            "location": [
+                -88,
+                47
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 30,
+            "length": 25,
+            "location": [
+                -89,
+                41
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 36,
+            "length": 35,
+            "location": [
+                -90,
+                35
+            ],
+            "style": "HIGH_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 36,
+            "length": 35,
+            "location": [
+                -90,
+                -34
+            ],
+            "style": "HIGH_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 30,
+            "length": 25,
+            "location": [
+                -89,
+                -41
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 30,
+            "length": 25,
+            "location": [
+                -88,
+                -46
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        }
+    ],
+    "height": 200,
+    "hullId": "brilliant",
+    "hullName": "Brilliant",
+    "hullSize": "CRUISER",
+    "shieldCenter": [
+        1,
+        0
+    ],
+    "shieldRadius": 135,
+    "spriteName": "graphics/ships/remnants/remnant_cruiser1.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 20,
+            "arc": 120,
+            "id": "WS 000",
+            "locations": [
+                -24,
+                37
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -45,
+            "arc": 180,
+            "id": "WS 001",
+            "locations": [
+                -46,
+                -46
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 200,
+            "id": "WS 002",
+            "locations": [
+                70,
+                27
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -45,
+            "arc": 200,
+            "id": "WS 003",
+            "locations": [
+                40,
+                -48
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 8,
+            "id": "WS 004",
+            "locations": [
+                58,
+                56
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "SYNERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 8,
+            "id": "WS 005",
+            "locations": [
+                78,
+                -31
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 0,
+            "arc": 8,
+            "id": "WS 006",
+            "locations": [
+                71,
+                -49
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 0,
+            "arc": 30,
+            "id": "WS 007",
+            "locations": [
+                11,
+                10,
+                11,
+                -9,
+                -2,
+                -1
+            ],
+            "mount": "HIDDEN",
+            "size": "MEDIUM",
+            "type": "LAUNCH_BAY"
+        },
+        {
+            "angle": 45,
+            "arc": 5,
+            "id": "WS 008",
+            "locations": [
+                -26,
+                72
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        },
+        {
+            "angle": -45,
+            "arc": 5,
+            "id": "WS 009",
+            "locations": [
+                -26,
+                -71
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        }
+    ],
+    "width": 160
+}

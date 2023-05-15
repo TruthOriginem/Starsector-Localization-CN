@@ -1,0 +1,116 @@
+{
+    "bounds": [
+        -10,
+        16,
+        11,
+        11,
+        11,
+        -10,
+        -10,
+        -15
+    ],
+    "builtInMods": ["no_weapon_flux"],
+    "center": [
+        20,
+        16
+    ],
+    "collisionRadius": 26,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 16,
+            "length": 12,
+            "location": [
+                -13,
+                13
+            ],
+            "style": "HIGH_TECH",
+            "width": 4
+        },
+        {
+            "angle": 180,
+            "contrailSize": 16,
+            "length": 12,
+            "location": [
+                -11,
+                9
+            ],
+            "style": "HIGH_TECH",
+            "width": 4
+        },
+        {
+            "angle": 180,
+            "contrailSize": 16,
+            "length": 12,
+            "location": [
+                -13,
+                -13
+            ],
+            "style": "HIGH_TECH",
+            "width": 4
+        },
+        {
+            "angle": 180,
+            "contrailSize": 16,
+            "length": 12,
+            "location": [
+                -11,
+                -8
+            ],
+            "style": "HIGH_TECH",
+            "width": 4
+        }
+    ],
+    "height": 34,
+    "hullId": "flash",
+    "hullName": "Flash",
+    "hullSize": "FIGHTER",
+    "shieldCenter": [
+        0,
+        0
+    ],
+    "shieldRadius": 26,
+    "spriteName": "graphics/ships/remnants/flare.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 4,
+            "id": "WS 001",
+            "locations": [
+                8,
+                0
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": -80,
+            "arc": 200,
+            "id": "WS 002",
+            "locations": [
+                10,
+                -6
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 80,
+            "arc": 200,
+            "id": "WS 003",
+            "locations": [
+                10,
+                7
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        }
+    ],
+    "width": 40
+}

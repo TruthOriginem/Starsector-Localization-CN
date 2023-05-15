@@ -1,0 +1,214 @@
+{
+    "bounds": [
+        -9,
+        37,
+        17,
+        26,
+        41,
+        0,
+        16,
+        -27,
+        -10,
+        -36,
+        -22,
+        -31,
+        -32,
+        0,
+        -21,
+        32
+    ],
+    "builtInMods": ["automated"],
+    "center": [
+        39,
+        36
+    ],
+    "collisionRadius": 70,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 24,
+            "length": 20,
+            "location": [
+                -24,
+                29
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 24,
+            "length": 20,
+            "location": [
+                -26,
+                25
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 24,
+            "length": 20,
+            "location": [
+                -28,
+                20
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 24,
+            "length": 20,
+            "location": [
+                -31,
+                11
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 24,
+            "length": 20,
+            "location": [
+                -33,
+                5
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 24,
+            "length": 20,
+            "location": [
+                -33,
+                -4
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 24,
+            "length": 20,
+            "location": [
+                -31,
+                -10
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 24,
+            "length": 20,
+            "location": [
+                -28,
+                -19
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 24,
+            "length": 20,
+            "location": [
+                -26,
+                -23
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 24,
+            "length": 20,
+            "location": [
+                -24,
+                -28
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        }
+    ],
+    "height": 80,
+    "hullId": "glimmer",
+    "hullName": "Glimmer",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        1,
+        0
+    ],
+    "shieldRadius": 68,
+    "spriteName": "graphics/ships/remnants/remnant_frigate1.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 001",
+            "locations": [
+                29,
+                0
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 50,
+            "arc": 200,
+            "id": "WS 002",
+            "locations": [
+                -2,
+                23
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -50,
+            "arc": 200,
+            "id": "WS 003",
+            "locations": [
+                -2,
+                -23
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 10,
+            "id": "WS 004",
+            "locations": [
+                25,
+                19
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "SYNERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 10,
+            "id": "WS 005",
+            "locations": [
+                25,
+                -18
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "SYNERGY"
+        }
+    ],
+    "width": 78
+}

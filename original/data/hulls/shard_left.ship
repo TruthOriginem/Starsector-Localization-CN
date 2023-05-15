@@ -1,0 +1,103 @@
+{
+    "bounds": [
+        54,
+        4,
+        -21,
+        35,
+        -36,
+        17,
+        -18,
+        -5,
+        -31,
+        -25,
+        25,
+        -30
+    ],
+    "builtInMods": [
+        "automated",
+        "fluxbreakers",
+        "shard_spawner",
+        "do_not_back_off"
+    ],
+    "center": [
+        38,
+        40
+    ],
+    "collisionRadius": 85,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -25,
+                27
+            ],
+            "style": "OMEGA",
+            "width": 20
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                5,
+                -26
+            ],
+            "style": "OMEGA",
+            "width": 20
+        }
+    ],
+    "height": 100,
+    "hullId": "shard_left",
+    "hullName": "Shard",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        13,
+        0
+    ],
+    "shieldRadius": 70,
+    "spriteName": "graphics/ships/omega/omega_frigate_left.png",
+    "style": "OMEGA",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 210,
+            "id": "WS 000",
+            "locations": [
+                7,
+                -10
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 001",
+            "locations": [
+                36,
+                -16
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 120,
+            "arc": 300,
+            "id": "WS 002",
+            "locations": [
+                -6,
+                13
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        }
+    ],
+    "width": 73
+}

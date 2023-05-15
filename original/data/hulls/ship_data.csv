@@ -29,13 +29,13 @@ Lux,lux,,Remnant,flarelauncher_fighter,,400,60,350,,50,0,,220,350,350,100,240,30
 Flash,flash,,Remnant,,,400,60,350,,50,0,,170,240,200,40,120,30,OMNI,,160,0,1,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,116
 Perdition,perdition,,Low Tech,,,400,50,50,,10,0,,140,150,150,30,90,15,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,,,,,,,0,,,,117
 Cobra,cobra,,High Tech,,,400,25,400,,50,0,,160,200,200,30,120,40,OMNI,,120,0,1,,,4,4,,,,,,,,,,,,,,,,,,,,,,0,,,,118
-Sarissa,sarissa,,Low Tech,canister_flak,,750,200,500,,160,0,,140,250,200,100,200,40,NONE,,0,0,0,,,3,3,,,,,,,,,,,,,,,,,,,,,,0,,,,118.5
+Sarissa,sarissa,,Low Tech,canister_flak,,750,200,180,,100,0,,140,250,200,100,200,40,NONE,,0,0,0,,,3,3,,,,,,,,,,,,,,,,,,,,,,0,,,,118.5
 ,aspect,Aspect,Unknown,,,600,300,1000,,200,0,,350,350,350,120,360,50,NONE,,0,0,0,,,0,0,,,,,,,,,,,,,,,,,,,HIDE_IN_CODEX,,,0,,,,119
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Wolf,wolf,Frigate,High Tech,displacer,5,1500,150,2250,1875,150,55,,150,130,100,60,120,200,FRONT,,150,0.4,0.7,,,15,30,50,20,1,20,10,12000,10,20,180,0.25,5,5,,,,,,,,"hightech_bp, merc",,0.5,2,2,,200
-Hound,hound,Combat Freighter,Low Tech,flarelauncher,3,2000,400,750,1250,100,38,,180,175,100,90,120,200,NONE,,0,0,0,,,10,40,75,30,1,30,10,7500,5,10,240,0.25,3,3,25,75,,,,,,base_bp,,0.4,2,2,,201
+Wolf,wolf,Frigate,High Tech,displacer,5,1500,150,2250,1875,150,55,,150,130,100,60,120,200,FRONT,,150,0.4,0.7,,,15,30,50,20,1,20,10,12000,10,20,180,0.25,5,5,,,,,,,,"hightech_bp, merc, ind",,0.5,2,2,,200
+Hound,hound,Combat Freighter,Low Tech,flarelauncher,3,2000,400,750,1250,100,38,,180,175,100,90,120,200,NONE,,0,0,0,,,10,40,75,30,1,30,10,7500,5,10,240,0.25,3,3,25,75,,,,,,"base_bp, ind",,0.4,2,2,,201
 Vanguard,vanguard,Heavy Frigate,Low Tech,burndrive,8,3000,600,2000,1875,150,60,,135,120,100,60,90,300,PHASE,damper,,,,,,30,50,50,30,1,30,10,30000,8,10,300,0.25,6,6,8,50,,,,,,"rare_bp, merc, ind, special_allows_system_use, system_allows_special_use",0.75,0.4,2,2,,201.5
-Hyperion,hyperion,Advanced Gunship,High Tech,phaseteleporter,15,2500,250,8000,6250,500,65,,120,175,150,50,100,200,FRONT,,300,0.6,0.6,,,5,15,10,15,1,15,10,95000,8,40,120,0.25,15,15,,,,,,,,"rare_bp, ind, kanta_gift",0.5,0.75,2,2,,202
+Hyperion,hyperion,Advanced Gunship,High Tech,phaseteleporter,15,2500,250,8000,6250,500,65,,120,175,150,50,100,200,FRONT,,300,0.6,0.6,,,5,15,10,15,1,15,10,95000,8,40,120,0.25,15,15,,,,,,,,"rare_bp, merc, ind, kanta_gift",0.5,0.75,2,2,,202
 Mercury,mercury,Shuttle,High Tech,flarelauncher_active,3,1000,150,1600,1875,150,27,,135,100,100,90,120,125,OMNI,,120,0.5,0.8,,,1,30,20,15,0.5,30,9,4000,5,20,180,0.25,2,2,10,40,,,15,60,"CIVILIAN, LINER","base_bp, ind",,0.5,2,2,,203
 Hermes,hermes,Shuttle,Midline,maneuveringjets,3,1200,200,1000,1000,80,27,,125,90,80,90,120,125,OMNI,,120,0.5,1,,,2,10,50,15,0.5,30,9,4000,5,20,180,0.25,2,2,25,100,,,,,"CIVILIAN, FREIGHTER","base_bp, ind",,0.5,2,2,,203.5
 Lasher,lasher,Frigate,Low Tech,ammofeed,5,1750,300,2100,1750,140,55,,120,110,90,60,90,200,FRONT,,210,0.4,1,,,25,50,40,25,1,25,10,9000,8,10,240,0.25,4,4,,,,,,,,"lowtech_bp, merc, ind",,0.4,2,2,,204
@@ -53,7 +53,7 @@ Shepherd,shepherd,Drone Tender,Low Tech,maneuveringjets,4,1200,200,1500,1250,100
 Kite,kite,Shuttle,Midline,maneuveringjets,3,900,150,1400,1000,80,25,,140,150,75,45,85,120,OMNI,,150,0.5,0.8,,,2,30,30,15,1,15,9,4000,5,20,180,0.25,2,2,,,,,,,,"base_bp, ind",,0.75,2,2,,217
 Mudskipper,mudskipper,Civilian Transport,Low Tech,maneuveringjets,3,1000,150,750,938,75,18,,90,80,50,45,60,200,NONE,,0,0,0,,,5,100,70,40,1,40,9,3000,5,20,180,0.25,2,2,35,70,,,50,100,"CIVILIAN, LINER","base_bp, ind",,0.5,2,2,,218
 Centurion,centurion,Heavy Frigate,Midline,damper,6,2250,500,2200,2188,175,55,,120,110,90,40,80,300,OMNI,,180,0.4,0.8,,,30,50,50,25,1,25,10,20000,8,10,240,0.25,4,4,,,,,,,,"midline_bp, merc, ind",,0.4,2,2,,219
-Scarab,scarab,Heavy Frigate,High Tech,temporalshell,8,2000,250,2500,3125,250,55,,130,120,100,60,120,300,OMNI,,180,0.4,0.6,,,35,45,40,20,1,20,10,30000,7,20,180,0.25,8,8,,,,,,,,"rare_bp, hist1t, ind",,0.5,2,2,,220
+Scarab,scarab,Heavy Frigate,High Tech,temporalshell,8,2000,250,2500,3125,250,55,,130,120,100,60,120,300,OMNI,,180,0.4,0.6,,,35,45,40,20,1,20,10,30000,7,20,180,0.25,8,8,,,,,,,,"rare_bp, hist1t, merc, ind",,0.5,2,2,,220
 Wayfarer,wayfarer,Combat Freighter,Midline,flarelauncher,5,2250,250,1600,1500,120,55,,120,105,70,45,90,300,FRONT,,180,0.4,0.8,,,25,50,150,40,1,40,10,14000,8,10,240,0.25,5,5,30,,,,,,,"base_bp, ind",,0.5,2,2,,221
 Warden,warden,Drone,Explorarium,ammofeed,3,1500,300,750,1250,100,30,,120,100,90,90,120,150,NONE,,0,0,0,,,0,0,20,20,1,20,9,10000,5,5,480,0.25,3,3,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","derelict, auto_rec",,0.5,2,2,,222
 Defender,defender,Drone,Explorarium,flarelauncher,3,1800,350,750,1250,100,30,,100,90,90,90,110,160,NONE,,0,0,0,,,0,0,20,20,1,20,9,10000,5,5,480,0.25,3,3,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","derelict, auto_rec",,0.5,2,2,,223
@@ -110,7 +110,7 @@ Revenant,revenant,Phase Tender,High Tech,flarelauncher_active,5,6000,900,6000,80
 Rampart,rampart,Drone,Explorarium,burndrive,10,11000,1500,10000,5625,450,120,,35,20,10,12,10,2100,NONE,,0,0,0,,,0,0,100,60,4,15,8,130000,5,12,600,0.25,15,15,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","derelict, auto_rec",,0.5,2,3,,412
 Brilliant,brilliant,Droneship Cruiser,Remnant,microburn,16,8000,900,10000,12000,600,140,,60,35,30,20,25,2000,OMNI,,270,0.4,0.6,,,0,0,120,90,3,30,9,140000,5,15,540,0.25,25,25,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","remnant, auto_rec",,0.5,2,3,,413
 Apex,apex,Heavy Droneship,Remnant,drone_strike,18,12000,1100,12000,11000,550,150,2,50,35,30,12,20,3000,FRONT,,180,0.4,0.6,,,0,0,120,90,3,30,9,170000,5,15,540,0.25,30,30,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","remnant, auto_rec",,0.5,2,3,,414
-Fury,fury,Light Cruiser,High Tech,microburn,14,5000,600,9000,12000,600,130,,95,100,80,30,60,650,OMNI,,180,0.3,0.7,,,60,120,60,80,3,27,9,115000,4,12,420,0.25,20,20,,,,,,,,"hightech_bp, merc",,0.7,2,3,,415
+Fury,fury,Light Cruiser,High Tech,microburn,14,5000,600,9000,12000,600,130,,95,100,80,30,60,650,OMNI,,180,0.3,0.7,,,60,120,60,80,3,27,9,115000,4,12,420,0.25,20,20,,,,,,,,"hightech_bp, merc, ind",,0.7,2,3,,415
 ,tesseract,Tesseract,Unknown,temporalshell,40,10000,1500,15000,25000,1500,180,,100,120,120,45,135,2000,OMNI,,150,0,0.5,,,0,0,40,150,3,50,11,500000,20,5,,,24,24,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","omega, no_autofit, restricted",,0.5,2,3,,416
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -127,9 +127,9 @@ Legion,legion,Battlecarrier,Low Tech,burndrive,28,18000,1650,12000,12500,500,300
 Guardian,guardian,Drone Battleship,Explorarium,plasmajets,30,20000,1700,25000,25000,1000,450,,40,30,20,7,10,3500,FRONT,,200,0.4,1,,,0,0,300,400,15,27,7,500000,3,12,720,0.25,40,40,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","derelict, no_autofit",,0.4,2,4,,508
 Radiant,radiant,Drone Battleship,Remnant,displacer,30,20000,1500,25000,37500,1500,320,,40,30,20,7,10,3500,OMNI,,270,0.4,0.6,,,0,0,250,400,10,40,8,500000,3,15,720,0.25,60,60,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","remnant, auto_rec",,0.4,2,4,,509
 Ziggurat,ziggurat,Phase Vessel,High Tech,mote_control,40,14000,1500,16000,30000,1200,260,,40,50,50,20,30,2400,PHASE,phasecloak,,,,0.02,0.02,300,400,200,500,10,50,7,1000000,3,50,600,0.25,75,75,,,,,,,HIDE_IN_CODEX,,,0.4,2,3,,510
-Invictus,invictus,Dreadnought,Low Tech,lidararray,35,40000,10000,40000,15000,600,240,,35,15,15,4,4,10000,PHASE,canister_flak,0,0,0,,,4000,6000,1000,800,20,40,6,700000,3,12,1200,0.25,60,60,,,,,,,NEVER_DODGE_MISSILES,rare_bp,,0.2,2,2,,511
+Invictus,invictus,Dreadnought,Low Tech,lidararray,35,40000,10000,30000,12500,500,240,,35,15,15,4,4,10000,PHASE,canister_flak,0,0,0,,,4000,6000,1000,800,20,40,6,700000,3,12,1200,0.25,60,60,,,,,,,NEVER_DODGE_MISSILES,rare_bp,,0.2,2,2,,511
 Pegasus,pegasus,Battleship,Midline,fastmissileracks,24,17000,1500,14000,12500,500,365,,50,35,25,6,6,3000,FRONT,,270,0.4,0.6,,,500,600,400,300,10,30,7,400000,4,12,720,0.25,50,50,,,,,,,MISSILE_HARDPOINTS_ROTATE,"rare_bp, merc",,0.5,2,4,,512
-Retribution,retribution,Battlecruiser,Low Tech,orion_device,20,10000,800,15000,17500,700,300,,75,50,40,10,10,2500,OMNI,,60,0.2,1.2,,,300,400,200,300,10,30,8,200000,3,12,600,0.25,40,40,,,,,,,,rare_bp,,0.5,2,4,,513
+Retribution,retribution,Battlecruiser,Low Tech,orion_device,20,10000,800,15000,17500,700,300,,75,50,40,10,10,2500,OMNI,,60,0.2,1.2,,,300,400,200,300,10,30,8,200000,3,12,600,0.25,35,35,,,,,,,,rare_bp,,0.5,2,4,,513
 Nova,nova,Drone Battlecruiser,Remnant,nova_burst,24,12000,1000,18000,25000,1000,280,,80,70,50,12,16,3000,FRONT,,90,0.4,0.6,,,0,0,150,300,10,30,9,350000,3,15,600,0.25,40,40,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","remnant, auto_rec",,0.5,2,4,,514
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Shuttle Pod,shuttlepod,Pod,,,1,1000,100,150,,50,0,,400,800,500,150,450,100,NONE,,0,0,0,,,1,1,1,1,1,1,,1000,,,,,,,,,,,,,,,,,,,,1000

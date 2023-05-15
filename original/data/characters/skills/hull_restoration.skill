@@ -1,0 +1,19 @@
+{
+	"id":"hull_restoration",
+	"governingAptitude":"industry",
+	"compressHullmods":false,
+	"scope":"FLEET",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.HullRestoration$Level1"},
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.HullRestoration$Level2"},
+				{"type":"FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.HullRestoration$Level4A"},
+				{"type":"FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.HullRestoration$Level4B"},
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.HullRestoration$Level3"},
+			]
+		},
+	],
+}

@@ -1,0 +1,35 @@
+{
+    "displayName": "Attack",
+    "fluxCapacitors": 5,
+    "fluxVents": 0,
+    "hullId": "heron",
+    "hullMods": [
+        "expanded_deck_crew",
+        "missleracks"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "heron_Attack1",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "pdburst",
+                "WS 004": "pdburst",
+                "WS 009": "pdlaser",
+                "WS 010": "pdlaser"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 005": "gazerpod"}
+        }
+    ],
+    "wings": [
+        "thunder_wing",
+        "thunder_wing",
+        "thunder_wing"
+    ]
+}

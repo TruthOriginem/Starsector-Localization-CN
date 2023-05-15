@@ -1,0 +1,56 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 9,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "invictus",
+    "hullMods": [
+        "armoredweapons",
+        "converted_hangar"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "invictus_Support",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "mark9",
+                "WS 002": "mark9",
+                "WS 009": "mark9",
+                "WS 010": "mark9"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 004": "pilum_large",
+                "WS 007": "pilum_large"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "mark9",
+                "WS 008": "mark9"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "devastator",
+                "WS 005": "devastator",
+                "WS 006": "devastator",
+                "WS 026": "devastator"
+            }
+        }
+    ],
+    "wings": [
+        "perdition_wing",
+        "perdition_wing"
+    ]
+}

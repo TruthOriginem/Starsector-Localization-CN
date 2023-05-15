@@ -1,0 +1,141 @@
+{
+    "bounds": [
+        -36,
+        26,
+        -19,
+        36,
+        24,
+        30,
+        35,
+        18,
+        35,
+        -18,
+        24,
+        -29,
+        -20,
+        -35,
+        -36,
+        -27
+    ],
+    "builtInMods": [
+        "phasefield",
+        "delicate"
+    ],
+    "center": [
+        40,
+        39
+    ],
+    "collisionRadius": 64,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -39,
+                22
+            ],
+            "style": "HIGH_TECH",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -39,
+                -21
+            ],
+            "style": "HIGH_TECH",
+            "width": 16
+        }
+    ],
+    "height": 80,
+    "hullId": "shade",
+    "hullName": "Shade",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        0,
+        0
+    ],
+    "shieldRadius": 64,
+    "spriteName": "graphics/ships/phase/phase_assault_ff.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 001",
+            "locations": [
+                35,
+                14
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 002",
+            "locations": [
+                35,
+                -14
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 90,
+            "arc": 210,
+            "id": "WS 003",
+            "locations": [
+                -15,
+                28
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 210,
+            "id": "WS 004",
+            "locations": [
+                22,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -90,
+            "arc": 210,
+            "id": "WS 005",
+            "locations": [
+                -15,
+                -28
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 180,
+            "arc": 5,
+            "id": "WS 006",
+            "locations": [
+                -22,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        }
+    ],
+    "width": 80
+}

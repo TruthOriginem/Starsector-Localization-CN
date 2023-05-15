@@ -1,0 +1,20 @@
+{
+	"id":"flux_regulation",
+	"governingAptitude":"technology",
+	"compressHullmods":false,
+	#"scope":"ALL_COMBAT_SHIPS",
+	"scope":CUSTOM,
+	"scopeStr":"ship loadouts",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"CHARACTER_STATS", "script":"com.fs.starfarer.api.impl.campaign.skills.FluxRegulation$Level2"},
+				{"type":"CHARACTER_STATS", "script":"com.fs.starfarer.api.impl.campaign.skills.FluxRegulation$Level3"},
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.FluxRegulation$Level1"},
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"fluxbreakers":1}},
+			]
+		},
+	],
+}

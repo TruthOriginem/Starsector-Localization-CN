@@ -1,0 +1,21 @@
+{
+	"id":"miningblaster_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"onHitEffect":"com.fs.starfarer.api.impl.combat.MiningBlasterOnHitEffect",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":45.0,
+	"width":7,
+	"fadeTime":0.3,
+	"fringeColor":[255,100,100,255],
+	"coreColor":[255,255,255,255],
+	"glowColor":[255,0,0,125],
+	#"glowRadius":45,
+	#"hitGlowRadius":90,	
+	"glowRadius":30,
+	"hitGlowRadius":80,	
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/missiles/shell_gauss_cannon.png"	
+}

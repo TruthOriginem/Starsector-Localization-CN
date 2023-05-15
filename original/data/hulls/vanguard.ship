@@ -1,0 +1,200 @@
+{
+    "bounds": [
+        48,
+        17,
+        27,
+        34,
+        26,
+        45,
+        -21,
+        45,
+        -29,
+        38,
+        -44,
+        41,
+        -36,
+        28,
+        -46,
+        24,
+        -46,
+        -23,
+        -35,
+        -29,
+        -45,
+        -39,
+        -20,
+        -40,
+        -18,
+        -46,
+        26,
+        -44,
+        27,
+        -34,
+        48,
+        -16
+    ],
+    "builtInMods": ["rugged"],
+    "center": [
+        52,
+        51
+    ],
+    "collisionRadius": 75,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -48,
+                21
+            ],
+            "style": "LOW_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -48,
+                8
+            ],
+            "style": "LOW_TECH",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -48,
+                -8
+            ],
+            "style": "LOW_TECH",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -48,
+                -20
+            ],
+            "style": "LOW_TECH",
+            "width": 12
+        }
+    ],
+    "height": 104,
+    "hullId": "vanguard",
+    "hullName": "Vanguard",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        0,
+        0
+    ],
+    "shieldRadius": 73,
+    "spriteName": "graphics/ships/vanguard/vanguard_base.png",
+    "style": "LOW_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 000",
+            "locations": [
+                21,
+                40
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "COMPOSITE"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 001",
+            "locations": [
+                44,
+                0
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "COMPOSITE"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 002",
+            "locations": [
+                21,
+                -40
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "COMPOSITE"
+        },
+        {
+            "angle": 100,
+            "arc": 235,
+            "id": "WS 003",
+            "locations": [
+                2,
+                37
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 260,
+            "arc": 235,
+            "id": "WS 004",
+            "locations": [
+                2,
+                -37
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 25,
+            "arc": 130,
+            "id": "WS 005",
+            "locations": [
+                28,
+                21
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": -25,
+            "arc": 130,
+            "id": "WS 006",
+            "locations": [
+                28,
+                -21
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 110,
+            "id": "WS 007",
+            "locations": [
+                23,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        }
+    ],
+    "width": 104
+}

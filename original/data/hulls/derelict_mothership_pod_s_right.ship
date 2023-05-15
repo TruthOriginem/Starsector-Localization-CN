@@ -1,0 +1,61 @@
+{
+    "bounds": [
+        22,
+        4,
+        9,
+        -13,
+        -24,
+        0,
+        -2,
+        14
+    ],
+    "builtInMods": [
+        "supercomputer",
+        "reduced_explosion"
+    ],
+    "center": [
+        16,
+        27
+    ],
+    "collisionRadius": 30,
+    "coversColor": "",
+    "height": 52,
+    "hullId": "derelict_mothership_pod_s_right",
+    "hullName": "Gun Pod, Small",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        1,
+        0
+    ],
+    "shieldRadius": 30,
+    "spriteName": "graphics/ships/derelict/derelict_mothership_pod_s_right.png",
+    "style": "LOW_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 6,
+            "id": "WS 021",
+            "locations": [
+                17,
+                -4
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -45,
+            "arc": 100,
+            "id": "WS 022",
+            "locations": [
+                -6,
+                6
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        }
+    ],
+    "width": 32
+}

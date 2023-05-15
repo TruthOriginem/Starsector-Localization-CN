@@ -1,0 +1,287 @@
+{
+    "bounds": [
+        50,
+        87,
+        59,
+        36,
+        72,
+        33,
+        96,
+        -17,
+        95,
+        -38,
+        50,
+        -66,
+        24,
+        -101,
+        -22,
+        -102,
+        -57,
+        -81,
+        -54,
+        -55,
+        -35,
+        -48,
+        -80,
+        -32,
+        -59,
+        -25,
+        -57,
+        25,
+        -81,
+        34,
+        -44,
+        43,
+        -34,
+        54,
+        -57,
+        59,
+        -58,
+        88,
+        -20,
+        104,
+        23,
+        105
+    ],
+    "center": [
+        111,
+        88
+    ],
+    "collisionRadius": 150,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -62,
+                77
+            ],
+            "style": "LOW_TECH",
+            "width": 32
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -63,
+                66
+            ],
+            "style": "LOW_TECH",
+            "width": 32
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -63,
+                -64
+            ],
+            "style": "LOW_TECH",
+            "width": 32
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -63,
+                -75
+            ],
+            "style": "LOW_TECH",
+            "width": 32
+        }
+    ],
+    "height": 190,
+    "hullId": "mora",
+    "hullName": "Mora",
+    "hullSize": "CRUISER",
+    "shieldCenter": [
+        1,
+        1
+    ],
+    "shieldRadius": 140,
+    "spriteName": "graphics/ships/mora/mora.png",
+    "style": "LOW_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 12,
+            "id": "WS 002",
+            "locations": [
+                53,
+                81
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 40,
+            "arc": 200,
+            "id": "WS 003",
+            "locations": [
+                28,
+                80
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "MISSILE"
+        },
+        {
+            "angle": -50,
+            "arc": 200,
+            "id": "WS 004",
+            "locations": [
+                20,
+                -80
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 20,
+            "arc": 180,
+            "id": "WS 005",
+            "locations": [
+                50,
+                44
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": -20,
+            "arc": 200,
+            "id": "WS 007",
+            "locations": [
+                68,
+                -42
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": -80,
+            "arc": 210,
+            "id": "WS 008",
+            "locations": [
+                1,
+                -101
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 80,
+            "arc": 210,
+            "id": "WS 011",
+            "locations": [
+                2,
+                103
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": -45,
+            "arc": 160,
+            "id": "WS 012",
+            "locations": [
+                51,
+                -68
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 110,
+            "id": "WS 013",
+            "locations": [
+                46,
+                64
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 180,
+            "arc": 150,
+            "id": "WS 014",
+            "locations": [
+                -58,
+                -2
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 300,
+            "id": "WS 015",
+            "locations": [
+                43,
+                2,
+                -34,
+                17,
+                -50,
+                -21,
+                56,
+                15
+            ],
+            "mount": "HIDDEN",
+            "size": "LARGE",
+            "type": "LAUNCH_BAY"
+        },
+        {
+            "angle": 0,
+            "arc": 300,
+            "id": "WS 016",
+            "locations": [
+                -47,
+                26,
+                33,
+                14,
+                78,
+                -10,
+                55,
+                -10
+            ],
+            "mount": "HIDDEN",
+            "size": "LARGE",
+            "type": "LAUNCH_BAY"
+        },
+        {
+            "angle": 0,
+            "arc": 300,
+            "id": "WS 017",
+            "locations": [
+                -35,
+                -17,
+                -48,
+                13,
+                66,
+                3,
+                27,
+                -6
+            ],
+            "mount": "HIDDEN",
+            "size": "LARGE",
+            "type": "LAUNCH_BAY"
+        }
+    ],
+    "width": 220
+}

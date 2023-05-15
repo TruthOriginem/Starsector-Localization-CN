@@ -1,0 +1,250 @@
+{
+    "bounds": [
+        168,
+        0,
+        152,
+        -28,
+        125,
+        -39,
+        120,
+        -56,
+        81,
+        -54,
+        62,
+        -41,
+        30,
+        -41,
+        23,
+        -51,
+        2,
+        -50,
+        -38,
+        -34,
+        -48,
+        -50,
+        -77,
+        -50,
+        -105,
+        -23,
+        -105,
+        24,
+        -77,
+        51,
+        -47,
+        51,
+        -38,
+        35,
+        2,
+        51,
+        23,
+        52,
+        30,
+        42,
+        62,
+        42,
+        81,
+        55,
+        120,
+        57,
+        125,
+        39,
+        152,
+        29
+    ],
+    "builtInMods": ["civgrade"],
+    "center": [
+        63,
+        113
+    ],
+    "collisionRadius": 202,
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 96,
+            "length": 64,
+            "location": [
+                -108,
+                19
+            ],
+            "style": "MIDLINE",
+            "width": 24
+        },
+        {
+            "angle": 180,
+            "contrailSize": 96,
+            "length": 96,
+            "location": [
+                -108,
+                0
+            ],
+            "style": "MIDLINE",
+            "width": 32
+        },
+        {
+            "angle": 180,
+            "contrailSize": 96,
+            "length": 64,
+            "location": [
+                -108,
+                -18
+            ],
+            "style": "MIDLINE",
+            "width": 24
+        },
+        {
+            "angle": 180,
+            "contrailSize": 32,
+            "length": 24,
+            "location": [
+                -85,
+                39
+            ],
+            "style": "MIDLINE",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 32,
+            "length": 24,
+            "location": [
+                -85,
+                -38
+            ],
+            "style": "MIDLINE",
+            "width": 6
+        },
+        {
+            "angle": 170,
+            "contrailSize": 32,
+            "length": 24,
+            "location": [
+                -106,
+                26
+            ],
+            "style": "MIDLINE",
+            "width": 6
+        },
+        {
+            "angle": 190,
+            "contrailSize": 32,
+            "length": 24,
+            "location": [
+                -106,
+                -25
+            ],
+            "style": "MIDLINE",
+            "width": 6
+        }
+    ],
+    "height": 284,
+    "hullId": "starliner",
+    "hullName": "Starliner",
+    "hullSize": "CRUISER",
+    "shieldCenter": [
+        30,
+        0
+    ],
+    "shieldRadius": 170,
+    "spriteName": "graphics/ships/starliner/starliner.png",
+    "style": "MIDLINE",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 55,
+            "arc": 180,
+            "id": "WS 001",
+            "locations": [
+                104,
+                47
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": -55,
+            "arc": 180,
+            "id": "WS 002",
+            "locations": [
+                105,
+                -47
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 90,
+            "arc": 150,
+            "id": "WS 003",
+            "locations": [
+                8,
+                46
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": -90,
+            "arc": 150,
+            "id": "WS 004",
+            "locations": [
+                8,
+                -46
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 120,
+            "arc": 170,
+            "id": "WS 005",
+            "locations": [
+                -53,
+                37
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 240,
+            "arc": 170,
+            "id": "WS 006",
+            "locations": [
+                -53,
+                -37
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 150,
+            "arc": 30,
+            "id": "WS 007",
+            "locations": [
+                71,
+                54
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        },
+        {
+            "angle": 210,
+            "arc": 30,
+            "id": "WS 008",
+            "locations": [
+                71,
+                -53
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        }
+    ],
+    "width": 126
+}

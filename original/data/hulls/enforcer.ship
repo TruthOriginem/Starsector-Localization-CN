@@ -1,0 +1,263 @@
+{
+    "bounds": [
+        37,
+        56,
+        1,
+        60,
+        -21,
+        66,
+        -41,
+        48,
+        -61,
+        42,
+        -63,
+        17,
+        -45,
+        14,
+        -29,
+        0,
+        -44,
+        -12,
+        -61,
+        -16,
+        -62,
+        -40,
+        -40,
+        -47,
+        -22,
+        -64,
+        0,
+        -60,
+        37,
+        -56,
+        35,
+        -41,
+        46,
+        -39,
+        44,
+        -24,
+        33,
+        -22,
+        36,
+        -14,
+        49,
+        -19,
+        65,
+        -20,
+        68,
+        -6,
+        68,
+        8,
+        64,
+        21,
+        49,
+        21,
+        39,
+        15,
+        34,
+        22,
+        45,
+        24,
+        45,
+        40,
+        35,
+        39
+    ],
+    "center": [
+        68,
+        67
+    ],
+    "collisionRadius": 105,
+    "coversColor": "255,188,175,255",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -66,
+                29
+            ],
+            "style": "LOW_TECH",
+            "width": 24
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -66,
+                -28
+            ],
+            "style": "LOW_TECH",
+            "width": 24
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -66,
+                38
+            ],
+            "style": "LOW_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -65,
+                20
+            ],
+            "style": "LOW_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -65,
+                -20
+            ],
+            "style": "LOW_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -66,
+                -37
+            ],
+            "style": "LOW_TECH",
+            "width": 8
+        }
+    ],
+    "height": 136,
+    "hullId": "enforcer",
+    "hullName": "Enforcer",
+    "hullSize": "DESTROYER",
+    "shieldCenter": [
+        -5,
+        0
+    ],
+    "shieldRadius": 96,
+    "spriteName": "graphics/ships/enforcer/enforcer_base.png",
+    "style": "LOW_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 90,
+            "arc": 210,
+            "id": "WS 001",
+            "locations": [
+                -15,
+                44
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 30,
+            "arc": 125,
+            "id": "WS 002",
+            "locations": [
+                12,
+                29
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 125,
+            "id": "WS 003",
+            "locations": [
+                19,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": -30,
+            "arc": 125,
+            "id": "WS 004",
+            "locations": [
+                12,
+                -29
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": -90,
+            "arc": 210,
+            "id": "WS 005",
+            "locations": [
+                -15,
+                -44
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 006",
+            "locations": [
+                29,
+                47
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 007",
+            "locations": [
+                38,
+                32
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 008",
+            "locations": [
+                38,
+                -31
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 009",
+            "locations": [
+                29,
+                -46
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        }
+    ],
+    "width": 136
+}

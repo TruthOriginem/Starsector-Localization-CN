@@ -1,0 +1,167 @@
+{
+    "bounds": [
+        20,
+        73,
+        60,
+        55,
+        60,
+        -55,
+        19,
+        -72,
+        -9,
+        -56,
+        -9,
+        59
+    ],
+    "builtInMods": [
+        "supercomputer",
+        "reduced_explosion"
+    ],
+    "center": [
+        82,
+        36
+    ],
+    "collisionRadius": 100,
+    "coversColor": "",
+    "height": 108,
+    "hullId": "remnant_hangar1",
+    "hullName": "Remnant Station Hangar",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        1,
+        0
+    ],
+    "shieldRadius": 100,
+    "spriteName": "graphics/ships/remnants/remnant_station_hangar1.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 10,
+            "arc": 100,
+            "id": "WS 001",
+            "locations": [
+                13,
+                48
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -10,
+            "arc": 100,
+            "id": "WS 002",
+            "locations": [
+                14,
+                -48
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 50,
+            "arc": 180,
+            "id": "WS 003",
+            "locations": [
+                20,
+                71
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 10,
+            "arc": 100,
+            "id": "WS 004",
+            "locations": [
+                41,
+                45
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -10,
+            "arc": 100,
+            "id": "WS 005",
+            "locations": [
+                41,
+                -45
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -50,
+            "arc": 180,
+            "id": "WS 006",
+            "locations": [
+                20,
+                -71
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 0,
+            "arc": 90,
+            "id": "WS 007",
+            "locations": [
+                38,
+                19,
+                27,
+                14,
+                31,
+                6,
+                22,
+                1
+            ],
+            "mount": "HIDDEN",
+            "size": "LARGE",
+            "type": "LAUNCH_BAY"
+        },
+        {
+            "angle": 0,
+            "arc": 90,
+            "id": "WS 008",
+            "locations": [
+                40,
+                -1,
+                28,
+                -15,
+                30,
+                -5,
+                38,
+                -12
+            ],
+            "mount": "HIDDEN",
+            "size": "LARGE",
+            "type": "LAUNCH_BAY"
+        },
+        {
+            "angle": 0,
+            "arc": 90,
+            "id": "WS 009",
+            "locations": [
+                40,
+                10,
+                19,
+                -8,
+                33,
+                13,
+                29,
+                0
+            ],
+            "mount": "HIDDEN",
+            "size": "LARGE",
+            "type": "LAUNCH_BAY"
+        }
+    ],
+    "width": 164
+}

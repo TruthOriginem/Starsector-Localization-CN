@@ -1,0 +1,123 @@
+{
+    "bounds": [
+        21,
+        20,
+        21,
+        -19,
+        2,
+        -25,
+        -16,
+        -19,
+        -16,
+        19,
+        1,
+        28
+    ],
+    "builtInMods": [
+        "automated",
+        "rugged"
+    ],
+    "center": [
+        30,
+        24
+    ],
+    "collisionRadius": 34,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 48,
+            "length": 36,
+            "location": [
+                -22,
+                15
+            ],
+            "style": "LOW_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 48,
+            "length": 36,
+            "location": [
+                -22,
+                -15
+            ],
+            "style": "LOW_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 36,
+            "length": 24,
+            "location": [
+                -21,
+                9
+            ],
+            "style": "LOW_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 36,
+            "length": 24,
+            "location": [
+                -21,
+                -8
+            ],
+            "style": "LOW_TECH",
+            "width": 6
+        }
+    ],
+    "height": 52,
+    "hullId": "picket",
+    "hullName": "Picket",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        1,
+        0
+    ],
+    "shieldRadius": 36,
+    "spriteName": "graphics/ships/derelict/derelict_picket.png",
+    "style": "LOW_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 2,
+            "arc": 10,
+            "id": "WS 001",
+            "locations": [
+                21,
+                14
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 10,
+            "id": "WS 002",
+            "locations": [
+                21,
+                0
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": -2,
+            "arc": 10,
+            "id": "WS 003",
+            "locations": [
+                21,
+                -14
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        }
+    ],
+    "width": 60
+}

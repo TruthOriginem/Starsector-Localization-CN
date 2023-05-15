@@ -1,0 +1,16 @@
+{
+	"id":"tachyonlance_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":1000.0,
+	"width":25.0,
+	"hitGlowRadius":100,
+	"fadeTime":0.25,
+	"fringeColor":[85,25,215,255],
+	"coreColor":[255,255,255,255],
+	"textureType":"SMOOTH",  # only needed for BEAM spawnType
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":1.0	
+}

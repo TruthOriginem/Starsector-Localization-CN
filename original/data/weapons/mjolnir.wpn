@@ -1,0 +1,32 @@
+{
+	"id":"mjolnir",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"LARGE",
+	"displayArcRadius":450,
+	"turretUnderSprite":"graphics/weapons/mjolnir_turret_under.png",
+	"turretSprite":"graphics/weapons/mjolnir_turret_base.png",
+	"turretGunSprite":"graphics/weapons/mjolnir_turret_recoil.png",
+	"hardpointUnderSprite":"graphics/weapons/mjolnir_hardpoint_under.png",	
+	"hardpointSprite":"graphics/weapons/mjolnir_hardpoint_base.png",
+	"hardpointGunSprite":"graphics/weapons/mjolnir_hardpoint_recoil.png",	
+	"visualRecoil":10.0,  # the gun sprites are only used if this is non-0
+	"renderHints":[RENDER_BARREL_BELOW],
+	"glowColor":[255,185,215,215],
+	"turretOffsets":[25, -4.5, 25, 4.5],
+	"turretAngleOffsets":[0, 0],
+	"hardpointOffsets":[37, -4.5, 37, 4.5],
+	"hardpointAngleOffsets":[0, 0],
+	"barrelMode":"ALTERNATING", # LINKED or ALTERNATING.  whether barrels fire at the same time or alternate.
+	"animationType":"MUZZLE_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"muzzleFlashSpec":{"length":34.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":10.0,
+					   "particleSizeMin":18.0,
+					   "particleSizeRange":24.0,
+					   "particleDuration":0.12,
+					   "particleCount":12,
+					   "particleColor":[255,185,215,215]},
+					   #"particleColor":[155,185,255,215]},
+	"projectileSpecId":"mjolnir_shot",  # projectile that will be fired
+	"fireSoundTwo":"mjolnir_fire",	
+}

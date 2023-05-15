@@ -287,7 +287,7 @@
 	"stockpileShortageCostMult":0.1,
 	
 	
-	"stabilityBaseValue":5,
+	"stabilityBaseValue":6,
 	
 	"accessibilityBaseValue":0.5, # used
 	"accessibilityNoSpaceport":-1, # used
@@ -354,6 +354,12 @@
 	"patherProgressMultSleeperCells":0.5,
 	"patherProgressMultActiveCells":1,
 	
+	# for computing Hostile Activity Pather progress non-linearly
+	# remove unit from total, multiply by mult, repeat
+	# e.g. if unit is 10 and mult is 0.5, then for progress 20: 10 + 10/2 
+	"patherProgressUnit":10,
+	"patherProgressMult":0.75,
+	
 	"maxHostileActivityFleetsPerSystem":11,
 	
 	"pirateProtectionPaymentFraction":0.1,
@@ -373,6 +379,16 @@
 	# mega-tithe to avoid Pather activity for a time
 	"luddicPathTithePerPointOfInterestPerColonySize":1000,
 	"luddicPathTitheDurationDays":730,
+	
+	# some of the HA progress reductions
+	"HA_fleetPointsPerPoint":10,
+	"HA_kantaProtection":100,
+	"HA_pirateBase":[40, 50, 60, 70, 80], # based on base level 
+	"HA_patherBaseFlat":50, 
+	"HA_patherBasePerActiveCell":20, 
+	"HA_patherBaseMax":150, 
+	"HA_megaTithe":30,
+	"HA_givePK":100,
 	
 	
 	##### END HOSTILE ACTIVITY EVENT CONFIG #####

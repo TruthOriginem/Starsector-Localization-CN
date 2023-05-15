@@ -1,0 +1,107 @@
+{
+    "bounds": [
+        -12,
+        47,
+        -4,
+        35,
+        32,
+        20,
+        53,
+        16,
+        96,
+        15,
+        119,
+        12,
+        93,
+        3,
+        11,
+        -6,
+        1,
+        -22,
+        -15,
+        -33,
+        -63,
+        -42,
+        -72,
+        -30,
+        -67,
+        5,
+        -25,
+        17,
+        -26,
+        46
+    ],
+    "builtInMods": [
+        "supercomputer",
+        "reduced_explosion"
+    ],
+    "center": [
+        49,
+        78
+    ],
+    "collisionRadius": 130,
+    "coversColor": "",
+    "height": 200,
+    "hullId": "derelict_mothership_sensor_mast",
+    "hullName": "Bow Sensor Mast",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        -10,
+        0
+    ],
+    "shieldRadius": 110,
+    "spriteName": "graphics/ships/derelict/derelict_mothership_sensor_mast.png",
+    "style": "LOW_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": -60,
+            "arc": 130,
+            "id": "WS 009",
+            "locations": [
+                -20,
+                -14
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 40,
+            "arc": 100,
+            "id": "WS 010",
+            "locations": [
+                -17,
+                39
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 100,
+            "id": "WS 011",
+            "locations": [
+                30,
+                10
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -90,
+            "arc": 140,
+            "id": "WS 012",
+            "locations": [
+                -55,
+                -35
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        }
+    ],
+    "width": 96
+}

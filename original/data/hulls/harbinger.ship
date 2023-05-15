@@ -1,0 +1,183 @@
+{
+    "bounds": [
+        61,
+        40,
+        61,
+        -39,
+        23,
+        -57,
+        -17,
+        -34,
+        -40,
+        -44,
+        -74,
+        -41,
+        -76,
+        -17,
+        -64,
+        0,
+        -76,
+        18,
+        -74,
+        41,
+        -39,
+        45,
+        -17,
+        34,
+        21,
+        56
+    ],
+    "builtInMods": [
+        "phasefield",
+        "delicate"
+    ],
+    "center": [
+        67,
+        81
+    ],
+    "collisionRadius": 120,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 32,
+            "length": 32,
+            "location": [
+                -77,
+                36
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 44,
+            "length": 44,
+            "location": [
+                -79,
+                28
+            ],
+            "style": "HIGH_TECH",
+            "width": 14
+        },
+        {
+            "angle": 180,
+            "contrailSize": 46,
+            "length": 46,
+            "location": [
+                -80,
+                20
+            ],
+            "style": "HIGH_TECH",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 32,
+            "length": 32,
+            "location": [
+                -77,
+                -36
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 44,
+            "length": 44,
+            "location": [
+                -80,
+                -28
+            ],
+            "style": "HIGH_TECH",
+            "width": 14
+        },
+        {
+            "angle": 180,
+            "contrailSize": 46,
+            "length": 46,
+            "location": [
+                -80,
+                -20
+            ],
+            "style": "HIGH_TECH",
+            "width": 16
+        }
+    ],
+    "height": 152,
+    "hullId": "harbinger",
+    "hullName": "Harbinger",
+    "hullSize": "DESTROYER",
+    "shieldCenter": [
+        1,
+        0
+    ],
+    "shieldRadius": 107,
+    "spriteName": "graphics/ships/harbinger/harbinger.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 6,
+            "id": "WS 001",
+            "locations": [
+                50,
+                0
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 6,
+            "id": "WS 002",
+            "locations": [
+                60,
+                24
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 6,
+            "id": "WS 003",
+            "locations": [
+                60,
+                -23
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 120,
+            "arc": 200,
+            "id": "WS 004",
+            "locations": [
+                -41,
+                36
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 240,
+            "arc": 200,
+            "id": "WS 005",
+            "locations": [
+                -41,
+                -36
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        }
+    ],
+    "width": 134
+}

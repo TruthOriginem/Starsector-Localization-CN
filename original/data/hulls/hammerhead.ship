@@ -1,0 +1,233 @@
+{
+    "bounds": [
+        43,
+        17,
+        58,
+        50,
+        72,
+        51,
+        80,
+        39,
+        86,
+        0,
+        80,
+        -39,
+        74,
+        -50,
+        58,
+        -49,
+        45,
+        -16,
+        13,
+        -14,
+        14,
+        -31,
+        -13,
+        -52,
+        -41,
+        -39,
+        -68,
+        -44,
+        -62,
+        -7,
+        -31,
+        -1,
+        -62,
+        8,
+        -68,
+        44,
+        -40,
+        41,
+        -12,
+        53,
+        13,
+        30,
+        13,
+        14
+    ],
+    "center": [
+        54,
+        71
+    ],
+    "collisionRadius": 130,
+    "coversColor": "255,255,255,255",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 80,
+            "length": 75,
+            "location": [
+                -70,
+                38
+            ],
+            "style": "MIDLINE",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 60,
+            "length": 65,
+            "location": [
+                -69,
+                27
+            ],
+            "style": "MIDLINE",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 80,
+            "length": 55,
+            "location": [
+                -68,
+                15
+            ],
+            "style": "MIDLINE",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 80,
+            "length": 55,
+            "location": [
+                -68,
+                -15
+            ],
+            "style": "MIDLINE",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 80,
+            "length": 65,
+            "location": [
+                -69,
+                -26
+            ],
+            "style": "MIDLINE",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 80,
+            "length": 75,
+            "location": [
+                -70,
+                -38
+            ],
+            "style": "MIDLINE",
+            "width": 16
+        }
+    ],
+    "height": 164,
+    "hullId": "hammerhead",
+    "hullName": "Hammerhead",
+    "hullSize": "DESTROYER",
+    "shieldCenter": [
+        11,
+        1
+    ],
+    "shieldRadius": 120,
+    "spriteName": "graphics/ships/hammerhead/hammerhead_base.png",
+    "style": "MIDLINE",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 10,
+            "id": "WS 001",
+            "locations": [
+                84,
+                31
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 10,
+            "id": "WS 002",
+            "locations": [
+                84,
+                -31
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 003",
+            "locations": [
+                87,
+                11
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 004",
+            "locations": [
+                87,
+                -11
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 45,
+            "arc": 215,
+            "id": "WS 005",
+            "locations": [
+                57,
+                16
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": -45,
+            "arc": 215,
+            "id": "WS 006",
+            "locations": [
+                57,
+                -16
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 115,
+            "arc": 215,
+            "id": "WS 007",
+            "locations": [
+                -16,
+                39
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 245,
+            "arc": 215,
+            "id": "WS 008",
+            "locations": [
+                -16,
+                -39
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        }
+    ],
+    "width": 108
+}

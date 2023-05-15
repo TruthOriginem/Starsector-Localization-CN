@@ -1,0 +1,28 @@
+{
+	"baseHullId":"eagle",
+	"skinHullId":"eagle_LG",
+	"hullName":"Eagle (LG)",
+	"descriptionPrefix":"Modified for operations in the Askonia system under orders from Supreme Executor Philip Andrada, this hull includes integrated solar shielding as well as a peculiar internal cladding provided by an industrial conglomerate out of Sindria itself. That the chief designer, appointed by the Supreme Executor for his many cycles of loyal service, sits on the board of that conglomerate is simply an example of the unity and efficiency of the Sindrian Polity.",
+	"tags":["LG_bp","no_dealer"],
+	"tech":"Lion's Guard",
+	"spriteName":"graphics/ships/eagle/eagle_lg.png",
+	"baseValueMult":1,
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	#"systemId":"ammofeed",
+	"ordnancePoints":146,
+	"builtInMods":["andrada_mods","solar_shielding"],
+	#"builtInMods":["andrada_mods"],
+	"builtInWeapons":{
+    },
+    "weaponSlotChanges":{
+		"WS 007":{
+			"type": "HYBRID"
+		},
+		"WS 008":{
+			"type": "HYBRID"
+		},
+	},
+}

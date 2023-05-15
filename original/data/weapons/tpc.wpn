@@ -1,0 +1,27 @@
+{
+	"id":"tpc",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"LARGE",
+	"turretSprite":"graphics/weapons/onslaught_thermal_turret_base.png",
+	"turretGlowSprite":"",
+	"hardpointSprite":"",
+	"hardpointGlowSprite":"graphics/weapons/onslaught_thermal_glow.png",
+	"turretOffsets":[25, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[15, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH",
+	"glowColor":[255,100,100,255],
+	"muzzleFlashSpec":{"length":30.0,
+					   "spread":5.0,
+					   "particleSizeMin":15.0,
+					   "particleSizeRange":20.0,
+					   "particleDuration":0.12,
+					   "particleCount":10,
+					   "particleColor":[255,100,100,255]},		
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"tpc_shot",  # projectile that will be fired
+	"fireSoundTwo":"thermal_pulse_cannon_fire",
+}

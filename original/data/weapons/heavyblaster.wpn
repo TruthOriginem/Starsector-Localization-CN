@@ -1,0 +1,29 @@
+{
+	"id":"heavyblaster",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/weapons/blaster_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/blaster_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/blaster_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/blaster_hardpoint_glow.png",
+	#"glowColor":[155,100,255,255],
+	"glowColor":[100,100,255,255],
+	"turretOffsets":[10, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[15, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{"length":40.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":15.0,
+					   "particleSizeMin":20.0,
+					   "particleSizeRange":10.0,
+					   "particleDuration":0.12,
+					   "particleCount":12,
+					   "particleColor":[100,100,255,255]},
+	#"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	#"requiresFullCharge":true,  # for pulse weapons - whether the weapon will fire at a lower strength partial charge
+	"projectileSpecId":"heavyblaster_shot",  # projectile that will be fired
+	"fireSoundTwo":"heavy_blaster_fire",
+}

@@ -1,0 +1,32 @@
+{
+	"id":"displacer_degraded",
+	"type":"DISPLACER",
+	"aiType":"PHASE_DISPLACER",
+	
+	
+	"jitterColor":[100,165,255,155],
+	#"jitterColor":[255,100,255,150],
+	"jitterCopies":10,
+	"jitterRange":0,
+	"jitterRangeRadiusFraction":0.5,
+	
+	"weaponGlowColor":[100,165,255,0],
+	"weaponTypes":[ENERGY],
+	
+	"engineGlowColor":[100,165,255,125],
+
+	"range":300,
+	"randomRange":0,
+	
+	"renderCopyDuringTeleport":true,
+	
+	"fadeActivationSoundOnChargedown":false,
+	"useSound":"system_phase_skimmer",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+		"activeSpeedIncrease":0,
+		"burstMovementPotential":300,
+		"averageSpeedIncrease":30,
+	}
+}
