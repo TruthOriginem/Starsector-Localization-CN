@@ -1,0 +1,51 @@
+{
+    "bounds": [
+        5,
+        0,
+        -5,
+        3,
+        -5,
+        -3
+    ],
+    "center": [
+        7,
+        7
+    ],
+    "collisionRadius": 12,
+    "engineSlots": [{
+        "angle": 180,
+        "contrailSize": 64,
+        "length": 8,
+        "location": [
+            -3,
+            0
+        ],
+        "style": "MIDLINE",
+        "width": 4
+    }],
+    "height": 14,
+    "hullId": "drone_pd_midline",
+    "hullName": "PD Drone",
+    "hullSize": "FIGHTER",
+    "shieldCenter": [
+        0,
+        0
+    ],
+    "shieldRadius": 12,
+    "spriteName": "graphics/ships/drones/drone_pd.png",
+    "style": "MIDLINE",
+    "viewOffset": 0,
+    "weaponSlots": [{
+        "angle": 0,
+        "arc": 120,
+        "id": "WS 001",
+        "locations": [
+            0,
+            0
+        ],
+        "mount": "HIDDEN",
+        "size": "SMALL",
+        "type": "ENERGY"
+    }],
+    "width": 14
+}

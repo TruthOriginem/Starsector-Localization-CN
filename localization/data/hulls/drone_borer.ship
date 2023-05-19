@@ -1,0 +1,75 @@
+{
+    "bounds": [
+        5,
+        0,
+        -5,
+        6,
+        -5,
+        -6
+    ],
+    "center": [
+        9,
+        8
+    ],
+    "collisionRadius": 12,
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 12,
+            "location": [
+                -6,
+                0
+            ],
+            "style": "LOW_TECH",
+            "width": 6
+        },
+        {
+            "angle": 160,
+            "contrailSize": 64,
+            "length": 8,
+            "location": [
+                -6,
+                6
+            ],
+            "style": "LOW_TECH",
+            "width": 4
+        },
+        {
+            "angle": 200,
+            "contrailSize": 64,
+            "length": 8,
+            "location": [
+                -6,
+                -6
+            ],
+            "style": "LOW_TECH",
+            "width": 4
+        }
+    ],
+    "height": 16,
+    "hullId": "drone_borer",
+    "hullName": "Borer Drone",
+    "hullSize": "FIGHTER",
+    "shieldCenter": [
+        0,
+        0
+    ],
+    "shieldRadius": 12,
+    "spriteName": "graphics/ships/drones/drone_borer.png",
+    "style": "LOW_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [{
+        "angle": 0,
+        "arc": 30,
+        "id": "WS 001",
+        "locations": [
+            0,
+            0
+        ],
+        "mount": "HIDDEN",
+        "size": "SMALL",
+        "type": "ENERGY"
+    }],
+    "width": 18
+}

@@ -1,0 +1,32 @@
+{
+	"id":"disintegrator",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"mountTypeOverride":"HYBRID",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/weapons/disintegrator_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/disintegrator_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/disintegrator_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/disintegrator_hardpoint_glow.png",
+	"glowColor":[183,65,13,255],
+	# 3 barrels in the same spot, with different angles to ensure a spread of shots
+	"turretOffsets":[15, 0, 15, 0, 15, 0],
+	"turretAngleOffsets":[4, -4, 0],
+	"hardpointOffsets":[20, 0, 20, 0, 20, 0],
+	"hardpointAngleOffsets":[4, -4, 0],
+	#"turretOffsets":[10, -2, 10, 0, 10, 2],
+	#"turretAngleOffsets":[5, 0, -5],
+	#"hardpointOffsets":[15, -2, 15, 0, 15, 2],
+	#"hardpointAngleOffsets":[5, 0, -5],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{"length":40.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":15.0,
+					   "particleSizeMin":20.0,
+					   "particleSizeRange":10.0,
+					   "particleDuration":0.24,
+					   "particleCount":17,
+					   "particleColor":[183,95,70,255]},
+	"projectileSpecId":"disintegrator_shot",  # projectile that will be fired
+	"fireSoundTwo":"disintegrator_fire",
+}

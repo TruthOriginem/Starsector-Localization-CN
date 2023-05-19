@@ -1,0 +1,247 @@
+{
+    "bounds": [
+        99,
+        13,
+        49,
+        30,
+        36,
+        16,
+        24,
+        51,
+        10,
+        51,
+        -2,
+        16,
+        -36,
+        33,
+        -49,
+        25,
+        -57,
+        40,
+        -76,
+        38,
+        -82,
+        14,
+        -58,
+        0,
+        -82,
+        -11,
+        -75,
+        -37,
+        -58,
+        -40,
+        -48,
+        -23,
+        -39,
+        -31,
+        -2,
+        -16,
+        11,
+        -49,
+        22,
+        -49,
+        35,
+        -14,
+        49,
+        -29,
+        100,
+        -11,
+        41,
+        0
+    ],
+    "center": [
+        56,
+        85
+    ],
+    "collisionRadius": 111,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -79,
+                33
+            ],
+            "style": "MIDLINE",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -85,
+                17
+            ],
+            "style": "MIDLINE",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -85,
+                -17
+            ],
+            "style": "MIDLINE",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -79,
+                -33
+            ],
+            "style": "MIDLINE",
+            "width": 16
+        }
+    ],
+    "height": 192,
+    "hullId": "sunder",
+    "hullName": "Sunder",
+    "hullSize": "DESTROYER",
+    "shieldCenter": [
+        11,
+        0
+    ],
+    "shieldRadius": 128,
+    "spriteName": "graphics/ships/sunder/sunder.png",
+    "style": "MIDLINE",
+    "viewOffset": 100,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 001",
+            "locations": [
+                27,
+                48
+            ],
+            "mount": "HARDPOINT",
+            "position": [
+                51,
+                80
+            ],
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 002",
+            "locations": [
+                29,
+                30
+            ],
+            "mount": "HARDPOINT",
+            "position": [
+                121,
+                50
+            ],
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 003",
+            "locations": [
+                42,
+                0
+            ],
+            "mount": "HARDPOINT",
+            "position": [
+                131,
+                0
+            ],
+            "size": "LARGE",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 004",
+            "locations": [
+                29,
+                -30
+            ],
+            "mount": "HARDPOINT",
+            "position": [
+                121,
+                -50
+            ],
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 005",
+            "locations": [
+                27,
+                -48
+            ],
+            "mount": "HARDPOINT",
+            "position": [
+                51,
+                -75
+            ],
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 75,
+            "arc": 190,
+            "id": "WS 006",
+            "locations": [
+                11,
+                18
+            ],
+            "mount": "TURRET",
+            "position": [
+                -22,
+                65
+            ],
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": -75,
+            "arc": 190,
+            "id": "WS 007",
+            "locations": [
+                11,
+                -18
+            ],
+            "mount": "TURRET",
+            "position": [
+                -24,
+                -65
+            ],
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 180,
+            "arc": 270,
+            "id": "WS 008",
+            "locations": [
+                -50,
+                0
+            ],
+            "mount": "TURRET",
+            "position": [
+                -124,
+                0
+            ],
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        }
+    ],
+    "width": 112
+}

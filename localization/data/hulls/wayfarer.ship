@@ -1,0 +1,189 @@
+{
+    "bounds": [
+        46,
+        35,
+        60,
+        19,
+        60,
+        -16,
+        46,
+        -34,
+        -37,
+        -33,
+        -37,
+        35
+    ],
+    "center": [
+        44,
+        44
+    ],
+    "collisionRadius": 85,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 179,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -41,
+                13
+            ],
+            "style": "MIDLINE",
+            "width": 18
+        },
+        {
+            "angle": 181,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -41,
+                -11
+            ],
+            "style": "MIDLINE",
+            "width": 18
+        },
+        {
+            "angle": 172,
+            "contrailSize": 24,
+            "length": 24,
+            "location": [
+                -40,
+                30
+            ],
+            "style": "MIDLINE",
+            "width": 8
+        },
+        {
+            "angle": 184,
+            "contrailSize": 24,
+            "length": 24,
+            "location": [
+                -40,
+                26
+            ],
+            "style": "MIDLINE",
+            "width": 8
+        },
+        {
+            "angle": 188,
+            "contrailSize": 24,
+            "length": 24,
+            "location": [
+                -40,
+                -28
+            ],
+            "style": "MIDLINE",
+            "width": 8
+        },
+        {
+            "angle": 176,
+            "contrailSize": 24,
+            "length": 24,
+            "location": [
+                -40,
+                -23
+            ],
+            "style": "MIDLINE",
+            "width": 8
+        }
+    ],
+    "height": 108,
+    "hullId": "wayfarer",
+    "hullName": "Wayfarer",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        11,
+        1
+    ],
+    "shieldRadius": 73,
+    "spriteName": "graphics/ships/wayfarer/wayfarer.png",
+    "style": "MIDLINE",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 160,
+            "id": "WS 001",
+            "locations": [
+                44,
+                14
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 160,
+            "id": "WS 002",
+            "locations": [
+                44,
+                -12
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 80,
+            "arc": 140,
+            "id": "WS 003",
+            "locations": [
+                15,
+                31
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": -80,
+            "arc": 140,
+            "id": "WS 004",
+            "locations": [
+                9,
+                -29
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 140,
+            "arc": 150,
+            "id": "WS 005",
+            "locations": [
+                -26,
+                29
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 210,
+            "arc": 160,
+            "id": "WS 006",
+            "locations": [
+                -25,
+                -27
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 180,
+            "arc": 5,
+            "id": "WS 007",
+            "locations": [
+                -32,
+                1
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        }
+    ],
+    "width": 86
+}

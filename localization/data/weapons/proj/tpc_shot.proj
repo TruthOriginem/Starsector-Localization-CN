@@ -1,0 +1,19 @@
+{
+	"id":"tpc_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":100.0,
+	"width":35,
+	"fadeTime":0.3,
+	"fringeColor":[255,0,0,255],
+	"coreColor":[255,255,255,200],
+	"textureType":"ROUGH",  # now also used for "BALLISTIC_AS_BEAM", if specified
+	#"textureType":["graphics/fx/emp_arcs.png","graphics/fx/emp_arcs.png"],
+	"textureScrollSpeed":-256,
+	"pixelsPerTexel":1.0,
+	"passThroughMissiles":true,
+	"passThroughFighters":true,
+	"passThroughFightersOnlyWhenDestroyed":true,
+}

@@ -1,0 +1,35 @@
+{
+	"specClass":"beam",
+	"id":"taclaser",
+	"type":"ENERGY",
+	"size":"SMALL",
+	"displayArcRadius":300,  # radius of the arc on the overlay.  Generally same as range, but not always.
+	"turretSprite":"graphics/weapons/...",
+	"turretGlowSprite":"graphics/weapons/...",
+	"hardpointSprite":"graphics/weapons/...",
+	"hardpointGlowSprite":"graphics/weapons/...",
+	"turretOffsets":[10, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[15, 0],
+	"hardpointAngleOffsets":[0],
+	"fringeColor":[155,0,0,255],
+	"coreColor":[255,255,255,255],
+	"glowColor":[255,255,255,255],
+	"darkCore":false,
+	"width":12.0,
+	"impactMass":0,
+	"textureType":ROUGH,
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":1.0,
+	"pierceSet":["FIGHTER"]
+
+### DO NOT SET - these are taken from weapon_data.csv (which in turn comes from a googledocs spreadsheet)	
+#	"ordnancePoints":10,
+#	"turnRate":50,
+#	"beamSpeed":1400.0,
+#	"maxRange":500.0,
+#	"damagePerSecond":100.0,
+#	"chargeupTime":0.0,
+#	"chargedownTime":0.0,
+	
+}

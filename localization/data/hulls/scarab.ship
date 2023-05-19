@@ -1,0 +1,201 @@
+{
+    "bounds": [
+        47,
+        25,
+        21,
+        43,
+        -2,
+        33,
+        -29,
+        38,
+        -37,
+        1,
+        -28,
+        -37,
+        -5,
+        -33,
+        20,
+        -45,
+        47,
+        -23,
+        33,
+        -14,
+        42,
+        0,
+        35,
+        12
+    ],
+    "center": [
+        48,
+        42
+    ],
+    "collisionRadius": 90,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 36,
+            "location": [
+                -39,
+                21
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 36,
+            "location": [
+                -39,
+                -21
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 20,
+            "location": [
+                -40,
+                9
+            ],
+            "style": "HIGH_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 20,
+            "location": [
+                -40,
+                -8
+            ],
+            "style": "HIGH_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 28,
+            "location": [
+                -40,
+                3
+            ],
+            "style": "HIGH_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 28,
+            "location": [
+                -40,
+                -2
+            ],
+            "style": "HIGH_TECH",
+            "width": 8
+        }
+    ],
+    "height": 96,
+    "hullId": "scarab",
+    "hullName": "Scarab",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        0,
+        0
+    ],
+    "shieldRadius": 75,
+    "spriteName": "graphics/ships/scarab/scarab.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 80,
+            "id": "WS 001",
+            "locations": [
+                23,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 150,
+            "id": "WS 002",
+            "locations": [
+                43,
+                23
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "SYNERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 150,
+            "id": "WS 003",
+            "locations": [
+                43,
+                -23
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "SYNERGY"
+        },
+        {
+            "angle": -55,
+            "arc": 130,
+            "id": "WS 005",
+            "locations": [
+                23,
+                -33
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 120,
+            "arc": 150,
+            "id": "WS 008",
+            "locations": [
+                -26,
+                32
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 240,
+            "arc": 150,
+            "id": "WS 009",
+            "locations": [
+                -26,
+                -32
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 55,
+            "arc": 130,
+            "id": "WS 010",
+            "locations": [
+                23,
+                33
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        }
+    ],
+    "width": 96
+}

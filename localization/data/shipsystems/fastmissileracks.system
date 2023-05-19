@@ -1,0 +1,13 @@
+{
+	"id":"fastmissileracks",
+	"type":"FAST_RELOAD",
+	"aiType":"FAST_RELOAD",
+	#"aiType":"CUSTOM",
+	#"aiScript":"data.shipsystems.scripts.ai.FastMissileRacksAI",
+	
+	"weaponTypes":[MISSILE],
+	"minFractionToReload":0.5,
+	
+	"useSound":"system_fast_missile_racks",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

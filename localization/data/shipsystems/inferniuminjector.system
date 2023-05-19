@@ -1,0 +1,31 @@
+{
+	"id":"inferniuminjector",
+	"type":"ENGINE_MOD",
+	"aiType":"NONE",
+	
+	"engineGlowColor":[255,100,225,255],
+	"engineGlowContrailColor":[200,100,200,25],
+	"engineGlowLengthMult":0.5,
+	"engineGlowWidthMult":0.65,
+	"engineGlowGlowMult":0,
+	
+	"flameoutOnImpactChance":0,
+
+	"clampTurnRateAfter":true,
+	"clampMaxSpeedAfter":true,
+
+	"accelerationBonusFlat":800,
+	"accelerationBonusPercent":800,
+	"decelerationBonusFlat":0,
+	"decelerationBonusPercent":0,
+	"turnAccelerationBonusFlat":0,
+	"turnAccelerationBonusPercent":400,
+	
+	"speedBonusFlat":50,
+	"speedBonusPercent":50,
+	"turnRateBonusFlat":0,
+	"turnRateBonusPercent":50,
+	
+	"useSound":"engine_accelerate",
+	"outOfUsesSound":"engine_disabled",
+}

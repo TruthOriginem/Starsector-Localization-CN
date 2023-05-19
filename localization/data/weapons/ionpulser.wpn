@@ -1,0 +1,34 @@
+{
+	"id":"ionpulser",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/weapons/ionpulser/ionpulser_t00.png",
+	"hardpointSprite":"graphics/weapons/ionpulser/ionpulser_h00.png",
+	"hardpointGlowSprite":"graphics/weapons/ionpulser/ionpulser_hardpoint_glow.png",
+	"turretGlowSprite":"graphics/weapons/ionpulser/ionpulser_turret_glow.png",
+	"numFrames":9,
+	"frameRate":20,
+	"turretOffsets":[22, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[33, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	#"animationType":"GLOW",
+	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{"length":33.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":15.0,
+					   "particleSizeMin":15.0,
+					   "particleSizeRange":17.0,
+					   "particleDuration":0.12,
+					   "particleCount":7,
+					   "particleColor":[100,200,255,255]},
+					   
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"ionpulser_shot",  # projectile that will be fired
+	#"fireSoundOne":"thumper_spinup",
+	"fireSoundTwo":"ion_pulser_fire",
+	"glowColor":[100,150,255,225],
+	#"autocharge":true,
+	#"interruptibleBurst":true,
+}

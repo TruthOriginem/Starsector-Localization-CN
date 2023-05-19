@@ -1,0 +1,134 @@
+{
+    "bounds": [
+        -33,
+        27,
+        -6,
+        39,
+        15,
+        27,
+        38,
+        21,
+        40,
+        10,
+        31,
+        0,
+        40,
+        -9,
+        38,
+        -19,
+        -6,
+        -37,
+        -33,
+        -26,
+        -31,
+        -15,
+        -20,
+        0,
+        -31,
+        16
+    ],
+    "builtInMods": [
+        "drive_field_stabilizer",
+        "high_maintenance",
+        "civgrade"
+    ],
+    "center": [
+        40,
+        37
+    ],
+    "collisionRadius": 55,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 12,
+            "location": [
+                -35,
+                25
+            ],
+            "style": "LOW_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 12,
+            "location": [
+                -35,
+                22
+            ],
+            "style": "LOW_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 12,
+            "location": [
+                -34,
+                20
+            ],
+            "style": "LOW_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 12,
+            "location": [
+                -34,
+                -19
+            ],
+            "style": "LOW_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 12,
+            "location": [
+                -35,
+                -22
+            ],
+            "style": "LOW_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 12,
+            "location": [
+                -35,
+                -24
+            ],
+            "style": "LOW_TECH",
+            "width": 6
+        }
+    ],
+    "height": 80,
+    "hullId": "ox",
+    "hullName": "Ox",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        1,
+        0
+    ],
+    "shieldRadius": 55,
+    "spriteName": "graphics/ships/ox/ox2.png",
+    "style": "LOW_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [{
+        "angle": 180,
+        "arc": 10,
+        "id": "WS 001",
+        "locations": [
+            -23,
+            1
+        ],
+        "mount": "TURRET",
+        "size": "SMALL",
+        "type": "SYSTEM"
+    }],
+    "width": 80
+}

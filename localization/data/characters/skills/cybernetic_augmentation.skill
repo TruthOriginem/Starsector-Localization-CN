@@ -1,0 +1,22 @@
+{
+	"id":"cybernetic_augmentation",
+	"governingAptitude":"technology",
+	"compressHullmods":false,
+	"scope":"FLEET",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":0,
+			"effects":[
+				{"type":"DESCRIPTION", "script":"com.fs.starfarer.api.impl.campaign.skills.CyberneticAugmentation$Level0"},
+			]
+		},
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"CHARACTER_STATS", "script":"com.fs.starfarer.api.impl.campaign.skills.CyberneticAugmentation$Level1"},
+				#{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.CyberneticAugmentation$Level2"},
+			]
+		},
+	],
+}

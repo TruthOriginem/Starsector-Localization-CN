@@ -1,0 +1,111 @@
+{
+    "bounds": [
+        24,
+        22,
+        -4,
+        32,
+        -5,
+        21,
+        -23,
+        20,
+        -23,
+        -26,
+        22,
+        -27
+    ],
+    "builtInMods": [
+        "automated",
+        "rugged"
+    ],
+    "center": [
+        36,
+        27
+    ],
+    "collisionRadius": 55,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -27,
+                12
+            ],
+            "style": "LOW_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 28,
+            "location": [
+                -27,
+                1
+            ],
+            "style": "LOW_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 24,
+            "location": [
+                -27,
+                -10
+            ],
+            "style": "LOW_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 20,
+            "location": [
+                -27,
+                -21
+            ],
+            "style": "LOW_TECH",
+            "width": 8
+        }
+    ],
+    "height": 56,
+    "hullId": "warden",
+    "hullName": "Warden",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        1,
+        0
+    ],
+    "shieldRadius": 52,
+    "spriteName": "graphics/ships/derelict/derelict_warden.png",
+    "style": "LOW_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 10,
+            "id": "WS 001",
+            "locations": [
+                21,
+                14
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 10,
+            "id": "WS 002",
+            "locations": [
+                21,
+                -24
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        }
+    ],
+    "width": 69
+}

@@ -1,0 +1,36 @@
+{
+	"id":"heatseeker_mrm",
+	"specClass":"missile",	
+	"missileType":"HEATSEEKER",
+	"sprite":"graphics/missiles/missile_salamander.png",
+	"size":[11,22],	
+	"center":[5.5,11],
+	"collisionRadius":16,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[255,100,100,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":150, # purely visual
+	"engineSpec":{"turnAcc":600,
+				  "turnRate":300,
+				  "acc":5500,
+				  "dec":3500},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-12, 0],
+				    #"style":"MISSILE_LOW_TECH",
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[255,145,75,255],
+						"contrailDuration":1.5,
+						"contrailWidthMult":1,
+						"contrailWidthAddedFractionAtEnd":2,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":15, # min segment length, in pixels
+						"contrailMaxSpeedMult":.0f,
+						"contrailAngularVelocityMult":0.5f,
+						"contrailSpawnDistMult":.5, # how far away from engine it starts
+						"contrailColor":[100,100,100,150],
+						"type":"SMOKE" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":11.0,
+				    "length":40.0,
+				    "angle":180.0}]
+}

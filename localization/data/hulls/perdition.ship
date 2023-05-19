@@ -1,0 +1,67 @@
+{
+    "bounds": [
+        12,
+        11,
+        12,
+        -12,
+        -11,
+        -10,
+        -11,
+        10
+    ],
+    "center": [
+        19,
+        19
+    ],
+    "collisionRadius": 24,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 24,
+            "location": [
+                -13,
+                5
+            ],
+            "style": "LOW_TECH",
+            "width": 9
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 24,
+            "location": [
+                -13,
+                -4
+            ],
+            "style": "LOW_TECH",
+            "width": 9
+        }
+    ],
+    "height": 40,
+    "hullId": "perdition",
+    "hullName": "Perdition",
+    "hullSize": "FIGHTER",
+    "shieldCenter": [
+        0,
+        0
+    ],
+    "shieldRadius": 22,
+    "spriteName": "graphics/ships/perdition_bomber.png",
+    "style": "LOW_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [{
+        "angle": 0,
+        "arc": 4,
+        "id": "WS 000",
+        "locations": [
+            5,
+            0
+        ],
+        "mount": "HARDPOINT",
+        "size": "SMALL",
+        "type": "MISSILE"
+    }],
+    "width": 40
+}

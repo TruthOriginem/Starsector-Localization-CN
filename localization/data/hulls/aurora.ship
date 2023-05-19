@@ -1,0 +1,380 @@
+{
+    "bounds": [
+        -106,
+        60,
+        4,
+        38,
+        23,
+        62,
+        54,
+        68,
+        140,
+        -16,
+        86,
+        -49,
+        16,
+        -49,
+        15,
+        -30,
+        -105,
+        -52,
+        -114,
+        1
+    ],
+    "center": [
+        70,
+        123
+    ],
+    "collisionRadius": 200,
+    "coversColor": "230,245,255,255",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -115,
+                27
+            ],
+            "style": "HIGH_TECH",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -117,
+                -23
+            ],
+            "style": "HIGH_TECH",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -116,
+                21
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -117,
+                16
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 80,
+            "location": [
+                -116,
+                1
+            ],
+            "style": "HIGH_TECH",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -117,
+                -5
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -115,
+                -14
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -115,
+                -18
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -111,
+                40
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -112,
+                35
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -112,
+                -30
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -111,
+                -36
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 160,
+            "contrailSize": 128,
+            "length": 24,
+            "location": [
+                16,
+                56
+            ],
+            "style": "HIGH_TECH",
+            "width": 8
+        },
+        {
+            "angle": 190,
+            "contrailSize": 128,
+            "length": 24,
+            "location": [
+                11,
+                -46
+            ],
+            "style": "HIGH_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -117,
+                8
+            ],
+            "style": "HIGH_TECH",
+            "width": 13
+        }
+    ],
+    "height": 280,
+    "hullId": "aurora",
+    "hullName": "Aurora",
+    "hullSize": "CRUISER",
+    "shieldCenter": [
+        8,
+        1
+    ],
+    "shieldRadius": 190,
+    "spriteName": "graphics/ships/aurora/aurora.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 180,
+            "arc": 210,
+            "id": "WS 001",
+            "locations": [
+                -94,
+                -10
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 90,
+            "arc": 150,
+            "id": "WS 002",
+            "locations": [
+                -39,
+                33
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 45,
+            "arc": 150,
+            "id": "WS 003",
+            "locations": [
+                62,
+                33
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 250,
+            "id": "WS 004",
+            "locations": [
+                116,
+                -15
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -80,
+            "arc": 180,
+            "id": "WS 005",
+            "locations": [
+                76,
+                -37
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 240,
+            "arc": 159,
+            "id": "WS 006",
+            "locations": [
+                -29,
+                -20
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "SYNERGY"
+        },
+        {
+            "angle": 80,
+            "arc": 210,
+            "id": "WS 007",
+            "locations": [
+                35,
+                39
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -60,
+            "arc": 150,
+            "id": "WS 008",
+            "locations": [
+                45,
+                -33
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 009",
+            "locations": [
+                103,
+                17
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "SYNERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 010",
+            "locations": [
+                141,
+                -10
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "SYNERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 011",
+            "locations": [
+                64,
+                58
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "SYNERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 012",
+            "locations": [
+                97,
+                35
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "SYNERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 013",
+            "locations": [
+                98,
+                -42
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "SYNERGY"
+        },
+        {
+            "angle": 180,
+            "arc": 5,
+            "id": "WS 014",
+            "locations": [
+                -115,
+                1
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        }
+    ],
+    "width": 128
+}

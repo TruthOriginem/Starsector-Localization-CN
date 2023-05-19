@@ -1,0 +1,121 @@
+{
+    "bounds": [
+        44,
+        14,
+        38,
+        -14,
+        5,
+        -10,
+        15,
+        -19,
+        13,
+        -28,
+        -21,
+        -27,
+        -23,
+        -17,
+        -7,
+        -15,
+        -19,
+        -11,
+        -20,
+        10,
+        -8,
+        16,
+        -23,
+        17,
+        -24,
+        27,
+        15,
+        27,
+        16,
+        19,
+        12,
+        13
+    ],
+    "builtInMods": [
+        "rugged",
+        "shielded_holds"
+    ],
+    "center": [
+        31,
+        27
+    ],
+    "collisionRadius": 73,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 80,
+            "location": [
+                -25,
+                22
+            ],
+            "style": "LOW_TECH",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 80,
+            "location": [
+                -25,
+                -22
+            ],
+            "style": "LOW_TECH",
+            "width": 16
+        }
+    ],
+    "height": 72,
+    "hullId": "hound",
+    "hullName": "Hound",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        8,
+        0
+    ],
+    "shieldRadius": 64,
+    "spriteName": "graphics/ships/hound/hound_base.png",
+    "style": "LOW_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 001",
+            "locations": [
+                35,
+                -6
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 145,
+            "arc": 290,
+            "id": "WS 002",
+            "locations": [
+                -4,
+                4
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 180,
+            "arc": 90,
+            "id": "WS 003",
+            "locations": [
+                -19,
+                0
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        }
+    ],
+    "width": 62
+}

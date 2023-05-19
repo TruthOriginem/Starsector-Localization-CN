@@ -1,0 +1,57 @@
+{
+	"starSystem":"isirah",
+	"markets":[
+		{
+			"entities":["laicaille_habitat"],
+			"faction":"persean",
+			"size":4,
+			"startingConditions":[
+				"population_4",
+				#"vice_demand",
+				"ore_abundant",
+			],
+			"industries":[
+				"population",
+				"spaceport",
+				"orbitalstation",
+				"mining",
+				"heavybatteries",
+				"militarybase",
+			],
+		},
+#		{
+#			"entities":["groombridge_habitat"],
+#			"faction":"independent",
+#			"size":4,
+#			"startingConditions":[
+#				"population_4",
+#				"orbital_station",
+#				"organics_complex",
+#				"trade_center",
+#				"free_market",
+#				"light_industrial_complex",
+#			],
+#		},
+		{
+			"entities":["station_kapteyn"],
+			"faction":"pirates",
+			"size":4,
+			"freePort":true,
+			"startingConditions":[
+				#"organized_crime",
+				"population_4",
+			],
+			"industries":[
+				"population",
+				"spaceport",
+				"refining",
+				"orbitalstation",
+				"orbitalworks",
+				"heavybatteries",
+			],
+		},
+	]
+}
+
+
+

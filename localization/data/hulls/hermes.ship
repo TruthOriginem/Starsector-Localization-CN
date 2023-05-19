@@ -1,0 +1,150 @@
+{
+    "bounds": [
+        42,
+        5,
+        21,
+        10,
+        14,
+        24,
+        -22,
+        17,
+        -37,
+        16,
+        -37,
+        -15,
+        -21,
+        -18,
+        14,
+        -25,
+        21,
+        -10,
+        42,
+        -4
+    ],
+    "builtInMods": ["civgrade"],
+    "center": [
+        28,
+        39
+    ],
+    "collisionRadius": 60,
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 24,
+            "location": [
+                -39,
+                10
+            ],
+            "style": "MIDLINE",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -39,
+                0
+            ],
+            "style": "MIDLINE",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 24,
+            "location": [
+                -39,
+                -10
+            ],
+            "style": "MIDLINE",
+            "width": 8
+        },
+        {
+            "angle": 150,
+            "contrailSize": 128,
+            "length": 12,
+            "location": [
+                -19,
+                23
+            ],
+            "style": "MIDLINE",
+            "width": 6
+        },
+        {
+            "angle": 210,
+            "contrailSize": 128,
+            "length": 12,
+            "location": [
+                -19,
+                -23
+            ],
+            "style": "MIDLINE",
+            "width": 6
+        }
+    ],
+    "height": 82,
+    "hullId": "hermes",
+    "hullName": "Hermes",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        2,
+        0
+    ],
+    "shieldRadius": 57,
+    "spriteName": "graphics/ships/hermes/hermes_base.png",
+    "style": "MIDLINE",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 45,
+            "arc": 150,
+            "id": "WS 001",
+            "locations": [
+                12,
+                18
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": -45,
+            "arc": 150,
+            "id": "WS 002",
+            "locations": [
+                12,
+                -18
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 180,
+            "arc": 210,
+            "id": "WS 003",
+            "locations": [
+                -18,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 180,
+            "arc": 30,
+            "id": "WS 004",
+            "locations": [
+                -40,
+                0
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        }
+    ],
+    "width": 56
+}

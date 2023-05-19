@@ -1,0 +1,30 @@
+{
+	"id":"type_1_srm",
+	"specClass":"missile",	
+	"missileType":"MISSILE",
+	"sprite":"graphics/missiles/missile_SRM.png",
+	"glowSprite":"graphics/missiles/missile_SRM.png",
+	"glowColor":[255,255,255,255],
+	"size":[6,14],	
+	"center":[3,7],
+	"collisionRadius":12,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[255,255,255,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":100, # purely visual
+	"engineSpec":{"turnAcc":1720,
+				  "turnRate":240,
+				  "acc":400,
+				  "dec":400},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-7, 0],
+				    "style":"MISSILE_MIDLINE",
+				    "width":4.0,
+				    "length":20.0,
+				    "angle":180.0}]
+				    
+### DO NOT SET - these are taken from weapon_data.csv (which in turn comes from a googledocs spreadsheet)
+#	"maxHealth":75,				    
+#	"damage":100,
+#	"launchSpeed":50,
+#	"maxFlightTime":3.0,				    
+}

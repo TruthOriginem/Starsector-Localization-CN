@@ -1,0 +1,181 @@
+{
+    "bounds": [
+        18,
+        19,
+        24,
+        -21,
+        43,
+        -26,
+        36,
+        -42,
+        -25,
+        -36,
+        -41,
+        -26,
+        -37,
+        -5,
+        -21,
+        2,
+        -37,
+        8,
+        -41,
+        29,
+        -25,
+        40,
+        39,
+        43,
+        42,
+        28
+    ],
+    "center": [
+        50,
+        47
+    ],
+    "collisionRadius": 82,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 52,
+            "length": 52,
+            "location": [
+                -43,
+                14
+            ],
+            "style": "MIDLINE",
+            "width": 18
+        },
+        {
+            "angle": 180,
+            "contrailSize": 52,
+            "length": 52,
+            "location": [
+                -43,
+                -12
+            ],
+            "style": "MIDLINE",
+            "width": 18
+        },
+        {
+            "angle": 180,
+            "contrailSize": 40,
+            "length": 40,
+            "location": [
+                -46,
+                -20
+            ],
+            "style": "MIDLINE",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 40,
+            "length": 40,
+            "location": [
+                -46,
+                23
+            ],
+            "style": "MIDLINE",
+            "width": 12
+        }
+    ],
+    "height": 92,
+    "hullId": "centurion",
+    "hullName": "Centurion",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        2,
+        1
+    ],
+    "shieldRadius": 75,
+    "spriteName": "graphics/ships/centurion/centurion.png",
+    "style": "MIDLINE",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 25,
+            "arc": 150,
+            "id": "WS 001",
+            "locations": [
+                35,
+                33
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": -25,
+            "arc": 150,
+            "id": "WS 002",
+            "locations": [
+                35,
+                -31
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 0,
+            "arc": 10,
+            "id": "WS 003",
+            "locations": [
+                24,
+                -10
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 70,
+            "arc": 200,
+            "id": "WS 004",
+            "locations": [
+                -1,
+                33
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": -70,
+            "arc": 200,
+            "id": "WS 005",
+            "locations": [
+                -2,
+                -31
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 140,
+            "arc": 120,
+            "id": "WS 006",
+            "locations": [
+                -18,
+                24
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 220,
+            "arc": 120,
+            "id": "WS 007",
+            "locations": [
+                -18,
+                -22
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        }
+    ],
+    "width": 98
+}

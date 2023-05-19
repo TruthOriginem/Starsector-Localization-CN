@@ -1,0 +1,25 @@
+{
+	"id":"nova_burst",
+	"type":"STAT_MOD",
+	"aiType":"BURN_DRIVE",
+	
+	"statsScript":"com.fs.starfarer.api.impl.combat.NovaBurstStats",
+
+	"runScriptWhileIdle":true, # unapply() never gets called
+
+	#"fadeActivationSoundOnChargedown":true,
+	
+	"useSound":"system_nova_burst_fire",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+		"activeSpeedIncrease":0,
+		"burstMovementPotential":850,
+		"averageSpeedIncrease":50,
+	}
+	
+}
+
+
+
+

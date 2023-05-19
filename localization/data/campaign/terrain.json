@@ -1,0 +1,126 @@
+{
+	#
+	# terrain with gameplay effects
+	#
+	
+	"nebula":{
+		"plugin":"com.fs.starfarer.api.impl.campaign.terrain.NebulaTerrainPlugin",
+		
+		"musicSuppression":1,
+		# inside nebula
+		"loopOne":"terrain_nebula",
+	},
+	"ring":{
+		"plugin":"com.fs.starfarer.api.impl.campaign.terrain.RingSystemTerrainPlugin",
+		#"loopOne":"terrain_asteroid_ring",
+	},
+	"debris_field":{
+		"plugin":"com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin",
+		#"loopOne":"terrain_asteroid_ring",
+	},
+	"asteroid_belt":{
+		"plugin":"com.fs.starfarer.api.impl.campaign.terrain.AsteroidBeltTerrainPlugin",
+		#"loopOne":"terrain_asteroid_belt",
+		"loopOne":"terrain_asteroid_field",
+	},
+	"asteroid_field":{
+		"plugin":"com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin",
+		"musicSuppression":0.25,
+		"loopOne":"terrain_asteroid_field",
+	},
+	"corona":{
+		"plugin":"com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin",
+		"musicSuppression":1,
+		# inside corona but not inside flare
+		"loopOne":"terrain_corona",
+		# inside flare
+		"loopTwo":"terrain_corona_flare",
+	},
+	"corona_aka_mainyu":{
+		"plugin":"com.fs.starfarer.api.impl.campaign.terrain.StarCoronaAkaMainyuTerrainPlugin",
+		"musicSuppression":1,
+		# inside corona but not inside flare
+		"loopOne":"terrain_corona_am",
+		# inside flare
+		"loopTwo":"terrain_corona_am_flare",
+	},
+	#"corona_jet":{
+	#	"plugin":"com.fs.starfarer.api.impl.campaign.terrain.StarCoronaJetTerrainPlugin",
+	#	"musicSuppression":1,
+	#	# inside corona but not inside flare
+	#	"loopOne":"terrain_corona_am",
+	#	# inside flare
+	#	"loopTwo":"terrain_corona_am_flare",
+	#},
+	"event_horizon":{
+		"plugin":"com.fs.starfarer.api.impl.campaign.terrain.EventHorizonPlugin",
+		"musicSuppression":1,
+		"loopOne":"terrain_corona_am",
+	},
+	"pulsar_beam":{
+		"plugin":"com.fs.starfarer.api.impl.campaign.terrain.PulsarBeamTerrainPlugin",
+		"musicSuppression":1,
+		"loopOne":"terrain_corona_am",
+	},
+	"magnetic_field":{
+		"plugin":"com.fs.starfarer.api.impl.campaign.terrain.MagneticFieldTerrainPlugin",
+		"musicSuppression":0.5,
+		# inside field
+		"loopOne":"terrain_magfield",
+		# inside active aurora/magnetic storm
+		"loopTwo":"terrain_magstorm",
+	},
+	"hyperspace":{
+		"plugin":"com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin",
+		"musicSuppression":1,
+		# open hyperspace, optional
+		#"loopOne":"terrain_hyperspace_open",
+		# deep hyperspace
+		"loopTwo":"terrain_hyperspace_deep",
+		# pre-storm signal
+		#"loopThree":"terrain_hyperspace_storm_signal",
+		# storm in deep hyperspace
+		"loopFour":"terrain_hyperspace_storm",
+		"custom":{
+			# lightning strikes
+			"stormSound":"terrain_hyperspace_lightning",
+		},
+	},
+	
+	"spatial_anomaly":{
+		"plugin":"com.fs.starfarer.api.impl.campaign.terrain.SpatialAnomalyTerrainPlugin",
+	},
+	
+	#
+	# implemented as terrain, but with no gameplay effects
+	#	
+	"radio_chatter":{
+		"plugin":"com.fs.starfarer.api.impl.campaign.terrain.RadioChatterTerrainPlugin",
+		"musicSuppression":1,
+		"custom":{
+			# loops played at a volume based on sine wave; regularly spaced
+			# threshold: range of [-1 to 1), lower values mean more playback time, should be higher if more chatter loops
+			# phaseMult: multiplier for how rapidly the volume-driving sine wave oscillates
+			"chatter":[
+				{"sound":"terrain_radio_chatter_1", "phaseMult":1, "threshold":-1},
+				{"sound":"terrain_radio_chatter_2", "phaseMult":1, "threshold":-1},
+				{"sound":"terrain_radio_chatter_3", "phaseMult":1, "threshold":-1},
+			],
+		},
+	},
+	
+	"slipstream":{
+		"plugin":"com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2",
+		"musicSuppression":1,
+		"loopOne":"terrain_slipstream",
+		"loopTwo":"terrain_slipstream_near",
+		"custom":{
+			"gain":0.75,
+			"gainHF":0.5,
+			"minPitch":0.5,
+			"maxPitch":1.25,
+			"outsideSoundRange":1000,
+		},
+	},
+}
+

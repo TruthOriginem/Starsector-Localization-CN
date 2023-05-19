@@ -1,0 +1,83 @@
+{
+    "bounds": [
+        -11,
+        9,
+        13,
+        14,
+        14,
+        -15,
+        -10,
+        -8,
+        -1,
+        1
+    ],
+    "center": [
+        17,
+        14
+    ],
+    "collisionRadius": 30,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -13,
+                9
+            ],
+            "style": "HIGH_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -13,
+                -8
+            ],
+            "style": "HIGH_TECH",
+            "width": 8
+        }
+    ],
+    "height": 35,
+    "hullId": "longbow",
+    "hullName": "Longbow",
+    "hullSize": "FIGHTER",
+    "shieldCenter": [
+        1,
+        0
+    ],
+    "shieldRadius": 30,
+    "spriteName": "graphics/ships/longbow_intg.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 90,
+            "id": "WS 001",
+            "locations": [
+                14,
+                12
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 002",
+            "locations": [
+                9,
+                -11
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "MISSILE"
+        }
+    ],
+    "width": 34
+}

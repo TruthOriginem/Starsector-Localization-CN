@@ -1,0 +1,16 @@
+{
+	"id":"space_operations",
+	"governingAptitude":"leadership",
+	"compressHullmods":false,
+	"scope":"GOVERNED_OUTPOST",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"GOVERNED_OUTPOST", "script":"com.fs.starfarer.api.impl.campaign.skills.SpaceOperations$Level1"},
+				{"type":"GOVERNED_OUTPOST", "script":"com.fs.starfarer.api.impl.campaign.skills.SpaceOperations$Level2"},
+			]
+		},
+	],
+}

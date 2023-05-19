@@ -1,0 +1,40 @@
+{
+	"id":"fragbomb_proj",
+	"specClass":"missile",
+	"missileType":"BOMB_WITH_SLOW",
+	#"sprite":"graphics/missiles/bomblet0.png",
+	"sprite":"graphics/missiles/bomblet3.png",
+	"size":[9,11],	
+	"center":[4.5,5.5],
+	"collisionRadius":9,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[255,155,125,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":100, # purely visual
+	"flameoutTime":0.05, # total time from flameout to full fadeout
+	"noEngineGlowTime":0.05, # time spent without the engine glow being rendered
+	"fadeTime":0.05, # fadeout duration		
+	"explosionSpec":{"duration":0.1f, # not visual
+					 "radius":75,
+					 "coreRadius":50, # full damage within core radius
+					 "collisionClass":MISSILE_FF,
+					 "collisionClassByFighter":MISSILE_FF},
+	"behaviorSpec":{"behavior":"PROXIMITY_FUSE",
+					"slowToMaxSpeed":true,
+					"range":50,
+					"explosionSpec":{"duration":0.1f,
+									 "radius":100,
+									 "coreRadius":75, # full damage within core radius
+									 "collisionClass":PROJECTILE_FF,
+									 "collisionClassByFighter":PROJECTILE_FIGHTER,
+									 "particleSizeMin":3.0,
+									 "particleSizeRange":3.0,
+									 "particleDuration":1,
+									 "particleCount":150,
+									 "particleColor":[255,155,125,175],
+									 "sound":"explosion_flak"},
+					},
+	"engineSpec":{"turnAcc":100,
+				  "turnRate":10,
+				  "acc":100,
+				  "dec":100}
+}

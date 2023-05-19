@@ -1,0 +1,257 @@
+{
+    "bounds": [
+        85,
+        102,
+        49,
+        32,
+        34,
+        27,
+        104,
+        -92,
+        87,
+        -84,
+        78,
+        -88,
+        18,
+        -55,
+        0,
+        -48,
+        -8,
+        -59,
+        -113,
+        -62,
+        -63,
+        -21,
+        -66,
+        -2,
+        -116,
+        51,
+        -57,
+        47,
+        -37,
+        62,
+        -15,
+        76,
+        -18,
+        56,
+        -11,
+        52,
+        0,
+        77
+    ],
+    "builtInMods": [
+        "automated",
+        "fluxbreakers",
+        "shard_spawner"
+    ],
+    "center": [
+        102,
+        122
+    ],
+    "collisionRadius": 165,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -108,
+                38
+            ],
+            "style": "OMEGA",
+            "width": 20
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -76,
+                4
+            ],
+            "style": "OMEGA",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -68,
+                -5
+            ],
+            "style": "OMEGA",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -96,
+                -47
+            ],
+            "style": "OMEGA",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -102,
+                -54
+            ],
+            "style": "OMEGA",
+            "width": 12
+        }
+    ],
+    "height": 228,
+    "hullId": "tesseract",
+    "hullName": "Tesseract",
+    "hullSize": "CRUISER",
+    "shieldCenter": [
+        0,
+        1
+    ],
+    "shieldRadius": 160,
+    "spriteName": "graphics/ships/omega/omega_cruiser.png",
+    "style": "OMEGA",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 45,
+            "arc": 210,
+            "id": "WS 000",
+            "locations": [
+                59,
+                81
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 110,
+            "arc": 150,
+            "id": "WS 001",
+            "locations": [
+                4,
+                69
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 140,
+            "arc": 210,
+            "id": "WS 002",
+            "locations": [
+                -77,
+                44
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 240,
+            "arc": 200,
+            "id": "WS 003",
+            "locations": [
+                -59,
+                -47
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 265,
+            "arc": 120,
+            "id": "WS 004",
+            "locations": [
+                -8,
+                -39
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": -45,
+            "arc": 210,
+            "id": "WS 005",
+            "locations": [
+                78,
+                -73
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 30,
+            "arc": 150,
+            "id": "WS 006",
+            "locations": [
+                30,
+                56
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 10,
+            "arc": 90,
+            "id": "WS 007",
+            "locations": [
+                30,
+                -21
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 008",
+            "locations": [
+                47,
+                6
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 0,
+            "arc": 90,
+            "id": "WS 009",
+            "locations": [
+                2,
+                13
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": -45,
+            "arc": 150,
+            "id": "WS 010",
+            "locations": [
+                51,
+                -49
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "UNIVERSAL"
+        }
+    ],
+    "width": 198
+}

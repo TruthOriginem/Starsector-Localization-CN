@@ -1,0 +1,247 @@
+{
+    "bounds": [
+        79,
+        18,
+        61,
+        20,
+        58,
+        14,
+        36,
+        20,
+        24,
+        39,
+        37,
+        68,
+        28,
+        78,
+        12,
+        77,
+        -24,
+        42,
+        -61,
+        36,
+        -59,
+        0,
+        -62,
+        -35,
+        -24,
+        -41,
+        14,
+        -76,
+        30,
+        -77,
+        39,
+        -66,
+        24,
+        -39,
+        36,
+        -20,
+        60,
+        -15,
+        62,
+        -20,
+        79,
+        -18,
+        85,
+        0
+    ],
+    "builtInMods": ["ballistic_rangefinder"],
+    "center": [
+        82,
+        67
+    ],
+    "collisionRadius": 130,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -66,
+                17
+            ],
+            "style": "LOW_TECH",
+            "width": 20
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -62,
+                0
+            ],
+            "style": "LOW_TECH",
+            "width": 20
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -66,
+                -16
+            ],
+            "style": "LOW_TECH",
+            "width": 20
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -62,
+                30
+            ],
+            "style": "LOW_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -62,
+                -30
+            ],
+            "style": "LOW_TECH",
+            "width": 12
+        }
+    ],
+    "height": 154,
+    "hullId": "manticore",
+    "hullName": "Manticore",
+    "hullSize": "DESTROYER",
+    "shieldCenter": [
+        8,
+        0
+    ],
+    "shieldRadius": 100,
+    "spriteName": "graphics/ships/manticore/manticore_base.png",
+    "style": "LOW_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 90,
+            "id": "WS 000",
+            "locations": [
+                21,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 80,
+            "arc": 235,
+            "id": "WS 001",
+            "locations": [
+                23,
+                65
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 235,
+            "id": "WS 002",
+            "locations": [
+                73,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": -80,
+            "arc": 235,
+            "id": "WS 003",
+            "locations": [
+                23,
+                -65
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 004",
+            "locations": [
+                32,
+                43
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 005",
+            "locations": [
+                32,
+                -43
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "MISSILE"
+        },
+        {
+            "angle": -45,
+            "arc": 5,
+            "id": "WS 006",
+            "locations": [
+                36,
+                -20
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        },
+        {
+            "angle": 45,
+            "arc": 5,
+            "id": "WS 007",
+            "locations": [
+                36,
+                21
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        },
+        {
+            "angle": 135,
+            "arc": 5,
+            "id": "WS 008",
+            "locations": [
+                -19,
+                40
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        },
+        {
+            "angle": 225,
+            "arc": 5,
+            "id": "WS 009",
+            "locations": [
+                -19,
+                -40
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        }
+    ],
+    "width": 164
+}

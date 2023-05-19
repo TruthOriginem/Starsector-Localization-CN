@@ -1,0 +1,52 @@
+{
+	"id":"phase_charge",
+	"specClass":"missile",	
+	"missileType":"PHASE_CHARGE",
+	"sprite":"graphics/missiles/phase_charge_base.png",
+	"glowSprite":"graphics/missiles/phase_charge_glow.png",
+	"glowColor":[190,60,255,255],
+	"size":[16,16],	
+	"center":[8,8],
+	"collisionRadius":12,
+	"collisionClass":"MISSILE_FF",
+	"explosionColor":[148,0,211,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":150, # purely visual
+	"flameoutTime":0.1, # total time from flameout to full fadeout
+	"fadeTime":0.1, # fadeout duration
+	"noEngineGlowTime":0.05, # time spent without the engine glow being rendered	
+	"engineSpec":{"turnAcc":500,
+				  "turnRate":150,
+				  "acc":40,
+				  "dec":40},
+	#"engineSlots":[{"id":"ES1",
+	#				"loc":[-8, 0],
+	#			    "style":"HIGH_TECH",
+	#			    "width":4.0,
+	#			    "length":10.0,
+	#			    "angle":180.0}]
+	"behaviorSpec":{"behavior":"PROXIMITY_FUSE",
+					"range":40,
+					"slowToMaxSpeed":true,
+					"explosionSpec":{"duration":0.12f,
+									 "radius":150,
+									 "coreRadius":75, # full damage within core radius
+									 "collisionClass":PROJECTILE_FF,
+									 "collisionClassByFighter":PROJECTILE_FIGHTER,
+									 "particleSizeMin":3.0,
+									 "particleSizeRange":3.0,
+									 "particleDuration":1,
+									 "particleCount":50,
+									 "particleColor":[148,70,211,255],
+									 "explosionColor":[155,125,255,255],
+									 "useDetailedExplosion":true,
+									 "useDetailedExplosionColorAlpha":true,
+									 "detailedExplosionRadius":100,
+									 "detailedExplosionFlashRadius":250,
+									 "detailedExplosionFlashDuration":0.5,
+									 "detailedExplosionFlashColorFringe":[200,125,255,255],
+									 "detailedExplosionFlashColorCore":[155,155,155,255],
+									 "sound":"prox_charge_explosion"},
+					}
+}
+
+

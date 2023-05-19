@@ -1,0 +1,51 @@
+{
+    "bounds": [
+        5,
+        0,
+        -5,
+        6,
+        -5,
+        -6
+    ],
+    "center": [
+        9,
+        7
+    ],
+    "collisionRadius": 15,
+    "engineSlots": [{
+        "angle": 180,
+        "contrailSize": 64,
+        "length": 12,
+        "location": [
+            -7,
+            0
+        ],
+        "style": "LOW_TECH",
+        "width": 12
+    }],
+    "height": 15,
+    "hullId": "drone_assault",
+    "hullName": "Assault Drone",
+    "hullSize": "FIGHTER",
+    "shieldCenter": [
+        0,
+        0
+    ],
+    "shieldRadius": 15,
+    "spriteName": "graphics/ships/drones/drone_strike.png",
+    "style": "LOW_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [{
+        "angle": 0,
+        "arc": 30,
+        "id": "WS 001",
+        "locations": [
+            0,
+            0
+        ],
+        "mount": "HIDDEN",
+        "size": "SMALL",
+        "type": "ENERGY"
+    }],
+    "width": 18
+}

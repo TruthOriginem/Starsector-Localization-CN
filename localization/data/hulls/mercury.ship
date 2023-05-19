@@ -1,0 +1,197 @@
+{
+    "bounds": [
+        18,
+        24,
+        -16,
+        23,
+        -24,
+        27,
+        -24,
+        21,
+        -32,
+        22,
+        -35,
+        3,
+        -27,
+        0,
+        -34,
+        -3,
+        -32,
+        -22,
+        -25,
+        -22,
+        -24,
+        -26,
+        -15,
+        -23,
+        17,
+        -25,
+        20,
+        -14,
+        35,
+        -7,
+        35,
+        9,
+        21,
+        14
+    ],
+    "builtInMods": ["civgrade"],
+    "center": [
+        29,
+        36
+    ],
+    "collisionRadius": 55,
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 20,
+            "location": [
+                -34,
+                20
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 20,
+            "location": [
+                -36,
+                16
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -37,
+                12
+            ],
+            "style": "HIGH_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -37,
+                7
+            ],
+            "style": "HIGH_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -37,
+                -6
+            ],
+            "style": "HIGH_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -37,
+                -12
+            ],
+            "style": "HIGH_TECH",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 20,
+            "location": [
+                -35,
+                -16
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 20,
+            "location": [
+                -34,
+                -20
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        }
+    ],
+    "height": 75,
+    "hullId": "mercury",
+    "hullName": "Mercury",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        0,
+        0
+    ],
+    "shieldRadius": 55,
+    "spriteName": "graphics/ships/mercury/mercury_base.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 30,
+            "arc": 150,
+            "id": "WS 001",
+            "locations": [
+                13,
+                20
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": -30,
+            "arc": 150,
+            "id": "WS 002",
+            "locations": [
+                13,
+                -20
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 180,
+            "arc": 210,
+            "id": "WS 003",
+            "locations": [
+                -17,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 180,
+            "arc": 90,
+            "id": "WS 004",
+            "locations": [
+                -30,
+                0
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        }
+    ],
+    "width": 58
+}

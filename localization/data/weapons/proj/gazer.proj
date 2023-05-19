@@ -1,0 +1,57 @@
+{
+	"id":"gazer",
+	"specClass":"missile",	
+	"missileType":"MISSILE",
+	"onFireEffect":"com.fs.starfarer.api.impl.combat.dem.DEMEffect",
+	"behaviorSpec":{"behavior":"CUSTOM",
+		"minDelayBeforeTriggering":0,
+		"triggerDistance":[800,850],
+		"preferredMinFireDistance":[700,750],
+		"turnRateBoost":50,
+		"targetingTime":1,
+		"firingTime":10.5,
+		"targetingLaserId":"targetinglaser1",
+		"targetingLaserFireOffset":[8, 0],
+		"payloadWeaponId":"gazer_payload",
+		"targetingLaserRange":0,
+		"targetingLaserArc":3,
+		"bombPumped":false,
+		"snapFacingToTargetIfCloseEnough":true,
+		"fadeOutEngineWhenFiring":false;
+		"randomStrafe":true;
+		"destroyMissleWhenDoneFiring":true,
+		"destroyedExplosionColor":[5,135,175,255],
+	},
+	"sprite":"graphics/missiles/missile_gazer.png",
+	"size":[6,16],	
+	"center":[3,8],
+	"collisionRadius":8,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[100,200,255,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":120, # purely visual	
+	"engineSpec":{"turnAcc":800,
+				  "turnRate":200,
+				  "acc":100,
+				  "dec":100},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-7, 0],
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[5,135,175,255],
+						"contrailDuration":1,
+						"contrailWidthMult":1,
+						"contrailWidthAddedFractionAtEnd":2.5,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":5, # min segment length, in pixels
+						"contrailMaxSpeedMult":0.5f,
+						"contrailAngularVelocityMult":0.5f,
+						"contrailColor":[5,135,175,75],
+						"glowSizeMult":3,
+						#"glowAlternateColor":[255,0,0,255],
+						"type":"SMOKE" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":4.0,
+				    "length":20.0,
+				    "angle":180.0},
+				    ]
+}

@@ -1,0 +1,247 @@
+{
+    "bounds": [
+        -15,
+        151,
+        29,
+        98,
+        22,
+        63,
+        57,
+        57,
+        57,
+        -55,
+        22,
+        -62,
+        28,
+        -99,
+        -16,
+        -148,
+        -41,
+        -139,
+        -41,
+        141
+    ],
+    "builtInMods": [
+        "supercomputer",
+        "reduced_explosion",
+        "chassis_storage",
+        "do_not_fire_through"
+    ],
+    "center": [
+        154,
+        58
+    ],
+    "collisionRadius": 180,
+    "coversColor": "",
+    "height": 124,
+    "hullId": "module_midline_support",
+    "hullName": "Heavy Support Module",
+    "hullSize": "FRIGATE",
+    "moduleAnchor": [
+        -43,
+        0
+    ],
+    "shieldCenter": [
+        -103,
+        0
+    ],
+    "shieldRadius": 230,
+    "spriteName": "graphics/ships/stations/module_midline_hangar.png",
+    "style": "MIDLINE",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 10,
+            "arc": 100,
+            "id": "WS 000",
+            "locations": [
+                -23,
+                111
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "COMPOSITE"
+        },
+        {
+            "angle": 10,
+            "arc": 140,
+            "id": "WS 001",
+            "locations": [
+                6,
+                45
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "COMPOSITE"
+        },
+        {
+            "angle": -10,
+            "arc": 140,
+            "id": "WS 002",
+            "locations": [
+                6,
+                -45
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "COMPOSITE"
+        },
+        {
+            "angle": -10,
+            "arc": 100,
+            "id": "WS 003",
+            "locations": [
+                -23,
+                -111
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "COMPOSITE"
+        },
+        {
+            "angle": 20,
+            "arc": 100,
+            "id": "WS 004",
+            "locations": [
+                -18,
+                140
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "COMPOSITE"
+        },
+        {
+            "angle": 30,
+            "arc": 150,
+            "id": "WS 005",
+            "locations": [
+                8,
+                109
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "COMPOSITE"
+        },
+        {
+            "angle": 15,
+            "arc": 200,
+            "id": "WS 006",
+            "locations": [
+                54,
+                50
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": -15,
+            "arc": 200,
+            "id": "WS 007",
+            "locations": [
+                54,
+                -50
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": -30,
+            "arc": 150,
+            "id": "WS 008",
+            "locations": [
+                8,
+                -109
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "COMPOSITE"
+        },
+        {
+            "angle": -20,
+            "arc": 120,
+            "id": "WS 009",
+            "locations": [
+                -17,
+                -140
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "COMPOSITE"
+        },
+        {
+            "angle": 0,
+            "arc": 8,
+            "id": "WS 010",
+            "locations": [
+                11,
+                91,
+                1,
+                87,
+                10,
+                67,
+                0,
+                71
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "LAUNCH_BAY"
+        },
+        {
+            "angle": 0,
+            "arc": 8,
+            "id": "WS 011",
+            "locations": [
+                11,
+                -69,
+                -8,
+                -70,
+                9,
+                -89,
+                -6,
+                -89
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "LAUNCH_BAY"
+        },
+        {
+            "angle": 0,
+            "arc": 8,
+            "id": "WS 012",
+            "locations": [
+                42,
+                26,
+                30,
+                22,
+                38,
+                15,
+                29,
+                11
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "LAUNCH_BAY"
+        },
+        {
+            "angle": 0,
+            "arc": 8,
+            "id": "WS 013",
+            "locations": [
+                37,
+                -11,
+                27,
+                -13,
+                40,
+                -22,
+                30,
+                -23
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "LAUNCH_BAY"
+        }
+    ],
+    "width": 308
+}

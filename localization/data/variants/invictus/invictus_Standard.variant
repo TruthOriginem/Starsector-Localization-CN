@@ -1,0 +1,60 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 0,
+    "fluxVents": 31,
+    "goalVariant": true,
+    "hullId": "invictus",
+    "hullMods": [
+        "fluxbreakers",
+        "reinforcedhull",
+        "armoredweapons",
+        "insulatedengine"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "invictus_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "hellbore",
+                "WS 010": "hellbore"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 004": "hurricane",
+                "WS 007": "hurricane"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "mark9",
+                "WS 009": "mark9"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "mark9",
+                "WS 008": "mark9"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "devastator",
+                "WS 005": "devastator",
+                "WS 006": "devastator",
+                "WS 026": "devastator"
+            }
+        }
+    ]
+}

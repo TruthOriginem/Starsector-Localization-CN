@@ -137,5 +137,14 @@
       "customAncillary",
       "customAncillaryHL"
     ]
+  },
+  {
+    "path": "data/campaign/reports.csv",
+    "id_column_name": ["event_type", "event_stage", "target_rel", "channels"],
+    "text_column_names": [
+      "subject",
+      "summary",
+      "assessment"
+    ]
   }
 ]

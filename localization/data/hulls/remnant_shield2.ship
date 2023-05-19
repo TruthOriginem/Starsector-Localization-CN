@@ -1,0 +1,61 @@
+{
+    "bounds": [
+        -18,
+        47,
+        35,
+        26,
+        35,
+        -26,
+        -18,
+        -47
+    ],
+    "builtInMods": [
+        "supercomputer",
+        "reduced_explosion"
+    ],
+    "center": [
+        48,
+        48
+    ],
+    "collisionRadius": 400,
+    "coversColor": "",
+    "height": 96,
+    "hullId": "remnant_shield2",
+    "hullName": "Remnant Station Citadel",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        -123,
+        1
+    ],
+    "shieldRadius": 450,
+    "spriteName": "graphics/ships/remnants/remnant_station_shield2.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 130,
+            "id": "WS 001",
+            "locations": [
+                12,
+                27
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 130,
+            "id": "WS 002",
+            "locations": [
+                12,
+                -27
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "ENERGY"
+        }
+    ],
+    "width": 96
+}

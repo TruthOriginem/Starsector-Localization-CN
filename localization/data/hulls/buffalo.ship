@@ -1,0 +1,209 @@
+{
+    "bounds": [
+        55,
+        48,
+        75,
+        32,
+        76,
+        15,
+        85,
+        6,
+        85,
+        -6,
+        75,
+        -17,
+        75,
+        -31,
+        55,
+        -47,
+        12,
+        -44,
+        -20,
+        -45,
+        -34,
+        -31,
+        -57,
+        -29,
+        -60,
+        -3,
+        -44,
+        0,
+        -60,
+        3,
+        -58,
+        28,
+        -33,
+        32,
+        -20,
+        44,
+        12,
+        44
+    ],
+    "builtInMods": ["civgrade"],
+    "builtInWeapons": {
+        "WS 003": "blinker_red",
+        "WS 004": "blinker_green",
+        "WS 005": "blinker_red",
+        "WS 006": "blinker_green"
+    },
+    "center": [
+        50,
+        63
+    ],
+    "collisionRadius": 112,
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -59,
+                24
+            ],
+            "style": "MIDLINE",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -60,
+                15
+            ],
+            "style": "MIDLINE",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -61,
+                6
+            ],
+            "style": "MIDLINE",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -61,
+                -6
+            ],
+            "style": "MIDLINE",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -60,
+                -15
+            ],
+            "style": "MIDLINE",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -59,
+                -24
+            ],
+            "style": "MIDLINE",
+            "width": 8
+        }
+    ],
+    "height": 150,
+    "hullId": "buffalo",
+    "hullName": "Buffalo",
+    "hullSize": "DESTROYER",
+    "shieldCenter": [
+        10,
+        0
+    ],
+    "shieldRadius": 100,
+    "spriteName": "graphics/ships/buffalo/buffalo_base.png",
+    "style": "MIDLINE",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 210,
+            "id": "WS 001",
+            "locations": [
+                69,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 180,
+            "arc": 5,
+            "id": "WS 002",
+            "locations": [
+                -50,
+                0
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        },
+        {
+            "angle": 0,
+            "arc": 1,
+            "id": "WS 003",
+            "locations": [
+                70,
+                41
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "DECORATIVE"
+        },
+        {
+            "angle": 0,
+            "arc": 0,
+            "id": "WS 004",
+            "locations": [
+                70,
+                -41
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "DECORATIVE"
+        },
+        {
+            "angle": 0,
+            "arc": 0,
+            "id": "WS 005",
+            "locations": [
+                -38,
+                37
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "DECORATIVE"
+        },
+        {
+            "angle": 0,
+            "arc": 0,
+            "id": "WS 006",
+            "locations": [
+                -38,
+                -37
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "DECORATIVE"
+        }
+    ],
+    "width": 100
+}

@@ -1,0 +1,65 @@
+{
+    "bounds": [
+        -3,
+        44,
+        24,
+        29,
+        24,
+        -7,
+        4,
+        -34,
+        -15,
+        -34,
+        -15,
+        31
+    ],
+    "builtInMods": [
+        "supercomputer",
+        "reduced_explosion"
+    ],
+    "center": [
+        46,
+        27
+    ],
+    "collisionRadius": 200,
+    "coversColor": "",
+    "height": 56,
+    "hullId": "derelict_mothership_bow_module",
+    "hullName": "Bow Shield Module",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        10,
+        -13
+    ],
+    "shieldRadius": 170,
+    "spriteName": "graphics/ships/derelict/derelict_mothership_bow_module.png",
+    "style": "LOW_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 30,
+            "arc": 90,
+            "id": "WS 007",
+            "locations": [
+                3,
+                27
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 10,
+            "arc": 90,
+            "id": "WS 008",
+            "locations": [
+                4,
+                -14
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        }
+    ],
+    "width": 84
+}

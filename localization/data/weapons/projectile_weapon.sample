@@ -1,0 +1,60 @@
+{
+	"id":"swarmersrm",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"MISSILE",
+	"size":"SMALL",
+	"displayArcRadius":300,
+	"turretSprite":"graphics/weapons/light_autocannon_turret.png",
+	"turretGlowSprite":"graphics/weapons/",
+	"turretGunSprite":"graphics/weapons/",
+	"hardpointSprite":"graphics/weapons/light_autocannon_hardpoint.png",
+	"hardpointGlowSprite":"graphics/weapons/",
+	"hardpointGunSprite":"graphics/weapons/",	
+	"glowColor":[255,255,255,255],
+	"visualRecoil":0.0,  # the gun sprites are only used if this is non-0
+	"renderHints":[RENDER_BARREL_BELOW,RENDER_LOADED_MISSILES],
+	"turretOffsets":[10, -4, 10, -2, 10, 2, 10, 4],
+	"turretAngleOffsets":[-20, -10, 10, 20],
+	"hardpointOffsets":[15, -4, 15, -2, 15, 2, 15, 4],
+	"hardpointAngleOffsets":[-20, -10, 10, 20],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"SMOKE", #NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"interruptibleBurst":false,
+	"autocharge":false,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"requiresFullCharge":true,  # for pulse weapons - whether the weapon will fire at a lower strength partial charge
+	"muzzleFlashSpec":{"length":30.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":20.0,
+					   "particleSizeMin":10.0,
+					   "particleSizeRange":10.0,
+					   "particleDuration":0.5,
+					   "particleCount":10,
+					   "particleColor":[255,255,255,255]},
+	"smokeSpec":{"particleSizeMin":20.0,   # only used if animationType = SMOKE
+							 "particleSizeRange":20.0,
+							 "cloudParticleCount":3,
+							 "cloudDuration":1.0,
+							 "cloudRadius":10.0,
+							 "blowbackParticleCount":3,
+							 "blowbackDuration":2.0,
+							 "blowbackLength":30.0,
+							 "blowbackSpread":10.0,
+							 "particleColor":[100,100,100,200]},
+	"projectileSpecId":"type_1_srm"  # projectile that will be fired
+	
+	
+### DO NOT SET - these are taken from weapon_data.csv (which in turn comes from a googledocs spreadsheet)	
+#	"ordnancePoints":10,
+#	"turnRate":50,
+#	"chargeTime":0.0,
+#	"refireDelay":1.0,
+#	"burstSize":4,
+#	"burstDelay":0.1,
+#	"energyPerShot":0.0,
+#	"energyPerSecond":0.0,
+#	"maxRange":300,
+#	"maxAmmo":100,
+#	"minSpread":0.0,
+#	"maxSpread":0.0,
+#	"spreadBuildup":0.0,
+#	"spreadDecay":0.0,	
+}

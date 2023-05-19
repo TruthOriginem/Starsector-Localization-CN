@@ -1,0 +1,30 @@
+{
+	"id":"arbalest",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"MEDIUM",
+	"displayArcRadius":700,
+	#"turretUnderSprite":"graphics/weapons/arbalest_turret_under.png",
+	"turretSprite":"graphics/weapons/arbalest_turret_base.png",
+	"turretGunSprite":"graphics/weapons/arbalest_turret_recoil.png",
+	#"hardpointUnderSprite":"graphics/weapons/arbalest_hardpoint_under.png",
+	"hardpointSprite":"graphics/weapons/arbalest_hardpoint_base.png",
+	"hardpointGunSprite":"graphics/weapons/arbalest_hardpoint_recoil.png",	
+	"visualRecoil":6.0,  # the gun sprites are only used if this is non-0
+	"renderHints":[RENDER_BARREL_BELOW],
+	"turretOffsets":[13, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[28, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"MUZZLE_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"muzzleFlashSpec":{"length":40.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":20.0,
+					   "particleSizeMin":16.0,
+					   "particleSizeRange":18.0,
+					   "particleDuration":0.5,
+					   "particleCount":20,
+					  "particleColor":[255,225,225,235]},
+	"projectileSpecId":"arbalest_shot",  # projectile that will be fired	
+	"fireSoundTwo":"autocannon_fire",
+}

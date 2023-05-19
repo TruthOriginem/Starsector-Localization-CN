@@ -1,0 +1,248 @@
+commodity,group,freq
+,,
+metals,basic,20
+heavy_machinery,basic,1
+supplies,basic,10
+fuel,basic,10
+,,
+nothing,goods,70
+domestic_goods,goods,20
+luxury_goods,goods,10
+lobster,goods,2
+food,goods,20
+organs,goods,2
+drugs,goods,10
+hand_weapons,goods,10
+,,
+heavy_machinery,supply,1
+supplies,supply,10
+fuel,supply,5
+rare_metals,supply,1
+,,
+nothing,extended,100
+heavy_machinery,extended,10
+organics,extended,10
+volatiles,extended,10
+rare_metals,extended,10
+,,
+ore,mining_station,20
+rare_ore,mining_station,10
+volatiles,mining_station,5
+heavy_machinery,mining_station,10
+metals,mining_station,10
+rare_metals,mining_station,5
+,,
+nothing,mining_bulk,100
+ore,mining_bulk,20
+rare_ore,mining_bulk,5
+metals,mining_bulk,10
+,,
+nothing,hab_bulk,100
+food,hab_bulk,10
+organics,hab_bulk,10
+domestic_goods,hab_bulk,5
+,,
+domestic_goods,freighter_cargo,10
+luxury_goods,freighter_cargo,3
+lobster,freighter_cargo,1
+food,freighter_cargo,15
+ore,freighter_cargo,20
+metals,freighter_cargo,10
+hand_weapons,freighter_cargo,5
+heavy_machinery,freighter_cargo,3
+organics,freighter_cargo,10
+volatiles,freighter_cargo,5
+rare_metals,freighter_cargo,3
+rare_ore,freighter_cargo,6
+supplies,freighter_cargo,4
+,,
+fuel,fuel,10
+,,
+nothing,ai_cores3,100
+alpha_core,ai_cores3,1
+beta_core,ai_cores3,2
+gamma_core,ai_cores3,5
+,,
+nothing,ai_cores2,100
+beta_core,ai_cores2,2
+gamma_core,ai_cores2,5
+,,
+nothing,ai_cores1,100
+gamma_core,ai_cores1,5
+,,
+nothing,rem_frigate,10
+gamma_core,rem_frigate,2
+,,
+nothing,rem_destroyer,10
+gamma_core,rem_destroyer,3
+beta_core,rem_destroyer,1
+,,
+nothing,rem_cruiser,10
+gamma_core,rem_cruiser,3
+beta_core,rem_cruiser,2
+alpha_core,rem_cruiser,1
+,,
+nothing,rem_capital,10
+gamma_core,rem_capital,3
+beta_core,rem_capital,3
+alpha_core,rem_capital,3
+,,
+alpha_core,guaranteed_alpha,1
+,,
+,,
+nothing,misc_test,10
+wpn_lightmg,misc_test,10
+#mod_heavyarmor,misc_test,10
+ftr_talon_wing,misc_test,10
+"#mod_:{tier:3, tags:[shields]}",misc_test,10
+"wpn_:{tier:3, tags:[]}",misc_test,10
+"ftr_:{tier:3, tags:[]}",misc_test,10
+#item_factory_core,misc_test,1000
+item_modspec:converted_hangar,misc_test,1000
+"item_modspec:{tier:3, tags:[shields]}",misc_test,1000
+item_modspec:{},misc_test,1000
+item_:{},misc_test,1000
+"item_:{tags:[modspec], p:{tier:3, tags:[engines]}}",misc_test,1000
+,,
+"wpn_:{tags:[omega, !no_drop, !no_drop_salvage], weaponSize:SMALL}",omega_weapons_small,100
+"wpn_:{tags:[omega, !no_drop, !no_drop_salvage], weaponSize:MEDIUM}",omega_weapons_medium,100
+"wpn_:{tags:[omega, !no_drop, !no_drop_salvage], weaponSize:LARGE}",omega_weapons_large,100
+,,
+,,
+,,
+nothing,rem_weapons1,355
+"wpn_:{tags:[remnant, !no_drop, !restricted, !no_drop_salvage], weaponSize:SMALL, weaponType:BALLISTIC}",rem_weapons1,100
+"wpn_:{weaponSize:SMALL, weaponType:MISSILE, tags:[!no_drop, !restricted, !no_drop_salvage]}",rem_weapons1,100
+"wpn_:{weaponSize:SMALL, weaponType:ENERGY, tags:[!no_drop, !restricted, !no_drop_salvage]}",rem_weapons1,100
+"ftr_:{tags:[!remnant, !no_drop, !restricted, !no_drop_salvage]}",rem_weapons1,50
+"ftr_:{tags:[remnant, !no_drop, !restricted, !no_drop_salvage]}",rem_weapons1,5
+,,
+nothing,rem_weapons2,410
+"wpn_:{tags:[remnant, !no_drop, !restricted, !no_drop_salvage], weaponType:BALLISTIC}",rem_weapons2,100
+"wpn_:{weaponType:MISSILE, tags:[!no_drop, !restricted, !no_drop_salvage]}",rem_weapons2,100
+"wpn_:{weaponType:ENERGY, tags:[!no_drop, !restricted, !no_drop_salvage]}",rem_weapons2,100
+"ftr_:{tags:[!remnant, !no_drop, !restricted, !no_drop_salvage]}",rem_weapons2,100
+"ftr_:{tags:[remnant, !no_drop, !restricted, !no_drop_salvage]}",rem_weapons2,10
+,,
+nothing,high_weapons1,250
+"wpn_:{weaponSize:SMALL, weaponType:MISSILE, tags:[!no_drop, !restricted, !no_drop_salvage]}",high_weapons1,100
+"wpn_:{weaponSize:SMALL, weaponType:ENERGY, tags:[!no_drop, !restricted, !no_drop_salvage]}",high_weapons1,100
+"ftr_:{tags:[high, !no_drop, !restricted, !no_drop_salvage]}",high_weapons1,50
+,,
+nothing,high_weapons2,300
+"wpn_:{weaponType:MISSILE, tags:[!no_drop, !restricted, !no_drop_salvage]}",high_weapons2,100
+"wpn_:{weaponType:ENERGY, tags:[!no_drop, !restricted, !no_drop_salvage]}",high_weapons2,100
+"ftr_:{tags:[high, !no_drop, !restricted, !no_drop_salvage]}",high_weapons2,100
+,,
+nothing,low_weapons1,250
+"wpn_:{weaponSize:SMALL, weaponType:BALLISTIC, tags:[!no_drop, !restricted, !no_drop_salvage]}",low_weapons1,100
+"wpn_:{weaponSize:SMALL, weaponType:MISSILE, tags:[!no_drop, !restricted, !no_drop_salvage]}",low_weapons1,100
+"ftr_:{tags:[low, !no_drop, !restricted, !no_drop_salvage]}",low_weapons1,50
+,,
+nothing,low_weapons2,300
+"wpn_:{weaponType:BALLISTIC, tags:[!no_drop, !restricted, !no_drop_salvage]}",low_weapons2,100
+"wpn_:{weaponType:MISSILE, tags:[!no_drop, !restricted, !no_drop_salvage]}",low_weapons2,100
+"ftr_:{tags:[low, !no_drop, !restricted, !no_drop_salvage]}",low_weapons2,100
+,,
+nothing,weapons1,350
+"wpn_:{weaponSize:SMALL, weaponType:BALLISTIC, tags:[!no_drop, !restricted, !no_drop_salvage]}",weapons1,100
+"wpn_:{weaponSize:SMALL, weaponType:MISSILE, tags:[!no_drop, !restricted, !no_drop_salvage]}",weapons1,100
+"wpn_:{weaponSize:SMALL, weaponType:ENERGY, tags:[!no_drop, !restricted, !no_drop_salvage]}",weapons1,100
+"ftr_:{tags:[!remnant, !no_drop, !restricted, !no_drop_salvage]}",weapons1,50
+,,
+nothing,weapons2,400
+"wpn_:{weaponType:BALLISTIC, tags:[!no_drop, !restricted, !no_drop_salvage]}",weapons2,100
+"wpn_:{weaponType:MISSILE, tags:[!no_drop, !restricted, !no_drop_salvage]}",weapons2,100
+"wpn_:{weaponType:ENERGY, tags:[!no_drop, !restricted, !no_drop_salvage]}",weapons2,100
+"ftr_:{tags:[!remnant, !no_drop, !restricted, !no_drop_salvage]}",weapons2,100
+,,
+nothing,any_hullmod_low,100
+"item_modspec:{tags:[!no_drop_salvage, !restricted]}",any_hullmod_low,10
+,,
+nothing,any_hullmod_medium,100
+"item_modspec:{tags:[!no_drop_salvage, !restricted]}",any_hullmod_medium,100
+,,
+nothing,any_hullmod_high,100
+"item_modspec:{tags:[!no_drop_salvage, !restricted]}",any_hullmod_high,300
+,,
+heavy_machinery,machinery,100
+rare_metals,machinery,20
+,,
+"#item_:{tags:[single_bp], p:{tags:[rare_bp]}}",blueprints,100
+"item_ship_bp:{tags:[rare_bp, !no_drop, !restricted]}",blueprints,100
+"item_weapon_bp:{tags:[rare_bp, !no_drop, !restricted]}",blueprints,100
+"item_fighter_bp:{tags:[rare_bp, !no_drop, !restricted]}",blueprints,100
+"item_:{tags:[package_bp, !no_drop, !restricted]}",blueprints,25
+nothing,blueprints,100
+,,
+,,
+item_synchrotron,rare_tech,10
+item_pristine_nanoforge,rare_tech,3
+item_corrupted_nanoforge,rare_tech,7
+item_orbital_fusion_lamp,rare_tech,10
+item_mantle_bore,rare_tech,10
+item_catalytic_core,rare_tech,10
+item_soil_nanites,rare_tech,10
+item_biofactory_embryo,rare_tech,10
+item_fullerene_spool,rare_tech,10
+item_plasma_dynamo,rare_tech,10
+item_cryoarithmetic_engine,rare_tech,10
+item_drone_replicator,rare_tech,10
+item_dealmaker_holosuite,rare_tech,10
+item_coronal_portal,rare_tech,10
+nothing,rare_tech,50%
+"#item_:{tags:[nanoforge]}, p:{}}",rare_tech,10
+,,
+item_pristine_nanoforge,nanoforge_always,100
+item_corrupted_nanoforge,nanoforge_always,100
+,,
+,,
+item_synchrotron,rare_tech_low,10
+item_pristine_nanoforge,rare_tech_low,3
+item_corrupted_nanoforge,rare_tech_low,7
+item_orbital_fusion_lamp,rare_tech_low,10
+item_mantle_bore,rare_tech_low,10
+item_catalytic_core,rare_tech_low,10
+item_soil_nanites,rare_tech_low,10
+item_biofactory_embryo,rare_tech_low,10
+item_fullerene_spool,rare_tech_low,10
+item_plasma_dynamo,rare_tech_low,10
+item_cryoarithmetic_engine,rare_tech_low,10
+item_drone_replicator,rare_tech_low,10
+item_dealmaker_holosuite,rare_tech_low,10
+item_coronal_portal,rare_tech_low,10
+nothing,rare_tech_low,90%
+,,
+"item_ship_bp:{tags:[rare_bp, !no_drop, !restricted]}",blueprints_low,100
+"item_weapon_bp:{tags:[rare_bp, !no_drop, !restricted]}",blueprints_low,100
+"item_fighter_bp:{tags:[rare_bp, !no_drop, !restricted]}",blueprints_low,100
+"item_:{tags:[package_bp, !no_drop, !restricted]}",blueprints_low,25
+nothing,blueprints_low,1000
+,,
+"item_ship_bp:{tags:[rare_bp, !no_drop, !restricted]}",blueprints_guaranteed,100
+"item_weapon_bp:{tags:[rare_bp, !no_drop, !restricted]}",blueprints_guaranteed,100
+"item_fighter_bp:{tags:[rare_bp, !no_drop, !restricted]}",blueprints_guaranteed,100
+"item_:{tags:[package_bp, !no_drop, !restricted]}",blueprints_guaranteed,25
+,,
+,,
+"item_weapon_bp:{tags:[rare_bp, !no_drop, !restricted]}",weapon_bp,100
+nothing,weapon_bp,100
+,,
+"item_fighter_bp:{tags:[rare_bp, !no_drop, !restricted]}",fighter_bp,100
+nothing,fighter_bp,100
+,,
+"item_ship_bp:{tags:[rare_bp, !no_drop, !restricted]}",ship_bp,100
+nothing,ship_bp,100
+,,
+"item_:{tags:[package_bp, !no_drop, !restricted]}",package_bp,20
+nothing,package_bp,100
+,,
+"item_modspec:{tags:[!no_drop_salvage, !restricted]}",techmining_first_find,10
+"item_:{tags:[package_bp, !no_drop, !restricted]}",techmining_first_find,10
+item_corrupted_nanoforge,techmining_first_find,2
+#item_synchrotron,techmining_first_find,1
+"item_:{tags:[hist3t, !no_drop, !restricted]}",techmining_first_find,2
+alpha_core,techmining_first_find,1
+beta_core,techmining_first_find,2
+gamma_core,techmining_first_find,5
+"wpn_:{tags:[rare_bp, !restricted, !no_drop_salvage]}",techmining_first_find,20

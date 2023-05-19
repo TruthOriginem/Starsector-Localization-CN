@@ -1,0 +1,34 @@
+{
+	"id":"command_and_control",
+	"governingAptitude":"leadership",
+	"compressHullmods":false,
+	"effectGroups":[
+		{
+			"name":"Level 1",
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"CHARACTER_STATS", "script":"com.fs.starfarer.api.impl.campaign.skills.CommandAndControl$Level1A"},
+				#{"type":"CHARACTER_STATS", "script":"com.fs.starfarer.api.impl.campaign.skills.CommandAndControl$Level1B"},
+			]
+		},
+		{
+			"name":"Level 2",
+			"requiredSkillLevel":2,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"CHARACTER_STATS", "script":"com.fs.starfarer.api.impl.campaign.skills.CommandAndControl$Level1B"},
+			]
+		},
+		{
+			"name":"Level 3",
+			"requiredSkillLevel":3,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"CHARACTER_STATS", "script":"com.fs.starfarer.api.impl.campaign.skills.CommandAndControl$Level3A"},
+				{"type":"CHARACTER_STATS", "script":"com.fs.starfarer.api.impl.campaign.skills.CommandAndControl$Level3B"},
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"operations_center":3}},
+			]
+		},		
+	],
+}
