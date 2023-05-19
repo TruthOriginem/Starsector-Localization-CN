@@ -8,7 +8,7 @@ name,id,flux/second,f/s (base rate),f/s (base cap),flux/use,f/u (base rate),f/u 
 等离子爆裂驱动器,microburn,1,,,,,,,2,0.1,0.5,0.5,0.5,,,,,,,,TRUE,TRUE,,,,,graphics/icons/hullsys/burn_drive.png
 等离子爆裂驱动器 - 欧米伽,microburn_omega,1,,,,,,,3,0.1,0.5,0.5,0.5,,,,,,,,TRUE,TRUE,,,,restricted,graphics/icons/hullsys/burn_drive.png
 机动推进器,maneuveringjets,,,,,,,,,,1,5,1,5,,,,,,,,,,,,,graphics/icons/hullsys/maneuvering_jets.png
-Dynamic Stabilizer,dynamic_stabilizer,,,,,,,,,,1,5,1,5,,,,,,,,,,,,,graphics/icons/hullsys/maneuvering_jets.png
+动态稳定器,dynamic_stabilizer,,,,,,,,,,1,5,1,5,,,,,,,,,,,,,graphics/icons/hullsys/maneuvering_jets.png
 烈焰喷射,inferniuminjector,1,,,,,,,,,1,,1,1,TRUE,,,,,,,TRUE,,,,,graphics/icons/hullsys/infernium_injector.png
 高速导弹挂架,fastmissileracks,,,,,,0.25,,3,0.1,1,0,0,0,,,,,,,,,,,,,graphics/icons/hullsys/missile_racks.png
 堡垒护盾,fortressshield,,,0.025,,,,,,,1.5,,1.5,0,TRUE,,,TRUE,TRUE,,,,,,,,graphics/icons/hullsys/fortress_shield.png
@@ -21,7 +21,7 @@ Dynamic Stabilizer,dynamic_stabilizer,,,,,,,,,,1,5,1,5,,,,,,,,,,,,,graphics/icon
 感应无人机,drone_sensor,,,,,,,,5,,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/drone_sensor.png
 终结者无人机,drone_terminator,,,,,,,,1,0.0333,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_high.png
 加速填弹器,ammofeed,,,,,,,,,,1,5,1,10,,,,,,,,,,,,,graphics/icons/hullsys/ammo_feeder.png
-Lidar Array,lidararray,1,,,,,,,,,3.25,5,1,10,,,,,,,,,,,,,graphics/icons/hullsys/lidar_barrage.png
+激光雷达阵列,lidararray,1,,,,,,,,,3.25,5,1,10,,,,,,,,,,,,,graphics/icons/hullsys/lidar_barrage.png
 EMP 发生器,emp,1,,,,,0.2,,,,0.5,4,0.5,3,,,,,TRUE,,,,,,,,graphics/icons/hullsys/emp_emitter.png
 导弹自动工厂,forgevats,,,,,,0.9,,1,,1,0,0,0,,,,,,,,,,,,,graphics/icons/hullsys/missile_autoforge.png
 阻尼力场,damper,1,,,,,,,2,0.05,0.25,3,0.25,0,,,,,TRUE,,,,TRUE,TRUE,,uses_damper_ai,graphics/icons/hullsys/damper_field.png
@@ -36,8 +36,8 @@ EMP 发生器,emp,1,,,,,0.2,,,,0.5,4,0.5,3,,,,,TRUE,,,,,,,,graphics/icons/hullsy
 目标馈送系统,targetingfeed,,,,,,0.5,,,,0.5,20,0.5,10,,,,,,,,,,,,,graphics/icons/hullsys/targeting_feed.png
 召回装置,recalldevice,,,,,,0.5,,,,0.5,,0.5,30,,,,,,,,,,,,,graphics/icons/hullsys/recall_device.png
 等离子推进器,plasmajets,,,,,,,,,,1,3,2,5,,,,,,,,,,,,,graphics/icons/hullsys/infernium_injector.png
-Orion Device,orion_device,,,,,,,,4,0.2,0,0.001,0,1,,,,,,,,,,,,,graphics/icons/hullsys/infernium_injector.png
-Nova Burst,nova_burst,,,,,,,,2,0.1,0.5,0.001,0,1,,,,,,,,,,,,,graphics/icons/hullsys/infernium_injector.png
+猎户座装置,orion_device,,,,,,,,4,0.2,0,0.001,0,1,,,,,,,,,,,,,graphics/icons/hullsys/infernium_injector.png
+新星爆裂驱动器,nova_burst,,,,,,,,2,0.1,0.5,0.001,0,1,,,,,,,,,,,,,graphics/icons/hullsys/infernium_injector.png
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
 能量转换,energy_conversion,,,,,,0,,3,0.1,0.5,,2,0,,TRUE,,TRUE,,,,,,,,restricted,graphics/icons/hullsys/displacer.png
 镜像投射,chiral_figment,,,,,,,,,,0.5,,0.5,30,,,,,,,,,,,,restricted,graphics/icons/hullsys/interdictor_array.png

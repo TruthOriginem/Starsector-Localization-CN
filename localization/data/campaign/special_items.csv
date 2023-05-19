@@ -29,7 +29,7 @@ name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaid
 这种复制器早在 大崩塌 之前，就已被 人之领 禁止了很长时间。因此能在 英仙座星域 找到一台状态良好的复制器，是非常令人惊讶的。",175
 全息交易撮合套件,dealmaker_holosuite,"hist3t, pather4",姆巴耶-果戈尔,,120000,1000,1,EXTREME,graphics/icons/cargo/holosuite.png,ui_cargo_special_biotech_pickup,ui_cargo_special_tech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,commerce,"这款全息套组能生成一个交互式环境，用来模拟和潜在商业伙伴进行谈判时的场景。此外，这款高端 VR 设备内置了自适应型智能微感情传感器，可提供实时的表情分析数据，从而用一种从技术层面来讲还算道德的行为，为设施运营者带来商业方面的优势。
 
-该套件内置的广告经常强调本设备并不是 AI，只是一种极其复杂的加权网络，并且绝对没有违反任何 人之领 的相关规定。",180
+该套件内置的广告经常强调本设备并不是 AI，只是一种极其复杂的加权网络，绝对没有违反任何 人之领 的相关规定。",180
 ,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
 # blueprints,,,,,,,,,,,,,,,
@@ -55,7 +55,7 @@ name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaid
 """双面神""装置",janus,mission_item,,,100000,1000,1,,graphics/icons/cargo/janus_device.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.JanusDevicePlugin,,"这是 Elissa Zal 基于 Scylla Coureuse 等人发展的理论而创建的第一代 ""双面神"" 装置。
 
 与超空间驱动器整合之后，这个装置能根据出发星门和目标星门独特的共振信号特征，向星门环传输调制过的超波脉冲。随后消耗大量燃料产生巨大的能量，在两个星门之间建立一条临时连接，使整个舰队能运用星门网络进行移动。",0
-Planetkiller,planetkiller,mission_item,,,1000000,1000,1,,graphics/icons/cargo/planetkiller.png,ui_cargo_special_military_pickup,ui_cargo_special_military_drop,com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin,,"A specialized warhead capable of sundering a world. Operating principles are only dimly understood and are thought to involve utilizing the world's spin and some form of resonance.
+歼星武器,planetkiller,mission_item,,,1000000,1000,1,,graphics/icons/cargo/planetkiller.png,ui_cargo_special_military_pickup,ui_cargo_special_military_drop,com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin,,"一颗专门用来摧毁一整个世界的弹头。人们关于其运作原理知之甚少，只知道其借助了行星的自转与运用了某些共振。
 
-This one is safed and requires authorization codes, possibly long-lost, to become anything more than a complicated, but completely inert piece of machinery.",10
-Topographic Data,topographic_data,,,,50000,1000,1,,graphics/icons/cargo/hyperspace_data.png,ui_chip_pickup,ui_modspec_drop,com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin,,"This secure TriPad contains a recent database which holds detailed scans and analyses of the hyperspace topography in the Persean Sector, organized according to traditional guidelines set by the Domain Explorarium. Data such as this is an essential element to successful expeditions outside the core worlds.",500
+这颗弹头需要某些大概早已遗失的授权代码，目前它就只是一台死气沉沉的复杂机械而已。",10
+超空间流况数据,topographic_data,,,,50000,1000,1,,graphics/icons/cargo/hyperspace_data.png,ui_chip_pickup,ui_modspec_drop,com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin,,这台有着基本资安措施的 Tripad 依照 人之领 开拓者们传承而下的数据格式规则，囊括了一个英仙座星域最近超空间流况数据的详尽扫描与分析结果。像这样的数据对前往 核心世界 之外探索远征的成功而言是不可或缺的。,500
