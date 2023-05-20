@@ -9364,7 +9364,7 @@ FireAll GAKAGargoyleHub","""就只有 —— 我 —— 和所有人！""
 
 ""让我数一下自己都交了哪些新朋友，"" Gargoyle 开始扳起手指数了起来，""先从 霸主 开始，COMSEC 想着能派来所有人都算进去。我估摸着要是来一次正式的抓捕行动的话，肯定会闹成一场外交纠纷。所以可能会偷偷派些喜欢在暗地里拿枪崩人的喽啰试着来弄死我。接着是 速子科技，至少 霸主 整出什么大动静之后，他们也会派人来看看。别忘了还有那群 左径分子。霸主 情报网对于卢德佬们来说简直漏得像个筛子似的，他们又肯定爱死这种破事了。""
 
-""让我给你总结一下把，我的好好舰长：不出...嗯...两三天这样，某件让各大势力紧张到临界点的大事就会把这个地方变成交火前线。到时候在港区里随便找两个买拉杂面的太空佬，都可能个是刺客或间谍什么的。""",,
+""让我给你总结一下把，我的好好舰长：不出...嗯...两三天这样，某件让各大势力紧张到临界点的大事就会把这个地方变成交火前线。到时候在港区里随便两个买拉杂面的太空佬，都可能有个是刺客或间谍什么的。""",,
 gaKAGargoyle2DoYouHaveArchiveSel,DialogOptionSelected,$option == gaKA_gargoyleDoYouHave,"$askedDoYouHave = true 0
 FireAll GAKAGargoyleHub","""没时间了！但是 —— "" Gargoyle 得意地笑着说，""我知道你想干什么。别担心，我把它锁得很好，用我的小技巧加密还备份了。如果你能找到它，哪怕是用 Alpha 级核心来破解它也要花费不少时间，更何况你还不知道它在哪。""
 
@@ -25411,7 +25411,12 @@ $player.mostLuddicEthosPather = false
 $player.mostLuddicEthosAtheistic = false
 $player.luddicAttitudeFaithfulOrPather = false
 $player.luddicAttitudeCynicalOrAtheistic = false
-$topLEscore = 0 0",,,
+$topLEscore = 0 0
+FireAll MostLuddicEthosRefresh1
+FireAll MostLuddicEthosRefresh2
+FireAll MostLuddicEthosRefresh3
+FireAll MostLuddicEthosRefresh4
+FireAll MostLuddicEthosRefresh5",,,
 LuddicEthosRefresh1,MostLuddicEthosRefresh1,"$player.luddicAttitudeFaithful > 3
 $player.luddicAttitudeFaithful > $topLEscore ","$player.mostLuddicEthosFaithful = true
 $player.mostLuddicEthosCynical = false
