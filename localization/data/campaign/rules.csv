@@ -285,20 +285,20 @@ marketPostOpenNoTradeHostile,MarketPostOpen,"$hasMarket
 $market.playerHostileTimeout score:100","$tradeMode = NONE 0
 SetTextHighlightColors bad
 Highlight $market.playerHostileTimeoutStr
-FireBest MarketPostDock","Your recent actions around $marketName have generated a lot of local interest, and simply coming in with the transponder off is no longer sufficient to go unnoticed. Judging from the current level of comm chatter and news reports, you estimate it'll take $playerHostileTimeoutStr until the commotion dies down.",,
+FireBest MarketPostDock",你最近在 $marketName 附近采取的行动已经引起了广泛的关注。关闭应答器已经无法蒙混过关。从目前的传言和新闻来看，你恐怕得等 $playerHostileTimeoutStr 才能指望骚乱平息。,,
 marketPostOpenNoTradeHostileTOn,MarketPostOpen,"$hasMarket
 $player.transponderOn
 $market.playerHostileTimeout score:100","$tradeMode = NONE 0
 SetTextHighlightColors bad
 Highlight $market.playerHostileTimeoutStr
-FireBest MarketPostDock","Your recent actions around $marketName have generated a lot of local interest, and engaging in open business is impossible. Judging from the current level of comm chatter and news reports, you estimate it'll take $playerHostileTimeoutStr until the commotion dies down.",,
+FireBest MarketPostDock",你最近在 $marketName 附近采取的行动已经引起了广泛的关注。目前已无法进行公开交易。从目前的传言和新闻来看，你恐怕得等 $playerHostileTimeoutStr 才能指望骚乱平息。,,
 marketPostOpenNoTradeOffOpen,MarketPostOpen,"$hasMarket
 $player.transponderOn
 RepIsAtBest $faction.id INHOSPITABLE score:10","Highlight  ""turning off your transponder""
 $tradeMode = NONE 0
-FireBest MarketPostDock","$TheFactionLong $factionIsOrAre $relAdjective towards you, and the port authority refuses your request for docking clearance after you identify yourself.
+FireBest MarketPostDock","鉴于 $TheFactionLong 与你处于 $relAdjective 关系，港务局拒绝了你的入港许可。
 
-The refusal is rather perfunctory and you get the impression that turning off your transponder to prevent identification might yield better results.",,
+对方拒绝的理由相当敷衍，你觉得只需关闭你的应答器就可轻松混入。",,
 marketPostOpenToOffPatrols,MarketPostOpen,"$hasMarket
 !$player.transponderOn
 !$faction.c:allowsTransponderOffTrade
@@ -735,7 +735,7 @@ LPTithePay,DialogOptionSelected,$option == payTithe,"#AddText ""Lost $entity.LP_
 AddRemoveCommodity credits -$entity.LP_tithe true
 $entity.LP_tithePaid = true 30
 MakeOtherFleetNonHostile LP_tithe true 30
-AddText ""The connection is cut before you have a chance to respond.""
+AddText ""通讯链接在你回应前就被切断了。""
 ShowDefaultVisual
 EndConversation","""也许你的灵魂还未被机械伪神夺走。""
 OR
@@ -1056,7 +1056,7 @@ relLevelHostilePiratesFleet,RelationshipLevelDesc,"$faction.rel == HOSTILE
 $faction.id == pirates
 $player.fleetPoints >= 120",FireAll RelLevelMoreDescription,大多数海盗都只是惧怕你强大的舰队，并没有对你有一丝尊敬之情。为了避免惹上成为你'帮凶'的名号，海盗基地不愿与你公开交易，不仅如此，海盗们还会乘人之危对你发动袭击。,,
 relLevelVengefulPirates,RelationshipLevelDesc,"$faction.rel == VENGEFUL
-$faction.id == pirates",FireAll RelLevelMoreDescription,"You are scorned as mere prey and despised as a lackey serving the fat, rich factions of the Persean Sector.",,
+$faction.id == pirates",FireAll RelLevelMoreDescription,你不过是被海盗们嗤之以鼻的猎物，并且作为那些英仙座星区里臃肿流油的主要势力们的一条看门杂种被海盗舰长们所不耻。,,
 relLevelVengefulPiratesFleet,RelationshipLevelDesc,"$faction.rel == VENGEFUL
 $faction.id == pirates
 $player.fleetPoints >= 120",FireAll RelLevelMoreDescription,"你现在就是海盗们的眼中钉；他们甚至用你的全息脸像来练习打靶。不难想象，英仙座星域无法地带的阴影中，初出茅庐的年轻海盗们有一个算一个，都准备集结舰队猎杀你，你的人头便是他们""万古流芳""之路的开始。",,
@@ -1085,29 +1085,29 @@ $faction.id == sindrian_diktat",FireAll RelLevelMoreDescription,辛达强权 政
 relLevelHostileDiktat,RelationshipLevelDesc,"$faction.rel == HOSTILE
 $faction.id == sindrian_diktat",FireAll RelLevelMoreDescription,你已经跻身于国家公敌的行列。辛达强权 海军已被授权与你的舰队交火，同时商人都被禁止与你交易，违者恐怕会被认定为支持恐怖主义。,,
 relLevelVengefulDiktat,RelationshipLevelDesc,"$faction.rel == VENGEFUL
-$faction.id == sindrian_diktat",FireAll RelLevelMoreDescription,你已经被 辛达强权 宣示为国家公敌，被视为一名顽抗 Andrada 伟大运动的疯狂恐怖分子。你的全息影像被修饰得更加狰狞可恶，被用于宣传你犯下的各种见不得人的违法罪行，在官方宣传广播中频繁出现。,,
+$faction.id == sindrian_diktat",FireAll RelLevelMoreDescription,你已经被 辛达强权 宣示为国家公敌，被视为一名顽抗 Andrada 伟大运动的疯狂恐怖分子。你的全息影像被刻画得更加狰狞可恶，被用于宣传你犯下的各种见不得人的违法罪行，在官方宣传广播中频繁出现。,,
 relLevelDiktatSDTU,RelLevelMoreDescription,"$global.sdtu_completed
-$faction.id == sindrian_diktat",,There are rumors that you're a double or triple-agent working for - or against? - Dolos Macario.,,
+$faction.id == sindrian_diktat",,有传言说你是二重甚至三重间谍 —— 或者不是呢？—— Dolos Macario。,,
 relLevelCooperativeTriTachyon,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
 $faction.id == tritachyon",FireAll RelLevelMoreDescription,董事会已经认定您是一位重要的战略合作伙伴，需作为公司重要的核心盈利指标加以考量。根据您规模增长与优势集中两者协调并重的理念，多位副总裁都采取了全新的管理模式。凭借您和 速子科技 的关系，您可以调动大量的投资基金和技术支持。,,
 relLevelFriendlyTriTachyon,RelationshipLevelDesc,"$faction.rel == FRIENDLY
 $faction.id == tritachyon",FireAll RelLevelMoreDescription,作为公司多个部门重要的合作伙伴关系的返利，您的友善形象出现在 速子科技 公司季度报告上。您享受特别的优待，有权优先使用 速子科技 及其子公司所属的设施。,,
 relLevelWelcomingTriTachyon,RelationshipLevelDesc,"$faction.rel == WELCOMING
-$faction.id == tritachyon",FireAll RelLevelMoreDescription,"The Tri-Tachyon Customer and Client Service Smart Database assigns you priority docking and a complimentary fruit and flower arrangement at every port controlled by Tri-Tachyon or one of its subsidiaries. Even if this is automated by a technically non-sentient sub-AI system, it is a sign that the Tri-Tachyon corporation values your ongoing business relationship.",,
+$faction.id == tritachyon",FireAll RelLevelMoreDescription,在每一个 速子科技 及其子公司控制下的港口，智能客户服务数据库会优先让你进港停泊，并布置免费的水果与鲜花。即使这些欢迎只是由非感性子 AI 系统自动完成，这也是 速子科技 公司重视与你保持商业关系的象征。,,
 relLevelFavorableTriTachyon,RelationshipLevelDesc,"$faction.rel == FAVORABLE
-$faction.id == tritachyon",FireAll RelLevelMoreDescription,鉴于您重要合作伙伴的身份，当您访问 速子科技 及其子公司的设施时，我们已经免除了您的标准氧气及人造重力设施使用费用。,,
+$faction.id == tritachyon",FireAll RelLevelMoreDescription,鉴于你与  速子科技 重要合作伙伴的身份，你无需在访问 速子科技 及其子公司的设施时缴纳标准氧气及人造重力设施使用费。,,
 relLevelNeutralTriTachyon,RelationshipLevelDesc,"$faction.rel == NEUTRAL
-$faction.id == tritachyon",FireAll RelLevelMoreDescription,"The Tri-Tachyon Customer and Client Service Smart Database, a Domain certified equivalent sub-gamma AI system dedicated to tracking potential competition, has not tagged your profile for special treatment or caution.",,
+$faction.id == tritachyon",FireAll RelLevelMoreDescription,速子科技 智能客户服务数据库是一个等效于次伽马 AI 核心的系统，用以追踪可能的的竞争。你在此数据库中的档案并没有优待或者警告的标记。,,
 relLevelSuspiciousTriTachyon,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
-$faction.id == tritachyon",FireAll RelLevelMoreDescription,"Your profile with the Tri-Tachyon Customer and Client Service Smart Database has been algorithmically tagged as ""potential risk"" resulting in additional small ""security fees"" and delays when docking at facilities owned or operated by Tri-Tachyon or its subsidiaries.",,
+$faction.id == tritachyon",FireAll RelLevelMoreDescription,"在 速子科技 智能客户服务数据库中，你已经被算法标记为 ""潜在的威胁""。你会被收取附加的小额 ""安全费""，并在 速子科技 及其子公司的设施中延后靠港停泊。",,
 relLevelInhospitableTriTachyon,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
-$faction.id == tritachyon",FireAll RelLevelMoreDescription,"A Tri-Tachyon sub-AI (alleged) tracks your movements through the Sector, and when docked at a wholly owned or subsidiary facility, you are followed by an indiscreet security drone. Employees of the corporation treat you with suspicion, performing additional checks to avoid risk to their quarterly bonus.  ",,
+$faction.id == tritachyon",FireAll RelLevelMoreDescription,一个 速子科技 的次 AI 核心 (据称) 在星域中追踪你的行动轨迹。当你在 速子科技 及其子公司所属的设施靠港停泊时，总会有一个草率的安保无人机跟着你。速子科技 的员工以不信任的眼光看待你，并对你进行再三检查以避免扣除他们的季度奖金。,,
 relLevelHostileTriTachyon,RelationshipLevelDesc,"$faction.rel == HOSTILE
-$faction.id == tritachyon",FireAll RelLevelMoreDescription,"Employees of Tri-Tachyon have been given the opportunity to earn a substantial increase to their quarterly performance bonus if they manage to kill you or, failing that, destroy your ability to cause further harm to the interests of the Company. A truly astronomical bribe might get you back in their good books.",,
+$faction.id == tritachyon",FireAll RelLevelMoreDescription,如果 速子科技 的员工设法干掉了你，或退而求其次，使你失去对公司利益造成进一步破坏的能力，那么他们的季度奖金便有机会大涨一笔。也许一笔几百亿星币的贿赂能让你重获一个好印象。,,
 relLevelVengefulTriTachyon,RelationshipLevelDesc,"$faction.rel == VENGEFUL
-$faction.id == tritachyon",FireAll RelLevelMoreDescription,"Tri-Tachyon has assigned an AI core to theorycrafting your destruction and set aside a mercenary fund to see it done. Your name has its own byline, in red, in quarterly corporate reports and a rather uglier version of you features in procedurally-generated children's adutainment holos.",,
+$faction.id == tritachyon",FireAll RelLevelMoreDescription,速子科技 已经指派了一个 AI 核心来计算如何干掉你，并专门设置了一笔雇佣基金来实现计划。在公司的季度报告中，你的名字被单独以红色标注。此外，在系统生成的幼儿教育全息影像中，你的形象被修饰的更加丑恶。,,
 relLevelTriTachyonCores,RelLevelMoreDescription,"$faction.id == tritachyon
-$faction.turnedIn_allCores > 3",,A special department has taken an interest in how you have found so many AI cores.,,
+$faction.turnedIn_allCores > 3",,一个特殊部门很想知道你是如何找到这么多 AI 核心的。,,
 relLevelCooperativePather,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
 $faction.id == luddic_path",FireAll RelLevelMoreDescription,"Truly, you walk upon the Path. It is not a Path of peace, and it marches ceaselessly toward the end-time, which is soon. Your fellow Walkers will keep Faith with you, whether into the blessed martyrdom of battle or into the great unknown that is God's plan, revealed only to the prophets such as Ludd and, some say, Brother Cotton.",,
 relLevelFriendlyPather,RelationshipLevelDesc,"$faction.rel == FRIENDLY
@@ -1156,52 +1156,52 @@ $faction.id == luddic_church",FireAll RelLevelMoreDescription,"The Luddic Church
 relLevelLuddicShrines,RelLevelMoreDescription,"$faction.id == luddic_church
 $global.lpp_completed",,"You are known to have pilgrimaged to, or at least visited, the shrines of the Pilgrim's Path.",,
 relLevelCooperativeLeague,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
-$faction.id == persean",FireAll RelLevelMoreDescription,"You are upheld as a friend, ally, and patriot of the League (and the gens); an example held high for those building a new, free system of federated polities among the stars to counter those who would recast the chains of Domain hegemony.",,
+$faction.id == persean",FireAll RelLevelMoreDescription,您被 英仙座联盟 (以及氏族) 视作朋友，盟友，爱国者；您为那些想要在星系中建立一个全新而自由的联邦政体的人树立了一个很好的榜样，用以对抗那些想重拾 人之领 霸权的人。,,
 relLevelFriendlyLeague,RelationshipLevelDesc,"$faction.rel == FRIENDLY
-$faction.id == persean",FireAll RelLevelMoreDescription,"You are given friendly welcome by agents of the Persean League, including fleet, customs, and intelligence services. The great gens of Kazeron favor you in matters of business and easily forgive minor indiscretions.",,
+$faction.id == persean",FireAll RelLevelMoreDescription,英仙座联盟 的政治代理，包括舰队，海关，以及情报部门都对您表示友好欢迎。Kazeron 的几个大型氏族在生意上十分青睐您，就算犯了点小错，他们也会选择视而不见。,,
 relLevelWelcomingLeague,RelationshipLevelDesc,"$faction.rel == WELCOMING
-$faction.id == persean",FireAll RelLevelMoreDescription,"Your name is known and welcomed among the worlds of the Persean League - and the gens of Kazeron - including the shared Fleet. You are considered a safe operator, made welcome in matters of business and easily forgiven for minor indiscretions.",,
+$faction.id == persean",FireAll RelLevelMoreDescription,你的大名远闻于 英仙座联盟 和他们的海军中 —— 还有 Kazeron 的几个氏族。你被认为是一个可靠而安全的人，商业上大受欢迎，就算犯了点小错，他们也会选择视而不见。,,
 relLevelFavorableLeague,RelationshipLevelDesc,"$faction.rel == FAVORABLE
-$faction.id == persean",FireAll RelLevelMoreDescription,"You are considered a reliable operator among the worlds of the Persean League and by their shared navy. The gens of Kazeron even welcome you in matters of business, though you are still considered an outsider.",,
+$faction.id == persean",FireAll RelLevelMoreDescription,在 英仙座联盟 和他们的海军中，你被当做了个可靠的人，可以依赖于你。Kazeron 的几个氏族都愿意与你做生意，即使你还是被当做外来者。,,
 relLevelNeutralLeague,RelationshipLevelDesc,"$faction.rel == NEUTRAL
 $faction.id == persean
 $player.numColonies == 0
-$player.fleetPoints < 120",FireAll RelLevelMoreDescription,"Officials of the Persean League consider you to be an independent operator with a set of League-guaranteed commerce rights within their controlled volume. You can trade and travel freely so long as you use a transponder, respect tariffs, and adhere to commodity restrictions.",,
+$player.fleetPoints < 120",FireAll RelLevelMoreDescription,英仙座联盟 的官员把你当做一个自由人，在他们控制的星区里，你受惠于一系列由联盟保证的贸易权利。只要你打开应答器，支付关税，并严格遵守商品限制，你便可以在这里自由贸易与通行。,,
 relLevelNeutralLeagueFleet,RelationshipLevelDesc,"$faction.rel == NEUTRAL
 $faction.id == persean
 $player.numColonies == 0
-$player.fleetPoints >= 120",FireAll RelLevelMoreDescription,Officials of the Persean League consider you to be an independent operator with a set of League-guaranteed commerce rights within their controlled volume. Your noteworthy independent fleet makes some smaller members wary and others respectful.,,
+$player.fleetPoints >= 120",FireAll RelLevelMoreDescription,英仙座联盟 的官员把你当做一个自由人，在他们控制的星区里，你受惠于一系列由联盟保证的贸易权利。你那引人注目的独立舰队让一些势力较小的成员对你十分谨慎，其他人则对你毕恭毕敬。,,
 relLevelNeutralLeaguePlanet,RelationshipLevelDesc,"$faction.rel == NEUTRAL
 $faction.id == persean
-$player.numColonies > 0",FireAll RelLevelMoreDescription,Officials of the Persean League consider you to be an independent operator with a set of League-guaranteed commerce rights within their controlled volume. Controlling your own colony has made you notable as a potential partner.,,
+$player.numColonies > 0",FireAll RelLevelMoreDescription,英仙座联盟 的官员把你当做一个自由人，在他们控制的星区里，你受惠于一系列由联盟保证的贸易权利。你拥有的殖民地让你作为联盟潜在合作伙伴而备受瞩目。,,
 relLevelSuspiciousLeague,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
-$faction.id == persean",FireAll RelLevelMoreDescription,"You have been tagged as a person of interest by the Persean League federal apparatus, subject to additional inspection and verification upon port entry. The gens of Kazeron are hesitant to deal with you preferring to do necessary business through intermediaries.",,
+$faction.id == persean",FireAll RelLevelMoreDescription,你已被 英仙座联盟 联邦安全局标记为重点关注对象，需要在靠港停泊时接受额外检查。Kazeron 的氏族们并不愿意与你打交道，他们宁愿通过代理人来与你进行必要的交易。,,
 relLevelInhospitableLeague,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
-$faction.id == persean",FireAll RelLevelMoreDescription,"The PLFIS has flagged you as an involved party in suspicious and/or criminal activity. You are denied permission to trade in League world markets, and patrols will treat you as a potential threat, though they do not have shoot-on-sight orders from Fleet command. Yet.",,
+$faction.id == persean",FireAll RelLevelMoreDescription,英仙座联盟 的舰队情报部已经认定你为可疑或犯罪活动的参与者。联盟所属的市场拒绝与你交易。巡逻队也同样视你为潜在的危险分子，尽管舰队司令并没有下达格杀勿论的指令。,,
 relLevelHostileLeague,RelationshipLevelDesc,"$faction.rel == HOSTILE
-$faction.id == persean",FireAll RelLevelMoreDescription,"Patrols of the Persean League have orders to 'engage at opportunity' if your fleet is spotted, considering you no better than a pirate. Markets of League Worlds are closed to you, and it is rumored that the gens of Kazeron are cooking up plans to be rid of your nuisance once and for all.",,
+$faction.id == persean",FireAll RelLevelMoreDescription,在 英仙座联盟 的巡逻队眼里，你没比海盗好哪去。他们已经接到命令，只要发现你的舰队便可以伺机进攻。联盟所属市场拒绝与你交易，同时据说 Kazeron 的氏族们正计划一劳永逸地干掉你这个讨厌鬼。,,
 relLevelVengefulLeague,RelationshipLevelDesc,"$faction.rel == VENGEFUL
-$faction.id == persean",FireAll RelLevelMoreDescription,"You are a scourge of the spaceways, declared enemy of the Persean League and its free citizens. More concerning, however, is that the great gens of Kazeron are willing to put aside their differences to pool resources to hunt you down.",,
+$faction.id == persean",FireAll RelLevelMoreDescription,你是天外来祸，是 英仙座联盟 及其自由子民的公敌。然而你更需要担心的是，Kazeron 的几个大型氏族愿意放下彼此的成见，穷尽一切资源来追捕你。,,
 relLevelLeagueYaribay,RelLevelMoreDescription,"$faction.id == persean
-$player.metDaud",,You are rumored to be an agent for gens Yaribay of Kazeron.,,
+$player.metDaud",,据传你是 Kazeron 上 Yaribay 氏族的特工。,,
 relLevelCooperativeHegemony,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
-$faction.id == hegemony",FireAll RelLevelMoreDescription,"You are trusted and valued by $theFaction, green-lit by patrols and port authorities alike, and have considerable access to high-level officials. You are given much leeway, and may receive trade concessions and access to high-quality ships and munitions.",,
+$faction.id == hegemony",FireAll RelLevelMoreDescription,你被 $theFaction 信任并看重。港务局和巡逻队都为你开绿灯，而且还有机会面见 霸主 的高官。在与 霸主 的事务中你能获得许多回旋的余地，可能在交易中获得优惠并有机会弄到高质量的舰船与武器。,,
 relLevelFriendlyHegemony,RelationshipLevelDesc,"$faction.rel == FRIENDLY
 $faction.id == hegemony",FireAll RelLevelMoreDescription,"You are well known to the Hegemony, and admired. Officers respect your steadfastness and civilian personnel appreciative of your honest dealing. Functionaries learn that not every rule applies to you, and that you are trusted with restricted military hardware.",,
 relLevelWelcomingHegemony,RelationshipLevelDesc,"$faction.rel == WELCOMING
-$faction.id == hegemony",FireAll RelLevelMoreDescription,"Your integrity is known in the Hegemony bureaucracy, earning you respect from officers and the welcome of civilian personnel. There is willingness to sell you certain restricted materiel and forgo some of the more tedious inspections.",,
+$faction.id == hegemony",FireAll RelLevelMoreDescription,你的正直已经在 霸主 的官僚系统中广为人知，使你在官员和文职人员当中有着良好的声誉。他们愿意向你出售一些违禁品，并且省略一些冗长的的检查程序。,,
 relLevelFavorableHegemony,RelationshipLevelDesc,"$faction.rel == FAVORABLE
-$faction.id == hegemony",FireAll RelLevelMoreDescription,"You have earned a begrudging respect from the Hegemony bureaucracy. Officers tend to be less strict with you, though this has few practical implications. At best you might be sold low-grade surplus equipment and avoid being the target of a quota-meeting investigation.",,
+$faction.id == hegemony",FireAll RelLevelMoreDescription,你勉强得到了 霸主 官僚系统的尊重。官员们普遍会对你不那么严格，尽管这没有什么实际影响。充其量，你只是能被允许购买一些低档的过剩装备，并且能避免成为例行审查的目标。,,
 relLevelNeutralHegemony,RelationshipLevelDesc,"$faction.rel == NEUTRAL
-$faction.id == hegemony",FireAll RelLevelMoreDescription,"You're not generally well known by $faction officials, for good or ill.",,
+$faction.id == hegemony",FireAll RelLevelMoreDescription,你并未被 $faction 的要员们广泛熟知，这既有好处也有坏处。,,
 relLevelSuspiciousHegemony,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
-$faction.id == hegemony",FireAll RelLevelMoreDescription,"Though nothing has been proven (yet), $faction officials tend to view you with distrust. Link access to the port authority is granted only grudgingly, and you find yourself the subject of investigations and harassment frequently.",,
+$faction.id == hegemony",FireAll RelLevelMoreDescription,虽然目前还没有任何确凿的犯罪证据，但 $faction 官员已经倾向于用不信任的眼光看待你。接入港口当局的连接必须再三勉为其难才能被允许，同时你发现自己经常遭到调查和骚扰。,,
 relLevelInhospitableHegemony,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
-$faction.id == hegemony",FireAll RelLevelMoreDescription,"Suspicions have risen to an actionable level. There's no shoot-on-sight authorization quite yet, but $faction ports will refuse to trade with you, and patrols seem on a mission to make your life miserable.",,
+$faction.id == hegemony",FireAll RelLevelMoreDescription,对你的嫌疑已经上升到了可以提起诉讼的水平。虽然目前还没到要求对你格杀勿论的程度，但 $faction 的港口会拒绝与你贸易，而巡逻队们仿佛是接到了指示一样处处让你苦不堪言。,,
 relLevelHostileHegemony,RelationshipLevelDesc,"$faction.rel == HOSTILE
-$faction.id == hegemony",FireAll RelLevelMoreDescription,"$Faction commanders have authorization to engage your fleet on sight, and all markets are prohibited from trading with you. You might still recover good standing with $theFaction, but it's going to take some serious work.",,
+$faction.id == hegemony",FireAll RelLevelMoreDescription,$Faction 的指挥官有权在发现你的舰队后不经询问立即交战，同时它们所有市场都被禁止与你交易。你也许还有机会恢复与 $theFaction 的良好关系，但这已经不是能靠做几件小事就能解决的问题。,,
 relLevelVengefulHegemony,RelationshipLevelDesc,"$faction.rel == VENGEFUL
-$faction.id == hegemony",FireAll RelLevelMoreDescription,A holo of your face and an IDENT-hash of your last known fleet are both regular parts of inter-system security bulletins. It's fairly certain there's a high-ranking $faction officer whose primary assignment is to hunt you down.,,
+$faction.id == hegemony",FireAll RelLevelMoreDescription,你的面部全息图像和你舰队最后被发现时的识别信息快照已经成为了星系间安全通知公告的常规部分。可以肯定的是，已经有一个高级别的 $faction 官员将负责追捕你作为首要任务进行。,,
 relLevelHegemonyDaud,RelLevelMoreDescription,"$faction.id == hegemony
 $player.metDaud",,Your meeting with the High Hegemon is a topic of speculation among the higher ranks.,,
 ,,,,,,
@@ -1447,7 +1447,7 @@ ShowPersonVisual
 FireAll PopulateOptions","经过短暂的等待，你的连接请求被接受了。
 
 ""你好，有什么事么？""",,
-defaultGreetingIgnore,PickGreeting,$temporarilyIgnoreYou score:10,,"After a short wait, your connection request is denied.",0:cutCommLink:Cut the comm link,
+defaultGreetingIgnore,PickGreeting,$temporarilyIgnoreYou score:10,,"After a short wait, your connection request is denied.",0:cutCommLink:切断通讯链接,
 convDefaultGreetingSoldier,PickGreeting,"!$contact_printedFirstReturnGreeting
 $voice == soldier","$contact_printedFirstReturnGreeting = true 0
 ShowPersonVisual
@@ -1757,10 +1757,10 @@ ome_cantHireAdmin,PopulateOptionsHire,"$ome_hireable score:100
 CallEvent $ome_eventRef atLimit $id
 $ome_isAdmin",,,"0:ome_convEnd:""目前我无法聘用更多的行政官了。""",
 ome_wontHire,PopulateOptionsHire,"$ome_hireable score:100
-!CallEvent $ome_eventRef atLimit $id","SetShortcut ome_convEnd ""ESCAPE",,2:ome_convEnd:结束谈话,
+!CallEvent $ome_eventRef atLimit $id","SetShortcut ome_convEnd ""ESCAPE""",,2:ome_convEnd:结束谈话,
 ome_wontHireMerc,PopulateOptionsHire,"$ome_hireable score:100
 CallEvent $ome_eventRef atLimit $id
-$isMercenary","SetShortcut ome_convEnd ""ESCAPE",,2:ome_convEnd:结束谈话,
+$isMercenary","SetShortcut ome_convEnd ""ESCAPE""",,2:ome_convEnd:结束谈话,
 ome_askSkillsSel,DialogOptionSelected,$option == ome_askSkills,"AddText ""你问了 $personName 一些问题以评估$hisOrHer的能力水平。""
 CallEvent $ome_eventRef printSkills $id
 $askedSkills = true 0
@@ -2311,7 +2311,7 @@ FireAll CargoPodsOptionsUpdate",,,
 "# Ceyx - KOL administer planet w/o market
 Have fun with this case, modders!",,,,,,
 ceyxOverride,OpenInteractionDialog,$id == ceyx score:100,"PrintDescription 3
-ShowDefaultVisual",Your $shipOrFleet approaches $entityName.,100:defaultLeave:离开,
+ShowDefaultVisual",你的$shipOrFleet接近了 $entityName。,100:defaultLeave:离开,
 ,,,,,,
 # Luddic Pilgrim's Path - LPP,,,,,,
 # Intro to Pilgrim's Path mission,,,,,,# Can be accepted at any public shrine
@@ -2360,7 +2360,7 @@ FireBest DialogOptionSelected
 ",,
 lppHookPolite,DialogOptionSelected,$option == lpp_hookPolite,,"你礼貌性的拒绝只是让对方虔诚的热情烧得更旺了。
 
-""这么说，你已经得知好消息了，""见习修士满面热情。""你在卢德的眼中已存真福。你认为自己是虔诚的信徒吗? 还是精神上的渴望把你带到了这圣地来?”","lpp_hookLearn1:""我很好奇圣地长什么样。""
+""这么说，你已经得知好消息了，""见习修士满面热情。""你在卢德的眼中已存真福。你认为自己是虔诚的信徒吗? 还是精神上的渴望把你带到了这圣地来?""","lpp_hookLearn1:""我很好奇圣地长什么样。""
 lpp_hookLearn:""我...也许有些唯心方面的问题。""
 lpp_hookWalkAlready:""你误解了我的话语，我早已踏上了那条道。""
 lpp_hookAntiTech1:""不。一个憎恨科技的宗教有什么好的?""
@@ -2604,21 +2604,21 @@ lppHookCurateCottonTalk,DialogOptionSelected,$option == lpp_hookCurateCottonTalk
 ""他会告诉你一些你还不相信的事吗?""$HeOrShe 叹了口气并坐到了长凳上。""不必回答，我只希望你不要这样做。""
 
 ""人们来到这圣地来寻求答案。但我发现大多数来到这里的人已经有了他们所寻求的答案；他们寻求的是让他们接受已经知道的东西的许可。""",lpp_hookCurateCottonTalk2:继续,
-lppHookCurateCottonTalk2,DialogOptionSelected,$option == lpp_hookCurateCottonTalk2,$player.declaredWillTalkToCotton = true,"副牧师站了起来，轻振 $hisOrHer 的长袍。""如果我的回答让你满意了的话，""$heOrShe 避开了你的目光，""我得去照顾其他朝圣者了。""",lpp_hookCurateSeeya:向对方道别后离开,
+lppHookCurateCottonTalk2,DialogOptionSelected,$option == lpp_hookCurateCottonTalk2,$player.declaredWillTalkToCotton = true,"副牧师站了起来，轻振 $hisOrHer 的长袍。""如果我的回答让你满意了的话，"" 副牧师避开了你的目光，""我得去照顾其他朝圣者了。""",lpp_hookCurateSeeya:向对方道别后离开,
 lppHookCurateCottonJoin,DialogOptionSelected,$option == lpp_hookCurateCottonJoin,$player.luddicAttitudePather++,"""我劝你不要踏上那条道，""副牧师断然地说。
 
 副牧师轻振 $hisOrHer 的长袍。""如果我的回答让你满意了的话，""$heOrShe 避开了你的目光，""我得去照顾其他朝圣者了。""",lpp_hookCurateSeeya:向对方道别后离开,
-lppHookCurateCottonKill,DialogOptionSelected,$option == lpp_hookCurateCottonKill,$player.declaredWillKillCotton = true,"The curate sighs, rubbing $hisOrHer eyes as if a sharp headache had just come upon $himOrHer, then speaks.
- 
-""I could not say if you would find the finality you seek on that particular path.""","lpp_hookCurateCottonKill2a:""Why not?""
-lpp_hookCurateCottonKill2b:""By broadside or sidearm, I can ensure finality.""
+lppHookCurateCottonKill,DialogOptionSelected,$option == lpp_hookCurateCottonKill,$player.declaredWillKillCotton = true,"副牧师叹了口气，揉了揉$hisOrHer的眼睛，仿佛正在忍受剧烈的头痛，然后开口道：
+
+""我并不知道这条道路是否通向你所追求的最终结局。""","lpp_hookCurateCottonKill2a:""为什么这么说?""
+lpp_hookCurateCottonKill2b:""不管用舷炮还是佩枪，我都会确保那是我想要的结局。""
 ",
-lppHookCurateCottonKill2a,DialogOptionSelected,$option == lpp_hookCurateCottonKill2a,,"""He's not the first of his kind, nor will he be the last, nor is he the only,"" $heOrShe says with a pained voice.
+lppHookCurateCottonKill2a,DialogOptionSelected,$option == lpp_hookCurateCottonKill2a,,"""他不是第一个这种人，也不会是最后一个，更不是唯一的一个。""$heOrShe痛苦地说道。
 
-""If it pleases you,"" the curate does not meet your eyes, ""I shall attend to the other pilgrims now.""",lpp_hookCurateSeeya:Say your good-byes and leave,
-lppHookCurateCottonKill2b,DialogOptionSelected,$option == lpp_hookCurateCottonKill2b,,"""As you say,"" the curate concedes without meeting your eyes.
+""如果这让你满意的话，""牧师没有和你对视，""我现在要去见其他的朝圣者了。""",lpp_hookCurateSeeya:向对方道别后离开,
+lppHookCurateCottonKill2b,DialogOptionSelected,$option == lpp_hookCurateCottonKill2b,,"""就照你的意思来吧，""副牧师勉为其难地同意了，但没有对上你的目光。
 
-""If it pleases you,"" the curate does not meet your eyes, ""I shall attend to the other pilgrims now.""",lpp_hookCurateSeeya:Say your good-byes and leave,
+""如果我的回答让你满意了的话，"" 副牧师避开了你的目光，""我得去照顾其他朝圣者了。""",lpp_hookCurateSeeya:向对方道别后离开,
 ,,,,,,
 lppHookCurateSeeya,DialogOptionSelected,$option == lpp_hookCurateSeeya,"EndConversation DO_NOT_FIRE
 $option = shrineDoLeave 0
@@ -2628,31 +2628,31 @@ $id != beholder_station
 $entity.id != killa","ShowDefaultVisual
 $justVisitedShrine = true 0
 FireAll PopulateOptions
-ShrineCMD endMusic","The flight in your return shuttle is uneventful, yet you are keenly aware of the thin envelope of technology protecting you from the ravages of vacuum and radiation.",,
+ShrineCMD endMusic",搭乘穿梭机返航的过程平稳顺利，然而你敏锐地意识到，保护你免受真空和辐射摧残的是科学的薄外衣。,,
 lppHookShrineLeaveBeholder,DialogOptionSelected,"$option == shrineDoLeave 
 $id == beholder_station","ShrineCMD endMusic
-FireBest ShrineMainOptions","The flight in your return shuttle is uneventful, yet you are keenly aware of the thin envelope of technology protecting you from the ravages of vacuum and radiation.",shrineDoLeaveBeholder2:离开,
+FireBest ShrineMainOptions",搭乘穿梭机返航的过程平稳顺利，然而你敏锐地意识到，保护你免受真空和辐射摧残的是科学的薄外衣。,shrineDoLeaveBeholder2:离开,
 lppHookShrineLeaveBeholder2,DialogOptionSelected,$option == shrineDoLeaveBeholder2,DismissDialog,,,
 # Beholder Station shrine,,,,,,
 lppBeholderOpenDialog,OpenInteractionDialog,"$id == beholder_station
 $tag:luddic_shrine","PrintDescription 1
-AddText ""The landing bay is filled with parties of Luddic pilgrims, many dressed in traditional handweave, meeting with subcurates. An attendant looks you over suspiciously and inquires about what business you have coming here.""
+AddText ""着陆舱里挤满了身着传统手织品的卢德朝圣者队伍，他们正在与准助理牧师们会面。一名侍从用怀疑的眼光打量着你，询问你此行的目的。""
 ShowDefaultVisual
 FireAll BeholderShrineMainOptions
 ShrineCMD addIntel",,,
 #lppBeholderShrineMainOptions2,BeholderShrineMainOptions,$player.atrocities > 1,,,,
-lppBeholderShrineMainOptions,BeholderShrineMainOptions,,,,"0:lpp_beholderShrineVisit:Visit the shrine
-1:beholderShrineMakeOffering:Make an offering
-10:lpp_beholderShrineRealLeave:Return to your $shipOrFleet",
+lppBeholderShrineMainOptions,BeholderShrineMainOptions,,,,"0:lpp_beholderShrineVisit:拜访圣地
+1:beholderShrineMakeOffering:做出捐赠
+10:lpp_beholderShrineRealLeave:返回 $shipOrFleet",
 lppBeholderShrineVisit,DialogOptionSelected,$option == lpp_beholderShrineVisit,"SetShortcut shrineLeave1 ""ESCAPE""
 ShrineCMD setVisited
-FireAll LPPShrineVisitXP","The attendant receives your request with only the subtlest disapproval. To your surprise, a subcurate approaches to escort you to the shrine's viewing chamber.
+FireAll LPPShrineVisitXP","侍从接受了你的请求，只是稍显不悦。出乎你意料的是，一名准助理牧师走了过来，领你去了圣地的观礼室。
 
-A vast, dim gallery opens upon a hundred-meter diamond plate window allowing a full view of the glory of Kumari Aru. Here, pilgrims quietly contemplate the miracle of Creation, taking in the sublime and terrible beauty of the gas giant looming below. Storm systems the size of a standard terrestrial world churn with slow majesty, inner-lit with green-violet sheet lightning, teeming with xenolife.
+一个巨大而昏暗的回廊围绕着一扇百米宽的菱形窗口展开，让人得以一览 Kumari Aru 的壮丽美景。在这里，朝圣者们冥思创世者的神迹，体验下方赫然耸立的气态巨星所展现出的庄严敬畏之美。规模相当于一个标准的类地星球风暴系统缓慢而威严地翻腾着，大片绿紫色的雷电不时闪烁其中，孕育着数不尽的异种生命。
 
-Does something incomprehensible look up from the lee of a dark cloudbank at the bright point in that alien sky?",beholderShrineLeave1:离开,
+不知在那阴暗的云层之下，是否有什么难以名状之物正抬头望着它们的天空中的亮点？",beholderShrineLeave1:离开,
 lppBeholderShrineLeave1,DialogOptionSelected,$option == beholderShrineLeave1,"$option = lpp_hookStart 0
-FireBest DialogOptionSelected","You exit the sanctum, still pondering what you saw and, perhaps, felt.",,
+FireBest DialogOptionSelected",你走出密室，思考着你所看到，或许还有感觉到的。,,
 lppBeholderShrineRealLeave,DialogOptionSelected,$option == lpp_beholderShrineRealLeave,DismissDialog,,,
 lppBeholderShrineOfferingAlreadyMade,DialogOptionSelected,"$option == beholderShrineMakeOffering
 $offeringMade score:100",,你最近已经做过捐赠了，如果还这么做的话将被认为是个傲慢不得体的家伙。,,
@@ -2713,108 +2713,108 @@ $faction.id == luddic_church
 $market.tag:luddic_shrine
 $menuState == main
 !$market.knowAboutShrine","ShrineCMD addIntel
-$market.knowAboutShrine = true",It is well known that pilgrims of the Luddic faith travel here from across the Persean Sector to visit the holy shrine of Gilead. The shrine is said to be built where Ludd kissed the ground after first stepping onto the surface of the planet.,,
+$market.knowAboutShrine = true",众所周知，心怀卢德信仰的朝圣者们从英仙座星区的各处来到这里，参观 Gilead 上神圣的圣地。据说，这座圣地就坐落于卢德第一次踏上这颗星球后亲吻大地之处。,,
 lppGileadShrineVisitOption,PopulateOptions,"$market.id == gilead
 $faction.id == luddic_church
 $market.tag:luddic_shrine
 $menuState == main
 $player.transponderOn
 !$justVisitedShrine
-!$market.lpp_finishPilgrimage",,,3:lpp_gileadShrineVisitStart:Join the pilgrims visiting the Luddic shrine,# available by default
+!$market.lpp_finishPilgrimage",,,3:lpp_gileadShrineVisitStart:加入拜访卢德圣地的朝圣者们,# available by default
 lppGileadPilgrimageEndOption,PopulateOptions,"$market.id == gilead
 $market.tag:luddic_shrine
 $menuState == main
 !$justVisitedShrine
-$market.lpp_finishPilgrimage score:1000",SetOptionColor lpp_gileadShrineVisitStart buttonShortcut,,3:lpp_gileadShrineVisitStart:Shuttle down to complete the pilgrimage,
-lppGileadShrineVisitStart,DialogOptionSelected,$option == lpp_gileadShrineVisitStart,ShowLargePlanet,"Deorbiting to the surface of Gilead is strictly overseen by the Knights of Ludd; your shuttle must queue behind a flotilla of lumbering transports and haulers filled with approved industrial goods.
+$market.lpp_finishPilgrimage score:1000",SetOptionColor lpp_gileadShrineVisitStart buttonShortcut,,3:lpp_gileadShrineVisitStart:搭乘穿梭机下到地面来为朝圣之旅画上句号,
+lppGileadShrineVisitStart,DialogOptionSelected,$option == lpp_gileadShrineVisitStart,ShowLargePlanet,"离开轨道下到 Gilead 地表的过程由卢德骑士严格监管，你的穿梭机得排在一堆装满经过批准的工业产品的笨重运输船和拖船后面。
 
-This provides you with time to contemplate the face of Gilead; its continents, once fringed only by alien algae-equivalents, were seeded with Earth-life by a far-roving sporeship of the second wave of human expansion. The Eridani-Utopia Terraforming megacorp followed and its vast machines stabilized the climate and ecological processes. Ludd came then, pulled down the machines, and the believers who followed maintained the world as a garden-wilderness of astounding richness. Truly, it is a gem of the Persean Sector.
+这样一来你便有时间细想 Gilead 的面貌了。它的大陆曾经只被外星藻类覆盖，直到人类进行第二波殖民扩张时，被远道而来的孢子母舰播种了类地生命。天苑四-乌托邦地貌改造集团 紧随其后，用巨型机器稳定了气候和生态。那之后卢德来到了这里，摧毁了机器，跟随着他的信徒们则把世界维持着花园般的未开发模样，至今它依然富饶得惊人。的确，它当得起英仙座星区明珠的名号。
 
-Your shuttle receives a ping from traffic control: permission to descend.",pp_gileadShrineVisitStart2:继续,
+这时你的穿梭机收到了交通管制中心的提示：这是允许降落的意思。",pp_gileadShrineVisitStart2:继续,
 lppGileadShrineStartHub,DialogOptionSelected,$option == lpp_gileadShrineVisitStart2,"ShowImageVisual luddic_shrine
-FireBest LPPGileadShrineStartHubA","The landing bay, one of a score or so allocated to outsiders, is packed with parties of Luddic pilgrims dressed in traditional handweave led by robed attendants.","
+FireBest LPPGileadShrineStartHubA",大约有二十分之一的着陆港被分配给了外来者，它们基本被长袍侍从带领着的、身着传统手织品的卢德朝圣者队伍挤满。,"
 ",
 lppGileadShrineVisitAgain,DialogOptionSelected,"$option == lpp_gileadShrineVisitStart
-$global.lpp_visitedShrineGilead",ShowLargePlanet,"Deorbiting to the surface of Gilead is overseen by the Knights of Ludd, and their traffic control is characteristically strict. Your shuttle queues behind a flotilla of lumbering transports and haulers.
+$global.lpp_visitedShrineGilead",ShowLargePlanet,"离开轨道下到 Gilead 地表的过程由卢德骑士严格监管，你的穿梭机得排在一堆笨重的运输船和拖船后面。
 
-The face of Gilead is filled with green continents, seeded with Earth-life by sporeship and climate-stabilized by Eridani Utopia's vast terraforming machines. Then Ludd came and the Faithful turned the world into a garden-wilderness of astounding richness; it is a gem of the Persean Sector.
+Gilead 的星球表面上遍布绿洲，孢子母舰在上面播种了类地生命，天苑四-乌托邦地貌改造集团 的巨型机器则稳定了它的气候和生态。那之后卢德来到了这里，跟随着他的信徒们则把世界变成了花园般的未开发模样，至今它依然富饶得惊人。它是英仙座星区中的一颗明珠。
 
-Your shuttle receives a ping from traffic control: permission to descend.",pp_gileadShrineVisitStart2:继续,
+你的穿梭机收到了交通管制中心的提示：这是允许降落的意思。",pp_gileadShrineVisitStart2:继续,
 lppGileadShrineVisitAgainEnd,DialogOptionSelected,"$option == lpp_gileadShrineVisitStart
 $lpp_finishPilgrimage score:1000","ShowLargePlanet
-FireBest LPPGileadDescriptionOrbit","Deorbiting to the surface of Gilead is overseen by the Knights of Ludd, and their traffic control is typically strict. Your shuttle queues behind a flotilla of lumbering transports and hauler",,
-lppGileadShrineVisitAgainEndB1,LPPGileadDescriptionOrbit,$player.luddicAttitudePather >= 3,FireBest LPPGileadDescriptionOrbit2,"The face of Gilead is painted with fragile green continents and glittering blue oceans. Ludd came here and the original Faithful, undiluted by the Church hierarchy, liberated the world from Eridani Utopia's terraforming machines. In place of a sprawl of private fortress-plantations and crowded resort playgrounds for the rich, a garden-wilderness of astounding richness bloomed. It is a gem of the Persean Sector.",,
-lppGileadShrineVisitAgainEndB2,LPPGileadDescriptionOrbit,$player.luddicAttitudeFaithful >= 3,FireBest LPPGileadDescriptionOrbit2,"The face of Gilead is painted with fragile green continents and glittering blue oceans. Ludd came here, saw Eridani Utopia's vast terraforming machines and designs for profit, and led the first Faithfulto liberate the world. In place of sprawling private fortress-plantations and crowded resort compounds, a garden-wilderness of astounding richness was cultivated. It is a gem of the Persean Sector.",,
-lppGileadShrineVisitAgainEndB3,LPPGileadDescriptionOrbit,$player.luddicAttitudeCynical >= 3,FireBest LPPGileadDescriptionOrbit2,"The face of Gilead is bears startlingly green continents and glittering blue oceans. First seeded by sporeships, the terraforming contract was granted by the Domain colonial authorities to the Eridani Utopia Terraforming megacorporation. Their vast machines tamed the world, and just as the project was on the cusp of fruition, Ludd came. From a certain perspective, the followers of Ludd stole the world to create their own vision of paradise: a rustic garden-wilderness. Despite the hypocrisy, or perhaps for it, Gilead is a gem of the Persean Sector.",,
-lppGileadShrineVisitAgainEndB4,LPPGileadDescriptionOrbit,$player.luddicAttitudeAtheistic >= 3,FireBest LPPGileadDescriptionOrbit2,"The face of Gilead is filled with green continents, seeded with Earth-life by sporeship and climate-stabilized by Eridani-Utopia's vast terraforming machines. Then Ludd came and the Faithful turned the world into a rustic garden-wilderness of astounding richness; it is a gem of the Persean Sector.",,
-lppGileadShrineVisitAgainEndB5,LPPGileadDescriptionOrbit,,FireBest LPPGileadDescriptionOrbit2,"The face of Gilead is filled with green continents, seeded with Earth-life by sporeship and climate-stabilized by Eridani Utopia's vast terraforming machines. Then Ludd came and turned the world into a rustic garden-wilderness of astounding richness; it is a gem of the Persean Sector.",,
-lppGileadShrineVisitAgainEndC,LPPGileadDescriptionOrbit2,,,Your shuttle receives a ping from traffic control: permission to descend.,pp_gileadShrineVisitStart2:继续,
-lppGileadShrineStartHubTextB,LPPGileadShrineStartHubA,$player.atrocities > 1,,"One such stony-faced attendant, flanked by Knights of Ludd in gleaming powered armor, meets your shuttle on the pad.
+FireBest LPPGileadDescriptionOrbit",离开轨道下到 Gilead 地表的过程由卢德骑士监管，并且他们的交通管制非常严格。你的穿梭机排在一堆笨重的运输船和拖船后面。,,
+lppGileadShrineVisitAgainEndB1,LPPGileadDescriptionOrbit,$player.luddicAttitudePather >= 3,FireBest LPPGileadDescriptionOrbit2,Gilead 的表面由纤巧美丽的绿色大陆和闪闪发光的蓝色海洋组成。卢德曾到过这里，那些追随他的、尚未被教会阶级制度侵蚀的最初信徒们，则将这个世界从天苑四-乌托邦 的地貌改造机器手中解放了出来。于是在这颗星球上，取代了杂乱无章的私人堡垒种植园和拥挤的富人度假乐园，一片富饶得惊人的自然花园盛放了，这让它成为了英仙座星区中的一颗明珠。,,
+lppGileadShrineVisitAgainEndB2,LPPGileadDescriptionOrbit,$player.luddicAttitudeFaithful >= 3,FireBest LPPGileadDescriptionOrbit2,Gilead 的表面由纤巧美丽的绿色大陆和闪闪发光的蓝色海洋组成。卢德曾到过这里，看到 天苑四-乌托邦 的巨型地貌改造机器和为了盈利进行的规划后，让最初信徒们解放了这个世界。于是在这颗星球上，取代了杂乱无章的私人堡垒种植园和拥挤的度假区复合体，一片富饶得惊人的自然花园被耕耘而出，让它成为了英仙座星区中的一颗明珠。,,
+lppGileadShrineVisitAgainEndB3,LPPGileadDescriptionOrbit,$player.luddicAttitudeCynical >= 3,FireBest LPPGileadDescriptionOrbit2,Gilead 的表面承载着惊艳的绿色大陆和闪烁的蓝色海洋。在最初由孢子母舰播种生命后，一份人之领殖民部门和天苑四-乌托邦地貌改造集团之间的合同签订了，后者的巨型机器随后开始开垦这个世界。就在项目即将取得成果之际，卢德来到了这里。从某种角度来看，卢德的追随者窃取了这个世界，将它塑造成了他们心目中的天堂：一座质朴的自然花园。尽管虚伪，但或许正因如此，Gilead 成为了英仙座星区中的一颗明珠。,,
+lppGileadShrineVisitAgainEndB4,LPPGileadDescriptionOrbit,$player.luddicAttitudeAtheistic >= 3,FireBest LPPGileadDescriptionOrbit2,Gilead 的星球表面上遍布绿洲，孢子母舰在上面播种了类地生命，天苑四-乌托邦地貌改造集团 的巨型机器则稳定了它的气候和生态。那之后卢德来到了这里，跟随着他的信徒们则把世界变成了一座质朴的自然花园，这使它成为了英仙座星区中的一颗明珠。,,
+lppGileadShrineVisitAgainEndB5,LPPGileadDescriptionOrbit,,FireBest LPPGileadDescriptionOrbit2,Gilead 的表面被绿色的大地所覆盖。孢子母舰在这里播种了类地生命，天苑四-乌托邦集团的巨型环境改造机器稳定了这里的气候和生态。随后卢德游历至此，将这个世界变成了富饶惊人的质朴园野，成就了这一英仙座星区瑰宝。,,
+lppGileadShrineVisitAgainEndC,LPPGileadDescriptionOrbit2,,,你的穿梭机收到了交通管制中心的提示：这是允许降落的意思。,pp_gileadShrineVisitStart2:继续,
+lppGileadShrineStartHubTextB,LPPGileadShrineStartHubA,$player.atrocities > 1,,"一个面无表情的侍从在着陆台等待着你的穿梭机降落，身着闪闪发光的动力盔甲的卢德骑士伴随在对方身侧。
 
-""We do not welcome those who have done what you have done, Captain $playerName,"" the attendant says. ""Please leave now.""
+""我们并不待见你的所作所为，$playerName 舰长，""侍从说，""请你离开。""
 
-They appear unyielding and perhaps even consider standing up to you a righteous test of their devotion.",lpp_gileadShrineVisit:离开,
-lppGileadShrineStartHubTextC,LPPGileadShrineStartHubA,RepLTE luddic_church INHOSPITABLE,,"One such stony-faced attendant, flanked by Knights of Ludd in gleaming powered armor, meets your shuttle on the pad.
+他们看起来不会退让，甚至觉得拦在你面前是对忠诚的正义考验。",lpp_gileadShrineVisit:离开,
+lppGileadShrineStartHubTextC,LPPGileadShrineStartHubA,RepLTE luddic_church INHOSPITABLE,,"一个面无表情的侍从在发射台等待着你的穿梭机降落，身着闪闪发光的动力盔甲的卢德骑士伴随在对方身侧。
 
-""We do not welcome those who have done what you have done, Captain $playerName,"" the attendant says. ""Please leave now.""
+""我们并不待见你的所作所为，$playerName 舰长，""侍从说，""请你离开。""
 
-They appear unyielding and perhaps even consider standing up to you a righteous test of their devotion.",lpp_gileadShrineVisit:离开,
+他们看起来不会退让，甚至觉得拦在你面前是对忠诚的正义考验。",lpp_gileadShrineVisit:离开,
 lppGileadShrineJaspisRetryA,DialogOptionSelected,"$option == lpp_gileadShrineVisitStart
 $global.lpp_playerRejectedJaspisRoute
-$global.lpp_visitedShrineGilead",ShowLargePlanet,"Deorbiting to the surface of Gilead is strictly overseen by the Knights of Ludd; your shuttle must queue behind a not insignificant flotilla of lumbering transports and haulers filled with approved industrial goods.
+$global.lpp_visitedShrineGilead",ShowLargePlanet,"离开轨道下到 Gilead 地表的过程由卢德骑士严格监管，你的穿梭机得排在一堆笨重的运输船和拖船后面。
 
-As your shuttle inserts into a holding orbit, an override comes in from traffic control. Your pilot forwards the nav instructions to you for approval: immediate permission to descend on a non-standard route to a site which is not the usual pilgrimage transport complex. Instead, you are being directed to a pad serving a sprawling monastic compound.
+你的穿梭机进入悬停轨道时，交通管制发来了超驰指令。驾驶员将导航指示转发给你以供确认：通行许可来的很快，但目的地并非通常的朝圣者交通复合体。取而代之地，你的穿梭机需要沿着非标准航线下到一处庞大寺院建筑群中的停机坪上。
 
-The local datasphere, such as it is, is not forthcoming on details.","lpp_ending1:Follow the route
-lpp_startEndingAbort:Return to your $shipOrFleet instead",
+哪怕是当地的数据库，也没能提供有关目的地的细节。","lpp_ending1:沿着对方发来的航线航行
+lpp_startEndingAbort:返回 $shipOrFleet",
 lppGileadShrineJaspisRetryB,DialogOptionSelected,"$option == lpp_gileadShrineVisitStart
 $global.lpp_playerRejectedFirstJaspisMeeting
-$global.lpp_visitedShrineGilead",ShowLargePlanet,"Deorbiting to the surface of Gilead is strictly overseen by the Knights of Ludd; your shuttle must queue behind a not insignificant flotilla of lumbering transports and haulers filled with approved industrial goods.
+$global.lpp_visitedShrineGilead",ShowLargePlanet,"离开轨道下到 Gilead 地表的过程由卢德骑士严格监管，你的穿梭机得排在一堆笨重的运输船和拖船后面。
 
-As your shuttle inserts into a holding orbit, an override comes in from traffic control. Your pilot forwards the nav instructions to you for approval: immediate permission to descend on a non-standard route to a site which is not the usual pilgrimage transport complex. Instead, you are being directed to a pad serving a sprawling monastic compound.
+你的穿梭机进入悬停轨道时，交通管制发来了超驰指令。驾驶员将导航指示转发给你以供确认：通行许可来的很快，但目的地并非通常的朝圣者交通复合体。取而代之地，你的穿梭机需要沿着非标准航线下到一处庞大寺院建筑群中的停机坪上。
 
-The local datasphere, such as it is, is not forthcoming on details. You can only assume that Archcurate Jaspis is insisting on meeting with you.","lpp_ending1:Follow the route
-lpp_startEndingAbort:Return to your $shipOrFleet instead",
-lppGileadShrineStartEndingAbort,DialogOptionSelected,$option == lpp_startEndingAbort,FireAll PopulateOptions,You order the pilot to abort your descent rather than follow the unusual nav plan. There is no objection from traffic control or any kind of follow-up comms request as you return to your $shipOrFleet.,,
-lppGileadMissionEndLeaveAttempt,DialogOptionSelected,$option == shrineDoLeavePostEnd,,"You return to your shuttle, taking a final breath of air rich with the exhalations of both the greenery and the mass of humanity.
+哪怕是当地的数据库，也没能提供有关目的地的细节。你只能猜这或许是 Jaspis 主教要见你。","lpp_ending1:沿着对方发来的航线航行
+lpp_startEndingAbort:返回 $shipOrFleet",
+lppGileadShrineStartEndingAbort,DialogOptionSelected,$option == lpp_startEndingAbort,FireAll PopulateOptions,你下令飞行员取消着陆计划，而非跟着非常规航线走。在返回 $shipOrFleet 的途中，没有交通管制或别种形式的后续通信向你传达反对意见。,,
+lppGileadMissionEndLeaveAttempt,DialogOptionSelected,$option == shrineDoLeavePostEnd,,"吸入最后一口充满了绿色植物和人类气息的空气后，你返回了穿梭机上。
 
-As your pilot swaps take-off pings with traffic control, they pause at an unusual set of nav instructions which are forwarded to your (now retrieved) datapad: you are being directed to a landing which serves a huge monastic complex, some sort of Church administrative center.
+当你的飞行员与交通管制交换起飞信号时，一组不寻常的导航指令打断了他们，随后这些指令被转发到了你的数据平板上：你的穿梭机需要沿着非标准航线前往一处庞大寺院建筑群中的着陆场，那似乎是教会的行政中心。
 
-The local datasphere is not forthcoming on details. It's difficult to say if this is a security measure or pious neglect.","lpp_ending1:Follow the route
-lpp_startEndingAbortB:Return to your $shipOrFleet instead",
+当地的数据库没能提供有关细节。很难说这是保密措施还是一种虔诚的忽视。","lpp_ending1:沿着对方发来的航线航行
+lpp_startEndingAbortB:返回 $shipOrFleet",
 lppGileadShrineStartEndingAbortB,DialogOptionSelected,$option == lpp_startEndingAbortB,"$global.lpp_playerRejectedJaspisRoute = true
-FireAll PopulateOptions","You order the pilot to follow the original ascent rather than follow the unusual navigation instructions.
+FireAll PopulateOptions","你下令飞行员继续返航，而非跟着非常规航线走。
 
-There is no objection from traffic control or any kind of follow-up comms request as you return to your $shipOrFleet.",,
-lppEnding1,DialogOptionSelected,$option == lpp_ending1,ShowImageVisual gilead,"At the landing pad, you are met by a solemn Luddic Knight. A Knight Initiate stands a few paces behind, trying to match the ease and calm of their superior.
+在返回 $shipOrFleet 的途中，没有交通管制或别种形式的后续通信向你传达反对意见。",,
+lppEnding1,DialogOptionSelected,$option == lpp_ending1,ShowImageVisual gilead,"在着陆场上，一位庄严的卢德骑士正等着你的到来。一名新晋骑士站在他身后几步远的地方，试图模仿前辈的从容镇静。
 
-""Captain $PlayerName,"" the Knight says, ""Let me speak welcome on behalf of the Church of Galactic Redemption. I extend to you an invitation from the Reverend Archcurate Jaspis to meet and share refreshment.""
+""$PlayerName 舰长，""骑士说，""请允许我代表银河救赎教会表示欢迎。同时，我谨代表 Jaspis 大主教向你发来会面和共进茶点的邀请。""
 
-The Knight stands aside, motioning with gauntlet to invite you to walk toward the administrative structures.","lpp_ending2:Walk with the Knight
-lpp_endingKnightWhat:""What's this about?""
-lpp_endingKnightAllowed:""Am I allowed to decline?""
-lpp_endingKnightDecline:""I decline the invitation.""",
+骑士站到一旁，用戴着臂铠的手邀请你向行政建筑群进发。","lpp_ending2:和骑士一起出发
+lpp_endingKnightWhat:""这是为了什么?""
+lpp_endingKnightAllowed:""我能拒绝吗?""
+lpp_endingKnightDecline:""我想拒绝这个邀请。""",
 lppEnding1redux,DialogOptionSelected,"$option == lpp_ending1
 !$global.jaspisMadeOffer
-$global.lpp_playerRejectedFirstJaspisMeeting",ShowImageVisual gilead,"At the landing pad, you are met by a solemn Luddic Knight. A Knight Initiate stands a few paces behind, trying to match the ease and calm of their superior.
+$global.lpp_playerRejectedFirstJaspisMeeting",ShowImageVisual gilead,"在着陆场上，一位庄严的卢德骑士正等着你的到来。一名新晋骑士站在他身后几步远的地方，试图模仿前辈的从容镇静。
 
-""Captain $PlayerName,"" the Knight says, ""Let me once again speak welcome on behalf of the Church of Galactic Redemption. I extend to you an invitation from the reverend Archcurate Jaspis to meet and share refreshment.""
+""$PlayerName 舰长，""骑士说，""请允许我再度代表银河救赎教会表示欢迎。同时，我谨代表 Jaspis 大主教向你发来会面和共进茶点的邀请。""
 
-The knight stands aside, motioning with gauntlet to invite you to walk toward the administrative structures.","lpp_ending2:Walk with the Knight
-lpp_endingKnightInsist:""Jaspis is insistent, isn't she.""
-lpp_endingKnightWhat:""What's this about?""
-lpp_endingKnightAllowed:""Am I allowed to decline?""
-lpp_endingKnightDecline:""I decline the invitation.""",
-lppGileadShrineStartHubTextA,LPPGileadShrineStartHubA,$player.atrocities <= 1,FireAll LPPGileadShrineStartHub,"One such stony-faced attendant meets your shuttle on the pad and, wasting no time, firmly but politely inquires about your business here.",,
-lppGileadShrineStartHubResponse1,LPPGileadShrineStartHub,,,,lpp_gileadShrineVisit:Visit the shrine,
-lppGileadShrineStartHubResponse2,LPPGileadShrineStartHub,!$askedShrine,,,lpp_gileadShrineInfo1:Ask about the shrine,
+骑士站到一旁，用戴着臂铠的手邀请你向行政建筑群进发。","lpp_ending2:和骑士一起出发
+lpp_endingKnightInsist:""Jaspis 还真是执着啊。""
+lpp_endingKnightWhat:""这是为了什么?""
+lpp_endingKnightAllowed:""我能拒绝吗?""
+lpp_endingKnightDecline:""我想拒绝这个邀请。""",
+lppGileadShrineStartHubTextA,LPPGileadShrineStartHubA,$player.atrocities <= 1,FireAll LPPGileadShrineStartHub,一个面无表情的侍从在着陆台上等待着你的穿梭机降落，对方一上来就强硬却不失礼节地向你询问到访此地的目的。,,
+lppGileadShrineStartHubResponse1,LPPGileadShrineStartHub,,,,lpp_gileadShrineVisit:拜访圣地,
+lppGileadShrineStartHubResponse2,LPPGileadShrineStartHub,!$askedShrine,,,lpp_gileadShrineInfo1:询问关于圣地的事,
 lppGileadShrineStartHubResponse3,LPPGileadShrineStartHub,,,,lpp_gileadShrineEarlyLeave:离开,
 lppGileadShrineInfo1,DialogOptionSelected,$option == lpp_gileadShrineInfo1,"$askedShrine = true 0
-FireAll LPPGileadShrineStartHub","The attendant dutifully explains that the shrine commemorates the holy site where Ludd first stepped onto Gilead and was brought prostrate, to the shock of non-believers, to kiss the earth itself, so overcome was Ludd by the rapturous touch of Divinity.
+FireAll LPPGileadShrineStartHub","侍从尽职地解释说，这个圣地是为了纪念卢德第一次踏上 Gilead 而建的，那时卢德被神伟大的才能所折服，在非信徒们震惊的目光中，弯下腰亲吻了大地。
 
-Ludd's influence spread by its own evident virtue, the attendant explains, and the industrial terraforming machines were brought down and flowers bloomed in the rubble. There is no mention of strikes, global storms, sabotage, apocalyptic flooding and heatwaves, or corporate terror squads in this narrative. Nor does the attendant mention that, technically, an entire planet owned by the Eridani Utopia Terraforming megacorporation was illegally occupied by a radical cult. Rather, the unbelievers wept as Ludd revealed their sins and told them forgiveness was within reach on this garden-world.
+侍从继续解释说，卢德的精神通过其自身明显的优点传播开来，地貌改造用工业机器被摧毁，鲜花在废墟中盛开。在叙述中，对方没有提到罢工、全球风暴、蓄意破坏、末日洪水和热浪，也没有提到企业的恐怖组织。侍从没有提到，严格意义上来说，这件事就是 天苑四-乌托邦地貌改造集团 拥有的整颗星球被激进的教团非法占领。取而代之地对方说，当卢德揭露他们的罪恶并告诉他们，在这花园世界里宽恕可以实现的时候，非信徒们感激涕零。
 
-It is an appealing morality tale delivered earnestly.",,
+真是个引人入胜的道德故事。",,
 lppGileadShrineVisit1,DialogOptionSelected,$option == lpp_gileadShrineVisit,,"The attendant nods, explaining that you must leave your guards behind because this is a place of peace, and all are equal on the Pilgrim's Path. 
 
 The request is an implied request for keeping up appearances: a couple of your guards, unarmed and trained for situations requiring this degree of subtlety, attend to your safety as per matter of course. You note other unusually small parties of ""pilgrims"", plainly but clearly wealthy by their cut and carriage, led by their own shrine-attendants and accompanied by unusually muscled 'distant cousins'.
@@ -5002,7 +5002,7 @@ DoCanAffordCheck 2000 lke_chalcedonBarBribe3k false","The Mammonite laughs, and 
 lke_barEndOut:Keep walking",
 lkeChalcedonBarBribeWalkB,DialogOptionSelected,"$option == llke_chalcedonBarBribeWalk
 !$mamAnnoyedEveryone","AdjustRep independent SUSPICIOUS -1
-SetTextHighlights ""2,000 credits""
+SetTextHighlights ""2,000 星币""
 DoCanAffordCheck 2000 lke_chalcedonBarBribe3k false","The Mammonite laughs, and calls out to you. ""Wait, wait,"" and stands up to shout for the whole teahouse, ""This one, tough negotiator! Watch out, credits are hidden behind Fortress Shield. No one gets in!"" 
 
 Other spaces stare, some murmuring disapproval, others laughing.
@@ -5195,26 +5195,26 @@ $player.luddicAttitudePather++
 FireAll LKEchalcedonBarSedgeOpts","Sedge nods. ""My Path crossed his, and his was to end.""",,
 lkeChalcedonBarSedgeRespA,DialogOptionSelected,"$option == lke_chalcedonBarSedgeRespA
 $market.talkingAtBar","$askedJethro = true 0
-FireAll LKEchalcedonBarSedgeOpts","""Mm."" Sedge looks away, making a show of thinking it over, turning your cup - his now - over and over in his hands. ""No, I do not recall a Jethro.""",,
+FireAll LKEchalcedonBarSedgeOpts","""嗯。"" Sedge 看向远方，做出努力回想的样子，把你的杯子 —— 现在是他的了 —— 拿在手里翻来覆去。""不，我不记得任何叫 Jethro 的人。""",,
 lkeChalcedonBarSedgeRespA2,DialogOptionSelected,"$option == lke_chalcedonBarSedgeRespA
 $market.talkingOutside","$askedJethro = true 0
 FireAll LKEchalcedonBarSedgeOpts","""Mm."" Sedge looks away, making a show of thinking it over. ""No, do not recall a Jethro.""
 
 The pooling blood is caught by a small stream of run-off and begins to wash a red streak down the alley.",,
 lkeChalcedonBarSedgeRespB,DialogOptionSelected,$option == lke_chalcedonBarSedgeRespB,"$saidRecruiter = true 0
-FireAll LKEchalcedonBarSedgeOpts","He makes an expression of mock confusion. ""I just said. I am Sedge.""
+FireAll LKEchalcedonBarSedgeOpts","他困惑的表情带着点嘲讽。""我刚才已经说过了。我就是 Sedge。""
 
-He drops the look. ""But you want to know who I am to the Path. Who I am to this world, to people who might come here. Who I am to you. Who am I to what you are looking for.""
+这个表情消失了。""但你想知道我对于左径来说是谁。对于这个世界，对于将要来到这里的人们来说是谁。对你来说是谁。对你正在找的东西来说是谁。""
 
-He corrects himself, holding up a finger, ""Whom you are looking for.""",,
+他竖起一根手指，纠正道 ""你正在找的人。""",,
 lkeChalcedonBarSedgeRespB2,DialogOptionSelected,$option == lke_chalcedonBarSedgeRespB2,"$saidRecruiter = true 0
-FireAll LKEchalcedonBarSedgeOpts","""People find me. Those who seek the Path,"" he looks at you, the mask of casual ease drawing away to show you the ice-cold, self-assured fervor in his eyes.
+FireAll LKEchalcedonBarSedgeOpts","""那些希望加入左径的人会来找我。"" 他看着你，脸上随意轻松的面具被揭下，显露出他眼中冰冷的、自信的狂热。
 
-""I judge if their path leads true. If it does,"" he shrugs. Merely the casual business of building an interstellar terrorism network.",,
+""我负责判断他们的意图是否真实。如果确实如此的话..."" 他耸了耸肩。仅仅是建立一个星际恐怖主义网络的休闲业务。",,
 lkeChalcedonBarSedgeRespC,DialogOptionSelected,$option == lke_chalcedonBarSedgeRespC,"$saidRecruiter = true 0
-FireAll LKEchalcedonBarSedgeOpts","""Is that what I am?"" He pauses a moment, then nods, ""It is more, people find me. Those who seek the Path.""
+FireAll LKEchalcedonBarSedgeOpts","""这就是我的身份吗？"" 他停顿了一会，然后点了点头，""不仅如此，那些希望加入左径的人会来找我。""
 
-The mask of casual ease draws away to show you the ice-cold, self-assured fervor in his eyes. ""I judge if their path leads true. If it does,"" he shrugs; merely the casual business of building an interstellar network of terrorism.",,
+他脸上随意轻松的面具被揭下，显露出他眼中冰冷的、自信的狂热。""我负责判断他们的意图是否真实。如果确实如此的话..."" 他耸了耸肩。仅仅是建立一个星际恐怖主义网络的休闲业务。",,
 lkeChalcedonBarSedgeRespTea,DialogOptionSelected,$option == lke_chalcedonBarSedgeRespTea,"$saidTea = true 0
 FireAll LKEchalcedonBarSedgeOpts","""Why say such a thing? It is done,"" Sedge says.
 
@@ -5547,7 +5547,7 @@ FireAll DEVlkeMazTestMenuOptions",,,
 LKEmazTest2a,DialogOptionSelected,$option == LKE_mazTest2a,"$player.metSiyavong = true 0
 FireAll DEVlkeMazTestMenuOptions",,,
 LKEmazTest3a,DialogOptionSelected,$option == LKE_mazTest3a,"BeginMission lke
-AddTextSmall ""Received location of Jethro Bornanew"" highlight
+AddTextSmall ""收到 Jethro Bornanew 的位置"" highlight
 $global.lke_contactBornanew = true
 Call $global.lke_ref updateStage
 FireAll DEVlkeMazTestMenuOptions",,,
@@ -5590,11 +5590,11 @@ FireBest DialogOptionSelected",,,
 LKEmazConvEnd,DialogOptionSelected,$option == lke_MazCutCommLink,"ShowDefaultVisual
 EndConversation
 $option = lke_mazFreebie0 0
-FireBest DialogOptionSelected",You cut the comm link.,,
+FireBest DialogOptionSelected",你切断了通讯链接。,,
 LKEmazConvEndPolite,DialogOptionSelected,$option == lke_MazCutCommLinkPolite,"ShowDefaultVisual
 EndConversation
 $option = lke_mazFreebie0 0
-FireBest DialogOptionSelected",You cut the comm link after exchanging a few pleasantries.,,
+FireBest DialogOptionSelected",你在礼貌地寒暄了几句之后中断了通讯链接。,,
 # LKE Mazalot portmaster,,,,,,
 LKEmazalotPortmasterSetLuddic,PopulateOptions,"$market.lke_searchForBornanew2
 $market.id == mazalot
@@ -5618,7 +5618,7 @@ $postId == portmaster
 !$askedBornanew
 !$lke_stoneWalling
 !$didGreeting","FireAll MostLuddicEthosRefresh
-$didGreeting = true 0","""Ah,"" $heOrShe reads something off a datapad. ""Captain $playerName? May your time on Mazalot be one of blessed peace.""","lke_mazalotAskPMBornanew:""I'm looking for a man who may be involved in the Luddic Path.""",
+$didGreeting = true 0","""啊，"" $heOrShe在数据平板上读到了什么。""$playerName 舰长？愿你在 Mazalot 度过一段平静的时光。""","lke_mazalotAskPMBornanew:""我在找一个可能是左径分子的男人。""",
 LKEmazalotAskPortmasterPath2,PopulateOptions,"$market.lke_searchForBornanew2
 $market.id == mazalot
 $postId == portmaster
@@ -6083,11 +6083,11 @@ lkeMazBarAgentRespSiyavong2,DialogOptionSelected,$option == lke_mazBarAgentRespS
 The officer is on his back heel, sweating. Nearby tables are carefully pretending not to listen to your tirade.
 
 ""'Riddled with Pather credits' is what I've heard. And as you well know per the League's Interstellar Terrorism Statute - which you so helpfully quoted for me - that means that central oversight is empowered to intervene in local affairs.""",lke_mazBarAgentRespSiyavong3:Keep berating,
-lkeMazBarAgentRespSiyavong3,DialogOptionSelected,$option == lke_mazBarAgentRespSiyavong3,,"""Do you know what that means? Do not respond, officer, I am not finished.""
+lkeMazBarAgentRespSiyavong3,DialogOptionSelected,$option == lke_mazBarAgentRespSiyavong3,,"""你知道这意味着什么吗？别急着回答，长官，我还没说完。""
 
-You continue the dress-down, describing the various powers that the central League executive can hammer down upon members found to be involved in abetting terrorism - Mairaath's millions dead were fresh in the minds of the composers of the League's constitution, and the powers enumerated to stop a repeat of the event are far-reaching indeed.
+你继续斥责着，描述了联盟中央行政部门可以对被发现参与教唆恐怖主义的成员施加的各种处罚 —— Mairaath 的数百万死者在联盟的规则制定者们心中记忆犹新，而为阻止事件重演而被赋予的权力确实意义深远。
 
-It is, you reflect, a good thing you paid attention to League history.",lke_mazBarAgentRespSiyavong4:Continue berating,
+你庆幸到，还好你之前研究过联盟的历史。",lke_mazBarAgentRespSiyavong4:继续斥责,
 lkeMazBarAgentRespSiyavong4,DialogOptionSelected,$option == lke_mazBarAgentRespSiyavong4,"Highlight ""Nile Virens""
 AddTextSmall ""Received comms ID for Nile Virens"" highlight
 AddTextSmall ""Received tactical data for Nile Virens compounds"" highlight
@@ -8741,11 +8741,11 @@ gaDuringTutorialMoreInfo1,DialogOptionSelected,$option == gaDuringTutorialMoreIn
 ""我想你在技术层面确实算是指挥系统中的辅助军。对，我们逮捕了学院的院长，指控他一系列罪名 —— 危及太空基础设施、忽视宜居性协议、密谋操纵未经授权的技术等等。""
 
 ""看在古老的地球的份上，""你注意到$hisOrHer的下巴不自觉地紧咬着，""这是他应得的。""","0:gaDuringTutorialMoreInfo2:""为什么，他做了什么？""",
-gaDuringTutorialMoreInfo2,DialogOptionSelected,$option == gaDuringTutorialMoreInfo2,,"""We were briefed about the experiment, but it was only supposed to cause a minor increase in comms noise, maybe some odd readings near the jump-points. Nothing like this! Obviously something more was going on, something big enough that the provost had to know about it, and-""
+gaDuringTutorialMoreInfo2,DialogOptionSelected,$option == gaDuringTutorialMoreInfo2,,"""我们听取了有关实验的简报，但它应该只会导致通信噪音的略微增加，可能是在跳跃点附近出现一些奇怪的读数。从未有过的！显然还有更多的事情正在发生，一些大到院长必须知道的事情，而且 —— ""
 
-The lieutenant's adjutant whispers in $hisOrHer ear again. If you're not mistaken, there is some shouting in the background, barely picked up by the lieutenant's handheld comm unit.
+上尉的副官再次在$hisOrHer耳边低语。如果你没弄错的话，背景中有一些喊叫声，中尉的手持式通讯装置几乎听不到。
 
-""The mob grows restless,"" the lieutenant says with a joyless smile. $HeOrShe barks some orders to someone; the holo feed jostles and flickers with static as they begin to move. ""We'll have to chat later, captain. I'll buy you a pint on Coatl Station if you can get us out of this.""",100:defaultLeave:感谢对方并挂断,
+""暴徒正变得焦躁不安，""上尉僵硬的笑着说。$HeOrShe向某人发出命令；当他们开始移动时，全息影像会因静电而紊乱和闪烁。""我们稍后再聊，舰长。如果你能帮我们摆脱困境，我会在 Coatl 空间站请你喝上一杯。""",100:defaultLeave:感谢对方并挂断,
 gaOpenDialogDuringTutorialAgain,GAHegOfficerInteraction,"$global.isInTutorial
 $doneFirstVisit",SetShortcut defaultLeave ESCAPE,"当你接近 Galatia 学院空间站的纯白色圆环型外壳时，你向自动化停靠队列发送的停靠请求遭到拒绝。过了一会儿，通信链接接通并显示出了 $personName 上尉的影像，$HeOrShe看起来一副早该申请休假的样子。
 
@@ -9069,9 +9069,9 @@ Highlight ""Scylla Coureuse""","""我需要你找回 Kallichore 的秘密档案�
 
 ""我需要你找到她。""","bairdIntro_archive:""如何能从霸主手上拿到 Kallichore 的档案？""
 bairdIntro_scylla:""你手上有 Scylla Coureuse 的线索么？""",
-bairdIntroArchive1,DialogOptionSelected,$option == bairdIntro_archive,"AddTextSmall ""Received comms ID for Rayan Arroyo"" highlight","""Following the aftermath of the Galatia Experiment. The Hegemony technological inspectors seized everything, all the records and data. The most direct approach would be to get access to the data vaults of the Ministry of Technology Standards. They're who you might call the 'AI Inspectors', serving that among other roles. Not trivial,"" she looks amused, ""but it's been done before.""
+bairdIntroArchive1,DialogOptionSelected,$option == bairdIntro_archive,"AddTextSmall ""Received comms ID for Rayan Arroyo"" highlight","""Galatia 实验之后。霸主 的科技审查员查封了所有的数据记录。最直接的方法是进入科技标准部的数据库。他们是你可能称之为'AI 稽查员'的人，并同时在其他职位服役。这可不是小事，""她看起来有些想笑，""但曾经也有人办到过。""
 
-""I do have an old... acquaintance who has been rising quickly in the Tri-Tachyon executive ladder. His name is Rayan Arroyo, based out of Eochu Bres. He may be compelled to assist us with a human asset on this front. I'll forward you the contact information."" She taps for a moment on her desk-interface.",bairdIntro_archive1:继续,
+""我的确有个...老熟人，他在 速子科技 的行政梯队中上升很快。他的名字叫 Rayan Arroyo，在 Eochu Bres 办公。也许他能被说动在这一目标上动用某些人力资源协助我们。我会把联系信息转发给你。"" 她在她的桌面终端上敲了一会儿。",bairdIntro_archive1:继续,
 bairdIntroArchive2,DialogOptionSelected,$option == bairdIntro_archive1,"$bairdIntro_archive = true 0
 BeginMission gaKA","""这么说吧，这事关乎他未来的职业生涯。报我的名字，如果你的态度足够强硬而谨慎，我相信你会发现他十分乐于助人。""","bairdIntro_archive2b:""Rayan Arroyo，明白了。""
 bairdIntro_archive2a:""你想让我去勒索一位速子科技的高管？""
@@ -9088,7 +9088,7 @@ Call $global.gaFC_ref updateData","""Coureuse 一直都是个怪胎。才华横�
 
 ""她的家人和比如某些朋友们，""你想了片刻 Baird 有没有这些关系亲近的人，"" —— 都来自 Westerness 星系的 Filkenhild，你可以从那里开始找。""",bairdIntro_scylla2:继续,
 bairdIntroScylla2,DialogOptionSelected,$option == bairdIntro_scylla2,"$bairdIntro_scylla = true 0
-AddTextSmall ""Received nav data for $gaFC_starName"" highlight","Baird thinks for a moment. ""If you are observed looking for Coureuse, you may be contacted by others who are looking for her. That could be useful. You could cut a deal, get some leads.""
+AddTextSmall ""收到了 $gaFC_starName 的导航数据"" highlight","Baird thinks for a moment. ""If you are observed looking for Coureuse, you may be contacted by others who are looking for her. That could be useful. You could cut a deal, get some leads.""
 
 ""Alternatively, her department was operating experimental packages in the $gaFC_starName system. We have detected some ongoing telemetry that suggests these instruments are still in use, though it isn't clear by whom."" She taps her desk interface, ""I've sent you the coordinates.""
 
@@ -9351,7 +9351,7 @@ Call $global.gaKA_ref updateStage","你在想，霸主 会不会利用黑客装�
 gaKAGargoyle2Greeting,PickGreeting,"$id == gargoyle
 $gaKA_contactRetrieve score:1000",ShowPersonVisual,"你输入 Gargoyle 的通讯 ID，向通讯技师点头示意让对方准备好应对 Gargoyle 可能会为了找乐子从通讯器传过来的什么小惊喜之类的东西。
 
-但这次没遇到什么鬼把戏。显示器伤立马解析出了一张熟悉的脸，挂着一种陌生的表情：恐惧。",继续,
+但这次没遇到什么鬼把戏。显示器伤立马解析出了一张熟悉的脸，挂着一种陌生的表情：恐惧。",gaKA_gargoyle2Greeting2:继续,
 gaKAGargoyle2Greeting2,DialogOptionSelected,$option == gaKA_gargoyle2Greeting2,FireAll GAKAGargoyleHub,"""舰长，你得用你的船带上我离开这里。他们知道我在哪儿了。这次我居然真的干成了，太不可思议了。"" Gargoyle 紧张地笑了，""这可是第二次 AI 战争以来最伟大的数据大劫案！""
 
 黑客似乎已经意识到了情况的严重性：""我想—— 他们这次有些，非常，超级，彻底的不高兴了。这可不安全。带我去... Galatia 学院？Anahita 有能耐把我藏起来，对吧？看在我做了这么多的份上，她应该会。""",,
@@ -9686,12 +9686,12 @@ gaKACoureuseAskAbtCavinA2a,DialogOptionSelected,$option == gaKA_courAskAbtCavinA
 FireBest DialogOptionSelected",,,
 gaKACoureuseAskAbtCavinA2,DialogOptionSelected,$option == gaKA_courAskAbtCavinA2,,"The moment draws out. ""Um,"" she looks away, then rapidly taps on her lab-interface, flooding the view with holographic data-tables. ""I really must be getting back to work. Good-bye.""
 
-The feed flickers and a generic Galatia Academy holding signal appears.",cutCommLink:Cut the link,
+The feed flickers and a generic Galatia Academy holding signal appears.",cutCommLink:切断通讯链接,
 gaKACoureuseAskAbtCavinB,DialogOptionSelected,$option == gaKA_courAskAbtCavinB,,"""Unreliable... I mean, yes, he was that,"" she admits. ""He just has different priorities than most people. He doesn't really align with, well, institutions. It's what made him so... well, he was exciting, that's for sure."" She looks down for a moment, ""But at some point... if you're not his priority, when it's really important, well, that's the end of that.""
 
 ""Um,"" she blinks several times, like waking up from a dream. ""I really should get back to work."" Coureuse rapidly taps on several interfaces, flooding the view with holographic data-tables. ""Good-bye captain.""
 
-The feed flickers and a generic Galatia Academy holding signal appears.",cutCommLink:Cut the link,
+The feed flickers and a generic Galatia Academy holding signal appears.",cutCommLink:切断通讯链接,
 gaKACoureuseAskAbtCavinC,DialogOptionSelected,$option == gaKA_courAskAbtCavinC,FireAll PopulateOptions,"""I don't mind. That was all a few cycles ago, anyway."" 
 
 A pause, then she says, ""It is actually kind of nice to hear that he's still, well, being Cavin.""",,
@@ -9699,7 +9699,7 @@ gaKACoureuseAskAbtZal1,DialogOptionSelected,$option == gaKA_courAskAbtZal,$asked
 
 She taps at some command interfaces and a flood of data tables fills the screen. ""I really must get back to work, captain. Sorry. Good-bye.""
 
-The feed flickers and a generic Galatia Academy holding signal appears.",cutCommLink:Cut the link,
+The feed flickers and a generic Galatia Academy holding signal appears.",cutCommLink:切断通讯链接,
 gaKACoureuseGargoyleOptSel,DialogOptionSelected,$option == gaKA_courGarg,"$askedAboutGargoyle = true
 FireAll PopulateOptions","""Oh, very helpful,"" she says with a smile, ""You get a, just a really different perspective from Gargoyle. There are so many assumptions, invisible little things we do, um, as an institutional organization without realizing, and - well, and also the technical stuff, like code. It's been - hmm, a bit strange. And teamwork in the traditional sense is mostly out of the question. But if we find a little self-contained project for Gargoyle, it can work out great.""
 
@@ -11219,7 +11219,7 @@ As if just remembering its existence, the archon slips the League agent's pistol
 
 ""Baird wants me back, doesn't she."" Coureuse crosses her arms.",gaFC_laicailleVisit7:将你那显示着 Baird 的信息的数据平板交给她。,
 gaFCLaicailleVisit7,DialogOptionSelected,$option == gaFC_laicailleVisit7,"#ShowDefaultVisual
-#ShowSecondPerson coureuse","You pass the datapad to Coureuse, and she takes it to a chair set at a workstation a few meters away, activating a privacy field that dulls the sound and blurs her image.","gaFC_laicailleVisit8:等着
+#ShowSecondPerson coureuse",你把数据平板递给 Coureuse，她拿着数据平板坐到了几米外的工作站椅子上，并激活了一个能消音和阻碍视线的私人力场。,"gaFC_laicailleVisit8:等着
 gaFC_laicailleVisit8b:环顾四周",
 gaFCLaicailleVisit8,DialogOptionSelected,$option == gaFC_laicailleVisit8,"$option = gaFC_laicailleVisit9 0
 FireBest DialogOptionSelected",你听到了含混不清的说话声，听起来是 Baird 的语调不会错。Coureuse 模糊的轮廓就这样一动不动地默默听着。当 Baird 的说话声停下来时，那个轮廓猛然瘫倒在椅子上，仿佛里面所有的意志全都被抽走了。,,
@@ -11635,7 +11635,9 @@ $gaPZ_stage == SOLD_BLACKMAIL_MATERIAL score:1000",ShowPersonVisual,"在接入�
 gaPZ_returnArroyo1,DialogOptionSelected,$option == gaPZ_returnArroyo1,"Highlight ""Hamatsu""","Arroyo 用程序远程访问了资料库，接着他点了点头，将一份个人档案覆盖在了通讯链接上，那上面显示着 Kelise Astraia 生活的细节。
 
 ""我们的 Kelise 女士有点古怪，"" Arroyo 说，""总之你可以稍后再了解这些细节。相关的部分在这里：看起来她好像加入了 速子科技 的机密项目 —— 反正就是那些机密的其中之一 —— 并被要求去现场全职工作。她留下了令人信服的辞职信，订了一艘星舰，企业-级 Hamatsu 号。这艘船已经离开过核心世界好几次了，拾荒或是什么特殊行动，总之就是为公司跑腿。""","gaPZ_returnArroyo2:""你能告诉我更多 Hamatsu 号的细节吗？""",
-gaPZ_returnArroyo2,DialogOptionSelected,$option == gaPZ_returnArroyo2,,"""让我们看看。看起来 Astraia 要求对船体做过一些特别的改装。"" Arroyo 扬起眉毛，""价格不菲，我猜这是为了保密而额外准备的。然而，这些改装的细节没有被记录，看起来当时负责盯着的间谍很懒。这艘船在跃进超空间离开了 Hybrasil 星系前关掉了应答器，这透露不出什么很有价值的情报，但是..."" Arroyo 思考了一会儿，然后把文件翻到了前面。","gaPZ_returnArroyo3:""但是？""",
+gaPZ_returnArroyo2,DialogOptionSelected,$option == gaPZ_returnArroyo2,,"""让我们看看。看起来 Astraia 要求对船体做过一些特别的改装。"" Arroyo 扬起眉毛，""价格不菲，我猜这是为了保密而额外准备的。然而，这些改装的细节没有被记录，看起来当时负责盯着的间谍很懒。
+
+这艘船在跃进超空间离开了 Hybrasil 星系前关掉了应答器，这透露不出什么很有价值的情报，但是..."" Arroyo 思考了一会儿，然后把文件翻到了前面。","gaPZ_returnArroyo3:""但是？""",
 gaPZ_returnArroyo3,DialogOptionSelected,$option == gaPZ_returnArroyo3,"Highlight ""Callisto Ibrahim""","""但是这至少意味着他们不想被人跟踪，"" Arroyo 看了看通讯画面以外的某处，数据在他桌面的投影仪上滚动着，""我猜港务局记录的航行计划在这方面给不了我们帮助。总得有人知道些什么，嗯...""
 
 ""Hamatsu 号的主人叫 Callisto Ibrahim，""他抬头看着你，""听说过她吗？没有？其实她还有点名气，我以前的合伙人雇过她。她的证书从头到尾都是谎言，""他耸耸肩，""你得承认这很有用。不管怎么说，她最近在 Arcadia 星系的 Agreus 运营着几支小舰队。""
@@ -12020,7 +12022,7 @@ gaPZ_return2,DialogOptionSelected,$option == gaPZ_return2,ShowSecondPerson coure
 ""我刚刚正在和舰长讨论这一发现的科学价值，"" Baird 院长说，""我们刚刚谈到了那些奇怪的光尘。""
 
 通灵塔上的某个子系统在图像中被高光标记了出来，似乎还有一些光点正围绕着图像飞舞。",gaPZ_return3:继续,
-gaPZ_return3,DialogOptionSelected,$option == gaPZ_return3,,"""喔，唔。从我们的初步分析来看，它似乎不是一种武器系统 —— 不，让我想想怎么说要准确一些，"" Coureuse 向下看了看，通过数据平板操纵着图像。从她将其放大至填满整个显示器的举动来看，她关注的似乎是那个分为二阶段运作的特殊装置。
+gaPZ_return3,DialogOptionSelected,$option == gaPZ_return3,,"""哦是的，唔。从我们的初步分析来看，它似乎不是一种武器系统 —— 不，让我想想怎么说要准确一些，"" Coureuse 向下看了看，通过数据平板操纵着图像。从她将其放大至填满整个显示器的举动来看，她关注的似乎是那个分为二阶段运作的特殊装置。
 
 ""它被当成了武器来使用，但我认为这原本并非武器。这非常...嗯...""她思考着该如何进行表述，""设计方向模糊？通用性很强？不管怎么说，你可以从中看到超空间驱动核心技术的影子，""显示器上的一个部分在 Coureuse 的触摸下闪烁了起来。
 
@@ -13388,9 +13390,9 @@ gaATG_ttScanFleet2end:""抱歉，我只是想确认一下。祝你们调查顺�
 gaATGttScanFleet23,DialogOptionSelected,"$option == gaATG_ttScanFleet23
 Call $global.gaATG_ref updateData","$madeBribeOffer = true
 Highlight $gaATG_ttScanCost
-DoCanAffordCheck $gaATG_ttScanCost gaATG_ttScanFleet2accept false","$HeOrShe looks at you for a moment, calculating, then taps something on $hisOrHer console. Turning the comms record off? 
+DoCanAffordCheck $gaATG_ttScanCost gaATG_ttScanFleet2accept false","$HeOrShe盯着你看了一会，好像脑海里在计算着什么，然后在$hisOrHer控制台上点了一下。也许是把通讯记录器关掉了？
 
-""We could arrange something. No need to go through the TriStar Smart Navigation Suite. Direct data from me to you, direct payment from you to me."" $HeOrShe smiles with undisguised avarice. ""$gaATG_ttScanCost credits, let's say. Deal?""","gaATG_ttScanFleet2accept:接受
+""我们可以做笔交易。忘了那个什么 TriStar 智能导航套组吧。我直接把数据发给你，你直接把款付给我。""$HeOrShe的笑容里透露着毫不掩饰的贪婪。""就 $gaATG_ttScanCost 星币吧。成交？""","gaATG_ttScanFleet2accept:接受
 gaATG_ttScanFleet2decline:拒绝",
 gaATGttScanFleet2end,DialogOptionSelected,$option == gaATG_ttScanFleet2end,FireAll GAATGttScanFleetHubOptions,"""谢谢，""$heOrShe平淡地说。",,
 gaATGttScanFleet2accept,DialogOptionSelected,$option == gaATG_ttScanFleet2accept,"RemoveCommodity credits $gaATG_ttScanCost
@@ -14553,11 +14555,11 @@ gaATG_meetCottonTeaDie:""我想你有更好的东西让他们为之而死？""",
 gaATGmeetCottonTeaPeace,DialogOptionSelected,$option == gaATG_meetCottonTeaPeace,,"Cotton 放下他的茶，笑容消失了。
 
 ""我承认我不总是通过杀戮寻求胜利。在战斗中，我选择通过击败敌人来摧毁他们。最终，卢德精神向我展示了真正的道路。当年轻人的愤怒为我们的圣战服务时，我谦卑地顺从及远离他们。""",gaATG_meetCottonTeaWar:继续,
-gaATGmeetCottonTeaFutile,DialogOptionSelected,$option == gaATG_meetCottonTeaFutile,,"Cotton raises an eyebrow at this challenge and sets his tea down with a sad smile. 
+gaATGmeetCottonTeaFutile,DialogOptionSelected,$option == gaATG_meetCottonTeaFutile,,"Cotton 对这一挑衅挑起了眉毛，伤感地笑着放下茶杯。
 
-""A younger man than I once was thought he might nourish his soul if only he could kill every heretic that stood before him.""
+""一个如同我曾经一样的年轻人，觉得只有杀掉他面前的所有异教徒，才能滋养自己的灵魂。""
 
-""What he found was not strength, but pride. And he- he would have killed you before you had spoken those words. On the landing pad, perhaps; a bomb in a cargo container. Or on the street, with his hands, had it come to it. That man was as blind as his enemies.""",gaATG_meetCottonTeaWar:继续,
+""但这个人获得的不是力量，而是傲慢。并且他...他会在你说这些话之前就杀掉你。也许是在着陆台上的货物集装箱中的炸弹，或是在大街上亲自动手。如果到了这一步的话，那样的人和他的敌人一样盲目。""",gaATG_meetCottonTeaWar:继续,
 gaATGmeetCottonTeaDie,DialogOptionSelected,$option == gaATG_meetCottonTeaDie,,"""是的。""Cotton 把他的茶放下，瞪着眼睛。
 
 ""是的。我并没有轻易地穿上沾血的领导者披风。这是我的道路。并且我会直视着我的行为的真相走下去。卢德的启示是痛苦的！""他一只手锤在桌子上，震得餐具作响。""卢德选择了这条道路并不是因为这很简单，或是友善，也不是没有痛苦！""
@@ -15063,8 +15065,8 @@ OR
 asebMissionReturnGreeting,ASEBMissionReturn,!$aseb_printedFirstReturnGreeting,$aseb_printedFirstReturnGreeting = true 0,你打开了学者 $personLastName 的通讯链接。,,
 asebGivePlayerNDetectorOnAccept,DialogOptionSelected,"$option == aseb_accept
 !$player.ability:gravitic_scan
-$aseb_givePlayerNeutrinoDetector score:1000","Highlight ""Neutrino Detector""
-Highlight ""volatiles""
+$aseb_givePlayerNeutrinoDetector score:1000","Highlight ""中微子探测器""
+Highlight ""挥发物""
 unset $aseb_givePlayerNeutrinoDetector
 AddAbility gravitic_scan","Sebestyen jumps as if he just realized something. ""Captain! You might, ah, I've been authorized to provide you with a Neutrino Detector for the mission. Um, a technical crew is transferring the necessary equipment to your flagship, and,"" he taps his datapad, ""I've sent your sensors officer the documentation.""
 
@@ -15378,9 +15380,9 @@ ShowDefaultVisual",,,
 gaDAPirateBuyDeclinePolite,DialogOptionSelected,$option == gaDA_buyDecline,"MakeOtherFleetNonHostile gaDA true
 EndConversation
 ShowDefaultVisual",你向海盗舰长解释你不会在这场交易中支付足够的费用，并切断了通讯。你们在谈判中建立的融洽关系似乎倾向于让$himOrHer放你走，至少目前是这样。,,
-gaDADeclineBuyAggro,DialogOptionSelected,$option == gaDA_buyDeclineAggro,,"""Oh, I see how it is,"" the pirate captain snarls, raising a gauntleted fist. ""If you were going to make me kill you anyway, why'd you waste precious atmo with all that chum talk?""
-
-The comms snap to static; you speculate that you don't hear the fist slam on the pirate's console because the link cut out just before the shock reverberated to the pickups. Yes, that explains it. You turn to find that your tactical officer has just finished sending a combat alert to the $shipOrFleet.",cutCommLinkNoText:继续,
+gaDADeclineBuyAggro,DialogOptionSelected,$option == gaDA_buyDeclineAggro,,"""哦，我知道是怎么回事了。"" 海盗舰长叫嚷着，举起一只带着手套的拳头，""如果你无论如何都要逼我杀了你，你为什么还要浪费宝贵的空气，跟我说这些话呢？""
+ 
+通讯忽然归于寂静。你推测是由于在声音传到麦克风之前通讯连接就被断开了，因此你没有听见拳头砸到海盗控制台上的声音。这就说得通了。紧接着，你发现战术副官刚刚向$shipOrFleet发送完战斗警报。",cutCommLinkNoText:继续,
 gaDADeclineBuyAggroStronger,DialogOptionSelected,"$option == gaDA_buyDeclineAggro
 $entity.relativeStrength < 0","SetTextHighlights $gaDA_piratePaymentLow
 $gaDA_piratePrice = $gaDA_piratePaymentLow 0
@@ -15420,7 +15422,7 @@ SetStoryOption gaDA_scavBluff 1 gaDA_scavBluff general ""通过撒谎从拾荒�
 
 ""群星闪亮，舰长，""$heOrShe问候道。""是什么把你带到这个偏僻的轨道来的？""","gaDA_scavBuy:""你找到了我需要的东西。来做个交易吧。""
 gaDA_scavThreaten:""我要你发现的东西。马上送过来。这是最后通牒。""
-gaDA_scavBluff:""说，你是不是 $personName ?""(虚张声势)",
+gaDA_scavBluff:""我说，你不会是 $personName 吧?""(虚张声势)",
 gaDAScavBuy,DialogOptionSelected,$option == gaDA_scavBuy,"SetTextHighlights $gaDA_scavPayment
 $gaDA_scavPrice = $gaDA_scavPayment
 DoCanAffordCheck $gaDA_scavPrice gaDA_scavBuyAccept false","你们开始谈判，这是一个你们都知道的游戏。你向他们争论说如果他们现在向你出售这件来历不明的物品，他们就不需要回到核心世界。在这一点上，他们需要浪费更多的时间和精力四处跑才能找到合适的买家。舰长 $lastName 反对道，""很明显你已经有一个买家。为什么不透露他们的通讯 ID 给我来赚取星币呢？"" 你摇摇头，解释说你拥有的专属关系比一份任务更有价值。
@@ -15470,13 +15472,13 @@ gaDAScavThreatenScavPayText,ScavPaidText,$gaDA_scavPrice == $gaDA_scavPaymentHig
 ""下不为例，舰长，""$heOrShe说道，并通过通讯线路盯着你。你可以发誓，神情专注的$heOrShe绝对在记忆你这张脸。
 
 你关闭通讯，并收到来自后勤官的报告。一次性货运无人机已交付包裹。",cutCommLinkNoText:继续,
-gaDAScavBluff1,DialogOptionSelected,$option == gaDA_scavBluff,,"The scavenger blinks. ""Yes, my name is in the comms IDs we exchanged when this line was opened.""
+gaDAScavBluff1,DialogOptionSelected,$option == gaDA_scavBluff,,"拾荒者眼神闪烁。""没错，我的名字就是刚发送到你这里的通讯 ID。""
 
-It's coming back to you now. Some minor report while in dock a ways back, you're not sure why you read so deeply into the neighboring vessels ownership status and history of public contract affiliations. Just something to pass the time while cargo is moved, perhaps.
+现在轮到你了。你开始回想起了之前在某个港口里读过的一些琐碎的报告，你也搞不懂当时你为什么会这么细致地查阅邻近船只的所有权状况和公共合同关系的记录。也许只是为了在装货时打发时间。
 
-You explain, referencing the details you now recall, that they are the $personName who is serving a long-term contract for the Provenance Supply Stock Combine, registered with the good ol' APCC- the Agreus Provisional Commerce Concordat. And it's a good thing you found them now rather than having them find out about it when they got back to Nortia.
+根据刚回忆到的一些细节，你解释道自己清楚他们是 $personName，与注册在 阿加雷斯临时商贸协会 旗下的 土产供销社 签有长期服务合同。而幸运的是，他们是现在碰到了你，而不是在返回 Nortia 之后才发现情况不对。
 
-""Find out what,"" $heOrShe says in flat anticipation of bad news.","gaDA_scavBluff2:""当然是调查的结果。""",
+""发现什么情况？""$heOrShe的语气毫无起伏，显然已经对坏消息做好了心理准备。","gaDA_scavBluff2:""当然是调查的结果。""",
 gaDAScavBluff2,DialogOptionSelected,$option == gaDA_scavBluff2,,"$HeOrShe looks worried. ""The investigation?""
 
 You shake your head as you tell of the scandal and subsequent legal action that has toppled most of the board of directors of the PSSC after the APCC was tipped off about funds being shuffled between certain providers of 'ghost capital' in a scheme involving heavy weapons smuggled into Pather space leveraged off prime Eventide real estate. The rot goes deep, and with interfactional diplomatic pressure, the Concordat will see more heads roll in the upcoming cycle, that's for sure.
@@ -18843,11 +18845,11 @@ extrOfferTextContact3,DialogOptionSelected,"$option == extr_start
 $extr_variation == LUDDIC_PATH_BASE","$missionId = extr
 SetTextHighlightColors $extr_factionColor h h
 Highlight ""Pathers"" $extr_reward $extr_marines
-Call $extr_ref showMap ""Target: $extr_marketName""","""One of our agents infiltrated a militant Luddic sect $extr_marketOnOrAt $extr_marketName."" $HeOrShe meets your eyes, ""Yes, Pathers. We know our agent was apprehended. Extraction by any means necessary is now our mission objective, and I believe you are best suited to carry out this mission."" $HeOrShe sighs, ""We cannot use the flagged navy in this operation due to... religious considerations. So we come to you. Retrieve the agent and we will pay you $extr_reward credits.""
+Call $extr_ref showMap ""Target: $extr_marketName""","""我方的一名特工渗透了在 $extr_marketName 的一个卢德武装教派。"" $HeOrShe和你交换了一下眼色。""对，就是卢德左经。我们得知这名特工已经被扣押了。当前的任务目标是不择手段将其救回，而我相信你是执行这个任务的最佳人选。""$HeOrShe叹气到。""比较出于……宗教上的考虑，我们不能让海军打着自己的旗号去执行这一行动。因此我们必须拜托你。救回我们的特工，我们将支付你 $extr_reward 星币作为报酬。""
 
-With a few taps at $hisOrHer console you receive an incoming data stream, ""Intel on the Pathers' defenses. We won't be sending you in blind, at least.""
+$hisOrHer在控制面板上轻触几下，随即你收到了一份数据，""这是左径分子的防御布局。我们至少不会让你盲目地冲进去。""
 
-You quickly review the intel and estimate that you'd need around $extr_marines marines to carry off this operation.","contact_accept:接受
+你快速浏览了一遍情报，估计你需要至少大约 $extr_marines 名陆战队员来执行这项任务。","contact_accept:接受
 contact_decline:拒绝",
 # interaction with target market,,,,,,
 extrOpenMarket1,OpenInteractionDialog,"$market.extr_target score:1000
@@ -19349,9 +19351,9 @@ contact_decline:拒绝",
 taboBombardmentFinished,DialogOptionSelected,"$market.tabo_bombardedColony score:1000
 $option == mktBombardResult","unset $market.tabo_bombardedColony
 $market.tabo_completed = true 0
-Call $market.tabo_ref updateStage","$name fills your bridge tactical display, a spatter of hollowed icons representing dead targets. The last one blinks out, and with that your mission parameters are fulfilled.
+Call $market.tabo_ref updateStage","$name 填满了你舰桥上的战术显示屏，四散的中空图标显示出了被解决的目标。很快最后一个目标的图标出现，你的任务完成了。
 
-With a simple wave of your hand the tactical display collapses and winks out. The holomatrix snows and reforms a navigational overview, your $shipOrFleet holding station in the very center.",mktBombardResult:继续,
+你轻轻挥了挥手，战术显示器上的图像消失。四散的全息噪点以你的$shipOrFleet为中心点，向外围快速重聚成了导航界面。",mktBombardResult:继续,
 # Patrol encounter at some point afterwards,,,,,,
 TABOPatrolHail1,TABOPatrolHail,,$entity.ignorePlayerCommRequests = true,"""你可别指望轰炸了 $entity.tabo_marketName 后没人会给出响应，"" $rank 大胆地说。""现在准备战斗吧！""","cutCommLink2:""如有不便，敬请谅解。""
 cutCommLink:保持沉默",
@@ -23660,7 +23662,7 @@ PKPatherRecoverMissionSelGenFail,DialogOptionSelected,$option == pkPather_where,
 
 ""Something in my spirit hesitates. Why should that be?"" $HeOrShe slowly puts the datapad down. ""How did you, a slave to Moloch, come to speak with me so readily? Is this a ruse to use the information so-revealed to ourselves for your own ends? Or for Tri-Tachyon? The Hegemony?""
 
-You can see $hisOrHer expression turning from distrust to disgust. ""I won't be your dupe, your fool, your means of finding the tool of the defiler!"" $HeOrShe stands, shouting, ""Begone from here!""",cutCommLink:Cut the comm link,
+You can see $hisOrHer expression turning from distrust to disgust. ""I won't be your dupe, your fool, your means of finding the tool of the defiler!"" $HeOrShe stands, shouting, ""Begone from here!""",cutCommLink:切断通讯链接,
 PKPatherSayYes,DialogOptionSelected,$option == pkPather_sayYes,"$option = pk_recoverMissionBeginReal 0
 FireBest DialogOptionSelected
 $global.toldPathWillGiveThemPK = true","As long as the Pathers don't use the planetkiller on you, then it's not your problem. Maybe they'll just throw it into a black hole, who can say?",,
@@ -24530,7 +24532,7 @@ AddTextSmall ""发现了 哨戒船坞 "" highlight","""我敢打赌这是霸主�
 
 传感器操作员们在运行了又一次扫描后，向你示意到，""$PlayerSirOrMadam，这座船坞里还有几艘被遗弃于此的舰艇，看起来像是第十四军团的老古董了。""",,
 PKSentinelDockyardFollowupB,PKSentinelDockyardInteract,"!$global.pk_exploredSentinelGantry
-$global.discoveredSentinel",,"""霸主留下的玩意，有些年头了。"" 你的行动长官咕哝着说到，""我敢打赌是第一次AI战争时期的的东西。""
+$global.discoveredSentinel",,"""霸主留下的玩意，有些年头了。"" 你的行动长官咕哝着说到，""我敢打赌是第一次 AI 战争时期的的东西。""
 
 这里肯定就是 哨戒星 上的原舰队船员回收再利用他们舰队里一切还能发挥作用的东西 —— 与改装舰船的地方了。
 
@@ -24578,44 +24580,44 @@ pk_sentinelDevOptSetSawFleet:DEV set encountered XIV fleet
 pk_sentinelDevOptSetKilledFleet:DEV set defeated XIV fleet
 pk_sentinelDevOptSetGantry:DEV set found Gantries
 dev_PKnexusHackTest:DEV test nexus hack dialog",
-pkSentinelTryComms,DialogOptionSelected,$option == pkSentinel_tryComms,RemoveOption pkSentinel_tryComms,"你发送的标准通讯请求并未得到任何答复。就算这颗星球的地表上还存在着能够运行的通讯网络，哪怕只是一台紧急用求生通讯设备，也要么是坏了，要么就是无法建立通讯链接。
+pkSentinelTryComms,DialogOptionSelected,$option == pkSentinel_tryComms,RemoveOption pkSentinel_tryComms,"你发送的标准通讯请求并未得到任何答复。这颗星球的地表上没有通讯器网络，甚至连一台紧急求生通讯器都没有，就算有也应该全坏了，或是无法建立通讯链接。
 
-你的通讯官试图用一些不同寻常的方法建立链接，先是一组通讯序列，这是用于接入从人之领时代起就漂浮在深空中的老古董的；再到一组新鲜出炉，只有地下世界的帮派们才会使用的通讯序列，这种序列低保真到几乎能和传感器阵列的背景噪音混杂在一起 —— 任何行事正派的官员都会严密监视这种通讯。但这些尝试最终都是徒劳。
+你的通讯官尝试采用一系列非常规手段，从一套用来定位从 人之领 时代以来就在深空中飘流的遗物的旧式通讯标准，再到一套容易用传感器阵列背景噪声掩盖的地下帮派专用最新低保真通讯标准，能让正派的海关人员板起脸侧目而视的那种。但这些尝试最终都只是徒劳罢了。
 
-""$PlayerSirOrMadam，我们说不定只能用老套一点的方法和他们接触了。"" 你的通讯官带着一丝歉意向你报告。",,
-pkSentinelSel,DialogOptionSelected,$option == pkSentinel_shuttle,ShowImageVisual sentinel,"You step off the shuttle, the frosty ground crunching beneath your boots. Your envirosuit has no trouble keeping you completely comfortable despite the biting winds.
+""$PlayerSirOrMadam，我们说不定只能用老办法和他们接触了。"" 你的通讯官带着一丝歉意向你报告。",,
+pkSentinelSel,DialogOptionSelected,$option == pkSentinel_shuttle,ShowImageVisual sentinel,"你踏下了穿梭机，结满霜冻的地面在你的靴底吱嘎作响。尽管周围寒风刺骨，但环境防护服保证了你舒适无虞。
 
-The settlement is about a kilometer off. You've landed at a polite distance, on a rocky plateau, to avoid disturbing some muddy gray fields of some kind of agricultural effort.",pk_sentinel0:接近这座聚落,
-pkSentinel0,DialogOptionSelected,$option == pk_sentinel0,"AddTextSmall ""Lost colony on Sentinel discovered"" highlight","A party of the inhabitants wearing masks and hoods meet you halfway.
+那片聚落距此约有一公里远。出于基本的礼节，你的着陆地点选在了一处多石的高地上，尽量避免震动打扰到那片看起来像是在尝试进行某些农作活动的灰色泥地。",pk_sentinel0:接近这座聚落,
+pkSentinel0,DialogOptionSelected,$option == pk_sentinel0,"AddTextSmall ""找到了失落的哨戒殖民地"" highlight","一群身着面罩与兜帽的当地住民在途中与你们会面了。
 
-Their guards, at the back, hold weapons slung; standard Domain-fab carbines. Their clothing is repurposed utility forgecloth, the type used to line cargo bays and maintenance conduits. They wear adornments denoting status made of worn but well-polished military insignia; winged phoenixes and stars. Hegemony crew survivors. And they've been here for a long time, from the looks of it.
+这群人的护卫们在队伍的后方，将随身的标准预制型人之领卡宾枪收了起来，吊在背带上。他们的衣着不过是些改制再利用后的勤务合成服，就是在负责管理货舱和钻维护通道的人员身上会看到的那种。但他们的身上依旧有着一些像是装饰品的，用来表明职务与地位，磨损严重但依旧擦得锃亮的军徽 —— 还有双翼绽开的凤凰与群星。这群人就是 霸主 的幸存船员了，而且根据他们的样子来看，这群人已经在这里待了相当，相当长的一段时间了。
 
-A leader steps forward, pulling off her goggles. ""Did we win?"" she asks.","pk_sentinel1:""第一次 AI 战争还是第二次？""",
-pkSentinel1,DialogOptionSelected,$option == pk_sentinel1,BeginConversation skiron,"The leader exchanges glances with her companions, taking in the implication of your words.
+他们的领队走上前来，摘下了她的护目镜。""我们赢了吗？"" 她问到。","pk_sentinel1:""第一次 AI 战争还是第二次？""",
+pkSentinel1,DialogOptionSelected,$option == pk_sentinel1,BeginConversation skiron,"在头领与她的同伴们交换着眼神，尝试着接受你话里的言外之意。
 
-You are invited to their settlement, to continue your conversation out of the cold. These castaways have not forgotten hospitality, in their manner. 
+你被邀请进入了他们的聚落，在一个稍微暖和一点的场所继续你们的谈话。至少这些落难者依旧没有忘记基本的待客之道 —— 至少是以他们的标准来说。
 
-Or, perhaps, their leader - an elder by the name of Alo Skiron called ""commander"" by her lieutenants - knows the wisdom of controlling the spread of potentially explosive news from the outside Sector.",pk_sentinel2:跟上去,
-pkSentinel2,DialogOptionSelected,$option == pk_sentinel2,,"You are led to a cluster of neat, low structures; earthworks and hull panels spotted with forgeglass and chimney. The streets are clean and the citizenry uniformed by job role. Despite fixing you with open stares, they do not falter in their assignments.
+亦或者，是他们的头领 —— 一位被她的 ""中尉"" 们称呼为 ""指挥官"" 的，名叫 Alo Skiron 的长老 —— 明智地选择了一种能够将从星区中传来的，易于让人反应过激的新消息传播控制在最低限度的手段。",pk_sentinel2:跟上去,
+pkSentinel2,DialogOptionSelected,$option == pk_sentinel2,,"你被带往了一群简单，低矮的建筑群中。这些建筑大多由土方，星舰的船体结构板构成，而烟囱和预铸玻璃则点缀其中。街道十分干净，而居民们都根据自己职业的不同身着对应的制服。尽管他们的目光都毫无保留地盯着你们一行人，但没有一人停下自己手上的工作。
 
-Commander Skiron welcomes you and your party into a central meeting hall. It is warm, and festooned with Hegemony paraphernalia: uniforms, weapons, etched insignia from supply-case lids. The hand-worked reverence brings to mind a Luddic shrine that has undergone conversion to worship a martial god.
+Skiron 指挥官将你和你的团队迎进了一座中心议会厅。这里不仅相当温暖，还装饰着 霸主 相关的随身装备：制服，武器，补给箱盖上抠下的徽记等等。这些手工制作的纪念物几乎让你以为这是一座卢德圣地，只不过进行了一些翻修，好重新用来敬拜一位军武之神。
 
-You pretend to sip a wretched yeast-derived ersatz tea - coffee maybe? - given to you by Skiron's attendants.","pk_sentinel3:继续听
+你假装抿了一口 Skrion 的侍从端上来的劣质酵母衍生物代茶 —— 说不定是代咖啡？","pk_sentinel3:继续听
 pk_sentinel3b:""嗯，这茶味道不坏。""",
 pkSentinel3b,DialogOptionSelected,$option == pk_sentinel3b,"$player.ethosLiar++
 $option = pk_sentinel3 0
 FireBest DialogOptionSelected",,,
-pkSentinel3,DialogOptionSelected,$option == pk_sentinel3,,"""You come from the Core Worlds, yes?,"" Skiron asks, ""We must get back in contact with our proper chain of command. The protocols command it."" 
+pkSentinel3,DialogOptionSelected,$option == pk_sentinel3,,"""你们是从 核心世界 来的，对吗？"" Skiron 开口问到，""我们必须和正式的指挥链重新建立联系，一切皆为协议之命。""
 
-Behind her, attendants and guards all mumble something in unison. You think you catch the word 'protocols'. ",pk_sentinel4:继续听,
+在她身后，侍从与守卫们一起咕哝着相似的话语。你觉得你好像听到了 ""协议"" 二字。",pk_sentinel4:继续听,
 pkSentinel4,DialogOptionSelected,$option == pk_sentinel4,"FireAll PKSentinelHubOptionsCheck
-FireAll PKSentinelHubOptions","""Will you bring word of us to the Persean Hegemony of the Fourteenth Battlegroup? They must have survived, yes? The Protocols promise that you will be rewarded, and we, saved.""
+FireAll PKSentinelHubOptions","""你愿意将我们的消息传达给第十四军团之英仙座霸主吗？他们肯定幸存下来了，对吗？协议保证了你会得到嘉奖，而我们则会得到 —— 救赎。""
 
-(Behind her, in unison, you hear intoned the words ""Reward and Salvation,"" in not quite the sing-song of group prayer.)
+(在她身后，你又听到了人们齐声，用好似又不似祈祷与合唱的声音反复念着 ""嘉奖与救赎""，)
 
-Now you can see the strange gleam in Skiron's eyes, as if she is looking up at the unwitting savior from her religion. And at the same time, something like fear, even panic, under the mania; you are an outsider.
+现在 Skiron 像是看见了她信仰中的救世主一般，眼底正散发着奇异的微光。而与此同时，那眼神中在狂热之下也还埋藏着些许恐惧，甚至是惊慌，因为你是个外来者。
 
-They don't have outsiders here.",,
+他们这里从来就没有过外来者。",,
 PKSentinelHubReturn,DialogOptionSelected,$option == pk_sentinelHubReturn,"FireAll PKSentinelHubOptionsCheck
 FireAll PKSentinelHubOptions",,,
 PKSentinelHubConfrontCheck0,PKSentinelHubOptionsCheck,,$canConfront = false 0,,,"# make sure the player has at least one thing to confront Skiron with, otherwise remove the option"
@@ -24630,61 +24632,61 @@ $confrontedAboutAIFleet
 !$confrontedAboutAIUse",$canConfront = true 0,,,
 PKSentinelHubShowHegCommission,PKSentinelHubOptions,"$player.fcm_faction == hegemony
 !$showedHegCommission",,,pk_sentinelShowHegCom:向他们展示你的 霸主 雇佣合约,
-PKSentinelHubShowDataPads,PKSentinelHubOptions,!$gaveDatapads,,,pk_sentinelGiveDatapads:Catch her up on the current history of the Sector,
-PKSentinelHubQuestionsIn,PKSentinelHubOptions,,,,"pk_sentinelHubQuestions:""I would like to ask you some questions.""",
-PKSentinelHubConfrontIn,PKSentinelHubOptions,,,,pk_sentinelHubConfront:Confront Skiron with something you know,
+PKSentinelHubShowDataPads,PKSentinelHubOptions,!$gaveDatapads,,,pk_sentinelGiveDatapads:帮她了解星区最近的情况和历史,
+PKSentinelHubQuestionsIn,PKSentinelHubOptions,,,,"pk_sentinelHubQuestions:""我想问你几个问题。""",
+PKSentinelHubConfrontIn,PKSentinelHubOptions,,,,pk_sentinelHubConfront:与 Skiron 就你所掌握的现状对质,
 PKSentinelHubConfrontCheckE,PKSentinelHubOptions,!$canConfront,RemoveOption pk_sentinelHubConfront,,,
 pkSentinelHubMedicalCases,PKSentinelHubOptions,"$offerToTakeMedicalCasesMade
-!$global.tookInfirmFromSentinel",,,pk_sentinelHubMedicalCases:Make arrangements to take on medical cases for treatment in Hegemony space,
+!$global.tookInfirmFromSentinel",,,pk_sentinelHubMedicalCases:安排将患者送往 霸主 治下的宙域进行治疗,
 pkSentinelHubLeaveCrew,PKSentinelHubOptions,"$showedHegCommission
-!$global.leftCrewOnSentinel",,,"pk_sentinelLeaveCrew:""I could leave 100 crew; specialists to assist your colony."" ",
+!$global.leftCrewOnSentinel",,,"pk_sentinelLeaveCrew:""我可以留下 100 名船员，他们可以作为专家与技师协助你的殖民地。"" ",
 pkSentinelHubLeaveCrewCheck,PKSentinelHubOptions,"$showedHegCommission
 !$global.leftCrewOnSentinel
 $player.crew < 200","SetEnabled pk_sentinelLeaveCrew false
-SetTooltip pk_sentinelLeaveCrew ""Requires that your $shipOrFleet have more than 200 crew.""",,,
+SetTooltip pk_sentinelLeaveCrew ""只有当你的 $shipOrFleet 内有 200 名以上的船员时你才能这样做。""",,,
 pkSentinelHubLeave,PKSentinelHubOptions,,,,pk_sentinelLeave:离开,
 pkSentinelRemoveQuestions,PKSentinelHubOptions,"$saidDanger
 $askedProtocols
 $askedWhereYouFrom
 $askedAboutStarships
 $askedStayHere",RemoveOption pk_sentinelHubQuestions,,,# can't ask questions if you already asked them all!
-PKSentinelHubQuestionsInA,DialogOptionSelected,$option == pk_sentinelHubQuestions,FireAll PKSentinelHubQuestions,"Skiron's face is impassive. ""The Protocols prohibit sharing intel without strategic purpose,"" she says. ""But you may ask.""",,
+PKSentinelHubQuestionsInA,DialogOptionSelected,$option == pk_sentinelHubQuestions,FireAll PKSentinelHubQuestions,"Skiron 看起来无动于衷。""协议严禁我们为了达成非战略目的与他人分享情报，"" 她说到，""但让你提几个问题也无妨。""",,
 PKSentinelHubQuestionsInB,DialogOptionSelected,"$option == pk_sentinelHubQuestions
-$gainedSomeTrust",FireAll PKSentinelHubQuestions,"""The Protocols allow for conditional intel-sharing,"" Skiron says, giving you a hesitant look. ""Your own candor is appreciated. So ask.""",,
+$gainedSomeTrust",FireAll PKSentinelHubQuestions,"""但军事章程允许在有条件的情况下与他人共享情报，"" Skiron 有些犹豫地看了你一眼，说到，""我们感谢你在这方面的直截了当，所以问吧。""",,
 PKSentinelHubQuestionsInC,DialogOptionSelected,"$option == pk_sentinelHubQuestions
-$showedHegCommission score:2",FireAll PKSentinelHubQuestions,"""It is Protocol to share intel with allies,"" Skiron gives you a comradely nod. ""Ask, and we shall provide.""",,
+$showedHegCommission score:2",FireAll PKSentinelHubQuestions,"""根据协议，我们应当与盟友共享情报，"" Skiron 如对待一个同志般向你点头致意，""我们有问必答。""",,
 PKSentinelHubQAskDangerVague,PKSentinelHubQuestions,"$knowMoreIsGoingOn
 !$gotAIWarfleetStory
-!$saidDanger ",,,"pk_sentinelAskDangerVague:""I feel that there is some danger here that you are not telling me about.""",
+!$saidDanger ",,,"pk_sentinelAskDangerVague:""我觉得这里有些你没有告诉我的危险存在。""",
 PKSentinelHubQAskDangerSpecific,PKSentinelHubQuestions,"$knowMoreIsGoingOn
 $gotAIWarfleetStory
-!$saidDanger ",,,"pk_sentinelAskDangerSpecific:""Can you tell me anything about active Tri-Tachyon AI war fleets?""",
-PKSentinelHubQAskProtocols,PKSentinelHubQuestions,!$askedProtocols,,,"pk_sentinelAskProtocols:""Can you tell me about these 'Protocols'?""",
-PKSentinelHubQHowLiveHere,PKSentinelHubQuestions,!$askedWhereYouFrom,,,"pk_sentinelAskWhereFrom:""Tell me, how did your people come to live in this place?""",
-PKSentinelHubQAskWarfleet,PKSentinelHubQuestions,!$askedAboutStarships,,,"pk_sentinelAskAboutStarships:""What happened to your starships?""",
-PKSentinelHubQAskStayHere,PKSentinelHubQuestions,!$askedStayHere,,,"pk_sentinelAskStayHere:""Do you want to stay here?""",
-PKSentinelHubQBack,PKSentinelHubQuestions,,,,pk_sentinelHubReturn:Talk about something else,
+!$saidDanger ",,,"pk_sentinelAskDangerSpecific:""你能告诉我那些仍处于活跃状态的 速子科技 AI 舰队是怎么回事吗？""",
+PKSentinelHubQAskProtocols,PKSentinelHubQuestions,!$askedProtocols,,,"pk_sentinelAskProtocols:""你能不能跟我说说和这些 '协议' 有关的事？""",
+PKSentinelHubQHowLiveHere,PKSentinelHubQuestions,!$askedWhereYouFrom,,,"pk_sentinelAskWhereFrom:""跟我说说，你们这群人是如何在这里生活的？""",
+PKSentinelHubQAskWarfleet,PKSentinelHubQuestions,!$askedAboutStarships,,,"pk_sentinelAskAboutStarships:""你们的星舰出了什么事？""",
+PKSentinelHubQAskStayHere,PKSentinelHubQuestions,!$askedStayHere,,,"pk_sentinelAskStayHere:""你想留在这里吗？""",
+PKSentinelHubQBack,PKSentinelHubQuestions,,,,pk_sentinelHubReturn:聊聊其它的事,
 PKSentinelHubQForceBack,PKSentinelHubQuestions,"$saidDanger
 $askedProtocols
 $askedWhereYouFrom
 $askedAboutStarships
 $askedStayHere","$option = pk_sentinelHubReturn 0
 FireAll PKSentinelHubOptions",,,
-PKSentinelHubConfInA,DialogOptionSelected,$option == pk_sentinelHubConfront,FireAll PKSentinelHubConfront,"You consider certain discoveries you've made. Skiron's adherence to 'Protocols' suggests that she may not be forthcoming, but perhaps she will spill some detail when presented with hard facts.",,
+PKSentinelHubConfInA,DialogOptionSelected,$option == pk_sentinelHubConfront,FireAll PKSentinelHubConfront,你思忖着自己已有的发现 。出于 Skiron 对 '协议' 的遵从，她或许并不会对你袒露一切，但或许只要你将某些难以辩驳的证据摆在她面前，就能够从她口中钓出更多的细节。,,
 PKSentinelHubConfInB,DialogOptionSelected,"$option == pk_sentinelHubConfront
-$gainedSomeTrust",FireAll PKSentinelHubConfront,"You consider certain discoveries you've made established. Although open to a certain amount of information-sharing, you suspect that you'll get little information of immediate value out of Skiron due to her adherence to 'the Protocols'.",,
+$gainedSomeTrust",FireAll PKSentinelHubConfront,你思忖着自己已有的发现 。尽管你们已经在有限的程度上分享了情报，但你依旧怀疑自己能够从死守 '协议' 的 Skiron 身上获取多少具有直接价值的情报。,,
 PKSentinelHubConfInC,DialogOptionSelected,"$option == pk_sentinelHubConfront
-$showedHegCommission score:2",FireAll PKSentinelHubConfront,"You consider certain discoveries you've made established. Skiron seems to trust your Hegemony commission, so she might be willing to fill in some gaps about what exactly happened if you present her with intel you already possess.",,
+$showedHegCommission score:2",FireAll PKSentinelHubConfront,你思忖着自己已有的发现 。看起来 Skiron 对你的 霸主 雇佣协议深信不疑，因此只要你将自己现有的情报与她交换，她似乎会很乐意为你补上这些事件之间的空白。,,
 PKSentinelHubConfGantry,PKSentinelHubConfront,"$global.pk_exploredSentinelGantry
-!$confrontedAboutGantry",,,"pk_sentinelAskGantry:""I found your gantries in orbit. But no fleet.""",
+!$confrontedAboutGantry",,,"pk_sentinelAskGantry:""我找到你们轨道上的船坞了，但没看到你们的舰队。""",
 PKSentinelHubConfFoundFleet,PKSentinelHubConfront,"$player.encounteredPKDefenderFleet
-!$confrontedAboutAIFleet",,,"pk_sentinelFoundYourFleet:""I encountered your fleet. It was under autonomous control.""",
+!$confrontedAboutAIFleet",,,"pk_sentinelFoundYourFleet:""我和你们的舰队打过照面了，它们当时正处于 AI 控制下的自律状态。""",
 PKSentinelHubConfFleetAI,PKSentinelHubConfront,"$global.pkCacheDefendersDefeated
 $confrontedAboutAIFleet
-!$confrontedAboutAIUse",,,"pk_sentinelFoundFleetAI:""Look. I know your fleet was modified for AI core control. I have evidence.""",
+!$confrontedAboutAIUse",,,"pk_sentinelFoundFleetAI:""听着，我知道你的舰队经过了可以让他们被 AI 核心操控的改造，我这有证据。""",
 PKSentinelHubConfPK,PKSentinelHubConfront,"$global.pk_recovered
-!$confrontedAboutPK",,,"pk_sentinelFoundPK:""I found the planetkiller your fleet left behind.""",
-PKSentinelHubConfBack,PKSentinelHubConfront,,,,pk_sentinelHubReturn:Talk about something else,
+!$confrontedAboutPK",,,"pk_sentinelFoundPK:""我找到你们的舰队留下的行星杀手了。""",
+PKSentinelHubConfBack,PKSentinelHubConfront,,,,pk_sentinelHubReturn:聊聊其它的事,
 PKSentinelHubConfInsideCheck1,PKSentinelHubConfront,,$canConfront = false 0,,,"# make sure the player has at least one thing to confront Skiron with, otherwise remove the option"
 PKSentinelHubConfInsideCheck2,PKSentinelHubConfront,"$global.pk_exploredSentinelGantry
 !$confrontedAboutGantry",$canConfront = true 0,,,
@@ -24698,30 +24700,30 @@ $global.pkCacheDefendersDefeated
 PKSentinelHubConfInsideCheck6,PKSentinelHubConfront,!$canConfront,"$option = pk_sentinelHubReturn 0
 FireBest DialogOptionSelected",,,"# confronts done, force return to base convo
 # maybe acknowledge this? Maybe not."
-PKSentinelShowHegCom,DialogOptionSelected,$option == pk_sentinelShowHegCom,,"You pull up your Hegemony credentials on your TriPad and offer them to Skiron for confirmation.
+PKSentinelShowHegCom,DialogOptionSelected,$option == pk_sentinelShowHegCom,,"你从自己的 TriPad 上调出了自己的 霸主 证明文件，将它们展示给 Skiron 以供确认。
 
-She gives you a deliberate look, then turns her gaze to the screen. She taps in some codewords and mutters passphrases which your credentials respond to approvingly. Skiron pauses for a moment, then coming to a decision passes your TriPad back to you with the care one would give to an irreplaceable artifact.",pk_sentinelShowHegCom2:继续,
+她小心地看了你一眼，便将眼神转向了屏幕。她键入了某些代码，喃喃自语着一些口令，而你的证明文件也对此作出了正确的回应。Skiron 停住了片刻，决定将 TriPad 递还给你，小心翼翼地就好像这是某种无可替代的文物。",pk_sentinelShowHegCom2:继续,
 PKSentinelShowHegCom2,DialogOptionSelected,$option == pk_sentinelShowHegCom2,"$gainedSomeTrust = true
 $showedHegCommission = true
 AdjustRepPerson skiron FRIENDLY 10
-FireAll PKSentinelHubOptions","""It is not unimaginable that Tri-Tachyon, or some AI, has broken our security. But. I believe you to be who you say you are, Captain $PlayerName, Auxiliary to the Hegemony Navy.""
+FireAll PKSentinelHubOptions","""就算这是 速子科技 或者某种 AI 攻破了我们的资安也不奇怪，但据你所言，我还是愿意相信你，自称隶属于 霸主 海军辅助军的 $PlayerName 舰长。""
 
-She doesn't quite smile, but a moment of tension has broken. Her guards relax slightly at her words, and her lieutenants exchange a grin.
+她的脸上并没有流露出任何的笑意，但紧张的气氛还是消散无踪了。守卫们从她的话语中感到了些许安心，而她的中尉们相视而笑。
 
-(""Praise Command,"" you hear someone say.)",,
-PKSentinelGiveDatapads,DialogOptionSelected,$option == pk_sentinelGiveDatapads,,"One of your guards passes you the satchel with datapads pre-loaded with current affairs primers.
+(你听到其中的某人说到 ""赞美命令""。)",,
+PKSentinelGiveDatapads,DialogOptionSelected,$option == pk_sentinelGiveDatapads,,"你的一个随行警卫递了一个小书包给你，里面装了些预载有星区近况读本的数据平板。
 
-Used by salvors on the Fringe, these are kept up-to-date for a reasonable subscription fee and statistically proven to ensure an efficient transition into contemporary society for temporal refugees from cryo-sleepers, to decivs and castaways.
+这是打捞者游走于边缘世界时的常备之物，只要付一小笔订阅费用就能持续更新。统计数据显示，这些读物能有效地帮助那些与世隔绝许久的难民重新融入社会，无论对方是低温冷冻者，船难幸存者，还是文明丧失地的居民。
 
-Skiron and the others treat your datapads like holy artifacts, touching them delicately. They know, haltingly, how to use the interfaces but it is clear that they have been cut off from sophisticated nanoforge output for a long, long time.",pk_sentinelGiveDatapads2:继续,
+Skiron 一行人像对待圣物般接过了你的数据平板，小心翼翼地触碰着它。即使动作有些迟疑，但他们还是知道如何使用那些交互界面。不过很显然，他们已经在很长，很长一段时间里，与稍微复杂些的纳米锻炉制品无缘了。",pk_sentinelGiveDatapads2:继续,
 PKSentinelGiveDatapads2,DialogOptionSelected,$option == pk_sentinelGiveDatapads2,"$gaveDatapads = true
 $gainedSomeTrust = true
 AdjustRepPerson skiron FRIENDLY 2
-FireAll PKSentinelHubOptions","You and a handful of senior officers take in their quiet discussion and reactions to the current state of affairs; their linguistic drift is no worse than any cryo-case you've met before.
+FireAll PKSentinelHubOptions","你和几个高级军官听着这群人小声讨论着当前的局势与时事；他们口中的方言的确与当下的英仙座星区有些脱轨，但并不比你见过的一些冬眠者身上的案例更严重。
 
-""We thank you for this intel, captain,"" Skiron says, handing a datapad back to you. ""Much has changed, but it brings me great satisfaction to know that Command awaits us.""
+""我们感谢你提供的情报，舰长。"" Skiron 说到，同时将数据平板交还给你。""许多事情都变了，但知道了指挥部仍然存在，并依旧等待着我们回去报到，使我们倍感欣慰。""
 
-(""Command is Salvation,"" they say together, behind her.)",,
+(""指挥部即为救赎，"" 在她身后，人们齐声说到。)",,
 PKSentinelAskWhereFromNotTrust,DialogOptionSelected,$option == pk_sentinelAskWhereFrom,$askedWhereYouFrom = true,"Commander Skiron considers her answer before speaking.
 
 ""We are descended from the crews of a Hegemony flotilla active during the Great AI War. None of the original crew survive for it has been over 100 cycles since planetfall. We have maintained continuity of command,"" she touches the crest attached to her 'uniform', ""As per Hegemony cut-off protocols. The Protocols are survival.""
@@ -24773,12 +24775,12 @@ $showedHegCommission score:2",,"Skiron's face automatically moves toward a blank
 
 ""The Protocols forbid me from discussing strategic matters without authorization from Command,"" she says, ""But as a commissioned auxiliary, I should give you the sitrep.""
 
-She takes a deep breath, then begins. ""Our orders were to destroy a staging point for the Tri-Tachyon AI warfleets, a vast automated station. The last intel said it was under construction, but...""","pk_sentinelAskAboutStarships2:""It was fully armed and operational.""",
+She takes a deep breath, then begins. ""Our orders were to destroy a staging point for the Tri-Tachyon AI warfleets, a vast automated station. The last intel said it was under construction, but...""","pk_sentinelAskAboutStarships2:""那支舰队武装齐全，依旧处于运作状态。""",
 PKSentinelAskAboutStarshipsHeg2,DialogOptionSelected,$option == pk_sentinelAskAboutStarships2,,"""Yes. And accompanied by an armada of AI warships. Our ancestors disengaged, but most of their logistical ships were lost.""
 
 ""Their fleet could not return to the Core Worlds, so one small detachment was sent back with the remaining fuel and news of the defeat. It appears that they were intercepted.""
 
-""Our ancestors found the closest habitable world, called Sentinel in the old surveys. We settled here, with what salvage could be spared.""","pk_sentinelAskAboutStarships3:""Your settlement is smaller than what could be built from an entire fleet of salvage.""",
+""Our ancestors found the closest habitable world, called Sentinel in the old surveys. We settled here, with what salvage could be spared.""","pk_sentinelAskAboutStarships3:""从一整支舰队打捞回收的材料可建的起的聚落要比你们现在这座可大的多啊。""",
 PKSentinelAskAboutStarshipsHeg3,DialogOptionSelected,$option == pk_sentinelAskAboutStarships3,"$askedAboutStarships = true
 $gotAIWarfleetStory = true
 FireAll PKSentinelHubQuestions","""You observe well,"" Skiron admits.
@@ -24890,14 +24892,14 @@ When the heavy door is shut softly behind you, Skiron lets out a sigh and sits. 
 
 
 ",
-PKSentinelConfrontAIRespA,PKSentinelConfrontAIResps,,,,"pk_sentinelConfrontAIRespA2:""I was attacked by that fleet. Your ancestors left a deadly trap.""",
-PKSentinelConfrontAIRespB,PKSentinelConfrontAIResps,,,,"pk_sentinelConfrontAIRespB2:""The truth must be told, no matter how uncomfortable.""",
-PKSentinelConfrontAIRespC,PKSentinelConfrontAIResps,,,,"pk_sentinelConfrontAIRespC2:""I'm willing to keep it quiet. For the greater good.""",
-PKSentinelConfrontAIRespD,PKSentinelConfrontAIResps,,,,"pk_sentinelConfrontAIRespD2:""I'm willing to keep it quiet. For adequate compensation.""",
-PKSentinelConfrontAIRespE,PKSentinelConfrontAIResps,,,,"pk_sentinelConfrontAIRespE2:""The use of AIs in war is a crime under Hegemony's law.""",
-PKSentinelConfrontAIRespF,PKSentinelConfrontAIResps,,,,"pk_sentinelConfrontAIRespF2:""Forcing AIs to fight your war is unconscionable.""",
-PKSentinelConfrontAIRespG,PKSentinelConfrontAIResps,$player.luddicAttitudeFaithfulOrPather,,,"pk_sentinelConfrontAIRespG2:""AI is an abomination unto God.""",
-PKSentinelConfrontAIRespH,PKSentinelConfrontAIResps,,,,"pk_sentinelConfrontAIRespH2:""It was the right thing to do. AIs are a powerful tool.""",
+PKSentinelConfrontAIRespA,PKSentinelConfrontAIResps,,,,"pk_sentinelConfrontAIRespA2:""那支舰队袭击了我们。你们的祖先可算是留下了好一个致命陷阱。""",
+PKSentinelConfrontAIRespB,PKSentinelConfrontAIResps,,,,"pk_sentinelConfrontAIRespB2:""真相必须被揭露，无论是多令人不快的真相。""",
+PKSentinelConfrontAIRespC,PKSentinelConfrontAIResps,,,,"pk_sentinelConfrontAIRespC2:""为了大多数人的利益，我愿意对此缄口不提。""",
+PKSentinelConfrontAIRespD,PKSentinelConfrontAIResps,,,,"pk_sentinelConfrontAIRespD2:""只要有个合适的价钱，我也是愿意乖乖闭嘴的。""",
+PKSentinelConfrontAIRespE,PKSentinelConfrontAIResps,,,,"pk_sentinelConfrontAIRespE2:""根据 霸主 的法律，在战争中使用 AI 的行径属于犯罪。""",
+PKSentinelConfrontAIRespF,PKSentinelConfrontAIResps,,,,"pk_sentinelConfrontAIRespF2:""强迫 AI 们为你们的战争卖命是不人道的。""",
+PKSentinelConfrontAIRespG,PKSentinelConfrontAIResps,$player.luddicAttitudeFaithfulOrPather,,,"pk_sentinelConfrontAIRespG2:""AI 是对上帝的亵渎。""",
+PKSentinelConfrontAIRespH,PKSentinelConfrontAIResps,,,,"pk_sentinelConfrontAIRespH2:"" AI 们是趁手的工具，你们当初做了正确的事。""",
 PKSentinelConfrontAIRespA2,DialogOptionSelected,$option == pk_sentinelConfrontAIRespA2,,"""War sows a deadly crop,"" Skiron says, turning her eyes to one of the Hegemony crests etched into a battered hull-plate. ""And conscripts the innocent to die, and makes unfeeling machines of humanity.""
 
 ""Whatever was done in the past, you are alive, and so are we.""",pk_sentinelLeave:继续,
@@ -24960,7 +24962,7 @@ She turns back to you, composed. ""There may be someone, or something, still out
 ""That is all we can say.""",,
 PKSentinelAskDangerSpecific,DialogOptionSelected,$option == pk_sentinelAskDangerSpecific,$saidDanger = true 0,"""Yes... yes, we saw lights in the sky about a cycle ago."" Skiron says.
 
-""We don't have advanced instrumentation, so we could not identify the opposed forces. We're pretty sure from the visible drive spectra - and weapons-blink - that it wasn't a Tri-Tachyon warfleet.""","pk_sentinelAskDangerSpecific2:""Weapons-blink? There was a battle?""",
+""We don't have advanced instrumentation, so we could not identify the opposed forces. We're pretty sure from the visible drive spectra - and weapons-blink - that it wasn't a Tri-Tachyon warfleet.""","pk_sentinelAskDangerSpecific2:""舰载武器开火的闪光？这片星系里最近发生了战斗吗？""",
 PKSentinelAskDangerSpecific2,DialogOptionSelected,$option == pk_sentinelAskDangerSpecific2,"$saidDanger = true 0
 FireAll PKSentinelHubQuestions","""Um,"" she looks cowed. ""So we believe. None of the elder-crew still live. But they told stories of such conflicts as seen from distant worlds, and... we have training manuals. And holos, though most have broken down by now.""
 
@@ -24982,12 +24984,12 @@ PKSentinelOutSequenceInterrupt,DialogOptionSelected,"$option == pk_sentinelLeave
 $showedHegCommission
 !$global.leftCrewOnSentinel 
 !$didLeaveCrewInterrupt","$didLeaveCrewInterrupt = true
-FireAll PKSentinelOutSequenceIntCrewCheck","As you walk back through the settlement, under the subtle stares of Skiron's workcrews, you note how easily a few technicians with light equipment could upgrade the comms and infrastructure to the bare minimum of space-faring civilization.","pk_sentinelLeave:Keep walking.
-pk_sentinelLeaveCrewAlt:""I could leave 100 crew here; specialists to help your colony survive.""",
+FireAll PKSentinelOutSequenceIntCrewCheck","As you walk back through the settlement, under the subtle stares of Skiron's workcrews, you note how easily a few technicians with light equipment could upgrade the comms and infrastructure to the bare minimum of space-faring civilization.","pk_sentinelLeave:继续走下去。
+pk_sentinelLeaveCrewAlt:""我可以留下 100 名船员，作为专家和技师来确保你们的殖民地能继续支撑下去。""",
 PKSentinelOutSequenceIntCrewCheck,PKSentinelOutSequenceIntCrewCheck,"$showedHegCommission
 !$global.leftCrewOnSentinel
 $player.crew < 200","SetEnabled pk_sentinelLeaveCrew false
-SetTooltip pk_sentinelLeaveCrewAlt ""Requires that your $shipOrFleet have more than 200 crew.""",,,
+SetTooltip pk_sentinelLeaveCrewAlt ""需要你的 $shipOrFleet 内拥有 200 名以上的船员。""",,,
 PKSentinelCrewSelAlt,DialogOptionSelected,$option == pk_sentinelLeaveCrewAlt,"AddCommodity crew -100
 AdjustRepPerson skiron FRIENDLY 5
 $global.leftCrewOnSentinel = true

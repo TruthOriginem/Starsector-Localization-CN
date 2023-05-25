@@ -1,72 +1,72 @@
 event_type,event_stage,p,target_rel,channels,subject,summary,assessment,image,icon,tags,sound_id,implementation notes
-food_shortage,possible,,,player_intel,Possible food shortage $onOrAt $market,Analysis of the intelligence gained from intercepted comms and other sources suggests that a food shortage is likely to occur $onOrAt $market within a few weeks.,Increased food prices and reduced stability $onOrAt $market if the shortage occurs.,,graphics/icons/markets/food_shortage.png,,,
-food_shortage,likely,,,player_intel,Likely food shortage $onOrAt $market,Analysis of the intelligence gained from intercepted comms and other sources suggests that a food shortage is all but certain to occur $onOrAt $market within a few weeks.,Increased food prices and reduced stability $onOrAt $market if the shortage occurs.,,graphics/icons/markets/food_shortage.png,,,
-food_shortage,likely,0.5,HOSTILE,hegemony_internal,Likely food shortage $onOrAt $market,"This report indicates that a food shortage is all but certain to occur $onOrAt $market, and advises units in the area on what steps could be taken to maximize its impact.","Relief fleet likely to be sent from a nearby star system; intercepting it will extend the shortage and further destabilize $market.
+food_shortage,possible,,,player_intel,$market 有可能出现食品短缺,从截获通讯和其他来源的情报分析提示 $market 有可能在几周内出现食品短缺问题。,假如食品短缺发生，$market 将经历食物价格上涨，稳定性下降。,,graphics/icons/markets/food_shortage.png,,,
+food_shortage,likely,,,player_intel,$market 极可能出现食品短缺,从截获通讯和其他来源的情报分析提示 $market 极有可能在几周内出现食品短缺问题。,假如食品短缺发生，$market 将经历食物价格上涨，稳定性下降。,,graphics/icons/markets/food_shortage.png,,,
+food_shortage,likely,0.5,HOSTILE,hegemony_internal,$market 极可能出现食品短缺,此报告指出 $market 极有可能发生食品短缺，并指示该区域内的行动单位如何分阶段采取行动使影响最大化。,"附近星系可能会派遣援助舰队，拦截它将导致食品短缺延长，并加剧 $market 的不稳定局势。
 
-Selling food on black market will increase post-shortage unrest.",,graphics/icons/markets/food_shortage.png,,,
-food_shortage,likely,0.5,FRIENDLY,hegemony_internal,Likely food shortage $onOrAt $market,"This report indicates that a food shortage is all but certain to occur $onOrAt $market, and advises units to stand by to provide assistance.",Delivering enough food to $market quickly will reduce the duration and impact of the shortage.,,graphics/icons/markets/food_shortage.png,,,
-food_shortage,start,,,news,Food shortage $onOrAt $market,"The report discusses the food shortage $onOrAt $market and provides a balanced perspective, but fails to pinpoint a specific cause. The most likely culprit appears to be a cascading error in a deteriorating logistics system.","Increased food prices $onOrAt $market.
+在黑市出售食品将加剧食品短缺结束后的动荡水平。",,graphics/icons/markets/food_shortage.png,,,
+food_shortage,likely,0.5,FRIENDLY,hegemony_internal,$market 极可能出现食品短缺,此报告指出 $market 极有可能发生食品短缺，并指示该区域内的行动单位做好提供协助的准备。,迅速向 $market 运送充足的食物将减少短缺的持续时间和影响。,,graphics/icons/markets/food_shortage.png,,,
+food_shortage,start,,,news,$market 发生食品短缺,该新闻报道探讨了发生在 $market 食品短缺问题，展示了多角度的全貌，但没能指出具体引起短缺的原因。不过引起问题的罪魁祸首最有可能是由于后勤体系的恶化所导致的一连串恶果。,"$market 的食品价格上涨。
 
-Stability reduced by $stabilityPenalty.
+稳定性下降$stabilityPenalty。
 
-Approximately $neededFood units of food needed to end shortage.
-Relief fleet likely to be sent from a nearby star system.
+需要大约 $neededFood 单位的食品供应以结束短缺。
+邻居星系可能会派遣援助舰队。
 
-Increased reputation impact from selling food. Selling food on black market will increase post-shortage unrest.",,graphics/icons/markets/food_shortage.png,prices,,
-food_shortage,start,0.25,HOSTILE,hegemony_public,Critical food shortage $onOrAt $market,"The report indicates the food shortage $onOrAt $market is unusually severe, and accuses $theMarketFaction administration of precipitating a humanitarian crisis.","Increased food prices $onOrAt $market.
+提高出售食品所产生的声望影响。在黑市出售食物将加剧短缺结束后的动荡局势。",,graphics/icons/markets/food_shortage.png,prices,,
+food_shortage,start,0.25,HOSTILE,hegemony_public,$market 发生严重的食品短缺,此报告指出 $market 发生了非常严重的食品短缺，并谴责 $theMarketFaction 的管理者放任了人道主义危机的发生。,"$market 的食品价格上涨。
 
-Stability reduced by $stabilityPenalty.
+稳定性下降$stabilityPenalty。
 
-Approximately $neededFood units of food needed to end shortage.
+需要大约 $neededFood 单位的食品供应以结束短缺。
 
-Relief fleet likely to be sent from a nearby star system.
+邻居星系可能会派遣援助舰队。
 
-Increased reputation impact from selling food. Selling food on black market will increase post-shortage unrest.",,graphics/icons/markets/food_shortage.png,prices,,
-food_shortage,start,0.25,SELF,hegemony_public,Alleged food shortage $onOrAt $market,"The report flatly denies any rumours of a food shortage $onOrAt $market, and encourages responsible citizens to do their part by reporting anyone suspected of spreading malicious rumours.","Increased food prices $onOrAt $market.
+提高出售食品所产生的声望影响。在黑市出售食物将加剧短缺结束后的动荡局势。",,graphics/icons/markets/food_shortage.png,prices,,
+food_shortage,start,0.25,SELF,hegemony_public,$market 疑似发生食品短缺,该报道断然否认了所有关于 $market 发生食品短缺传言，并鼓励有责任感的市民们尽义务举报恶意造谣者。,"$market 的食品价格上涨。
 
-Stability reduced by $stabilityPenalty.
+稳定性下降$stabilityPenalty。
 
-Approximately $neededFood units of food needed to end shortage.
+需要大约 $neededFood 单位的食品供应以结束短缺。
 
-Relief fleet likely to be sent from a nearby star system.
+邻居星系可能会派遣援助舰队。
 
-Increased reputation impact from selling food. Selling food on black market will increase post-shortage unrest.",,graphics/icons/markets/food_shortage.png,prices,,
-food_shortage,warning_relief,,,player_intel,Food shortage $onOrAt $market: relief being organized on $reliefMarket,Comm traffic analysis indicates that a relief fleet is being organized at $reliefMarket in $reliefSystem and will be sent to $market in the near future.,"Fleet is carrying enough food to end the shortage.
+提高出售食品所产生的声望影响。在黑市出售食物将加剧短缺结束后的动荡局势。",,graphics/icons/markets/food_shortage.png,prices,,
+food_shortage,warning_relief,,,player_intel,$market 发生的食品短缺: $reliefMarket 正在组织援助,对通讯往来的分析结果表明位于 $reliefSystem 的 $reliefMarket 正在组织一支援助舰队，将在不久后被派往 $market。,"舰队满载有足以结束食品短缺的食品。
 
-If the fleet does not arrive as expected, the situation at $market will destabilize further.",,graphics/icons/markets/food_shortage.png,,,
+如果舰队无法如期抵达，$market 的动荡局势将进一步恶化。",,graphics/icons/markets/food_shortage.png,,,
 food_shortage,warning_relief,0.5,HOSTILE,"hegemony_internal,
 tritachyon_internal,
-sindrian_diktat_internal",Food shortage $onOrAt $market: relief being organized on $reliefMarket,"The report indicates that a relief fleet is being organized at $reliefMarket in $reliefSystem, and is likely to get underway within a few weeks.","Fleet is carrying enough food to end the shortage.
+sindrian_diktat_internal",$market 发生的食品短缺: $reliefMarket 正在组织援助,报告指出位于 $reliefSystem 的 $reliefMarket 正在组织一支援助舰队，并很可能会在几周内启程出发。,"舰队满载有足以结束食品短缺的食品。
 
-If the fleet does not arrive as expected, the situation at $market will destabilize further.",,graphics/icons/markets/food_shortage.png,,,
+如果舰队无法如期抵达，$market 的动荡局势将进一步恶化。",,graphics/icons/markets/food_shortage.png,,,
 food_shortage,warning_relief,0.5,FRIENDLY,"hegemony_internal,
 tritachyon_internal,
-sindrian_diktat_internal",Food shortage $onOrAt $market: relief being organized on $reliefMarket,"The report indicates that a relief fleet is being organized at $reliefMarket in $reliefSystem, and is likely to get underway within a few days. Nearby units are advised to ensure the fleet arrives to its destination safely.","Fleet is carrying enough food to end the shortage.
+sindrian_diktat_internal",$market 发生的食品短缺: $reliefMarket 正在组织援助,报告指出位于 $reliefSystem 的 $reliefMarket 正在组织一支援助舰队，并很可能会在几天内启程出发。临近的行动单位被指示需确保该舰队安全地抵达目的地。,"舰队满载有足以结束食品短缺的食品。
 
-If the fleet does not arrive as expected, the situation at $market will destabilize further.",,graphics/icons/markets/food_shortage.png,,,
-food_shortage,relief_sent,,,news,Food shortage $onOrAt $market: relief sent from $reliefMarket,"A relief fleet is underway from $reliefMarket in the $reliefSystem system, and should arrive in $marketSystem $eta.","Fleet is carrying enough food to end the shortage.
+如果舰队无法如期抵达，$market 的动荡局势将进一步恶化。",,graphics/icons/markets/food_shortage.png,,,
+food_shortage,relief_sent,,,news,$market 发生的食品短缺: $reliefMarket 的援助已经出发,一支援助舰队已经从位于 $reliefSystem 星系的 $reliefMarket 启程，预计将在 $eta 之后抵达 $marketSystem。,"舰队满载有足以结束食品短缺的食品。
 
-If the fleet does not arrive as expected, the situation at $market will destabilize further.",,graphics/icons/markets/food_shortage.png,,,
-food_shortage,relief_unavailable,,,news,Food shortage $onOrAt $market: conditions worsen,"While there was speculation early on that a neighboring world might be able to send relief, it appears no such aid is forthcoming.",Unrest increased by $stabilityPenaltyRelief.,,graphics/icons/markets/food_shortage.png,prices,,
-food_shortage,relief_aborted,,,news,Food shortage $onOrAt $market: relief fleet turned back,"The relief fleet from $reliefMarket was attacked on its way to $market, suffered major losses, and was forced to turn back. The food shortage contniues unabated.",Unrest increased by $stabilityPenaltyRelief.,,graphics/icons/markets/food_shortage.png,prices,,
-food_shortage,end_relief_arrived,,,news,Food shortage $onOrAt $market: relief fleet arrived,"The relief fleet from $reliefMarket has arrived, and the food shortage $onOrAt $market is over.","Unrest increased by $stabilityPenaltyEnd.
+如果舰队无法如期抵达，$market 的动荡局势将进一步恶化。",,graphics/icons/markets/food_shortage.png,,,
+food_shortage,relief_unavailable,,,news,$market 发生的食品短缺: 状态恶化,尽管早前有一些推测认为周边的星球和地区有能力提供援助，但就当前情况来看，这类援助在近期内不会发生。,动乱局势加剧 $stabilityPenaltyRelief。,,graphics/icons/markets/food_shortage.png,prices,,
+food_shortage,relief_aborted,,,news,$market 发生的食品短缺: 援助舰队折返,从 $reliefMarket 出发前往 $market 的援助舰队在途中遭到攻击，因遭受重大损失而被迫折返。食品短缺将持续无法缓解。,动乱局势加剧 $stabilityPenaltyRelief。,,graphics/icons/markets/food_shortage.png,prices,,
+food_shortage,end_relief_arrived,,,news,$market 发生的食品短缺: 援助舰队抵达,来自 $reliefMarket 的援助舰队抵达，$market 的食品短缺结束。,"动荡程度提高 $stabilityPenaltyEnd。
 
-Food prices $onOrAt $market are back to their normal levels.",,graphics/icons/markets/food_shortage.png,prices,,
-food_shortage,relief_lost,,,news,Food shortage $onOrAt $market: relief fleet lost,"The relief fleet from $reliefMarket did not arrive at its destination, and the food shortage contniues unabated.",Unrest increased by $stabilityPenaltyRelief.,,graphics/icons/markets/food_shortage.png,prices,,
-food_shortage,end_expired,,,news,Food shortage $onOrAt $market over,"The report indicates that the food shortage $onOrAt $market is now over. Various factors, including strict rationing, riot-suppression measures, and the arrival of several independent traders, are all credited with ending the shortage.","Unrest increased by $stabilityPenaltyExpire.
-Food prices $onOrAt $market are back to their normal levels.",,graphics/icons/markets/food_shortage.png,prices,,
-food_shortage,end_player,,,news,Food shortage $onOrAt $market over,"The report indicates that the food shortage $onOrAt $market is now over. The arrival of a relief fleet commaned by $playerName is credited with ending the shortage, though a local administrator was quick to point out his own contributions.","Unrest increased by $stabilityPenaltyEnd.
-Food prices $onOrAt $market are back to their normal levels.",,graphics/icons/markets/food_shortage.png,prices,,
-food_shortage,end_player_black,,,news,Food shortage $onOrAt $market over,"The report indicates that the food shortage $onOrAt $market is now over. Unfortunately, much of the food relief distribution was handled by criminal elements, strengthening their position and undermining local authorities both financially and in the eyes of the population.","Unrest increased by $stabilityPenaltyEndBlack.
+$market 的食品价格恢复正常水平。",,graphics/icons/markets/food_shortage.png,prices,,
+food_shortage,relief_lost,,,news,$market 发生的食品短缺: 援助舰队失事,从 $reliefMarket 出发前往 $market 的援助舰队未能抵达目的地。食品短缺将持续无法缓解。,动乱局势加剧 $stabilityPenaltyRelief。,,graphics/icons/markets/food_shortage.png,prices,,
+food_shortage,end_expired,,,news,$market 的食品短缺结束,新闻报道指出发生于 $market 的食品短缺状况已经结束。包括严格限定配给、采取措施镇压骚乱和多支独立贸易舰队的抵达在内的多种因素共同促成了这次短缺的结束。,"动荡程度提高 $stabilityPenaltyExpire。
+$market 的食品价格恢复正常水平。",,graphics/icons/markets/food_shortage.png,prices,,
+food_shortage,end_player,,,news,$market 的食品短缺结束,新闻报道指出发生在 $market 的食品短缺问题已解决。短缺的解决被归功于 $playerName 指挥的一支救助舰队成功抵达，不过一名当地管理者迅速地强调了他做出的一系列贡献。,"动荡程度提高 $stabilityPenaltyEnd。
+$market 的食品价格恢复正常水平。",,graphics/icons/markets/food_shortage.png,prices,,
+food_shortage,end_player_black,,,news,$market 的食品短缺结束,新闻报道指出发生于 $market 的食品短缺状况已经结束。遗憾的是，大量的救济食品都由犯罪分子经手，强化了他们的地位。这不仅在经济上，还在民众们的眼中削弱了当地政府的权威。,"动荡程度提高 $stabilityPenaltyEndBlack。
 
-Food prices $onOrAt $market are back to their normal levels.",,graphics/icons/markets/food_shortage.png,,,
-food_shortage,end_player_fast,,,news,Food shortage $onOrAt $market over,The report indicates that the food shortage $onOrAt $market is now over. The timely arrival of a relief fleet commaned by $playerName is credited with ending the shortage quickly and mitigating its long-term effects.,"No unrest increase $onOrAt $market.
+$market 的食品价格恢复正常水平。",,graphics/icons/markets/food_shortage.png,,,
+food_shortage,end_player_fast,,,news,$market 的食品短缺结束,新闻报道指出发生在 $market 的食品短缺问题已解决。短缺的迅速解决被归功于 $playerName 指挥的一支救助舰队及时抵达，缓解了短缺可能带来的长期影响。,"$market 没有发生动荡加剧。
 
-Food prices $onOrAt $market are back to their normal levels.",,graphics/icons/markets/food_shortage.png,prices,,
+$market 的食品价格恢复正常水平。",,graphics/icons/markets/food_shortage.png,prices,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 # player smuggling investigation,,,,,,,,,,,,
-investigation_smuggling,start_smuggling,,,secure_comm,Smuggling investigation $onOrAt $market,An encryped message from one of your contacts in $market's underworld warns you that $theMarketFaction authorities have launched an investigation into the recent smuggling activity.,"If the investigation finds you involved in the smuggling, $theMarketFaction will become inhospitable towards you.
+investigation_smuggling,start_smuggling,,,secure_comm,$market 开展走私调查,你的一位在 $market's 的犯罪集团中联系人发来加密信息警告你，$theMarketFaction 当局已经对最近的走私活动展开了调查。,"If the investigation finds you involved in the smuggling, $theMarketFaction will become inhospitable towards you.
 
 $InvestigatorPost $investigatorName is charged with carrying out the investigation. You may be able to influence the outcome by contacting $invHimOrHer.
 
