@@ -1,6 +1,6 @@
 {
     "displayName": "Balanced",
-    "fluxCapacitors": 33,
+    "fluxCapacitors": 1,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "pegasus",
@@ -25,10 +25,10 @@
         },
         {
             "autofire": false,
-            "mode": "ALTERNATING",
+            "mode": "LINKED",
             "weapons": {
-                "WS 000": "dragon",
-                "WS 001": "dragon"
+                "WS 000": "dragonpod",
+                "WS 001": "dragonpod"
             }
         },
         {
