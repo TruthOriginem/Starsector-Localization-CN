@@ -1,5 +1,6 @@
 [
   {
+    "type": "csv",
     "path": "data/campaign/abilities.csv",
     "id_column_name": "id",
     "text_column_names": [
@@ -8,6 +9,7 @@
     ]
   },
   {
+    "type": "csv",
     "path": "data/campaign/commodities.csv",
     "id_column_name": "id",
     "text_column_names": [
@@ -15,6 +17,7 @@
     ]
   },
   {
+    "type": "csv",
     "path": "data/campaign/industries.csv",
     "id_column_name": "id",
     "text_column_names": [
@@ -23,6 +26,7 @@
     ]
   },
   {
+    "type": "csv",
     "path": "data/campaign/market_conditions.csv",
     "id_column_name": "id",
     "text_column_names": [
@@ -31,6 +35,7 @@
     ]
   },
   {
+    "type": "csv",
     "path": "data/campaign/special_items.csv",
     "id_column_name": "id",
     "text_column_names": [
@@ -40,6 +45,7 @@
     ]
   },
   {
+    "type": "csv",
     "path": "data/campaign/submarkets.csv",
     "id_column_name": "id",
     "text_column_names": [
@@ -48,6 +54,7 @@
     ]
   },
   {
+    "type": "csv",
     "path": "data/campaign/rules.csv",
     "id_column_name": "id",
     "text_column_names": [
@@ -57,6 +64,7 @@
     ]
   },
   {
+    "type": "csv",
     "path": "data/characters/skills/aptitude_data.csv",
     "id_column_name": "id",
     "text_column_names": [
@@ -65,6 +73,7 @@
     ]
   },
   {
+    "type": "csv",
     "path": "data/characters/skills/skill_data.csv",
     "id_column_name": "id",
     "text_column_names": [
@@ -74,6 +83,7 @@
     ]
   },
   {
+    "type": "csv",
     "path": "data/characters/personalities.csv",
     "id_column_name": "id",
     "text_column_names": [
@@ -82,6 +92,7 @@
     ]
   },
   {
+    "type": "csv",
     "path": "data/hullmods/hull_mods.csv",
     "id_column_name": "id",
     "text_column_names": [
@@ -91,6 +102,7 @@
     ]
   },
   {
+    "type": "csv",
     "path": "data/hulls/ship_data.csv",
     "id_column_name": "id",
     "text_column_names": [
@@ -100,6 +112,7 @@
     ]
   },
   {
+    "type": "csv",
     "path": "data/hulls/wing_data.csv",
     "id_column_name": "id",
     "text_column_names": [
@@ -107,6 +120,7 @@
     ]
   },
   {
+    "type": "csv",
     "path": "data/shipsystems/ship_systems.csv",
     "id_column_name": "id",
     "text_column_names": [
@@ -114,6 +128,7 @@
     ]
   },
   {
+    "type": "csv",
     "path": "data/strings/descriptions.csv",
     "id_column_name": ["id", "type"],
     "text_column_names": [
@@ -123,6 +138,7 @@
     ]
   },
   {
+    "type": "csv",
     "path": "data/weapons/weapon_data.csv",
     "id_column_name": "id",
     "text_column_names": [
@@ -139,12 +155,21 @@
     ]
   },
   {
+    "type": "csv",
     "path": "data/campaign/reports.csv",
     "id_column_name": ["event_type", "event_stage", "target_rel", "channels"],
     "text_column_names": [
       "subject",
       "summary",
       "assessment"
+    ]
+  },
+  {
+    "type": "jar",
+    "path": "starfarer_obf.jar",
+    "class_file_paths": [
+      "com/fs/starfarer/BaseGameState.class",
+      "com/fs/starfarer/Version.class"
     ]
   }
 ]
