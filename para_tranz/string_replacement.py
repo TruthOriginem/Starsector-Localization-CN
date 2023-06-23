@@ -4,7 +4,8 @@ import re
 from pathlib import Path
 from typing import List, Tuple
 
-from para_tranz.para_tranz_script import String, CsvFile
+from para_tranz.util import String
+from para_tranz.csv_loader.csv_loader import CsvFile
 
 logging.root.setLevel(logging.NOTSET)
 logger = logging.getLogger('string_replacement.py')
@@ -62,10 +63,10 @@ class ParatranzJsonFile:
         self.strings: List[String] = []
 
     def load(self):
-        self.strings = CsvFile.load_json_strings(self.path)
+        self.strings = CsvFile._read_json_strings(self.path)
 
     def save(self):
-        CsvFile.save_json_strings(self.path, self.strings)
+        CsvFile._write_json_strings(self.path, self.strings)
 
 
 def load_json_files() -> List[ParatranzJsonFile]:
