@@ -41,14 +41,19 @@ class ConstantTable:
     用于表示class文件中的常量表
     """
 
+    # TODO: 1. 增加检测同一个UTF8常量是否被多次引用的功能，尤其是被其他非String类型的常量引用
+    # TODO: 2. 考虑将被String引用的常量单独复制并添加到常量表尾部，以避免被其他非String类型的常量引用
+    # TODO: 3. 分析class文件的剩余部分，找出String被引用的方法名
+
     def __init__(self, class_bytes: bytes):
         self.class_bytes = class_bytes
         self.constant_count = int.from_bytes(class_bytes[8:10], 'big')
 
         self.table_end_index = None
 
-        self.constants = []  # type: List[Union[UTF8_Constant, bytes]]
+        self.constants = []  # type: List[Union[BaseConstant, bytes]]
         self.utf8_string_references = set()  # type: Set[int]
+        self.utf8_other_references = set()  # type: Set[int]
 
         self._load_constants()
 
@@ -60,38 +65,53 @@ class ConstantTable:
             constant_type = ConstantType(self.class_bytes[byte_index])
 
             if constant_type == ConstantType.Utf8:
-                constant = UTF8_Constant(self.class_bytes[byte_index:], constant_index)
-                byte_index += 3 + constant.length
+                constant = Utf8Constant(self.class_bytes[byte_index:], constant_index)
+                byte_index += len(constant.to_bytes())
+                self.constants.append(constant)
+            elif constant_type == ConstantType.String:
+                constant = StringConstant(self.class_bytes[byte_index:byte_index+CONSTANT_LENGTHS[constant_type]], constant_index)
+                self.utf8_string_references.add(constant.string_index)
+                byte_index += CONSTANT_LENGTHS[constant_type]
+                self.constants.append(constant)
+            elif constant_type == ConstantType.Class:
+                constant = ClassConstant(self.class_bytes[byte_index:byte_index+CONSTANT_LENGTHS[constant_type]], constant_index)
+                self.utf8_other_references.add(constant.name_index)
+                byte_index += CONSTANT_LENGTHS[constant_type]
+                self.constants.append(constant)
+            elif constant_type == ConstantType.NameAndType:
+                constant = NameAndTypeConstant(self.class_bytes[byte_index:byte_index+CONSTANT_LENGTHS[constant_type]], constant_index)
+                self.utf8_other_references.add(constant.name_index)
+                self.utf8_other_references.add(constant.descriptor_index)
+                byte_index += CONSTANT_LENGTHS[constant_type]
                 self.constants.append(constant)
             else:
                 # 将原始字节存入常量表
                 length = CONSTANT_LENGTHS[constant_type]
                 self.constants.append(self.class_bytes[byte_index:byte_index + length])
-
-                if constant_type == ConstantType.String:
-                    byte_index += 1  # 跳过 tag
-                    string_index = int.from_bytes(self.class_bytes[byte_index:byte_index + 2], 'big')
-                    # 记录字符串常量的索引
-                    self.utf8_string_references.add(string_index)
-                    byte_index += 2
-
-                else:
-                    byte_index += length
+                byte_index += length
 
             constant_index += 1
 
+            if constant_type == ConstantType.Long or constant_type == ConstantType.Double:
+                # long 和 double 类型的常量占两个位置
+                constant_index += 1
+                self.constants.append(b'')  # 占位以保证数组索引与常量索引一致
+
         self.table_end_index = byte_index
 
-        if len(self.constants) != self.constant_count - 1:
-            raise ValueError(
-                f'常量表中的实际解析出的常量数量({len(self.constants)})与constant_count={self.constant_count} 不符')
-
-    def get_utf8_constants_which_have_string_ref(self) -> List['UTF8_Constant']:
+    def get_utf8_constants_with_string_ref(self) -> List['Utf8Constant']:
         """
-        获取常量表中所有的字符串常量
+        获取常量表中所有被String类型常量引用的Utf8常量
         """
         return [self.constants[i - 1] for i in self.utf8_string_references
-                if type(self.constants[i - 1]) == UTF8_Constant]
+                if type(self.constants[i - 1]) == Utf8Constant]
+
+    def get_utf8_constants_with_extra_ref(self) -> List['Utf8Constant']:
+        """
+        获取常量表中所有被String常量和其他常量同时引用的Utf8常量
+        """
+        return [self.constants[i - 1] for i in (self.utf8_other_references & self.utf8_string_references)
+                if type(self.constants[i - 1]) == Utf8Constant]
 
     def to_bytes(self) -> bytes:
         """
@@ -99,7 +119,7 @@ class ConstantTable:
         """
         bytes = self.constant_count.to_bytes(2, 'big')
         for constant in self.constants:
-            if isinstance(constant, UTF8_Constant):
+            if isinstance(constant, BaseConstant):
                 bytes += constant.to_bytes()
             else:
                 bytes += constant
@@ -107,20 +127,80 @@ class ConstantTable:
         return bytes
 
 
-class UTF8_Constant:
+class BaseConstant:
     def __init__(self, bytes: bytes, constant_index: int):
-        self.length = int.from_bytes(bytes[1:3], 'big')
-        self.string = bytes[3:3 + self.length].decode('utf-8')
-
         self.constant_index = constant_index
 
     def to_bytes(self) -> bytes:
+        pass
+
+
+class Utf8Constant(BaseConstant):
+    def __init__(self, bytes: bytes, constant_index: int):
+        super().__init__(bytes, constant_index)
+        self.length = int.from_bytes(bytes[1:3], 'big')
+        self.string = bytes[3:3 + self.length].decode('utf-8')
+
+    def to_bytes(self) -> bytes:
+        string_bytes = self.string.encode('utf-8')
+        self.length = len(string_bytes)
+
         return ConstantType.Utf8.value.to_bytes(1, 'big') \
             + self.length.to_bytes(2, 'big') \
-            + self.string.encode('utf-8')
+            + string_bytes
 
     def __str__(self):
         return self.string
 
     def __repr__(self):
-        return f'UTF8_Constant("{self.string}")'
+        return f'UTF8("{self.string}")'
+
+
+class StringConstant(BaseConstant):
+    def __init__(self, bytes: bytes, constant_index: int):
+        super().__init__(bytes, constant_index)
+        self.string_index = int.from_bytes(bytes[1:3], 'big')
+
+    def to_bytes(self) -> bytes:
+        return ConstantType.String.value.to_bytes(1, 'big') \
+            + self.string_index.to_bytes(2, 'big')
+
+    def __str__(self):
+        return repr(self)
+
+    def __repr__(self):
+        return f'String(# {self.string_index})'
+
+
+class NameAndTypeConstant(BaseConstant):
+    def __init__(self, bytes: bytes, constant_index: int):
+        super().__init__(bytes, constant_index)
+        self.name_index = int.from_bytes(bytes[1:3], 'big')
+        self.descriptor_index = int.from_bytes(bytes[3:5], 'big')
+
+    def to_bytes(self) -> bytes:
+        return ConstantType.NameAndType.value.to_bytes(1, 'big') \
+            + self.name_index.to_bytes(2, 'big') \
+            + self.descriptor_index.to_bytes(2, 'big')
+
+    def __str__(self):
+        return repr(self)
+
+    def __repr__(self):
+        return f'NameAndType(#{self.name_index}, #{self.descriptor_index})'
+
+
+class ClassConstant(BaseConstant):
+    def __init__(self, bytes: bytes, constant_index: int):
+        super().__init__(bytes, constant_index)
+        self.name_index = int.from_bytes(bytes[1:3], 'big')
+
+    def to_bytes(self) -> bytes:
+        return ConstantType.Class.value.to_bytes(1, 'big') \
+            + self.name_index.to_bytes(2, 'big')
+
+    def __str__(self):
+        return repr(self)
+
+    def __repr__(self):
+        return f'Class(#{self.name_index})'
