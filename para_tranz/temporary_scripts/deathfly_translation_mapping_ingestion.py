@@ -36,7 +36,7 @@ def convert_deathfly_csv_to_paratranz_mapping():
         class_name = row[1]
         if class_name not in class_to_data:
             class_to_data[class_name] = set()
-        original_text = row[0].strip('"')
+        original_text = row[0][1:-1]
         if original_text.strip(' '):
             class_to_data[class_name].add(original_text)
 
@@ -74,7 +74,7 @@ def add_translation_to_exported_strings():
         if class_name not in class_to_data:
             class_to_data[class_name] = dict()
         if '"' in row[2]:
-            class_to_data[class_name][row[0].strip('"')] = row[2].strip('"')
+            class_to_data[class_name][row[0][1:-1]] = row[2][1:-1]
 
     with open(PARATRANZ_STRINGS_PATH, 'r', encoding='utf-8') as f:
         paratranz_strings = json.load(f)
@@ -92,5 +92,5 @@ def add_translation_to_exported_strings():
 
 
 if __name__ == '__main__':
-    # convert_deathfly_csv_to_paratranz_mapping()
-    add_translation_to_exported_strings()
+    convert_deathfly_csv_to_paratranz_mapping()
+    # add_translation_to_exported_strings()
