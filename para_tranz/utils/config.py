@@ -2,7 +2,7 @@ import logging
 from pathlib import Path
 
 # [日志输出]
-LOG_LEVEL = logging.DEBUG
+LOG_LEVEL = logging.INFO
 LOG_DEBUG_OVERWRITE = False
 
 # [路径配置]

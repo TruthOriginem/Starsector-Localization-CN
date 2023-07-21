@@ -206,7 +206,7 @@ class JavaClassFile:
         self.translation_constant_table = ConstantTable(self.translation_bytes)
 
         self.logger.debug(
-            f'读取 {self.jar_file.path}:{path_str} 完成')
+            f'class读取完成: {self.jar_file.path}:{path_str} ')
 
     def _debug_load_from_standalone_file(self) -> None:
         with open(self.path, 'rb') as f:
@@ -220,7 +220,7 @@ if __name__ == '__main__':
     from para_tranz.jar_loader.jar_file import JavaJarFile
 
     fake_jar_file = JavaJarFile(Path(r"starfarer_obf.jar"), [])
-    class_file = JavaClassFile(fake_jar_file, r"C:\Users\jinan\Desktop\L.class", no_auto_load=True)
+    class_file = JavaClassFile(fake_jar_file, r"C:\Users\jinan\Desktop\class.class", no_auto_load=True)
     class_file._debug_load_from_standalone_file()
     for s in class_file.get_strings():
         print(s)

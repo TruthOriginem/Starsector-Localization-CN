@@ -92,5 +92,5 @@ def add_translation_to_exported_strings():
 
 
 if __name__ == '__main__':
-    convert_deathfly_csv_to_paratranz_mapping()
+    # convert_deathfly_csv_to_paratranz_mapping()
     # add_translation_to_exported_strings()

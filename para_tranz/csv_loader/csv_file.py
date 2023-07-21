@@ -99,32 +99,6 @@ class CsvFile(DataFile):
             else:
                 self.logger.warning(f'在文件 {self.path} 中没有找到 {self.id_column_name}="{id}" 的行，未更新该词条')
 
-    # 将数据转换为 ParaTranz 词条数据对象，并保存到json文件中
-    def save_json(self, ensure_ascii=False, indent=4) -> None:
-        strings = [s for s in self.get_strings() if s.original]  # 只导出原文不为空的词条
-
-        # 如果Paratranz json文件已存在，则从中同步任何已翻译词条的状态
-        if self.para_tranz_path.exists():
-            self.logger.info(
-                f"Paratranz 平台数据文件 {relative_path(self.para_tranz_path)} 已存在，从中读取已翻译词条的词条状态")
-
-            special_stages = (1, 2, 3, 5, 9, -1)
-            para_strings = self._read_json_strings(self.para_tranz_path)
-            para_key_strings = {s.key: s for s in para_strings if
-                                s.stage in special_stages}  # type:Dict[str, String]
-            for s in strings:
-                if s.key in para_key_strings:
-                    para_s = para_key_strings[s.key]
-                    if s.stage != para_s.stage:
-                        self.logger.debug(f"更新词条{s.key}的stage：{s.stage}->{para_s.stage}")
-                        s.stage = para_s.stage
-
-        # 导出Paratranz词条
-        self._write_json_strings(self.para_tranz_path, strings, ensure_ascii, indent)
-
-        self.logger.info(
-            f'从 {relative_path(self.path)} 中导出了 {len(strings)} 个词条到 {relative_path(self.para_tranz_path)}')
-
     # 将译文数据写回译文csv中
     def save_file(self) -> None:
         with open(self.translation_path, 'r', newline='', encoding='utf-8') as f:
