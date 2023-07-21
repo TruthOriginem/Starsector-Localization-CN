@@ -4,9 +4,9 @@ import json
 from para_tranz.utils.config import PROJECT_DIRECTORY, PARA_TRANZ_PATH
 from para_tranz.utils.util import make_logger
 
-CSV_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'deathfly_096_mapping.csv'
+CSV_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'temporary_scripts' / 'deathfly_096_mapping.csv'
 
-MAPPING_OUTPUT_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'deathfly_096_mapping.json'
+MAPPING_OUTPUT_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'temporary_scripts' / 'deathfly_096_mapping.json'
 
 PARATRANZ_STRINGS_PATH = PARA_TRANZ_PATH / 'starfarer_obf.json'
 
@@ -85,12 +85,21 @@ def add_translation_to_exported_strings():
             class_strings = class_to_data[class_name]
             if string['original'] in class_strings:
                 string['translation'] = class_strings[string['original']]
-                string['stage'] = 1
+                string['stage'] = max(string['stage'], 1)
 
     with open(PARATRANZ_STRINGS_PATH, 'w', encoding='utf-8') as f:
         json.dump(paratranz_strings, f, indent=2, ensure_ascii=False)
 
 
 if __name__ == '__main__':
+    # 先运行下面这个函数，生成mapping文件
     # convert_deathfly_csv_to_paratranz_mapping()
+
+    # 然后把生成的mapping文件加到para_tranz_map.json里面
+    # 然后运行脚本，选1导出string文件
+
+    # 然后运行下面这个函数，把渡鸦提取的旧版本翻译加到para_tranz_map.json里面
     # add_translation_to_exported_strings()
+
+    # 然后运行脚本，选2导入string文件
+    pass
