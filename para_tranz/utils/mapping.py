@@ -77,12 +77,12 @@ class ParaTranzMap:
                 return item
         return None
     def load(self) -> None:
-        with open(MAP_PATH, 'r') as f:
+        with open(MAP_PATH, 'r', encoding='utf-8') as f:
             self.items = [ParaTranzMapItem.from_dict(item) for item in json.load(f)]
 
     def save(self) -> None:
         data = [dataclasses.asdict(item) for item in self.items]
-        with open(MAP_PATH, 'w') as f:
+        with open(MAP_PATH, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2, cls=SetEncoder)
 
 

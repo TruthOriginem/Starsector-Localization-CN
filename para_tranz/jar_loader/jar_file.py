@@ -34,10 +34,10 @@ class JavaJarFile(DataFile):
 
         self.class_files = {}  # type: Dict[str, JavaClassFile]
 
-        self.logger.info(f'开始读取 {self.path} 中的class文件，共 {len(class_files)} 个')
+        self.logger.info(f'开始读取 {self.path} 中指定的class文件，共 {len(class_files)} 个')
         for class_file_info in class_files:
             self.load_class_file(**class_file_info)
-        self.logger.info(f'读取 {self.path} 完成')
+        self.logger.info(f'jar读取完成: {self.path}')
 
     def __del__(self):
         self.close_files()
@@ -234,8 +234,10 @@ class JavaJarFile(DataFile):
 
     @classmethod
     def load_files_from_config(cls) -> List['JavaJarFile']:
+        cls.logger.info('开始读取游戏jar数据')
         files = [cls(**asdict(item)) for item in PARA_TRANZ_MAP if
                  type(item) == JarMapItem]
+        cls.logger.info('游戏jar数据读取完成')
         return files
 
 

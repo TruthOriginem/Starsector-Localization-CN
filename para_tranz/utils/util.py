@@ -93,7 +93,7 @@ class DataFile:
                 if s.key in para_key_strings:
                     para_s = para_key_strings[s.key]
                     if s.stage != para_s.stage:
-                        self.logger.debug(f"更新词条{s.key}的stage：{s.stage}->{para_s.stage}")
+                        self.logger.debug(f"更新词条 {s.key} 的stage：{s.stage}->{para_s.stage}")
                         s.stage = para_s.stage
 
         self._write_json_strings(self.para_tranz_path, strings, ensure_ascii, indent)
@@ -127,7 +127,7 @@ class DataFile:
     @staticmethod
     def _read_json_strings(path: Path) -> List[String]:
         strings = []
-        with open(path, 'r', encoding='utf-8-sig') as f:
+        with open(path, 'r', encoding='utf-8') as f:
             data = json.load(f)  # type:List[Dict]
         for d in data:
             strings.append(

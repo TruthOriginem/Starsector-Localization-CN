@@ -2,7 +2,7 @@ from para_tranz.csv_loader.csv_file import CsvFile
 from para_tranz.jar_loader.jar_file import JavaJarFile
 from para_tranz.utils.util import make_logger
 
-logger = make_logger('para_tranz_script.py')
+logger = make_logger('ParaTranzScript')
 
 # 选择要处理的文件类型
 # loaders = [JavaJarFile]
