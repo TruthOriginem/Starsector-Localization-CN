@@ -2,13 +2,8 @@ from pathlib import Path, PurePosixPath
 from typing import Union, Set, Optional, List, Tuple, Dict
 
 from para_tranz.jar_loader.constant_table import ConstantTable, Utf8Constant
+from para_tranz.utils.config import MAGIC, MIN_CLASS_VER, MAX_CLASS_VER, ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS
 from para_tranz.utils.util import make_logger, String, contains_chinese
-
-MAGIC = b'\xca\xfe\xba\xbe'
-MIN_CLASS_VER = 0x31  # 1.5
-MAX_CLASS_VER = 0x33  # 1.7
-
-
 class JavaClassFile:
     """
     用于表示游戏文件中可以提取原文和译文的class文件
@@ -25,6 +20,10 @@ class JavaClassFile:
         self.path = PurePosixPath(path)
         self.include_strings = set(include_strings) if include_strings else set()
         self.exclude_strings = set(exclude_strings) if exclude_strings else set()
+
+        if ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS:
+            self.include_strings = {s.strip(' \t') for s in self.include_strings}
+            self.exclude_strings = {s.strip(' \t') for s in self.exclude_strings}
 
         self.jar_file = jar_file
         self.class_name = path.replace('/', '.').replace('.class', '')
@@ -78,17 +77,21 @@ class JavaClassFile:
 
         for original_constant in self.original_constant_table.get_utf8_constants_with_string_ref():
 
+            original_string = original_constant.string
+            if ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS:
+                original_string = original_string.strip(' \t')
+
             # 过滤掉不需要翻译的字符串
-            if self.include_strings and (original_constant.string not in self.include_strings):
+            if self.include_strings and (original_string not in self.include_strings):
                 continue
-            if self.exclude_strings and (original_constant.string in self.exclude_strings):
+            if self.exclude_strings and (original_string in self.exclude_strings):
                 continue
 
             constant_index = original_constant.constant_index
             translated_constant = translated_constant_index_constants[constant_index]
 
             pairs.append((original_constant, translated_constant))
-            added_strings.add(original_constant.string)
+            added_strings.add(original_constant.string if not ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS else original_string)
 
         # 如果在include_strings中的字符串未在译文中出现，则输出警告
         not_found_strings = self.include_strings - self.exclude_strings - added_strings
