@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Dict, Set, List, Union
 
 from para_tranz.utils.config import PROJECT_DIRECTORY, ORIGINAL_PATH, TRANSLATION_PATH, PARA_TRANZ_PATH, LOG_LEVEL, \
-    LOG_DEBUG_OVERWRITE
+    LOG_DEBUG_OVERWRITE, OVERRIDE_STRING_STATUS
 
 
 def relative_path(path: Path) -> Path:
@@ -81,9 +81,9 @@ class DataFile:
         strings = [s for s in self.get_strings() if s.original]  # 只导出原文不为空的词条
 
         # 如果Paratranz json文件已存在，则从中同步任何已翻译词条的状态
-        if self.para_tranz_path.exists():
+        if not OVERRIDE_STRING_STATUS and self.para_tranz_path.exists():
             self.logger.info(
-                f"Paratranz 平台数据文件 {relative_path(self.para_tranz_path)} 已存在，从中读取已翻译词条的词条状态")
+                f"Paratranz 平台数据文件 {relative_path(self.para_tranz_path)} 已存在，从中读取已翻译词条的词条stage状态")
 
             special_stages = (1, 2, 3, 5, 9, -1)
             para_strings = self._read_json_strings(self.para_tranz_path)
