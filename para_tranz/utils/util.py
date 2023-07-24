@@ -26,6 +26,7 @@ class CustomFormatter(logging.Formatter):
             self._style._fmt = "[%(name)s][%(levelname)s] %(message)s \n"
         return super().format(record)
 
+
 def make_logger(name: str) -> logging.Logger:
     # 设置日志输出
     logging.root.setLevel(logging.NOTSET)
@@ -153,6 +154,13 @@ def contains_chinese(s: str) -> bool:
     return False
 
 
+def contains_english(s: str) -> bool:
+    for _char in s:
+        if 'a' <= _char <= 'z' or 'A' <= _char <= 'Z':
+            return True
+    return False
+
+
 # From processWithWiredChars.py
 # 由于游戏原文文件中可能存在以Windows-1252格式编码的字符（如前后双引号等），所以需要进行转换
 def replace_weird_chars(s: str) -> str:
@@ -191,14 +199,17 @@ def normalize_class_path(class_path: str) -> str:
 
     return '/'.join([normalize(s) for s in segments[:-1]] + [class_name])
 
+
 class SetEncoder(json.JSONEncoder):
     """
     From: https://stackoverflow.com/questions/8230315/how-to-json-serialize-sets
     """
+
     def default(self, obj):
         if isinstance(obj, set):
             return sorted(list(obj))
         return json.JSONEncoder.default(self, obj)
+
 
 if __name__ == '__main__':
     print(normalize_class_path(

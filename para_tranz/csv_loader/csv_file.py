@@ -9,7 +9,8 @@ from typing import Set, Union, List, Dict, Tuple
 
 from para_tranz.utils.config import MAP_PATH
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, CsvMapItem
-from para_tranz.utils.util import relative_path, String, DataFile, contains_chinese, replace_weird_chars, make_logger
+from para_tranz.utils.util import relative_path, String, DataFile, contains_chinese, replace_weird_chars, make_logger, \
+    contains_english
 
 
 class CsvFile(DataFile):
@@ -70,12 +71,16 @@ class CsvFile(DataFile):
                 original = row[col]
                 translation = ''
                 stage = 0
+                # 如果已翻译，则使用译文覆盖
                 if row_id in self.translation_id_data:
                     translation = self.translation_id_data[row_id][col]
                     stage = 1
                 # 特殊规则：如果rules.csv里的script列中不包含'"'（双引号），则视为已翻译
                 if (self.path.name == 'rules.csv') and (col == 'script') and (
                         '"' not in original):
+                    stage = 1
+                # 如果原文不包含英文，则设定为已翻译
+                elif not contains_english(original):
                     stage = 1
                 # 如果尚未翻译（不包含中文），则设定为未翻译
                 elif not contains_chinese(translation):

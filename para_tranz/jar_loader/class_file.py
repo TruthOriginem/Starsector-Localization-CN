@@ -3,7 +3,9 @@ from typing import Union, Set, Optional, List, Tuple, Dict
 
 from para_tranz.jar_loader.constant_table import ConstantTable, Utf8Constant
 from para_tranz.utils.config import MAGIC, MIN_CLASS_VER, MAX_CLASS_VER, ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS
-from para_tranz.utils.util import make_logger, String, contains_chinese
+from para_tranz.utils.util import make_logger, String, contains_chinese, contains_english
+
+
 class JavaClassFile:
     """
     用于表示游戏文件中可以提取原文和译文的class文件
@@ -132,7 +134,9 @@ class JavaClassFile:
                 translation = translated_constant.string
                 stage = 1
 
-                if not contains_chinese(translation):
+                if not contains_english(translation):
+                    stage = 1
+                elif not contains_chinese(translation):
                     translation = ''
                     stage = 0
 
