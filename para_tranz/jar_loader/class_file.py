@@ -154,15 +154,15 @@ class JavaClassFile:
             strings.append(String(key, original, translation, stage, context))
 
         # 按已有的上下文信息排序
-        sorted_strings = sorted(strings, key=lambda s: s.context)
-        extra_context = '[同文件中的词条]\n'
+        # sorted_strings = sorted(strings, key=lambda s: s.context)
+        # extra_context = '[同文件中的词条]\n'
 
         # 上下文信息：class文件中的其他string
-        for s in sorted_strings:
-            extra_context += f'"{s.original}" => "{s.translation}" (https://paratranz.cn/projects/{PARA_TRANZ_PROJECT_ID}/strings?key={url_encode(s.key)})\n'
-
-        for s in strings:
-            s.context += extra_context
+        # for s in sorted_strings:
+        #     extra_context += f'"{s.original}" => "{s.translation}"\n'
+        #
+        # for s in strings:
+        #     s.context += extra_context
         return strings
 
     def update_strings(self, strings: List[String]) -> int:
