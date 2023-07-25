@@ -36,7 +36,8 @@ def mian():
     print('请选择您要进行的操作：')
     print('1 - 从原始(original)和汉化(localization)文件导出 ParaTranz 词条')
     print('2 - 将 ParaTranz 词条写回汉化(localization)文件')
-    print('3 - 将 ParaTranz 词条写回新版本游戏的汉化(localization)文件（版本迁移时使用，主要针对jar文件）')
+    # TODO: jar版本迁移还没写好
+    # print('3 - 将 ParaTranz 词条写回新版本游戏的汉化(localization)文件（版本迁移时使用，主要针对jar文件）')
 
     while True:
         option = input('请输入选项数字：')
@@ -46,9 +47,9 @@ def mian():
         elif option == '2':
             paratranz_to_game()
             break
-        elif option == '3':
-            paratranz_to_game_new_version()
-            break
+        # elif option == '3':
+        #     paratranz_to_game_new_version()
+        #     break
         else:
             print('无效选项！')
 

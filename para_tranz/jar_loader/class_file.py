@@ -223,8 +223,8 @@ class JavaClassFile:
 if __name__ == '__main__':
     from para_tranz.jar_loader.jar_file import JavaJarFile
 
-    fake_jar_file = JavaJarFile(Path(r"starfarer_obf.jar"), [])
-    class_file = JavaClassFile(fake_jar_file, r"C:\Users\jinan\Desktop\class.class", no_auto_load=True)
+    fake_jar_file = JavaJarFile(Path(r"starfarer.api.jar"), [])
+    class_file = JavaClassFile(fake_jar_file, r"C:\Users\jinan\Desktop\ProcGenTestPluginImpl.class", no_auto_load=True)
     class_file._debug_load_from_standalone_file()
     for s in class_file.get_strings():
         print(s)

@@ -188,7 +188,10 @@ class JavaJarFile(DataFile):
         # 对于每一个已读取的class文件，生成新的字节码
         updated_file_contents = {}
         for class_file in self.class_files.values():
-            updated_file_contents[str(class_file.path)] = class_file.generate_translated_bytecode()
+            new_bytecode = class_file.generate_translated_bytecode()
+            # 如果字节码有变化，则将新的字节码加入 updated_file_contents
+            if new_bytecode != class_file.translation_bytes:
+                updated_file_contents[str(class_file.path)] = new_bytecode
 
         # 生成新的jar文件，写入新的class文件，并将老jar中的其它文件也复制进去
         with zipfile.ZipFile(self.translation_path.with_suffix('.temp'), 'w') as zf:
