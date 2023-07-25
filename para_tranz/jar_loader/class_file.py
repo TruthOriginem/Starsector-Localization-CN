@@ -2,8 +2,9 @@ from pathlib import Path, PurePosixPath
 from typing import Union, Set, Optional, List, Tuple, Dict
 
 from para_tranz.jar_loader.constant_table import ConstantTable, Utf8Constant
-from para_tranz.utils.config import MAGIC, MIN_CLASS_VER, MAX_CLASS_VER, ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS
-from para_tranz.utils.util import make_logger, String, contains_chinese, contains_english
+from para_tranz.utils.config import MAGIC, MIN_CLASS_VER, MAX_CLASS_VER, ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS, \
+    PARA_TRANZ_PROJECT_ID
+from para_tranz.utils.util import make_logger, String, contains_chinese, contains_english, url_encode
 
 
 class JavaClassFile:
@@ -93,12 +94,14 @@ class JavaClassFile:
             translated_constant = translated_constant_index_constants[constant_index]
 
             pairs.append((original_constant, translated_constant))
-            added_strings.add(original_constant.string if not ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS else original_string)
+            added_strings.add(
+                original_constant.string if not ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS else original_string)
 
         # 如果在include_strings中的字符串未在译文中出现，则输出警告
         not_found_strings = self.include_strings - self.exclude_strings - added_strings
         for s in not_found_strings:
-            self.logger.warning(f'在 {self.jar_file.path}:{self.path} 中未找到mapping中指定需要提取的字符串 "{s}"，未进行提取')
+            self.logger.warning(
+                f'在 {self.jar_file.path}:{self.path} 中未找到mapping中指定需要提取的字符串 "{s}"，未进行提取')
 
         return pairs
 
@@ -142,22 +145,25 @@ class JavaClassFile:
 
             context = ''
             for original_constant, translated_constant in pairs:
-                context += self.generate_constant_context(original_constant, translated_constant)
+                # 上下文信息：词条本身部分
+                context += f'提取自 {self.jar_file.path}:{self.path} 的第{str(original_constant.constant_index).zfill(4)}个常量\n' \
+                           f'原始数据："{original_constant.string}"\n' \
+                           f'译文数据："{translated_constant.string}"'
                 context += '\n\n'
 
             strings.append(String(key, original, translation, stage, context))
+
+        # 按已有的上下文信息排序
+        sorted_strings = sorted(strings, key=lambda s: s.context)
+        extra_context = '[同文件中的词条]\n'
+
+        # 上下文信息：class文件中的其他string
+        for s in sorted_strings:
+            extra_context += f'"{s.original}" => "{s.translation}" (https://paratranz.cn/projects/{PARA_TRANZ_PROJECT_ID}/strings?key={url_encode(s.key)})\n'
+
+        for s in strings:
+            s.context += extra_context
         return strings
-
-    def generate_constant_context(self, original_constant: Utf8Constant,
-                                  translation_constant: Optional[Utf8Constant]) -> str:
-        if not translation_constant:
-            return f'提取自 {self.jar_file.path}:{self.path} 的第{str(original_constant.constant_index).zfill(4)}个常量\n' \
-                   f'原始数据："{original_constant.string}"\n' \
-                   f'译文数据：无对应译文数据'
-
-        return f'提取自 {self.jar_file.path}:{self.path} 的第{str(original_constant.constant_index).zfill(4)}个常量\n' \
-               f'原始数据："{original_constant.string}"\n' \
-               f'译文数据："{translation_constant.string}"'
 
     def update_strings(self, strings: List[String]) -> int:
         """

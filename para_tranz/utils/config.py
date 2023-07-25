@@ -15,6 +15,7 @@ PARA_TRANZ_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'output'
 MAP_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'para_tranz_map.json'
 
 # [通用配置]
+PARA_TRANZ_PROJECT_ID = 3489
 # 在导出字符串时是否覆盖已导出字符串的翻译stage状态
 OVERRIDE_STRING_STATUS = False
 

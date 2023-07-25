@@ -3,6 +3,7 @@ import json
 import logging
 import re
 import sys
+import urllib.parse
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Set, List, Union
@@ -199,6 +200,8 @@ def normalize_class_path(class_path: str) -> str:
 
     return '/'.join([normalize(s) for s in segments[:-1]] + [class_name])
 
+def url_encode(s: str) -> str:
+    return urllib.parse.quote(s)
 
 class SetEncoder(json.JSONEncoder):
     """
@@ -212,6 +215,7 @@ class SetEncoder(json.JSONEncoder):
 
 
 if __name__ == '__main__':
-    print(normalize_class_path(
-        'com/fs/starfarer/renderers/A/OooOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO.class'))
-    print(normalize_class_path('com/fs/starfarer/launcher/opengl/GLModPickerV2.class'))
+    # print(normalize_class_path(
+    #     'com/fs/starfarer/renderers/A/OooOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO.class'))
+    # print(normalize_class_path('com/fs/starfarer/launcher/opengl/GLModPickerV2.class'))
+    print(url_encode('submarkets.csv#storage$name'))
