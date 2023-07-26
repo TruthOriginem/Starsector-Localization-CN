@@ -88,7 +88,7 @@ class DataFile:
                 f"Paratranz 平台数据文件 {relative_path(self.para_tranz_path)} 已存在，从中读取已翻译词条的词条stage状态")
 
             special_stages = (1, 2, 3, 5, 9, -1)
-            para_strings = self._read_json_strings(self.para_tranz_path)
+            para_strings = self.read_json_strings(self.para_tranz_path)
             para_key_strings = {s.key: s for s in para_strings if
                                 s.stage in special_stages}  # type:Dict[str, String]
             for s in strings:
@@ -98,7 +98,7 @@ class DataFile:
                         self.logger.debug(f"更新词条 {s.key} 的stage：{s.stage}->{para_s.stage}")
                         s.stage = para_s.stage
 
-        self._write_json_strings(self.para_tranz_path, strings, ensure_ascii, indent)
+        self.write_json_strings(self.para_tranz_path, strings, ensure_ascii, indent)
 
         self.logger.info(
             f'从 {relative_path(self.path)} 中导出了 {len(strings)} 个词条到 {relative_path(self.para_tranz_path)}')
@@ -109,7 +109,7 @@ class DataFile:
         :return:
         """
         if self.para_tranz_path.exists():
-            strings = self._read_json_strings(self.para_tranz_path)
+            strings = self.read_json_strings(self.para_tranz_path)
             self.update_strings(strings, version_migration)
             self.logger.info(
                 f'从 {relative_path(self.para_tranz_path)} 加载了 {len(strings)} 个词条到 {relative_path(self.translation_path)}')
@@ -127,7 +127,7 @@ class DataFile:
         raise NotImplementedError
 
     @staticmethod
-    def _read_json_strings(path: Path) -> List[String]:
+    def read_json_strings(path: Path) -> List[String]:
         strings = []
         with open(path, 'r', encoding='utf-8') as f:
             data = json.load(f)  # type:List[Dict]
@@ -137,7 +137,7 @@ class DataFile:
         return strings
 
     @staticmethod
-    def _write_json_strings(path: Path, strings: List[String], ensure_ascii=False, indent=4) -> None:
+    def write_json_strings(path: Path, strings: List[String], ensure_ascii=False, indent=4) -> None:
         path.parent.mkdir(parents=True, exist_ok=True)
         with open(path, 'w', encoding='utf-8') as f:
             data = []
