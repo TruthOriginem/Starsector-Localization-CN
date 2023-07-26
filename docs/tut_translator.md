@@ -17,7 +17,7 @@
 ## 进行翻译
 好啦，现在你就可以立刻开始翻译啦！不过在开始翻译之前，请务必阅读：
 
-- [远行星号译文格式规范](docs/format_standard.md)
+- [远行星号译文格式规范](format_standard.md)
 - [远行星号术语参考表](https://paratranz.cn/projects/3489/terms)
 
 ParaTranz 上的翻译以**词条**为单位，每一个词条
