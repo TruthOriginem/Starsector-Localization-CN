@@ -133,7 +133,7 @@ class DataFile:
             data = json.load(f)  # type:List[Dict]
         for d in data:
             strings.append(
-                String(d['key'], d['original'], d.get('translation', ''), d['stage']))
+                String(d['key'], d['original'], d.get('translation', ''), d['stage'], d.get('context', '')))
         return strings
 
     @staticmethod
