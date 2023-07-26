@@ -22,9 +22,9 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 不能安装在护卫和驱逐上，也无法与 目标定位系统 同时工作。
 
 除了一些特化的装配，绝大多数的战斗舰船都会选择安装 目标定位系统 而非 专注型目标锁定核心。",提高实弹和能量武器的射程。,Increases the range bonus to %s for cruisers and %s for capital ships.,graphics/hullmods/targeting_core.png
-Defensive Targeting Array,defensive_targeting_array,2,,,"special, merc, standard",Fighters,3000,,,,2,4,6,10,com.fs.starfarer.api.impl.hullmods.DefensiveTargetingArray,"Standard fighter communication links are re-purposed to provide short-range targeting data.
+护航定位阵列,defensive_targeting_array,2,,,"special, merc, standard",Fighters,3000,,,,2,4,6,10,com.fs.starfarer.api.impl.hullmods.DefensiveTargetingArray,"修改标准战斗机通讯链路，转而为战机提供短程目标定位数据。
 
-Increases fighter damage to missiles and other fighters by %s, but makes the fighters unable to leave the vicinity of their ship.","Increases fighter PD damage, reduces fighter roam range to zero.",Extends range of ballistic and energy weapons of the ship's fighters by %s units.,graphics/hullmods/defensive_targeting_array.png
+增加战机对导弹和敌机造成的伤害 %s，但致使战机无法远离战舰周边区域。",增加战机针对导弹与其他战机的伤害，将战机的出击范围降至零。,Extends range of ballistic and energy weapons of the ship's fighters by %s units.,graphics/hullmods/defensive_targeting_array.png
 电子反制组件,eccm,2,,,"offensive, defensive, merc, standard",Weapons,2500,,,,5,8,15,20,data.hullmods.ECCMPackage,"降低 %s 导弹被电子反制或热诱弹拦截的概率。
 
 为每枚导弹附加一个 CPU 辅核，能提高导弹 %s 的飞行速度以及 %s 的机动性，同时也显著改善了制导算法，即追踪能力。
@@ -47,14 +47,14 @@ Increases fighter damage to missiles and other fighters by %s, but makes the fig
 定向护盾生成器,frontshield,0,,,"shields, defensive, standard",Shields,4000,,,,5,10,15,25,data.hullmods.FrontShieldGenerator,"为舰船安装一部临时低效的护盾发生器。护盾为前盾且展开角度为 %s 度。
 
 该发生器会从引擎处抽取大量能源，而导致最高航速下降 %s。",为无盾船安装基础护盾，但降低最高航速。,,graphics/hullmods/front_shield_generator.png
-导弹自动装填器,missile_autoloader,1,,,"offensive, merc, standard",Weapons,6000,,,,8,12,20,30,com.fs.starfarer.api.impl.hullmods.MissileAutoloader,<tooltip created in the script due to sections/other complexity>,Reloads missile weapons in small missile mounts,Increases the post-reload cooldown to %s seconds.,graphics/hullmods/missile_autoloader.png
+导弹自动装填器,missile_autoloader,1,,,"offensive, merc, standard",Weapons,6000,,,,8,12,20,30,com.fs.starfarer.api.impl.hullmods.MissileAutoloader,<tooltip created in the script due to sections/other complexity>,为安装在小型导弹武器位上的导弹武器补充弹药。,Increases the post-reload cooldown to %s seconds.,graphics/hullmods/missile_autoloader.png
 强化护盾,hardenedshieldemitter,3,,,"shields, defensive, merc, standard",Shields,10000,,,,5,10,15,25,data.hullmods.HardenedShieldEmitter,降低 %s 护盾所受伤害，并降低护盾被 EMP 电弧击穿的概率。,降低护盾所受伤害。,,graphics/hullmods/hardened_shields.png
 硬化子系统,hardened_subsystems,0,,,"special, merc, standard",Special,2500,TRUE,,,5,10,15,25,data.hullmods.HardenedSubsystems,"提高 %s 峰值时间，防止舰船性能过早因长期部署而下降。
 
 同时还将战备值 (CR) 在战斗中衰减的速度降低 %s。",提高峰值时间，且降低战备值 (CR) 的衰减速率。,,graphics/hullmods/hardened_subsystems.png
 重型装甲,heavyarmor,0,,,"defensive, merc, standard",Defenses,2500,,,,8,15,20,40,data.hullmods.HeavyArmor,按舰船级别，提高 %s/%s/%s/%s 装甲。,提高装甲值。,Reduces the ship's maneuverability by %s.,graphics/hullmods/heavy_armor.png
 高散射增幅器,high_scatter_amp,3,,,"offensive, merc, standard",Weapons,5000,,,,4,8,12,20,com.fs.starfarer.api.impl.hullmods.HighScatterAmp,降低光束类武器的射程，并且使它们在对护盾造成伤害时产生硬幅能。,提高光束武器的伤害，还可对护盾造成硬幅能伤害，但降低其基础射程。,Increases beam weapon damage by an additional %s.,graphics/hullmods/high_scatter_amp.png
-整合点防御 AI,pointdefenseai,3,,,"defensive, merc, standard","Weapons, Defenses",10000,,,,3,6,9,15,data.hullmods.IntegratedPointDefenseAI,给予所有点防御武器识别并忽略诱饵弹的能力。此外，无论战备处于何种水平，所有点防御武器均可保持最佳精准度。且对导弹造成的伤害提高 %s。,所有非导弹的小型武器都具备点防能力。点防武器不会再被热诱弹干扰。,"All small non-missile weapons are classified as ""point-defense"", automatically target missiles, and are affected by point-defense stat modifiers.",graphics/hullmods/integrated_point_defense_ai.png
+整合点防御 AI,pointdefenseai,3,,,"defensive, merc, standard","Weapons, Defenses",10000,,,,3,6,9,15,data.hullmods.IntegratedPointDefenseAI,给予所有点防御武器识别并忽略诱饵弹的能力。此外，无论战备处于何种水平，所有点防御武器均可保持最佳精准度。所有舰载武器对导弹造成的伤害提高 %s。,所有非导弹的小型武器都具备点防能力。点防武器不会再被热诱弹干扰。,"All small non-missile weapons are classified as ""point-defense"", automatically target missiles, and are affected by point-defense stat modifiers.",graphics/hullmods/integrated_point_defense_ai.png
 #Point Defense Integration,pdintegration,3,,,"defensive, merc","Weapons, Defenses",10000,,,,12,15,18,24,com.fs.starfarer.api.impl.hullmods.PDIntegration,"Reduces the ordnance point cost of small point-defense weapons by %s. The cost reduction only affects weapons that have PD capability as a feature of the weapon itself, and not when it's gained through other means such as from a hullmod.
 
 In addition, all point-defense weapons deal %s more damage to all targets.","Reduces ordnance point cost of small PD weapons, increases all PD damage.",,graphics/hullmods/integrated_point_defense_ai.png
@@ -88,7 +88,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 因该行动会对相位空间造成严重扭曲，所以每场战斗 (无论敌友) 仅能进行一次这样的操作。",提高相位隐形时的软幅能耗散速率与武器充能速率，还能紧急下潜来规避致命伤害。,,graphics/hullmods/phase_anchor.png
 救援穿梭舱,recovery_shuttles,1,,,"special, standard",Fighters,4000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.RecoveryShuttles,降低战机联队 %s 的人员战损。,降低因战机损失而导致的人员伤亡。,Increases the fighter pilot casualty reduction to %s.,graphics/hullmods/recovery_shuttles.png
 强化舱壁,reinforcedhull,0,,,"defensive, merc, standard",Defenses,2500,TRUE,,,5,10,15,30,data.hullmods.ReinforcedBulkheads,提高舰船 %s 的结构值。且当该舰停机时，不会四分五裂且几乎总是可在战后修复。,提高舰船耐久，避免该舰船在停机时碎裂，并总是可被修复。,,graphics/hullmods/reinforced_bulkheads.png
-幅散管道扩容,fluxbreakers,2,,,"defensive, merc, standard","Special, Defenses",7000,,,,3,6,9,15,data.hullmods.FluxBreakers,Decreases the amount of EMP damage taken from weapons such as Ion Cannons by %s. Also increases the ship's flux dissipation rate while venting by %s.,降低受到的 EMP 损伤，加快强制排幅速度。,Increases the flux dissipation rate while venting by a further %s.,graphics/hullmods/resistant_flux_conduits.png
+幅散管道扩容,fluxbreakers,2,,,"defensive, merc, standard","Special, Defenses",7000,,,,3,6,9,15,data.hullmods.FluxBreakers,降低 %s 武器、引擎受到的 EMP 损伤。并提高 %s 强制排幅的速率。,降低受到的 EMP 损伤，加快强制排幅速度。,Increases the flux dissipation rate while venting by a further %s.,graphics/hullmods/resistant_flux_conduits.png
 安全协议超驰,safetyoverrides,0,,,"special, engines, offensive, merc, no_build_in, standard","Special, Engines",2500,TRUE,,,15,30,45,70,data.hullmods.SafetyOverrides,"禁用舰船的安全协议，根据舰船级别提高 %s/%s/%s 舰船战斗中的最高航速，也会对应提高加速度。零幅能加速在任何幅能水平下都能生效。幅能耗散将直接提高至 %s 倍 (包括来自其他船插、改装的部分)。
 
 峰值时间降低为原来的 %s 分之一，禁用强制排幅，且所有武器射程超过 %s 单位的部分将极大衰减。
@@ -123,7 +123,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 同时降低该舰 %s 的被侦测范围。",令引擎更不易失效，且该舰的被侦测范围降低。,"Increases engine durability by a further %s, and Increases the sensor profile reduction to %s.",graphics/hullmods/insulated_engine_assembly.png
 军事化子系统,militarized_subsystems,0,,,"req_spaceport, merc, standard","Special, Logistics, Requires Dock",6000,TRUE,,,4,8,12,20,com.fs.starfarer.api.impl.hullmods.MilitarizedSubsystems,"移除民用级船体的惩罚，并提高 %s 最大宇宙航速。
 
-提高 %s 最低船员需求。",消除传感器惩罚、提升最高宇宙航速、并增加所需船员数量。,Negates the increased crew requirements.,graphics/hullmods/militarized_subsystems.png
+提高 %s 最低船员需求。",消除传感器惩罚、提高最大宇宙航速、并增加所需船员数量。,Negates the increased crew requirements.,graphics/hullmods/militarized_subsystems.png
 恒星防护层,solar_shielding,2,,,"defensive, req_spaceport, merc, standard","Defenses, Logistics, Requires Dock",5000,,,,3,6,9,15,data.hullmods.SolarShielding,"最早由辛达的工程师为应对 Askonia 星系核心区的独特环境而研发。降低 %s 日冕对战备值 (CR) 的影响，对超空间内的风暴也有同样的作用。
 
 战斗中降低 %s 舰船所受到的能量伤害。",降低日冕惩罚与所受能量武器的伤害。,Increases the protection from solar coronae and similar hazards to %s.,graphics/hullmods/solar_shielding2.png
@@ -134,9 +134,9 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 共享幅散管道,shared_flux_sink,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.SharedFluxSink,根据当前存活模块的数量，最高提高 %s 的幅能耗散。如果模块在战斗中遭到破坏，幅能耗散增益将在剩余模块间重新分配。而 %s 耗散增益将适用于硬幅能耗散。,模块损失后提高其他模块幅能与硬幅能的耗散效率。,,graphics/hullmods/shared_flux_sink.png
 感应雷区,stealth_minefield,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.StealthMinefield,战场周遭会布置大量感应空雷，并破坏靠近的敌舰。,战场周遭会布置大量感应空雷，并破坏靠近的敌舰。,,graphics/hullmods/stealth_mines.png
 感应雷区,stealth_minefield_lt,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.StealthMinefieldLT,战场周遭会布置大量感应空雷，并破坏靠近的敌舰。,战场周遭会布置大量感应空雷，并破坏靠近的敌舰。,,graphics/hullmods/stealth_mines.png
-B-Deck,bdeck,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.BDeck,"Once per combat, when the fighter replacement rate reaches %s, the fighter launch bays are switched over to operate from a ""B-Deck"".
+后备甲板,bdeck,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.BDeck,"当战机整备速率下降到 %s 时，舰船将换用一套备用甲板，每次战斗可使用一次。
 
-Standby fighters are launched to rapidly bring the wings back up to full strength, and the fighter replacement rate is set to %s.",Launches fresh wing once per combat and replenishes the replacement rate.,,graphics/hullmods/bdeck.png
+切换至备用甲板时，将迅速部署后备战机以补满本舰部署的全部战机联队，并使战机整备速率恢复至 %s 。",每场战斗可以恢复一次整备速率并部署补充战机。,,graphics/hullmods/bdeck.png
 战机底盘储备,chassis_storage,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.FighterChassisStorage,即便战机遭到破坏，也不会降低战机整备速率。,战机整备速率不会下降。,,graphics/hullmods/expanded_deck_crew.png
 保持开盾,shield_always_on,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.ShieldAlwaysOn,,强制开启护盾。,,graphics/hullmods/hardened_shields.png
 导弹自动工厂,missile_reload,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PeriodicMissileReload,内置的导弹工厂会定期补满所有导弹武器。,内置的导弹工厂会定期补满所有导弹武器。,,graphics/hullmods/expanded_missile_racks.png
@@ -146,7 +146,7 @@ Standby fighters are launched to rapidly bring the wings back up to full strengt
 磁通分流,fluxshunt,,,,,,,,TRUE,,10,20,30,50,data.hullmods.FluxShunt,允许舰船以 %s 的正常耗散速率在护盾开启时耗散硬幅能。,允许舰船在展开护盾时耗散硬幅能。,,graphics/hullmods/flux_shunt.png
 民用级舰体,civgrade,,,,,,,,TRUE,,0,0,0,0,data.hullmods.CivGrade,提高 %s 被侦测范围，降低 %s 探测范围。,提高被侦测范围，降低探测范围。,,graphics/hullmods/civilian_grade.png
 高维护需求,high_maintenance,,,,,,,,TRUE,,0,0,0,0,data.hullmods.HighMaintenance,提高 %s 的每月维护所需补给。,提高维护成本。,,graphics/hullmods/high_maintenance.png
-Energy Bolt Coherer,coherer,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.EnergyBoltCoherer,<tooltip created in the script>,Increases base range of non-beam energy weapons.,,graphics/hullmods/coherer.png
+能量弹体同调器,coherer,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.EnergyBoltCoherer,<tooltip created in the script>,增加 非光束 能量武器的基础射程。,,graphics/hullmods/coherer.png
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
@@ -163,15 +163,15 @@ Energy Bolt Coherer,coherer,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullm
 
 当峰值时间耗尽后，战备值 (CR) 衰减的速率提高 %s。",提高峰值时间耗尽后的战备值 (CR) 衰减速率。,,graphics/hullmods/delicate_machinery.png
 重弹集成,hbi,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.HeavyBallisticsIntegration,降低 %s 点所有大型实弹武器所需的装配点。,降低大型实弹武器所需装配点。,,graphics/hullmods/ballistics_integration.png
-Vast Hangar,vast_hangar,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.VastHangar,"The ship has a huge hangar and a commensurate small fleet of support craft.
+巨型机库,vast_hangar,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.VastHangar,"该舰拥有足以支援一个小型舰队的巨型机库。
 
-The number of fighter bays added by Converted Hangar is increased by %s, and its performance matches that of a dedicated fighter bay - all of the penalties and modifiers, including those to the ship's deployment cost, are negated.",Increases the effect of Converted Hangar and removes its penalties.,,graphics/hullmods/vast_hangar.png
+若安装 改装机库，则额外再提供 %s 个甲板，并抵消其包括整备时间、舰船部署点在内的全部负面副作用。",增强 改装机库 的效果并移除所有惩罚。,,graphics/hullmods/vast_hangar.png
 坚固结构,rugged,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.RuggedConstruction,"将大多数 D-插件 的负面影响降低 %s。如果在战斗中停机或被摧毁，则该舰有 %s 的几率避免新 D-插件 的产生，且几乎总是可在战后修复。
 
 此外，用于该舰用于恢复部署战备损耗以及停机修复所需的补给降低 %s。",降低 D-插件 的影响，且几乎总是可在战后修复。,,graphics/hullmods/rugged_construction.png
 全自动舰船,automated,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.Automated,"能全自动化运作，无需人类船员操作，亦无法搭载任何人类。
 
-自动化舰船需要专门的设备与专业知识才能进行日常维护，从而导致 %s 的战备值 (CR) 上限惩罚。但这个惩罚可被一名熟练操控自动化舰船的舰队指挥官所抵消。",无需船员也无法搭载船员。,,graphics/hullmods/automated.png
+自动化舰船通常需要专门的设备与专业知识才能进行日常维护，从而导致 %s 的战备值 (CR) 上限惩罚。这个惩罚可被一名熟练操控自动化舰船的舰队指挥官所抵消。",无需船员也无法搭载船员。,,graphics/hullmods/automated.png
 先进目标定位核心,advancedcore,,,,,,,,TRUE,,0,0,0,0,data.hullmods.AdvancedTargetingCore,"提高 %s 实弹与能量武器射程，但点防类武器仅提高 %s。
 
 与 目标定位系统 和 专注性目标锁定核心 冲突。",极大地提高非导弹武器的射程。,,graphics/hullmods/advanced_targeting_core.png
@@ -180,18 +180,18 @@ The number of fighter bays added by Converted Hangar is increased by %s, and its
 同时也提高了瞄准精度，并大幅度提高战斗探测范围。",极大地提高非导弹武器的射程。,,graphics/hullmods/targeting_supercomputer.png
 实验性相位线圈,ex_phase_coils,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.ExperimentalPhaseCoils,降低 %s 相位线圈的冷却时间。,极大地降低相位线圈的冷却时间。,,graphics/hullmods/phase_coils_experimental.png
 感灵吸引场,high_frequency_attractor,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.combat.BaseHullMod,一种实验性改造，使得该舰所搭载的裂隙核心可以裹挟能量读数更高的光尘。,发射更强力的光尘。,,graphics/hullmods/high_volition_attractor.png
-Ablative Armor,ablative_armor,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.AblativeArmor,"An ancient design intended to stop micro-meteorites through sheer volume of material in place, before the advent of ""spaced"" armor.
+烧蚀装甲,ablative_armor,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.AblativeArmor,"在现代 ""间隙"" 装甲出现之前的一种古老设计，通过纯粹堆砌大量材料以抵御微陨石。
 
-Reduces the effective armor strength for the damage reduction calculation to %s of its actual value. However, ships of this design tend to carry extremely heavy armor.",Reduces damage reduction by armor.,,graphics/hullmods/ablative_armor.png
-Distributed Fire Control,distributed_fire_control,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DistributedFireControl,"Much of the damage that takes weapons offline is to external control runs and power conduits. This ship's weapons are engineered to operate more independently, reducing their exposure to damage by %s and reducing the EMP damage taken by the ship overall by %s.",增加武器耐久度并降低受到的EMP伤害。,,graphics/hullmods/distributed_fire_control2.png
+将减少伤害计算的 有效装甲强度 降低到其实际值的 %s。不过，采用这种设计的舰船往往拥有极其厚重的装甲。",降低装甲的减伤效果。,,graphics/hullmods/ablative_armor.png
+分布式火控系统,distributed_fire_control,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DistributedFireControl,大部分导致武器系统离线的伤害都发生在外部控制线路和供电线路上。这艘船的武器系统设计布局具备更强的独立运作能力，降低 %s 武器系统所受伤害，并降低 %s 全船受到的 EMP 效果。,增加武器耐久度并降低受到的 EMP 效果。,,graphics/hullmods/distributed_fire_control2.png
 改装货舱,converted_bay,1,,,,,,,TRUE,,0,0,0,0,data.hullmods.ConvertedCargoBay,该舰的标准货舱已被改装成临时飞行甲板。不可靠的简易制造车间只能产出劣质的战机底盘，且大量内部构件都具有轻微缺陷，导致战机航速降低 %s 且所受伤害提高 %s。,用货舱临时改装成的飞行甲板。,,graphics/hullmods/converted_hangar.png
-特殊改装,andrada_mods,,,,dmod,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.AndradaMods,"During an inspection of an early prototype, the Supreme Executor was heard to comment unfavorably on exposed conduits running along the passageways, and the danger these must pose to the brave and loyal crew under combat conditions. 
+忠诚改装,andrada_mods,,,,dmod,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.AndradaMods,"在检查早期原型船体时，最高元首批评了人员过道中裸露的管线，指出它们必然会在战斗中对英勇而忠诚的船员们构成危险。
 
-The new chief designer, a loyal officer appointed by the Supreme Executor himself, instructed the forge-programmers to make accommodations for the installation of special blast-proof insulated paneling produced by Sindria itself.
+为此，由最高元首钦点上任的新任首席设计师下令让锻炉工程师修改了蓝图，为船体添加了 Sindria 出产的特制防爆绝缘镶板。
 
-If the passages are a bit narrower, conduits prone to overheating, and flush-set panels somewhat unwieldy to access, the official readiness reports include no criticism of the changes. Everyone agrees in both public and - as the Internal Security Ministry can attest - in private, that the stark grandeur of the Lion's Guard fleet is breathtaking.
+虽然这一改动令通道更难通行，又令导管更易过热，还让检修面板更难以触及，不过官方报道对此毫无意见。辛达强权内安部也可以证明，无论是公开还是私下，所有人都认为它让狮心舰队更加伟大。
 
-Crew casualties in combat are increased by %s. The base flux dissipation rate is reduced by %s, and the repair rate for disabled weapons and engines is reduced by %s.",降低了船只的性能。,,graphics/hullmods/special_modifications.png
+提高 %s 战斗中因船体结构受损而造成的船员伤亡。降低 %s 舰船基础幅能耗散，降低 %s 在战斗中修复受损武器及引擎的速率。",降低舰船性能。,,graphics/hullmods/special_modifications.png
 庞然大物,vastbulk,,,,,,,,TRUE,,0,0,0,0,data.hullmods.VastBulk,其巨大的主体结构几乎可以承受所有常规伤害而不被摧毁。,,,graphics/hullmods/vast_bulk.png
 绕轴旋转,axialrotation,,,,,,,,TRUE,,0,0,0,0,data.hullmods.AxialRotation,这个结构一直绕着它的中心轴旋转。,,,graphics/hullmods/axial_rotation.png
 固定旋转,anchorrotation,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.AnchorRotation,该结构围绕着固定锚点进行旋转，仅适用于空间站模块。,,,graphics/hullmods/axial_rotation.png

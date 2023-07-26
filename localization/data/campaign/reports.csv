@@ -66,43 +66,43 @@ $market 的食品价格恢复正常水平。",,graphics/icons/markets/food_short
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 # player smuggling investigation,,,,,,,,,,,,
-investigation_smuggling,start_smuggling,,,secure_comm,$market 开展走私调查,你的一位在 $market's 的犯罪集团中联系人发来加密信息警告你，$theMarketFaction 当局已经对最近的走私活动展开了调查。,"If the investigation finds you involved in the smuggling, $theMarketFaction will become inhospitable towards you.
+investigation_smuggling,start_smuggling,,,secure_comm,$market 开展走私调查,你的一位在 $market's 的犯罪集团中联系人发来加密信息警告你，$theMarketFaction 当局已经对最近的走私活动展开了调查。,"如果调查发现你涉及走私活动，$theMarketFaction 将会对你产生敌意。
 
-$InvestigatorPost $investigatorName is charged with carrying out the investigation. You may be able to influence the outcome by contacting $invHimOrHer.
+$InvestigatorPost $investigatorName 被委派进行此次调查。你也许能通过联系 $invHimOrHer 来影响调查结果。
 
-The investigation will last for $duration.",,,important,,
-investigation_smuggling,clear_smuggling,,,player_intel_always,Smuggling investigation $onOrAt $market - cleared,"The $marketFaction smuggling investigation is over, and it looks like your name was cleared - or, at least, there was no conclusive evidence to prove your involvement.",Relationship with $theMarketFaction is unaffected.,,,important,,
-investigation_smuggling,clear_smuggling_bribe,,,player_intel_always,Smuggling investigation $onOrAt $market - cleared,"The $marketFaction smuggling investigation has been completed according to your ""special arrangement"" with $investigatorName, and this particular stain on your reputation has been erased.","Bribe to $InvestigatorPost $investigatorName was effective.
+调查将持续 $duration。",,,important,,
+investigation_smuggling,clear_smuggling,,,player_intel_always,$market 的走私调查无果而终。,$marketFaction 的走私调查已经结束，看起来你是清白的——起码没有确凿的证据证明你涉嫌走私。,与 $theMarketFaction 的关系未受影响。,,,important,,
+investigation_smuggling,clear_smuggling_bribe,,,player_intel_always,$market 的走私调查无果而终。,"在你和 $investigatorName 的 ""特殊安排"" 之下，$marketFaction 的走私调查已经结束，你名声中的这个污点已经被擦去。","对 $InvestigatorPost $investigatorName 的收买见效了。 
 
-Relationship with $theMarketFaction is unaffected.",,,important,,
-investigation_smuggling,player_guilty_smuggling,,,player_intel_always,Smuggling investigation $onOrAt $market - convicted,"The $marketFaction investigation has concluded that you were, indeed, involved in the recent smuggling activity.",,,,important,,
+与 $theMarketFaction 的关系未受影响。",,,important,,
+investigation_smuggling,player_guilty_smuggling,,,player_intel_always,因 $market 的走私活动，你已被定罪,$marketFaction 的调查结果表明，你与近期的走私活动密切相关。,,,,important,,
 # faction good reputation investigation,,,,,,,,,,,,
-investigation_goodrep,start_goodrep,,,secure_comm,$MarketFaction investigation of your ties to $OtherFaction,An encryped message from one of your contacts $onOrAt $market warns you that $theMarketFaction authorities have launched an investigation into your ties with $theOtherFactionLong.,"$TheMarketFaction may become hostile towards you as a result of the investigation.
+investigation_goodrep,start_goodrep,,,secure_comm,$MarketFaction 正在调查你和 $OtherFaction 的关系,你在 $market 的一位联络人用加密信息警告你， $theMarketFaction 官方已经针对你和 $theOtherFactionLong 的关系展开了调查。,"基于此次调查的结果， $TheMarketFaction 与你的关系可能会转为敌对。
 
-$InvestigatorPost $investigatorName $onOrAt $market is charged with carrying out the investigation. You may be able to influence the outcome by contacting $invHimOrHer.
+$market 的 $InvestigatorPost $investigatorName 正在主持调查。你或许可以通过联络$invHimOrHer来影响调查的结果。
 
-The investigation will last for $duration.",,,important,,
-investigation_goodrep,clear_goodrep,,,player_intel_always,$MarketFaction investigation of your ties to $OtherFaction - cleared,"The $marketFaction investigation of your ties with $theOtherFactionLong is over, and you've been cleared of acting against $marketFaction interests.",Relationship with $theMarketFaction is unaffected.,,,important,,
-investigation_goodrep,clear_goodrep_bribe,,,player_intel_always,$MarketFaction investigation of your ties to $OtherFaction - cleared,"The $marketFaction investigation of your ties with $theOtherFactionLong has been completed according to your ""special arrangement"" with $investigatorName, and you've been cleared of acting against $marketFaction interests.","Bribe to $InvestigatorPost $investigatorName was effective.
+本次调查将持续 $duration 。",,,important,,
+investigation_goodrep,clear_goodrep,,,player_intel_always,$MarketFaction 已停止调查你和 $OtherFaction 的关系。,$marketFaction 已停止调查你和 $theOtherFactionLong 的关系，你摆脱了损害 $marketFaction 利益的嫌疑。,与 $theMarketFaction 的关系未受影响。,,,important,,
+investigation_goodrep,clear_goodrep_bribe,,,player_intel_always,$MarketFaction 已停止调查你和 $OtherFaction 的关系。,"$marketFaction 对你和 $theOtherFactionLong 之间的关系已经调查完毕。按照你和 $investigatorName 的 ""特殊安排"" ，你已摆脱了损害 $marketFaction 利益的嫌疑。","对 $InvestigatorPost $investigatorName 的收买见效了。 
 
-Relationship with $theMarketFaction is unaffected.",,,important,,
-investigation_goodrep,player_guilty_goodrep,,,player_intel_always,$MarketFaction investigation of your ties to $OtherFaction - convicted,The $marketFaction investigation of your ties with $theOtherFactionLong has concluded that you've been acting against the interests of $theMarketFaction. It is clear that you will be treated with particular suspicion by $theMarketFaction.,,,,important,,
+与 $theMarketFaction 的关系未受影响。",,,important,,
+investigation_goodrep,player_guilty_goodrep,,,player_intel_always,由于调查发现你和 $OtherFaction 的关系，你已被 $MarketFaction 定罪。,$marketFaction 调查了你和 $theOtherFactionLong 的关系，结果显示你的行为损害了 $theMarketFaction 的利益。很明显，你将受到 $theMarketFaction 的高度怀疑。,,,,important,,
 ,,,,,,,,,,,,
 # comm sniffer investigation,,,,,,,,,,,,
-investigation_comm_sniffer,start_comm_sniffer,,,player_intel_always,Lost contact with comm sniffer at $name,The comm sniffer you've installed on $name has stopped reporting. This is likely due to it being removed by security software. It's possible that a manual audit of the security logs will spawn an investigation into the sniffer's origin.,Comm sniffer at $name is no longer operational.,,,,,
-investigation_comm_sniffer,player_guilty_comm_sniffer,,,player_intel_always,Comm sniffer at $name traced back to you,A thorough audit of the security logs on $name has resulted in you being blamed for the security breach.,,,,,,
+investigation_comm_sniffer,start_comm_sniffer,,,player_intel_always,与 $name 的通讯嗅探器失去联络,你在 $name 安装的通讯嗅探器已停止汇报，这可能是因为它已经被安全软件所清除。对安全日志进行人工审核有可能引发针对嗅探器来源的调查。,$name 的嗅探器已停止工作。,,,,,
+investigation_comm_sniffer,player_guilty_comm_sniffer,,,player_intel_always,$name 的通讯嗅探器已经追踪到你了,对 $name 上的安全日志进行彻底审查后，你被指认为安全漏洞的罪魁祸首。,,,,,,
 ,,,,,,,,,,,,
 # trade disruption reports,,,,,,,,,,,,
-trade_disruption,report_td,,,news,Trade disrupted $onOrAt $market in the $marketSystem system,Trade fleets going to or from $market are not reaching their destination in significant numbers. The report points to piracy or war as being the most likely culprits.,"Prices likely to revert to norm within two months.
+trade_disruption,report_td,,,news,在 $marketSystem 星系中的 $market 上进行的交易被打乱了。 ,有大量来往于 $market 的贸易舰队未能抵达目的地。报告指出，原因很可能是海盗和战乱。,"价格可能在两个月内恢复正常。
 
-The following commodities are affected:
+以下商品将受到影响：
 $commoditySummary
 
-Select ""prices"" and switch to the map tab for details.",,graphics/icons/markets/trade_disruption.png,prices,,
-trade_disruption,report_smuggling,,,news,Smuggling activity $onOrAt $market in the $marketSystem system,The situation $onOrAt $market has grown less stable as a result of recent smuggling activity. The local authorities are promising a full-scale investigation.,Stability reduced by $smugglingPenalty.,,graphics/icons/markets/smuggling.png,,,
-trade_disruption,report_smuggling_player,,,news,Smuggling activity $onOrAt $market in the $marketSystem system,"The situation $onOrAt $market has grown less stable as a result of recent smuggling activity, in which you've been involved. The local authorities are promising a full-scale investigation.","Stability reduced by $smugglingPenalty.
+选择“价格”并切换到地图选项以获取详细信息。",,graphics/icons/markets/trade_disruption.png,prices,,
+trade_disruption,report_smuggling,,,news,$marketSystem 星系的 $market 发生走私活动,近期的走私活动导致 $market 上的局势失去稳定。地方当局承诺，将就此事展开全面调查。,$smugglingPenalty 导致稳定性降低。,,graphics/icons/markets/smuggling.png,,,
+trade_disruption,report_smuggling_player,,,news,$marketSystem 星系的 $market 发生走私活动,你近期参与的走私活动导致 $market 上的局势失去稳定。地方当局承诺，将就此事展开全面调查。,"$smugglingPenalty 导致稳定性降低。
 
-Your recent actions have contributed to the situation.",,graphics/icons/markets/smuggling.png,,,
+你最近的行为促成了这一局面。",,graphics/icons/markets/smuggling.png,,,
 ,,,,,,,,,,,,
 # rep changes,,,,,,,,,,,,
 rep_tracker,trade_rep,,,player_intel_always,Standing with $theFaction improved due to trade,There are indications that your recent trading activity at $marketList has been noted by $theFaction.,,,,nomap,,
@@ -234,15 +234,15 @@ analyze_entity,accept,,,secure_comm,Accepted: run sensor package on $entityName 
 
 Mission will be considered completed and payment posted immediately upon running the sensor package.",$locationHint,,,"no_system_prefix, important",,
 analyze_entity,failure,,,player_intel_always,Failed: run sensor package on $entityName in $systemName,Mission failed - deadline not met.,,,,"no_system_prefix, important",,
-analyze_entity,success,,,player_intel_always,Completed: run sensor package on $entityName in $systemName,Mission completed successfully.,$rewardCredits gained.,,,"no_system_prefix, important",,
+analyze_entity,success,,,player_intel_always,Completed: run sensor package on $entityName in $systemName,任务成功完成。,获得了 $rewardCredits。,,,"no_system_prefix, important",,
 ,,,,,,,,,,,,
 # survey planet mission,,,,,,,,,,,,
-survey_planet,posting,,,posting,Run a full survey on $planetName in $systemName within $daysLeft for $rewardCredits payment.,Mission will be considered completed and payment posted immediately upon survey completion.,$surveyInfo,,,no_system_prefix,,
+survey_planet,posting,,,posting,在 $daysLeft 天内对 $systemName 星系中的 $planetName 进行完整扫描以获得 $rewardCredits。,Mission will be considered completed and payment posted immediately upon survey completion.,$surveyInfo,,,no_system_prefix,,
 survey_planet,accept,,,secure_comm,Accepted: run a full survey on $planetName in $systemName,"$rewardCredits reward, must be completed within $daysLeft.
 
 Mission will be considered completed and payment posted immediately upon survey completion.",$surveyInfo,,,"no_system_prefix, important",,
 survey_planet,failure,,,player_intel_always,Failed: run a full survey on $planetName in $systemName,Mission failed - deadline not met.,,,,"no_system_prefix, important",,
-survey_planet,success,,,player_intel_always,Completed: run a full survey on $planetName in $systemName,Mission completed successfully.,$rewardCredits gained.,,,"no_system_prefix, important",,
+survey_planet,success,,,player_intel_always,Completed: run a full survey on $planetName in $systemName,Mission completed successfully.,获得了 $rewardCredits。,,,"no_system_prefix, important",,
 ,,,,,,,,,,,,
 # tutorial mission,,,,,,,,,,,,
 tutorial_mission,start,,,secure_comm,Secure communication from Ancyra,"You receive a tight-beam communication from the system's main inhabited world, Ancyra.
@@ -320,7 +320,7 @@ civil_disorder,end1,,,news,,Martial law has been lifted as peace returns to $mar
 civil_disorder,end2,,,news,,Marines have been withdrawn from major population centers as peace returns to $market.,Production is back to normal levels.,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
-sindria_terrorists,likely,,,sindrian_diktat_internal,Possible terrorist attacks on Sindria,Intelligence indicates that terrorists have obtained a cache of illegal weapons and intend to use them against government targets.,Likely decreased production on Sindria.,,,,,precursor to terrorist attacks
+sindria_terrorists,likely,,,sindrian_diktat_internal,Possible terrorist attacks on Sindria,情报显示，恐怖分子获得了一批非法武器，并计划使用这些武器对付政府的目标,Sindria 的产能可能下降。,,,,,precursor to terrorist attacks
 sindria_terrorists,start1,,,news,Terrorist attacks on Sindria,A public monument commemorating the Lion's military victories was destroyed in a midnight bombing that was swiftly condemned by Diktat officials. A temporary curfew has been imposed in the major hive-cities and security patrols increased.,Decreased production on Sindria.,,,,,start option 1
 sindria_terrorists,start2,,,news,Terrorist attacks on Sindria,Several bombs were found and defused in key Sindrian industrial centers. Facilities all over the planet have been shut down and searched for bombs. A Diktat official announced the assembly of a special taskforce to find the perpetrators.,Decreased production on Sindria.,,,,,start option 2
 sindria_terrorists,start3,,,news,Terrorist attacks on Sindria,A series of bombings targeting Diktat administration offices has taken place on Sindria. A statement released by Diktat officials promised that the terrorists would be brought swift justice.,Decreased production on Sindria.,,,,,start option 3
