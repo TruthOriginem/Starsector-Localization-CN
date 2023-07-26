@@ -2938,7 +2938,7 @@ lppEnding4e,DialogOptionSelected,$option == lpp_ending4Policy,"$player.luddicAtt
 $option = lpp_ending4makeTea 0
 FireBest DialogOptionSelected","""传闻你幽默风趣，巧舌如簧，那你也一定能把庆祝和谈判的氛围炒热吧。就算是现在我也在考虑，到底有没有必要展现出一丁点殷勤好客的意思。""",,
 lppEnding4makeTea,DialogOptionSelected,$option == lpp_ending4makeTea,"$option = lpp_ending5blind 0
-FireBest DialogOptionSelected","她握住水壶的握把，“不论你愿不愿意喝，我都会把茶倒好，”她边说边动手倒满了茶壶，双眼全程都未曾聚焦。
+FireBest DialogOptionSelected","她握住水壶的握把，""不论你愿不愿意喝，我都会把茶倒好，""她边说边动手倒满了茶壶，双眼全程都未曾聚焦。
 
 你意识到，她已目盲。",,
 lppEnding4water,DialogOptionSelected,$option == lpp_ending4water,"$playerWantedWater = true 0
@@ -3024,7 +3024,7 @@ FireAll LPPEndingJaspisHub","""我很好奇，你到底是在侮辱我还是赞�
 ""或者，确切来讲，她是派别人替她去敲这扇门。"" 大祭司轻蔑地挥了挥手，""我觉得你为她干的活并不符合你的性格。如果我回应了你这口是心非的恭维，那你为 Baird 所做的一切便能印证我的想法""",,
 lppJaspisWhatDo,DialogOptionSelected,$option == lpp_jaspisWhatDo,"$askedJaspis++ 0
 $askedWhatDo = true 0
-FireAll LPPEndingJaspisHub","""不。我手下的 '重锤' 是..."" 她朝你颌首致意，""一个比你谦逊得多的人。而他在探索时需要协助，你也许将为此提供服务。”
+FireAll LPPEndingJaspisHub","""不。我手下的 '重锤' 是..."" 她朝你颌首致意，""一个比你谦逊得多的人。而他在探索时需要协助，你也许将为此提供服务。""
 
 她啜饮了几口茶，道：""请你一定要理解，我所说的协助，并不完全是指战争与怒火。只要辅以技巧，智慧与虔诚，即便是 '重锤' 出击也可以做到无声无息。""",,
 lppJaspisWhatGoal,DialogOptionSelected,$option == lpp_jaspisWhatGoal,"$askedJaspis++ 0
@@ -3074,7 +3074,7 @@ lppJaspisWrapUp1,DialogOptionSelected,$option == lpp_jaspisWrapUp1,"#$option = l
 lppJaspisWrapUp2a,DialogOptionSelected,"!$askedWhatDo
 $option == lpp_jaspisWrapUp2","$askedWhatDo = true 0
 $option = lpp_jaspisWrapUp2 0
-FireBest DialogOptionSelected","""我的 '重锤' 是..."" 她朝你颌首致意，似乎确认了什么，""一个比你谦逊得多的人。但他在探索时需要帮助，你也许会为此提供协助。”",,
+FireBest DialogOptionSelected","""我的 '重锤' 是..."" 她朝你颌首致意，似乎确认了什么，""一个比你谦逊得多的人。但他在探索时需要帮助，你也许会为此提供协助。""",,
 lppJaspisWrapUp2b,DialogOptionSelected,"$askedWhatDo
 $option == lpp_jaspisWrapUp2",,"""我的特工是卢德骑士团的见习修士。他被派到这里来工作是为了取得骑士爵位。在他潜入臭名昭著的卢德左径的一个异端武装成员基地后，我已经有一段时间没有收到他的讯息了。""
 
@@ -3239,7 +3239,7 @@ FireBest DialogOptionSelected","官员点了点头，理顺他的制服，然后
 他之后得意地迈向圣地入口，脚跟咯吱一声停顿，而后旋转。所有这些动作都是按阅兵级别执行的。",,
 lppVolturnOfficialCommission1,DialogOptionSelected,$option == lpp_volturnOfficialCommission1,$market.usedCommissionOnShrineOfficial = true,"这个官员手里变出一个数据平板，他反复抬头在你和数据平板之间来回比较。
 
-“我，我衷心向您道歉，$playerSirOrMadam，”军官结结巴巴地说到，“我早该被通知并且提前做好准备的，”他环视四周左顾右盼，最后盯准了征召兵们不放。",lpp_volturnOfficialCommission2:继续,
+""我，我衷心向您道歉，$playerSirOrMadam，""军官结结巴巴地说到，""我早该被通知并且提前做好准备的，""他环视四周左顾右盼，最后盯准了征召兵们不放。",lpp_volturnOfficialCommission2:继续,
 lppVolturnOfficialCommission2,DialogOptionSelected,$option == lpp_volturnOfficialCommission2,"$option = lpp_volturnShrineFirstVisit1
 FireBest DialogOptionSelected","""立正！""他大喊到，引发了一系列慌乱的举动 —— 丢下麻醉烟，然后抬起枪，再接着是敬礼。
 
@@ -9534,7 +9534,7 @@ gaKAReturnToAcademy7,DialogOptionSelected,$option == gaKA_return7,,"在一片寂
 gaKAReturnToAcademy8NoCoureuse,DialogOptionSelected,"$option == gaKA_return8
 !$global.foundCoureuse",AddCredits 100000,"你跟着 Baird 院长走进她的办公室，之后门悄悄地关上了。她一边打开命令面板，一边示意你可以坐在她桌前的座位上。
 
-“舰长，让我适当地为您的出色工作给予报酬。”她轻敲一下界面发出转账命令，你的个人数据平板随即发出了响应。 “我相信这能补偿您的一些损失。”
+""舰长，让我适当地为您的出色工作给予报酬。""她轻敲一下界面发出转账命令，你的个人数据平板随即发出了响应。 ""我相信这能补偿您的一些损失。""
 
 你的个人数据平板响应：收到资金转账。",gaKA_return8b:继续,
 gaKAReturnToAcademy8b,DialogOptionSelected,$option == gaKA_return8b,,"Now Baird's interface pings; an incoming signal. ""Ah, good,"" Baird says, and slides a datapad over for your inspection.
@@ -12074,7 +12074,7 @@ AddCredits 150000","""尽管经验不足，她依然表现得很好，尤其是�
 ""在我们结束谈话之前，我应当先处理一下你的报酬问题。"" 她一边说着，一边输入了一串指令。",gaPZ_return7:继续,
 gaPZ_return7,DialogOptionSelected,$option == gaPZ_return7,"AddStoryPoints 1
 $global.gaPZ_completed = true
-Call $global.gaPZ_ref updateStage","“不久之后还会有更多事情要劳烦你的，舰长。” 她说到。""更多不可思议的事情。""
+Call $global.gaPZ_ref updateStage","""不久之后还会有更多事情要劳烦你的，舰长。"" 她说到。""更多不可思议的事情。""
 
 在关闭通讯链接之前，Baird 心满意足地笑了，很是一反常态。",cutCommLinkNoText:切断通讯链接,
 ,,,,,,
@@ -22680,9 +22680,9 @@ Macario sighs, irritated. ""I am surrounded, surrounded by idiots,"" he mutters.
 ""Captain,"" he sits up, speaking clearly now. ""I suppose if it works, it works. I would be bored silly if it weren't for the inventiveness of Luddic zealots and the Hegemony's meddling. Are you familiar with Orcus Rao? Oh, he's a character. A worthy opponent, I think. Indulge me a moment, I think you'll find the comparison with yourself amusing..."" ",sdtu_postCaden2:继续,
 sdtuPostCadenLieSecretAdmire,DialogOptionSelected,$option == sdtu_postCadenLieSecretAdmire,AdjustRepActivePerson FRIENDLY 1,"Macario以手扶额，看起来就好像他突然头痛欲裂一般。
 
-“那真是...荒谬。”他放下手，“他居然相信了？”
+""那真是...荒谬。""他放下手，""他居然相信了？""
 
-“应该只是我太聪明了，我的智慧让我免于这种愚蠢自大的傻瓜思维，船长。”他抬起头，脸上恢复了血色，“你着实让我大吃一惊。”",sdtu_postCaden2:继续,
+""应该只是我太聪明了，我的智慧让我免于这种愚蠢自大的傻瓜思维，船长。""他抬起头，脸上恢复了血色，""你着实让我大吃一惊。""",sdtu_postCaden2:继续,
 sdtuPostCadenLuddic,DialogOptionSelected,$option == sdtu_postCadenLuddic,$global.sdtu_toldMacarioKnowLuddic = true,"Something tightens on Macario's face, but he plays casual. You've got him off-balance.
 
 ""Did he say that?"" He chuckles, then assembles a smile. ""The man must trust you."" 
