@@ -17,13 +17,14 @@
 如果您希望抢先体验汉化内容，请参照如下步骤下载汉化：
 
 1. 下载汉化文件
-   1. [点这里下载汉化文件](https://github.com/TruthOriginem/Starsector-096-Localization/archive/refs/heads/master)
+   1. [点这里下载汉化文件](https://github.com/TruthOriginem/Starsector-096-Localization/archive/refs/heads/master.zip)
    2. 解压下载的文件，其中应包括名为`localization`的文件夹
 2. 安装汉化文件
    1. 打开游戏目录下的`starsector-core`文件夹
    2. 将下载解压文件中`localization`文件夹内的全部内容复制到`starsector-core`文件夹中
       1. 如提示文件已存在，请选择【覆盖】
-3. 正常游玩，**如果遇到翻译质量问题或bug，请及时向我们报告**
+3. 正常游玩，**如果遇到翻译质量问题或bug，请向我们报告**。
+   1. 由于汉化尚未完成，出现未翻译英文属于正常现象，无需报告。 
 
 ## 参与汉化
 
