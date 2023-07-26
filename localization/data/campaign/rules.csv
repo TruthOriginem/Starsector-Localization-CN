@@ -701,9 +701,9 @@ FireAll LPTitheOptions","""服从并忏悔！你们需要献上 $entity.LP_tithe
 OR
 ""恶魔摩洛克的奴仆！或许救赎对你们来说还并非遥不可及。献上 $entity.LP_tithe 星币的什一税可以让你踏上卢德之道修行的第一步。""
 
-""放弃这次忏悔的机会将遭受灭顶之灾，来生也必被卢德诅咒。斟酌定夺皆由你。""","payTithe:支付什一税
-cutCommLink:切断通讯链接",
-LPTitheHasColonies,LPTitheOptions,"HA_CMD computeMegaTithe
+""放弃这次忏悔的机会将遭受灭顶之灾，来生也必被卢德诅咒。斟酌定夺皆由你。""",,
+LPTitheHasColonies,LPTitheOptions,"!$player.patherAgreement
+HA_CMD computeMegaTithe
 HA_CMD playerColoniesHavePatherActvity",,,"10:payMegaTithe:""说不定一笔更高的什一税可以让我们达成更多的共识。""",
 LPTitheNormal,LPTitheOptions,,,,5:payTithe:缴纳什一税,
 LPTitheCutComms,LPTitheOptions,,,,100:cutCommLink:切断通讯链接,
@@ -739,7 +739,7 @@ AddText ""通讯链接在你回应前就被切断了。""
 ShowDefaultVisual
 EndConversation","""也许你的灵魂还未被机械伪神夺走。""
 OR
-""平心而论，卢德之手刚刚引导了你。""",cutCommLink:切断通讯链接,
+""平心而论，卢德之手刚刚引导了你。""",,
 ,,,,,,
 ,,,,,,
 ,,,,,,
@@ -1086,7 +1086,7 @@ relLevelHostileDiktat,RelationshipLevelDesc,"$faction.rel == HOSTILE
 $faction.id == sindrian_diktat",FireAll RelLevelMoreDescription,你已经跻身于国家公敌的行列。辛达强权 海军已被授权与你的舰队交火，同时商人都被禁止与你交易，违者恐怕会被认定为支持恐怖主义。,,
 relLevelVengefulDiktat,RelationshipLevelDesc,"$faction.rel == VENGEFUL
 $faction.id == sindrian_diktat",FireAll RelLevelMoreDescription,你已经被 辛达强权 宣示为国家公敌，被视为一名顽抗 Andrada 伟大运动的疯狂恐怖分子。你的全息影像被刻画得更加狰狞可恶，被用于宣传你犯下的各种见不得人的违法罪行，在官方宣传广播中频繁出现。,,
-relLevelDiktatSDTU,RelLevelMoreDescription,"$global.sdtu_completed
+relLevelDiktatSDTU,RelLevelMoreDescription,"$global.sdtu_missionCompleted
 $faction.id == sindrian_diktat",,有传言说你是二重甚至三重间谍 —— 或者不是呢？—— Dolos Macario。,,
 relLevelCooperativeTriTachyon,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
 $faction.id == tritachyon",FireAll RelLevelMoreDescription,董事会已经认定您是一位重要的战略合作伙伴，需作为公司重要的核心盈利指标加以考量。根据您规模增长与优势集中两者协调并重的理念，多位副总裁都采取了全新的管理模式。凭借您和 速子科技 的关系，您可以调动大量的投资基金和技术支持。,,
@@ -1315,8 +1315,8 @@ $global.customsInspectionFactionId == $faction.id score:100","SetShortcut market
 # new game creation,,,,,,
 onNewGameCreationStart,BeginNewGameCreation,,"NGCAddCredits 2000
 FireAll InitNewGameChoices",,,
-initNewGameChoicesDev,AddNewGameChoices,$global.isDevMode,,,100:ngcDevStart:>> (dev) quick start,
-initNewGameChoicesDev2,AddNewGameChoices,$global.isDevMode,,,101:ngcDevStart2:>> (dev) quick start custom no time pass,
+initNewGameChoicesDev,AddNewGameChoices,$global.isDevMode,,,100:ngcDevStart:>>(dev) quick start,
+initNewGameChoicesDev2,AddNewGameChoices,$global.isDevMode,,,101:ngcDevStart2:>>(dev) quick start custom no time pass,
 initNewGameChoices,InitNewGameChoices,,FireAll AddNewGameChoices,你近期是职业是...,,
 ngcWolfStart,AddNewGameChoices,,"SetTooltip ngcWolf ""野狼-级是一台先进而致命的护卫舰，有着适中的后勤消耗。\n\n最好在文明社会附近使用。或搭配其他具有更好的燃料和补给运载力的后勤船只。""",,0:ngcWolf:一名赏金猎人，驾驶一艘野狼-级护卫舰,
 ngcWayfarerStart,AddNewGameChoices,,"SetTooltip ngcWayfarer ""远行者-级不是一艘漂亮的船，但它有很好的运载货物、燃料和船员的能力。\n\n它的战斗力有限，但却不容忽视。它被设计为能在偏远星系开展行动，这艘货船具有较好的自卫能力。""",,1:ngcWayfarer:一名拾荒者，驾驶一艘 远行者-级 武装商舰,
@@ -4040,42 +4040,57 @@ $menuState == main
 $global.lpp_inProgress
 $player.transponderOn
 !$global.lpp_visitedShrineHesperus",,,3:lpp_hesperusVisitStart:乘坐穿梭机前去拜访卢德圣地,
-lppHesperusShrineOptionAgain,PopulateOptions,"$market.id == hesperus
+lppHesperusShrineOptionRevisit,PopulateOptions,"$market.id == hesperus
 $market.tag:luddic_shrine
 $menuState == main
 $player.transponderOn
-$global.lpp_visitedShrineHesperus",,,3:lpp_hesperusVisitStart:乘坐穿梭机前去拜访卢德圣地,
+$global.lpp_visitedShrineHesperus",,,3:lpp_hesperusVisitStart:Take a shuttle to visit the Luddic shrine,
 lppHesperusShrineVisitSneak,PopulateOptions,"$market.id == hesperus
 $market.tag:luddic_shrine
 $menuState == main
 $global.lpp_inProgress
+$global.lpp_didHesperusFirstShrineAttempt
 !$player.transponderOn
 !$global.lpp_visitedShrineHesperus",,,3:lpp_hesperusSneakStart:Secretly take a shuttle to visit the Luddic shrine,"# sneaky, sneaky ... "
+lppHesperusShrineFirstTime1,DialogOptionSelected,"$option == lpp_hesperusVisitStart
+!$global.lpp_didHesperusFirstShrineAttempt score:10",,"You are just beginning to make your way toward the shuttle bay when you receive a ping from your nav officer: the request to land has been denied by traffic control.
+
+Strange. This should be perfectly routine.","lpp_hesperusVisitFirstTime1a:""Nav, try again.""
+lpp_hesperusVisitFirstTime1b:Request to speak with someone in authority
+lpp_hesperusVisitFirstTime1c:Cancel your visit",
+lppHesperusShrineVisitAgain,DialogOptionSelected,"$option == lpp_hesperusVisitStart
+$global.lpp_visitedShrineHesperus score:10","$option = lpp_hesperusVisit1 0
+FireBest DialogOptionSelected",,,
 lppHesperusShrineVisitFirstFinally,DialogOptionSelected,"$option == lpp_hesperusVisitStart
 $market.allowedToVisitShrine
 !$global.lpp_visitedShrineHesperus","$option = lpp_hesperusVisitFirst1 0
 FireBest DialogOptionSelected",,,
-lppHesperusShrineVisitAgain,DialogOptionSelected,"$option == lpp_hesperusVisitStart
-$global.lpp_visitedShrineHesperus","$option = lpp_hesperusVisit1 0
-FireBest DialogOptionSelected",,,
 lppHesperusShrineVisitAllowed,DialogOptionSelected,"$option == lpp_hesperusVisitStart
 $global.lpp_madeToWaitForHesperus
 $global.lpp_didHesperusFirstShrineAttempt
+!$global.lpp_hesperusWait
 !$global.lpp_visitedShrineHesperus
 !$global.lpp_deniedHesperusShrineAccess","$option = lpp_hesperusVisit1 0
 FireBest DialogOptionSelected",,,
 lppHesperusShrineVisitNoWait,DialogOptionSelected,"$option == lpp_hesperusVisitStart
+$global.lpp_didHesperusFirstShrineAttempt
 $global.lpp_madeToWaitForHesperus
-$global.lpp_didHesperusFirstShrineAttempt",,"You put in the order to have a shuttle prepared for a flight to the surface.
+!$global.lpp_visitedShrineHesperus",,"You put in the order to have a shuttle prepared for a flight to the surface.
 
 ""Captain,"" your Nav officer reports, ""Traffic control is denying your flight request.""","lpp_hesperusGetMeExcubitor:""Get me the Excubitor Orbis on comms.""
 lpp_hesperusShrineCancelShuttle:Cancel the flight",
 lppHesperusShrineVisitNoDenied,DialogOptionSelected,"$option == lpp_hesperusVisitStart
 $global.lpp_deniedHesperusShrineAccess
-$global.lpp_didHesperusFirstShrineAttempt",,"You put in the order to have a shuttle prepared for a flight to the surface.
+$global.lpp_didHesperusFirstShrineAttempt
+!$global.lpp_visitedShrineHesperus",,"You put in the order to have a shuttle prepared for a flight to the surface.
 
 ""Captain,"" your Nav officer reports, ""Traffic control is denying your flight request.""","lpp_hesperusGetMeExcubitor:""Get me the Excubitor Orbis on comms.""
 lpp_hesperusShrineCancelShuttle:Cancel the flight",
+lppHesperusShrineFirstTimeFallback,DialogOptionSelected,"$option == lpp_hesperusVisitStart
+!$global.lpp_visitedShrineHesperus","$option = lpp_hesperusVisitFirst1 0
+FireBest DialogOptionSelected",,,# this should never trigger. But... -dgb
+lppHesperusShrineFallback,DialogOptionSelected,$option == lpp_hesperusVisitStart,"$option = lpp_hesperusVisit1 0
+FireBest DialogOptionSelected",,,"# Also, this should never trigger. But... -dgb"
 lppHesperusShrineWaitCancelShuttle,DialogOptionSelected,"$option == lpp_hesperusShrineCancelShuttle
 $global.lpp_madeToWaitForHesperus","AddText ""You order the shuttle to stand down. It looks like Excubitor Oak is serious about making you wait seven days before you can access the shrine of Hesperus.""
 FireAll PopulateOptions",,,
@@ -4084,12 +4099,6 @@ $global.lpp_deniedHesperusShrineAccess","AddText ""You order the shuttle to stan
 FireAll PopulateOptions",,,
 lppHesperausGetMeExcubitor,DialogOptionSelected,$option == lpp_hesperusGetMeExcubitor,"BeginConversation oak
 FireBest PickGreeting","Nav routes your comm-link to the local system network, and after what feels like a longer than necessary wait, the link finally establishes a connection.",,
-lppHesperusShrineFirstTime1,DialogOptionSelected,"$option == lpp_hesperusVisitStart
-!$global.lpp_didHesperusFirstShrineAttempt",,"You are just beginning to make your way toward the shuttle bay when you receive a ping from your nav officer: the request to land has been denied by traffic control.
-
-Strange. This should be perfectly routine.","lpp_hesperusVisitFirstTime1a:""Nav, try again.""
-lpp_hesperusVisitFirstTime1b:Request to speak with someone in authority
-lpp_hesperusVisitFirstTime1c:Cancel your visit",
 lppHesperusShrineFirstTime1a,DialogOptionSelected,$option == lpp_hesperusVisitFirstTime1a,$global.lpp_didHesperusFirstShrineAttempt = true,"""Affirmative,"" Nav says. A moments pause. ""Captain, I have traffic control on comms.""
 
 Nav patches you into the comm-loop, and a young-looking Luddic Knight, probably an initiate, appears before you.",lpp_hesperusVisitFirstTime2:继续,
@@ -4155,7 +4164,7 @@ FireBest DialogOptionSelected","That wrinkle again, the Sector's smallest smile.
 lppHesperusExcubitorCrime,DialogOptionSelected,$option == lpp_hesperusExcubitorCrime,"$option = lpp_hesperusExcubitorJudge1 0
 FireBest DialogOptionSelected","That wrinkle again, the Sector's smallest smile. 
 
-""Yes, I am quite certain that you have committed many crimes. Secular justice is only part of my purview hower,"" he says gravely.
+""Yes, I am quite certain that you have committed many crimes. Secular justice is only part of my purview however,"" he says gravely.
 
 ""Today I am more concerned with your spirit.""",,
 lppHesperusExcubitorThreatCheck,LPPCheckCanThreatenExcubitor,$player.maxCombatHullSize < 4,"SetEnabled lpp_hesperusExcubitorForce false
@@ -4256,6 +4265,8 @@ He lifts a stylus and scratches something on a sheet of nondigital medium, his g
 ""Blessings be, captain,"" he finishes.","lpp_hesperusExcubitorAllowEndCutoff:""What about the time I've already waited?""
 lpp_hesperusExcubitorAllowEndNice:""And upon you, Excubitor Orbis.""
 0:cutCommLinkPolite:Cut the comm link","# yeah, don't be a pest!"
+lppExcubitorWhyDenyFallback,DialogOptionSelected,$option == lpp_excubitorWhyDeny,"$askedWhy = true 0
+FireAll PopulateOptions","""Because I have judged it so,"" he says, his tone of long-held authority which suggests that this is all that is required to settle the matter.",,"# this should never fire, but ... -dgb"
 lppExcubitorWhyDenyB1,DialogOptionSelected,"$option == lpp_excubitorWhyDeny
 $global.lpp_deniedHesperusShrineAccess","$askedWhy = true 0
 FireAll PopulateOptions","""Because you are an unacceptable risk; you choose sin after sin, and your bestrayed path will lead to sin sixfold once again.""
@@ -4354,7 +4365,7 @@ lppHesperusShrineOptionSnuckIn,HesperusShrineOptions,"$market.snuckIntoHesperus
 !$market.bribedIntoHesperus","AddText ""A robed subcurate shuffles to meet you. \""Blessings upon you. Your arrival was... unexpected,\"" they say. \""But no matter. All who come in good faith are welcome to worship at this shrine.\""""",,,
 lppHesperusShrineOptionBribedIn,HesperusShrineOptions,$market.bribedIntoHesperus,"AddText ""A robed subcurate shuffles to meet you. \""Blessings upon you. Your arrival... ah, we expected a larger party of pilgrims,\"" they say, \""But no matter; the faith of one is the faith of all.\""""",,,
 lppHesperusShrineOptionVisit,HesperusShrineOptions,,,,lpp_hesperusDoVisit:Ask to visit the shrine,
-lppHesperusShrineOptionLeave,HesperusShrineOptions,,,,shrineDoLeave:Leave now,
+lppHesperusShrineOptionLeave,HesperusShrineOptions,$global.lpp_visitedShrineHesperus,,,shrineDoLeave:Leave now,"# If you haven't visited, you're going to be forced to. Because otherwise you can break the flow of logic -dgb"
 lppHesperusShrineDoVisit,DialogOptionSelected,$option == lpp_hesperusDoVisit,ShowImageVisual hesperus_shrine,"At your request, the attending subcurate leads you through a brief ceremonial hand-washing, then down a long gallery.
 
 The flow of the curate's robe doesn't quite touch the floor, a welded field of armored plates weathered into intricate patterns by the varied atmospheres of a score of worlds on which the Knights have fought and died. Niches along the walls are occupied by empty helmets.",lpp_hesperusShrineVisit1:继续,
@@ -4920,6 +4931,7 @@ lkeChalcedonMakeFleetsHostile,LKEChalcedonMakeFleetsHostile,,MakeNearbyFleetsHos
 # LKE Chalcedon ask around bar,,,,,,
 lkeAskChalcedonBarPromptContact,DialogOptionSelected,"$market.id == chalcedon
 $option == marketVisitBar
+!$market.lkeMeetingWait
 Call $global.lke_ref updateData
 $lke_stage == CONTACT_RECRUITER","FireBest BarShuttleDownPrintDesc
 FireBest BarPrintDesc
@@ -4928,6 +4940,7 @@ FireBest DialogOptionSelected",,,# a meeting to contact Sedge has been set up
 lkeAskChalcedonBarPromptBugged,DialogOptionSelected,"$market.id == chalcedon
 $option == marketVisitBar
 $market.lkeBuggedVIPs > 1
+!$market.lkeMeetingWait
 Call $global.lke_ref updateData
 $lke_stage == GO_TO_CHALCEDON","FireBest BarShuttleDownPrintDesc
 FireBest BarPrintDesc
@@ -4939,7 +4952,9 @@ $lke_stage == GO_TO_CHALCEDON","AddBarEvent LKEchalcedon_barEvent ""Find someone
 lkeAskChalcedonBarPromptWaiting,AddBarEvents,"$market.id == chalcedon
 $market.lke_searchForBornanew
 $market.lkeMeetingSet
-$market.lkeMeetingWait",,"You have a meeting scheduled with a Mammonite to talk with a third party who might know something about Jethro Bornanew, but it is not yet the agreed upon time.",,
+$market.lkeMeetingWait
+Call $global.lke_ref updateData
+$lke_stage == CONTACT_RECRUITER",,"You have a meeting scheduled with a Mammonite to talk with a third party who might know something about Jethro Bornanew, but it is not yet the agreed upon time.",,
 lkeAskChalcedonBarStartB,DialogOptionSelected,"$option == LKEchalcedon_barEvent
 $market.lkeBuggedVIPs > 1",,"A simple, steaming cup of tea is placed before you with a subtle hint from the proprietor that you need but ask and something much stronger will arrive in a teapot.
 
@@ -5276,7 +5291,8 @@ FireBest DialogOptionSelected",You slowly draw your TriPad and activate the Jeth
 lkeSedgeShowPic2,DialogOptionSelected,$option == lke_sedgeShowPic2,"SetPersonPortrait bornanew ""jethro_bornanew2""
 ShowSecondPerson bornanew
 $global.lke_gotBornanewLead = true
-Call $global.lke_ref updateStage","Sedge leans over to examine it.
+Call $global.lke_ref updateStage
+unset $market.lkeMeetingSet","Sedge leans over to examine it.
 
 ""Ah."" He speaks without hesitation, ""Yes, I remember now. He went to Mazalot.""","lke_sedgeShowPic3:""Mazalot? Why?""",
 lkeSedgeShowPic3,DialogOptionSelected,$option == lke_sedgeShowPic3,"HideSecondPerson
@@ -6060,8 +6076,7 @@ Call $global.lke_ref updateStage","His sneer fades. You wouldn't be so stupid, h
 
 Before long, you've got the dossier on one Nile Virens, local Pather strongman, transferred to your datapad. Contact info, addresses, and a patchy bio. Operates compounds in all the major Luddic population centers. Runs the Path, such as it is, on Mazalot.
 
-""You deserve each other,"" the officer grumbles as he makes his exit.","lke_barEndOut:Leave
-lke_barEnd:Have another look around the bar",
+""You deserve each other,"" the officer grumbles as he makes his exit.",lke_barEndOut:Leave,
 lkeMazBarAgentRespPunch,DialogOptionSelected,$option == lke_mazBarAgentOptPunch,$global.lke_punchedMUAcop,"A solid blow sends the security officer toppling back into a table which obediently flips, spilling glassware and tipsy spacers across the bar.
 
 The MuniSec undercovers that were watching you the whole time from the bar leap to their feet, drawing stun prods. 
@@ -6605,7 +6620,12 @@ $menuState == main
 #Call $lke_ref updateData",FireBest LKEvirensRaidCheckHostilesNearby,,2:lke_virensRaidStart:Prepare a raid on Virens' compounds to extract Jethro Bornanew,
 lkeDisableVirensRaidIfNeeded,LKEvirensRaidCheckHostilesNearby,HostileFleetNearbyAndAware,"SetEnabled lkeVirensRaidStart false
 SetTooltip lkeVirensRaidStart ""A nearby hostile fleet is tracking your movements, making a raid absolutely inadvisable.""",,,
-lkeVirensRaidStart,DialogOptionSelected,$option == lke_virensRaidStart,ShowImageVisual raid_prepare,"You convene your senior officers to discuss an extraction scenario for Jethro Bornanew, presumably employed or taken hostage by Nile Virens. 
+lkeVirensRaidStart,DialogOptionSelected,$option == lke_virensRaidStart,"$raidDifficulty = 250 0
+$raidGoBackTrigger = PopulateOptions 0
+$raidContinueTrigger = LKEVirensRaidFinishedB 0
+$raidRestrictToTrigger = LKEVirensRaidFinishedA 0
+AddRaidObjective genericIcon ""Raid Viren's Pather strongholds"" HIGH 3000 LKEVirensRaidFinishedA true
+ShowImageVisual raid_prepare","You convene your senior officers to discuss an extraction scenario for Jethro Bornanew, presumably employed or taken hostage by Nile Virens. 
 
 It is impossible to completely avoid the MUA's defense network, although even cursory scans show that it is deployed to counter internal uprisings rather than external raids. Persean League casualties can be minimized, but certain sensor stations and defensive batteries will have to be disabled to open the way for a clean assault on Virens' bases.
 
@@ -7297,7 +7317,7 @@ $global.lke_fakeBornanewDeathButTold = true
 FireAll LKEdoFinish","She closes the link abruptly, sending you to a CGR standby mode. An instant later, a secretary activates the comms to arrange for the credits transfer in a terse transaction.",,
 LKEreturnToGileadDeadJaspis6c,DialogOptionSelected,$option == lke_returnToGileadDeadJaspis6c,,"""No. Leave him. Free will was given to us by God that we would use it, and err.""
 
-A pause, then, ""You shall receive the credits.""",,
+A pause, then, ""You shall receive the credits.""",lke_returnToGileadDeadJaspis6c2:Continue,
 LKEreturnToGileadDeadJaspis6c2,DialogOptionSelected,$option == lke_returnToGileadDeadJaspis6c2,"AdjustRepActivePerson HOSTILE -10
 EndConversation DO_NOT_FIRE
 AddCredits 50000
@@ -8769,11 +8789,7 @@ FireBest DialogOptionSelected
 $player.ethosOrder++",,,
 gaMeetHegLtCoatl3,DialogOptionSelected,$option == coatlOfficer_barEvent3,"$option = coatlOfficer_barEvent4 0
 FireBest DialogOptionSelected
-$player.ethosKnowledge++","上尉沉默了片刻，他看着你。
-
-然后他突然大笑起来，拍了拍你的背。""嘿，我喜欢你，$playerName。如果你哪天回到 Coatl 附近，可以来找我。海军经常会有外包工作，你永远不知道会接到什么。""
-
-他忍不住打嗝，站起身说，""我该去值班了""然后跌跌撞撞地走向洗手间。",backToBar:在酒吧里四处看看,
+$player.ethosKnowledge++",,,
 gaMeetHegLtCoatl4,DialogOptionSelected,$option == coatlOfficer_barEvent4,AdjustRepActivePerson COOPERATIVE 5,"The lieutenant is silent for a moment, looking at you.
 
 Then he bursts out laughing, and slaps your back. ""Hey I like you, $playerName. If you ever find yourself back around Coatl, look me up. The navy contracts out some odd jobs; you never know what might come up.""
@@ -8874,7 +8890,7 @@ She leaves the question hanging in the air for a moment.","0:gaRequestMeeting5a:
 3:gaRequestMeeting5d:""Knowledge brings us closer to the Creator.""
 4:gaRequestMeetingSayNothing:Say nothing",
 gaRequestMeeting4,DialogOptionSelected,"$option == gaRequestMeeting4
-$player.finishedTutorial",$theQuestionWasRhetorical = true 0,"她抢在你说话之前举起一只手。
+$player.finishedTutorial",,"她抢在你说话之前举起一只手。
 
 ""你当然不是来捐款的。那是因为什么呢？因为我非常想了解那位纠正我野心过剩但谨慎不足的前任所造成的不幸局面，日渐崭露头角的雇佣兵舰长。""
 
@@ -8980,10 +8996,7 @@ $global.bairdWantsToTalk score:2000",,"通讯立即被接通了。你看到一�
 就这样，你一句话还没说，通讯就暗了下去。",0:cutCommLink:关闭通讯,
 gaBairdShuttleOption,PopulateOptions,"$id == station_galatia_academy
 $global.bairdWantsToTalk",,,1:gaBairdShuttle:乘坐穿梭机面见 Baird 院长,
-gaBairdShuttleOptionSel,DialogOptionSelected,$option == gaBairdShuttle,"unset $global.bairdWantsToTalk
-unset $global.asebSayBairdWantsToTalk
-$market.gaTTB_completed = true 0
-Call $global.gaTTB_ref updateStage","You find a junior academy agent pacing in the landing bay reception lounge. As soon as you enter, they spot you with a look of relief and walk quickly to meet you.
+gaBairdShuttleOptionSel,DialogOptionSelected,$option == gaBairdShuttle,,"You find a junior academy agent pacing in the landing bay reception lounge. As soon as you enter, they spot you with a look of relief and walk quickly to meet you.
 
 ""Captain $playerLastName! Thank you for coming. The provost will see you immediately. If you would just follow me this way, thank you...""",bairdIntroC1:继续,
 bairdIntro1,DialogOptionSelected,$option == bairdIntroC1,,"The junior agent leads you through a series of back hallways and secure lifts toward the administrative suite occupied by Provost Baird at the core of the station. 
@@ -9194,8 +9207,7 @@ gaKAArroyoVisitLaugh,DialogOptionSelected,$option == gaKA_arroyoLaugh,,"As you s
 
 He puts his head in his hands.",gaKA_arroyoAMoment2:继续,
 gaKAArroyoVisitAMoment,DialogOptionSelected,$option == gaKA_arroyoAMoment,"$option = gaKA_arroyoAMoment2 0
-FireBest DialogOptionSelected",He slaps the onyx bar-top one last time and puts his head in his hands.,"gaKA_arroyoDrinkDecline:拒绝
-gaKA_arroyoDrinkAccept:来一杯",
+FireBest DialogOptionSelected",He slaps the onyx bar-top one last time and puts his head in his hands.,,
 gaKAArroyoVisitAMoment2,DialogOptionSelected,$option == gaKA_arroyoAMoment2,,"He sighs and pours something from a crystal decanter into a glass, empties it. ""To a deal that gets worse all the time!"" 
 
 Then pours another. He considers a moment, notices you, and tilts the decanter to offer you a drink.","gaKA_arroyoDrinkDecline:Decline
@@ -12221,8 +12233,12 @@ FireBest GAPZTTInitial",,,
 gaPZTriTachEncounterStandard,GAPZTTInitial,,FireAll GAPZTTHub,"""Good shift, captain,"" the Tri-Tachyon $rank says crisply. ""You possess property belonging to the Tri-Tachyon Corporation and I have come to recover it. Surrender the Ziggurat-class TTS Xenorphica to me at once.""
 
 $HeOrShe locks you with an unblinking gaze, awaiting your response.",,
-gaPZTriTachEncounterNoZig,GAPZTTInitial,!$entity.hasZiggurat,FireBest GAPZTTInitialCont,"""Good shift, captain,"" the Tri-Tachyon $rank says crisply. ""Long-range sensors recently detected a certain Ziggurat-class TTS Xenorphica in your fleet; this is property of the Tri-Tachyon Corporation."" $HisOrHer eyes flick down, reading from a screen ""Let this statement be notice that the Tri-Tachyon Corporation considers legitimate all appropriate and necessary means to recover property belonging to said company, including use of militarized force, employment of mercenaries or privateers, et cetera.""",,
-gaPZTriTachEncounterOnlyZig,GAPZTTInitial,$entity.hasOnlyZiggurat,FireBest GAPZTTInitialCont,"""Good shift, captain,"" the Tri-Tachyon $rank says crisply. ""You possess property belonging to the Tri-Tachyon Corporation."" $HisOrHer eyes flick down, reading from a screen ""Let this statement be notice that the Tri-Tachyon Corporation considers legitimate all appropriate and necessary means to recover property belonging to said company, including use of militarized force, employment of mercenaries or privateers, et cetera.""",,
+gaPZTriTachEncounterNoZig,GAPZTTInitial,!$entity.hasZiggurat,FireBest GAPZTTInitialCont,"""Good shift, captain,"" the Tri-Tachyon $rank says crisply. ""Long-range sensors recently detected a certain Ziggurat-class TTS Xenorphica in your fleet; this is property of the Tri-Tachyon Corporation.""
+
+$HisOrHer eyes flick down, reading from a screen ""Let this statement be notice that the Tri-Tachyon Corporation considers legitimate all appropriate and necessary means to recover property belonging to said company, including use of militarized force, employment of mercenaries or privateers, et cetera.""",,
+gaPZTriTachEncounterOnlyZig,GAPZTTInitial,$entity.hasOnlyZiggurat,FireBest GAPZTTInitialCont,"""Good shift, captain,"" the Tri-Tachyon $rank says crisply. ""You possess property belonging to the Tri-Tachyon Corporation.""
+
+$HisOrHer eyes flick down, reading from a screen ""Let this statement be notice that the Tri-Tachyon Corporation considers legitimate all appropriate and necessary means to recover property belonging to said company, including use of militarized force, employment of mercenaries or privateers, et cetera.""",,
 gaPZTriTachEncounterInitialCont,GAPZTTInitialCont,,"MakeOtherFleetNonHostile gaPZ true
 MakeOtherFleetImportant gaPZ false
 MakeOtherFleetGoAway true","这位速子科技 $rank 毫无感情地盯着你。""请将此视作一次警告。""
@@ -12235,7 +12251,7 @@ GAPZTTHub5,GAPZTTHub,,,,"gaPZ_ttHubAccept:""我会立即传输指挥协议。""(
 gaPZ_ttHubSal,DialogOptionSelected,$option == gaPZ_ttHubSal,"$gaPZ_ttHubSal = true 0
 FireAll GAPZTTHub","""我们当然知道打捞权，舰长。""$heOrShe咬牙切齿地说道，""但是我司认为这次是例外情况。我们在那艘船上倾注了太多的心血，也期望从这次投资中获利。""",,
 gaPZ_ttHubPryStronger,DialogOptionSelected,"$option == gaPZ_ttHubPry
-$entity.relativeStrength >= 0",,"""求之不得。"" 这位速子科技 $rank 怀着邪恶的满足感说道。通讯被切断了。",cutCommLinkNoText:继续,
+$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true,"""求之不得。"" 这位速子科技 $rank 怀着邪恶的满足感说道。通讯被切断了。",cutCommLinkNoText:继续,
 gaPZ_ttHubPryWeaker,DialogOptionSelected,"$option == gaPZ_ttHubPry
 $entity.relativeStrength < 0","AdjustRep tritachyon VENGEFUL -75
 MakeOtherFleetNonHostile gaPZ true
@@ -13357,7 +13373,8 @@ gaATGttScanGate,OpenInteractionDialog,"$tag:gate
 $GAATGttScanGate score:1000
 $global.canScanGates
 !$gateScanned
-$global.gaATG_inProgress",,"这处由坚固材料所制成，并沉寂已久的环状星门，是人之领最具代表性的遗迹之一。
+Call $global.gaATG_ref updateData
+$lke_stage != GO_TO_MAGEC_GATE",,"这处由坚固材料所制成，并沉寂已久的环状星门，是人之领最具代表性的遗迹之一。
 
 你的传感器操作官让你注意。""舰长，我们受到了来自附近的那支速子科技舰队的某种超波干扰。如果他们还在那里做... 不知道在做什么的的话，我们的扫描器就无法锁定目标。""",100:defaultLeave:离开,
 gaATGttScanFleet,BeginFleetEncounter,"!$encounteredAlready
@@ -14201,7 +14218,12 @@ AddRaidObjective genericIcon ""从 Kanta 之巢营救 Elissa Zal"" EXTREME 5000 
 FireBest GAATGkantaRaidCheckHostilesNearby",,2:gaATG_kantasDenRaidStart:准备一场袭击营救 Elissa Zal,
 gaATGdisableKantaRaidIfNeeded,GAATGkantaRaidCheckHostilesNearby,HostileFleetNearbyAndAware,"SetEnabled gaATG_kantasDenRaidStart false
 SetTooltip gaATG_kantasDenRaidStart ""附近有支敌对舰队正在追踪你的行动，使得空间站突袭是不可能的。""",,,
-gaATGkantasDenRaidStart,DialogOptionSelected,$option == gaATG_kantasDenRaidStart,ShowImageVisual raid_prepare,"You convene your senior officers to discuss an extraction scenario for Elissa Zal. Kanta's Den is swarming with heavily armed gangs and is enveloped by a stealth mine network. You also lack any real intel pertaining to Zal's position within the station. The potential cost and difficulty of the raid is therefore projected to be extreme. High attrition of assault shuttles must be assumed, and a dozen separate infiltration squads would have to simultaneously breach volumes where Zal could be held. 
+gaATGkantasDenRaidStart,DialogOptionSelected,$option == gaATG_kantasDenRaidStart,"$raidDifficulty = $gaATG_kantaRaidDifficulty 0
+$raidGoBackTrigger = PopulateOptions 0
+$raidContinueTrigger = GAATGkantaRaidFinishedB 0
+$raidRestrictToTrigger = GAATGkantaRaidFinishedA 0
+AddRaidObjective genericIcon ""Extract Elissa Zal from Kanta's Den"" EXTREME 5000 GAATGkantaRaidFinishedA true
+ShowImageVisual raid_prepare","You convene your senior officers to discuss an extraction scenario for Elissa Zal. Kanta's Den is swarming with heavily armed gangs and is enveloped by a stealth mine network. You also lack any real intel pertaining to Zal's position within the station. The potential cost and difficulty of the raid is therefore projected to be extreme. High attrition of assault shuttles must be assumed, and a dozen separate infiltration squads would have to simultaneously breach volumes where Zal could be held. 
 
 There's no way the operation will be anything but a meat grinder. It would also be a blatant attack upon Kanta which would provoke pirates across the Sector, if that even matters anymore.",mktRaidNonMarket:继续,
 gaATGkantaRaidFinishedA,GAATGkantaRaidFinishedA,,,"你在舰桥上监视着这场袭击，你的$shipOrFleet为那些突击无人机和陆战队穿梭机提供电子战掩护以及零星的火力支援。
@@ -14299,7 +14321,12 @@ $raidGoBackTrigger = PopulateOptions 0
 $raidContinueTrigger = GAATGcottonRaidFinishedB 0
 AddRaidObjective genericIcon ""从 Epiphany 营救克隆人 Loke"" EXTREME 5000 GAATGcottonRaidFinishedA
 FireBest GAATGcottonRaidCheckHostilesNearby",,2:gaATG_cottonRaidStart:准备一场袭击营救克隆人 Loke,
-gaATGcottonRaidStart,DialogOptionSelected,$option == gaATG_cottonRaidStart,ShowImageVisual raid_prepare,"You convene your senior officers to discuss the option of seizing the Loke clone from Brother Cotton's forces. SIGINT is spotty due to Pathers' low-tech operations and HUMINT nearly impossible due to their fanaticism. Nonetheless, your officers have identified several possible fortified compounds connected with Cotton's sect. 
+gaATGcottonRaidStart,DialogOptionSelected,$option == gaATG_cottonRaidStart,"$raidDifficulty = $gaATG_cottonRaidDifficulty 0
+$raidGoBackTrigger = PopulateOptions 0
+$raidContinueTrigger = GAATGcottonRaidFinishedB 0
+$raidRestrictToTrigger = GAATGcottonRaidFinishedA 0
+AddRaidObjective genericIcon ""Extract Clone Loke from Epiphany"" EXTREME 5000 GAATGcottonRaidFinishedA true
+ShowImageVisual raid_prepare","You convene your senior officers to discuss the option of seizing the Loke clone from Brother Cotton's forces. SIGINT is spotty due to Pathers' low-tech operations and HUMINT nearly impossible due to their fanaticism. Nonetheless, your officers have identified several possible fortified compounds connected with Cotton's sect. 
 
 Any attack on Cotton will be viewed by Pathers as an attack on all. Once the shooting starts you anticipate security forces to activate planet-wide, so this has to be a quick operation. Hitting Cotton's strongholds all at once in a surprise raid will require many marines squads, but it will ensure the greatest odds of finding the Loke clone.",mktRaidNonMarket:继续,
 gaATGcottonRaidFinishedA,GAATGcottonRaidFinishedA,,,"The main bridge is a hive of activity, with additional officers brought in to coordinate the assaults by tactical teams on the strongholds of Cotton's Pathers. A volley of quick orbital strikes from your $shipOrFleet disrupt power and communications, leaving planetside comms-chatter a confused staticky buzz of automated alerts and hand-equipment operators speaking in code.
@@ -14705,6 +14732,8 @@ $global.murderedCloneLoke = true
 AdjustRepPerson kanta VENGEFUL -100
 $option = gaATG_returnLokeGateRunStart1
 FireBest DialogOptionSelected",警卫确认了你的命令。,,
+gaATGkillLokeKantaCheck,GAATGkillLokeKantaCheck,$player.kantaProtection,"KantaCMD loseProtection
+#AddTextSmall ""Kanta's Protection lost"" bad",,,
 gaATGreturnLokeGateRunStart1,DialogOptionSelected,$option == gaATG_returnLokeGateRunStart1,,"""舰长，""战术副官报告，""隐形空雷已经解除武装，我们可以撤退了。""",gaATG_returnLokeGateRun:继续,
 gaATGreturnLokeGateRun,DialogOptionSelected,$option == gaATG_returnLokeGateRun,,"Zal 大声说到，""Kanta 会召集她的舰队。他们通常在超空间附近游荡。他们会通过跳跃点进来，然后直接向我们而来。""
 
@@ -18450,9 +18479,7 @@ OR
 dcomOfferOption,dcom_option,,,,"dcom_start:询问 ""敏感事项""",
 dcomBlurbBar,dcom_blurbBar,,,一个身着昂贵西装的$dcom_manOrWoman抓着 TriPad，似乎正在强忍愤怒，呆呆地盯着空气。,,
 dcomOfferOptionBar,dcom_optionBar,,,,dcom_startBar:小心地接近这名身着昂贵西装的$dcom_manOrWoman,
-dcomOfferTextBar,DialogOptionSelected,$option == dcom_startBar,"$missionId = dcom
-SetTextHighlights $dcom_reward $dcom_marines
-Call $dcom_ref showMap ""目标：$dcom_marketName ""","You exude understanding. If someone needed to vent a little flux, why, you'd be the perfect audience. It takes only halfway through a light drink before you have the angry $manOrWoman opening up about $hisOrHer problems. 
+dcomOfferTextBar,DialogOptionSelected,$option == dcom_startBar,,"You exude understanding. If someone needed to vent a little flux, why, you'd be the perfect audience. It takes only halfway through a light drink before you have the angry $manOrWoman opening up about $hisOrHer problems. 
 
 You murmur vague agreement at the injustice done to honest folk, the irony of laws used as a shield by dishonest actors. Someone could do something, maybe.","dcom_startBar2:""Someone should do something, maybe.""
 contact_declineBarNoContinue:Decline",
@@ -20114,6 +20141,21 @@ kdDevSetBluffedKanta1,PopulateOptions,"$market.id == kantas_den
 $global.isDevMode
 $menuState == main
 $player.kantaBluffs < 1",SetOptionColor kdDev_setBluffedKanta gray,,20:kdDev_setBluffedKanta:DEV set player bluffed Kanta,
+kdDevSetHadKantaProtection,PopulateOptions,"$market.id == kantas_den
+$global.isDevMode
+$menuState == main
+!$player.everHadKantaProtection",SetOptionColor kdDev_setHadKantaProtection gray,,20:kdDev_setHadKantaProtection:DEV set player HAD Kanta protection,
+kdDevSetHadKantaProtection2,DialogOptionSelected,$option == kdDev_setHadKantaProtection,$player.everHadKantaProtection = true,,,
+kdDevToggleKantaProtection,PopulateOptions,"$market.id == kantas_den
+$global.isDevMode
+$menuState == main",SetOptionColor kdDev_toggleKantaProtection gray,,20:kdDev_toggleKantaProtection:DEV toggle Kanta's Protection,
+kdDevToggleKantaProtectionOn,DialogOptionSelected,"$option == kdDev_toggleKantaProtection
+$player.kantaProtection","unset $player.kantaProtection
+AddTextSmall ""Kanta's Protection lost"" bad
+FireAll PopulateOptions",,,
+kdDevToggleKantaProtectionOff,DialogOptionSelected,$option == kdDev_toggleKantaProtection,"$player.kantaProtection = true
+AddTextSmall ""Kanta's Protection gained"" good
+FireAll PopulateOptions",,,
 kdDevSetKilledLoke2,DialogOptionSelected,$option == kdDev_setKilledLoke,"$global.murderedCloneLoke = true
 FireAll PopulateOptions",,,
 kdDevSetBluffedKanta2,DialogOptionSelected,$option == kdDev_setBluffedKanta,"$player.kantaBluffs++
@@ -20548,72 +20590,94 @@ FireAll AndradaOfficeReplies","""为辛达强权的利益服务，""$heOrShe毫�
 ""顺从我们的光荣愿景，你自然就身处为辛达强权服务的行列中。和管理员谈谈，他们会和你商谈雇佣事宜。""",,
 ,,,,,,
 defaultHyderGreeting,OpenCommLink,"$id == hyder score:1000
-!$global.sdtu_completed",BeginConversation hyder true true,"Deputy Star Marshal Hyder appears, her face impassive. ""Contact identified, maintain course,"" she speaks to another bridge officer before turning to comms.
+!$global.sdtu_missionCompleted
+!$faction.isHostile",,"Deputy Star Marshal Hyder appears, her face impassive. ""Contact identified, maintain course,"" she speaks to another bridge officer before turning to comms.
 
 ""Independent fleet, hear me: stay clear of our operational volume and you will not be fired upon.""
 
 ""Hyder out.""
 
 The comms snap off before you have a chance to speak.",cutCommLink:切断通讯链接,
+defaultHyderGreetingHostile,OpenCommLink,"$id == hyder score:1000
+!$global.sdtu_missionCompleted
+$faction.isHostile",EndConversation DO_NOT_FIRE,"Deputy Star Marshal Hyder appears, her face impassive. ""Hostile identified, prepare battlestations,"" she speaks to another bridge officer before turning to comms.
+
+""Independent fleet, hear me: your opportunity for honorable surrender has passed. Prepare to be destroyed in battle.""
+
+""Hyder out."" The comms snap off before you have a chance to speak.",,
 postSDTUHyderGreeting,OpenCommLink,"$id == hyder score:1000
-$global.sdtu_completed",BeginConversation hyder true true,"Deputy Star Marshal Hyder appears, her face impassive. ""Independent fleet,"" she says, not acknowledging your previous contact, ""Hear me: stay clear of our operational volume and you will not be fired upon.""
+$global.sdtu_missionCompleted
+!$faction.isHostile",,"Deputy Star Marshal Hyder appears, her face impassive. ""Independent fleet,"" she says, not acknowledging your previous contact, ""Hear me: stay clear of our operational volume and you will not be fired upon.""
 
 ""Hyder out.""
 
 The comms snap off before you have a chance to speak.",cutCommLink:切断通讯链接,
 postSDTUHyderGreetingTrust,OpenCommLink,"$id == hyder score:1000
-$global.sdtu_completed
-$global.gotHyderTrust",BeginConversation hyder true true,"Deputy Star Marshal Hyder appears. ""Captain,"" she says, impassive but respectful. ""Please stay clear of our operational volume."" 
+$global.sdtu_missionCompleted
+$global.gotHyderTrust
+!$faction.isHostile",,"Deputy Star Marshal Hyder appears. ""Captain,"" she says, impassive but respectful. ""Please stay clear of our operational volume."" 
 
 And pause, then ""We have nothing further to discuss at this time. Hyder out.""
 
 The comms snap off before you have a chance to speak.",cutCommLink:切断通讯链接,
 defaultCadenGreetingPreSDTU,OpenCommLink,"$id == caden score:1000
-!$global.sdtu_completed",BeginConversation caden true true,"Guard High Deputy Executor Caden appears; he barely looks at the comms.
+!$global.sdtu_missionCompleted
+!$faction.isHostile",,"Guard High Deputy Executor Caden appears; he barely looks at the comms.
 
 ""Independent fleet: maintain distance and you will not be fired upon. Hear and obey,"" Caden declares.
 
-""Final victory to the Supreme Executor!"" Caden shouts with genuine enthusiasm before snapping the comms off.",cutCommLink:切断通讯链接,
+""Final victory to the Supreme Executor!"" Caden shouts with genuine enthusiasm.",cutCommLink:切断通讯链接,
 defaultCadenGreetPreSDTUWeakPlayer,OpenCommLink,"$id == caden score:1000
-!$global.sdtu_completed
-$player.fleetPoints < 75","EndConversation DO_NOT_FIRE
+!$global.sdtu_missionCompleted
+$player.fleetPoints < 75
+!$faction.isHostile","EndConversation DO_NOT_FIRE
 FireAll PopulateOptions","Guard High Deputy Executor Caden doesn't even bother to open to comms; instead, a blank-faced Sindrian Diktat officer appears, and speaks.
 
 ""Minor independent fleet: maintain distance and you will not be fired upon. Glory to the Sindrian Diktat!"" 
 
-And with that, they snap off the comms-line.",,
+And with that, the comms-line snaps off.",,
+defaultCadenGreetHostile,OpenCommLink,"$id == caden score:1000
+$faction.isHostile",EndConversation DO_NOT_FIRE,"Guard High Deputy Executor Caden appears, face red, eyes staring with blank hatred.
+
+""You shall be extinguished by the might of the Lion's Guard!"" he shouts. ""Glory to the Sindrian Diktat, eternal victory to the Supreme Executor!""
+
+The comms snap off without waiting for your reply.",,
 defaultCadenGreetPostSDTU,OpenCommLink,"$id == caden score:1000
-$global.sdtu_completed",BeginConversation caden true true,"The image of Guard High Deputy Executor Caden appears. He is not even looking at the comms-feed.
+$global.sdtu_missionCompleted
+!$faction.isHostile",,"The image of Guard High Deputy Executor Caden appears. He is not even looking at the comms-feed.
 
 ""Independent fleet: maintain distance and you will not be fired upon. Hear and obey,"" Caden declares, taking a breath.
 
-""Final victory to the Supreme Executor!"" he shouts, and the comms snap off without waiting for a reply.",cutCommLink:切断通讯链接,
+""Final victory to the Supreme Executor!"" he shouts.",cutCommLink:切断通讯链接,
 defaultCadenGreetPostSDTUWeakPlayer,OpenCommLink,"$id == caden score:1000
-$global.sdtu_completed
-$player.fleetPoints < 75","EndConversation DO_NOT_FIRE
+$global.sdtu_missionCompleted
+$player.fleetPoints < 75
+!$faction.isHostile","EndConversation DO_NOT_FIRE
 FireAll PopulateOptions","Guard High Deputy Executor Caden doesn't even bother to open the comms; instead, a blank-faced Sindrian Diktat officer appears.
 
 ""Minor independent fleet: maintain distance and you will not be fired upon. Glory to the Sindrian Diktat!"" 
 
 Without waiting for a reply, the connection is terminated.",,
 defaultCadenGreetPostSDTUcommission,OpenCommLink,"$id == caden score:1000
-$global.sdtu_completed
-$player.fcm_faction
-!$global.sdtu_enragedCaden",,"Guard High Deputy Executor Caden appears before you. ""Glory to the Sindrian Diktat, captain!"" he booms enthusiastically. ""It stirs the heart to see another proud follower of the Supreme Executor's vision upholding the Great Cause."" 
+$global.sdtu_missionCompleted
+$player.fcm_faction == sindrian_diktat
+!$global.sdtu_enragedCaden
+!$faction.isHostile",EndConversation DO_NOT_FIRE,"Guard High Deputy Executor Caden appears before you. ""Glory to the Sindrian Diktat, captain!"" he booms enthusiastically. ""It stirs the heart to see another proud follower of the Supreme Executor's vision upholding the Great Cause."" 
 
 He blinks, perhaps realizing that he doesn't actually have anything to say to you. ""Stay strong and stay vigilant - as Supreme Executor Andrada taught us. Glory to the Sindrian Diktat!"" 
 
 Without waiting for a reply, the connection is terminated.",,
 defaultCadenGreetPostSDTUbacker,OpenCommLink,"$id == caden score:1000
-$global.sdtu_completed
+$global.sdtu_missionCompleted
 $global.sdtu_toldCadenPlayerBacksHim score:2
-!$global.sdtu_enragedCaden",,"Guard High Deputy Executor Caden appears before you. ""Ah, Captain $playerName. Glory to the Sindrian Diktat!"" he booms enthusiastically. ""It stirs the heart to see a loyal follower of the Supreme Executor's vision, and,"" he leans in, ""One who will stand with me when the time comes, when strength and loyalty will be required to secure the future of the Persean Sector.""
+!$global.sdtu_enragedCaden
+!$faction.isHostile",EndConversation DO_NOT_FIRE,"Guard High Deputy Executor Caden appears before you. ""Ah, Captain $playerName. Glory to the Sindrian Diktat!"" he booms enthusiastically. ""It stirs the heart to see a loyal follower of the Supreme Executor's vision, and,"" he leans in, ""One who will stand with me when the time comes, when strength and loyalty will be required to secure the future of the Persean Sector.""
 
 He leans back, satisfied. ""Stay strong and vigilant - as Supreme Executor Andrada taught us. Glory to the Sindrian Diktat!"" 
 
 Without waiting for a reply, the connection is terminated.",,
 postSDTUMacarioGreeting,,"$id == macario score:1000
-$global.sdtu_completed",BeginConversation macario true true,"Dolos Macario, the Spider of Sindria, appears before you. He looks bored.
+$global.sdtu_missionCompleted",BeginConversation macario true true,"Dolos Macario, the Spider of Sindria, appears before you. He looks bored.
 
 ""Captain, o captain,"" he greets you, his tone bored. ""Not yet."" He winks and hits the shut-off.
 
@@ -20693,10 +20757,28 @@ sdBarRaidLeave,DialogOptionSelected,$option == sdbr_end2,"$global.didSDBarRaid =
 BarCMD leaveBar",,,
 ,,,,,,
 # Sindrian Diktat - The Usurpers sdtu,,,,,,
-sdtuStartDev,PopulateOptions,"$menuState == main
+sdOpenDevOptions,PopulateOptions,"$menuState == main
 $faction.id == sindrian_diktat
 $hasMarket
-$global.isDevMode",SetOptionColor sdtu_startDev gray,,180:sdtu_startDev:DEV start The Usurpers mission,
+$global.isDevMode",SetOptionColor sd_openDevOptions1 gray,,180:sd_openDevOptions1:DEV open SD dev options,
+sdOpenDevOptions1,DialogOptionSelected,$option == sd_openDevOptions1,FireAll SDdevOptionHub,,,
+sdDevOptionHubA,SDdevOptionHub,!$global.sdtu_missionCompleted,SetOptionColor sdtu_startDev gray,,sdtu_startDev:start The Usurpers mission,
+sdDevOptionHubB,SDdevOptionHub,!$global.sdtu_missionCompleted,SetOptionColor sdtu_setCompleted gray,,sdtu_setCompleted:set The Usurpers mission as completed,
+sdDevOptionHubC,SDdevOptionHub,!$global.sdtu_toldCadenPlayerBacksHim,SetOptionColor sdtu_setToldBackedCaden gray,,sdtu_setToldBackedCaden:set player told Caden they back him,
+sdDevOptionHubD,SDdevOptionHub,!$global.sdtu_enragedCaden,SetOptionColor sdtu_setEnragedCaden gray,,sdtu_setEnragedCaden:set player enraged Caden,
+sdDevOptionHubOut,SDdevOptionHub,,SetOptionColor sd_devOptionsBack gray,,sd_devOptionsBack:return to previous dialog,
+sdDevOptionHubOptionB,DialogOptionSelected,$option == sdtu_setCompleted ,"RemoveOption sdtu_setCompleted 
+$player.metCaden = true
+$player.metMacario = true
+$player.metHyder = true
+$player.metRam = true
+SetPersonHidden macario false
+$global.sdtu_missionCompleted = true",,,
+sdDevOptionHubOptionC,DialogOptionSelected,$option == sdtu_setToldBackedCaden ,"$global.sdtu_toldCadenPlayerBacksHim = true
+RemoveOption sdtu_setToldBackedCaden ",,,
+sdDevOptionHubOptionD,DialogOptionSelected,$option == sdtu_setEnragedCaden ,"$global.sdtu_enragedCaden = true
+RemoveOption sdtu_setEnragedCaden ",,,
+sdDevOptionHubOptionOut,DialogOptionSelected,$option == sd_devOptionsBack,FireAll PopulateOptions,,,
 sdtuStartDev2,DialogOptionSelected,$option == sdtu_startDev,,"Your comms officer calls for your attention, ""Captain, we have incoming from... um, an official channel. No ID provided."" They forward the link to your personal interface.",sdtu_startInfo0:继续,
 sdtuStart,PopulateOptions,"$menuState == main
 $faction.id == sindrian_diktat
@@ -21378,7 +21460,8 @@ sdtuHyderAngryGreeting,OpenCommLink,"$id == hyder score:1000
 $sdtu_meetHyder
 $global.sdtu_inProgress
 Call $global.sdtu_ref updateData
-$sdtu_stage == MEET_HYDER","BeginConversation hyder
+$sdtu_stage == MEET_HYDER
+!$faction.isHostile","BeginConversation hyder
 FireAll SDTUHyderTalkRound1Options
 AdjustRepPerson hyder VENGEFUL  -5
 Call $global.sdtu_ref playMusicHyder
@@ -21580,6 +21663,12 @@ sdtuHyderTalk2BattleLieC,DialogOptionSelected,$option == sdtu_hyderTalk2BattleLi
 
 She fixes you with her glare. ""Do this by the proper order of things, each in its place. This is the way of the Sindrian Diktat.""","sdtu_hyderTalk2Transfer:""I will transfer them to your custody immeditately.""
 sdtu_hyderTalk2PrisonerToMacarioFinal:""Macario issued the arrest warrant. I will take the prisoner to him.""",
+sdtuHyderTalk2BattleLieC2,DialogOptionSelected,"$option == sdtu_hyderTalk2BattleLieC
+$global.sdtu_fulfilledPromiseToPatrolTraitor",,"Hyder closes her eyes and rubs the bridge of her nose; it seems that she does not enjoy the prospect of lie and counter-lie.
+
+""Typical Macario,"" she says finally, her anger now - mostly - directed away from yourself.
+
+""Tell Macario,"" she spits his name out like a rotten piece of food, ""that my loyalty to the Supreme Executor is unquestionable. And that I shall be making a report of his waste of naval resources to my superior.""","sdtu_hyderTalk3start2:""There's just one more thing...""",
 sdtuHyderTalk2BattleCheckB,SDTUHyderTalk2BattleCheck,$global.sdtu_foughtDiktatPatrol,,"""Although dissatisfying, I shall accept your word as an officer that this is the truth.""",sdtu_hyderTalk3start:继续,
 # hyder round 3,,,,,,
 sdtuHyderTalk3Start,DialogOptionSelected,$option == sdtu_hyderTalk3start,,"""Now then, I believe our business is concluded for the present,"" she says.
@@ -22039,7 +22128,12 @@ Call $global.sdtu_ref updateData
 $sdtu_stage == EXTRACT_AGENT",FireBest SDTUUmbraRaidCheckHostilesNearby,,2:sdtu_umbraRaidStart:Prepare a raid to extract Caden's agent,
 sdtuDisableUmbraRaidOption,SDTUUmbraRaidCheckHostilesNearby,HostileFleetNearbyAndAware,"SetEnabled sdtu_umbraRaidStart false
 SetTooltip sdtu_umbraRaidStart ""A nearby hostile fleet is tracking your movements, making a raid impossible.""",,,
-sdtuUmbraRaidStart,DialogOptionSelected,$option == sdtu_umbraRaidStart,ShowImageVisual raid_prepare,"Macario's file is highly detailed. It's clear that Sindrian Diktat intelligence has had sources embedded in both the Umbran ARC/Anti-affiliated insurrectionists as well as the Lion's Guard for quite some time.
+sdtuUmbraRaidStart,DialogOptionSelected,$option == sdtu_umbraRaidStart,"$raidDifficulty = $sdtu_extractAgentRaidDifficulty 0
+$raidGoBackTrigger = PopulateOptions 0
+$raidContinueTrigger = SDTUUmbraRaidFinishedB 0
+AddRaidObjective genericIcon ""Capture the Lion's Guard double agent"" HIGH 3000 SDTUUmbraRaidFinishedA true
+$raidRestrictToTrigger = SDTUUmbraRaidFinishedA 0
+ShowImageVisual raid_prepare","Macario's file is highly detailed. It's clear that Sindrian Diktat intelligence has had sources embedded in both the Umbran ARC/Anti-affiliated insurrectionists as well as the Lion's Guard for quite some time.
 
 The double-agent's key locations are clearly described, though their schedule is erratic. A clean capture will involve multiple simultaneous strikes at insurrectionist bunkers, at which point the op will definitely go hot. 
 
@@ -22208,8 +22302,9 @@ $sdtu_stage == MEET_CADEN",BeginConversation macario,"After a short wait, Macari
 ""Until then?"" He says this like it's a question, but it isn't, because he's already killed the link.",cutCommLink:切断通讯链接,
 # SDTU step 7: Meet Caden's fleet,,,,,,
 sdtuCadenAngryGreeting,OpenCommLink,"$id == caden score:1000
+!$faction.isHostile
 Call $global.sdtu_ref updateData
-$sdtu_stage == MEET_CADEN","BeginConversation caden true true
+$sdtu_stage == MEET_CADEN score:1000","BeginConversation caden true true
 FireBest SDTUCadenGreeting
 Call $global.sdtu_ref playMusicCaden
 $player.metCaden = true","Horacio Caden, Grand High Deputy Executor of the Sindrian Diktat appears before you, looking satisfied with himself.",,
@@ -23093,10 +23188,18 @@ FireAll PopulateOptions","""Oh, you're one of those? Easy! Just go kill some Sin
 ,,,,,,
 # Kanta's Protection,,,,,,
 kpAudienceHasProtection,DialogOptionSelected,"$option == kpAudience1
-$player.kantaProtection",,TODO Player has Kanta's protection already,kpLeave2:Leave,
+$player.kantaProtection",,"Cydonia nods stiff-necked, the tiniest insinuation of a bow, then addresses you.
+
+""See now how Captain $playerName crawls before her worshipfulness!"" He turns slowly, projecting his piercing voice to all corners. ""Safe under the protection of the merciless Warlord Kanta; safe like a little fetus in a birthing tank. See how those prosper who appease her desires!""
+
+He spins back toward you. ""Besides supplicating yourself before our queen of blood,"" he hisses, ""Why have you come?""",kpLeave2:Leave,
 kpAudienceHadProtection,DialogOptionSelected,"$option == kpAudience1
 !$player.kantaProtection
-$player.everHadKantaProtection",,"TODO Player had Kanta's protection, but lost it",kpLeave2:Leave,
+$player.everHadKantaProtection",,"Cydonia shakes his head slowly, arms crossed, looking down at you with showy disapproval.
+
+He gives a shrill shout, ""See this wretched worm before you!"" Turning slowly to address all the court, he berates you. ""This blind simpleton, this ungrateful fool. What madness compelled $playerName to throw off Kanta's gift of protection, given so dearly?""
+
+The crowd boos and jeers, calling for your blood to spill on the agrav plates, or to boil away in the vaccuum as merciless as their queen. Cydonia looks pleased with himself. Kanta sits, impassive, respirators hissing like serpents coiled to strike.",kpLeave2:Leave,
 kpAudience1,DialogOptionSelected,$option == kpAudience1,,"Cydonia nods stiff-necked, the tiniest hint of a bow, then addresses you before the entire court.
 
 ""You've come crawling to her worshipfulness,"" he turns, projecting his piercing voice to all corners. ""The mighty Warlord Kanta; the predator of the Persean Sector; the font of violence from which we quench our thirst for glory,"" then spins back toward you.
@@ -23611,7 +23714,7 @@ PKPathRecoverMission2,DialogOptionSelected,$option == pkPath_recoverMission2,,"$
 
 
 pkPath_recoverMission3:继续",
-PKPathRecoverMission3,DialogOptionSelected,$option == pkPath_recoverMission3,FireAll PKPatherComOptions,"""I see by your face that you know of these abominations; that unholy craft of the Domain, murderer of Opis and its billions; and Hana Pacha, and countless others.""
+PKPathRecoverMission3,DialogOptionSelected,$option == pkPath_recoverMission3,FireAll PKPatherComOptions,"""I see by your face that you know of these abominations; that unholy craft of the Domain, murderer of Opis and its billions; and Hanan Pacha, and countless others.""
 
 ""I know where one may be found. Bring it to me and our holy war against you shall end."" $HeOrShe lowers $hisOrHer head just a little, ""Until the end of the world.""",,
 PKPatherComOptZ,PKPatherComOptions,!$askedEndOfWorld,,,"pkPather_askEndOfWorld:""What do you mean by 'End of the world'?""",
@@ -24332,6 +24435,7 @@ $id != macario
 $id != hyder
 $id != caden
 !$demandedExecutor
+!$global.preparingExecutor
 !$player.turnedInPlanetkiller
 PlayerHasCargo planetkiller
 PK_CMD rightPostToAcceptPK
@@ -24400,7 +24504,7 @@ pk_executorInsistSel2,DialogOptionSelected,$option == pk_executorInsist2,"Highli
 AdjustRep sindrian_diktat -10
 AdjustRepActivePerson -25
 $demandedExecutor = true
-$preparingExecutor = true 7
+$global.preparingExecutor = true 7
 $removeSpecialModifications = false
 MakeNearbyFleetsNonHostile sindrian_diktat pk 20000 8","An image of soldiers in power armor marching to the cheers of the 'liberated' citizens of Volturn is interrupted by the cowed-looking Diktat $Rank.
 
@@ -24413,7 +24517,7 @@ pk_executorSpecialSel,DialogOptionSelected,$option == pk_executorSpecial,"Highli
 AdjustRep sindrian_diktat -25
 AdjustRepActivePerson -50
 $demandedExecutor = true
-$preparingExecutor = true 7
+$global.preparingExecutor = true 7
 $removeSpecialModifications = true
 MakeNearbyFleetsNonHostile sindrian_diktat pk 20000 8","An image of soldiers marching to the cheers of the 'liberated' citizens of Volturn is interrupted by the cowed-looking Diktat $Rank.
 
@@ -24426,17 +24530,17 @@ PKDiktatExecutorNotReady,PickGreeting,"$isPerson
 !$player.turnedInPlanetkiller
 PlayerHasCargo planetkiller
 $demandedExecutor == true score:1000
-$preparingExecutor
+$global.preparingExecutor
 $personFaction.id == sindrian_diktat",,"""You,"" $heOrShe says with a truly ugly sneer that tells you everything about $hisOrHer opinion.
 
 ""It's not ready.""
 
-The Diktat $Rank slams the comms-cutoff.",cutCommLink:切断通讯链接,
+The Sindrian Diktat $Rank slams the comms-cutoff.",cutCommLink:切断通讯链接,
 PKDiktatExecutorReady,PickGreeting,"$isPerson
 !$player.turnedInPlanetkiller
 PlayerHasCargo planetkiller
 $demandedExecutor == true score:1000
-!$preparingExecutor
+!$global.preparingExecutor
 $personFaction.id == sindrian_diktat","AddRemoveAnyItem SPECIAL planetkiller -1
 AdjustRep hegemony -50
 $player.turnedInPlanetkiller = true
@@ -24444,7 +24548,7 @@ PK_CMD giveExecutor $removeSpecialModifications
 $global.gavePKtoDiktat = true
 $global.soldPKtoDiktatForExecutor = true","""It's ready,"" $heOrShe says, sneering. ""The Executor-class battleship, a thing of beauty and vision that you will never understand.""
 
-$HeOrShe slams a comms-cutoff, leaving a confused but unquestioningly loyal junior officer to make the actual arrangements. A Diktat technical team takes possession of the planetkiller and takes it from your $shipOrFleet into Diktat custody.
+$HeOrShe slams a comms-cutoff, leaving a confused but unquestioningly loyal junior officer to make the actual arrangements. A technical team takes possession of the planetkiller and remove it from your $shipOrFleet into the custody of the Sindrian Diktat.
 
 Andrada only knows what will be done with it.",cutCommLink:切断通讯链接,
 ,,,,,,

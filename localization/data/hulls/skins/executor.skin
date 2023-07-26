@@ -18,6 +18,8 @@
 	"removeBuiltInMods":[], 			# hullmod ids
 	"removeBuiltInWeapons":[], 			# weapon slot ids
 	"systemId":"highenergyfocus",
+	"maxSpeed":50,
+	"shieldEfficiency":0.6,
 	"builtInMods":["solar_shielding", "andrada_mods", "coherer"],
 	#"builtInMods":["solar_shielding", "andrada_mods"],
 	"builtInWeapons":{
@@ -32,4 +34,15 @@
 			"size": "LARGE"
 		},
 	},
+	"engineSlotChanges":{
+		"3":{"length": 64, "width":20},
+		"4":{"length": 64, "width":20},
+		"5":{"length": 64, "width":20},
+		"6":{"length": 64, "width":20},
+		"7":{"length": 64, "width":20},
+		"8":{"length": 64, "width":20},
+	},    
 }
+
+
+
