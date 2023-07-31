@@ -62,7 +62,7 @@
 	##############################################################
 	
 	"localeOverride":"en_US",
-	"cjkMode":false, # enables support for linewrapping for Chinese/Japanese/Korean fonts
+	"cjkMode":true, # enables support for linewrapping for Chinese/Japanese/Korean fonts
 	
 	# VERY rudimentary accessibility feature
 	# Writes some interaction text to saves/common/interaction_text
@@ -95,7 +95,7 @@
 
 	"uiFadeSpeedMult":1, # when set to 1000 or higher, also makes the hyperspace transition fade instant
 	
-	"showCNTranslationCredits":false,
+	"showCNTranslationCredits":true,
 	#"cnTranslationCreditsStringOverride":"",
 	
 	# no longer used due to saving/loading rendering happening on the main thread, bypassing the issue
@@ -1024,32 +1024,54 @@
 
 	"designTypeColors":{
 		"Common":[190,200,200,255],
+		"普通":[190,200,200,255],
 		#"Common":[170,222,255,255],
 		#"Low Tech":[245,150,30,255],
 		#"Midline":[200,200,200,255],
 		#"High Tech":[135,206,255],
 		"Low Tech":[209,110,91,255],
+		"主宰纪元":[209,110,91,255],
 		"Midline":[221,201,104,255],
+		"核心纪元":[221,201,104,255],
 		"High Tech":[160,213,225,255],
+		"扩展纪元":[160,213,225,255],
 		"Remnant":[70,255,235,255],
+		"余辉":[70,255,235,255],
 		"Explorarium":[155,139,134,255],
+		"开拓者":[155,139,134,255],
 		"Pirate":[200,0,0,255],
+		"海盗":[200,0,0,255],
 		"Tri-Tachyon":[135,206,255,255],
+		"速子科技":[135,206,255,255],
 		"Hegemony":[245,150,30,255],
+		"霸主":[245,150,30,255],
 		"XIV Battlegroup":[252,173,60,255],
+		"第十四战斗群":[252,173,60,255],
 		"Luddic Path":[150,200,0,255],
+		"卢德左径":[150,200,0,255],
 		"Luddic Church":[76,169,20,255],
+		"卢德教会":[76,169,20,255],
 		"Persean League":[220,185,20,255],
+		"英仙座联盟":[220,185,20,255],
 		"Lion's Guard":[160,0,95,255],
+		"狮心卫队":[160,0,95,255],
 		
 		"Unknown":[155,155,155,255], # special weapons
+		"未知":[155,155,155,255],
 		"Domain Restricted":[155,155,155,255],
+		"人之领管制科技":[155,155,155,255],
 		"Fabrique Orbitale":[100,100,200,255],
+		"轨道工厂制造公司":[100,100,200,255],
 		"Exodyne Biotech":[201,219,4,255],
+		"艾克索达因生物科技":[201,219,4,255],
 		"Ko Combine":[221,201,104,255],
+		"Ko 联合实业":[221,201,104,255],
 		"Eridani-Utopia Terraforming":[204,229,255,255],
+		"天苑四-乌托邦地貌改造集团":[204,229,255,255],
 		"Mbaye-Gogol":[233,233,121,255],
+		"姆巴耶-果戈尔":[233,233,121,255],
 		"Bhilai Astra":[200,80,67,255],
+		"比莱空间":[200,80,67,255],
 	},
 
 	"graphics":{
