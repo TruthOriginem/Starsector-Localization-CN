@@ -55,7 +55,7 @@ name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaid
 """双面神""装置",janus,mission_item,,,100000,1000,1,,graphics/icons/cargo/janus_device.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.JanusDevicePlugin,,"这是 Elissa Zal 基于 Scylla Coureuse 等人发展的理论而创建的第一代 ""双面神"" 装置。
 
 与超空间驱动器整合之后，这个装置能根据出发星门和目标星门独特的共振信号特征，向星门环传输调制过的超波脉冲。随后消耗大量燃料产生巨大的能量，在两个星门之间建立一条临时连接，使整个舰队能运用星门网络进行移动。",0
-行星杀手,planetkiller,mission_item,,,1000000,1000,1,,graphics/icons/cargo/planetkiller.png,ui_cargo_special_military_pickup,ui_cargo_special_military_drop,com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin,,"一颗专门用来摧毁一整个世界的弹头。人们关于其运作原理知之甚少，只知道其借助了行星的自转与运用了某些共振。
+行星杀手,planetkiller,mission_item,,,1000000,1000,1,,graphics/icons/cargo/planetkiller.png,ui_cargo_special_military_pickup,ui_cargo_special_military_drop,com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin,,"一颗足以使星球分崩离析的专用弹头。人们关于其运作原理知之甚少，只知道其通过将某种形式的共振和星球本身的自转共同产生作用。
 
-这颗弹头需要某些大概早已遗失的授权代码，目前它就只是一台死气沉沉的复杂机械而已。",10
-超空间流况数据,topographic_data,,,,50000,1000,1,,graphics/icons/cargo/hyperspace_data.png,ui_chip_pickup,ui_modspec_drop,com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin,,这台有着基本资安措施的 TriPad 依照 人之领 开拓者们传承而下的数据格式规则，囊括了英仙座星域某片超空间最近流况数据的详尽扫描与分析结果。像这样的数据对前往 核心世界 之外探索远征的成功而言是不可或缺的。,500
+这颗弹头被上了保险，需要某些大概失传已久的授权代码才能解锁。目前它就只是一台死气沉沉的复杂机械而已。",10
+超空间测绘数据,topographic_data,,,,50000,1000,1,,graphics/icons/cargo/hyperspace_data.png,ui_chip_pickup,ui_modspec_drop,com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin,,这台有着基本资安措施的 TriPad 依照 人之领 开拓者们传承而下的数据格式规则，囊括了英仙座星域某片超空间最近流况数据的详尽扫描与分析结果。像这样的数据对前往 核心世界 之外探索远征的成功而言是不可或缺的。,500

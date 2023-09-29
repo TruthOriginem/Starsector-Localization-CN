@@ -126,7 +126,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 提高 %s 最低船员需求。",消除传感器惩罚、提高最大宇宙航速、并增加所需船员数量。,Negates the increased crew requirements.,graphics/hullmods/militarized_subsystems.png
 恒星防护层,solar_shielding,2,,,"defensive, req_spaceport, merc, standard","Defenses, Logistics, Requires Dock",5000,,,,3,6,9,15,data.hullmods.SolarShielding,"最早由辛达的工程师为应对 Askonia 星系核心区的独特环境而研发。降低 %s 日冕对战备值 (CR) 的影响，对超空间内的风暴也有同样的作用。
 
-战斗中降低 %s 舰船所受到的能量伤害。",降低日冕惩罚与所受能量武器的伤害。,Increases the protection from solar coronae and similar hazards to %s.,graphics/hullmods/solar_shielding2.png
+战斗中降低 %s 舰船所受到的能量伤害。",降低星冕影响与所受能量武器的伤害。,Increases the protection from solar coronae and similar hazards to %s.,graphics/hullmods/solar_shielding2.png
 勘探设备,surveying_equipment,1,,,"special, req_spaceport, standard","Logistics, Requires Dock",5000,,,,5,10,15,25,data.hullmods.SurveyingEquipment,根据舰船级别，降低 %s/%s/%s/%s 勘探星球时所需的重型机械和补给。所消耗资源的数量最低可降至 %s。,降低勘探时所需的资源。,Increases the survey cost reduction by %s.,graphics/hullmods/surveying_equipment.png
 ,,,,,,,,,,,,,,,,,,,
 # standard built-in hullmods,,,,,,,,,,,,,,,,,,,
