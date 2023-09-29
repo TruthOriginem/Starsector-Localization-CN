@@ -1,8 +1,8 @@
 {
 	id:"hegemony",
 	"color":[245,150,30,255],
-	"displayName":"Hegemony",
-	"displayNameWithArticle":"the Hegemony",
+	"displayName":"霸主",
+	"displayNameWithArticle":"霸主",
 	"logo":"graphics/factions/hegemony.png",
 	"crest":"graphics/factions/crest_hegemony.png",
 	"shipNamePrefix":"HSS",
@@ -318,14 +318,14 @@
 	},
 	"ranks":{
 		"ranks":{
-			"factionLeader":{"name":"High Hegemon"},
-			"spaceCommander":{"name":"Commander"},
+			"factionLeader":{"name":"至高霸主"},
+			"spaceCommander":{"name":"指挥官"},
 		},
 		"posts":{
-			"factionLeader":{"name":"High Hegemon"},
-			"patrolCommander":{"name":"Patrol Commander"},
-			"fleetCommander":{"name":"Fleet Commander"},
-			"baseCommander":{"name":"Base Commander"},
+			"factionLeader":{"name":"至高霸主"},
+			"patrolCommander":{"name":"巡逻队指挥官"},
+			"fleetCommander":{"name":"舰队指挥官"},
+			"baseCommander":{"name":"基地指挥官"},
 		},
 	},
 	"voices":{
