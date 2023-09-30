@@ -64,11 +64,11 @@ public class FrontShieldGenerator extends BaseHullMod {
 	
 	public String getUnapplicableReason(ShipAPI ship) {
 		if (ship != null && ship.getVariant().getHullMods().contains(HullMods.SHIELD_SHUNT)) {
-			return "Incompatible with Shield Shunt";
+			return "不兼容于 护盾分流";
 		}
 		if (ship != null && ship.getHullSpec().getDefenseType() == ShieldType.PHASE) {
-			return "Ship can not have shields";
+			return "该舰不能拥有护盾";
 		} 
-		return "Ship already has shields";
+		return "该舰已经拥有护盾";
 	}
 }

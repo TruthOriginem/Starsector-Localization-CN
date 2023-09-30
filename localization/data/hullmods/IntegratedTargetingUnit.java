@@ -44,13 +44,13 @@ public class IntegratedTargetingUnit extends BaseHullMod {
 	
 	public String getUnapplicableReason(ShipAPI ship) {
 		if (ship.getVariant().getHullMods().contains("dedicated_targeting_core")) {
-			return "Incompatible with Dedicated Targeting Core";
+			return "不兼容于 专注型目标锁定核心";
 		}
 		if (ship.getVariant().getHullMods().contains("advancedcore")) {
-			return "Incompatible with Advanced Targeting Core";
+			return "不兼容于 先进目标定位核心";
 		}
 		if (ship.getVariant().getHullMods().contains(HullMods.DISTRIBUTED_FIRE_CONTROL)) {
-			return "Incompatible with Distributed Fire Control";
+			return "不兼容于 分布式火控系统";
 		}
 		return null;
 	}

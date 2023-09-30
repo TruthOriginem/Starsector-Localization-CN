@@ -25,7 +25,7 @@ public class ExtendedShieldEmitter extends BaseHullMod {
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
-		return "Ship has no shields";
+		return "该舰没有护盾";
 	}
 	
 	public String getSModDescriptionParam(int index, HullSize hullSize) {

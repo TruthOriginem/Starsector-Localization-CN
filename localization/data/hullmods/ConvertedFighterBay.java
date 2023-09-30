@@ -46,7 +46,7 @@ public class ConvertedFighterBay extends BaseHullMod {
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
-		return "Requires built-in fighter wings only";
+		return "该舰必须有且仅有内置战机";
 	}
 	
 	public String getSModDescriptionParam(int index, HullSize hullSize, ShipAPI ship) {

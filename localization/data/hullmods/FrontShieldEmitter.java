@@ -52,15 +52,15 @@ public class FrontShieldEmitter extends BaseHullMod {
 	
 	public String getUnapplicableReason(ShipAPI ship) {
 		if (ship == null || ship.getShield() == null) {
-			return "Ship has no shields";
+			return "该舰没有护盾";
 		}
 		
 		if (ship.getShield().getType() == ShieldType.FRONT) {
-			return "Ship already has front shields";
+			return "该舰已经拥有定向护盾";
 		}
 		
 		if (ship.getVariant().getHullMods().contains("adaptiveshields")) {
-			return "Incompatible with Shield Conversion - Omni";
+			return "不兼容于 全角护盾发生器";
 		}
 		
 		return null;

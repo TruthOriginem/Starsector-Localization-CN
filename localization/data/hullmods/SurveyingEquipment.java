@@ -72,8 +72,8 @@ public class SurveyingEquipment extends BaseLogisticsHullMod {
 		
 		
 		
-		tooltip.addPara("The combined surveying equipment in your fleet reduces the survey cost by %s "
-				+ "supplies and %s heavy machinery.", 
+		tooltip.addPara("当前舰队勘探设备的总和使得勘探补给消耗降低 %s ，"
+				+ "重型机械需求降低 %s 。", 
 				opad, h,
 				"" + supplies,
 				"" + machinery

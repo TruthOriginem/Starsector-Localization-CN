@@ -33,7 +33,7 @@ public class StabilizedShieldEmitter extends BaseHullMod {
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
-		return "Ship has no shields";
+		return "该舰没有护盾";
 	}
 	
 //	public void addSModEffectSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship,

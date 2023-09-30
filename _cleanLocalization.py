@@ -15,10 +15,12 @@ def remove_excess_files(original_dir, localization_dir):
 
         # 找到存在于localization文件夹但不存在于original文件夹中的文件
         excess_files = localization_files - original_files
-
         # 删除多余的文件
         for file in excess_files:
-            os.remove(os.path.join(corresponding_path, file))
+            path_to_remove = os.path.join(corresponding_path, file)
+            if os.path.isfile(path_to_remove):
+                print('删除{}'.format(path_to_remove))
+                os.remove(path_to_remove)
 
 # 调用函数，传入你的原始文件夹路径和本地化文件夹路径
-remove_excess_files('original', 'localization')
+remove_excess_files('original/data', 'localization/data')

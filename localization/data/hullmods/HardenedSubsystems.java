@@ -48,14 +48,14 @@ public class HardenedSubsystems extends BaseHullMod {
 		
 		if (crPerDep < minCRPerDep) crPerDep = minCRPerDep;
 		if (crPerDep <= 0) return;
-		
+	
 		
 		float opad = 10f;
 		
-		tooltip.addSectionHeading("Combat readiness decay", Alignment.MID, opad);
+		tooltip.addSectionHeading("战备衰减", Alignment.MID, opad);
 		
-		tooltip.addPara("Without this hullmor or any other modifiers, it would take %s seconds for "
-				+ "this ship to lose %s combat readiness, after its peak performance time has run out.", opad,
+		tooltip.addPara("该舰峰值时间耗尽后，若未安装该插件或没有同类型增/减益效果，会在 %s 秒内"
+				+ "损失总计 %s 的战备值 (CR)。", opad,
 				Misc.getHighlightColor(),
 				"" + (int) Math.round(secondsPerDeplomentCR),
 				"" + (int) Math.round(crPerDep * 100f) + "%");
@@ -63,7 +63,7 @@ public class HardenedSubsystems extends BaseHullMod {
 		float crLossPerSecond = stats.getCRLossPerSecondPercent().computeEffective(decay);
 		float seconds = (crPerDep * 100f) / crLossPerSecond;
 		
-		tooltip.addPara("With all the modifications currently installed on the ship, it will take %s seconds.",
+		tooltip.addPara("若统计所有同类型增/减益效果，这个时间为 %s 秒。",
 				opad, Misc.getHighlightColor(),
 				"" + (int) Math.round(seconds));
 		
@@ -73,7 +73,7 @@ public class HardenedSubsystems extends BaseHullMod {
 
 
 	public String getUnapplicableReason(ShipAPI ship) {
-		return "Ship does not suffer from CR degradation";
+		return "该舰的战备值 (CR) 不会衰减";
 	}
 }
 
