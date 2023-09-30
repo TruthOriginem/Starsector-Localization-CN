@@ -47,6 +47,7 @@
 
 * "版本号 + data"是游戏各个版本原始的 data 文件夹
 * "original" 内存放当前版本的英文原文，不要改动
+* "original.old" 内存放上个版本的英文原文，不要改动(暂时没有该文件夹)
 * "localization" 内存放当前版本的译文
 * "localization.old" 内存放上个版本(0.95.1a-RC6)的译文
 * "para_tranz" 内存放Paratranz平台相关脚本
