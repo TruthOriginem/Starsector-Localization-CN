@@ -1,0 +1,28 @@
+{
+    "displayName": "Shieldbreaker",
+    "fluxCapacitors": 8,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "shard_left",
+    "hullMods": [],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "shard_left_Shieldbreaker",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "minipulser"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 000": "resonatormrm"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "minipulser"}
+        }
+    ]
+}

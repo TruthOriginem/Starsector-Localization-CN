@@ -1,0 +1,24 @@
+{
+    "displayName": "Custom",
+    "fluxCapacitors": 9,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "shepherd",
+    "hullMods": ["reinforcedhull"],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "shepherd_Starting",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 008": "heatseeker"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 007": "vulcan"}
+        }
+    ],
+    "wings": []
+}

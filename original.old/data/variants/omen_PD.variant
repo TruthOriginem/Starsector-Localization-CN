@@ -1,0 +1,30 @@
+{
+    "displayName": "EW",
+    "fluxCapacitors": 8,
+    "fluxVents": 3,
+    "goalVariant": true,
+    "hullId": "omen",
+    "hullMods": [
+        "missleracks",
+        "hardened_subsystems",
+        "auxiliarythrusters"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "omen_PD",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {"WS 003": "swarmer"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "pdlaser",
+                "WS 002": "pdlaser"
+            }
+        }
+    ]
+}

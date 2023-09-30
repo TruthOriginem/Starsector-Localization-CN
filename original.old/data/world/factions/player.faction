@@ -1,0 +1,381 @@
+{
+	# trivial test commit change.
+	"id":"player",
+	#"color":[155,255,0,155],
+	"color":[170,222,255,127],
+	
+	"baseUIColor":[170,222,255,255],
+	#"secondaryUIColor":[255,155,100,255],
+	#"secondarySegments":5,
+	"darkUIColor":[31,94,112,175],
+	"gridUIColor":[70,200,255,75],
+	#"brightUIColor":[203,245,255,255],
+	
+	"showInIntelTab":false,
+	
+	"displayName":"Your",
+	"displayNameWithArticle":"Your",
+	"logo":"graphics/factions/player_flag3.png",
+	"crest":"graphics/factions/crest_player_flag.png",
+	"shipNamePrefix":"ISS",
+	"shipNameSources":{
+		"SPACE":1,
+	},
+	"names":{
+		"old english":1,
+		"modern":1,
+		"world":1,
+		"future":1,
+		"myth":1,
+	},
+	"flags":[
+		#{
+			#"logo":"graphics/factions/custom/player_logo00_flag.png",
+			#"crest":"graphics/factions/custom/player_logo00_crest.png"
+		#},
+		{
+			"logo":"graphics/factions/player_flag3.png",
+			"crest":"graphics/factions/crest_player_flag.png",
+		},
+		{
+			"logo":"graphics/factions/custom/player_logo01_flag.png",
+			"crest":"graphics/factions/custom/player_logo01_crest.png"
+		},
+		{
+			"logo":"graphics/factions/custom/player_logo02_flag.png",
+			"crest":"graphics/factions/custom/player_logo02_crest.png"
+		},
+		{
+			"logo":"graphics/factions/custom/player_logo03_flag.png",
+			"crest":"graphics/factions/custom/player_logo03_crest.png"
+		},
+		{
+			"logo":"graphics/factions/custom/player_logo04_flag.png",
+			"crest":"graphics/factions/custom/player_logo04_crest.png"
+		},
+		{
+			"logo":"graphics/factions/custom/player_logo05_flag.png",
+			"crest":"graphics/factions/custom/player_logo05_crest.png"
+		},
+		{
+			"logo":"graphics/factions/custom/player_logo06_flag.png",
+			"crest":"graphics/factions/custom/player_logo06_crest.png"
+		},
+		{
+			"logo":"graphics/factions/custom/player_logo07_flag.png",
+			"crest":"graphics/factions/custom/player_logo07_crest.png"
+		},
+		{
+			"logo":"graphics/factions/custom/player_logo08_flag.png",
+			"crest":"graphics/factions/custom/player_logo08_crest.png"
+		},
+		{
+			"logo":"graphics/factions/custom/player_logo09_flag.png",
+			"crest":"graphics/factions/custom/player_logo09_crest.png"
+		},
+		{
+			"logo":"graphics/factions/custom/player_logo10_flag.png",
+			"crest":"graphics/factions/custom/player_logo10_crest.png"
+		},
+		{
+			"logo":"graphics/factions/custom/player_logo11_flag.png",
+			"crest":"graphics/factions/custom/player_logo11_crest.png"
+		},
+		{
+			"logo":"graphics/factions/custom/player_logo12_flag.png",
+			"crest":"graphics/factions/custom/player_logo12_crest.png"
+		},
+		{
+			"logo":"graphics/factions/custom/player_logo13_flag.png",
+			"crest":"graphics/factions/custom/player_logo13_crest.png"
+		},
+		{
+			"logo":"graphics/factions/custom/player_logo14_flag.png",
+			"crest":"graphics/factions/custom/player_logo14_crest.png"
+		},
+	],
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/portrait_hegemony01.png",
+			"graphics/portraits/portrait_hegemony02.png",
+			"graphics/portraits/portrait_hegemony05.png",
+			"graphics/portraits/portrait_hegemony07.png",
+			"graphics/portraits/portrait_hegemony09.png",
+			"graphics/portraits/portrait_hegemony12.png",
+			"graphics/portraits/portrait_hegemony13.png",
+			"graphics/portraits/portrait_hegemony15.png",
+			"graphics/portraits/portrait_mercenary01.png",
+			"graphics/portraits/portrait_mercenary03.png",
+			"graphics/portraits/portrait_mercenary04.png",
+			"graphics/portraits/portrait_mercenary06.png",
+			"graphics/portraits/portrait_mercenary08.png",
+			"graphics/portraits/portrait_corporate01.png",
+			"graphics/portraits/portrait_corporate03.png",
+			"graphics/portraits/portrait_corporate05.png",
+			"graphics/portraits/portrait_corporate06.png",
+			"graphics/portraits/portrait_corporate08.png",
+			"graphics/portraits/portrait_corporate10.png",
+			"graphics/portraits/portrait12.png",
+			"graphics/portraits/portrait13.png",
+			"graphics/portraits/portrait15.png",
+			"graphics/portraits/portrait17.png",
+			"graphics/portraits/portrait18.png",
+			"graphics/portraits/portrait20.png",
+			"graphics/portraits/portrait23.png",
+			"graphics/portraits/portrait_luddic00.png",
+			"graphics/portraits/portrait_luddic02.png",
+			"graphics/portraits/portrait_luddic04.png",
+			"graphics/portraits/portrait_luddic05.png",
+			"graphics/portraits/portrait_luddic06.png",
+			"graphics/portraits/portrait_luddic09.png",
+			"graphics/portraits/portrait_luddic12.png",
+			"graphics/portraits/portrait25.png",
+			"graphics/portraits/portrait26.png",
+			"graphics/portraits/portrait30.png",
+			"graphics/portraits/portrait_pirate02.png",
+			"graphics/portraits/portrait31.png",
+			"graphics/portraits/portrait_pirate03.png",
+			"graphics/portraits/portrait33.png",
+			"graphics/portraits/portrait35.png",
+			"graphics/portraits/portrait36.png",
+			"graphics/portraits/portrait38.png",
+			"graphics/portraits/portrait40.png",
+			"graphics/portraits/portrait43.png",	
+			"graphics/portraits/portrait44.png",	
+			"graphics/portraits/portrait_league01.png",
+			"graphics/portraits/portrait_league02.png",
+			"graphics/portraits/portrait_league03.png",
+			"graphics/portraits/portrait_league06.png",
+			"graphics/portraits/portrait_league07.png",
+			"graphics/portraits/portrait_league09.png",
+			"graphics/portraits/portrait_diktat01.png",
+			"graphics/portraits/portrait_diktat03.png",
+			"graphics/portraits/portrait_diktat04.png",
+			"graphics/portraits/portrait_diktat07.png",
+			"graphics/portraits/characters/old_spacer02.png",
+			#"graphics/portraits/characters/historian02.png",
+
+		],
+		"standard_female":[
+			"graphics/portraits/portrait_hegemony03.png",
+			"graphics/portraits/portrait_hegemony04.png",
+			"graphics/portraits/portrait_hegemony06.png",
+			"graphics/portraits/portrait_hegemony08.png",
+			"graphics/portraits/portrait_hegemony10.png",
+			"graphics/portraits/portrait_hegemony11.png",
+			"graphics/portraits/portrait_hegemony14.png",
+			"graphics/portraits/portrait_hegemony16.png",
+			"graphics/portraits/portrait_mercenary02.png",
+			"graphics/portraits/portrait_mercenary05.png",
+			"graphics/portraits/portrait_mercenary07.png",
+			"graphics/portraits/portrait_corporate02.png",
+			"graphics/portraits/portrait_corporate04.png",
+			"graphics/portraits/portrait_corporate07.png",
+			"graphics/portraits/portrait_corporate09.png",
+			"graphics/portraits/portrait14.png",
+			"graphics/portraits/portrait16.png",
+			"graphics/portraits/portrait21.png",
+			"graphics/portraits/portrait22.png",
+			"graphics/portraits/portrait24.png",
+			"graphics/portraits/portrait27.png",
+			"graphics/portraits/portrait28.png",
+			"graphics/portraits/portrait_pirate01.png",
+			"graphics/portraits/portrait_pirate04.png",
+			"graphics/portraits/portrait_pirate05.png",
+			"graphics/portraits/portrait29.png",
+			"graphics/portraits/portrait32.png",
+			"graphics/portraits/portrait34.png",
+			"graphics/portraits/portrait37.png",
+			"graphics/portraits/portrait39.png",
+			"graphics/portraits/portrait41.png",
+			"graphics/portraits/portrait42.png",
+			"graphics/portraits/portrait45.png",	
+			"graphics/portraits/portrait46.png",	
+			"graphics/portraits/portrait_league00.png",
+			"graphics/portraits/portrait_league04.png",
+			"graphics/portraits/portrait_league05.png",
+			"graphics/portraits/portrait_league08.png",
+			"graphics/portraits/portrait_league10.png",
+			"graphics/portraits/portrait_luddic01.png",
+			"graphics/portraits/portrait_luddic03.png",
+			"graphics/portraits/portrait_luddic07.png",
+			"graphics/portraits/portrait_luddic08.png",
+			"graphics/portraits/portrait_luddic10.png",
+			"graphics/portraits/portrait_luddic11.png",
+			"graphics/portraits/portrait_diktat02.png",
+			"graphics/portraits/portrait_diktat05.png",
+			"graphics/portraits/portrait_diktat06.png",
+			"graphics/portraits/portrait_diktat08.png",
+			"graphics/portraits/characters/old_spacer01.png",
+			#"graphics/portraits/characters/historian01.png",
+
+		],
+	},
+	"fleetCompositions":{
+		"start1":{
+			"displayName":"Fleet",
+			"maxFleetPoints":100,
+			"daysWorthOfSupplies":[30, 40],
+			"lyWorthOfFuel":[20, 30],
+			"extraCrewPercent":[10, 30],
+			"marinesPercent":[5, 10],
+			"ships":{
+				"tempest_Attack":[1, 1],
+				"wolf_CS":[1, 1],
+				"lasher_CS":[1, 1],
+				"hound_Standard":[1, 1],
+				"enforcer_Assault":[1, 1],
+				"enforcer_Outdated":[1, 1],
+				"enforcer_Elite":[1, 1],
+				"mercury_Attack":[1, 1],
+				"vigilance_Standard":[1, 1],
+				"medusa_Attack":[1, 1],
+				"dominator_Support":[1, 1],
+				"omen_PD":[1, 1],
+				"hyperion_Attack":[1, 1],
+				"hyperion_Strike":[1, 1],
+				"brawler_Assault":[1, 1],
+				"afflictor_Strike":[1, 1],
+				"shade_Assault":[1, 1],
+				"doom_Strike":[1, 1],
+				"hammerhead_Balanced":[1, 1],
+				"sunder_CS":[1, 1],
+				"gemini_Standard":[1, 1],
+				"falcon_Attack":[1, 1],
+				"eagle_Assault":[1, 1],
+				"aurora_Balanced":[1, 1],
+				"apogee_Balanced":[1, 1],
+				"venture_Balanced":[1, 1],
+				"onslaught_Standard":[1, 1],
+				"conquest_Elite":[1, 1],
+				"mule_Standard":[1, 1],
+				"odyssey_Balanced":[1, 1],
+				"paragon_Elite":[1, 1],
+				"wasp_wing":[2, 2],
+			},
+		},
+		"start2":{
+			"displayName":"Fleet",
+			"maxFleetPoints":8,
+			"daysWorthOfSupplies":[50, 100],
+			"lyWorthOfFuel":[20, 30],
+			"extraCrewPercent":[50, 50],
+			"marinesPercent":[50, 50],
+			"ships":{
+				"lasher_d_CS":[0, 1],
+				"hound_d_Standard":[0, 1],
+				"cerberus_d_Standard":[0, 1],
+				#"brawler_Assault":[0, 1],
+				#"lasher_Starting":[0, 1],
+				#"brawler_Starting":[0, 1],
+				#"wolf_Starting":[0, 1],
+				#"vigilance_Starting":[0, 1],
+			},
+		},			
+		"shuttle":{
+			"displayName":"Fleet",
+			"maxFleetPoints":10,
+			"daysWorthOfSupplies":[20, 30],
+			"lyWorthOfFuel":[10, 15],
+			"extraCrewPercent":[10, 20],
+			"marinesPercent":[0, 0],
+			"ships":{
+				"wayfarer_Starting":[1, 1],
+				"kite_Starting":[1, 1],
+			},
+		},
+		"shuttle_easy":{
+			"displayName":"Fleet",
+			"maxFleetPoints":10,
+			"daysWorthOfSupplies":[20, 30],
+			"lyWorthOfFuel":[10, 15],
+			"extraCrewPercent":[10, 20],
+			"marinesPercent":[0, 0],
+			"ships":{
+				"wayfarer_Starting":[1, 1],
+				"kite_Starting":[1, 1],
+				#"wolf_Starting":[0, 1],
+			},
+		},
+	},
+	
+	"variantOverrides":{
+	},
+	"shipsWhenImporting":{
+		"tags":["base_bp"],
+		"hulls":[
+		],
+	},
+	"knownShips":{
+		"tags":["base_bp"],
+		"hulls":[
+		],
+	},
+	"priorityShips":{
+		"tags":[],
+		"hulls":[
+		],
+	},
+	"knownFighters":{
+		"tags":["base_bp"],
+		"fighters":[
+		],
+	},
+	"priorityFighters":{
+		"tags":[],
+		"fighters":[
+		],
+	},
+	"knownWeapons":{
+		"tags":["base_bp"],
+		"weapons":[
+		],
+	},
+	"priorityWeapons":{
+		"tags":[],
+		"weapons":[
+		],
+	},
+	"knownHullMods":{
+		"tags":["base_bp"],
+		"hullMods":[
+		],
+	},
+	"factionDoctrine":{
+		"warships":4,
+		"carriers":2,
+		"phaseShips":1,
+		
+		"officerQuality":2,
+		"shipQuality":3,
+		"numShips":2,
+		
+		"shipSize":3,
+		
+		"aggression":2,
+		
+		#"combatFreighterProbability":0.25,      			# instead of some portion of the freighters in a fleet
+		"combatFreighterProbability":0,      			    # instead of some portion of the freighters in a fleet
+		"combatFreighterCombatUseFraction":1,  				# as part of the normal combat lineup
+		"combatFreighterCombatUseFractionWhenPriority":1,   # as part of normal combat lineup, when marked as priority ship
+		"autofitRandomizeProbability":0.1,
+		"strictComposition":true, # warships/carriers/phase at 1 will be treated as 0, also no random factor
+
+		"commanderSkillsShuffleProbability":0,
+		"commanderSkills":[
+			"officer_management",
+			"carrier_group",
+			"coordinated_maneuvers",
+			"electronic_warfare",
+		],
+	},
+	"illegalCommodities":[
+		"drugs",
+		"organs",
+		"hand_weapons",
+		"ai_cores",	
+	],
+	"barSound":"bar_ambience",
+}
+
+

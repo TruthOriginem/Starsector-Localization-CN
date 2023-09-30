@@ -1,0 +1,25 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 0,
+    "fluxVents": 10,
+    "hullId": "derelict_mothership_pod_engine_left",
+    "hullMods": [],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "derelict_mothership_pod_engine_left_Standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 013": "miningblaster"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 014": "pdlaser",
+                "WS 015": "pdlaser"
+            }
+        }
+    ]
+}

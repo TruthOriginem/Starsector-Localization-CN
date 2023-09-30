@@ -1,0 +1,24 @@
+{
+    "displayName": "Shielded",
+    "fluxCapacitors": 7,
+    "fluxVents": 10,
+    "hullId": "hound_d_pirates",
+    "hullMods": [
+        "frontshield",
+        "fluxcoil"
+    ],
+    "permaMods": [],
+    "variantId": "hound_d_pirates_Shielded",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "arbalest"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "vulcan"}
+        }
+    ]
+}

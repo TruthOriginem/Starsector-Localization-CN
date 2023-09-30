@@ -1,0 +1,41 @@
+{
+    "displayName": "Close Support",
+    "fluxCapacitors": 15,
+    "fluxVents": 20,
+    "hullId": "hammerhead_d",
+    "hullMods": [
+        "blast_doors",
+        "hardened_subsystems"
+    ],
+    "permaMods": [],
+    "quality": 0,
+    "variantId": "hammerhead_d_CS",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "arbalest",
+                "WS 002": "arbalest"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 003": "harpoon",
+                "WS 004": "harpoon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "pdlaser",
+                "WS 006": "pdlaser",
+                "WS 007": "pdlaser",
+                "WS 008": "pdlaser"
+            }
+        }
+    ]
+}

@@ -1,4 +1,5 @@
 # 根据source_folder文件夹更新到target_folder文件夹
+# variants文件夹最好手动更新
 import os
 import shutil
 

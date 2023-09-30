@@ -1,0 +1,23 @@
+{
+    "hullId": "flash",
+    "variantId": "flash_Bomber",
+    "displayName": "Bomber",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "quality": 1,
+    "hullMods":[],
+	"weaponGroups":[
+		{	"mode":"LINKED",
+		 	"weapons":{
+		 			#"WS 001":"bomb",
+		 			"WS 001":"phasecl_bomber",
+		 		   },
+		},
+		#{	"mode":"LINKED",
+		#	"weapons":{
+		# 			"WS 002":"pdlaser",
+		# 			"WS 003":"pdlaser",
+		# 		   },
+		#},
+	],
+}

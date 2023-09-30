@@ -1,0 +1,25 @@
+{
+	"quality":0.5,
+	"displayName":"Heavy Fighter",
+	"hullId":"broadsword",
+	"variantId":"broadsword_Fighter",
+	"fluxVents":0,
+	"fluxCapacitors":0,
+	"hullMods":[], # array of strings
+	
+	# mode is either LINKED or ALTERNATING
+	# slot ids (WS ***) must match what's in the .ship file
+	"weaponGroups":[
+		{"mode":"LINKED",
+		 "weapons":{
+		 			"WS 001":"lightmg",
+		 			"WS 002":"lightmg",
+		 		   },
+		},
+		{"mode":"LINKED",
+		 "weapons":{
+		 			#"WS 003":"swarmer_fighter",
+		 		   },
+		},
+	],
+}

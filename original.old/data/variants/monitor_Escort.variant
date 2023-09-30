@@ -1,0 +1,29 @@
+{
+    "displayName": "Escort",
+    "fluxCapacitors": 8,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "monitor",
+    "hullMods": ["extendedshieldemitter"],
+    "permaMods": [],
+    "quality": 1,
+    "variantId": "monitor_Escort",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "flak",
+                "WS 002": "flak"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "taclaser",
+                "WS 004": "taclaser"
+            }
+        }
+    ]
+}

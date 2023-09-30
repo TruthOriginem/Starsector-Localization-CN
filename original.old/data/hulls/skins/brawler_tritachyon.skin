@@ -1,0 +1,57 @@
+{
+    "baseHullId":"brawler",
+    "skinHullId":"brawler_tritachyon",
+    "hullName":"Brawler (TT)",
+    "descriptionId":"brawler",  # optional
+    "descriptionPrefix":"This ship has been thoroughly overhauled by the Tri-Tachyon corporation. Tri-Tachyon compliant software patches have been installed which are fully integrated with TriPad (R) status monitoring protocols, high-spec flux conduit upgrades performed, and weapon attachment points refurbished for mounting advanced energy weapons.",
+	"tags":["rare_bp"],
+	"tech":"Tri-Tachyon",
+    "spriteName":"graphics/ships/brawler/brawler_tritachyon.png",
+    "ordnancePoints":60,
+    "baseValueMult":1.5,
+    "systemId":"plasmajets",
+    "removeWeaponSlots":[], 		# ids
+    "removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+    "removeBuiltInMods":[], 		# hullmod ids
+    "removeBuiltInWeapons":[], 		# weapon slot ids
+    "builtInMods":["insulatedengine"],
+    "builtInWeapons":{
+    },
+    "weaponSlotChanges":{
+	   "WS 001":{
+		  #"angle": 0,
+		  #"arc": 210,
+		  #"mount": "TURRET",
+		  #"size": "SMALL",
+		  "type": "ENERGY"
+	   },
+	   "WS 002":{
+		  #"angle": 0,
+		  #"arc": 210,
+		  #"mount": "TURRET",
+		  #"size": "SMALL",
+		  "type": "ENERGY"
+	   },
+	   "WS 003":{"type":SYNERGY},
+	   "WS 004":{"type":SYNERGY},
+    },
+	"engineSlotChanges":{
+		"0":{
+			#"width": 0,
+          	#"length": 210,
+          	#"angle": 210,
+          	"style": "HIGH_TECH",
+		},
+		"1":{"style":"HIGH_TECH"},
+		"2":{"style":"HIGH_TECH"},
+		"3":{"style":"HIGH_TECH"},
+		"4":{"style":"HIGH_TECH"},
+		"5":{"style":"HIGH_TECH"},
+		"6":{"style":"HIGH_TECH"},
+		"7":{"style":"HIGH_TECH"},
+	},    
+}
+
+
+
+

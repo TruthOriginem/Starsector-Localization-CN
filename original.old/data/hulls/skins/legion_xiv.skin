@@ -1,0 +1,53 @@
+{
+	"baseHullId":"legion",
+	"skinHullId":"legion_xiv",
+	"hullName":"Legion (XIV)",
+	"descriptionId":"legion",
+	"descriptionPrefix":"Built to the specifications of the 14th Domain Battlegroup which founded the Hegemony, this vessel is a prime example of the Domain Navy's 'decisive battle' doctrine, particularly exhibited by a series of radical structural modifications performed using pre-Collapse industrial technology.",
+	#"tags":["XIV_bp"], # don't want it available for the Hegemony, it's "lost"
+	"tags":["hist3t"],
+	"tech":"XIV Battlegroup",
+	"fleetPoints":30,
+	"ordnancePoints":270,
+	"baseValueMult":1.75,
+	"spriteName":"graphics/ships/legion/legion_xiv.png",
+	"coversColor":[255,255,255,255],
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["fourteenth"],
+	"builtInWeapons":{
+    },
+    "weaponSlotChanges":{
+	   "WS 000":{
+		  #"angle": 0,
+		  #"arc": 210,
+		  #"mount": "TURRET",
+		  #"size": "SMALL",
+		  "type": "MISSILE"
+	   },
+	   "WS 001":{
+		  #"angle": 0,
+		  #"arc": 210,
+		  #"mount": "TURRET",
+		  #"size": "SMALL",
+		  "type": "MISSILE"
+	   },
+	   "WS 002":{
+		  "type": "BALLISTIC",
+	   },
+	   "WS 003":{
+		  "type": "BALLISTIC",
+	   },
+	   "WS 004":{
+		  "type": "BALLISTIC",
+	   },
+	   "WS 005":{
+		  "type": "BALLISTIC",
+	   },
+	   "WS 007":{
+		  "type": "BALLISTIC",
+	   },
+    },
+}

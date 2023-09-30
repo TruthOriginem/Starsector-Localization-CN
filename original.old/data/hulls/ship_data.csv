@@ -1,0 +1,187 @@
+name,id,designation,tech/manufacturer,system id,fleet pts,hitpoints,armor rating,max flux,8/6/5/4%,flux dissipation,ordnance points,fighter bays,max speed,acceleration,deceleration,max turn rate,turn acceleration,mass,shield type,defense id,shield arc,shield upkeep,shield efficiency,phase cost,phase upkeep,min crew,max crew,cargo,fuel,fuel/ly,range,max burn,base value,cr %/day,CR to deploy,peak CR sec,CR loss/sec,supplies/rec,supplies/mo,c/s,c/f,f/s,f/f,crew/s,crew/f,hints,tags,rarity,breakProb,minPieces,maxPieces,travel drive,number
+PD Drone,drone_pd,,,,,30,10,100,,50,,,200,250,250,180,360,5,NONE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,,0
+PD Drone,drone_pd_midline,,,,,30,10,100,,50,,,200,250,250,180,360,5,NONE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,,1
+Borer,drone_borer,,,,,200,25,200,,100,,,100,200,200,180,360,5,NONE,,,,,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,1.5
+Assault Drone,drone_assault,,,,,300,100,500,,100,,,150,200,200,90,180,5,OMNI,,120,0.25,1,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,,2
+Sensor Drone,drone_sensor,,,,,30,10,400,,100,,,100,150,150,120,240,5,NONE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,,3
+Terminator,drone_terminator,,,,,500,100,200,,50,,,300,400,400,200,400,5,NONE,,360,0,1,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,4
+Merlon,merlon,,,,,3000,400,1600,,400,50,,250,400,300,60,90,200,NONE,,0,0,0,,,0,0,,,,,,,,,,,,,,,,,,,UNBOARDABLE,no_dealer,,0.4,2,2,,5
+Gargoyle,gargoyle,,,fortressshield,,1600,250,3000,3750,300,50,,250,400,300,60,90,200,OMNI,,360,0,0.6,,,0,0,,,,,,,,,,,,,,,,,,,UNBOARDABLE,no_dealer,,0.4,2,2,,6
+Ravelin,ravelin,,,forgevats_station,,4000,500,2400,,500,90,,250,400,300,60,90,200,FRONT,,120,0,1,,,0,0,,,,,,,,,,,,,,,,,,,UNBOARDABLE,no_dealer,,0.4,2,2,,7
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Talon,talon,,Low Tech,,,200,25,400,,100,0,,325,400,300,150,300,10,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,,,,,,,0,,,,100
+Dagger,dagger,,High Tech,,,300,10,200,,50,0,,175,350,250,90,180,10,OMNI,,160,0,1,,,1,1,,,,,,,,,,,,,,,,,,,,,,0,,,,101
+Wasp,wasp,,High Tech,,,100,10,500,,100,0,,325,500,450,180,360,10,NONE,,0,0,0,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,102
+Xyphos,xyphos,,High Tech,,,450,50,600,,50,0,,160,300,250,90,180,30,OMNI,,160,0,1,,,2,2,,,,,,,,,,,,,,,,,,,,,,0,,,,103
+Broadsword,broadsword,,Low Tech,flarelauncher_fighter,,750,100,80,,10,0,,200,400,350,90,180,30,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,,,,,,,0,,,,104
+Piranha,piranha,,Low Tech,,,500,75,200,,100,0,,150,200,200,40,120,30,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,,,,,,,0,,,,105
+Trident,trident,,High Tech,,,500,25,500,,50,0,,130,150,125,30,90,50,OMNI,,180,0,1,,,3,3,,,,,,,,,,,,,,,,,,,,,,0,,,,106
+Longbow,longbow,,High Tech,,,300,10,100,,50,0,,200,400,300,90,180,20,OMNI,,160,0,1,,,1,1,,,,,,,,,,,,,,,,,,,,,,0,,,,107
+Mining Pod,mining_drone,,Low Tech,,,600,150,150,,100,0,,125,75,75,45,90,50,NONE,,0,0,0,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,108
+Gladius,gladius,,Midline,flarelauncher_single,,500,75,200,,50,0,,300,400,300,150,300,40,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,,,,,,,0,,,,109
+Warthog,warthog,,Midline,flarelauncher_fighter,,750,200,200,,50,0,,130,180,150,100,200,40,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,,,,,,,0,,,,110
+Thunder,thunder,,Midline,,,500,75,750,,100,0,,450,600,500,150,300,30,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,,,,,,,0,,,,111
+Claw,claw,,High Tech,,,300,25,150,,50,0,,275,350,300,120,240,20,OMNI,,160,0,1,,,1,1,,,,,,,,,,,,,,,,,,,,,,0,,,,112
+Khopesh,hoplon,,Low Tech,,,500,75,500,,100,0,,180,225,200,60,120,40,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,,,,,,,0,,,,113
+Spark,spark,,Remnant,,,300,20,150,,50,0,,335,500,400,90,270,15,OMNI,,160,0,1,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,114
+Lux,lux,,Remnant,flarelauncher_fighter,,400,60,350,,50,0,,220,350,350,100,240,30,OMNI,,160,0,1,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,115
+Flash,flash,,Remnant,,,400,60,350,,50,0,,170,240,200,40,120,30,OMNI,,160,0,1,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,116
+Perdition,perdition,,Low Tech,,,400,50,50,,10,0,,140,150,150,30,90,15,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,,,,,,,0,,,,117
+Cobra,cobra,,High Tech,,,400,25,400,,50,0,,160,200,200,30,120,40,OMNI,,120,0,1,,,4,4,,,,,,,,,,,,,,,,,,,,,,0,,,,118
+,aspect,Aspect,Unknown,,,600,300,1000,,200,0,,350,350,350,120,360,50,NONE,,0,0,0,,,0,0,,,,,,,,,,,,,,,,,,,HIDE_IN_CODEX,,,0,,,,119
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Wolf,wolf,Frigate,High Tech,displacer,5,1500,150,2250,1875,150,55,,150,130,100,60,120,200,FRONT,,150,0.4,0.8,,,15,30,50,20,1,20,10,12000,10,20,180,0.25,5,5,,,,,,,,"hightech_bp, merc",,0.5,2,2,,200
+Hound,hound,Combat Freighter,Low Tech,flarelauncher,3,2000,400,750,1250,100,38,,180,175,100,90,120,200,NONE,,0,0,0,,,10,40,75,30,1,30,10,7500,5,10,240,0.25,3,3,25,75,,,,,,base_bp,,0.4,2,2,,201
+Vanguard,vanguard,Heavy Frigate,Low Tech,burndrive,8,3000,600,2000,1875,150,60,,135,120,100,60,90,300,PHASE,damper,,,,,,30,50,50,30,1,30,10,30000,8,10,300,0.25,6,6,8,50,,,,,,"rare_bp, merc, special_allows_system_use, system_allows_special_use",0.75,0.4,2,2,,201.5
+Hyperion,hyperion,Advanced Gunship,High Tech,phaseteleporter,15,2500,250,8000,6250,500,65,,120,175,150,50,100,300,FRONT,,300,0.6,0.6,,,5,15,10,15,1,15,10,95000,8,40,120,0.25,15,15,,,,,,,,rare_bp,0.5,0.75,2,2,,202
+Mercury,mercury,Shuttle,High Tech,flarelauncher_active,3,1000,150,1600,1875,150,27,,135,100,100,90,120,125,OMNI,,120,0.5,0.8,,,1,30,20,15,0.5,30,9,4000,5,20,180,0.25,2,2,10,40,,,15,60,"CIVILIAN, LINER",base_bp,,0.5,2,2,,203
+Hermes,hermes,Shuttle,Midline,maneuveringjets,3,1200,200,1000,1000,80,27,,125,90,80,90,120,125,OMNI,,120,0.5,1,,,2,10,50,15,0.5,30,9,4000,5,20,180,0.25,2,2,25,100,,,,,"CIVILIAN, FREIGHTER",base_bp,,0.5,2,2,,203.5
+Lasher,lasher,Frigate,Low Tech,ammofeed,5,1750,300,2100,1750,140,55,,120,110,90,60,90,200,FRONT,,210,0.4,1,,,25,50,40,25,1,25,10,9000,8,10,240,0.25,4,4,,,,,,,,"lowtech_bp, merc",,0.4,2,2,,204
+Omen,omen,Frigate,High Tech,emp,6,750,125,2500,2500,200,40,,155,220,175,120,360,100,OMNI,,360,0.3,0.6,,,10,20,30,20,1,20,10,20000,10,20,180,0.25,6,6,,,,,,,,"rare_bp, merc",,0.5,2,2,,205
+Tempest,tempest,Frigate,High Tech,drone_strike,8,1250,200,2500,2813,225,50,1,180,200,175,90,270,200,OMNI,,120,0.2,0.8,,,15,25,30,20,1,20,11,36000,10,20,180,0.25,8,8,,,,,,,,"rare_bp, hist1t, merc",0.75,0.5,2,2,,206
+Brawler,brawler,Gunship,Midline,maneuveringjets,7,2000,450,3000,3125,250,50,,100,180,120,60,120,250,FRONT,,270,0.4,0.8,,,15,30,40,20,1,20,9,12000,8,10,300,0.25,5,5,,,,,,,,"midline_bp, merc",,0.4,2,2,,207
+Vigilance,vigilance,Frigate,Midline,fastmissileracks,5,1500,200,2000,2250,180,45,,110,120,100,45,90,100,OMNI,,150,0.4,0.8,,,10,25,40,25,1,25,10,10000,8,10,240,0.25,5,5,,,,,,,,"midline_bp, merc",,0.5,2,2,,208
+Dram,dram,Tanker,Low Tech,flarelauncher,3,750,200,1500,1250,100,30,,120,70,50,30,60,200,OMNI,,90,0.5,1.2,,,5,10,15,300,1,300,9,8000,8,20,180,0.25,2,2,,,150,300,,,"CIVILIAN, TANKER","base_bp, merc",,0.7,2,4,,209
+Afflictor,afflictor,Phase Frigate,High Tech,entropyamplifier,11,1500,400,3000,5000,400,55,,165,120,100,60,120,200,PHASE,phasecloak,90,,,0.03,0.04,5,10,25,50,1,50,10,42000,10,20,180,0.25,10,10,,,,,,,,"rare_bp, merc",,0.5,2,2,,210
+Shade,shade,Phase Frigate,High Tech,emp,10,1750,400,2500,3750,300,50,,165,120,100,60,120,200,PHASE,phasecloak,90,,,0.05,0.05,10,15,25,50,1,50,10,40000,10,20,180,0.25,8,8,,,,,,,,"rare_bp, merc",,0.5,2,2,,211
+Ox,ox,Tug,Low Tech,flarelauncher,2,500,150,500,625,50,5,,100,200,150,45,90,150,NONE,,0,0,0,,,2,4,0,10,5,2,8,16000,10,40,240,0.25,5,5,,,,,,,CIVILIAN,"base_bp, merc",,0.25,2,2,,212
+Cerberus,cerberus,Combat Freighter,Low Tech,burndrive,5,2500,400,1250,1875,150,50,,110,100,75,60,120,300,NONE,,0,0,0,,,20,50,100,40,1,40,10,9000,8,10,240,0.25,4,4,25,100,,,,,,base_bp,,0.3,2,2,,213
+Monitor,monitor,Frigate,Midline,fortressshield,5,1500,175,4000,1500,120,30,,90,120,100,60,120,200,OMNI,,300,0.5,0.8,,,15,30,30,20,1,20,10,25000,8,10,360,0.25,6,6,,,,,,,,"rare_bp, hist2t, merc",,0.5,2,2,,214
+Shepherd,shepherd,Drone Tender,Low Tech,maneuveringjets,4,1200,200,1500,1250,100,23,1,90,120,70,90,180,200,OMNI,,90,0.5,1.2,,,15,30,100,40,1,40,9,10000,8,20,240,0.25,3,3,33,,,,,,CARRIER,base_bp,,0.5,2,2,,216
+Kite,kite,Shuttle,Midline,maneuveringjets,3,900,150,1400,1000,80,25,,140,150,75,45,85,120,OMNI,,150,0.5,0.8,,,2,30,30,15,1,15,9,4000,5,20,180,0.25,2,2,,,,,,,,base_bp,,0.75,2,2,,217
+Mudskipper,mudskipper,Civilian Transport,Low Tech,maneuveringjets,3,1000,150,750,938,75,18,,90,80,50,45,60,200,NONE,,0,0,0,,,5,100,70,40,1,40,9,3000,5,20,180,0.25,2,2,35,70,,,50,100,"CIVILIAN, LINER",base_bp,,0.5,2,2,,218
+Centurion,centurion,Heavy Frigate,Midline,damper,6,2250,500,2200,2188,175,55,,120,110,90,40,80,300,OMNI,,180,0.4,0.8,,,30,50,50,25,1,25,10,20000,8,10,240,0.25,4,4,,,,,,,,"midline_bp, merc",,0.4,2,2,,219
+Scarab,scarab,Heavy Frigate,High Tech,temporalshell,8,2000,250,2500,3125,250,55,,130,120,100,60,120,300,OMNI,,180,0.4,0.6,,,35,45,40,20,1,20,10,30000,7,20,180,0.25,8,8,,,,,,,,"rare_bp, hist1t",,0.5,2,2,,220
+Wayfarer,wayfarer,Combat Freighter,Midline,flarelauncher,5,2250,250,1600,1500,120,55,,120,105,70,45,90,300,FRONT,,180,0.4,0.8,,,25,50,150,40,1,40,10,14000,8,10,240,0.25,5,5,30,,,,,,,base_bp,,0.5,2,2,,221
+Warden,warden,Drone,Explorarium,ammofeed,3,1500,300,750,1250,100,30,,120,100,90,90,120,150,NONE,,0,0,0,,,0,0,20,20,1,20,9,10000,5,5,480,0.25,3,3,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","derelict, auto_rec",,0.5,2,2,,222
+Defender,defender,Drone,Explorarium,flarelauncher,3,1800,350,750,1250,100,30,,100,90,90,90,110,160,NONE,,0,0,0,,,0,0,20,20,1,20,9,10000,5,5,480,0.25,3,3,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","derelict, auto_rec",,0.5,2,2,,223
+Picket,picket,Drone,Explorarium,maneuveringjets,3,1400,250,750,1250,100,15,,200,175,150,100,120,120,NONE,,0,0,0,,,0,0,20,20,1,20,9,10000,5,5,480,0.25,3,3,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","derelict, auto_rec",,0.5,2,2,,224
+Sentry,sentry,Drone,Explorarium,fastmissileracks,3,1200,200,750,1250,100,15,,110,90,90,60,100,120,NONE,,0,0,0,,,0,0,20,20,1,20,9,10000,5,5,480,0.25,3,3,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","derelict, auto_rec",,0.5,2,2,,225
+Lumen,lumen,Droneship,Remnant,displacer,8,1000,150,2000,2500,200,35,,140,250,200,90,270,150,OMNI,,150,0.4,0.6,,,0,0,40,40,1,40,11,30000,5,10,360,0.25,4,4,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","remnant, auto_rec",,0.5,2,2,,226
+Glimmer,glimmer,Droneship,Remnant,highenergyfocus,8,1500,200,2500,3125,250,50,,130,250,200,90,270,200,OMNI,,150,0.4,0.6,,,0,0,50,40,1,40,11,30000,5,10,360,0.25,5,5,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","remnant, auto_rec",,0.5,2,2,,227
+Gremlin,gremlin,Phase Frigate,Low Tech,flarelauncher,6,2000,350,1200,2000,160,35,,90,120,90,45,90,200,PHASE,phasecloak,90,,,0.06,0.06,4,10,10,20,1,20,9,26000,10,20,180,0.25,6,6,,,,,,,,base_bp,,0.5,2,2,,228
+,shard_left,Sinistral Shard,Unknown,microburn_omega,12,2000,500,4000,5000,400,50,,200,250,200,120,360,200,OMNI,,150,0,0.5,,,0,0,10,50,1,50,12,100000,20,5,,,6,6,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","omega, no_autofit, restricted",,0.5,2,2,,229
+,shard_right,Dextral Shard,Unknown,microburn_omega,12,2000,500,4000,5000,400,50,,200,250,200,120,360,200,OMNI,,150,0,0.5,,,0,0,10,50,1,50,12,100000,20,5,,,6,6,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","omega, no_autofit, restricted",,0.5,2,2,,230
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Hammerhead,hammerhead,Destroyer,Midline,ammofeed,10,5000,500,4200,4167,250,95,,90,60,40,30,60,400,FRONT,,300,0.4,0.8,,,50,100,100,60,2,30,9,40000,5,12,360,0.25,10,10,,,,,,,,"midline_bp, merc",,0.5,2,3,,300
+Sunder,sunder,Destroyer,Midline,highenergyfocus,10,4000,250,7500,8333,500,105,,90,80,60,30,30,350,FRONT,,300,0.4,1.2,,,50,70,80,50,2,25,9,45000,5,15,300,0.25,11,11,,,,,,,,"midline_bp, merc",,0.5,2,3,,301
+Condor,condor,Light Carrier,Low Tech,fastmissileracks,9,5000,500,2200,1833,110,45,2,40,30,20,20,10,400,OMNI,,120,0.4,1.2,,,90,150,120,30,2,15,9,32000,5,10,360,0.25,10,10,,,,,,,CARRIER,base_bp,,0.5,2,3,,302
+Enforcer,enforcer,Destroyer,Low Tech,burndrive,10,6000,900,4000,3333,200,110,,60,40,20,30,20,500,OMNI,,150,0.4,1,,,60,100,90,90,3,30,9,38000,5,12,420,0.25,9,9,,,,,,,,"lowtech_bp, merc",,0.4,2,3,,303
+Manticore,manticore,Destroyer,Low Tech,canister_flak,12,5000,750,5000,4167,250,90,,80,70,50,30,50,400,OMNI,,150,0.4,1,,,50,80,80,50,2,25,9,45000,5,12,420,0.25,12,12,,,,,,,,"rare_bp, merc",,0.4,2,3,,303.5
+Buffalo,buffalo,Freighter,High Tech,flarelauncher_active,5,3000,125,1500,1167,70,28,,50,25,20,15,7,400,OMNI,,120,0.5,1,,,10,20,400,80,2,40,8,20000,5,20,240,0.25,3,3,133,200,,,,,"CIVILIAN, FREIGHTER","base_bp, merc",,0.6,2,3,,304
+Gemini,gemini,Combat Freighter,Midline,reservewing,9,4500,250,2700,2833,170,75,1,50,35,15,25,20,400,OMNI,,150,0.4,0.8,,,55,120,250,70,2,35,9,36000,4,8,360,0.25,9,9,28,125,,,,,,midline_bp,,0.6,2,3,,305
+Tarsus,tarsus,Freighter,Low Tech,burndrive,6,4250,400,1800,2083,125,40,,45,35,25,25,15,400,OMNI,,120,0.66,1.2,,,30,80,350,80,3,27,8,18000,5,20,420,0.25,3,3,117,117,,,,,"CIVILIAN, FREIGHTER","lowtech_bp, merc",,0.5,2,3,,306
+Valkyrie,valkyrie,Troop Transport,Midline,flarelauncher_active,6,3500,400,2250,1833,110,55,,80,60,60,30,45,400,FRONT,,90,0.4,0.8,,,10,250,50,80,2,40,9,20000,5,15,360,0.25,5,5,,,,,50,125,"CIVILIAN, TRANSPORT","rare_bp, merc",,0.5,2,3,,307
+Phantom,phantom,Phase Transport,High Tech,flarelauncher_active,3,3000,500,3000,5000,300,30,,90,90,70,45,60,350,PHASE,phasecloak,90,,,0.07,0.07,5,200,50,100,2,50,9,35000,5,20,300,0.25,10,10,,,,,20,100,"CIVILIAN, TRANSPORT","rare_bp, merc, req_military",,0.5,2,3,,307.5
+Buffalo Mk.II,buffalo2,Destroyer,Low Tech,flarelauncher,7,2500,200,2250,1667,100,70,,80,60,40,25,30,300,NONE,,0,0,0,,,40,40,20,30,2,15,9,18000,5,10,120,0.25,4,4,,,,,,,,base_bp,,0.6,2,3,,308
+Medusa,medusa,Destroyer,High Tech,displacer,12,3000,300,6000,6667,400,95,,100,90,60,40,100,300,OMNI,,120,0.3,0.6,,,35,50,50,40,2,20,9,60000,5,20,300,0.25,12,12,,,,,,,,"rare_bp, hist1t, merc",,0.7,2,3,,309
+Mule,mule,Combat Freighter,Low Tech,maneuveringjets,9,5500,650,3000,2500,150,80,,60,40,20,20,15,500,OMNI,,120,0.4,1,,,40,100,250,80,2,40,9,34000,5,10,420,0.25,7,7,36,125,,,,,,base_bp,,0.5,2,3,,310
+Phaeton,phaeton,Tanker,Low Tech,flarelauncher,6,2000,350,2000,2500,150,45,,50,30,20,25,15,400,OMNI,,90,0.5,1.2,,,10,20,20,800,2,400,8,22000,5,20,300,0.25,4,4,,,200,400,,,"CIVILIAN, TANKER","base_bp, merc",,0.75,3,4,,311
+,crig,Salvage Rig,Midline,flarelauncher,3,2000,200,1000,1667,100,16,,50,30,20,25,15,300,NONE,,0,0,0,,,20,2,0,0,2,0,8,20000,5,20,360,0.25,3,3,,,,,,,CIVILIAN,base_bp,,0.75,2,3,,312
+Nebula,nebula,Civilian Transport,Midline,flarelauncher,5,3000,175,1500,1700,85,40,,55,35,20,20,12,450,FRONT,,150,0.5,1,,,15,400,120,80,2,40,8,20000,4,20,240,0.25,4,4,,,,,100,200,"CIVILIAN, LINER","base_bp, merc",,,2,3,,313
+Harbinger,harbinger,Phase Destroyer,High Tech,acausaldisruptor,15,4000,650,5000,10000,500,95,,80,60,40,30,30,400,PHASE,phasecloak,90,,,0.05,0.04,25,50,60,100,2,50,9,120000,5,20,300,0.25,20,20,,,,,,,,"rare_bp, merc",,0.5,2,3,,314
+Bastillon,bastillon,Drone,Explorarium,flarelauncher,6,4500,550,3500,3125,250,60,,60,40,20,20,20,400,NONE,,0,0,0,,,0,0,80,40,2,20,8,40000,5,10,540,0.25,6,6,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","derelict, auto_rec",,0.5,2,3,,315
+Berserker,berserker,Drone,Explorarium,burndrive,7,4500,575,3400,2813,225,60,,65,45,15,18,18,450,NONE,,0,0,0,,,0,0,80,40,2,20,8,40000,5,10,540,0.25,6,6,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","derelict, auto_rec",,0.5,2,3,,316
+Fulgent,fulgent,Droneship,Remnant,highenergyfocus,12,5000,450,5000,3750,300,100,,85,75,50,30,50,500,OMNI,,150,0.4,0.6,,,0,0,80,60,2,30,10,50000,5,15,420,0.25,11,11,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","remnant, auto_rec",,0.5,2,3,,317
+Scintilla,scintilla,Droneship Carrier,Remnant,recalldevice,12,5000,350,4000,2500,200,75,2,60,60,25,20,15,500,OMNI,,270,0.4,0.6,,,0,0,40,60,2,30,10,50000,5,15,420,0.25,12,12,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, CARRIER","remnant, auto_rec",,0.5,2,3,,317
+Drover,drover,Light Carrier,Midline,reservewing,11,4250,400,3000,2813,225,70,2,75,50,30,25,25,450,FRONT,,300,0.4,0.8,,,90,150,40,40,2,20,9,52000,5,15,360,0.25,15,15,,,,,,,CARRIER,"midline_bp, merc",,0.5,2,3,,318
+Shrike,shrike,Light Destroyer,High Tech,microburn,9,2800,250,5400,5833,350,85,,100,100,80,35,80,250,OMNI,,150,0.3,0.7,,,20,40,40,60,2,30,10,20000,5,15,300,0.25,8,8,,,,,,,,"hightech_bp, merc",,0.7,2,3,,319
+,facet,Facet,Unknown,damper_omega,20,5000,800,10000,13333,800,140,,120,150,150,60,180,400,OMNI,,150,0,0.5,,,0,0,20,100,2,50,11,200000,20,5,,,12,12,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","omega, no_autofit, restricted",,0.5,2,3,,320
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Falcon,falcon,Light Cruiser,Midline,maneuveringjets,12,6000,750,7000,8000,400,125,,80,70,50,20,25,650,FRONT,,270,0.4,0.8,,,100,180,120,100,3,33,9,80000,4,12,480,0.25,14,14,,,,,,,,"midline_bp, merc",,0.5,2,3,,400
+Eagle,eagle,Cruiser,Midline,maneuveringjets,14,8000,1000,11000,12000,600,155,,50,30,20,15,20,1200,FRONT,,270,0.4,0.8,,,150,250,150,100,3,33,8,120000,3,12,480,0.25,22,22,,,,,,,,"rare_bp, merc",,0.5,2,3,,401
+Champion,champion,Heavy Cruiser,Midline,highenergyfocus,15,10000,1250,10000,11000,550,165,,60,40,30,15,20,1500,FRONT,,210,0.4,0.8,,,200,300,150,150,4,38,8,125000,4,12,480,0.25,25,25,,,,,,,,"rare_bp, merc",,0.5,2,4,,401.5
+Venture,venture,Cruiser,Low Tech,fastmissileracks,10,10000,1250,7000,6000,300,115,1,40,15,10,12,6,1500,OMNI,,120,0.4,1,,,80,300,600,180,3,60,7,70000,5,10,540,0.25,14,14,,,,,,,,"base_bp, merc",,0.4,2,3,,402
+Apogee,apogee,Cruiser,High Tech,flarelauncher_active,14,9000,750,12000,14000,700,140,,60,40,30,20,25,2000,FRONT,,360,0.6,0.7,,,150,450,400,200,2,100,8,140000,3,15,420,0.25,18,18,,,,,,,,"rare_bp, merc",,0.6,2,3,,403
+Dominator,dominator,Heavy Cruiser,Low Tech,burndrive,15,14000,1500,10000,10000,500,200,,30,20,10,12,12,2250,FRONT,,150,0.4,1,,,200,300,150,150,5,30,8,125000,4,12,540,0.25,25,25,,,,,,,,"lowtech_bp, merc",,0.4,2,3,,404
+Eradicator,eradicator,Fast Cruiser,Low Tech,ammofeed,13,9000,1200,9000,8000,400,150,,70,50,40,15,20,1800,OMNI,,150,0.4,1,,,120,170,100,120,4,30,9,100000,4,12,540,0.25,20,20,,,,,,,,"rare_bp, merc",,0.5,2,4,,404.5
+Aurora,aurora,Cruiser,High Tech,plasmajets,17,8000,800,11000,16000,800,165,,80,50,25,25,25,1800,OMNI,,180,0.5,0.8,,,75,200,150,90,3,30,8,200000,4,20,420,0.25,30,30,,,,,,,,"rare_bp, hist2t, merc",,0.6,2,3,,405
+Doom,doom,Phase Cruiser,High Tech,mine_strike,22,8000,1250,10000,18000,900,145,,75,55,40,20,25,1200,PHASE,phasecloak,,,,0.05,0.05,50,100,120,150,3,50,8,250000,4,20,420,0.25,35,35,,,,,,,,"rare_bp, hist2t, merc",,0.5,2,3,,406
+Heron,heron,Fast Carrier,Midline,targetingfeed,14,6000,750,5000,6000,300,100,3,80,60,40,20,25,800,OMNI,,180,0.5,0.8,,,150,250,90,60,3,20,8,120000,3,12,360,0.25,20,20,,,,,,,CARRIER,"midline_bp, merc",,0.5,2,3,,407
+Gryphon,gryphon,Missile Cruiser,Midline,forgevats,14,7000,800,5000,4000,200,140,,60,60,40,15,20,1200,FRONT,,270,0.5,0.8,,,150,250,120,80,3,27,8,110000,3,12,480,0.25,20,20,,,,,,,,"rare_bp, merc",,0.5,2,3,,408
+Starliner,starliner,Civilian Transport,Midline,flarelauncher,7,5500,225,2500,2500,125,60,,45,20,10,10,10,900,FRONT,,150,0.5,1,,,50,1500,300,120,3,40,7,50000,3,20,480,0.25,10,10,,,,,150,500,"CIVILIAN, LINER","midline_bp, merc",,0.6,2,3,,409
+Mora,mora,Carrier,Low Tech,damper,15,10000,1250,4000,4000,200,125,3,45,20,10,10,10,2000,OMNI,,150,0.4,1,,,200,300,100,60,4,15,8,125000,4,12,420,0.25,20,20,,,,,,,"CARRIER, COMBAT, NO_AUTO_ESCORT","lowtech_bp, merc",,0.4,2,3,,410
+Colossus,colossus,Heavy Freighter,Low Tech,flarelauncher,7,6000,300,2750,2000,100,55,,40,20,10,10,10,1500,FRONT,,150,0.5,1,,,40,200,900,120,4,30,7,40000,3,20,480,0.25,6,6,150,225,,,,,"CIVILIAN, FREIGHTER","base_bp, merc",,0.6,2,3,,411
+Colossus Mk.II,colossus2,Modified Freighter,Luddic Path,burndrive,9,6000,600,3250,3600,180,55,,50,25,10,12,12,1400,FRONT,,150,0.5,1,,,60,120,300,60,4,15,7,50000,3,20,480,0.25,9,9,,,,,,,ALWAYS_PANIC,"rare_bp, LP_bp",,0.6,2,3,,411.1
+Colossus Mk.III,colossus3,Modified Freighter,Pirate,flarelauncher,9,6000,600,3250,3600,180,55,,50,25,10,12,12,1400,FRONT,,150,0.5,1,,,80,160,300,60,4,15,7,50000,3,20,480,0.25,8,8,,,,,,,"CARRIER, COMBAT","rare_bp, pirate_bp",,0.6,2,3,,411.2
+Revenant,revenant,Phase Tender,High Tech,flarelauncher_active,5,6000,900,6000,8000,400,45,,60,40,20,12,12,1400,PHASE,phasecloak,90,,,0.07,0.07,30,80,600,900,3,300,8,80000,3,20,420,0.25,15,15,40,200,60,300,,,"CIVILIAN, TANKER, FREIGHTER","rare_bp, merc, req_military",,0.5,2,3,,411.3
+Rampart,rampart,Drone,Explorarium,burndrive,10,11000,1500,10000,5625,450,120,,35,20,10,12,10,2100,NONE,,0,0,0,,,0,0,100,60,4,15,8,130000,5,12,600,0.25,15,15,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","derelict, auto_rec",,0.5,2,3,,412
+Brilliant,brilliant,Droneship Cruiser,Remnant,flarelauncher_active,16,8000,900,10000,12000,600,140,1,60,35,30,20,25,2000,OMNI,,270,0.5,0.6,,,0,0,120,90,3,30,9,140000,5,15,540,0.25,25,25,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","remnant, auto_rec",,0.5,2,3,,413
+Fury,fury,Light Cruiser,High Tech,microburn,14,5000,600,9000,12000,600,120,,90,100,80,30,60,650,OMNI,,180,0.3,0.7,,,60,120,60,80,3,27,9,115000,4,12,420,0.25,20,20,,,,,,,,"hightech_bp, merc",,0.7,2,3,,414
+,tesseract,Tesseract,Unknown,temporalshell,40,10000,1500,15000,25000,1500,180,,100,120,120,45,135,2000,OMNI,,150,0,0.5,,,0,0,40,150,3,50,11,500000,20,5,,,24,24,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","omega, no_autofit, restricted",,0.5,2,3,,415
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Onslaught,onslaught,Battleship,Low Tech,burndrive,28,20000,1750,17000,15000,600,360,,25,10,10,4,4,3500,FRONT,,180,0.4,1,,,750,1500,300,400,15,27,7,350000,3,12,720,0.25,40,40,,,,,,,,"rare_bp, merc",,0.4,2,4,,500
+Astral,astral,Carrier,High Tech,recalldevice,27,10000,900,12000,15000,600,250,6,30,15,10,7,4,3000,FRONT,,360,0.7,0.6,,,450,1000,250,200,10,20,7,400000,3,15,600,0.25,50,50,,,,,,,CARRIER,"rare_bp, merc",,0.6,2,4,,501
+Atlas,atlas,Superfreighter,Low Tech,flarelauncher,7,8000,250,4000,5000,200,65,,25,5,2,3,2,4000,OMNI,,45,0.5,1,,,50,100,2000,400,6,67,6,75000,2,20,720,0.25,10,10,200,333,,,,,"CIVILIAN, FREIGHTER","rare_bp, merc",,0.7,2,4,,502
+Atlas Mk.II,atlas2,Modified Superfreighter,Pirate,ammofeed,18,9000,750,8000,8750,350,220,,30,8,4,4,2,4000,OMNI,,60,0.5,1,,,250,300,200,400,10,40,7,150000,2,20,720,0.25,24,24,,,,,,,,rare_bp,,0.7,2,4,,502.5
+Conquest,conquest,Battlecruiser,Midline,maneuveringjets,24,12000,1200,20000,30000,1200,315,,45,20,15,6,4,2500,OMNI,,90,0.4,1.4,,,400,500,300,300,10,30,8,300000,3,15,600,0.25,40,40,,,,,,,,"rare_bp, merc",,0.5,2,4,,503
+Paragon,paragon,Battleship,High Tech,fortressshield,30,18000,1500,25000,31250,1250,370,,30,15,10,5,5,3500,OMNI,,360,0.6,0.6,,,400,1000,300,300,10,30,7,500000,4,20,720,0.25,60,60,,,,,,,,"rare_bp, hist3t, merc",,0.6,2,4,,504
+Odyssey,odyssey,Battlecruiser,High Tech,microburn,25,10000,1000,15000,25000,1000,280,2,70,50,40,8,12,2500,OMNI,,180,0.25,1,,,400,800,400,450,8,56,8,330000,4,20,600,0.25,45,45,,,,,,,,"rare_bp, hist3t, merc",,0.6,2,4,,505
+Prometheus,prometheus,Tanker,Low Tech,flarelauncher,12,10000,1200,7000,7500,300,95,,50,15,10,4,4,4000,OMNI,,180,0.5,1.2,,,50,100,200,3000,6,500,6,80000,2,20,720,0.25,10,10,,,300,500,,,"CIVILIAN, TANKER","rare_bp, merc",,0.75,3,5,,506
+Prometheus Mk.II,prometheus2,Modified Tanker,Luddic Path,burndrive,20,15000,1500,10500,11250,450,240,2,50,16,10,4,4,4000,OMNI,,180,0.5,1.2,,,250,300,200,800,10,80,7,200000,2,20,720,0.25,30,30,,,,,,,ALWAYS_PANIC,rare_bp,,0.75,3,5,,506.5
+Legion,legion,Battlecarrier,Low Tech,burndrive,28,18000,1650,12000,12500,500,260,4,30,15,15,6,6,3500,FRONT,,180,0.4,1,,,700,1500,300,300,15,20,7,375000,3,12,720,0.25,40,40,,,,,,,"CARRIER, COMBAT, NO_AUTO_ESCORT","rare_bp, merc",,0.4,2,4,,507
+Guardian,guardian,Drone Battleship,Explorarium,plasmajets,30,20000,1700,25000,25000,1000,450,,40,30,20,7,10,3500,FRONT,,200,0.4,1,,,0,0,300,400,15,27,7,500000,3,12,720,0.25,40,40,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","derelict, no_autofit",,0.4,2,4,,508
+Radiant,radiant,Drone Battleship,Remnant,displacer,30,20000,1500,25000,37500,1500,320,,40,30,20,7,10,3500,OMNI,,270,0.4,0.6,,,0,0,250,400,10,40,8,500000,3,15,720,0.25,60,60,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","remnant, auto_rec",,0.4,2,4,,509
+Ziggurat,ziggurat,Phase Vessel,High Tech,mote_control,40,14000,1500,16000,24000,1200,260,,40,50,50,20,30,2400,PHASE,phasecloak,,,,0.02,0.02,300,400,200,500,10,50,7,1000000,3,50,600,0.25,75,75,,,,,,,HIDE_IN_CODEX,,,0.4,2,3,,510
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Shuttle Pod,shuttlepod,Pod,,,1,1000,100,150,,50,0,,400,800,500,150,450,100,NONE,,0,0,0,,,1,1,1,1,1,1,,1000,,,,,,,,,,,,,,,,,,,,1000
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,station_small,Small Orbital Station,,,30,10000,1500,1000,2500,100,0,,30,200,200,5,5,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,50,50,,,,,,,"SHIP_WITH_MODULES, HIDE_IN_CODEX",,,0,,,,2000
+,station_derelict_survey_mothership,Domain-era Survey Mothership,,,30,40000,1600,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,50,50,,,,,,,"STATION, UNBOARDABLE, HIDE_IN_CODEX",derelict,,0,,,,2001
+Orbital Station,station1,Orbital Station,,,100,40000,1600,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,50,50,,,,,,,"STATION, UNBOARDABLE, HIDE_IN_CODEX",,,0,,,,2002
+Orbital Station,station1_midline,Orbital Station,,,100,40000,1600,1000,2500,100,0,,30,200,200,7,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,50,50,,,,,,,"STATION, UNBOARDABLE, HIDE_IN_CODEX",,,0,,,,2002.1
+Orbital Station,station1_hightech,Orbital Station,,,100,40000,1600,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,50,50,,,,,,,"STATION, UNBOARDABLE, HIDE_IN_CODEX",,,0,,,,2002.2
+Battlestation,station2,Battlestation,,,200,80000,2000,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,75,50,,,,,,,"STATION, UNBOARDABLE, HIDE_IN_CODEX",,,0,,,,2003
+Battlestation,station2_midline,Battlestation,,,200,80000,2000,1000,2500,100,0,,30,200,200,7,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,75,50,,,,,,,"STATION, UNBOARDABLE, HIDE_IN_CODEX",,,0,,,,2003.5
+Battlestation,station2_hightech,Battlestation,,,200,80000,2000,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,75,50,,,,,,,"STATION, UNBOARDABLE, HIDE_IN_CODEX",,,0,,,,2003.5
+Star Fortress,station3,Star Fortress,,drone_station_lt,400,160000,2400,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,100,50,,,,,,,"STATION, UNBOARDABLE, HIDE_IN_CODEX",,,0,,,,2004
+Star Fortress,station3_midline,Star Fortress,,drone_station_mid,400,160000,2400,1000,2500,100,0,,30,200,200,7,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,100,50,,,,,,,"STATION, UNBOARDABLE, HIDE_IN_CODEX",,,0,,,,2004.5
+Star Fortress,station3_hightech,Star Fortress,,drone_station_high,400,160000,2400,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,100,50,,,,,,,"STATION, UNBOARDABLE, HIDE_IN_CODEX",,,0,,,,2004.5
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,module_bastion_pd1,PD Bastion 1,,flarelauncher_active,1,3000,500,1250,3500,140,44,0,0,0,0,10,10,240,FRONT,,170,0.4,0.8,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,2050
+,module_armour1,Station Armour,,,1,5000,1500,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",module_hull_bar_only,,1,2,3,,2051
+,module_armour2,Station Armour,,,1,5000,1500,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",module_hull_bar_only,,1,2,3,,2052
+,module_blocker1,Station Structural Spur,,,1,5000,1500,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,3,,2053
+,module_blocker2,Station Structural Spur,,,1,5000,1500,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,3,,2054
+,module_blocker2b,Station Structural Spur,,,1,5000,1500,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,3,,2055
+,module_blocker2c,Station Structural Spur,,,1,5000,1500,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,3,,2056
+,module_armour3,Station Structural Spur,,,1,5000,1500,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",module_hull_bar_only,,1,2,3,,2057
+,module_armour4,Station Structural Spur,,,1,5000,1500,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",module_hull_bar_only,,1,2,3,,2058
+,module_armour5,Station Structural Spur,,,1,5000,1500,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",module_hull_bar_only,,1,2,3,,2059
+,module_decor_midline1,Station Extension,,,1,5000,1500,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,3,,2060
+,module_decor_midline2,Station Extension,,,1,5000,1500,0,2500,100,0,,0,0,0,2,2,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,3,,2061
+,platform1,Weapons Platform,,,1,10000,1000,2000,2500,100,100,,0,0,0,10,10,600,FRONT,,50,1,0.7,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0,,,,2062
+,module_large1_lowtech,Heavy Combat Module,,forgevats_station,1,20000,2000,30000,30000,1200,1000,,0,0,0,10,10,3500,FRONT,,120,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,4,,2063
+,module_large2_lowtech,Heavy Support Module,,forgevats_station,1,10000,1500,10000,12500,500,1000,2,0,0,0,10,10,2500,FRONT,,130,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,4,,2064
+,module_bastion1_lowtech,PD Bastion,,forgevats_station,1,7500,1250,7000,7500,300,1000,,0,0,0,10,10,240,FRONT,,170,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,2,,2065
+,module_citadel1_lowtech,Heavy Citadel,,forgevats_station,1,15000,2000,30000,43750,1750,1000,,0,0,0,10,10,1000,FRONT,,300,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,4,,2066
+,module_midline_broadside,Heavy Broadside Module,,forgevats_station,1,50000,1750,30000,31250,1250,1000,,0,0,0,10,10,3500,FRONT,,90,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,4,,2067
+,module_midline_citadel,Heavy Station Battery,,forgevats_station,1,20000,1750,25000,37500,1500,1000,,0,0,0,10,10,3500,FRONT,,40,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,4,,2068
+,module_midline_support,Heavy Support Module,,forgevats_station,1,15000,1500,10000,10000,400,1000,4,0,0,0,10,10,2500,FRONT,,100,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,4,,2069
+,module_midline_bastion,Light Support Module,,forgevats_station,1,12000,1500,10000,10000,400,1000,,0,0,0,10,10,240,FRONT,,240,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,2,,2070
+,module_hightech_shield,Shield Module,,fortressshield,1,7500,1000,15000,25000,1000,0,,0,0,0,3,6,200,FRONT,,120,1,0.6,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,1,2,2,,2071
+,module_hightech_citadel,Heavy Citadel,,fortressshield,1,12000,1750,22000,25000,1000,1000,,0,0,0,3,6,1000,FRONT,,220,0.4,0.6,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,4,,2072
+,module_hightech_hangar,Hangar Module,,recalldevice,1,7000,1250,7500,12500,500,1000,4,0,0,0,10,10,2500,NONE,,0,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,4,,2073
+,module_hightech_armour,Station Armour,,,1,20000,4000,0,2500,100,0,,0,0,0,3,6,1000,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",module_hull_bar_only,,1,2,3,,2074
+,module_hightech_strut,Station Extension,,,1,5000,1500,0,2500,100,0,,0,0,0,3,10,500,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, UNDER_PARENT",,,1,2,3,,2075
+,module_hightech_attack,Station Battery,,,1,12000,1750,15000,25000,1000,1000,,0,0,0,10,10,1000,NONE,,0,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,4,,2076
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,derelict_mothership_pod_s_right,"Gun Pod, Small",,,1,1500,300,1000,2500,100,14,,0,0,0,10,10,70,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,2101
+,derelict_mothership_pod_m_right,"Gun Pod, Medium",,,1,2500,400,1500,5000,200,22,,0,0,0,10,10,120,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,2102
+,derelict_mothership_pod_m_left,"Gun Pod, Medium",,,1,3200,400,2000,5000,200,26,,0,0,0,10,10,150,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,2103
+,derelict_mothership_pod_engine_left,"Gun Pod, Rear",,,1,3200,400,2000,5000,200,28,,0,0,0,10,10,220,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,2104
+,derelict_mothership_bow_module,Bow Shield Module,,,1,3000,600,3000,6250,250,16,,0,0,0,10,10,200,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,2105
+,derelict_mothership_sensor_mast,Bow Sensor Mast,,,1,5000,400,3000,6250,250,32,,0,0,0,10,10,280,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.7,2,2,,2106
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,remnant_station1,Remnant Station,,,100,50000,1600,1000,2500,100,0,,30,200,200,3,3,6000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,50,50,,,,,,,"STATION, UNBOARDABLE, HIDE_IN_CODEX",,,0,,,,2200
+,remnant_station2,Remnant Station,,,200,50000,1600,1000,2500,100,0,,30,200,200,3,3,6000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,75,50,,,,,,,"STATION, UNBOARDABLE, HIDE_IN_CODEX",remnant,,0,,,,2201
+,remnant_armour1,Remnant Station Armour,,,1,10000,2000,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",module_hull_bar_only,,1,2,3,,2210
+,remnant_armour2,Remnant Station Armour,,,1,5000,800,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",module_hull_bar_only,,1,2,3,,2211
+,remnant_armour3,Remnant Station Armour,,,1,5000,800,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",module_hull_bar_only,,1,2,4,,2212
+,remnant_weapon_platform1,Remnant Weapon Platform,,forgevats_station,1,10000,1500,15000,25000,1000,1000,,0,0,0,10,10,800,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,2220
+,remnant_weapon_platform2,Remnant Weapon Platform,,,1,6000,1000,10000,18750,750,1000,,0,0,0,10,10,600,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,2221
+,remnant_weapon_platform3,Remnant Weapon Platform,,,1,6000,1250,6000,7500,300,1000,,0,0,0,10,10,400,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,2223
+,remnant_shield1,Remnant Station Citadel,,,1,6000,1250,7000,10000,400,1000,,0,0,0,10,10,500,FRONT,,50,0.4,0.8,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,2230
+,remnant_shield2,Remnant Station Citadel,,,1,5000,500,20000,25000,1000,1000,,0,0,0,10,10,600,FRONT,,90,0.4,0.8,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,2231
+,remnant_hangar1,Remnant Station Hangar,,recalldevice,1,5000,750,5000,7500,300,1000,3,0,0,0,10,10,600,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX",,,0.5,2,2,,2240

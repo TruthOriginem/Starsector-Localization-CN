@@ -1,0 +1,40 @@
+{
+    "displayName": "Pirate",
+    "fluxCapacitors": 0,
+    "fluxVents": 8,
+    "goalVariant": true,
+    "hullId": "colossus3",
+    "hullMods": ["insulatedengine"],
+    "permaMods": [],
+    "variantId": "colossus3_Pirate",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "lightac",
+                "WS 012": "lightac",
+                "WS 013": "lightmortar",
+                "WS 014": "lightmortar",
+                "WS 015": "lightmortar",
+                "WS 016": "lightmortar"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "lightmg",
+                "WS 002": "lightmg",
+                "WS 003": "lightmg",
+                "WS 004": "lightmg",
+                "WS 009": "lightmg",
+                "WS 010": "lightmg"
+            }
+        }
+    ],
+    "wings": [
+        "talon_wing",
+        "talon_wing"
+    ]
+}

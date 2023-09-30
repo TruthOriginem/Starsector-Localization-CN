@@ -1,0 +1,81 @@
+{
+    "displayName": "Raider",
+    "fluxCapacitors": 34,
+    "fluxVents": 50,
+    "hullId": "paragon",
+    "hullMods": [
+        "stabilizedshieldemitter",
+        "hardenedshieldemitter",
+        "advancedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "paragon_Raider",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "plasma",
+                "WS 002": "plasma"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 012": "atropos",
+                "WS 018": "atropos"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 014": "heatseeker",
+                "WS 020": "heatseeker"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "hil",
+                "WS 004": "hil"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "ionbeam",
+                "WS 006": "ionbeam",
+                "WS 011": "taclaser",
+                "WS 013": "taclaser",
+                "WS 015": "taclaser",
+                "WS 017": "taclaser",
+                "WS 019": "taclaser",
+                "WS 021": "taclaser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 009": "ionpulser",
+                "WS 010": "ionpulser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "dualflak",
+                "WS 008": "dualflak",
+                "WS 016": "pdburst",
+                "WS 022": "pdburst",
+                "WS 023": "pdburst"
+            }
+        }
+    ]
+}

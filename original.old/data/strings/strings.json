@@ -1,0 +1,389 @@
+{
+
+	"fleetInteractionDialog":{
+		# Available tokens:
+		#
+		# $faction  faction of other fleet ("Hegemony", "Tri-Tachyon", "Pirate", etc)
+		# $fleetName name of other fleet ("Scout", "Security Detachment", etc)
+		# $firstName first name of other fleet's commander
+		# $lastName last name of other fleet's commander
+		# $fleetOrShip "fleet", "ship" if only one ship in fleet, "fighter wing" if only one fighter wing (and nothing else)
+		# $repairedShipList list of names of the ships that were successfully repaired after being disabled
+		# $crewLost Approximate number of crew lost during the last engagement, i.e. "4", "around 100", or "no". 
+		# $marinesLost Approximate number of marines lost during the last engagement, i.e. "4", "around 100", or "no". 
+		# $crewRecovered Number of crew recovered after winning the entire encounter. 
+		# $marinesRecovered Number of marines recovered after winning the entire encounter.
+		# $numLifeSigns Approximate number of crew + marines on ship about to be boarded. Can also be "no".
+		# $boardingTaskForceShips List of names of the ships in the boarding task force.
+		# $boardingCrewLost
+		# $boardingEnemyCrewLost
+		# $boardingMarinesLost
+		# $boardingEnemyMarinesLost
+		# $boardableShipName "ISS Something or Other"
+		# $boardingTaskForceShipName "ISS Something or Other", name of the first ship in the boarding task force
+		# $creditsLooted
+		# $flagship On flagship selection
+		# $crashMothballList
+		# battles with allies
+		# Tokens:
+		# $alliedFactionAndTheirAllies "Hegemony forces and their allies"
+		# $enemyFactionAndTheirAllies "Hegemony forces and their allies"
+		# $yourForcesWereOrYourSideWas	 
+	
+		"initialWithStationVsLargeFleet":"The $faction $fleetOrShip maneuvers to remain supported by the station, allowing your fleet to disengage. However, your forces are likely to be harried as they pull back.",
+		"initialAggressive":"The $faction $fleetOrShip maneuvers to prevent you from disengaging easily.",
+		"initialDisengage":"The $faction $fleetOrShip is attempting to disengage.",
+		"initialCareful":"The $faction $fleetOrShip carefully maintains its distance, keeping ready to disengage in the event of hostilities.",
+		"initialNeutral":"The $faction $fleetOrShip assumes a neutral posture.",
+		"initialHoldVsStrongerEnemy":"The $faction $fleetOrShip seems ready to fight despite being faced with superior forces, but isn't likely to press the issue.",
+		"initialAggressiveSide":"The $enemyFactionAndTheirAllies maneuver to prevent you from disengaging easily.",
+		"initialDisengageSide":"The $enemyFactionAndTheirAllies are attempting to disengage.",
+		"initialCarefulSide":"The $enemyFactionAndTheirAllies carefully maintain their distance, keeping ready to disengage in the event of hostilities.",
+		"initialNeutralSide":"The $enemyFactionAndTheirAllies assume a neutral posture.",
+		"initialHoldVsStrongerEnemySide":"The $enemyFactionAndTheirAllies seem ready to fight despite being faced with superior forces, but aren't likely to press the issue.",
+	
+		"initialKnows":"It's aware of your identity due to your $playerFleetOrShip's transponder being turned on.",
+		"initialKnowsTOff":"Indications are that it's aware of your identity, despite your $playerFleetOrShip's transponder being turned off, likely due to having seen you recently.",
+		"initialKnowsUnique":"Despite your $playerFleetOrShip's transponder being turned off, it appears to be aware of your identity - likely due to the presence of notable ships in your fleet.",
+		"initialKnowsUniqueSide":"Despite your $playerFleetOrShip's transponder being turned off, it appears to be aware of your identity - likely due to the presence of notable ships in your fleet.",
+		"initialDoesntKnow":"It does not appear to be certain of your identity. Any hostilities will have a reduced impact on your reputation.",
+		"initialKnowsSide":"They're aware of your identity due to your $playerFleetOrShip's transponder being turned on.",
+		"initialKnowsTOffSide":"Indications are that they're aware of your identity, despite your $playerFleetOrShip's transponder being turned off, likely due to having seen you recently.",
+		"initialDoesntKnowSide":"They do not appear to be certain of your identity. Any hostilities will have a reduced impact on your reputation.",
+		
+		"battleDefeat":"$yourForcesWereOrYourSideWas defeated in the last engagement.",
+		"battleTotalDefeat":"$yourForcesWereOrYourSideWas utterly defeated in the last engagement.",
+		"battleVictory":"$yourForcesWereOrYourSideWas victorious in the last engagement.",
+		"battleTotalVictory":"$yourForcesWereOrYourSideWas able to gain a complete victory in the last engagement.",
+		"battleFleetLost":"All of your ships were destroyed in the last engagement.",
+		
+		"friendlyFireRepLoss":"There were significant friendly fire incidents over the course of the encounter.",
+		
+		"pursuitAutoresolve":"Your forces engage in pursuit, as ordered.",
+		"pursuitVictoryNoLosses":"The retreating enemy forces were able to disengage without losing any ships.",
+		"pursuitVictoryLosses":"The retreating enemy forces were able to disengage, but not without taking losses.",
+		"pursuitTotalVictory":"No enemy ships managed to escape.",
+		"pursuitDefeat":"The enemy forces were able to turn the tables and hand your forces a defeat.",
+		"pursuitTotalDefeat":"In a surprising turn of events, the retreating enemy forces were able to turn the tables and obtain a crushing victory.",
+		
+		"escapeDefeat":"$yourForcesWereOrYourSideWas able to disengage from the enemy.",
+		"escapeTotalDefeat":"None of your side's ships managed to escape.",
+		"escapeVictory":"$yourForcesWereOrYourSideWas able to turn the tables on the pursuing enemy and hand them a defeat.",
+		"escapeTotalVictory":"$yourForcesWereOrYourSideWas able to turn the tables on the pursuing enemy and crushed them utterly.",
+		
+		"engagementMutualDestruction":"The ships on both sides have been reduced to so much scrap metal.",
+		"mutualDestructionRepairs":"But, not all is lost. You take command of the $boardableShipName, organizing repair teams and focusing on regaining basic propulsion and life support. Your efforts are successful, and several hours later, you're able to get underway.",
+		
+		"enemyHarass":"The enemy forces harass your ships as they retreat, causing much disruption, but ultimately do not force a battle.",
+		"enemyUnableToPursue":"The enemy ships are unable to offer pursuit, allowing your forces to withdraw without further incident.",
+		"enemyDecidesNotToPursue":"The enemy ships make no move to pursue, allowing your forces to withdraw without further incident.",
+		"enemyPursuit":"The enemy fleet pursues your forces.",
+		
+		"playerRecovery":"$yourForcesWereOrYourSideWas able to recover some combat readiness as they control the battlespace and the engagement was limited.",
+		"enemyRecovery":"The enemy forces are able to recover some combat readiness as they control the battlespace and the engagement was limited.",
+		"bothRecovery":"Both sides are able to recover some combat readiness as they stand down after a limited and chaotic engagement.",
+		
+		"enemyCleanDisengage":"The opposing fleet is able to disengage cleanly as your forces are unable to offer pursuit.",
+		"enemyCleanDisengageSide":"The opposing fleet is able to disengage cleanly as the forces on your side are unable to offer pursuit.",
+		
+		# in playerUnableToPursue, the player can still harass the escaping ships, so it's not a "clean" disengagement.
+		"playerUnableToPursue":"It looks like the opposing fleet will be able disengage without your being able to force a fight.",
+		"playerUnableToPursueNoReadyShips":"None of your ships are in any shape to offer pursuit.",
+		"playerUnableToPursueStoodDown":"Your ships are focused on regaining combat readiness and are unable to offer pursuit.",
+		
+		"playerDisruptedEnemy":"Despite retreating from the last engagement, your forces have disrupted the enemy, and can disengage without being pursued.",
+		"enemyDisruptedPlayer":"Despite being victorious in the last engagement, your forces have suffered sufficient losses to be unable to offer pursuit as the enemy disengages.",
+		"enemyDisruptedPlayerSide":"Despite being victorious in the last engagement, the forces on your side have suffered sufficient losses to be unable to offer pursuit as the enemy disengages.",
+		"cleanDisengageOpportunity":"After a tactical victory, your forces have an opportunity to cleanly disengage from the enemy.",
+		
+		#"playerTooLargeToDisengage":"Your fleet is too large to be able to disengage effectively unless the opposing forces are already in disarray.",
+		#"playerTooLargeCanFightToDisengage":"Engaging the opponent and destroying, disabling, or forcing enough of their ships to retreat will allow your fleet to disengage without being pursued.",
+		#"highlightTooLarge":"too large to be able to disengage",
+		#"highlightCanFight":"disengage without being pursued",
+		"playerTooLargeToDisengage":"Your fleet is too large to be able to disengage easily. Engaging the enemy and destroying, disabling, or forcing enough of their ships to retreat will allow your fleet to disengage without being pursued.",
+		"highlightTooLarge":"too large to be able to disengage",
+		"highlightDisengage":"disengage without being pursued",
+		
+		
+		"highlghtDisruptedEnemy":"disengage without being pursued",
+		"highlightDisruptedPlayer":"unable to offer pursuit",
+		"highlightCleanDisengage":"cleanly disengage from the enemy",
+		
+		
+		"playerLetGo":"Your ships make no move to pursue, allowing the enemy forces to withdraw without further incident.",
+		"playerHarass":"Your forces harass the enemy ships as they retreat, causing much disruption, but ultimately do not force a battle.",
+		
+		
+		"engageForce":"Your order a series of maneuvers the leave the enemy commander with progressively fewer and fewer options.",
+		"engagePursuit":"The opposing fleet tries to disengage, but they won't be able to get away without a fight.",
+		"engageMutual":"The opposing fleet moves in to join battle.",
+		"pursue":"Your forces pursue the enemy and manage to close in enough to force battle.",
+		
+		"postBattleAggressive":"The $faction $fleetOrShip maneuvers for another engagement.",
+		"postBattleDisengage":"The $faction $fleetOrShip maneuvers to disengage.",
+		"postBattleNeutral":"The $faction $fleetOrShip assumes a neutral posture.",
+		"postBattleHoldVsStrongerEnemy":"The $faction $fleetOrShip seems ready to fight despite being faced with superior forces, but isn't likely to press the issue.",
+		
+		"postBattleAggressiveSide":"The $enemyFactionAndTheirAllies maneuver for another engagement.",
+		"postBattleDisengageSide":"The $enemyFactionAndTheirAllies maneuver to disengage.",
+		"postBattleNeutralSide":"The $enemyFactionAndTheirAllies assume a neutral posture.",
+		"postBattleHoldVsStrongerEnemySide":"The $enemyFactionAndTheirAllies seem ready to fight despite being faced with superior forces, but aren't likely to press the issue.",
+		
+		"cutComm":"You cut the comm link and consider the tactical options available.",
+	
+		"repairReport":"The salvage crews were able to restore basic systems on $repairedShipList.",
+		"casualtyReport":"Preliminary reports indicate $crewLost crew and $marinesLost marines were lost during the last engagement.",
+		"recoveryReport":"After the battle, $crewRecovered crew and $marinesRecovered marines were rescued from lifepods and intact compartments in the wrecks.",
+
+		#
+		# BOARDING ENEMY SHIP
+		#
+		"enemyShipBoardable":"Your forces are preparing to begin salvage operations, when suddenly an enemy ship's systems come back online. A quick scan picks up $numLifeSigns lifesign(s) on board.",
+		"engageBoardableDisabled":"Your forces engage the enemy ship, and a few well-placed shots quickly neutralize it.",
+		"engageBoardableDestroyed":"Your forces engage the enemy ship. A huge explosion blanks out the viewscreens shortly after a few shots impact its damaged hull, and all that's left when visuals come back online is a slowly expanding ball of debris.",
+		"engageBoardableEscaped":"Your forces move to engage the enemy ship, but its crew is able to bring the drive field back online at the last moment and it manages to get away.",
+		"letBoardableGo":"Your forces stand down and let the enemy ship get away.",
+		"boardingTaskForceSelectedOneShip":"On receiving its orders, $boardingTaskForceShips moves in to approach the enemy ship.",
+		"boardingTaskForceSelectedMultiple":"On receiving their orders, $boardingTaskForceShips move in to approach the enemy ship.",
+		
+		"boardingApproachDock":"A hard dock with the enemy hull is established and the assault teams quickly override the security systems on airlocks and blast temporary access points in weakened sections of the hull.",
+		"boardingApproachLaunch":"Assault teams are launched from about a kilometer out and approach the hull in waves, using personal propulsion systems to brake on the final approach. The defenders have an opportunity to fire on the landing forces with impunity until enough teams land to push inside the hull.",
+		
+		"boardingOutcomeSelfDestruct":"As your assault teams start to overcome resistance inside the enemy ship, it self-destructs. Most of the men and women in the boarding party are killed by the explosion.",
+		"boardingOutcomeShipLost":"The $boardingTaskForceShipName is destroyed.", 
+		"boardingOutcomeShipDamaged":"The $boardingTaskForceShipName is seriously damaged.",
+		"boardingOutcomeTaskForceLost":"The entire task force docked with the enemy ship is destroyed.", 
+		"boardingOutcomeTaskForceLostPartial":"Some of the ships docked with the enemy ship when it exploded are destroyed, while the rest take serious damage.", 
+		"boardingOutcomeTaskForceDamaged":"Fortunately, none of the ships in the task force are destroyed.",
+		 
+		"boardingOutcomeSuccess":"After overcoming all organized resistance and sweeping every compartment, the commander of the boarding party reports the enemy ship secured and ready to accept a prize crew.",
+		"boardingOutcomeTooDamaged":"After overcoming all organized resistance and sweeping every compartment, the commander of the boarding party reports the enemy ship secured. Unfortunately, collateral damage from the fighting has crippled core ship systems beyond repair.",
+		"boardingOutcomeEscape":"The entrenched enemy forces are able to hold back your assault teams long enough to finish engine repairs and get away.",
+		"boardingCleanEscapeMissedLaunch":"At the last moment, the enemy ship regains propulsion and is able to alter its trajectory enough to avoid most of the incoming attackers, gaining enough time to get away. After a recovery effort, $boardingCrewLost crew and $boardingMarinesLost marine(s) remain unaccounted for.",
+		
+		"boardingNoMarines":"You have no marines available to conduct boarding operations. Somewhat unhelpfully, an automated system chimes in with a projection that a boarding operation would have zero chance of success.",
+		"boardingProjection":"You have $marines marine(s) available. According to simulations run by a gamma-level AI, a boarding operation would have a $boardingSuccessChance chance of success.",
+		
+		"boardingCasualtyReport":"An after-action assessment indicates $boardingMarinesLost marine(s) lost during the fighting.",  
+		
+		#
+		# BEING BOARDED (limited to ship being engaged and shot down or not, at the moment)
+		#
+		"friendlyShipBoardable":"The crew of one of your disabled ships has effected enough repairs for critical systems to come back online. If it's able to regain propulsion, it might be able to rejoin your fleet.",
+		"engageFriendlyBoardableDisabled":"Unfortunately, enemy ships close in and fire a few well-placed shots to eliminate any chance of that.",
+		"engageFriendlyBoardableDestroyed":"Unfortunately, enemy ships close in and fire on it before further repairs could be completed. A stray shot must have collapsed the reactor containment field - the ship explodes, leaving behind a slowly expanding field of debris.",
+		"engageFriendlyBoardableEscaped":"Before the enemy can close in, engine repairs are completed and the ship gets away to rejoin your fleet.",
+		"engageFriendlyBoardableLetGo":"The enemy forces stand down and let the ship complete its repairs and limp away to rejoin your fleet.",
+		
+		"lastFriendlyShipRepairs":"You take command of the $boardableShipName, quickly organizing repair teams. If it's able to regain propulsion, you might be able to get away.",
+		"lastFriendlyBoardableDisabled":"Unfortunately, enemy ships close in and fire a few well-placed shots to eliminate any chance of that.",
+		"lastFriendlyBoardableDestroyed":"Unfortunately, enemy ships close in and fire on it before further repairs could be completed. A stray shot must have collapsed the reactor containment field - the ship explodes, leaving behind a slowly expanding field of debris.",
+		"lastFriendlyBoardableEscaped":"Before the enemy can close in, engine repairs are completed and you're able to get away!",
+		"lastFriendlyBoardableLetGo":"The enemy forces stand down and let your ship complete repairs and limp away.",
+
+		"finalOutcomeNoShipsLeft":"The last thing you remember is the sudden burst of acceleration as the escape pod you're in tears away from your doomed ship.",
+		
+		#
+		# OTHER
+		#
+		"creditsLootedReport":"Salvage crews are able to recover $creditsLooted credit(s) from CPU cores still active in the wreckage.",
+		"selectedFlagship":"You transfer command to $flagship for the upcoming engagement.",
+		"noSalvageReport":"There's no salvage to be had.",
+		"noSalvageReportPlayerDidNothing":"Your $playerFleetOrShip does not participate in salvage operations due to its limited contributions throughout the encounter.",
+		"salvageReportPlayer":"Your $playerFleetOrShip is able to participate in salvage operations due to its contributions throughout the encounter.",
+		
+		#
+		# CRASH MOTHBALLING
+		#
+		"crashMothballSelectedOneShip":"Your order $crashMothballList to power down all combat systems to avoid the risk of malfunctions during battle. The ship's crew directs all available resources to keep the engines running as smoothly as possible.",
+		"crashMothballSelectedMultiple":"Your order $crashMothballList to power down all combat systems to avoid the risk of malfunctions during battle. The ship's crews direct all available resources to keep the engines running as smoothly as possible.",
+		"tooltipCrashMothball":"Some of your ships suffer from low combat readiness and could experience malfunctions during battle.\n\nTheir combat systems can be powered down to avoid malfunctions and allow the ships to make their best speed to escape.",
+		"tooltipCrashMothballUnavailable":"All of your ships are ready for combat and do not run the risk of suffering malfunctions.",
+		
+		#
+		# TOOLTIPS
+		#
+		"tooltipPursue":"Forces a battle in which the disengaging forces attempt to get away.",
+		"tooltipPursueAutoresolve":"Orders your second-in-command to handle the pursuit. Offers no risk to your ships, but likely less effective than commanding the pursuit yourself.",
+		"tooltipPursueLostLast":"Your forces were defeated in the last engagement and are unable to pursue.",
+		"tooltipPursueStoodDown":"Your forces stood down after the last engagement and are unable to pursue.",
+		"tooltipPursueSeriousLosses":"Your forces took serious losses in the last engagement and are unable to pursue.",
+		"tooltipPursueTooSlow":"The enemy fleet is too fast for your forces to catch up to.",
+		
+		"tooltipNoReadyShips":"None of your ships are combat-ready.",
+		"tooltipNoPersonnel":"There are no marines available.",
+		
+		"tooltipHarassRetreat":"Reduces the combat readiness of all disengaging ships as if they were deployed into combat.\n\nAlso slows down your fleet for a while as your forces require time to reorganize after the harassing action.",
+		"tooltipHarassRetreatUnavailable":"Unable to harass the retreating forces either due to standing down or not having any combat-ready ships.",
+		
+		"tooltipLetThemGoNoPenalty":"Lets the other fleet leave in peace.\n\nYour fleet does not need to reorganize after the encounter and is not slowed down.",
+		"tooltipLetThemGo":"Lets the other fleet leave in peace.\n\nYour fleet does not need to reorganize after the encounter and is not slowed down.",
+		"tooltipEngage":"Attack the opposing fleet.\n\nIf you inflict enough damage before retreating, you will be able to disengage without being pursued.",
+		"tooltipCleanDisengage":"Ends the battle with no risk of being harried by the opposing fleet.\n\nAs the enemy remains in control of the battlespace, you won't be able to conclude any salvage operations.\n\nIf your fleet hasn't taken any hostile actions, disengaging will not do any damage to your standing with the opposing faction.",
+		"tooltipHarrassableDisengage":"Ends the battle without any risk of pursuit. The opposing fleet may still harry your retreat.\n\nAs the enemy remains in control of the battlespace, you won't be able to conclude any salvage operations.\n\nIf your fleet hasn't taken any hostile actions, disengaging will not do any damage to your standing with the opposing faction.",
+		"tootipAttemptToDisengage":"Attempt to retreat from battle. The opposing fleet may pursue and force a battle, or may let you go.\n\nAs the enemy remains in control of the battlespace, you won't be able to conclude any salvage operations.\n\nIf your fleet hasn't taken any hostile actions, disengaging - without damaging any pursuing ships - will do the least damage to your standing with the opposing faction.",
+		
+		"tooltipBoardingAction":"Organize a boarding action. Requires marines and likely to result in serious personnel losses.",
+		"tooltipEngageBoardable":"Attack the ship before it has a chance to complete repairs.\n\nThere is a chance that the ship will be destroyed entirely.",
+		"tooltipLetShipGo":"Let the enemy ship finish emergency repairs and withdraw.",
+		"tooltipHardDockBoarding":"Ships assigned to the boarding task force approach the enemy ship and dock with it.\n\nOffers the best combat odds to the assault teams and a high chance of success.\n\nIf the ship being boarded self-destructs, the ships involved in the boarding action will take heavy damage and may be destroyed.",
+		"tooltipLaunchBoarding":"The boarding task force maintains a safe distance and launches assault teams equipped with personal propulsion systems.\n\nGives the defenders a significant combat advantage and a higher chance to get away, but does not risk the ships in the boarding task force.",
+		"tooltipAboutBoardingAction":"Recall the task force and cancel the boarding action, allowing the enemy ship to withdraw.", 
+		"tooltipSelectorMarines":"Select the number of marines to assign to the assault force.",
+		"tooltipSelectorCrew":"Select the number of crew to assign to the assault force.",
+		"tooltipSelectFlagship":"Select the ship you will directly control in the upcoming engagement.",
+		
+		"ongoingBattleEncounter":"You encounter an ongoing battle.",
+		"ongoingBattleShareIFF":"The $alliedFactionAndTheirAllies transmit their IFF codes, which allow you to join the battle on their side if you decide to do so.",
+		"ongoingBattleNoJoin":"Neither side trusts you enough to share IFF codes or fight alongside, and you're unable to join the battle on either side.",
+		"ongoingBattleNoJoinTransponder":"Neither side trusts you enough to share IFF codes, but that's likely to change if you come back with your transponder turned on.",
+		#"playerOutFirstEscapeWin":"Your forces leave the battlespace before all of your allies, who are nonetheless able to rout the enemy forces.",
+		#"playerOutFirstEscapeLoss":"Your forces leave the battlespace before all of your allies, who are able to escape shortly thereafter.",
+		#"playerOutFirstEngageWin":"Your forces retreat from the battlespace before your allies, who are nonetheless able to win the engagement.",
+		#"playerOutFirstEngageLoss":"Your forces retreat from the battlespace before all of your allies and have an opportunity to leave in relative safety, despite your allies being defeated shortly thereafter.",
+		#"playerOutFirstPursuitWin":"Your forces retreat from the battlespace before your allies, who are nonetheless able to chase off the retreating enemy forces.",
+		#"playerOutFirstPursuitLoss":"Your forces retreat from the battlespace before your allies, and the enemy side is able to turn the tables and defeat them shortly thereafter.",
+		"playerOutFirstEscapeWin":"Your forces leave the battlespace before all of your allies, who are nonetheless able to rout the enemy forces.",
+		"playerOutFirstEscapeLoss":"Your forces leave the battlespace before all of your allies, who are able to escape shortly thereafter.",
+		"playerOutFirstEngageWin":"Your forces retreat from the battlespace before your allies, who are nonetheless able to win the engagement.",
+		"playerOutFirstEngageLoss":"Your forces retreat from the battlespace before all of your allies and have an opportunity to leave in relative safety.",
+		"playerOutFirstPursuitWin":"Your forces retreat from the battlespace before your allies.",
+		"playerOutFirstPursuitLoss":"Your forces retreat from the battlespace before your allies.",
+		"ongoingBattleEngage":"The $alliedFactionAndTheirAllies are moving in to engage the $enemyFactionAndTheirAllies.",
+		"ongoingBattleStation":"The $alliedFactionAndTheirAllies are holding their ground against the $enemyFactionAndTheirAllies.",
+		"ongoingBattlePursue":"The $alliedFactionAndTheirAllies are pursuing the retreating $enemyFactionAndTheirAllies.",
+		"ongoingBattleHarass":"The $alliedFactionAndTheirAllies harass the retreating $enemyFactionAndTheirAllies, causing much disruption, but ultimately do not force a battle.",
+		"ongoingBattleLetGo":"The $alliedFactionAndTheirAllies let the $enemyFactionAndTheirAllies go without further incident.",
+		"ongoingBattleDisengage":"The $alliedFactionAndTheirAllies are attempting to disengage from the $enemyFactionAndTheirAllies.",
+		#"ongoingBattleJoinEnemyWillFlee":"Your forces join the battle, and the now-outclassed $enemyFactionAndTheirAllies attempt to disengage.",
+		#"ongoingBattleJoinAlliesWillFight":"Your forces join the battle, and encouraged by this turn of events, the $alliedFactionAndTheirAllies turn to engage the enemy.",
+		#"ongoingBattleJoinTurnTables":"Your forces join the battle, shifting the balance drastically. The $alliedFactionAndTheirAllies turn to engage the $enemyFactionAndTheirAllies which, in turn, attempt to disengage.",
+	},
+
+
+	"jumpPointInteractionDialog":{
+		# Available tokens:
+		#
+		# $fleetOrShip "fleet", "ship" if only one ship in fleet, "fighter wing" if only one fighter wing (and nothing else)
+		
+		"approach":"Your $fleetOrShip approaches the jump point.",
+		"starAnchor":"Jumping in through the wormhole generated by the star's gravity field is quite a feat of navigation. Only the most skilled would even consider attempting it, and even then, the results are unpredictable.",
+		"starAnchorUnusable":"You are unable to use this jump point.",
+		"noFuel":"Your $fleetOrShip has no fuel remaining and is unable to make a jump.",
+		"noExits":"The jump point does not appear to have any functional exits and is effectively unusable.",
+	},
+	
+	
+	"planetInteractionDialog":{
+		# Available tokens:
+		#
+		# $fleetOrShip "fleet", "ship" if only one ship in fleet, "fighter wing" if only one fighter wing (and nothing else)
+		# $planetName
+		"approach":"Your $fleetOrShip approaches $planetName.",
+	},
+	
+
+	"campaignHelp":{
+		"chmNewgame_text":"Welcome to the Starsector campaign!\n\nYou can press F5 to quicksave and F9 to quickload.\n\nTry to avoid taking on fleets much bigger than yours, or ones that have bigger ships, and please remember that it's a work-in-progress so bugs will occasionally happen.\n\nGood luck!",
+		"chmNewgame_dismiss":"Dismiss",
+		
+		"chmNewgameIron_text":"Welcome to the Starsector campaign!\n\nSince you're playing in iron mode, you'll only be able to save the game when you exit, and won't be able to load another game without exiting (and saving) your current game first.\n\nTry to avoid taking on fleets much bigger than yours, or ones that have bigger ships, and please remember that it's a work-in-progress so bugs will occasionally happen.\n\nGood luck!",
+		"chmNewgameIron_dismiss":"Dismiss",
+		
+		"chmDeployCritCR_text":"Some of the ships marked for deployment are at dangerously low combat readiness (below 20%).\n\nBringing the systems on these ships to combat power levels is likely to cause critical malfunctions - dealing damage, disabling some weapons and engines for the duration of the battle, and causing further critical malfunctions during the deployment.\n\nRunning these risks - which include the outright destruction of a ship - is usually a measure of last resort.",
+		"chmDeployCritCR_action":"Proceed with the deployment",
+		"chmDeployCritCR_dismiss":"Reconsider",
+		
+		"chmDeployLowCR_text":"Some of the ships marked for deployment are at low combat readiness (below 40%).\n\nTheir weapon systems and engines are likely to suffer malfunctions and become temporarily disabled during sustained use.",
+		"chmDeployLowCR_action":"Proceed with the deployment",
+		"chmDeployLowCR_dismiss":"Reconsider",
+		
+		"chmDeployCostsCR_text":"You can select which ships to deploy at the beginning of each battle, and deploy reinforcements as the battle goes on.\n\nDeploying a ship reduces its combat readiness by a fixed amount. In addition, ships will begin to gradually lose combat readiness after their peak readiness time runs out.\n\nRecovering combat readiness takes time and consumes valuable supplies.",
+		"chmDeployCostsCR_dismiss":"Dismiss",
+		
+		"chmWeaponGroups_text":"You've made changes to the ship's loadout, but have not adjusted the weapon groups.\n\nWeapons will be automatically assigned to groups when you deploy the ship for combat, but it's a good idea to make the assignments manually.",
+		"chmWeaponGroups_action":"Adjust weapon groups",
+		"chmWeaponGroups_dismiss":"Never mind",
+		
+		#"chmOpenTrade_text":"In the cargo/trade screen, you can:\n\n- Left-click to pick up a stack\n- Shift-click to pick up items from a stack one at a time\n- Shift-click and hold, then drag to pick up a specific quantity\n- Control-click to transfer an entire stack without picking it up\n- Hold down Alt and move the mouse to transfer multiple stacks quickly",
+		"chmOpenTrade_text":"In the cargo/trade screen, you can:\n\n- Left-click to pick up a stack\n- Shift-click to pick up items from a stack one at a time\n- Shift-click and hold, then drag to pick up a specific quantity\n- Control-click to transfer an entire stack without picking it up",
+		"chmOpenTrade_dismiss":"Dismiss",
+		
+		"chmHyperStorm_text":"Your fleet has been hit by a hyperspace storm! One of your ships has taken damage and its combat readiness has been reduced.\n\nStorm strikes can also knock your fleet off course, but an \"Emergency Burn\" lets your fleet to get back on course more easily and allows it to punch through storms.",
+		"chmHyperStorm_dismiss":"Dismiss",
+	
+		"chmShipPurchase_text":"Congratulations, you just bought a new ship!\n\nIt doesn't have any weapons or hullmods installed, so it's a good idea to get it outfitted.\n\nYou'll also need to make sure you have enough personnel to crew it.",
+		"chmShipPurchase_action":"Open the refit screen",
+		"chmShipPurchase_dismiss":"Dismiss",
+		
+		"chmWingPurchase_text":"Congratulations, you just bought a new fighter wing!\n\nFighter wing combat readiness represents the number of replacement fighter chassis available, but these can only be used if you have a ship with a flight deck in your fleet.\n\nNew fighters will take off from a nearby flight deck to replace any losses taken in combat. As long as your fleet has a ship with proper repair facilities (i.e. a flight deck), a fighter wing can not be completely lost, even if its combat readiness is reduced to zero.",
+		"chmWingPurchase_dismiss":"Dismiss",
+		
+		"chmRefitOnStation_text":"When refitting a ship while docked at a space station, you can mount both the weapons in your cargo hold and the ones available for purchase at the station.\n\nUndoing the changes to the ship's loadout (or simply unmounting the purchased weapons) will refund the credits used, but only if you haven't navigated away from the refit screen.",
+		"chmRefitOnStation_dismiss":"Dismiss",
+		
+		"chmLootOverCapacity_text":"Warning: you're taking more salvage than your fleet has the capacity to carry.\n\nThis will result in greatly increased daily supply consumption and a reduced travel speed.\n\nIt's recommended that you either take less salvage or head for a nearby station to sell off the excess.",
+		"chmLootOverCapacity_dismiss":"Dismiss",
+		
+		"chmOverCargoCapacity_text":"Your fleet is carrying more cargo than it has capacity for.\n\nThis will result in greatly increased daily supply consumption and a reduced travel speed.\n\nIt's recommended that you either jettison some of the cargo now or head to a station quickly so you can sell off the excess. You can jettison cargo from the crew/cargo screen.",
+		"chmOverCargoCapacity_action":"Open the crew/cargo screen",
+		"chmOverCargoCapacity_dismiss":"Dismiss",
+		
+		"chmOverFuelCapacity_text":"Your fleet is carrying more fuel than it has capacity for.\n\nThis will result in greatly increased daily supply consumption and a reduced travel speed.\n\nIt's recommended that you either jettison some of the fuel now or head to a station quickly so you can sell off the excess. You can jettison fuel from the crew/cargo screen.",
+		"chmOverFuelCapacity_action":"Open the crew/cargo screen",
+		"chmOverFuelCapacity_dismiss":"Dismiss",
+		
+		"chmOverCrewCapacity_text":"Your fleet is carrying more personnel than it has capacity for.\n\nThis will result in greatly increased daily supply consumption and a reduced travel speed.\n\nIt's recommended that you head to a nearby market so you can drop them off there.",
+		"chmOverCrewCapacity_action":"Open the crew/cargo screen",
+		"chmOverCrewCapacity_dismiss":"Dismiss",
+		
+		"chmLowFuel_text":"Your fleet is running low on fuel.\n\nIf it runs out of fuel in hyperspace, it will drift towards the nearest star system and may become stranded if you're not able to acquire more fuel there.",
+		"chmLowFuel_dismiss":"Dismiss",
+		
+		"chmLowSupplies_text":"Your fleet is running low on supplies.\n\nIf it runs out of supplies, all repairs will stop and ships will start to lose combat readiness over time. After more than a couple of days without supplies, the fleet begins to run the risk of accidents that range from minor (such as the loss of some cargo) to critical (losing a ship).\n\nIt's recommended that you acquire more supplies as quickly as possible.\n\nTo reduce supply consumption, you can suspend any ongoing ship repairs. A last resort way to get more supplies is to scuttle one of your ships.\n\nThe commands to do so are available on the fleet screen.",
+		"chmLowSupplies_action":"Open the fleet screen",
+		"chmLowSupplies_dismiss":"Dismiss",
+		
+		"chmNotEnoughCrew_text":"Your fleet does not have enough personnel to fully crew all of your ships.\n\nThis results in reduced combat readiness and combat readiness recovery for the affected ships.\n\nYou can concentrate the available crew on specifc ships by mothballing some ships from the fleet screen. It's recommended that you hire more crew at a nearby space station as soon as possible.",
+		"chmNotEnoughCrew_action":"Open the fleet screen",
+		"chmNotEnoughCrew_dismiss":"Dismiss",
+		
+		"chmSomeLowCR_text":"Some of the ships in your fleet are at low combat readiness (below 40%).\n\nTheir weapon systems and engines are likely to suffer malfunctions and become temporarily disabled during sustained use, making them less capable in combat.\n\nIt's recommended that you let these ships recover before using them in combat. Ships regain combat readiness over time, and friendly stations offer a quick way to do so and effect repairs, as well as hire on additional crew if needed.\n\nYou can check the combat readiness levels of your ships in the fleet screen.",
+		"chmSomeLowCR_action":"Open the fleet screen",
+		"chmSomeLowCR_dismiss":"Dismiss",
+		
+		"chmSomeCritCR_text":"Some of the ships in your fleet are at dangerously low combat readiness (below 20%).\n\nDeploying these ships in combat is likely to cause critical malfunctions - dealing damage, disabling some weapons and engines for the duration of the battle, and causing further critical malfunctions during the deployment.\n\nIt's recommended that you let these ships recover before using them in combat. Ships regain combat readiness over time, and friendly stations offer a quick way to do so and effect repairs, as well as hire on additional crew if needed.\n\nYou can check the combat readiness levels of your ships in the fleet screen.",
+		"chmSomeCritCR_action":"Open the fleet screen",
+		"chmSomeCritCR_dismiss":"Dismiss",
+		
+		"chmAllCritCR_text":"All of the ships in your fleet are at dangerously low combat readiness (below 20%).\n\nDeploying these ships in combat is likely to cause critical malfunctions - dealing damage, disabling some weapons and engines for the duration of the battle, and causing further critical malfunctions during the deployment.\n\nIt's recommended that you let your fleet recover before engaging in combat. Ships regain combat readiness over time, and friendly stations offer a quick way to do so and effect repairs, as well as hire on additional crew if needed.\n\nYou can check the combat readiness levels of your ships in the fleet screen.",
+		"chmAllCritCR_action":"Open the fleet screen",
+		"chmAllCritCR_dismiss":"Dismiss",
+		
+		"chmSupplyUseAfterBattle_text":"Your fleet's supply consumption has just gone up!\n\nRecovering combat readiness used to deploy ships into battle costs supplies, as does repairing battle damage.\n\nTo reduce supply use, repairs and CR recovery on ships can be suspended from the fleet screen.",
+		"chmSupplyUseAfterBattle_action":"Open the fleet screen",
+		"chmSupplyUseAfterBattle_dismiss":"Dismiss",
+		
+		"chmRiskOfAccidents_text":"Some of the ships in your fleet are in danger of suffering accidents due to having 0% combat readiness.\n\nAccidents may damage or even destroy a ship.\n\nIt's recommended that you either mothball those ships or let them recover combat readiness as soon as possible.",
+		"chmRiskOfAccidents_dismiss":"Dismiss",
+		
+		"chmEnteredHyper_text":"Your fleet has entered hyperspace!\n\nShips traveling in hyperspace use fuel in proportion to the distance travelled. Fleets that run out of fuel drift towards the nearest star system and may become stranded there.",
+		"chmEnteredHyper_dismiss":"Dismiss",
+	
+		"chmRefitCRLoss_text":"Refitting a ship in space will cause it to lose some combat readiness.\n\nThe amount lost depends on the extent of the changes made and is indicated by the dimmed portion of the combat readiness bar.\n\nRefitting at a market or station does not reduce combat readiness.",
+		"chmRefitCRLoss_dismiss":"Dismiss",
+	},
+	
+	
+	
+		
+}
+
+
+
+
+
+
+
+
+

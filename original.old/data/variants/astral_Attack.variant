@@ -1,0 +1,58 @@
+{
+    "displayName": "Attack",
+    "fluxCapacitors": 29,
+    "fluxVents": 28,
+    "goalVariant": true,
+    "hullId": "astral",
+    "hullMods": ["missleracks"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "astral_Attack",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 011": "hurricane",
+                "WS 012": "hurricane"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 013": "gravitonbeam",
+                "WS 014": "gravitonbeam",
+                "WS 015": "gravitonbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 023": "gravitonbeam",
+                "WS 024": "gravitonbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "pdlaser",
+                "WS 003": "pdlaser",
+                "WS 005": "pdlaser",
+                "WS 006": "pdlaser",
+                "WS 007": "pdlaser",
+                "WS 008": "pdlaser"
+            }
+        }
+    ],
+    "wings": [
+        "claw_wing",
+        "gladius_wing",
+        "wasp_wing",
+        "wasp_wing",
+        "thunder_wing",
+        "thunder_wing"
+    ]
+}

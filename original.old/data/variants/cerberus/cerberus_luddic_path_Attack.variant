@@ -1,0 +1,28 @@
+{
+    "displayName": "Attack",
+    "fluxCapacitors": 7,
+    "fluxVents": 10,
+    "hullId": "cerberus_luddic_path",
+    "hullMods": [
+        "unstable_injector",
+        "heavyarmor"
+    ],
+    "permaMods": [],
+    "variantId": "cerberus_luddic_path_Attack",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "flak"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "lightmortar",
+                "WS 002": "lightag",
+                "WS 003": "lightdualmg"
+            }
+        }
+    ]
+}

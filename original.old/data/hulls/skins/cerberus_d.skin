@@ -1,0 +1,17 @@
+{
+	"baseHullId":"cerberus",
+	"skinHullId":"cerberus_d",
+	"hullName":"Cerberus (D)",
+	"descriptionId":"cerberus",
+	"descriptionPrefix":"Ships that would be decommissioned in quieter times now see widespread use throughout the Sector. The hull designation for such ships is usually tagged with a \"D\", for \"damaged\" or \"defective\".",
+	"restoreToBaseHull":true,
+	"baseValueMult":.67,
+	"spriteName":"graphics/ships/cerberus/cerberus_damaged.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["shielded_holds","comp_armor","faulty_grid"],
+	"builtInWeapons":{
+    },
+}

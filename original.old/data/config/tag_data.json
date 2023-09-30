@@ -1,0 +1,81 @@
+{
+	# only applies to intel tags
+	
+	"New":{
+		"name":"New",
+		"color":"buttonShortcut",
+		"width":118,
+		"putFirst":true,
+		"sort":10,
+	},
+	"Important":{
+		"name":"Important",
+		#"color":"buttonShortcut",
+		"width":118,
+		"putFirst":true,
+		"sort":20,
+	},
+	"Major events":{
+		"name":"Major events",
+		#"color":"buttonShortcut",
+		"width":119,
+		#"putFirst":true,
+		"sort":30,
+	},
+	"Contacts":{
+		"name":"Contacts",
+		"width":118,
+		"putFirst":true,
+		"sort":32,
+	},
+	"Local":{
+		"name":"Local",
+		"width":118,
+		"putFirst":true,
+		"sort":33,
+	},
+	"Colony threats":{
+		"name":"Colony threats",
+		#"color":[200,0,0,255],
+		#"width":119,
+		"putFirst":true,
+		"sort":34,
+	},
+	"Fleet log":{
+		"name":"Fleet log",
+		"width":119,
+		"putFirst":true,
+		"sort":35,
+	},
+	"Accepted":{
+		"name":"Accepted",
+		#"color":"textFriendColor",
+		"width":119,
+		"putFirst":true,
+		"sort":37.5,
+	},
+	"Missions":{
+		"name":"Missions",
+		#"color":"textFriendColor",
+		"width":119,
+		"putFirst":true,
+		"sort":40,
+	},
+	"Bounties":{
+		"name":"Bounties",
+		#"color":[200,0,0,255],
+		"width":119,
+		"putFirst":true,
+		"sort":50,
+	},
+	"Story":{
+		"name":"Story",
+		"width":119,
+		"putFirst":true,
+		"sort":31,
+	},
+
+}
+
+
+

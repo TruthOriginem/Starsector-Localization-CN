@@ -1,0 +1,32 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 7,
+    "fluxVents": 15,
+    "goalVariant": true,
+    "hullId": "berserker",
+    "hullMods": [],
+    "permaMods": [],
+    "quality": 0,
+    "variantId": "berserker_Assault",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "heavymg",
+                "WS 005": "heavymg",
+                "WS 007": "heavymg"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "lightmortar",
+                "WS 002": "lightmortar",
+                "WS 006": "lightmortar",
+                "WS 008": "lightmortar"
+            }
+        }
+    ]
+}

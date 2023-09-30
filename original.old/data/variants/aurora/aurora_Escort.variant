@@ -1,0 +1,47 @@
+{
+    "displayName": "Escort",
+    "fluxCapacitors": 9,
+    "fluxVents": 30,
+    "hullId": "aurora",
+    "hullMods": [
+        "targetingunit",
+        "turretgyros",
+        "stabilizedshieldemitter"
+    ],
+    "permaMods": [],
+    "quality": 1,
+    "variantId": "aurora_Escort",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 009": "salamanderpod",
+                "WS 011": "heatseeker",
+                "WS 013": "heatseeker"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 010": "annihilator",
+                "WS 012": "annihilator"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "pdburst",
+                "WS 002": "pdburst",
+                "WS 003": "pdburst",
+                "WS 004": "pdburst",
+                "WS 005": "pdburst",
+                "WS 006": "heavyburst",
+                "WS 007": "heavyburst",
+                "WS 008": "heavyburst"
+            }
+        }
+    ]
+}

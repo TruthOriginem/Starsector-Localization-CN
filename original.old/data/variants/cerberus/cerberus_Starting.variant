@@ -1,0 +1,30 @@
+{
+    "displayName": "Custom",
+    "fluxCapacitors": 9,
+    "fluxVents": 10,
+    "hullId": "cerberus",
+    "hullMods": [
+        "blast_doors",
+        "reinforcedhull"
+    ],
+    "permaMods": [],
+    "variantId": "cerberus_Starting",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "lightac",
+                "WS 003": "lightag"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "vulcan",
+                "WS 004": "flak"
+            }
+        }
+    ]
+}

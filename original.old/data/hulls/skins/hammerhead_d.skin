@@ -1,0 +1,19 @@
+{
+	"baseHullId":"hammerhead",
+	"skinHullId":"hammerhead_d",
+	"hullName":"Hammerhead (D)",
+	"descriptionId":"hammerhead",
+	"descriptionPrefix":"Ships that would be decommissioned in quieter times now see widespread use throughout the Sector. The hull designation for such ships is usually tagged with a \"D\", for \"damaged\" or \"defective\".",
+	"fleetPoints":8,
+	"restoreToBaseHull":true,
+	#"ordnancePoints":85,
+	"baseValueMult":.6,
+	"spriteName":"graphics/ships/hammerhead/hammerhead_damaged.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["degraded_engines","comp_armor","faulty_grid"],
+	"builtInWeapons":{
+    },
+}

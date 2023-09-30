@@ -1,0 +1,17 @@
+{
+	"baseHullId":"wolf",
+	"skinHullId":"wolf_hegemony",
+	"hullName":"Wolf (H)",
+	"descriptionId":"wolf",
+	"descriptionPrefix":"This ship has been given Hegemony markings. Systems modifications are otherwise superficial.",
+	"tags":["heg_aux_bp"],
+	"tech":"Hegemony",
+	"spriteName":"graphics/ships/wolf/wolf_hegemony.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":[],
+	"builtInWeapons":{
+    },
+}

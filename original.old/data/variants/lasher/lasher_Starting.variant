@@ -1,0 +1,40 @@
+{
+    "displayName": "Custom",
+    "fluxCapacitors": 6,
+    "fluxVents": 10,
+    "hullId": "lasher",
+    "hullMods": [
+        "blast_doors",
+        "auxiliarythrusters"
+    ],
+    "permaMods": [],
+    "quality": 0.5,
+    "variantId": "lasher_Starting",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "lightag",
+                "WS 003": "lightag"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "heatseeker",
+                "WS 004": "heatseeker"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "lightmg",
+                "WS 006": "lightmg",
+                "WS 007": "lightmg"
+            }
+        }
+    ]
+}

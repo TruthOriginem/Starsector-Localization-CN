@@ -1,0 +1,52 @@
+{
+    "displayName": "Elite",
+    "fluxCapacitors": 25,
+    "fluxVents": 30,
+    "hullId": "dominator_xiv",
+    "hullMods": [
+        "heavyarmor",
+        "armoredweapons",
+        "targetingunit"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "dominator_XIV_Elite",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 012": "hephag"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 014": "typhoon",
+                "WS 015": "typhoon",
+                "WS 016": "typhoon"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 013": "mark9"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "lightmg",
+                "WS 002": "lightmg",
+                "WS 003": "lightmg",
+                "WS 004": "lightmg",
+                "WS 005": "lightmg",
+                "WS 006": "lightmg",
+                "WS 007": "lightmg",
+                "WS 008": "lightmg",
+                "WS 009": "lightmg",
+                "WS 010": "flak",
+                "WS 011": "flak"
+            }
+        }
+    ]
+}

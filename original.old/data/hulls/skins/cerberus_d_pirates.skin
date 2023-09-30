@@ -1,0 +1,18 @@
+{
+	"baseHullId":"cerberus",
+	"skinHullId":"cerberus_d_pirates",
+	"hullName":"Cerberus (P)",
+	"descriptionId":"cerberus",
+	"descriptionPrefix":"This ship has been heavily modified - and poorly maintained - by its pirate crew.",
+	"tags":["pirate_bp"],
+	"tech":"Pirate",
+	#"baseValueMult":1.2,
+	"spriteName":"graphics/ships/cerberus/cerberus_pirates.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["shielded_holds"],
+	"builtInWeapons":{
+    },
+}

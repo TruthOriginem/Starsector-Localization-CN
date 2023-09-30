@@ -47,7 +47,7 @@
 
 * "版本号 + data"是游戏各个版本原始的 data 文件夹
 * "original" 内存放当前版本的英文原文，不要改动
-* "original.old" 内存放上个版本的英文原文，不要改动(暂时没有该文件夹)
+* "original.old" 内存放上个版本(0.95.1a-RC6)的英文原文，不要改动
 * "localization" 内存放当前版本的译文
 * "localization.old" 内存放上个版本(0.95.1a-RC6)的译文
 * "para_tranz" 内存放Paratranz平台相关脚本
@@ -59,6 +59,8 @@
 
 | 文件                  | 作用                                                    |
 |-----------------------|-------------------------------------------------------|
+| _cleanLocalization.py | 根据original文件夹清理localization文件夹。                     |
+| _copyOldLocalization.py | 通过比对original文件夹，更新汉化包中的未变更文件。                     |
 | _handleVariantNames.py | 处理指定文件夹中所有装配名，并更新/使用映射 json 用于翻译。                     |
 | _swapLangFile.py       | 用来更替汉化文件和英文文件的脚本。                                     |
 | _variant_name_map.json | 装配名映射文件，英文名对应汉化名，可后继继续更新。                             |
