@@ -1,12 +1,12 @@
 {
 	"baseHullId":"hound",
 	"skinHullId":"hound_luddic_church",
-	"hullName":"Hound (LC)",
+	"hullName":"猎犬 (LC)",
 	"descriptionId":"hound",
 	"spriteName":"graphics/ships/hound/hound_luddic_church.png",
-	"descriptionPrefix":"This ship has been given Luddic Church markings. Systems modifications are otherwise superficial.",
+	"descriptionPrefix":"舰除了涂装有}卢德教会}的标志以外，其船只系统并未受到任何修改 ",
 	"tags":["LC_bp"],
-	"tech":"Luddic Church",
+	"tech":"卢德教会",
 	"removeWeaponSlots":[], 		# ids
 	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
 	"removeBuiltInMods":[], 		# hullmod ids

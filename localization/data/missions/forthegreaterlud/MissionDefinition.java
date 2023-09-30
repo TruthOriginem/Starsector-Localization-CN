@@ -19,14 +19,14 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
 		// Set a small blurb for each fleet that shows up on the mission detail and
 		// mission results screens to identify each side.
-		api.setFleetTagline(FleetSide.PLAYER, "ISS Black Star and Luddic Path strike force");
-		api.setFleetTagline(FleetSide.ENEMY, "PLS Praxis with escort and Tri-Tachyon allies");
+		api.setFleetTagline(FleetSide.PLAYER, "ISS Black Star 和 卢德左径 突袭舰队");
+		api.setFleetTagline(FleetSide.ENEMY, "PLS Praxis 与它的护卫以及 速子科技 盟军");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
-		api.addBriefingItem("Distract the enemy flagship to allow your bombers to flank it");
-		api.addBriefingItem("Defeat all enemy forces");
-		api.addBriefingItem("ISS Black Star must survive");
+		api.addBriefingItem("分散敌人的旗舰, 让轰炸机找准机会从侧翼摧毁敌人.");
+		api.addBriefingItem("击败所有敌舰");
+		api.addBriefingItem("ISS Black Star 必须存活");
 		
 		// Set up the player's fleet.  Variant names come from the
 		// files in data/variants and data/variants/fighters

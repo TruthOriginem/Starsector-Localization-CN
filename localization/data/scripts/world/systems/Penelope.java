@@ -61,7 +61,7 @@ public class Penelope {
 			penelope3a.applySpecChanges();
 			
 			// Penelope's Jumppoint - L4 (ahead)
-			JumpPointAPI p_jumpPoint = Global.getFactory().createJumpPoint("penelope_jump", "Penelope's Inner Jump-point");
+			JumpPointAPI p_jumpPoint = Global.getFactory().createJumpPoint("penelope_jump", "Penelope 内部跳跃点");
 			p_jumpPoint.setCircularOrbit(system.getEntityById("penelope"), 80+60, 6800, 225);
 			p_jumpPoint.setRelatedPlanet(penelope3);
 			
@@ -113,7 +113,7 @@ public class Penelope {
 						24, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Penelope L4 Asteroids")); // null for default name
+						"Penelope L4 小行星带")); // null for default name
 			
 			SectorEntityToken penelopeL5 = system.addTerrain(Terrain.ASTEROID_FIELD,
 					new AsteroidFieldParams(
@@ -123,7 +123,7 @@ public class Penelope {
 						24, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Penelope L5 Asteroids")); // null for default name
+						"Penelope L5 小行星带")); // null for default name
 			
 			penelopeL4.setCircularOrbit(penelope_star, 230 + 60, 9500, 450);
 			penelopeL5.setCircularOrbit(penelope_star, 230 - 60, 9500, 450);
@@ -141,7 +141,7 @@ public class Penelope {
 		penelope5.applySpecChanges();
 		
 		// Telepylus station : staging area for volatiles transport Oxen
-			SectorEntityToken telepylus_station = system.addCustomEntity("telepylus_station", "Telepylus Station", "station_sporeship_derelict", "neutral");
+			SectorEntityToken telepylus_station = system.addCustomEntity("telepylus_station", "Telepylus 空间站", "station_sporeship_derelict", "neutral");
 			telepylus_station.setCircularOrbitPointingDown(system.getEntityById("penelope5"), 90, 420, 25);		
 			telepylus_station.setCustomDescriptionId("station_telepylus");
 			telepylus_station.setInteractionImage("illustrations", "abandoned_station3");
@@ -150,7 +150,7 @@ public class Penelope {
 		
 		// Outer system jump-point
 			// Telepylus Jumppoint - L5 (behind)
-			JumpPointAPI p_jumpPoint2 = Global.getFactory().createJumpPoint("penelope_jump", "Penelope's Outer Jump-point");
+			JumpPointAPI p_jumpPoint2 = Global.getFactory().createJumpPoint("penelope_jump", "Penelope 边缘跳跃点");
 			p_jumpPoint2.setCircularOrbit(system.getEntityById("penelope"), 250-60, 12050, 650);
 			//p_jumpPoint2.setRelatedPlanet(penelope5);
 			
@@ -161,7 +161,7 @@ public class Penelope {
 		// Asteroid belt.
 //		system.addRingBand(penelope_star, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 13750, 345f, Terrain.ASTEROID_BELT, null);
 //		system.addAsteroidBelt(penelope_star, 100, 13750, 200, 330, 360, Terrain.ASTEROID_BELT, "The Cyclopeans");
-		system.addAsteroidBelt(penelope_star, 100, 13750, 200, 330, 360, Terrain.ASTEROID_BELT, "The Cyclopeans");
+		system.addAsteroidBelt(penelope_star, 100, 13750, 200, 330, 360, Terrain.ASTEROID_BELT, "Cyclopeans 小行星带");
 		system.addRingBand(penelope_star, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 13750, 345f, null, null);
 
 		// Ismara : mass driven volatiles, looted

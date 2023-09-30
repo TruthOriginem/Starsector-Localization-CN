@@ -20,14 +20,14 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
 		// Set a small blurb for each fleet that shows up on the mission detail and
 		// mission results screens to identify each side.
-		api.setFleetTagline(FleetSide.PLAYER, "ISS Hamatsu and ISS Black Star with drone escort");
-		api.setFleetTagline(FleetSide.ENEMY, "Luddic Path forces");
+		api.setFleetTagline(FleetSide.PLAYER, "ISS Hamatsu 与 ISS Black Star 以及一支无人机护卫队");
+		api.setFleetTagline(FleetSide.ENEMY, "卢德左径 舰队");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
-		api.addBriefingItem("Defeat all enemy forces");
-		api.addBriefingItem("ISS Black Star & ISS Hamatsu must survive");
-		api.addBriefingItem("Stay with the ISS Hamatsu (friendly cruiser) for safety");
+		api.addBriefingItem("击败所有敌军");
+		api.addBriefingItem("ISS Black Star 与 ISS Hamatsu 必须存活");
+		api.addBriefingItem("待在 ISS Hamatsu 附近 (友方巡洋舰) 附近比较安全");
 		// Set up the player's fleet.  Variant names come from the
 		// files in data/variants and data/variants/fighters
 		

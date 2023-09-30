@@ -1,6 +1,6 @@
 {
 	"nav_buoy":{
-		"name":"Nav Buoy",
+		"name":"导航浮标",
 		"icon":"graphics/warroom/objective_nav_buoy.png",
 		"sprite":"graphics/ships/deployables/mini_navbeacon.png",
 		"spriteScale":1,
@@ -9,7 +9,7 @@
 		"effectClass":"com.fs.starfarer.api.impl.combat.NavBuoyEffect",
 	},
 	"sensor_array":{
-		"name":"Sensor Jammer",
+		"name":"传感干扰器",
 		"icon":"graphics/warroom/objective_sensor_array.png",
 		"sprite":"graphics/ships/deployables/mini_sensor_array.png",
 		"spriteScale":1,
@@ -18,7 +18,7 @@
 		"effectClass":"com.fs.starfarer.api.impl.combat.SensorArrayEffect",
 	},
 	"comm_relay":{
-		"name":"Comm Relay",
+		"name":"通讯中继站",
 		"icon":"graphics/warroom/objective_comm_relay.png",
 		"sprite":"graphics/ships/deployables/mini_comm_relay.png",
 		"spriteScale":1,

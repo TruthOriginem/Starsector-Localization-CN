@@ -20,12 +20,12 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		api.initFleet(FleetSide.ENEMY, "HSS", FleetGoal.ATTACK, true, 10);
 
 		// Set a blurb for each fleet
-		api.setFleetTagline(FleetSide.PLAYER, "The TTS Invincible");
-		api.setFleetTagline(FleetSide.ENEMY, "Leading elements of the Hegemony Defense Fleet");
+		api.setFleetTagline(FleetSide.PLAYER, "TTS Invincible");
+			api.setFleetTagline(FleetSide.ENEMY, "霸主 防御舰队主要战力");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
-		api.addBriefingItem("The TTS Invincible must survive");
+		api.addBriefingItem("TTS Invincible 必须存活");
 		
 		// Set up the player's fleet
 		api.addToFleet(FleetSide.PLAYER, "paragon_Escort", FleetMemberType.SHIP, "TTS Invincible", true);

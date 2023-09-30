@@ -19,14 +19,14 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		api.initFleet(FleetSide.ENEMY, "TTS", FleetGoal.ATTACK, true, 5);
 
 		// Set a blurb for each fleet
-		api.setFleetTagline(FleetSide.PLAYER, "Hegemony patrol");
-		api.setFleetTagline(FleetSide.ENEMY, "Tri-Tachyon carrier detachment");
+		api.setFleetTagline(FleetSide.PLAYER, "霸主 巡逻队");
+		api.setFleetTagline(FleetSide.ENEMY, "速子科技 航母支队");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
-		api.addBriefingItem("Defeat the enemy forces");
-		api.addBriefingItem("Retreating enemy fighters will lead you to their carrier");
-		api.addBriefingItem("Time your advance against the rhythm of enemy torpedo attacks");
+		api.addBriefingItem("击败所有敌舰");
+		api.addBriefingItem("击退敌方战机联队将帮助你围攻敌军航母");
+		api.addBriefingItem("在你推进时, 需时刻把握鱼雷来袭的节奏");
 		
 		// Set up the player's fleet
 		//api.addToFleet(FleetSide.PLAYER, "dominator_Assault", FleetMemberType.SHIP, "HSS Shogun", true);

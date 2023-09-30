@@ -60,13 +60,13 @@ public class Arcadia {
 		
 			// lagrangian point of Syrinx
 			SectorEntityToken relay = system.addCustomEntity("syrinx_relay", // unique id
-					 "Syrinx Relay", // name - if null, defaultName from custom_entities.json will be used
+					 "Syrinx 通讯中继站", // name - if null, defaultName from custom_entities.json will be used
 					 "comm_relay_makeshift", // type of object, defined in custom_entities.json
 					 "hegemony"); // faction
 			relay.setCircularOrbitPointingDown( system.getEntityById("arcadia"), 180 + 60, 6000, 200);
 			
 			// lagrangian point of Syrinx
-			JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("syrinx_passage","Syrinx Passage");
+			JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("syrinx_passage","Syrinx 跳跃点");
 			OrbitAPI orbit = Global.getFactory().createCircularOrbit(star, 180 - 60, 6000, 200);
 			jumpPoint.setOrbit(orbit);	
 			jumpPoint.setRelatedPlanet(arcadia2a);
@@ -76,7 +76,7 @@ public class Arcadia {
 //		SectorEntityToken arc_station = system.addOrbitalStation("arcadia_station", arcadia2, 45, 750, 30, "Citadel Arcadia", "hegemony");
 //		arc_station.setCustomDescriptionId("station_arcadia"); 
 		
-		SectorEntityToken arc_station = system.addCustomEntity("arcadia_station", "Citadel Arcadia", "station_side02", "hegemony");
+		SectorEntityToken arc_station = system.addCustomEntity("arcadia_station", "Arcadia 星垒", "station_side02", "hegemony");
 		arc_station.setCircularOrbitPointingDown(system.getEntityById("syrinx"), 45, 730, 30);		
 		arc_station.setCustomDescriptionId("station_arcadia");
 		arc_station.setInteractionImage("illustrations", "hound_hangar");

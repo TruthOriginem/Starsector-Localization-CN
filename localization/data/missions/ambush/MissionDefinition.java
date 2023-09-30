@@ -23,14 +23,14 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
 		// Set a small blurb for each fleet that shows up on the mission detail and
 		// mission results screens to identify each side.
-		api.setFleetTagline(FleetSide.PLAYER, "Tri-Tachyon phase group Gamma III");
-		api.setFleetTagline(FleetSide.ENEMY, "Hegemony special anti-raider patrol force");
+		api.setFleetTagline(FleetSide.PLAYER, "速子科技 相位舰队 Gamma III");
+		api.setFleetTagline(FleetSide.ENEMY, "霸主 特种反掠夺巡逻舰队");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
-		api.addBriefingItem("Defeat all enemy forces");
-		api.addBriefingItem("Use Sabot SRMs to overload tough targets before finishing them off with Reaper torpedos");
-		api.addBriefingItem("Remember: Your armor can safely absorb hits from anti-fighter missiles");
+		api.addBriefingItem("击败所有敌军");
+		api.addBriefingItem("先用赛博 SRM 超载目标，然后用死神鱼雷摧毁它们");
+		api.addBriefingItem("记住: 你的旗舰拥有足够的装甲，因此无需惧怕来袭的蜂群导弹");
 		
 		// Set up the player's fleet.  Variant names come from the
 		// files in data/variants and data/variants/fighters

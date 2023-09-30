@@ -37,7 +37,7 @@ public class HighEnergyFocusStats extends BaseShipSystemScript {
 		float bonusPercent = DAMAGE_BONUS_PERCENT * effectLevel;
 		float damageTakenPercent = EXTRA_DAMAGE_TAKEN_PERCENT * effectLevel;
 		if (index == 0) {
-			return new StatusData("+" + (int) bonusPercent + "% energy weapon damage" , false);
+			return new StatusData("+" + (int) bonusPercent + "% 能量武器伤害" , false);
 		} else if (index == 1) {
 			//return new StatusData("+" + (int) damageTakenPercent + "% weapon/engine damage taken", false);
 			return null;

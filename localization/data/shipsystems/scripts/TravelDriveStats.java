@@ -25,7 +25,7 @@ public class TravelDriveStats extends BaseShipSystemScript {
 	
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
-			return new StatusData("increased engine power", false);
+			return new StatusData("提高引擎出力", false);
 		}
 		return null;
 	}

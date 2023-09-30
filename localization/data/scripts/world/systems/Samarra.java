@@ -36,7 +36,7 @@ public class Samarra {
 		system.addRingBand(samarra_star, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 3000, 201f, null, null);
 		system.addRingBand(samarra_star, "misc", "rings_asteroids0", 256f, 1, Color.white, 256f, 3100, 225f, null, null);
 		
-		SectorEntityToken tigra_city = system.addCustomEntity("tigra_city", "Tigra City", "station_side00", "hegemony");
+		SectorEntityToken tigra_city = system.addCustomEntity("tigra_city", "Tigra 太空城", "station_side00", "hegemony");
 		tigra_city.setCircularOrbitPointingDown(system.getEntityById("samarra"), 270, 3020, 185);		
 		tigra_city.setCustomDescriptionId("station_tigra_city");
 		tigra_city.setInteractionImage("illustrations", "hound_hangar");
@@ -53,11 +53,11 @@ public class Samarra {
 		samarra1.setCustomDescriptionId("planet_eventide");
 		
 			// Eventide mirror system 
-			SectorEntityToken eventide_mirror1 = system.addCustomEntity("eventide_mirror1", "Eventide Stellar Mirror Alpha", "stellar_mirror", "hegemony");
-			SectorEntityToken eventide_mirror2 = system.addCustomEntity("eventide_mirror2", "Eventide Stellar Mirror Beta", "stellar_mirror", "hegemony");	
-			SectorEntityToken eventide_mirror3 = system.addCustomEntity("eventide_mirror3", "Eventide Stellar Mirror Gamma", "stellar_mirror", "hegemony");
-			SectorEntityToken eventide_mirror4 = system.addCustomEntity("eventide_mirror4", "Eventide Stellar Mirror Delta", "stellar_mirror", "hegemony");
-			SectorEntityToken eventide_mirror5 = system.addCustomEntity("eventide_mirror5", "Eventide Stellar Mirror Epsilon", "stellar_mirror", "hegemony");
+			SectorEntityToken eventide_mirror1 = system.addCustomEntity("eventide_mirror1", "Eventide '阿尔法' 恒星镜", "stellar_mirror", "hegemony");
+			SectorEntityToken eventide_mirror2 = system.addCustomEntity("eventide_mirror2", "Eventide '贝塔' 恒星镜", "stellar_mirror", "hegemony");	
+			SectorEntityToken eventide_mirror3 = system.addCustomEntity("eventide_mirror3", "Eventide '伽马' 恒星镜", "stellar_mirror", "hegemony");
+			SectorEntityToken eventide_mirror4 = system.addCustomEntity("eventide_mirror4", "Eventide '德尔塔' 恒星镜", "stellar_mirror", "hegemony");
+			SectorEntityToken eventide_mirror5 = system.addCustomEntity("eventide_mirror5", "Eventide '艾普西龙' 恒星镜", "stellar_mirror", "hegemony");
 			eventide_mirror1.setCircularOrbitPointingDown(system.getEntityById("eventide"), 30 - 60, 400, 200);
 			eventide_mirror2.setCircularOrbitPointingDown(system.getEntityById("eventide"), 30 - 30, 400, 200);	
 			eventide_mirror3.setCircularOrbitPointingDown(system.getEntityById("eventide"), 30 + 0, 400, 200);	
@@ -70,9 +70,9 @@ public class Samarra {
 			eventide_mirror5.setCustomDescriptionId("stellar_mirror");
 			
 			// Eventide shade system 
-			SectorEntityToken eventide_shade1 = system.addCustomEntity("eventide_mirror1", "Eventide Stellar Shade Omega", "stellar_shade", "hegemony");
-			SectorEntityToken eventide_shade2 = system.addCustomEntity("eventide_mirror3", "Eventide Stellar Shade Psi", "stellar_shade", "hegemony");
-			SectorEntityToken eventide_shade3 = system.addCustomEntity("eventide_mirror5", "Eventide Stellar Shade Chi", "stellar_shade", "hegemony");
+			SectorEntityToken eventide_shade1 = system.addCustomEntity("eventide_mirror1", "Eventide '欧米伽' 恒星罩", "stellar_shade", "hegemony");
+			SectorEntityToken eventide_shade2 = system.addCustomEntity("eventide_mirror3", "Eventide '普西' 恒星罩", "stellar_shade", "hegemony");
+			SectorEntityToken eventide_shade3 = system.addCustomEntity("eventide_mirror5", "Eventide '器' 恒星罩", "stellar_shade", "hegemony");
 			eventide_shade1.setCircularOrbitPointingDown(system.getEntityById("eventide"), 210 - 26, 390, 200);
 			eventide_shade2.setCircularOrbitPointingDown(system.getEntityById("eventide"), 210 + 0, 425, 200);	
 			eventide_shade3.setCircularOrbitPointingDown(system.getEntityById("eventide"), 210 + 26, 390, 200);		
@@ -84,13 +84,13 @@ public class Samarra {
 			
 			// Samarra Relay - L5 (behind)
 			SectorEntityToken samarra_relay = system.addCustomEntity("samarra_relay", // unique id
-					 "Samarra Relay", // name - if null, defaultName from custom_entities.json will be used
+					 "Samarra 通讯中继站", // name - if null, defaultName from custom_entities.json will be used
 					 "comm_relay", // type of object, defined in custom_entities.json
 					 "hegemony"); // faction
 			samarra_relay.setCircularOrbitPointingDown( system.getEntityById("samarra"), 30 - 60, 4000, 200);
 	
 			// Samarra Jump - L4 (ahead)
-			JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("samarra_jump_point_alpha", "Samarra Jump-point");
+			JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("samarra_jump_point_alpha", "Samarra 跳跃点");
 			OrbitAPI orbit = Global.getFactory().createCircularOrbit(samarra_star,  30 + 60, 4000, 200);
 			jumpPoint.setOrbit(orbit);
 			jumpPoint.setRelatedPlanet(samarra1);
@@ -99,7 +99,7 @@ public class Samarra {
 		
 		// Samarra Gate
 		SectorEntityToken samarra_gate = system.addCustomEntity("samarra_gate", // unique id
-				 "Samarra Gate", // name - if null, defaultName from custom_entities.json will be used
+				 "Samarra 之门", // name - if null, defaultName from custom_entities.json will be used
 				 "inactive_gate", // type of object, defined in custom_entities.json
 				 null); // faction
 		samarra_gate.setCircularOrbit(samarra_star, 210, 4250, 200);
@@ -121,7 +121,7 @@ public class Samarra {
 			PlanetAPI samarra2c = system.addPlanet("orthrus", samarra2, "Orthrus", "rocky_ice", 40, 70, 1400, 41);
 			// Orthrus Relay - L5 (behind)
 			SectorEntityToken orthrus_relay = system.addCustomEntity("orthrus_relay", // unique id
-					 "Orthrus Relay", // name - if null, defaultName from custom_entities.json will be used
+					 "Orthrus 通讯中继站", // name - if null, defaultName from custom_entities.json will be used
 					 "comm_relay", // type of object, defined in custom_entities.json
 					 "independent"); // faction
 			orthrus_relay.setCircularOrbit( samarra2, 40 -60, 1475, 41);
@@ -138,7 +138,7 @@ public class Samarra {
 						30, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Typhon L4 Asteroids")); // null for default name
+						"Typhon L4 小行星带")); // null for default name
 			
 			SectorEntityToken typhonL5 = system.addTerrain(Terrain.ASTEROID_FIELD,
 					new AsteroidFieldParams(
@@ -148,7 +148,7 @@ public class Samarra {
 						30, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Typhon L5 Asteroids")); // null for default name
+						"Typhon L5 小行星带")); // null for default name
 			
 			typhonL4.setCircularOrbit(samarra_star, 60 + 60, 7000, 500);
 			typhonL5.setCircularOrbit(samarra_star, 60 - 60, 7000, 500);

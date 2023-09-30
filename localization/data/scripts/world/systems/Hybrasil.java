@@ -46,7 +46,7 @@ public class Hybrasil {
 		hybrasil1.setCustomDescriptionId("planet_culann");
 		hybrasil1.applySpecChanges();
 		
-		SectorEntityToken culannStation = system.addCustomEntity("culann_starforge", "Culann Starforge", "station_side07", "tritachyon");
+		SectorEntityToken culannStation = system.addCustomEntity("culann_starforge", "Culann 星际锻炉", "station_side07", "tritachyon");
 		culannStation.setCircularOrbitPointingDown(system.getEntityById("culann"), 0, 250, 30);		
 		culannStation.setInteractionImage("illustrations", "orbital");
 		culannStation.setCustomDescriptionId("station_culann");
@@ -75,15 +75,15 @@ public class Hybrasil {
 			hybrasil2a.setInteractionImage("illustrations", "eochu_bres");
 			
 				// Eochu Bres mirror system 
-				SectorEntityToken eochu_bres_mirror1 = system.addCustomEntity("eochu_bres_mirror1", "Eochu Bres Stellar Mirror", "stellar_mirror", "tritachyon");
+				SectorEntityToken eochu_bres_mirror1 = system.addCustomEntity("eochu_bres_mirror1", "Eochu Bres 恒星镜", "stellar_mirror", "tritachyon");
 				eochu_bres_mirror1.setCircularOrbitPointingDown(system.getEntityById("eochu_bres"), 0, 220, 40);		
 				eochu_bres_mirror1.setCustomDescriptionId("stellar_mirror");
 				
-				SectorEntityToken eochu_bres_mirror2 = system.addCustomEntity("eochu_bres_mirror2", "Eochu Bres Stellar Mirror", "stellar_mirror", "tritachyon");
+				SectorEntityToken eochu_bres_mirror2 = system.addCustomEntity("eochu_bres_mirror2", "Eochu Bres 恒星镜", "stellar_mirror", "tritachyon");
 				eochu_bres_mirror2.setCircularOrbitPointingDown(system.getEntityById("eochu_bres"), 120, 220, 40);		
 				eochu_bres_mirror2.setCustomDescriptionId("stellar_mirror");
 				
-				SectorEntityToken eochu_bres_mirror3 = system.addCustomEntity("eochu_bres_mirror3", "Eochu Bres Stellar Mirror", "stellar_mirror", "tritachyon");
+				SectorEntityToken eochu_bres_mirror3 = system.addCustomEntity("eochu_bres_mirror3", "Eochu Bres 恒星镜", "stellar_mirror", "tritachyon");
 				eochu_bres_mirror3.setCircularOrbitPointingDown(system.getEntityById("eochu_bres"), 240, 220, 40);
 				eochu_bres_mirror3.setCustomDescriptionId("stellar_mirror");
 				
@@ -97,7 +97,7 @@ public class Hybrasil {
 			
 			// Elada Relay, L5 (behind)
 			SectorEntityToken relay = system.addCustomEntity("elada_relay", // unique id
-					 "Elada Relay", // name - if null, defaultName from custom_entities.json will be used
+					 "Elada 通讯中继站", // name - if null, defaultName from custom_entities.json will be used
 					 "comm_relay", // type of object, defined in custom_entities.json
 					 "tritachyon"); // faction
 			relay.setCircularOrbitPointingDown( system.getEntityById("hybrasil"), 320, 4750, 220);
@@ -125,7 +125,7 @@ public class Hybrasil {
 		crom_cruach_loc.setCircularOrbitPointingDown( hybrasil_star, 180-60, 7300, 340);		
 		
 		// jump point Crom Leim!
-		JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("hybrasil_inner_jump", "Hybrasil Inner System Jump-point");
+		JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("hybrasil_inner_jump", "Hybrasil 星系内部跳跃点");
 		OrbitAPI orbit = Global.getFactory().createCircularOrbit(hybrasil3, 0, 1500, 65);
 		jumpPoint.setOrbit(orbit);
 		jumpPoint.setRelatedPlanet(hybrasil3);

@@ -16,15 +16,15 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		api.initFleet(FleetSide.ENEMY, "", FleetGoal.ATTACK, true, 3);
 
 		// Set a blurb for each fleet
-		api.setFleetTagline(FleetSide.PLAYER, "ISS Van Rijn and salvage fleet");
-		api.setFleetTagline(FleetSide.ENEMY, "Kanta pirate coalition forces");
+		api.setFleetTagline(FleetSide.PLAYER, "ISS Van Rijn 和打捞舰队");
+		api.setFleetTagline(FleetSide.ENEMY, "Kanta 海盗联军");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
-		api.addBriefingItem("Defeat all enemy forces");
+		api.addBriefingItem("击败所有敌舰");
 		//api.addBriefingItem("ISS Van Rijn must survive");
-		api.addBriefingItem("You have very limited Command Points");
-		api.addBriefingItem("Concentrate your superior forces to defeat the enemy in detail");
+		api.addBriefingItem("珍惜你有限的命令点数");
+		api.addBriefingItem("集中你的优势兵力来打击主要目标");
 		
 		// Set up the player's fleet
 		api.addToFleet(FleetSide.PLAYER, "apogee_Balanced", FleetMemberType.SHIP, "ISS Van Rijn", true);

@@ -65,7 +65,7 @@ public class Isirah {
 			PlanetAPI isirah_c2 = system.addPlanet("galar", isirah_c, "Galar", "barren", 270, 30, 280, 37);
 		
 		// Isirah Inner Jumppoint
-		JumpPointAPI jumpPoint2 = Global.getFactory().createJumpPoint("isirah_jump", "Isirah Inner Jump-point");
+		JumpPointAPI jumpPoint2 = Global.getFactory().createJumpPoint("isirah_jump", "Isirah 内部跳跃点");
 		jumpPoint2.setCircularOrbit( system.getEntityById("isirah"), 120 + 60, 2700, 80);
 		jumpPoint2.setRelatedPlanet(isirah_c);
 		system.addEntity(jumpPoint2);
@@ -83,7 +83,7 @@ public class Isirah {
 		system.addAsteroidBelt(isirah_star, 140, 3500, 180, 120, 160, Terrain.ASTEROID_BELT, null);
 		system.addAsteroidBelt(isirah_star, 80, 3700, 180, 140, 180, Terrain.ASTEROID_BELT, null);
 		
-		SectorEntityToken ring1 = system.addTerrain(Terrain.RING, new RingParams(900, 3500, null, "Utgarda's Wall"));
+		SectorEntityToken ring1 = system.addTerrain(Terrain.RING, new RingParams(900, 3500, null, "Utgarda 之壁"));
 		ring1.setCircularOrbit(isirah_star, 0, 0, 100);
 		
 		
@@ -97,19 +97,19 @@ public class Isirah {
 					30, // max asteroid count
 					4f, // min asteroid radius 
 					14f, // max asteroid radius
-					"Corb Accretion Swarm")); // null for default name
+					"Corb 堆积小行星带")); // null for default name
 		
 		isirah_d1.setCircularOrbit(isirah_star, 180 -10, 4300, 400);
 		
 		system.addAsteroidBelt(isirah_star, 50, 4200, 150, 170, 210, Terrain.ASTEROID_BELT, null);
 		
 		
-		SectorEntityToken station1 = system.addCustomEntity("laicaille_habitat", "Laicaille Habitat", "station_side00", "persean");
+		SectorEntityToken station1 = system.addCustomEntity("laicaille_habitat", "Laicaille 栖息地", "station_side00", "persean");
 		station1.setCustomDescriptionId("station_laicaille");
 		station1.setInteractionImage("illustrations", "orbital");
 		station1.setCircularOrbitWithSpin(isirah_star, 180+60, 4300, 400, -1f, -3f);
 		
-		SectorEntityToken station2 = system.addCustomEntity("station_kapteyn", "Kapteyn Starworks", "station_mining00", "pirates");
+		SectorEntityToken station2 = system.addCustomEntity("station_kapteyn", "Kapteyn 星际工业", "station_mining00", "pirates");
 		station2.setCustomDescriptionId("station_kapteyn");
 		station2.setInteractionImage("illustrations", "industrial_megafacility");
 		//station2.setCircularOrbitPointingDown(system.getEntityById("isirah"), 180-60, 4300, 400);		
@@ -123,7 +123,7 @@ public class Isirah {
 		
 		// Isirah Gate
 		SectorEntityToken gate = system.addCustomEntity("isirah_gate", // unique id
-				 "Isirah Gate", // name - if null, defaultName from custom_entities.json will be used
+				 "Isirah 之门", // name - if null, defaultName from custom_entities.json will be used
 				 "inactive_gate", // type of object, defined in custom_entities.json
 				 null); // faction
 		
@@ -141,7 +141,7 @@ public class Isirah {
 		system.addAsteroidBelt(isirah_star, 100, 5300, 180, 100, 140, Terrain.ASTEROID_BELT, null);
 		system.addAsteroidBelt(isirah_star, 80, 5700, 180, 140, 180, Terrain.ASTEROID_BELT, null);
 		
-		SectorEntityToken ring2 = system.addTerrain(Terrain.RING, new RingParams(900, 4900, null, "Disk of Vosud"));
+		SectorEntityToken ring2 = system.addTerrain(Terrain.RING, new RingParams(900, 4900, null, "Vosud 之盘"));
 		ring2.setCircularOrbit(isirah_star, 0, 0, 100);
 		
 		
@@ -153,7 +153,7 @@ public class Isirah {
 			isirah_e1.getSpec().setTexture(Global.getSettings().getSpriteName("planets", "frozen00"));
 			isirah_e1.applySpecChanges();
 			
-		SectorEntityToken station3 = system.addCustomEntity("groombridge_habitat", "Groombridge Habitat", "station_side00", "neutral");
+		SectorEntityToken station3 = system.addCustomEntity("groombridge_habitat", "Groombridge 栖息地", "station_side00", "neutral");
 		station3.setCustomDescriptionId("station_groombridge");
 		station3.setInteractionImage("illustrations", "abandoned_station3");
 		station3.setCircularOrbitPointingDown(isirah_star, 270+60, 7000, 500);

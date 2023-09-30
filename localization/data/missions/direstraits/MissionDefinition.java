@@ -18,13 +18,13 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		api.initFleet(FleetSide.ENEMY, "TTS", FleetGoal.ATTACK, true, 5);
 
 		// Set a blurb for each fleet
-		api.setFleetTagline(FleetSide.PLAYER, "Hegemony relief fleet with mercenary escort");
-		api.setFleetTagline(FleetSide.ENEMY, "Tri-Tachyon containment task force");
+		api.setFleetTagline(FleetSide.PLAYER, "霸主 救援舰队与护航佣兵");
+		api.setFleetTagline(FleetSide.ENEMY, "速子科技 封锁舰队");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
-		api.addBriefingItem("ISS Black Star must survive");
-		api.addBriefingItem("At least 25% of the Hegemony forces must escape");
+		api.addBriefingItem("ISS Black Star 必须存活");
+		api.addBriefingItem("至少需要 25% 的霸主舰队撤离战场");
 		
 		// Set up the player's fleet
 		api.addToFleet(FleetSide.PLAYER, "hammerhead_Elite", FleetMemberType.SHIP, "ISS Black Star", true);

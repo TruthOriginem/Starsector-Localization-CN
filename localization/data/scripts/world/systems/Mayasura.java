@@ -55,10 +55,10 @@ public class Mayasura {
 		mayasura_c.getSpec().setAtmosphereThicknessMin(62f); // fix for aliasing issue on outward side of planet
 		mayasura_c.applySpecChanges();
 
-			system.addRingBand(mayasura_c, "misc", "rings_special0", 256f, 0, new Color(255,230,100,255), 256f, 420, 60f, Terrain.RING, "Gelan's Shackle");
+			system.addRingBand(mayasura_c, "misc", "rings_special0", 256f, 0, new Color(255,230,100,255), 256f, 420, 60f, Terrain.RING, "Gelan 之环");
 		
 		// Mayasura Jumppoint in the L-something of Gelan
-		JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("mayasura_jump", "Mayasura Jump-point");
+		JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("mayasura_jump", "Mayasura 跳跃点");
 		jumpPoint.setCircularOrbit( mayasura_star, 300 + 60, 2400, 104);
 		jumpPoint.setRelatedPlanet(mayasura_c);
 		system.addEntity(jumpPoint);
@@ -79,7 +79,7 @@ public class Mayasura {
 		
 			// Mairaath gets 1 orbiting derelict station, one lost station, and ideally plenty of debris
 			SectorEntityToken mairaathStation1 = system.addCustomEntity("mairaath_abandoned_station1",
-				"Abandoned Astropolis", "station_side06", "neutral");
+				"废弃的生态空间站", "station_side06", "neutral");
 		
 			mairaathStation1.setCircularOrbitPointingDown( system.getEntityById("mairaath"), 45, 350, 50);
 	
@@ -89,7 +89,7 @@ public class Mayasura {
 			mairaathStation1.setInteractionImage("illustrations", "abandoned_station3");
 		
 			// Mairaath stellar shade - out of orbit
-			SectorEntityToken mairaath_shade = system.addCustomEntity("mairaath_shade", "Shade Chah", "stellar_shade", "neutral");
+			SectorEntityToken mairaath_shade = system.addCustomEntity("mairaath_shade", "恒星镜", "stellar_shade", "neutral");
 			mairaath_shade.setCircularOrbitPointingDown( mayasura_star, 300, 3550, 183 );		
 			mairaath_shade.setCustomDescriptionId("stellar_shade");
 		
@@ -97,13 +97,13 @@ public class Mayasura {
 			SectorEntityToken mayasura_stable1 = system.addCustomEntity(null, null, "sensor_array_makeshift", Factions.PIRATES);
 			mayasura_stable1.setCircularOrbitPointingDown(mayasura_star, 180, 3800, 183);
 			
-		system.addAsteroidBelt(mayasura_star, 90, 4300, 200, 140, 180, Terrain.ASTEROID_BELT, "The Danavas");
+		system.addAsteroidBelt(mayasura_star, 90, 4300, 200, 140, 180, Terrain.ASTEROID_BELT, "Danavas 小行星带");
 		system.addRingBand(mayasura_star, "misc", "rings_dust0", 256f, 0, Color.white, 256f, 4360, 160f);
 		
 		
 			// Pirates took over the lost station
 			SectorEntityToken pirateStation = system.addCustomEntity("mairaath_abandoned_station2",
-					"Lost Astropolis", "station_side06", "pirates");
+					"失落的生态空间站", "station_side06", "pirates");
 			
 			pirateStation.setCircularOrbitPointingDown(system.getEntityById("mayasura"), 45, 4500, 250);		
 			pirateStation.setCustomDescriptionId("mairaath_station2");
@@ -145,7 +145,7 @@ public class Mayasura {
 		
 		
 		system.addRingBand(mayasura_star, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 5100, 100f);
-		system.addAsteroidBelt(mayasura_star, 120, 5130, 300, 200, 300, Terrain.ASTEROID_BELT, "The Daitya");
+		system.addAsteroidBelt(mayasura_star, 120, 5130, 300, 200, 300, Terrain.ASTEROID_BELT, "Daitya 小行星带");
 		
 		
 		PlanetAPI mayasura_e = system.addPlanet("diti", mayasura_star, "Diti", "ice_giant", 270, 240, 6200, 290);
@@ -158,7 +158,7 @@ public class Mayasura {
 		mayasura_e.applySpecChanges();
 		
 			// rumoured to have the finest cocktail lounge in the entire Sector
-			SectorEntityToken tritachStation = system.addCustomEntity("port_tse", "Port Tse Franchise Station", "station_side00", "tritachyon");
+			SectorEntityToken tritachStation = system.addCustomEntity("port_tse", "Port Tse 特许经营站", "station_side00", "tritachyon");
 			tritachStation.setCustomDescriptionId("station_tse_enterprise");
 			tritachStation.setInteractionImage("illustrations", "space_bar");
 			tritachStation.setCircularOrbitWithSpin(mayasura_e, 60, 510, 30, 3, 5);
@@ -171,14 +171,14 @@ public class Mayasura {
 			mayasura_e1.applySpecChanges();
 			
 		// Mayasura Relay
-		SectorEntityToken mayasura_relay = system.addCustomEntity("mayasura_relay", "Mayasura Relay", "comm_relay", "tritachyon");
+		SectorEntityToken mayasura_relay = system.addCustomEntity("mayasura_relay", "Mayasura 通讯中继站", "comm_relay", "tritachyon");
 		mayasura_relay.setCircularOrbitPointingDown( mayasura_star, 270 + 60, 6200, 290);
 			
 		// stable loc in counter-orbit to Diti
 		SectorEntityToken mayasura_stable2 = system.addCustomEntity(null, null, "stable_location", Factions.NEUTRAL);
 		mayasura_stable2.setCircularOrbitPointingDown(mayasura_star, 90, 6200, 290);
 		
-		system.addAsteroidBelt(mayasura_star, 150, 7500, 400, 370, 430, Terrain.ASTEROID_BELT, "The Takshaka");
+		system.addAsteroidBelt(mayasura_star, 150, 7500, 400, 370, 430, Terrain.ASTEROID_BELT, "Takshaka 小行星带");
 		system.addRingBand(mayasura_star, "misc", "rings_dust0", 256f, 0, Color.white, 256f, 7520, 400f);
 		
 		system.autogenerateHyperspaceJumpPoints(true, true);

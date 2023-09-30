@@ -15,14 +15,14 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		api.initFleet(FleetSide.ENEMY, "LSS", FleetGoal.ATTACK, true, 5);
 
 		// Set a blurb for each fleet
-		api.setFleetTagline(FleetSide.PLAYER, "Persean League task force led by Navarch Kato");
-		api.setFleetTagline(FleetSide.ENEMY, "Detachment from the 3rd Holy Armada and Pather irregulars");
+		api.setFleetTagline(FleetSide.PLAYER, "由海军都统 Kato 所率领的 英仙座联盟 特遣队");
+		api.setFleetTagline(FleetSide.ENEMY, "第三神圣舰队支队和当地非正规军");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
-		api.addBriefingItem("Using your torpedo bombers is key to victory");
-		api.addBriefingItem("Keep the Astral carrier 'Sirocco' on the field to repair and rearm them");
-		api.addBriefingItem("Defeat all enemy forces");
+		api.addBriefingItem("你的鱼雷轰炸机是胜利的关键所在");
+		api.addBriefingItem("星体-级航母 Sirocco 的作用是确保战机联队持续作战的重要支柱, 请务必照顾好它");
+		api.addBriefingItem("击败所有敌舰");
 		
 		// Set up the player's fleet
 		api.addToFleet(FleetSide.PLAYER, "astral_Strike", FleetMemberType.SHIP, "PLS Sirocco", true);

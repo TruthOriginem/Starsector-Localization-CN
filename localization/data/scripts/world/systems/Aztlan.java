@@ -39,7 +39,7 @@ public class Aztlan {
 		
 		
 		system.addRingBand(aztlan_star, "misc", "rings_dust0", 256f, 0, Color.white, 256f, 3100, 70f, null, null);
-		system.addAsteroidBelt(aztlan_star, 150, 3100, 128, 60, 80, Terrain.ASTEROID_BELT, "The Ciltetl");
+		system.addAsteroidBelt(aztlan_star, 150, 3100, 128, 60, 80, Terrain.ASTEROID_BELT, "Ciltetl 小行星带");
 		
 	// Chicomoztoc & friends
 		PlanetAPI aztlan2 = system.addPlanet("chicomoztoc", aztlan_star, "Chicomoztoc", "barren-desert", 60, 200, 4200, 300);
@@ -53,7 +53,7 @@ public class Aztlan {
 			//system.addRingBand(aztlan2, "misc", "rings1", 256f, 3, Color.white, 256f, 500, 30f);
 			system.addRingBand(aztlan2, "misc", "rings_dust0", 256f, 3, Color.white, 256f, 500, 33f, Terrain.RING, null);
 			
-			SectorEntityToken hegemonyStation = system.addCustomEntity("aztlan_starport", "Aztlan Starport", "station_lowtech2", "hegemony");
+			SectorEntityToken hegemonyStation = system.addCustomEntity("aztlan_starport", "Aztlan 星港", "station_lowtech2", "hegemony");
 			hegemonyStation.setCircularOrbitPointingDown(system.getEntityById("chicomoztoc"), 0, 350, 30);		
 			hegemonyStation.setInteractionImage("illustrations", "orbital");
 			//hegemonyStation.setCustomDescriptionId("station_jangala");
@@ -62,7 +62,7 @@ public class Aztlan {
 			SectorEntityToken aztlan_loc = system.addCustomEntity(null, null, "sensor_array", Factions.HEGEMONY);
 			aztlan_loc.setCircularOrbitPointingDown(aztlan_star, 240, 4200, 300);
 			
-			JumpPointAPI jumpPoint_aztlan = Global.getFactory().createJumpPoint("aztlan_jump_point_alpha", "Aztlan Inner System Jump-point");
+			JumpPointAPI jumpPoint_aztlan = Global.getFactory().createJumpPoint("aztlan_jump_point_alpha", "Aztlan 星系内部跳跃点");
 			OrbitAPI orbit = Global.getFactory().createCircularOrbit(aztlan_star, 0, 4200, 300);
 			jumpPoint_aztlan.setOrbit(orbit);
 			jumpPoint_aztlan.setRelatedPlanet(aztlan2);
@@ -71,7 +71,7 @@ public class Aztlan {
 			
 			// Aztlan Gate
 			SectorEntityToken gate = system.addCustomEntity("aztlan_gate", // unique id
-					 "Aztlan Gate", // name - if null, defaultName from custom_entities.json will be used
+					 "Aztlan 之门", // name - if null, defaultName from custom_entities.json will be used
 					 "inactive_gate", // type of object, defined in custom_entities.json
 					 null); // faction
 			gate.setCircularOrbit(system.getEntityById("aztlan"), 120, 4200, 300);
@@ -95,7 +95,7 @@ public class Aztlan {
 			aztlan3a.applySpecChanges();
 			aztlan3a.setCustomDescriptionId("planet_coatl");
 			
-			SectorEntityToken coatl_station = system.addCustomEntity("coatl_station", "Coatl Bastion", "station_side02", "hegemony");
+			SectorEntityToken coatl_station = system.addCustomEntity("coatl_station", "Coatl 堡垒", "station_side02", "hegemony");
 			coatl_station.setCircularOrbitPointingDown(system.getEntityById("coatl"), 45, 200, 20);		
 			coatl_station.setCustomDescriptionId("station_coatl");
 			coatl_station.setInteractionImage("illustrations", "hound_hangar");
@@ -109,7 +109,7 @@ public class Aztlan {
 			aztlan3b.setCustomDescriptionId("planet_zorrah");
 			
 			SectorEntityToken relay = system.addCustomEntity("aztlan_relay", // unique id
-					 "Aztlan Relay", // name - if null, defaultName from custom_entities.json will be used
+					 "Aztlan 通讯中继站", // name - if null, defaultName from custom_entities.json will be used
 					 "comm_relay", // type of object, defined in custom_entities.json
 					 "hegemony"); // faction
 	
@@ -142,7 +142,7 @@ public class Aztlan {
 		tlalocan_L4_nebula.setCircularOrbit(aztlan_star, 130 + 60, 7500, 500);
 		
 		// and a jump point hidden in Tlalocan's L5.
-		JumpPointAPI jumpPoint_aztlan2 = Global.getFactory().createJumpPoint("aztlan_jump_point_beta", "Aztlan Outer System Jump-point");
+		JumpPointAPI jumpPoint_aztlan2 = Global.getFactory().createJumpPoint("aztlan_jump_point_beta", "Aztlan 星系边缘跳跃点");
 		OrbitAPI orbit2 = Global.getFactory().createCircularOrbit(aztlan_star, 130 + 60, 7500, 500);
 		jumpPoint_aztlan2.setOrbit(orbit2);
 		//jumpPoint_aztlan2.setRelatedPlanet(aztlan3);

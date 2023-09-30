@@ -20,15 +20,15 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
 		// Set a small blurb for each fleet that shows up on the mission detail and
 		// mission results screens to identify each side.
-		api.setFleetTagline(FleetSide.PLAYER, "Mercenary raiders");
-		api.setFleetTagline(FleetSide.ENEMY, "Hegemony convoy with escort");
+		api.setFleetTagline(FleetSide.PLAYER, "参与突袭的佣兵舰队");
+		api.setFleetTagline(FleetSide.ENEMY, "霸主 护航舰队与货运商队");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
-		api.addBriefingItem("The Hegemony convoy will attempt to flee towards the top of the map");
-		api.addBriefingItem("Controlling the Nav Buoys is critical to preventing a quick escape");
-		api.addBriefingItem("Ordering a fleetwide search & destroy will make your ships more aggressive");
-		api.addBriefingItem("Ordering your ships to eliminate a target will make them more aggressive");
+		api.addBriefingItem("霸主 的舰队将尝试从地图的顶端逃离");
+		api.addBriefingItem("控制导航浮标是防止敌方快速撤离的关键");
+		api.addBriefingItem("利用 \"全面进攻\" 命令来使你的舰队更积极的搜索并摧毁敌人");
+		api.addBriefingItem("利用 \"消灭\" 命令来使你的舰队更具攻击性");
 //		api.addBriefingItem("Disable as many enemy ships as you can");
 //		api.addBriefingItem("The Deimos must survive");
 		

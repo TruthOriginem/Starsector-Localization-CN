@@ -64,7 +64,7 @@ public class PhaseCloakStatsOld extends BaseShipSystemScript {
 	
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
-			return new StatusData("time flow altered", false);
+			return new StatusData("时间流速改变", false);
 		}
 //		float percent = (1f - INCOMING_DAMAGE_MULT) * effectLevel * 100;
 //		if (index == 1) {

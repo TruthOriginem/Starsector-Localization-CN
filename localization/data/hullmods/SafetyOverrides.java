@@ -106,10 +106,10 @@ public class SafetyOverrides extends BaseHullMod {
 	
 	public String getUnapplicableReason(ShipAPI ship) {
 		if (ship.getVariant().getHullSize() == HullSize.CAPITAL_SHIP) {
-			return "Can not be installed on capital ships";
+			return "不能被安装在主力舰上";
 		}
 		if (ship.getVariant().hasHullMod(HullMods.CIVGRADE) && !ship.getVariant().hasHullMod(HullMods.MILITARIZED_SUBSYSTEMS)) {
-			return "Can not be installed on civilian ships";
+			return "不能被安装在民用舰上";
 		}
 		
 		return null;

@@ -23,7 +23,7 @@ public class DisplacerStats extends BaseShipSystemScript {
 	
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
-			return new StatusData("out of phase", false);
+			return new StatusData("解除相位状态", false);
 		}
 		return null;
 	}
