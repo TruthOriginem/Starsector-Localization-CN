@@ -14175,7 +14175,10 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/skills/AptitudeDesc$Level0.class",
       "include_strings": [
-        " point"
+        " point",
+        "    - Choose enough skills in lower tiers to unlock the next tier\n    - It's possible to skip a tier by taking more skills in lower tiers instead\n    - Reaching the top tier requires 4 skill points, plus 1 more to take one of the top skills\n    - Taking the second top tier skill requires an additional 2 points spent in lower tier skills\n    - Skills that only affect the piloted ship can be made \"elite\" at the cost of a ",
+        " point\n",
+        "Skills that have been made elite in the past can be re-made elite at no cost\n"
       ]
     },
     {
