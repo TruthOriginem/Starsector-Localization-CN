@@ -1127,7 +1127,7 @@ $faction.id == luddic_path",FireAll RelLevelMoreDescription,左径的注视者�
 relLevelHostilePather,RelationshipLevelDesc,"$faction.rel == HOSTILE
 $faction.id == luddic_path",FireAll RelLevelMoreDescription,对于卢德左径而言你被认为是摩洛克的宠儿、科技恶魔的奴隶。你是恶魔玛门愚蠢的盟仆，在这个浸满罪恶的世界中奋斗不是出于对神的敬爱，而是仅仅为了从那些可悲的对卢德的启示视而不见的不信者身上榨取享乐主义的钱财。,,
 relLevelVengefulPather,RelationshipLevelDesc,"$faction.rel == VENGEFUL
-$faction.id == luddic_path",FireAll RelLevelMoreDescription,站在左径分子一侧的牧师在他们的布道中谴责你；他们称你是一个气急败坏的ai变出来的侏儒。毁灭你是一项神圣的使命。距离你在酒吧里被一些狂热分子打冷枪或者被左径舰队船长跳出来抓住机会发动神风攻击殉教只是时间问题。,,
+$faction.id == luddic_path",FireAll RelLevelMoreDescription,站在左径分子一侧的牧师在他们的布道中谴责你；他们称你是一个气急败坏的 AI 变作的侏儒。毁灭你是一项神圣的使命。距离你在酒吧里被狂热分子的冷枪命中或者被试图殉教的左径舰队拦截只是时间问题。,,
 relLevelPatherPK,RelLevelMoreDescription,"$faction.id == luddic_path
 $player.patherAgreementPermanent
 !$player.metBrotherCotton",,由于你对他们事业作出的巨大贡献，卢德左径 已宣布禁止对你造成伤害。,,
@@ -4814,15 +4814,15 @@ $PersonName猛地打住并咳嗽了一声。""无论如何，这里不适合讨�
 cutCommLink:切断通讯链接",
 ,,,,,,
 "# LKE Chalcedon VIP neutral, ish",,,,,,
-lkeChalcedonVIPstartNeutral,LKEChalcedonVIPStart,,FireAll LKEEphiphanyVIPoptions,"""Blessed is the day,"" $personName says, looking at you skeptically. ""What brings you to our humble world?""
+lkeChalcedonVIPstartNeutral,LKEChalcedonVIPStart,,FireAll LKEEphiphanyVIPoptions,"""今天真是福运临门，"" $personName 一边说着，一边怀疑地看着你，""敢问是何事带您来到我们这贫寒的世界？""
 OR
-""Peace of Ludd upon you,"" $personName says, somewhat hastily. ""Why has Providence set our humble world on your Path?""
+""愿卢德为您带来安宁，"" $personName 有些匆忙地说道，""敢问天意为何让我们这贫寒的世界成为您道途中的一站？""
 OR
-""Blessings of Ludd,"" $personName says, examining you. ""Pray tell what brings you and your $shipOrFleet to Chalcedon?""
+""愿卢德祝福你，"" $personName 一边说着，一边审视着你，""请告诉我，是什么带您和您的 $shipOrFleet 来到 Chalcedon？""
 OR
-""May Providence favor this day and peace see its end,"" $personName says, looking you over. ""What path brings you to our stormy home, captain?""
+""愿上苍保佑这一天，使它得以画上和平的句点，"" $personName 一边说着，一边打量着你，""是什么带您来到我们这风暴缠身的家园，舰长？""
 OR
-""We thank Providence for this day and its peace,"" says $personName, holding $hisOrHer hands together piously. ""How may I be of help, captain?""",,
+""感谢上天赐予我等今日的和平，"" $personName 说着，虔诚地双手合十，""我可以帮上什么吗，舰长？""",,
 lkeChalcedonLookingSomeoneA,DialogOptionSelected,$option == lke_chalcedonLookingSomeone,"$lkeAskedSomeone = true 7
 $market.lkeBuggedVIPs++
 FireAll LKEEphiphanyVIPoptions","""Ah."" $HeOrShe keeps looking at you.
@@ -12560,13 +12560,13 @@ FleetDesc
 HailPlayer",,,
 gaPZDiktatEncounterComm2,OpenCommLink,"$entity.gaPZ_diktatSecond score:1000
 !$entity.ignorePlayerCommRequests
-ZigguratCMD updateData",$entity.ignorePlayerCommRequests = true,"The Diktat $rank appears in your comm display, outwardly calm.
+ZigguratCMD updateData",$entity.ignorePlayerCommRequests = true,"这位辛达 $rank 的身影出现了，你隔着屏幕都能感受到对方的镇静。
 
-""Captain $playerName. I hope I find you well? I understand you've been involved in a, ah, misunderstanding recently."" The $rank straightens $hisOrHer uniform, clearly uncomfortable. ""I have been ordered to make a statement."" 
+"" $playerName 舰长。近来可好？我了解到您最近被卷入了一场，啊，误会。"" 这位 $rank 抻了抻身上的制服，那制服显然穿起来并不舒服。""我受命向您通报一件事情。""
 
-$HeOrShe lifts a datapad from out of view and begins reading.
+$HeOrShe从屏幕外拿出一块数据平板，照着上面的字念起来。
 
-""From the office of the Chief High Inspector, the Sindrian Diktat would like to acknowledge that your previous encounter with our special self-defense forces over the matter of a, hmm, starship expropriation order was, ah... "" $heOrShe looks away, speaking ""The officer in question acted rashly, without clarifying their orders with central command. The Sindrian Diktat considers the incident to be the rogue action of a deep-cover terrorist sympathizer whose goal was to undermine the authority and glory of our leader, Supreme Executor Admiral Andrada.""",gaPZ_diktatSecondCont:继续,
+""来自 辛达强权 最高检察长办公室的消息，辛达强权希望您了解，您之前与我方特别自卫部队关于一道星舰征收命令的遭遇，是一次，啊...""$heOrShe往别处看了看，继续说道，""涉事官员行动鲁莽，并且未向中央指挥部确认命令细节。辛达强权现宣布，该事件为潜伏的恐怖分子同情者的擅自行动，其目标是污蔑我们的领袖，最高行政官 Andrada 上将的威名和荣光。""",gaPZ_diktatSecondCont:继续,
 gaPZ_diktatSecondCont,DialogOptionSelected,$option == gaPZ_diktatSecondCont,"MakeOtherFleetNonHostile gaPZ true
 MakeOtherFleetImportant gaPZ false
 MakeOtherFleetGoAway true","这位辛达 $rank 重新看向你。
@@ -14188,7 +14188,7 @@ gaATGkantaPaymentZal,DialogOptionSelected,$option == gaATG_kantaPaymentZal,,"Cyd
 Kanta 的声音又突然响起，""把我的宠物 Loke 带回来；然后 Zal 就是你的了。以血还血。名叫 Cotton 的左径会领教 Kanta 的制裁！""",gaATG_kantaPaymentZal2:继续,
 gaATGkantaPaymentZal2,DialogOptionSelected,$option == gaATG_kantaPaymentZal2,,"Cydonia 因她的要求而感到难堪，他歉意地笑着并退后一步向法廷内通告。
 
-""伟大的军阀会让她的宠物回来的！由于所有其他人都失败了，$playerName 将作为她的勇士去完成别人所无法完成的这项任务！""
+""伟大的军阀会让她的宠物回来的！由于所有其他人都失败了，$playerName 将作为她的冠军去完成别人所无法完成的这项任务！""
 
 他靠近你，散发着一股尖酸刻薄的味道。",gaATG_kantaPaymentZal3:继续,
 gaATGkantaPaymentZal3,DialogOptionSelected,$option == gaATG_kantaPaymentZal3,,"Cydonia 轻快地与你说着话，眼睛里闪烁着只有他自己能看到的单词和图像。""Livewell Cotton 修士，卢德左径 的新晋大佬，通常待在位于 Al Gebbar 星系，Epiphany 行星的基地中。但他也可能在其他地方。他的一个爪牙绑架了 Kanta 的宠物——前军阀 Onesimos Loke 的克隆人，也是我的作品。她想找回她的宠物，但没有其他人能够追踪到 Cotton。""
@@ -20243,9 +20243,9 @@ kdTrafficControlFirstTime,KantasDenTrafficControlOptions,"!$market.didTrafficCon
 
 ",
 kdTrafficControlOptionA,KantasDenTrafficControlOptions,$market.gotPermissionToLandFromSK,,,"kantasDen_trafficAlready:""Your boss already gave me the go-ahead. Shall we comms them about the delay?""",
-kdTrafficControlOptionB,KantasDenTrafficControlOptions,!$market.gotPermissionToLandFromSK,,,"kantasDen_trafficBribe:""Let's make it easy, friend. Do you like your fry red or green?""",
-kdTrafficControlOptionC,KantasDenTrafficControlOptions,!$market.gotPermissionToLandFromSK,,,"kantasDen_trafficBullyA:""I'm here to see your boss.""",
-kdTrafficControlOptionD,KantasDenTrafficControlOptions,!$market.gotPermissionToLandFromSK,,,"kantasDen_trafficBullyB:""Cut the shakedown. I'm here for Kanta.""",
+kdTrafficControlOptionB,KantasDenTrafficControlOptions,!$market.gotPermissionToLandFromSK,,,"kantasDen_trafficBribe:""不用客气，朋友。你的油炸杂碎是要荤的还是素的？""",
+kdTrafficControlOptionC,KantasDenTrafficControlOptions,!$market.gotPermissionToLandFromSK,,,"kantasDen_trafficBullyA:""我是来见你老板的。""",
+kdTrafficControlOptionD,KantasDenTrafficControlOptions,!$market.gotPermissionToLandFromSK,,,"kantasDen_trafficBullyB:""别敲竹杆了，我是来见 Kanta 的。""",
 kdTrafficControlRevisitBribe,KantasDenTrafficControlOptions,"$market.didTrafficControlBribe score:10
 !$market.gotPermissionToLandFromSK",FireBest KDSKConvoStart,"The pilot goes through routine chatter with what passes for traffic control. A previous bribe means you're recognized and get you a direct comms request to the station king, no waiting.",kd_stationKingStart:继续,
 kdTrafficControlRevisitGeneric,KantasDenTrafficControlOptions,"$market.didTrafficControlBribe
@@ -20265,7 +20265,7 @@ FireAll PopulateOptions
 ShowDefaultVisual","The comms cut. As your shuttle makes a hasty return to your $shipOrFleet, your tactical officer sends an urgent signal.
 
 ""Captain. Looks like Kanta's Den sent out a broadcast alert; calling in all nearby pirate fleets to our $shipOrFleet drive signature. Advise prep for hostiles.""",,
-kantasDenTrafficAlready,DialogOptionSelected,$option == kantasDen_trafficAlready,,"""Uhhh, confirm that, shuttle. Negative to request,"" traffic control says, ""Incoming shuttle cleared for, uh, landing at bay 12. Proceed.""",kd_landing1:Dock at Kanta's Den,# go to landing sequence!
+kantasDenTrafficAlready,DialogOptionSelected,$option == kantasDen_trafficAlready,,"""Uhhh, confirm that, shuttle. Negative to request,"" traffic control says, ""Incoming shuttle cleared for, uh, landing at bay 12. Proceed.""",kd_landing1:停靠 Kanta 之巢,# go to landing sequence!
 kantasDenTrafficControlBribe,DialogOptionSelected,$option == kantasDen_trafficBribe,"AdjustRep pirates COOPERATIVE 1
 $player.ethosGenerous++
 $market.didTrafficControlBribe = true","You transfer a fractional credit over to the thug running traffic control, enough to cover a generous meal or a round of cheap drinks.
@@ -20308,8 +20308,8 @@ FireBest KDSKShuttleCheck","你按下了发送键送出了电子令牌，当场�
 ""哦。家族，嗯？没有认出你来，也没有见过你。但，哈哈，Kanta 的人无处不在，额？见了卢德个鬼了，你应该早点说的。""$heOrShe的语气比$hisOrHer没叫你吸他妈的真空时的语气还要温和。
 
 ""你知道规矩，军阀不喜欢用通讯器，所以我必须给你约一次御前会议。你人到空间站上来，我会找人来接你。""",,
-kdSKnowStartShuttle,KDSKShuttleCheck,!$market.alreadyOnShuttle,,,"kantasDen_visit1:Take a shuttle to Kanta's Den
-cutCommLink:Cut the comm link",
+kdSKnowStartShuttle,KDSKShuttleCheck,!$market.alreadyOnShuttle,,,"kantasDen_visit1:乘坐穿梭机前往 Kanta 之巢
+cutCommLink:切断通讯链接",
 kdSKkeepTakingShuttle,KDSKShuttleCheck,$market.alreadyOnShuttle,,,kd_landing1:在 Kanta 之巢停泊,
 kdStationKingIntroRevisit,DialogOptionSelected,$option == kd_stationKingIntro1,FireAll KDStationKingOptions,"""Yeah, who're you?"" $personName snarls before bothering to glance at a grimy datapad. 
 
@@ -20318,9 +20318,9 @@ kdStationKingAudienceNormal,DialogOptionSelected,$option == kdKP_askAudience,"Hi
 DoCanAffordCheck $kpBribeAmount kpAudienceAccept false","""是啊，是啊。总共是 $kpBribeAmount 星币的，""$heOrShe说道。""嗯，行政费用。""","kdKP_audienceAccept:""这简直是...海盗行为。我现在就进行传输。""
 cutCommLink:切断通讯链接",
 kdKPAudienceAlreadyArranged,DialogOptionSelected,"$option == kdKP_askAudience
-$market.kpAudience score:100",FireBest KDSKShuttleCheck,"""Um,"" the pirate chews on something while appearing to examine you.
+$market.kpAudience score:100",FireBest KDSKShuttleCheck,"""呃，""海盗一边嚼着些什么一边打量着你。
 
-""You already paid up. It's all arranged. Though uh, if you don't remember... you wanna pay again?",,
+""你已经给过钱了。已经妥了。不过呃，如果你记不清了...你还想再给一次么？",,
 kdStationKingAudienceRepeat,DialogOptionSelected,"$option == kpAskAudience
 $market.numAudiences > 1","Highlight $kpBribeAmount 
 DoCanAffordCheck $kpBribeAmount kpAudienceAccept false","""Yeah, uh. I am once again asking for $kpBribeAmount credits for..."" $heOrShe thinks for a moment. ""Administrative expenses. Yeah, that was it.""","kdKP_audienceAccept:""又来，这...这是海盗行径。我马上转账。""
@@ -20653,7 +20653,7 @@ $player.fleetPoints < 75
 
 And with that, the comms-line snaps off.",,
 defaultCadenGreetHostile,OpenCommLink,"$id == caden score:1000
-$faction.isHostile",EndConversation DO_NOT_FIRE,"卫队副首长 Caden 出现在画面里，面色通红，对你怒目而视。
+$faction.isHostile",EndConversation DO_NOT_FIRE,"卫队最高副首长 Caden 出现在画面里，面色通红，对你怒目而视。
 
 ""你们将被狮心卫队的力量所碾碎！""他喊道。""荣耀归于辛达强权，永恒的胜利归于最高元首！""
 
@@ -21282,18 +21282,18 @@ sdtuSafehouseWrapAnswer2,DialogOptionSelected,$option == sdtu_macHyderYouTalk,Re
 sdtuSafehouseWrapAnswer3,DialogOptionSelected,$option == sdtu_macHyderNoWant,RemoveOption sdtu_macHyderNoWant,"Macario 做了个咧嘴一笑的样子。
 
 ""完成你的职责，舰长。你会发现回报远超预期。""",,
-sdtuSafehouseWrapAnswer4,DialogOptionSelected,$option == sdtu_macHyderTreason,RemoveOption sdtu_macHyderTreason,"""把 辛达强权 卷入内战？在她负责星系防御舰队指挥权的时候？"" Macario 翻了个白眼：""问问你自己吧。""
+sdtuSafehouseWrapAnswer4,DialogOptionSelected,$option == sdtu_macHyderTreason,RemoveOption sdtu_macHyderTreason,"""把 辛达强权 推向内战？还是在她负责星系防御舰队指挥权的时候？"" Macario 翻了个白眼：""瞧你说的。""
 
 ""时机。"" 他嘶嘶吐气，""时机必须正确无误。""",,
 sdtuSafehouseWrapAnswer5,DialogOptionSelected,$option == sdtu_macHyderHow,RemoveOption sdtu_macHyderHow,"""You don't know her like I do, captain. She is a capable admiral, a brilliant logistician, and a dreadful politician. She loathes contradiction, inefficiency, and above all lies. When she must participate in such squalid affairs, she will be put off-balance and seek stability. Provide it.""
 
 Macario looks pleased with himself. ""It is trivial to manipulate her. I trust, with my help, you are capable of it.""",,
 sdtuSafehouseEndInterrupt,DialogOptionSelected,"$option == sdtu_safehouseEnd
-RepLTE sindrian_diktat INHOSPITABLE",AdjustRep sindrian_diktat SUSPICIOUS 100,"""Ah,"" Macario raises a finger. ""Just one thing, captain.""
+RepLTE sindrian_diktat INHOSPITABLE",AdjustRep sindrian_diktat SUSPICIOUS 100,"""啊，"" Macario 用手势示意你噤声。""就这一件事，舰长。""
 
-""You've been very, very bad,"" he wags his finger, scolding you. ""I'll arrange matters to allow you to operate in Diktat space. But you must promise to behave. You'll behave?"" 
+""你干过不少坏事，""他摇晃着食指数落你。""我会安排好你在辛达星区行动的相关事宜。但是你必须保证会守规矩。你能做到吗？""
 
-He doesn't wait for an answer, ""Good.""",sdtu_safehouseEnd:继续,
+他并没有等你给出确切回复，""很好。""",sdtu_safehouseEnd:继续,
 sdtuSafehouseEnd,DialogOptionSelected,$option == sdtu_safehouseEnd,"FireAll SDTUSafehouseHolorecCheck
 Call $global.sdtu_ref resumeMusic
 EndConversation DO_NOT_FIRE
@@ -22672,7 +22672,7 @@ sdtuPostCadenNoTrustLie,DialogOptionSelected,$option == sdtu_postCadenNoTrustLie
 He needs something plausible.",,
 sdtuPostCadenNoTrustLieOptsA,SDTUPostCadenNoTrustLieOpts,$global.sdtu_knowMacarioWasLuddic,,,"sdtu_postCadenLuddic:""Caden told me you were raised by Luddics.""",
 sdtuPostCadenNoTrustLieOptsB,SDTUPostCadenNoTrustLieOpts,!$global.sdtu_toldCadenMacarioBacksHyder ,,,"sdtu_postCadenHydCadLie:""Hyder has his backing for Supreme Executor. So he said.""",
-sdtuPostCadenNoTrustLieOptsC,SDTUPostCadenNoTrustLieOpts,!$global.sdtu_setCadenOffAboutMacario,,,"sdtu_postCadenLieBoring:""他认为你的忠诚不可靠,额,在对 Philip Andrada 的意识形态方面。""",
+sdtuPostCadenNoTrustLieOptsC,SDTUPostCadenNoTrustLieOpts,!$global.sdtu_setCadenOffAboutMacario,,,"sdtu_postCadenLieBoring:""他认为你的忠诚不可靠...比如...在对 Philip Andrada 的意识形态方面。""",
 sdtuPostCadenNoTrustLieOptsD,SDTUPostCadenNoTrustLieOpts,,,,"sdtu_postCadenOverstepped:""他已经意识到你想成为最高元首。""",
 sdtuPostCadenLieBoring,DialogOptionSelected,$option == sdtu_postCadenLieBoring,,"""Well yes, that's obviously true and he should well know it without an unusually helpful spacer pointing it out for him.""
 
