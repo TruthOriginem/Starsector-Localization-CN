@@ -32,7 +32,7 @@ class MapItem(object):
         self.key = key
         self.path = path
         self.mapKey = mapKey
-        self.key_name_re = re.compile(r'"{}"'.format(key) + r'\s*:\s*"(.*?)"')
+        self.key_name_re = re.compile(rf'"{key}"' + r'\s*:\s*"((?:[^"\\]|\\.)*)"')
         if mapKey:
             self.map_file_path = f"map_{prefix}_{ext[1:]}_{mapKey}.json"
         else:
@@ -137,10 +137,10 @@ class MapItem(object):
                                 key_times += 1
                                 line = line.replace(value, item_map_json[key])
                                 line_changed = True
-                        elif not item_map_values.__contains__(value) :
+                        elif not item_map_values.__contains__(value):
                             no_match_item_list.append(f"{file_path}({line_count}):{value}")
                 new_lines.append(line)
-                line_count+=1
+                line_count += 1
         return (line_changed, key_times)
 
     def updateTargetItems(self):
