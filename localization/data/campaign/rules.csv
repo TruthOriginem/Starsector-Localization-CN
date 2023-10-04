@@ -4825,29 +4825,28 @@ OR
 ""感谢上天赐予我等今日的和平，"" $personName 说着，虔诚地双手合十，""我可以帮上什么吗，舰长？""",,
 lkeChalcedonLookingSomeoneA,DialogOptionSelected,$option == lke_chalcedonLookingSomeone,"$lkeAskedSomeone = true 7
 $market.lkeBuggedVIPs++
-FireAll LKEEphiphanyVIPoptions","""Ah."" $HeOrShe keeps looking at you.
+FireAll LKEEphiphanyVIPoptions","""啊。"" $HeOrShe 目不转睛地盯着你。
 
-""If I am understanding your intention, that might not be so easy. The Path is joined with the heart, the immortal spirit, not some number or identification file.""
+""这可能不会很容易，如果我理解到了你的意图的话。左径们发自内心的聚集在一起，因为那永恒不灭的精神，不是一些数字和身份文件。""
 OR
-""Someone?"" $HeOrShe smiles in not wholly sincere apology.
+""某人？"" $HeOrShe 不太真诚地笑着道歉到。
 
-""There are many people who come to Chalcedon, some who stay, some who go. Some who find that for which they search, and many who do not.""",,
-lkeChalcedonLookingRecruiterD,DialogOptionSelected,$option == lke_chalcedonLookingRecruiter,,"""You may not like this, but I speak truly: the best recruiter for the Path is the Hegemony's brutality toward the Faithful, the Tri-Tachyon mercenary-assassins who cut down our children, the ravages of the Domain you can see all around us.""
+""很多人来到 Chalcedon，有的留下，有的离开。 有的找到了他们所追寻的，大部分人并没有。""",,
+lkeChalcedonLookingRecruiterD,DialogOptionSelected,$option == lke_chalcedonLookingRecruiter,,"""你可能不喜欢这个，但实话实说： 左径的最佳征兵广告是霸主对卢德信仰的残酷镇压，杀死我们孩子的速子科技雇佣杀手，那些随处可见的人之领遗迹。""
 OR
-""The brutal suppression of our Faith recruits for the Path, captain. Those who ravage Creation and build false idols to assault God's domain - it is they recruit for the Path.""","lke_chalcedonLookingRecD2:""You know what I mean. I'm looking for a person. A recruiter.""
-lke_chalcedonLookingRecD2b:""I understand, but I'm looking for someone to talk to.""
-lke_chalcedonLookingRecD2c:""Are you being intentionally dense? Just give me a straight answer.""",
+""是对卢德信仰的残酷镇压在为左径招兵买马，舰长。"" 那些破坏神之造物并且捏造虚假神像来侵犯神之领地的人-是他们在为左径招兵买马。""","lke_chalcedonLookingRecD2:""你知道我在说什么。我正在找人，一个招募人员。""
+lke_chalcedonLookingRecD2b:""我知道，但我在找一个能和我聊聊的人。""
+lke_chalcedonLookingRecD2c:""你是在装傻吗？给我一个直接的答复。""",
 lkeChalcedonLookingRecruiterD2b,DialogOptionSelected,$option == lke_chalcedonLookingRecD2b,"$option = lke_chalcedonLookingRecD2 0
 FireBest DialogOptionSelected",,,
-lkeChalcedonLookingRecruiterD2,DialogOptionSelected,$option == lke_chalcedonLookingRecD2,,"The very ghost of a frown appears on $hisOrHer face.
+lkeChalcedonLookingRecruiterD2,DialogOptionSelected,$option == lke_chalcedonLookingRecD2,,"$hisOrHer的脸上出现了一丝皱眉的痕迹。
 
-""I'm afraid I don't know what you're talking about, captain. And if I did..."" $heOrShe shrugs, almost, but not quite apologetic.
+""恐怕我不知道你在说什么，舰长。而且就算我知道..."" $heOrShe带着些许但又不那么明显的歉意耸了耸肩。
 OR
-""Surely I wouldn't know anything about that,"" $heOrShe says quickly.
+""显然我对你说的什么都不知道，"" $heOrShe快速地说到。
 
-A new furrow appears in $hisOrHer brow, and $heOrShe adds, more quietly, ""Such an association could be... dangerous.""","lke_chalcedonLookingRecOutB:""It is not my intention to cause you trouble, I'm simply looking for a man.""
-lke_chalcedonLookingRecOutA:""Perhaps a donation would help jog your memory?""
-",
+$hisOrHer眉头出现了一条新的皱纹，$heOrShe更小声地补充说，""这样的关系可能会…有危险。""","lke_chalcedonLookingRecOutB:""我不想找茬，只是来找一个人而已。""
+lke_chalcedonLookingRecOutA:""或许一笔捐款能帮助你找回一些记忆？""",
 lkeChalcedonLookingRecD2c,DialogOptionSelected,$option == lke_chalcedonLookingRecD2c,"AdjustRepActivePerson INHOSPITABLE -2
 $lke_ignorePlayer = true 30
 $market.lkeBuggedVIPs++","$PersonName folds $hisOrHer hands, a tense smile appearing on $hisOrHer face.
@@ -4863,21 +4862,21 @@ Something tenses in $hisOrHer expression. ""If your eyes were not shut to Ludd's
 The $personPost taps something on a control console.",lke_chalcedonLookingRecMad1:继续,
 lkeChalcedonLookingRecMad1,DialogOptionSelected,$option == lke_chalcedonLookingRecMad1,"FireBest LKEChalcedonMakeFleetsHostile
 EndConversation DO_NOT_FIRE
-ShowDefaultVisual","""Captain,"" the voice of your comms officer quietly speaks in your ear, ""They've sent some kind of coded signal. Nearby Pather fleets will be alerted to our position.""
+ShowDefaultVisual","""长官,""你的通讯官在你耳边轻声说道，""他们发送了某种加密信号。附近的左径舰队知晓了我们的位置。
 
-You acknowledge the report and turn your attention back to the Pather on the comms link - and find that the connection has been terminated.",lke_chalcedonLookingRecMad2:Cut the comms,
+你确认了汇报并把注意力回归到与左径分子的通讯链接上 - 然后发现链接已经被中断了",lke_chalcedonLookingRecMad2:切断通讯,
 lkeChalcedonLookingRecMad2,DialogOptionSelected,$option == lke_chalcedonLookingRecMad2,FireAll PopulateOptions,,,
 lkeChalcedonLookingRecOutA,DialogOptionSelected,$option == lke_chalcedonLookingRecOutA,"AdjustRepActivePerson INHOSPITABLE -3
 $lke_ignorePlayer = true 30
 $market.lkeBuggedVIPs++
 EndConversation DO_NOT_FIRE
-FireAll PopulateOptions","$HisOrHer expression hardens noticeably. ""I'm very sorry, captain, but all the credits in the Sector won't save my soul.""
+FireAll PopulateOptions","$HisOrHer 的表情明显凝重了起来。""我非常抱歉，舰长，但哪怕是全星域所有的星币加起来都无法拯救我的灵魂。""
 
-$HeOrShe turns away, giving you a perfunctory ""Blessed day,"" before cutting the comm-link.
+$HeOrShe 转身离开，在切断通讯链接之前给丢下一句敷衍的 ""祝你今天顺利 ""。
 OR
-A deep frown grows on $hisOrHer face. ""I am not to be bought and sold like a cache of supplies, captain.""
+$hisOrHer 眉头紧皱。""我不能如同一箱补给一样被买来卖去，舰长。 ""
 
-$HeOrShe turns to cut the comms, added a ""Ludd save you,"" before hitting the termination command.",,
+$HeOrShe 转身去关闭通讯链接，在切断之前补了一句 "" 卢德拯救你""。",,
 lkeChalcedonLookingRecOutB,DialogOptionSelected,$option == lke_chalcedonLookingRecOutB,"AdjustRepActivePerson INHOSPITABLE -1
 $lke_ignorePlayer = true 30
 $market.lkeBuggedVIPs++
@@ -4963,17 +4962,17 @@ $lke_stage == CONTACT_RECRUITER",,"You have a meeting scheduled with a Mammonite
 lkeAskChalcedonBarStartB,DialogOptionSelected,"$option == LKEchalcedon_barEvent
 $market.lkeBuggedVIPs > 1",,"A simple, steaming cup of tea is placed before you with a subtle hint from the proprietor that you need but ask and something much stronger will arrive in a teapot.
 
-Before you can make a proper assessment of the colorful figures who tend to populate this sort of establishment, a man sits next to you with casual self-assurance, takes your tea, and downs the entire cup in one go.","lke_chalcedonBarSedge1:Continue
-lke_chalcedonBarSedge1b:""Hey, that was my tea!""",
+Before you can make a proper assessment of the colorful figures who tend to populate this sort of establishment, a man sits next to you with casual self-assurance, takes your tea, and downs the entire cup in one go.","lke_chalcedonBarSedge1:继续
+lke_chalcedonBarSedge1b:""嘿，那是我的茶！""",
 lkeAskChalcedonBarStartB2,DialogOptionSelected,$option == lke_chalcedonBarSedge1b,"$option = lke_chalcedonBarSedge1 0
 FireBest DialogOptionSelected",,,
-lkeAskChalcedonBarStart,DialogOptionSelected,$option == LKEchalcedon_barEvent,FireAll LKEchalcedonAskBarOpts,"You take your time, drinking tea and asking around, eventually finding yourself at a table with a 'Mammon's man'; a free agent who interfaces between Pathers and the outside world while despised by both.
+lkeAskChalcedonBarStart,DialogOptionSelected,$option == LKEchalcedon_barEvent,FireAll LKEchalcedonAskBarOpts,"你悠闲地喝着茶并在周围打听，最终明白自己与一名 ""玛门之仆"" 同桌；一位在左径分子和外界间进行沟通同时又受到双方鄙视的自由代理人。
 
-Well aware that he will sell any useful information you let slip to Pathers or Pather-hunters, you say...",,
-lkeChalcedonAskBarOptA,LKEchalcedonAskBarOpts,,,,"lke_chalcedonBarAskSomeone:""I'm looking for someone who may have joined the Path.""",
-lkeChalcedonAskBarOptB,LKEchalcedonAskBarOpts,,,,"lke_chalcedonBarAskRec:""I'm looking for someone who recruits for the Path.""",
-lkeChalcedonAskBarOptC,LKEchalcedonAskBarOpts,,,,"lke_chalcedonBarAskBornanew:""I'm searching for a man called Jethro Bornanew.""",
-lkeChalcedonAskBarOptD,LKEchalcedonAskBarOpts,,,,lke_barEnd:Thank him for his time and leave.,
+你深知他会把你不经意泄露的任何有用信息出售给左径或左径猎人，你说...",,
+lkeChalcedonAskBarOptA,LKEchalcedonAskBarOpts,,,,"lke_chalcedonBarAskSomeone:""我在找一个可能已经加入了左径的人。""",
+lkeChalcedonAskBarOptB,LKEchalcedonAskBarOpts,,,,"lke_chalcedonBarAskRec:""我在找为左径招募的人。""",
+lkeChalcedonAskBarOptC,LKEchalcedonAskBarOpts,,,,"lke_chalcedonBarAskBornanew:""我在找 Jethro Bornanew。""",
+lkeChalcedonAskBarOptD,LKEchalcedonAskBarOpts,,,,lke_barEnd:感谢他为你抽出的时间并离开。,
 lkeChalcedonAskBarRespA,DialogOptionSelected,$option == lke_chalcedonBarAskSomeone,RemoveOption lke_chalcedonBarAskSomeone,"The Mammonite chuckles darkly, shaking his head. ""Captain $playerFirstName. This is Chalcedon; everyone maybe has joined the Path. You must be more specific, much more.""
 
 At your hesitation, he continues, ""You must trust me, just a little, yes? If you don't tell me what you need, then I cannot provide.""",,
@@ -5037,7 +5036,7 @@ $option = lke_chalcedonBarMeetingSet
 FireBest DialogOptionSelected",You transfer the credits to the sticky datapad offered by your new friend.,,
 lkeChalcedonBarBribe2k,DialogOptionSelected,$option == lke_chalcedonBarBribe2k,"AddCredits -2000
 $option = lke_chalcedonBarMeetingSet
-FireBest DialogOptionSelected",You sit back down and transfer the credits.,,
+FireBest DialogOptionSelected",你坐了回去并且转账了星币。,,
 lkeChalcedonAskBarMeetingSet,DialogOptionSelected,$option == lke_chalcedonBarMeetingSet,"$market.lkeMeetingSet = true
 $market.lkeMeetingWait = true 1
 $global.lke_contactRecruiter = true
@@ -5094,7 +5093,7 @@ lkeChalcedonBarReturnNextDay1,DialogOptionSelected,$option == lke_chalcedonBarMe
 
 ""Yes, hello captain! You must come meet my friend!""
 
-He stands - unsteadily - and leads you through a door in the back of the bar.",lke_chalcedonBarNextday2:Follow,
+He stands - unsteadily - and leads you through a door in the back of the bar.",lke_chalcedonBarNextday2:跟上去,
 lkeChalcedonBarReturnNextDay2,DialogOptionSelected,$option == lke_chalcedonBarNextday2,"$lke_interceptLeaveBar2 = true 0
 BarCMD leaveBar","You step into a storage room. Broken furniture is stacked in a corner. Dim light from a stick-on glowplate has decayed into a sickly yellow-green gradient.
 
@@ -5102,16 +5101,16 @@ BarCMD leaveBar","You step into a storage room. Broken furniture is stacked in a
 lkeChalcedonBarReturnNextDay2bar,ReturnFromBar,$lke_interceptLeaveBar2,unset $lke_interceptLeaveBar2,,"lke_chalcedonBarNextday3:Step through the door
 lke_chalcedonBarNextday2b:Prepare your sidearm, then step through the door
 lke_chalcedonBarNextday2c:Call your bodyguards, then step through the door",
-lkeChalcedonBarReturnNextDay2b,DialogOptionSelected,$option == lke_chalcedonBarNextday2b,$market.lkeReadiedSidearm = true 0,"You unholster your sidearm, check its status, and hold it close but readied.",lke_chalcedonBarNextday3:Step through the door,
+lkeChalcedonBarReturnNextDay2b,DialogOptionSelected,$option == lke_chalcedonBarNextday2b,$market.lkeReadiedSidearm = true 0,你拔出了你的副武器，检查其状态，紧握着但已做好了准备。,lke_chalcedonBarNextday3:Step through the door,
 lkeChalcedonBarReturnNextDay2c,DialogOptionSelected,$option == lke_chalcedonBarNextday2c,$market.lkeReadiedBodyguards = true 0,"You give a quiet order to your bodyguards to circle around to your position, confident in their ability to take control of the situation with their specialized training and equipment.",lke_chalcedonBarNextday3:Step through the door,
-lkeChalcedonBarReturnNextDay3,DialogOptionSelected,$option == lke_chalcedonBarNextday3,HideVisual,"You step through the door.
+lkeChalcedonBarReturnNextDay3,DialogOptionSelected,$option == lke_chalcedonBarNextday3,HideVisual,"你走出了门。
 
-Daylight, a rare gap in the storms, washes our your vision for a moment.",lke_chalcedonBarNextday4:继续,
-lkeChalcedonBarReturnNextDay4,DialogOptionSelected,$option == lke_chalcedonBarNextday4,Call $global.lke_ref shootEm,A gunshot claps your eardrums.,lke_chalcedonBarNextday5:React,
+阳光，风暴间难得的间隙，使你的视野暂时清晰开阔。",lke_chalcedonBarNextday4:继续,
+lkeChalcedonBarReturnNextDay4,DialogOptionSelected,$option == lke_chalcedonBarNextday4,Call $global.lke_ref shootEm,一声震耳欲聋的枪声响起。,lke_chalcedonBarNextday5:作出反应,
 lkeChalcedonBarReturnNextDay5a,DialogOptionSelected,"$option == lke_chalcedonBarNextday5
-$market.lkeReadiedBodyguards",,"Almost without thinking, you fall to the side to remove yourself from a potential sweep of fire. Tactical chatter whispers in your ear; calm tones. No one is aiming a weapon at you, but your bodyguards can drop anyone nearby at a word.
+$market.lkeReadiedBodyguards",,"几乎没有思考，你扑到在一旁来躲避可能的扫射。耳旁响起战术口令，非常冷静的口吻。没有人用武器瞄准着你，但一声令下你的保镖可以干掉任何人。
 
-The closest shape is a shadow; a figure; a man. Not aiming anything at you. Looking at you, hands open and raised part-way.",lke_chalcedonBarNextday6:继续,
+离你最近的形状的是一个影子；一个形象；一个男人。没有用任何东西瞄准着你。看着你，打开的双手半举着。",lke_chalcedonBarNextday6:继续,
 lkeChalcedonBarReturnNextDay5b,DialogOptionSelected,"$option == lke_chalcedonBarNextday5
 $market.lkeReadiedSidearm",,"Almost without thinking, you fall to the side with your sidearm raised and ready at the closest shape - a shadow; a figure; a man. Not aiming at you. Looking at you, hands open and raised part-way.",lke_chalcedonBarNextday6:继续,
 lkeChalcedonBarReturnNextDay5c,DialogOptionSelected,$option == lke_chalcedonBarNextday5,,"Almost without thinking, you fall to the side to remove yourself from a potential sweep of fire. The closest shape before you is a shadow; a figure; a man. Not aiming at you. Looking at you, hands open and raised part-way.",lke_chalcedonBarNextday6:继续,
@@ -5140,12 +5139,12 @@ lkeChalcedonBarSedgeOptKill2,LKEchalcedonBarSedgeOpts,"$market.lkePlayerKidnappe
 !$hadShotTalk
 $global.lke_sedgeKilledMammonite",,,"lke_chalcedonSedgeRespKill:""Why did you kill him?""",
 lkeChalcedonBarSedgeOptB,LKEchalcedonBarSedgeOpts,!$saidRecruiter,,,"lke_chalcedonBarSedgeRespB:""And who are you?""",
-lkeChalcedonBarSedgeOptC,LKEchalcedonBarSedgeOpts,!$saidRecruiter,,,"lke_chalcedonBarSedgeRespC:""You're the recruiter.""",
-lkeChalcedonBarSedgeOptA,LKEchalcedonBarSedgeOpts,!$askedJethro,,,"lke_chalcedonBarSedgeRespA:""I'm looking for a man called Jethro Bornanew.""",
-lkeChalcedonBarSedgeOptA2,LKEchalcedonBarSedgeOpts,$askedJethro,,,"lke_sedgeShowPic:Show a picture of Jethro Bornanew, ""Recognize him?""",
+lkeChalcedonBarSedgeOptC,LKEchalcedonBarSedgeOpts,!$saidRecruiter,,,"lke_chalcedonBarSedgeRespC:""你就是征兵官。""",
+lkeChalcedonBarSedgeOptA,LKEchalcedonBarSedgeOpts,!$askedJethro,,,"lke_chalcedonBarSedgeRespA:""我在找一名叫 Jethro Bornanew的 男人。""",
+lkeChalcedonBarSedgeOptA2,LKEchalcedonBarSedgeOpts,$askedJethro,,,"lke_sedgeShowPic:展示一张 Jethro Bornanew的照片， ""认识他吗？""",
 lkeChalcedonBarSedgeOptD,LKEchalcedonBarSedgeOpts,"$market.talkingAtBar
 !$saidTea
-!$gotTeapot",,,"lke_chalcedonBarSedgeRespTea:""You drank my tea.""",
+!$gotTeapot",,,"lke_chalcedonBarSedgeRespTea:""你喝了我的茶。""",
 lkeChalcedonBarSedgeOptD2,LKEchalcedonBarSedgeOpts,"$saidTea
 !$saidTea2",,,"lke_chalcedonBarSedgeRespTea2:""You can't just drink people's tea.""",
 lkeChalcedonBarSedgeOptE,LKEchalcedonBarSedgeOpts,"$market.talkingAtBar
@@ -5153,14 +5152,14 @@ lkeChalcedonBarSedgeOptE,LKEchalcedonBarSedgeOpts,"$market.talkingAtBar
 lkeChalcedonBarSedgeSmashA,LKEchalcedonBarSedgeOpts,"$global.sedgeSmashedTea
 !$didSmashAsk",,,"lke_askSedgeSmashA:""They're afraid. So might-makes-right and terror rules. You think this is righteous?""",
 lkeChalcedonBarSedgeSmashB,LKEchalcedonBarSedgeOpts,"$global.sedgeSmashedTea
-!$didSmashAsk",,,"lke_askSedgeSmashB:""They respect you. Because you are willing to do what needs to be done.""",
+!$didSmashAsk",,,"lke_askSedgeSmashB:""他们尊重你。 因为你愿意做该做的事。""",
 lkeChalcedonSedgeOptMurder,LKEchalcedonBarSedgeOpts,"$saidRecruiter
 $saidMurder
 !$agreedWithMurder
-!$player.gotSedgeFaithSpeech",,,"lke_askSedgeMurder:""How can you murder a man in cold blood and think yourself righteous?""",
+!$player.gotSedgeFaithSpeech",,,"lke_askSedgeMurder:""你怎能冷酷无情的谋杀一个人并自诩正义？""",
 lkeChalcedonSedgeOptFaithA,LKEchalcedonBarSedgeOpts,"$player.gotSedgeFaithSpeech 
 $global.lke_sedgeKilledMammonite
-!$saidFaithResponse",,,"lke_sedgeFaithA:""You murder because you feel like its right? That's insane.""",
+!$saidFaithResponse",,,"lke_sedgeFaithA:""因为你觉得这是对的就进行谋杀？ 这太疯狂了。""",
 lkeChalcedonSedgeOptFaithB,LKEchalcedonBarSedgeOpts,"$player.gotSedgeFaithSpeech
 $global.lke_sedgeKilledMammonite
 !$saidFaithResponse",,,"lke_sedgeFaithB:""What you say about faith alone, not deeds, it... makes sense.""",
@@ -18505,8 +18504,8 @@ SetTextHighlightColors h h h $dcom_factionColor
 SetTextHighlights $dcom_marketName $dcom_reward $dcom_marines $dcom_marketFaction
 Call $dcom_ref showMap ""目标: $dcom_marketName""","""It'd be a rational response. Proportional, even,"" $heOrShe says intensely, $hisOrHer rage now the deathly cold of a cryovolcano. ""If their warehouse $dcom_marketOnOrAt $dcom_marketName was raided by an unassociated third party,"" $heOrShe smiles vengefully, lifting a drink in a salute to you, ""I could arrange $dcom_reward credits to find their way into your account if that happened. I'll provide all the necessary tactical details, of course.""
 
-A quick review of $hisOrHer TriPad suggests that you'd need around $dcom_marines marines to carry off the operation. You note that it lies within $dcom_marketFactionArticle $dcom_marketFaction logistics zone, so performing such a raid may anger the local authorities. Even taking stealth measures may not entirely avert suspicion.","contact_acceptBar:Accept
-contact_declineBarNoContinue:Decline",
+A quick review of $hisOrHer TriPad suggests that you'd need around $dcom_marines marines to carry off the operation. You note that it lies within $dcom_marketFactionArticle $dcom_marketFaction logistics zone, so performing such a raid may anger the local authorities. Even taking stealth measures may not entirely avert suspicion.","contact_acceptBar:接受
+contact_declineBarNoContinue:拒绝",
 dcomOfferTextContact,DialogOptionSelected,$option == dcom_start,"$missionId = dcom
 SetTextHighlightColors h h $dcom_factionColor
 SetTextHighlights $dcom_reward $dcom_marines $dcom_marketFaction
@@ -19180,22 +19179,22 @@ $PersonName 将照片拉到了一边，然后打开了星图。""我们诱使$bc
 # Luddic Pilgrim Transport mission,,,,,,# bar mission only
 lptBlurbBar1,lpt_blurbBar,$lpt_wealth == rich,,A $lpt_manOrWoman in finely made Luddic pilgrimage robes seems to be speaking to various ship captains.,,
 lptOfferOptionBar1,lpt_optionBar,$lpt_wealth == rich,,,lpt_startBarRich:Approach the pilgrim wearing fine Luddic robes,
-lptBlurbBar2,lpt_blurbBar,,,A $manOrWoman in the ragged robes of a Luddic pilgrim seems to be approaching ship captains only to be turned away.,,
-lptOfferOptionBar2,lpt_optionBar,,,,lpt_startBarPoor:Approach the Luddic pilgrim wearing ragged robes,
+lptBlurbBar2,lpt_blurbBar,,,身着破烂卢德朝圣者服装的$manOrWoman似是想接近船长们却被赶走。,,
+lptOfferOptionBar2,lpt_optionBar,,,,lpt_startBarPoor:接近那个身着破烂卢德朝圣者服装的人,
 lptOfferTextBarRich,DialogOptionSelected,$option == lpt_startBarRich,"$missionId = lpt
 SetTextHighlights $lpt_entityName $lpt_reward $lpt_dist 
 Call $lpt_ref showMap ""目的地: $lpt_entityName""","You approach the pilgrim, who smiles and puts $lpt_hisOrHer hands together. From $lpt_hisOrHer confident disposition and quality clothing it is clear that $lpt_heOrShe comes from wealth somewhat at odds with Ludd's ascetic reputation.
 
-""Blessed day. Captain, I presume?"" $lpt_heOrShe says. ""I wish to arrange transport for myself and my party to the shrine of $lpt_entityName in the $lpt_systemName. I can, of course, provide payment. Would $lpt_reward credits be worth a journey of $lpt_dist lightyears?""","contact_acceptBar:Accept
-contact_declineBarNoContinue:Decline",
+""Blessed day. Captain, I presume?"" $lpt_heOrShe says. ""I wish to arrange transport for myself and my party to the shrine of $lpt_entityName in the $lpt_systemName. I can, of course, provide payment. Would $lpt_reward credits be worth a journey of $lpt_dist lightyears?""","contact_acceptBar:接受
+contact_declineBarNoContinue:拒绝",
 lptOfferTextBarPoor,DialogOptionSelected,$option == lpt_startBarPoor,"$missionId = lpt
 SetTextHighlights $lpt_entityName
 Call $lpt_ref showMap ""目的地: $lpt_entityName""","You approach the pilgrim. Finally seeing someone who looks like they want to talk, $lpt_heOrShe produces a crooked smile and puts $lpt_hisOrHer calloused hands together.
 
 ""May Ludd bless you, $playerSirOrMadam,"" $lpt_heOrShe says, bowing. ""I beg of you for passage for myself and a small party to the shrine of $lpt_entityName. We are but poor pilgrims and cannot pay, so we beg this as charity from you.""  
 
-""Perhaps you are already traveling to the $lpt_systemName? The shrine would be but a short detour."" $lpt_HeOrShe looks up at you hopefully. ""We will cause no trouble, and will pray for Providence to bless you with prosperity and health.""","contact_acceptBar:Accept
-contact_declineBarNoContinue:Decline",
+""Perhaps you are already traveling to the $lpt_systemName? The shrine would be but a short detour."" $lpt_HeOrShe looks up at you hopefully. ""We will cause no trouble, and will pray for Providence to bless you with prosperity and health.""","contact_acceptBar:接受
+contact_declineBarNoContinue:拒绝",
 lptPostAccept,ContactPostAccept,$missionId == lpt,"#AddTextSmall ""卢德朝圣者们登上了你的$shipOrFleet"" highlight","You have your purser make arrangements, with instructions to keep the pilgrims from interfering in $shipOrFleet operations.",,
 ,,,,,,
 # LPT arrived at destination,,,,,,
@@ -20042,8 +20041,8 @@ standfastOfferingEnough,DialogOptionSelected,$option == standfastMakeOffering,"S
 SetTextHighlights ""5"" ""heavy armaments""
 IncreaseSmugglingSuspicion 0.3","""A donation directly to... those in need... would be most welcome."" 
 
-In roundabout language, Curate Sacraria Standfast explains that her network could move 5 units of heavy armaments to the surface. There is, however, a small risk of generating suspicion from the Sindrian Diktat authorities.","0:standfastGiveOffering:Transfer 5 heavy armaments
-1:standfastCancelOffering:Never mind",
+In roundabout language, Curate Sacraria Standfast explains that her network could move 5 units of heavy armaments to the surface. There is, however, a small risk of generating suspicion from the Sindrian Diktat authorities.","0:standfastGiveOffering:交换 5 件重武器
+1:standfastCancelOffering:算了",
 standfastGiveOffering,DialogOptionSelected,$option == standfastGiveOffering,"AddText ""The arrangements are made, and Steadfast offers her prayers and well-wishes, promising that your gifts will be put to righteous purpose.""
 AddRemoveCommodity hand_weapons -5 true
 AdjustRep luddic_church 1
@@ -20608,13 +20607,13 @@ FireAll AndradaOfficeReplies","""为辛达强权的利益服务，""$heOrShe毫�
 ,,,,,,
 defaultHyderGreeting,OpenCommLink,"$id == hyder score:1000
 !$global.sdtu_missionCompleted
-!$faction.isHostile",BeginConversation hyder true true,"Deputy Star Marshal Hyder appears, her face impassive. ""Contact identified, maintain course,"" she speaks to another bridge officer before turning to comms.
+!$faction.isHostile",BeginConversation hyder true true,"副星际元帅 Hyder 出现在画面中，面无表情。""确认目标，保持航行。"" 她对另一位舰桥军官下达了命令，然后转向通讯器。
 
-""Independent fleet, hear me: stay clear of our operational volume and you will not be fired upon.""
+""独立舰队，听好了：与我们的行动区域保持距离，这样我们就不会向你开火。""
 
-""Hyder out.""
+""Hyder 完毕。"" 
 
-The comms snap off before you have a chance to speak.",cutCommLink:切断通讯链接,
+在你有机会说话之前，通讯链接就被切断了。",cutCommLink:切断通讯链接,
 defaultHyderGreetingHostile,OpenCommLink,"$id == hyder score:1000
 !$global.sdtu_missionCompleted
 $faction.isHostile",EndConversation DO_NOT_FIRE,"副星际元帅 Hyder 出现在画面中，面无表情。""发现敌情，准备战斗。"" 她对另一位舰桥军官下达了命令，然后转向通讯器。
@@ -21567,10 +21566,10 @@ $trust++",,,
 sdtuHyderTalk1Unacceptable2,DialogOptionSelected,$option == sdtu_hyderTalk1Unacceptable2,"$option = sdtu_hyderTalkRound2startLaw 0
 FireBest DialogOptionSelected","""Then we stand together on this matter of honor,"" she says with a nod.",,
 # Hyder convo round 2,,,,,,
-sdtuHyderTalkRound2startLaw,DialogOptionSelected,$option == sdtu_hyderTalkRound2startLaw,FireAll SDTUHyderTalkRound2Options,"""Speaking of the law."" Hyder crosses her arms. ""You have an officer subordinate to my command. I will take them into custody to deal with per naval court-martial.""",,
-sdtuHyderTalkRound2start,DialogOptionSelected,$option == sdtu_hyderTalkRound2start,FireAll SDTUHyderTalkRound2Options,"Hyder crosses her arms. ""You have an officer subordinate to my command. I will take them into custody to deal with per a naval court-martial.""",,
-sdtuHyderTalkRound2OptionsB,SDTUHyderTalkRound2Options,!$global.sdtu_fulfilledPromiseToPatrolTraitor,,,"sdtu_hyderTalk2Transfer:""I will transfer them to your custody immeditately.""",
-sdtuHyderTalkRound2OptionsC,SDTUHyderTalkRound2Options,!$global.sdtu_fulfilledPromiseToPatrolTraitor,,,"sdtu_hyderTalk2ToMacario:""Macario issued the arrest warrant. I will take the officer to him.""",
+sdtuHyderTalkRound2startLaw,DialogOptionSelected,$option == sdtu_hyderTalkRound2startLaw,FireAll SDTUHyderTalkRound2Options,"""说到法律，""Hyder 交叉双臂说道。""你手下有一名我麾下的军官。我将带他们到军事法庭接受审判。""",,
+sdtuHyderTalkRound2start,DialogOptionSelected,$option == sdtu_hyderTalkRound2start,FireAll SDTUHyderTalkRound2Options,"""Hyder 交叉双臂说道。""你手下有一名我麾下的军官。我要带他们到军事法庭接受审判。""",,
+sdtuHyderTalkRound2OptionsB,SDTUHyderTalkRound2Options,!$global.sdtu_fulfilledPromiseToPatrolTraitor,,,"sdtu_hyderTalk2Transfer:""我马上就将他们交给你。""",
+sdtuHyderTalkRound2OptionsC,SDTUHyderTalkRound2Options,!$global.sdtu_fulfilledPromiseToPatrolTraitor,,,"sdtu_hyderTalk2ToMacario:""Macario 发布了这则逮捕令。我会把这位军官交给他。""",
 sdtuHyderTalkRound2OptionsD,SDTUHyderTalkRound2Options,"!$global.sdtu_fulfilledPromiseToPatrolTraitor
 $global.sdtu_promisedToHelpPatrolLeader",,,"sdtu_hyderTalk2Promised:""I promised to release this officer on an independent world.""",
 sdtuHyderTalkRound2OptionsD2,SDTUHyderTalkRound2Options,$global.sdtu_fulfilledPromiseToPatrolTraitor,,,"sdtu_hyderTalk2PromisedB:""I promised to release them on an independent world, and I did.""",
@@ -23808,15 +23807,15 @@ $pk_detectedCommLink = true","""$PlayerSirOrMadam!""
 
 Your comms officer calls for your attention with an excited look, ""I'm picking up an anomalous signal, it's an open channel. Just a carrier signal, a low-grade military fallback standard. Very faint and lossy. We're really only picking this up because of the MILAUX package installed in our comms system to help integrate with Hegemony fleet actions.""
 
-""Shall I open a link?"" Their hands don't quite tremble over the controls. Whatever is using this frequency is either Hegemony or has some of their less secure emergency codes.","pk_investigate:Try to open a comm link on this channel
-pk_ignore:Ignore it and close in on the asteroid",
+""Shall I open a link?"" Their hands don't quite tremble over the controls. Whatever is using this frequency is either Hegemony or has some of their less secure emergency codes.","pk_investigate:尝试在此频道建立通讯链接
+pk_ignore:忽视它并靠近小行星",
 pkCacheDefenderPreEmpt2,TriggerAutomatedDefenses,"$core_pkCache score:100
 $player.commissionFactionId == hegemony
 !$pk_triedCommLink
 $pk_detectedCommLink",$pk_triedCommLink = true 0,"Your comms officer tags the faint carrier wave which is using an obscure Hegemony signal standard. Someone - or perhaps no one - has been waiting for a response for quite some time.
  
-""Shall I open a link?"" your comms officer asks, mostly keeping their excitement over a mystery signal under control. Mostly.","pk_investigate:Try to open a comm link on this channel
-pk_ignore:Ignore it and close in on the asteroid",
+""Shall I open a link?"" your comms officer asks, mostly keeping their excitement over a mystery signal under control. Mostly.","pk_investigate:尝试在此频道建立通讯链接
+pk_ignore:忽视它并靠近小行星",
 pk_ignoreSel,DialogOptionSelected,$option == pk_ignore,"FireBest TriggerAutomatedDefenses
 $player.encounteredPKDefenderFleet = true",,,
 pk_investigateSel,DialogOptionSelected,$option == pk_investigate,,"Comms opens the link. Your sensors and tactical officers start flickering interfaces on their control consoles, and they exchange a look.
@@ -23923,52 +23922,50 @@ PKHackSel,DialogOptionSelected,$option == pk_hack,"$global.pk_nexusDataGained = 
 Call $global.pk_ref updateStage","As a commissioned privateer of the Tri-Tachyon Corporation, you have been given a standard set of access codes. These are old protocols, and while they've migrated away from company standards over time (due, probably, to the meddling of idle AIs), your technical officers have the skill to adapt to the unusual changes.
 
 After hours of painstakingly crafting a request - it must be asked in precisely the correct way and have the properly mutated access codes attached - the question is asked and the answer received nearly instantly. Unnervingly so. Nonetheless, you now have navigation coordinates which should lead to the planetkiller.",defaultLeave:离开,
-PKHackStorySel,DialogOptionSelected,$option == pk_hackStory,,"Your comms officer is taken aback, ""But $playerSirOrMadam, what-""","pk_hackStory2:""Just do it. I've got an idea.""",
+PKHackStorySel,DialogOptionSelected,$option == pk_hackStory,,"你的通讯官有些吃惊，""但是，$playerSirOrMadam，这 ——""","pk_hackStory2:""就这么办。我有一个主意。""",
 PKHackStory2,DialogOptionSelected,$option == pk_hackStory2,HideVisual,"Your comms officer inputs the commands, a look of confusion remaining on their face.
 
 ""Their system isn't built for comms. Um, at all. But, theoretically the adaptive protocols should... could interface, if there's a proper link..."" 
 
 Another tap at the controls, ""The line should be open. If someone, something... is listening.""
 
-Your display shows nothing but holo-snow. Your officers fall silent, and the signal processing amplifies the buzz of cosmic background radiation to a near-audible level. There's nought but a yawning void awaiting your words.","pk_hackStoryStartA:""Is there anybody out there?""
-pk_hackStoryStartB:""I am $playerName. Who are you?""
-pk_hackStoryStartC:""This is Artemisia Sun, CEO of the Tri-Tachyon Corporation.""
-pk_hackStoryStartD:""This is Omega calling. I have a command for you.""",
+Your display shows nothing but holo-snow. Your officers fall silent, and the signal processing amplifies the buzz of cosmic background radiation to a near-audible level. There's nought but a yawning void awaiting your words.","pk_hackStoryStartA:""有人吗？""
+pk_hackStoryStartB:""我是 $playerName。你是谁？""
+pk_hackStoryStartC:""我是 Artemisia Sun，速子科技公司的首席执行官。""
+pk_hackStoryStartD:""这是欧米伽呼叫。我有指令要给你。""",
 PKHackStoryStartA,DialogOptionSelected,$option == pk_hackStoryStartA,,"
-   yes
+有的
 
-   hello $playerName
-",pk_hackStoryStart2:继续,
+你好，$playerName",pk_hackStoryStart2:继续,
 PKHackStoryStartB,DialogOptionSelected,$option == pk_hackStoryStartB,$toldName = true 0,"
-   hello $playerName
+   你好，$playerName
 ",pk_hackStoryStart2:继续,
 PKHackStoryStartC,DialogOptionSelected,$option == pk_hackStoryStartC,"$option = pk_hackStoryStartD 0
 FireBest DialogOptionSelected",,,
 PKHackStoryStartD,DialogOptionSelected,$option == pk_hackStoryStartD,"$player.ethosLiar++
 $wasCalledLiar = true 0","
-   no, liar
+不，骗子
 
-   you are $playerName
-",pk_hackStoryStart2:继续,
-PKHackStoryStart2,DialogOptionSelected,$option == pk_hackStoryStart2,FireAll PKHackStoryOptions,"You couldn't quite say how you heard the words. It was as if they were spoken without a voice. Your senior officers all take a step back from the empty holo-display, eyes wide; shocked into silence.
+你是$playerName",pk_hackStoryStart2:继续,
+PKHackStoryStart2,DialogOptionSelected,$option == pk_hackStoryStart2,FireAll PKHackStoryOptions,"你不是很清楚自己是怎么听见这些话的。就好似它们并非由声音传递。你的高级官员们都从空空如也的全息显示屏前退了几步，瞪大了双眼；震惊得说不出话来。
 
-Your comms officer exchanges a look with you - yes, they heard it too; no, they don't know what it is. They tear their eyes away from the nothing in the holo-display and start pulling telemetry into a buffer through their datapad interface.",,
+你的通讯官和你交换了一个眼神-是的，他们也听到了；但是他们不知道那是什么意思。他们将视线从空白的全息显示屏上移开并开始用数据平板将遥测数据传输到缓冲区中。",,
 PKHackStoryOptA,PKHackStoryOptions,"!$toldName
-!$askedHowKnowName",,,"pk_hackStoryHowName:""How do you know my name?""",
+!$askedHowKnowName",,,"pk_hackStoryHowName:""你怎么知道我的名字的？""",
 PKHackStoryOptB,PKHackStoryOptions,"$wasCalledLiar
-!$promisedHonesty ",,,"pk_hackStorySorryLied:""I apologize for lying to you. Let's be honest with one another from now on.""",
+!$promisedHonesty ",,,"pk_hackStorySorryLied:""我为欺骗你道歉。现在，让我们坦诚相待吧。""",
 PKHackStoryOptB2,PKHackStoryOptions,"!$wasCalledLiar
-!$promisedHonesty",,,"pk_hackStorySorryLied:""I want us to be completely honest with one another.""",
-PKHackStoryOptG,PKHackStoryOptions,!$askedWhoAreYou,,,"pk_hackStoryWhoAreYou:""Who are you?""",
-PKHackStoryOptE,PKHackStoryOptions,!$askedHacked,,,"pk_hackStoryDidYouHack:""Have you hacked my computer systems?""",
-PKHackStoryOptF,PKHackStoryOptions,!$askedReadMind,,,"pk_hackStoryCanYouReadMind:""Can you read my mind?""",
-PKHackStoryOptC,PKHackStoryOptions,!$askedAreYouNexus,,,"pk_hackStoryAreYouNexus:""Are you the Remnant AI Nexus?""",
+!$promisedHonesty",,,"pk_hackStorySorryLied:""我希望我们彼此完全坦诚。""",
+PKHackStoryOptG,PKHackStoryOptions,!$askedWhoAreYou,,,"pk_hackStoryWhoAreYou:""你是谁？""",
+PKHackStoryOptE,PKHackStoryOptions,!$askedHacked,,,"pk_hackStoryDidYouHack:""你入侵了我的电脑系统吗？""",
+PKHackStoryOptF,PKHackStoryOptions,!$askedReadMind,,,"pk_hackStoryCanYouReadMind:""你能看透我的思想吗？""",
+PKHackStoryOptC,PKHackStoryOptions,!$askedAreYouNexus,,,"pk_hackStoryAreYouNexus:""你是余晖的 AI 中枢吗？""",
 PKHackStoryOptOmega,PKHackStoryOptions,"$promisedHonesty
-!$askedOmega",,,"pk_hackStoryAreYouOmega:""Are you Omega?""",
+!$askedOmega",,,"pk_hackStoryAreYouOmega:""你是欧米伽吗？""",
 PKHackStoryOptOmega2,PKHackStoryOptions,"$askedOmega
-!$youAreOmega ",,,"pk_hackStoryYouAreOmega:""You are Omega.""",
+!$youAreOmega ",,,"pk_hackStoryYouAreOmega:""你是欧米伽。""",
 PKHackStoryOptOmega2b,PKHackStoryOptions,"$askedOmega
-!$youAreOmega ",,,"pk_hackStoryYouAreAlpha:""You're probably an alpha core having fun with me.""",
+!$youAreOmega ",,,"pk_hackStoryYouAreAlpha:""你估计是一颗逗弄我的 Alpha 核心。""",
 PKHackStoryOptD,PKHackStoryOptions,$askedAreYouNexus,,,"pk_hackStoryDoYouKnowPK:""行星杀手在哪里？""",
 PKHackStoryDidYouHack,DialogOptionSelected,$option == pk_hackStoryDidYouHack,"$askedHacked = true 0
 FireAll PKHackStoryOptions","
