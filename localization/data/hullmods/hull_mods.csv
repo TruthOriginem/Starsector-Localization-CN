@@ -4,7 +4,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 
 该调整能让线圈处理更高水平的硬幅能，使航速降至最低的硬幅能阈值提高 %s。未经处理的标准线圈在硬幅处于 %s 时航速就会降低，而调整后的则达到 %s 后才会降低。",降低硬幅能水平对最高航速的惩罚。,,graphics/hullmods/phase_field.png
 先进光学器件,advancedoptics,2,,,"offensive, merc, standard",Weapons,1000,,,,5,10,15,25,data.hullmods.AdvancedOptics,提高光束武器 %s 的射程，但会降低其 %s 的转向速度，兼容于目标定位系统。,提高光束武器射程。,,graphics/hullmods/advanced_optics.png
-高级炮塔陀螺仪,turretgyros,0,,,"defensive, merc, standard",Weapons,2500,,,,2,4,6,10,data.hullmods.AdvancedTurretGyros,提高所有炮台 %s 的转向速度。,提高炮台的转向速度。,Increases damage to missiles and fighters by %s. Increases damage to smaller ships by %s per size class of difference.,graphics/hullmods/advanced_turret_gyros.png
+高级炮塔陀螺仪,turretgyros,0,,,"defensive, merc, standard",Weapons,2500,,,,2,4,6,10,data.hullmods.AdvancedTurretGyros,提高所有炮塔 %s 的转向速度。,提高炮塔的转向速度。,Increases damage to missiles and fighters by %s. Increases damage to smaller ships by %s per size class of difference.,graphics/hullmods/advanced_turret_gyros.png
 炮塔装甲,armoredweapons,0,,,"defensive, merc, standard","Weapons, Defenses",2500,TRUE,,,3,6,9,15,data.hullmods.ArmoredWeapons,提高 %s 武器耐久度，并降低 %s 后坐力，但降低 %s 武器转向速度。同时提高 %s 船体装甲。,令武器更难下线，并降低后坐力。,Increases the rate of fire of all non-missile weapons by %s.,graphics/hullmods/armored_weapon_emplacements.png
 突击套件,assault_package,1,,,"defensive, civ_package, no_drop, no_drop_salvage","Special, Defenses",8000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.AssaultPackage,"提高 %s 船体结构、%s 的装甲以及 %s 的幅能容量。
 

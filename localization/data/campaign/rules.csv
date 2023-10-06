@@ -4849,17 +4849,17 @@ $hisOrHer眉头出现了一条新的皱纹，$heOrShe更小声地补充说，""�
 lke_chalcedonLookingRecOutA:""或许一笔捐款能帮助你找回一些记忆？""",
 lkeChalcedonLookingRecD2c,DialogOptionSelected,$option == lke_chalcedonLookingRecD2c,"AdjustRepActivePerson INHOSPITABLE -2
 $lke_ignorePlayer = true 30
-$market.lkeBuggedVIPs++","$PersonName folds $hisOrHer hands, a tense smile appearing on $hisOrHer face.
+$market.lkeBuggedVIPs++","$PersonName 双手交叠，脸上挤出一个紧张的微笑。
 
-""What do you think of us, really. Ignorant fanatics, fearful of machines, fleeing before your might? Your arrogance astounds me.""
+""在你心底，究竟是怎样看待我们的？是畏惧机器的愚昧狂信徒，在你的权势之下四散奔逃吗？你的傲慢真是叫我大吃一惊。""
 
-The $personPost taps something on a control console.
+$personPost 在一个控制台上敲了些什么。
 OR
-""You may not see it, but I am trying to help you.""
+""也许你没有发现，但我可是在试着帮你。""
 
-Something tenses in $hisOrHer expression. ""If your eyes were not shut to Ludd's light, you might understand. But the false flame of pride, of power, leads you astray.""
+$hisOrHer的表情显得有些紧张，""如果你还没有对卢德的灵光闭紧双眼，你或许就会明白这一点。但骄傲和权势，这些错误的渴望使你误入歧途。""
 
-The $personPost taps something on a control console.",lke_chalcedonLookingRecMad1:继续,
+$personPost 在一个控制台上敲了些什么。",lke_chalcedonLookingRecMad1:继续,
 lkeChalcedonLookingRecMad1,DialogOptionSelected,$option == lke_chalcedonLookingRecMad1,"FireBest LKEChalcedonMakeFleetsHostile
 EndConversation DO_NOT_FIRE
 ShowDefaultVisual","""长官,""你的通讯官在你耳边轻声说道，""他们发送了某种加密信号。附近的左径舰队知晓了我们的位置。
@@ -4897,15 +4897,13 @@ $option = lke_chalcedonLookingBornanewA 0
 FireBest DialogOptionSelected",,,
 lkeChalcedonLookingBornanewA,DialogOptionSelected,$option == lke_chalcedonLookingBornanewA,"$lkeAskedBornanew = true 7
 $option = lke_chalcedonLookingBornanewA2 0
-FireBest DialogOptionSelected","""I'm afraid that I know no one by that name, captain."" $HeOrShe shrugs apologetically.
+FireBest DialogOptionSelected","""我恐怕不知道有叫这个名字的人，舰长。"" $HeOrShe略带歉意地耸了耸肩。
 
-""If you are looking for a member of the Path, that will not be easy. It is, as I'm sure you know, a kinship of people, not numbers and indices. You must know someone who trusts you and knows the one for whom you look.""
+""找一个左径的成员不会是件简单的事。我相信你知道，他们之间有亲密的关系，而不是依靠于一些数字和指数。你得认识一个信任你而且知道你要找的是谁的人。""
 
-""So forgive me, but I do not have your answer. But... "" $heOrShe smiles coyly, ""I may know who to ask.""
+""所以还请原谅我，我并不知道问题的答案。但..."" $heOrShe害羞的微笑着，""我可能知道你该去问谁。""
 OR
-""I know not that name, $playerSirOrMadam,"" $heOrShe says. ""We do not believe in indexing people with the beast's number. To find someone, you must know someone, and you must build a bridge of trust. This is the Luddic way.""
-
-""So,"" $heOrShe nods, conceding something, ""while I have no answer for you, I may know someone who does.""",,
+""我不知道这个名字，$playerSirOrMadam，"" $heOrShe说到。""我们不相信把人用野兽般的数字编号那一套。想要找一个人，你必须先认识一个其他人，然后建立起信任的桥梁。这才是卢德的做法。""",,
 lkeChalcedonLookingBornanewA2a,DialogOptionSelected,$option == lke_chalcedonLookingBornanewA2,,,"lke_chalcedonLookingBornanewA3:""所以我该向谁去问？""",
 lkeChalcedonLookingBornanewA2b,DialogOptionSelected,"$option == lke_chalcedonLookingBornanewA2
 $player.metBrotherCotton",,,"lke_chalcedonLookingBornanewA3:""我应该向谁去问？""
@@ -5049,11 +5047,11 @@ ShowDefaultVisual",,,
 lkeChalcedonBarEnd,DialogOptionSelected,$option == lke_barEnd,BarCMD showOptions,,,
 lkeChalcedonBarDrinkLots,DialogOptionSelected,$option == lke_barMammoniteDrink,,"You drink with the Mammonite, who indeed makes for a good drinking partner. He has many stories, and matches you for tales of scrapes with irate Pathers, pirates, and patrols.
 
-The Mammonite raises a hand to summon the proprietor again. Another pot of 'tea'?","lke_barMammoniteDrink2:""Why not?""
-lke_barEndOut:Make some excuse and leave",
+The Mammonite raises a hand to summon the proprietor again. Another pot of 'tea'?","lke_barMammoniteDrink2:""为什么不呢？""
+lke_barEndOut:找个借口离开",
 lkeChalcedonBarDrinkLotsMore,DialogOptionSelected,$option == lke_barMammoniteDrink2,,"One pot turns into two, then three.
 
-The night spins. A blur of sound and the light - another drink, bottoms of! - teahouse lanterns, doubling, tripling.",lke_barMammoniteDrink3:Need t'find the lav...,
+The night spins. A blur of sound and the light - another drink, bottoms of! - teahouse lanterns, doubling, tripling.",lke_barMammoniteDrink3:得上个厕...,
 lkeChalcedonBarDrinkLotsMore2,DialogOptionSelected,$option == lke_barMammoniteDrink3,"HideVisual
 $lke_interceptLeaveBar1 = true 0
 BarCMD leaveBar","You're wrapping up your visit to the charmingly quaint facilities when you are grabbed from behind, a dark hood pulled over your head.
@@ -5137,8 +5135,8 @@ $market.talkingAtBar = true 0","You would have thought the tea to be uncomfortab
 ""I'm Sedge,"" he says.",,
 lkeChalcedonBarSedgeOptKill2,LKEchalcedonBarSedgeOpts,"$market.lkePlayerKidnapped
 !$hadShotTalk
-$global.lke_sedgeKilledMammonite",,,"lke_chalcedonSedgeRespKill:""Why did you kill him?""",
-lkeChalcedonBarSedgeOptB,LKEchalcedonBarSedgeOpts,!$saidRecruiter,,,"lke_chalcedonBarSedgeRespB:""And who are you?""",
+$global.lke_sedgeKilledMammonite",,,"lke_chalcedonSedgeRespKill:""你为什么杀了他？""",
+lkeChalcedonBarSedgeOptB,LKEchalcedonBarSedgeOpts,!$saidRecruiter,,,"lke_chalcedonBarSedgeRespB:""然后你又是谁？""",
 lkeChalcedonBarSedgeOptC,LKEchalcedonBarSedgeOpts,!$saidRecruiter,,,"lke_chalcedonBarSedgeRespC:""你就是征兵官。""",
 lkeChalcedonBarSedgeOptA,LKEchalcedonBarSedgeOpts,!$askedJethro,,,"lke_chalcedonBarSedgeRespA:""我在找一名叫 Jethro Bornanew的 男人。""",
 lkeChalcedonBarSedgeOptA2,LKEchalcedonBarSedgeOpts,$askedJethro,,,"lke_sedgeShowPic:展示一张 Jethro Bornanew的照片， ""认识他吗？""",
@@ -5148,7 +5146,7 @@ lkeChalcedonBarSedgeOptD,LKEchalcedonBarSedgeOpts,"$market.talkingAtBar
 lkeChalcedonBarSedgeOptD2,LKEchalcedonBarSedgeOpts,"$saidTea
 !$saidTea2",,,"lke_chalcedonBarSedgeRespTea2:""You can't just drink people's tea.""",
 lkeChalcedonBarSedgeOptE,LKEchalcedonBarSedgeOpts,"$market.talkingAtBar
-!$gotTeapot",,,lke_chalcedonBarSedgeRespE:Signal for something stronger from the proprietor.,
+!$gotTeapot",,,lke_chalcedonBarSedgeRespE:示意老板上些更猛的.,
 lkeChalcedonBarSedgeSmashA,LKEchalcedonBarSedgeOpts,"$global.sedgeSmashedTea
 !$didSmashAsk",,,"lke_askSedgeSmashA:""They're afraid. So might-makes-right and terror rules. You think this is righteous?""",
 lkeChalcedonBarSedgeSmashB,LKEchalcedonBarSedgeOpts,"$global.sedgeSmashedTea
@@ -6247,8 +6245,8 @@ This is a fine blend.","lke_virensStartSit:Sit and drink
 lke_virensStartStand:Remain standing",
 LKEvirensStart0b,DialogOptionSelected,$option == lke_virensStart0,,"With all this dealing with Luddics, you realize that you're starting to develop a sense for the quality of tea by the scent hanging in the air after boiling water is freshly poured.
 
-This is the good stuff.","lke_virensStartSit:Sit and drink
-lke_virensStartStand:Remain standing",
+This is the good stuff.","lke_virensStartSit:坐下喝茶
+lke_virensStartStand:继续站着",
 LKEvirensStartA,DialogOptionSelected,$option == lke_virensStartSit,FireAll LKEvirensConvOpts,"You sit, and Virens pours two cups, then motions for you to choose your pick of the two.
 
 After you do, he holds the cup up for a moment and inhales the steam.",,
@@ -6258,15 +6256,15 @@ FireAll LKEvirensConvOpts","A frown begins in his brow but fails to materialize 
 
 ""I respect that you shall do as you wish, $playerSirOrMadam,"" he says, and pours a cup for himself. ""My invitation stands, and you have my hospitality regardless.""",,
 LKEvirensConvOptB,LKEvirensConvOpts,"$global.lke_gotVirensContactFreebie
-!$askedWhyInvite",,,"lke_virensWhyInvite:""Why did you invite me here?""",
-LKEvirensConvOptA,LKEvirensConvOpts,,,,"lke_virensLookingBornanew:""I'm looking for a man called Jethro Bornanew.""",
+!$askedWhyInvite",,,"lke_virensWhyInvite:""为什么邀请我来？""",
+LKEvirensConvOptA,LKEvirensConvOpts,,,,"lke_virensLookingBornanew:""我在找一个叫 Jethro Bornanew 的人。""",
 LKEvirensConvOptC,LKEvirensConvOpts,"$player.shotSedge
 !$askedWhySidearm
-!$askedWhyKillSedge",,,"lke_virensAskSidearm:""Why did you take my sidearm?""",
-LKEvirensConvOptD,LKEvirensConvOpts,!$askedWhyKillSedge,,,"lke_virensPoliteSedge:""You're a lot more polite than Sedge.""",
+!$askedWhyKillSedge",,,"lke_virensAskSidearm:""你为什么收走了我的随身武器？""",
+LKEvirensConvOptD,LKEvirensConvOpts,!$askedWhyKillSedge,,,"lke_virensPoliteSedge:""你比 Sedge 要有礼节多了。""",
 LKEvirensConvOptE,LKEvirensConvOpts,"$askedWhyKillSedge
 !$askedWhySedgeAlly",,,"lke_virensAskSedgeAlly:""How does a man like you ally yourself with a man like Sedge?""",
-LKEvirensConvOptF,LKEvirensConvOpts,$didNotSit,,,lke_virensSitForTea:Sit and take a cup of tea,
+LKEvirensConvOptF,LKEvirensConvOpts,$didNotSit,,,lke_virensSitForTea:坐下并来上杯茶,
 LKEvirensSitForTea,DialogOptionSelected,$option == lke_virensSitForTea,"RemoveOption lke_virensSitForTea
 unset $didNotSit
 AdjustRepActivePerson WELCOMING 1","Virens acknowledges your act with a nod, and raises his cup to you before sipping some tea.",,
@@ -6293,7 +6291,7 @@ LKEvirensPoliteSedgeMoreB,LKEvirensPoliteSedgeFollowup,$global.sedgeSmashedTea,"
 FireBest DialogOptionSelected","""I am told that Sedge became... agitated. He was quick to anger, and quick to demonstrate that anger.""",,
 LKEvirensPoliteSedgeMoreC,LKEvirensPoliteSedgeFollowup,"!$global.lke_sedgeKilledMammonite
 !$global.sedgeSmashedTea","$option = lke_virensWhyKillSedge 0
-FireBest DialogOptionSelected","""I knew Sedge to be crude, and to be cruel.""",,
+FireBest DialogOptionSelected","""我知道 Sedge 为人粗鲁，同时也很残忍。""",,
 LKEvirensPoliteSedgeMoreD,DialogOptionSelected,"$option == lke_virensWhyKillSedge
 !$player.shotSedge","$askedWhyKillSedge = true 0
 FireAll LKEvirensConvOpts","Virens looks thoughtfully at his tea like something is wrong with it, something ineffable.",,"# Virens' mouth draws a thin line. ""If you wish to talk of that, then we shall,"" he says, putting his teacup down. 
@@ -6348,7 +6346,7 @@ Just the hint of an unexpected smile lingers.","lke_virensKillSedgeKilledMe3:""I
 LKEvirensKillSedgeKilledMe2,DialogOptionSelected,$option == lke_virensKillSedgeKilledMe2,,"""The thought had crossed my mind,"" he admits. ""But I think it would bring much trouble. And... I want to see what happens.""","lke_virensKillSedgeKilledMe3:""I'm glad we cleared that up.""",
 LKEvirensKillSedgeKilledMe3,DialogOptionSelected,$option == lke_virensKillSedgeKilledMe3,"$option = lke_virensWhyKillSedgeOut 0
 FireBest DialogOptionSelected","""I as well,"" he says.",,
-LKEvirensKillSedgeTea,DialogOptionSelected,$option == lke_virensKillSedgeTea,$player.ethosRuthless++,"""You killed a man over a cup of tea?"" Virens' composure cracks for a moment in sheer disbelief.",lke_virensKillSedgeTea2:继续,
+LKEvirensKillSedgeTea,DialogOptionSelected,$option == lke_virensKillSedgeTea,$player.ethosRuthless++,"""你杀了个人就因为一杯茶？"" 因为太过难以置信，Virens那镇定自若的神色从他脸上消失了那么一小会儿。",lke_virensKillSedgeTea2:继续,
 LKEvirensKillSedgeTea2,DialogOptionSelected,$option == lke_virensKillSedgeTea2,,"""I understand that Sedge could be rude, yes, and even offensive. But,"" he shakes his head. ""Death is not a thing to administer lightly.""
 
 You are certain he has made such administrations himself.","lke_virensKillSedgeKilledMe2tea:""So are you thinking about killing me?""
@@ -8147,8 +8145,8 @@ FireBest COB_ConfirmOptions",,,
 cob_confirmOpts,COB_ConfirmOptions,,,,"COB_confirmAction:继续
 COB_cancelAction:放弃",
 cob_confirmOptsBurstNo,COB_ConfirmOptions,"$cob_action == burst
-!Objectives canBurst",SetEnabled COB_confirmAction false,You do not have the resources required to proceed.,"COB_confirmAction:Proceed
-COB_cancelAction:Never mind",
+!Objectives canBurst",SetEnabled COB_confirmAction false,你没有足够的所需资源来继续。,"COB_confirmAction:继续
+COB_cancelAction:取消",
 cob_neutrinoBurst,COB_ConfirmPrompt,$cob_action ==  burst,"Highlight $COB_burstRange
 Objectives showBurstCost",$shortName 能够被超载并往超空间释放一次中微子爆发，借此获取有价值的超空间地形数据，并探测 $COB_burstRange 光年范围中的超空间滑流。,,
 cob_salvageMakeshift,COB_ConfirmPrompt,"$cob_action == salvage
@@ -11388,9 +11386,9 @@ gaFCReturnToAcademy12b,DialogOptionSelected,$option == gaFC_return12b,,"Gargoyle
 Baird 没有理他，她点了点一个数据平板，全息投影仪投射出了一个三维的网状结构地图。你认出了这张图片：这是人之领星门网络在英仙座星域的结构图。在一片很显眼的区域中交织出的密集点就是被人称为核心世界的地方。
 
 ""更准确地说，是为了星门能做到的事。"" Baird 说。",gaFC_return13b:继续,
-gaFCReturnToAcademy13b,DialogOptionSelected,$option == gaFC_return13b,,"Gargoyle speaks up again, more earnest somehow than usual ""Freedom! Imagine that, $playerFirstName. The technology the Domain used to enslave humanity - liberated! The small minds that rule us, they're all still shackled by Domain-mindset. All alike in their own way, Tri-Tach, Ludders, the Hegemony; soulless minions of orthodoxy, all of them!""
+gaFCReturnToAcademy13b,DialogOptionSelected,$option == gaFC_return13b,,"Gargoyle 又开口了，以不知怎么地比平时更认真的口气说道：""自由！想象一下，$playerFirstName。人之领用来奴役人类的技术 —— 获得了解放！那些统治我们的家伙依然被人之领时代的思维束缚着，它们也总想着用自己的思维去束缚别人，速子科技、卢德教会、霸主，全都是没有灵魂的奴才！""
 
-""Imagine if we took that all away from them, imagine if anyone could go anywhere and do anything!"" Gargoyle cackles, rocking back and forth.",gaFC_return14b:继续,
+""想象一下我们把他们的美梦打碎的情境，想象一下，任何人都可以去任何地方做任何事的时代！"" Gargoyle 咯咯地笑了起来，身体前后摇晃着。",gaFC_return14b:继续,
 gaFCReturnToAcademy14b,DialogOptionSelected,$option == gaFC_return14b,"$global.gaFC_completed = true
 Call $global.gaFC_ref updateStage","你注意到 Baird 在对方演讲时面无表情地看着 Gargoyle。当 Gargoyle 被数据平板分散了注意力安静下来时，院长用一种命令般的语气对你说：""一周左右后回来，舰长。我的人需要时间工作，你则应该休息一下。""
 
@@ -18821,11 +18819,11 @@ extrBlurb2,extr_blurb,$extr_variation == PIRATE_BASE,,"""指挥部分配给我�
 extrOfferOption2,extr_option,$extr_variation == PIRATE_BASE,,,"extr_start:询问涉及海盗的""非常规撤离""任务",
 extrBlurb3,extr_blurb,$extr_variation == LUDDIC_PATH_BASE,,"""指挥部给了我一个高度敏感的任务。由于...宗教因素，你这种独立的混合能力单位最适合执行它。""",,
 extrOfferOption3,extr_option,$extr_variation == LUDDIC_PATH_BASE,,,"extr_start:询问涉及左径的 ""非常规撤离"" 任务",
-extrBlurbBar1,extr_blurbBar,$extr_variation == COLONY,,"一个紧张的学员，拿着酒接近你，""呃，长官。我...呃，那边的$extr_manOrWoman想要和您说句话。＂学员往酒吧阴暗角落瞥了一眼。",,
+extrBlurbBar1,extr_blurbBar,$extr_variation == COLONY,,"一个紧张的学员拿着酒靠近你，""呃，舰长。我的...呃我是说那边的$extr_manOrWoman想要和您说句话。"" 学员往酒吧阴暗角落瞥了一眼。",,
 extrOfferOptionBar1,extr_optionBar,$extr_variation == COLONY,,,extr_startBar:与学员介绍的$extr_manOrWoman交谈,
-extrBlurbBar2,extr_blurbBar,$extr_variation == PIRATE_BASE,,"一个紧张的学员，拿着酒接近你，""呃，长官。我...呃，那边的$extr_manOrWoman想要和您说句话。＂学员往酒吧阴暗角落瞥了一眼。",,
+extrBlurbBar2,extr_blurbBar,$extr_variation == PIRATE_BASE,,"一个紧张的学员拿着酒靠近你，""呃，舰长。我的...呃我是说那边的$extr_manOrWoman想要和您说句话。"" 学员往酒吧阴暗角落瞥了一眼。",,
 extrOfferOptionBar2,extr_optionBar,$extr_variation == PIRATE_BASE,,,extr_startBar:与学员介绍的$extr_manOrWoman交谈,
-extrBlurbBar3,extr_blurbBar,$extr_variation == LUDDIC_PATH_BASE,,"一个紧张的学员，拿着酒接近你，""呃，长官。我...呃，那边的$extr_manOrWoman想要和您说句话。＂学员往酒吧阴暗角落瞥了一眼。",,
+extrBlurbBar3,extr_blurbBar,$extr_variation == LUDDIC_PATH_BASE,,"一个紧张的学员拿着酒靠近你，""呃，舰长。我的...呃我是说那边的$extr_manOrWoman想要和您说句话。"" 学员往酒吧阴暗角落瞥了一眼。",,
 extrOfferOptionBar3,extr_optionBar,$extr_variation == LUDDIC_PATH_BASE,,,extr_startBar:与学员介绍的$extr_manOrWoman交谈,
 extrOfferTextBar1,DialogOptionSelected,"$option == extr_startBar
 $extr_variation == COLONY","$missionId = extr
@@ -23632,7 +23630,7 @@ FireAll PSKMercOptions","""Comms open to captain of independent $shipOrFleet."" 
 
 ""You may now go,"" the merc flicks a hand dismissively. ""We shall see to the safety of this and nearby systems.""",,
 PSKMercOptionsNoncommital,PSKMercOptions,,,,"pskMerc_noncommital:""Thanks for the warning.""",
-PSKMercOptionsAttack,PSKMercOptions,,,,pskMerc_attack:Cut the comm link and power up weapons,
+PSKMercOptionsAttack,PSKMercOptions,,,,pskMerc_attack:切断通讯链接并将武器充能,
 PSKMercOptionsThreaten,PSKMercOptions,,,,"pskMerc_threaten:""That station is my concern only. It is you who shall leave. Now.""",
 PSKMercOptionsStory,PSKMercOptions,,"SetStoryOption pskMerc_story ui_char_spent_story_point ""Talked a bounty hunter out of attacking a pirate base you had an agreement with""",,"pskMerc_story:""That may not be a good idea."" (talk them out of it)",
 PSKMercOptionsCutLink,PSKMercOptions,,,,cutCommLink:切断通讯链接,
@@ -24561,7 +24559,7 @@ $player.turnedInPlanetkiller = true
 PK_CMD giveExecutor $removeSpecialModifications
 $global.gavePKtoDiktat = true
 $global.soldPKtoDiktatForExecutor = true
-unset $global.preparingExecutor","""一切就绪了，"" $heOrShe冷笑着说，""执政官级战列舰，这可是一艘设计富有美感，充斥着伟大远见，远超你心智理解能力的尖端造物。""
+unset $global.preparingExecutor","""一切就绪了，"" $heOrShe冷笑着说，""执行官-级战列舰，这可是一艘设计富有美感，充斥着伟大远见，远超你心智理解能力的尖端造物。""
 
 $HeOrShe旋即切断了通讯链接，留下一名困惑但忠诚无疑的下级军官来做出实际安排。一支技术小队接管了行星杀手，并把它从你的$shipOrFleet移送给辛达强权保管。
 
