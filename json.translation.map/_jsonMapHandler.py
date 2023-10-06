@@ -93,7 +93,10 @@ class MapItem(object):
 
         print("开始更新映射...")
         if os.path.isfile(self.item_map_file):
-            item_map_json = json5.load(open(self.item_map_file, 'r', encoding='utf-8'))
+            try:
+                item_map_json = json5.load(open(self.item_map_file, 'r', encoding='utf-8'))
+            except:
+                item_map_json = {}
         else:
             item_map_json = {}
 
