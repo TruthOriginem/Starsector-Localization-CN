@@ -3106,7 +3106,7 @@ SetPersonHidden jaspis false
 AddStoryPoints 1
 AddTextSmall ""获得了 Sophronia Jaspis 的通讯 ID"" highlight","你起身离开，给 Jaspis 大祭司留下静心读书的空间。
 
-穿着长袍、说话轻声细语的圣务侍摸出了个和他自己的形象很不搭调的数据板，将大祭司的通讯 ID 调给了你 —— 至少是她办公室的 —— 然后让面无表情的 Ailanthus 骑士将你护送回穿梭机处。
+穿着长袍、说话轻声细语的圣务侍摸出了个和他自己的形象很不搭调的数据平板，将大祭司的通讯 ID 调给了你 —— 至少是她办公室的 —— 然后让面无表情的 Ailanthus 骑士将你护送回穿梭机处。
 
 你返航的过程平安顺利。",,
 ,,,,,,
@@ -3221,7 +3221,7 @@ lppVolturnOfficialLie1,DialogOptionSelected,$option == lpp_volturnOfficialLie1,,
 ""我必须...必须请示一下..."" 他开始胡乱摸索他的数据平板。","lpp_volturnOfficialLie1b:""那可就大错特错了。""",
 lppVolturnOfficialLie1b,DialogOptionSelected,$option == lpp_volturnOfficialLie1b,,"维持着四目相接的状态，你伸出一只手稳稳地按住了他的数据平板。
 
-""这会惊动那些叛徒，毕竟他们可是渗透进了..."" 你冲着他的脚啐了一口，""...所谓的本地安保。我本该把你直接枪毙。""",lpp_volturnOfficialLie1c:松开你的防身武器,
+""这会惊动那些叛徒，毕竟他们可是渗透进了..."" 你冲着他的脚啐了一口，""...所谓的本地安保。我本该把你直接枪毙。""",lpp_volturnOfficialLie1c:松开你的随身武器,
 lppVolturnOfficialLie1c,DialogOptionSelected,$option == lpp_volturnOfficialLie1c,,"""我是忠诚的，我是忠诚的！"" 他大喊着，冷汗从脸上滑落，""我发誓！""
 
 他几乎是呜咽着把自己的反应压了下去，然后用小声询问道：""这是否...是一次考验？敢问是哪位派您来...""","lpp_volturnOfficialLie2:""是上级的意思，最上级。头等要务。你需要知道的就这么多。""",
@@ -3291,7 +3291,7 @@ SetPersonHidden standfast false
 $player.metStandfast = true
 FireAll LPPVolturnCurateResponses1","你走到桌前，倒了杯茶。她睁开双眼，从手制斗篷下面撤出一把手枪 —— 
 
-然后，她把它收进了枪套。
+然后，她把枪收进了枪套。
 
  ""你喝茶这么急，我都不忍心开枪了。没事，请自便吧。"" ",,
 lppVolturnShrineFirstVisit3d,DialogOptionSelected,$option == lpp_volturnShrineFirstVisit3d,"BeginConversation standfast False False
@@ -3357,12 +3357,12 @@ lppVolturnCurateAskSeeShrine,DialogOptionSelected,$option == lpp_volturnCurateAs
 
 "" Simon ？"" 她对你身后的某个人说到，""你也可以放下枪了。""
 
-你转身一瞧，发现 Simon 照做了，还向你微微致以歉意的半礼。祭司微笑着，张开双手为你展示通往内部 圣地 的道路。",lpp_volturnShrineFirstVisit4:继续,
+你转身一瞧，发现 Simon 照做了，还向你微微致以歉意的半礼。祭司微笑着，张开双手为你展示通往内部圣地的道路。",lpp_volturnShrineFirstVisit4:继续,
 lppVolturnCurateAskPilgrim,DialogOptionSelected,$option == lpp_volturnCurateAskPilgrim,$player.luddicAttitudeFaithful++,"""那么，""她说，""我就带你去吧。""
 
 "" Simon ？"" 她对你身后的某个人说到，""你也可以收起武器了。""
 
-你转身一瞧，发现 Simon 照做了，还向你微微致以歉意的半礼。祭司微笑着，张开双手为你展示通往内部 圣地 的道路。",lpp_volturnShrineFirstVisit4:继续,
+你转身一瞧，发现 Simon 照做了，还向你微微致以歉意的半礼。祭司微笑着，张开双手为你展示通往内部圣地的道路。",lpp_volturnShrineFirstVisit4:继续,
 lppVolturnCurateAskPilgrimSD,DialogOptionSelected,"$option == lpp_volturnCurateAskPilgrim
 $player.fcm_faction == sindrian_diktat","$option = lpp_volturnCurateAskSeeShrine 0
 FireBest DialogOptionSelected","""朝圣者？你？"" 她看起来很迷惑。",lpp_volturnShrineFirstVisit4:继续,
@@ -3429,7 +3429,7 @@ lppVolturnShrineFirstVisit4,DialogOptionSelected,$option == lpp_volturnShrineFir
 ShowImageVisual volturn_shrine
 FireAll LPPVolturnCurateResponses2","不到一小时，你已深入海底，抵达 Voltrun 的卢德 圣地。那是一个潮湿的探测舱室，位于改良型钻井的末端，嘎吱作响，令人不安，如同刺入 Volturn 深处的长喙。
 
-这里还填满了枪支，炸药，榴弹，弹匣。板条箱和架子高高堆起，让本就狭小的空间愈发拥挤。那圆形的 金刚石方窗 观察口，将亿万吨水体阻隔在外，其下的空地上布置着一个小小的圣地。一些蜡烛在它们那一排排熄灭的同道之中挣扎着，闪烁出恰到好处的微光。
+这里还填满了枪支，炸药，榴弹，弹匣。板条箱和架子高高堆起，让本就狭小的空间愈发拥挤。那圆形的金刚石方窗观察口，将亿万吨水体阻隔在外，其下的空地上布置着一个小小的圣地。一些蜡烛在它们那一排排熄灭的同道之中挣扎着，闪烁出恰到好处的微光。
 
 这里有一些勉强算是朝圣者的人，他们安静地交谈和祈祷着，未经清洗的身躯散发着汗水和烟熏的气息。神龛祭司用已燃的烛火点亮了另一支，也给你一支让你跟上。",,
 lppVolturnCurateResponses2a,LPPVolturnCurateResponses2,"!$commentedOnWeapons
@@ -3506,7 +3506,7 @@ lppVolturnShrineRevisit2,DialogOptionSelected,$option == lpp_volturnShrineRevisi
 
 尽管这不合常理，你还是进入了 圣地。它安置在一个潮湿的探测舱室，位于改良型钻井的末端，嘎吱作响。塞满武器弹药的板条箱和架子高高堆起，朝圣者和义军摩肩接踵。他们安静地交谈和祈祷着，未经清洗的身躯散发着汗水和烟熏的气息。
 
-那圆形的 金刚石方窗 观察口，将海洋深处那粉碎性的重压阻隔在外，其下的空地上布置着圣地的核心。一些蜡烛在它们那一排排熄灭的同道之中挣扎着，闪烁出恰到好处的微光。一如既往，神龛祭司用已燃的烛火点亮了另一支，也给你一支让你跟上。","lpp_volturnShrineRevisitCandle:点亮一支蜡烛
+那圆形的金刚石方窗观察口，将海洋深处那粉碎性的重压阻隔在外，其下的空地上布置着圣地的核心。一些蜡烛在它们那一排排熄灭的同道之中挣扎着，闪烁出恰到好处的微光。一如既往，神龛祭司用已燃的烛火点亮了另一支，也给你一支让你跟上。","lpp_volturnShrineRevisitCandle:点亮一支蜡烛
 shrineDoLeave:离开",
 lppVolturnShrineRevisitCandle,DialogOptionSelected,$option == lpp_volturnShrineRevisitCandle,,你用已燃的烛火点亮了另一支，让它的一位同伴起死回生，薪火相传。,shrineDoLeave:离开,
 lppVolturnShrineRevisitSD2,DialogOptionSelected,"$option == lpp_volturnShrineRevisit1
@@ -3560,9 +3560,9 @@ PrintDescription 3
 FireAll PopulateKillaOptions",你的穿梭机返回了你在轨道上的 $shipOrFleet。,,
 lppKillaVisitStart2Follow,DialogOptionSelected,$option == lpp_killaVisitStartFollow,"HideVisual
 ShrineCMD playMusic",你沿着前人走过的路来到气闸前。你拉开依然健在的手动操纵装置，露出一个十分宽阔的漆黑洞口。,lpp_killaOssuary1:走进去,
-lppKillaOssuary1,DialogOptionSelected,$option == lpp_killaOssuary1,,"室内气体稀薄，一切看起来乏善可陈。幽灵似的尘埃，如面纱般在 圣地 的静电场中飘摇，克服了这个世界的低重力，在几近真空的环境中悬浮着。
+lppKillaOssuary1,DialogOptionSelected,$option == lpp_killaOssuary1,,"室内空气稀薄，可以说是没有。幽灵似的尘埃，如面纱般在圣地的静电场中飘摇，克服了这个世界的低重力，在几近真空的环境中悬浮着。
 
-你激活了简陋的中继器，一位不知名的 卢德 神父所朗诵的导言开始广播：
+你激活了简陋的中继器，一位不知名的卢德神父所朗诵的导言开始广播：
 
 ""铸剑为犁，逝者安息。我等虔诚祷告，谨遵卢德神启...""",lpp_killaOssuary2:环顾四周,
 lppKillaOssuary2,DialogOptionSelected,$option == lpp_killaOssuary2,ShowImageVisual killa_shrine,"藏骨堂由深埋地下的船体改造而来，与错落有致的建筑粗略地焊成一体。这里找不到任何平整的表面，而那些面目全非，破碎不堪的符号和字迹，已然遮盖了被人遗忘的舱室功能 —— ""船员宿舍""，""连接点""，""循环前清洁站""等等。
@@ -3684,9 +3684,9 @@ lppKillaOssuaryWait,DialogOptionSelected,$option == lpp_killaShrineStayAWhile,,"
 
 尘埃之流缓缓搏动，有如庞然大物吞吐的气息。",lpp_killaShrineFirstLeaveStart:返回你的穿梭机,
 lppKillaShrineVisitAgain1,DialogOptionSelected,$option == lpp_killaShrineVisitAgain1,"ShrineCMD playMusic
-ShowImageVisual killa_shrine","尘埃如面纱般在 圣地 的静电场中飘摇，克服了这个世界的低重力，在几近真空的环境中悬浮着。
+ShowImageVisual killa_shrine","尘埃如面纱般在圣地的静电场中飘摇，克服了这个世界的低重力，在几近真空的环境中悬浮着。
 
-你激活了简陋的中继器，一位不知名的 卢德 神父所朗诵的导言开始广播：
+你激活了简陋的中继器，一位不知名的卢德神父所朗诵的导言开始广播：
 
 ""铸剑为犁，逝者安息。我等虔诚祷告，谨遵卢德神启...""",lpp_killaShrineVisitAgain2:继续,
 lppKillaShrineVisitAgain2,DialogOptionSelected,$option == lpp_killaShrineVisitAgain2,,"在一片幽暗中，你渐渐辨认出空洞的眼窝，肋骨架，以及数之不尽的股骨和脊椎，它们一团团簇拥在壁龛里，在墙角里，在拆掉舱门的储物间里。
@@ -3781,9 +3781,9 @@ $Rank $personName 忙着组织事后的逮捕行动，但当你离开此地去�
 lppJangalaProtestMarinesHelpHegNo,DialogOptionSelected,$option == lpp_jangalaProtestMarinesHelpNo,FireAll PPJangalaProtestResponses,"$rank 心烦意乱地点了点头，""如你所愿，舰长。""",,
 lppJangalaProtestInfo,DialogOptionSelected,$option == lpp_jangalaProtestInfo,"$askedProtestInfo = true 0
 ShrineCMD addIntel
-FireBest PPJangalaProtestInfoAsked","""这里不行，"" $heOrShe 说，视线并没有离开抗议者。""从表面上来说，是为了欣赏当地的植物。我根本不理解，你都想不到这玩意毒性有多强。这玩意暴露在空气中的剧烈排毒就好比把整整一周的痛苦宿醉聚集在一两天之内。"" $HeOrShe 摇了摇头。""至少他们给我的感觉就是这样的，或许他们热衷于受苦。卢德保佑。上面说我们要迁就他们。这就是政治，对吧？""
+FireBest PPJangalaProtestInfoAsked","""有，不过不在这里，"" $heOrShe说，视线并没有离开抗议者，""是在地表上，朝圣者们喜欢在那欣赏当地的植物。我不理解。你想象不到那些玩意的毒性有多强。人体暴露在那种环境中后，后续的排毒过程十分痛苦，好比是把整整一周的宿醉压缩到一至两天。"" $HeOrShe摇了摇头。""反正我的亲身体验就是这样的。可能这帮人就是喜欢受苦吧。这就是卢德信徒。上面的人说我们必须迁就他们。这就是政治，对吧？""
 
-通讯器出现了一段乱码， $post 给出了一个简短的回答。""如果你想想看看接下来会发生什么，宪兵马上就到了,"" $heOrShes 说。",,
+通讯器中传来一阵噪声，$post给出了一个简短的回答。""如果你想想看看接下来会发生什么，宪兵马上就到了。"" $heOrShe说。",,
 lppJangalaProtestInfoHegComDT1,PPJangalaProtestInfoAsked,"$player.fcm_faction == hegemony
 !$didDoubleTake","$option = lpp_jangalaProtestInfoHegCom 0
 $didDoubleTake = true 0","突然 $rank 愣了一下，然后露出了吃惊的表情。 ""$playerName ?那是你，对不对？现役辅助军，对吧？当你进入轨道站的时候，触发了一个警报。""",,
@@ -3901,7 +3901,7 @@ ShowLargePlanet
 ShrineCMD playMusic","青翠的 Jangala 大陆在你的脚下肆意生长，巨型的云层在你的头顶上慵懒地翻腾着。
 
 炽热的轨道激光从 Jangala 空间站中喷涌而出，在大气层中划出一道道炫目的等离子体。燃烧的辉光和云层中的闪电交相辉映，照亮了下面那些如山峦般厚重的云层。",lpp_JangalaFirstVisit2:继续,
-lppJangalaFirstVisit2,DialogOptionSelected,$option == lpp_JangalaFirstVisit2,,"伴随着时高时低的噪音，你的穿梭机抵达了真实大气的边缘，一瞬间消失在云层之中。在观察窗之外，人眼的可见度几乎为零。当穿梭机开始着陆时，由于导航规则和礼貌的要求，其下降速度远低于音速，你的观察窗逐渐布满移动着的水滴。
+lppJangalaFirstVisit2,DialogOptionSelected,$option == lpp_JangalaFirstVisit2,,"伴随着时高时低的噪音，你的穿梭机抵达了真实大气的边缘，一瞬间消失在云层之中。在观察窗之外，人眼的能见度几乎为零。当穿梭机开始着陆时，由于导航规则和礼貌的要求，其下降速度远低于音速，你的观察窗逐渐布满移动着的水滴。
 
 水滴呈现出一种奇怪的赭色，而云层上方又是病态的绿色。你对此有所耳闻：这是大气中细小的类孢子的东西。","lpp_JangalaFirstVisit3:继续
 lpp_JangalaFirstVisit2b:查阅这些孢子的长期影响",
@@ -4950,17 +4950,17 @@ $option = lke_chalcedonBarSedge0 0
 FireBest DialogOptionSelected",,,"# you've bothered VIPS, but no meeting is set up"
 lkeAskChalcedonBarPrompt,AddBarEvents,"$market.id == chalcedon
 Call $global.lke_ref updateData
-$lke_stage == GO_TO_CHALCEDON","AddBarEvent LKEchalcedon_barEvent ""Find someone well-connected to bribe for information on Bornanew"" ""There are many here who make 'arrangements' between Pathers and the black market merchants, mercenaries, and bounty hunters who might have difficulty openly dealing with them. Perhaps one can get your information on Jethro Bornanew.""",,,
+$lke_stage == GO_TO_CHALCEDON","AddBarEvent LKEchalcedon_barEvent ""找个门路宽广的人贿赂一番，以此打探 Bornanew 的消息"" ""这儿有不少给人 '安排事情' 的家伙，对象包括左径分子，黑市商人，佣兵，还有那些不方便与他们公开交易的赏金猎人。或许其中就有人能给你找到 Jethro Bornanew 的消息。""",,,
 lkeAskChalcedonBarPromptWaiting,AddBarEvents,"$market.id == chalcedon
 $market.lke_searchForBornanew
 $market.lkeMeetingSet
 $market.lkeMeetingWait
 Call $global.lke_ref updateData
-$lke_stage == CONTACT_RECRUITER",,"You have a meeting scheduled with a Mammonite to talk with a third party who might know something about Jethro Bornanew, but it is not yet the agreed upon time.",,
+$lke_stage == CONTACT_RECRUITER",,你有一个日程安排，准备同一个玛门之仆一起，和某位可能了解 Jethro Bornanew 的人会面。但现在还没到约定的时间。,,
 lkeAskChalcedonBarStartB,DialogOptionSelected,"$option == LKEchalcedon_barEvent
-$market.lkeBuggedVIPs > 1",,"A simple, steaming cup of tea is placed before you with a subtle hint from the proprietor that you need but ask and something much stronger will arrive in a teapot.
+$market.lkeBuggedVIPs > 1",,"一杯冒着热气的清茶摆在你面前。店主微妙地暗示你，你只需要示意一下，茶壶里就会有更强劲的东西。
 
-Before you can make a proper assessment of the colorful figures who tend to populate this sort of establishment, a man sits next to you with casual self-assurance, takes your tea, and downs the entire cup in one go.","lke_chalcedonBarSedge1:继续
+在你对这个地方形形色色的居民做出适当的评价前，一个男人自信且放松的坐在了你旁边，拿过你的茶，一口气喝完。","lke_chalcedonBarSedge1:继续
 lke_chalcedonBarSedge1b:""嘿，那是我的茶！""",
 lkeAskChalcedonBarStartB2,DialogOptionSelected,$option == lke_chalcedonBarSedge1b,"$option = lke_chalcedonBarSedge1 0
 FireBest DialogOptionSelected",,,
@@ -4971,67 +4971,65 @@ lkeChalcedonAskBarOptA,LKEchalcedonAskBarOpts,,,,"lke_chalcedonBarAskSomeone:""�
 lkeChalcedonAskBarOptB,LKEchalcedonAskBarOpts,,,,"lke_chalcedonBarAskRec:""我在找为左径招募的人。""",
 lkeChalcedonAskBarOptC,LKEchalcedonAskBarOpts,,,,"lke_chalcedonBarAskBornanew:""我在找 Jethro Bornanew。""",
 lkeChalcedonAskBarOptD,LKEchalcedonAskBarOpts,,,,lke_barEnd:感谢他为你抽出的时间并离开。,
-lkeChalcedonAskBarRespA,DialogOptionSelected,$option == lke_chalcedonBarAskSomeone,RemoveOption lke_chalcedonBarAskSomeone,"The Mammonite chuckles darkly, shaking his head. ""Captain $playerFirstName. This is Chalcedon; everyone maybe has joined the Path. You must be more specific, much more.""
+lkeChalcedonAskBarRespA,DialogOptionSelected,$option == lke_chalcedonBarAskSomeone,RemoveOption lke_chalcedonBarAskSomeone,"玛门之仆微微笑了笑，摇了摇头。 ""$playerFirstName 舰长。这里是 Chalcedon，也许每个人都是左径信徒。你必须描述得更详细些，非常详细。"" 
 
-At your hesitation, he continues, ""You must trust me, just a little, yes? If you don't tell me what you need, then I cannot provide.""",,
-lkeChalcedonAskBarRespB,DialogOptionSelected,$option == lke_chalcedonBarAskRec,,"""Looking for."" He raises his eyebrows. ""There are many ways of looking for a person, you know. Some look to talk; some to deal.""
+在你犹豫的时候，他继续说:  ""你必须相信我，哪怕一点点，好吗？如果你不告诉我你需要什么，我就无法提供任何信息。"" ",,
+lkeChalcedonAskBarRespB,DialogOptionSelected,$option == lke_chalcedonBarAskRec,," ""找人..."" 他扬起眉毛。""你要知道，找一个人可以有很多种目的。比如为了交流、为了交易...""
 
-He pours another dram of a foul black market distillate into a teacup. The fumes shimmer as they evaporate.
+他又往茶杯里倒了一杯某种私酒，蒸发的烟雾闪闪发光。
 
-""Some look to kill."" He eyes you for a moment, holding the teacup, then pours it down his throat, coughs, and slams the cup back on the table. ""I mention because that? That would cost more.""","lke_chalcedonBarAskInformation:""I'm after information, not killing. It's just talk.""
+ ""抑或是为了杀戮。"" 他看了你一会儿，拿起茶杯一饮而尽，咳嗽了一声，把杯子重重地放在桌子上。 ""知道我为什么说这个吗？因为那得加钱。""","lke_chalcedonBarAskInformation:""I'm after information, not killing. It's just talk.""
 lke_chalcedonBarAskBornanew:""I'm searching for a man called Jethro Bornanew.""",
 lkeChalcedonAskBarRespC,DialogOptionSelected,$option == lke_chalcedonBarAskBornanew,"SetTextHighlights ""5,000""
 AddText ""你有 $player.creditsStrC 可用。""
 SetTextHighlights $player.creditsStrC
 DoCanAffordCheck 5000 lke_chalcedonBarBribe5k
-DoCanAffordCheck 1000 lke_chalcedonBarBribe1kOffer","""Jethro Bornanew,"" the Mammonite repeats as if writing it to permanent memory.
+DoCanAffordCheck 1000 lke_chalcedonBarBribe1kOffer","""Jethro Bornanew。"" 玛门之仆重复着，让自己的记忆更深刻。
 
-""A name is good. Very specific. I can make inquiries."" He smiles, then holds up a finger for the proprietor's attention - another round - then points it at you - you're paying.
+""一个名字。很好，很具体，我可以去打听打听。"" 他微笑着，然后举起一根手指引起店主的注意 —— 再来一杯 —— 然后指指你 —— 你付钱。
 
-""I will set up a meeting with a... friend."" He gives you a look, ""Not a good friend, not too close. Just a talking friend. Good business, you know.""
+""我会安排一场会面....和一个朋友。"" 他看了你一眼，""不是什么好朋友，联系也不怎么紧密，也就随便聊聊天。好生意，你懂的。""
 
-""5,000 credits. You're a big captain, with a big $shipOrFleet. It's nothing, yes?""","lke_chalcedonBarBribe5k:""Agreed.""
+""5,000 星币。你是位有名的舰长，有个大$shipOrFleet 。这对你来说不算什么，对吧？""","lke_chalcedonBarBribe5k:""Agreed.""
 lke_chalcedonBarBribe1kOffer:""It's just talk, how about 1000?""
 llke_chalcedonBarBribeWalk:Decline and leave",
 lkeChalcedonAskBarRespD,DialogOptionSelected,$option == lke_chalcedonBarAskInformation,"SetTextHighlights ""5,000""
 AddText ""你有 $player.creditsStrC 可用。""
 SetTextHighlights $player.creditsStrC
 DoCanAffordCheck 5000 lke_chalcedonBarBribe5k
-DoCanAffordCheck 1000 lke_chalcedonBarBribe1kOffer","""Good, good!"" the Mammonite laughs and holds up a finger for the proprietor's attention - another round - then points it at you - you're paying.
+DoCanAffordCheck 1000 lke_chalcedonBarBribe1kOffer","""很好，很好！"" 玛门之仆笑了，举起一根手指引起店主的注意 —— 再来一杯 —— 然后指指你 —— 你付钱。
 
-""I can set up a meeting, you and... a friend."" He gives you a look, ""Not a good friend, not too close. Just a talking friend. Good business, you know.""
+""我会安排一场会面....和一个朋友。"" 他看了你一眼，""不是什么好朋友，联系也不怎么紧密，也就随便聊聊天。好生意，你懂的。""
 
-""5,000 credits. You're a big captain, with a big $shipOrFleet. It's nothing, yes?""","lke_chalcedonBarBribe5k:""Agreed.""
+""5,000星币。你是有名的舰长，有个大$shipOrFleet 。不算什么，对吧?""","lke_chalcedonBarBribe5k:""Agreed.""
 lke_chalcedonBarBribe1kOffer:""It's just talk, how about 1000?""
 llke_chalcedonBarBribeWalk:Decline and leave",
 lkeChalcedonBarOffer1k,DialogOptionSelected,$option == lke_chalcedonBarBribe1kOffer,"SetTextHighlights ""3,000""
 DoCanAffordCheck 3000 lke_chalcedonBarBribe3k false
 $mamAnnoyedEveryone = true 0
-AdjustRep independent SUSPICIOUS -1","The Mammonite laughs, then stands up to shout for the whole teahouse, ""This one, tough negotiator! Watch out, credits are hidden behind Fortress Shield. No one gets in!"" 
+AdjustRep independent SUSPICIOUS -1","玛门之仆笑了起来，站起来朝着整个茶馆喊到，""这家伙，可不好惹！小心，他把星币藏堡垒护盾后面。谁都拿不走！"" 
 
-Other spacers stare, some murmuring disapproval, others laughing.
+其他太空船员看了过来，一些人喃喃地表达不满，另一些人则大笑。
 
-He sits, rattling the tea-set, and grins at you. ""3,000 credits. Is spacelane robbery, but I like you.""","lke_chalcedonBarBribe3k:""Agreed.""
+他坐下，晃动着茶具，冲你咧嘴笑道，""3,000星币。你像个太空劫匪，但我欣赏你。""","lke_chalcedonBarBribe3k:""Agreed.""
 llke_chalcedonBarBribeWalk:Decline and leave",
 lkeChalcedonBarBribeWalk,DialogOptionSelected,"$option == llke_chalcedonBarBribeWalk
 $mamAnnoyedEveryone","SetTextHighlights ""2,000 credits""
-DoCanAffordCheck 2000 lke_chalcedonBarBribe3k false","The Mammonite laughs, and calls out to you, almost pleading. ""Wait, wait! 2,000 credits. Final offer. It is charity, almost! Very Luddic!""","lke_chalcedonBarBribe2k:""Agreed.""
+DoCanAffordCheck 2000 lke_chalcedonBarBribe3k false","玛门之仆大笑着说，简直像是乞求。""等等，等等！2,000 星币。最终报价。这简直是慈善！非常卢德！""","lke_chalcedonBarBribe2k:""Agreed.""
 lke_barEndOut:Keep walking",
 lkeChalcedonBarBribeWalkB,DialogOptionSelected,"$option == llke_chalcedonBarBribeWalk
 !$mamAnnoyedEveryone","AdjustRep independent SUSPICIOUS -1
 SetTextHighlights ""2,000 星币""
-DoCanAffordCheck 2000 lke_chalcedonBarBribe3k false","The Mammonite laughs, and calls out to you. ""Wait, wait,"" and stands up to shout for the whole teahouse, ""This one, tough negotiator! Watch out, credits are hidden behind Fortress Shield. No one gets in!"" 
-
-Other spaces stare, some murmuring disapproval, others laughing.
-
-The Mammonite sits, rattling the tea-set, and grins at you. ""2,000 credits. Is spacelane robbery, but I like you.""","lke_chalcedonBarBribe2k:""Agreed.""
+DoCanAffordCheck 2000 lke_chalcedonBarBribe3k false","玛门之仆笑了起来，对你说：""等等，等等！"" 他站起来朝着整个茶馆喊到: ""这家伙，不好惹的对手！小心，他把星币藏堡垒护盾后面。谁都拿不走!"" 
+其他太空船员看了过来，一些人喃喃地表达不满，另一些人则大笑。
+他坐下，晃动着茶具，冲你咧嘴笑道: ""2000星币。你像个太空劫匪，但我欣赏你。""","lke_chalcedonBarBribe2k:""Agreed.""
 lke_barEndOut:Keep walking",
 lkeChalcedonBarBribe5k,DialogOptionSelected,$option == lke_chalcedonBarBribe5k,"AddCredits -5000
 $option = lke_chalcedonBarMeetingSet
-FireBest DialogOptionSelected",You transfer the credits to the sticky datapad offered by your new friend.,,
+FireBest DialogOptionSelected",你把星币转账到一个你这新朋友提供的黏糊糊的数据平板上。,,
 lkeChalcedonBarBribe3k,DialogOptionSelected,$option == lke_chalcedonBarBribe3k,"AddCredits -3000
 $option = lke_chalcedonBarMeetingSet
-FireBest DialogOptionSelected",You transfer the credits to the sticky datapad offered by your new friend.,,
+FireBest DialogOptionSelected",你把星币转账到一个你的新朋友提供的黏糊糊的数据平板上。,,
 lkeChalcedonBarBribe2k,DialogOptionSelected,$option == lke_chalcedonBarBribe2k,"AddCredits -2000
 $option = lke_chalcedonBarMeetingSet
 FireBest DialogOptionSelected",你坐了回去并且转账了星币。,,
@@ -12199,7 +12197,7 @@ gaPZ_hegHub1c:拒绝提议，这是原则问题",
 gaPZ_hegHub1b,DialogOptionSelected,$option == gaPZ_hegHub1b,"AdjustRepActivePerson COOPERATIVE 10
 MakeOtherFleetNonHostile gaPZ true
 MakeOtherFleetImportant gaPZ false
-MakeOtherFleetGoAway true","你的战术军官解除了点防御系统，并允许扫描小组的穿梭机着舰。你通过摄像头看到霸主的技术人员走进气闸，在数据板上划了一下，接着便回到了穿梭机上。
+MakeOtherFleetGoAway true","你的战术军官解除了点防御系统，并允许扫描小组的穿梭机着舰。你通过摄像头看到霸主的技术人员走进气闸，在数据平板上划了一下，接着便回到了穿梭机上。
 
 ""谢谢你在这次调查中的合作，舰长。没有发现任何问题，你可以走了。"" $personName $PersonRank 挤出一个细微而讽刺的笑容，说了一句 ""为了人之领"" 并切断了通讯。",cutCommLinkNoText:继续,
 gaPZ_hegHub1c,DialogOptionSelected,$option == gaPZ_hegHub1c,FireAll GAPZHegHub,"这位霸主 $personRank 叹了口气，揉了揉$hisOrHer额头，好像这件事让$himOrHer头很痛一样。""我是想与你合作，舰长。但我不能为了你拿我的职业生涯冒险。""",,
@@ -15105,7 +15103,7 @@ asebGivePlayerNDetectorOnAccept,DialogOptionSelected,"$option == aseb_accept
 $aseb_givePlayerNeutrinoDetector score:1000","Highlight ""中微子探测器""
 Highlight ""挥发物""
 unset $aseb_givePlayerNeutrinoDetector
-AddAbility gravitic_scan","Sebestyen 仿佛想到了某些事情般地跳了起来。""舰长！你也许，呃，我被授权为你提供一个中微子探测器。嗯，技术人员正在把必要的设备转移到你的旗舰上，并且，"" 他敲击着数据板，""我已经把文档发给了你的传感器操作员。""
+AddAbility gravitic_scan","Sebestyen 仿佛想到了某些事情般地跳了起来。""舰长！你也许，呃，我被授权为你提供一个中微子探测器。嗯，技术人员正在把必要的设备转移到你的旗舰上，并且，"" 他敲击着数据平板，""我已经把文档发给了你的传感器操作员。""
 
 ""我们发现中微子探测器在勘探远方星系时非常有用，它能精确定位，唔，各种有趣的事物。它特别适合用来寻找能量源，不过有时会收到假信号。哦，还有件事！我们还没办法很好地闭合等离子反射器上的正反馈回路... 呃，所以必须在你的货舱里准备好额外的挥发物来保持探测器的运行。""",aseb_accept:继续,
 ,,,,,,
@@ -15300,7 +15298,7 @@ gaDAMissionTextBasic,DialogOptionSelected,"$option == gaDA_start
 $gaDA_notRemnants","$missionId = gaDA
 SetTextHighlights $gaDA_dist $gaDA_reward
 $aseb_givePlayerNeutrinoDetector = true 0
-Call $global.gaDA_ref showMap ""目标：$gaDA_systemName ""","""$gaDA_department 需要你出现在 $gaDA_systemName，距离此处 $gaDA_dist 光年，以获取，呃，""他斜视着数据板，""遗弃舰中的 '$gaDA_widget'。
+Call $global.gaDA_ref showMap ""目标：$gaDA_systemName ""","""$gaDA_department 需要你出现在 $gaDA_systemName，距离此处 $gaDA_dist 光年，以获取，呃，""他斜视着数据平板，""遗弃舰中的 '$gaDA_widget'。
 
 我猜它在一艘飞船里？或者在货箱里？反正，据说他们非常清楚它在船体中的确切位置。那应该很简单，对吧？""
 
@@ -15803,7 +15801,7 @@ Call $global.gaProbe_ref updateStage","几分钟后，Sebestyen 重新启动了�
 gaProbeMissionReturnMissing,PickGreeting,"$gaProbe_returnHere score:1000
 Call $global.gaProbe_ref updateData
 $gaProbe_variation == PACKAGE_MISSING
-FireBest ASEBMissionReturn",ShowPersonVisual,"当通讯链接接通时，Sebestyen 从数据板上抬头起来。""舰长！这么快就回来了吗？我还以为你一直在这呢，啊-""他看着你的表情，话音渐弱。
+FireBest ASEBMissionReturn",ShowPersonVisual,"当通讯链接接通时，Sebestyen 从数据平板上抬头起来。""舰长！这么快就回来了吗？我还以为你一直在这呢，啊-""他看着你的表情，话音渐弱。
 
 你向院士解释从探测器上消失的仪器套件情况。
 
@@ -15936,7 +15934,7 @@ gaVIPBlurbMissionTextBasicThreats,DialogOptionSelected,$option == gaVIP_threats,
 ""那么你还有兴趣么？""","aseb_accept:接受
 aseb_decline:拒绝",
 gaVIPBlurbMissionTextKanta,DialogOptionSelected,"$option == gaVIP_start
-$gaVIP_variation == KANTA",$missionId = gaVIP,"""噢。"" Sebestyen 再次看向他手中的数据板。""嗷！我的天。""
+$gaVIP_variation == KANTA",$missionId = gaVIP,"""噢。"" Sebestyen 再次看向他手中的数据平板。""嗷！我的天。""
 
 院士似乎意识到了这个任务的内容，突然，""那是...那个 Kanta，是吗？噢，哇，好吧，学院保证对每一个将他们的年轻学生委托给我们的家庭的安全和信任...我是指，无论是谁。""
 
@@ -16969,7 +16967,7 @@ gaTJBlurb,gaTJ_blurb,,,"""Baird 院长提出了一个请求，请求前往一处
 gaTJOfferOption,gaTJ_option,,,,gaTJ_start:询问关于前往 速子科技 秘密据点接人的事,
 gaTJMissionText,DialogOptionSelected,$option == gaTJ_start,$missionId = gaTJ,"""好的，没问题！"" Sebestyen 紧张地清了清嗓子。
 
-""院长说在你接受任务前，我不应该...呃，不能告诉你目标所在的星系位置。所以...""，他渐渐说不下去了，开始整理桌上的数据板，似乎觉得这样做可能会有点用。所有东西都摆好之后，他别无选择，只能继续说。
+""院长说在你接受任务前，我不应该...呃，不能告诉你目标所在的星系位置。所以...""，他渐渐说不下去了，开始整理桌上的数据平板，似乎觉得这样做可能会有点用。所有东西都摆好之后，他别无选择，只能继续说。
 
 ""这项任务需要...谨慎行事。想必你也知道，在核心星域外，有很多理论上无人占有的星系。如果某个政体希望占领某处，他们必须获得来自人之领的特许，这相当于人之领拥有了此地的管辖权。当然，在人之领消失后，霸主已经自诩为其继承者，并据此开始行使人之领的权力...""",gaTJ_briefing1:继续,
 gaTJMissionText1,DialogOptionSelected,$option == gaTJ_briefing1,,"Sebestyen 注意到你有点走神。
@@ -18439,7 +18437,7 @@ proComDeliverCompletedUnderworld,ProComCompletedText,$proCom_underworld,,"$HeOrS
 OR
 ""好，非常好！""$HeOrShe看起来紧迫的任务更放松些。""你不知道这东西有多重要。""
 OR
-""好极了，任务完成了""$HeOrShe似乎在一个杂牌数据板上输入了某种确认信息，然后回头看你。""就当这事从未发生过。""",,
+""好极了，任务完成了""$HeOrShe似乎在一个杂牌数据平板上输入了某种确认信息，然后回头看你。""就当这事从未发生过。""",,
 # Pirate encounter at some point after accepting the proCom mission,,,,,,
 PROCOMPirateHail,PROCOMPirateHail,,$entity.ignorePlayerCommRequests = true,"""噢，舰长阁下，""海盗 $personRank 的态度看起来几乎就是道歉。""这是关于你已采购的 $proCom_commodityName 的一件事。""$heOrShe甩了甩手，好像这件事没有解释的必要，但$heOrShe考虑到你的木鱼脑袋，还是进行了解释，""您有一位竞争对手派我来传达一条信息...是关于和某个人做生意的风险的。""","cutCommLink2:""原来不是私人恩怨吗？这可真是令人 '欣慰'。""
 cutCommLink:保持沉默",
@@ -22219,7 +22217,7 @@ sdtuUmbraTrickVIPOptionB,SDTUUmbraTrickVIPOptions,,,,"sdtu_umbraTrickVIPB:""Myse
 sdtuUmbraTrickVIPOptionC,SDTUUmbraTrickVIPOptions,,,,"sdtu_umbraTrickVIPC:""Myself. And I hate the Sindrian Diktat."" (lie)",
 sdtuUmbraTrickVIPOptionD,SDTUUmbraTrickVIPOptions,,,,"sdtu_umbraTrickVIPD:""A deep-cover ARC cell you've never heard of."" (lie)",
 sdtuUmbraTrickVIPOptionE,SDTUUmbraTrickVIPOptions,,,,"sdtu_umbraTrickVIPE:""I am of the Luddic faith and I fight our common enemy."" (lie)",
-sdtuUmbraTrickVIPOptionF,SDTUUmbraTrickVIPOptions,$global.lpp_completed,,,"sdtu_umbraTrickVIPF:""I am of the Luddic faith and I fight our common enemy.""",
+sdtuUmbraTrickVIPOptionF,SDTUUmbraTrickVIPOptions,$global.lpp_completed,,,"sdtu_umbraTrickVIPF:""我信仰卢德教，我会与我们共同的敌人战斗。""",
 sdtuUmbraTrickVIPOptionG,SDTUUmbraTrickVIPOptions,$global.gaFC_knowSiyavongContact ,,,"sdtu_umbraTrickVIPG:""Persean League fleet intelligence. My real name is 'Siyavong'."" (lie)",
 sdtuUmbraTrickVIPOptionA2,DialogOptionSelected,$option == sdtu_umbraTrickVIPA,"$global.toldARCplayerIsHegemony
 $player.ethosLiar++
@@ -24476,7 +24474,7 @@ $global.gavePKtoDiktat = true","你遵照 $rank 的要求，允许一支技术�
 
 辛达强权 $rank 眉开眼笑。""狮王对那些为他的伟大事业服务的人很慷慨，并且我 —— 你，肯定会因为你为他的最终胜利做出的小小贡献而得到认可""
 
-最后，带着满意的笑容，$heOrShe正要关闭通讯链接，停顿了一下，然后拍了拍$hisOrHer额头。""我差点忘了你的报酬。"" $heOrShe在数据板上轻轻一点。 ""看到了吗？咱们两个都会因服务于最高元首而得到奖励。""",cutCommLink:切断通讯链接,
+最后，带着满意的笑容，$heOrShe正要关闭通讯链接，停顿了一下，然后拍了拍$hisOrHer额头。""我差点忘了你的报酬。"" $heOrShe在数据平板上轻轻一点。 ""看到了吗？咱们两个都会因服务于最高元首而得到奖励。""",cutCommLink:切断通讯链接,
 pk_diktatComplyHappySel,DialogOptionSelected,$option == pk_diktatComplyHappy,"AddCommodity credits 20000
 AdjustRep sindrian_diktat 10
 AdjustRepActivePerson 10
@@ -25403,7 +25401,7 @@ greetingsMairaathQ1A1,DialogOptionSelected,$option == greetingsAskMairaathGlory,
 
 ""I suppose if you're not from around here, you'd have to have it told.""
 
-""Used to be, Mairaath was a wonder of the Persean Sector. Three great cities in orbit, the Astropoli, and below a wonder of terraforming biotechnology."" Bitterness enters $hisOrHer voice now, ""Some Pathers took offense to people living long and well and without fear of the dark, so... ""","greetingsAskMairaathGlory2:""So... ?""",
+""Used to be, Mairaath was a wonder of the Persean Sector. Three great cities in orbit, the Astropoli, and below a wonder of terraforming biotechnology."" Bitterness enters $hisOrHer voice now, ""Some Pathers took offense to people living long and well and without fear of the dark, so... ""","greetingsAskMairaathGlory2:""所以...？""",
 greetingsMairaathQ1A2,DialogOptionSelected,$option == greetingsAskMairaathGlory2,FireAll PopulateOptions,"""They blew it up,"" $heOrShe says, stone-faced. ""The mad fanatics, they blew it up. Most terrible act of terrorism the Sector has ever had inflicted, if you ask me. Tens of millions dead, all the dreams and world turned to ash. The real miracle is anyone survived."" $HeOrShe indicates $himOrHerself, ""My ancestors did, somehow.""
 
 ""Mayasuran until the end. And beyond the end, because not even the end of our world could kill us all off. Might be living off the scraps, but we're still living.""
