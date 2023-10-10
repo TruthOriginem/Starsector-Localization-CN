@@ -7,7 +7,7 @@ from dataclasses import asdict
 from pathlib import Path
 from typing import Set, Union, List, Dict, Tuple
 
-from para_tranz.utils.config import MAP_PATH
+from para_tranz.utils.config import MAP_PATH, REMOVE_TRANSLATION_WHEN_ORIGINAL_IS_EMPTY
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, CsvMapItem
 from para_tranz.utils.util import relative_path, String, DataFile, contains_chinese, replace_weird_chars, make_logger, \
     contains_english
@@ -94,15 +94,24 @@ class CsvFile(DataFile):
     def update_strings(self, strings: List[String], version_migration:bool=False) -> None:
         for s in strings:
             _, id, column = re.split('[#$]', s.key)
-            if id in self.translation_id_data:
-                # 如果词条已翻译并且译文不为空，则使用新译文覆盖
+            if id in self.translation_id_data and id in self.original_id_data:
+                # 如果词条已翻译并且译文不为空
                 if s.stage > 0 and s.translation:
-                    self.translation_id_data[id][column] = s.translation
+                    if self.original_id_data[id][column] == "":
+                        self.logger.warning(f'文件 {self.path} 中 {self.id_column_name}="{id}" 的行中 "{column}" 列原文为空，'
+                                            f'但更新的译文数据不为空，未更新该词条。原文可能已删除，请考虑删除该译文词条')
+                        if REMOVE_TRANSLATION_WHEN_ORIGINAL_IS_EMPTY:
+                            self.logger.warning(f'已设置 REMOVE_TRANSLATION_WHEN_ORIGINAL_IS_EMPTY 为 True，'
+                                                f'将该译文设为空字符串')
+                            self.translation_id_data[id][column] = ''
+                    else:
+                        # 更新译文数据
+                        self.translation_id_data[id][column] = s.translation
                 elif contains_chinese(self.translation_id_data[id][column]):
                     self.logger.warning(f'文件 {self.path} 中 {self.id_column_name}="{id}" 的行已被翻译，'
                                         f'但更新的译文数据未翻译该词条，保持原始翻译不变')
             else:
-                self.logger.warning(f'在文件 {self.path} 中没有找到 {self.id_column_name}="{id}" 的行，未更新该词条')
+                self.logger.warning(f'在文件 {self.path} 中没有找到 {self.id_column_name}="{id}" 的行，未更新该词条。原文可能已删除，请考虑删除该译文词条')
 
     # 将译文数据写回译文csv中
     def save_file(self) -> None:
