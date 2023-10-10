@@ -701,8 +701,7 @@ FireAll LPTitheOptions","""服从并忏悔！你们需要献上 $entity.LP_tithe
 OR
 ""恶魔摩洛克的奴仆！或许救赎对你们来说还并非遥不可及。献上 $entity.LP_tithe 星币的什一税可以让你踏上卢德之道修行的第一步。""
 
-""放弃这次忏悔的机会将遭受灭顶之灾，来生也必被卢德诅咒。斟酌定夺皆由你。""","payTithe:支付什一税
-cutCommLink:切断通讯链接",
+""放弃这次忏悔的机会将遭受灭顶之灾，来生也必被卢德诅咒。斟酌定夺皆由你。""",,
 LPTitheHasColonies,LPTitheOptions,"!$player.patherAgreement
 HA_CMD computeMegaTithe
 HA_CMD playerColoniesHavePatherActvity",,,"10:payMegaTithe:""说不定一笔更高的什一税可以让我们达成更多的共识。""",
@@ -740,7 +739,7 @@ AddText ""通讯链接还没等你回应就被切断了。""
 ShowDefaultVisual
 EndConversation","""也许你的灵魂还未被机械伪神夺走。""
 OR
-""平心而论，卢德之手刚刚引导了你。""",cutCommLink:切断通讯链接,
+""平心而论，卢德之手刚刚引导了你。""",,
 ,,,,,,
 ,,,,,,
 ,,,,,,
@@ -3358,9 +3357,9 @@ lppVolturnCurateAskSeeShrine,DialogOptionSelected,$option == lpp_volturnCurateAs
 "" Simon ？"" 她对你身后的某个人说到，""你也可以放下枪了。""
 
 你转身一瞧，发现 Simon 照做了，还向你微微致以歉意的半礼。祭司微笑着，张开双手为你展示通往内部圣地的道路。",lpp_volturnShrineFirstVisit4:继续,
-lppVolturnCurateAskPilgrim,DialogOptionSelected,$option == lpp_volturnCurateAskPilgrim,$player.luddicAttitudeFaithful++,"""那么，""她说，""我就带你去吧。""
+lppVolturnCurateAskPilgrim,DialogOptionSelected,$option == lpp_volturnCurateAskPilgrim,$player.luddicAttitudeFaithful++,"""那么..."" 她说，""我就带你去吧。""
 
-"" Simon ？"" 她对你身后的某个人说到，""你也可以收起武器了。""
+""Simon？"" 她对你身后的某个人说到，""你也可以收起武器了。""
 
 你转身一瞧，发现 Simon 照做了，还向你微微致以歉意的半礼。祭司微笑着，张开双手为你展示通往内部圣地的道路。",lpp_volturnShrineFirstVisit4:继续,
 lppVolturnCurateAskPilgrimSD,DialogOptionSelected,"$option == lpp_volturnCurateAskPilgrim
@@ -4857,7 +4856,7 @@ $personPost 在一个控制台上敲了些什么。
 OR
 ""也许你没有发现，但我可是在试着帮你。""
 
-$hisOrHer的表情显得有些紧张，""如果你还没有对卢德的灵光闭紧双眼，你或许就会明白这一点。但骄傲和权势，这些错误的渴望使你误入歧途。""
+$hisOrHer的表情显得有些紧张，""如果你还没有对卢德的灵光闭紧双眼，你或许就会明白这一点。然而对骄傲和权势的错误渴求，使你误入歧途。""
 
 $personPost 在一个控制台上敲了些什么。",lke_chalcedonLookingRecMad1:继续,
 lkeChalcedonLookingRecMad1,DialogOptionSelected,$option == lke_chalcedonLookingRecMad1,"FireBest LKEChalcedonMakeFleetsHostile
@@ -4978,8 +4977,8 @@ lkeChalcedonAskBarRespB,DialogOptionSelected,$option == lke_chalcedonBarAskRec,,
 
 他又往茶杯里倒了一杯某种私酒，蒸发的烟雾闪闪发光。
 
- ""抑或是为了杀戮。"" 他看了你一会儿，拿起茶杯一饮而尽，咳嗽了一声，把杯子重重地放在桌子上。 ""知道我为什么说这个吗？因为那得加钱。""","lke_chalcedonBarAskInformation:""I'm after information, not killing. It's just talk.""
-lke_chalcedonBarAskBornanew:""I'm searching for a man called Jethro Bornanew.""",
+ ""抑或是为了杀戮。"" 他看了你一会儿，拿起茶杯一饮而尽，咳嗽了一声，把杯子重重地放在桌子上。 ""知道我为什么说这个吗？因为那得加钱。""","lke_chalcedonBarAskInformation:""我是来打探消息的，没打算杀人。这只是一次谈话罢了。""
+lke_chalcedonBarAskBornanew:""我在找一个叫 Jethro Bornanew 的人。""",
 lkeChalcedonAskBarRespC,DialogOptionSelected,$option == lke_chalcedonBarAskBornanew,"SetTextHighlights ""5,000""
 AddText ""你有 $player.creditsStrC 可用。""
 SetTextHighlights $player.creditsStrC
@@ -4990,9 +4989,9 @@ DoCanAffordCheck 1000 lke_chalcedonBarBribe1kOffer","""Jethro Bornanew。"" 玛�
 
 ""我会安排一场会面....和一个朋友。"" 他看了你一眼，""不是什么好朋友，联系也不怎么紧密，也就随便聊聊天。好生意，你懂的。""
 
-""5,000 星币。你是位有名的舰长，有个大$shipOrFleet 。这对你来说不算什么，对吧？""","lke_chalcedonBarBribe5k:""Agreed.""
-lke_chalcedonBarBribe1kOffer:""It's just talk, how about 1000?""
-llke_chalcedonBarBribeWalk:Decline and leave",
+""5,000 星币。你是位有名的舰长，有个大$shipOrFleet 。这对你来说不算什么，对吧？""","lke_chalcedonBarBribe5k:""成交。""
+lke_chalcedonBarBribe1kOffer:""这只是谈话罢了，1000 怎么样？""
+llke_chalcedonBarBribeWalk:拒绝并离开",
 lkeChalcedonAskBarRespD,DialogOptionSelected,$option == lke_chalcedonBarAskInformation,"SetTextHighlights ""5,000""
 AddText ""你有 $player.creditsStrC 可用。""
 SetTextHighlights $player.creditsStrC
@@ -5001,9 +5000,9 @@ DoCanAffordCheck 1000 lke_chalcedonBarBribe1kOffer","""很好，很好！"" 玛�
 
 ""我会安排一场会面....和一个朋友。"" 他看了你一眼，""不是什么好朋友，联系也不怎么紧密，也就随便聊聊天。好生意，你懂的。""
 
-""5,000星币。你是有名的舰长，有个大$shipOrFleet 。不算什么，对吧?""","lke_chalcedonBarBribe5k:""Agreed.""
-lke_chalcedonBarBribe1kOffer:""It's just talk, how about 1000?""
-llke_chalcedonBarBribeWalk:Decline and leave",
+""5,000星币。你是有名的舰长，有个大$shipOrFleet 。不算什么，对吧?""","lke_chalcedonBarBribe5k:""成交。""
+lke_chalcedonBarBribe1kOffer:""这只是谈话罢了，1000 怎么样？""
+llke_chalcedonBarBribeWalk:拒绝并离开",
 lkeChalcedonBarOffer1k,DialogOptionSelected,$option == lke_chalcedonBarBribe1kOffer,"SetTextHighlights ""3,000""
 DoCanAffordCheck 3000 lke_chalcedonBarBribe3k false
 $mamAnnoyedEveryone = true 0
@@ -5011,8 +5010,8 @@ AdjustRep independent SUSPICIOUS -1","玛门之仆笑了起来，站起来朝着
 
 其他太空船员看了过来，一些人喃喃地表达不满，另一些人则大笑。
 
-他坐下，晃动着茶具，冲你咧嘴笑道，""3,000星币。你像个太空劫匪，但我欣赏你。""","lke_chalcedonBarBribe3k:""Agreed.""
-llke_chalcedonBarBribeWalk:Decline and leave",
+他坐下，晃动着茶具，冲你咧嘴笑道，""3,000星币。你像个太空劫匪，但我欣赏你。""","lke_chalcedonBarBribe3k:""成交。""
+llke_chalcedonBarBribeWalk:拒绝并离开",
 lkeChalcedonBarBribeWalk,DialogOptionSelected,"$option == llke_chalcedonBarBribeWalk
 $mamAnnoyedEveryone","SetTextHighlights ""2,000 credits""
 DoCanAffordCheck 2000 lke_chalcedonBarBribe3k false","玛门之仆大笑着说，简直像是乞求。""等等，等等！2,000 星币。最终报价。这简直是慈善！非常卢德！""","lke_chalcedonBarBribe2k:""Agreed.""
@@ -8792,16 +8791,12 @@ FireBest DialogOptionSelected
 $player.ethosOrder++",,,
 gaMeetHegLtCoatl3,DialogOptionSelected,$option == coatlOfficer_barEvent3,"$option = coatlOfficer_barEvent4 0
 FireBest DialogOptionSelected
-$player.ethosKnowledge++","上尉沉默了片刻，他看着你。
-
-然后他突然大笑起来，拍了拍你的背。""嘿，我喜欢你，$playerName。如果你哪天回到 Coatl 附近，可以来找我。海军经常会有外包工作，你永远不知道会接到什么。""
-
-他忍不住打嗝，站起身说，""我该去值班了""然后跌跌撞撞地走向洗手间。",backToBar:在酒吧里四处看看,
+$player.ethosKnowledge++",,,
 gaMeetHegLtCoatl4,DialogOptionSelected,$option == coatlOfficer_barEvent4,AdjustRepActivePerson COOPERATIVE 5,"上尉沉默了一会儿，看着你。
 
 然后他突然大笑起来，拍拍你的背。""嘿，我喜欢你，$playerName。如果你什么时候发现自己回到了 Coatl，来找我。海军外派了一些杂活；你永远不知道什么会发生。""
 
-他忍住打嗝然后站起来，""职责召唤""，然后跌跌撞撞地走向厕所。",backToBar:在酒吧里四处看看,
+他忍住打嗝然后站起来，""职责召唤，"" 然后跌跌撞撞地走向厕所。",backToBar:在酒吧里四处看看,
 genericBarEventBackToBar,DialogOptionSelected,$option == backToBar,BarCMD returnFromEvent false,,backToBar:在酒吧里四处看看,
 ,,,,,,
 gaDefaultDescription,GAPostOpen,,"ShowDefaultVisual
@@ -8897,7 +8892,7 @@ She leaves the question hanging in the air for a moment.","0:gaRequestMeeting5a:
 3:gaRequestMeeting5d:""Knowledge brings us closer to the Creator.""
 4:gaRequestMeetingSayNothing:Say nothing",
 gaRequestMeeting4,DialogOptionSelected,"$option == gaRequestMeeting4
-$player.finishedTutorial",$theQuestionWasRhetorical = true 0,"她抢在你说话之前举起一只手。
+$player.finishedTutorial",,"她抢在你说话之前举起一只手。
 
 ""你当然不是来捐款的。那是因为什么呢？因为我非常想了解那位纠正我野心过剩但谨慎不足的前任所造成的不幸局面，日渐崭露头角的雇佣兵舰长。""
 
@@ -9003,10 +8998,7 @@ $global.bairdWantsToTalk score:2000",,"通讯立即被接通了。你看到一�
 就这样，你一句话还没说，通讯就暗了下去。",0:cutCommLink:关闭通讯,
 gaBairdShuttleOption,PopulateOptions,"$id == station_galatia_academy
 $global.bairdWantsToTalk",,,1:gaBairdShuttle:乘坐穿梭机面见 Baird 院长,
-gaBairdShuttleOptionSel,DialogOptionSelected,$option == gaBairdShuttle,"unset $global.bairdWantsToTalk
-unset $global.asebSayBairdWantsToTalk
-$market.gaTTB_completed = true 0
-Call $global.gaTTB_ref updateStage","你看到一位初级学院工作人员在降落台的接待休息室里徘徊。看到你进门他明显松了一口气，迅速地走来迎接你。
+gaBairdShuttleOptionSel,DialogOptionSelected,$option == gaBairdShuttle,,"你看到一位初级学院工作人员在降落台的接待休息室里徘徊。看到你进门他明显松了一口气，迅速地走来迎接你。
 
 "" $playerLastName 舰长！感谢您的光临。院长会想立即与您会面，还请您和我一起往这边移步。""",bairdIntroC1:继续,
 bairdIntro1,DialogOptionSelected,$option == bairdIntroC1,,"初级代理带着你穿过一系列的走廊和安全电梯，向着空间站中心 Baird 院长的办公室走去。
@@ -9217,8 +9209,7 @@ gaKAArroyoVisitLaugh,DialogOptionSelected,$option == gaKA_arroyoLaugh,,"As you s
 
 He puts his head in his hands.",gaKA_arroyoAMoment2:继续,
 gaKAArroyoVisitAMoment,DialogOptionSelected,$option == gaKA_arroyoAMoment,"$option = gaKA_arroyoAMoment2 0
-FireBest DialogOptionSelected",最后，他狠狠拍向黑玛瑙的吧台面，然后双手抱头。,"gaKA_arroyoDrinkDecline:拒绝
-gaKA_arroyoDrinkAccept:来一杯",
+FireBest DialogOptionSelected",最后，他狠狠拍向黑玛瑙的吧台面，然后双手抱头。,,
 gaKAArroyoVisitAMoment2,DialogOptionSelected,$option == gaKA_arroyoAMoment2,,"He sighs and pours something from a crystal decanter into a glass, empties it. ""To a deal that gets worse all the time!"" 
 
 Then pours another. He considers a moment, notices you, and tilts the decanter to offer you a drink.","gaKA_arroyoDrinkDecline:Decline
@@ -11657,7 +11648,7 @@ $gaPZ_stage == SOLD_BLACKMAIL_MATERIAL score:1000",ShowPersonVisual,"在接入�
 ""你想要 Kelise Astraia 的档案。""他笑着说，""我甚至不需要贿赂 Culann 星际锻炉的管理人员。你敢相信我们四年前在一起工作过吗？那时候发生了一些有趣的事 —— 算了，让我们来说说你的武器工程师吧。""",gaPZ_returnArroyo1:继续,
 gaPZ_returnArroyo1,DialogOptionSelected,$option == gaPZ_returnArroyo1,"Highlight ""Hamatsu""","Arroyo 用程序远程访问了资料库，接着他点了点头，将一份个人档案覆盖在了通讯链接上，那上面显示着 Kelise Astraia 生活的细节。
 
-""我们的 Kelise 女士有点古怪，"" Arroyo 说，""总之你可以稍后再了解这些细节。相关的部分在这里：看起来她好像加入了 速子科技 的机密项目 —— 反正就是那些机密的其中之一 —— 并被要求去现场全职工作。她留下了令人信服的辞职信，订了一艘星舰，企业-级 Hamatsu 号。这艘船已经离开过核心世界好几次了，拾荒或是什么特殊行动，总之就是为公司跑腿。""","gaPZ_returnArroyo2:""你能告诉我更多 Hamatsu 号的细节吗？""",
+""我们的 Kelise 女士有点古怪，"" Arroyo 说，""总之你可以稍后再了解这些细节。相关的部分在这里：看起来她好像加入了 速子科技 的机密项目 —— 反正就是那些机密的其中之一 —— 并被要求去现场全职工作。她留下了令人信服的辞职信，订了一艘星舰，奋进-级 Hamatsu 号。这艘船已经离开过核心世界好几次了，拾荒或是什么特殊行动，总之就是为公司跑腿。""","gaPZ_returnArroyo2:""你能告诉我更多 Hamatsu 号的细节吗？""",
 gaPZ_returnArroyo2,DialogOptionSelected,$option == gaPZ_returnArroyo2,,"""让我们看看。看起来 Astraia 要求对船体做过一些特别的改装。"" Arroyo 扬起眉毛，""价格不菲，我猜这是为了保密而额外准备的。然而，这些改装的细节没有被记录，看起来当时负责盯着的间谍很懒。
 
 这艘船在跃进超空间离开了 Hybrasil 星系前关掉了应答器，这透露不出什么很有价值的情报，但是..."" Arroyo 思考了一会儿，然后把文件翻到了前面。","gaPZ_returnArroyo3:""但是？""",
@@ -11725,7 +11716,7 @@ gaPZ_adminAstraia4a,DialogOptionSelected,$option == gaPZ_adminAstraia4a,AddCredi
 文件滚动得很快，管理员的手在虚拟界面上飞舞，并巧妙地掩盖了浏览的踪迹。",gaPZ_adminAstraia5:继续,
 gaPZ_adminAstraia5,DialogOptionSelected,$option == gaPZ_adminAstraia5,"Highlight ""Hamatsu""","""从 '未知来源' 的星币转移来看，我认为这位 379490509 号员工加入了公司在其它地方的机密项目。不在我的辖区内，啧。""这似乎惹恼了管理员，""如果要我猜的话，这就是她突然辞职的原因 —— 哦，来看看这个。""
 
-一幅似乎是在导航信标的基座上摄制的布满噪点的全息图像弹了出来，图像上是一艘饱经风霜的 企业-级 星舰。""它叫做 'Hamatsu' 号。负责过探索，拾荒...以及许多其它工作。Astraia 预订了这艘船，并要求进行一些改装。""管理员现在皱着眉头，这对$himOrHer来说是很不寻常的表情，""没有更多细节了。我得和港务长谈一谈，不知道谁允许他在不向公司提交一份材料的情况下就为此船放行的。""",gaPZ_adminAstraia6:继续,
+一幅似乎是在导航信标的基座上摄制的布满噪点的全息图像弹了出来，图像上是一艘饱经风霜的 奋进-级 星舰。""它叫做 'Hamatsu' 号。负责过探索，拾荒...以及许多其它工作。Astraia 预订了这艘船，并要求进行一些改装。""管理员现在皱着眉头，这对$himOrHer来说是很不寻常的表情，""没有更多细节了。我得和港务长谈一谈，不知道谁允许他在不向公司提交一份材料的情况下就为此船放行的。""",gaPZ_adminAstraia6:继续,
 gaPZ_adminAstraia6,DialogOptionSelected,$option == gaPZ_adminAstraia6,"Highlight ""Callisto Ibrahim""","""Hamatsu 号完成改装后，就启程离开 Hybrasil 星系，但在跳跃前就关闭了应答器。""$heOrShe思考了一会儿，然后继续翻动文件。
 
 ""啊。这是 Callisto Ibrahim 的船。""$heOrShe抬头看着你，""你听说过她吗？没有？她以前其实还挺有名的。毕竟公司的几个初级合伙人曾雇过她，虽然她是通过伪造证书才拿到那份工作，但令人钦佩的是，她最后还是出色的完成了任务。现在她在 Arcadia 星系里的 Agreus 运营着...""$heOrShe突然露出了一副嗤之以鼻的表情。""几支小舰队。""
@@ -11927,7 +11918,7 @@ $hamatsu score:1000","$canNotSalvage = true 0
 ShowDefaultVisual
 SalvageGenFromSeed
 FireBest ShowSalvageEntityDetails
-FireBest SalvageCheckHostile",一艘死气沉沉的 企业-级 漂浮在你的$shipOrFleet前，它破碎的舰体出现在了你舰桥中各种传感器的画面上。战术副官让你将注意力集中在舰体那不寻常的灼伤分布上，那看起来就好像这艘船被另一个世界来的能量武器从多个角度同时击中了一般。,,
+FireBest SalvageCheckHostile",一艘死气沉沉的 奋进-级 漂浮在你的$shipOrFleet前，它破碎的舰体出现在了你舰桥中各种传感器的画面上。战术副官让你将注意力集中在舰体那不寻常的灼伤分布上，那看起来就好像这艘船被另一个世界来的能量武器从多个角度同时击中了一般。,,
 gaPZ_hamatsuWreckOpen1NIP,ShipRecoveryCustomText,"$customType == wreck
 $hamatsu score:1000
 !$foundStuff","AddCredits 50000
@@ -11935,7 +11926,7 @@ AddCommodity fuel 73
 AddCommodity supplies 126
 $foundStuff = true","最初的打捞小组在一个被保护得很好的箱子里发现了大量的星币，因此他们断定这个箱子及其所在的舱室一定曾经属于一个有一定分量的人物。
 
-企业-级 的货舱里装满了供应品和燃料，其中大部分是可回收的。许多重要的系统都没有损坏，打捞小组的组长报告说，这艘船可以恢复基本的功能。",,
+奋进-级 的货舱里装满了供应品和燃料，其中大部分是可回收的。许多重要的系统都没有损坏，打捞小组的组长报告说，这艘船可以恢复基本的功能。",,
 gaPZ_hamatsuWreckOpen2NIP,ShipRecoveryCustomText,"$customType == wreck
 $hamatsu score:1000",,登船的搜索队员发现许多重要的系统都没有损坏，此舰船可以恢复基本功能。,,
 # salvaged the Hamatsu - begin mission to return it to Callisto,,,,,,
@@ -18489,9 +18480,7 @@ OR
 dcomOfferOption,dcom_option,,,,"dcom_start:询问 ""敏感事项""",
 dcomBlurbBar,dcom_blurbBar,,,一个身着昂贵西装的$dcom_manOrWoman抓着 TriPad，似乎正在强忍愤怒，呆呆地盯着空气。,,
 dcomOfferOptionBar,dcom_optionBar,,,,dcom_startBar:小心地接近这名身着昂贵西装的$dcom_manOrWoman,
-dcomOfferTextBar,DialogOptionSelected,$option == dcom_startBar,"$missionId = dcom
-SetTextHighlights $dcom_reward $dcom_marines
-Call $dcom_ref showMap ""目标：$dcom_marketName ""","你展现出了自己善解人意的一面，成为了某人需要倾倒苦水时完美的倾诉对象。只用了喝掉半杯低度酒的功夫，你就轻松地撬开了这个$manOrWoman的话匣子。
+dcomOfferTextBar,DialogOptionSelected,$option == dcom_startBar,,"你展现出了自己善解人意的一面，成为了某人需要倾倒苦水时完美的倾诉对象。只用了喝掉半杯低度酒的功夫，你就轻松地撬开了这个$manOrWoman的话匣子。
 
 老实人倾诉着自己所遭受的不公，你轻声附和着，嘲讽法律居然屡屡成为了骗子们的挡箭牌。也许总得有人得站出来做点什么。","dcom_startBar2:""也许的确需要有人做些什么了。""
 contact_declineBarNoContinue:婉拒",
@@ -20603,7 +20592,7 @@ FireAll AndradaOfficeReplies","""为辛达强权的利益服务，""$heOrShe毫�
 ,,,,,,
 defaultHyderGreeting,OpenCommLink,"$id == hyder score:1000
 !$global.sdtu_missionCompleted
-!$faction.isHostile",BeginConversation hyder true true,"副星际元帅 Hyder 出现在画面中，面无表情。""确认目标，保持航行。"" 她对另一位舰桥军官下达了命令，然后转向通讯器。
+!$faction.isHostile",,"副星际元帅 Hyder 出现在画面中，面无表情。""确认目标，保持航行。"" 她对另一位舰桥军官下达了命令，然后转向通讯器。
 
 ""独立舰队，听好了：与我们的行动区域保持距离，这样我们就不会向你开火。""
 
@@ -20619,7 +20608,7 @@ $faction.isHostile",EndConversation DO_NOT_FIRE,"副星际元帅 Hyder 出现在
 ""Hyder 完毕。"" 在你有机会说话之前，通讯链接就被切断了。",,
 postSDTUHyderGreeting,OpenCommLink,"$id == hyder score:1000
 $global.sdtu_missionCompleted
-!$faction.isHostile",BeginConversation hyder true true,"Deputy Star Marshal Hyder appears, her face impassive. ""Independent fleet,"" she says, not acknowledging your previous contact, ""Hear me: stay clear of our operational volume and you will not be fired upon.""
+!$faction.isHostile",,"Deputy Star Marshal Hyder appears, her face impassive. ""Independent fleet,"" she says, not acknowledging your previous contact, ""Hear me: stay clear of our operational volume and you will not be fired upon.""
 
 ""Hyder out.""
 
@@ -20627,14 +20616,14 @@ The comms snap off before you have a chance to speak.",cutCommLink:切断通讯�
 postSDTUHyderGreetingTrust,OpenCommLink,"$id == hyder score:1000
 $global.sdtu_missionCompleted
 $global.gotHyderTrust
-!$faction.isHostile",BeginConversation hyder true true,"Deputy Star Marshal Hyder appears. ""Captain,"" she says, impassive but respectful. ""Please stay clear of our operational volume."" 
+!$faction.isHostile",,"Deputy Star Marshal Hyder appears. ""Captain,"" she says, impassive but respectful. ""Please stay clear of our operational volume."" 
 
 And pause, then ""We have nothing further to discuss at this time. Hyder out.""
 
 The comms snap off before you have a chance to speak.",cutCommLink:切断通讯链接,
 defaultCadenGreetingPreSDTU,OpenCommLink,"$id == caden score:1000
 !$global.sdtu_missionCompleted
-!$faction.isHostile",BeginConversation caden true true,"Guard High Deputy Executor Caden appears; he barely looks at the comms.
+!$faction.isHostile",,"Guard High Deputy Executor Caden appears; he barely looks at the comms.
 
 ""Independent fleet: maintain distance and you will not be fired upon. Hear and obey,"" Caden declares.
 
@@ -20655,7 +20644,7 @@ $faction.isHostile",EndConversation DO_NOT_FIRE,"卫队最高副首长 Caden 出
 不等你的回答，通讯链接就被切断了。",,
 defaultCadenGreetPostSDTU,OpenCommLink,"$id == caden score:1000
 $global.sdtu_missionCompleted
-!$faction.isHostile",BeginConversation caden true true,"The image of Guard High Deputy Executor Caden appears. He is not even looking at the comms-feed.
+!$faction.isHostile",,"The image of Guard High Deputy Executor Caden appears. He is not even looking at the comms-feed.
 
 ""Independent fleet: maintain distance and you will not be fired upon. Hear and obey,"" Caden declares, taking a breath.
 
@@ -22923,10 +22912,10 @@ FireAll anhCantinaAskHubOptions","The old man looks like a hermit who's been liv
 He smiles mysteriously as you approach, and speaks both to you and the mop-haired kid, more a youth of not yet 20 cycles.
 
 ""I have a good feeling about this one.""",,
-anhCantinaAskAccept,anhCantinaAskHubOptions,$madeOffer,,,"anh_cantinaAccept:""Okay, you have a deal.""",
+anhCantinaAskAccept,anhCantinaAskHubOptions,$madeOffer,,,"anh_cantinaAccept:""行，那成交了。""",
 anhCantinaAskTransport,anhCantinaAskHubOptions,!$whyAuthorities,,,"anh_cantinaAskTransport:""Let me guess- you need transport, no need to involve the authorities.""",
 anhCantinaAskFeelings,anhCantinaAskHubOptions,!$askedFeelings,,,"anh_cantinaAskFeelings:""I'd be careful about trusting your feelings around here, old man.""",
-anhCantinaAskRobot,anhCantinaAskHubOptions,!$askedRobot,,,"anh_cantinaRobot:""What's with the robot, got some kind of AI in there?""",
+anhCantinaAskRobot,anhCantinaAskHubOptions,!$askedRobot,,,"anh_cantinaRobot:""机器人又是怎么回事，里面有什么 AI 吗？""",
 anhCantinaAskTerroristA,anhCantinaAskHubOptions,"$whyAuthorities
 !$dontLookLikeTerrorists
 !$askedIfTerrorists
@@ -22934,10 +22923,10 @@ anhCantinaAskTerroristA,anhCantinaAskHubOptions,"$whyAuthorities
 anhCantinaAskTerroristB,anhCantinaAskHubOptions,"$whyAuthorities
 !$dontLookLikeTerrorists
 !$askedIfTerrorists
-!$chargeMoreTerror",,,"anh_cantinaKnowMore0:""如果你真是什么恐怖分子，让我开开眼。""",
+!$chargeMoreTerror",,,"anh_cantinaKnowMore:""如果你真是什么恐怖分子，让我开开眼。""",
 anhCantinaAskTerroristC,anhCantinaAskHubOptions,"$whyAuthorities
 !$dontLookLikeTerrorists
-!$chargeMoreTerror",,,"anh_cantinaKnowMore0:""如果你真是什么恐怖分子，那得加钱。""",
+!$chargeMoreTerror",,,"anh_cantinaChargeMore:""如果你真是什么恐怖分子，那得加钱。""",
 anhCantinaAskTerroristD,anhCantinaAskHubOptions,"$whyAuthorities
 !$dontLookLikeTerrorists
 !$chargeMoreTerror",,,"anh_cantinaDontLookTerrorists:""我最好还是别问了。""",
