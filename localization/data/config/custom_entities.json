@@ -102,8 +102,8 @@
 		"defaultName":"稳定的区域", # used if name=null in addCustomEntity()
 		"nameInText":"稳定的区域",
 		"shortName":"稳定的区域",
-		"一处OrAn":"一处",
-		"可能OrAre":"可能",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"customDescriptionId":"stable_location",
 		"interactionImage":"graphics/illustrations/free_orbit.jpg",
 		"icon":"graphics/icons/stable_location.png",
@@ -127,8 +127,8 @@
 		"defaultName":"目标位置", # used if name=null in addCustomEntity()
 		"nameInText":"目标位置",
 		"shortName":"目标位置",
-		"一处OrAn":"一处",
-		"可能OrAre":"可能",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"customDescriptionId":"mission_location",
 		"interactionImage":"graphics/illustrations/free_orbit.jpg",
 		"tags":["has_interaction_dialog", "mission_location"],
@@ -138,8 +138,8 @@
 		"defaultName":"货物吊舱", # used if name=null in addCustomEntity()
 		"nameInText":"货物吊舱",
 		"shortName":"货物吊舱",
-		"一处OrAn":"一处",
-		"可能OrAre":"可能",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"defaultRadius":24, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"cargo_pod_special",
 		"interactionImage":"graphics/illustrations/cargo_pod_drift.jpg",
@@ -165,8 +165,8 @@
 		"defaultName":"探针", # used if name=null in addCustomEntity()
 		"nameInText":"探针",
 		"shortName":"探针",
-		"一处OrAn":"一处",
-		"可能OrAre":"可能",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"detectionRange":2000, # must be >0 for discoverable/discoveryXP to be used
 		"discoverable":true,
 		"discoveryXP":500,		
@@ -748,8 +748,8 @@
 		"defaultName":"人之领-探测器", # used if name=null in addCustomEntity()
 		"nameInText":"人之领-探测器",
 		"shortName":"探针",
-		"一处OrAn":"一处",
-		"可能OrAre":"可能",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"defaultRadius":35, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"derelict_probe",
 		"interactionImage":"graphics/illustrations/space_wreckage.jpg",
@@ -777,8 +777,8 @@
 		"defaultName":"人之领-勘探舰", # used if name=null in addCustomEntity()
 		"nameInText":"人之领-勘探舰",
 		"shortName":"勘探舰",
-		"一处OrAn":"一处",
-		"可能OrAre":"可能",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"defaultRadius":47, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"derelict_surveyship",
 		"interactionImage":"graphics/illustrations/space_wreckage.jpg",
@@ -805,8 +805,8 @@
 		"defaultName":"人之领-勘探母舰", # used if name=null in addCustomEntity()
 		"nameInText":"人之领-勘探母舰",
 		"shortName":"勘探母舰",
-		"一处OrAn":"一处",
-		"可能OrAre":"可能",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"defaultRadius":67, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"derelict_mothership",
 		"interactionImage":"graphics/illustrations/space_wreckage.jpg",
@@ -833,8 +833,8 @@
 		"defaultName":"人之领-低温休眠舱", # used if name=null in addCustomEntity()
 		"nameInText":"人之领-低温休眠舱",
 		"shortName":"低温休眠舱",
-		"一处OrAn":"一处",
-		"可能OrAre":"可能",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"defaultRadius":96, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"derelict_cryosleeper",
 		"interactionImage":"graphics/illustrations/cryosleeper_interior.jpg",
@@ -862,8 +862,8 @@
 		"defaultName":"星冕分流器", # used if name=null in addCustomEntity()
 		"nameInText":"星冕分流器",
 		"shortName":"星冕分流器",
-		"一处OrAn":"一处",
-		"可能OrAre":"可能",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"defaultRadius":150, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"coronal_tap",
 		"interactionImage":"graphics/illustrations/coronal_tap.jpg",
@@ -894,8 +894,8 @@
 		"defaultName":"残骸区", # used if name=null in addCustomEntity()
 		"nameInText":"残骸区",
 		"shortName":"残骸",
-		"一处OrAn":"一处",
-		"可能OrAre":"可能",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"customDescriptionId":"debris_field_shared",
 		"interactionImage":"graphics/illustrations/space_wreckage.jpg",
 		"tags":["has_interaction_dialog", "salvageable", "neutrino_low"],
@@ -907,8 +907,8 @@
 		"defaultRadius":20, # used if radius<0 in addCustomEntity()
 		"nameInText":"遗弃舰",
 		"shortName":"舰船",
-		"一处OrAn":"一处",
-		"可能OrAre":"可能",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"showInCampaign":true,
 		"scaleIconSizeBasedOnDefaultRadius":false,
 		"showIconOnMap":true,
@@ -928,8 +928,8 @@
 		"defaultRadius":35, # used if radius<0 in addCustomEntity()
 		"nameInText":"隐蔽藏匿点",
 		"shortName":"隐蔽藏匿点",
-		"一处OrAn":"一处",
-		"可能OrAre":"可能",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"showInCampaign":true,
 		"scaleIconSizeBasedOnDefaultRadius":false,
 		"showIconOnMap":true,
@@ -950,8 +950,8 @@
 		"defaultRadius":35, # used if radius<0 in addCustomEntity()
 		"nameInText":"补给藏匿点",
 		"shortName":"补给藏匿点",
-		"一处OrAn":"一处",
-		"可能OrAre":"可能",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"showInCampaign":true,
 		"scaleIconSizeBasedOnDefaultRadius":false,
 		"showIconOnMap":true,
@@ -1145,7 +1145,7 @@
 		"defaultRadius":20, # used if radius<0 in addCustomEntity()
 		"nameInText":"货物吊舱",
 		"shortName":"货物吊舱",
-		"一处OrAn":"一处",
+		"aOrAn":"一处",
 		"isOrAre":"可能",
 		"showInCampaign":true,
 		"scaleIconSizeBasedOnDefaultRadius":false,
@@ -1417,8 +1417,8 @@
 		"defaultName":"不明实体", # used if name=null in addCustomEntity()
 		"nameInText":"传感器幽灵",
 		"shortName":"传感器幽灵",
-		"一处OrAn":"一处",
-		"可能OrAre":"可能",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"detectionRange":1000, # must be >0 for discoverable/discoveryXP to be used
 		"discoverable":true,
 		"discoveryXP":0,		

@@ -122,6 +122,7 @@ class MapItem(object):
             print("映射文件未变化")
         print("-" * 50)
         return True
+    
 
     def updateFile(self, file_path, new_lines, item_map_json, item_map_values, no_match_item_list):
         line_changed = False
@@ -138,7 +139,7 @@ class MapItem(object):
                         if item_map_json.__contains__(key):
                             if item_map_json[key].lower() != key:
                                 key_times += 1
-                                line = line.replace(value, item_map_json[key])
+                                line = line[:display_match.start(1)] + item_map_json[key] + line[display_match.end(1):]
                                 line_changed = True
                         elif not item_map_values.__contains__(value):
                             no_match_item_list.append(f"{file_path}({line_count}):{value}")
