@@ -5013,16 +5013,16 @@ AdjustRep independent SUSPICIOUS -1","玛门之仆笑了起来，站起来朝着
 他坐下，晃动着茶具，冲你咧嘴笑道，""3,000星币。你像个太空劫匪，但我欣赏你。""","lke_chalcedonBarBribe3k:""成交。""
 llke_chalcedonBarBribeWalk:拒绝并离开",
 lkeChalcedonBarBribeWalk,DialogOptionSelected,"$option == llke_chalcedonBarBribeWalk
-$mamAnnoyedEveryone","SetTextHighlights ""2,000 credits""
-DoCanAffordCheck 2000 lke_chalcedonBarBribe3k false","玛门之仆大笑着说，简直像是乞求。""等等，等等！2,000 星币。最终报价。这简直是慈善！非常卢德！""","lke_chalcedonBarBribe2k:""Agreed.""
-lke_barEndOut:Keep walking",
+$mamAnnoyedEveryone","SetTextHighlights ""2,000 星币""
+DoCanAffordCheck 2000 lke_chalcedonBarBribe3k false","玛门之仆大笑着说，简直像是乞求。""等等，等等！2,000 星币。最终报价。这简直是慈善！非常卢德！""","lke_chalcedonBarBribe2k:""成交。""
+lke_barEndOut:继续离开",
 lkeChalcedonBarBribeWalkB,DialogOptionSelected,"$option == llke_chalcedonBarBribeWalk
 !$mamAnnoyedEveryone","AdjustRep independent SUSPICIOUS -1
 SetTextHighlights ""2,000 星币""
 DoCanAffordCheck 2000 lke_chalcedonBarBribe3k false","玛门之仆笑了起来，对你说：""等等，等等！"" 他站起来朝着整个茶馆喊到: ""这家伙，不好惹的对手！小心，他把星币藏堡垒护盾后面。谁都拿不走!"" 
 其他太空船员看了过来，一些人喃喃地表达不满，另一些人则大笑。
-他坐下，晃动着茶具，冲你咧嘴笑道: ""2000星币。你像个太空劫匪，但我欣赏你。""","lke_chalcedonBarBribe2k:""Agreed.""
-lke_barEndOut:Keep walking",
+他坐下，晃动着茶具，冲你咧嘴笑道: ""2000星币。你像个太空劫匪，但我欣赏你。""","lke_chalcedonBarBribe2k:""成交。""
+lke_barEndOut:继续离开",
 lkeChalcedonBarBribe5k,DialogOptionSelected,$option == lke_chalcedonBarBribe5k,"AddCredits -5000
 $option = lke_chalcedonBarMeetingSet
 FireBest DialogOptionSelected",你把星币转账到一个你这新朋友提供的黏糊糊的数据平板上。,,
@@ -5035,20 +5035,20 @@ FireBest DialogOptionSelected",你坐了回去并且转账了星币。,,
 lkeChalcedonAskBarMeetingSet,DialogOptionSelected,$option == lke_chalcedonBarMeetingSet,"$market.lkeMeetingSet = true
 $market.lkeMeetingWait = true 1
 $global.lke_contactRecruiter = true
-Call $global.lke_ref updateStage","""I will make inquiries, and you will wait and come back after one day for a good answer.""
+Call $global.lke_ref updateStage","""我去问问，你先等等，一天以后回来听我的好消息就行了。""
 
-He pounds a drumroll on the table and laughs as a pot of 'tea' arrives. ""Tonight, we drink and celebrate!""","lke_barMammoniteDrink:Keep the party going
-lke_barEndOut:Make some excuse and leave",
+他把桌子敲出了鼓点，直到一罐 '茶水' 端上来才笑出了声。""今晚，咱们就喝一杯庆祝庆祝！""","lke_barMammoniteDrink:让派对继续下去
+lke_barEndOut:找点借口离开",
 lkeChalcedonBarEndOut,DialogOptionSelected,$option == lke_barEndOut,"BarCMD leaveBar
 ShowDefaultVisual",,,
 lkeChalcedonBarEnd,DialogOptionSelected,$option == lke_barEnd,BarCMD showOptions,,,
-lkeChalcedonBarDrinkLots,DialogOptionSelected,$option == lke_barMammoniteDrink,,"You drink with the Mammonite, who indeed makes for a good drinking partner. He has many stories, and matches you for tales of scrapes with irate Pathers, pirates, and patrols.
+lkeChalcedonBarDrinkLots,DialogOptionSelected,$option == lke_barMammoniteDrink,,"你正和一位 ""玛门之仆"" 对饮，他简直是为了成为一名好酒友而生的。他似乎有着说不完的故事，无论是你与左径分子、海盗还是巡逻队之间的 ""小摩擦""，他总能接上。
 
-The Mammonite raises a hand to summon the proprietor again. Another pot of 'tea'?","lke_barMammoniteDrink2:""为什么不呢？""
+这位""玛门之仆""又一次抬手招来店家。要不就再来一壶 ""茶""？","lke_barMammoniteDrink2:""为什么不呢？""
 lke_barEndOut:找个借口离开",
-lkeChalcedonBarDrinkLotsMore,DialogOptionSelected,$option == lke_barMammoniteDrink2,,"One pot turns into two, then three.
+lkeChalcedonBarDrinkLotsMore,DialogOptionSelected,$option == lke_barMammoniteDrink2,,"一杯，两杯，三杯，觥筹交错。
 
-The night spins. A blur of sound and the light - another drink, bottoms of! - teahouse lanterns, doubling, tripling.",lke_barMammoniteDrink3:得上个厕...,
+斗转星移，卜夜卜昼。视线已然模糊，所听恍然朦胧——“再来一杯！干杯！”——直到茶馆的灯笼也重重叠叠了起来。",lke_barMammoniteDrink3:得上个厕...,
 lkeChalcedonBarDrinkLotsMore2,DialogOptionSelected,$option == lke_barMammoniteDrink3,"HideVisual
 $lke_interceptLeaveBar1 = true 0
 BarCMD leaveBar","You're wrapping up your visit to the charmingly quaint facilities when you are grabbed from behind, a dark hood pulled over your head.
@@ -21640,8 +21640,8 @@ FireBest SDTUHyderTalk2BattleCheck","""I see,"" Hyder says flatly.",,
 sdtuHyderTalk2BattleCheckA,SDTUHyderTalk2BattleCheck,!$global.sdtu_foughtDiktatPatrol,AdjustRepPerson hyder VENGEFUL -1,"""I find difficulty in accepting your word in this matter, as you did not fight a battle with our patrol fleet while this officer was in command."" 
 
 ""I would be terribly disappointed if I discovered you were lying.""","sdtu_hyderTalk2BattleLieA:""作为一名军官，我信守诺言。""
-sdtu_hyderTalk2BattleLieB:""抱歉，我承诺将这位军官释放到一个 自由联盟 的星球。""
-sdtu_hyderTalk2BattleLieC:""抱歉， Macario 还让我在这件事上撒谎，以衡量你的反应。""（说谎）",
+sdtu_hyderTalk2BattleLieB:""抱歉，我承诺将这位军官释放到一个独立世界上。""
+sdtu_hyderTalk2BattleLieC:""抱歉，Macario 还让我在这件事上撒谎，以衡量你的反应。""（说谎）",
 sdtuHyderTalk2BattleLieA,DialogOptionSelected,$option == sdtu_hyderTalk2BattleLieA,$knowHyderThinksPlayerLied = true 0,"""确实如此，"" Hyder 说。
 
 你可以从她的脸上看出她认为你在撒谎且选择不在此刻揭穿你。 Macario 是对的 - 她不会成为一名优秀的政治家。",sdtu_hyderTalk3start:继续,
