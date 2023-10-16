@@ -1,6 +1,6 @@
 # 也不麻烦的数据和版本管理指南
 - 在首次使用之前，您需要：
-    - 安装`Python 3.8`或以上版本。
+    - 安装`Python 3.10`或以上版本。
       - 可以从 [这里下载](https://www.python.org/downloads/)
     - 安装`Git`版本管理系统。
       - 可以从 [这里下载](https://git-scm.com/downloads)
