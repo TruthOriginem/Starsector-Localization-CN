@@ -2511,25 +2511,25 @@ $player.luddicAttitudeLPPHookBDone = true",,,
 lppHookAttitudeAdjustmentB3,PPHookAttitudeAdjustment,"!$player.luddicAttitudeLPPHookBDone
 $saidBAtheistic ","$player.luddicAttitudeAtheistic++
 $player.luddicAttitudeLPPHookBDone = true",,,
-lppHookCurateInfoDump,DialogOptionSelected,$option == lpp_hookCurateInfoDump,"Highlight ""朝圣者之路""","$HeOrShe清了清嗓子，开始进行一段熟练的说明。""这些圣地合在一起，形成了朝圣者之路。它不仅仅是一条穿过太空的直线路程。虽然..."" $heOrShe慢条斯理地说道，""在世俗语境中，这个名字意指教会和霸主控制的星际空间之间的主航道。""
+lppHookCurateInfoDump,DialogOptionSelected,$option == lpp_hookCurateInfoDump,"Highlight ""朝圣者之路""","$HeOrShe清了清嗓子，开始进行一段熟练的说明。""如果在太空中画一条线，把这些圣地串在一起，就形成了朝圣者之路。对我们来说，它可不仅仅是一条穿过太空的路程。话虽如此..."" $heOrShe慢条斯理地说道，""在世俗语境中，这个名字常被用来指代来往于教会和霸主控制的星际空间之间的重要航道。""
 
-祭司继续说下去。""朝圣者之路是每个个体独特的精神旅程，他们通过我们共同的教义，也就是曾感动先知卢德的造物主赐予我们的圣言，来探索和发现自己的信仰。我们鼓励信众在有能力的情况下，在他们的一生中至少进行一次朝圣。""","lpp_hookCurateHowMany:""总共有多少个圣地啊?""
+祭司继续说下去。""对每个人来说，朝圣者之路是他们独一无二的精神旅程，他们通过我们共同的教义，也就是曾感动先知卢德的造物主赐予我们的圣言，来探索和发现自己的信仰。我们鼓励信众，若有能力的情况下，在他们的一生中至少应当进行一次朝圣之旅。""","lpp_hookCurateHowMany:""总共有多少个圣地啊?""
 lpp_hookCurateCredits:""看来在圣地之间为朝圣者提供交通服务可以赚些星币...""
 lpp_hookCurateCharity:""看来在圣地之间为朝圣者提供交通服务是不错的慈善事业...""
 lpp_hookCurateVisit:""我想拜访这些圣地。""
 lpp_hookCurateFascinating:""真不错。嗯，我得走了。""",
 lppHookCurateHowManyA,DialogOptionSelected,"$option == lpp_hookCurateHowMany
-$entity.id == beholder_station",$didShrineInfoDump = true,"""Gilead, Jangala, Hesperus...有不少，""$heOrShe停顿了一下，目光仿佛在寻找着什么。""有些已经遗失在岁月中了，比如 Opis。还有一些地方被重新革凡登圣。譬如此地， Kumari Aru 轨道上的 Beholder 空间站上就是一处，尽管武装分子频繁在附近出没。还有 Volturn 的圣地，然而当局对是否允许拜访那里一事反复无常。""
+$entity.id == beholder_station",$didShrineInfoDump = true,"""Gilead, Jangala, Hesperus...有不少，""$heOrShe停顿了一下，目光仿佛在寻找着什么。""有些已经遗失在岁月中了，比如 Opis。还有一些地方被重新革凡登圣。譬如此地， Kumari Aru 轨道上的 Beholder 空间站就是一处，尽管武装分子频繁在附近出没。还有 Volturn 圣地，然而当局对是否允许拜访那里一事反复无常。""
 
-""还有曾经的...当然可能现在还在，Killa 上的圣地。然而那里的环境本来就很危险，更别提该星系常受到海盗侵扰了。""","lpp_hookCurateCredits:""看来在圣地之间为朝圣者提供交通服务可以赚些星币...""
+""还有曾经的 Killa 圣地...可能现在还在。不过那里的环境本来就很危险，更别提该星系常受到海盗侵扰了。""","lpp_hookCurateCredits:""看来在圣地之间为朝圣者提供交通服务可以赚些星币...""
 lpp_hookCurateCharity:""看来在圣地之间为朝圣者提供交通服务是不错的慈善事业...""
 lpp_hookCurateVisit:""我想拜访这些圣地。""
 lpp_hookCuratePilgrimage:""我打算去所有圣地朝圣。""
 lpp_hookCurateFascinating:""真不错。嗯，我得走了。""",
 lppHookCurateHowManyB,DialogOptionSelected,"$option == lpp_hookCurateHowMany
-$entity.id != beholder_station",$didShrineInfoDump = true,"""Gilead, Jangala, Hesperus...有不少，""$heOrShe停顿了一下，目光仿佛在寻找着什么。""有些已经遗失在岁月中了，比如 Opis。还有一些地方被重新革凡登圣。Kumari Aru 轨道上的 Beholder 空间站上是其中一处，尽管武装分子频繁那在附近出没。还有 Volturn 的圣地，然而当局对是否允许拜访那里一事反复无常。""
+$entity.id != beholder_station",$didShrineInfoDump = true,"""Gilead, Jangala, Hesperus...有不少，""$heOrShe停顿了一下，目光仿佛在寻找着什么。""有些已经遗失在岁月中了，比如 Opis。还有一些地方被重新革凡登圣。Kumari Aru 轨道上的 Beholder 空间站就是其中一处，尽管武装分子频繁那在附近出没。还有 Volturn 圣地，然而当局对是否允许拜访那里一事反复无常。""
 
-""还有曾经的...当然可能现在还在，Killa 上的圣地。然而那里的环境本来就很危险，更别提该星系常受到海盗侵扰了。""","lpp_hookCurateCredits:""看来在圣地之间为朝圣者提供交通服务可以赚些星币...""
+""还有曾经的 Killa 圣地...可能现在还在。不过那里的环境本来就很危险，更别提该星系常受到海盗侵扰了。""","lpp_hookCurateCredits:""看来在圣地之间为朝圣者提供交通服务可以赚些星币...""
 lpp_hookCurateCharity:""看来在圣地之间为朝圣者提供交通服务是不错的慈善事业...""
 lpp_hookCurateVisit:""我想拜访这些圣地。""
 lpp_hookCuratePilgrimage:""我打算去所有圣地朝圣。""
@@ -2593,7 +2593,7 @@ $HeOrShe吐出了一口气。""这是个很久没听过的名字了。""
 lpp_hookCurateCottonJoin:""我想加入他。""
 lpp_hookCurateCottonKill:""我要干掉他。""
 lpp_hookCurateCottonWontSay:""我打算保密。""",
-lppHookCurateCottonLooking,DialogOptionSelected,$option == lpp_hookCurateCottonLooking,,"""你找到他了吗?""","lpp_hookCurateCottonTalk:""我想和他谈谈。""
+lppHookCurateCottonLooking,DialogOptionSelected,$option == lpp_hookCurateCottonLooking,,"""那如果你找到他了呢？""","lpp_hookCurateCottonTalk:""我想和他谈谈。""
 lpp_hookCurateCottonJoin:""我想加入他。""
 lpp_hookCurateCottonKill:""我要干掉他。""
 lpp_hookCurateCottonWontSay:""我打算保密。""",
@@ -4096,7 +4096,7 @@ lppHesperusShrineWaitCancelShuttle,DialogOptionSelected,"$option == lpp_hesperus
 $global.lpp_madeToWaitForHesperus","AddText""你下令取消了穿梭机行程。看起来哨卫 Oak 在让你等待七天后再访问圣地的事情上是认真的。""
 FireAll PopulateOptions",,,
 lppHesperusShrineDeniedCancelShuttle,DialogOptionSelected,"$option == lpp_hesperusShrineCancelShuttle
-$global.lpp_deniedHesperusShrineAccess","AddText""你下令取消了穿梭机行程。看起来哨卫 Oak 在直到你 '寻找到救赎'，之前不会让你访问圣地的事情上是认真的，无论这救赎意味着什么。""
+$global.lpp_deniedHesperusShrineAccess","AddText ""你下令取消了穿梭机行程。看起来哨卫 Oak 在直到你 '寻找到救赎'，之前不会让你访问圣地的事情上是认真的，无论这救赎意味着什么。""
 FireAll PopulateOptions",,,
 lppHesperausGetMeExcubitor,DialogOptionSelected,$option == lpp_hesperusGetMeExcubitor,"BeginConversation oak
 FireBest PickGreeting",导航技师将你的通讯链接路由到本地的系统网络中，在经过一段感觉上超出必要等待所需的时间后，连接终于被建立。,,
@@ -4108,7 +4108,7 @@ lppHesperusShrineFirstTime1c,DialogOptionSelected,$option == lpp_hesperusVisitFi
 FireAll PopulateOptions",,,
 lppHesperusShrineFirstTime2,DialogOptionSelected,$option == lpp_hesperusVisitFirstTime2,,"""愿卢德保佑你，舰长，""他们成功的藏住了他们声音中的颤抖。""十分抱歉，你的着陆请求被拒绝了。""
 
-你吸了一口气，正准备恢复，这个新人瞧了一眼通知然后瞪大了他的眼睛。
+你吸了一口气，正准备回复，这个新人瞧了一眼通知然后瞪大了他的眼睛。
 
 ""抱歉，舰长 ... 我的意思是，尊敬的。 我... 哨卫 Orbis 想要和你通话，"" 他们在念头衔的时候倒是十分流利。练过，你很确信。
 
@@ -4186,9 +4186,10 @@ RepLTE luddic_church SUSPICIOUS score:50",$global.lpp_deniedHesperusShrineAccess
 cutCommLink:切断通讯链接",
 lppHesperusExcubitorEndAllow,DialogOptionSelected,"$option == lpp_hesperusExcubitorRepCheck
 RepGTE luddic_church WELCOMING score:100",$market.allowedToVisitShrine = true,"长久的沉默。
-""我会让交通管制中心给予你降落许可，舰长，"" 哨卫 Orbis 总算说到。
+
+""我会让交通管制中心给予你降落许可，舰长，""哨卫 Orbis 总算说到，
 ""愿你的灵魂能寻找到它所追寻之物。""","pp_hesperusExcubitorAllowEndCutoff:""等等，就这？""
-lpp_hesperusExcubitorAllowEndNice:""谢谢你， 哨卫 Orbis 。""
+lpp_hesperusExcubitorAllowEndNice:""谢谢你， 哨卫 Orbis。""
 cutCommLink:切断通讯链接",
 lppHesperusExcubitorEndAllowWait,DialogOptionSelected,"$option == lpp_hesperusExcubitorRepCheck
 RepGTE luddic_church NEUTRAL score:50","$global.lpp_hesperusWait = true 7
@@ -4581,9 +4582,10 @@ lkeJaspisStartHisMission3,DialogOptionSelected,$option == lke_jaspisStartHisMiss
 lkeJaspisStartHisMission4,DialogOptionSelected,$option == lke_jaspisStartHisMission4,FireAll LKEJaspisStartHub,"""也许他会，"" 她轻声说道。",,
 lkeJaspisStartHisMission5,DialogOptionSelected,$option == lke_jaspisStartHisMission5,FireAll LKEJaspisStartHub,,,
 lkeJaspisStartBornanew,DialogOptionSelected,$option == lke_jaspisStartBornanew,"$askedBornanew = true 0
-FireAll LKEJaspisStartHub","""尽管曾受到了粗暴的对待，他还是一个温柔的人。几年前，当他的案件被带到我面前时，他正在忏悔者之家。 ""大祭司稍微转过身去，仿佛回忆起了一幅画面。 ""你会称之为监狱。""
+FireAll LKEJaspisStartHub","""尽管曾受到了粗暴的对待，他还是有一个温柔的灵魂。几年前，当我处理他的案子时，他在忏悔者之家。"" 大祭司稍微转过身去，仿佛回忆起了一幅画面，""用你们的话来说就是监狱。""
 
-""根据我的日程安排，审查赦免请求是我的职责，而不仅仅是慈善。我发现杰斯罗很聪明，悔过并渴望重新学习。他的罪行并不是那么严重，他的参与更多是为了取悦他的伙伴，而不是出于天生的恶意。我将他的忏悔作为我的事业一段时间，到了最后，他换了一个新名字，并问道……他如何服务。""",lke_jaspisStartBornanew2:继续,
+""在日程有空闲时，我有职责 —— 而不仅是出于慈悲 —— 审查赦免请求。我发现 Jethro 心灵明澈，愿意痛改前非。他的罪行并不那么严重，与其说是天性邪恶，倒不如说是为了取悦同伴。我花了一段时间主持他的忏悔，结束之后，他取了一个新名字，并且问...他该如何为神做贡献。""
+",lke_jaspisStartBornanew2:继续,
 lkeJaspisStartBornanew2,DialogOptionSelected,$option == lke_jaspisStartBornanew2,,"""某个人需要他的...经验。我送他去和卢德骑士们一同训练，于是他成为了一名学徒，然后在拿到了见习骑士的职称后他被派回到我的主管办公室为我服务来换取骑士职称。""
 
 ""我承认""， 她小声的说到，""我害怕我又一次浪费了一个好人的生命。我的傲慢-，""Jaspis 轻轻的苦笑了一声。""可能这确实蒙蔽了我。""","lke_jaspisStartBornanew3:""你不知道他已经死了。""
@@ -4692,12 +4694,12 @@ SetTooltip lke_chalcedonVIPoptHostileC ""需要至少 250 名陆战队员""",,,
 lkeChalcedonVIPoptHostileSP1a,DialogOptionSelected,"$option == lke_chalcedonVIPoptHostileSP
 $global.jangalaProtestIncident",,"你想方设法辩解道，虽然你在 Jangala 空间站命定遇袭的那一日正好出现在空间站，事实却根本不是他们所想的那样。
 
-霸主佬放出的全息影像，其实用他们私藏的 AI 核心修改过了 —— 你的脸被 AI 核心拿去，换掉了在场某位霸主军官的脸。那帮子霸主懦夫如此做，全是为了给自己脱罪！至于霸主的长期目标，那当然就是摧垮这英仙座的一切精神信仰，由此，就能让英仙座全民接受 AI 核心的控制，将众人全部化作机械，变作那所谓 ""新人之领"" 巨大机械，那玷污上帝一切造物，散漫跨坐于整个银河之上的摩洛克机械之中的，一枚枚螺丝钉啊！",lke_chalcedonVIPoptHostileSP2:继续,
+霸主佬放出的全息影像，其实用他们私藏的 AI 核心修改过了 —— 你的脸被 AI 核心拿去，换掉了在场某位霸主军官的脸。那帮子 霸主 懦夫如此做，全是为了给自己脱罪！至于 霸主 的长期目标，那当然就是摧垮这英仙座的一切精神信仰，由此，就能让英仙座全民接受 AI 核心的控制，将众人全部化作机械，变作那所谓 ""新人之领"" 巨大机械，那玷污上帝一切造物，横跨于整个银河之上的摩洛克机械之中的，一枚枚螺丝钉啊！",lke_chalcedonVIPoptHostileSP2:继续,
 lkeChalcedonVIPoptHostileSP1b,DialogOptionSelected,"$option == lke_chalcedonVIPoptHostileSP
-$global.gaATG_gotLokeViaRaid",,"你解释说，虽然你指挥的陆战队确实在主显节的这个重要的日子里被部署了，但你实际上是在试图阻止霸主通过海盗军阀 Kanta 进行的黑色突袭行动。正是随后的黑色宣传/掩盖将你置于行动的中心。
+$global.gaATG_gotLokeViaRaid",,"你想方设法辩解道，虽然你指挥的陆战队确实在 Epiphany 遇袭这一天被部署过，但你实际上是在试图阻止 霸主 通过海盗军阀 Kanta 进行的隐秘突袭行动；反倒是他们随后托名各方派系，掩盖自身行径的大量宣传，才将你拖入了这次袭击的中心。
 
-当然，Kanta是一个由 AI 核心控制的空壳；在任何卢德的追随者眼中，它都是一个可憎之物，但它正是霸主终极目标下英仙座星域所有人类的形象：虚假 AI 神明的机器奴隶，任务是建立一个新的人之领；一个星系级的机械恶魔摩洛克，蔑视上帝创造自然的本质!",lke_chalcedonVIPoptHostileSP2:继续,
-lkeChalcedonVIPoptHostileSP2,DialogOptionSelected,$option == lke_chalcedonVIPoptHostileSP2,,"你声情并茂，深入阐释着，那 AI 核心们是如何使出重重阴谋诡计，想方设法挑动人类内斗的；而你本人受到这 AI 核心们坑害的经历又如何驱使着你，让你有生以来第一次，开始重新考虑 卢德循经派 那崇高理想与远大目标，是否才是正道。
+当然，所谓 Kanta 也不过是一个由 AI 核心控制的空壳。在任何卢德的追随者眼中，这具空壳都只能说是令人生厌，但此等孽物，也正是 霸主 终极目标下英仙座星域所有人类的形象：为建立所谓“新人之领”而被 AI 伪神操弄的机械奴隶；而 霸主 那所谓的“新人之领”，那横跨整个银河之上的摩洛克机械，将玷污上帝一切造物之天性！",lke_chalcedonVIPoptHostileSP2:继续,
+lkeChalcedonVIPoptHostileSP2,DialogOptionSelected,$option == lke_chalcedonVIPoptHostileSP2,,"你声情并茂，深入阐释着，那 AI 核心们是如何使出重重阴谋诡计，想方设法挑动人类内斗的；而你本人受到这 AI 核心们坑害的经历又如何驱使着你，让你有生以来第一次，开始重新考虑 卢德循径派 那崇高理想与远大目标，是否才是正道。
 
 你观察着：那 $personPost 先是满脸恐慌，而后又是一脸的认同 —— 他的教派才是正道，所有方面都预测对了。由此看来，你讲出的那一番故事足够引人入胜，那人若是对此还提不起兴致才是怪事。虽然你讲出的故事听来略有些荒谬，但它足够贴合 卢德左径 成员的直觉，更是能够调动起他内心深处那份对异端邪说的愤恨之情。",lke_chalcedonVIPoptHostileSP3:继续,
 lkeChalcedonVIPoptHostileSP3,DialogOptionSelected,$option == lke_chalcedonVIPoptHostileSP3,"$market.lke_liedWithSP = true
@@ -4831,9 +4833,9 @@ OR
 ""某人？"" $HeOrShe 不太真诚地笑着道歉到。
 
 ""很多人来到 Chalcedon，有的留下，有的离开。 有的找到了他们所追寻的，大部分人并没有。""",,
-lkeChalcedonLookingRecruiterD,DialogOptionSelected,$option == lke_chalcedonLookingRecruiter,,"""你可能不喜欢这个，但实话实说： 左径的最佳征兵广告是霸主对卢德信仰的残酷镇压，杀死我们孩子的速子科技雇佣杀手，那些随处可见的人之领遗迹。""
+lkeChalcedonLookingRecruiterD,DialogOptionSelected,$option == lke_chalcedonLookingRecruiter,,"""你可能不喜欢这个，但实话实说： 左径 的最佳征兵广告是 霸主 对卢德信仰的残酷镇压，杀死我们孩子的 速子科技 雇佣杀手，那些随处可见的 人之领 遗迹。""
 OR
-""是对卢德信仰的残酷镇压在为左径招兵买马，舰长。"" 那些破坏神之造物并且捏造虚假神像来侵犯神之领地的人-是他们在为左径招兵买马。""","lke_chalcedonLookingRecD2:""你知道我在说什么。我正在找人，一个招募人员。""
+""是对卢德信仰的残酷镇压在为 左径 招兵买马，舰长。"" 那些破坏神之造物并且捏造虚假神像来侵犯神之领地的人——是他们在为 左径 招兵买马。""","lke_chalcedonLookingRecD2:""你知道我在说什么。我正在找人，一个招募人员。""
 lke_chalcedonLookingRecD2b:""我知道，但我在找一个能和我聊聊的人。""
 lke_chalcedonLookingRecD2c:""你是在装傻吗？给我一个直接的答复。""",
 lkeChalcedonLookingRecruiterD2b,DialogOptionSelected,$option == lke_chalcedonLookingRecD2b,"$option = lke_chalcedonLookingRecD2 0
@@ -4861,9 +4863,9 @@ $hisOrHer的表情显得有些紧张，""如果你还没有对卢德的灵光闭
 $personPost 在一个控制台上敲了些什么。",lke_chalcedonLookingRecMad1:继续,
 lkeChalcedonLookingRecMad1,DialogOptionSelected,$option == lke_chalcedonLookingRecMad1,"FireBest LKEChalcedonMakeFleetsHostile
 EndConversation DO_NOT_FIRE
-ShowDefaultVisual","""长官,""你的通讯官在你耳边轻声说道，""他们发送了某种加密信号。附近的左径舰队知晓了我们的位置。
+ShowDefaultVisual","""长官，""你的通讯官在你耳边轻声说道，""他们发送了某种加密信号。附近的 左径 舰队知晓了我们的位置。""
 
-你确认了汇报并把注意力回归到与左径分子的通讯链接上 - 然后发现链接已经被中断了",lke_chalcedonLookingRecMad2:切断通讯,
+你确认了汇报并把注意力回归到与左径分子的通讯链接上——然后发现链接已经被中断了。",lke_chalcedonLookingRecMad2:切断通讯,
 lkeChalcedonLookingRecMad2,DialogOptionSelected,$option == lke_chalcedonLookingRecMad2,FireAll PopulateOptions,,,
 lkeChalcedonLookingRecOutA,DialogOptionSelected,$option == lke_chalcedonLookingRecOutA,"AdjustRepActivePerson INHOSPITABLE -3
 $lke_ignorePlayer = true 30
@@ -5015,7 +5017,7 @@ llke_chalcedonBarBribeWalk:拒绝并离开",
 lkeChalcedonBarBribeWalk,DialogOptionSelected,"$option == llke_chalcedonBarBribeWalk
 $mamAnnoyedEveryone","SetTextHighlights ""2,000 星币""
 DoCanAffordCheck 2000 lke_chalcedonBarBribe3k false","玛门之仆大笑着说，简直像是乞求。""等等，等等！2,000 星币。最终报价。这简直是慈善！非常卢德！""","lke_chalcedonBarBribe2k:""成交。""
-lke_barEndOut:继续离开",
+lke_barEndOut:继续走",
 lkeChalcedonBarBribeWalkB,DialogOptionSelected,"$option == llke_chalcedonBarBribeWalk
 !$mamAnnoyedEveryone","AdjustRep independent SUSPICIOUS -1
 SetTextHighlights ""2,000 星币""
@@ -5051,32 +5053,32 @@ lkeChalcedonBarDrinkLotsMore,DialogOptionSelected,$option == lke_barMammoniteDri
 斗转星移，卜夜卜昼。视线已然模糊，所听恍然朦胧——“再来一杯！干杯！”——直到茶馆的灯笼也重重叠叠了起来。",lke_barMammoniteDrink3:得上个厕...,
 lkeChalcedonBarDrinkLotsMore2,DialogOptionSelected,$option == lke_barMammoniteDrink3,"HideVisual
 $lke_interceptLeaveBar1 = true 0
-BarCMD leaveBar","You're wrapping up your visit to the charmingly quaint facilities when you are grabbed from behind, a dark hood pulled over your head.
+BarCMD leaveBar","对这迷人且古雅的设施的访问快要结束时，你被从后面抓住，头上被套了一个黑色的袋子。
 
-You're dragged through a doorway, somewhere with dank; close air; then out into cold night. There's a thrum of raindrops on awnings.",,
+你被拖过一扇门，在某个潮湿沉闷的地方; 然后进入寒冷的夜晚。雨篷上落下一串雨滴。",,
 lkeChalcedonBarDrinkLotsMore2bar,ReturnFromBar,$lke_interceptLeaveBar1,"HideVisual
 unset $lke_interceptLeaveBar1",,lke_barMammoniteDrink3b:继续,
-lkeChalcedonBarDrinkLotsMore2b,DialogOptionSelected,$option == lke_barMammoniteDrink3b,,"Sharp, low words are exchanged between your kidnappers - and muffled cursing from beside you. Sounds like the Mammonite.
+lkeChalcedonBarDrinkLotsMore2b,DialogOptionSelected,$option == lke_barMammoniteDrink3b,,"你的绑架者们之间交换着尖锐、低沉的话语 —— 还有从你身边传来的低沉的咒骂声。听起来像是玛门之仆。
 
-You're pretty sure you're not as worse for the drink as he is. Pretty sure. Hard to tell with your head in a bag.","lke_barMammoniteDrink4:Continue
-lke_barMammoniteDrink4b:Draw your sarm. Side-arm, tha'sit. Draw your sidearm.",
+你很确定你不会像他一样醉酒。非常确定。头被罩在袋子里时很难分辨。","lke_barMammoniteDrink4:继续
+lke_barMammoniteDrink4b:拔仓，啊对，木仓，拔出你的佩枪。",
 lkeChalcedonBarDrinkLotsMore3b,DialogOptionSelected,$option == lke_barMammoniteDrink4b,"$option = lke_barMammoniteDrink4
-FireBest DialogOptionSelected","You fumble for your sidearm, and find your holster empty. They must have grabbed it.",,
-lkeChalcedonBarDrinkLotsMore3,DialogOptionSelected,$option == lke_barMammoniteDrink4,Call $global.lke_ref shootEm,"A gunshot, barely muffled by the sack on your head, claps your eardrums.
+FireBest DialogOptionSelected",你摸索着你的随身武器，发现枪套是空的。一定是被他们拿走了。,,
+lkeChalcedonBarDrinkLotsMore3,DialogOptionSelected,$option == lke_barMammoniteDrink4,Call $global.lke_ref shootEm,"一声枪响，几乎被你头上的布袋掩盖，击中了你的耳膜。
 
-You don't hear the Mammonite cursing anymore. The cold shock of dread sobers you.",lke_barMammoniteDrink5:继续,
-lkeChalcedonBarDrinkLotsMore4,DialogOptionSelected,$option == lke_barMammoniteDrink5,$market.lkePlayerKidnapped = true 0,"More low talking. You're dragged a short distance, then lifted to your feet.
+你再也听不到玛门之仆的咒骂了，冰冷的恐惧使你战栗。",lke_barMammoniteDrink5:继续,
+lkeChalcedonBarDrinkLotsMore4,DialogOptionSelected,$option == lke_barMammoniteDrink5,$market.lkePlayerKidnapped = true 0,"更多的低语声。你被拖拽了一小段距离，然后被架着站了起来。
 
-""We should speak, face to face. You- let the good $playerBrotherOrSister see.""
+ ""我们应该面对面谈谈。你 —— 摘了这位好$playerBrotherOrSister的头套。"" 
 
-The hood comes off.",lke_barMammoniteDrink6:继续,
+头套被摘下了。",lke_barMammoniteDrink6:继续,
 lkeChalcedonBarDrinkLotsMore5,DialogOptionSelected,$option == lke_barMammoniteDrink6,"BeginConversation sedge
 Call $global.lke_ref playMusicSedge
 $market.talkingOutside = true 0
 $global.lke_sedgeKilledMammonite = true 0
-FireAll LKEchalcedonBarSedgeOpts","""Been told you've been asking questions,"" the man says with a cheap smile. A tooth is missing, another cracked to a point. He smells of mildew, and sweat.
+FireAll LKEchalcedonBarSedgeOpts","""有人说你一直在问问题，"" 男人带着假笑说到。他的一颗牙丢了，另一颗裂了。身上还带着霉味和汗味。
 
-""I'm Sedge."" He graciously waves a hand to show you the dismal alley you find yourself in, toward the slumped form sitting in a puddle of its own blood. ""Welcome to my Path.""",,
+""我是 Sedge。"" 他优雅地挥挥手，向你展示了一下身处的这条阴暗小巷，和一个倒在自己血泊中的身体。""欢迎来到我的道。""",,
 lkeChalcedonBarReturnNextDay0,DialogOptionSelected,"$option == marketVisitBar
 $market.lkeMeetingSet 
 !$market.lkeMeetingWait","FireBest BarShuttleDownPrintDesc
@@ -5084,20 +5086,20 @@ FireBest BarPrintDesc
 unset $market.lkeMeetingSet
 $option = lke_chalcedonBarMeetM
 FireBest DialogOptionSelected",,,
-lkeChalcedonBarReturnNextDay1,DialogOptionSelected,$option == lke_chalcedonBarMeetM,,"It's the next day. You see the Mammonite as you walk in and he greets you from the bar - a little worse for the wear after a night of drinking, it seems. 
+lkeChalcedonBarReturnNextDay1,DialogOptionSelected,$option == lke_chalcedonBarMeetM,,"现在是第二天。你走进门时看见玛门之仆在吧台后面招呼着你 —— 喝了一夜之后看起来有些糟糕。
 
-""Yes, hello captain! You must come meet my friend!""
+""你好啊舰长！你必须来见见我们的朋友！""
 
-He stands - unsteadily - and leads you through a door in the back of the bar.",lke_chalcedonBarNextday2:跟上去,
+他站了起来 —— 晃晃悠悠的 —— 带着你进了吧台后面的门。",lke_chalcedonBarNextday2:跟上去,
 lkeChalcedonBarReturnNextDay2,DialogOptionSelected,$option == lke_chalcedonBarNextday2,"$lke_interceptLeaveBar2 = true 0
-BarCMD leaveBar","You step into a storage room. Broken furniture is stacked in a corner. Dim light from a stick-on glowplate has decayed into a sickly yellow-green gradient.
+BarCMD leaveBar","你走进一间储藏室。破损的家具堆放在角落里。贴在墙上的荧光板已经褪色成病态的昏暗黄绿色。
 
-""He's just through here. Come, come,"" the Mammonite says, beckoning, and steps through a door to the outside.",,
-lkeChalcedonBarReturnNextDay2bar,ReturnFromBar,$lke_interceptLeaveBar2,unset $lke_interceptLeaveBar2,,"lke_chalcedonBarNextday3:Step through the door
-lke_chalcedonBarNextday2b:Prepare your sidearm, then step through the door
-lke_chalcedonBarNextday2c:Call your bodyguards, then step through the door",
-lkeChalcedonBarReturnNextDay2b,DialogOptionSelected,$option == lke_chalcedonBarNextday2b,$market.lkeReadiedSidearm = true 0,你拔出了你的副武器，检查其状态，紧握着但已做好了准备。,lke_chalcedonBarNextday3:Step through the door,
-lkeChalcedonBarReturnNextDay2c,DialogOptionSelected,$option == lke_chalcedonBarNextday2c,$market.lkeReadiedBodyguards = true 0,"You give a quiet order to your bodyguards to circle around to your position, confident in their ability to take control of the situation with their specialized training and equipment.",lke_chalcedonBarNextday3:Step through the door,
+""他就在这儿。来，来。"" 玛门之仆招着手，又穿过一扇门走向外面。",,
+lkeChalcedonBarReturnNextDay2bar,ReturnFromBar,$lke_interceptLeaveBar2,unset $lke_interceptLeaveBar2,,"lke_chalcedonBarNextday3:穿过这扇门
+lke_chalcedonBarNextday2b:准备好你的随身武器，然后穿过这扇门
+lke_chalcedonBarNextday2c:叫上你的护卫，然后穿过这扇门",
+lkeChalcedonBarReturnNextDay2b,DialogOptionSelected,$option == lke_chalcedonBarNextday2b,$market.lkeReadiedSidearm = true 0,你拔出了你的副武器，检查其状态，紧握着但已做好了准备。,lke_chalcedonBarNextday3:穿过这扇门,
+lkeChalcedonBarReturnNextDay2c,DialogOptionSelected,$option == lke_chalcedonBarNextday2c,$market.lkeReadiedBodyguards = true 0,你悄悄地命令你的保镖围绕你散开，相信他们的专业训练和装备让他们有能力控制局面。,lke_chalcedonBarNextday3:穿过这扇门,
 lkeChalcedonBarReturnNextDay3,DialogOptionSelected,$option == lke_chalcedonBarNextday3,HideVisual,"你走出了门。
 
 阳光，风暴间难得的间隙，使你的视野暂时清晰开阔。",lke_chalcedonBarNextday4:继续,
@@ -5107,29 +5109,29 @@ $market.lkeReadiedBodyguards",,"几乎没有思考，你扑到在一旁来躲避
 
 离你最近的形状的是一个影子；一个形象；一个男人。没有用任何东西瞄准着你。看着你，打开的双手半举着。",lke_chalcedonBarNextday6:继续,
 lkeChalcedonBarReturnNextDay5b,DialogOptionSelected,"$option == lke_chalcedonBarNextday5
-$market.lkeReadiedSidearm",,"Almost without thinking, you fall to the side with your sidearm raised and ready at the closest shape - a shadow; a figure; a man. Not aiming at you. Looking at you, hands open and raised part-way.",lke_chalcedonBarNextday6:继续,
-lkeChalcedonBarReturnNextDay5c,DialogOptionSelected,$option == lke_chalcedonBarNextday5,,"Almost without thinking, you fall to the side to remove yourself from a potential sweep of fire. The closest shape before you is a shadow; a figure; a man. Not aiming at you. Looking at you, hands open and raised part-way.",lke_chalcedonBarNextday6:继续,
+$market.lkeReadiedSidearm",,几乎没有思考，你扑倒在一旁，举起随身武器对准了最近的身影 —— 一个影子；一个形象；一个男人。没有拿武器。而是看着你，打开的双手半举着。,lke_chalcedonBarNextday6:继续,
+lkeChalcedonBarReturnNextDay5c,DialogOptionSelected,$option == lke_chalcedonBarNextday5,,几乎没有思考，你扑倒在一旁来躲避可能的射击。离你最近的身影的是一个影子；一个形象；一个男人。没有那武器对着你。而是看着你，打开的双手半举着。,lke_chalcedonBarNextday6:继续,
 lkeChalcedonBarReturnNextDay6,DialogOptionSelected,$option == lke_chalcedonBarNextday6,"BeginConversation sedge
 Call $global.lke_ref playMusicSedge
 FireAll LKEchalcedonBarSedgeOpts
 $market.talkingOutside = true 0
-$global.lke_sedgeKilledMammonite = true 0","""Been told you've been asking questions,"" the man says with a cheap smile. A tooth is missing, another cracked to a point. He smells of mildew, and sweat.
+$global.lke_sedgeKilledMammonite = true 0","""有人说你一直在问问题，"" 男人带着假笑说到。他的一颗牙丢了，另一颗裂了。身上还带着霉味和汗味。
 
-""I'm Sedge."" He graciously waves a hand to show you the dismal alley you find yourself in, toward the slumped Mammonite sitting in a puddle of their own blood. ""Welcome to my Path.""",,
+""我是 Sedge。"" 他优雅地挥挥手，向你展示了一下身处的这条阴暗小巷，和玛门之奴倒在自己血泊中的身影。""欢迎来到我的道。""",,
 "# LKE Chalcedon, Sedge convo",,,,,,
-lkeChalcedonBarSedge0,DialogOptionSelected,$option == lke_chalcedonBarSedge0,,"You seat yourself. A simple, steaming tea is placed before you with a subtle hint from the proprietor that you need but ask and something much stronger will arrive in a teapot.
+lkeChalcedonBarSedge0,DialogOptionSelected,$option == lke_chalcedonBarSedge0,,"你找地方坐了下来，一杯冒着热气的茶放在了你面前。店主微妙地暗示你，你只需要示意一下，茶壶里就会有更强劲的东西。
 
-Before you can make a proper assessment of the colorful figures who tend to populate a spacer bar, a man sits next to you with casual self-assurance, grabs your cup of tea, and downs the entire cup in one go.","lke_chalcedonBarSedge1:Continue
-lke_chalcedonBarSedge1b:""Hey, that was my tea!""",
+在你对这个太空船员酒吧里形形色色的人做出适当的评价前，一个男人自信且放松的坐在了你旁边，拿过你的茶，一口气喝完。","lke_chalcedonBarSedge1:继续
+lke_chalcedonBarSedge1b:""嘿，那是我的茶！""",
 lkeChalcedonBarSedge1,DialogOptionSelected,$option == lke_chalcedonBarSedge1,"$global.lke_sedgeDrankYourTea = true
 BeginConversation sedge
 Call $global.lke_ref playMusicSedge
 FireAll LKEchalcedonBarSedgeOpts
-$market.talkingAtBar = true 0","You would have thought the tea to be uncomfortably hot, but the man seems unfazed as he swishes it around his mouth and swallows.
+$market.talkingAtBar = true 0","你觉得茶可能有些太烫了，但是这个男人似乎并不在乎，他咕噜咕噜地把茶喝了下去。
 
-""Been told you've been asking questions,"" he says with a cheap smile. A tooth is missing, another cracked to a point. He smells of mildew, and sweat.
+""有人说你一直在问问题，"" 男人带着假笑说到。他的一颗牙丢了，另一颗裂了。身上还带着霉味和汗味。
 
-""I'm Sedge,"" he says.",,
+""我是 Sedge。"" 他说。",,
 lkeChalcedonBarSedgeOptKill2,LKEchalcedonBarSedgeOpts,"$market.lkePlayerKidnapped
 !$hadShotTalk
 $global.lke_sedgeKilledMammonite",,,"lke_chalcedonSedgeRespKill:""你为什么杀了他？""",
@@ -5141,11 +5143,11 @@ lkeChalcedonBarSedgeOptD,LKEchalcedonBarSedgeOpts,"$market.talkingAtBar
 !$saidTea
 !$gotTeapot",,,"lke_chalcedonBarSedgeRespTea:""你喝了我的茶。""",
 lkeChalcedonBarSedgeOptD2,LKEchalcedonBarSedgeOpts,"$saidTea
-!$saidTea2",,,"lke_chalcedonBarSedgeRespTea2:""You can't just drink people's tea.""",
+!$saidTea2",,,"lke_chalcedonBarSedgeRespTea:""你不能拿起别人的茶就喝。""",
 lkeChalcedonBarSedgeOptE,LKEchalcedonBarSedgeOpts,"$market.talkingAtBar
-!$gotTeapot",,,lke_chalcedonBarSedgeRespE:示意老板上些更猛的.,
+!$gotTeapot",,,lke_chalcedonBarSedgeRespE:示意店主上些更猛的.,
 lkeChalcedonBarSedgeSmashA,LKEchalcedonBarSedgeOpts,"$global.sedgeSmashedTea
-!$didSmashAsk",,,"lke_askSedgeSmashA:""They're afraid. So might-makes-right and terror rules. You think this is righteous?""",
+!$didSmashAsk",,,"lke_askSedgeSmashA:""他们害怕。所以强者为王，恐怖统治。你觉得这是正义吗？""",
 lkeChalcedonBarSedgeSmashB,LKEchalcedonBarSedgeOpts,"$global.sedgeSmashedTea
 !$didSmashAsk",,,"lke_askSedgeSmashB:""他们尊重你。 因为你愿意做该做的事。""",
 lkeChalcedonSedgeOptMurder,LKEchalcedonBarSedgeOpts,"$saidRecruiter
@@ -5157,66 +5159,68 @@ $global.lke_sedgeKilledMammonite
 !$saidFaithResponse",,,"lke_sedgeFaithA:""因为你觉得这是对的就进行谋杀？ 这太疯狂了。""",
 lkeChalcedonSedgeOptFaithB,LKEchalcedonBarSedgeOpts,"$player.gotSedgeFaithSpeech
 $global.lke_sedgeKilledMammonite
-!$saidFaithResponse",,,"lke_sedgeFaithB:""What you say about faith alone, not deeds, it... makes sense.""",
+!$saidFaithResponse",,,"lke_sedgeFaithB:""你说的只存信仰，无关行为，这...有道理。""",
 lkeChalcedonSedgeOptFaithC,LKEchalcedonBarSedgeOpts,"$player.gotSedgeFaithSpeech 
 $global.sedgeSmashedTea
-!$saidFaithResponse",,,"lke_sedgeFaithA:""You do what you want and think faith makes it good? That's insane.""",
+!$saidFaithResponse",,,"lke_sedgeFaithA:""你想做什么就做什么，然后觉得有信仰一切就会好起来？这是疯了。""",
 lkeChalcedonSedgeOptFaithD,LKEchalcedonBarSedgeOpts,"$player.gotSedgeFaithSpeech
 $global.sedgeSmashedTea
-!$saidFaithResponse",,,"lke_sedgeFaithB:""What you say about following faith alone, it... makes sense.""",
+!$saidFaithResponse",,,"lke_sedgeFaithB:""你说的只需追随信仰，这...有道理。""",
 lkeAskSedgeSmashA,DialogOptionSelected,$option == lke_askSedgeSmashA,"$didSmashAsk = true 0
 $player.gotSedgeFaithSpeech = true
 $player.ethosHumanitarian++
-FireAll LKEchalcedonBarSedgeOpts","Sedge shakes his head, ""You understand nothing. Mammon and Moloch live in your heart and in your mind.""
+FireAll LKEchalcedonBarSedgeOpts","Sedge 摇了摇头，""蒙昧无知。恶魔玛门和摩洛克存于你心中，存于你思想之中。""
 
-""Righteousness is not a scale to be weighed, good deed against evil. Humanity is a being of sin, cursed by the desecration of the Garden of Earth. Nothing will save you but to follow the Path. It is faith that I follow, it is faith that shows me the way, it is faith alone that is salvation.""
 
-""I do as I do because I follow the Path. The true Path ends in Heaven. Faith reveals this.""",,
+""公义与否不取决于其施行手段，而取决于行善还是行恶。人是有罪的，因亵渎了地球的神圣花园而担了罪孽。唯从卢德的道才能得救。信此道引领我，信此道启示我，唯此道是我的救主。""
+
+""我行我应行之事，因我谨守卢德的道。这道路真实，通向应许的天堂。信的人便明白。""",,
 lkeAskSedgeSmashB,DialogOptionSelected,$option == lke_askSedgeSmashB,"$didSmashAsk = true 0
 $player.gotSedgeFaithSpeech = true
-FireAll LKEchalcedonBarSedgeOpts","Sedge nods. ""I have what they do not: faith in the Path. I follow where it leads without fear, without question. Faith alone reveals the righteous Path.
+FireAll LKEchalcedonBarSedgeOpts","Sedge 点点头。""我有他们没有的东西: 对卢德之道的信仰。我遵循此道的指引，既无恐惧，也无疑虑。唯此信仰可揭示正义之道。""
 
-""True faith terrifies the faithless."" He leans back, his look softening. He is not boastful, but absolutely earnest. ""You see how these little spacers, the Hegemony, the Church-liars, all of them; how they fear us.""",,
+""这信仰使不信者惧怕。""他向后靠了靠，神情变得柔和了。他不是在自夸，反而十分认真。""你看到这些普通船员，霸主，卢德教会异端，他们所有人；他们是多么恐惧我们。""",,
 lkeSedgeFaithA,DialogOptionSelected,$option == lke_sedgeFaithA,"AdjustRepActivePerson HOSTILE -1
 $saidFaithResponse = true 0
 $player.luddicAttitudePather--
-FireAll LKEchalcedonBarSedgeOpts","""It is a good thing you are not God,"" Sedge cracks a new smile, ""Because then I would be in big trouble.""",,
+FireAll LKEchalcedonBarSedgeOpts","""幸好你不是神。"" Sedge 露出一个新的微笑，""因为那样我就有大麻烦了。""",,
 lkeSedgeFaithB,DialogOptionSelected,$option == lke_sedgeFaithB,"$saidFaithResponse = true 0
 $player.luddicAttitudePather++
 AdjustRepActivePerson WELCOMING 3
 AdjustRep luddic_path WELCOMING 1
 $player.agreedWithSedgeTheology = true
-FireAll LKEchalcedonBarSedgeOpts","""Sense is not faith,"" Sedge says, correcting you. ""But maybe you are still finding the Path.""
+FireAll LKEchalcedonBarSedgeOpts","""理性不是信仰。"" Sedge 纠正你，""但也许你仍在探寻卢德之道。""
 
-He pauses, then adds, ""Maybe we talk more someday, $playerBrotherOrSister, after your business with me.""",,
-lkeAskSedgeMurder,DialogOptionSelected,$option == lke_askSedgeMurder,$saidMurder = true 0,"Sedge's eyes narrow at you. ""You say, to kill a man is not righteous? You don't know that Mammonite. I do. But,"" Sedge grunts, ""I need not explain my path to you. God will judge.""","lke_askSedgeMurderA:Change the subject
-lke_askSedgeMurderB:""I expect some worldly authority will judge you, and not well."" 
-lke_askSedgeMurderC:""How much blood must you spill to be allowed into Heaven?""
-lke_askSedgeMurderD:""What good deeds of yours outweigh such casual murder?""
-lke_askSedgeMurderE:""You killed an evil man? Then I spoke too soon.""",
+他停顿了一下，然后补充道，""也许我们下次再聊，$playerBrotherOrsister，在这单生意之后。""",,
+lkeAskSedgeMurder,DialogOptionSelected,$option == lke_askSedgeMurder,$saidMurder = true 0,"Sedge 眯起眼睛看着你。""你说，杀人是不正义的？你不了解那个玛门之仆。我了解。但是，"" Sedge咕哝道，""我无需向你解释我行的道。神会审判我。""","lke_askSedgeMurderA:换一个话题
+lke_askSedgeMurderB:""我希望某些世俗权威会审判你，并且不会有好的结果。"" 
+lke_askSedgeMurderC:""你要流多少血才能被允许进入天堂？""
+lke_askSedgeMurderD:""你积了多少德能够抵消这种随意的谋杀？""
+lke_askSedgeMurderE:""你杀了一个邪恶的人？那我话讲早了。""",
 lkeAskSedgeMurderA,DialogOptionSelected,$option == lke_askSedgeMurderA,FireAll LKEchalcedonBarSedgeOpts,,,
 lkeAskSedgeMurderB,DialogOptionSelected,$option == lke_askSedgeMurderB,"$player.ethosOrder++
-FireAll LKEchalcedonBarSedgeOpts","Sedge shrugs. ""My path will end. Not today, I think.""",,
+FireAll LKEchalcedonBarSedgeOpts","Sedge 耸了耸肩。""我的道将会走到尽头，但不是今天，我想。""",,
 lkeAskSedgeMurderC,DialogOptionSelected,$option == lke_askSedgeMurderC,"$option = lke_askSedgeMurderD 0
 FireBest DialogOptionSelected",,,
 lkeAskSedgeMurderD,DialogOptionSelected,$option == lke_askSedgeMurderD,"$player.ethosHumanitarian++
 $player.gotSedgeFaithSpeech = true
-FireAll LKEchalcedonBarSedgeOpts","Sedge shakes his head, ""You don't understand. You think that way? It shows you worship Mammon and Moloch in your heart and you don't know it.""
+FireAll LKEchalcedonBarSedgeOpts","Sedge 摇了摇头，""蒙昧无知。你是这样想的吗？这说明你在心中崇尚着恶魔玛门和摩洛克而不自知。""
 
-""Righteousness is not a scale to be weighed, good deed against evil. Humanity is a being of sin, cursed by the desecration of the Garden of Earth. Nothing will save you but to follow the Path. It is faith that I follow, it is faith that shows me the way, it is faith alone that is salvation.""
 
-""I do as I do because I follow the Path, not because I think I can buy-,"" he pauses to spit toward the slumped corpse, ""-my way into Heaven.""",,
+""公义不可被衡量，行善业可拒邪恶。人是有罪的，因亵渎了地球的神圣花园而担了罪孽。唯从卢德的道才能得救。信此道引领我，信此道启示我，唯此道是我的救主。""
+
+""我行我应行之事，因我谨守卢德的道，而不是我觉得我能买到 ——"" 他停顿了一下，唾弃倒在地上的尸体，""—— 买到通往应许天堂的路。""",,
 lkeAskSedgeMurderE,DialogOptionSelected,$option == lke_askSedgeMurderE,"$player.ethosRuthless++
 $player.luddicAttitudePather++
-FireAll LKEchalcedonBarSedgeOpts","Sedge nods. ""My Path crossed his, and his was to end.""",,
+FireAll LKEchalcedonBarSedgeOpts","Sedge 点头。 ""我的道和他的交错，他的道行尽了。""",,
 lkeChalcedonBarSedgeRespA,DialogOptionSelected,"$option == lke_chalcedonBarSedgeRespA
 $market.talkingAtBar","$askedJethro = true 0
 FireAll LKEchalcedonBarSedgeOpts","""嗯。"" Sedge 看向远方，做出努力回想的样子，把你的杯子 —— 现在是他的了 —— 拿在手里翻来覆去。""不，我不记得任何叫 Jethro 的人。""",,
 lkeChalcedonBarSedgeRespA2,DialogOptionSelected,"$option == lke_chalcedonBarSedgeRespA
 $market.talkingOutside","$askedJethro = true 0
-FireAll LKEchalcedonBarSedgeOpts","""Mm."" Sedge looks away, making a show of thinking it over. ""No, do not recall a Jethro.""
+FireAll LKEchalcedonBarSedgeOpts","""嗯。"" Sedge 转过头，像是在想这事。""不，没想到哪个叫 Jethro 的。""
 
-The pooling blood is caught by a small stream of run-off and begins to wash a red streak down the alley.",,
+血泊汇聚成小股径流，在巷子里流淌出红色的纹路。",,
 lkeChalcedonBarSedgeRespB,DialogOptionSelected,$option == lke_chalcedonBarSedgeRespB,"$saidRecruiter = true 0
 FireAll LKEchalcedonBarSedgeOpts","他困惑的表情带着点嘲讽。""我刚才已经说过了。我就是 Sedge。""
 
@@ -5232,74 +5236,74 @@ FireAll LKEchalcedonBarSedgeOpts","""这就是我的身份吗？"" 他停顿了�
 
 他脸上随意轻松的面具被揭下，显露出他眼中冰冷的、自信的狂热。""我负责判断他们的意图是否真实。如果确实如此的话..."" 他耸了耸肩。仅仅是建立一个星际恐怖主义网络的休闲业务。",,
 lkeChalcedonBarSedgeRespTea,DialogOptionSelected,$option == lke_chalcedonBarSedgeRespTea,"$saidTea = true 0
-FireAll LKEchalcedonBarSedgeOpts","""Why say such a thing? It is done,"" Sedge says.
+FireAll LKEchalcedonBarSedgeOpts","""为何说这种话？事情已经发生了，"" Sedge 说。
 
-""Maybe you want it back?"" He smiles.",,
-lkeChalcedonBarSedgeRespTea2,DialogOptionSelected,$option == lke_chalcedonBarSedgeRespTea2,$saidTea2 = true 0,"""I can because I do,"" he says. The smile sublimes away like ice in vacuum.
+""也许你希望能重来？"" 他露出微笑。",,
+lkeChalcedonBarSedgeRespTea2,DialogOptionSelected,$option == lke_chalcedonBarSedgeRespTea2,$saidTea2 = true 0,"""我可以，因为我做到了，"" 他说，笑容像真空中的冰一样升华了。
 
-""I see you don't understand, spacer.""
+""我看你不是很懂，太空来的家伙。""
 
-He keeps his gaze pinned on you as he swipes his hand across the table, sending cup and teapot flying to smash against a neighboring drinking-party. They raise a shout of offense.",lke_chalcedonBarSedgeRespTea3:继续,
+他的目光紧紧盯着你，手在桌子上一划，杯子和茶壶就飞了出去，砸在了邻近的几个酒徒桌上。他们发出被冒犯的喊声。",lke_chalcedonBarSedgeRespTea3:继续,
 lkeChalcedonBarSedgeRespTea3,DialogOptionSelected,$option == lke_chalcedonBarSedgeRespTea3,"$global.sedgeSmashedTea = true 0
-FireAll LKEchalcedonBarSedgeOpts","A scrape of chairs on floor, and the shouts are quickly hushed by the outraged party's companions. Conversation dies in the room, and everyone at nearby tables takes in the situation. Upon seeing Sedge, they start to quietly file out of the teahouse.
+FireAll LKEchalcedonBarSedgeOpts","在一阵椅子与地板的摩擦声后，叫喊声很快被愤怒的同伴们压了下去。房间里顿时没了声音，附近桌子上的每个人都在打量着这一切。在看到 Sedge 后，他们开始悄悄地排队离开茶馆。
 
-Soon, you are left nearly alone.
+很快，你几乎被独自一人地留在了这里。
 
-Sedge moves his hand through a slow arc, a mockery of blessing, to indicate those who left the room, ""They understand.""
+Sedge 的手缓缓划过一道弧线，模仿着做出祝福的样子，来示意那些离开房间的人，""他们明白""。
 
-Another pot of tea and two new cups appear, the proprietor quickly retreating with a crunch of ceramic underfoot.",,
-lkeChalcedonBarSedgeRespE,DialogOptionSelected,$option == lke_chalcedonBarSedgeRespE,$gotTeapot = true 0,"You signal the proprietor, who glances at the back of Sedge's head with a questioning look- really? With him right there? You confirm your order with a firm nod.
+又一壶茶和两个新杯子被端了上来，老板很快退了出去，脚下传来陶瓷碎裂的响声。",,
+lkeChalcedonBarSedgeRespE,DialogOptionSelected,$option == lke_chalcedonBarSedgeRespE,$gotTeapot = true 0,"你向老板示意，他用询问的眼神瞥了一眼 Sedge 的后脑勺 — 真的吗？他就在那里？你肯定地点了点头，确认了要点的东西。
 
-Soon enough the teapot arrives, smelling of liquor. Two cups are almost dropped and the proprietor retreats.
+很快，一壶茶就被端上来了，散发着酒香。两只杯子几乎掉在了地上，老板退了出去。
 
-Sedge watches the whole procedure with his crooked smile, sets the two cups in place, fills them from the pot. He lifts his cup and looks at you expectantly.","lke_chalcedonBarSedgeCheersA:""To finding lost things."" 
+Sedge 歪着头微笑着看着整个过程，他把两个杯子放好，把它们倒满了茶。他举起杯子，期待地看着你。","lke_chalcedonBarSedgeCheersA:""To finding lost things."" 
 lke_chalcedonBarSedgeCheersB:""Are you allowed to drink this?""
 lke_chalcedonBarSedgeCheersC:""Got a prayer for this?""",
-lkeChalcedonBarSedgeCheersA,DialogOptionSelected,$option == lke_chalcedonBarSedgeCheersA,FireAll LKEchalcedonBarSedgeOpts,"""And may we recognize truth on the Path of Providence,"" he adds, ""and not turn away.""
+lkeChalcedonBarSedgeCheersA,DialogOptionSelected,$option == lke_chalcedonBarSedgeCheersA,FireAll LKEchalcedonBarSedgeOpts,"""愿我们行在卢德之道，得真理临到我们，"" 他补充到， ""不偏左右。""
 
-Then he downs the spirit.",,
-lkeChalcedonBarSedgeCheersB,DialogOptionSelected,$option == lke_chalcedonBarSedgeCheersB,RemoveOption lke_chalcedonBarSedgeCheersB,"""God will forgive me,"" he says, giving the cup a waggle.",,
-lkeChalcedonBarSedgeCheersC,DialogOptionSelected,$option == lke_chalcedonBarSedgeCheersC,FireAll LKEchalcedonBarSedgeOpts,"""May we recognize truth on the Path of Providence,"" he says, ""and not turn away.""
+然后他消沉下来。",,
+lkeChalcedonBarSedgeCheersB,DialogOptionSelected,$option == lke_chalcedonBarSedgeCheersB,RemoveOption lke_chalcedonBarSedgeCheersB,"""主会恕我的罪。"" 他摇晃着杯子说。",,
+lkeChalcedonBarSedgeCheersC,DialogOptionSelected,$option == lke_chalcedonBarSedgeCheersC,FireAll LKEchalcedonBarSedgeOpts,"""愿我们行在卢德之道，得真理临到我们，"" 他补充到， ""不偏左右。""
 
-Then he downs the spirit.",,
+然后他消沉下来。",,
 lkeChalcedonSedgeRespKill,DialogOptionSelected,$option == lke_chalcedonSedgeRespKill,"$hadShotTalk = true 0
-FireAll LKEchalcedonSedgeKillResps","""That?"" Sedge looks down, as if at a stone on the ground.
+FireAll LKEchalcedonSedgeKillResps","""他？"" Sedge 垂下眼睛，像在看地上的石块。
 
-""That got careless. That forgot that one does not speak easily of the Path. The Path is sacred. It does not belong in the mouth of a decadent heathen.""
+""他没有谨言慎行。他忘了他不可妄言卢德之道。这道圣洁，怎可出于堕落异端之口。""
 
-His eyes flick downward again, ""Like that.""",,
-LKEchalcedonSedgeKillRespsA,LKEchalcedonSedgeKillResps,,,,"lke_chalcedonSedgeKillOptA:""That led me to you. Will you shoot me as well?""",
-LKEchalcedonSedgeKillRespsB,LKEchalcedonSedgeKillResps,,,,"lke_chalcedonSedgeKillOptB:""I could kill you.""",
-LKEchalcedonSedgeKillRespsC,LKEchalcedonSedgeKillResps,,,,"lke_chalcedonSedgeKillOptC:""I could have you killed.""",
-LKEchalcedonSedgeKillRespsD,LKEchalcedonSedgeKillResps,,,,"lke_chalcedonSedgeKillOptD:""Yes, you did him a mercy.""",
-LKEchalcedonSedgeKillRespsE,LKEchalcedonSedgeKillResps,,,,"lke_chalcedonSedgeKillOptE:""He drank too much anyway.""",
-LKEchalcedonSedgeKillOptA,DialogOptionSelected,$option == lke_chalcedonSedgeKillOptA,FireAll LKEchalcedonBarSedgeOpts,"""No."" He smiles again. ""You are welcome here, with blessed peace and the hospitality of my people.""",,
-LKEchalcedonSedgeKillOptB,DialogOptionSelected,$option == lke_chalcedonSedgeKillOptB,FireAll LKEchalcedonBarSedgeOpts,"""Yes."" He smiles again. ""But, $playerBrotherOrSister, you would not find what you're looking for.""",,
-LKEchalcedonSedgeKillOptC,DialogOptionSelected,$option == lke_chalcedonSedgeKillOptC,FireAll LKEchalcedonBarSedgeOpts,"""Yes."" He smiles again. ""But, $playerBrotherOrSister, you would not find what you're looking for.""",,
+他的眼睛又向下撇了一下，""像他这样的。""",,
+LKEchalcedonSedgeKillRespsA,LKEchalcedonSedgeKillResps,,,,"lke_chalcedonSedgeKillOptA:""他带我来的。你也要向我开枪么？""",
+LKEchalcedonSedgeKillRespsB,LKEchalcedonSedgeKillResps,,,,"lke_chalcedonSedgeKillOptB:""我可以杀了你。""",
+LKEchalcedonSedgeKillRespsC,LKEchalcedonSedgeKillResps,,,,"lke_chalcedonSedgeKillOptC:""我不介意杀了你。""",
+LKEchalcedonSedgeKillRespsD,LKEchalcedonSedgeKillResps,,,,"lke_chalcedonSedgeKillOptD:""是的，你给了他些仁慈。""",
+LKEchalcedonSedgeKillRespsE,LKEchalcedonSedgeKillResps,,,,"lke_chalcedonSedgeKillOptE:""反正他喝的太醉了。""",
+LKEchalcedonSedgeKillOptA,DialogOptionSelected,$option == lke_chalcedonSedgeKillOptA,FireAll LKEchalcedonBarSedgeOpts,"""不。"" 他再次笑了。""我们欢迎你，以神圣的和平和我们人民的热情。""",,
+LKEchalcedonSedgeKillOptB,DialogOptionSelected,$option == lke_chalcedonSedgeKillOptB,FireAll LKEchalcedonBarSedgeOpts,"""是的。"" 他又笑了。""但是，$playerBrotherOrSister，你不会找到你想找的东西的。""",,
+LKEchalcedonSedgeKillOptC,DialogOptionSelected,$option == lke_chalcedonSedgeKillOptC,FireAll LKEchalcedonBarSedgeOpts,"""是的。"" 他又笑了。""但是，$playerBrotherOrSister，你不会找到你想找的东西的。""",,
 LKEchalcedonSedgeKillOptD,DialogOptionSelected,$option == lke_chalcedonSedgeKillOptD,"$player.luddicAttitudePather++
 $player.ethosRuthless++
 $agreedWithMurder = true 0
-FireAll LKEchalcedonBarSedgeOpts","He smiles again. ""You are welcome here, with blessed peace and the hospitality of my people.""",,
+FireAll LKEchalcedonBarSedgeOpts","他再次笑了。""我们欢迎你，以神圣的和平和我们人民的热情。""",,
 LKEchalcedonSedgeKillOptE,DialogOptionSelected,$option == lke_chalcedonSedgeKillOptE,"$player.ethosRuthless++
 $agreedWithMurder = true 0
-FireAll LKEchalcedonBarSedgeOpts","He smiles again. ""You are welcome here, with blessed peace and the hospitality of my people.""",,
+FireAll LKEchalcedonBarSedgeOpts","他再次笑了。""我们欢迎你，以神圣的和平和我们人民的热情。""",,
 lkeSedgeShowPicA,DialogOptionSelected,"$option == lke_sedgeShowPic
 $market.talkingAtBar","$option = lke_sedgeShowPic2 0
-FireBest DialogOptionSelected",You draw out your TriPad and activate the Jethro Bornanew file. There is a holo from before he left.,,
+FireBest DialogOptionSelected",你拿出你的 TriPad 然后打开 Jethro Bornanew 的档案。里头有他离去前的全息影像。,,
 lkeSedgeShowPicB,DialogOptionSelected,"$option == lke_sedgeShowPic
 $market.talkingOutside","$option = lke_sedgeShowPic2 0
-FireBest DialogOptionSelected",You slowly draw your TriPad and activate the Jethro Bornanew file. There is a holo from before he left.,,
+FireBest DialogOptionSelected",你谨慎的抽出 TriPad 然后打开 Jethro Bornanew 的档案。里头有他离去前的全息影像。,,
 lkeSedgeShowPic2,DialogOptionSelected,$option == lke_sedgeShowPic2,"SetPersonPortrait bornanew ""jethro_bornanew2""
 ShowSecondPerson bornanew
 $global.lke_gotBornanewLead = true
 Call $global.lke_ref updateStage
-unset $market.lkeMeetingSet","Sedge leans over to examine it.
+unset $market.lkeMeetingSet","Sedge 俯下身检查。
 
-""Ah."" He speaks without hesitation, ""Yes, I remember now. He went to Mazalot.""","lke_sedgeShowPic3:""Mazalot? Why?""",
+""啊。"" 他毫不犹疑的说，""对，我现在想起啦了，他去了 Mazalot。""","lke_sedgeShowPic3:"" Mazalot？ 为什么？""",
 lkeSedgeShowPic3,DialogOptionSelected,$option == lke_sedgeShowPic3,"HideSecondPerson
-SetPersonPortrait bornanew ""jethro_bornanew""","Sedge considers his words for a moment. Sucking spittle through his tooth-gap.
+SetPersonPortrait bornanew ""jethro_bornanew""","Sedge 斟酌了一会，从牙缝里吸着气。
 
-""That man, his faith is true."" Sedge swishes again. ""But he... did not know his Path.""",lke_sedgeShowPic4:继续,
+""他的信仰虔诚，"" Sedge 低声说到，""但是他... 并未明晰自己的道路。""",lke_sedgeShowPic4:继续,
 lkeSedgeShowPic4a,DialogOptionSelected,"$option == lke_sedgeShowPic4
 $market.talkingOutside",,"Sedge stands back suddenly, looking away down the alley.
 
@@ -5322,39 +5326,39 @@ FireAll LKESedgeShootOptions
 ""No more questions,"" he spits. ""We are done.""
 
 He walks away.",,
-lkeSedgeEndShootNo,LKESedgeShootOptions,,,,lke_sedgeEnd2:Watch him leave,
-lkeSedgeEndShootA,LKESedgeShootOptions,$market.talkingAtBar,,,lke_sedgeEndBarShoot:Shoot him in the back,
+lkeSedgeEndShootNo,LKESedgeShootOptions,,,,lke_sedgeEnd2:看着他离开,
+lkeSedgeEndShootA,LKESedgeShootOptions,$market.talkingAtBar,,,lke_sedgeEndBarShoot:给他背后来一枪,
 lkeSedgeEndShootB1,LKESedgeShootOptions,"$market.talkingOutside
-$market.lkePlayerKidnapped",,"You spot your sidearm on the ground, next to the Mammonite's cooling body.",lke_sedgeEndShoot:Grab your sidearm and shoot Sedge in the back,
+$market.lkePlayerKidnapped",,你瞟到你的随身武器落在地上，旁边就是玛门之仆冰凉的尸体。,lke_sedgeEndShoot:拿起你的随身武器并给 Sedge 背后来一枪,
 lkeSedgeEndShootB2,LKESedgeShootOptions,"$market.talkingOutside
 !$market.lkePlayerKidnapped",,,lke_sedgeEndShoot:Shoot Sedge in the back,
 lkeSedgeEndShootC,LKESedgeShootOptions,"$market.talkingOutside
-$market.lkePlayerKidnapped",,,lke_sedgeEndGuardShoot:Have one of your guards shoot him in the back,
+$market.lkePlayerKidnapped",,,lke_sedgeEndGuardShoot:让你的一名警卫给他背后来一枪,
 lkeSedgeEndBarShoot,DialogOptionSelected,$option == lke_sedgeEndBarShoot,"Call $global.lke_ref shootEm
 Call $global.lke_ref endMusic","You draw and fire. The shot reverberates in the small space, a sharp crack that rattles ceramicware.
 
 Sedge drops like a bag of meat.
 
-There are shouts and screams from patrons. Chaos, and flight. The room empties out, the proprietor ducks behind the bar.",lke_sedgeEndShoot2:Check to make sure he is dead,
+There are shouts and screams from patrons. Chaos, and flight. The room empties out, the proprietor ducks behind the bar.",lke_sedgeEndShoot2:检查尸体来确保他挂了,
 lkeSedgeEndBarShootB,DialogOptionSelected,"$option == lke_sedgeEndBarShoot
 $global.sedgeSmashedTea","Call $global.lke_ref shootEm
 Call $global.lke_ref endMusic","You draw and fire. The shot reverberates in the small space, a sharp crack that rattles ceramicware.
 
 Sedge drops like a bag of meat.
 
-The proprietor ducks behind the bar and scrabbles out some back door.",lke_sedgeEndShoot2:Check to make sure he is dead,
+The proprietor ducks behind the bar and scrabbles out some back door.",lke_sedgeEndShoot2:检查尸体来确保他挂了,
 lkeSedgeEndShoot,DialogOptionSelected,$option == lke_sedgeEndShoot,"Call $global.lke_ref shootEm
 Call $global.lke_ref endMusic","You draw and fire. The shot reverberates in the alley, a sharp crack.
 
 Sedge drops like a bag of meat.
 
-Silence follows the echoing shot, broken only by retreating footsteps as his thugs flee the scene.",lke_sedgeEndShoot2:Check to make sure he is dead,
+Silence follows the echoing shot, broken only by retreating footsteps as his thugs flee the scene.",lke_sedgeEndShoot2:检查尸体来确保他挂了,
 lkeSedgeEndGuardShoot,DialogOptionSelected,$option == lke_sedgeEndGuardShoot,"Call $global.lke_ref shootEm
 Call $global.lke_ref endMusic","You speak a sharp word into your comms and within seconds an echoing crack shoots down the alley.
 
 Sedge drops like a bag of meat.
 
-His thugs disappear. Tactical chatter from your guards - equipped with the best - tracks their flight from the spot.",lke_sedgeEndShoot2:Check to make sure he is dead,
+His thugs disappear. Tactical chatter from your guards - equipped with the best - tracks their flight from the spot.",lke_sedgeEndShoot2:检查尸体来确保他挂了,
 lkeSedgeEndShoot2bar,DialogOptionSelected,"$option == lke_sedgeEndShoot2
 $market.talkingAtBar","$player.shotSedge = true
 Call $global.lke_ref resumeMusic
@@ -5370,9 +5374,9 @@ $player.ethosRuthless+++","His sightless eyes stare up at a translucent awning, 
 He is smiling. And dead.",lke_sedgeEndShootEnd:离开,
 lkeSedgeEndShootEnd,DialogOptionSelected,$option == lke_sedgeEndShootEnd,"$player.luddicAttitudePather--
 AdjustRep luddic_path HOSTILE -50
-FireAll PopulateOptions","You leave his body to return to your $shipOrFleet. The Path will know what to do with it.
+FireAll PopulateOptions","你留下他的尸体回到了你的$shipOrFleet里。左径会处理好这一切。
 
-They are sure to come after you, if they weren't before.",,
+他们肯定会来找你的麻烦，如果他们之前没有来找的话。",,
 lkeSedgeEnd2Inside,DialogOptionSelected,"$option == lke_sedgeEnd2
 $market.talkingAtBar","Call $global.lke_ref resumeMusic
 FireAll MostLuddicEthosRefresh
@@ -6343,7 +6347,7 @@ Just the hint of an unexpected smile lingers.","lke_virensKillSedgeKilledMe3:""I
 LKEvirensKillSedgeKilledMe2,DialogOptionSelected,$option == lke_virensKillSedgeKilledMe2,,"""The thought had crossed my mind,"" he admits. ""But I think it would bring much trouble. And... I want to see what happens.""","lke_virensKillSedgeKilledMe3:""I'm glad we cleared that up.""",
 LKEvirensKillSedgeKilledMe3,DialogOptionSelected,$option == lke_virensKillSedgeKilledMe3,"$option = lke_virensWhyKillSedgeOut 0
 FireBest DialogOptionSelected","""I as well,"" he says.",,
-LKEvirensKillSedgeTea,DialogOptionSelected,$option == lke_virensKillSedgeTea,$player.ethosRuthless++,"""你杀了个人就因为一杯茶？"" 因为太过难以置信，Virens那镇定自若的神色从他脸上消失了那么一小会儿。",lke_virensKillSedgeTea2:继续,
+LKEvirensKillSedgeTea,DialogOptionSelected,$option == lke_virensKillSedgeTea,$player.ethosRuthless++,"""你杀了个人就因为一杯茶？"" 因为太过难以置信，Virens 那镇定自若的神色从他脸上消失了那么一小会儿。",lke_virensKillSedgeTea2:继续,
 LKEvirensKillSedgeTea2,DialogOptionSelected,$option == lke_virensKillSedgeTea2,,"""I understand that Sedge could be rude, yes, and even offensive. But,"" he shakes his head. ""Death is not a thing to administer lightly.""
 
 You are certain he has made such administrations himself.","lke_virensKillSedgeKilledMe2tea:""So are you thinking about killing me?""
@@ -10331,7 +10335,7 @@ gaFCZalLeonisIsirah,DialogOptionSelected,$option == gaFC_zalLeonisIsirah,,"她�
 gaFCZalAlamang,DialogOptionSelected,$option == gaFC_zalAlamang,$global.gaFC_gotAlamangForScylla = true,"""哦，还有一件事 —— 当你找到 Scylla 的时候，一定要给她带一块 Sub-Kay 牌的调味酱。这是嗯，一种磷虾酱。要确保是蓝色包装的。这可是好东西，你只有在 Fikenhild 上才能买到它。她说其他都只能喂给垃圾桶。""","gaFC_zalAllYouGet:""Isirah 星系和磷虾酱，对吧""",
 gaFCZalAllYouGet,DialogOptionSelected,$option == gaFC_zalAllYouGet,,"""是啊。"" 她的影像微笑着，很高兴能给你一个如此糟糕的回答。
 
-""看吧，她不告诉我她的确切位置。而且，它是会变动的。我只是确保她能够从系统中获得信号……嗯，这是由Scylla来告诉你的，如果她愿意的话。""
+""看吧，她不告诉我她的确切位置。而且，它是会变动的。我只是确保她能够从系统中获得信号...嗯，这是由 Scylla 来告诉你的，如果她愿意的话。""
 
 ""祝你在制造混乱方面好运，船长。""
 
@@ -13580,7 +13584,7 @@ gaATGluddicScan41c,DialogOptionSelected,"$option == gaATG_luddicScan41
 $player.mostLuddicEthosFaithful","SetTextHighlights 50
 FireBest GAATGluddicScanSupplyCheck","$HeOrShe听着你的话频频点头，有些犹豫地说道，""我承认我们的舰船都已经年久失修了。假若你能捐赠 50 单位的补给，就能极大地缓解这种这种煎熬...当然，还请你务必抱着慈悲为怀的精神这么做。此外，就像你说的那样，我们可以在你的船上为了继续守夜而稍作休养，以便你可以前去进行...净化仪式？""
 
-你虔诚地点了点头。这些走在一条或许有点异端道路上的行者仍然将你视为接近他们自己的人。毕竟你和他们一样都去神社朝圣过。当涉及到宗教的微妙问题时，和普通的航行者相比他们远信任你。","gaATG_luddicScan32:提供 50 补给，然后继续扫描
+你虔诚地点了点头。这些走在一条或许有点异端道路上的行者仍然将你视为接近他们自己的人。毕竟你和他们一样都去圣地朝圣过。当涉及到宗教的微妙问题时，和普通的航行者相比他们远信任你。","gaATG_luddicScan32:提供 50 补给，然后继续扫描
 gaATG_luddicScanHubReturn:商讨其他方案",
 gaATGluddicScanSupplyCheck,GAATGluddicScanSupplyCheck,$player.supplies < 50,"SetEnabled gaATG_luddicScan32 false
 SetTooltip gaATG_luddicScan32 ""你没有足够的补给。""",,,
@@ -14373,7 +14377,7 @@ $market.gaATG_findingLoke
 $isPerson
 $faction.id == ""luddic_path""
 !$entity.setUpCottonMeeting
-!$entity.askedForKidnapperCotton",,,"gaATG_epiphanyAskKidnapPolite:""我在找某位....Cotton 修士的客人""",
+!$entity.askedForKidnapperCotton",,,"gaATG_epiphanyAskKidnapPolite:""我在找某位...Cotton 修士的客人""",
 gaATGEpiphanySearch2,PopulateOptions,"$market.id == epiphany
 $market.gaATG_findingLoke
 $isPerson
@@ -14583,11 +14587,11 @@ gaATGmeetCottonTeaFutile,DialogOptionSelected,$option == gaATG_meetCottonTeaFuti
 ""一个如同我曾经一样的年轻人，觉得只有杀掉他面前的所有异教徒，才能滋养自己的灵魂。""
 
 ""但这个人获得的不是力量，而是傲慢。并且他...他会在你说这些话之前就杀掉你。也许是在着陆台上的货物集装箱中的炸弹，或是在大街上亲自动手。如果到了这一步的话，那样的人和他的敌人一样盲目。""",gaATG_meetCottonTeaWar:继续,
-gaATGmeetCottonTeaDie,DialogOptionSelected,$option == gaATG_meetCottonTeaDie,,"""是的。""Cotton 把他的茶放下，瞪着眼睛。
+gaATGmeetCottonTeaDie,DialogOptionSelected,$option == gaATG_meetCottonTeaDie,,"""是的。"" Cotton 把茶杯放下，眼神坚定。
 
-""是的。我并没有轻易地穿上沾血的领导者披风。这是我的道路。并且我会直视着我的行为的真相走下去。卢德的启示是痛苦的！""他一只手锤在桌子上，震得餐具作响。""卢德选择了这条道路并不是因为这很简单，或是友善，也不是没有痛苦！""
+""是的。我未轻易领受这染血的领袖之责。我仅是行我之道。并且我行在这道上时，当不遮掩我之所为。受难乃是卢德的启示！"" 他一只手锤在桌子上，震得茶具作响。""卢德行这道，并不因其易行，或是因其平缓，也不是因可免遭了苦难！""
 
-他几乎像是耳语般说，""他这样选择因为这是好的。""",gaATG_meetCottonTeaWar:继续,
+他像是耳语般说到，""他行这道，因为这道是正的。""",gaATG_meetCottonTeaWar:继续,
 gaATGmeetCottonTeaWar,DialogOptionSelected,$option == gaATG_meetCottonTeaWar,"$askedTea = true 0
 FireAll GAATGmeetCottonTeaHub","""霸主 的战术家们和会思考的机器都犯了同样的错误：他们认为，只要可以被测量、被追踪、被计数，我们这些走上了圣途的人就可以被打败。然而我们美丽的圣战不是数学计算，而是人类的灵魂。我们奋斗的目标不能被数据库和日志里的东西衡量。""
 
@@ -15589,7 +15593,7 @@ Call $global.gaCO_ref updateData",ShowDefaultVisual,"你的导航技师报告你
 gaCOObjectScan,DialogOptionSelected,$option == gaCO_scan,"$global.gaCO_scanCompleted = true
 Call $global.gaCO_ref updateStage","在机动推进器进行一连串喷射后，舰队划出一条优美的弧线，像书法的笔墨划过你面前的 $gaCO_celestialObjectType。
 
-系统提示能源耗尽，仅仅几分钟操作就完成了。通讯官报告发现了一道微弱的超通讯脉冲。这是向 Galatia 学院发送的释放你报酬的通知信号。
+系统开始为扫描作业供能，仅仅几分钟操作就完成了。你的通讯官随后报告发现了一道微弱的超通讯脉冲，这是向 Galatia 学院发送的，准许你获酬的通知信号。
 
 舰桥船员依次报告，一切正常，准备恢复航向。",defaultLeave:离开,
 # CO pather conversations - before scan,,,,,,
@@ -18790,7 +18794,7 @@ ssatPrintHostilesText,OpenInteractionDialog,"$ssat_target score:1000
 IsSeenByAnyFleet
 Call $ssat_ref updateData",ShowDefaultVisual,周遭舰队最近或者正在跟踪您的$shipOrFleet，目前无法隐秘部署间谍卫星。,defaultLeave:离开,
 ssatObjectInteraction,OpenInteractionDialog,"$ssat_target score:1000
-Call $ssat_ref updateData",ShowDefaultVisual,"您的领航员通知您的$shipOrFleet已经抵达 $ssat_personName 提供的坐标位置。间谍卫星随时可以部署。
+Call $ssat_ref updateData",ShowDefaultVisual,"你的领航员表示你的$shipOrFleet已经抵达 $ssat_personName 提供的坐标位置。间谍卫星随时可以部署。
 
 指令界面上，部署按钮轻柔地闪烁着。","ssat_scan:部署间谍卫星
 defaultLeave:离开",
@@ -22736,9 +22740,9 @@ SalvageEntity descDebris
 一架打捞无人机找回了一具尸体的被烧焦炸碎之后的上半身。你的行动长官亲自把完好无损的数据核心搞了出来，也就是用把钳子麻利地拧一下的事儿。
 
 它等待您的检查。",sdtu_debrisData0:检查核心,
-sdtuDebrisData0,DialogOptionSelected,$option == sdtu_debrisData0,,"您的技术专家可以快速清理核心并设置短程电磁场接口。
+sdtuDebrisData0,DialogOptionSelected,$option == sdtu_debrisData0,,"你的技术专家快速地清理核心并设置短程电磁场接口。
 
-报告很快出具：核心文件系统内保存的内容受到了加密，当然是 速子科技 最好的加密。
+报告很快出具：核心文件系统内保存的内容受到了加密，加密程度可谓竭尽 速子科技 所能。
 
 然而有可读的元数据。",sdtu_debrisData1:查看元数据,
 sdtuDebrisData1,DialogOptionSelected,$option == sdtu_debrisData1,"Call $global.sdtu_ref playMusicSons
