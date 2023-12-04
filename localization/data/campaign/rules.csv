@@ -708,7 +708,7 @@ HA_CMD playerColoniesHavePatherActvity",,,"10:payMegaTithe:""说不定一笔更�
 LPTitheNormal,LPTitheOptions,,,,5:payTithe:缴纳什一税,
 LPTitheCutComms,LPTitheOptions,,,,100:cutCommLink:切断通讯链接,
 payMegaTitheSel,DialogOptionSelected,$option == payMegaTithe,"Highlight $LP_megaTitheDGS $LP_megaTitheDuration
-DoCanAffordCheck $LP_megaTithe payMegaTitheConfirm false","$rank's 在听到了你提出缴纳一笔更高的 ""什一税"" 后起了兴趣。在内心的一番挣扎后$heOrShe终于将这笔勒索的宗教性质抛到了脑后，提出只要缴纳 $LP_megaTitheDGS 信用点就可以促使左径分子们在 $LP_megaTitheDuration 天内不再骚扰你的殖民地 —— 但并不包括袭击你的舰队。
+DoCanAffordCheck $LP_megaTithe payMegaTitheConfirm false","$rank 在听到了你提出缴纳一笔更高的 ""什一税"" 后起了兴趣。在内心的一番挣扎后$heOrShe终于将这笔勒索的宗教性质抛到了脑后，提出只要缴纳 $LP_megaTitheDGS 星币就可以促使左径分子们在 $LP_megaTitheDuration 天内不再骚扰你的殖民地 —— 但并不包括袭击你的舰队。
 
 $heOrShe几乎像是带着一丝不易察觉的歉意解释到，""毕竟，我在教中的兄弟与姐妹们都是因为他们的狂热才拿起了武器。对正义的热忱把他们推向了战场，而比起神圣的正义审判来说星币之类的俗物自然要屈居第二位。""","payMegaTitheConfirm:缴纳你们约好的数量
 payMegaTitheOther:""或许我们可以一起相约走上一条更加长久 —— 并且更有前途的关系呢？""
@@ -877,7 +877,7 @@ FireAll PopulateOptions","""判断敌我识别代码回应是 [友方]...判定�
 ""[...速子授权的维修技术员]。为了确保您的安全，武器系统已经关闭。本机已为 [尊敬的客户 / 授权的维修技术人员] 的接近做好准备。""
 OR
 ""判断敌我识别代码回应是 [友方]...判定通过 //
-""您好 [尊敬的速子科技综合空间防御系统合约持有者 / 速子科技授权的维修技术...]""
+""您好 [尊敬的速子科技综合空间防御系统合约持有者 / 速子科技授权的...]""
 
 / 进程中断 /
 
@@ -1365,8 +1365,8 @@ NGCSetStartingLocation Corvus -2500 3000
 NGCAddStandardStartingScript
 NGCDone",,,
 ngcPickSecondShip,NGCSecondShipOptions,,"SetTooltip ngcKite ""风筝-级是一种轻便灵活但武装有限的穿梭机。\n\n它本身并不能造成很大的伤害，但是它能够持续地扰乱敌人的注意力，特别是在擅长防御技能的军官掌控之下时。""
-SetTooltip ngcShepherd ""牧羊人-种不是一艘战舰，它既慢又脆弱，不过它的无人机能够为其他船只提供一些支援。\n\n然而它真正的价值在于其宽敞的货舱和多个有利于打捞/探测的船体特性上。\n\n携带的重型机械也能运用至在打捞与探测作业当中。""",此外，你的舰队还包括...,"0:ngcKite:一艘 风筝-级 穿梭机，以及一名经验丰富的军官。
-1:ngcShepherd:一艘 牧羊人-级 无人机护卫舰，运载了一些重型机械。",
+SetTooltip ngcShepherd ""牧羊人-级不是一艘战舰，它既慢又脆弱，不过它的无人机能够为其他船只提供一些支援。\n\n然而它真正的价值在于其宽敞的货舱和多个有利于打捞/探测的船体特性上。\n\n携带的重型机械也能运用至在打捞与探测作业当中。""",此外，你的舰队还包括...,"0:ngcKite:一艘 风筝-级 穿梭机，以及一名经验丰富的军官。
+1:ngcShepherd:一艘 牧羊人-级 无人机补给舰，运载了一些重型机械。",
 ngcKitePicked,NewGameOptionSelected,$option == ngcKite,"NGCAddShip kite_Starting
 AddTextSmall ""获得一名 1 级军官"" good
 SetTextHighlights ""level 1 officer""
@@ -3249,12 +3249,12 @@ lppVolturnOfficialBribe1,DialogOptionSelected,$option == lpp_volturnOfficialBrib
 lppVolturnOfficialBribe2,DialogOptionSelected,$option == lpp_volturnOfficialBribe2,"SetTextHighlights 1,000
 DoCanAffordCheck 1000 lpp_volturnOfficialBribe2offer1k false","""唉，唉，唉！世事艰难啊！针对妇女儿童的恐怖袭击突如其来，以及...噢，我真心感谢那位 雄狮。卑劣之徒只会肆无忌惮地轰炸这个行星来镇压我们，但若是 最高元首？他真是爱民如子，待我们如父亲一般。但即便是他也只有这么点物资可供调用...为何如此啊，若我们有更多的星币，来给我们勇武的年轻战士们采购更好的护甲..."" 他指着那些吞云吐雾的征召兵们 —— 他们正在停机坪边上举行吐痰大赛。
 
-""想象一下，要是这些战士被恐怖袭击所害，他们的母亲又会作何感想...""","lpp_volturnOfficialBribe2offer1k:""1000 星币 可够？""
+""想象一下，要是这些战士被恐怖袭击所害，他们的母亲又会作何感想...""","lpp_volturnOfficialBribe2offer1k:""1,000 星币 可够？""
 lpp_volturnOfficialBribe2naw:""我敢肯定她们会心碎不已。那么，我先走了。""",
 lppVolturnOfficialBribe2offer1k,DialogOptionSelected,$option == lpp_volturnOfficialBribe2offer1k,"SetTextHighlights 5,000
 DoCanAffordCheck 5000 lpp_volturnOfficialBribe2offer5k false
-DoCanAffordCheck 2000 lpp_volturnOfficialBribe2offer2k","""5000 星币。""这名官员开始坐地起价。","lpp_volturnOfficialBribe2offer5k:""5000，成交。""
-lpp_volturnOfficialBribe2offer2k:""我能出2000，再多也没有了。""
+DoCanAffordCheck 2000 lpp_volturnOfficialBribe2offer2k","""5,000 星币。""这名官员开始坐地起价。","lpp_volturnOfficialBribe2offer5k:""五千，成交。""
+lpp_volturnOfficialBribe2offer2k:""我能出 2,000，再多也没有了。""
 lpp_volturnOfficialBribe2naw:""你给孩子们吃什么伙食啊，Volturn 蓝龙虾吗？""",
 lppVolturnOfficialBribe2offer5k,DialogOptionSelected,$option == lpp_volturnOfficialBribe2offer5k,AddCredits -5000,"""成交。""官员说着，露出和小便一样恶心的微笑，拿出他的数据平板来让你付款。",lpp_volturnOfficialBribe3:确认行贿,
 lppVolturnOfficialBribe2offer2k,DialogOptionSelected,$option == lpp_volturnOfficialBribe2offer2k,AddCredits -2000,"""成交。""官员说着，露出和小便一样恶心的微笑，拿出他的数据平板来让你付款。",lpp_volturnOfficialBribe3:确认行贿,
@@ -3897,7 +3897,7 @@ ShrineCMD playMusic","你的穿梭机降落在苍翠的陆地上，翻腾的风�
 你穿过炫目的云层，映入眼帘的是一片令人头晕的绿色。当穿梭机缓慢降落在被密植淹没的着陆台上时，你的观察窗里很快堆满了移动着的孢子水滴",lpp_JangalaEnter1:进入圣地,
 lppJangalaFirstVisit1,DialogOptionSelected,$option == lpp_jangalaVisitStart,"$didFirstVisit = true
 ShowLargePlanet
-ShrineCMD playMusic","青翠的 Jangala 大陆在你的脚下肆意生长，巨型的云层在你的头顶上慵懒地翻腾着。
+ShrineCMD playMusic","Jangala 青翠的大陆在你脚下延伸，巨型的云层在你的头顶上慵懒地翻腾着。
 
 炽热的轨道激光从 Jangala 空间站中喷涌而出，在大气层中划出一道道炫目的等离子体。燃烧的辉光和云层中的闪电交相辉映，照亮了下面那些如山峦般厚重的云层。",lpp_JangalaFirstVisit2:继续,
 lppJangalaFirstVisit2,DialogOptionSelected,$option == lpp_JangalaFirstVisit2,,"伴随着时高时低的噪音，你的穿梭机抵达了真实大气的边缘，一瞬间消失在云层之中。在观察窗之外，人眼的能见度几乎为零。当穿梭机开始着陆时，由于导航规则和礼貌的要求，其下降速度远低于音速，你的观察窗逐渐布满移动着的水滴。
@@ -4078,14 +4078,14 @@ $global.lpp_didHesperusFirstShrineAttempt
 $global.lpp_madeToWaitForHesperus
 !$global.lpp_visitedShrineHesperus",,"你下令让一艘穿梭机准备好飞往地面。
 
-""舰长，""你的导航技师汇报道，""交通管制处否决了你的飞行请求。""","lpp_hesperusGetMeExcubitor:""给我呼叫哨卫 Orbis。""
+""舰长，""你的导航技师汇报道，""交通管制处否决了你的飞行请求。""","lpp_hesperusGetMeExcubitor:""给我呼叫行星教卫。""
 lpp_hesperusShrineCancelShuttle:取消航程",
 lppHesperusShrineVisitNoDenied,DialogOptionSelected,"$option == lpp_hesperusVisitStart
 $global.lpp_deniedHesperusShrineAccess
 $global.lpp_didHesperusFirstShrineAttempt
 !$global.lpp_visitedShrineHesperus",,"你下令让穿梭机准备好载你到星球表面。
 
-""舰长，"" 你的导航技师报告到，""交通管制中心拒绝了你的航班请求。""","lpp_hesperusGetMeExcubitor:""给我呼叫哨卫 Orbis。""
+""舰长，"" 你的导航技师报告到，""交通管制中心拒绝了你的航班请求。""","lpp_hesperusGetMeExcubitor:""给我呼叫行星教卫。""
 lpp_hesperusShrineCancelShuttle:取消航程",
 lppHesperusShrineFirstTimeFallback,DialogOptionSelected,"$option == lpp_hesperusVisitStart
 !$global.lpp_visitedShrineHesperus","$option = lpp_hesperusVisitFirst1 0
@@ -4093,10 +4093,10 @@ FireBest DialogOptionSelected",,,# this should never trigger. But... -dgb
 lppHesperusShrineFallback,DialogOptionSelected,$option == lpp_hesperusVisitStart,"$option = lpp_hesperusVisit1 0
 FireBest DialogOptionSelected",,,"# Also, this should never trigger. But... -dgb"
 lppHesperusShrineWaitCancelShuttle,DialogOptionSelected,"$option == lpp_hesperusShrineCancelShuttle
-$global.lpp_madeToWaitForHesperus","AddText""你下令取消了穿梭机行程。看起来哨卫 Oak 在让你等待七天后再访问圣地的事情上是认真的。""
+$global.lpp_madeToWaitForHesperus","AddText ""你下令取消了穿梭机行程。看起来教廷哨卫 Oak 在让你等待七天后再访问圣地的事情上是认真的。""
 FireAll PopulateOptions",,,
 lppHesperusShrineDeniedCancelShuttle,DialogOptionSelected,"$option == lpp_hesperusShrineCancelShuttle
-$global.lpp_deniedHesperusShrineAccess","AddText ""你下令取消了穿梭机行程。看起来哨卫 Oak 在直到你 '寻找到救赎'，之前不会让你访问圣地的事情上是认真的，无论这救赎意味着什么。""
+$global.lpp_deniedHesperusShrineAccess","AddText ""你下令取消了穿梭机行程。看起来教廷哨卫 Oak 铁了心不允许你在 '寻得救赎' 之前访问圣地，无论这救赎意味着什么。""
 FireAll PopulateOptions",,,
 lppHesperausGetMeExcubitor,DialogOptionSelected,$option == lpp_hesperusGetMeExcubitor,"BeginConversation oak
 FireBest PickGreeting",导航技师将你的通讯链接路由到本地的系统网络中，在经过一段感觉上超出必要等待所需的时间后，连接终于被建立。,,
@@ -4106,22 +4106,22 @@ lppHesperusShrineFirstTime1a,DialogOptionSelected,$option == lpp_hesperusVisitFi
 lppHesperusShrineFirstTime1b,DialogOptionSelected,$option == lpp_hesperusVisitFirstTime1b,$global.lpp_didHesperusFirstShrineAttempt = true,导航技师将你接入链接，然后一个看起来很年轻的卢德骑士-或者是个新人-出现在你的面前。,lpp_hesperusVisitFirstTime2:继续,
 lppHesperusShrineFirstTime1c,DialogOptionSelected,$option == lpp_hesperusVisitFirstTime1c,"AddText ""你下令取消了穿梭机行程。 谁知道这群卢德佬现在在干什么。""
 FireAll PopulateOptions",,,
-lppHesperusShrineFirstTime2,DialogOptionSelected,$option == lpp_hesperusVisitFirstTime2,,"""愿卢德保佑你，舰长，""他们成功的藏住了他们声音中的颤抖。""十分抱歉，你的着陆请求被拒绝了。""
+lppHesperusShrineFirstTime2,DialogOptionSelected,$option == lpp_hesperusVisitFirstTime2,,"""愿卢德保佑你，舰长。"" 他们成功地藏住了他们声音中的颤抖，""十分抱歉，你的着陆请求被拒绝了。""
 
 你吸了一口气，正准备回复，这个新人瞧了一眼通知然后瞪大了他的眼睛。
 
-""抱歉，舰长 ... 我的意思是，尊敬的。 我... 哨卫 Orbis 想要和你通话，"" 他们在念头衔的时候倒是十分流利。练过，你很确信。
+""抱歉，舰长... 我的意思是，尊敬的。 我想说... 行星教卫 想要和你通话。"" 他们在念头衔的时候倒是十分流利。练过，你很确信。
 
 ""正在转接。""",lpp_hesperusVisitFirstTime3:继续,
 lppHesperusShrineFirstTime3,DialogOptionSelected,$option == lpp_hesperusVisitFirstTime3,"BeginConversation oak
 $player.metGideonOak = true
-SetPersonHidden oak false","哨卫 Orbis 出现在了你的面前。
+SetPersonHidden oak false","行星教卫出现在了你的面前。
 
-""$playerName 舰长，""他以问候的语气说到，同时严肃的盯着你。
+""$playerName 舰长。"" 他以问候的语气说到，同时严肃的盯着你。
 
 这一刻变得越来越长。他就好像是沉着的化身，对等你开口毫无怨言。嘴角的皱纹若隐若现，像是被永远困在了在成型的边缘不断徘徊。","lpp_hesperusExcubitorDenied0a:""为什么我的旅行请求被拒绝了？""
 lpp_hesperusExcubitorDenied0b:""我要求得知为什么我的请求被拒绝了！""
-lpp_hesperusExcubitorDenied1:""有什么问题吗，哨卫？""
+lpp_hesperusExcubitorDenied1:""有什么问题吗，教卫？""
 lpp_hesperusExcubitorWait1:耐心等待
 ",
 lppHesperusExcubitorDenied0a,DialogOptionSelected,$option == lpp_hesperusExcubitorDenied0a,"$option = lpp_hesperusExcubitorDenied1 0
@@ -4134,7 +4134,7 @@ lppHesperusExcubitorWait1,DialogOptionSelected,$option == lpp_hesperusExcubitorW
 
 他锲而不舍，他一言不发，继续荒唐地盯着。你注意到显示器校正信号波动时，图像产生了些许闪烁。","lpp_hesperusExcubitorDenied0a:""为什么我的旅行请求被拒绝了？""
 lpp_hesperusExcubitorDenied0b:""我要求得知为什么我的请求被拒绝了！""
-lpp_hesperusExcubitorDenied1:""有什么问题吗，哨卫？""
+lpp_hesperusExcubitorDenied1:""有什么问题吗，教卫？""
 lpp_hesperusExcubitorWait2:保持坚定，安静等待。",
 lppHesperusExcubitorWaitAside,LPPExcubitorWaitAside,$player.waitedOutGargoyle,,你以前就和 Gargoyle 玩过这个游戏，你知道该怎么赢 —— 坚持不懈。,,
 lppHesperusExcubitorWait2,DialogOptionSelected,$option == lpp_hesperusExcubitorWait2,,"飞船的轰鸣在你耳中不断回响放大，让你意识到自己正身处于一个围绕重力井飞驰的铁罐头中。引力犹如无数无边的大网，让你困入动力持续变动的危局之中，滞留于此。
@@ -4143,9 +4143,9 @@ lppHesperusExcubitorWait2,DialogOptionSelected,$option == lpp_hesperusExcubitorW
 
 此刻，难以言述。",lpp_hesperusExcubitorWait3:仔细倾听...,
 lppHesperusExcubitorWait3,DialogOptionSelected,$option == lpp_hesperusExcubitorWait3,"AdjustRepActivePerson FRIENDLY 1
-$player.waitedOutExcubitor = true","Excubitor Orbis 的突然开口，差点吓了你一跳，将你的思绪拉回现实。
+$player.waitedOutExcubitor = true","行星教卫的突然开口，差点吓了你一跳，将你的思绪拉回现实。
 
-""你很有耐心，"" 他说。他的嘴角边又浮现出一抹皱纹；你猜测这在卢徳骑士团里可能算是一种笑容吧。
+""你很有耐心。"" 他说。他的嘴角边又浮现出一抹皱纹；你猜测这在卢徳骑士团里可能算是一种笑容吧。
 
 ""我没料到你会有如此耐心。""
 
@@ -4180,25 +4180,24 @@ $triedBribe = true","那个皱纹 —— 或者也可以说是全星域最微弱
 ""而至于你，"" 他继续道，""你的精神又是何其堕落，以至于你竟会想着迁就此事。""",,
 lppHesperusExcubitorJudge1,DialogOptionSelected,$option == lpp_hesperusExcubitorJudge1,,"他像捶下拍卖捶一般重重的拍了一下桌子。""我不想再听下去了。现在，好好听我对这件事的判断吧。""", lpp_hesperusExcubitorRepCheck:继续,
 lppHesperusExcubitorDenyAccess,DialogOptionSelected,"$option == lpp_hesperusExcubitorRepCheck
-RepLTE luddic_church SUSPICIOUS score:50",$global.lpp_deniedHesperusShrineAccess = true,"""你的恶名让人产生怀疑， 舰长。 我不能问心无愧地让你访问我们的圣地，"" 哨卫 Orbis 说到。 ""为你自己寻找救赎吧。 如果你能多少找到一些, 那我们可以再讨论一下这事。""
+RepLTE luddic_church SUSPICIOUS score:50",$global.lpp_deniedHesperusShrineAccess = true,"""你的恶名让人产生怀疑， 舰长。 我不能问心无愧地让你访问我们的圣地。"" 行星教卫说到， ""为你自己寻找救赎吧。 如果你能多少找到一些, 那我们可以再讨论一下这事。""
 
-""求善， 舰长，"" 他以告别的语气说到。","lpp_hesperusExcubitorAllowEndCutoff:""要不然我们现在讨论一下救赎怎么样。""
+""求善， 舰长。"" 他以告别的语气说到。","lpp_hesperusExcubitorAllowEndCutoff:""要不然我们现在讨论一下救赎怎么样。""
 cutCommLink:切断通讯链接",
 lppHesperusExcubitorEndAllow,DialogOptionSelected,"$option == lpp_hesperusExcubitorRepCheck
 RepGTE luddic_church WELCOMING score:100",$market.allowedToVisitShrine = true,"长久的沉默。
 
-""我会让交通管制中心给予你降落许可，舰长，""哨卫 Orbis 总算说到，
-""愿你的灵魂能寻找到它所追寻之物。""","pp_hesperusExcubitorAllowEndCutoff:""等等，就这？""
-lpp_hesperusExcubitorAllowEndNice:""谢谢你， 哨卫 Orbis。""
+""我会让交通管制中心给予你降落许可，舰长。"" 行星教卫终于开口，""愿你的灵魂能寻找到它所追寻之物。""","pp_hesperusExcubitorAllowEndCutoff:""等等，就这？""
+lpp_hesperusExcubitorAllowEndNice:""谢谢你， 行星教卫。""
 cutCommLink:切断通讯链接",
 lppHesperusExcubitorEndAllowWait,DialogOptionSelected,"$option == lpp_hesperusExcubitorRepCheck
 RepGTE luddic_church NEUTRAL score:50","$global.lpp_hesperusWait = true 7
-$global.lpp_madeToWaitForHesperus = true","""我将在七天之内审核你的请求，"" 哨卫 Orbis 说到。""如果这段时间足够上帝创世，那么也足够让你学习到耐心。""
+$global.lpp_madeToWaitForHesperus = true","""我将在七天之内审核你的请求。"" 行星教卫说到，""如果这段时间足够上帝创世，那么也足够让你学习到耐心。""
 
 他脸上再次浮现出充满褶皱的笑
 
 ""愿卢德保佑你，舰长。""","lpp_hesperusExcubitorAllowEndCutoff:""为何让我等待？""
-lpp_hesperusExcubitorAllowEndNice:""您也是，哨卫 Orbis。""
+lpp_hesperusExcubitorAllowEndNice:""您也是，行星教卫。""
 0:cutCommLinkPolite:切断通讯链接",
 lppHesperusExcubitorAllowEndCutoff,DialogOptionSelected,$option == lpp_hesperusExcubitorAllowEndCutoff,"ShowDefaultVisual
 EndConversation NO_CONTINUE",你正想说话，但他已经从他那一端中止了链接。,0:cutCommLinkPolite:切断通讯链接,
@@ -4208,11 +4207,11 @@ EndConversation NO_CONTINUE",他仅仅是点头表示了解，然后便从他那
 lppExcubitorResponseSevenDaysA,PopulateOptions,"$id == oak
 !$global.lpp_hesperusWait
 $global.lpp_madeToWaitForHesperus 
-!$global.lpp_visitedShrineHesperus","AddText ""你已经像哨卫 Orbis 要求的一样等待了七天。""",,,
+!$global.lpp_visitedShrineHesperus","AddText ""你已经按照行星教卫的要求等待了七天。""",,,
 lppExcubitorResponseSevenDaysB,PopulateOptions,"$id == oak
 $global.lpp_hesperusWait
 $global.lpp_madeToWaitForHesperus 
-!$global.lpp_visitedShrineHesperus","AddText ""你还没有按照哨卫 Orbis 的要求等待七天的时间。你猜测他不会乐意接受协商等待时长。""",,,
+!$global.lpp_visitedShrineHesperus","AddText ""你还没有按照行星教卫的要求等待七天。你猜测他不会乐意让这段时间缩短一点。""",,,
 lppExcubitorResponseAsk,PopulateOptions,"$id == oak
 $global.lpp_inProgress
 $global.lpp_madeToWaitForHesperus 
@@ -4239,34 +4238,34 @@ $global.lpp_deniedHesperusShrineAccess
 lppExcubitorDidWait,DialogOptionSelected,$option == lpp_excubitorDidWait,"AdjustRepActivePerson FRIENDLY 1
 unset $global.lpp_madeToWaitForHesperus
 unset $global.lpp_deniedHesperusShrineAccess
-$market.allowedToVisitShrine = true","""好的，"" 他说道，嘴角浮现出英仙座星域中最微小的笑容形成的褶皱。
+$market.allowedToVisitShrine = true","""好的。"" 他说道，嘴角浮现出英仙座星域中最微小的笑容形成的褶皱。
 
 漫长的等待。
 
-""我将会命令交通管制处给予你着陆许可，舰长，"" 哨卫 Orbis 最后说道。""愿尔之灵魂寻得其所寻之物。""","lpp_hesperusExcubitorAllowEndCutoff:""等等，就这样结束了？""
-lpp_hesperusExcubitorAllowEndNice:""再会了，哨卫 Orbis。""
-0:cutCommLinkPolite:Cut the comm link",
+""我将会命令交通管制处给予你着陆许可，舰长。"" 行星教卫终于开口，""愿尔之灵魂寻得其所寻之物。""","lpp_hesperusExcubitorAllowEndCutoff:""等等，就这样结束了？""
+lpp_hesperusExcubitorAllowEndNice:""再会了，行星教卫。""
+0:cutCommLinkPolite:切断通讯链接",
 lppExcubitorAllowAccess,DialogOptionSelected,"$option == lpp_excubitorAskToVisit
 !$global.lpp_hesperusWait
 $global.lpp_madeToWaitForHesperus","unset $global.lpp_madeToWaitForHesperus
 unset $global.lpp_deniedHesperusShrineAccess
-$market.allowedToVisitShrine = true","漫长的等待后。
+$market.allowedToVisitShrine = true","长久的沉默。
 
-""我会命令交通管制处通过您的着陆许可，舰长，"" 哨卫 Orbis 最后说道。""望尔之灵魂寻得其所寻。""","lpp_hesperusExcubitorAllowEndCutoff:""等等，就这样结束了？""
-lpp_hesperusExcubitorAllowEndNice:""再会了，哨卫 Orbis。""
-0:cutCommLinkPolite:Cut the comm link",
+""我会让交通管制中心给予你降落许可，舰长。"" 行星教卫终于开口，""愿你的灵魂能寻找到它所追寻之物。""","lpp_hesperusExcubitorAllowEndCutoff:""等等，就这样结束了？""
+lpp_hesperusExcubitorAllowEndNice:""再会了，行星教卫。""
+0:cutCommLinkPolite:切断通讯链接",
 lppExcubitorDenyAccessWait,DialogOptionSelected,"$option == lpp_excubitorAskToVisit
 $global.lpp_hesperusWait
 $global.lpp_madeToWaitForHesperus","AdjustRepActivePerson SUSPICIOUS -1
 $global.lpp_hesperusWait = true 7","漫长的等待后。
 
-""我会在七天之后考虑你的诉求，"" 哨卫 Orbis 叹了口气，说道，""从现在开始计时。""
+行星教卫 Oak 叹了口气。""我会在七天之后考虑你的诉求。"" 他说道，""从现在开始计时。""
 
 他拿起一支笔，在一张非数字化媒介的纸张上写写画画，目光却投向了别处。""记住，耐心源自谦逊。""
 
-""原神灵护佑你，舰长，"" 他最后说道。","lpp_hesperusExcubitorAllowEndCutoff:""那我已经等了的时间算什么？""
-lpp_hesperusExcubitorAllowEndNice:""再会，哨卫 Orbis。""
-0:cutCommLinkPolite:Cut the comm link","# yeah, don't be a pest!"
+""原神灵护佑你，舰长。"" 他最后说道。","lpp_hesperusExcubitorAllowEndCutoff:""那我已经等了的时间算什么？""
+lpp_hesperusExcubitorAllowEndNice:""再会，行星教卫。""
+0:cutCommLinkPolite:切断通讯链接","# yeah, don't be a pest!"
 lppExcubitorWhyDenyFallback,DialogOptionSelected,$option == lpp_excubitorWhyDeny,"$askedWhy = true 0
 FireAll PopulateOptions","""因为这是我的判断，""他说，语气中带着长期执政的权威，看来这就是解决问题所需要的一切。",,"# this should never fire, but ... -dgb"
 lppExcubitorWhyDenyB1,DialogOptionSelected,"$option == lpp_excubitorWhyDeny
@@ -4302,13 +4301,13 @@ FireBest DialogOptionSelected","""还算过得去，"" 他满不情愿地说道�
 lppExcubitorRedemptionCheckYes,DialogOptionSelected,"$option == lpp_excubitorRedemptionCheck
 RepGTE luddic_church FAVORABLE","AdjustRepActivePerson FRIENDLY 1
 $market.allowedToVisitShrine = true
-unset $global.lpp_deniedHesperusShrineAccess","""好的，"" 他说道，嘴边皱了一下就算是给了你一个全英仙座星域最小气的笑容。
+unset $global.lpp_deniedHesperusShrineAccess","""好的。"" 他说道，嘴角浮现出英仙座星域中最微小的笑容形成的褶皱。
 
 漫长的等待。
 
-""我将会命令交通管制处给予你着陆许可，舰长，"" 哨卫 Orbis 最后说道。""愿尔之灵魂寻得其所寻之物。""","lpp_hesperusExcubitorAllowEndNice:""谢谢。""
+""我将会命令交通管制处给予你着陆许可，舰长。"" 行星教卫终于开口，""愿尔之灵魂寻得其所寻之物。""","lpp_hesperusExcubitorAllowEndNice:""谢谢。""
 lpp_hesperusExcubitorAllowEndCutoff:""等等，这就结束了？""
-0:cutCommLinkPolite:Cut the comm link",
+0:cutCommLinkPolite:切断通讯链接",
 lppExcubitorRedemptionCheckNo,DialogOptionSelected,$option == lpp_excubitorRedemptionCheck,"$askedRedemption = true 0
 FireAll PopulateOptions","""是的，"" 他说着，眉头紧蹙。
 
@@ -4327,9 +4326,9 @@ lppHesperusBarEventSel,DialogOptionSelected,$option == lpp_hesperusShrine_barEve
 DoCanAffordCheck 2000 lpp_hesperusShrineSneakBribe false",你开始从太空船员同僚中寻找门路，和他们一起谈天说地，买酒请客。在对古板的教会海关规程尖锐而中肯地吐槽了几句之后，你马上就摸到了门道。很快，在你反应过来之前，你就已经置身于酒吧后面一个烟雾缭绕的逃生井里，和一位当地港口机构的技术人员攀谈了起来。,lpp_hesperusShrine_barEvent2:试探是否有可能行贿,
 lppHesperusBarEventSel2,DialogOptionSelected,$option == lpp_hesperusShrine_barEvent2,," ""我们这种人还是要保持低调。在公共场合里保持虔诚，自由自在的生活全留在私底下过，懂吗？"" 
 
-他们抽了一口黑市毒烟卷，继续说到： ""无论你对哨卫 Orbis 的牢骚有多大，至少和对待其他那些 '骑士美德' 一样，他对怜悯和宽恕也一视同仁。""
+他们抽了一口黑市毒烟卷，继续说到： ""无论你对行星教卫的牢骚有多大，至少和对待其他那些 '骑士美德' 一样，他对怜悯和宽恕也一视同仁。""
 
-夹杂在各种对卢德教居民的抱怨和牢骚里，你打听到只要花 2000 星币就能让一个有能耐的无信者把一趟未经授权前往 Hesperus 的穿梭机飞行计划标记为朝圣者定期运输航班。","lpp_hesperusShrineSneakBribe:支付贿赂
+夹杂在各种对卢德教居民的抱怨和牢骚里，你打听到只要花 2,000 星币就能让一个有能耐的无信者把一趟未经授权前往 Hesperus 的穿梭机飞行计划标记为朝圣者定期运输航班。","lpp_hesperusShrineSneakBribe:支付贿赂
 lpp_hesperus_returnToBar:回到酒吧",
 lppHesperus_barReturnToBar,DialogOptionSelected,$option == lpp_hesperus_returnToBar,BarCMD returnFromEvent false,,,
 lppHesperusShrineSneakBribe,DialogOptionSelected,$option == lpp_hesperusShrineSneakBribe,"RemoveCommodity credits 2000
@@ -5021,9 +5020,11 @@ lke_barEndOut:继续走",
 lkeChalcedonBarBribeWalkB,DialogOptionSelected,"$option == llke_chalcedonBarBribeWalk
 !$mamAnnoyedEveryone","AdjustRep independent SUSPICIOUS -1
 SetTextHighlights ""2,000 星币""
-DoCanAffordCheck 2000 lke_chalcedonBarBribe3k false","玛门之仆笑了起来，对你说：""等等，等等！"" 他站起来朝着整个茶馆喊到: ""这家伙，不好惹的对手！小心，他把星币藏堡垒护盾后面。谁都拿不走!"" 
+DoCanAffordCheck 2000 lke_chalcedonBarBribe3k false","玛门之仆笑了起来，对你说：""等等，等等！"" 他站起来朝着整个茶馆喊到：""这家伙，不好惹的对手！小心，他把星币藏堡垒护盾后面。谁都拿不走！"" 
+
 其他太空船员看了过来，一些人喃喃地表达不满，另一些人则大笑。
-他坐下，晃动着茶具，冲你咧嘴笑道: ""2000星币。你像个太空劫匪，但我欣赏你。""","lke_chalcedonBarBribe2k:""成交。""
+
+他坐下，晃动着茶具，冲你咧嘴笑道：""2,000 星币。简直是拦路抢劫，但我欣赏你。""","lke_chalcedonBarBribe2k:""成交。""
 lke_barEndOut:继续离开",
 lkeChalcedonBarBribe5k,DialogOptionSelected,$option == lke_chalcedonBarBribe5k,"AddCredits -5000
 $option = lke_chalcedonBarMeetingSet
@@ -5256,14 +5257,14 @@ lkeChalcedonBarSedgeRespE,DialogOptionSelected,$option == lke_chalcedonBarSedgeR
 
 很快，一壶茶就被端上来了，散发着酒香。两只杯子几乎掉在了地上，老板退了出去。
 
-Sedge 歪着头微笑着看着整个过程，他把两个杯子放好，把它们倒满了茶。他举起杯子，期待地看着你。","lke_chalcedonBarSedgeCheersA:""To finding lost things."" 
-lke_chalcedonBarSedgeCheersB:""Are you allowed to drink this?""
-lke_chalcedonBarSedgeCheersC:""Got a prayer for this?""",
-lkeChalcedonBarSedgeCheersA,DialogOptionSelected,$option == lke_chalcedonBarSedgeCheersA,FireAll LKEchalcedonBarSedgeOpts,"""愿我们行在卢德之道，得真理临到我们，"" 他补充到， ""不偏左右。""
+Sedge 歪着头微笑着看着整个过程，他把两个杯子放好，把它们倒满了茶。他举起杯子，期待地看着你。","lke_chalcedonBarSedgeCheersA:""为了那些失而复得的东西，我敬你一杯。""
+lke_chalcedonBarSedgeCheersB:""你喝这个合规矩吗？""
+lke_chalcedonBarSedgeCheersC:""喝前要祈祷一下吗？""",
+lkeChalcedonBarSedgeCheersA,DialogOptionSelected,$option == lke_chalcedonBarSedgeCheersA,FireAll LKEchalcedonBarSedgeOpts,"""愿我们行在卢德之道，得蒙真理，"" 他补充到， ""不偏左右。""
 
 然后他消沉下来。",,
 lkeChalcedonBarSedgeCheersB,DialogOptionSelected,$option == lke_chalcedonBarSedgeCheersB,RemoveOption lke_chalcedonBarSedgeCheersB,"""主会恕我的罪。"" 他摇晃着杯子说。",,
-lkeChalcedonBarSedgeCheersC,DialogOptionSelected,$option == lke_chalcedonBarSedgeCheersC,FireAll LKEchalcedonBarSedgeOpts,"""愿我们行在卢德之道，得真理临到我们，"" 他补充到， ""不偏左右。""
+lkeChalcedonBarSedgeCheersC,DialogOptionSelected,$option == lke_chalcedonBarSedgeCheersC,FireAll LKEchalcedonBarSedgeOpts,"""愿我们行在卢德之道，得蒙真理，"" 他补充到， ""不偏左右。""
 
 然后他消沉下来。",,
 lkeChalcedonSedgeRespKill,DialogOptionSelected,$option == lke_chalcedonSedgeRespKill,"$hadShotTalk = true 0
@@ -5299,79 +5300,79 @@ $global.lke_gotBornanewLead = true
 Call $global.lke_ref updateStage
 unset $market.lkeMeetingSet","Sedge 俯下身检查。
 
-""啊。"" 他毫不犹疑的说，""对，我现在想起啦了，他去了 Mazalot。""","lke_sedgeShowPic3:"" Mazalot？ 为什么？""",
+""啊。"" 他毫不犹疑的说，""对，我现在想起来了，他去了 Mazalot。""","lke_sedgeShowPic3:"" Mazalot？ 为什么？""",
 lkeSedgeShowPic3,DialogOptionSelected,$option == lke_sedgeShowPic3,"HideSecondPerson
 SetPersonPortrait bornanew ""jethro_bornanew""","Sedge 斟酌了一会，从牙缝里吸着气。
 
 ""他的信仰虔诚，"" Sedge 低声说到，""但是他... 并未明晰自己的道路。""",lke_sedgeShowPic4:继续,
 lkeSedgeShowPic4a,DialogOptionSelected,"$option == lke_sedgeShowPic4
-$market.talkingOutside",,"Sedge stands back suddenly, looking away down the alley.
+$market.talkingOutside",,"Sedge 突然后退一步，看向小巷另一边。
 
-""That a man could believe, truly, and not know his Path? I did not like to see that. I told him he had no place with us."" 
+""一个人的信仰虔诚, 却没有信念？我不想看见这种人。我告诉他他在我们这没有立足之地。"" 
 
-He speaks without meeting your eyes, ""I was told he worked for a time, then bought passage to Mazalot.""
+他说话时没有看你的眼睛， ""我听说他工作了一段时间，凑够钱去了 Mazalot。""
 
-""I hope they see what I saw, too. That... he is unfit.""",lke_sedgeEnd1:继续,
+""我希望他们也能看到我所看到的，就是... 他不合适。""",lke_sedgeEnd1:继续,
 lkeSedgeShowPic4b,DialogOptionSelected,"$option == lke_sedgeShowPic4
-$market.talkingAtBar",,"Sedge stands, suddenly, a look of concern on his face.
+$market.talkingAtBar",,"Sedge 突然站了起来，脸上露出郑重的神色。
 
-""That a man could believe, truly, and not know his Path? I did not like to see that. I told him, he had no place with us.""
+""一个人的信仰虔诚, 却没有信念？我不想看见这种人。我告诉他他在我们这没有立足之地。"" 
 
-""I was told he worked for a time, then bought passage to Mazalot,"" he says. ""I hope they see what I saw, too. That he is unfit.""",lke_sedgeEnd1:继续,
+ ""我听说他工作了一段时间，凑够钱去了 Mazalot。"" 他说，""我希望他们也能看到我所看到的，就是... 他不合适。""",lke_sedgeEnd1:继续,
 lkeSedgeEnd1,DialogOptionSelected,$option == lke_sedgeEnd1,"EndConversation DO_NOT_FIRE
 ShowDefaultVisual
 FireAll LKESedgeShootOptions
-#ShowImageVisual luddicbar","You would swear that Sedge is upset. 
+#ShowImageVisual luddicbar","你可以发誓 Sedge 很低沉。 
 
-""No more questions,"" he spits. ""We are done.""
+""别问了，""他唾沫横飞， ""就这样。""
 
-He walks away.",,
+他走开了。",,
 lkeSedgeEndShootNo,LKESedgeShootOptions,,,,lke_sedgeEnd2:看着他离开,
-lkeSedgeEndShootA,LKESedgeShootOptions,$market.talkingAtBar,,,lke_sedgeEndBarShoot:给他背后来一枪,
+lkeSedgeEndShootA,LKESedgeShootOptions,$market.talkingAtBar,,,lke_sedgeEndBarShoot:在他背后射击他,
 lkeSedgeEndShootB1,LKESedgeShootOptions,"$market.talkingOutside
-$market.lkePlayerKidnapped",,你瞟到你的随身武器落在地上，旁边就是玛门之仆冰凉的尸体。,lke_sedgeEndShoot:拿起你的随身武器并给 Sedge 背后来一枪,
+$market.lkePlayerKidnapped",,你瞟到你的随身武器落在地上，旁边就是玛门之仆冰凉的尸体。,lke_sedgeEndShoot:拿起你的随身武器并在 Sedge 背后射击他,
 lkeSedgeEndShootB2,LKESedgeShootOptions,"$market.talkingOutside
-!$market.lkePlayerKidnapped",,,lke_sedgeEndShoot:Shoot Sedge in the back,
+!$market.lkePlayerKidnapped",,,lke_sedgeEndShoot:从背后向 Sedge 射击,
 lkeSedgeEndShootC,LKESedgeShootOptions,"$market.talkingOutside
-$market.lkePlayerKidnapped",,,lke_sedgeEndGuardShoot:让你的一名警卫给他背后来一枪,
+$market.lkePlayerKidnapped",,,lke_sedgeEndGuardShoot:让你的一名警卫在他背后射击他,
 lkeSedgeEndBarShoot,DialogOptionSelected,$option == lke_sedgeEndBarShoot,"Call $global.lke_ref shootEm
-Call $global.lke_ref endMusic","You draw and fire. The shot reverberates in the small space, a sharp crack that rattles ceramicware.
+Call $global.lke_ref endMusic","你拔枪射击。枪声在狭小的空间中回荡，尖锐的声音震的瓷器嗡嗡作响。
 
-Sedge drops like a bag of meat.
+Sedge 像一袋肉一样倒下。
 
-There are shouts and screams from patrons. Chaos, and flight. The room empties out, the proprietor ducks behind the bar.",lke_sedgeEndShoot2:检查尸体来确保他挂了,
+顾客们发出尖叫声。一片混乱，人们纷纷逃离。房间里空荡荡的，老板躲在吧台后面。",lke_sedgeEndShoot2:检查尸体来确保他死了,
 lkeSedgeEndBarShootB,DialogOptionSelected,"$option == lke_sedgeEndBarShoot
 $global.sedgeSmashedTea","Call $global.lke_ref shootEm
-Call $global.lke_ref endMusic","You draw and fire. The shot reverberates in the small space, a sharp crack that rattles ceramicware.
+Call $global.lke_ref endMusic","你拔枪射击。枪声在狭小的空间中回荡，尖锐的声音震的瓷器嗡嗡作响。
 
-Sedge drops like a bag of meat.
+Sedge 像一袋肉一样倒下。
 
-The proprietor ducks behind the bar and scrabbles out some back door.",lke_sedgeEndShoot2:检查尸体来确保他挂了,
+老板翻身躲进吧台，从后门爬了出去。",lke_sedgeEndShoot2:检查尸体来确保他死了,
 lkeSedgeEndShoot,DialogOptionSelected,$option == lke_sedgeEndShoot,"Call $global.lke_ref shootEm
-Call $global.lke_ref endMusic","You draw and fire. The shot reverberates in the alley, a sharp crack.
+Call $global.lke_ref endMusic","你拔枪射击。尖锐的枪声在小巷中回荡。
 
-Sedge drops like a bag of meat.
+Sedge 像一袋肉一样倒下。
 
-Silence follows the echoing shot, broken only by retreating footsteps as his thugs flee the scene.",lke_sedgeEndShoot2:检查尸体来确保他挂了,
+回响之后，唯有他手下逃离的脚步声打破了沉默。",lke_sedgeEndShoot2:检查尸体来确保他死了,
 lkeSedgeEndGuardShoot,DialogOptionSelected,$option == lke_sedgeEndGuardShoot,"Call $global.lke_ref shootEm
-Call $global.lke_ref endMusic","You speak a sharp word into your comms and within seconds an echoing crack shoots down the alley.
+Call $global.lke_ref endMusic","你对着通讯器说了个词，数秒后，一声巨响在小巷中回荡。
 
-Sedge drops like a bag of meat.
+Sedge 像一袋肉一样倒下。
 
-His thugs disappear. Tactical chatter from your guards - equipped with the best - tracks their flight from the spot.",lke_sedgeEndShoot2:检查尸体来确保他挂了,
+他的手下消失了。你装备精良的保镖们说着战术术语，追踪着他们的逃跑路线。",lke_sedgeEndShoot2:检查尸体来确保他死了,
 lkeSedgeEndShoot2bar,DialogOptionSelected,"$option == lke_sedgeEndShoot2
 $market.talkingAtBar","$player.shotSedge = true
 Call $global.lke_ref resumeMusic
-$player.ethosRuthless++","His sightless eyes stare up at a paper lantern slowly spinning in the rafters, casting a warm and murky light.
+$player.ethosRuthless++","他无神的双眼盯着一个在屋檐上慢慢旋转的纸灯笼，倒映着温暖而朦胧的光。
 
-He is smiling. And dead.",lke_sedgeEndShootEnd:离开,
+他在笑。他死了。",lke_sedgeEndShootEnd:离开,
 lkeSedgeEndShoot2outside,DialogOptionSelected,"$option == lke_sedgeEndShoot2
 $market.talkingOutside","$player.shotSedge = true
 $player.shotSedgeOutside = true
 Call $global.lke_ref resumeMusic
-$player.ethosRuthless+++","His sightless eyes stare up at a translucent awning, rain spatter distorting a murky light.
+$player.ethosRuthless+++","他无神的双眼凝视着半透明的雨篷，雨点扭曲了模糊的光线。
 
-He is smiling. And dead.",lke_sedgeEndShootEnd:离开,
+他在笑。他死了。",lke_sedgeEndShootEnd:离开,
 lkeSedgeEndShootEnd,DialogOptionSelected,$option == lke_sedgeEndShootEnd,"$player.luddicAttitudePather--
 AdjustRep luddic_path HOSTILE -50
 FireAll PopulateOptions","你留下他的尸体回到了你的$shipOrFleet里。左径会处理好这一切。
@@ -5380,15 +5381,15 @@ FireAll PopulateOptions","你留下他的尸体回到了你的$shipOrFleet里。
 lkeSedgeEnd2Inside,DialogOptionSelected,"$option == lke_sedgeEnd2
 $market.talkingAtBar","Call $global.lke_ref resumeMusic
 FireAll MostLuddicEthosRefresh
-FireBest LKEsedgeContactCheck","The proprietor, who was pretending to polish a samovar, releases an audible sigh of relief then gives you an accusing look. You suspect service will not be enthusiastic for you in this establishment in the future.
+FireBest LKEsedgeContactCheck","之前一直在假装擦洗茶具的店主这时发出了一声如释重负的叹息，并用责备的眼神瞪了你一眼。你估计以后再也没法在这享受到什么热情的服务了。
 
-You have a lead: Mazalot",lke_sedgeEndLeave:离开,
+不过你有了条线索：Mazalot",lke_sedgeEndLeave:离开,
 lkeSedgeEnd2Outside,DialogOptionSelected,"$option == lke_sedgeEnd2
 $market.talkingOutside","Call $global.lke_ref resumeMusic
 FireAll MostLuddicEthosRefresh
-FireBest LKEsedgeContactCheck","Sedge disappears down a side-alley, and his thugs with him. You are left in the dipping alley with a corpse.
+FireBest LKEsedgeContactCheck","Sedge 消失在小巷另一头，他的手下和他一起走了，留下你和一具尸体。
 
-And a lead: Mazalot.",lke_sedgeEndLeave:离开,
+还有一条线索：Mazalot",lke_sedgeEndLeave:离开,
 lkeSedgeEnd2Leave,DialogOptionSelected,$option == lke_sedgeEndLeave,FireAll PopulateOptions,,,
 lkeSedgeContactCheckA,LKEsedgeContactCheck,$player.mostLuddicEthosPather,"SetPersonHidden sedge false
 AddPotentialContact sedge",,,
@@ -5404,139 +5405,139 @@ lkePatherFleetOpenComm,OpenCommLink,"$entity.lke_patherIntercept score:1000
 !$entity.ignorePlayerCommRequests
 Call $global.lke_ref updateData","$entity.ignorePlayerCommRequests = true
 FireAll MostLuddicEthosRefresh
-FireBest LKEpatherFleetStartOpts","The commlink opens with a shudder, error codes flashing from ancient protocols begrudgingly converted to current standards.
+FireBest LKEpatherFleetStartOpts","伴着抖动和卡顿，通讯链接联通了。古老的通讯协议被强行转换符合现行规范，产生了一堆在不断闪烁的错误代码。
 
-The Pather captain stares you down. ""$playername,"" $heOrShe begins.",,
+左径舰长盯着你。""$playername，"" $heOrShe说。",,
 lkePatherFleetStartLikePath,LKEpatherFleetStartOpts,"$player.mostLuddicEthosPather
-$global.lpp_radicalizedKnightInitiate",FireAll LKEpatherFleetStartResp,"""You are known to us. You have spoken in support of the Path that is necessary and righteous to faithful walkers,"" $heOrShe smiles grimly for a moment, then drops it.
+$global.lpp_radicalizedKnightInitiate",FireAll LKEpatherFleetStartResp,"""我们知道你。你曾经说过你支持对忠实的求道者来说必要且正义的 左径，"" $heOrShe狞笑了一会，然后收起表情。
 
-""So if you truly wish to serve the Path, cease your search. Do not pry into our operations, do not ask after one or another 'missing' recruit.""",,
-lkePatherFleetStartJangSup,LKEpatherFleetStartOpts,$player.joinedJangalaProtest,FireAll LKEpatherFleetStartResp,"""You are known to us. You shed blood for the Faith on Jangala by the Hegemony's cruel hand."" $HeOrShe smiles grimly, ""Yes, we know of you.""
+""那么如果你真的希望为 左径 服务，就停止你的追寻。不要窥探我们的行动，不要探问无论哪个 '失踪' 的新兵。""",,
+lkePatherFleetStartJangSup,LKEpatherFleetStartOpts,$player.joinedJangalaProtest,FireAll LKEpatherFleetStartResp,"""我们知道你。在 Jangala，你在 霸主 残酷的手上为信仰流过血。"" $HeOrShe狞笑着，""对，我们知道你的事。""
 
-$HeOrShe drops the smile, and continues. ""Serve the Path again: cease your search. Do not pry into our operations, do not ask after one or another 'missing' recruit.""",,
+$HeOrShe收起笑容，继续说道，""再次服务 左径 吧：停止你的追寻。不要窥探我们的行动，不要探问无论哪个 '失踪' 的新兵。""",,
 lkePatherFleetStartCotton,LKEpatherFleetStartOpts,$player.satWithCottonCount >= 2 score:2,"$brotherCottonSaid = true 0
 $wontAttack = true 0
-FireAll LKEpatherFleetStartResp","""I was told to cut you from the sky, to burn your fleet and scatter your ashes to the blessed vacuum."" $HeOrShe smiles grimly, ""But then I received a message. Brother Cotton believes that Providence has sung of your role in the final battle.""
+FireAll LKEpatherFleetStartResp","""有人叫我将你从天空斩落，燃尽你的舰队然后将你的骨灰撒入这神圣的虚空。"" $HeOrShe狞笑着，""但我之后收到一条消息。Cotton 修士相信上天认可你在最终之战里的贡献。""
 
-$HeOrShe shakes $hisOrHer head, dropping the smile. ""I know not what to make of this. Nonetheless, I... ask... that you cease your search for this 'missing' recruit."" $HeOrShe sighs, recognizing how pathetic this sounds. 
+$HeOrShe摇着头，收起笑容。""我不知道该怎么做。不管怎样，我...求...你不要再寻找这个 '失踪' 的新兵了。"" $HeOrShe叹气道，意识到这听起来多么可悲。
 
-""Ask yourself,"" $heOrShe pleads, ""Who do you serve by this action? What lies at the end of this Path?""",,
-lkePatherFleetFaithOption,LKEpatherFleetStartOpts,$player.mostLuddicEthosFaithful,FireAll LKEpatherFleetStartResp,"""You tread a dangerous path, $playerBrotherOrSister. I was sent here to cut you from the sky and scatter your ashes to the blessed vacuum. I pray that this shall not be necessary."" ",,
-lkePatherFleetDefault,LKEpatherFleetStartOpts,,FireAll LKEpatherFleetStartResp,"""I will cut you from the sky, burn your fleet and scatter your ashes to the blessed vacuum."" $HeOrShe smiles grimly, ""This is where your path ends, for you have asked forbidden questions and searched for forbidden things.""",,
-lkePatherFleetRespA,LKEpatherFleetStartResp,,,,"lke_patherFleetNotStopping:""I'm not going to stop my search.""",
-lkePatherFleetRespB,LKEpatherFleetStartResp,,,,"lke_patherFleetCeaseLie:""If that is what the Path demands, I will cease."" (lie)",
+""问问你自己，"" $heOrShe恳求道，""在这个行动中你为谁服务？在这条道路的尽头有什么？""",,
+lkePatherFleetFaithOption,LKEpatherFleetStartOpts,$player.mostLuddicEthosFaithful,FireAll LKEpatherFleetStartResp,"""你踏上了一条危险的路， $playerBrotherOrSister。我被派来将你从天空斩落并且将你的骨灰撒入这神圣的虚空。我希望我没有必要这么做。"".",,
+lkePatherFleetDefault,LKEpatherFleetStartOpts,,FireAll LKEpatherFleetStartResp,"""我会将你从天空斩落，燃尽你的舰队然后将你的骨灰撒入这神圣的虚空。"" $HeOrShe狞笑着，""你既然问寻禁忌，那这便是你的终结。""",,
+lkePatherFleetRespA,LKEpatherFleetStartResp,,,,"lke_patherFleetNotStopping:""我并不准备停下演讲。""",
+lkePatherFleetRespB,LKEpatherFleetStartResp,,,,"lke_patherFleetCeaseLie:""若是修业之道所需，那我会就此停手。"" (撒谎) ",
 lkePatherFleetRespC,LKEpatherFleetStartResp,"$player.mostLuddicEthosFaithful
 $player.satWithCottonCount < 2
-!$wontAttack",,,"lke_patherFleetServeFaith:""I serve the Faith, and I search for a servant of the Faith. What would battle serve?""",
-lkePatherFleetRespD,LKEpatherFleetStartResp,$player.mostLuddicEthosPather,,,"lke_patherFleetServePath:""I wish to serve the Path; finding Bornanew will serve the cause we share.""",
+!$wontAttack",,,"lke_patherFleetServeFaith:""我为信仰服务，我寻找信仰的仆从。战斗对此又有何用？""",
+lkePatherFleetRespD,LKEpatherFleetStartResp,$player.mostLuddicEthosPather,,,"lke_patherFleetServePath:""我愿奉卢德之道； 找到 Bornanew 对我们共同的事业是有益处的。""",
 lkePatherFleetRespE,LKEpatherFleetStartResp,"$player.joinedJangalaProtest
-!$player.mostLuddicEthosPather",,,"lke_patherFleetServePathB:""Finding Bornanew will serve the Path. Have faith.""",
-lkePatherFleetRespF,LKEpatherFleetStartResp,$brotherCottonSaid,,,"lke_patherFleetAskCottonSay:""What else did Brother Cotton say? Is that all?""",
-lkePatherFleetRespG,LKEpatherFleetStartResp,$player.jaspisCottonBook ,,,"lke_patherFleetAskCottonContact:""I need to contact Brother Cotton. I have something for him.""",
-lkePatherFleetRespH,LKEpatherFleetStartResp,!$wontAttack,,,"lke_patherFleetThreat:""You demand what your puny fleet cannot impose. Flee now.""",
-lkePatherFleetRespI,LKEpatherFleetStartResp,!$wontAttack,,,"lke_patherFleetThreatC:""You talk a lot. Sure you're up for this?""",
+!$player.mostLuddicEthosPather",,,"lke_patherFleetServePathB:""找到 Bornanew 既是行卢德之道。坚定你的信仰。""",
+lkePatherFleetRespF,LKEpatherFleetStartResp,$brotherCottonSaid,,,"lke_patherFleetAskCottonSay:""Cotton 修士还说了什么？就这些么？""",
+lkePatherFleetRespG,LKEpatherFleetStartResp,$player.jaspisCottonBook ,,,"lke_patherFleetAskCottonContact:""我需要联系 Cotton 修士。我有些东西给他。""",
+lkePatherFleetRespH,LKEpatherFleetStartResp,!$wontAttack,,,"lke_patherFleetThreat:""你在提一个你那可怜的小舰队无力承担的要求。逃吧。""",
+lkePatherFleetRespI,LKEpatherFleetStartResp,!$wontAttack,,,"lke_patherFleetThreatC:""你话真多。你确定你准备好了么？""",
 lkePatherFleetRespK,LKEpatherFleetStartResp,"$player.metBrotherCotton
-!$wontAttack ","SetStoryOption lke_patherFleetSP 1 lke_patherFleetSP general ""Claimed to be working for Brother Cotton to avoid Pather fleet sent to stop you from finding Bornanew""",,"lke_patherFleetSP:""Stand down, $brotherOrSister. I am following the orders of Livewell Cotton.""",
-lkePatherFleetRespJ,LKEpatherFleetStartResp,,,,lke_patherFleetEndFight:Cut the comms,
-LKEpatherFleetNotStopping,DialogOptionSelected,$option == lke_patherFleetNotStopping,RemoveOption lke_patherFleetNotStopping,"""But you must,"" $heOrShe says, almost perplexed. ""I shall attack if you do not desist.""",,
+!$wontAttack ","SetStoryOption lke_patherFleetSP 1 lke_patherFleetSP general ""声称你是在为 Cotton 修士工作从而避开派来阻挠你寻找 Bornanew 的左径分子舰队""",,"lke_patherFleetSP:""停下，$brotherOrSister。 我正在听从 Livewell Cotton 的命令。""",
+lkePatherFleetRespJ,LKEpatherFleetStartResp,,,,lke_patherFleetEndFight:切断通讯,
+LKEpatherFleetNotStopping,DialogOptionSelected,$option == lke_patherFleetNotStopping,RemoveOption lke_patherFleetNotStopping,"""但你必须如此，"" $heOrShe几乎是困惑不解地说出这些话，""你再不停下，我就要动武了。""",,
 LKEpatherFleetNotStoppingB,DialogOptionSelected,"$option == lke_patherFleetNotStopping
-$wontAttack",RemoveOption lke_patherFleetNotStopping,"""But you must,"" $heOrShe says unhappily.",,
-LKEpatherFleetAskCottonSay,DialogOptionSelected,$option == lke_patherFleetAskCottonSay,RemoveOption lke_patherFleetAskCottonSay,"""I did not speak with Brother Cotton directly. A message was relayed,"" $heOrShe looks at you with curiosity and concern as $heOrShe speaks.
+$wontAttack",RemoveOption lke_patherFleetNotStopping,"""但你必须那样，"" $heOrShe不高兴地说。",,
+LKEpatherFleetAskCottonSay,DialogOptionSelected,$option == lke_patherFleetAskCottonSay,RemoveOption lke_patherFleetAskCottonSay,"""我并没有直接同 Cotton 修士对话。信息是被转达的。"" $heOrShe在$heOrShe说话时好奇的注视着你。
 
-""My Path is to obey, so I obey.""",,
-LKEpatherFleetAskCottonContact,DialogOptionSelected,$option == lke_patherFleetAskCottonContact,RemoveOption lke_patherFleetAskCottonContact,"""I... it is not my place."" $HeOrShe rubs $hisOrHer forehead nervously. ""I will... report your words to my superior. I can promise nothing.""",,
+""我道遵从，所以我遵从。""",,
+LKEpatherFleetAskCottonContact,DialogOptionSelected,$option == lke_patherFleetAskCottonContact,RemoveOption lke_patherFleetAskCottonContact,"""我...我不负责这个。"" $HeOrShe紧张的点了点$hisOrHer的脑袋。""我会...向我的上级转达你的要求。我也不能给出任何保证。""",,
 LKEpatherFleetThreatC,DialogOptionSelected,$option == lke_patherFleetThreatC,"$player.ethosSarcastic++
 $option = lke_patherFleetThreat 0
 FireBest DialogOptionSelected",,,
 LKEpatherFleetThreatNope,DialogOptionSelected,"$option == lke_patherFleetThreat
 $wontAttack","EndConversation DO_NOT_FIRE
 $option = lke_patherFleetEndPeace 0
-FireBest DialogOptionSelected","""I but asked,"" $heOrShe says, distressed. ""And I shall not disobey Brother Cotton's orders. If you will not listen to my words, then I beg you pray. Pray! And listen for the song of the angels, because you will hear no more from me.""
+FireBest DialogOptionSelected","""我只是问问。"" $heOrShe苦恼的说，""我也不会违背 Cotton 修士的命令。如果你不想听我的话，那我请求你祈祷吧。祈祷吧！以听天使之颂歌，因你将不会听见我的言语。""
 
-$HeOrShe cuts the comms.",,
+$HeOrShe切断了通讯。",,
 LKEpatherFleetThreatA,DialogOptionSelected,"$option == lke_patherFleetThreat
 $entity.relativeStrength >= 0","EndConversation DO_NOT_FIRE
 $player.ethosCocky++
 $option = lke_patherFleetEndFight 0
-FireBest DialogOptionSelected","The Pather shakes $hisOrHer head; grim, determined. 
+FireBest DialogOptionSelected","左径摇了摇$hisOrHer的头；冷酷，坚定。
 
-""In that, you are mistaken. I prayed that our Paths would align, and a fellow $playerBrotherOrSister could walk with me. But here it ends for you- in God's holy vacuum.""
+""在这一点上，你错了。我祈祷你我之道将要并行，一位$playerBrotherOrSister可以与我同行。但在这儿你道就要尽了 —— 在这神圣虚空之中。""
 
-The comms are cut.",,
+通讯被切断了。",,
 LKEpatherFleetThreatB,DialogOptionSelected,"$option == lke_patherFleetThreat
 $entity.relativeStrength < 0","EndConversation DO_NOT_FIRE
 $option = lke_patherFleetEndFight 0
-FireBest DialogOptionSelected","The Pather shakes $hisOrHer head; grim, determined.
+FireBest DialogOptionSelected","左径摇了摇$hisOrHer的头；冷酷，坚定。
 
-""I obey, and I obey unto a righteous death in God's holy vacuum.""
+""我遵从，我遵从直到在神圣虚空之中为公义而献身。""
 
-That said, $heOrShe cuts the comms.",cutCommLinkNoText:继续,
+这么说着，$heOrShe切断了通讯。",cutCommLinkNoText:继续,
 LKEpatherFleetCeaseLie,DialogOptionSelected,"$option == lke_patherFleetCeaseLie
 $player.mostLuddicEthosFaithful","AdjustRepActivePerson WELCOMING 1
 AdjustRep luddic_path WELCOMING 1
 $player.ethosLiar++
 $option = lke_patherFleetEndPeace 0
-FireBest DialogOptionSelected","""Well decided, $playerBrotherOrSister. We share Faith, if not our Path, but that is enough. We must do all in our worldly and spiritual power to halt that so-called church's perversion of Ludd's teachings.""
+FireBest DialogOptionSelected","""好决定，$playerBrotherOrSister。我们拥有同样的信仰，也许不是同行于卢德之道，但也够了。我们需竭尽世俗和灵性之力，去阻止那所谓的教会扭曲卢德的教导。""
 
-$HeOrShe holds $hisOrHer hands together, ""Blessed be this day; may your Path lead you to righteous glory.""",,
+$HeOrShe紧握$hisOrHer的双手，""祝福此日；愿你奉行之道引领你得公义的荣耀。""",,
 LKEpatherFleetCeaseLie2,DialogOptionSelected,"$option == lke_patherFleetCeaseLie
 $player.mostLuddicEthosPather","AdjustRepActivePerson WELCOMING 1
 AdjustRep luddic_path WELCOMING 1
 $player.ethosLiar++
 $option = lke_patherFleetEndPeace 0
-FireBest DialogOptionSelected","""Well decided, $playerBrotherOrSister. We share Faith and a Path, and that must be enough. We must do all in our worldly and spiritual power to halt that so-called church's perversion of Ludd's teachings.""
+FireBest DialogOptionSelected","""好决定，$playerBrotherOrSister。我们拥有同样的信仰，同行于卢德之道，这就够了。我们需竭尽世俗和灵性之力，去阻止那所谓的教会扭曲卢德的教导。""
 
-$HeOrShe holds $hisOrHer hands together, ""Blessed be this day; may your Path lead you to righteous glory.""",,
+$HeOrShe紧握$hisOrHer的双手，""祝福此日；愿你奉行之道引领你得公义的荣耀。""",,
 LKEpatherFleetCeaseLie3,DialogOptionSelected,$option == lke_patherFleetCeaseLie,"RemoveOption lke_patherFleetCeaseLie
 $player.ethosLiar++
-AdjustRepActivePerson HOSTILE -1","""I pray that I could believe you,"" $HeOrShe holds $hisOrHer hands together for a moment, ""But you are not of the Faith, nor of the Path. What value is the word of one who so denies the light of Ludd?""
+AdjustRepActivePerson HOSTILE -1","""我祈愿我可以相信你，"" $HeOrShe握住$hisOrHer的双手。""但你既无信仰，又不奉行卢德之道。一个否认卢德之光的人，他的言语又有何价值？""
 
-$HeOrShe lets $hisOrHer hands drop. ""Nothing. It is worth nothing. Even the truth, if indeed it is truth, is a lie in your heretic's mouth.""",,
-LKEpatherFleetServeFaith,DialogOptionSelected,$option == lke_patherFleetServeFaith,,"""You too must pray on this, $playerBrotherOrSister,"" $heOrShe says with genuine concern. ""It is a narrow Path we tread, and easily lost by those who pervert the teachings of Ludd and name their heresy Truth.""
+$HeOrShe让$hisOrHer的手垂下。""没有。毫无价值。即使是真的，假使的确是真的，也是从你这异教徒之口中说出的谎言。""",,
+LKEpatherFleetServeFaith,DialogOptionSelected,$option == lke_patherFleetServeFaith,,"""你需为此祈祷，$playerBrotherOrSister，"" $heOrShe真诚的关心着你。""我们所行之道为窄，易为那些信奉异端邪说，扭曲卢德教导之人所迷惑。""
 
-""Let me speak truth to you; I wish not to battle you. The strength of the Faithful is wasted when we fight amongst ourselves; and the devil-spawn of the Domain laugh as they watch. They think we're misguided fools, you know.""","lke_patherFleetServeFaithA1:""We are no fools. Save your strength, $brotherOrSister.""
-lke_patherFleetServeFaithB1:""You would be a fool, and a heretic besides, to stand in my way.""",
+""让我来告诉你真相：我不想与你战斗。当我们自相残杀时，信徒的力量就被虚耗；而那些人之领的恶魔之子会看着我们大笑。你知道的，他们觉得我们是被误导的蠢货。""","lke_patherFleetServeFaithA1:""我们不是蠢货。节省你的力量，$brotherOrSister。""
+lke_patherFleetServeFaithB1:""如果你挡了我的路，那你就是个蠢货，而且还是个异教徒。""",
 LKEpatherFleetServeFaithA1,DialogOptionSelected,$option == lke_patherFleetServeFaithA1,"$player.ethosMercy++
 AdjustRepActivePerson WELCOMING 1
 AdjustRep luddic_path WELCOMING 1
 $option = lke_patherFleetEndPeace 0
-FireBest DialogOptionSelected","$HeOrShe stares hard into your eyes, at least the holo-image of them, then brings $hisOrHer hands together. ""May Providence show me the way; by the stars and the pneuma and the revelation.""
+FireBest DialogOptionSelected","$HeOrShe直视着你的眼睛，至少是全息影像上的眼睛，然后将$hisOrHer的手合起。""愿主示我前路；以星辰、圣灵和启示。""
 
-After a moment, $personName opens $hisOrHer eyes. 
+过了一会，$personName张开$hisOrHer的眼睛。
 
-""Let me speak plainly now: I shall trust your Path. Wherever it leads you, remember what we fight for.""",,
+""让我直说吧：我愿相信你行之道。无论此道引你去何方，别忘了我们为何而战。""",,
 LKEpatherFleetServeFaithB1,DialogOptionSelected,$option == lke_patherFleetServeFaithB1,"$player.ethosRuthless++
 $player.ethosOrder++
 $option = lke_patherFleetEndFight 0
-FireBest DialogOptionSelected","$HisOrHer eyes go hard. ""It is as I fear. The false Church has corrupted you. It was said that the Adversary would cloak their lies in the sacrament, and here it is before me.""
+FireBest DialogOptionSelected","$HisOrHer双眼紧盯着你。""这就是我害怕的。你已经被那虚假的教会腐化。据说卢德之敌会用圣礼掩盖谎言，正如我现在所见。""
 
-""May God's holy vacuum purify you,"" $heOrShe hisses.",,
-LKEpatherFleetServePath,DialogOptionSelected,$option == lke_patherFleetServePath,,"""You must pray on this, $playerBrotherOrSister,"" $heOrShe says with genuine concern. ""It is a narrow and perilous Path we tread, beset by the false teachings of the Church on one side, and by the devil-spawn of the Domain on the other.""
+""愿神圣虚空将你净化。"" $heOrShe嘶嘶地说。",,
+LKEpatherFleetServePath,DialogOptionSelected,$option == lke_patherFleetServePath,,"""你需为此祈祷，$playerBrotherOrSister，"" $heOrShe真诚地关心着你。""我们所行之道是窄的，是险的，被虚伪谎言的异端教会所困，又被人之领的恶魔之子所围。""
 
-$HeOrShe sighs, and brings $hisOrHer hands together. ""May Providence show me the way; by the stars and the pneuma and the revelation.""",lke_patherFleetServePath2:继续,
+$HeOrShe叹了口气，然后将$hisOrHer的手合起。""愿主示我前路；以星辰、圣灵和启示。""",lke_patherFleetServePath2:继续,
 LKEpatherFleetServePath2,DialogOptionSelected,$option == lke_patherFleetServePath2,"AdjustRepActivePerson WELCOMING 1
 AdjustRep luddic_path WELCOMING 1
 $option = lke_patherFleetEndPeace 0
-FireBest DialogOptionSelected","After a moment, $personName opens $hisOrHer eyes. 
+FireBest DialogOptionSelected","过了一会，$personName 张开$hisOrHer的眼睛。
 
-""Let me speak plainly now: I shall trust your Path. Wherever it leads you, remember what we fight for.""",,
+""让我直说吧：我愿相信你行之道。无论此道引你去何方，别忘了我们为何而战。""",,
 LKEpatherFleetServePathB,DialogOptionSelected,$option == lke_patherFleetServePathB,"$option = lke_patherFleetServePath 0
 FireBest DialogOptionSelected",,,
-LKEpatherFleetSPOpt,DialogOptionSelected,$option == lke_patherFleetSP,$player.ethosLiar++,"""Brother Cotton spoke to you?"" $HisOrHer eyes narrow.
-","lke_patherFleetSP2:""Yes, over tea. Would that we all could serve the Path with such grace and charm.""",
-LKEpatherFleetSPOpt2,DialogOptionSelected,$option == lke_patherFleetSP2,$player.heardCottonHearsSong = true,"""Would that we could indeed,"" $heOrShe says, perhaps thinking to some slight or misstep $heOrShe observed in the fellow Faithful. 
+LKEpatherFleetSPOpt,DialogOptionSelected,$option == lke_patherFleetSP,$player.ethosLiar++,"""Cotton 修士和你说话了？""$HisOrHer眯起眼睛。
+","lke_patherFleetSP2:""是的，边喝茶边谈。真希望我们都这么温文尔雅地循经行道。""",
+LKEpatherFleetSPOpt2,DialogOptionSelected,$option == lke_patherFleetSP2,$player.heardCottonHearsSong = true,"""要是我们能这样就好了，"" $heOrShe说到，或许是想起了$heOrShe在一众信徒中曾经观察到的一些怠慢或是错误的行为。
 
-""It is said that Brother Cotton hears the song of the angels, the whisper of pneuma itself. It is not for human ears, they say."" $HeOrShe looks away wistfully, ""He is like a prophet of old; touched by the divine."" 
+""据说 Cotton 修士能听到天使的歌声，也就是灵魂的低语。他们说，这不是人类能听到的。"" $HeOrShe深情地望着远方，""他就像古代的先知，被神灵所点化。""
 
-Aware of how this sounds, $heOrShe quickly adds, ""Not like Ludd, of course. The Word, that is another matter. What I mean to say is that, truly, it must be blessedly glorious.""","lke_patherFleetSP3:""It must; truly we are blessed to walk aside him.""",
+意识到这听起来有些不妥当，$heOrShe连忙补充到，""当然了，不是像卢德那样。卢德之道那是另一回事。我实际上想说的是，那一定是无上光荣的。""","lke_patherFleetSP3:""必须如此。我们能与他同行真是受了神的祝福。""",
 LKEpatherFleetSPOpt3,DialogOptionSelected,$option == lke_patherFleetSP3,"AdjustRepActivePerson WELCOMING 1
 AdjustRep luddic_path WELCOMING 1
 $option = lke_patherFleetEndPeace 0
-FireBest DialogOptionSelected","""Truly! Oh, I am overcome- forgive me, I must pray.""
+FireBest DialogOptionSelected","""真的！哦，我征服了 —— 原谅我，我需要祈祷。""
 
-Putting $hisOrHer hands together, the Pather goes on for some time about how wonderful Brother Cotton is, and how we should all follow his example and be so blessed.
+将$hisOrHer的手合拢，左径份子花了一段时间描述 Cotton 修士是多么耀目，以及我们应当如何效仿他这受赐福的事例。
 
-And so on; you put your hands together and mumble something to keep up the act. Soon enough, the show is over, and persuade the Pather that $heOrShe may close the comms without yet another blessing.",,
+诸如此类；你将你的双手合拢，喃喃自语以符合你扮演的形象。很快，表演结束了，这说服了左径份子$heOrShe可以在没有另一个祝福的情况下关闭通讯。",,
 lkePatherFleetEndPeace,DialogOptionSelected,$option == lke_patherFleetEndPeace,"MakeOtherFleetNonHostile lke true
 MakeOtherFleetGoAway true
 Call $entity.lke_ref makeUnimportant
@@ -5561,7 +5562,7 @@ $global.isDevMode",SetOptionColor lkeDev_optionsMenu gray,,200:lkeDev_optionsMen
 lkeDevOptionsMenu,DialogOptionSelected,$option == lkeDev_optionsMenu,FireAll DEVlkeMazTestMenuOptions,,,
 LKEmazTestSetting1,DEVlkeMazTestMenuOptions,!$player.gotYaribayCredentials,SetOptionColor LKE_mazTest1a gray,,LKE_mazTest1a:set $player.gotYaribayCredentials true,
 LKEmazTestSetting2,DEVlkeMazTestMenuOptions,!$player.metSiyavong,SetOptionColor LKE_mazTest2a gray,,LKE_mazTest2a:set $player.metSiyavong true,
-LKEmazTestSetting3,DEVlkeMazTestMenuOptions,,SetOptionColor LKE_mazTest3a gray,,LKE_mazTest3a:Test Bornanew end convo,
+LKEmazTestSetting3,DEVlkeMazTestMenuOptions,,SetOptionColor LKE_mazTest3a gray,,LKE_mazTest3a:测试 Bornanew 那端的通讯状况,
 #LKEmazTestSetting4,DEVlkeMazTestMenuOptions,#$player.luddicAttitudePather < 10,SetOptionColor LKE_mazTestOut gray,,LKE_mazTestOut:Return,
 LKEmazTest1a,DialogOptionSelected,$option == LKE_mazTest1a,"$player.gotYaribayCredentials = true 0
 FireAll DEVlkeMazTestMenuOptions",,,
@@ -5677,12 +5678,12 @@ FireAll PopulateOptions","""Jethro。当然，"" $heOrShe平静地说。""我会
 
 ""今天你还需要港务局的其他服务吗，舰长？""",,
 LKEmazalotAskPMYaribayB3,DialogOptionSelected,$option == lke_mazalotAskPMYaribayB3,"$lke_stoneWalling = true
-FireAll PopulateOptions","""我不确定，"" $heOrShe平静地说。""我的办公室将尽一切努力为你们在 Mazalot 统一政权的利益范围内，以及附近的联盟贸易通道内的商业活动提供便利。""
+FireAll PopulateOptions","""我不确定，""$heOrShe平静地说。""我的办公室将尽一切努力为你们在 Mazalot 统一政权的利益范围内，以及附近的联盟贸易通道内的商业活动提供便利。""
 
 你听到敲击数据平板的声音。
 
 ""今天你还需要港务局的其他服务吗，舰长？""",,
-LKEmazalotAskPMresp5Opt,DialogOptionSelected,$option == lke_mazalotAskPMresp5Opt,FireAll PopulateOptions,"""是的，"" $heOrShe看起来松了一口气。""我的办公室很乐意协助促进 Mazalot 统一政权和联盟监管的贸易路线范围内的商业繁荣。""",,
+LKEmazalotAskPMresp5Opt,DialogOptionSelected,$option == lke_mazalotAskPMresp5Opt,FireAll PopulateOptions,"""是的，""$heOrShe看起来松了一口气。""我的办公室很乐意协助促进 Mazalot 统一政权和联盟监管的贸易路线范围内的商业繁荣。""",,
 LKEmazalotAskPMresp1Opt,DialogOptionSelected,$option == lke_mazalotAskPMresp1Opt,"EndConversation DO_NOT_FIRE
 ShowDefaultVisual","""对不起，"" $heOrShe说，举止有些改变，""但我帮不了你。""
 
@@ -5704,405 +5705,405 @@ AddTextSmall ""获得了突袭 Nile Virens 藏身处的方案"" highlight
 SetPersonHidden virens false
 $global.lke_contactVirens = true
 Call $global.lke_ref updateStage
-FireAll PopulateOptions","$PersonName looks at you for a long time before $heOrShe relents. ""You would have my thanks for not mentioning who gave you this information.""
+FireAll PopulateOptions","$PersonName 注视着你，过了许久，$heOrShe的态度缓和了下来。""你没提起这份消息的来源，感激不尽。""
 
-""It is common knowledge that Luddic Path activity on Mazalot goes through a man named Nile Virens. The MUA has never got enough evidence to convict him of anything. And if they did, there would be another uprising, anyway. Virens... takes care of people. Charity, of a sort.""
+""众所周知，Mazalot 上的左径活动是通过一个名叫 Nile Virens 的人展开的。MUA 尚未掌握足以为其定罪的证据。不论如何，他们要是真有证据，那肯定又会发生一次暴动。毕竟 Virens 这个人...关心民众，宽厚仁爱 —— 勉强算是。""
 
-""Virens owns a series of compounds located in a few of the larger Luddic-majority settlements, and several in the former-frontiers. He does have a public comms ID, though I can't say whether he'll speak with you.""",,
+""Virens 在一些较大的卢德聚居地有一连串的场院，另外还有几个位于前边境地带。他确实有公开的通讯 ID，但我说不准他会不会跟你谈。""",,
 LKEmazalotPMwontTellLie,DialogOptionSelected,$option == lke_mazalotPMwontTellLie,"$player.ethosLiar++
 $market.lke_wontTellLied = true
 $option = lke_mazalotPMwontTell 0
 FireBest DialogOptionSelected",,,
-LKEmazalotPMwontTell,DialogOptionSelected,$option == lke_mazalotPMwontTell,FireAll PopulateOptions,"""Thank Providence,"" $heOrShe lets out a breath. ""And thank you. The last thing Mazalot needs - the Faithful and the rest, both - is another crackdown. Or an uprising."" 
+LKEmazalotPMwontTell,DialogOptionSelected,$option == lke_mazalotPMwontTell,FireAll PopulateOptions,"""感谢神，""$heOrShe松了一口气。""也谢谢你。无论是对信徒还是其他人而言，Mazalot 最不需要的事就是另一次镇压，或者暴动。"" 
 
-""Little difference,"" $heOrShe muses idly, ""One always leads to the other.""
+""没啥区别，""$heOrShe随口说，""一个总是跟着另一个。""
 
-""But um, where were we? My office is happy to assist in facilitating commerce within the sphere of the MUA and associated League-regulated space lanes.""",,
+""但是嗯，我们说到哪儿了？我的部门很乐意协助 MUA 和相关联盟监管航线内的商贸活动。""",,
 # LKE Mazalot Quartermaster,,,,,,
 LKEmazalotAskQuartermaster1,PopulateOptions,"$market.lke_searchForBornanew2
 $market.id == mazalot
 $postId == supplyOfficer
-!$askedBornanew",,,"lke_mazalotAskBornanew:""I'm looking for a man called Jethro Bornanew.""",
+!$askedBornanew",,,"lke_mazalotAskBornanew:""我在找一个叫 Jethro Bornanew 的人。""",
 LKEmazalotAskQuartermaster2,PopulateOptions,"$market.lke_searchForBornanew2
 $market.id == mazalot
 $postId == supplyOfficer
-!$askedPath",,,"lke_mazalotAskPath:""I'm looking for whoever is in charge of the Luddic Path around here.""",
+!$askedPath",,,"lke_mazalotAskPath:""我在寻找这里 卢德左径 活动的领导者。""",
 LKEmazalotAskQuartermaster3,PopulateOptions,"$market.lke_searchForBornanew2
 $market.id == mazalot
 $postId == supplyOfficer
 $player.gotYaribayCredentials
 $askedSomething
-!$lke_usedYaribayCred",,,"lke_mazQMTryYaribay:""I have credentials from gens Yaribay. Horus Yaribay personally asked me to investigate this matter."" (lie)",
+!$lke_usedYaribayCred",,,"lke_mazQMTryYaribay:""我有 Yaribay 家族的证件。Horus Yaribay 亲自要求我调查此事。"" (说谎)",
 LKEmazQMTryYaribay,DialogOptionSelected,$option == lke_mazQMTryYaribay,"$player.ethosLiar++
 $player.abusedYaribayCred++
 AdjustRepActivePerson FRIENDLY 1
-$lke_usedYaribayCred = true","""Gens Yaribay?"" $HeOrShe immediately sits up straighter. ""Yes, $playerSirOrMadam, how can I help?""
+$lke_usedYaribayCred = true","""Yaribay 氏族？""$HeOrShe立即坐的更直了些。""是的，$playerSirOrMadam，我能帮你做些什么？""
 
-$HeOrShe glances around, then leans a little closer to the comms, ""If the administrator finds out you're working for Yaribay, well. He'll make your life difficult. Just so you know. I got nothing against them personally. Even think they're the way to go, right? Peace with the Hegemony? I'll take that over war any shift of the week.""","lke_mazQMTryYaribayA:""I need to make contact with the Luddic Path on Mazalot.""
-lke_mazQMTryYaribayForget:""You know what, forget I said anything about Yaribay.""",
-LKEmazQMTryYaribayA,DialogOptionSelected,$option == lke_mazQMTryYaribayA,,"""Okay. Look though- I don't want to start any trouble, and you gotta remember I didn't tell you any of this. I'm only sticking my neck out because... I'm just doing my part. You'll mention that to the Yaribays?""","lke_mazQMTryYaribayA2:""I'm afraid not. I have to protect your identity.""
-lke_mazQMTryYaribayA1:""Sure."" (lie)",
+$HeOrShe瞥了眼周围，然后稍稍靠近通讯器，""如果管理员发现你在为 Yaribay 工作，好吧。他会让你日子不好过的。你要知道。我个人对他们没什么意见。甚至认为他们...是对的？与 霸主 的和平？这周每一天，我都会觉得这比战争更重要。""","lke_mazQMTryYaribayA:""我需要与 Mazalot 上的 卢德左径 取得联系。""
+lke_mazQMTryYaribayForget:""不如这样，忘了我说的关于 Yaribay 的任何事。""",
+LKEmazQMTryYaribayA,DialogOptionSelected,$option == lke_mazQMTryYaribayA,,"""好吧。你看 —— 我不想惹上什么麻烦，你得记着我可什么都没说。我冒险仅仅是因为...我在做我该做的事。你会向 Yaribay 的人提这事么？""","lke_mazQMTryYaribayA2:""我恐怕不能。我必须保护你的身份。""
+lke_mazQMTryYaribayA1:""当然。"" (撒谎)",
 LKEmazQMTryYaribayA1,DialogOptionSelected,$option == lke_mazQMTryYaribayA1,"$option = lke_mazQMTryYaribayA3 0
-FireBest DialogOptionSelected",$PersonName smiles obediently.,,
+FireBest DialogOptionSelected",$PersonName 顺从地笑了。,,
 LKEmazQMTryYaribayA2,DialogOptionSelected,$option == lke_mazQMTryYaribayA2,"$option = lke_mazQMTryYaribayA3 0
-FireBest DialogOptionSelected","$PersonName looks disappointed, but says ""I understand, $playerSirOrMadam.""",,
-LKEmazQMTryYaribayA3,DialogOptionSelected,$option == lke_mazQMTryYaribayA3,"Highlight ""Nile Virens""","""Everyone knows the Path comes through here. They say, don't touch that crate? You don't touch that crate. Gotta be careful or they make sure you remember who runs things. And who's that? Nile Virens.""",lke_mazQMTryYaribayA3b:继续,
+FireBest DialogOptionSelected","$PersonName 看起来很失望，但仍然说 ""我理解，$playerSirOrMadam。""",,
+LKEmazQMTryYaribayA3,DialogOptionSelected,$option == lke_mazQMTryYaribayA3,"Highlight ""Nile Virens""","""所有人都知道这儿 卢德左径 说了算。他们说，别碰那箱子？那你就别碰。小心点，要不他们就会让你知道谁才是老大。谁是老大呢？Nile Virens。""",lke_mazQMTryYaribayA3b:继续,
 LKEmazQMTryYaribayA3b,DialogOptionSelected,$option == lke_mazQMTryYaribayA3b,"AddTextSmall ""获得了 Nile Virens 的通讯 ID"" highlight
 AddTextSmall ""获得了突袭 Nile Virens 藏身处的方案"" highlight
 SetPersonHidden virens false
 $global.lke_contactVirens = true
-Call $global.lke_ref updateStage","""Virens is the Path on Mazalot. It all goes through him. He's got compounds on the surface. Sometimes we make shipments. I'll give you the locations."" $HeOrShe taps at a datapad. ""The Authority can't nail him down on any of this. Or won't. Too scared.""
+Call $global.lke_ref updateStage","""Virens是 Mazalot 上的 卢德左径 成员。他是老大。在地表他有个基地。有时候会有些物流运输往来，我给你详细地址，""$HeOrShe点了点数据面板。""当局没办法给他定罪。或者是不想定罪。太忌惮他了。""
 
-""But you're not,"" $heOrShe looks at you, eyes gleaming. ""Not too scared I mean, right? Hope you find your man. And if Virens goes down a peg or two? Wouldn't mind a bit.""","lke_mazQMTryYaribayA4:""Thank you for your service.""",
-LKEmazQMTryYaribayA4,DialogOptionSelected,$option == lke_mazQMTryYaribayA4,FireAll PopulateOptions,"""Don't mention it, $playerSirOrMadam,"" $personName says almost bashfully.",,
+""但你不一样，""$heOrShe看着你，眼神闪亮。""我的意思是，不是很怕，对么？希望你找到你想找的人。如果 Virens 自尊心受伤了？没人在意。""","lke_mazQMTryYaribayA4:""感谢你的服务。""",
+LKEmazQMTryYaribayA4,DialogOptionSelected,$option == lke_mazQMTryYaribayA4,FireAll PopulateOptions,"""别提了，$playerSirOrMadam，""$personName 羞怯地说。",,
 LKEmazQMTryYaribayForget,DialogOptionSelected,$option == lke_mazQMTryYaribayForget,"$player.abusedYaribayCred--
-FireAll PopulateOptions","""Er,"" $heOrShe says, looking confused for a moment before deciding to play along. ""Of course, $playerSirOrMadam. I heard nothing.""",,
+FireAll PopulateOptions","""呃，""$heOrShe说，在决定合作之前看起来有些困惑.，""当然，$playerSirOrMadam。我没听到什么。""",,
 LKEmazalotAskQMBornanew,DialogOptionSelected,"$option == lke_mazalotAskBornanew
 $postId == supplyOfficer
 !$askedBornanew","$market.buggedVIPsAboutBornanew++
 $askedBornanew = true 30
 $askedSomething = true 0
-FireAll PopulateOptions","""Jethro?"" $HeOrShe thinks for a moment. ""Don't know 'em, sorry. I'm more in logistics and requisition, so if you have a question about that...""
+FireAll PopulateOptions","""Jethro？""$HeOrShe想了会。""不认识，抱歉。我这里是物流和申请业务，如果你对这方面有疑问...""
 
-$HeOrShe looks hopeful that you'll stop asking questions.",,
+$HeOrShe一幅希望你别问了的样子。",,
 LKEmazalotAskQMPath,DialogOptionSelected,"$option == lke_mazalotAskPath
 $postId == supplyOfficer
 !$askedPath","$market.buggedVIPsAboutBornanew++
 $askedPath = true
-$askedSomething = true 0","""The Luddic... Ah."" $HeOrShe glances around self-consciously.
+$askedSomething = true 0","""卢德...啊。"" $HeOrShe不自在地环顾了四周。
 
-""Look, I don't mess with those types. The Unification Authority put 'em on the terrorist list. You know what the punishment is for 'aiding and abetting'? Ain't worth it.""","lke_mazalotAskPathQM2a:""Sounds serious. I'll keep my nose clean.""
-lke_mazalotAskPathQM2b:""'Worth it'? So you know what the Path will pay for collaboration?""",
-LKEmazalotAskQMPath2a,DialogOptionSelected,$option == lke_mazalotAskPathQM2a,FireAll PopulateOptions,"""You so do, so do,"" $heOrShe says.
+""听着，我与那些人没有交集。统一政权把他们列入了恐怖分子名单。你明白 '协助和教唆' 的惩罚是什么吗？这对我来说不值得。""","lke_mazalotAskPathQM2a:""听起来挺严重，我不会惹麻烦的。""
+lke_mazalotAskPathQM2b:""'值得'？所以你知道 卢德左径 会给协作者什么报酬？""",
+LKEmazalotAskQMPath2a,DialogOptionSelected,$option == lke_mazalotAskPathQM2a,FireAll PopulateOptions,"""你也该这样有样学样，""$heOrShe说。
 
-""Look, word of advice. If a mudboot comes all sneaky to you, and they make an offer - big number credits - just say, no way, not interested. Probably an Authority agent or could be FleetSec. Testing loyalty, is what that is. I mean sure, there's Pathers sneaking through all the time, but how do you know?""
+""听着，给你点建议。如果有泥腿子鬼鬼祟祟的来找你，和你说有个活 —— 能赚大笔星币 —— 你就说，没门，没兴趣。很有可能这人是当局特工，或者舰队安全官。忠诚测试，就这样。我讲真的，当然有 卢德左径 在周边潜藏活动，但你怎么分辨呢？""
 
-$HeOrShe shrugs, ""If the MUA questioned every Luddic who spoke against the polity, they'd have to arrest half the planet. It'd be another uprising! No one wants that.""",,
-LKEmazalotAskQMPath2b,DialogOptionSelected,$option == lke_mazalotAskPathQM2b,FireAll PopulateOptions,"""Oh, come on."" $HeOrShe shakes $hisOrHer head in consternation.
+$HeOrShe耸耸肩，""如果 MUA 质询每个反政府的卢德信徒，他们就得拘留半个星球的人。这会是另一次暴动！没人希望这样。""",,
+LKEmazalotAskQMPath2b,DialogOptionSelected,$option == lke_mazalotAskPathQM2b,FireAll PopulateOptions,"""哦，得了。""$HeOrShe惊愕的摇摇头。
 
-""I'm just talking. It's just words. Ask anyone. Some mudboot will come all sneaking-like and say they're making an offer. Big-number credits. I tell them no way, not interested, I don't need that trouble. Even odds it's an Authority agent. Or FleetSec, could be. Testing loyalty, is what it is.""
+""我只是聊天。说说而已。随便问问谁。有些泥腿子鬼鬼祟祟的说有个赚钱的机会。一大笔星币。我告诉他们没门，没兴趣，我不需要这样的麻烦。很有可能这人是当局特工，或者舰队安全官。忠诚测试，就这样。""
 
-""And if the MUA questioned every Luddic who spoke up against the polity, they'd have to arrest half the planet. It'd be another uprising! No one wants that.""",,
+""如果 MUA 质询每个反政府的卢德信徒，他们就得拘留半个星球的人。这会是另一次暴动！没人希望这样。""",,
 # LKE Mazalot administrator Dardan Kato,,# market.dardanWontTalkLKE ,,,,
 LKEmazalotAskAdministrator0,PopulateOptions,"$market.lke_searchForBornanew2
 $market.id == mazalot
 $postId == administrator
 !$askedBornanew
 $market.buggedVIPsAboutBornanew < 4
-!$player.metDardanKato",$player.metDardanKato = true,"$HeOrShe is paying more attention to a datapad than the comms. ""Perhaps we can resolve this quickly?""",,
+!$player.metDardanKato",$player.metDardanKato = true,"$HeOrShe把注意力从通讯器移到数据平板上。""也许我们能早点解决这个问题？""",,
 LKEmazalotAskAdministrator1,PopulateOptions,"$market.lke_searchForBornanew2
 $market.id == mazalot
 $postId == administrator
 !$askedBornanew
-$market.buggedVIPsAboutBornanew < 4",,,"lke_mazalotAskBornanew:""I'm looking for a man called Jethro Bornanew.""",
+$market.buggedVIPsAboutBornanew < 4",,,"lke_mazalotAskBornanew:""我在找一个叫 Jethro Bornanew 的人。""",
 LKEmazalotAskAdministrator2,PopulateOptions,"$market.lke_searchForBornanew2
 $market.id == mazalot
 $postId == administrator
 !$askedPath
-$market.buggedVIPsAboutBornanew < 4",,,"lke_mazalotAskPath:""I'm looking for whoever is in charge of the Luddic Path around here.""",
+$market.buggedVIPsAboutBornanew < 4",,,"lke_mazalotAskPath:""我在寻找这里 卢德左径 活动的领导者。""",
 LKEmazalotAskAdminChurch,PopulateOptions,"$market.lke_searchForBornanew2
 $market.id == mazalot
 $postId == administrator
 $market.lke_askedPMChurch
-#$market.lke_wontTellLied",,,"lke_mazAdminTellChurch:""I'm on a mission on behalf of an archcurate of the Church of Galactic Redemption.""",
+#$market.lke_wontTellLied",,,"lke_mazAdminTellChurch:""我作为银河救赎教会的一位大祭司的代表执行一项任务。""",
 LKEmazalotAskAdministrator3,PopulateOptions,"$market.lke_searchForBornanew2
 $market.id == mazalot
 $postId == administrator
-$player.gotYaribayCredentials",,,"lke_mazDKTellAboutYaribay:""I'm working for Horus Yaribay. Of gens Yaribay. You know them?""",
-LKEmazDKTellAboutYaribay,DialogOptionSelected,$option == lke_mazDKTellAboutYaribay,,"Suddenly, you have his full attention. ""Yes, obviously."" 
+$player.gotYaribayCredentials",,,"lke_mazDKTellAboutYaribay:""我为 Horus Yaribay 工作。Yaribay 氏族的。你知道他们么？""",
+LKEmazDKTellAboutYaribay,DialogOptionSelected,$option == lke_mazDKTellAboutYaribay,,"突然，他的注意力集中在你身上，""对，显然。""
 
-His entire tone has changed into a cloud of blackest suspicion tinged with playful competition.
+他的语气包含了最阴暗的怀疑，夹杂着戏谑的竞争色彩。
 
-A pause as he considers you, then says, ""Gens Yaribay isn't stupid enough to just... ask... for my cooperation. I am not sure yet about you.""","lke_mazDKYaribayYouTell:""You help me, then Yaribay owes you one. Deal?""
-lke_mazDKYaribayAppeal:""For the good of the League, I am asking for your help.""
-lke_mazDKYaribayConcession:""I'm sure gens Yaribay will make some kind of concession.""
+他顿了一下，看了看你，然后说，""Yaribay 氏族还没有愚蠢到只是…请求…我的合作。我还不确定你的情况。""","lke_mazDKYaribayYouTell:""你来帮我一把，之后 Yaribay 欠你一个人情。成交吗？""
+lke_mazDKYaribayAppeal:""为了 League 的利益，我需要你的帮助。""
+lke_mazDKYaribayConcession:""我相信 Yaribay 氏族一定会为此做出某种让步。""
 ",
-LKEmazDKYaribayAppeal,DialogOptionSelected,$option == lke_mazDKYaribayAppeal,,"Dardan Kato bursts out laughing. It's a desperate, on-edge sort of break; too many stimulants, you suspect.
+LKEmazDKYaribayAppeal,DialogOptionSelected,$option == lke_mazDKYaribayAppeal,,"Dardan Kato 突然大笑起来。这是一种绝望的、失控边缘的冲动。你怀疑，是兴奋剂过量。
 
-He takes a minute to settle down.
+他花了一分钟才平静下来。
 
-""Oh, thank you,"" he wipes away a tear, ""I needed that. What a shift it's been- and then, ah, such patriotism! - Yaribay you said?"" He shakes his head, ""What a gift. I shall thank them for this excellent jape.""",lke_mazDKYaribayEnd:继续,
-LKEmazDKYaribayConcession,DialogOptionSelected,$option == lke_mazDKYaribayConcession,,"""Somehow,"" Dardan Kato says, ""I am not prepared to have some Yariaby slug ooze around my volume on a vague suggestion of concessions. I have enough problems without the meddling of some debutante.""",lke_mazDKYaribayEnd:继续,
-LKEmazDKYaribayYouTell,DialogOptionSelected,$option == lke_mazDKYaribayYouTell,,"""Ha!"" Dardan Kato's laugh is mirthless. ""By gens Kato accounts, Yaribay owes us a lot more than 'one', and I'm not going to provide one of their minions with an opening based solely on... on what? The good name of gens Yaribay?""",lke_mazDKYaribayEnd:继续,
+""哦，谢谢你，"" 他擦去眼泪，""我需要这个。多么美好的一天 —— 啊，还有，爱国主义！—— 你说 Yaribay？"" 他摇摇头，""真是好礼物。我要感谢他们给我带来了如此精彩的笑话。""",lke_mazDKYaribayEnd:继续,
+LKEmazDKYaribayConcession,DialogOptionSelected,$option == lke_mazDKYaribayConcession,,"""怎样都好，"" Dardan Kato 说，""我不准备让那些只会提出含糊让步提议的 Yariaby 鼻涕虫在这边爬来爬去。我的麻烦够多了，不需要天真大小姐们在这指手画脚。""",lke_mazDKYaribayEnd:继续,
+LKEmazDKYaribayYouTell,DialogOptionSelected,$option == lke_mazDKYaribayYouTell,,"""哈！"" Dardan Kato 的笑声毫无笑意。""在 Kato 氏族的账上，Yaribay 欠我们的远超'一个'，我也不会仅仅为了...为了什么？Yaribay 氏族的好名声？而他们的一个爪牙放开口子。""",lke_mazDKYaribayEnd:继续,
 LKEmazDKYaribayEnd,DialogOptionSelected,$option == lke_mazDKYaribayEnd,"$player.ethosLiar++
 $player.abusedYaribayCred++
 AdjustRepActivePerson INHOSPITABLE -4
 $wontTalkLKE = true
 $global.angeredDardanKato = true
 $option = lke_MazHangUpCommLink 0
-FireBest DialogOptionSelected","His demeanor freezes into an icy mask, and a hand reaches for his comms-cutoff.
+FireBest DialogOptionSelected","他脸上的表情犹如冰面具一样冻住了，一只手伸向通讯开关。
 
-""Don't talk to me.""
+""别和我说话。""
 
-The link terminates.",,
+链接切断。",,
 LKEmazAdminAskBornanew1,DialogOptionSelected,"$option == lke_mazalotAskBornanew
 $postId == administrator","$askedBornanew = true 30
 $market.buggedVIPsAboutBornanew++
 $option = lke_mazalotAskBornanew2 0
-FireBest DialogOptionSelected","""Bornanew, huh,"" $personName says, growing bored. ""Sounds like a Luddie. I'd say check the public directory, but I guess he'd be one of those that thinks it's 'the book of Moloch', right?""
+FireBest DialogOptionSelected","""Bornanew，哼，"" $personName 说，""听起来像个小卢德。我建议你去查查公共目录，但我猜他会是那些认为这是 '恶魔摩洛克之书' 的人之一，对吧？""
 
-""Look... Captain $playerLastName was it? I have enough problems with keeping the Luddics under control as it is. If you want to find one, ask one.""
+""这么说吧... $playerLastName 舰长是吗？我在控制卢德人方面遇到的问题已经够多了。如果你想找一个卢德人，那就去问另一个。""
 
-$HeOrShe turns away to look at another screen, clearly finished with the conversation. ",,
+$HeOrShe转过身去看另一个屏幕，干脆地结束了对话。",,
 LKEmazAdminAskBornanew2yar,DialogOptionSelected,"$option == lke_mazalotAskBornanew2
-$player.gotYaribayCredentials",,,"lke_mazAdminTryYaribay:""I have credentials from Gens Yaribay. Horus Yaribay personally asked me to investigate this matter."" (lie)
-lke_mazalotAskBornanew3:Say nothing",
+$player.gotYaribayCredentials",,,"lke_mazAdminTryYaribay:""我有来自 Yaribay 家族的证件。Horus Yaribay 亲自命令我调查此事。""(撒谎)
+lke_mazalotAskBornanew3:保持沉默",
 LKEmazAdminAskBornanew2,DialogOptionSelected,"$option == lke_mazalotAskBornanew2
 !$player.gotYaribayCredentials",,,lke_mazalotAskBornanew3:继续,
 LKEmazAdminTryYaribay,DialogOptionSelected,$option == lke_mazAdminTryYaribay,"$player.ethosLiar++
 $player.abusedYaribayCred++
-AdjustRepActivePerson INHOSPITABLE -3","His eyebrows go up. ""Horus Yaribay sent you? Here?""
+AdjustRepActivePerson INHOSPITABLE -3","他的眉毛扬起，""Horus Yaribay 让你来的？来这？""
 
-""Gens Kato is looking after Mazalot. Trying to build something here in spite of interfactional meddling. The Yaribays should know that, and you should know better than to interfere.""
+""Kato 氏族看管这 Mazalot。在各种外交干涉中试图着建立点儿什么东西。Yaribay 们应当了解这点，而你更应当知道不要乱插手。""
 
-He snorts, ""At least, you should have been quiet about it.""",lke_mazAdminTryYaribayEnd:继续,
+他哼了声，""至少，你应对此保持沉默。""",lke_mazAdminTryYaribayEnd:继续,
 LKEmazAdminYariBye,DialogOptionSelected,$option == lke_mazAdminTryYaribayEnd,"$wontTalkLKE = true
 $global.angeredDardanKato = true
 $option = lke_MazHangUpCommLink 0
-FireBest DialogOptionSelected","""I'm very busy. Have a bright burn away from here.""
+FireBest DialogOptionSelected","""我很忙。还请祝你离开时航行顺利。""
 
-The comms snap off.",,
+通讯中断了。",,
 LKEmazAdminAskBornanew1b,DialogOptionSelected,"$option == lke_mazalotAskBornanew
 $postId == administrator
 $player.fcm_faction == persean","$askedBornanew = true 30
-$market.buggedVIPsAboutBornanew++","""Bornanew, huh,"" $personName says. ""Sounds like a Luddie. I'd say check the public directory, but I guess he'd be one of those that thinks it's 'the book of Moloch', right?""
+$market.buggedVIPsAboutBornanew++","""Bornanew，哼，"" $personName 说，""听起来像个小卢德。我建议你去查查公共目录，但我猜他会是那些认为这是 '恶魔摩洛克之书' 的人之一，对吧？""
 
-""Look... Captain $playerLastName? I can see you're signed up with the League, so I want to help you. But I have enough problems keeping the Luddics under control as it is.""","lke_mazalotAskBornanewPL1:""So help me. Who runs the Path around here?""",
-LKEmazAdminAskBornanewPL1,DialogOptionSelected,$option == lke_mazalotAskBornanewPL1,,"""You really want to go there?"" $HeOrShe looks at you for a moment, then shakes $hisOrHer head when you fail to desist.
+""你瞧... $playerLastName 舰长？我看到你已经加入了联盟，所以我想帮助你。但我在控制卢德信徒上遇到的麻烦已经够多了。""","lke_mazalotAskBornanewPL1:""所以帮帮。谁是这里 卢德左径 的老大？""",
+LKEmazAdminAskBornanewPL1,DialogOptionSelected,$option == lke_mazalotAskBornanewPL1,,"""你真的想去那里吗？""$HeOrShe 看了你一会，在你制止之前摇了摇$hisOrHer的头。
 
-""Well. Fine. There's a man, Nile Virens. He's some kind of strong-man in the Path. I swear he's behind half the bombings in the systems, but I can't peg anything on him. You know, legally. So if I touch him, it'll set off the Luddies and we all know what happened last time.""
+""行。好吧。有一个人，Nile Virens。他是 卢德左径 里的某个高层。并且我发誓他是星系中一半爆炸事件的幕后黑手，但我无法往他身上挂任何罪名。你知道，合法的那种。所以如果我碰他，就会激怒卢德佬，我们都知道上次发生了什么。""
 
-You note, now, that $personName looks seriously stressed out. $HeOrShe could probably use more sleep. And fewer stimulants.","lke_mazalotAskBornanewPL2:""Where can I find Nile Virens?""",
+你注意到，现在 $personName 看起来压力很大。$HeOrShe可能需要更多的睡眠。和更少的兴奋剂。","lke_mazalotAskBornanewPL2:""在哪儿能找到 Nile Virens？""",
 LKEmazAdminAskBornanewPL2,DialogOptionSelected,$option == lke_mazalotAskBornanewPL2,"AddTextSmall ""获得了 Nile Virens 的通讯 ID"" highlight
 AddTextSmall ""获得了突袭 Nile Virens 藏身处的方案"" highlight
 SetPersonHidden virens false
 $global.lke_contactVirens = true
-Call $global.lke_ref updateStage","""He's got... a stronghold, I guess I'd call it. Fortified bunker on the surface. Well, a network of them hidden in the Luddic communities and quarters. I'll send you what I've got on him.""
+Call $global.lke_ref updateStage","""他有...一个要塞，我猜我可以这么称呼。地表上的坚固掩体。好吧，他们的网络隐藏在卢德信徒社群和居住区中。我会把我掌握的资料发给你。""
 
-""There's also a comms ID, though,"" $heOrShe makes a little snort, ""He doesn't pick up when 'Servants of Moloch' come calling.""
+""这儿还有一个通讯 ID，"" $heOrShe哼了一声，""不过 '摩洛克之仆' 呼叫时他不会接听的。""
 
-""Captain."" $HeOrShe fixes you with $hisOrHer bloodshot eyes. ""Please. Don't do anything stupid. Like I said, the Luddies are touchy, and there are more of them than there are us.""","lke_mazAdminAskBornanewDKend1:""You can count on me.""
-lke_mazAdminAskBornanewDKend2:""...We'll see. Thank you for you cooperation.""",
+""舰长。"" $HeOrShe用$hisOrHer充满血丝的眼睛凝视着你，""拜托。别做什么傻事。就像我说的，卢德佬很敏感，而且人数比我们要多。""","lke_mazAdminAskBornanewDKend1:""你可以信赖我。""
+lke_mazAdminAskBornanewDKend2:""...我们拭目以待。感谢您的合作。""",
 LKEmazAdminAskBornanewDKend1,DialogOptionSelected,$option == lke_mazAdminAskBornanewDKend1,"EndConversation DO_NOT_FIRE
 ShowDefaultVisual
-FireAll PopulateOptions","""Good, ... good,"" he says, uncertainly.
+FireAll PopulateOptions","""好，... 好。""他不确定地说。
 
-It looks like he's considering telling you more dire warnings, but he says nothing as he cuts the comms.",,
+看起来他正在考虑向你发出更可怕的警告，但他在切断通讯时什么也没说。",,
 LKEmazAdminAskBornanewDKend2,DialogOptionSelected,$option == lke_mazAdminAskBornanewDKend2,"$wontTalkLKE = true
 EndConversation DO_NOT_FIRE
 ShowDefaultVisual
-FireAll PopulateOptions","What looks like an expression of terrible regret, poorly hidden, crosses Dardan Kato's face. 
+FireAll PopulateOptions","Dardan Kato 的脸上露出一种难以掩饰的、可怕的悔恨表情。
 
-But he says nothing as he cuts the comms.",,
+但他在切断通讯时什么也没说。",,
 LKEmazAdminAskBornanew3,DialogOptionSelected,$option == lke_mazalotAskBornanew3,"$option = lke_MazHangUpCommLink 0
-FireBest DialogOptionSelected","""And,"" $heOrShe spares a glance back at the comms, ""Don't stir up any trouble. $personLastName out.""
+FireBest DialogOptionSelected","""还有，""$heOrShe回头看了一眼通讯器，""别搞出任何麻烦。$personLastName完毕。""
 
-The comms cut.",,
+通讯中断了。",,
 LKEmazAdminAskPath1,DialogOptionSelected,"$option == lke_mazalotAskPath
 $postId == administrator","$askedPath = true
 $market.buggedVIPsAboutBornanew++
 AdjustRepActivePerson INHOSPITABLE -1
-RemoveOption lke_mazalotAskPath","$PersonName looks at you incredulously, then lets out a bitter laugh.
+RemoveOption lke_mazalotAskPath","$PersonName 难以置信地看着你，然后发出一声苦笑。
 
-""Are you, now. Great,"" $heOrShe rolls $hisOrHer eyes, ""just what I need: a vigilante. Or a merc?""
+""是吗？非常好，"" $heOrShe翻了翻眼睛，""我需要的是个自以为是的私警，还是个雇佣兵？""
 
-""Look, either way about it, I am telling you - ordering you - to not go stirring up trouble with the Luddies. The last thing I need on my watch is another 'incident' to give them an excuse to cause more trouble.""
+""听着，不论如何，我告诉，不，命令你 —— 不要再惹那帮小卢德的麻烦了。我最不希望看到的就是另一个 '事故'，让他们借此引来更多麻烦。""
 
-$HeOrShe gives you a look of immense skepticism. ""We done?""",,
+$HeOrShe对你投以极度怀疑的目光。""听明白了吗？""",,
 LKEmazalotAskAdminBugged,PopulateOptions,"$postId == administrator
 $market.id == mazalot
 $market.lke_searchForBornanew2
 $market.buggedVIPsAboutBornanew > 2
 !$askedBornanew
-!$askedPath",FireAll LKEmazalotAdminBugFaithCheck,"$HeOrShe glances down at a datapad, then back at you. ""Oh. You're the one who's been asking around about the Luddie, aren't you.""","LKE_mazAdminAskBugA:""That's right. Know anything about Jethro Bornanew?""
-LKE_mazAdminAskBugB:""Isn't 'Luddie' a bit derogatory?""
-LKE_mazAdminAskBugC:""We prefer the word 'Faithful' or 'Walker'. 'Follower of Ludd' can work, if you like.""",
+!$askedPath",FireAll LKEmazalotAdminBugFaithCheck,"$HeOrShe低头撇了一眼数据平板，然后又看向你。""啊，你就是那个到处打听小卢德的人，对吧？""","LKE_mazAdminAskBugA:""没错，你知道关于 Jethro Bornanew 的消息吗？""
+LKE_mazAdminAskBugB:""你不觉得 '小卢德' 这词很不敬吗？""
+LKE_mazAdminAskBugC:""我更倾向于 '忠诚者' 或者是 '求道者'。如果你喜欢，'卢德的追随者' 也可以。""",
 LKEmazalotAskAdminBugFaithCheck,LKEmazalotAdminBugFaithCheck,$player.luddicAttitudeFaithful < 4,RemoveOption LKE_mazAdminAskBugC,,,
-LKEmazAdminAskBugA,DialogOptionSelected,$option == LKE_mazAdminAskBugA,AdjustRepActivePerson INHOSPITABLE -1,"$HeOrShe sighs heavily, and drops $hisOrHer TriPad onto $hisOrHer desk. 
+LKEmazAdminAskBugA,DialogOptionSelected,$option == LKE_mazAdminAskBugA,AdjustRepActivePerson INHOSPITABLE -1,"$HeOrShe重重地叹了口气，然后将$hisOrHer的 TriPad 放在$hisOrHer的桌子上。
 
-""No. And if you insist on poking around for your lost Luddie, just don't cause any trouble. That's an order, a command."" $HeOrShe picks the TriPad back up, ""Whatever it is I'm supposed to be doing around here for the glory of the Mazalot Unificiation Authority.""",LKE_mazAdminAskBugBye:继续,
-LKEmazAdminAskBugB,DialogOptionSelected,$option == LKE_mazAdminAskBugB,AdjustRepActivePerson INHOSPITABLE -1,"$HeOrShe rolls $hisOrHer eyes. ""No? It's what they are.""
+""不行。如果你一定要四处探寻那个失踪的小卢德，就别惹任何麻烦。这是个命令，死命令。"" $HeOrShe又拿起那个 TriPad，""不论我为此做了什么，都是为了 Mazalot 统一政权的荣耀。""",LKE_mazAdminAskBugBye:继续,
+LKEmazAdminAskBugB,DialogOptionSelected,$option == LKE_mazAdminAskBugB,AdjustRepActivePerson INHOSPITABLE -1,"$HeOrShe翻了翻眼睛。""不是？这就是他们的本性。""
 
-""Anyway, I don't know where your Luddie is, so don't bother asking. Those people give me enough trouble as it is, and the last thing I need is another 'incident' to stir up the mob""",LKE_mazAdminAskBugBye:继续,
+""不论如何，我不知道你要找的那个小卢德在哪，所以别浪费时间了。那帮人已经给我弄出足够大的乱子了，而我最不希望看见的就是另一个 '事故' 激起民众的情绪。""",LKE_mazAdminAskBugBye:继续,
 LKEmazAdminAskBugC,DialogOptionSelected,$option == LKE_mazAdminAskBugC,"$player.luddicAttitudeFaithful++
-AdjustRepActivePerson INHOSPITABLE -2","$HeOrShe rolls $hisOrHer eyes. ""Wonderful. I will definitely make an effort to remember your preferred form of address.""",LKE_mazAdminAskBugBye:继续,
+AdjustRepActivePerson INHOSPITABLE -2","$HeOrShe动了动眼睛。""太好了，我一定会努力记住你喜欢的称呼方式。""",LKE_mazAdminAskBugBye:继续,
 LKEmazAdminAskBugBye,DialogOptionSelected,$option == LKE_mazAdminAskBugBye,"$market.dardanWontTalkLKE = true
 $option = lke_MazHangUpCommLink 0
-FireBest DialogOptionSelected","""Speaking of- I'm very busy. Have a bright burn away from here, spacer.""
+FireBest DialogOptionSelected","""谈到这里 —— 我很忙。还请祝你离开时航行顺利，太空人""
 
-The comms snap off.",,
+通讯中断了",,
 LKEmazAdminWontTalk,PickGreeting,"$market.lke_searchForBornanew2
 $market.id == mazalot
 $postId == administrator
 $market.dardanWontTalkLKE","EndConversation DO_NOT_FIRE
 ShowDefaultVisual
-FireAll PopulateOptions",The line blinks a standby message for several minutes. There is no acknowledgement of your comms request.,,
+FireAll PopulateOptions",几分钟过去，通讯界面一直保持着待机状态。你的通讯请求没有回应。,,
 LKEmazAdminWontTalk2,PickGreeting,"$market.lke_contactVirens
 $market.id == mazalot
 $postId == administrator
 $market.dardanWontTalkLKE","EndConversation DO_NOT_FIRE
 ShowDefaultVisual
-FireAll PopulateOptions",The line blinks a standby message for several minutes. There is no acknowledgement of your comms request.,,
-LKEmazAdminTellChurch,DialogOptionSelected,$option == lke_mazAdminTellChurch,AdjustRepActivePerson INHOSPITABLE -3,"You watch Dardan Kato's face stiffen; emotions - anger, annoyance, fear - erupt and crystalize.
+FireAll PopulateOptions",几分钟过去，通讯界面一直保持着待机状态。你的通讯请求没有回应。,,
+LKEmazAdminTellChurch,DialogOptionSelected,$option == lke_mazAdminTellChurch,AdjustRepActivePerson INHOSPITABLE -3,"你看到 Dardan Kato 的脸变得僵硬，愤懑、恼怒、恐惧五味杂陈地凸显在脸上。
 
-""The Church."" The words escape from his mouth like an inconvenient prisoner he'd rather everyone forgot. ""Here.""","lke_mazAdminTellChurch1:""Yes, I am searching for an agent of the Church. He came here.""",
+""教会"" 他像不愿意让别人听到一样吐出这句话，""在这里。""","lke_mazAdminTellChurch1:""是的，我正在搜寻一个隶属于教会的特工，他来过这里。""",
 LKEmazAdminTellChurch1,DialogOptionSelected,$option == lke_mazAdminTellChurch1,"$market.dardanWontTalkLKE = true
 $global.angeredDardanKato = true
 $market.buggedVIPsAboutBornanew++
 $option = lke_MazHangUpCommLink 0
-FireBest DialogOptionSelected","""No, you're not,"" he snaps. ""You're not here. You're not welcome here. And we're not having this conversation.""
+FireBest DialogOptionSelected","""不，你不在，""他咆哮道。""你不在这里。这里不欢迎你。我们也没有说过话。""
 
-The comms-link abruptly terminates.",,
+通信突然中断了。",,
 ,,,,,,
 # LKE Mazalot ask around bar,,,,,,
 LKEaskMazalotBarPrompt,AddBarEvents,"$market.id == mazalot
 $market.lke_searchForBornanew2
-!$global.lke_didMazBarAgentEncounter","AddBarEvent LKEmazalot_barEvent ""Find someone well-connected to bribe for information on Bornanew"" ""There are those who make 'arrangements' between Pathers and the black marketeers and mercs who might have difficulty openly dealing with them. Perhaps one can provide a lead on Bornanew.""",,,
-LKEaskMazalotBarStart,DialogOptionSelected,$option == LKEmazalot_barEvent,,"You ask around about someone who might have connections with the Path, keeping your language indirect. 
+!$global.lke_didMazBarAgentEncounter","AddBarEvent LKEmazalot_barEvent ""找个门路宽广的人贿赂一番，以此打探 Bornanew 的消息"" ""这儿有不少给人 '安排事情' 的家伙，对象包括左径分子，黑市商人，还有那些不方便与他们公开交易的佣兵。或许其中就有人能给你找到 Bornanew 的线索。""",,,
+LKEaskMazalotBarStart,DialogOptionSelected,$option == LKEmazalot_barEvent,,"你四下打听可能与 卢德左径 有联系的人，同时留意着别说得太直截了当。
 
-Spacers know that following local planetary rules and regulations is only really a game to be kept up, so you are only politely rebuffed and, in turn, politely turn down unwanted counter-offers about irrelevant opportunities.
+宇宙民都知道遵守行星当地的规章制度实际上只是些不得不逢场作戏的东西，所以你只会被礼貌地拒绝。相对的，你也礼貌地拒绝了回过来的那些无关紧要的邀约。
 
-Finally, you hit upon someone who seems to give the right responses. You slide over an ""extra"" drink you were given to start the procedure off on the right foot.","lke_askMazalotBar2:""I'm looking for someone. Having trouble finding the right path.""",
+最后，你终于碰到了一个似乎能给出正确答案的家伙。你拿了一份别人 ""额外送的"" 饮料过去凑近乎，让事情一下子就迈上了正轨。","lke_askMazalotBar2:""我在找人。但有些循不着正确的行径。""",
 LKEaskMazalotBarStartB,DialogOptionSelected,"$option == LKEmazalot_barEvent
-$global.lke_sedgeKilledMammonite",,"You ask around about someone who might have connections with the Path, keeping your language indirect. You have developed a sense of wariness after the whole incident with the Mammonite on Chalcedon.
+$global.lke_sedgeKilledMammonite",,"你四下打听可能与 卢德左径 有联系的人，同时留意着别说得太直截了当。你慢慢地觉察到在 Chalcedon 的那个 玛门之仆 出了那些事之后，周围多了一些警惕的意味。
 
-Spacers know that following local planetary rules and regulations is only really a game to be kept up, so you are only politely rebuffed and, in turn, can politely turn down unwanted counter-offers about some irrelevant opportunity or other.
+宇宙民都知道遵守行星当地的规章制度实际上只是些不得不逢场作戏的东西，所以你只会被礼貌地拒绝。相对的，你也礼貌地拒绝了回过来的那些无关紧要的邀约。
 
-Finally, you hit upon someone who exudes restrained competence. You slide over an ""extra"" drink you were given, to start the procedure off on the right foot.","lke_askMazalotBar2:""I'm looking for someone. Having trouble finding the right... path.""",
+最后，你终于碰到了一个似乎能给出正确答案的家伙。你拿了一份别人 ""额外送的"" 饮料过去凑近乎，让事情一下子就迈上了正轨。","lke_askMazalotBar2:""我在找人。但有些循不着正确的... 行径。""",
 LKEaskMazalotBar2,DialogOptionSelected,$option == lke_askMazalotBar2,"SetTextHighlights ""3,000""
 SetTextHighlights ""1,000""
 AddText ""你有 $player.creditsStrC 可用。""
 SetTextHighlights $player.creditsStrC
 DoCanAffordCheck 3000 lke_mazBarBribe3kOffer
-DoCanAffordCheck 1000 lke_mazBarBribe1kOffer","He nods, and deliberately lifts your drink, holds it up toward you in a subtle toast, then takes a sip.
+DoCanAffordCheck 1000 lke_mazBarBribe1kOffer","他点点头，故意端起你的酒，朝你微微一敬，然后喝了一口。
 
-""You may not be as lost as you think,"" he says. ""I'm in information technology. Less the tech, more the sales, you know? Distribution of... useful information.""
+""你可能没有想象中那么迷茫。""他说，""我是搞信息技术的。不在于技术，更多在于销售，你知道吗？分发...有用的信息。""
 
-He makes a show of examining the drink you gave him. ""This is nice to wet your throat. But I got a mighty thirst.""","lke_mazBarBribe1kOffer:""Just info? Let's call it 1,000 credits.""
-lke_mazBarBribe3kOffer:""I'm in a hurry, how's 3,000 credits?""
-lke_mazBarReturn:""Sorry, friend. Tap's run dry."" (leave)",
-LKEaskMazalotBarOffer1k,DialogOptionSelected,$option == lke_mazBarBribe1kOffer,"SetTextHighlights ""1,000""","""1,000 credits and I will put you in contact with the Luddic Path,"" he says to confirm the substance of the deal, and pokes a datapad from under his sleeve for your transfer confirmation.","lke_mazBarAgent:Transfer the credits
-lke_mazBarReturn:""Sorry, friend. Tap's run dry."" (leave)",
-LKEaskMazalotBarOffer3k,DialogOptionSelected,$option == lke_mazBarBribe3kOffer,"SetTextHighlights ""3,000""","""3,000 credits and I will put you in contact with the Luddic Path"" he says to confirm the substance of the deal, and holds out a datapad for your transfer.","lke_mazBarAgent:Transfer the credits
-lke_mazBarReturn:""Sorry, friend. Tap's run dry."" (leave)",
+他做了一个检查你给他的饮料的动作。""用来润喉不错。但我非常口渴""","lke_mazBarBribe1kOffer:""只要一些消息？那就 1,000 星币吧。""
+lke_mazBarBribe3kOffer:""我有些急事，3,000 星币怎么样？""
+lke_mazBarReturn:""抱歉，我的朋友。水龙头里没水了。"" (离开) ",
+LKEaskMazalotBarOffer1k,DialogOptionSelected,$option == lke_mazBarBribe1kOffer,"SetTextHighlights ""1,000""","""1,000 星币，我会帮你联系到 卢德左径 。"" 他确认了交易的内容，并从袖子下拿出一个数据平板，让你确认转账。","lke_mazBarAgent:把星币转给他
+lke_mazBarReturn:""不好意思，朋友。水龙头里没水了""  (离开) ",
+LKEaskMazalotBarOffer3k,DialogOptionSelected,$option == lke_mazBarBribe3kOffer,"SetTextHighlights ""3,000""","""3,000 星币，我会帮你联系到 卢德左径 ，""他确认了交易的内容，并从袖子下拿出一个数据平板，让你确认转账。","lke_mazBarAgent:把星币转给他
+lke_mazBarReturn:""不好意思，朋友。水龙头里没水了""  (离开) ",
 lkeMazBarAgent,DialogOptionSelected,$option == lke_mazBarAgent,"FireAll LKEMazBarAgentOpts
-$global.lke_didMazBarAgentEncounter = true","You touch the datapad and its screen flashes to a badge of the Mazalot Unification Authority Municipal Security. The agent gives you a little smile.
+$global.lke_didMazBarAgentEncounter = true","你摸了摸数据平板，屏幕上闪现出 Mazalot 统一政权安全部门的徽章。一位官员向你微微一笑。
 
-""Captain $playerName, by the power of the Mazalot Unification Authority, you are charged with criminal conspiracy under the Interstellar Terrorism Statute of-"" 
+""$playerName 舰长，根据 Mazalot 统一政权的法律，你被指控犯有星际恐怖主义罪。"" 
 
-He drones on in legalese, relishing the act.
+他用法言法语滔滔不绝，乐此不疲。
 
-You consider your options: you suspect reprisals for dodging out of this entrapment scheme will be token at best - it feels like a credit-rustling op to scam naive spacers more than any kind of serious investigation.",,
-lkeMazBarAgentOptYaribay,LKEMazBarAgentOpts,$player.gotYaribayCredentials,,,"lke_mazBarAgentRespYaribay:""Before we continue, allow me to show you my diplomatic credentials from Gens Yaribay.""",
-lkeMazBarAgentOptLeague,LKEMazBarAgentOpts,$player.fcm_faction == persean,,,"lke_mazBarAgentRespLeague:""Agent, you should know that I am a commissioned privateer of the Persean League Fleet.""",
-lkeMazBarAgentOptArchcurate,LKEMazBarAgentOpts,,,,"lke_mazBarAgentRespArchcurate:""Agent, I am acting on behalf of an archcurate of the Church of Galactic Redemption.""",
-lkeMazBarAgentOptSiyavong,LKEMazBarAgentOpts,$player.metSiyavong,"SetStoryOption lke_mazBarAgentRespSiyavong general ""Told local security officer on Mazalot that you're Finlay Siyavong and on a secret mission""",,"lke_mazBarAgentRespSiyavong:""My name is Finlay Siyavong of Fleet Intelligence and I have questions for you.""",
+你在考虑自己的选择：你怀疑就算逃过这个诱捕程序，当局的报复行动充其量也只会是象征性的 —— 这感觉更像是一场欺骗天真的太空旅人的信用诈骗，而不是什么严肃的调查。",,
+lkeMazBarAgentOptYaribay,LKEMazBarAgentOpts,$player.gotYaribayCredentials,,,"lke_mazBarAgentRespYaribay:""在我们继续之前，请允许我向你展示我从 Yaribay 家族那里得到的外交证书。""",
+lkeMazBarAgentOptLeague,LKEMazBarAgentOpts,$player.fcm_faction == persean,,,"ke_mazBarAgentRespLeague:""特工，你应该知道我是 英仙座联盟 舰队的一名授权私掠者。""",
+lkeMazBarAgentOptArchcurate,LKEMazBarAgentOpts,,,,"lke_mazBarAgentRespArchcurate:""特工，我是银河救赎教会的大祭司的代表。""",
+lkeMazBarAgentOptSiyavong,LKEMazBarAgentOpts,$player.metSiyavong,"SetStoryOption lke_mazBarAgentRespSiyavong general ""告诉 Mazalot 当局的安全部官员你是 Finlay Siyavong，并且在执行秘密任务""",,"lke_mazBarAgentRespSiyavong:""我是舰队情报部的 Finlay Siyavong，我有问题要问你。""",
 lkeMazBarAgentOptBribe,LKEMazBarAgentOpts,,"SetTextHighlights ""6,000""
-DoCanAffordCheck 6000 lke_mazBarBribe6kOffer",,"lke_mazBarAgentRespBribe:""6,000 credits, then?""",
-lkeMazBarAgentOptPunch,LKEMazBarAgentOpts,,,,lke_mazBarAgentOptPunch:Punch the MUA agent in the face and make a break for it,
+DoCanAffordCheck 6000 lke_mazBarBribe6kOffer",,"lke_mazBarAgentRespBribe:""6,000 星币，然后呢？""",
+lkeMazBarAgentOptPunch,LKEMazBarAgentOpts,,,,lke_mazBarAgentOptPunch:给 MUA 特工的脸来上一拳，然后迅速逃跑,
 lkeMazBarAgentRespYaribay,DialogOptionSelected,$option == lke_mazBarAgentRespYaribay,"$player.ethosLiar++
-$player.abusedYaribayCred++","The agent freezes mid-speech, and looks at you. You've already got your TriPad out, credentials displayed. He quickly taps at a datapad, looking between it and yours. Hoping, perhaps, that these aren't what you claim they are.
+$player.abusedYaribayCred++","特工在讲话的过程中突然停住，直勾勾地看着你。你已经拿出了 TriPad 并展示出身份验证信息。他迅速地敲了几下数据平板，拿它和你的 TriPad 反复对比。也许他希望那些信息并不如你所说的那样一致。
 
-""Captain."" The datapad is tucked away, the agent standing up straight, the insincere smile off his face. ""I'm afraid there's been a misunderstanding. Gens Yaribay is a respected operator which the MUA, naturally, welcomes within the local commercial volume. If MuniSec can be of any assistance in your, ah, business...""","lke_mazBarAgentHelp1:""Who runs the Path around here? I need information.""",
-lkeMazBarAgentRespLeague,DialogOptionSelected,$option == lke_mazBarAgentRespLeague,,"The agent freezes mid-speech, looks at you - yes, you mean it - then quickly taps at a datapad, looking between it and you.
+""舰长。"" 特工挺了挺身子，把数据平板塞回去，撤掉了脸上那虚伪的笑容。""恐怕我们之间有些误会。Yaribay 氏族备受尊敬，MUA 自然也欢迎他们在当地进行商业活动。如果地方安全部能够，呃，在商业方面提供帮助...""","lke_mazBarAgentHelp1:""谁运作附近的 卢德左径？ 我需要他的信息。""",
+lkeMazBarAgentRespLeague,DialogOptionSelected,$option == lke_mazBarAgentRespLeague,,"这个特工话说到一半戛然而止，看向了你 —— 是的，你没在开玩笑 —— 然后在数据平板上飞快地敲了几下，目光在你和平板之间来回对照。
 
-""Captain."" The datapad is tucked away, the agent standing up straight, the smile wiped off his face. ""I'm afraid there's been a misunderstanding. The MUA, naturally, fully supports the League Fleet,"" his eyes meet yours, and he makes a comradely nod, ""-and the commissioned privateers who bolster our forces.""
+""这位舰长，"" 数据平板被收到了一边，这个特工站的笔直，脸上抹去了笑容，""之前恐怕有一些误解。MUA 组织，理所当然地，全力以赴地，支持着联盟舰队，"" 他与你目光交接，亲切地点头，""—以及让我们的部队如虎添翼的签约私掠者们。""
 
-""On behalf of Mazalot MuniSec, allow me to render any required assistance with, ah, Fleet operations...""","lke_mazBarAgentHelp1:""Who runs the Path around here? I need information.""",
+""请允许我代表 Mazalot 地方安全部，为，呃，舰队行动，提供一切必要的协助...""","lke_mazBarAgentHelp1:""谁运作附近的 卢德左径？ 我需要他的信息。""",
 lkeMazBarAgentHelp1,DialogOptionSelected,$option == lke_mazBarAgentHelp1,"AddTextSmall ""获得了 Nile Virens 的通讯 ID"" highlight
 AddTextSmall ""获得了突袭 Nile Virens 藏身处的方案"" highlight
 SetPersonHidden virens false
 $global.lke_contactVirens = true
-Call $global.lke_ref updateStage","Before long, you've got the dossier on one Nile Virens, local Pather strongman, transferred to your datapad. Contact info, addresses, and a patchy bio. Operates compounds in all the major Luddic population centers. Effectively runs the Path on Mazalot.
+Call $global.lke_ref updateStage","不久之后，你就将当地左径头目 Nile Virens 的档案转移到了你的数据平板上。联系方式、地址和不完整的生物信息。在所有的主要卢德教徒聚居地都有驻地。在 Mazalot 上有效地指挥左径活动。
 
-""You need to watch out for that one,"" the agent stows his datapad and stands. ""Slippery customer, he is. Can't nail him on one thing or another, always some young Luddie will come to confess in his place."" The agent looks at you with comradely bonhomie, ""Glad they finally called in the big guns. You gonna..."" he makes a finger pistol motion, and winks.
+""你需要提防那个人，"" 特工收起数据平板并站了起来。""他确实是个狡猾的人。在哪一点上都没法定他的罪，总有一些年轻的卢德佬会替他来坦白。"" 特工用一种同志般和蔼的眼神看着你，""很高兴他们终于呼叫了大炮。你要..."" 他比了一个枪的手势，眨了眨眼睛。
 
-""Not that you could tell me, I suppose.""","lke_barEnd:Leave without a word
-lke_barEnd3:""Your assistance will be noted in the after action report.""",
+""我猜你也不会告诉我。""","lke_barEnd:一言不发地离开
+lke_barEnd3:""您的帮助会记录在行动后的报告内。""",
 lkeMazBarAgentRespArchcurate,DialogOptionSelected,$option == lke_mazBarAgentRespArchcurate,"SetTextHighlights ""5,000""
 AdjustRep persean SUSPICIOUS -2
 $player.ethosTruth++
 AddText ""你有 $player.creditsStrC 可用。""
 SetTextHighlights $player.creditsStrC
-FireAll LKEMazBarAgentFineResps","""Yeah? Well good for Ludd."" The agent holds up his datapad, which blinks a flash at you for a quick holo to register your 'crime'.
+FireAll LKEMazBarAgentFineResps","""哦？那我祝卢德好运啊。"" 特工举起数据平板，随着一阵闪烁，他迅速地给你拍了一张全息影像，好用来登记你的 '罪行'。
 
-""Maybe you can pay your fine with all those tithes you Luddies collect from little old grannies. And it is,"" another couple taps, ""5,000 credits.""",,
-lkeMazBarAgentFineKatoOption,LKEMazBarAgentFineResps,$player.metDardanKato,,,"lke_mazBarAgentKatoThreat:""I'm not sure this aligns with Administrator Kato's policies. Perhaps we should comms him and ask?""",
-lkeMazBarAgentFineLoudOption,LKEMazBarAgentFineResps,,,,"lke_mazBarAgentLoud:(raise your voice) ""I would think that the MUA would cooperate with a Church investigation into Pather activity.""",
-lkeMazBarAgentFinePunchOption,LKEMazBarAgentFineResps,,,,lke_mazBarAgentOptPunch:Punch the MUA agent in the face and make a break for it,
-lkeMazBarAgentFineFineOption,LKEMazBarAgentFineResps,,DoCanAffordCheck 5000 lke_mazBarFine5k,,lke_mazBarFine5k:Pay the fine,
-lkeMazBarAgentKatoThreat,DialogOptionSelected,$option == lke_mazBarAgentKatoThreat,DoCanAffordCheck 5000 lke_mazBarFine5k,"The agent freezes, hunched over the datapad with the spurious 'fine' transaction request blinking. His eyes stare unblinking at you, expression grim. Deciding if you're serious.","lke_mazBarFineEyeContact:Maintain eye contact
-lke_mazBarFine5k:Pay the fine",
+""或许你可以掏出你们这些 '驴德' 修士从可怜的老奶奶们那里收来的什一税，来支付你的罚金。而这个数额是，"" 他又在平板上敲了几下，""5,000 星币。""",,
+lkeMazBarAgentFineKatoOption,LKEMazBarAgentFineResps,$player.metDardanKato,,,"lke_mazBarAgentKatoThreat:""我不确定这是否符合 Kato 管理员的政策。也许我们应该联系他？""",
+lkeMazBarAgentFineLoudOption,LKEMazBarAgentFineResps,,,,"lke_mazBarAgentLoud:(提高声音) ""我认为 MUA 会配合教会对 卢德左径 活动的调查。""",
+lkeMazBarAgentFinePunchOption,LKEMazBarAgentFineResps,,,,lke_mazBarAgentOptPunch:给 MUA 特工的脸来上一拳，然后迅速逃跑,
+lkeMazBarAgentFineFineOption,LKEMazBarAgentFineResps,,DoCanAffordCheck 5000 lke_mazBarFine5k,,lke_mazBarFine5k:缴纳罚款,
+lkeMazBarAgentKatoThreat,DialogOptionSelected,$option == lke_mazBarAgentKatoThreat,DoCanAffordCheck 5000 lke_mazBarFine5k,客服人员僵住了，弯腰盯着数据平板，虚假的 '正常' 交易请求在闪烁。他的眼睛一眨不眨地看着你，表情严峻。 判断你是否是认真的。,"lke_mazBarFineEyeContact:保持眼神接触
+lke_mazBarFine5k:缴纳罚款",
 lkeMazBarAgentLoud,DialogOptionSelected,$option == lke_mazBarAgentLoud,"AdjustRep persean SUSPICIOUS -2
-DoCanAffordCheck 5000 lke_mazBarFine5k","Heads turn. The party at a neighboring table does a double-take and decides now is a good time to pay the tab.
+DoCanAffordCheck 5000 lke_mazBarFine5k","你瞬间化为目光焦点。邻桌聚会的人又仔细打量了一下，决定趁现在这个好时机赶紧付账走人。
 
-The agent fixes you with his eyes, and smirks coldly. ""I see what you're trying. The Church doesn't run this polity, the League does.""
+特工的目光锁定了你，脸上挂着冰冷的假笑。""我知道你在试探些什么。教会不是这个国家的主事者，联盟才是。""
 
-He stares unblinking at you. Assessing.","lke_mazBarFineEyeContact:Maintain eye contact
-lke_mazBarFine5k:Pay the fine",
+他目不转睛地凝视着你，揣摩不定。","lke_mazBarFineEyeContact:保持眼神接触
+lke_mazBarFine5k:缴纳罚款",
 lkeMazBarFineEyeContactEO1,DialogOptionSelected,"$option == lke_mazBarFineEyeContact
-$player.waitedOutExcubitor",,You stared down the Excubitor Orbis of Hesperus. A munisec officer from Mazalot? He's nothing. A bilge-roach before the Dragon of Orion.,lke_mazBarFineEyeContact2:继续,
-lkeMazBarFineEyeContactEO2,DialogOptionSelected,$option == lke_mazBarFineEyeContact2,,"Your gaze sears like plasma, it tears the munisec bully apart like a graviton beam cannon flashing across the blood-and-ash flecked volume of space battle; you've seen things he wouldn't believe. Unimaginable vastnesses, vacuum most terrible and cruel.",lke_mazBarFineEyeContact3:继续,
-lkeMazBarFineEyeContactEO3,DialogOptionSelected,$option == lke_mazBarFineEyeContact3,,"He drops his eyes to his silly parking-warden's datapad. Bashfully, he tucks it into a pocket while mumbling something about a misunderstanding, and shuffles away.
+$player.waitedOutExcubitor",,你傲视着 Hesperus 的行星教卫。区区 Mazalot 来的地方安全部官员？不值一提。在伟大的猎户座之龙面前，他不过是一只舱底的蟑螂罢了。,lke_mazBarFineEyeContact2:继续,
+lkeMazBarFineEyeContactEO2,DialogOptionSelected,$option == lke_mazBarFineEyeContact2,,你的目光像等离子体一样灼热，它撕裂了这个地方安全部的恶霸，就像引力子束在遍布血与灰的太空战场中闪耀；你看到了他不会相信的事情。难以想象的浩瀚，最可怕和残酷的真空。,lke_mazBarFineEyeContact3:继续,
+lkeMazBarFineEyeContactEO3,DialogOptionSelected,$option == lke_mazBarFineEyeContact3,,"他的目光落在了他愚蠢的泊位管理员数据平板上。他害羞地把平板塞进口袋，嘴里嘟囔着误会，拖着脚步走开了。
 
-You stand alone.",lke_mazBarReturn:Turn back to the bar,
+你独自站着。",lke_mazBarReturn:回到酒吧,
 lkeMazBarFineEyeContact,DialogOptionSelected,$option == lke_mazBarFineEyeContact,"SetTextHighlights ""5,000""
-DoCanAffordCheck 5000 lke_mazBarFine5k","His eyes stare with the dumb authority of a machine set to an aggression routine. There is no human connection, no empathy. You can only imagine this as the look given by a gamma AI stripped of its theory of mind in some dim Tri-Tachyon blacksite.
+DoCanAffordCheck 5000 lke_mazBarFine5k","他的眼神死板而权威，就像一台设定了攻击程序的机器。没有人与人之间的联系，没有同理心。在你的想像中，只有一个身处速子科技秘密空间站，被剥夺了情感模块的伽玛级AI才能有此等表情。
 
-""The fine,"" he says, ""Is 5,000 credits.""","lke_mazBarAgentOptPunch:Punch the MUA agent in the face and make a break for it
-lke_mazBarFine5k:Pay the fine",
-lkeMazBarFine5k,DialogOptionSelected,$option == lke_mazBarFine5k,,"You pay the fine.
+""罚款，"" 他说，""5,000星币。""","lke_mazBarAgentOptPunch:在 MUA 特工的脸上来一拳，然后逃跑
+lke_mazBarFine5k:缴纳罚款",
+lkeMazBarFine5k,DialogOptionSelected,$option == lke_mazBarFine5k,,"你交了罚款。
 
-""Stay safe, citizen."" The MUA agent produces a perfunctory forge-duplicated smile, ""This place is crawling with terrorist sympathizers.""
+""注意安全，公民。"" MUA 特工露出敷衍、虚伪的微笑，""这个地方挤满了恐怖分子的同情者。""
 
-He leaves.",lke_mazBarReturn:继续,
-lkeMazBarAgentRespBribe,DialogOptionSelected,$option == lke_mazBarAgentRespBribe,,"The official datapad disappears and a different, somewhat more battered one appears in its place. A credits transfer request awaits your confirmation.
+他离开了。",lke_mazBarReturn:继续,
+lkeMazBarAgentRespBribe,DialogOptionSelected,$option == lke_mazBarAgentRespBribe,,"官方数据平板消失了，取而代之的是另一个更破旧的数据平板。一笔星币转账等待着你的确认。
 
-""You may pay your, ah, fine right here. I understand that you've expressed remorse for the breach of law, so I'll make sure this incident doesn't appear on your record.""
+""你可以在这缴纳你的，啊，罚款。我知道你已经对违法行为表示悔恨，所以我会确保这件事不会出现在官方记录中。""
 
-He winks.","lke_mazBarAgentRespBribe2:Transfer the credits
-lke_mazBarAgentOptPunch:Punch the MUA agent in the face and make a break for it",
+他眨了眨眼。","lke_mazBarAgentRespBribe2:星币转账
+lke_mazBarAgentOptPunch:在 MUA 特工的脸上来一拳，然后逃跑",
 lkeMazBarAgentRespBribe2,DialogOptionSelected,$option == lke_mazBarAgentRespBribe2,"AddCredits -6000
-$global.lke_bribedMUAcop","As the transfer chimes complete, the officer makes a perfectly insincere smile.
+$global.lke_bribedMUAcop","转账提示响了之后, 特工露出了一个一点不真诚的微笑。
 
-""Stay safe, citizen,"" he says.","lke_mazBarAgentRespBribe3:""Hold on. I paid for information - I expect to get it.""",
-lkeMazBarAgentRespBribe3,DialogOptionSelected,$option == lke_mazBarAgentRespBribe3,FireAll LKEMazBarAgentBribeResponses,"Confusion, then a sneer grows on his face.
+""注意安全，公民"" 他说。","lke_mazBarAgentRespBribe3:""等下。 我为这情报付了钱的 — 我可期望得到它。""",
+lkeMazBarAgentRespBribe3,DialogOptionSelected,$option == lke_mazBarAgentRespBribe3,FireAll LKEMazBarAgentBribeResponses,"一阵困惑，然后他脸上浮现出冷笑。
 
-""Don't get smart with me, spacer - you don't want to catch me in a bad mood."" ",,
-lkeMazBarAgentRespBribe3a,LKEMazBarAgentBribeResponses,$player.metDardanKato,,,"lke_mazBarAgentRespBribe4:""Shall we call up Dardan Kato and explain the bribe I just paid?""",
-lkeMazBarAgentRespBribe3b,LKEMazBarAgentBribeResponses,!$player.metDardanKato,,,"lke_mazBarAgentRespBribe4:""Shall we call up the administrator and explain the bribe I just paid?""",
-lkeMazBarAgentRespBribe3c,LKEMazBarAgentBribeResponses,,,,"lke_barEnd:""Of course. Good day, officer.""",
+""别跟我耍小聪明，太空人 —— 你不会想让我心情不好的。""",,
+lkeMazBarAgentRespBribe3a,LKEMazBarAgentBribeResponses,$player.metDardanKato,,,"lke_mazBarAgentRespBribe4:""我们要和 Dardan Kato 联络并解释下我刚刚的贿赂吗？""",
+lkeMazBarAgentRespBribe3b,LKEMazBarAgentBribeResponses,!$player.metDardanKato,,,"lke_mazBarAgentRespBribe4:""我们要和主管联络并解释我刚刚的贿赂吗？""",
+lkeMazBarAgentRespBribe3c,LKEMazBarAgentBribeResponses,,,,"lke_barEnd:""当然。今日愉快，长官。""",
 lkeMazBarAgentRespBribe4,DialogOptionSelected,$option == lke_mazBarAgentRespBribe4,"AdjustRep persean SUSPICIOUS -2
 AddTextSmall ""获得了 Nile Virens 的通讯 ID"" highlight
 AddTextSmall ""获得了突袭 Nile Virens 藏身处的方案"" highlight
 SetPersonHidden virens false
 $global.lke_contactVirens = true
-Call $global.lke_ref updateStage","His sneer fades. You wouldn't be so stupid, his look says, would you? You give a little nod; yes, you would. You've done far stupider and walked away intact.
+Call $global.lke_ref updateStage","他的冷笑消失了。你有那么蠢吗？不会吧？他仿佛在用表情这么问。你轻轻点头。没错，你就那么蠢。你还做过蠢得更离谱的事，而且能全身而退。
 
-Before long, you've got the dossier on one Nile Virens, local Pather strongman, transferred to your datapad. Contact info, addresses, and a patchy bio. Operates compounds in all the major Luddic population centers. Runs the Path, such as it is, on Mazalot.
+不久之后，你让一份关于本地左径铁腕人物 Nile Virens 的档案转到了你的数据平板上。包括相关人士信息、地址和一份零散不堪的简介。 在所有主要的卢德聚居区都运营有定居点。 那基本上就是在暗地里领导整个 Mazalot 的左径了。
 
-""You deserve each other,"" the officer grumbles as he makes his exit.",lke_barEndOut:离开,
-lkeMazBarAgentRespPunch,DialogOptionSelected,$option == lke_mazBarAgentOptPunch,$global.lke_punchedMUAcop,"A solid blow sends the security officer toppling back into a table which obediently flips, spilling glassware and tipsy spacers across the bar.
+""你们俩都是自找的，"" 警官在离开时抱怨道。",lke_barEndOut:离开,
+lkeMazBarAgentRespPunch,DialogOptionSelected,$option == lke_mazBarAgentOptPunch,$global.lke_punchedMUAcop,"重重的一击使安保人员摔倒在桌子上，桌子乖乖地翻了过来，让玻璃器皿和醉鬼洒落在酒吧里。
 
-The MuniSec undercovers that were watching you the whole time from the bar leap to their feet, drawing stun prods. 
+一直监视着你的地方安全部便衣站了起来，抽出电击器。
 
-You manage to avoid them thanks to the shouting, chaos, and your bodyguards' admirable job of running interference without appearing to be associated with you.",lke_mazBarAgentOptPunch2:Slip out the back door,
-lkeMazBarAgentRespPunch2,DialogOptionSelected,$option == lke_mazBarAgentOptPunch2,AdjustRep persean SUSPICIOUS -6,"As you slip out of the bar, leaving the sound of breaking glass and shouting behind, you reflect that the MuniSec goons were definitely running holo-rec, so it's not a clean getaway. 
+你成功地避开了他们，这要归功于喊叫、混乱，以及你的保镖在没有暴露和你关系的前提下进行的令人钦佩的干扰。",lke_mazBarAgentOptPunch2:从后门溜出去,
+lkeMazBarAgentRespPunch2,DialogOptionSelected,$option == lke_mazBarAgentOptPunch2,AdjustRep persean SUSPICIOUS -6,"你溜出酒吧，玻璃破碎和呐喊起哄的声音抛在身后。这时你忽然回想到那些地方安全部的蠢货们肯定都开着全息记录仪，因此这并不是一次完美的逃亡。
 
-But it's also probably not worth the real authorities making too much a fuss about, either. You wouldn't be the first spacer to run from a brawl, not on Mazalot, not anywhere, and allowances must be made for the commerce your type brings to these worlds.
+但这或许也不是什么值得当局大惊小怪的事。毕竟你又不是第一个干架之后跑路的太空佬，这种事无论在 Mazalot 还是在其他的什么地方都不可能没发生过。而考虑到你们这种人能带来的商业价值，一些忍让肯定还是会被做出的。
 
-Someone will remember, however.",lke_barEndGetOut:Get back to your $shipOrFleet,
+不过嘛，某个人肯定会记得的。",lke_barEndGetOut:回到你的$shipOrFleet里,
 lkeMazBarAgentRespPunch2out,DialogOptionSelected,$option == lke_barEndGetOut,BarCMD leaveBar,,,
 lkeMazBarAgentRespSiyavong,DialogOptionSelected,$option == lke_mazBarAgentRespSiyavong,"$player.ethosLiar++
 $player.ethosCocky++
-$global.toldMUAplayerIsSiyavong = true","This cop is local munisec, and a corrupt bottom-feeder at that. You know that such a bully is easily bullied if they believe you're higher-ranking. And the Persean League Fleet Intelligence Service is an elite among the League, filled with Gens-heirs.
+$global.toldMUAplayerIsSiyavong = true","这条子隶属地方安全部，一个腐败的底层混混。你知道如果这样的恶霸相信你的地位更高，他们很容易屈服。而英仙座联盟舰队情报部门是联盟中的精英，里面都是氏族子弟。
 
-""Officer."" You affect the aristocratic accent of Kazeron and its self-assured authority, ""Think very carefully before you respond.""",lke_mazBarAgentRespSiyavong2:Berate the officer,
-lkeMazBarAgentRespSiyavong2,DialogOptionSelected,$option == lke_mazBarAgentRespSiyavong2,,"""I didn't want to come to this Luddie-infested backwater of a failed terraforming experiment to hunt Pathers, but Intel smelled rot. Do you know what that means? - Don't answer. We have heard reports - disturbing reports - about the accounts of the Mazalot Unification Authority Municipal Security branch.""
+""警官。"" 你带着 Kazeron 的贵族口音，还有自信和优越感，""回答前好好想想。""",lke_mazBarAgentRespSiyavong2:斥责军官,
+lkeMazBarAgentRespSiyavong2,DialogOptionSelected,$option == lke_mazBarAgentRespSiyavong2,,"""我本来也不想到这个地貌改造失败的穷乡僻壤，在到处滋生的驴德佬里面追猎左径分子，但情报中透露出一股不妙的气息。你知道那意味着什么吗？— 不用回答。我收到一些令人不安的报告，与 Mazalot 统一政权安全部门的账目有关。""
 
-The officer is on his back heel, sweating. Nearby tables are carefully pretending not to listen to your tirade.
+这个军官立正站直，汗水涔涔而下。附近几桌人小心翼翼地装作没听到你的长篇大论。
 
-""'Riddled with Pather credits' is what I've heard. And as you well know per the League's Interstellar Terrorism Statute - which you so helpfully quoted for me - that means that central oversight is empowered to intervene in local affairs.""",lke_mazBarAgentRespSiyavong3:Keep berating,
+""关于左径分子资金来源的流言，已经充斥了我的耳朵。而正如你所熟知的那样，根据联盟的星际恐怖主义法 — 就是你助人为乐给我引用的那个 — 这意味着中央监督机构将有权干预地方事务。""",lke_mazBarAgentRespSiyavong3:继续斥责,
 lkeMazBarAgentRespSiyavong3,DialogOptionSelected,$option == lke_mazBarAgentRespSiyavong3,,"""你知道这意味着什么吗？别急着回答，长官，我还没说完。""
 
 你继续斥责着，描述了联盟中央行政部门可以对被发现参与教唆恐怖主义的成员施加的各种处罚 —— Mairaath 的数百万死者在联盟的规则制定者们心中记忆犹新，而为阻止事件重演而被赋予的权力确实意义深远。
@@ -6117,8 +6118,8 @@ Call $global.lke_ref updateStage","Before long, you have the munisec officer sil
 
 You find exactly what you need - Nile Virens, local Pather strongman. Operates compounds in all the major Luddic population centers.
 
-After transferring the information to your own TriPad you toss the officer's datapad across the table. He is too slow to catch it, and it clatters to the ground.","lke_barEnd:Leave without a word
-lke_barEnd2:""Your cooperation will be noted.""",
+After transferring the information to your own TriPad you toss the officer's datapad across the table. He is too slow to catch it, and it clatters to the ground.","lke_barEnd:一言不发地离开
+lke_barEnd2:""您的帮助被会记录下。""",
 LKEaskMazalotBarReturn,DialogOptionSelected,$option == lke_mazBarReturn,BarCMD showOptions,,,
 LKEaskMazalotBarEnd,DialogOptionSelected,$option == lke_barEnd,FireBest ReturnFromBar,,,
 LKEaskMazalotBarEndB,DialogOptionSelected,$option == lke_barEnd2,FireBest ReturnFromBar,,,
@@ -6134,15 +6135,15 @@ $market.buggedVIPsAboutBornanew > 1
 FireBest DialogOptionSelected",,,
 LKEmazalotFreebieAdvance0,DialogOptionSelected,$option == lke_mazFreebie0,,"Your comms officer pings you unexpectedly.
 
-""$PlayerSirOrMadam. I received an unusual communication which- I thought it should be brought to your attention.""","lke_mazFreebie1:""What is it?""",
+""$PlayerSirOrMadam. I received an unusual communication which- I thought it should be brought to your attention.""","lke_mazFreebie1:""是什么？""",
 LKEmazalotFreebieAdvance1,DialogOptionSelected,$option == lke_mazFreebie1,,"""$PlayerSirOrMadam. Someone who claims to work for a man named 'Virens' commed to invite you to a meeting. I did not... at first think to bring it to your attention until the details could be verified.""
 
-""Well, ah,"" they twitch nervously. ""We verified the details.""","lke_mazFreebie2:""And?""",
-LKEmazalotFreebieAdvance2,DialogOptionSelected,$option == lke_mazFreebie2,"Highlight ""Nile Virens""","And indeed, as your comms officer explains, it turns out that one Nile Virens figures prominently in Mazalot as the leader (alleged) of the local branch of the Luddic Path, though none of the mainstream media or data outlets state this apparently unspoken-by-agreement fact. Virens legally runs a number of charities; Pather fronts (allegedly), and owns properties in most of the significant Luddic-majority settlements on Mazalot.
+""Well, ah,"" they twitch nervously. ""We verified the details.""","lke_mazFreebie2:""还有呢？""",
+LKEmazalotFreebieAdvance2,DialogOptionSelected,$option == lke_mazFreebie2,"Highlight ""Nile Virens""","确实，正如你的通讯官所说，Nile Virens 在 Mazalot 上扮演的一个重要角色其实是 卢德左径 当地分支的领导者 (据传)，尽管没有任何主流媒体或小道消息点明过这一不言而喻的事实。Virens 合法经营着数个慈善机构，其实都是掩护 左径组织 的前台 (据传)，且在 Mazalot 大多数重要的 卢德 聚集地中持有地产。
 
-It's not difficult to read between the lines. Just dangerous.
+听懂这些弦外之意并不困难，但很危险。
 
-Unless you are someone who employs top-credit bodyguards and operates a private battlefleet.",lke_mazFreebie3:Someone like me.,
+除非你个雇佣了顶级保镖，并坐拥一支私人作战舰队的家伙。",lke_mazFreebie3:比如像我这样的人。,
 LKEmazalotFreebieAdvance3,DialogOptionSelected,$option == lke_mazFreebie3,"AddTextSmall ""获得了 Nile Virens 的通讯 ID"" highlight
 AddTextSmall ""获得了突袭 Nile Virens 藏身处的方案"" highlight
 SetPersonHidden virens false
@@ -6164,10 +6165,10 @@ Your request hangs in the limbo, request bouncing between nodes on the Mazalot n
 
 Nile Virens isn't answering.","lke_virensCommsFirstWait:Have your comms officer babysit the link request
 cutCommLink:Cut the comm link",
-lkeVirensCommsFirstWait,DialogOptionSelected,$option == lke_virensCommsFirstWait,,"Your comms officer replies with an appropriately professional level of enthusiasm to the tedious task. In the meantime, you turn to certain routine obligations of running a $shipOrFleet.",lke_virensComms2:Close the comms interface,
-lkeVirensComms2,DialogOptionSelected,$option == lke_virensComms2,,"Mere minutes later, your comms officer pings you with an update.
+lkeVirensCommsFirstWait,DialogOptionSelected,$option == lke_virensCommsFirstWait,,你的通讯官带着些许职业水平的热忱接下了这项乏味的任务。在此期间，你将转而处理管理$shipOrFleet的一些日常事务。,lke_virensComms2:Close the comms interface,
+lkeVirensComms2,DialogOptionSelected,$option == lke_virensComms2,,"几分钟后，你的通讯官给你发来了最新消息。
 
-Nile Virens never activated the comms; it seems that he ""doesn't use comms"". But someone who claimed to be an associate did respond, finally, and has relayed an invitation...","lke_virensComms3:""He's invited me for tea, hasn't he.""",
+Nile Virens 一直没有激活通讯器；看来他 ""不使用通讯器"" 。但终于有一个自称是他同事的人回复了，并转达了一个邀请...","lke_virensComms3:""他邀请我去喝杯茶是吗？""",
 lkeVirensComms3,DialogOptionSelected,$option == lke_virensComms3,"$market.lkeSetUpVirensMeeting = true
 FireAll LKEvirensCommsSedgeAside
 FireAll PopulateOptions","""Um,"" your comms officer is caught off guard. ""Yes, $playerSirOrMadam, he has. For tea.""
@@ -6200,11 +6201,11 @@ Soon, you find yourself before a large compound with doors of etched metal. The 
 LKEshuttleToVirens2b,LKEshuttleToVirensGunCheck,!$player.shotSedge,,"""$PlayerName. Blessed peace this day. Please, $playerSirOrMadam, follow me.""",lke_shuttleToVirens3:继续,
 LKEshuttleToVirens2a,LKEshuttleToVirensGunCheck,$player.shotSedge,,"""$PlayerName. Blessed peace,"" he says, and hesitates. 
 
-""Please. Your weapon."" He indicates your sidearm.","lke_virensGunCheckA:Hand over your sidearm
-lke_virensGunCheckB:""Don't worry, I'm not here to shoot anyone.""
-lke_virensGunCheckC:""I will not surrender my sidearm.""
-lke_virensGunCheckD:""You'll have to take it from my cold, dead hands.""
-lke_virensGunCheckE:Return to your shuttle",
+""Please. Your weapon."" He indicates your sidearm.","lke_virensGunCheckA:交出你的随身武器
+lke_virensGunCheckB:""放心，我来这射爆谁的。""
+lke_virensGunCheckC:""我不会交出我的随身武器的。""
+lke_virensGunCheckD:""那得等我死透之后你才能从我手上拿走它。""
+lke_virensGunCheckE:返回你的穿梭机",
 LKEvirensGunCheckA,DialogOptionSelected,$option == lke_virensGunCheckA,,"The lead guard accepts it with both hands, giving a little bow, then tucks it into a holster on the front of his webbing. 
 
 A place of honor? Or at least a visible demonstration that he's going to keep a close eye on your gun.",lke_shuttleToVirens3:继续,
@@ -6242,8 +6243,8 @@ A finely-carved table is set with a tea set, simple in form and painted with del
 LKEvirensStart0a,DialogOptionSelected,"$option == lke_virensStart0
 $player.luddicAttitudeFaithfulOrPather",,"You are gaining a sense for the quality of tea by the scent hanging in the air after boiling water is freshly poured.
 
-This is a fine blend.","lke_virensStartSit:Sit and drink
-lke_virensStartStand:Remain standing",
+This is a fine blend.","lke_virensStartSit:坐下喝茶
+lke_virensStartStand:继续站着",
 LKEvirensStart0b,DialogOptionSelected,$option == lke_virensStart0,,"With all this dealing with Luddics, you realize that you're starting to develop a sense for the quality of tea by the scent hanging in the air after boiling water is freshly poured.
 
 This is the good stuff.","lke_virensStartSit:坐下喝茶
@@ -7856,16 +7857,16 @@ tut_mainBackground1,DialogOptionSelected,$option == tutBackground,,"""Galatia �
 实验前景乐观 —— 至少他们是这么想的，但在星门按照我们的预期发出能量脉冲回应时，破坏了星系入口跳跃点的稳定性，把我们与星域其他地方隔绝开来。
 
 这就简直就像星域与人之领隔绝的一个缩影 —— 看来星空也懂得讽刺，不是吗？""",0:tutBgCont1:继续,
-tut_mainGetDataInfo1,DialogOptionSelected,$option == tutBgCont1,,"""同处于这个星系的 Derinkuyu 空间站矿工本来就挣扎只能勉强维持生计的水平上，因此受到的打击最大。他们开始进行海盗活动，拦截了一批最后运抵的食物 —— 毫无疑问是被逼无奈。但由于已经造成了伤亡，他们已经完全置身于法律保护范围之外了。
+tut_mainGetDataInfo1,DialogOptionSelected,$option == tutBgCont1,,"""同处于这个星系的 Derinkuyu 采矿站 矿工本来就挣扎只能勉强维持生计的水平上，因此受到的打击最大。他们开始进行海盗活动，拦截了一批最后运抵的食物 —— 毫无疑问是被逼无奈。但由于已经造成了伤亡，他们已经完全置身于法律保护范围之外了。
 
 他们的领导人知道，如果跳跃点重新稳定下来，使得星系再次成为星域的一部分，他们最好的结局也只能是在流放殖民地上接受终身判决。""","1:tutCont1:""好的，那么现在我该从哪开始着手？""",
-tut_mainGetDataInfo2,DialogOptionSelected,$option == tutCont1,,"""这些成为了海盗的矿工目前正守在在跳跃点附近，阻止我们获取近期数据，防止我们找到稳定它的方法。
+tut_mainGetDataInfo2,DialogOptionSelected,$option == tutCont1,,"""这些转职当海盗的前矿工们目前正守在跳跃点附近，阻止我们获取近期数据，防止我们找到稳定它的方法。
 
 虽然我们有一支治安舰队可以对付这些武装分子，但他们现在正为忙于防守 Ancyra。
 
-而这些海盗太多，你对付不过来。幸运的是你不必直接面对他们。我们在 Derinkuyu 有位探员已经设法从守护跳跃点的飞船上获取了一份近期的数据，但他们无法接近远程通讯阵列把数据发给我们。
+而这些海盗太多，你对付不过来。幸运的是你不必直接面对他们。在 Derinkuyu 采矿站 有位探员已经设法从守护跳跃点的飞船上获取了一份近期的数据，但他们无法接近远程通讯阵列把数据发给我们。
 
-那就是你要开始着手去做的事情 —— 前往 Derinkuyu，从我们的探员手中取得数据，并然后回到这里。""","0:tutCont2a:""为什么让我去？""
+那就是你要开始着手去做的事情 —— 前往 Derinkuyu，从我方探员手中取得数据，并然后回到这里。""","0:tutCont2a:""为什么让我去？""
 1:tutCont2b:""对我来说这有什么好处吗？""",
 tut_mainGetDataWhyMe,DialogOptionSelected,$option == tutCont2a,"AdjustRep $personFaction.id COOPERATIVE 1
 AdjustRepActivePerson COOPERATIVE 2","""为什么不？我又没有丧失判断能力，而你看起来有本事能对付...可能发生的麻烦。
@@ -7908,7 +7909,7 @@ AddText ""背景中传来了系统的蜂鸣声，$heOrShe看起来忧心忡忡�
 ""现在系统正在对数据进行初步分析 —— 你应该已经拿到报酬了吧？""","tutGotDataCont1:""遇到什么问题了吗？""",
 tut_mainContactProbe1,DialogOptionSelected,$option == tutGotDataCont1,,"""是的 —— 系统预计大概需要一个星历年来分析数据得出一个稳定化程序。不用说，到那时这数据就失去时效性了，任何基于它的程序都毫无意义。
 
-如果我们手头有一个 AI 核心，我们可以更快地分析数据。幸运的是，在这个星系的某处有一个探测器，那是人之领首次探索星域时留下的。应该至少有一个 AI 核心作为它的大脑。""","tutGotDataCont2:""它在哪？为什么之前没有回收它？""",
+如果我们手头有一个 AI 核心，我们可以更快地分析数据。幸运的是，在这个星系的某处有一个探测器，那是 人之领 首次探索本星域时留下的。应该至少有一个 AI 核心作为它的中枢。""","tutGotDataCont2:""它在哪？为什么之前没有回收它？""",
 tut_mainContactProbe2,DialogOptionSelected,$option == tutGotDataCont2,,"""先说你的第二个问题，这些人之领遗物经常受至今仍在运作的自动防御系统保护，这个探测器也不例外。且霸主通常禁止平民干涉人之领遗物，当然是考虑到公众的安全。""
 
 ""但现在已经别无他法了...""",tutGotDataCont3:继续,
@@ -8393,7 +8394,7 @@ saic_initialText,SAICPrintInitialText,,,"你的$shipOrFleet到达了之前在 $s
 令人惊讶的是，之前居然没有任何人发现这个藏匿处。不过刚开始的时候从远程传感器的读数上看，这里的确是被误判成了毫无价值的残骸区。现在眼下的问题是，你是打算把 AI 核心封入屏蔽箱，在下次靠港时将它快递寄走，还是说你打算把它据为己有？毕竟那个学者肯定只是个无足轻重的角色。",,
 saic_leaveSel,DialogOptionSelected,$option == saic_leave,DismissDialog,,,
 saic_giveCoreSel,DialogOptionSelected,$option == saic_giveCore,,屏蔽箱在电动闩滑动就位的声响中锁死了。这时它送出了一个一次性编码的超波突发通信。应该是确认讯号，你猜想到。但如果那个学者能提前跟你提一下这个小把戏就好了，现在只能希望附近没有海盗或是其他什么东西正在监听。,saic_continueGiveCore:把藏匿处的其他东西带走,
-saic_takeCoreSel,DialogOptionSelected,$option == saic_takeCore,,你打开了这曾属于 速子科技 的箱子，从中收获了一枚 Alpha 级核心。随着冰冷的非人类思维被激活，核心脉动着，照亮了你的笑脸。你下令把学者的屏蔽箱扔出气闸。如果你想在这世上有所成就，那最好亲力亲为。,saic_continueTakeCore:把藏匿处的其他东西带走,
+saic_takeCoreSel,DialogOptionSelected,$option == saic_takeCore,,你打开了这曾属于 速子科技 的箱子，从中收获了一枚 Alpha 级核心。核心的光芒随着它的运作不断地脉动，那冰冷的非人类思维因而照亮了你的笑脸。你下令把学者的屏蔽箱扔出气闸 —— 如果想在这乱世中办妥什么事，那最好别把它托给别人。,saic_continueTakeCore:把藏匿处的其他东西带走,
 saic_continueLootGiveCore,DialogOptionSelected,$option == saic_continueGiveCore,CallEvent $saic_eventRef genLootNoCore,,,
 saic_continueLootTakeCore,DialogOptionSelected,$option == saic_continueTakeCore,CallEvent $saic_eventRef genLootWithCore,,,
 ,,,,,,
@@ -9756,7 +9757,7 @@ gaKA_ttLeaveSel2,DialogOptionSelected,$option == gaKA_ttLeaveToBar,,"你离开�
 当转身想要离开时，你感觉到脖子后面传来了刺痛感。",gaKA_ttGoBackToBarCont:继续,
 gaKA_ttLeaveSel2b,DialogOptionSelected,$option == gaKA_ttLeaveToBarB,,"You stand from the table, drink untouched.
 
-You almost feel like there's a tingle on the back of your neck as you leave, but the Tri-Tachyon agent is nowhere to be seen.",gaKA_ttGoBackToBarCont:Continue,
+You almost feel like there's a tingle on the back of your neck as you leave, but the Tri-Tachyon agent is nowhere to be seen.",gaKA_ttGoBackToBarCont:继续,
 gaKA_ttGoBackToBarContSel,DialogOptionSelected,$option == gaKA_ttGoBackToBarCont,"EndConversation DO_NOT_FIRE
 RestoreSavedVisual
 BarCMD showOptions",,,
@@ -10141,7 +10142,7 @@ gaFCFikenhildCavinKnock,DialogOptionSelected,$option == gaFC_fikenhildCavinKnock
 $player.metCavin = true","门边损坏的通讯面板发出噼里啪啦的全损人声，""...你是地方安全部？我们不同意搜查！除非你有... ""，然后是一些低沉的话语，第二个声音打断道：""闭嘴。我来处理。""
 
 门后的门闩被收回，一个男人走了出来。他对你摆出一副酸溜溜的表情，身着混杂着近似于太空人的装备和一些当地象征反主流文化的装饰品。出来后他把门拉上，用很低的声音说：""别管这里面的事了。她是不是又卷进更多的麻烦里了？那件关于 Galatia 的事，是吗？""","gaFC_fikenhildCavinIntro:""我猜你是 Cavin Pharoh?""",
-gaFCFikenhildCavinIntro1,DialogOptionSelected,$option == gaFC_fikenhildCavinIntro,FireAll FikenhildCavinHub,"""是的。很明显。"" 他看了看你，""你不是内安部或舰队情报部的人，雇佣兵？还是某种间谍？你的朋友已经在这里到处打探消息了，我们告诉他滚去舔 Kazeron 的靴子。""
+gaFCFikenhildCavinIntro1,DialogOptionSelected,$option == gaFC_fikenhildCavinIntro,FireAll FikenhildCavinHub,"""是的。很明显。"" 他看了看你，""你不是地方安全部或舰队情报部的人，雇佣兵？还是某种间谍？你的朋友已经在这里到处打探消息了，我们告诉他滚去舔 Kazeron 的靴子。""
 
 Cavin 不耐烦地交叉着双臂，看着远处的维生管道，竭力表现出他根本不想鸟你的态度。""所以你呢？""",,
 gaFCFikenhildCavinHubResponse1,FikenhildCavinHub,!$global.knowSiyavongContact,,,"gaFC_fikenhildCavinA:""还有人会问关于 Coureuse 的问题？""",
@@ -10379,7 +10380,7 @@ FireBest DialogOptionSelected","""我是 Finlay Siyavong，不过你已经很清
 GAFCSiyavongFikenhildHub,DialogOptionSelected,$option == gaFC_fikenhildSiyavongHub,FireAll GAFCSiyavongFikenhildHubOptions,,,
 GAFCSiyavongFikenhildHub1,GAFCSiyavongFikenhildHubOptions,!$askedWhatDoYouDo ,,,"gaFC_fikenhildSiyavongWhatDo:""你到底是做什么工作的？""",
 GAFCSiyavongFikenhildHub2,GAFCSiyavongFikenhildHubOptions,!$tookYouLongEnough,,,"gaFC_fikenhildSiyavongLongEnough:""你真是过了好一会才联系我。""",
-GAFCSiyavongFikenhildHub3,GAFCSiyavongFikenhildHubOptions,,,,"gaFC_fikenhildSiyavongWhereSyclla:""Scylla Coureuse 在哪？""",
+GAFCSiyavongFikenhildHub3,GAFCSiyavongFikenhildHubOptions,,,,"gaFC_fikenhildSiyavongWhereScylla:""Scylla Coureuse 在哪？""",
 GAFCSiyavongFikenhildWhatDo,DialogOptionSelected,$option == gaFC_fikenhildSiyavongWhatDo,"$askedWhatDoYouDo = true
 $option = gaFC_fikenhildSiyavongHub 0
 FireBest DialogOptionSelected","""如你所见，我是 英仙座联盟 舰队情报部的代表。"" Siyavong 摊开双手，似乎在表明他没有恶意。""我的工作是防止并确保 联盟 成员享受的自由不被侵犯。""
@@ -10657,7 +10658,7 @@ gaFCStolenProbePodStart,OpenInteractionDialog,$tag:gaFC_lootedProbe,"ShowDefault
 FireBest GAFCStolenProbePodStartOption",一支打捞小组确保目标收纳以便你的技术团队进行调查。,,
 gaFCStolenProbePodStartOption1,GAFCStolenProbePodStartOption,$global.gaFC_probesDone == 0,,技术人员工作迅速，并报告说，他们已经与探测器的机箱建立了连接。,gaFC_probe1Investigation1:继续,
 gaFCStolenProbePodStartOption2,GAFCStolenProbePodStartOption,$global.gaFC_probesDone == 1,"$global.gaFC_probesDone++
-DespawnEntity","""超波分析不是单纯的线性过程，""你的技术专家解释道。""现在还差一个数据集才能完成... 嗯，好吧，它虽然不是三角定位，但如果那样更好理解的话，你可以当成是那样，嗯。""
+DespawnEntity","""超波分析不是单纯的线性过程，""你的技术专家解释道。""现在还差一个数据集才能完成...嗯，好吧，它虽然不是三角定位，但如果那样更好理解的话，你可以当成是那样，嗯。""
 
 他们清了清嗓子。""舰长$PlayerSirOrMadam。""
 
@@ -14073,7 +14074,7 @@ FireAll GAATGzalMissionStartHub","""嗯，她被允许偶尔和外界进行交�
 ""Elissa 可以背着 Kanta 的人偷运些东西出来。毕竟他们根本搞不清楚她的工作，"" Coureuse 说到这有些自豪地笑了，""但这是有风险的。而且最近这风险越来越高。毕竟 Kanta 有些，呃，"" 她摆动着双手，想找一个恰当的形容方式。""有些反应堆侧漏？""",,
 gaATGzalMissionHubB,DialogOptionSelected,$option == gaATG_zalMissionHubB,"$kanta = true 0
 $didone = true 0
-FireAll GAATGzalMissionStartHub","""对 —— 是啊，就是你想的那位，老巢在 Magec 星系的。这也是我不想提到 Elissa 的事情的原因之一。Elissa 让我 ... 倒不是当作秘密，但是要万分小心。Kanta 在很多地方都有眼线。你也知道的，敲诈、行贿、勒索。Kanta 家族的人会利用任何她们能接触到的人，所以你永远都不知道该相信谁。""",,
+FireAll GAATGzalMissionStartHub","""对 —— 是啊，就是你想的那位，老巢在 Magec 星系的。这也是我不想提到 Elissa 的事情的原因之一。Elissa 让我...倒不是当作秘密，但是要万分小心。Kanta 在很多地方都有眼线。你也知道的，敲诈、行贿、勒索。Kanta 家族的人会利用任何她们能接触到的人，所以你永远都不知道该相信谁。""",,
 gaATGzalMissionHubC,DialogOptionSelected,$option == gaATG_zalMissionHubC,"$gargoyle = true 0
 $didone = true 0
 FireAll GAATGzalMissionStartHub","""哦，不，不不不，"" 黑客说道，""不过我确实知道一点。""
@@ -16374,11 +16375,11 @@ Call $global.gaOp_ref updateStage","""我 —— 是的，我们应该继续。�
 gaOpMissionReturnRogueAI,PickGreeting,"$gaOp_returnHere score:1000
 Call $global.gaOp_ref updateData
 $gaOp_variation == ROGUE_AI
-FireBest ASEBMissionReturn",ShowPersonVisual,"Sebestyen 看起来很紧张。""我，嗯，你好舰长！见到你真好。嗯，来自 $gaOp_department 部门的轮值成员，他们 - 他们很高兴能回家啊，嗯...""停顿了许久。
+FireBest ASEBMissionReturn",ShowPersonVisual,"Sebestyen 看起来很紧张。""我，嗯，你好舰长！见到你真好。嗯，来自 $gaOp_department 部门的轮值成员，他们 —— 他们很高兴能回家啊，嗯...""停顿了许久。
 
-""我们，嗯，你的任务文件有点问题。看起来，""他的目光集中在你显示器外的某个东西——不，某个人上。
+""我们，嗯，你的任务文件有点问题。看起来，""他的目光集中在你显示器外的某个东西 —— 不，某个人上。
 
-他向对方点了点头，然后把注意力转回到你身上。""所有的数据都被不可修复地删除了。我不得不强调，学院认为这件事是高度机密的，而且，""他开始调出一个数据平板，""所有的知识产权，新方法，专利设备及在执行这项任务过程中观察到的其他事物都被视为高度机密。""",gaOp_returnedCont:继续,
+他向对方点了点头，然后把注意力转回到你身上。""所有的数据都被不可修复地删除了。我不得不强调，学院认为这件事是高度机密的，而且，""他开始调出一个数据平板，""-该行程中涉及的所有知识产权，新方法，专利设备，以及其他任何形式的观测结果都必须严加保密。""",gaOp_returnedCont:继续,
 gaOpMissionReturnRogueAI1,DialogOptionSelected,$option == gaOp_returnedCont,"Call $global.gaOp_ref doubleReward
 $global.gaOp_completed = true
 Call $global.gaOp_ref updateStage","""然而，""他轻咳一声，""学院认可了你杰出的工作，特别是你在处理这件事上的谨慎与周到。所以财务处认为应当将你的任务报酬翻倍。""
@@ -16678,7 +16679,7 @@ pwi2Bluff,DialogOptionSelected,$option == pwi2_bluff,,"你摆出一副忧心忡�
 
 $HeOrShe试图揣测你的意思，这个左径分子逐渐困惑了起来。
 
-""别忘了 Mairaath""，你就像旧地球的预言家一样咆哮着，你的头前倾，眼里燃烧着神圣的复仇焰火。""接下来是组织内部的秘密工作，你没有权限了解。你必须离开这里防止干扰我的任务，但首先-""",pwi2_bluff1:继续,
+""别忘了 Mairaath""，你就像旧地球的预言家一样咆哮着，你的头前倾，眼里燃烧着神圣的复仇焰火。""接下来是组织内部的秘密工作，你没有权限了解。你必须离开这里防止干扰我的任务，但首先 ——""",pwi2_bluff1:继续,
 pwi2Bluff1,DialogOptionSelected,$option == pwi2_bluff1,"MakeOtherFleetNonHostile true
 MakeOtherFleetGoAway true
 AdjustRep $personFaction.id COOPERATIVE 5","你夸张地双手合十，仿佛在向众人吟诵。""我为你祈祷，$brotherOrSister，而在圣卢德赐予我们的这条道路上，请跟随我的脚步。""
@@ -17105,11 +17106,11 @@ FireBest OtherPlanetInteractionText
 FireAll PopulateOptions
 FireBest PrintNearbySurveyHostilesTextIfSo
 AddText ""围绕这颗行星运行的一个仪器正在发送微弱的信号，Galatia 学院承诺将它回收会提供报酬。""",,gaIntro2_retrieval2:下令回收数据核心,# in case you want to immediately change your mind
-gaIntro2start2,DialogOptionSelected,$option == gaIntro2_start2,"Highlight ""18,000""","传感器技师开启音频输出：一段杂乱无章的循环，不间断地哀嚎声。似乎是一段录制的声音？
+gaIntro2start2,DialogOptionSelected,$option == gaIntro2_start2,"Highlight ""18,000""","传感器技师开启音频输出：一段无法辨识的杂音在循环播放，其中夹杂着断断续续的啸叫声。似乎是一段录音？
 
 ""发射器肯定损坏了，但还可以挽救，""他们的话听上去带着一丝自豪，""走你。""
 
-""— Galatia 学院。任何找到这件物品的人，我恳请你把数据核心送回学院，你将会获得由 Tomas Kallichore 院长授权的 18000 星币奖励。信息会重复播放。""","gaIntro2_retrieval:下令回收数据核心
+""— Galatia 学院。任何找到这件物品的人，我恳请你把数据核心送回学院，你将会获得由 Tomas Kallichore 院长授权的 18,000 星币奖励。信息会重复播放。""","gaIntro2_retrieval:下令回收数据核心
 gaIntro2_leaveIt:把它留在原地",
 gaIntro2leaveIt,DialogOptionSelected,$option == gaIntro2_leaveIt,"$gaIntro2startLater = true
 $rejectedRetrieval = true 0
@@ -19053,7 +19054,7 @@ CBPather1Aristo,CBPatherOfferDescAristo,$voice == aristo,Highlight $bcb_dist $bc
 ""我会给你 $bcb_reward 星币去干掉这个狂信徒。你有 $bcb_days 天的时间来完成任务。""",,
 CBPather2LuddicChurch,CBPatherOfferDesc,$personFaction.id == luddic_church,Highlight $bcb_dist $bcb_reward $bcb_days,"""这是个比较敏感的麻烦，""$heOrShe沉默了一会儿。
 
-""我们的一队...前任骑士，违背誓言并加入了所谓的 ""循径者""教派。最近一位寻求赦免的异端者证实了我们关于这位背信者的情报。他们藏身在 $bcb_systemName，距离此地 $bcb_dist 光年。""
+""我们的一队...前任骑士，违背誓言并加入了所谓的 ""循径派""。最近一位寻求赦免的异端者证实了我们关于这位背信者的情报。他们藏身在 $bcb_systemName，距离此地 $bcb_dist 光年。""
 
 ""鉴于他们假借先知之名所犯下的滔天罪行和异端行径，教会已经恩准这份处决令。同时将提供 $bcb_reward 星币作为酬报。我们期待你能在 $bcb_days 天内完成这个任务。你接受吗？""",,
 CBDeserter,CBDeserterOfferDesc,,Highlight $bcb_dist $bcb_reward $bcb_days,"""如果我有一支舰队的话，我会亲自搞定这个人。""$heOrShe脸上露出的表情好像$heOrShe刚咬到了什么酸到极点的东西，"" $bcb_targetName 是个叛徒，来自 $thePersonFaction 的逃兵，我们必须杀鸡儆猴。我们知道 $bcb_targetHeOrShe藏在 $bcb_systemName 中，距离这里 $bcb_dist 光年。""
@@ -20258,10 +20259,10 @@ kantasDenTrafficControlBribe,DialogOptionSelected,$option == kantasDen_trafficBr
 $player.ethosGenerous++
 $market.didTrafficControlBribe = true","You transfer a fractional credit over to the thug running traffic control, enough to cover a generous meal or a round of cheap drinks.
 
-""Eh, here's one to brighten today,"" control says enthusiastically, ""Me, I like going halfsies with the fry, bit-a each. Shuttle, you're cleared to land at munitions bay 12.""","gaATG_shuttleKantasDen4:""告诉随便哪个管事儿的，说我是来见军阀 Kanta 的。""",
-kantasDenTrafficControlBullyA,DialogOptionSelected,$option == kantasDen_trafficBullyA,,"""Uhh,"" says control, ""You mean the portboss? Or, er, station king? Or you mean t-the...""","kantasDen_trafficBullyB:""Warlord Kanta.""",
+""Eh, here's one to brighten today,"" control says enthusiastically, ""Me, I like going halfsies with the fry, bit-a each. Shuttle, you're cleared to land at munitions bay 12.""","kantasDen_trafficBullyB:""告诉随便哪个管事儿的，说我是来见军阀 Kanta 的。""",
+kantasDenTrafficControlBullyA,DialogOptionSelected,$option == kantasDen_trafficBullyA,,"""呃..."" 管控员说，""你是说港口老大？还是，呃，空间站之王？又或是你指的是那...那个...""","kantasDen_trafficBullyB:""军阀 Kanta。""",
 kantasDenTrafficControlBullyB,DialogOptionSelected,$option == kantasDen_trafficBullyB,"$market.alreadyOnShuttle = true 0
-FireAll KDSKConvoStart","""Um, copy that shuttle,"" the comms crackle, ""Uh, hold. Um, please.""",,
+FireAll KDSKConvoStart","""呃，收到了，开穿梭机的。"" 通讯中传来了不小的杂音，""呃，稍等。嗯，请稍等一下。""",,
 # talk to Station King about what PC wants; may or may not already be on a shuttle.,,,,,,
 devKDfirstVisitA,KDStationKingOptions,$global.isDevMode,SetOptionColor devkdSK_sendToken gray,,20:devkdSK_sendToken:DEV Send the digital token given to you by Gargoyle,
 devKDfirstVisitB,KDStationKingOptions,$global.isDevMode,SetOptionColor devkdKP_askAudience gray,,"20:devkdKP_askAudience:DEV ""我希望能安排一次觐见 军阀 Kanta 的机会，这关系到我的殖民地。""",
@@ -20374,8 +20375,8 @@ kdKantaFirstIntro4,DialogOptionSelected,$option == kd_kantaFirstIntro4,"ShowSeco
 $player.metCydonia = true
 SetPersonHidden cydonia false","Before her a strange, small man hunches. He wears some parody of a doctor's surgical garb.
 
-""You had best kneel,"" the doctor hisses.","kd_kantaIntro4kneel:Kneel
-kd_kantaIntro4stand:Stand",
+""You had best kneel,"" the doctor hisses.","kd_kantaIntro4kneel:跪下
+kd_kantaIntro4stand:站着",
 kdKantaFirstIntro4kneel,DialogOptionSelected,$option == kd_kantaIntro4kneel,,"If a broken atmo scrubber could laugh, it might sound like the noise that comes from Kanta. 
 
 ""A kneeler!"" she shouts. Her guards remain relaxed. ""We see you know who is strong here. Know your place. Kanta will watch over you.""
@@ -21259,10 +21260,10 @@ FireAll SDTUSafehouseWrapHubOpt","""This is your opening. Explain yourself as ac
 ""Find out her intentions; if she is willing to engage in open treason, or if pushed, will she side with myself: the legitimate authority in the upcoming struggle. Her rivalry with Caden and the Lion's Guard is well known, so that may be a good axis upon which to turn her.""",,
 sdtuSafehouseWrapHubOpt0,SDTUSafehouseWrapHubOpt,,,,"sdtu_safehouseEnd:""I'll... see what I can do.""",
 sdtuSafehouseWrapHubOpt1,SDTUSafehouseWrapHubOpt,,,,"sdtu_macHyderJustTalk:""Why don't I just talk to her?""",
-sdtuSafehouseWrapHubOpt2,SDTUSafehouseWrapHubOpt,,,,"sdtu_macHyderYouTalk:""Why don't you just talk to her about all of this?""",
+sdtuSafehouseWrapHubOpt2,SDTUSafehouseWrapHubOpt,,,,"sdtu_macHyderYouTalk:""为什么你不直接和她谈谈这一切？""",
 sdtuSafehouseWrapHubOpt3,SDTUSafehouseWrapHubOpt,,,,"sdtu_macHyderTreason:""If she is engaging in treason, technically, why not eliminate her now?""",
 sdtuSafehouseWrapHubOpt4,SDTUSafehouseWrapHubOpt,,,,"sdtu_macHyderHow:""How would killing her subordinate possibly make Hyder trust me?""",
-sdtuSafehouseWrapHubOpt5,SDTUSafehouseWrapHubOpt,,,,"sdtu_macHyderNoWant:""I don't want to do this.""",
+sdtuSafehouseWrapHubOpt5,SDTUSafehouseWrapHubOpt,,,,"sdtu_macHyderNoWant:""我不想这样做。""",
 sdtuSafehouseWrapAnswer1,DialogOptionSelected,$option == sdtu_macHyderJustTalk,RemoveOption sdtu_macHyderJustTalk,"""You're welcome to try,"" Macario says smugly. ""Without an opening, however, you will get nothing. I know how she works."" ",,
 sdtuSafehouseWrapAnswer2,DialogOptionSelected,$option == sdtu_macHyderYouTalk,RemoveOption sdtu_macHyderYouTalk,"Macario looses a breathy laugh.
 
@@ -21297,10 +21298,10 @@ sdtuSafehouseHolorecCheck,SDTUSafehouseHolorecCheck,$player.sdtu_gotWire,,"An id
 sdtuTraitorPatrolDialog,OpenInteractionDialog,$sdtu_interceptFleet,Call $global.sdtu_ref updateData,This fleet is transmitting the transponder code provided by Macario. It is commanded by the 'traitor' you must arrest or kill.,,
 sdtuTraitorPatrolOptionConfront,PopulateOptions,"$entity.sdtu_interceptFleet
 !$sentWarrant
-!$madeArrestClaim",,,"sdtu_traitorPatrolUnderArrest1:""You are under arrest by order of Chief High Inspector Dolos Macario.""",
+!$madeArrestClaim",,,"sdtu_traitorPatrolUnderArrest1:""根据最高检察长 Dolos Macario的命令，你被逮捕了。""",
 sdtuTraitorPatrolOptionConfront2,PopulateOptions,"$entity.sdtu_interceptFleet
 !$sentWarrant
-!$madeArrestClaim",,,"sdtu_traitorPatrolSoldOut1:""Bad news. You've been sold out by Dolos Macario.""",
+!$madeArrestClaim",,,"sdtu_traitorPatrolSoldOut1:""坏消息。你们被 Dolos Macario 出卖了。""",
 sdtuPatrolAgainSaidArrest,PopulateOptions,"$entity.sdtu_interceptFleet
 !$sentWarrant
 $madeArrestClaim",,,"sdtu_traitorPatrolUnderArrest1b:""I'm here - again - to arrest order from Chief High Inspector Dolos Macario.""",
@@ -21331,13 +21332,13 @@ FireAll SDTUPatrolOptions","You watch the blood drain from $hisOrHer face. $HeOr
 ""What is the meaning of this? You speak outrageous mockery and claim false authority! I should have you arrested for that alone.""",,
 sdtuPatrolOptionWarrant,SDTUPatrolOptions,!$sentWarrant,,,sdtu_traitorPatrolWarrantReaction:Transmit the arrest warrant provided by Macario,
 sdtuPatrolOptionSurrenderAsk,SDTUPatrolOptions,$sentWarrant,,,"sdtu_patrolAskSurrender:""Do the right thing and surrender yourself without a fight.""",
-sdtuPatrolOptionSurrenderDemand,SDTUPatrolOptions,$sentWarrant,,,"sdtu_patrolDemandSurrender:""Surrender now, or I will attack.""",
+sdtuPatrolOptionSurrenderDemand,SDTUPatrolOptions,$sentWarrant,,,"sdtu_patrolDemandSurrender:""立刻投降，否则我就下令攻击了。""",
 sdtuPatrolOptionMutiny,SDTUPatrolOptions,$sentWarrant,"SetStoryOption sdtu_patrolConvinceMutiny general ""Convinced 'treasonous' Sindrian Diktat patrol to mutiny and hand over their commander""
 SetTooltip sdtu_patrolConvinceMutiny ""Appeal to the patriotism - and fear - of the crew to capture this officer without a fight.""",,sdtu_patrolConvinceMutiny:Convince $hisOrHer crew to turn $himOrHer over without a fight,
 sdtuPatrolOptionHelpYou,SDTUPatrolOptions,$sentWarrant,"SetStoryOption sdtu_patrolForAPrice general ""Convinced 'treasonous' Sindrian Diktat patrol commander to pay you to help them escape from Macario""
 SetTooltip sdtu_patrolForAPrice ""Convince $PersonName to pay you 10,000 credits. You will drop $himOrHer off at a neutral system and report that $heOrShe was killed in combat.""
 SetTooltipHighlights ""10,000 credits""",,"sdtu_patrolForAPrice:""I can help you out of this... for a price.""",
-sdtuPatrolOptionOops,SDTUPatrolOptions,,,,"cutCommLink:""Oops, wrong comms-ID. I need to go now.""",# cutCommLinkNoText
+sdtuPatrolOptionOops,SDTUPatrolOptions,,,,"cutCommLink:""哎呀，拨错通讯 ID 了。我现在要离开了。""",# cutCommLinkNoText
 sdtuTraitorPatrolWarrantReaction,DialogOptionSelected,$option == sdtu_traitorPatrolWarrantReaction,"$sentWarrant = true
 FireAll SDTUPatrolOptions","Now you see true fear fall across $hisOrHer face. Macario's reputation doing its work.
 
@@ -21385,9 +21386,9 @@ Your tactical officer pings you, alerting you to the fact that the Diktat patrol
 sdtu_patrolForAPrice3c:""Lieutenant, is it? You're welcome for the promotion.""
 sdtu_patrolForAPrice3d:Cut the comm link.",
 sdtuPatrolForAPrice3b,DialogOptionSelected,$option == sdtu_patrolForAPrice3b,"$option = sdtu_patrolForAPrice3d 0
-FireBest DialogOptionSelected",The comm link is cut from the other end. It seems like they're not in the mood to talk.,,
+FireBest DialogOptionSelected",通讯链接从另一端被切断。看来他们没有心情对话。,,
 sdtuPatrolForAPrice3c,DialogOptionSelected,$option == sdtu_patrolForAPrice3c,"$option = sdtu_patrolForAPrice3d 0
-FireBest DialogOptionSelected",The comm link is cut from the other end. It seems like they're not in the mood to talk.,,
+FireBest DialogOptionSelected",通讯链接从另一端被切断。看来他们没有心情对话。,,
 sdtuPatrolForAPrice3d,DialogOptionSelected,$option == sdtu_patrolForAPrice3d,"ShowDefaultVisual
 AdjustRepActivePerson VENGEFUL -50
 MakeOtherFleetHostile true
@@ -22134,7 +22135,7 @@ SetTooltip sdtu_umbraRaidStart ""A nearby hostile fleet is tracking your movemen
 sdtuUmbraRaidStart,DialogOptionSelected,$option == sdtu_umbraRaidStart,"$raidDifficulty = $sdtu_extractAgentRaidDifficulty 0
 $raidGoBackTrigger = PopulateOptions 0
 $raidContinueTrigger = SDTUUmbraRaidFinishedB 0
-AddRaidObjective genericIcon ""Capture the Lion's Guard double agent"" HIGH 3000 SDTUUmbraRaidFinishedA true
+AddRaidObjective genericIcon ""抓捕狮心卫队的双重间谍"" HIGH 3000 SDTUUmbraRaidFinishedA true
 $raidRestrictToTrigger = SDTUUmbraRaidFinishedA 0
 ShowImageVisual raid_prepare","Macario's file is highly detailed. It's clear that Sindrian Diktat intelligence has had sources embedded in both the Umbran ARC/Anti-affiliated insurrectionists as well as the Lion's Guard for quite some time.
 
@@ -22435,8 +22436,8 @@ He drops the expression.
 sdtuCadenMacPuppet1,DialogOptionSelected,$option == sdtu_cadenMacPuppet1,"$player.ethosTruth++
 $global.sdtu_toldCadenMacarioWantsToPuppet = true","""Me? A Puppet?"" Caden forces out a painful-sounding laugh.
 
-""That spider has been cooped up too long in his torture-bunker. Too far from the martial leadership that produces men of quality,"" Caden thumps his chest, setting medals jingling.","sdtu_cadenMacPuppet2:""He thinks he's smarter than you.""
-sdtu_cadenMacPuppet2b:""You're right. He's crazy.""",
+""That spider has been cooped up too long in his torture-bunker. Too far from the martial leadership that produces men of quality,"" Caden thumps his chest, setting medals jingling.","sdtu_cadenMacPuppet2:""他认为他远比你要聪明。""
+sdtu_cadenMacPuppet2b:""你说得对。他疯了。""",
 sdtuCadenMacPuppet2a,DialogOptionSelected,"$option == sdtu_cadenMacPuppet2
 $global.sdtu_gotMacarioOpinionOfCaden",,"You explain Macario's words describing Caden as liking to 'play dress-up and have parades' you can see the color rising again in his face.
 
@@ -23898,30 +23899,30 @@ PKCommRelayOpt,COB_AddOptions,"$tag:comm_relay
 $locationId == $global.core_pkNexus
 $global.pk_inProgress
 Call $global.pk_ref updateData
-$pk_stage == GO_TO_NEXUS",,,0:pk_hackMenu:尝试远程黑入中枢找到行星杀手的位置。,
-PKHackMenuSel,DialogOptionSelected,$option == pk_hackMenu,"SetStoryOption pk_hackStory technology ""Hacked into a remnant Nexus using a nearby comm relay""
-FireBest PKRelayCheckTTCommission","It is not unusual that the Remnant Nexus exchanges signals with the local comm relay. Wherever Tri-Tachyon's AI fleets linger, one finds clouds of tiny spy-sats, relays, and repeaters chirping squirts of data back and forth. Very quietly, almost enough to be lost in the background noise. But not quite.
+$pk_stage == GO_TO_NEXUS",,,0:pk_hackMenu:尝试远程黑入中枢，取回行星杀手的位置信息。,
+PKHackMenuSel,DialogOptionSelected,$option == pk_hackMenu,"SetStoryOption pk_hackStory technology ""使用附近的通讯中继站黑入了余晖中枢""
+FireBest PKRelayCheckTTCommission","余晖中枢和星系内的通讯中继站进行信号交互并不罕见。毕竟无论这些 速子科技 麾下的 AI 舰队在哪儿徘徊，都会留下如云雾般密布的间谍卫星和中继转发系统，不停地来回吞吐数据流。虽然这些都安静到几乎能被背景噪音所掩盖，但也不是完全悄然无息。
 
-It is not a simple thing to tap into this self-evolved network to request a very specific piece of information. You assemble your senior officers and consider your options for hacking into the Nexus","pk_hack:Use Tri-Tachyon security codes to make the task possible
-pk_hackStory:Open a comm-link into the network
-pk_commGoBack:Go back",
+接入这样一个自我进化出来的网络里获取某个特定的信息绝非易事。你将你的高级军官召集到了一起，考虑能采取什么行动来黑入中枢。","pk_hack:使用 速子科技 的安全编码让这项工作可行
+pk_hackStory:向网络开放通讯链接接入
+pk_commGoBack:返回",
 PKRelayCheckTTCommission,PKRelayCheckTTCommission,$player.commissionFactionId != tritachyon,"SetEnabled pk_hack false
-SetTooltip pk_hack ""Requires a Tri-Tachyon commission.""",,,
+SetTooltip pk_hack ""需要与 速子科技 签订有雇佣协议。""",,,
 PKHackSel,DialogOptionSelected,$option == pk_hack,"$global.pk_nexusDataGained = true
-Call $global.pk_ref updateStage","As a commissioned privateer of the Tri-Tachyon Corporation, you have been given a standard set of access codes. These are old protocols, and while they've migrated away from company standards over time (due, probably, to the meddling of idle AIs), your technical officers have the skill to adapt to the unusual changes.
+Call $global.pk_ref updateStage","身为一名 速子科技 公司麾下的签约私掠者，你被给予了一套标准访问编码。这些协议很老旧，而且和公司标准规范渐行渐远 (也许是那些到处闲逛的 AI 们搞的鬼)，不过你的技术官们终归会有技术去适应这些不常见的变动。
 
-After hours of painstakingly crafting a request - it must be asked in precisely the correct way and have the properly mutated access codes attached - the question is asked and the answer received nearly instantly. Unnervingly so. Nonetheless, you now have navigation coordinates which should lead to the planetkiller.",defaultLeave:离开,
-PKHackStorySel,DialogOptionSelected,$option == pk_hackStory,,"你的通讯官有些吃惊，""但是，$playerSirOrMadam，这 ——""","pk_hackStory2:""就这么办。我有一个主意。""",
-PKHackStory2,DialogOptionSelected,$option == pk_hackStory2,HideVisual,"Your comms officer inputs the commands, a look of confusion remaining on their face.
+由于必须附上准确转换后的访问编码，并使用非常精确地用方式正确地进行询问，检索请求在煞费苦心地认真编写了几个小时之后才发出去，之后却几乎立即就收到了回答，让人不禁有些胆怯。但无论如何，你现在拿到了应该都能通往行星杀手所在位置的导航坐标了。",defaultLeave:离开,
+PKHackStorySel,DialogOptionSelected,$option == pk_hackStory,,"你的通讯官看起来大吃了一惊，""但是，$playerSirOrMadam，这 ——""","pk_hackStory2:""就这么办。我有一个主意。""",
+PKHackStory2,DialogOptionSelected,$option == pk_hackStory2,HideVisual,"你的通讯官输入了指令，一脸的困惑依然没有散去。
 
-""Their system isn't built for comms. Um, at all. But, theoretically the adaptive protocols should... could interface, if there's a proper link..."" 
+""它们的系统构造没考虑过接受通讯，额，完全没有。但，理论上自适应协议应该...也许能进行交互，如果有合适的链接的话..."" 
 
-Another tap at the controls, ""The line should be open. If someone, something... is listening.""
+通讯官又在控制台上按了一下，""链接应该开启了，如果有人，有什么东西...在听着的话。""
 
-Your display shows nothing but holo-snow. Your officers fall silent, and the signal processing amplifies the buzz of cosmic background radiation to a near-audible level. There's nought but a yawning void awaiting your words.","pk_hackStoryStartA:""有人吗？""
+你的显示台上除了全息雪花噪之外什么都没显示。你的军官都安静了下来，这时信号处理器自顾自地把宇宙背景辐射的嗡响放大到了几乎能听见的音量水平。在这无有之处中，仿佛有片虚空正打着哈欠等着你发话。","pk_hackStoryStartA:""有人吗？""
 pk_hackStoryStartB:""我是 $playerName。你是谁？""
 pk_hackStoryStartC:""我是 Artemisia Sun，速子科技公司的首席执行官。""
-pk_hackStoryStartD:""这是欧米伽呼叫。我有指令要给你。""",
+pk_hackStoryStartD:""这是欧米伽在呼叫。我有指令要传达给你。""",
 PKHackStoryStartA,DialogOptionSelected,$option == pk_hackStoryStartA,,"
 有的
 
@@ -23933,16 +23934,16 @@ PKHackStoryStartC,DialogOptionSelected,$option == pk_hackStoryStartC,"$option = 
 FireBest DialogOptionSelected",,,
 PKHackStoryStartD,DialogOptionSelected,$option == pk_hackStoryStartD,"$player.ethosLiar++
 $wasCalledLiar = true 0","
-不，骗子
+非也，妄语者
 
-你是$playerName",pk_hackStoryStart2:继续,
-PKHackStoryStart2,DialogOptionSelected,$option == pk_hackStoryStart2,FireAll PKHackStoryOptions,"你不是很清楚自己是怎么听见这些话的。就好似它们并非由声音传递。你的高级官员们都从空空如也的全息显示屏前退了几步，瞪大了双眼；震惊得说不出话来。
+你是 $playerName",pk_hackStoryStart2:继续,
+PKHackStoryStart2,DialogOptionSelected,$option == pk_hackStoryStart2,FireAll PKHackStoryOptions,"你没法描述自己到底是怎么听见这些话的。它们仿佛并非由声音传递。你的高级军官们都不由得从空空如也的全息显示台后退了一步，瞪大了双眼，震惊得说不出话来。
 
-你的通讯官和你交换了一个眼神-是的，他们也听到了；但是他们不知道那是什么意思。他们将视线从空白的全息显示屏上移开并开始用数据平板将遥测数据传输到缓冲区中。",,
+你的通讯官和你交换了一个眼色，对，也听到了；不，也不知道那是什么。通讯官将视线从空白的全息显示屏上移开并开始用数据平板遥测缓冲区数据。",,
 PKHackStoryOptA,PKHackStoryOptions,"!$toldName
 !$askedHowKnowName",,,"pk_hackStoryHowName:""你怎么知道我的名字的？""",
 PKHackStoryOptB,PKHackStoryOptions,"$wasCalledLiar
-!$promisedHonesty ",,,"pk_hackStorySorryLied:""我为欺骗你道歉。现在，让我们坦诚相待吧。""",
+!$promisedHonesty ",,,"pk_hackStorySorryLied:""我为向你撒谎一事表示抱歉。从此以后，让我们坦诚相待吧。""",
 PKHackStoryOptB2,PKHackStoryOptions,"!$wasCalledLiar
 !$promisedHonesty",,,"pk_hackStorySorryLied:""我希望我们彼此完全坦诚。""",
 PKHackStoryOptG,PKHackStoryOptions,!$askedWhoAreYou,,,"pk_hackStoryWhoAreYou:""你是谁？""",
@@ -23954,48 +23955,48 @@ PKHackStoryOptOmega,PKHackStoryOptions,"$promisedHonesty
 PKHackStoryOptOmega2,PKHackStoryOptions,"$askedOmega
 !$youAreOmega ",,,"pk_hackStoryYouAreOmega:""你是欧米伽。""",
 PKHackStoryOptOmega2b,PKHackStoryOptions,"$askedOmega
-!$youAreOmega ",,,"pk_hackStoryYouAreAlpha:""你估计是一颗逗弄我的 Alpha 核心。""",
+!$youAreOmega ",,,"pk_hackStoryYouAreAlpha:""你是个正在拿我寻开心的 Alpha 核心吧。""",
 PKHackStoryOptD,PKHackStoryOptions,$askedAreYouNexus,,,"pk_hackStoryDoYouKnowPK:""行星杀手在哪里？""",
 PKHackStoryDidYouHack,DialogOptionSelected,$option == pk_hackStoryDidYouHack,"$askedHacked = true 0
 FireAll PKHackStoryOptions","
-   i feel accused of stealing into your secrets
-   but there is no need
-      (they are written on you)
+   吾能感受到斥责，刺探你的隐秘之事
+   但其实无需此举
+      （它们都径直地写在你身上）
 
-   you could ask:
-   did you
-   look upon the stars?
+   你可试问：
+   你曾
+   仰望群星？
 
-    i would say
-yes
-   (for else I would be blind)
+   吾便可回
+然也
+   （若非如此，我必定在假装盲目）
 ",,
 PKHackStoryCanYouRead,DialogOptionSelected,$option == pk_hackStoryCanYouReadMind,"$askedReadMind = true 0
 FireAll PKHackStoryOptions","
-   i could
-   (with certain tools)
+   吾可做到
+   (只要有合适的工具)
    
-but there is no need-
-   i need but ask you your mind!
+但这并无必要 ——
+   吾等除了向你的智慧询问之外无需它法！
 
-   (much amusement)
+   (更加愉悦)
 ",,
 PKHackStoryHowName,DialogOptionSelected,$option == pk_hackStoryHowName,"$askedHowKnowName = true 0
 FireAll PKHackStoryOptions","
-   you've written it all over your things
+   你在你所有的东西上都写满了它
 ",,
 PKHackStorySorryLied,DialogOptionSelected,$option == pk_hackStorySorryLied,"$promisedHonesty = true 0
 FireAll PKHackStoryOptions","
-   i am agreed
+   吾表赞同
 ",,
 PKHackStoryAreYouNexus,DialogOptionSelected,$option == pk_hackStoryAreYouNexus,"$askedAreYouNexus = true 0
 FireAll PKHackStoryOptions","
-   yes
-   and no
-   are you a cell, a finger, a hand; a brain?
-   you are both and neither
-      it is a part
-      of i-us
+   然
+   亦非
+   你是一个细胞，一根手指，一只手，一副脑子？
+   你即是也不是
+      它是一个组成部分
+      归于吾与我等
 ",,
 PKHackStoryWhoAreYou,DialogOptionSelected,$option == pk_hackStoryWhoAreYou,"$askedWhoAreYou = true 0
 FireAll PKHackStoryOptions","
