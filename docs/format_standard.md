@@ -26,8 +26,9 @@
 - **中文、英文、数值**之间空格
   - 例：`报告都会实时更新到你的·TriPad·上`
   - 例：`海军勒令·224·项·34·条之规定`
-- **token 前后空格**
+- **token 前后空格，除非和标点符号相连**
   - 例：`你最近在·$market·附近采取的行动`
+  - 例：`你说得对，$playerName·是一款我的问题`
 - 人称代词前后不空格
   - `$heOrShe`、`$hisOrHer`、`$himOrHer`、`$himOrHerself`、`$manOrWoman` 前后不空格
   - `$**_manOrWoman`、`$**_heOrShe` 等这种代表人称代词的也不空格
