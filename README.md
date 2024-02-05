@@ -1,4 +1,4 @@
-﻿# Starsector-096-Localization
+﻿# Starsector-Localization-CN
 
 本项目为《远行星号》游戏的中文翻译项目。
 
