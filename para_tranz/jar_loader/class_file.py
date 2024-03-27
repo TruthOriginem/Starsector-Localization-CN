@@ -78,7 +78,8 @@ class JavaClassFile:
 
         added_strings = set()
 
-        for original_constant in self.original_constant_table.get_utf8_constants_with_string_ref():
+        original_constants = self.original_constant_table.get_utf8_constants_with_string_ref()
+        for original_constant in original_constants:
 
             original_string = original_constant.string
             if ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS:
@@ -91,7 +92,13 @@ class JavaClassFile:
                 continue
 
             constant_index = original_constant.constant_index
-            translated_constant = translated_constant_index_constants[constant_index]
+
+            try:
+                translated_constant = translated_constant_index_constants[constant_index]
+            except KeyError:
+                self.logger.warning(
+                    f'在 {self.jar_file.path}:{self.path} 的译文中未找到常量编号为 {constant_index} 的字符串，未进行提取')
+                continue
 
             pairs.append((original_constant, translated_constant))
             added_strings.add(
