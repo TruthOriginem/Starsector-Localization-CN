@@ -32,15 +32,18 @@ class MapItem(object):
         self.key = key
         self.path = path
         self.mapKey = mapKey
-        self.key_name_re = re.compile(rf'"{key}"' + r'\s*:\s*"((?:[^"\\]|\\.)*)"')
+        self.key_name_re = re.compile(rf'"{key}"' +
+                                      r'\s*:\s*"((?:[^"\\]|\\.)*)"')
         if mapKey:
             self.map_file_path = f"map_{prefix}_{ext[1:]}_{mapKey}.json"
         else:
             self.map_file_path = f"map_{prefix}_{ext[1:]}_{key}.json"
         self.source_path = f"{source_folder}/{path}"
         self.target_path = f"{target_folder}/{path}"
-        self.source_path = os.path.normpath(os.path.join(workplace_path, self.source_path))
-        self.target_path = os.path.normpath(os.path.join(workplace_path, self.target_path))
+        self.source_path = os.path.normpath(
+            os.path.join(workplace_path, self.source_path))
+        self.target_path = os.path.normpath(
+            os.path.join(workplace_path, self.target_path))
         self.item_map_file = os.path.join(workplace_path, self.map_file_path)
 
     def searchFile(self, file_path, value_list):
@@ -75,15 +78,22 @@ class MapItem(object):
                     ignored, ext = os.path.splitext(file_path)
                     if not ext == self.ext:
                         continue
-                    (hasValue, hasIndieValue) = self.searchFile(file_path, value_list)
+                    (hasValue,
+                     hasIndieValue) = self.searchFile(file_path, value_list)
                     processed_times += hasValue
                     processed_not_duplicated += hasIndieValue
-                    print("\r已搜索到{}个条目(搜索文件总和:{})，已检索到{}个独特条目...".format(processed_times, total_files, processed_not_duplicated), end=" ")
+                    print("\r已搜索到{}个条目(搜索文件总和:{})，已检索到{}个独特条目...".format(
+                        processed_times, total_files,
+                        processed_not_duplicated),
+                          end=" ")
         else:
-            (hasValue, hasIndieValue) = self.searchFile(self.source_path, value_list)
+            (hasValue,
+             hasIndieValue) = self.searchFile(self.source_path, value_list)
             processed_times += hasValue
             processed_not_duplicated += hasIndieValue
-            print("\r已搜索到{}个条目(搜索文件总和:{})，已检索到{}个独特条目...".format(processed_times, total_files, processed_not_duplicated), end=" ")
+            print("\r已搜索到{}个条目(搜索文件总和:{})，已检索到{}个独特条目...".format(
+                processed_times, total_files, processed_not_duplicated),
+                  end=" ")
         print()
 
         value_list.sort()
@@ -94,7 +104,8 @@ class MapItem(object):
         print("开始更新映射...")
         if os.path.isfile(self.item_map_file):
             try:
-                item_map_json = json5.load(open(self.item_map_file, 'r', encoding='utf-8'))
+                item_map_json = json5.load(
+                    open(self.item_map_file, 'r', encoding='utf-8'))
             except:
                 item_map_json = {}
         else:
@@ -108,41 +119,59 @@ class MapItem(object):
                 is_map_changed = True
                 item_map_json[value_lower] = value
 
-        # print(item_map_json)
-        json5.dump(item_map_json,
-                   open(self.item_map_file, 'w+', encoding='utf-8'),
-                   indent=4,
-                   quote_keys=True,
-                   trailing_commas=False,
-                   sort_keys=True,
-                   ensure_ascii=False)
+        # json5.dump(item_map_json,
+        #            open(self.item_map_file, 'w+', encoding='utf-8'),
+        #            indent=4,
+        #            quote_keys=True,
+        #            trailing_commas=False,
+        #            sort_keys=True,
+        #            ensure_ascii=False)
+        json_str = json5.dumps(item_map_json,
+                               indent=4,
+                               quote_keys=True,
+                               trailing_commas=False,
+                               sort_keys=True,
+                               ensure_ascii=False)
+        json_str = json_str.replace(r'\\\"', r'\"')
+        with open(self.item_map_file, 'w+', encoding='utf-8') as f:
+            f.write(json_str)
+            f.close()
         if is_map_changed:
             print("已完成更新")
         else:
             print("映射文件未变化")
         print("-" * 50)
         return True
-    
 
-    def updateFile(self, file_path, new_lines, item_map_json, item_map_values, no_match_item_list):
+    def updateFile(self, file_path, new_lines, item_map_json, item_map_values,
+                   no_match_item_list):
         line_changed = False
         key_times = 0
         line_count = 0
         with open(file_path, 'r', encoding='utf-8') as f:
+            # 读文件
             lines = f.readlines()
+            # 每行读取
             for line in lines:
+                # 是否满足key的正则
                 display_match = self.key_name_re.search(line)
                 if display_match:
+                    # 文件中，key的后半段(value)
                     value = display_match.group(1)
                     if value:
+                        value = value.replace("\\\"", "\"")
+                        # 在目标文件中，value就是映射文件的key
                         key = value.lower()
                         if item_map_json.__contains__(key):
                             if item_map_json[key].lower() != key:
                                 key_times += 1
-                                line = line[:display_match.start(1)] + item_map_json[key] + line[display_match.end(1):]
+                                line = line[:display_match.start(
+                                    1)] + item_map_json[key] + line[
+                                        display_match.end(1):]
                                 line_changed = True
                         elif not item_map_values.__contains__(value):
-                            no_match_item_list.append(f"{file_path}({line_count}):{value}")
+                            no_match_item_list.append(
+                                f"{file_path}({line_count}):{key}|{value}")
                 new_lines.append(line)
                 line_count += 1
         return (line_changed, key_times)
@@ -151,7 +180,12 @@ class MapItem(object):
         print("-" * 50)
         print("当前处理路径为:" + self.target_path)
         print("读取映射文件为:" + self.map_file_path, end=" ")
-        item_map_json = dict(json5.load(open(self.item_map_file, 'r', encoding='utf-8')))
+        item_map_text = ''
+        with open(self.item_map_file, 'r', encoding='utf-8') as f:
+            item_map_text = f.read()
+            f.close()
+        # item_map_test = item_map_text.replace("\\", "\\\\\\")
+        item_map_json = dict(json5.loads(item_map_text, encoding='utf-8'))
         item_map_values = list(item_map_json.values())
         print("读取完毕")
         no_match_item_list = []
@@ -167,24 +201,32 @@ class MapItem(object):
                     if not ext == self.ext:
                         continue
                     new_lines = list()
-                    (line_changed, key_times) = self.updateFile(file_path, new_lines, item_map_json, item_map_values, no_match_item_list)
+                    (line_changed, key_times) = self.updateFile(
+                        file_path, new_lines, item_map_json, item_map_values,
+                        no_match_item_list)
                     processed_times += key_times
                     if line_changed:
                         processed_files += 1
                         with open(file_path, 'w', encoding='utf-8') as f:
                             f.writelines(new_lines)
-                    print("\r已替换{}个文件，共计替换{}次(搜索文件总和:{})...".format(processed_files, processed_times, total_files), end=" ")
+                    print("\r已替换{}个文件，共计替换{}次(搜索文件总和:{})...".format(
+                        processed_files, processed_times, total_files),
+                          end=" ")
         else:
             file_path = self.target_path
             total_files += 1
             new_lines = list()
-            (line_changed, key_times) = self.updateFile(file_path, new_lines, item_map_json, item_map_values, no_match_item_list)
+            (line_changed,
+             key_times) = self.updateFile(file_path, new_lines, item_map_json,
+                                          item_map_values, no_match_item_list)
             processed_times += key_times
             if line_changed:
                 processed_files += 1
                 with open(file_path, 'w', encoding='utf-8') as f:
                     f.writelines(new_lines)
-            print("\r已替换{}个文件，共计替换{}次(搜索文件总和:{})...".format(processed_files, processed_times, total_files), end=" ")
+            print("\r已替换{}个文件，共计替换{}次(搜索文件总和:{})...".format(
+                processed_files, processed_times, total_files),
+                  end=" ")
         if no_match_item_list:
             print("以下的条目没有正确映射:")
             for item in no_match_item_list:
@@ -202,13 +244,17 @@ with open(json_map_collection_path, "r", encoding="utf-8") as f:
     # 打印字典的数据
     for row in dr:
         # print(row)
-        items.append(MapItem(row['prefix'], row['ext'], row['key'], row['path'], row['mapKey']))
+        items.append(
+            MapItem(row['prefix'], row['ext'], row['key'], row['path'],
+                    row['mapKey']))
 
 
 def chooseAction():
     print("此脚本用于映射json条目翻译操作...")
     print("所有文本都会被转化为小写...")
-    action = input("输入1来根据指定源目录更新映射文件\n输入2来根据映射文件更新指定目标目录\n输入3远程下载装配映射文件(文件来源于汉化项目中，注意!会覆盖本地文件)\n输入其他字符或回车自动退出\n")
+    action = input(
+        "输入1来根据指定源目录更新映射文件\n输入2来根据映射文件更新指定目标目录\n输入3远程下载装配映射文件(文件来源于汉化项目中，注意!会覆盖本地文件)\n输入其他字符或回车自动退出\n"
+    )
     if action == '1':
         for item in items:
             item.updateMap()
