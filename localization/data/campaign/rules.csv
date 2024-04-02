@@ -21956,9 +21956,9 @@ sdtuPostHyderPrisonerRespB,DialogOptionSelected,$option == sdtu_postHyderPrisone
 
 他两只手分别在桌子上敲了一下，然后将双手合拢，专注地看着你。""现在告诉我 Hyder 的情况。""",,
 sdtuPostHyderPrisonerRespC,DialogOptionSelected,$option == sdtu_postHyderPrisonerOptC,"$player.ethosLiar++
-$lies++","""哦？"" Macario 的眼眉轻挑。 ""但是你并没有。"" ","sdtu_postHyderPrisonerOptC1：""我向您保证，我已经这么做了。"" 
-sdtu_postHyderPrisonerOptC2：""您能完全确定我做了什么，又没做什么吗？"" 
-sdtu_postHyderPrisonerOptC3：""好吧。我会移交囚犯的。""",
+$lies++","""哦？"" Macario 的眼眉轻挑。 ""但是你并没有。"" ","sdtu_postHyderPrisonerOptC1:""我向您保证，我已经这么做了。"" 
+sdtu_postHyderPrisonerOptC2:""您能完全确定我做了什么，又没做什么吗？"" 
+sdtu_postHyderPrisonerOptC3:""好吧。我会移交囚犯的。""",
 sdtuPostHyderPrisonerRespC1,DialogOptionSelected,$option == sdtu_postHyderPrisonerOptC1,"AdjustRepPerson macario VENGEFUL -1
 FireAll SDTUPostHyderReports","""有趣。"" 他说，然后向前倾身， ""不要让我失望，舰长。我可觉得你那么聪明，不至于当我傻来着。"" 
 
@@ -21969,7 +21969,7 @@ FireAll SDTUPostHyderReports","""有趣。"" 他说，然后向前倾身， ""�
 他再次向后靠，轻轻挥动手指。 ""你就留着囚犯吧，我不在乎。无论如何，天有绝人之路，我们喜欢处理这种细枝末节。现在，说说 Hyder 的事情吧。""",,
 sdtuPostHyderPrisonerRespC3,DialogOptionSelected,$option == sdtu_postHyderPrisonerOptC3,"AdjustRepPerson macario VENGEFUL -1
 FireAll SDTUPostHyderReports
-AddTextSmall "" '叛国' 的军官被转交给 辛达强权 INSEC 羁押"" highlight","""你就这么轻易放弃了。”他说着说着，看来有点伤心。然后他向前倾身，说道： ""那就把囚犯交给我吧，舰长，但别再让我失望了。你这么聪明，肯定不会再做蠢事了，对吧？"" 
+AddTextSmall "" '叛国' 的军官被转交给 辛达强权 INSEC 羁押"" highlight","""你就这么轻易放弃了。""他说着说着，看来有点伤心。然后他向前倾身，说道： ""那就把囚犯交给我吧，舰长，但别再让我失望了。你这么聪明，肯定不会再做蠢事了，对吧？"" 
 
 他再次向后靠，轻轻挥动手指。 ""行，这回一定要把那货交给我，我们喜欢处理这种细枝末节。现在，说说 Hyder 的事情吧。""",,
 sdtuPostHyderPrisonerRespD,DialogOptionSelected,$option == sdtu_postHyderPrisonerOptD,"$player.ethosLiar++
@@ -22100,9 +22100,9 @@ sdtuPostHyderMission2,DialogOptionSelected,$option == sdtu_postHyderMission2,"Ad
 
 ""狮心卫队 当然有它们自己的情报部门。拘泥于让一脸正气的年轻人去端正意识形态，示范热血忠诚。"" 他的语气像是个很有耐心的恩师一样，""却不重视间谍情报技术。"" 
 
-""可惜了，Caden 在 Umbra 上的一名特工从一开始就一直在为叛乱分子效力。""他说到，""强行带走那名特工。等到 Caden 冷静下来之后，他应该会...准许你处理这个尴尬的局面的，你就等着瞧吧。只需要让他觉得自己还是掌局者就够了。""","sdtu_postHyderMission2a：""让 Caden 面对他的双重特工。好的。""
-sdtu_postHyderMission2c：""所以这名特工为叛乱分子工作？""
-sdtu_postHyderMission2b：""你知道这件事多久了？""",
+""可惜了，Caden 在 Umbra 上的一名特工从一开始就一直在为叛乱分子效力。""他说到，""强行带走那名特工。等到 Caden 冷静下来之后，他应该会...准许你处理这个尴尬的局面的，你就等着瞧吧。只需要让他觉得自己还是掌局者就够了。""","sdtu_postHyderMission2a: ""让 Caden 面对他的双重特工。好的。""
+sdtu_postHyderMission2c: ""所以这名特工为叛乱分子工作？""
+sdtu_postHyderMission2b: ""你知道这件事多久了？""",
 sdtuPostHyderMission2a,DialogOptionSelected,$option == sdtu_postHyderMission2a,"$global.sdtu_extractAgent = true
 Call $global.sdtu_ref updateStage
 $option = sdtu_macarioPostHyderEnd 0
