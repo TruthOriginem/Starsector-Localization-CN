@@ -52,6 +52,8 @@ class MapItem(object):
         with open(file_path, 'r', encoding='utf-8') as f:
             lines = f.readlines()
             for line in lines:
+                if starsector_comment_line.search(line):
+                    continue
                 display_match = self.key_name_re.search(line)
                 if display_match:
                     value = display_match.group(1)
@@ -153,6 +155,8 @@ class MapItem(object):
             lines = f.readlines()
             # 每行读取
             for line in lines:
+                if starsector_comment_line.search(line):
+                    continue
                 # 是否满足key的正则
                 display_match = self.key_name_re.search(line)
                 if display_match:

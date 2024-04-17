@@ -3517,7 +3517,7 @@ $player.commissionFactionId == sindrian_diktat",$justVisitedShrine = true 0,"圣
 lppVolturnShrineRevisitRazed,DialogOptionSelected,"$option == lpp_volturnShrineRevisit1
 $global.lpp_volturnShrineRazed
 $faction.id == sindrian_diktat","$justVisitedShrine = true 0
-FireAll LPPVolturnShrineRazedTea",圣地里空无一人，接待大厅里布满了弹孔与烧蚀的痕迹，很明显这是由武器开火造成的。这里的空气混杂着盐味，烟味，还有一股腐败的味道，地板上阴湿的水坑里混杂着可疑的锈迹。,shrineDoLeave:离开,# note: currently inaccessible
+FireAll LPPVolturnShrineRazedTea",圣地里空无一人，接待大厅里布满了弹孔与烧蚀的痕迹，很明显这是由武器开火造成的。这里的空气混杂着盐味，烟味，还有一股腐败的味道，地板上阴湿的水坑里混杂着可疑的铁锈色痕迹。,shrineDoLeave:离开,# note: currently inaccessible
 lppVolturnShrineRazedTea,LPPVolturnShrineRazedTea,$player.metStandfast,,一个熟悉的茶壶碎片在你脚下嘎吱作响。,,# note: currently inaccessible
 ,,,,,,
 # Killa shrine,,,,,,
@@ -4021,7 +4021,7 @@ FireAll LPPShrineVisitXP","远处，你看见一座雕像花园。这些造像�
 他们的脚下，遍布着的被苔藓和菌丝或者是类似的异星生命覆盖之物，是骨头。也可能是枯枝，乱石？是狂热信徒的遗愿，或者只是你自己的想象？",lpp_jangalaOutsideMaskOn3:继续,
 lppJangalaOutsideMaskOn3,DialogOptionSelected,$option == lpp_jangalaOutsideMaskOn3,"AddTextSmall ""Jangala 异种生命：轻微暴露"" highlight",在你逗留的这段时间里，这些绿植微不可查地翻搅着，吞噬万物，凶蛮不死。生命的轮回既可以生于地球，也可以生于一个异星世界。,lpp_jangalaShrineExtLeave:回到建筑群内部,
 lppJangalaShrineExteriorLeave,DialogOptionSelected,$option == lpp_jangalaShrineExtLeave,"ShowImageVisual luddic_shrine
-FireBest LPPJangalaOutsideReturnComment",你在不怎么干净的洁净室里接受例行的去污。在一次气味奇怪的沐浴、闪烁的激光和另一轮抗感染药物喷洒后，你拿回了你的衣服。所有东西都很干燥，还有消毒液的味道。,lpp_jangalaShrineLeave:继续,
+FireBest LPPJangalaOutsideReturnComment",你在一间整洁但略有污渍的洁净室里接受了例行去污。穿过气味奇怪的沐浴、照过一轮的激光、又服用了另一轮抗异种感染药物之后，你拿回了你的衣服。所有东西都被强力烘干过，还带着点消毒液的味道。,lpp_jangalaShrineLeave:继续,
 lppJangalaShrineExteriorLeaveB,LPPJangalaOutsideReturnComment,$maskOff,,呼吸仍然感觉很奇怪。你不得不仔细进行每一次呼吸，用空气填满你的肺，然后排空它们。,,
 lppJangalaShrineVisitAgainOutside,DialogOptionSelected,$option == lpp_jangalaShrineVisitAgainOutside,ShowImageVisual jangala_shrine,"空气刺痛着你，带来温暖又潮湿的感觉，就像高重力缓冲泡沫一样。你沿着小路走了出去，这条路几乎被植物淹没了。你顺着路继续前行，树叶和触须拂过你的身体。
 
@@ -6267,7 +6267,7 @@ LKEvirensConvOptC,LKEvirensConvOpts,"$player.shotSedge
 !$askedWhyKillSedge",,,"lke_virensAskSidearm:""你为什么收走了我的随身武器？""",
 LKEvirensConvOptD,LKEvirensConvOpts,!$askedWhyKillSedge,,,"lke_virensPoliteSedge:""你比 Sedge 要有礼节多了。""",
 LKEvirensConvOptE,LKEvirensConvOpts,"$askedWhyKillSedge
-!$askedWhySedgeAlly",,,"···lke_virensAskSedgeAlly:""像你这样的人为何与 Sedge 这样的人结盟？""",
+!$askedWhySedgeAlly",,,"lke_virensAskSedgeAlly:""像你这样的人为何与 Sedge 这样的人结盟？""",
 LKEvirensConvOptF,LKEvirensConvOpts,$didNotSit,,,lke_virensSitForTea:坐下并来上杯茶,
 LKEvirensSitForTea,DialogOptionSelected,$option == lke_virensSitForTea,"RemoveOption lke_virensSitForTea
 unset $didNotSit
@@ -6532,7 +6532,7 @@ LKEvirensEndingA1,DialogOptionSelected,$option == lke_virensEndingA1,FireAll LKE
 
 ""我觉得你确实该和 Bornanew 亲自谈谈。"" 他说道，""我这就让我的手下给你坐标。""",,
 LKEvirensEndingOptI,LKEvirensEndingOpts,$madeBigThreat,,,"lke_virensEndingOptIResp1:""是吧，告诉我也没那么难。""",
-LKEvirensEndingOptA,LKEvirensEndingOpts,$player.mostLuddicEthosFaithful ,,,"lke_virensEndingOptAResp1:""为什么要帮助 卢德教会？你难道不算是更...有骨气的教派吗？""",
+LKEvirensEndingOptA,LKEvirensEndingOpts,$player.mostLuddicEthosFaithful ,,,"lke_virensEndingOptAResp1:""为什么要帮助 卢德教会？你难道不算是更...非主流的教派吗？""",
 LKEvirensEndingOptB,LKEvirensEndingOpts,$player.mostLuddicEthosPather ,,,"lke_virensEndingOptBResp1:""我帮 卢德教会 找到 Bornanew 对 卢德左径 有什么好处？""",
 LKEvirensEndingOptC,LKEvirensEndingOpts,$player.mostLuddicEthosAtheistic,,,"lke_virensEndingOptCResp1:""这就完了？没什么关于 '左径' 的高谈阔论？""",
 LKEvirensEndingOptD,LKEvirensEndingOpts,,,,"lke_virensEndingOptDResp1:""为什么你作为一个 左径分子，会在这件事上帮我？""",
@@ -6541,9 +6541,9 @@ $player.mostLuddicEthosFaithful ",,,"lke_virensEndingOptEResp1:""非常感谢；
 LKEvirensEndingOptF,LKEvirensEndingOpts,!$player.mostLuddicEthosPather ,,,"lke_virensEndingOptFResp1:""这就结了？这是个陷阱吗？""",
 LKEvirensEndingOptG,LKEvirensEndingOpts,$player.jaspisCottonBook,,,"lke_virensEndingOptGResp1:""还有一件事 —— 我还在找 Cotton 修士。""",
 LKEvirensEndingOptH,LKEvirensEndingOpts,,,,"lke_virensEndingOptHResp1:""谢谢你，还有你的茶。""",
-LKEvirensEndingOptAResp1,DialogOptionSelected,$option == lke_virensEndingOptAResp1,,"""有骨气？"" 他轻笑一声，""你愿意的时候倒还挺圆滑的。""
+LKEvirensEndingOptAResp1,DialogOptionSelected,$option == lke_virensEndingOptAResp1,,"""非主流？"" 他轻笑一声，""你愿意的时候倒还挺圆滑的。""
 
-""卢德教会 又不是铁板一块。而你觉得这个家伙，这个 Jethro Bornanew，能帮教会里那些故步自封的分支打败全星域所有信徒吗？""
+""卢德教会 又不是铁板一块。而你觉得这个家伙，这个 Jethro Bornanew，能帮教会里那些坚持所谓正统的势力压制所有其他信徒，乃至整个星域吗？""
 
 ""我可不确定。"" 他扯出了一个被逗乐了的笑容，但最终没咧得那么开。""一帆风顺，舰长。""",lke_virensEndingOut1:离开,
 LKEvirensEndingOptBResp1,DialogOptionSelected,$option == lke_virensEndingOptBResp1,,"""当我说我不知道神给我们铺了什么样的 卢德之道 的时候，$playerBrotherOrSister，我很认真。""
@@ -6953,9 +6953,9 @@ LKEjethroAngelsTalkC,LKEjethroAngelsTalk,"$player.heardCottonHearsSong
 LKEjethroAngelsTalkD,LKEjethroAngelsTalk,"$player.knowsCottonHearsSong
 !$saidCottonHearsMusic",,,"lke_jethroAngelsTalkD:""Livewell Cotton 修士 也和我说他曾听到过旋律。他说那是 '天使的合唱'。""",
 LKEjethroAngelsTalkA1-1,DialogOptionSelected,$option == lke_jethroAngelsTalkA1,FireAll LKEjethroOptions,"""如此受神眷顾必是无人能知的重担。"" Bornanew 阴沉地说道。",,
-LKEjethroAngelsTalkA2-1,DialogOptionSelected,$option == lke_jethroAngelsTalkA2,FireAll LKEjethroOptions,"""说不准呢。"" Bornanew 说着看向了你。""先知究竟属于神性还是疯狂？""
+LKEjethroAngelsTalkA2-1,DialogOptionSelected,$option == lke_jethroAngelsTalkA2,FireAll LKEjethroOptions,"""说不准呢。"" Bornanew 说着看向了你。""在疯狂与神性之间，先知将自立于何处？""
 
-""—— 说不准呢。"" 他微笑着完成了这句引用。",,
+""—— 迎难而上。"" 他自问自答，引述的同时不由得露出了一丝微笑。",,
 LKEjethroAngelsTalkA3-1,DialogOptionSelected,$option == lke_jethroAngelsTalkA3,FireAll LKEjethroOptions,"""现在确实不是谈神学的时候。"" Bornanew 赞同道。",,
 LKEjethroAngelsTalkB1,DialogOptionSelected,$option == lke_jethroAngelsTalkB,"FireAll LKEjethroAngelsTalk
 $player.toldBornanewHeardMusic = true
@@ -7381,7 +7381,7 @@ AdjustRepPerson jaspis FRIENDLY 15","正当你们走进 Jaspis 的办公室，�
 
 ""Jethro，你来了！"" 她说道，""谢神恩赐！"" 骑士 Ailanthus 咳了一声，Jaspis 的回应只是挥挥手让他下去。
 
-""""",lke_endingJaspis2:继续,
+""而我也不得不说，你能无恙也是拜现在踏步来此的舰长所赐。"" 她微笑着说道，""休让我们忘记，正义之道终需有人开拓，不是吗？""",lke_endingJaspis2:继续,
 LKEendingJaspis2,DialogOptionSelected,$option == lke_endingJaspis2,"
 ","Bornanew 握住了 Jaspis 脆弱纤小的手。""是的，是的。教母 Sophronia，请你毋须这么激动。只是我而已，我给你造成了这么多的苦恼。""
 
@@ -18823,13 +18823,13 @@ extrOfferTextBar1,DialogOptionSelected,"$option == extr_startBar
 $extr_variation == COLONY","$missionId = extr
 SetTextHighlightColors $extr_factionColor h h
 Highlight $extr_marketFaction $extr_reward $extr_marines
-Call $extr_ref showMap ""目标：$extr_marketName ""","只见一个$manOrWoman坐在黑暗的角落里。$heOrShe虽穿得和普通的技术人员差不多，但话语间仍透露着一种对人发号施令似的威严。
+Call $extr_ref showMap ""目标：$extr_marketName ""","只见一个$manOrWoman坐在黑暗的角落里。$heOrShe虽穿得和普通的技术人员差不多，但话语间仍透露着一种现今或往时常对人发号施令威严。
 
-""$playerName 舰长，"" $heOrShe说。""我的上级意识到你出众的才干能为我们势力效力。"" 桌子上没有酒，$heOrShe看上去也没有邀你坐下的打算。""我们需要从 $extr_marketName 处撤离一名特工，那里是 $extr_marketFaction 的势力范围。由于某些...政治因素，我们无法用正规编制的特遣队执行这项任务。当然，我们将会提供 $extr_reward 星币作为报酬。""
+""$playerName 舰长，"" $heOrShe说。""我的上级意识到你出众的才干能为我们势力效力。"" 桌子上没有酒，对方也没有邀请你坐下。""我们需要从 $extr_marketName 撤离一名特工，那里属于 $extr_marketFaction 的势力范围。由于某些...政治因素，我们无法动用正规编制的特遣队执行这项任务。当然，我们将会提供 $extr_reward 星币作为报酬。""
 
 ""对方很可能对你的到来有所提防，我这里有些目标周边防御布置的情报。"" $manOrWoman把数据平板放在桌上供你检查。
 
-你快速浏览了一遍内容，预计需要大约 $extr_marines 陆战队员来执行这项任务。","contact_acceptBar:接受
+你快速浏览了一遍内容，估计需要大约 $extr_marines 名陆战队员来执行这项任务。","contact_acceptBar:接受
 contact_declineBarNoContinue:拒绝",
 extrOfferTextContact1,DialogOptionSelected,"$option == extr_start
 $extr_variation == COLONY","$missionId = extr
@@ -21264,7 +21264,7 @@ sdtuSafehouseWrapHubOpt0,SDTUSafehouseWrapHubOpt,,,,"sdtu_safehouseEnd:""我就.
 sdtuSafehouseWrapHubOpt1,SDTUSafehouseWrapHubOpt,,,,"sdtu_macHyderJustTalk:""为什么我就不能直接和她谈谈呢？""",
 sdtuSafehouseWrapHubOpt2,SDTUSafehouseWrapHubOpt,,,,"sdtu_macHyderYouTalk:""为什么你不直接和她谈谈这一切？""",
 sdtuSafehouseWrapHubOpt3,SDTUSafehouseWrapHubOpt,,,,"sdtu_macHyderTreason:""严格来讲，如果说她真的涉嫌叛国的话，为什么不直接干掉她？""",
-sdtuSafehouseWrapHubOpt4,SDTUSafehouseWrapHubOpt,,,,"sdtu_macHyderHow:""杀了 Hyde 的下属，怎么可能再让 Hyde 信任我呢？""",
+sdtuSafehouseWrapHubOpt4,SDTUSafehouseWrapHubOpt,,,,"sdtu_macHyderHow:""杀了 Hyder 的下属，怎么可能再让 Hyder 信任我呢？""",
 sdtuSafehouseWrapHubOpt5,SDTUSafehouseWrapHubOpt,,,,"sdtu_macHyderNoWant:""我不想这样做。""",
 sdtuSafehouseWrapAnswer1,DialogOptionSelected,$option == sdtu_macHyderJustTalk,RemoveOption sdtu_macHyderJustTalk,"""你大可一试。""Macario 说着，满脸得意。""可是，不找个切入口的话，你和她什么都谈不成的，我可了解她的行事风格。""",,
 sdtuSafehouseWrapAnswer2,DialogOptionSelected,$option == sdtu_macHyderYouTalk,RemoveOption sdtu_macHyderYouTalk,"Macario 长出了一口气，顺便笑了笑。
@@ -21474,7 +21474,7 @@ Call $global.sdtu_ref playMusicHyder
 unset $global.sdtu_interceptFleet
 $player.metHyder = true",Oxana Hyder 出现在通讯器画面里，早已火冒三丈。,,
 SDTUHyderTalkRound1Text1,SDTUHyderTalkRound1Options,!$global.sdtu_foughtDiktatPatrol,FireBest SDTUHyderTalkStartHegCheck,"""你绑架了 辛达强权 手下的一名军官，还是我手下的一名军官。我只给你一次机会，关闭武器，体面的投降，否则我就要摧毁你的舰队。""",,
-SDTUHyderTalkRound1Text2,SDTUHyderTalkRound1Options,$global.sdtu_foughtDiktatPatrol,FireBest SDTUHyderTalkStartHegCheck,"""你攻击了 辛达强权 手下的一支舰队，掳走了该舰队的指挥官，还是直接听命于我的一名指挥官。我只给你一次机会，关闭武器，荣耀投降，否则我就要毁灭你的舰队。""",,
+SDTUHyderTalkRound1Text2,SDTUHyderTalkRound1Options,$global.sdtu_foughtDiktatPatrol,FireBest SDTUHyderTalkStartHegCheck,"""你攻击了 辛达强权 手下的一支舰队，掳走了该舰队的指挥官，还是直接听命于我的一名指挥官。我只给你一次机会，关闭武器，体面的投降，否则我就要毁灭你的舰队。""",,
 SDTUHyderTalkStartHeg,SDTUHyderTalkStartHegCheck,$player.fcm_faction == hegemony,$trust++,"""要是说连 霸主 辅助军都敢光天化日做这种勾当，那 霸主 得堕落成什么样子了呢。"" 她小声嘟哝了一句。",,
 SDTUHyderTalkRound1Option1a,SDTUHyderTalkRound1Options,$global.sdtu_foughtDiktatPatrol,,,"sdtu_hyderOfficerSmuggling:""那支舰队当时在走私武器，Macario 说这是叛国行为。""",# use Macario's excuse
 SDTUHyderTalkRound1Option1b,SDTUHyderTalkRound1Options,!$global.sdtu_foughtDiktatPatrol,,,"sdtu_hyderOfficerSmuggling:""那名军官当时在走私武器，用 Macario 的话来讲，那叫 '叛国'。""",# use Macario's excuse
@@ -21558,14 +21558,14 @@ $trust++",,,
 sdtuHyderTalk1Unacceptable2,DialogOptionSelected,$option == sdtu_hyderTalk1Unacceptable2,"$option = sdtu_hyderTalkRound2startLaw 0
 FireBest DialogOptionSelected","""那么我们将在这个关乎荣誉的问题上站在一起。"" 她点点头说。",,
 # Hyder convo round 2,,,,,,
-sdtuHyderTalkRound2startLaw,DialogOptionSelected,$option == sdtu_hyderTalkRound2startLaw,FireAll SDTUHyderTalkRound2Options,"""说到法律。"" Hyder 交叉双臂说道，""你手下有一名我麾下的军官。我将带他们到军事法庭接受审判。""",,
-sdtuHyderTalkRound2start,DialogOptionSelected,$option == sdtu_hyderTalkRound2start,FireAll SDTUHyderTalkRound2Options,"Hyder 交叉双臂说道。""你手下有一名我麾下的军官。我要带他们到军事法庭接受审判。""",,
-sdtuHyderTalkRound2OptionsB,SDTUHyderTalkRound2Options,!$global.sdtu_fulfilledPromiseToPatrolTraitor,,,"sdtu_hyderTalk2Transfer:""我马上就将他们交给你。""",
+sdtuHyderTalkRound2startLaw,DialogOptionSelected,$option == sdtu_hyderTalkRound2startLaw,FireAll SDTUHyderTalkRound2Options,"""说到法律。"" Hyder 交叉双臂说道，""你手下有一名我麾下的军官。我将把那人带上军事法庭接受审判。""",,
+sdtuHyderTalkRound2start,DialogOptionSelected,$option == sdtu_hyderTalkRound2start,FireAll SDTUHyderTalkRound2Options,"Hyder 交叉双臂说道。""你手下有一名我麾下的军官。我要把那人带上军事法庭接受审判。""",,
+sdtuHyderTalkRound2OptionsB,SDTUHyderTalkRound2Options,!$global.sdtu_fulfilledPromiseToPatrolTraitor,,,"sdtu_hyderTalk2Transfer:""我马上就将那家伙交给你。""",
 sdtuHyderTalkRound2OptionsC,SDTUHyderTalkRound2Options,!$global.sdtu_fulfilledPromiseToPatrolTraitor,,,"sdtu_hyderTalk2ToMacario:""Macario 发布了这则逮捕令。我会把这位军官交给他。""",
 sdtuHyderTalkRound2OptionsD,SDTUHyderTalkRound2Options,"!$global.sdtu_fulfilledPromiseToPatrolTraitor
 $global.sdtu_promisedToHelpPatrolLeader",,,"sdtu_hyderTalk2Promised:""我发誓过要把这个军官带到一个独立世界去。""",
 sdtuHyderTalkRound2OptionsD2,SDTUHyderTalkRound2Options,$global.sdtu_fulfilledPromiseToPatrolTraitor,,,"sdtu_hyderTalk2PromisedB:""我发誓过要把这个军官带到一个独立世界去，我也是这么做的。""",
-sdtuHyderTalkRound2OptionsE,SDTUHyderTalkRound2Options,$global.sdtu_promisedToHelpPatrolLeader,,,"sdtu_hyderTalk2Battle:""很遗憾，他们在战斗中被击杀了。"" (谎言)",
+sdtuHyderTalkRound2OptionsE,SDTUHyderTalkRound2Options,$global.sdtu_promisedToHelpPatrolLeader,,,"sdtu_hyderTalk2Battle:""很遗憾，那家伙在战斗中被击杀了。"" (说谎)",
 sdtuHyderTalk2Transfer,DialogOptionSelected,$option == sdtu_hyderTalk2Transfer,"AdjustRepPerson hyder FRIENDLY 2
 $trust++
 FireAll SDTUHyderOfficerCheckPromise
@@ -21689,14 +21689,14 @@ sdtuHyderTalk3judgment2,SDTUHyderTalk3judgment,$trust==1,,你给她留下的印�
 sdtuHyderTalk3judgment3,SDTUHyderTalk3judgment,$trust==0,,她并不相信你。在独自经历 辛达强权 官僚的死板式混乱后，她现在无比希望能有一个值得信赖与尊重的盟友。在拉拢她这件事上，你只打出了最小的切入口。,,
 sdtuHyderTalk3judgment4,SDTUHyderTalk3judgment,$trust<0,,她不相信你，她也不喜欢你。她觉得你正在为 Macario 所工作，最起码也至少是为了达到他的水平而努力。最起码你的立场是明确的。,,
 sdtuHyderTalk3Answers1,SDTUHyderTalk3Options,"$answersDone == 1
-$trust <= 0",,"""我对这件事没什么耐心。"" 她说到，""说话小心点！""",,
+$trust <= 0",,"""我对这件事没什么耐心。"" 她说道，""说话小心点！""",,
 sdtuHyderTalk3Answers1End,SDTUHyderTalk3Options,"$answersDone == 2
 $trust <= 0","$option = sdtu_hyderTalkEnd 0
 FireBest DialogOptionSelected","""够了，""她说。""向 Macario 汇报。并仔细考虑你的话。""
 
 通讯中断了。",,
 sdtuHyderTalk3Answers2,SDTUHyderTalk3Options,"$answersDone == 2
-$trust == 1",,"""我对这件事没啥耐心。"" 她说道，""说话小心点！""",,
+$trust == 1",,"""我对这件事没什么耐心。"" 她说道，""说话小心点！""",,
 sdtuHyderTalk3Answers2End,SDTUHyderTalk3Options,"$answersDone == 3
 $trust == 1","$option = sdtu_hyderTalkEnd 0
 FireBest DialogOptionSelected","""够了，""她说。""向 Macario 汇报。并仔细考虑你的话。""
@@ -21746,7 +21746,7 @@ sdtuHyderTalk3MacarioB,DialogOptionSelected,"$option == sdtu_HyderTalk3MacarioKn
 $trust == 1","$answersDone++
 $saidMacario = true 0
 FireAll SDTUHyderTalk3Options
-$global.sdtu_HyderSaidMacarioFuelsWithLies = true","""但他还没法撤掉我呢。"" Hyder  凶狠的吐出一句话来：""要是这货能拿他的谎言养活船员、驱动星舰的话，他才能撤掉我，可是他不能。""",,
+$global.sdtu_HyderSaidMacarioFuelsWithLies = true","""但他还没法撤掉我呢。"" Hyder  凶狠的吐出一句话来，""要是这货能拿他的谎言养活船员、驱动星舰的话，他才能撤掉我，可是他不能。""",,
 sdtuHyderTalk3MacarioC,DialogOptionSelected,"$option == sdtu_HyderTalk3MacarioKnows
 $trust >= 2","$answersDone++
 $saidMacario = true 0
@@ -22100,9 +22100,9 @@ sdtuPostHyderMission2,DialogOptionSelected,$option == sdtu_postHyderMission2,"Ad
 
 ""狮心卫队 当然有它们自己的情报部门。拘泥于让一脸正气的年轻人去端正意识形态，示范热血忠诚。"" 他的语气像是个很有耐心的恩师一样，""却不重视间谍情报技术。"" 
 
-""可惜了，Caden 在 Umbra 上的一名特工从一开始就一直在为叛乱分子效力。""他说到，""强行带走那名特工。等到 Caden 冷静下来之后，他应该会...准许你处理这个尴尬的局面的，你就等着瞧吧。只需要让他觉得自己还是掌局者就够了。""","sdtu_postHyderMission2a: ""让 Caden 面对他的双重特工。好的。""
-sdtu_postHyderMission2c: ""所以这名特工为叛乱分子工作？""
-sdtu_postHyderMission2b: ""你知道这件事多久了？""",
+""可惜了，Caden 在 Umbra 上的一名特工从一开始就一直在为叛乱分子效力。""他说到，""强行带走那名特工。等到 Caden 冷静下来之后，他应该会...准许你处理这个尴尬的局面的，你就等着瞧吧。只需要让他觉得自己还是掌局者就够了。""","sdtu_postHyderMission2a:""让 Caden 面对他的双重特工。好的。""
+sdtu_postHyderMission2c:""所以这名特工为叛乱分子工作？""
+sdtu_postHyderMission2b:""你知道这件事多久了？""",
 sdtuPostHyderMission2a,DialogOptionSelected,$option == sdtu_postHyderMission2a,"$global.sdtu_extractAgent = true
 Call $global.sdtu_ref updateStage
 $option = sdtu_macarioPostHyderEnd 0
@@ -22210,7 +22210,7 @@ sdtuUmbraTrickVIP,DialogOptionSelected,$option == sdtu_umbraTrickVIP,FireAll SDT
 ",
 sdtuUmbraTrickVIPOptionA,SDTUUmbraTrickVIPOptions,,,,"sdtu_umbraTrickVIPA:""我其实是 霸主 的秘密特工，致力于暗中妨害 辛达强权。"" (撒谎)",
 sdtuUmbraTrickVIPOptionB,SDTUUmbraTrickVIPOptions,,,,"sdtu_umbraTrickVIPB:""只为我自己做事，而且，我讨厌 辛达强权。""",
-sdtuUmbraTrickVIPOptionC,SDTUUmbraTrickVIPOptions,,,,"sdtu_umbraTrickVIPB:""只为我自己做事，而且，我讨厌 辛达强权。""(撒谎)",
+sdtuUmbraTrickVIPOptionC,SDTUUmbraTrickVIPOptions,,,,"sdtu_umbraTrickVIPC:""只为我自己做事，而且，我讨厌 辛达强权。""(撒谎)",
 sdtuUmbraTrickVIPOptionD,SDTUUmbraTrickVIPOptions,,,,"sdtu_umbraTrickVIPD:""我来自某个你都没听说过的 Askonia 革命者委员会秘密支部。"" (撒谎)",
 sdtuUmbraTrickVIPOptionE,SDTUUmbraTrickVIPOptions,,,,"sdtu_umbraTrickVIPE:""我信仰卢德教，我会与我们共同的敌人战斗。"" (撒谎)",
 sdtuUmbraTrickVIPOptionF,SDTUUmbraTrickVIPOptions,$global.lpp_completed,,,"sdtu_umbraTrickVIPF:""我信仰卢德教，我会与我们共同的敌人战斗。""",
@@ -24171,7 +24171,7 @@ PKHackGetData,DialogOptionSelected,$option == pk_hackStoryGetData,"AddTextSmall 
 
 看上去，似乎驱动这一切的存在已经离开了。
 
-你的通讯官惊讶地瞪眼看着你。其他人的表情多是掩饰不住的恐惧和厌世的不解。","pk_hackStoryEnd:""星历日结尾时给我报告！解散。""",
+你的通讯官惊讶地瞪眼看着你。其他人的表情多是掩饰不住的恐惧和疲惫的不解。","pk_hackStoryEnd:""星历日结尾时给我报告！解散。""",
 PKHackStoryEnd,DialogOptionSelected,$option == pk_hackStoryEnd,"$global.pk_nexusDataGained = true
 $global.pk_gotDataFromMysteryAI
 Call $global.pk_ref updateStage","他们的报告没有告知任何你预料之外的内容。
@@ -24512,11 +24512,11 @@ AdjustRepActivePerson -25
 $demandedExecutor = true
 $global.preparingExecutor = true 7
 $removeSpecialModifications = false
-MakeNearbyFleetsNonHostile sindrian_diktat pk 20000 8","在 Volturn 上被 '解放' 了的市民们的欢呼声中，身穿动力装甲的士兵向人群列队行军的图像被畏畏缩缩的辛达强权 $Rank 打断了。
+MakeNearbyFleetsNonHostile sindrian_diktat pk 20000 8","面前的图像中，Volturn 上身着动力装甲的士兵正在 '获得解放' 的人民的欢呼致意中列队前行。而很快那个辛达强权 $Rank 就带着一副刚被训斥过的神色接入了通讯。
 
-""我的上级批准了你的...请求。"" $heOrShe说，看起来像是吃了什么腐烂的食物，""我们需要一个星期的时间来安排，到时候再回来找我完成交易。""
+""我的上级批准了你那些...请求。"" $heOrShe说道，脸色就像吃了条虫子般难看，""我们需要一个星期的时间来安排，到时候再回来敲定这笔交易。""
 
-""顺带一提，虽然我自己并不愿意，但附近的巡逻队都收到了... 建议... 要他们容忍你的存在。""
+""另外，尽管这并非我本意，但附近的巡逻队已经都都接到了...容忍你存在的...建议。""
 
 说完这句话，$heOrShe狠狠挂掉了通讯链接。",cutCommLink:切断通讯链接,
 pk_executorSpecialSel,DialogOptionSelected,$option == pk_executorSpecial,"Highlight ""一个星期""
@@ -24527,9 +24527,9 @@ $global.preparingExecutor = true 7
 $removeSpecialModifications = true
 MakeNearbyFleetsNonHostile sindrian_diktat pk 20000 8","面前的图像中，Volturn 上被 '解放' 的人民们正在向着列队行军的士兵欢呼致意。而很快那个辛达强权 $Rank 就带着一副刚被训斥过的神色接入了通讯。
 
-""我的上级批准了你那些... 有辱人格的勒索。"" $heOrShe说道，脸色就像吃了条虫子般难看，""我们需要一个星期的时间来安排，到时候再回来敲定这笔交易。""
+""我的上级批准了你那些...有辱人格的勒索。"" $heOrShe说道，脸色就像吃了条虫子般难看，""我们需要一个星期的时间来安排，到时候再回来敲定这笔交易。""
 
-""另外，就我个人而言，我更愿意把你当作恐怖分子来逮捕并处决，但附近的巡逻队都收到了... 容忍你存在的... 建议。""
+""另外，就我个人而言，我更愿意把你当作恐怖分子来逮捕并处决。但附近的巡逻队都收到了...容忍你存在的...建议。""
 
 说完这句话，$heOrShe狠狠挂掉了通讯链接。",cutCommLink:切断通讯链接,
 PKDiktatExecutorNotReady,PickGreeting,"$isPerson
@@ -24628,9 +24628,9 @@ $player.turnedInPlanetkiller = true
 $player.turnedInPlanetkillerToKnights = true
 $player.ethosOrder++","一位审判官-舰长领着一队骑士登上了你的$shipOrFleet。他们仔细检查了行星杀手装置，念了几句驱邪祷语，然后把它搬走了。
 
-""你在 卢德 的忠诚者见证之下信守了承诺，$playerName。"" 行星教卫说道，""愿 卢德 赞美您的善举。""
+""你信守了 对 卢德 的信徒之承诺，$playerName。"" 行星教卫说道，""愿 卢德 赞美您的善举。""
 
-他的脸上没有笑容，但依旧透露着些许暖意。",cutCommLink:切断通讯链接,
+他的脸上没有笑容，但透漏出了极其微小的一丝暖意。",cutCommLink:切断通讯链接,
 # PK Sentinel Gantries,,,,,,
 PKSentinelDockyardOpen,MarketPostOpen,$pkDockyard score:1000,"FireBest PKSentinelDockyardInteract
 $tradeMode = OPEN 0
@@ -25236,7 +25236,7 @@ $HeOrShe停顿了一下，然后善意的说道。""所有人都欢迎参与这�
 shrineFleetConvOptionSelFriend,DialogOptionSelected,"$faction.friendlyToPlayer
 $option == shrineQuestion",FireAll ShrineFleetConvOptions,"$HeOrShe做了个简单的祈祷手势 ""祝福你，同路之人。我带领朝圣者前往圣地冥想。""",,"# we can assume if player has commission, they're probably also friendly"
 shrineFleetConvAskAboutJob,ShrineFleetConvOptions,"!$showHostileResponses
-!$askedAboutJob",,,"shrineConv_jobResponse:""引领朝圣者能赚不少钱么？""",
+!$askedAboutJob",,,"shrineConv_jobResponse:""运送朝圣者能赚不少钱么？""",
 shrineFleetConvAskShrineDetails,ShrineFleetConvOptions,"!$showHostileResponses
 !$askedForShrineDetails",,,"shrineConv_shrineDetailsResponse:""告诉我你要前往的圣地。""",
 shrineFleetConvAskShrineQuestA,ShrineFleetConvOptions,"!$showHostileResponses
