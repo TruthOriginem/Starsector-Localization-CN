@@ -6,7 +6,7 @@
 	##############################################################
 	
 	"vsync":true,
-	"fps":60, # fps only used if vsync is false
+	"fps":60,
 	"devMode":false,
 	"godMode":false, # 100x damage dealt, no damage taken
 	"playtestingMode":false, # turns off some debug flags while in dev mode; doesn't do anything if not in dev mode.
@@ -52,6 +52,7 @@
 	"allowForceQuitInIronMode":true, # whether Alt-F4 and similar works when playing campaign in iron mode
 	
 	"useDefaultMouseCursor":false,
+	"useSoftwareMouseCursor":false, # can be useful if the mouse cursor is not showing for some reason
 	
 	"allowAnyJavaVersion":true,
 	
@@ -61,6 +62,12 @@
 	##############################################################
 	
 	"localeOverride":"en_US",
+	"cjkMode":false, # enables support for linewrapping for Chinese/Japanese/Korean fonts
+	
+	# VERY rudimentary accessibility feature
+	# Writes some interaction text to saves/common/interaction_text
+	# Slight performance impact as the disk writes happen on the main thread
+	"writeInteractionTextToFile":false,
 	
 	"profilerEnabled":false,
 	"forceNoVBO":true,
@@ -86,7 +93,7 @@
 	
 	"combatMapBorderPadForWaypoints":3000, # waypoints will be forced at least this far from the map border
 
-	"uiFadeSpeedMult":1,
+	"uiFadeSpeedMult":1, # when set to 1000 or higher, also makes the hyperspace transition fade instant
 	
 	"showCNTranslationCredits":false,
 	#"cnTranslationCreditsStringOverride":"",
@@ -102,7 +109,7 @@
 	"smallClouds":true,  # set to true to improve nebula rendering performance
 	# set to false to *maybe* work around driver issue re: fps drop when using Heron's system with shielded fighters
 	"renderShieldJitterEffect":true,
-	"compressSaveGameData":false, # smaller files, faster saving/loading
+	"compressSaveGameData":false, # smaller files, faster saving/loading, saveiles files not hand-editable
 	
 	# disabled for now, causes issues with subsequent runs if game is shut down during startup
 	"enableScriptCaching":false, # caches compiled scripts in saves/cache, faster startup time after first run
@@ -120,7 +127,8 @@
 	"enableUIStaticNoise":true,
 	"noiseColor":[40,152,176,255],
 	"tripadLineColor":[158,241,240,255],
-	"enableShipExplosionWhiteout":true,
+	#"enableShipExplosionWhiteout":false, # no longer used, replaced by checkbox in Gameplay Settings tab
+	"useOldShipExplosions":false, # added for compatibility with GraphicsLib ship explosions
 	"asteroidBeltMapColor":[70,50,40,255],
 	"ringSystemMapColor":[100,130,145,255],
 	"slipstreamUseGLLines":true, # a bit faster but may have some rendering issues depending on drivers
@@ -155,6 +163,7 @@
 	"minFluxVentFraction":0,
 	"minVentTimeForWeaponReload":2,
 	"minFighterReplacementRate":0.3,
+	"friendlyCollisionDamageMult":0.5,
 	
 	"nebulaSpeedFighter":1,
 	#"nebulaSpeedFrigate":0.7,
@@ -278,7 +287,7 @@
 	"stockpileShortageCostMult":0.1,
 	
 	
-	"stabilityBaseValue":5,
+	"stabilityBaseValue":6,
 	
 	"accessibilityBaseValue":0.5, # used
 	"accessibilityNoSpaceport":-1, # used
@@ -322,7 +331,83 @@
 	
 	"eventCheckInterval":30, # in days  mostly (or entirely?) not used anymore
 	
+	##### HOSTILE ACTIVITY EVENT CONFIG #####
 	
+	# [min number of star systems, min fraction of star systems]
+	"HA_1_affects":[1, 0.25],
+	"HA_2_affects":[2, 0.5],
+	"HA_3_affects":[3, 0.75],
+	"HA_4_affects":[4, 1],
+	
+	# [stability penalty, accessibility penalty]
+	"HA_1_impact":[1, 0.1],
+	"HA_2_impact":[2, 0.2],
+	"HA_3_impact":[3, 0.3],
+	"HA_4_impact":[4, 0.4],
+	
+	# Hostile Activity event progress points, DOES NOT INCLUDE EVERYTHING
+	"pirateBaseProximityPoints":[3, 10],
+	"kantasWrathPoints":[1, 15],
+	
+	# progress multiplier applied to total Pather interest level in the colony
+	"patherProgressMultNoCells":0,
+	"patherProgressMultSleeperCells":0.5,
+	"patherProgressMultActiveCells":1,
+	
+	# for computing Hostile Activity Pather progress non-linearly
+	# remove unit from total, multiply by mult, repeat
+	# e.g. if unit is 10 and mult is 0.5, then for progress 20: 10 + 10/2 
+	"patherProgressUnit":10,
+	"patherProgressMult":0.75,
+	
+	"maxHostileActivityFleetsPerSystem":11,
+	
+	"pirateProtectionPaymentFraction":0.1,
+	"pirateProtectionMercSpawnChance":0.1,
+	"pirateProtectionMercSpawnChanceMult":0.5, # chance for mercs to spawn multiplied by this every time they spawn
+	"pirateProtectionMercSpawnInterval":[180, 360],
+	
+	# hostile activity from Pathers
+	"luddicPathSmallFleetProb":0.85,
+	"luddicPathMaxFleets":4,
+	"luddicPathSleeperCellsBase":0.05f,
+	"luddicPathSleeperCellsPerSize":0f,
+	"luddicPathActiveCellsBase":0f,
+	"luddicPathActiveCellsPerSize":0.05f,
+	"luddicPathPerPointOfInterest":0.01f,
+	
+	# mega-tithe to avoid Pather activity for a time
+	"luddicPathTithePerPointOfInterestPerColonySize":1000,
+	"luddicPathTitheDurationDays":730,
+	
+	# some of the HA progress reductions
+	"HA_fleetPointsPerPoint":10,
+	"HA_kantaProtection":100,
+	"HA_pirateBase":[40, 50, 60, 70, 80], # based on base level 
+	"HA_patherBaseFlat":50, 
+	"HA_patherBasePerActiveCell":20, 
+	"HA_patherBaseMax":150, 
+	"HA_megaTithe":30,
+	"HA_givePK":100,
+	
+	
+	##### END HOSTILE ACTIVITY EVENT CONFIG #####
+	
+	##### BEGIN MISC FLEETS - shrine pilgrims, academy shuttle flights, etc #####
+	
+	"maxMiscFleets":8, # total below does not need to add up to this value
+	"miscFleetPilgrimMaxFleets":6,
+	"miscFleetAcademyMaxFleets":4,
+	
+	"miscSpawnTimeoutPerMarket":[1, 20], # min/max days between misc fleets from same market
+	"miscSpawnInterval":[1, 10], # min/max days between misc fleets spawning anywhere
+
+	"miscFleetPilgrimFrequency":10,
+	"miscFleetAcademyFrequency":4,
+	
+	##### END MISC FLEETS #####
+	
+
 	"blueprintPriceOriginalItemMult":1.5,
 	
 	"blueprintBasePriceFrigate":10000,
@@ -371,6 +456,7 @@
 	"baseSystemBounty":1000,
 	"minSystemBounties":0,
 	"maxSystemBounties":3,
+	"baseCommerceSystemBounty":500,
 	
 	"baseCustomBounty":70000,
 	"personCustomBountyPerLevel":25000,
@@ -380,11 +466,6 @@
 	"maxPersonBounties":5,
 	"personBountyNoSpawnRangeAroundPlayerLY":3,
 	
-	#"pirateBaseBounty1":100000,
-	#"pirateBaseBounty2":150000,
-	#"pirateBaseBounty3":200000,
-	#"pirateBaseBounty4":250000,
-	#"pirateBaseBounty5":300000,
 	"pirateBaseBounty1":40000,
 	"pirateBaseBounty2":50000,
 	"pirateBaseBounty3":60000,
@@ -409,8 +490,7 @@
 	"basePirateRaidTimeoutMonths":[6, 18],
 	"pirateRaidTimeoutRaidDefeatedMaxExtraMonths":12,
 	"pirateBaseMinMonthsForNextTier":12,
-	
-	"minMonthsBeforeFirstPirateRaidOnPlayerColony":6,
+
 	"playerRelatedPirateBaseCreationTimeoutMonths":[12, 24],
 	"playerRelatedPirateBaseCreationTimeoutExtraAfterBaseDestroyed":[12, 24],
 	
@@ -509,7 +589,7 @@
 	"salvageDebrisFieldFraction":0.25,
 	"minSalvageValueForDebrisField":1000,
 	
-	"shipRecoveryDialogShowBothListsAtOnce":false,
+	"shipRecoveryDialogShowBothListsAtOnce":true,
 	"baseShipRecoveryChance":0.25,
 	"baseOwnShipRecoveryChance":0.5,
 	"baseRestoreCostMult":1.2,
@@ -550,8 +630,8 @@
 	
 	"minFleetSpawnChanceMult":0.1,
 	"minFleetSpawnChanceRangeLY":10,
-	"maxPirateFleets":30, 
-	"maxMercFleets":15, 
+	"maxPirateFleets":30, # unused 
+	"maxMercFleets":15,
 	"minMarketExistenceDaysForMercs":90, # this many days for a new colony before mercs may spawn from it 
 	"minMarketSizeForMercs":4,
 	
@@ -569,9 +649,11 @@
 	"playerMaxLevel":15,
 	"skillPointsPerLevel":1,
 	"storyPointsPerLevel":4,
+	"bonusXPUseMultAtMaxLevel":3, # needs to be an integer value
 	
 	"startingCommandPoints":5,
 	"baseSecondsPerCommandPoint":120,
+	"commandFrequencyOpenDuration":10,
 	
 	"xpGainMult":1,
 	
@@ -611,7 +693,7 @@
 	"officerMercPayMult":2, # hiring bonus and salary
 	"officerMercContractDur":730, # minimum days before mercs will try to leave
 	
-	"officerXPRequiredMult":5, # higher number = slower officer level gain
+	"officerXPRequiredMult":4, # higher number = slower officer level gain
 	"officerMaxLevel":5,
 	"officerMaxEliteSkills":1,
 	"officerAIMax":10,
@@ -737,8 +819,14 @@
 	
 	# Bonus XP values for most story-point-using actions
 	"bonusXP":{
-		"permModNoBonusXPOPThreshold":40, # no bonus xp for hullmods that cost this much more more XP 
-		"permModMaxBonusXP":0.8, 
+		# for building in s-mods 
+		"permModCapital":0,
+		"permModCruiser":0.25,
+		"permModDestroyer":0.5,
+		"permModFrigate":0.75,
+		 
+		#"permModNoBonusXPOPThreshold":40, # no bonus xp for hullmods that cost this much more more XP 
+		#"permModMaxBonusXP":0.8, 
 		
 		"mentorOfficer":1,
 		"retrainOfficer":1,
@@ -786,6 +874,12 @@
 		"gaBA_bluffPather":1,
 		"gaBA_bluffPirate":1,
 		"gaRR_negotiateChurch":1,
+		"anh_diktatPatrolBluff":1,
+		"sdtu_patrolConvinceMutiny":1,
+		"sdtu_patrolForAPrice":1,
+		"sdtu_umbraTrickVIP":1,
+
+
 		
 		# missions - generic "X wants thing" complications
 		"pwi_bluff":1,
@@ -805,6 +899,16 @@
 		"gaATG_luddicScan32":1,
 		"gaATG_pirateScanReason3":1,
 		"soe_duelPrepStudied":1,
+		"lpp_volturnOfficialLie1":1,
+		"lkeEpiphanyVIPnonhostile":1,
+		"lke_mazBarAgentRespSiyavong":1,
+		"lke_patherFleetSP":1,
+		
+		# other
+		"kpGiftFavor":1,
+		"makeDealWithPirateBase":1,
+		"pskMerc_story":1,
+		"pk_hackStory":1,
 		
 	},
 	
@@ -935,7 +1039,8 @@
 		"XIV Battlegroup":[252,173,60,255],
 		"Luddic Path":[150,200,0,255],
 		"Luddic Church":[76,169,20,255],
-		"Persean League":[220,185,20],
+		"Persean League":[220,185,20,255],
+		"Lion's Guard":[160,0,95,255],
 		
 		"Unknown":[155,155,155,255], # special weapons
 		"Domain Restricted":[155,155,155,255],
@@ -969,6 +1074,7 @@
 			"heg_aux_package":"graphics/icons/cargo/bp_hegA.png",
 		},
 		"misc":{
+			"empty":"graphics/fx/empty.png",
 			#"beam_dark_core":"graphics/fx/beam_dark_core.png",
 			"slipstream_map":"graphics/fx/slipstream_map3.png",
 			"slipstream_map_edge":"graphics/fx/slipstream_map_edge2.png",
@@ -980,6 +1086,7 @@
 			"fx_particles1":"graphics/fx/fx_clouds00.png",
 			"fx_particles2":"graphics/fx/fx_clouds01.png",
 			"nebula_particles":"graphics/fx/nebula_colorless.png",
+			"nebula_particles2":"graphics/fx/cleaner_clouds00.png",
 			"dust_particles":"graphics/fx/dust_clouds_colorless.png",
 			"default_portrait":"graphics/portraits/portrait_generic_grayscale.png",
 			"default_portrait_automated":"graphics/portraits/portrait_generic_grayscale.png",
@@ -1133,11 +1240,30 @@
 			"orcus_rao":"graphics/portraits/characters/orcus_rao.png",
 			"elek":"graphics/portraits/characters/elek.png",
 			"jethro_bornanew":"graphics/portraits/characters/jethro_bornanew.png",
+			"jethro_bornanew2":"graphics/portraits/characters/jethro_bornanew2.png",
 			"jaspis":"graphics/portraits/characters/jaspis.png",
 			"caspian":"graphics/portraits/characters/caspian_sang.png",
 			"neriene_rao":"graphics/portraits/characters/neriene_rao.png",
 			"augusta_rao":"graphics/portraits/characters/augusta_rao.png",
 			"magnus_cardona":"graphics/portraits/characters/magnus_cardona.png",
+			"robed_man":"graphics/portraits/characters/robed_man.png",
+			"dolos_macario":"graphics/portraits/characters/dolos_macario.png",
+			"horacio_caden":"graphics/portraits/characters/horacio_caden.png",
+			"oxana_hyder":"graphics/portraits/characters/oxana_hyder.png",
+			"curate_male":"graphics/portraits/characters/curate01.png",
+			"curate_female":"graphics/portraits/characters/curate00.png",
+			"gideon_oak":"graphics/portraits/characters/gideon_oak.png",
+			"initiate":"graphics/portraits/characters/initiate00.png",
+			"standfast":"graphics/portraits/characters/standfast.png",
+			#"lamech":"graphics/portraits/characters/lamech.png",
+			"yannick_ram":"graphics/portraits/characters/yannick_ram.png",
+			"imoinu_kato":"graphics/portraits/characters/imoinu_kato.png",
+			"dardan_kato":"graphics/portraits/characters/dardan_kato.png",
+			"nile_virens":"graphics/portraits/characters/virens.png",
+			"sedge":"graphics/portraits/characters/sedge.png",
+			"laverna_tell":"graphics/portraits/characters/laverna_tell.png",
+			"skiron":"graphics/portraits/characters/skiron.png",
+			"skiron2":"graphics/portraits/characters/skiron2.png",
 			
 			# unused right now
 			#"tt_fixer_MALE":"graphics/portraits/portrait_corporate03.png",
@@ -1145,6 +1271,8 @@
 		},
 		"intel":{
 			#"bounties":"graphics/icons/intel/bounties.png",
+			
+			"luddic_shrine":"graphics/icons/intel/luddic_shrine64.png",
 			
 			"gate_inactive":"graphics/icons/intel/gate_inactive.png",
 			"gate_active":"graphics/icons/intel/gate_active.png",
@@ -1195,11 +1323,36 @@
 			"historian_female":"graphics/portraits/characters/historian01.png",
 			"historian_male":"graphics/portraits/characters/historian02.png",
 			
+			"curate_male":"graphics/portraits/characters/curate00.png",
+			"curate_female":"graphics/portraits/characters/curate01.png",
+
 			"historian_intel_icon":"graphics/icons/intel/fleet_log3.png",
 			
+			"hostile_activity":"graphics/icons/markets/pirate_activity.png",
 			
 			"border":"graphics/icons/intel_border_cyan.png",
+		},
+		"events":{
+			"stage_unknown_good":"graphics/icons/campaign/event_good.png",
+			"stage_unknown_bad":"graphics/icons/campaign/event_bad.png",
+			"stage_unknown_neutral":"graphics/icons/campaign/event_neutral.png",
 			
+			# hostile activity event
+			"hostile_activity":"graphics/icons/markets/hostile_activity.png",
+			"hostile_activity_START":"graphics/icons/campaign/hostile_activity_start.png",
+			"hostile_activity_HA_1":"graphics/icons/campaign/hostile_activity1.png",
+			"hostile_activity_HA_2":"graphics/icons/campaign/hostile_activity2.png",
+			"hostile_activity_HA_3":"graphics/icons/campaign/hostile_activity3.png",
+			"hostile_activity_HA_4":"graphics/icons/campaign/hostile_activity4.png",
+			"hostile_activity_INCREASED_DEFENSES":"graphics/icons/campaign/increased_defenses.png",
+			
+			# hyperspace topography event
+			"hyperspace_topography":"graphics/icons/markets/hyperspace_topography.png",
+			"hyperspace_topography_START":"graphics/icons/campaign/hyperspace_topography.png",
+			"hyperspace_topography_SLIPSTREAM_DETECTION":"graphics/icons/campaign/slipstream_detection.png",
+			"hyperspace_topography_SLIPSTREAM_NAVIGATION":"graphics/icons/campaign/slipstream_fuel.png",
+			"hyperspace_topography_HYPERFIELD_OPTIMIZATION":"graphics/icons/campaign/hyperspace_burn.png",
+			"hyperspace_topography_TOPOGRAPHIC_DATA":"graphics/icons/campaign/hyperspace_topography_data.png",
 		},
 		"raidObjectives":{  # icons displayed at 26x26
 			"gaData":"graphics/icons/raid_objective.png",
@@ -1210,6 +1363,7 @@
 			"survey_planet":"graphics/icons/intel/survey_planet.png",
 			"tutorial":"graphics/icons/intel/tutorial_mission.png",
 			
+			"luddic_pilgrim_transport":"graphics/icons/missions/luddic_pilgrim_transport.png",
 			"prisoner_luddic":"graphics/icons/missions/prisoner_luddic.png",
 			"prisoner_pirate":"graphics/icons/missions/prisoner_pirate.png",
 			"derelict_bounty":"graphics/icons/missions/derelict_bounty.png",
@@ -1347,15 +1501,32 @@
 			"active_gate":"graphics/illustrations/active_gate.jpg",
 			#"harry":"graphics/illustrations/harry.jpg",
 			"eventide":"graphics/illustrations/eventide.jpg",
+			"volturn":"graphics/illustrations/volturn.jpg",
 			"space_bar":"graphics/illustrations/space_bar.jpg",
 			"pirate_bar":"graphics/illustrations/pirate_bar.jpg",
 			"hegemony_bar":"graphics/illustrations/hegemony_bar.jpg",
-			
+			"sindria":"graphics/illustrations/sindria.jpg",
+			"gilead":"graphics/illustrations/gilead.jpg",
+			#"gilead_shrine":"graphics/illustrations/gilead_shrine.jpg",
+			"jangala_shrine":"graphics/illustrations/jangala_shrine.jpg",
+			"hesperus":"graphics/illustrations/hesperus.jpg",
+			"hesperus_shrine":"graphics/illustrations/hesperus_shrine.jpg",
+			"killa_shrine":"graphics/illustrations/killa_shrine.jpg",
+			"volturn_shrine":"graphics/illustrations/volturn_shrine.jpg",
+			"volturn_shrine_fake":"graphics/illustrations/volturn_shrine_fake.jpg",
+			"protest":"graphics/illustrations/protest.jpg",
 			"raid_prepare":"graphics/illustrations/raid_preparation.jpg",
 			"raid_valuables_result":"graphics/illustrations/raid_plunder.jpg",
 			"raid_disrupt_result":"graphics/illustrations/raid_destroy.jpg",
 			"raid_covert_result":"graphics/illustrations/covert_squad.jpg",
-			
+			"kazeron":"graphics/illustrations/kazeron.jpg",
+			"fikenhild":"graphics/illustrations/fikenhild.jpg",
+			"ilm":"graphics/illustrations/ilm.jpg",
+			"teahouse":"graphics/illustrations/teahouse.jpg",
+			"mazalot":"graphics/illustrations/mazalot.jpg",
+			"chalcedon":"graphics/illustrations/chalcedon.jpg",
+			"sentinel":"graphics/illustrations/sentinel.jpg",
+			"sentinel2":"graphics/illustrations/sentinel2.jpg",
 			#"deciv":"graphics/illustrations/abandoned_station.jpg",
 			
 			"bombard_prepare":"graphics/illustrations/bombardment_preparation.jpg",
@@ -1372,6 +1543,7 @@
 			"fusion_lamp":"graphics/illustrations/fusion_lamp.jpg",
 		},
 		"ui":{
+			"generate_ship_name":"graphics/ui/random23.png",
 			"bpOverlayShip":"graphics/icons/cargo/bp_overlay.png",
 			"bpOverlayWeapon":"graphics/icons/cargo/bp_overlay_weapon.png",
 			"bpOverlayFighter":"graphics/icons/cargo/bp_overlay_fighter.png",
@@ -1417,13 +1589,14 @@
 			"campaign_logistics_display_bg_full":"graphics/ui/campaign_infowidget4.png",
 			#"campaign_logistics_display_bg_full":"graphics/ui/campaign_infowidget3.png",
 			
+			"icon_fleet_danger":"graphics/icons/danger4.png",
 		
 			# ship status list icons begin
 			"icon_neural_link":"graphics/icons/tactical/neural_link.png",
 			"icon_tactical_coordinated_maneuvers":"graphics/warroom/objective_nav_buoy.png",
 			"icon_tactical_electronic_warfare":"graphics/warroom/objective_sensor_array.png",
 			
-			"icon_fleet_danger":"graphics/icons/danger4.png",
+			"icon_tactical_missile_autoloader":"graphics/icons/tactical/cr_tactical.png",
 			
 			"icon_tactical_cr_bonus":"graphics/icons/tactical/cr_tactical.png",
 			"icon_tactical_cr_neutral":"graphics/icons/tactical/cr_tactical.png",
@@ -1433,6 +1606,9 @@
 			"icon_tactical_nebula":"graphics/icons/tactical/nebula_slowdown.png",
 			"icon_tactical_overloaded":"graphics/icons/tactical/overloaded.png",
 			"icon_tactical_venting":"graphics/icons/tactical/venting_flux2.png",
+			
+			"icon_tactical_bdeck":"graphics/icons/tactical/bdeck.png",
+			"icon_tactical_reality_disruptor":"graphics/icons/tactical/reality_disrupted.png",
 			# ship status list icons end
 			
 			"icon_kinetic":"graphics/ui/icons/damagetype_kinetic.png",
@@ -1694,6 +1870,32 @@
 			"corona_soft":"graphics/planets/atmosphere2.png",
 			"corona_rays":"graphics/planets/aurorae.png",
 		},
+		
+		
+		"fighterSkinsPlayerAndNPC":{
+		},
+		"fighterSkinsPlayerOnly":{
+			"xyphos_LOW_TECH":"graphics/ships/fighters/xyphos_lowtech.png",
+			"xyphos_MIDLINE":"graphics/ships/fighters/xyphos_midline.png",
+			"xyphos_HIGH_TECH":"graphics/ships/fighters/xyphos_hightech.png",
+			"sarissa_LOW_TECH":"graphics/ships/fighters/sarissa_lowtech.png",
+			"sarissa_MIDLINE":"graphics/ships/fighters/sarissa_midline.png",
+			"sarissa_HIGH_TECH":"graphics/ships/fighters/sarissa_hightech.png",
+			"mining_drone_LOW_TECH":"graphics/ships/fighters/mining_drone_lowtech.png",
+			"mining_drone_MIDLINE":"graphics/ships/fighters/mining_drone_midline.png",
+			"mining_drone_HIGH_TECH":"graphics/ships/fighters/mining_drone_hightech.png",
+		},
+		
+		# Unless listed in fighterSkinsExcludeFromSharing, fighter skins may show up on
+		# ships of other tech types that do not have a fighter skin defined specifically for them.
+		# In that case, the closest average-color matching scheme is used.
+		"fighterSkinsExcludeFromSharing":{
+		},
 	}
 }
+
+
+
+
+
 

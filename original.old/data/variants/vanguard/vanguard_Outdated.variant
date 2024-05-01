@@ -1,0 +1,48 @@
+{
+    "displayName": "Outdated",
+    "fluxCapacitors": 0,
+    "fluxVents": 7,
+    "hullId": "vanguard",
+    "hullMods": [
+        "armoredweapons",
+        "heavyarmor",
+        "missleracks",
+        "fluxbreakers",
+        "insulatedengine"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vanguard_Outdated",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "lightdualac",
+                "WS 006": "lightdualac"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "hammer",
+                "WS 001": "hammer",
+                "WS 002": "hammer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 007": "lightmortar"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "lightdualmg",
+                "WS 004": "lightdualmg"
+            }
+        }
+    ]
+}

@@ -1,16 +1,24 @@
 {
     "displayName": "精英",
-    "fluxCapacitors": 3,
+    "fluxCapacitors": 5,
     "fluxVents": 20,
     "hullId": "enforcer_xiv",
     "hullMods": [
-        "auxiliarythrusters",
-        "heavyarmor"
+        "missleracks",
+        "fluxdistributor"
     ],
     "permaMods": [],
-    "quality": 1,
+    "sMods": [],
     "variantId": "enforcer_XIV_Elite",
     "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "hveldriver",
+                "WS 004": "hveldriver"
+            }
+        },
         {
             "autofire": false,
             "mode": "ALTERNATING",
@@ -24,15 +32,7 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {
-                "WS 002": "heavyac",
-                "WS 004": "heavyac"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {"WS 003": "heavyneedler"}
+            "weapons": {"WS 003": "heavymauler"}
         },
         {
             "autofire": true,

@@ -34,60 +34,64 @@
 	},
 	# variantOverrides restricts hulls to listed variants and adjusts their probability
 	"variantOverrides":{
+		"executor_Standard":10,
 	},
 	# multiplier for how often hulls show up in the faction's fleets
 	"hullFrequency":{
 		"tags":{
 		},
 		"hulls":{
-			"buffalo2":0, # just say no
-			"apogee":0, # too civilian
-			"shrike":0, # too light
 		},
 	},
 	# ships the faction gets access to when importing S&W out-of-faction
 	"shipsWhenImporting":{
-		"tags":["base_bp", "lowtech_bp", "midline_bp"],
+		"tags":[],
 		"hulls":[
 		],
 	},
 	"knownShips":{
-		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "sindrian_diktat"],
+		"tags":["sindrian_diktat"],
 		"hulls":[
-			"fury",
-			"doom",
-			"harbinger",
-			"afflictor",
-			"shade",
-			"atlas",
-			"kite_original",
-			"monitor",
-			"odyssey",
+			"crig",
+			"ox",
+			"dram",
+			"phaeton",
 			"prometheus",
-			"conquest",
-			"gryphon",
-			"eagle",
+			"gemini",
+			"atlas",
+			"mercury",
+			"hermes",
+			"kite_original",
+			"mudskipper",
+			"wayfarer",
+			"nebula",
 			"valkyrie",
+			"starliner",
+			"buffalo",
+			"colossus",
+			
+			"brawler",
+			"centurion",
+			
+			"hammerhead",
+			"sunder",
+			
+			"falcon",
+			"eagle",
+			
+			"executor",
 		],
 	},
 	# listing ships here will make the faction mostly use them even if other hulls become available
 	"priorityShips":{
 		"tags":[],
 		"hulls":[
-			"drover",
-			#"heron",
-			#"odyssey",
-			#"dominator",
-			"conquest",
 		],
 	},
 	"knownFighters":{
-		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "sindrian_diktat"],
+		"tags":["sindrian_diktat"],
 		"fighters":[
-			"xyphos_wing",
-			"thunder_wing",
-			"claw_wing",
-			"longbow_wing",
+			"talon_wing",
 		],
 	},
 	"priorityFighters":{
@@ -96,34 +100,59 @@
 		],
 	},
 	"knownWeapons":{
-		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "missile_bp", "sindrian_diktat"],
+		"tags":["sindrian_diktat"],
 		"weapons":[
-			"lightneedler",
+			"lightmg",
+			"lightdualmg",
+			"vulcan",
+			"lightac",
+			"lightdualac",
+			"lightag",
 			"railgun",
+
+			"heavymortar",
+			"chaingun",
+			"heavyac",
+			"flak",
 			"dualflak",
-			"heavymauler",
-			"hveldriver",
-			"heavyneedler",
-			"gauss",
-			"mjolnir",
-			"multineedler",
+			
+			"hephag",
+			"mark9",
+			"devastator",
+			
+			"reaper",
+			"atropos",
+			"atropos_single",
+			"swarmer",
+			"annihilator",
+			"heatseeker",
+			"harpoon",
+			"harpoon_single",
+			"breach",
+			"sabot",
+			"sabot_single",
+			
+			"pilum",
 			"breachpod",
+			"harpoonpod",
 			"sabotpod",
 			"phasecl",
-			"cyclone",
-			"hurricane",
+			"typhoon",
+			
 			"squall",
 			"locust",
-			"pdburst",
-			"amblaster",
+			
+			"taclaser",
+			"pdlaser",
+			"lrpdlaser",
+			"irpulse",
+			"ioncannon",
+			"gravitonbeam",
+			"pulselaser",
 			"phasebeam",
-			"heavyblaster",
-			"heavyburst",
-			"ionpulser",
-			"ionbeam",
-			"plasma",
-			"guardian",
-			"tachyonlance",
+			
+			"hil",
+			"autopulse",
 		],
 	},
 	"priorityWeapons":{
@@ -132,44 +161,47 @@
 		],
 	},
 	"knownHullMods":{
-		"tags":["base_bp", "sindrian_diktat"],
+		"tags":["standard", "sindrian_diktat"],
 		"hullMods":[
-			"advancedshieldemitter", # accelerated
-			"advancedoptics",
-			"turretgyros",
-			"armoredweapons",
-			"augmentedengines",
-			"autorepair",
-			"converted_hangar",
-			"eccm",
-			"ecm",
-			"expanded_deck_crew",
-			"magazines",
-			"missleracks",
-			"extendedshieldemitter",
-			"frontemitter",
-			"frontshield",  # makeshift
-			"hardenedshieldemitter",
-			"heavyarmor",
-			"insulatedengine",
-			"pointdefenseai",
-			"targetingunit",
-			"nav_relay",
-			"adaptiveshields", # omni
-			"operations_center",
-			"recovery_shuttles",
-			"fluxbreakers",
-			"solar_shielding",
-			"stabilizedshieldemitter",
-			"surveying_equipment",
-			"hiressensors",
-			"efficiency_overhaul",
 		],
 	},
+	"weaponSellFrequency":{
+		"lightag":5,
+		"railgun":5,
+
+		"heavyac":10,
+		"heavymortar":10,
+		"flak":5,
+		"dualflak":5,
+		
+		"reaper":5,
+		"phasecl":5,
+		"breachpod":5,
+		"harpoonpod":5,
+		"sabotpod":5,
+		"squall":5,
+		"locust":5,
+		
+		
+		"pdlaser":5,
+		"lrpdlaser":5,
+		"taclaser":5,
+		"gravitonbeam":5,
+		"pulselaser":3,
+		"phasebeam":2,
+		"hil":10,
+		"autopulse":5,
+	},
+	"fighterSellFrequency":{
+	},
+	"hullmodSellFrequency":{
+		"solar_shielding":10,
+		"missile_autoloader":5,
+	},	
 	"factionDoctrine":{
 		"warships":5,
-		"carriers":1,
-		"phaseShips":1,
+		"carriers":0,		# "the individualism often displayed by the so-called "fighter jocks" detracts from all working together to fulfill the Supreme Executor's Great Plan"
+		"phaseShips":0,
 		
 		"officerQuality":1,
 		"shipQuality":3,
@@ -177,17 +209,18 @@
 		
 		"shipSize":4,
 		
-		"aggression":3,
+		"aggression":4,
 		
-		"combatFreighterProbability":0.1,      				# instead of some portion of the freighters in a fleet
+		"combatFreighterProbability":0,      				# instead of some portion of the freighters in a fleet
 		"combatFreighterCombatUseFraction":0,  				# as part of the normal combat lineup
 		"combatFreighterCombatUseFractionWhenPriority":0,   # as part of normal combat lineup, when marked as priority ship
-		"autofitRandomizeProbability":0.1,
+		"autofitRandomizeProbability":0,					# there is no room for chance in the Supreme Executor's Great Plan
 		
 		"commanderSkillsShuffleProbability":0,
 		"commanderSkills":[
 			"coordinated_maneuvers",
 			"crew_training",
+			"tactical_drills",
 		],
 	},
 	"illegalCommodities":[
@@ -212,31 +245,22 @@
 			"graphics/portraits/portrait_diktat03.png",
 			"graphics/portraits/portrait_diktat04.png",
 			"graphics/portraits/portrait_diktat07.png",
-			"graphics/portraits/portrait_mercenary01.png",
-			"graphics/portraits/portrait_mercenary03.png",
-			"graphics/portraits/portrait_mercenary04.png",
-			"graphics/portraits/portrait12.png",
-			"graphics/portraits/portrait13.png",
-			"graphics/portraits/portrait15.png",
-			"graphics/portraits/portrait23.png",
-			"graphics/portraits/portrait33.png",
-			"graphics/portraits/portrait35.png",
-			"graphics/portraits/portrait38.png",
+			"graphics/portraits/portrait_diktat10.png",
+			"graphics/portraits/portrait_diktat12.png",
+			"graphics/portraits/portrait_diktat14.png",
+			"graphics/portraits/portrait_diktat16.png",
+
 		],
 		"standard_female":[
 			"graphics/portraits/portrait_diktat02.png",
 			"graphics/portraits/portrait_diktat05.png",
 			"graphics/portraits/portrait_diktat06.png",
 			"graphics/portraits/portrait_diktat08.png",
-			"graphics/portraits/portrait_mercenary02.png",
-			"graphics/portraits/portrait_mercenary08.png",
-			"graphics/portraits/portrait16.png",
-			"graphics/portraits/portrait21.png",
-			"graphics/portraits/portrait22.png",
-			"graphics/portraits/portrait28.png",
-			"graphics/portraits/portrait29.png",
-			"graphics/portraits/portrait34.png",
-			"graphics/portraits/portrait37.png",
+			"graphics/portraits/portrait_diktat09.png",
+			"graphics/portraits/portrait_diktat11.png",
+			"graphics/portraits/portrait_diktat13.png",
+			"graphics/portraits/portrait_diktat15.png",
+
 		],
 	},
 	"voices":{
@@ -276,6 +300,8 @@
 		},
 		"posts":{
 			"factionLeader":{"name":"Supreme Executor"},
+			"guardLeader":{"name":"Leader of Executive Guard"},
+			"militaryAdministrator":{"name":"Controller-General"},
 		},
 	},
 	"fleetTypeNames":{

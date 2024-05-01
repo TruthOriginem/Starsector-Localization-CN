@@ -28,7 +28,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		
 		// Set up the player's fleet
 		//api.addToFleet(FleetSide.PLAYER, "apogee_Balanced", FleetMemberType.SHIP, "ISS Van Rijn", true);
-		api.addToFleet(FleetSide.PLAYER, "aurora_Assault_Support", FleetMemberType.SHIP, "ISS Athena", true);
+		api.addToFleet(FleetSide.PLAYER, "aurora_Assault", FleetMemberType.SHIP, "ISS Athena", true);
 		api.addToFleet(FleetSide.PLAYER, "venture_Balanced", FleetMemberType.SHIP, "ISS Enki", false);
 		api.addToFleet(FleetSide.PLAYER, "falcon_Attack", FleetMemberType.SHIP, false);
 		api.addToFleet(FleetSide.PLAYER, "heron_Attack", FleetMemberType.SHIP, false);

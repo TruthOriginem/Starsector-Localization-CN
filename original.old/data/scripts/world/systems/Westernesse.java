@@ -49,6 +49,7 @@ public class Westernesse {
 			PlanetAPI fikenhild = system.addPlanet("fikenhild", horn, "Fikenhild", "water", 270, 85, 800, 34);
 			fikenhild.getSpec().setPlanetColor(new Color(240,225,255,255));
 			fikenhild.applySpecChanges();
+			fikenhild.setInteractionImage("illustrations", "fikenhild");
 			fikenhild.setCustomDescriptionId("planet_fikenhild");
 			
 		//	SectorEntityToken fikenhildStation = system.addCustomEntity("fikenhild_station", "Horn Starport", "station_midline1",  Factions.PERSEAN);

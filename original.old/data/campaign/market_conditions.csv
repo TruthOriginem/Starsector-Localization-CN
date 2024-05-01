@@ -39,15 +39,15 @@ Increases the quality and number of officers in $market's fleets.",graphics/icon
 Hydroponics Complex,hydroponics_complex,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Hydroponics,"Sealed-biosphere agricultural production facilities which allow farming in orbit or on the surface of inhospitable worlds. Requires crew to operate, organic growth medium, and heavy machinery for upkeep.",graphics/icons/markets/hydroponics.png,120
 ,,,,,,,
 Population,population_1,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,Only tens of people live here permanently.,graphics/icons/markets/population01.png,20
-Population,population_2,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,Mere hundreds of people populate $market.,graphics/icons/markets/population02.png,20
-Population,population_3,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,Thousands of people call $market home.,graphics/icons/markets/population03.png,20
-Population,population_4,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,Tens of thousands of people live on $market.,graphics/icons/markets/population04.png,20
-Population,population_5,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,$market is home to hundreds of thousands of people.,graphics/icons/markets/population05.png,20
-Population,population_6,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,The population of $market is in the millions.,graphics/icons/markets/population06.png,20
-Population,population_7,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,$market is a world of tens of millions.,graphics/icons/markets/population07.png,20
-Population,population_8,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,$market is one of the few worlds in the Sector with a population of hundreds of millions.,graphics/icons/markets/population08.png,20
-Population,population_9,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,"A precious refuge for humanity in a dangerous galaxy, $market is home to billions of souls.",graphics/icons/markets/population09.png,20
-Population,population_10,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,"$market is a dominant population center in the Sector, a rival to Old Earth as home to tens of billions of humans.",graphics/icons/markets/population10.png,20
+Population,population_2,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,Mere hundreds of people populate $marketName.,graphics/icons/markets/population02.png,20
+Population,population_3,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,Thousands of people call $marketName home.,graphics/icons/markets/population03.png,20
+Population,population_4,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,Tens of thousands of people live on $marketName.,graphics/icons/markets/population04.png,20
+Population,population_5,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,$marketName is home to hundreds of thousands of people.,graphics/icons/markets/population05.png,20
+Population,population_6,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,The population of $marketName is in the millions.,graphics/icons/markets/population06.png,20
+Population,population_7,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,$marketName is a world of tens of millions.,graphics/icons/markets/population07.png,20
+Population,population_8,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,$marketName is one of the few worlds in the Sector with a population of hundreds of millions.,graphics/icons/markets/population08.png,20
+Population,population_9,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,"A precious refuge for humanity in a dangerous galaxy, $marketName is home to billions of souls.",graphics/icons/markets/population09.png,20
+Population,population_10,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Population,"$marketName is a dominant population center in the Sector, a rival to Old Earth as home to tens of billions of humans.",graphics/icons/markets/population10.png,20
 ,,,,,,,
 ,,,,,,,
 ,,,,,,,
@@ -73,6 +73,7 @@ AI Core Admin (hidden),ai_core_admin,,TRUE,com.fs.starfarer.api.impl.campaign.ec
 Pirate Activity,pirate_activity,,TRUE,com.fs.starfarer.api.impl.campaign.intel.bases.PirateActivity,"There have been signs that pirates are targeting shipping and colonies in this system - from port inspectors being pressured to turn a blind eye, to inconsistencies in cargo manifests, to other increased criminal activity.
 
 The pirates most likely have a base somewhere relatively nearby.",graphics/icons/markets/pirate_activity.png,1300
+Hostile Activity,hostile_activity,,TRUE,com.fs.starfarer.api.impl.campaign.intel.events.HostileActivity,,graphics/icons/markets/pirate_activity.png,1350
 Luddic Path Cells,pather_cells,,TRUE,com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCells,,graphics/icons/markets/pather_cells.png,1400
 ,,,,,,,
 # stand-alone conditions,,,,,,,

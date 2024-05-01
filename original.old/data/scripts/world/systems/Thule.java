@@ -65,6 +65,7 @@ public class Thule {
 		kazeron.getSpec().setTilt(20f);
 		kazeron.applySpecChanges();
 		kazeron.setCustomDescriptionId("planet_kazeron");
+		kazeron.setInteractionImage("illustrations", "kazeron");
 		
 		//SectorEntityToken kazeronStation = system.addCustomEntity("kazeron_station", "Kazeron Star Command", "station_midline2", Factions.PERSEAN);
 		//kazeronStation.setCircularOrbitPointingDown( kazeron, 0, 150, 30);		

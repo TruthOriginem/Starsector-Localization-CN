@@ -7,10 +7,11 @@ import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 
 public class IntegratedTargetingUnit extends BaseHullMod {
 
-	private static Map mag = new HashMap();
+	public static Map mag = new HashMap();
 	static {
 		mag.put(HullSize.FIGHTER, 0f);
 		mag.put(HullSize.FRIGATE, 10f);
@@ -36,7 +37,9 @@ public class IntegratedTargetingUnit extends BaseHullMod {
 
 	@Override
 	public boolean isApplicableToShip(ShipAPI ship) {
-		return !ship.getVariant().getHullMods().contains("dedicated_targeting_core") && !ship.getVariant().getHullMods().contains("advancedcore");
+		return !ship.getVariant().getHullMods().contains("dedicated_targeting_core") &&
+				!ship.getVariant().getHullMods().contains(HullMods.DISTRIBUTED_FIRE_CONTROL) &&
+				!ship.getVariant().getHullMods().contains("advancedcore");
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
@@ -45,6 +48,9 @@ public class IntegratedTargetingUnit extends BaseHullMod {
 		}
 		if (ship.getVariant().getHullMods().contains("advancedcore")) {
 			return "Incompatible with Advanced Targeting Core";
+		}
+		if (ship.getVariant().getHullMods().contains(HullMods.DISTRIBUTED_FIRE_CONTROL)) {
+			return "Incompatible with Distributed Fire Control";
 		}
 		return null;
 	}

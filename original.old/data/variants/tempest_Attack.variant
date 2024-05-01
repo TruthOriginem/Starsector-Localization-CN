@@ -1,15 +1,15 @@
 {
     "displayName": "Attack",
-    "fluxCapacitors": 6,
+    "fluxCapacitors": 5,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "tempest",
     "hullMods": [
         "targetingunit",
-        "fluxdistributor",
-        "stabilizedshieldemitter"
+        "missile_autoloader"
     ],
     "permaMods": [],
+    "sMods": [],
     "variantId": "tempest_Attack",
     "weaponGroups": [
         {
@@ -25,7 +25,7 @@
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 003": "harpoon"}
+            "weapons": {"WS 003": "sabot"}
         }
     ],
     "wings": []

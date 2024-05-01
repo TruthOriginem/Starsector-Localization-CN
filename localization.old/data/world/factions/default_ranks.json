@@ -21,6 +21,10 @@
 		
 		"knightCaptain":{"name":"骑士队长"},
 		
+		"chiefHighInspector":{"name":"最高检察长"},
+		"deputyStarMarshal":{"name":"副星际元帅"},
+		"guardHighDeputyExecutor":{"name":"卫队最高副首长"},
+		
 		"citizen":{"name":"公民"},
 		"agent":{"name":"探员"},
 		"specialAgent":{"name":"特工"},
@@ -28,10 +32,15 @@
 		"pilot":{"name":"引航员"},
 		"unknown":{"name":"身份不明"},
 		
-		"brother":{"name":"兄弟"},
-		"sister":{"name":"姐妹"},
-		"terrorist":{"name":"恐怖分子"},
-		"clone":{"name":"克隆体"},
+		"brother":{name:"修士"},
+		"sister":{name:"修女"},
+		"father":{name:"神父"},
+		"mother":{name:"教母"},
+		"elder":{name:"长老"},
+		
+		"terrorist":{name:"恐怖分子"},
+		"freedomFighter":{name:"自由斗士"},
+		"clone":{name:"克隆体"},
 		
 	},
 	
@@ -46,11 +55,15 @@
 		"outpostCommander":{"name":"前哨指挥官"},
 		"portmaster":{"name":"港口主管"},
 		
+		"intelligenceDirector":{"name":"情报局局长"},
+		"guardLeader":{"name":"特种部队总管"},
+		
 		"supplyOfficer":{"name":"军需官"},
 		"supplyManager":{"name":"后勤经理"},
 		"medicalSupplier":{"name":"医疗供应商"},
 		
 		"administrator":{"name":"行政官"},
+		"military_administrator":{"name":"行政官"},
 		"freeAdmin":{"name":"自由行政官"},
 		
 		"guildMaster":{"name":"公会首领"},
@@ -91,6 +104,7 @@
 		
 		"doctor":{"name":"博士"},
 		"hacker":{"name":"骇客"},
+		"hermit":{"name":"隐士"},
 		"pensioner":{"name":"已退休人员"},
 		"activist":{"name":"激进主义分子"},
 		"scientist":{"name":"科学家"},
@@ -99,7 +113,13 @@
 		"unknown":{"name":"身份不明"},
 		"aristocrat":{"name":"贵族"},
 		
-		"synodSubcurate":{"name":"教会副牧师"},
+		"synodSubcurate":{name:"教会助理祭司"},
+		"archcurate":{name:"教会大祭司"},
+		"shrinePriest":{name:"Curate Sacraria"},
+		"excubitorOrbis":{"name":"哨卫 Orbis"},
+		"initiate":{"name":"新人"},
+		"novice":{"name":"见习修士"},
+		"pilgrim":{"name":"朝圣者"},
 	},
 }
 

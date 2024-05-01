@@ -1,0 +1,36 @@
+{
+	"id":"defensive_systems",
+	"governingAptitude":"combat",
+	"compressHullmods":false,
+	"elite":true,
+	"effectGroups":[
+		{
+			"name":"等级 1",
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.DefensiveSystems$Level1"},
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"stabilizedshieldemitter":1}},
+			]
+		},
+		{
+			"name":"等级 2",
+			"requiredSkillLevel":2,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.DefensiveSystems$Level2A"},
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.DefensiveSystems$Level2B"},
+			]
+		},
+		{
+			"name":"等级 3",
+			"requiredSkillLevel":3,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.DefensiveSystems$Level3A"},
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.DefensiveSystems$Level3B"},
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"hardenedshieldemitter":3}},
+			]
+		},
+	],
+}

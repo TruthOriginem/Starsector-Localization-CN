@@ -1,13 +1,12 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 5,
+    "fluxCapacitors": 15,
     "fluxVents": 50,
-    "goalVariant": true,
     "hullId": "legion",
     "hullMods": [
         "heavyarmor",
-        "armoredweapons",
-        "fluxdistributor"
+        "missleracks",
+        "armoredweapons"
     ],
     "permaMods": [],
     "sMods": [],
@@ -17,35 +16,31 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 002": "shredder",
-                "WS 003": "shredder"
+                "WS 000": "mark9",
+                "WS 001": "mark9"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "annihilatorpod",
+                "WS 003": "annihilatorpod",
+                "WS 004": "annihilatorpod",
+                "WS 005": "annihilatorpod",
+                "WS 007": "annihilatorpod"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 000": "devastator",
-                "WS 001": "devastator"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 018": "lightmg",
-                "WS 019": "lightmg",
-                "WS 020": "lightmg",
-                "WS 021": "lightmg"
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 004": "flak",
-                "WS 005": "flak",
-                "WS 007": "flak"
+                "WS 008": "vulcan",
+                "WS 009": "vulcan",
+                "WS 018": "vulcan",
+                "WS 019": "vulcan",
+                "WS 020": "vulcan",
+                "WS 021": "vulcan"
             }
         }
     ],

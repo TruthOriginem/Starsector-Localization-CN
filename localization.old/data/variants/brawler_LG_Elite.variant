@@ -1,0 +1,32 @@
+{
+    "displayName": "精英",
+    "fluxCapacitors": 4,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "brawler_LG",
+    "hullMods": [
+        "fluxbreakers",
+        "targetingunit"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "brawler_LG_Elite",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "pulselaser",
+                "WS 002": "pulselaser"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 003": "harpoon_single",
+                "WS 004": "harpoon_single"
+            }
+        }
+    ]
+}

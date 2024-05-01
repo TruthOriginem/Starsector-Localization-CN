@@ -12,7 +12,7 @@ name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaid
 轨道聚变射灯,orbital_fusion_lamp,"hist3t, pather4",轨道工厂制造公司,,150000,1000,1,EXTREME,graphics/icons/cargo/fusion_lamp.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,population,"一座输出可控的微型化聚变反应堆，能够为一整颗星球带来光和热。
 
 因该射灯需消耗大量的挥发物来确保其能安全运转，一旦供给不足，则可能使该设备失稳，进而让失控的能量输出激增。直到 大崩塌 发生时，人之领 的法庭里，关于该设备到底是存在设计缺陷还是使用不当的诉讼仍未终止。",135
-超分流阀门,coronal_portal,"hist3t, pather8",人之领管制科技,,300000,1000,1,EXTREME,graphics/icons/cargo/hypershunt_tap.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,population,"能与附近星冕分流器相连的微型虫洞连接器，可给殖民地提供近乎无限的能源
+超分流阀门,coronal_portal,"hist3t, pather8",人之领管制科技,,300000,1000,1,EXTREME,graphics/icons/cargo/hypershunt_tap.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,population,"能与附近星冕分流器相连的微型虫洞连接器，为殖民地提供近乎无限的能源。
 
 装置的运作需要工业规模的稀有金属供应来维持。这些稀有金属首先被用来打开虫洞，并在虫洞的产能可以自维持后继续用于稳定虫洞。这些稀有金属在这期间会经历极其复杂的烧蚀过程最终被损耗掉。如果稀有金属供应不足，分流器就必须完全关闭。",137
 全自动地幔钻机,mantle_bore,"hist3t, pather4",天苑四-乌托邦地貌改造集团,,80000,1000,1,EXTREME,graphics/icons/cargo/terraforming_bore.png,ui_cargo_special_industrial_pickup,ui_cargo_special_industrial_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,mining,虽然星区中应该已经没有还能正常运作的钻机控制单元了，但这种钻机可以托管独立运作 —— 尽管有时会没法预见它要往哪儿钻。自动模式的保险装置使这台钻机无法在宜居星球上运行。,140
@@ -29,7 +29,7 @@ name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaid
 这种复制器早在 大崩塌 之前，就已被 人之领 禁止了很长时间。因此能在 英仙座星域 找到一台状态良好的复制器，是非常令人惊讶的。",175
 全息交易撮合套件,dealmaker_holosuite,"hist3t, pather4",姆巴耶-果戈尔,,120000,1000,1,EXTREME,graphics/icons/cargo/holosuite.png,ui_cargo_special_biotech_pickup,ui_cargo_special_tech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,commerce,"这款全息套组能生成一个交互式环境，用来模拟和潜在商业伙伴进行谈判时的场景。此外，这款高端 VR 设备内置了自适应型智能微感情传感器，可提供实时的表情分析数据，从而用一种从技术层面来讲还算道德的行为，为设施运营者带来商业方面的优势。
 
-该套件内置的广告经常强调本设备并不是 AI，只是一种极其复杂的加权网络，并且绝对没有违反任何 人之领 的相关规定。",180
+该套件内置的广告经常强调本设备并不是 AI，只是一种极其复杂的加权网络，绝对没有违反任何 人之领 的相关规定。",180
 ,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
 # blueprints,,,,,,,,,,,,,,,
@@ -55,3 +55,7 @@ name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaid
 """双面神""装置",janus,mission_item,,,100000,1000,1,,graphics/icons/cargo/janus_device.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.JanusDevicePlugin,,"这是 Elissa Zal 基于 Scylla Coureuse 等人发展的理论而创建的第一代 ""双面神"" 装置。
 
 与超空间驱动器整合之后，这个装置能根据出发星门和目标星门独特的共振信号特征，向星门环传输调制过的超波脉冲。随后消耗大量燃料产生巨大的能量，在两个星门之间建立一条临时连接，使整个舰队能运用星门网络进行移动。",0
+行星杀手,planetkiller,mission_item,,,1000000,1000,1,,graphics/icons/cargo/planetkiller.png,ui_cargo_special_military_pickup,ui_cargo_special_military_drop,com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin,,"一颗足以使星球分崩离析的专用弹头。人们关于其运作原理知之甚少，只知道其通过将某种形式的共振和星球本身的自转共同产生作用。
+
+这颗弹头被上了保险，需要某些大概失传已久的授权代码才能解锁。目前它就只是一台死气沉沉的复杂机械而已。",10
+超空间测绘数据,topographic_data,,,,50000,1000,1,,graphics/icons/cargo/hyperspace_data.png,ui_chip_pickup,ui_modspec_drop,com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin,,这台有着基本资安措施的 TriPad 依照 人之领 开拓者们传承而下的数据格式规则，囊括了英仙座星域某片超空间最近流况数据的详尽扫描与分析结果。像这样的数据对前往 核心世界 之外探索远征的成功而言是不可或缺的。,500

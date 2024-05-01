@@ -43,6 +43,7 @@ public class Canaan {
 		gilead.getSpec().setUseReverseLightForGlow(true);
 		gilead.applySpecChanges();
 		gilead.setCustomDescriptionId("planet_gilead");
+		gilead.setInteractionImage("illustrations", "gilead");
 		
 			PlanetAPI og = system.addPlanet("og", gilead, "Og", "barren", 0, 50, 500, 30);
 			og.getSpec().setTexture(Global.getSettings().getSpriteName("planets", "barren03"));

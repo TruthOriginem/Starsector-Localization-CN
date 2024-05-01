@@ -198,6 +198,8 @@ public class Galatia {
 		
 		market.setFactionId(derinkuyuStation.getFaction().getId());
 		market.addCondition(Conditions.POPULATION_4);
+		market.addCondition(Conditions.ORE_SPARSE);
+		Misc.setFullySurveyed(market, null, false);
 		//market.addCondition(Conditions.ORBITAL_STATION);
 		//market.addCondition(Conditions.FREE_PORT);
 		

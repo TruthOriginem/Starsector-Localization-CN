@@ -1,11 +1,15 @@
 {
     "displayName": "密接支援",
-    "fluxCapacitors": 16,
+    "fluxCapacitors": 13,
     "fluxVents": 20,
     "goalVariant": true,
     "hullId": "medusa",
-    "hullMods": ["advancedoptics"],
+    "hullMods": [
+        "advancedoptics",
+        "targetingunit"
+    ],
     "permaMods": [],
+    "sMods": [],
     "variantId": "medusa_CS",
     "weaponGroups": [
         {

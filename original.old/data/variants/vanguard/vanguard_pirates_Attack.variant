@@ -1,0 +1,48 @@
+{
+    "displayName": "Attack",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "hullId": "vanguard_pirates",
+    "hullMods": [
+        "armoredweapons",
+        "heavyarmor",
+        "missleracks",
+        "fluxbreakers",
+        "insulatedengine"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vanguard_pirates_Attack",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "lightdualac",
+                "WS 006": "lightdualac"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 000": "harpoon",
+                "WS 001": "harpoon",
+                "WS 002": "harpoon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 007": "lightag"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "vulcan",
+                "WS 004": "vulcan"
+            }
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+	"baseHullId":"venture",
+	"skinHullId":"venture_pather",
+	"hullName":"Venture (LP)",
+	"hullDesignation":"Cruiser",
+	"fleetPoints":12,
+	"systemId":"orion_device",
+	"descriptionPrefix":"Fanatics of the Luddic Path have made this ship their own, stripping out all unnecessary furnishing and transforming it into a haphazard vehicle of holy war.",
+	"tags":["LP_bp"],
+	"tech":"Luddic Path",
+	"builtInWings": [],
+	"fighterBays":0,
+	"spriteName":"graphics/ships/venture/venture_lp.png",
+	"baseValueMult":1,
+	"removeWeaponSlots":["WS 008", "WS 009"], 	# ids
+	"removeEngineSlots":[], 			# indices, as engine slots have no id in the .ship file
+	#"removeBuiltInMods":["surveying_equipment"], 	# hullmod ids
+	#"builtInMods":["safetyoverrides","ill_advised"], # no SO; more interesting ship without it
+	"builtInMods":["ill_advised"], 
+	"builtInWeapons":{
+		"WS 011":"pusherplate_lt_small",
+    },
+    "weaponSlotChanges":{
+		"WS 005":{
+			"type": "COMPOSITE"
+		},
+		"WS 006":{
+			"type": "COMPOSITE"
+		},
+	},
+}

@@ -29,7 +29,9 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 					"odyssey_Balanced",
 					"legion_Strike",
 					"legion_FS",
-					"doom_Strike"
+					"doom_Strike",
+					"pegasus_Balanced",
+					"retribution_Standard",
 			};
 			String flagship = choices[(int) (Math.random() * (float) choices.length)];
 			api.addToFleet(side, flagship, FleetMemberType.SHIP, true);

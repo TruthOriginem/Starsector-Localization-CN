@@ -1,0 +1,58 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 44,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "radiant",
+    "hullMods": [
+        "targetingunit",
+        "magazines",
+        "hardenedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "radiant_Assault",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "autopulse",
+                "WS 001": "autopulse"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 005": "typhoon",
+                "WS 006": "typhoon",
+                "WS 007": "typhoon",
+                "WS 008": "typhoon"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "autopulse",
+                "WS 004": "autopulse"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "plasma"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 009": "pdlaser",
+                "WS 011": "pdlaser",
+                "WS 016": "pdlaser",
+                "WS 018": "pdlaser"
+            }
+        }
+    ]
+}

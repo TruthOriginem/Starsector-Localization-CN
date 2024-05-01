@@ -1,14 +1,15 @@
 {
     "displayName": "平衡",
-    "fluxCapacitors": 20,
+    "fluxCapacitors": 14,
     "fluxVents": 20,
     "hullId": "enforcer",
     "hullMods": [
         "auxiliarythrusters",
-        "blast_doors"
+        "blast_doors",
+        "fluxdistributor"
     ],
     "permaMods": [],
-    "quality": 0.5,
+    "sMods": [],
     "variantId": "enforcer_Balanced",
     "weaponGroups": [
         {

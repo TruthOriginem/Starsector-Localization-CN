@@ -1,13 +1,13 @@
 {
     "displayName": "战机支援",
     "fluxCapacitors": 0,
-    "fluxVents": 1,
+    "fluxVents": 26,
     "goalVariant": true,
     "hullId": "eradicator",
     "hullMods": [
-        "dedicated_targeting_core",
         "missleracks",
-        "converted_hangar"
+        "converted_hangar",
+        "targetingunit"
     ],
     "permaMods": [],
     "sMods": [],
@@ -16,11 +16,11 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 005": "heavymortar"}
+            "weapons": {"WS 005": "arbalest"}
         },
         {
             "autofire": false,
-            "mode": "ALTERNATING",
+            "mode": "LINKED",
             "weapons": {
                 "WS 000": "hammer",
                 "WS 001": "hammer",
@@ -32,26 +32,36 @@
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 006": "arbalest"}
+            "weapons": {"WS 006": "heavymortar"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 010": "lightac",
-                "WS 011": "lightac"
+                "WS 009": "lightac",
+                "WS 010": "lightac"
             }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 011": "lightac"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
                 "WS 007": "flak",
-                "WS 008": "lightmg",
-                "WS 009": "vulcan",
-                "WS 012": "lightmg",
                 "WS 013": "vulcan",
                 "WS 014": "vulcan"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "lightmg",
+                "WS 012": "lightmg"
             }
         }
     ],

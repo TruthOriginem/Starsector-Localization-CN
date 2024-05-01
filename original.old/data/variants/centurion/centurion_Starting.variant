@@ -1,9 +1,12 @@
 {
     "displayName": "Custom",
-    "fluxCapacitors": 10,
+    "fluxCapacitors": 7,
     "fluxVents": 10,
     "hullId": "centurion",
-    "hullMods": ["blast_doors"],
+    "hullMods": [
+        "blast_doors",
+        "fluxdistributor"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "centurion_Starting",

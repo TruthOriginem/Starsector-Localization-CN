@@ -1,0 +1,65 @@
+{
+    "displayName": "Strike",
+    "fluxCapacitors": 9,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "pegasus",
+    "hullMods": [
+        "missleracks",
+        "hardenedshieldemitter",
+        "dedicated_targeting_core"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "pegasus_Strike",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "dragonpod",
+                "WS 001": "dragonpod",
+                "WS 012": "dragonpod",
+                "WS 013": "dragonpod"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "heavyac",
+                "WS 009": "heavyac",
+                "WS 010": "heavyac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "gravitonbeam",
+                "WS 003": "gravitonbeam",
+                "WS 006": "gravitonbeam",
+                "WS 007": "gravitonbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "heavyac",
+                "WS 005": "heavyac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "flak",
+                "WS 014": "pdburst",
+                "WS 015": "pdburst",
+                "WS 016": "pdlaser",
+                "WS 017": "pdlaser"
+            }
+        }
+    ]
+}

@@ -29,7 +29,9 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 					"odyssey_Balanced",
 					"legion_Strike",
 					"legion_FS",
-					"doom_Strike"
+					"doom_Strike",
+					"pegasus_Balanced",
+					"retribution_Standard",
 			};
 			String flagship = choices[(int) (Math.random() * (float) choices.length)];
 			api.addToFleet(side, flagship, FleetMemberType.SHIP, true);
@@ -128,12 +130,12 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
 		// Set a small blurb for each fleet that shows up on the mission detail and
 		// mission results screens to identify each side.
-		api.setFleetTagline(FleetSide.PLAYER, "你的舰队");
-		api.setFleetTagline(FleetSide.ENEMY, "敌方舰队");
+		api.setFleetTagline(FleetSide.PLAYER, "Your forces");
+		api.setFleetTagline(FleetSide.ENEMY, "Enemy forces");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
-		api.addBriefingItem("击败所有敌舰");
+		api.addBriefingItem("Defeat all enemy forces");
 		
 		// Set up the fleets
 		generateFleet(100 + (int)((float) Math.random() * 50), FleetSide.PLAYER, ships, api);

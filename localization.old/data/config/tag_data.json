@@ -29,13 +29,13 @@
 		"sort":32,
 	},
 	"Local":{
-		"name":"本星系",
+		"name":"星系",
 		"width":118,
 		"putFirst":true,
 		"sort":33,
 	},
 	"Colony threats":{
-		"name":"殖民地遇袭",
+		"name":"殖民地威胁",
 		#"color":[200,0,0,255],
 		#"width":119,
 		"putFirst":true,
@@ -73,6 +73,10 @@
 		"width":119,
 		"putFirst":true,
 		"sort":31,
+	},
+	"Luddic shrines":{
+		"name":"卢德朝圣者",
+		"color":[75,200,0,255],
 	},
 
 }

@@ -56,7 +56,7 @@ public class Askonia {
 		a1.getSpec().setUseReverseLightForGlow(true);
 		a1.applySpecChanges();
 		a1.setCustomDescriptionId("planet_sindria");
-		a1.setInteractionImage("illustrations", "urban01");
+		a1.setInteractionImage("illustrations", "sindria");
 		
 			JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("askonia_jump_point_alpha", "Sindria Jump-point");
 			OrbitAPI orbit = Global.getFactory().createCircularOrbit(a1, 0, 500, 30);
@@ -112,11 +112,11 @@ public class Askonia {
 			a2b.getSpec().setGlowColor(new Color(255,255,255,255));
 			a2b.getSpec().setUseReverseLightForGlow(true);
 			a2b.applySpecChanges();
-			a2b.setInteractionImage("illustrations", "space_bar");
+			a2b.setInteractionImage("illustrations", "volturn");
 			
 				// Salus nav buoy, in L5
 				SectorEntityToken salus_nav = system.addCustomEntity(null, "Salus Navigation Buoy", "nav_buoy", Factions.DIKTAT); 
-				salus_nav.setCircularOrbitPointingDown( star, 110-60, 1400, 45);
+				salus_nav.setCircularOrbitPointingDown( a2, 110-60, 1400, 45);
 			
 			system.addRingBand(a2, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 1800, 70f);
 			system.addRingBand(a2, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 1800, 90f);

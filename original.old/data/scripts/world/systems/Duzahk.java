@@ -178,3 +178,13 @@ public class Duzahk {
 		system.autogenerateHyperspaceJumpPoints(true, true);
 	}
 }
+
+
+
+
+
+
+
+
+
+

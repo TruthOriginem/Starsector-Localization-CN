@@ -1,10 +1,13 @@
 {
-    "displayName": "Point Defense",
-    "fluxCapacitors": 15,
-    "fluxVents": 15,
+    "displayName": "Escort",
+    "fluxCapacitors": 9,
+    "fluxVents": 20,
     "goalVariant": true,
     "hullId": "medusa",
-    "hullMods": ["turretgyros"],
+    "hullMods": [
+        "magazines",
+        "hardenedshieldemitter"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "medusa_PD",

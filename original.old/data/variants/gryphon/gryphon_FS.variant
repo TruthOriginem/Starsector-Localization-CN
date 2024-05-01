@@ -1,7 +1,7 @@
 {
     "displayName": "Fire Support",
     "fluxCapacitors": 18,
-    "fluxVents": 15,
+    "fluxVents": 17,
     "goalVariant": true,
     "hullId": "gryphon",
     "hullMods": ["dedicated_targeting_core"],
@@ -9,11 +9,6 @@
     "sMods": [],
     "variantId": "gryphon_FS",
     "weaponGroups": [
-        {
-            "autofire": false,
-            "mode": "ALTERNATING",
-            "weapons": {"WS 001": "locust"}
-        },
         {
             "autofire": false,
             "mode": "ALTERNATING",
@@ -38,7 +33,7 @@
                 "WS 002": "heavyac",
                 "WS 003": "lightneedler",
                 "WS 004": "lightneedler",
-                "WS 005": "lightneedler"
+                "WS 005": "vulcan"
             }
         },
         {
@@ -48,6 +43,11 @@
                 "WS 006": "vulcan",
                 "WS 007": "vulcan"
             }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "squall"}
         }
     ]
 }

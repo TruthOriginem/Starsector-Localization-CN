@@ -1,0 +1,16 @@
+{
+	"id":"railgun_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":62.0,
+	"hitGlowRadius":40,
+	"width":6.5,
+	"fadeTime":0.3,
+	"fringeColor":[200,200,255,255],
+	"coreColor":[235,235,255,255],
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/missiles/shell_gauss_cannon.png"	
+}

@@ -1,10 +1,10 @@
 {
     "displayName": "Support",
-    "fluxCapacitors": 13,
+    "fluxCapacitors": 17,
     "fluxVents": 30,
     "goalVariant": true,
     "hullId": "mora",
-    "hullMods": ["dedicated_targeting_core"],
+    "hullMods": ["targetingunit"],
     "permaMods": [],
     "sMods": [],
     "variantId": "mora_Support",
@@ -12,7 +12,7 @@
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 002": "lightag"}
+            "weapons": {"WS 002": "lightac"}
         },
         {
             "autofire": false,
@@ -26,19 +26,17 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "lightdualac",
-                "WS 007": "lightdualac",
+                "WS 005": "lightac",
+                "WS 007": "lightac",
                 "WS 008": "lightac",
-                "WS 011": "lightac"
+                "WS 011": "lightac",
+                "WS 013": "lightac"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {
-                "WS 012": "lightag",
-                "WS 013": "lightag"
-            }
+            "weapons": {"WS 012": "lightag"}
         },
         {
             "autofire": true,

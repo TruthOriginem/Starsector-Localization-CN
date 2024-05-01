@@ -1,0 +1,50 @@
+{
+    "displayName": "进攻",
+    "fluxCapacitors": 0,
+    "fluxVents": 22,
+    "goalVariant": true,
+    "hullId": "falcon_LG",
+    "hullMods": [
+        "targetingunit",
+        "advancedoptics"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "falcon_LG_Attack",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "heavyac",
+                "WS 008": "heavyac"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "sabot",
+                "WS 002": "sabot"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 005": "phasebeam",
+                "WS 006": "phasebeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "pdlaser",
+                "WS 004": "pdlaser",
+                "WS 009": "pdlaser",
+                "WS 010": "pdlaser"
+            }
+        }
+    ]
+}

@@ -10,7 +10,7 @@
 			"effectBasedOnLevel":false,
 			"effects":[
 				{"type":"CHARACTER_STATS", "script":"com.fs.starfarer.api.impl.campaign.skills.AuxiliarySupport$Level1"},
-				{"type":"HULLMOD_UNLOCK", "hullmods":{"escort_package":1, "assault_package":1}},
+				#{"type":"HULLMOD_UNLOCK", "hullmods":{"escort_package":1, "assault_package":1}},
 			]
 		},
 	],

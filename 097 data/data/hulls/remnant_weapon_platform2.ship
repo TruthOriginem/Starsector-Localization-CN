@@ -1,0 +1,101 @@
+{
+    "bounds": [
+        19,
+        81,
+        60,
+        53,
+        60,
+        -53,
+        21,
+        -81,
+        -7,
+        -57,
+        -7,
+        56
+    ],
+    "builtInMods": [
+        "supercomputer",
+        "reduced_explosion"
+    ],
+    "center": [
+        82,
+        35
+    ],
+    "collisionRadius": 120,
+    "coversColor": "",
+    "height": 108,
+    "hullId": "remnant_weapon_platform2",
+    "hullName": "Remnant Weapon Platform",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        0,
+        0
+    ],
+    "shieldRadius": 115,
+    "spriteName": "graphics/ships/remnants/remnant_weapon_platform2.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": -18,
+            "arc": 90,
+            "id": "WS 002",
+            "locations": [
+                30,
+                -18
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 20,
+            "arc": 90,
+            "id": "WS 003",
+            "locations": [
+                14,
+                48
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -10,
+            "arc": 90,
+            "id": "WS 004",
+            "locations": [
+                14,
+                -48
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 20,
+            "arc": 90,
+            "id": "WS 006",
+            "locations": [
+                41,
+                45
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -20,
+            "arc": 90,
+            "id": "WS 007",
+            "locations": [
+                41,
+                -45
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        }
+    ],
+    "width": 164
+}

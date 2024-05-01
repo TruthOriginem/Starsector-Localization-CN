@@ -1,18 +1,19 @@
 {
     "displayName": "点防御",
-    "fluxCapacitors": 8,
+    "fluxCapacitors": 7,
     "fluxVents": 10,
     "hullId": "wolf_hegemony",
     "hullMods": [
         "turretgyros",
-        "fluxdistributor"
+        "fluxdistributor",
+        "fluxcoil"
     ],
     "permaMods": [],
     "sMods": [],
     "variantId": "wolf_hegemony_PD",
     "weaponGroups": [
         {
-            "autofire": false,
+            "autofire": true,
             "mode": "LINKED",
             "weapons": {"WS 004": "pulselaser"}
         },

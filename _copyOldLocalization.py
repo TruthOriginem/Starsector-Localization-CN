@@ -6,10 +6,11 @@ import filecmp
 import shutil
 
 def copy_if_identical(file1, file2, destination):
+    print(f"{file1} | to | {file2}")
     if os.path.exists(file2):
         if filecmp.cmp(file1, file2):
             return  # 文件已经存在且内容一致，跳过复制
-    
+    # print("{file1}to{destination}")
     shutil.copy2(file1, destination)  # 复制文件到目标路径
 
 def compare_and_copy_dirs(dir1, dir2, old_loc_dir, new_loc_dir):

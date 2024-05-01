@@ -1,32 +1,33 @@
 id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,,number
-broadsword_wing,broadsword_Fighter,"fighter4, fighter, low, lowtech_bp, merc",0,,6,8,V,4000,500,,3,FIGHTER,重型战斗机,10,6000,,,,,,,,,,,,,1
-xyphos_wing,xyphos_Fighter,"support3, fighter, high, rare_bp, hist1t, merc",3,0.5,7,18,V,0,500,,2,SUPPORT,支援战斗机,15,10000,,,,,,,,,,,,,2
-gladius_wing,gladius_Fighter,"fighter4, fighter, mid, midline_bp, merc",2,,6,6,V,4000,500,300,2,FIGHTER,战斗机,10,10000,,,,,,,,,,,,,3
-warthog_wing,warthog_Fighter,"fighter3, fighter, mid, midline_bp, merc",1,,8,12,CLAW,2000,500,-400,3,FIGHTER,重型战斗机,10,9000,,,,,,,,,,,,,4
-thunder_wing,thunder_Fighter,"fighter2, interceptor, mid, rare_bp, merc",2,,6,10,V,6000,500,900,2,FIGHTER,战斗机,15,7000,,,,,,,,,,,,,5
-claw_wing,claw_Fighter,"fighter2, interceptor, high, rare_bp, merc",1,,5,8,CLAW,4000,300,500,5,FIGHTER,战斗机,8,9000,,,,,,,,,,,,,
+broadsword_wing,broadsword_Fighter,"fighter4, fighter, low, lowtech_bp, merc, ind",0,,6,8,V,4000,500,,3,FIGHTER,重型战斗机,10,6000,,,,,,,,,,,,,1
+xyphos_wing,xyphos_Fighter,"support3, fighter, high, rare_bp, hist1t, merc, ind",3,0.5,7,18,V,0,500,,2,SUPPORT,支援战斗机,15,10000,,,,,,,,,,,,,2
+sarissa_wing,sarissa_Fighter,"stay_in_front_of_ship, support3, fighter, low, rare_bp, hist1t, merc, ind",2,,7,12,CLAW,0,500,,3,SUPPORT,支援战斗机,10,8000,,,,,,,,,,,,,
+gladius_wing,gladius_Fighter,"fighter4, fighter, mid, midline_bp, merc, ind",2,,6,6,V,4000,500,300,2,FIGHTER,重型截击机,10,10000,,,,,,,,,,,,,3
+warthog_wing,warthog_Fighter,"fighter3, fighter, low, lowtech_bp, merc, ind",1,,8,12,CLAW,2000,500,-400,3,FIGHTER,重型战斗机,10,9000,,,,,,,,,,,,,4
+thunder_wing,thunder_Fighter,"fighter2, interceptor, mid, rare_bp, merc, ind",2,,6,10,V,6000,500,900,2,FIGHTER,重型截击机,15,7000,,,,,,,,,,,,,5
+claw_wing,claw_Fighter,"fighter2, interceptor, high, rare_bp, merc, ind",1,,5,8,CLAW,4000,300,500,5,FIGHTER,战斗机,8,9000,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-talon_wing,talon_Interceptor,"interceptor1, interceptor, low, base_bp, merc",0,,3,2,V,4000,200,600,4,INTERCEPTOR,截击机,5,2000,,,,,,,,,,,,,6
-wasp_wing,wasp_Interceptor,"interceptor3, interceptor, high, hightech_bp, auto_fighter, merc",1,,5,5,CLAW,4000,200,700,6,INTERCEPTOR,无人截击机,5,6000,,,,,,,,,,,,,7
+talon_wing,talon_Interceptor,"interceptor1, interceptor, low, base_bp, merc, ind",0,,3,2,V,4000,200,600,4,INTERCEPTOR,截击机,5,2000,,,,,,,,,,,,,6
+wasp_wing,wasp_Interceptor,"interceptor3, interceptor, high, hightech_bp, auto_fighter, merc, ind",1,,5,5,CLAW,4000,200,700,6,INTERCEPTOR,无人截击机,5,6000,,,,,,,,,,,,,7
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,8
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,9
-hoplon_wing,hoplon_Escort,"bomber3, bomber, low, rare_bp, merc",1,,3,12,V,4000,2000,750,2,BOMBER,轰炸机,15,7000,,,,,,,,,,,,,10
-dagger_wing,dagger_Bomber,"bomber4, bomber, high, hightech_bp, merc",2,,5,18,V,4000,2000,600,3,BOMBER,轰炸机,18,9000,,,,,,,,,,,,,11
-piranha_wing,piranha_Bomber,"bomber3, bomber, low, lowtech_bp, merc",1,,5,10,CLAW,4000,2500,300,3,BOMBER,轰炸机,15,6000,,,,,,,,,,,,,12
+hoplon_wing,hoplon_Escort,"bomber3, bomber, low, rare_bp, merc, ind",1,,3,12,V,4000,2000,750,2,BOMBER,轰炸机,15,7000,,,,,,,,,,,,,10
+dagger_wing,dagger_Bomber,"bomber4, bomber, high, hightech_bp, merc, ind",2,,5,18,V,4000,2000,600,3,BOMBER,轰炸机,18,9000,,,,,,,,,,,,,11
+piranha_wing,piranha_Bomber,"bomber3, bomber, low, lowtech_bp, merc, ind",1,,5,10,CLAW,4000,2500,300,3,BOMBER,轰炸机,15,6000,,,,,,,,,,,,,12
 trident_wing,trident_Bomber,"bomber6, bomber, high, rare_bp, hist1t, merc",3,0.25,8,25,V,4000,2000,600,2,BOMBER,轰炸机,25,14000,,,,,,,,,,,,,13
 perdition_wing,perdition_Bomber,"bomber3, bomber, low, rare_bp, merc",0,,3,20,V,4000,2000,600,3,BOMBER,轰炸机,15,4000,,,,,,,,,,,,,10
 cobra_wing,cobra_Bomber,"bomber5, bomber, low, rare_bp, hist1t, merc",2,,6,15,V,4000,2000,600,1,BOMBER,轰炸机,20,10000,,,,,,,,,,,,,10
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-longbow_wing,longbow_Support,"bomber3, bomber, high, rare_bp, merc",1,,5,12,V,4000,2000,100,2,BOMBER,轰炸机,18,9000,,,,,,,,,,,,,15
+longbow_wing,longbow_Support,"bomber3, bomber, high, rare_bp, merc, ind",1,,5,12,V,4000,2000,100,2,BOMBER,轰炸机,18,9000,,,,,,,,,,,,,15
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,16
-mining_drone_wing,mining_drone_Standard,"support0, drone, low, base_bp, auto_fighter",0,,5,0,BOX,0,500,,4,FIGHTER,无人机,10,1500,,,,,,,,,,,,,17
+mining_drone_wing,mining_drone_Standard,"stay_in_front_of_ship, support0, drone, low, base_bp, auto_fighter, ind",0,,5,0,BOX,0,500,,4,SUPPORT,无人机,10,1500,,,,,,,,,,,,,17
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 borer_wing,drone_borer,"no_drop, no_sell, low",0,,4,0,BOX,2000,500,,6,INTERCEPTOR,无人机,5,1500,,,,,,,,,,,,,18
 terminator_wing,drone_terminator,"no_drop, no_sell, high",3,,6,0,BOX,0,200,,2,SUPPORT,点防无人机,20,6000,,,,,,,,,,,,,19
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,20
 flash_wing,flash_Bomber,"no_sell, bomber, remnant, bomber5, auto_fighter, merc",3,,5,12,V,4000,2500,300,4,BOMBER,无人轰炸机,18,8000,,,,,,,,,,,,,21
 spark_wing,spark_Interceptor,"no_sell, interceptor, remnant, interceptor5, auto_fighter, merc",3,,4,8,CLAW,4000,200,750,5,INTERCEPTOR,无人截击机,10,5000,,,,,,,,,,,,,22
-lux_wing,lux_Fighter,"no_sell, fighter, remnant, fighter5, auto_fighter, merc",3,,6,10,V,4000,500,,4,FIGHTER,无人战斗机,15,6000,,,,,,,,,,,,,23
+lux_wing,lux_Fighter,"no_sell, fighter, remnant, fighter5, auto_fighter, merc",3,,6,10,V,4000,500,,4,FIGHTER,无人战斗机,12,6000,,,,,,,,,,,,,23
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,24
 aspect_shock_wing,aspect_Shock,"auto_fighter, no_drop, no_sell, rapid_reform, leader_no_swarm, wingmen_no_swarm, match_leader_facing, attack_at_an_angle, independent_of_carrier, restricted",3,,6,10,BOX,100000,600,100,6,INTERCEPTOR,无常,20,20000,,,,,,,,,,,,,26
 aspect_shieldbreaker_wing,aspect_Shieldbreaker,"auto_fighter, no_drop, no_sell, rapid_reform, leader_no_swarm, wingmen_no_swarm, match_leader_facing, attack_at_an_angle, independent_of_carrier, restricted",3,,6,10,CLAW,100000,600,0,4,FIGHTER,无常,20,20000,,,,,,,,,,,,,27

@@ -1,12 +1,13 @@
 {
     "displayName": "Point Defense",
-    "fluxCapacitors": 8,
+    "fluxCapacitors": 7,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "wolf",
     "hullMods": [
         "turretgyros",
-        "fluxdistributor"
+        "fluxdistributor",
+        "fluxcoil"
     ],
     "permaMods": [],
     "sMods": [],

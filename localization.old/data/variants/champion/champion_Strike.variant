@@ -1,0 +1,52 @@
+{
+    "displayName": "打击",
+    "fluxCapacitors": 8,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "champion",
+    "hullMods": [
+        "targetingunit",
+        "missleracks"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "champion_Strike",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 008": "hil"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "dragonpod"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 006": "heavyac",
+                "WS 007": "heavyac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "pdlaser",
+                "WS 001": "pdlaser",
+                "WS 010": "pdlaser",
+                "WS 011": "pdlaser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "pdlaser",
+                "WS 005": "pdlaser"
+            }
+        }
+    ]
+}

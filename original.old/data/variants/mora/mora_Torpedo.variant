@@ -1,0 +1,48 @@
+{
+    "displayName": "Torpedo",
+    "fluxCapacitors": 21,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "mora",
+    "hullMods": ["missleracks"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "mora_Torpedo",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "lightac"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 003": "jackhammer",
+                "WS 004": "jackhammer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "lightac",
+                "WS 013": "lightac"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "vulcan",
+                "WS 012": "vulcan",
+                "WS 014": "vulcan"
+            }
+        }
+    ],
+    "wings": [
+        "perdition_wing",
+        "perdition_wing",
+        "broadsword_wing"
+    ]
+}

@@ -26,33 +26,22 @@
 		"tags":{
 		},
 		"hulls":{
-			"buffalo2":0,
+			"hyperion":0.25,
+			"scarab":0.25,
+			"monitor":0.25,
+			"tempest":0.5,
+			"aurora":0.5,
 		},
 	},
 	# ships the faction gets access to when importing S&W out-of-faction
 	"shipsWhenImporting":{
-		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp"],
+		"tags":[],
 		"hulls":[
-			"apogee",
 		],
 	},
 	"knownShips":{
-		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "scavengers"],
+		"tags":["ind", "independent"],
 		"hulls":[
-			"atlas",
-			"apogee",
-			"kite_original",
-			"doom",
-			"afflictor",
-			"prometheus",
-			"omen",
-			"shade",
-			"tempest",
-			"conquest",
-			"gryphon",
-			"eagle",
-			"valkyrie",
-			"harbinger",
 		],
 	},
 	# listing ships here will make the faction mostly use them even if other hulls become available
@@ -62,14 +51,8 @@
 		],
 	},
 	"knownFighters":{
-		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "scavengers"],
+		"tags":["ind", "independent"],
 		"fighters":[
-			"xyphos_wing",
-			"thunder_wing",
-			"claw_wing",
-			"hoplon_wing",
-			"trident_wing",
-			"longbow_wing",
 		],
 	},
 	"priorityFighters":{
@@ -78,30 +61,8 @@
 		],
 	},
 	"knownWeapons":{
-		"tags":["base_bp", "lowtech_bp", "midline_bp", "missile_bp", "hightech_bp", "scavengers"],
+		"tags":["ind", "independent"],
 		"weapons":[
-			"railgun",
-			"dualflak",
-			"heavymauler",
-			"hveldriver",
-			"gauss",
-			"mjolnir",
-			"breachpod",
-			"sabotpod",
-			"phasecl",
-			"cyclone",
-			"hurricane",
-			"squall",
-			"locust",
-			"pdburst",
-			"amblaster",
-			"phasebeam",
-			"heavyblaster",
-			"heavyburst",
-			"ionpulser",
-			"ionbeam",
-			"plasma",
-			"guardian",
 		],
 	},
 	"priorityWeapons":{
@@ -110,33 +71,8 @@
 		],
 	},
 	"knownHullMods":{
-		"tags":["base_bp", "scavengers"],
+		"tags":["standard", "ind", "independent"],
 		"hullMods":[
-			"advancedshieldemitter", # accelerated
-			"turretgyros",
-			"armoredweapons",
-			"augmentedengines",
-			"autorepair",
-			"converted_hangar",
-			"eccm",
-			"ecm",
-			"expanded_deck_crew",
-			"magazines",
-			"missleracks",
-			"extendedshieldemitter",
-			"frontemitter",
-			"frontshield",  # makeshift
-			"hardenedshieldemitter",
-			"heavyarmor",
-			"insulatedengine",
-			"targetingunit",
-			"nav_relay",
-			"adaptiveshields", # omni
-			"operations_center",
-			"recovery_shuttles",
-			"fluxbreakers",
-			"stabilizedshieldemitter",
-			"surveying_equipment",
 		],
 	},
 	"voices":{
@@ -180,8 +116,13 @@
 		"commanderSkillsShuffleProbability":1,
 		"commanderSkills":[
 			"crew_training",
+			"tactical_drills",
+			"officer_training",
+			"coordinated_maneuvers",
+			"electronic_warfare",
 			"fighter_uplink",
 			"carrier_group",
+			"flux_regulation",
 		],
 	},
 	"portraits":{

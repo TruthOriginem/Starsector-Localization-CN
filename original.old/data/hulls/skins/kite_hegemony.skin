@@ -2,6 +2,7 @@
 	"baseHullId":"kite",
 	"skinHullId":"kite_hegemony",
 	"hullName":"Kite (A)",
+	"incompatibleWithBaseHull":false, # for the autofit dialog
 	"ordnancePoints":32,
 	"descriptionId":"kite",  # optional
 	"descriptionPrefix":"This ship is on the Hegemony auxiliary list and as such its systems have been upgraded to military standard and a rigorous schedule of servicing enforced with the expectation that it can be pressed into military service during emergencies.",

@@ -1,6 +1,6 @@
 {
     "displayName": "精英",
-    "fluxCapacitors": 8,
+    "fluxCapacitors": 24,
     "fluxVents": 30,
     "hullId": "eagle_xiv",
     "hullMods": ["targetingunit"],
@@ -13,29 +13,29 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 007": "hveldriver",
-                "WS 008": "hveldriver",
-                "WS 013": "heavymauler"
+                "WS 008": "hveldriver"
             }
         },
         {
             "autofire": false,
             "mode": "ALTERNATING",
             "weapons": {
-                "WS 001": "harpoon",
-                "WS 002": "harpoon"
+                "WS 001": "breach",
+                "WS 002": "breach"
             }
         },
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 009": "ionbeam"}
+            "weapons": {"WS 013": "heavymauler"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "phasebeam",
-                "WS 006": "phasebeam"
+                "WS 005": "gravitonbeam",
+                "WS 006": "gravitonbeam",
+                "WS 009": "gravitonbeam"
             }
         },
         {
@@ -44,9 +44,9 @@
             "weapons": {
                 "WS 003": "pdlaser",
                 "WS 004": "pdlaser",
-                "WS 010": "pdburst",
-                "WS 011": "pdburst",
-                "WS 012": "pdburst"
+                "WS 010": "pdlaser",
+                "WS 011": "pdlaser",
+                "WS 012": "pdlaser"
             }
         }
     ]

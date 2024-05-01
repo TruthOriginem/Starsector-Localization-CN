@@ -13,7 +13,7 @@ orbitalworks,轨道工业设施,60,150,,12,heavyindustry,,"heavyindustry, uses_b
 
 升级添加了在轨生产设施，可以进一步提高舰船生产效率，并减少制造缺陷。",1700,HIGH
 fuelprod,燃料生产,90,120,,10,,,"fuelprod, industry, industrial",,graphics/icons/industry/fuel_production.png,com.fs.starfarer.api.impl.campaign.econ.impl.FuelProduction,该设施生产着被誉为星际文明生命线的星舰燃料。因缺乏 人之领 先进的制造技术，燃料的生产不仅十分艰难，而且异常缓慢。,1800,HIGH
-#advfuelprod,先进燃料生产,120,60,,5,fuelprod,,fuelprod,,graphics/icons/industry/advanced_fuel_production.png,com.fs.starfarer.api.impl.campaign.econ.impl.FuelProduction,"被赋予了}人之领}先进技术的燃料生产设施正源源不断地输送着}""星际血液"". ",1900,
+#advfuelprod,Advanced Fuel Production,120,60,,5,fuelprod,,fuelprod,,graphics/icons/industry/advanced_fuel_production.png,com.fs.starfarer.api.impl.campaign.econ.impl.FuelProduction,"A massive Domain-tech facility produces starship fuel, the life-blood of interstellar civilization.",1900,
 commerce,贸易中心,90,90,,3,,,"industry, urban",,graphics/icons/industry/commerce.png,com.fs.starfarer.api.impl.campaign.econ.impl.TradeCenter,通过制定法规，提供资助和建设基础设施，来促进民间贸易的蓬勃发展。但也会大大降低当局对殖民地的掌控程度。,1950,MEDIUM
 station_base,轨道站,,,,,,,"station, parent_item, important, structure",station,graphics/icons/industry/station_category.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"一处能够为殖民地附近的友军舰队提供火力支援的空间站，它的存在将阻止任何轰炸行动的发生。
 
@@ -89,6 +89,6 @@ highcommand,最高指挥部,30,120,,14,militarybase,,"command, unraidable, tacti
 lionsguard,狮心守卫总部,90,60,,6,,,"military, unraidable, tactical_bombardment, structure",,graphics/icons/industry/lions_guard.png,com.fs.starfarer.api.impl.campaign.econ.impl.LionsGuardHQ,"""辛达瑞亚之狮"" Phillip Andrada 令人畏惧的私人卫队总部。卫队成员都接受过一流的训练，并配备当下能买到的最顶尖装备。卫队采用一种与正规军截然不同的高额津贴与奖励制度以确保卫队成员都狂热地忠于领袖。",2650,
 planetaryshield,行星护盾,150,90,,3,,,"grounddefenses, structure",,graphics/icons/industry/planetary_shield.png,com.fs.starfarer.api.impl.campaign.econ.impl.PlanetaryShield,由一种带电等离子体包络而成，其内含的奇异虚拟粒子不仅能有效抵御轨道轰炸还能阻止小型舰队的突袭行动。整个行星护盾由一个中央设施集中控制并持续充能，对于任何形式的地面突击行动都是难以逾越的障碍。,2700,EXTREME
 waystation,星际驿站,20,60,,2,,,"waystation, structure",,graphics/icons/industry/waystation.png,com.fs.starfarer.api.impl.campaign.econ.impl.Waystation,为星际舰队提供补给和维修服务的中途站。增加殖民地的流通性。,155,MEDIUM
-cryosanctum,寒冰圣地,150,90,,5,,,"cryosanctum, structure",,graphics/icons/industry/cryosanctum.png,com.fs.starfarer.api.impl.campaign.econ.impl.Cryosanctum,一座巨大如墓穴般的建筑，用来安放为度过这次危机而冒险选择冷冻睡眠的人们，有可能的话，他们将在一个更文明的时代醒来。建筑配备了多套冗余的维生设施，大规模自动化保安系统以及反舰防御阵列。与之相比，冷冻舱本身的体积简直微不足道，而这一切都被安置在四通八达如迷宫般的地下堡垒内。,3000,EXTREME
+cryosanctum,低温避难所,150,90,,5,,,"cryosanctum, structure",,graphics/icons/industry/cryosanctum.png,com.fs.starfarer.api.impl.campaign.econ.impl.Cryosanctum,一座巨大如墓穴般的建筑，用来安放为度过这次危机而冒险选择冷冻睡眠的人们，有可能的话，他们将在一个更文明的时代醒来。建筑配备了多套冗余的维生设施，大规模自动化保安系统以及反舰防御阵列。与之相比，冷冻舱本身的体积简直微不足道，而这一切都被安置在四通八达如迷宫般的地下堡垒内。,3000,EXTREME
 ,,,,,,,,,,,,,,
 cryorevival,低温复苏设施,60,60,,5,,,"cryorevival, structure",,graphics/icons/industry/cryorevival.png,com.fs.starfarer.api.impl.campaign.econ.impl.Cryorevival,一处为 人之领 时代的低温睡眠者提供复苏与同化的重要设施。大幅度提高人口增长率。,3200,MEDIUM

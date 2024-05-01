@@ -143,6 +143,7 @@ public class Zagan {
 			ilm.getSpec().setGlowColor( new Color(0,255,150,255) );
 			ilm.getSpec().setUseReverseLightForGlow(true);
 			ilm.applySpecChanges();
+			ilm.setInteractionImage("illustrations", "ilm");
 			ilm.setCustomDescriptionId("planet_ilm");
 			
 			SectorEntityToken nebula1 = system.addTerrain(Terrain.NEBULA, new BaseTiledTerrain.TileParams(

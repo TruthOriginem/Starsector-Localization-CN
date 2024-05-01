@@ -1,15 +1,18 @@
 {
     "displayName": "Custom",
-    "fluxCapacitors": 10,
+    "fluxCapacitors": 7,
     "fluxVents": 10,
     "hullId": "wolf",
-    "hullMods": ["blast_doors"],
+    "hullMods": [
+        "blast_doors",
+        "fluxdistributor"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "wolf_Starting",
     "weaponGroups": [
         {
-            "autofire": false,
+            "autofire": true,
             "mode": "LINKED",
             "weapons": {"WS 004": "pulselaser"}
         },

@@ -1,21 +1,18 @@
 {
     "displayName": "突击",
-    "fluxCapacitors": 12,
-    "fluxVents": 4,
+    "fluxCapacitors": 14,
+    "fluxVents": 20,
     "goalVariant": true,
     "hullId": "fulgent",
-    "hullMods": [
-        "auxiliarythrusters",
-        "targetingunit"
-    ],
+    "hullMods": ["targetingunit"],
     "permaMods": [],
-    "quality": 0,
+    "sMods": [],
     "variantId": "fulgent_Assault",
     "weaponGroups": [
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 001": "heavyblaster"}
+            "weapons": {"WS 001": "phasebeam"}
         },
         {
             "autofire": false,
@@ -26,11 +23,19 @@
             }
         },
         {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "ioncannon",
+                "WS 002": "ioncannon"
+            }
+        },
+        {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "ionpulser",
-                "WS 004": "ionpulser"
+                "WS 003": "pulselaser",
+                "WS 004": "pulselaser"
             }
         },
         {
@@ -38,17 +43,7 @@
             "mode": "LINKED",
             "weapons": {
                 "WS 005": "pdlaser",
-                "WS 006": "pdlaser",
-                "WS 007": "pdlaser",
-                "WS 008": "pdlaser"
-            }
-        },
-        {
-            "autofire": false,
-            "mode": "ALTERNATING",
-            "weapons": {
-                "WS 000": "taclaser",
-                "WS 002": "taclaser"
+                "WS 006": "pdlaser"
             }
         }
     ]

@@ -3,18 +3,25 @@ package data.hullmods;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShieldAPI;
-import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShieldAPI.ShieldType;
+import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
 public class FrontShieldEmitter extends BaseHullMod {
 
-	public static final float ARC_BONUS = 100f;
-	public static final float UPKEEP_BONUS = 50f;
+	public static float ARC_BONUS = 100f;
+	//public static float UPKEEP_BONUS = 50f;
+	
+	public static float SMOD_SHIELD_BONUS = 5f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		stats.getShieldArcBonus().modifyPercent(id, ARC_BONUS);
-		stats.getShieldUpkeepMult().modifyMult(id, 1f - UPKEEP_BONUS * 0.01f);
+		//stats.getShieldUpkeepMult().modifyMult(id, 1f - UPKEEP_BONUS * 0.01f);
+		
+		boolean sMod = isSMod(stats);
+		if (sMod) {
+			stats.getShieldDamageTakenMult().modifyMult(id, 1f - SMOD_SHIELD_BONUS * 0.01f);
+		}
 	}
 	
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
@@ -27,7 +34,12 @@ public class FrontShieldEmitter extends BaseHullMod {
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		if (index == 0) return "" + (int) ARC_BONUS + "%";
-		if (index == 1) return "" + (int) UPKEEP_BONUS + "%";
+		//if (index == 1) return "" + (int) UPKEEP_BONUS + "%";
+		return null;
+	}
+
+	public String getSModDescriptionParam(int index, HullSize hullSize) {
+		if (index == 0) return "" + (int) SMOD_SHIELD_BONUS + "%";
 		return null;
 	}
 
@@ -44,7 +56,7 @@ public class FrontShieldEmitter extends BaseHullMod {
 		}
 		
 		if (ship.getShield().getType() == ShieldType.FRONT) {
-			return "该舰已经拥有前盾";
+			return "该舰已经拥有定向护盾";
 		}
 		
 		if (ship.getVariant().getHullMods().contains("adaptiveshields")) {
@@ -54,7 +66,7 @@ public class FrontShieldEmitter extends BaseHullMod {
 		return null;
 	}
 	
-
+	
 }
 
 

@@ -1,0 +1,54 @@
+{
+    "displayName": "标准",
+    "fluxCapacitors": 11,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "nova",
+    "hullMods": [
+        "targetingunit",
+        "missleracks"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "nova_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "plasma",
+                "WS 001": "plasma"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 006": "sabotpod",
+                "WS 007": "sabotpod",
+                "WS 008": "sabotpod",
+                "WS 009": "sabotpod"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "phasebeam",
+                "WS 003": "phasebeam",
+                "WS 004": "phasebeam",
+                "WS 005": "phasebeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 010": "pdburst",
+                "WS 011": "pdburst",
+                "WS 012": "pdburst",
+                "WS 013": "pdburst"
+            }
+        }
+    ]
+}

@@ -52,11 +52,10 @@ public class KumariKandam {
 		
 		
 			// Beholder Station
-			SectorEntityToken beholder_station = system.addCustomEntity("beholder_station", "Beholder 空间站", "station_side05", "luddic_church");
+			SectorEntityToken beholder_station = system.addCustomEntity("beholder_station", "Beholder Station", "station_side05", "luddic_church");
 			beholder_station.setCircularOrbitPointingDown(system.getEntityById("kumari_aru"), 270, 430, 30);		
 			beholder_station.setCustomDescriptionId("station_beholder");
 			beholder_station.setInteractionImage("illustrations", "luddic_shrine");
-			beholder_station.addTag("luddicShrine");
 			
 			// And the moons of Kumari Aru
 			// Makal : sulphurous outgassing like Io
@@ -81,7 +80,7 @@ public class KumariKandam {
 						24, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Kumari Aru L4 小行星带")); // null for default name
+						"Kumari Aru L4 Asteroids")); // null for default name
 			
 			SectorEntityToken kumari_aruL5 = system.addTerrain(Terrain.ASTEROID_FIELD,
 					new AsteroidFieldParams(
@@ -91,7 +90,7 @@ public class KumariKandam {
 						24, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Kumari Aru L5 小行星带")); // null for default name
+						"Kumari Aru L5 Asteroids")); // null for default name
 			
 			kumari_aruL4.setCircularOrbit(kumarikandam_star, 270 +60, 2800, 80);
 			kumari_aruL5.setCircularOrbit(kumarikandam_star, 270 -60, 2800, 80);
@@ -106,13 +105,14 @@ public class KumariKandam {
 		chalcedon.getSpec().setUseReverseLightForGlow(true);
 		chalcedon.applySpecChanges();
 		chalcedon.setCustomDescriptionId("planet_chalcedon");
+		chalcedon.setInteractionImage("illustrations", "chalcedon");
 		
 		// counter-orbit sensor array
 		SectorEntityToken chalcedon_loc = system.addCustomEntity(null, null, "nav_buoy_makeshift", Factions.PERSEAN); 
 		chalcedon_loc.setCircularOrbitPointingDown(kumarikandam_star, 220-180, 4300, 180);
 		
 			// Destroyed station
-			SectorEntityToken abandoned_station1 = system.addCustomEntity("abandoned_spacedock", "废弃的太空船坞", "station_side00", "neutral");
+			SectorEntityToken abandoned_station1 = system.addCustomEntity("abandoned_spacedock", "Abandoned Spacedock", "station_side00", "neutral");
 			abandoned_station1.setInteractionImage("illustrations", "abandoned_station3");
 			abandoned_station1.setCircularOrbitPointingDown(kumarikandam_star, 220 + 14, 4300, 180);
 			abandoned_station1.setCustomDescriptionId("station_chalcedon");
@@ -136,13 +136,13 @@ public class KumariKandam {
 		
 			// a gate in the Lagrangian of Chalcedon
 			SectorEntityToken gate = system.addCustomEntity("kumari_gate", // unique id
-					 "Kumarian 之门", // name - if null, defaultName from custom_entities.json will be used
+					 "Kumarian Gate", // name - if null, defaultName from custom_entities.json will be used
 					 "inactive_gate", // type of object, defined in custom_entities.json
 					 null); // faction
 			gate.setCircularOrbit(kumarikandam_star, 220-60, 4300, 180);
 			
 			// a jump in the other one: Rama's Bridge :  Jump-point
-			JumpPointAPI jumpPoint2 = Global.getFactory().createJumpPoint("kumarikandam_jump", "Rama 之桥 跳跃点");
+			JumpPointAPI jumpPoint2 = Global.getFactory().createJumpPoint("kumarikandam_jump", "Rama's Bridge");
 			jumpPoint2.setCircularOrbit( system.getEntityById("kumarikandam"), 220 + 60, 4300, 180);
 			jumpPoint2.setRelatedPlanet(chalcedon);
 			system.addEntity(jumpPoint2);
@@ -169,7 +169,7 @@ public class KumariKandam {
 		
 		
 		system.addRingBand(kumarikandam_star, "misc", "rings_dust0", 256f, 0, Color.white, 256f, 5900, 220f, null, null);
-		system.addAsteroidBelt(kumarikandam_star, 150, 5900, 128, 200, 240, Terrain.ASTEROID_BELT, "Mullam 小行星带");
+		system.addAsteroidBelt(kumarikandam_star, 150, 5900, 128, 200, 240, Terrain.ASTEROID_BELT, "The Mullam");
 		
 		PlanetAPI olinadu = system.addPlanet("olinadu", kumarikandam_star, "Olinadu", "cryovolcanic", 270, 100, 6800, 340);
 		olinadu.setCustomDescriptionId("planet_olinadu");

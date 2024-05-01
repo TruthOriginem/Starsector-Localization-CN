@@ -24,61 +24,64 @@
 	},
 	# variantOverrides restricts hulls to listed variants and adjusts their probability
 	"variantOverrides":{
+		"executor_Elite":10,
 	},
-	
 	# multiplier for how often hulls show up in the faction's fleets
 	"hullFrequency":{
 		"tags":{
 		},
 		"hulls":{
-			"buffalo2":0, # just say no
-			"apogee":0, # too civilian.
 		},
 	},
 	# ships the faction gets access to when importing S&W out-of-faction
 	"shipsWhenImporting":{
-		"tags":["base_bp", "lowtech_bp", "midline_bp"],
+		"tags":[],
 		"hulls":[
 		],
 	},
 	"knownShips":{
-		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "sindrian_diktat", "lions_guard"],
+		"tags":["sindrian_diktat", "lions_guard", "LG_bp"],
 		"hulls":[
-			"apogee",
-			"doom",
-			"harbinger",
-			"afflictor",
-			"shade",
-			"atlas",
-			"kite_original",
-			"monitor",
-			"odyssey",
+			"crig",
+			"ox",
+			"dram",
+			"phaeton",
 			"prometheus",
-			"conquest",
-			"gryphon",
-			"eagle",
+			"gemini",
+			"atlas",
+			"mercury",
+			"hermes",
+			"kite_original",
+			"mudskipper",
+			"wayfarer",
+			"nebula",
 			"valkyrie",
-			"manticore",
+			"starliner",
+			"buffalo",
+			"colossus",
+			
+			"brawler_LG",
+			"centurion_LG",
+			
+			"hammerhead_LG",
+			"sunder_LG",
+			
+			"falcon_LG",
+			"eagle_LG",
+			
+			"executor",
 		],
 	},
 	# listing ships here will make the faction mostly use them even if other hulls become available
 	"priorityShips":{
 		"tags":[],
 		"hulls":[
-			"drover",
-			#"heron",
-			#"odyssey",
-			#"dominator",
-			"conquest",
 		],
 	},
 	"knownFighters":{
-		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "sindrian_diktat", "lions_guard"],
+		"tags":["sindrian_diktat", "lions_guard"],
 		"fighters":[
-			"xyphos_wing",
-			"thunder_wing",
-			"claw_wing",
-			"longbow_wing",
+			"talon_wing",
 		],
 	},
 	"priorityFighters":{
@@ -87,96 +90,113 @@
 		],
 	},
 	"knownWeapons":{
-		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "missile_bp", "sindrian_diktat", "lions_guard"],
+		"tags":["sindrian_diktat", "lions_guard"],
 		"weapons":[
+			"lightmg",
+			"lightdualmg",
+			"vulcan",
+			"lightac",
+			"lightdualac",
+			"lightag",
 			"lightneedler",
 			"railgun",
-			"dualflak",
-			"heavymauler",
+
 			"hveldriver",
+			"heavymauler",
 			"heavyneedler",
-			"gauss",
-			"mjolnir",
-			"multineedler",
+			"heavymortar",
+			"chaingun",
+			"heavyac",
+			"flak",
+			"dualflak",
+			
+			"hephag",
+			"mark9",
+			"devastator",
+			
+			"reaper",
+			"atropos",
+			"atropos_single",
+			"swarmer",
+			"annihilator",
+			"heatseeker",
+			"harpoon",
+			"harpoon_single",
+			"breach",
+			"sabot",
+			"sabot_single",
+			
+			"pilum",
 			"breachpod",
+			"harpoonpod",
 			"sabotpod",
 			"phasecl",
-			"cyclone",
-			"hurricane",
+			"typhoon",
+			
 			"squall",
 			"locust",
-			"pdburst",
+			
 			"amblaster",
+			"taclaser",
+			"pdlaser",
+			"lrpdlaser",
+			"ioncannon",
+			
+			"gravitonbeam",
+			"pulselaser",
 			"phasebeam",
 			"heavyblaster",
-			"heavyburst",
-			"ionpulser",
-			"ionbeam",
-			"plasma",
-			"guardian",
-			"tachyonlance",
+			
+			"hil",
+			"autopulse",
+			
+			"kineticblaster",
+			"gigacannon",
 		],
 	},
 	"priorityWeapons":{
 		"tags":[],
 		"weapons":[
+			#"amblaster",
+			#"heavyblaster",
+			#"kineticblaster",
+			#"gigacannon",
 		],
 	},
 	"knownHullMods":{
-		"tags":["base_bp", "sindrian_diktat", "lions_guard"],
+		"tags":["standard", "sindrian_diktat", "lions_guard"],
 		"hullMods":[
-			"advancedshieldemitter", # accelerated
-			"advancedoptics",
-			"turretgyros",
-			"armoredweapons",
-			"augmentedengines",
-			"autorepair",
-			"converted_hangar",
-			"eccm",
-			"ecm",
-			"expanded_deck_crew",
-			"magazines",
-			"missleracks",
-			"extendedshieldemitter",
-			"frontemitter",
-			"frontshield",  # makeshift
-			"hardenedshieldemitter",
-			"heavyarmor",
-			"insulatedengine",
-			"pointdefenseai",
-			"targetingunit",
-			"nav_relay",
-			"adaptiveshields", # omni
-			"operations_center",
-			"recovery_shuttles",
-			"fluxbreakers",
-			"solar_shielding",
-			"stabilizedshieldemitter",
-			"surveying_equipment",
 		],
 	},
+	"weaponSellFrequency":{
+	},
+	"fighterSellFrequency":{
+	},
+	"hullmodSellFrequency":{
+	},	
 	"factionDoctrine":{
 		"warships":5,
-		"carriers":1,
-		"phaseShips":1,
+		"carriers":0,		# "the individualism often displayed by the so-called "fighter jocks" detracts from all working together to fulfill the Supreme Executor's Great Plan"
+		"phaseShips":0,
 		
-		"officerQuality":5,
+		"officerQuality":1,
 		"shipQuality":5,
 		"numShips":1,
 		
-		"shipSize":4,
+		"shipSize":5,
 		
-		"aggression":3,
+		"aggression":4,
 		
-		"combatFreighterProbability":0.1,      				# instead of some portion of the freighters in a fleet
+		"combatFreighterProbability":0,      				# instead of some portion of the freighters in a fleet
 		"combatFreighterCombatUseFraction":0,  				# as part of the normal combat lineup
 		"combatFreighterCombatUseFractionWhenPriority":0,   # as part of normal combat lineup, when marked as priority ship
-		"autofitRandomizeProbability":0.1,
+		"autofitRandomizeProbability":0,					# there is no room for chance in the Supreme Executor's Great Plan
 		
 		"commanderSkillsShuffleProbability":0,
 		"commanderSkills":[
+			"coordinated_maneuvers",
 			"crew_training",
-			"officer_training",
+			"tactical_drills",
 		],
 	},
 	"illegalCommodities":[

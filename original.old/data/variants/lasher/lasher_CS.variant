@@ -1,12 +1,15 @@
 {
     "displayName": "Close Support",
-    "fluxCapacitors": 10,
+    "fluxCapacitors": 7,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "lasher",
-    "hullMods": ["blast_doors"],
+    "hullMods": [
+        "blast_doors",
+        "fluxdistributor"
+    ],
     "permaMods": [],
-    "quality": 0.5,
+    "sMods": [],
     "variantId": "lasher_CS",
     "weaponGroups": [
         {
