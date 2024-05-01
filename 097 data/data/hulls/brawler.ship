@@ -1,0 +1,179 @@
+{
+    "bounds": [
+        16,
+        40,
+        26,
+        0,
+        17,
+        -39,
+        -8,
+        -53,
+        -21,
+        -31,
+        -15,
+        0,
+        -20,
+        33,
+        -8,
+        53
+    ],
+    "center": [
+        55,
+        26
+    ],
+    "collisionRadius": 70,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -25,
+                28
+            ],
+            "style": "MIDLINE",
+            "width": 24
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -25,
+                -28
+            ],
+            "style": "MIDLINE",
+            "width": 24
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 24,
+            "location": [
+                -22,
+                11
+            ],
+            "style": "MIDLINE",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 24,
+            "location": [
+                -22,
+                -11
+            ],
+            "style": "MIDLINE",
+            "width": 12
+        },
+        {
+            "angle": 145,
+            "contrailSize": 128,
+            "length": 16,
+            "location": [
+                -14,
+                53
+            ],
+            "style": "MIDLINE",
+            "width": 6
+        },
+        {
+            "angle": 225,
+            "contrailSize": 128,
+            "length": 16,
+            "location": [
+                -14,
+                -52
+            ],
+            "style": "MIDLINE",
+            "width": 6
+        },
+        {
+            "angle": 160,
+            "contrailSize": 128,
+            "length": 20,
+            "location": [
+                -19,
+                45
+            ],
+            "style": "MIDLINE",
+            "width": 6
+        },
+        {
+            "angle": 200,
+            "contrailSize": 128,
+            "length": 20,
+            "location": [
+                -19,
+                -44
+            ],
+            "style": "MIDLINE",
+            "width": 6
+        }
+    ],
+    "height": 54,
+    "hullId": "brawler",
+    "hullName": "Brawler",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        1,
+        0
+    ],
+    "shieldRadius": 70,
+    "spriteName": "graphics/ships/brawler/brawler_base.png",
+    "style": "MIDLINE",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 001",
+            "locations": [
+                18,
+                22
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 002",
+            "locations": [
+                18,
+                -22
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "BALLISTIC"
+        },
+        {
+            "angle": 0,
+            "arc": 10,
+            "id": "WS 003",
+            "locations": [
+                8,
+                46
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 0,
+            "arc": 10,
+            "id": "WS 004",
+            "locations": [
+                8,
+                -46
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        }
+    ],
+    "width": 110
+}

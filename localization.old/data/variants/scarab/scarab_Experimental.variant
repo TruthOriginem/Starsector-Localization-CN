@@ -1,27 +1,37 @@
 {
     "displayName": "实验性",
-    "fluxCapacitors": 3,
-    "fluxVents": 10,
+    "fluxCapacitors": 0,
+    "fluxVents": 8,
     "goalVariant": true,
     "hullId": "scarab",
     "hullMods": [
         "hardened_subsystems",
-        "stabilizedshieldemitter",
-        "fluxdistributor"
+        "fluxdistributor",
+        "hardenedshieldemitter"
     ],
     "permaMods": [],
     "sMods": [],
     "variantId": "scarab_Experimental",
     "weaponGroups": [
         {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "amblaster"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 002": "atropos",
+                "WS 003": "atropos"
+            }
+        },
+        {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "ioncannon",
-                "WS 002": "taclaser",
-                "WS 003": "taclaser",
-                "WS 005": "pdlaser",
-                "WS 010": "pdlaser"
+                "WS 005": "irpulse",
+                "WS 010": "irpulse"
             }
         },
         {

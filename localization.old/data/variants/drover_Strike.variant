@@ -1,29 +1,14 @@
 {
     "displayName": "打击",
-    "fluxCapacitors": 6,
+    "fluxCapacitors": 12,
     "fluxVents": 6,
     "goalVariant": true,
     "hullId": "drover",
     "hullMods": ["missleracks"],
     "permaMods": [],
+    "sMods": [],
     "variantId": "drover_Strike",
     "weaponGroups": [
-        {
-            "autofire": false,
-            "mode": "ALTERNATING",
-            "weapons": {
-                "WS 002": "harpoon",
-                "WS 005": "harpoon"
-            }
-        },
-        {
-            "autofire": false,
-            "mode": "ALTERNATING",
-            "weapons": {
-                "WS 003": "reaper",
-                "WS 004": "reaper"
-            }
-        },
         {
             "autofire": true,
             "mode": "LINKED",
@@ -31,10 +16,20 @@
                 "WS 000": "vulcan",
                 "WS 001": "vulcan"
             }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 002": "harpoon",
+                "WS 003": "harpoon",
+                "WS 004": "harpoon",
+                "WS 005": "harpoon"
+            }
         }
     ],
     "wings": [
-        "dagger_wing",
-        "broadsword_wing"
+        "broadsword_wing",
+        "dagger_wing"
     ]
 }

@@ -25,66 +25,97 @@
 		"myth":1,
 	},
 	"variantOverrides":{
+		"monitor_Escort":10,
+		"vigilance_Support1":5,
+		"vigilance_Support2":5,
+		"brawler_Support":5,
+		
+		"hammerhead_DEM":10,
+		"sunder_Support":10,
+		"drover_Support":10,
+		
+		"eagle_Support":10,
+		"falcon_Escort":10,
+		"champion_DEMEscort":3,
+		"champion_Strike":7,
+		"gryphon_DEM":10,
+		
+		"conquest_DEM":10,
+		"pegasus_Strike":5,
+		"pegasus_Balanced":5,
+		
+		"heron_Attack1":5,
+		"heron_Attack2":5,
 	},
 	# multiplier for how often hulls show up in the faction's fleets
 	"hullFrequency":{
 		"tags":{
 		},
 		"hulls":{
-			"buffalo2":0,
-			"gryphon":2,
-			"champion":3,
-			"heron":2,
+			"sunder":0.5,
+			"falcon":0.5,
+			"monitor":0.5,
 		},
 	},
 	# ships the faction gets access to when importing S&W out-of-faction
+	# defaults to same as knownShips when empty
 	"shipsWhenImporting":{
-		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp"],
+		"tags":[],
 		"hulls":[
-			"apogee",
 		],
 	},
 	"knownShips":{
-		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "persean"],
+		"tags":["persean"],
 		"hulls":[
-			"atlas",
-			"apogee",
-			"kite_original",
-			"fury",
-			"doom",
-			"afflictor",
+			"crig",
+			"ox",
+			"dram",
+			"phaeton",
 			"prometheus",
-			"omen",
-			"shade",
-			"tempest",
-			"conquest",
-			"champion",
-			#"eagle",
+			"gemini",
+			"atlas",
+			"mercury",
+			"hermes",
+			"kite_original",
+			"mudskipper",
+			"wayfarer",
+			"nebula",
 			"valkyrie",
-			"harbinger",
-			"gryphon",
+			"starliner",
+			"buffalo",
+			"colossus",
+			
+			"vigilance",
+			"brawler",
+			"monitor",
+			
+			"hammerhead",
+			"sunder",
+			"drover",
+			
 			"heron",
+			"falcon",
+			"eagle",
+			"champion",
+			"gryphon",
+			
+			"conquest",
+			"pegasus",
 		],
 	},
 	# listing ships here will make the faction mostly use them even if other hulls become available
 	"priorityShips":{
 		"tags":[],
 		"hulls":[
-			#"gryphon",
-			#"heron",
-			"odyssey",
-			"conquest",
 		],
 	},
 	"knownFighters":{
-		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "persean"],
+		"tags":["persean"],
 		"fighters":[
-			"xyphos_wing",
 			"thunder_wing",
+			"gladius_wing",
+			"talon_wing",
 			"claw_wing",
-			"hoplon_wing",
-			"trident_wing",
-			"longbow_wing",
 		],
 	},
 	"priorityFighters":{
@@ -93,30 +124,45 @@
 		],
 	},
 	"knownWeapons":{
-		"tags":["base_bp", "lowtech_bp", "midline_bp", "missile_bp", "hightech_bp", "persean"],
+		"tags":["persean"],
 		"weapons":[
-			"railgun",
-			"dualflak",
+			"gorgon",
+			"gorgonpod",
+			"gazer",
+			"gazerpod",
+			"dragon",
+			"dragonpod",
+			"hydra",
+		
+			"lightmg",
+			"lightdualmg",
+			"lightac",
+			"lightdualac",
+			"lightag",
+			
+			"heavymg",
+			"flak",
+			#"dualflak",
 			"heavymauler",
-			"hveldriver",
-			"gauss",
+			#"hveldriver",
+			"heavyac",
+			
 			"mjolnir",
-			"breachpod",
-			"sabotpod",
-			"phasecl",
-			"cyclone",
-			"hurricane",
-			"squall",
-			"locust",
+			
 			"pdburst",
-			"amblaster",
+			"pdlaser",
+			"lrpdlaser",
+			"taclaser",
+			"ioncannon",
+			
 			"phasebeam",
-			"heavyblaster",
+			"gravitonbeam",
+			"irautolance",
 			"heavyburst",
-			"ionpulser",
 			"ionbeam",
-			"plasma",
+			
 			"guardian",
+			"hil",
 		],
 	},
 	"priorityWeapons":{
@@ -125,42 +171,37 @@
 		],
 	},
 	"knownHullMods":{
-		"tags":["base_bp", "persean"],
+		"tags":["standard", "persean"],
 		"hullMods":[
-			"advancedshieldemitter", # accelerated
-			"turretgyros",
-			"armoredweapons",
-			"augmentedengines",
-			"autorepair",
-			"converted_hangar",
-			"eccm",
-			"ecm",
-			"expanded_deck_crew",
-			"magazines",
-			"missleracks",
-			"extendedshieldemitter",
-			"frontemitter",
-			"frontshield",  # makeshift
-			"hardenedshieldemitter",
-			"heavyarmor",
-			"insulatedengine",
-			"targetingunit",
-			"nav_relay",
-			"adaptiveshields", # omni
-			"operations_center",
-			"recovery_shuttles",
-			"fluxbreakers",
-			"stabilizedshieldemitter",
-			"surveying_equipment",
-			"hiressensors",
-			"efficiency_overhaul",
-			"converted_fighterbay",
 		],
 	},
+	"weaponSellFrequency":{
+		"gorgon":10,
+		"gorgonpod":10,
+		"gazer":10,
+		"gazerpod":10,
+		"dragon":10,
+		"dragonpod":10,
+		"hydra":10,
+		"irautolance":10,
+		"heavyac":10,
+		"mjolnir":10,
+		"guardian":5,
+		"hil":5,
+		"pdburst":5,
+		"heavyburst":5,
+	},
+	"fighterSellFrequency":{
+	},
+	"hullmodSellFrequency":{
+		"missleracks":10,
+		"eccm":10,
+		"missile_autoloader":5,
+	},
 	"factionDoctrine":{
-		"warships":4,
-		"carriers":2,
-		"phaseShips":1,
+		"warships":5,
+		"carriers":1,
+		"phaseShips":0,
 		
 		"officerQuality":3,
 		"shipQuality":2,
@@ -171,19 +212,24 @@
 		"aggression":2,
 		
 		"combatFreighterProbability":0.5,     				# instead of some portion of the freighters in a fleet
-		"combatFreighterCombatUseFraction":0.5,				# as part of the normal combat lineup
+		"combatFreighterCombatUseFraction":0,				# as part of the normal combat lineup
 		"combatFreighterCombatUseFractionWhenPriority":1,   # as part of normal combat lineup, when marked as priority ship
 		"autofitRandomizeProbability":0.25,
 
+		"officerSkillsShuffleProbability":0f,
+		"officerSkills":[
+			"missile_specialization",
+		],
+
 		"commanderSkillsShuffleProbability":1,
 		"commanderSkills":[
-			"fighter_uplink",
-			"carrier_group",
+			#"fighter_uplink",
+			#"carrier_group",
 			"crew_training",
 			"officer_training",
 			"coordinated_maneuvers",
 			"electronic_warfare",
-			"flux_regulation",
+			#"flux_regulation",
 		],
 	},
 	"illegalCommodities":[
@@ -191,6 +237,15 @@
 		"organs",
 		"ai_cores",
 	],
+	"music":{
+		"theme":"music_persean_league_market_neutral",
+		"market_neutral":"music_persean_league_market_neutral",
+		"market_hostile":"music_persean_league_market_hostile",
+		"market_friendly":"music_persean_league_market_friendly",
+		"encounter_neutral":"music_persean_league_encounter_neutral",
+		"encounter_hostile":"music_persean_league_encounter_hostile",
+		"encounter_friendly":"music_persean_league_encounter_friendly",
+	},	
 	"portraits":{
 		"standard_male":[
 			"graphics/portraits/portrait_league01.png",

@@ -1,14 +1,16 @@
 {
     "displayName": "平衡",
-    "fluxCapacitors": 32,
+    "fluxCapacitors": 22,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "odyssey",
     "hullMods": [
         "targetingunit",
-        "fluxdistributor"
+        "fluxdistributor",
+        "defensive_targeting_array"
     ],
     "permaMods": [],
+    "sMods": [],
     "variantId": "odyssey_Balanced",
     "weaponGroups": [
         {

@@ -1,49 +1,59 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 29,
-    "fluxVents": 30,
+    "fluxCapacitors": 0,
+    "fluxVents": 27,
     "goalVariant": true,
     "hullId": "eagle",
-    "hullMods": ["targetingunit"],
+    "hullMods": [
+        "targetingunit",
+        "missile_autoloader"
+    ],
     "permaMods": [],
-    "quality": 0.5,
+    "sMods": [],
     "variantId": "eagle_Assault",
     "weaponGroups": [
         {
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 007": "heavymortar",
-                "WS 008": "heavymortar",
-                "WS 013": "heavymortar"
+                "WS 007": "heavyneedler",
+                "WS 008": "heavyneedler"
             }
         },
         {
             "autofire": false,
             "mode": "ALTERNATING",
             "weapons": {
-                "WS 001": "sabot",
-                "WS 002": "sabot"
+                "WS 001": "atropos",
+                "WS 002": "atropos"
             }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 013": "heavymortar"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "ionbeam"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
                 "WS 005": "gravitonbeam",
-                "WS 006": "gravitonbeam",
-                "WS 009": "gravitonbeam"
+                "WS 006": "gravitonbeam"
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "lrpdlaser",
-                "WS 004": "lrpdlaser",
-                "WS 010": "lrpdlaser",
-                "WS 011": "lrpdlaser",
-                "WS 012": "lrpdlaser"
+                "WS 003": "pdlaser",
+                "WS 004": "pdlaser",
+                "WS 010": "pdburst",
+                "WS 012": "pdburst"
             }
         }
     ]

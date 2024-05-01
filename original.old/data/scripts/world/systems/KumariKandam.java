@@ -56,7 +56,6 @@ public class KumariKandam {
 			beholder_station.setCircularOrbitPointingDown(system.getEntityById("kumari_aru"), 270, 430, 30);		
 			beholder_station.setCustomDescriptionId("station_beholder");
 			beholder_station.setInteractionImage("illustrations", "luddic_shrine");
-			beholder_station.addTag("luddicShrine");
 			
 			// And the moons of Kumari Aru
 			// Makal : sulphurous outgassing like Io
@@ -106,6 +105,7 @@ public class KumariKandam {
 		chalcedon.getSpec().setUseReverseLightForGlow(true);
 		chalcedon.applySpecChanges();
 		chalcedon.setCustomDescriptionId("planet_chalcedon");
+		chalcedon.setInteractionImage("illustrations", "chalcedon");
 		
 		// counter-orbit sensor array
 		SectorEntityToken chalcedon_loc = system.addCustomEntity(null, null, "nav_buoy_makeshift", Factions.PERSEAN); 

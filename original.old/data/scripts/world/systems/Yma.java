@@ -54,6 +54,7 @@ public class Yma {
 		yma2.getMarket().addCondition(Conditions.DECIVILIZED);
 		yma2.getMarket().addCondition(Conditions.RUINS_EXTENSIVE);
 		yma2.getMarket().getFirstCondition(Conditions.RUINS_EXTENSIVE).setSurveyed(true);
+		yma2.getMarket().addCondition(Conditions.IRRADIATED);
 		yma2.getMarket().addCondition(Conditions.METEOR_IMPACTS);
 		yma2.getMarket().addCondition(Conditions.ORE_MODERATE);
 		yma2.getMarket().addCondition(Conditions.RARE_ORE_SPARSE);

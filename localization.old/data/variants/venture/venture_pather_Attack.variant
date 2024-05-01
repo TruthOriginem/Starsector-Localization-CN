@@ -1,0 +1,46 @@
+{
+    "displayName": "进攻",
+    "fluxCapacitors": 14,
+    "fluxVents": 12,
+    "goalVariant": true,
+    "hullId": "venture_pather",
+    "hullMods": [
+        "missleracks",
+        "shield_shunt",
+        "heavyarmor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "venture_pather_Attack",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 005": "jackhammer",
+                "WS 006": "jackhammer"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 004": "hammer",
+                "WS 007": "hammer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "miningblaster"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "flak",
+                "WS 003": "flak"
+            }
+        }
+    ]
+}

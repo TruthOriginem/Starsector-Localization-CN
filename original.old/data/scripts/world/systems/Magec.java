@@ -105,6 +105,7 @@ public class Magec {
 		achaman_buoy.setCircularOrbitPointingDown( star, 45+60, 8000, 700);
 		
 		PlanetAPI magec3a = system.addPlanet("tibicena", magec3, "Tibicena", "rocky_metallic", 200, 80, 800, 45);
+		magec3a.setCustomDescriptionId("planet_tibicena");
 		
 			SectorEntityToken achaman_station = system.addCustomEntity("achaman_enterprise_station", 
 																		"Achaman Enterprise Station",

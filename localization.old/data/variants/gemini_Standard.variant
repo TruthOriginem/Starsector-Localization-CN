@@ -1,27 +1,33 @@
 {
     "displayName": "标准",
-    "fluxCapacitors": 17,
-    "fluxVents": 20,
+    "fluxCapacitors": 7,
+    "fluxVents": 12,
     "goalVariant": true,
     "hullId": "gemini",
-    "hullMods": [],
+    "hullMods": [
+        "missleracks",
+        "targetingunit",
+        "reinforcedhull"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "gemini_Standard",
     "weaponGroups": [
         {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "heavymauler"}
+        },
+        {
             "autofire": false,
-            "mode": "ALTERNATING",
-            "weapons": {"WS 003": "typhoon"}
+            "mode": "LINKED",
+            "weapons": {"WS 003": "harpoonpod"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {
-                "WS 001": "heavyac",
-                "WS 002": "heavyac"
-            }
+            "weapons": {"WS 002": "flak"}
         }
     ],
-    "wings": ["broadsword_wing"]
+    "wings": ["gladius_wing"]
 }

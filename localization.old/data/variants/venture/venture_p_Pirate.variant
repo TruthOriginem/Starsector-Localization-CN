@@ -1,0 +1,44 @@
+{
+    "displayName": "海盗",
+    "fluxCapacitors": 0,
+    "fluxVents": 5,
+    "goalVariant": true,
+    "hullId": "venture_p",
+    "hullMods": [
+        "targetingunit",
+        "missile_autoloader"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "venture_p_Pirate",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "hurricane"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "breach",
+                "WS 005": "heavyac",
+                "WS 006": "heavyac",
+                "WS 007": "breach"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "irautolance"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "flak",
+                "WS 003": "flak"
+            }
+        }
+    ]
+}

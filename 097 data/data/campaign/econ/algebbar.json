@@ -1,0 +1,32 @@
+{
+	"starSystem":"algebbar",
+	"markets":[
+		{
+			"entities":["epiphany"],
+			"faction":"luddic_path",
+			"size":4,
+			"startingConditions":[
+				#"cottage_industry",
+				"luddic_majority",
+				"population_4",
+				"no_atmosphere",
+				"low_gravity",
+				"ore_sparse",
+				"volatiles_trace",
+				"cold",
+			],
+			"industries":[
+				"population",
+				"spaceport",
+				"mining",
+				"lightindustry",
+				"heavybatteries",
+				#"militarybase",
+				"patrolhq",
+			],
+		},
+	],
+}
+
+
+

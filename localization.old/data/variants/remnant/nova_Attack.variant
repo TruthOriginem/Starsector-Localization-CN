@@ -1,0 +1,54 @@
+{
+    "displayName": "进攻",
+    "fluxCapacitors": 47,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "nova",
+    "hullMods": [
+        "targetingunit",
+        "magazines"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "nova_Attack",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "autopulse",
+                "WS 001": "autopulse"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 006": "breachpod",
+                "WS 007": "breachpod",
+                "WS 008": "breachpod",
+                "WS 009": "breachpod"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "ionpulser",
+                "WS 003": "ionpulser",
+                "WS 004": "ionpulser",
+                "WS 005": "ionpulser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 010": "pdburst",
+                "WS 011": "pdburst",
+                "WS 012": "pdburst",
+                "WS 013": "pdburst"
+            }
+        }
+    ]
+}

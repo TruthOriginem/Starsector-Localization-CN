@@ -1,0 +1,241 @@
+{
+    "bounds": [
+        0,
+        48,
+        69,
+        29,
+        75,
+        20,
+        66,
+        13,
+        70,
+        3,
+        41,
+        1,
+        67,
+        -2,
+        69,
+        -28,
+        -1,
+        -50,
+        -9,
+        -36,
+        -21,
+        -47,
+        -32,
+        -46,
+        -65,
+        -33,
+        -74,
+        -9,
+        -56,
+        -6,
+        -56,
+        7,
+        -74,
+        10,
+        -65,
+        32,
+        -30,
+        48,
+        -21,
+        46,
+        -6,
+        35
+    ],
+    "center": [
+        55,
+        79
+    ],
+    "collisionRadius": 122,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -76,
+                14
+            ],
+            "style": "HIGH_TECH",
+            "width": 20
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -76,
+                -14
+            ],
+            "style": "HIGH_TECH",
+            "width": 20
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 24,
+            "location": [
+                -66,
+                34
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 24,
+            "location": [
+                -69,
+                28
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 24,
+            "location": [
+                -71,
+                23
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 24,
+            "location": [
+                -71,
+                -23
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 24,
+            "location": [
+                -69,
+                -28
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 24,
+            "location": [
+                -66,
+                -34
+            ],
+            "style": "HIGH_TECH",
+            "width": 6
+        }
+    ],
+    "height": 170,
+    "hullId": "shrike",
+    "hullName": "Shrike",
+    "hullSize": "DESTROYER",
+    "shieldCenter": [
+        6,
+        0
+    ],
+    "shieldRadius": 116,
+    "spriteName": "graphics/ships/shrike/shrike_base.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 80,
+            "arc": 190,
+            "id": "WS 000",
+            "locations": [
+                14,
+                36
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 210,
+            "id": "WS 001",
+            "locations": [
+                31,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -70,
+            "arc": 210,
+            "id": "WS 002",
+            "locations": [
+                14,
+                -36
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 25,
+            "arc": 220,
+            "id": "WS 003",
+            "locations": [
+                43,
+                22
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 005",
+            "locations": [
+                60,
+                -16
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 130,
+            "arc": 190,
+            "id": "WS 006",
+            "locations": [
+                -34,
+                34
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 230,
+            "arc": 190,
+            "id": "WS 007",
+            "locations": [
+                -34,
+                -34
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        }
+    ],
+    "width": 110
+}

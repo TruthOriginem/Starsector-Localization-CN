@@ -1,0 +1,33 @@
+{
+	"id":"advanced_countermeasures",
+	"governingAptitude":"combat",
+	"compressHullmods":false,
+	"elite":true,
+	"effectGroups":[
+		{
+			"name":"等级 1",
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.AdvancedCountermeasures$Level1"},
+			]
+		},
+		{
+			"name":"等级 2",
+			"requiredSkillLevel":2,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.AdvancedCountermeasures$Level2"},
+			]
+		},
+		{
+			"name":"等级 3",
+			"requiredSkillLevel":3,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.AdvancedCountermeasures$Level3A"},
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.AdvancedCountermeasures$Level3B"},
+			]
+		},
+	],
+}

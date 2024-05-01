@@ -1,17 +1,19 @@
 {
     "displayName": "Support",
-    "fluxCapacitors": 10,
-    "fluxVents": 4,
+    "fluxCapacitors": 11,
+    "fluxVents": 10,
     "goalVariant": true,
     "hullId": "fulgent",
-    "hullMods": [
-        "missleracks",
-        "advancedoptics"
-    ],
+    "hullMods": ["missleracks"],
     "permaMods": [],
-    "quality": 0,
+    "sMods": [],
     "variantId": "fulgent_Support",
     "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "ionpulser"}
+        },
         {
             "autofire": false,
             "mode": "ALTERNATING",
@@ -29,12 +31,11 @@
             }
         },
         {
-            "autofire": true,
+            "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 000": "taclaser",
-                "WS 001": "ionbeam",
-                "WS 002": "taclaser"
+                "WS 000": "ioncannon",
+                "WS 002": "ioncannon"
             }
         },
         {

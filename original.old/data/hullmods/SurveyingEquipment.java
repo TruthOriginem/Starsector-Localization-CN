@@ -27,9 +27,23 @@ public class SurveyingEquipment extends BaseLogisticsHullMod {
 		mag.put(HullSize.CAPITAL_SHIP, 40f);
 	}
 	
+	public static float SMOD_BONUS = 100f;
+	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		stats.getDynamic().getMod(Stats.getSurveyCostReductionId(Commodities.HEAVY_MACHINERY)).modifyFlat(id, (Float) mag.get(hullSize));
-		stats.getDynamic().getMod(Stats.getSurveyCostReductionId(Commodities.SUPPLIES)).modifyFlat(id, (Float) mag.get(hullSize));
+		boolean sMod = isSMod(stats);
+		
+		float mod = (Float) mag.get(hullSize);
+		if (sMod) {
+			mod *= 1f + (SMOD_BONUS / 100f);
+		}
+		
+		stats.getDynamic().getMod(Stats.getSurveyCostReductionId(Commodities.HEAVY_MACHINERY)).modifyFlat(id, mod);
+		stats.getDynamic().getMod(Stats.getSurveyCostReductionId(Commodities.SUPPLIES)).modifyFlat(id, mod);
+	}
+	
+	public String getSModDescriptionParam(int index, HullSize hullSize) {
+		if (index == 0) return "" + (int) SMOD_BONUS + "%";
+		return null;
 	}
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {

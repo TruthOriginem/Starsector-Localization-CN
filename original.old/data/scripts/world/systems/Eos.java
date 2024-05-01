@@ -123,6 +123,7 @@ public class Eos {
 		eos3.getSpec().setUseReverseLightForGlow(true);
 		eos3.applySpecChanges();
 		eos3.setCustomDescriptionId("planet_hesperus");
+		eos3.setInteractionImage("illustrations", "hesperus");
 		
 			PlanetAPI eos3a = system.addPlanet("ceyx", eos3, "Ceyx", "barren-bombarded", 0, 35, 440, 16);
 			eos3a.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "barren"));
@@ -130,6 +131,7 @@ public class Eos {
 			eos3a.getSpec().setUseReverseLightForGlow(true);
 			eos3a.applySpecChanges();
 			eos3a.setCustomDescriptionId("planet_ceyx");
+			eos3a.setFaction(Factions.KOL);
 			
 			PlanetAPI eos3b = system.addPlanet("daedaleon", eos3, "Daedaleon", "irradiated", 0, 50, 620, 33);
 			eos3b.getSpec().setGlowTexture(Global.getSettings().getSpriteName("hab_glows", "volturn"));

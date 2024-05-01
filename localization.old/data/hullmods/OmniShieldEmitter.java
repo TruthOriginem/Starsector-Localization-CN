@@ -9,12 +9,15 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
 public class OmniShieldEmitter extends BaseHullMod {
 
-	public static float ARC_PENALTY = 25f;
-	public static final float SHIELD_UPKEEP_BONUS = 25f;
+	public static float ARC_PENALTY = 30f;
+	//public static float SHIELD_UPKEEP_BONUS = 25f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		stats.getShieldArcBonus().modifyMult(id, 1f - ARC_PENALTY * 0.01f);
-		stats.getShieldUpkeepMult().modifyMult(id, 1f - SHIELD_UPKEEP_BONUS * 0.01f);
+		boolean sMod = isSMod(stats);
+		if (!sMod) {
+			stats.getShieldArcBonus().modifyMult(id, 1f - ARC_PENALTY * 0.01f);
+		}
+		//stats.getShieldUpkeepMult().modifyMult(id, 1f - SHIELD_UPKEEP_BONUS * 0.01f);
 	}
 	
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
@@ -28,7 +31,7 @@ public class OmniShieldEmitter extends BaseHullMod {
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		//if (index == 0) return "" + (int) ARC_PENALTY;
 		if (index == 0) return "" + (int) ARC_PENALTY + "%";
-		if (index == 1) return "" + (int) SHIELD_UPKEEP_BONUS + "%";
+		//if (index == 1) return "" + (int) SHIELD_UPKEEP_BONUS + "%";
 		return null;
 	}
 
@@ -48,7 +51,7 @@ public class OmniShieldEmitter extends BaseHullMod {
 		}
 		
 		if (ship.getVariant().getHullMods().contains("frontemitter")) {
-			return "不兼容于 固化护盾发生器";
+			return "Incompatible with Shield Conversion - Front";
 		}
 		
 		return null;

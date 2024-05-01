@@ -1,0 +1,20 @@
+{
+	"quality":0.5,
+	"displayName":"Support Fighter",
+	"hullId":"sarissa",
+	"variantId":"sarissa_Fighter",
+	"fluxVents":0,
+	"fluxCapacitors":0,
+	"hullMods":[], # array of strings
+	
+	# mode is either LINKED or ALTERNATING
+	# slot ids (WS ***) must match what's in the .ship file
+	"weaponGroups":[
+		{"mode":"ALTERNATING",
+		 "weapons":{
+		 			"WS 000":"lightac",
+		 			"WS 001":"lightac",
+		 		   },
+		},
+	],
+}

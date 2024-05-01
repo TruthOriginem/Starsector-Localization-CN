@@ -43,7 +43,7 @@ public class Zagan {
 		geburah.applySpecChanges();
 		
 		
-		system.addAsteroidBelt(zagan_star, 90, 3650, 500, 150, 300, Terrain.ASTEROID_BELT,  "失落浅滩 小行星带");
+		system.addAsteroidBelt(zagan_star, 90, 3650, 500, 150, 300, Terrain.ASTEROID_BELT,  "Shoals of Perdition");
 		system.addRingBand(zagan_star, "misc", "rings_asteroids0", 256f, 3, Color.white, 256f, 3600, 295f, null, null);
 		system.addRingBand(zagan_star, "misc", "rings_dust0", 256f, 3, Color.white, 256f, 3720, 305f, null, null);
 		
@@ -87,14 +87,14 @@ public class Zagan {
 			
 			// Mazalot Relay - L5 (behind)
 			SectorEntityToken relay = system.addCustomEntity("mazalot_relay", // unique id
-					 "Mazalot 通讯中继站", // name - if null, defaultName from custom_entities.json will be used
+					 "Mazalot Relay", // name - if null, defaultName from custom_entities.json will be used
 					 "comm_relay", // type of object, defined in custom_entities.json
 					 "persean"); // faction
 			relay.setCircularOrbitPointingDown(system.getEntityById("zagan"), 120, 5500, 220);
 			
 			// Mazalot Gate
 			SectorEntityToken gate = system.addCustomEntity("mazalot_gate", // unique id
-					 "Mazalot 之门", // name - if null, defaultName from custom_entities.json will be used
+					 "Mazalot Gate", // name - if null, defaultName from custom_entities.json will be used
 					 "inactive_gate", // type of object, defined in custom_entities.json
 					 null); // faction
 			gate.setCircularOrbit(system.getEntityById("zagan"), 240, 5500, 220);
@@ -143,6 +143,7 @@ public class Zagan {
 			ilm.getSpec().setGlowColor( new Color(0,255,150,255) );
 			ilm.getSpec().setUseReverseLightForGlow(true);
 			ilm.applySpecChanges();
+			ilm.setInteractionImage("illustrations", "ilm");
 			ilm.setCustomDescriptionId("planet_ilm");
 			
 			SectorEntityToken nebula1 = system.addTerrain(Terrain.NEBULA, new BaseTiledTerrain.TileParams(
@@ -174,7 +175,7 @@ public class Zagan {
 		yesod.setCustomDescriptionId("planet_yesod");
 		
 		// Zagan jump-point
-		JumpPointAPI jumpPoint2 = Global.getFactory().createJumpPoint("yesod_jump", "Yesod 跳跃点");
+		JumpPointAPI jumpPoint2 = Global.getFactory().createJumpPoint("yesod_jump", "Yesod Jump-point");
 		jumpPoint2.setCircularOrbit( zagan_star, 180 + 60, 9500, 580);
 		jumpPoint2.setRelatedPlanet(yesod);
 		system.addEntity(jumpPoint2);

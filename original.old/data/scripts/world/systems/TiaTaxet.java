@@ -12,6 +12,7 @@ import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.impl.campaign.ids.StarTypes;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
+import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator.StarSystemType;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner;
 import com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin.AsteroidFieldParams;
 import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldParams;
@@ -39,8 +40,14 @@ public class TiaTaxet {
 		
 		// double star, second partner: Tax'et, the violent star.
 		// gets a strong mag field (can we do coronas on fake stars? something to add to the TODO list ... )
-		PlanetAPI taxet_star = system.addPlanet("taxet", tia_star, "Ta'xet", StarTypes.RED_DWARF , 0, 400, 1600, 30);
-		
+		PlanetAPI taxet_star = system.addPlanet("taxet",
+												tia_star,
+												"Ta'xet",
+												StarTypes.RED_DWARF,
+												0, 400, 1600, 30);
+		system.setSecondary(taxet_star);
+		system.setType(StarSystemType.BINARY_FAR);
+		/*
 		SectorEntityToken taxet_star_field = system.addTerrain(Terrain.MAGNETIC_FIELD,
 				new MagneticFieldParams(taxet_star.getRadius() + 160f, // terrain effect band width 
 				(taxet_star.getRadius() + 160f) / 2f, // terrain effect middle radius
@@ -55,9 +62,10 @@ public class TiaTaxet {
 				new Color(90, 130, 180), 
 				new Color(105, 150, 190),
 				new Color(120, 175, 205),
-				new Color(135, 200, 220)));
-		
+				new Color(135, 200, 220))); 
+			
 		taxet_star_field.setCircularOrbit(taxet_star, 0, 0, 50);
+		*/
 		
 		SectorEntityToken tia_stable1 = system.addCustomEntity(null, null, "stable_location", "neutral");
 		tia_stable1.setCircularOrbitPointingDown(tia_star, 0 , 2900, 100);

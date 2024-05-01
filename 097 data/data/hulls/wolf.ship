@@ -1,0 +1,164 @@
+{
+    "bounds": [
+        54,
+        8,
+        54,
+        -8,
+        40,
+        -15,
+        19,
+        -12,
+        14,
+        -24,
+        2,
+        -21,
+        -8,
+        -15,
+        -33,
+        -15,
+        -39,
+        0,
+        -33,
+        16,
+        -7,
+        15,
+        2,
+        22,
+        14,
+        24,
+        19,
+        14,
+        43,
+        15,
+        44,
+        10
+    ],
+    "center": [
+        26,
+        42
+    ],
+    "collisionRadius": 80,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -36,
+                12
+            ],
+            "style": "HIGH_TECH",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -40,
+                0
+            ],
+            "style": "HIGH_TECH",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -36,
+                -11
+            ],
+            "style": "HIGH_TECH",
+            "width": 16
+        }
+    ],
+    "height": 96,
+    "hullId": "wolf",
+    "hullName": "Wolf",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        7,
+        0
+    ],
+    "shieldRadius": 70,
+    "spriteName": "graphics/ships/wolf/wolf_base.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 50,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 150,
+            "id": "WS 001",
+            "locations": [
+                11,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 90,
+            "arc": 200,
+            "id": "WS 002",
+            "locations": [
+                -13,
+                12
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -90,
+            "arc": 200,
+            "id": "WS 003",
+            "locations": [
+                -13,
+                -11
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 004",
+            "locations": [
+                45,
+                0
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 005",
+            "locations": [
+                11,
+                20
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 006",
+            "locations": [
+                11,
+                -19
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "MISSILE"
+        }
+    ],
+    "width": 52
+}

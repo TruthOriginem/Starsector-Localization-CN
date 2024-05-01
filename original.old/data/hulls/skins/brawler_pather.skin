@@ -8,6 +8,8 @@
 	"tech":"Luddic Path",
 	"spriteName":"graphics/ships/brawler/brawler_pather.png",
 	"baseValueMult":0.75,
+	"suppliesToRecover":6,
+	"suppliesPerMonth":6,
 	"removeWeaponSlots":[], 		# ids
 	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
 	"removeBuiltInMods":[], 		# hullmod ids

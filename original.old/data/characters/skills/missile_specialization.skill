@@ -11,8 +11,9 @@
 			"effects":[
 				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.MissileSpecialization$Level1"},
 				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.MissileSpecialization$Level2"},
-				{"type":"HULLMOD_UNLOCK", "hullmods":{"eccm":1}},		
-				{"type":"HULLMOD_UNLOCK", "hullmods":{"missleracks":1}},		
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"eccm":1}},
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"missleracks":1}},
+				#{"type":"HULLMOD_UNLOCK", "hullmods":{"missile_autoloader":1}},
 			]
 		},
 		{

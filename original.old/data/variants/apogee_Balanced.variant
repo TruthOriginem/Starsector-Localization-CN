@@ -1,23 +1,27 @@
 {
     "displayName": "Balanced",
     "fluxCapacitors": 0,
-    "fluxVents": 20,
+    "fluxVents": 19,
     "goalVariant": true,
     "hullId": "apogee",
     "hullMods": [
         "stabilizedshieldemitter",
-        "targetingunit"
+        "targetingunit",
+        "magazines"
     ],
     "permaMods": [],
+    "sMods": [],
     "variantId": "apogee_Balanced",
     "weaponGroups": [
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {
-                "WS 006": "amblaster",
-                "WS 007": "amblaster"
-            }
+            "weapons": {"WS 008": "autopulse"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "locust"}
         },
         {
             "autofire": false,
@@ -27,19 +31,25 @@
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 009": "locust"}
+            "weapons": {"WS 007": "ioncannon"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 008": "hil"}
+            "weapons": {"WS 006": "ionbeam"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
                 "WS 001": "heavyburst",
-                "WS 002": "heavyburst",
+                "WS 002": "heavyburst"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
                 "WS 003": "pdburst",
                 "WS 004": "pdburst"
             }

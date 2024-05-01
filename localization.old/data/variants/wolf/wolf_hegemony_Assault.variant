@@ -1,17 +1,17 @@
 {
     "displayName": "突击",
-    "fluxCapacitors": 7,
+    "fluxCapacitors": 5,
     "fluxVents": 10,
     "hullId": "wolf_hegemony",
-    "hullMods": ["fluxdistributor"],
+    "hullMods": ["missleracks"],
     "permaMods": [],
-    "quality": 0.75,
+    "sMods": [],
     "variantId": "wolf_hegemony_Assault",
     "weaponGroups": [
         {
-            "autofire": false,
+            "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 004": "heavyblaster"}
+            "weapons": {"WS 004": "pulselaser"}
         },
         {
             "autofire": false,

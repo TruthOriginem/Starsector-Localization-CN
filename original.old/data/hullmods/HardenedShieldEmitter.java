@@ -9,7 +9,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 public class HardenedShieldEmitter extends BaseHullMod {
 
 	public static float PIERCE_MULT = 0.5f;
-	public static float SHIELD_BONUS = 15f;
+	public static float SHIELD_BONUS = 20f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		stats.getShieldDamageTakenMult().modifyMult(id, 1f - SHIELD_BONUS * 0.01f);

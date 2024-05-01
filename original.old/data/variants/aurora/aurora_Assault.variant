@@ -1,13 +1,15 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 25,
-    "fluxVents": 30,
+    "fluxCapacitors": 24,
+    "fluxVents": 0,
     "goalVariant": true,
     "hullId": "aurora",
     "hullMods": [
-        "fluxdistributor",
         "hardenedshieldemitter",
-        "stabilizedshieldemitter"
+        "targetingunit",
+        "fluxbreakers",
+        "missleracks",
+        "magazines"
     ],
     "permaMods": [],
     "sMods": [],
@@ -15,43 +17,43 @@
     "weaponGroups": [
         {
             "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "phasecl"}
+        },
+        {
+            "autofire": false,
             "mode": "ALTERNATING",
             "weapons": {
-                "WS 010": "reaper",
-                "WS 011": "reaper",
-                "WS 012": "reaper",
-                "WS 013": "reaper"
+                "WS 010": "atropos",
+                "WS 011": "atropos",
+                "WS 012": "atropos",
+                "WS 013": "atropos"
             }
         },
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 006": "breachpod"}
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 007": "pulselaser",
-                "WS 008": "pulselaser",
-                "WS 009": "pulselaser"
-            }
+            "weapons": {"WS 006": "sabotpod"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {
-                "WS 003": "ioncannon",
-                "WS 004": "ioncannon",
-                "WS 005": "ioncannon"
-            }
+            "weapons": {"WS 008": "ionpulser"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 007": "pulselaser"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
                 "WS 001": "pdlaser",
-                "WS 002": "pdlaser"
+                "WS 002": "pdlaser",
+                "WS 003": "pdlaser",
+                "WS 004": "pdlaser",
+                "WS 005": "pdlaser"
             }
         }
     ]

@@ -1,30 +1,42 @@
 {
     "displayName": "Custom",
-    "fluxCapacitors": 22,
+    "fluxCapacitors": 18,
     "fluxVents": 30,
     "hullId": "apogee",
     "hullMods": [
         "dedicated_targeting_core",
         "fluxdistributor",
-        "unstable_injector"
+        "stabilizedshieldemitter",
+        "advancedshieldemitter"
     ],
     "permaMods": [],
+    "sMods": [],
     "variantId": "apogee_Starting",
     "weaponGroups": [
         {
             "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS 008": "miningblaster"}
+            "weapons": {"WS 008": "pulselaser"}
         },
         {
             "autofire": true,
-            "mode": "ALTERNATING",
+            "mode": "LINKED",
             "weapons": {"WS 009": "pilum"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 005": "heatseeker"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 007": "taclaser"}
         },
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 005": "heatseeker"}
+            "weapons": {"WS 006": "irpulse"}
         },
         {
             "autofire": true,
@@ -33,9 +45,7 @@
                 "WS 001": "pdlaser",
                 "WS 002": "pdlaser",
                 "WS 003": "pdlaser",
-                "WS 004": "pdlaser",
-                "WS 006": "taclaser",
-                "WS 007": "taclaser"
+                "WS 004": "pdlaser"
             }
         }
     ]

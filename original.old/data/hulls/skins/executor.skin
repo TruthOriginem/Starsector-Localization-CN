@@ -1,0 +1,48 @@
+{
+	"baseHullId":"pegasus",
+	"skinHullId":"executor",
+	"descriptionId":"executor",
+	"hullName":"Executor",
+	"ordnancePoints":350,
+	#"incompatibleWithBaseHull":true, # for the autofit dialog
+	#"systemId":"",
+	#"descriptionPrefix":"The Executor is a special modification of the Pegasus-class hull. Modifying starship designs at the forge-level is a feat only available to polities willing to undergo the high cost of employing highly specialized forge-engineers. After all, why invest in risky innovations when the bones of the Domain provide ship designs to fill every anticipated role? The Executor-class outfitted to Diktat specs tends to underperform the grand pronouncements set out by the original proposal, though the official reports on the matter have been subtly altered by parties seeking to avoid punishment. Nonetheless, all agree that the project was delivered on schedule and its results make for a fine and terrifying sight in the skies of the Askonia system.",
+	"tags":["LG_bp"],
+	"tech":"Lion's Guard",
+	"builtInWings": [],
+	"fighterBays":0,
+	"spriteName":"graphics/ships/pegasus/executor.png",
+	"baseValueMult":1.25,
+	"removeWeaponSlots":[], 			# ids
+	"removeEngineSlots":[], 			# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 			# hullmod ids
+	"removeBuiltInWeapons":[], 			# weapon slot ids
+	"systemId":"highenergyfocus",
+	"maxSpeed":50,
+	"shieldEfficiency":0.6,
+	"builtInMods":["solar_shielding", "andrada_mods", "coherer"],
+	#"builtInMods":["solar_shielding", "andrada_mods"],
+	"builtInWeapons":{
+    },
+    "weaponSlotChanges":{
+		"WS 000":{
+			"type": "ENERGY",
+			"size": "LARGE"
+		},
+		"WS 001":{
+			"type": "ENERGY",
+			"size": "LARGE"
+		},
+	},
+	"engineSlotChanges":{
+		"3":{"length": 64, "width":20},
+		"4":{"length": 64, "width":20},
+		"5":{"length": 64, "width":20},
+		"6":{"length": 64, "width":20},
+		"7":{"length": 64, "width":20},
+		"8":{"length": 64, "width":20},
+	},    
+}
+
+
+

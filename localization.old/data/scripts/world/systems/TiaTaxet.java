@@ -12,6 +12,7 @@ import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.impl.campaign.ids.StarTypes;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
+import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator.StarSystemType;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner;
 import com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin.AsteroidFieldParams;
 import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldParams;
@@ -39,8 +40,14 @@ public class TiaTaxet {
 		
 		// double star, second partner: Tax'et, the violent star.
 		// gets a strong mag field (can we do coronas on fake stars? something to add to the TODO list ... )
-		PlanetAPI taxet_star = system.addPlanet("taxet", tia_star, "Ta'xet", StarTypes.RED_DWARF , 0, 400, 1600, 30);
-		
+		PlanetAPI taxet_star = system.addPlanet("taxet",
+												tia_star,
+												"Ta'xet",
+												StarTypes.RED_DWARF,
+												0, 400, 1600, 30);
+		system.setSecondary(taxet_star);
+		system.setType(StarSystemType.BINARY_FAR);
+		/*
 		SectorEntityToken taxet_star_field = system.addTerrain(Terrain.MAGNETIC_FIELD,
 				new MagneticFieldParams(taxet_star.getRadius() + 160f, // terrain effect band width 
 				(taxet_star.getRadius() + 160f) / 2f, // terrain effect middle radius
@@ -55,9 +62,10 @@ public class TiaTaxet {
 				new Color(90, 130, 180), 
 				new Color(105, 150, 190),
 				new Color(120, 175, 205),
-				new Color(135, 200, 220)));
-		
+				new Color(135, 200, 220))); 
+			
 		taxet_star_field.setCircularOrbit(taxet_star, 0, 0, 50);
+		*/
 		
 		SectorEntityToken tia_stable1 = system.addCustomEntity(null, null, "stable_location", "neutral");
 		tia_stable1.setCircularOrbitPointingDown(tia_star, 0 , 2900, 100);
@@ -65,7 +73,7 @@ public class TiaTaxet {
 		// An asteroid belts
 		system.addRingBand(tia_star, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 4300, 220f, null, null);
 		system.addRingBand(tia_star, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 4400, 226f, null, null);
-		system.addAsteroidBelt(tia_star, 150, 3600, 170, 200, 250, Terrain.ASTEROID_BELT, "Lagua 小行星带");
+		system.addAsteroidBelt(tia_star, 150, 3600, 170, 200, 250, Terrain.ASTEROID_BELT, "Lagua's Torus");
 		
 		// Arbitrary Asteroid field 
 		SectorEntityToken tia_field1 = system.addTerrain(Terrain.ASTEROID_FIELD,
@@ -76,13 +84,13 @@ public class TiaTaxet {
 					40, // max asteroid count
 					4f, // min asteroid radius 
 					16f, // max asteroid radius
-					"Tia-Tax'et 小行星带")); // null for default name
+					"Tia-Tax'et Asteroid Cluster")); // null for default name
 		
 		tia_field1.setCircularOrbit(tia_star, 180, 4500, 250);
 		
 		
 		// Abandoned shipyard /research station
-			SectorEntityToken abandoned_station1 = system.addCustomEntity("abandoned_spacedock", "遗弃的研究站", "station_side00", "neutral");
+			SectorEntityToken abandoned_station1 = system.addCustomEntity("abandoned_spacedock", "Abandoned Research Station", "station_side00", "neutral");
 			//abandoned_station1.setCustomDescriptionId("station_tiataxet_abandoned_spacedock");
 			abandoned_station1.setInteractionImage("illustrations", "space_wreckage");
 			abandoned_station1.setCircularOrbitPointingDown(system.getEntityById("tia"), 180, 4450, 250);
@@ -161,7 +169,7 @@ public class TiaTaxet {
 		
 		
 		// Tia-Tax'et Jumppoint
-		JumpPointAPI jumpPoint2 = Global.getFactory().createJumpPoint("tia-taxet_jump", "Tia-Tax'et 跳跃点");
+		JumpPointAPI jumpPoint2 = Global.getFactory().createJumpPoint("tia-taxet_jump", "Tia-Tax'et Jump-point");
 		jumpPoint2.setCircularOrbit( system.getEntityById("tia"), 270+60, 11500, 800);
 		jumpPoint2.setRelatedPlanet(tia2);
 		system.addEntity(jumpPoint2);

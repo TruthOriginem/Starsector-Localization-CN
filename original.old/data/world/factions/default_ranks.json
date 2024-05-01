@@ -21,6 +21,10 @@
 		
 		"knightCaptain":{"name":"Knight-Captain"},
 		
+		"chiefHighInspector":{"name":"Chief High Inspector"},
+		"deputyStarMarshal":{"name":"Deputy Star Marshal"},
+		"guardHighDeputyExecutor":{"name":"Guard High Deputy Executor"},
+		
 		"citizen":{"name":"Citizen"},
 		"agent":{"name":"Agent"},
 		"specialAgent":{"name":"Special Agent"},
@@ -30,7 +34,12 @@
 		
 		"brother":{name:"Brother"},
 		"sister":{name:"Sister"},
+		"father":{name:"Father"},
+		"mother":{name:"Mother"},
+		"elder":{name:"Elder"},
+		
 		"terrorist":{name:"Terrorist"},
+		"freedomFighter":{name:"Freedom Fighter"},
 		"clone":{name:"Clone"},
 		
 	},
@@ -46,11 +55,15 @@
 		"outpostCommander":{"name":"Outpost Commander"},
 		"portmaster":{"name":"Portmaster"},
 		
+		"intelligenceDirector":{"name":"Director of Intelligence"},
+		"guardLeader":{"name":"Director of Special Forces"},
+		
 		"supplyOfficer":{"name":"Quartermaster"},
 		"supplyManager":{"name":"Supply Manager"},
 		"medicalSupplier":{"name":"Medical Supplier"},
 		
 		"administrator":{"name":"Administrator"},
+		"military_administrator":{"name":"Administrator"},
 		"freeAdmin":{"name":"Freelance Administrator"},
 		
 		"guildMaster":{"name":"Guildmaster"},
@@ -91,6 +104,7 @@
 		
 		"doctor":{name:"Doctor"},
 		"hacker":{name:"Hacker"},
+		"hermit":{name:"Hermit"},
 		"pensioner":{name:"Pensioner"},
 		"activist":{name:"Activist"},
 		"scientist":{name:"Scientist"},
@@ -100,6 +114,12 @@
 		"aristocrat":{name:"Aristocrat"},
 		
 		"synodSubcurate":{name:"Synod Subcurate"},
+		"archcurate":{name:"Archcurate"},
+		"shrinePriest":{name:"Curate Sacraria"},
+		"excubitorOrbis":{"name":"Excubitor Orbis"},
+		"initiate":{"name":"Initiate"},
+		"novice":{"name":"Novice"},
+		"pilgrim":{"name":"Pilgrim"},
 	},
 }
 

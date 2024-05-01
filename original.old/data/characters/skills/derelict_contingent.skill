@@ -17,6 +17,7 @@
 			"effectBasedOnLevel":false,
 			"effects":[
 				{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.DerelictContingent$Level1"},
+				#{"type":"FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.DerelictContingent$Level2"},
 				#{"type":"HULLMOD_UNLOCK", "hullmods":{"shield_shunt":1}},
 			]
 		},

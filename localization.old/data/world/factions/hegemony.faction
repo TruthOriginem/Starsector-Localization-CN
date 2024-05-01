@@ -29,50 +29,92 @@
 	# multiplier for how often hulls show up in the faction's fleets
 	"hullFrequency":{
 		"tags":{
-			"heg_aux_bp":2,
+			"heg_aux_bp":1,
 			"XIV_bp":0.25,
 		},
 		"hulls":{
-			"buffalo2":0, # just say no
+		
 		},
 	},
 	# ships the faction gets access to when importing S&W out-of-faction
 	"shipsWhenImporting":{
-		"tags":["base_bp", "heg_aux_bp", "lowtech_bp"],
+		"tags":[],
 		"hulls":[
 		],
 	},
 	"knownShips":{
-		"tags":["base_bp", "heg_aux_bp", "lowtech_bp", "midline_bp", "XIV_bp", "hegemony"],
+		"tags":["heg_aux_bp", "XIV_bp", "hegemony"],
 		"hulls":[
-			"atlas",
-			"monitor",
+			"cerberus",
+			"crig",
+			"ox",
+			"dram",
+			"phaeton",
 			"prometheus",
-			"legion",
-			"onslaught",
-			"gryphon",
-			"eagle",
+			"shepherd",
+			"mule",
+			"venture",
+			"atlas",
+			"hermes",
+			"mudskipper",
+			"nebula",
 			"valkyrie",
-			"vanguard",
-			"manticore",
-		],
-	},
-	# listing ships here will make the faction mostly use them even if other hulls become available
-	"priorityShips":{
-		"tags":[],
-		"hulls":[
+			"starliner",
+			"tarsus",
+			"colossus",
+			"buffalo_hegemony",
+			
+			"hound_hegemony",
+			"kite_hegemony",
+			"wolf_hegemony",
+			"lasher",
+			"centurion",
+			"gremlin",
+			#"vanguard", ? - no, LC
+			
 			"condor",
+			"enforcer",
+			"enforcer_xiv",
+			#"manticore", ? - no, LC
+			
+			"eagle",
+			"dominator",
+			"dominator_xiv",
+			"eagle_xiv",
+			"falcon_xiv",
 			"mora",
+			
 			"legion",
 			"onslaught",
 			"onslaught_xiv",
 		],
 	},
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	"priorityShips":{
+		"tags":[],
+		# capitals are all priority - this makes it so that they will get picked for the "capital" size ship
+		# without concern for matching the doctrine, i.e. a Legion will be as likely a pick as an Onslaught
+		# despite the Legion being a carrier and the carrier portion of the doctrine being low 
+		"hulls":[
+			"legion",
+			"legion_xiv",
+			"onslaught",
+			"onslaught_xiv",
+			
+			# need to be prioritized otherwise the Legion eats any and all carrier points
+			"condor",
+			"mora",
+		],
+	},
 	"knownFighters":{
-		"tags":["base_bp", "lowtech_bp", "midline_bp", "hegemony"],
+		"tags":["hegemony"],
 		"fighters":[
-			"thunder_wing",
+			"talon_wing",
+			"broadsword_wing",
+			"warthog_wing",
+			"piranha_wing",
 			"hoplon_wing",
+			"longbow_wing",
 		],
 	},
 	"priorityFighters":{
@@ -81,19 +123,66 @@
 		],
 	},
 	"knownWeapons":{
-		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "missile_bp", "hegemony"],
+		"tags":["hegemony"],
 		"weapons":[
+			"lightmg",
+			"lightdualmg",
+			"vulcan",
+			"lightac",
+			"lightdualac",
+			"lightag",
+			"lightneedler",
 			"railgun",
-			"dualflak",
-			"heavymauler",
+
+			"heavymortar",
+			"chaingun",
+			"heavyac",
 			"hveldriver",
+			"heavymauler",
+			"heavyneedler",
+			"flak",
+			"dualflak",
+			
 			"gauss",
-			"mjolnir",
+			"hephag",
+			"mark9",
+			"devastator",
+			"multineedler",
+			
+			
+			"reaper",
+			"atropos",
+			"atropos_single",
+			"swarmer",
+			"annihilator",
+			"heatseeker",
+			"harpoon",
+			"harpoon_single",
+			"breach",
+			"sabot",
+			"sabot_single",
+			
+			"pilum",
 			"breachpod",
+			"harpoonpod",
 			"sabotpod",
 			"phasecl",
+			"typhoon",
+			
+			# not mountable on any Hegemony ships (except the Legion XIV, which they don't have immediate access to);
+			# still available to buy from them
 			"cyclone",
 			"hurricane",
+			"squall",
+			"locust",
+			
+			"taclaser",
+			"pdlaser",
+			"lrpdlaser",
+			"ioncannon",
+			"gravitonbeam",
+			"pulselaser",
+			"phasebeam",
 		],
 	},
 	"priorityWeapons":{
@@ -102,38 +191,44 @@
 		],
 	},
 	"knownHullMods":{
-		"tags":["base_bp", "hegemony"],
+		"tags":["standard", "hegemony"],
 		"hullMods":[
-			"advancedshieldemitter",
-			"turretgyros",
-			"armoredweapons",
-			"augmentedengines",
-			"autorepair",
-			"expanded_deck_crew",
-			"magazines",
-			"missleracks",
-			"extendedshieldemitter",
-			"frontemitter",
-			"frontshield",
-			"heavyarmor",
-			"insulatedengine",
-			"targetingunit",
-			"nav_relay",
-			"operations_center",
-			"fluxbreakers",
-			"stabilizedshieldemitter",
-			"frontshield",  # makeshift
-			"surveying_equipment",
-			"efficiency_overhaul",
-			"converted_fighterbay",
-			"ballistic_rangefinder",
-			"shield_shunt",
 		],
 	},
+	"weaponSellFrequency":{
+		"vulcan":10,
+		"lightag":5,
+		"lightneedler":10,
+		"railgun":10,
+
+		"hveldriver":10,
+		"heavymauler":10,
+		"heavyneedler":10,
+		"flak":5,
+		"dualflak":5,
+		
+		"gauss":10,
+		"hephag":10,
+		"multineedler":5,
+		
+		"sabot":5,
+		"harpoon":5,
+		"reaper":5,
+		"breachpod":5,
+		"harpoonpod":5,
+		"sabotpod":5,
+	},
+	"fighterSellFrequency":{
+	},
+	"hullmodSellFrequency":{
+		"heavyarmor":10,
+		"ballistic_rangefinder":10,
+		"targetingunit":10,
+	},	
 	"factionDoctrine":{
-		"warships":4,
+		"warships":5,
 		"carriers":2,
-		"phaseShips":1,
+		"phaseShips":0,
 		
 		"officerQuality":5,
 		"shipQuality":1,
@@ -148,14 +243,28 @@
 		"combatFreighterCombatUseFractionWhenPriority":0,   # as part of normal combat lineup, when marked as priority ship
 		"autofitRandomizeProbability":0.1,
 		
+		"officerSkillsShuffleProbability":1f,
+		"officerSkills":[
+			"ballistic_mastery",
+			"ordnance_expert",
+		],
+		
 		"commanderSkillsShuffleProbability":1,
 		"commanderSkills":[
 			"crew_training",
 			"officer_training",
-			"coordinated_maneuvers",
-			"support_doctrine",
+			
+			#"tactical_drills", # keep it to two skills to make sure all high-level commanders get level 6 officers
+			#"coordinated_maneuvers",
+			#"support_doctrine",
 		],
 	},
+	"shipRoles":{
+		"combatSmall":{
+			"includeDefault":true,
+			"gremlin_Strike":10,
+		},
+	},	
 	"illegalCommodities":[
 		"drugs",
 		"organs",
@@ -199,6 +308,7 @@
 			"graphics/portraits/portrait_hegemony11.png",
 			"graphics/portraits/portrait_hegemony14.png",
 			"graphics/portraits/portrait_hegemony16.png",
+			"graphics/portraits/portrait_hegemony17.png",
 			"graphics/portraits/portrait16.png",
 			"graphics/portraits/portrait22.png",
 			"graphics/portraits/portrait34.png",

@@ -1,28 +1,28 @@
 {
     "displayName": "Strike",
     "fluxCapacitors": 10,
-    "fluxVents": 3,
+    "fluxVents": 1,
     "goalVariant": true,
     "hullId": "gremlin",
     "hullMods": ["missleracks"],
     "permaMods": [],
-    "quality": 0.75,
+    "sMods": [],
     "variantId": "gremlin_Strike",
     "weaponGroups": [
         {
-            "autofire": false,
-            "mode": "ALTERNATING",
-            "weapons": {
-                "WS 002": "hammer",
-                "WS 003": "hammer"
-            }
-        },
-        {
-            "autofire": false,
+            "autofire": true,
             "mode": "LINKED",
             "weapons": {
                 "WS 000": "lightag",
                 "WS 001": "lightag"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 002": "atropos",
+                "WS 003": "atropos"
             }
         }
     ]

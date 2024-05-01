@@ -1,0 +1,23 @@
+{
+	"baseHullId":"manticore",
+	"skinHullId":"manticore_luddic_path",
+	"hullName":"Manticore (LP)",
+	"descriptionId":"manticore",
+	"descriptionPrefix":"Fanatics of the Luddic Path have crudely modified this ship, overloading the engines and power systems then replacing the original ballistic turret mount with a massive missile launcher, the better to execute bold alpha-strikes upon capital ships and cruisers.",
+	"tags":["rare_bp"],
+	"tech":"Luddic Path",
+	"suppliesToRecover":14,
+	"suppliesPerMonth":14,
+	"spriteName":"graphics/ships/manticore/manticore_pather.png",
+	"removeWeaponSlots":[],
+	"weaponSlotChanges":{
+		"WS 000":{"type": "MISSILE"},
+		"WS 004":{"type": "BALLISTIC"},
+		"WS 005":{"type": "BALLISTIC"},
+	},
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":["ballistic_rangefinder"], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["safetyoverrides","ill_advised"],
+    },    
+}

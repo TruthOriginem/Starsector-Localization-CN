@@ -49,7 +49,7 @@ public class Valhalla {
 		system.addAsteroidBelt(star, 100, 3150, 256, 150, 250, Terrain.ASTEROID_BELT, "The Valkyries");
 		
 			// Valkyrie jump
-			JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("valkyrie_jump", " Valkyrie Jump-point");
+			JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("valkyrie_jump", "Valkyrie Jump-point");
 			OrbitAPI orbit = Global.getFactory().createCircularOrbit(star, 180, 3325, 195);
 			jumpPoint.setOrbit(orbit);
 			jumpPoint.setStandardWormholeToHyperspaceVisual();
@@ -145,7 +145,9 @@ public class Valhalla {
 	// Red Dwarf star Ragnar & friends
 	// orbited by station, relay, and asteroid field each 1/3rd orbit off from one another.
 		PlanetAPI val4 = system.addPlanet("ragnar", star, "Ragnar", StarTypes.RED_DWARF, 45, 350, 14000, 1000);
+		
 		system.setSecondary(val4);
+
 		//val4.setCustomDescriptionId("star_red_dwarf");
 		system.addCorona(val4, 150, 2f, 0f, 1f);
 		

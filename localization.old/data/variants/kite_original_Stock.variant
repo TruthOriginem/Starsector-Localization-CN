@@ -1,11 +1,13 @@
 {
     "displayName": "货运",
-    "fluxCapacitors": 10,
+    "fluxCapacitors": 8,
     "fluxVents": 10,
+    "goalVariant": true,
     "hullId": "kite_original",
     "hullMods": [
         "hardened_subsystems",
-        "blast_doors"
+        "blast_doors",
+        "insulatedengine"
     ],
     "permaMods": [],
     "sMods": [],

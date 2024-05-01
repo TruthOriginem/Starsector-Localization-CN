@@ -1,12 +1,12 @@
 {
     "displayName": "Elite",
-    "fluxCapacitors": 25,
+    "fluxCapacitors": 10,
     "fluxVents": 30,
     "hullId": "dominator_xiv",
     "hullMods": [
-        "heavyarmor",
         "armoredweapons",
-        "targetingunit"
+        "targetingunit",
+        "fluxdistributor"
     ],
     "permaMods": [],
     "sMods": [],
@@ -15,37 +15,39 @@
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 012": "hephag"}
+            "weapons": {
+                "WS 012": "gauss",
+                "WS 013": "gauss"
+            }
         },
         {
             "autofire": false,
             "mode": "ALTERNATING",
             "weapons": {
-                "WS 014": "typhoon",
-                "WS 015": "typhoon",
-                "WS 016": "typhoon"
+                "WS 014": "breachpod",
+                "WS 015": "breachpod",
+                "WS 016": "breachpod"
             }
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS 013": "mark9"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 001": "lightmg",
-                "WS 002": "lightmg",
-                "WS 003": "lightmg",
-                "WS 004": "lightmg",
-                "WS 005": "lightmg",
-                "WS 006": "lightmg",
-                "WS 007": "lightmg",
-                "WS 008": "lightmg",
-                "WS 009": "lightmg",
-                "WS 010": "flak",
-                "WS 011": "flak"
+                "WS 010": "hveldriver",
+                "WS 011": "hveldriver"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "vulcan",
+                "WS 003": "vulcan",
+                "WS 004": "vulcan",
+                "WS 005": "vulcan",
+                "WS 007": "vulcan",
+                "WS 008": "vulcan",
+                "WS 009": "vulcan"
             }
         }
     ]

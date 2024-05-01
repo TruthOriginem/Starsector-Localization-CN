@@ -1,6 +1,6 @@
 {
     "displayName": "密接支援",
-    "fluxCapacitors": 10,
+    "fluxCapacitors": 12,
     "fluxVents": 20,
     "goalVariant": true,
     "hullId": "enforcer",
@@ -9,7 +9,7 @@
         "auxiliarythrusters"
     ],
     "permaMods": [],
-    "quality": 0.5,
+    "sMods": [],
     "variantId": "enforcer_CS",
     "weaponGroups": [
         {
@@ -24,8 +24,8 @@
             "autofire": false,
             "mode": "ALTERNATING",
             "weapons": {
-                "WS 006": "heatseeker",
-                "WS 009": "heatseeker"
+                "WS 006": "sabot",
+                "WS 009": "sabot"
             }
         },
         {

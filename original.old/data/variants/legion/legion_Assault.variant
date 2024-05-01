@@ -1,7 +1,7 @@
 {
     "displayName": "Assault",
     "fluxCapacitors": 0,
-    "fluxVents": 18,
+    "fluxVents": 39,
     "goalVariant": true,
     "hullId": "legion",
     "hullMods": [
@@ -9,12 +9,17 @@
         "missleracks",
         "armoredweapons",
         "autorepair",
-        "expanded_deck_crew"
+        "dedicated_targeting_core"
     ],
     "permaMods": [],
     "sMods": [],
     "variantId": "legion_Assault",
     "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 000": "mark9"}
+        },
         {
             "autofire": false,
             "mode": "ALTERNATING",
@@ -29,9 +34,12 @@
         {
             "autofire": true,
             "mode": "LINKED",
+            "weapons": {"WS 001": "hephag"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
             "weapons": {
-                "WS 000": "dualflak",
-                "WS 001": "dualflak",
                 "WS 018": "vulcan",
                 "WS 019": "vulcan",
                 "WS 020": "vulcan",

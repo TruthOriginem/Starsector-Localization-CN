@@ -1,12 +1,15 @@
 {
     "displayName": "护航",
-    "fluxCapacitors": 8,
+    "fluxCapacitors": 3,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "monitor",
-    "hullMods": ["extendedshieldemitter"],
+    "hullMods": [
+        "extendedshieldemitter",
+        "hardenedshieldemitter"
+    ],
     "permaMods": [],
-    "quality": 1,
+    "sMods": [],
     "variantId": "monitor_Escort",
     "weaponGroups": [
         {
@@ -21,8 +24,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 003": "taclaser",
-                "WS 004": "taclaser"
+                "WS 003": "lightac",
+                "WS 004": "lightac"
             }
         }
     ]

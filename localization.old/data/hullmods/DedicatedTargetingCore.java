@@ -7,10 +7,11 @@ import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 
 public class DedicatedTargetingCore extends BaseHullMod {
 
-	private static Map mag = new HashMap();
+	public static Map mag = new HashMap();
 	static {
 		mag.put(HullSize.FIGHTER, 0f);
 		mag.put(HullSize.FRIGATE, 0f);
@@ -25,15 +26,25 @@ public class DedicatedTargetingCore extends BaseHullMod {
 		return null;
 	}
 	
+	public String getSModDescriptionParam(int index, HullSize hullSize) {
+		if (index == 0) return "" + ((Float) IntegratedTargetingUnit.mag.get(HullSize.CRUISER)).intValue() + "%";
+		if (index == 1) return "" + ((Float) IntegratedTargetingUnit.mag.get(HullSize.CAPITAL_SHIP)).intValue() + "%";
+		return null;
+	}
+	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		stats.getBallisticWeaponRangeBonus().modifyPercent(id, (Float) mag.get(hullSize));
-		stats.getEnergyWeaponRangeBonus().modifyPercent(id, (Float) mag.get(hullSize));
+		boolean sMod = isSMod(stats);
+		Map map = mag;
+		if (sMod) map = IntegratedTargetingUnit.mag;
+		stats.getBallisticWeaponRangeBonus().modifyPercent(id, (Float) map.get(hullSize));
+		stats.getEnergyWeaponRangeBonus().modifyPercent(id, (Float) map.get(hullSize));
 	}
 
 	@Override
 	public boolean isApplicableToShip(ShipAPI ship) {
 		return (ship.getHullSize() == HullSize.CAPITAL_SHIP || ship.getHullSize() == HullSize.CRUISER) &&
 				!ship.getVariant().getHullMods().contains("targetingunit") &&
+				!ship.getVariant().getHullMods().contains(HullMods.DISTRIBUTED_FIRE_CONTROL) &&
 				!ship.getVariant().getHullMods().contains("advancedcore");
 	}
 	
@@ -47,6 +58,9 @@ public class DedicatedTargetingCore extends BaseHullMod {
 		}
 		if (ship.getVariant().getHullMods().contains("advancedcore")) {
 			return "不兼容于 先进目标定位核心";
+		}
+		if (ship.getVariant().getHullMods().contains(HullMods.DISTRIBUTED_FIRE_CONTROL)) {
+			return "不兼容于 分布式火控系统";
 		}
 		
 		return null;

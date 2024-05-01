@@ -1,0 +1,74 @@
+{
+    "displayName": "精英",
+    "fluxCapacitors": 0,
+    "fluxVents": 46,
+    "goalVariant": true,
+    "hullId": "executor",
+    "hullMods": [
+        "missleracks",
+        "targetingunit"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "executor_Elite",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 000": "gigacannon",
+                "WS 001": "gigacannon"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 012": "squall",
+                "WS 013": "squall"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "heavyneedler",
+                "WS 009": "heavyneedler",
+                "WS 010": "heavyneedler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "kineticblaster",
+                "WS 003": "kineticblaster",
+                "WS 006": "kineticblaster",
+                "WS 007": "kineticblaster"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "heavyneedler",
+                "WS 005": "heavyneedler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 014": "pdburst",
+                "WS 015": "pdburst",
+                "WS 016": "pdburst",
+                "WS 017": "pdburst"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 011": "dualflak"}
+        }
+    ]
+}
