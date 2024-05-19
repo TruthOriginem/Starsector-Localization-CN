@@ -14,7 +14,7 @@ Volturn 蓝龙虾养殖场,volturnian_lobster_pens,TRUE,,com.fs.starfarer.api.im
 废弃空间站,abandoned_station,,TRUE,com.fs.starfarer.api.impl.campaign.econ.AbandonedStation,这处空间站已经遭到废弃。,graphics/icons/markets/abandoned.png,130
 家庭手工业,cottage_industry,,TRUE,com.fs.starfarer.api.impl.campaign.econ.CottageIndustry,$market 拥有以低技术和密集型劳动力为基础的轻工业。有机燃料与材料需求提高，提供手工制造的日用品，虽然低效但十分令人着迷。,graphics/icons/markets/cottage_industry.png,230
 前哨站,outpost,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Outpost,具备一整套严苛指挥结构的 $market 更像是一处守备站或是一艘战舰。这样做尽管提高了稳定性，但需要一些人员来处理内部的安全事务。,graphics/icons/markets/outpost.png,130
-卢德教众,luddic_majority,,TRUE,com.fs.starfarer.api.impl.campaign.econ.LuddicMajority,如果 $market 由 卢德教会 掌控，其稳定性将大大提高，否则就会降低。且卢德教义里的禁欲主义会导致本地奢侈品的需求降低。,graphics/icons/markets/luddic_majority.png,142
+卢德教众,luddic_majority,,TRUE,com.fs.starfarer.api.impl.campaign.econ.LuddicMajority,,graphics/icons/markets/luddic_majority.png,142
 感应雷区,stealth_minefields,,TRUE,com.fs.starfarer.api.impl.campaign.econ.StealthMinefields,$market 的感应雷区不仅能抵御外敌入侵，也能为来访的外来商人提供了安全保障。稳定性提高。,graphics/icons/markets/stealth_mines.png,510
 地区首府,regional_capital,,TRUE,com.fs.starfarer.api.impl.campaign.econ.RegionalCapital,一处控制安全以及后勤的主要行政中心。稳定性提高。,graphics/icons/markets/capital.png,500
 自由港,free_market,,TRUE,com.fs.starfarer.api.impl.campaign.econ.FreeMarket,当地港务局不仅对所交易的商品不加任何管制，且同样宽松的移民管制，让大量外来人口纷纷涌入此地，其中不乏一些身份可疑的人士。而正因如此，其他势力将以不信任的态度看待着该殖民地。,graphics/icons/markets/free_port.png,141
@@ -74,6 +74,8 @@ AI 行政官 (隐藏),ai_core_admin,,TRUE,com.fs.starfarer.api.impl.campaign.eco
 
 海盗很可能在附近的星系设有基地。",graphics/icons/markets/pirate_activity.png,1300
 敌对活动,hostile_activity,,TRUE,com.fs.starfarer.api.impl.campaign.intel.events.HostileActivity,,graphics/icons/markets/pirate_activity.png,1350
+Piracy Respite,piracy_respite,,TRUE,com.fs.starfarer.api.impl.campaign.econ.PiracyRespite,This colony is experiencing a respite from the depredations of piracy otherwise so common in the Sector.,graphics/icons/markets/respite40.png,1375
+Blockaded,blockaded,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Blockaded,"The system that this colony is in is experiencing a blockade, and regular trade shipping is suffering from harassment or worse. The effects will continue until the blockading force leaves or is soundly defeated.",graphics/icons/markets/blockade.png,1385
 左径狂信徒,pather_cells,,TRUE,com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCells,,graphics/icons/markets/pather_cells.png,1400
 ,,,,,,,
 # stand-alone conditions,,,,,,,

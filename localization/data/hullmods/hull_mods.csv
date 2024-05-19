@@ -10,13 +10,13 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 
 在战斗中该舰会积极迎击敌人并表现得如同战斗舰船一般。",提高船体结构、装甲强度、以及幅能容量。,,graphics/hullmods/assault_package.png
 自动修复单元,autorepair,2,,,"engines, defensive, merc, standard",防御,7500,,,,3,6,9,15,data.hullmods.AutomatedRepairUnit,降低 %s 在战斗中修复受损武器及引擎的时间。,提高战斗中武器的维修速率。,将武器与引擎的修复时间降低至 %s，且降低 %s 舰船过载持续时间。,graphics/hullmods/automated_repair_unit.png
-辅助推进器,auxiliarythrusters,1,,,"engines, merc, standard",引擎,5000,TRUE,,,5,10,15,25,data.hullmods.AuxiliaryThrusters,提高舰船 %s 机动性，如加速度/减速度/转向加速/转向角速。,提高舰船的机动性。,,graphics/hullmods/auxilliary_thrusters.png
+辅助推进器,auxiliarythrusters,1,,,"engines, merc, standard",引擎,5000,TRUE,,,4,8,12,20,data.hullmods.AuxiliaryThrusters,提高舰船 %s 机动性，如加速度/减速度/转向加速/转向角速。,提高舰船的机动性。,"Increases the 0-flux speed boost by %s, and %s the 0-flux turn rate bonus.",graphics/hullmods/auxilliary_thrusters.png
 弹道测距仪,ballistic_rangefinder,2,,,"offensive, merc, standard",武器,8000,,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.BallisticRangefinder,提高实弹槽位上中小型武器的射程。,提高实弹槽位上中小型武器的射程。,,graphics/hullmods/ballistic_rangefinder.png
 防爆气密门,blast_doors,0,,,"defensive, merc, standard",防御,2500,TRUE,,,4,8,12,20,data.hullmods.BlastDoors,"在各个要害部位加装坚固的密封门，提高 %s 船体结构。
 
 降低 %s 战斗中因船体结构受损而造成的船员伤亡。",提高舰船结构值，降低船员伤亡。,将减免船员伤亡的效果提高至 %s。,graphics/hullmods/blast_doors.png
 改装机库,converted_hangar,1,,,"special, non_phase, merc, standard",战机,5000,,,,0,10,10,10,com.fs.starfarer.api.impl.hullmods.ConvertedHangar,<Tooltip created in script>,给非航母舰船提供临时甲板。,提高战机整备速率的恢复速度，巡洋舰提高 %s，主力舰提高 %s。对驱逐舰无效。,graphics/hullmods/converted_hangar.png
-停用飞行甲板,converted_fighterbay,0,,,"req_spaceport, special, non_phase","战机, 后勤, 需要船坞",3000,,,,2,4,6,10,data.hullmods.ConvertedFighterBay,将该舰内置战机的飞行甲板改造为临时的货舱，提高该舰 %s 的货舱容量。每移除一个飞行甲板就会降低 %s 最低船员需求，最多可降低 %s 船员需求。,将内置的飞行甲板改为临时货舱。,每个飞行甲板每月维护费用降低 %s。,graphics/hullmods/converted_fighter_bay.png
+停用飞行甲板,converted_fighterbay,0,,,"req_spaceport, special, non_phase, standard","战机, 后勤, 需要船坞",3000,,,,2,4,6,10,data.hullmods.ConvertedFighterBay,将该舰内置战机的飞行甲板改造为临时的货舱，提高该舰 %s 的货舱容量。每移除一个飞行甲板就会降低 %s 最低船员需求，最多可降低 %s 船员需求。,将内置的飞行甲板改为临时货舱。,每个飞行甲板每月维护费用降低 %s。,graphics/hullmods/converted_fighter_bay.png
 专注型目标锁定核心,dedicated_targeting_core,0,,,"offensive, merc, standard",武器,2500,TRUE,,,0,0,15,25,data.hullmods.DedicatedTargetingCore,"提高实弹和能量武器射程，巡洋舰提高 %s，主力舰提高 %s。
 
 不能安装在护卫和驱逐上，也无法与 目标定位系统 同时工作。
@@ -31,9 +31,9 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 
 降低 %s 因电子战失利所造成的武器射程降低。",提高导弹速度与追踪能力，并抵抗敌方电子战的效果。,该舰发射的导弹将完全免疫 电子对抗组件 和 热诱弹 的影响。,graphics/hullmods/eccm_package.png
 电子对抗组件,ecm,2,,,"offensive, special, merc, standard","武器, 支援",4000,,,,6,12,18,24,com.fs.starfarer.api.impl.hullmods.ECMPackage,在战斗时，根据舰船级别，提高 %s/%s/%s/%s 电子战强度。,增强舰船的电子战能力。,,graphics/hullmods/ecm_package.png
-护航套件,escort_package,1,,,"weapons, engines, civ_package, no_drop, no_drop_salvage","特殊, 武器, 引擎",8000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.EscortPackage,"提高 %s 的机动性，并提高所有点防御武器 %s 的射程，同时提高 %s 对战机与导弹的伤害。
+护航套件,escort_package,1,,,"special, weapons, engines, standard","特殊, 武器, 引擎",8000,,,,5,7,15,25,com.fs.starfarer.api.impl.hullmods.EscortPackage,"提高 %s 的机动性，并提高所有点防御武器 %s 的射程，同时提高 %s 对战机与导弹的伤害。
 
-在战斗中该舰会积极迎击敌人并表现得如同战斗舰船一般。",提高舰船的机动性，点防御武器的射程以及对导弹和战机的伤害。,,graphics/hullmods/escort_package.png
+在战斗中该舰会积极迎击敌人并表现得如同战斗舰船一般。",提高舰船的机动性，点防御武器的射程以及对导弹和战机的伤害。,Destroyers: reduces the amount of damage taken by shields by %s. No added effect for cruisers.,graphics/hullmods/escort_package.png
 扩编飞行甲板人员,expanded_deck_crew,1,,,"special, merc, standard",战机,4000,,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.ExpandedDeckCrew,"降低 %s 战机损失时整备下降速率，提高 %s 整备恢复速率。
 
 每个甲板都会让该舰的最低船员需求提高 %s 名。",提高战机整备速率，但需要更多的船员来维持。,,graphics/hullmods/expanded_deck_crew.png
@@ -64,12 +64,12 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 导航中继器,nav_relay,2,,,"engines, special, merc, standard","引擎, 支援",5000,,,,10,15,20,25,com.fs.starfarer.api.impl.hullmods.NavRelay,"当该舰投入战斗时，根据舰船级别，提高 %s/%s/%s/%s 的舰队导航评级。
 
 导航评级会提高你所部署舰船的最高航速。",提高已部署的舰船在战斗时的最高航速。,,graphics/hullmods/nav_relay.png
-神经接口,neural_interface,3,,,"special, no_build_in, no_drop, no_drop_salvage",特殊,10000,,,,3,6,9,25,com.fs.starfarer.api.impl.hullmods.NeuralInterface,"将旗舰与其他舰船连接起来，使你能快速切换当前操作的舰船，而无需通过穿梭机转移。两艘船都需安装 神经接口，且不能由副官或 AI 核心操控。如果二者的总部署成本小于或等于 %s，转移将瞬间完成。
+神经接口,neural_interface,3,,,"special, no_build_in, no_drop, no_drop_salvage",特殊,10000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.NeuralInterface,"将旗舰与其他舰船连接起来，使你能快速切换当前操作的舰船，而无需通过穿梭机转移。两艘船都需安装 神经接口，且不能由副官或 AI 核心操控。如果二者的总部署成本小于或等于 %s，转移将瞬间完成。
 
 如果被连接的舰船被摧毁或离开战场，旗舰将自动与另一艘有 神经接口 的舰船建立 神经链接。如果旗舰被击沉，指挥官必须乘穿梭舱转移到另一艘有 神经接口 的舰船上才能建立新的链接。
 
 和 ""转移指挥权"" 类似，无论你亲自控制其中哪一艘，被连接的这一对舰船都能从你的个人战斗技能中获益。但对诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果不起作用。",允许在舰船之间快速切换，并重置战术系统的冷却时间或恢复一次充能。,,graphics/hullmods/neural_interface.png
-神经集成器,neural_integrator,,,,"special, no_build_in, no_drop, no_drop_salvage",特殊,10000,,,,4,8,12,50,com.fs.starfarer.api.impl.hullmods.NeuralIntegrator,"用于自主无人舰的增强版 神经接口。通过链接直接控制舰船的所有系统，而非简单地通过控制意识对舰桥人员下达指示。
+神经集成器,neural_integrator,,,,"special, no_build_in, no_drop, no_drop_salvage",特殊,10000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.NeuralIntegrator,"用于自主无人舰的增强版 神经接口。通过链接直接控制舰船的所有系统，而非简单地通过控制意识对舰桥人员下达指示。
 
 将旗舰与其他舰船连接起来，使你能快速切换当前操作的舰船，而无需通过穿梭机转移。两艘船都需安装 神经接口，且不能由副官或 AI 核心操控。如果二者的总部署成本小于或等于 %s，转移将瞬间完成。
 

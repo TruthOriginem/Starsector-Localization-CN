@@ -115,7 +115,7 @@ class CsvFile(DataFile):
 
     # 将译文数据写回译文csv中
     def save_file(self) -> None:
-        with open(self.translation_path, 'r', newline='', encoding='utf-8') as f:
+        with open(self.translation_path, 'r', errors='surrogateescape', newline='', encoding='utf-8') as f:
             csv = reader(f)
             real_column_names = csv.__next__()
 
