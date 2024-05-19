@@ -57,17 +57,40 @@
 
 * **Python环境: 3.10 或更高**
 
-| 文件                  | 作用                                                    |
-|-----------------------|-------------------------------------------------------|
-| _cleanLocalization.py | 根据original文件夹清理localization文件夹。                     |
-| _copyOldLocalization.py | 通过比对original文件夹，更新汉化包中的未变更文件。                     |
-| _handleVariantNames.py | 处理指定文件夹中所有装配名，并更新/使用映射 json 用于翻译。                     |
-| _swapLangFile.py       | 用来更替汉化文件和英文文件的脚本。                                     |
-| _variant_name_map.json | 装配名映射文件，英文名对应汉化名，可后继继续更新。                             |
-| para_tranz.py         | 用于ParaTranz平台的数据导入导出工具，使用方法参见[本指南](docs/tut_admin.md) |
+| 文件                                  | 用途及文档                                                 |
+|-------------------------------------|-------------------------------------------------------|
+| _cleanLocalization.py               | 根据original文件夹清理localization文件夹。                       |
+| _copyOldLocalization.py             | 通过比对original文件夹，更新汉化包中的未变更文件。                         |
+| _handleVariantNames.py              | 处理指定文件夹中所有装配名，并更新/使用映射 json 用于翻译。                     |
+| _overwriteLocalizationByOriginal.py | TODO                                                  |
+| _swapLangFile.py                    | 用来更替汉化文件和英文文件的脚本。                                     |
+| _updateOriginal.py                  | TODO                                                  |
+| _variant_name_map.json              | 装配名映射文件，英文名对应汉化名，可后继继续更新。                             |
+| para_tranz.py                       | 用于ParaTranz平台的数据导入导出工具，使用方法参见[本指南](docs/tut_admin.md) |
+| _jsonMapHandler.py                 | TODO                                                  |
 
 ### 版本汉化流程
 
 ![][flow-chart]
+
+1. 创建以新版本号命名的分支，例如`0.97`，并切换到该分支
+2. 重命名`original`文件夹为`original.old`，`localization`文件夹为`localization.old`
+3. 将新版本游戏目录下`starsector-core`文件夹中的`data`文件夹和`starfarer.api.jar`，`starfarer_obf.jar`复制到repo下`<版本号> data`文件夹中
+   > 应当使用文件更新脚本，而不是直接复制，文档待更新
+4. 将`localization.old/graphics`文件夹下的可以复用的图像和字体资源复制到`localization/graphics`文件夹中
+5. **将`original/data`文件夹和`starfarer.api.jar`，`starfarer_obf.jar`复制到`localization`**
+   > 应当使用文件更新脚本?
+6. **参照[Paratran版本管理指南](docs/tut_admin.md)步骤，从 git 导入新的原文到 ParaTranz**
+    - 只导入原文！**不要导入译文！**
+    - 必须在导入时选择**安全模式（不删除词条）**！
+7. **参照[Paratran版本管理指南](docs/tut_admin.md)中的步骤，将翻译完成的译文导入 git**
+8. 提交commit并push
+    - 在提交前，请将汉化文件复制入游戏，尝试能否正常启动游戏
+
+[update_files]:update_files.png
+[upload_folder]:upload_folder.png
+[unzip]:unzip.png
+[advance_filter]:advance_filter.png
+[filter_options]:filter_options.png
 
 [flow-chart]:docs/flow_chart.png
