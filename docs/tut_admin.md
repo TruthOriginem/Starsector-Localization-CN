@@ -126,27 +126,3 @@
 - -1：已隐藏，此状态下词条强制按原文导出
 
 由于本项目没有使用二次校对，所以不会有stage为3的词条。如果已经审核，stage为5
-
-## 游戏版本升级总体流程
-
-> 如果是大版本更新（如 0.95.1 -> 0.96）：创建新repo进行更新，具体流程根据情况确定
-
-> 如果是小版本更新（如RC更新或 0.95 -> 0.95.1），请参照以下步骤执行：
-
-1. 将游戏目录下`starsector-core`文件夹中的`data`文件夹和`starfarer.api.jar`，`starfarer_obf.jar`复制到repo下`<版本号> data`文件夹中
-   > 应当使用文件更新脚本，而不是直接复制，文档待更新
-3. ~将同样的文件也复制到repo下`original`文件夹中~
-4. 将老版本汉化中`localization/graphics`文件夹下的可以复用的图像和字体资源复制到repo下的`localization/graphics`文件夹中
-5. **将repo下`original/data`文件夹和`starfarer.api.jar`，`starfarer_obf.jar`复制到`localization`**
-6. **参照本文档上方步骤，从 git 导入新的原文到 ParaTranz**
-    - 只导入原文！**不要导入译文！**
-    - 必须在导入时选择**安全模式（不删除词条）**！
-7. **参照本文档上方步骤中的步骤，将翻译完成的译文导入 git**
-8. 提交commit并push
-    - 在提交前，请将汉化文件复制入游戏，尝试能否正常启动游戏
-
-[update_files]:update_files.png
-[upload_folder]:upload_folder.png
-[unzip]:unzip.png
-[advance_filter]:advance_filter.png
-[filter_options]:filter_options.png
