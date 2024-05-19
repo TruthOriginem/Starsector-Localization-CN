@@ -2,8 +2,7 @@ from pathlib import Path, PurePosixPath
 from typing import Union, Set, Optional, List, Tuple, Dict
 
 from para_tranz.jar_loader.constant_table import ConstantTable, Utf8Constant
-from para_tranz.utils.config import MAGIC, MIN_CLASS_VER, MAX_CLASS_VER, ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS, \
-    PARA_TRANZ_PROJECT_ID
+from para_tranz.utils.config import MAGIC, MIN_CLASS_VER, MAX_CLASS_VER, ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS
 from para_tranz.utils.util import make_logger, String, contains_chinese, contains_english, url_encode
 
 

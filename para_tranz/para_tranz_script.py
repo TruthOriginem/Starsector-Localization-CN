@@ -1,3 +1,9 @@
+# 将父级目录加入到环境变量中，以便从命令行中运行本脚本
+import sys
+from os.path import abspath, dirname
+
+sys.path.append(dirname(dirname(abspath(__file__))))
+
 from para_tranz.csv_loader.csv_file import CsvFile
 from para_tranz.jar_loader.jar_file import JavaJarFile
 from para_tranz.utils.util import make_logger
@@ -6,7 +12,7 @@ logger = make_logger('ParaTranzScript')
 
 # 选择要处理的文件类型
 # loaders = [JavaJarFile]
-loaders = [JavaJarFile, CsvFile]
+loaders = [CsvFile]
 
 
 def game_to_paratranz():

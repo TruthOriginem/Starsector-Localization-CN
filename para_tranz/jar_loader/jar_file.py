@@ -1,4 +1,5 @@
 import datetime
+import pdb
 import re
 import zipfile
 from dataclasses import asdict
@@ -9,9 +10,6 @@ from para_tranz.jar_loader.class_file import JavaClassFile
 from para_tranz.utils.config import ORIGINAL_PATH, TRANSLATION_PATH
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, JarMapItem, ClassFileMapItem
 from para_tranz.utils.util import DataFile, String, make_logger, normalize_class_path
-
-
-# Java设置
 
 
 class JavaJarFile(DataFile):
@@ -64,7 +62,7 @@ class JavaJarFile(DataFile):
             class_file = JavaClassFile(self, path, include_strings, exclude_strings)
             self.class_files[path] = class_file
         except Exception as e:
-            self.logger.debug(f'在 {self.path} 中读取 class 文件 {path} 时出错：{e}')
+            self.logger.warn(f'在 {self.path} 中读取 class 文件 {path} 时出错：{e}')
             return None
 
         return class_file
@@ -219,10 +217,16 @@ class JavaJarFile(DataFile):
             class_file.load_from_file()
 
     def read_original_class_file(self, class_file_path: str) -> bytes:
-        return zipfile.Path(self.original_file, class_file_path).read_bytes()
+        path = zipfile.Path(self.original_file, class_file_path)
+        if not path.exists():
+            raise FileNotFoundError(f'在原始jar文件 {self.original_path} 中找不到class文件 {class_file_path}')
+        return path.read_bytes()
 
     def read_translation_class_file(self, class_file_path: str) -> bytes:
-        return zipfile.Path(self.translation_file, class_file_path).read_bytes()
+        path = zipfile.Path(self.translation_file, class_file_path)
+        if not path.exists():
+            raise FileNotFoundError(f'在译文jar文件 {self.translation_path} 中找不到class文件 {class_file_path}')
+        return path.read_bytes()
 
     def load_all_classes_in_jar(self, from_translation: bool = False, override_loaded: bool = False) -> None:
         jar_path = ORIGINAL_PATH / self.path if not from_translation else TRANSLATION_PATH / self.path
