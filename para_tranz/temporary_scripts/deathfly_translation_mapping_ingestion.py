@@ -3,13 +3,13 @@ import json
 import re
 
 from para_tranz.utils.config import PROJECT_DIRECTORY, PARA_TRANZ_PATH
-from para_tranz.utils.util import make_logger
+from para_tranz.utils.util import make_logger, contains_english, contains_chinese
 
-CSV_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'temporary_scripts' / 'deathfly_097_obf_mapping.csv'
+CSV_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'temporary_scripts' / 'deathfly_097_api_mapping.csv'
 
-MAPPING_OUTPUT_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'temporary_scripts' / 'deathfly_097_obf_mapping.json'
+MAPPING_OUTPUT_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'temporary_scripts' / 'deathfly_097_api_mapping.json'
 
-PARATRANZ_STRINGS_PATH = PARA_TRANZ_PATH / 'starfarer_obf.json'
+PARATRANZ_STRINGS_PATH = PARA_TRANZ_PATH / 'starfarer.api.json'
 
 logger = make_logger(f'deathfly_translation_mapping_ingestion.py')
 
@@ -43,7 +43,7 @@ def convert_deathfly_csv_to_paratranz_mapping():
 
     paratranz_mapping = {
         "type": "jar",
-        "path": "starfarer_obf.jar",
+        "path": "starfarer.api.jar",
         "class_files": []
     }
 
@@ -81,6 +81,9 @@ def add_translation_to_exported_strings():
             class_to_data[class_name] = dict()
         if '"' in row[2]:
             class_to_data[class_name][row[0][1:-1]] = row[2][1:-1]
+        else:
+            # 如果没有翻译，就用 None 代替
+            class_to_data[class_name][row[0][1:-1]] = None
 
     with open(PARATRANZ_STRINGS_PATH, 'r', encoding='utf-8') as f:
         paratranz_strings = json.load(f)
@@ -91,13 +94,21 @@ def add_translation_to_exported_strings():
             class_strings = class_to_data[class_name]
 
             # 将 original 字段转换为对照表中的格式
-            original = string['original'].replace('\n', '\\n').replace('\t', '\\t').replace('"', '\\"')
+            original = string['original'].replace('\n', '\\n').replace('\t', '\\t').replace("'", "\'")
             # 将连续的空格转换为单个空格
             original = re.sub(r' +', ' ', original)
 
             if original in class_strings:
-                string['translation'] = class_strings[original]
-                string['stage'] = max(string['stage'], 1)
+                if class_strings[original] is not None:
+                    string['translation'] = class_strings[original]
+
+                    if not contains_english(string['original']):  # 如果原文不包含英文，则直接设为已翻译
+                        string['stage'] = max(string['stage'], 1)
+                    else:
+                        if contains_chinese(string['translation']):  # 如果翻译中包含中文，则设为已翻译
+                            string['stage'] = max(string['stage'], 1)
+                        else:  # 否则设为待翻译
+                            string['stage'] = max(string['stage'], 0)
             else:
                 print(f'在对照表中未找到原文字符串 "{string["original"]}"，类 {class_name}')
         else:

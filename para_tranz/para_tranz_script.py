@@ -11,8 +11,9 @@ from para_tranz.utils.util import make_logger
 logger = make_logger('ParaTranzScript')
 
 # 选择要处理的文件类型
-loaders = [JavaJarFile]
+# loaders = [JavaJarFile]
 # loaders = [CsvFile]
+loaders = [JavaJarFile, CsvFile]
 
 
 def game_to_paratranz():
