@@ -7,7 +7,7 @@ from dataclasses import asdict
 from pathlib import Path
 from typing import Set, Union, List, Dict, Tuple
 
-from para_tranz.utils.config import MAP_PATH, REMOVE_TRANSLATION_WHEN_ORIGINAL_IS_EMPTY
+from para_tranz.utils.config import MAP_PATH, REMOVE_TRANSLATION_WHEN_ORIGINAL_IS_EMPTY, EXPORTED_STRING_CONTEXT_PREFIX
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, CsvMapItem
 from para_tranz.utils.util import relative_path, String, DataFile, contains_chinese, replace_weird_chars, make_logger, \
     contains_english
@@ -223,4 +223,4 @@ class CsvFile(DataFile):
     def generate_row_context(self, row: dict) -> str:
         row_num = self.original_data.index(row)
 
-        return f"{self.path.name}第{str(row_num + 1).zfill(4)}行\n[本行原始数据]\n{pprint.pformat(row, sort_dicts=False)}"
+        return f"{EXPORTED_STRING_CONTEXT_PREFIX}{self.path.name}第{str(row_num + 1).zfill(4)}行\n[本行原始数据]\n{pprint.pformat(row, sort_dicts=False)}"
