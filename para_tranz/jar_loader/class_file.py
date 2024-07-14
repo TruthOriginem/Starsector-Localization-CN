@@ -2,7 +2,8 @@ from pathlib import Path, PurePosixPath
 from typing import Union, Set, Optional, List, Tuple, Dict
 
 from para_tranz.jar_loader.constant_table import ConstantTable, Utf8Constant
-from para_tranz.utils.config import MAGIC, MIN_CLASS_VER, MAX_CLASS_VER, ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS
+from para_tranz.utils.config import MAGIC, MIN_CLASS_VER, MAX_CLASS_VER, ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS, \
+    EXPORTED_STRING_CONTEXT_PREFIX
 from para_tranz.utils.util import make_logger, String, contains_chinese, contains_english, url_encode
 
 
@@ -152,7 +153,8 @@ class JavaClassFile:
             context = ''
             for original_constant, translated_constant in pairs:
                 # 上下文信息：词条本身部分
-                context += f'提取自 {self.jar_file.path}:{self.path} 的第{str(original_constant.constant_index).zfill(4)}个常量\n' \
+                context += f'{EXPORTED_STRING_CONTEXT_PREFIX}' \
+                           f'提取自 {self.jar_file.path}:{self.path} 的第{str(original_constant.constant_index).zfill(4)}个常量\n' \
                            f'原始数据："{original_constant.string}"\n' \
                            f'译文数据："{translated_constant.string}"'
                 context += '\n\n'

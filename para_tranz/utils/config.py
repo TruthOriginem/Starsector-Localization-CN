@@ -1,4 +1,5 @@
 import logging
+from datetime import datetime
 from pathlib import Path
 
 # [日志输出]
@@ -17,6 +18,8 @@ MAP_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'para_tranz_map.json'
 # [通用配置]
 # 在导出字符串时是否覆盖已导出字符串的翻译stage状态
 OVERRIDE_STRING_STATUS = False
+# 导出词条上下文前缀文本
+EXPORTED_STRING_CONTEXT_PREFIX = f'版本：0.97-RC11 {datetime.now().strftime("%Y-%m-%d %H:%M")}\n'
 
 # [jar_loader 配置]
 MAGIC = b'\xca\xfe\xba\xbe'

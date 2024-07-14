@@ -1,14 +1,15 @@
 import csv
 import json
+import re
 
 from para_tranz.utils.config import PROJECT_DIRECTORY, PARA_TRANZ_PATH
 from para_tranz.utils.util import make_logger
 
-CSV_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'temporary_scripts' / 'deathfly_096_api_mapping.csv'
+CSV_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'temporary_scripts' / 'deathfly_097_obf_mapping.csv'
 
-MAPPING_OUTPUT_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'temporary_scripts' / 'deathfly_096_api_mapping.json'
+MAPPING_OUTPUT_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'temporary_scripts' / 'deathfly_097_obf_mapping.json'
 
-PARATRANZ_STRINGS_PATH = PARA_TRANZ_PATH / 'starfarer.api.json'
+PARATRANZ_STRINGS_PATH = PARA_TRANZ_PATH / 'starfarer_obf.json'
 
 logger = make_logger(f'deathfly_translation_mapping_ingestion.py')
 
@@ -42,7 +43,7 @@ def convert_deathfly_csv_to_paratranz_mapping():
 
     paratranz_mapping = {
         "type": "jar",
-        "path": "starfarer.api.jar",
+        "path": "starfarer_obf.jar",
         "class_files": []
     }
 
@@ -51,12 +52,17 @@ def convert_deathfly_csv_to_paratranz_mapping():
     class_files = []
 
     for class_name, data in class_to_data_sorted:
-        data = {
+        include_strings = sorted(list(data))
+        # 渡鸦提供的对照表中，\n\t是转义字符，需要转换为真正的换行符和制表符
+        # '\"'是转义字符，需要转换为真正的双引号
+        include_strings = [s.replace('\\n', '\n').replace('\\t', '\t').replace('\\"', '"') for s in include_strings]
+
+        class_desc = {
             "path": class_name + ".class",
-            "include_strings": sorted(list(data))
+            "include_strings": include_strings
         }
 
-        class_files.append(data)
+        class_files.append(class_desc)
 
     paratranz_mapping["class_files"] = class_files
 
@@ -83,9 +89,19 @@ def add_translation_to_exported_strings():
         class_name = string['key'].split(':')[1].split('#')[0].removesuffix('.class')
         if class_name in class_to_data:
             class_strings = class_to_data[class_name]
-            if string['original'] in class_strings:
-                string['translation'] = class_strings[string['original']]
+
+            # 将 original 字段转换为对照表中的格式
+            original = string['original'].replace('\n', '\\n').replace('\t', '\\t').replace('"', '\\"')
+            # 将连续的空格转换为单个空格
+            original = re.sub(r' +', ' ', original)
+
+            if original in class_strings:
+                string['translation'] = class_strings[original]
                 string['stage'] = max(string['stage'], 1)
+            else:
+                print(f'在对照表中未找到原文字符串 "{string["original"]}"，类 {class_name}')
+        else:
+            print(f'在对照表中未找到类 {class_name}')
 
     with open(PARATRANZ_STRINGS_PATH, 'w', encoding='utf-8') as f:
         json.dump(paratranz_strings, f, indent=2, ensure_ascii=False)
@@ -93,7 +109,7 @@ def add_translation_to_exported_strings():
 
 if __name__ == '__main__':
     # 先运行下面这个函数，生成mapping文件
-    convert_deathfly_csv_to_paratranz_mapping()
+    # convert_deathfly_csv_to_paratranz_mapping()
 
     # 然后把生成的mapping文件加到para_tranz_map.json里面
     # 然后运行脚本，选1导出string文件
