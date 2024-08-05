@@ -361,7 +361,7 @@
 	},
 	
 	"station_galatia":{
-		"defaultName":"Galatia 学院", # used if name=null in addCustomEntity()
+		"defaultName":"Galatia 学院 空间站", # used if name=null in addCustomEntity()
 		"defaultRadius":50, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"station_galatia_academy",
 		"interactionImage":"graphics/illustrations/corporate_lobby.jpg",
@@ -857,6 +857,35 @@
 		"renderCircleIndicatorSelectionFlash":true,
 		"pluginClass":"com.fs.starfarer.api.impl.campaign.CryosleeperEntityPlugin",
 	},
+
+	"derelict_gatehauler":{
+		"defaultName":"人之领纪元 星门运输舰", # used if name=null in addCustomEntity()
+		"nameInText":"人之领纪元 星门运输舰",
+		"shortName":"星门运输舰",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
+		"defaultRadius":150, # used if radius<0 in addCustomEntity()
+		"customDescriptionId":"derelict_gatehauler",
+		"interactionImage":"graphics/illustrations/gate_hauler1.jpg",
+		"icon":"graphics/icons/gate_hauler2.png",
+		"iconWidth":32,
+		"iconHeight":32,
+		"sprite":"graphics/stations/gate_hauler.png",
+		"spriteWidth":152,
+		"spriteHeight":256,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"tags":["has_interaction_dialog", "salvageable", "neutrino_high"],
+		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"renderCircleIndicator":true,
+		"renderCircleIndicatorSelectionFlash":true,
+		"pluginClass":"com.fs.starfarer.api.impl.campaign.entities.GateHaulerEntityPlugin",
+	},	
 	
 	"coronal_tap":{
 		"defaultName":"星冕分流器", # used if name=null in addCustomEntity()
@@ -994,6 +1023,30 @@
 		"defaultRadius":35, 
 		"nameInText":"设备藏匿点",
 		"shortName":"设备藏匿点",
+	},
+
+	# a cache that's a single large structure rather than a collection of containers etc
+	# set up as a salvage entity but has no salvage by default, meant to use different
+	# salage specs for particular cases 
+	"large_cache":{
+		"baseId":"supply_cache",
+		"aOrAn":"a",
+		# needs to be cache so that an override name ending in Cache does not result in a weird tooltip
+		# E.G. if this said "Large Cache" and the name was set to "Mothballed Equipment Cache"
+		# The tooltip would show Mothballed Equipment Cache (Large Cache)
+		# But if the name ends with what's in this field, the parenthetical will be omitted.
+		"defaultName":"藏匿点",
+		"defaultRadius":35, 
+		"nameInText":"藏匿点",
+		"shortName":"藏匿点",
+		"iconWidth":20,
+		"iconHeight":20,
+		"icon":"graphics/icons/cache0.png",
+		"interactionImage":"graphics/illustrations/cache_large.jpg",
+		"sprite":"graphics/stations/large_cache.png",
+		"spriteWidth":40,
+		"spriteHeight":40,
+		"pluginClass":"",
 	},
 	
 	"technology_cache":{
@@ -1441,7 +1494,22 @@
 		"renderCircleIndicator":false,
 		"renderCircleIndicatorSelectionFlash":false,
 	},
-	
+
+	"abyssal_light":{
+		"defaultName":"深渊光点", # used if name=null in addCustomEntity()
+		"defaultRadius":45, # used if radius<0 in addCustomEntity()
+		"detectionRange":0, # set in plugin code
+		"showInCampaign":true,
+		"icon":"graphics/icons/abyssal_light.png",
+		"iconWidth":18,
+		"iconHeight":18,
+		"customDescriptionId":"abyssal_light",
+		"renderCircleIndicator":false,
+		"interactionImage":"graphics/illustrations/abyssal_light.jpg",
+		"tags":["has_interaction_dialog", "neutrino_high"],
+		"layers":[STATIONS, TERRAIN_8], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"pluginClass":"com.fs.starfarer.api.impl.campaign.AbyssalLightEntityPlugin",
+	},
 }
 
 
