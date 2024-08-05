@@ -312,13 +312,13 @@
 		"offersCommissions":true,
 		"engagesInHostilities":true,
 		"buysAICores":true,
-		"AICoreValueMult":1,
-		"AICoreRepMult":1,
+		"AICoreValueMult":1.5,
+		"AICoreRepMult":1.5,
 		"buysSurveyData":true,
 		"hostilityImpactOnGrowth":true,
 		"caresAboutAtrocities":true,
 		"punitiveExpeditionData":{
-			"vsCompetitors":true,
+			"vsCompetitors":false,
 			"vsFreePort":false,
 			"canBombard":false,
 			"territorial":true,
@@ -327,11 +327,17 @@
 	"ranks":{
 		"ranks":{
 			"spaceCommander":{"name":"海军都统"},
+			"spaceAdmiral":{"name":"大海军都统"},
+			"houseLeader":{"name":"宗主"},
+			"houseLeaderMale":{"name":"宗主"},
+			"houseLeaderFemale":{"name":"宗主夫人"},
 		},
 		"posts":{
-			"patrolCommander":{"name":"人民海军都统"},
+			"patrolCommander":{"name":"下级海军都统"},
 			"fleetCommander":{"name":"海军都统"},
 			"baseCommander":{"name":"执政官"},
+			#"administrator":{"name":"统领"}, # might confuse players
+			"factionLeader":{"name":"大统领"},
 		},
 	},
 	"fleetTypeNames":{
