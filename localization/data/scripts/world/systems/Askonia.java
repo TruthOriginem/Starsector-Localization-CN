@@ -58,7 +58,7 @@ public class Askonia {
 		a1.setCustomDescriptionId("planet_sindria");
 		a1.setInteractionImage("illustrations", "sindria");
 		
-			JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("askonia_jump_point_alpha", "Sindria Jump-point");
+			JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("askonia_jump_point_alpha", "Sindria 跳跃点");
 			OrbitAPI orbit = Global.getFactory().createCircularOrbit(a1, 0, 500, 30);
 			jumpPoint.setOrbit(orbit);
 			jumpPoint.setRelatedPlanet(a1);
@@ -67,7 +67,7 @@ public class Askonia {
 			system.addEntity(jumpPoint);
 			
 			SectorEntityToken sindria_relay = system.addCustomEntity("sindria_relay", // unique id
-					 "Sindria Relay", // name - if null, defaultName from custom_entities.json will be used
+					 "Sindria 通讯中继站", // name - if null, defaultName from custom_entities.json will be used
 					 "comm_relay", // type of object, defined in custom_entities.json
 					 "sindrian_diktat"); // faction
 			sindria_relay.setCircularOrbitPointingDown( system.getEntityById("askonia"), -60, 3000, 100);
@@ -75,7 +75,7 @@ public class Askonia {
 		// And now, the outer system.
 			system.addRingBand(star, "misc", "rings_dust0", 256f, 0, Color.white, 256f, 3570, 220f, null, null);
 			system.addRingBand(star, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 3660, 226f, null, null);
-		system.addAsteroidBelt(star, 150, 3600, 170, 200, 250, Terrain.ASTEROID_BELT, "Stone River");
+		system.addAsteroidBelt(star, 150, 3600, 170, 200, 250, Terrain.ASTEROID_BELT, "石河");
 		
 	// Salus system
 		PlanetAPI a2 = system.addPlanet("salus", star, "Salus", "gas_giant", 230, 350, 7500, 250);
@@ -103,7 +103,7 @@ public class Askonia {
 					30, // max asteroid count
 					4f, // min asteroid radius 
 					12f, // max asteroid radius
-					"Opis Debris Cloud")); // null for default name
+					"Opis 残骸云")); // null for default name
 			opis_debris_cloud.setCircularOrbitPointingDown(system.getEntityById("salus"), 45, 1100, 70);	
 			
 			PlanetAPI a2b = system.addPlanet("volturn", a2, "Volturn", "water", 110, 120, 1400, 45);
@@ -115,17 +115,17 @@ public class Askonia {
 			a2b.setInteractionImage("illustrations", "volturn");
 			
 				// Salus nav buoy, in L5
-				SectorEntityToken salus_nav = system.addCustomEntity(null, "Salus Navigation Buoy", "nav_buoy", Factions.DIKTAT); 
+				SectorEntityToken salus_nav = system.addCustomEntity(null, "Salus 导航浮标", "nav_buoy", Factions.DIKTAT); 
 				salus_nav.setCircularOrbitPointingDown( a2, 110-60, 1400, 45);
 			
 			system.addRingBand(a2, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 1800, 70f);
 			system.addRingBand(a2, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 1800, 90f);
-			system.addRingBand(a2, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 1800, 110f, Terrain.RING, "Dust Ring");
+			system.addRingBand(a2, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 1800, 110f, Terrain.RING, "粉尘环");
 			
 			system.addRingBand(a2, "misc", "rings_ice0", 256f, 0, Color.white, 256f, 2150, 50f);
 			system.addRingBand(a2, "misc", "rings_ice0", 256f, 0, Color.white, 256f, 2150, 70f);
 			system.addRingBand(a2, "misc", "rings_ice0", 256f, 0, Color.white, 256f, 2150, 80f);
-			system.addRingBand(a2, "misc", "rings_ice0", 256f, 1, Color.white, 256f, 2150, 90f, Terrain.RING, "Cloud Ring");
+			system.addRingBand(a2, "misc", "rings_ice0", 256f, 1, Color.white, 256f, 2150, 90f, Terrain.RING, "气体环");
 		
 		// Nortia - Independent (Charterist) base - caught in Salus' L4
 			PlanetAPI a3 = system.addPlanet("nortia", star, "Nortia", "barren-bombarded", 230 + 60, 80, 7500, 250);
@@ -145,7 +145,7 @@ public class Askonia {
 						30, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Salus L4 Asteroids")); // null for default name
+						"Salus L4 小行星团")); // null for default name
 			
 			SectorEntityToken salusL5 = system.addTerrain(Terrain.ASTEROID_FIELD,
 					new AsteroidFieldParams(
@@ -155,20 +155,20 @@ public class Askonia {
 						30, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Salus L5 Asteroids")); // null for default name
+						"Salus L5 小行星团")); // null for default name
 			
 			salusL4.setCircularOrbit(star, 230 + 60, 7500, 250);
 			salusL5.setCircularOrbit(star, 230 - 60, 7500, 250);
 			
 			// Askonia Outer Jump (in Salus L5)
-			JumpPointAPI jumpPoint2 = Global.getFactory().createJumpPoint("salus_jump", "Salus L5 Jump-point");
+			JumpPointAPI jumpPoint2 = Global.getFactory().createJumpPoint("salus_jump", "Salus L5 跳跃点");
 			jumpPoint2.setCircularOrbit(star, 230 - 60, 7500, 250);
 			jumpPoint2.setStandardWormholeToHyperspaceVisual();
 			system.addEntity(jumpPoint2);
 			
 			// Askonia Gate
 			SectorEntityToken askonia_gate = system.addCustomEntity("askonia_gate", // unique id
-					 "Askonia Gate", // name - if null, defaultName from custom_entities.json will be used
+					 "Askonia 之门", // name - if null, defaultName from custom_entities.json will be used
 					 "inactive_gate", // type of object, defined in custom_entities.json
 					 null); // faction
 			askonia_gate.setCircularOrbit(star, 230-180, 7000, 230);
@@ -183,7 +183,7 @@ public class Askonia {
 		a4.setInteractionImage("illustrations", "pirate_station");
 		
 		// makeshift sensor array in counter-orbit to Umbra
-		SectorEntityToken askonia_outer_array = system.addCustomEntity(null, "Askonia Fringe Listening Station", "sensor_array_makeshift", Factions.DIKTAT); 
+		SectorEntityToken askonia_outer_array = system.addCustomEntity(null, "Askonia 边缘监听占点", "sensor_array_makeshift", Factions.DIKTAT); 
 		askonia_outer_array.setCircularOrbitPointingDown( star, 150+180, 11000, 600);
 	
 //		system.addOrbitalJunk(a1,
@@ -197,7 +197,7 @@ public class Askonia {
 //				 60f, // min spin (degress/day)
 //				 360f); // max spin (degrees/day)
 		
-		SectorEntityToken station = system.addCustomEntity("diktat_cnc", "Command & Control", "station_side02", "sindrian_diktat");
+		SectorEntityToken station = system.addCustomEntity("diktat_cnc", "指挥 & 控制 中心", "station_side02", "sindrian_diktat");
 		station.setCircularOrbitPointingDown(system.getEntityById("sindria"), 45, 300, 50);		
 		station.setInteractionImage("illustrations", "orbital");
 //		station.setCustomDescriptionId("station_ragnar");

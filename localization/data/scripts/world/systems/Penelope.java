@@ -10,6 +10,7 @@ import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.StarTypes;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
 import com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin.AsteroidFieldParams;
@@ -21,6 +22,10 @@ public class Penelope {
 		
 		StarSystemAPI system = sector.createStarSystem("Penelope's Star");
 		LocationAPI hyper = Global.getSector().getHyperspace();
+		
+		if (Global.getSettings().getBoolean("factionsClaimUnpopulatedCoreSystems")) {
+			system.getMemoryWithoutUpdate().set(MemFlags.CLAIMING_FACTION, Factions.LUDDIC_CHURCH);
+		}
 		
 		system.setBackgroundTextureFilename("graphics/backgrounds/background4.jpg");
 		
@@ -61,7 +66,7 @@ public class Penelope {
 			penelope3a.applySpecChanges();
 			
 			// Penelope's Jumppoint - L4 (ahead)
-			JumpPointAPI p_jumpPoint = Global.getFactory().createJumpPoint("penelope_jump", "Penelope 内部跳跃点");
+			JumpPointAPI p_jumpPoint = Global.getFactory().createJumpPoint("penelope_jump", "Penelope 星系内部跳跃点");
 			p_jumpPoint.setCircularOrbit(system.getEntityById("penelope"), 80+60, 6800, 225);
 			p_jumpPoint.setRelatedPlanet(penelope3);
 			
@@ -113,7 +118,7 @@ public class Penelope {
 						24, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Penelope L4 小行星带")); // null for default name
+						"Penelope L4 小行星团")); // null for default name
 			
 			SectorEntityToken penelopeL5 = system.addTerrain(Terrain.ASTEROID_FIELD,
 					new AsteroidFieldParams(
@@ -123,7 +128,7 @@ public class Penelope {
 						24, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Penelope L5 小行星带")); // null for default name
+						"Penelope L5 小行星团")); // null for default name
 			
 			penelopeL4.setCircularOrbit(penelope_star, 230 + 60, 9500, 450);
 			penelopeL5.setCircularOrbit(penelope_star, 230 - 60, 9500, 450);
@@ -150,7 +155,7 @@ public class Penelope {
 		
 		// Outer system jump-point
 			// Telepylus Jumppoint - L5 (behind)
-			JumpPointAPI p_jumpPoint2 = Global.getFactory().createJumpPoint("penelope_jump", "Penelope 边缘跳跃点");
+			JumpPointAPI p_jumpPoint2 = Global.getFactory().createJumpPoint("penelope_jump", "Penelope 星系边缘跳跃点");
 			p_jumpPoint2.setCircularOrbit(system.getEntityById("penelope"), 250-60, 12050, 650);
 			//p_jumpPoint2.setRelatedPlanet(penelope5);
 			
