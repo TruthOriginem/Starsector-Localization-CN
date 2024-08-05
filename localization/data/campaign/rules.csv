@@ -1120,9 +1120,9 @@ $entity.LP_tithePaid = true 100
 MakeOtherFleetNonHostile LP_tithe true 100
 AddText ""通讯链接还没等你回应就被切断了。""
 ShowDefaultVisual
-EndConversation","""或许你还没有将自己的灵魂完全出卖给冰冷的机械。""$heOrShe欣喜地说到，""或许你的罪业还没有深重到不用神圣的烈焰就无法涤净的地步。""
+EndConversation","""你的灵魂尚未完全迷失在机械之中。""$heOrShe欣喜地说到，""你的罪业未必经历圣焰焚身即可获得宽恕。""
 OR
-""诚然，卢德正借无形之手指引着你的道路。""这个左径分子边说着，边从$hisOrHer的眼角抹去了一滴眼泪。",,
+""诚然，卢德之手引导了你。""这个左径分子边说着，边从$hisOrHer的眼角抹去了一滴眼泪。",,
 payMegaTitheNeverMindSel,DialogOptionSelected,$option == payMegaTitheNeverMind,"Highlight $entity.LP_titheDGS
 FireAll LPTitheOptions","""好吧。""这个左径分子有些犹豫地说到，""这些关于我们之间蒙主厚福的光辉前路将会如何硕果累累的大道理就到此为止...就算是我主的庇佑也只会施予那些知晓如何接受这份馈赠之人 —— 以及那些愿意为了他们的罪业缴纳相应什一税的自谦之人。""
 
@@ -3949,7 +3949,7 @@ lppVolturnShrineRevisit2,DialogOptionSelected,$option == lpp_volturnShrineRevisi
 shrineDoLeave:离开",
 lppVolturnShrineRevisitCandle,DialogOptionSelected,$option == lpp_volturnShrineRevisitCandle,,你用已燃的烛火点亮了另一支，让它的一位同伴起死回生，薪火相传。,shrineDoLeave:离开,
 lppVolturnShrineRevisitSD2,DialogOptionSelected,"$option == lpp_volturnShrineRevisit1
-$player.commissionFactionId == sindrian_diktat",$justVisitedShrine = true 0,"圣所祭司冷淡地于此地迎接了你。她随身携带的小型手枪规距地塞在枪套里，但搭扣却肆意地没有扣上。
+$player.commissionFactionId == sindrian_diktat",$justVisitedShrine = true 0,"祭司 Sacraria Standfast 冷淡地于此地迎接了你。她随身携带的小型手枪规距地塞在枪套里，但搭扣却肆意地没有扣上。
 
 当你提出要参拜圣地的时候，困惑与些许厌烦两种情绪同等地浮现在了她的脸上，但她依旧为你拉下了尘封的幕帘，并站到了一旁。
 
@@ -6980,7 +6980,7 @@ LKEvirensEndingA1,DialogOptionSelected,$option == lke_virensEndingA1,FireAll LKE
 
 ""我觉得你确实该和 Bornanew 亲自谈谈。"" 他说道，""我这就让我的手下给你坐标。""",,
 LKEvirensEndingOptI,LKEvirensEndingOpts,$madeBigThreat,,,"lke_virensEndingOptIResp1:""是吧，告诉我也没那么难。""",
-LKEvirensEndingOptA,LKEvirensEndingOpts,$player.mostLuddicEthosFaithful ,,,"lke_virensEndingOptAResp1:""为什么要帮助 卢德教会？你难道不算是更...非主流的教派吗？""",
+LKEvirensEndingOptA,LKEvirensEndingOpts,$player.mostLuddicEthosFaithful ,,,"lke_virensEndingOptAResp1:""为什么你要帮助 卢德教会？你所属的教派通常不是更...另辟蹊径吗？""",
 LKEvirensEndingOptB,LKEvirensEndingOpts,$player.mostLuddicEthosPather ,,,"lke_virensEndingOptBResp1:""我帮 卢德教会 找到 Bornanew 对 卢德左径 有什么好处？""",
 LKEvirensEndingOptC,LKEvirensEndingOpts,$player.mostLuddicEthosAtheistic,,,"lke_virensEndingOptCResp1:""这就完了？没什么关于 '左径' 的高谈阔论？""",
 LKEvirensEndingOptD,LKEvirensEndingOpts,,,,"lke_virensEndingOptDResp1:""为什么你作为一个 左径分子，会在这件事上帮我？""",
@@ -6989,11 +6989,11 @@ $player.mostLuddicEthosFaithful ",,,"lke_virensEndingOptEResp1:""非常感谢；
 LKEvirensEndingOptF,LKEvirensEndingOpts,!$player.mostLuddicEthosPather ,,,"lke_virensEndingOptFResp1:""这就结了？这是个陷阱吗？""",
 LKEvirensEndingOptG,LKEvirensEndingOpts,$player.jaspisCottonBook,,,"lke_virensEndingOptGResp1:""还有一件事 —— 我还在找 Cotton 修士。""",
 LKEvirensEndingOptH,LKEvirensEndingOpts,,,,"lke_virensEndingOptHResp1:""谢谢你，还有你的茶。""",
-LKEvirensEndingOptAResp1,DialogOptionSelected,$option == lke_virensEndingOptAResp1,,"""非主流？"" 他轻笑一声，""你愿意的时候倒还挺圆滑的。""
+LKEvirensEndingOptAResp1,DialogOptionSelected,$option == lke_virensEndingOptAResp1,,"""另辟蹊径？"" 他轻笑一声，""你圆滑起来倒还挺像样的。""
 
-""卢德教会 又不是铁板一块。而你觉得这个家伙，这个 Jethro Bornanew，能帮教会里那些坚持所谓正统的势力压制所有其他信徒，乃至整个星域吗？""
+""卢德教会 内部并不是铁板一块。而你觉得这个家伙，这个 Jethro Bornanew，能帮教会里那些坚持所谓正统的势力压制所有其他信徒，乃至整个星域吗？""
 
-""我可不确定。"" 他扯出了一个被逗乐了的笑容，但最终没咧得那么开。""一帆风顺，舰长。""",lke_virensEndingOut1:离开,
+""我可不确定。"" 他扯出了一个被逗乐了的笑容，但最终没咧得那么开。""祝你航行无阻，舰长。""",lke_virensEndingOut1:离开,
 LKEvirensEndingOptBResp1,DialogOptionSelected,$option == lke_virensEndingOptBResp1,,"""当我说我不知道神给我们铺了什么样的 卢德之道 的时候，$playerBrotherOrSister，我很认真。""
 
 ""但我知道卢德教会 并不是铁板一块。而你觉得这个家伙，这个 Jethro Bornanew，能帮教会里那些正统派克服所有信徒和其他星域的阻碍吗？""
@@ -11353,7 +11353,7 @@ DoCanAffordCheck $gaFC_kapteynBribeCost gaFC_kapteynBossOfferBribe false","海�
 ""如果你能支付...嗯，$gaFC_kapteynBribeCost 星币，我就可以帮你 —— 并且十分愿意这么做。""","gaFC_kapteynBossBribe:同意付款
 gaFC_kapteynBossBother1:""我们还是再来谈谈这个 Scylla Coureuse 吧。""",
 gaFCKapteynBossKantaAppeal,DialogOptionSelected,$option == gaFC_kapteynBossKantaAppeal,"AdjustRepActivePerson INHOSPITABLE -1
-$wasAnnoying = true","""不，她没有，告辞。""
+$wasAnnoying = true","""不，她没有，滚。""
 
 海盗头子轻拍了一下通讯控制台，通讯就被断开了，你眼前的屏幕除了噪点以外只剩一片漆黑。",cutCommLink:关闭通讯,
 gaFCKapteynBossAppeal,DialogOptionSelected,$option == gaFC_kapteynBossBribe,"AdjustRepActivePerson COOPERATIVE 10
@@ -17913,14 +17913,14 @@ FireBest DialogOptionSelected",一个你很熟悉但令人不爽的声音透过�
 soeTakeDrink,DialogOptionSelected,"$option == soe_takeDrink
 $player.sawCaspian","BeginConversation caspian
 $player.tookDrink = true 0
-FireAll SOEsangRound1","""怎么了，舰长，"" Caspian Sang 慢悠悠地开口了。尽管身上的制服是新熨烫过的，他的笑容却依旧和上次一样虚伪。""看来你已经搞到你的佣金了，""他指着你那没动过的饮料，""东道主尽地主之谊，风度翩翩地慷慨施恩，可没想到这么快就给糟蹋了。""
+FireAll SOEsangRound1","""怎么了，舰长，"" Caspian Sang 慢悠悠地开口了。尽管身上的制服是新熨烫过的，他的笑容却依旧和上次一样虚伪。""看来你已经搞到你的佣金了，""他指着你那没动过的饮料，""东道主尽地主之谊，风度翩翩地慷慨施恩，可没想到这么快就被你这种人给糟蹋了。""
 
 当他继续说下去时，你闻到了一身酒气。""但我还是让你赚得太少了点。你说你为 霸主 效忠，不是吗？现在是你立功的好机会，帮我加满这杯饮料，好吗？""
 
 目光越过 Caspian 的肩头，你看到他那群跟屁虫在窃笑。",,
 soeNoDrink,DialogOptionSelected,"$option == soe_noDrink
 $player.sawCaspian","BeginConversation caspian
-FireAll SOEsangRound1","""怎么了，舰长，"" Caspian Sang 慢悠悠地开口了。他手中的杯子已经空空如也。""我还以为一名受雇的海盗，抱歉，应该说是私掠者，会在宴会一开始就去糟蹋一轮我们好客主人尽地主之谊给出慷慨恩赐呢。""
+FireAll SOEsangRound1","""怎么了，舰长，"" Caspian Sang 慢悠悠地开口了。他手中的杯子已经空空如也。""我还以为一名受雇的海盗，抱歉，应该说是私掠者，会在宴会一开始就会先去糟蹋一轮我们好客主人尽地主之谊给出慷慨恩赐呢。""
 
 他把他的酒杯递向你，""请，接过这个杯子。""你能从他的呼吸中闻出满身的酒气，""履行你对 霸主 的职责，帮我加满它。""
 
@@ -18014,7 +18014,7 @@ $player.threwDrink",AdjustRepPerson neriene_rao FRIENDLY 2,""" Caspian Sang 就�
 soe_askOrcus:"" Rao 家族。应该是那位 Orcus Rao 将军，Raesvelg 的英雄。""
 soe_notExcited:""你好像对这场舞会不太感兴趣。""",
 soeIntroNeriene3punch,DialogOptionSelected,"$option == soe_introNeriene3
-$player.threwPunch",,""" Caspian Sang 是个蠢货，那是他自找的，""她皱着眉头，""但殴打军官可不讨喜。严格来说，这也是违法的。但如果你听我的，就没人会追究。Sang 应该拉不下脸来亲自举报你，毕竟那只会自取其辱。""
+$player.threwPunch",,"""Caspian Sang 是个蠢货，那是他自找的，""她皱着眉头，""但殴打军官可不讨喜。严格来说，这也是违法的。但如果你听我的，就没人会追究。Sang 应该拉不下脸来亲自举报你，毕竟那只会自取其辱。""
 
 ""更何况，""她边说边环顾四周，""那可能冒犯到某个家族。""","soe_askWhyCover:""你为什么要帮我打掩护？""
 soe_askEstate:"" Rao 家族，应该是这庄园的主人。""
@@ -18094,10 +18094,10 @@ ShowDefaultVisual
 FireBest MarketPostOpen",你的穿梭机返回了 $entityName 上方的$shipOrFleet中。,,
 soeDanceRound1a,DialogOptionSelected,"$option == soe_danceRound1
 $player.nerieneStartedDance","$option = soe_danceRound2 0
-FireBest DialogOptionSelected",一开始你的步调温和，也没习惯 Eventide 的精英们跳的这种交谊舞，但 Neriene 随和且耐心，低声指导你跟上当地的习俗舞步。你感觉她是一个能够激励新手船员在高压之下高效完成任务的指挥官。,,
+FireBest DialogOptionSelected",一开始你的步调温和，也没习惯 Eventide 的精英们跳的这种交谊舞。但 Neriene 随和且耐心，低声指导你跟上当地的习俗舞步。你感觉她是一个能够激励新手船员在高压之下高效完成任务的指挥官。,,
 soeDanceRound1b,DialogOptionSelected,"$option == soe_danceRound1
 $player.playerStartedDance","$option = soe_danceRound2 0
-FireBest DialogOptionSelected",她的舞步轻快活泼，尽管你觉得她不会在社交中显露出来。可惜你和 Eventide 的霸主精英跳交谊舞时的表现没和你的操舵技术一样好。察觉到这一点后，Neriene 低声指导了你几句，让你跟上当地的习俗舞步。你感觉她是一个能够激励新手船员在高压环境下高效完成任务的指挥官。,,
+FireBest DialogOptionSelected",她的舞步轻快活泼，让你觉得都有点不像她平常的样子。可惜你的 Eventide 霸主精英交谊舞步没能和你的操舵技术一样好。察觉到这一点后，Neriene 低声指导了你几句，让你跟上当地的传统舞步。你感到她是个能够激励新手船员在高压环境下高效完成任务的指挥官。,,
 soeDanceRound2,DialogOptionSelected,$option == soe_danceRound2,,很快你就发现自己跟上了当下舞步的节奏，暂时把周围无聊的欺压和派系的政见全都给抛到了脑后。,soe_danceRound3:继续,
 soeDanceRound3,DialogOptionSelected,$option == soe_danceRound3,,"下一支曲开始，你们顺势继续。
 
@@ -18112,7 +18112,7 @@ soeDanceRound3important,DialogOptionSelected,$option == soe_danceReplyImportant,
 soeDanceRound3party,DialogOptionSelected,$option == soe_danceReplyParty,AdjustRepPerson neriene_rao FRIENDLY 1,"""不错，""她笑着说，""因为我也终于开始感受到乐趣了。""",soe_danceRound4:继续,
 soeDanceRound3sang,DialogOptionSelected,$option == soe_danceReplySang,,"她皱起眉头，""我理解你这种情绪，但你需要在意的不是他。""",soe_danceRound4:继续,
 soeDanceRound3felt,DialogOptionSelected,$option == soe_danceReplyFelt,AdjustRepPerson neriene_rao FRIENDLY 1,"""那就是命运了，""她露出了个古怪的笑容，""我没料到你是个浪漫的人。""",soe_danceRound4:继续,
-soeDanceRound3you,DialogOptionSelected,$option == soe_danceReplyYou,AdjustRepPerson neriene_rao FRIENDLY 1,"""这谎说得太不知羞耻了。"" 她笑着说，""不过还挺中听的。""",soe_danceRound4:继续,
+soeDanceRound3you,DialogOptionSelected,$option == soe_danceReplyYou,AdjustRepPerson neriene_rao FRIENDLY 1,"""这谎说得还真是没羞没臊的。"" 她笑着说，""不过还挺中听的。""",soe_danceRound4:继续,
 soeDanceRound4,DialogOptionSelected,$option == soe_danceRound4,,你注意到 Neriene 似乎在看着你身后的什么，随即她的脸色变得不太好看，把你推开了。,soe_danceRound5:继续,
 soeDanceRound5,DialogOptionSelected,$option == soe_danceRound5,ShowSecondPerson caspian,"""喔，$playerName！""
 
@@ -18187,9 +18187,9 @@ soeDuelPrepare2,DialogOptionSelected,$option == soe_duelPrepare2,ShowSecondPerso
 soeDuelPrepare3,DialogOptionSelected,$option == soe_duelPrepare3,"EndConversation DO_NOT_FIRE
 ShowImageVisual eventide
 Call $global.soe_ref THEDUEL",,soe_duelPrepare4:继续,
-soeDuelPrepare4,DialogOptionSelected,$option == soe_duelPrepare4,FireAll SOEDuelPrepResponse,"你面前的长台面上摆着一整套的决斗装备：坚固的靴子、手套和头盔，还有一套连身衣整齐地叠放在一旁。连身衣由智能材料构成，只允许被认定为非致命的刺击和劈砍穿过它。同时它还带有一套嵌入式医疗设备，可以在受伤时自动执行急救。""几乎没人在决斗时死去，""一个小贵族向你保证道，同时他把一支没出鞘的剑递给了 Neriene Rao。
+soeDuelPrepare4,DialogOptionSelected,$option == soe_duelPrepare4,FireAll SOEDuelPrepResponse,"你面前的长台面上摆着一整套的决斗装备：坚固的靴子、手套和头盔，还有一套连身衣整齐地叠放在一旁。连身衣由智能材料构成，只允许被认定为非致命的刺击和劈砍穿过它。同时它还带有一套嵌入式医疗设备，可以在受伤时自动执行急救。""几乎没人在决斗时死去，""一位低阶贵族向你保证道，同时他把一支没出鞘的剑递给了 Neriene Rao。
 
-她挥手把这个小贵族赶回了看客群中，脸上止不住地露出一副懊恼的神情。相对于 Cardona 和 Sang 那边，你这边围上来的人很少，而其中穿制服的家伙就更少了。
+她挥手把这位低阶贵族赶回了看客之中，脸上止不住地流露出懊恼的神情。相对于 Cardona 和 Sang 那边，你这边围上来的人很少，而其中穿制服的家伙就更少了。
 
 ""这太蠢了，""她说着，把剑抽出一掌宽，仔细检查起剑刃来。""你没必要这么做。""",,
 soeDuelPrepResponseBeginDuel,SOEDuelPrepResponse,$player.gotSword,,,"soe_duelPrepReady:""我准备好了。""",
@@ -18221,7 +18221,7 @@ FireAll SOEDuelPrepResponse","她把剑连鞘一起递给了你，""这是我父
 ""但这没什么情感价值在里边。""她瞥了一眼你的表情，""我不怎么喜欢剑术。""",,
 soeDuelPrepQuaint,DialogOptionSelected,$option == soe_duelPrepQuaint,"$prepSaidQuaint = true 0
 FireAll SOEDuelPrepResponse","""那东西在文明社会里根本没有用武之地。但看来我们还没文明到那个程度，不是吗？""目光看向一套恒星镜组，她这么说到。",,
-soeDuelPrepStudied,DialogOptionSelected,$option == soe_duelPrepStudied,"AddTextSmall ""透露出接受过剑术训练"" highlight
+soeDuelPrepStudied,DialogOptionSelected,$option == soe_duelPrepStudied,"AddTextSmall ""展现出接受过剑术训练"" highlight
 $player.bladeSkill = true
 $player.gotSword = true 0
 FireAll SOEDuelPrepResponse","Neriene 把剑递你的时候看起来还有些将信将疑。
@@ -27886,17 +27886,17 @@ DespawnEntity","那支全自动舰队所保护的小行星上布满了空荡荡�
 一台行星杀手。
 
 你的行动长官一声令下，打断了打捞队员们兴奋的七嘴八舌，他们又开始一如既往地做出回复。行星杀手很快就被送到了你的旗舰上。",pkRecoveredCont:继续,
-pkRecoveredContSel,DialogOptionSelected,$option == pkRecoveredCont,,"一颗遗失已久的行星杀手是笼罩在英仙座星域每个人头顶上的不祥阴影。它那残暴肆虐力量，是曾让 Opis、Hanan Pacha 以及其他世界覆灭的罪魁祸首。
+pkRecoveredContSel,DialogOptionSelected,$option == pkRecoveredCont,,"一颗下落不明的行星杀手是笼罩在英仙座星域每个人头顶上的不祥阴影。它那残暴肆虐力量，是曾让 Opis、Hanan Pacha 以及其他世界覆灭的罪魁祸首。
 
 许多强大的势力都希望能拥有这样一件武器，来确保他们不会因为一次闪电突袭就被踢下王座。而许多二流势力也希望用其确保自己能受到尊重和保护。至于左径信徒会拿这件装置干些什么，恐怕只有卢德他老人家才会知道，而海盗们就更别提了。",defaultLeave:离开,
 pkRecoveredContSelPatherLie,DialogOptionSelected,"$option == pkRecoveredCont
-$player.pkRecoveryLiedToPather ",,"一颗失落已久的行星杀手是笼罩在英仙座星域所有人类头顶上的不祥阴影；在被它蹂躏过的其它所有世界上，包括 Opis，Hanan Pacha 在内，都留下了刻骨铭心的伤痛。
+$player.pkRecoveryLiedToPather ",,"一颗下落不明的行星杀手是笼罩在英仙座星域所有人类头顶上的不祥阴影；在被它蹂躏过的其它所有世界上，包括 Opis，Hanan Pacha 在内，都留下了刻骨铭心的伤痛。
 
 只有卢德他老人家才知道左径信徒会打算用这样的装置干些什么，而当你敲定这笔交易时，可没有蠢到简简单单地把行星杀手交出去只为了看看这样做会带来何种后果。
 
 无论你作出何种努力，他们都会很快知道你发现了些什么。消息会通过他们的监视网络不胫而走，无论是来自你船员中的线人，亦或者是祈祷与臆测。",defaultLeave:离开,
 pkRecoveredContSelPatherNoCommit,DialogOptionSelected,"$option == pkRecoveredCont
-$player.knowsPatherLeadOnPKButNoCommit",,"一颗失落已久的行星杀手是笼罩在英仙座星域所有人类头顶上的不祥阴影；在被它蹂躏过的其它所有世界上，包括 Opis，Hanan Pacha 在内，都留下了刻骨铭心的伤痛。
+$player.knowsPatherLeadOnPKButNoCommit",,"一颗下落不明的行星杀手是笼罩在英仙座星域所有人类头顶上的不祥阴影；在被它蹂躏过的其它所有世界上，包括 Opis，Hanan Pacha 在内，都留下了刻骨铭心的伤痛。
 
 只有卢德他老人家才知道左径信徒会打算用这样的装置干些什么。然而你已经同意把行星杀手交给他们，也许他们只是想保障自己在这片星域里的安全和立足之地 —— 也许他们只是想毁掉这台可怕的憎恶科技造物。
 
