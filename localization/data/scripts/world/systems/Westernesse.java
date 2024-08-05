@@ -56,14 +56,14 @@ public class Westernesse {
 		//	fikenhildStation.setCircularOrbitPointingDown( fikenhild, 0, 150, 30);		
 		//	fikenhildStation.setInteractionImage("illustrations", "orbital");
 		
-		JumpPointAPI jumpPoint1 = Global.getFactory().createJumpPoint("westernesse_jump", "Westernesse Jump-point");
+		JumpPointAPI jumpPoint1 = Global.getFactory().createJumpPoint("westernesse_jump", "Westernesse 跳跃点");
 		jumpPoint1.setCircularOrbit( system.getEntityById("westernesse"), 90 + 60, radiusAfter1 + 1500 , 90);
 		jumpPoint1.setRelatedPlanet(horn);
 		jumpPoint1.setStandardWormholeToHyperspaceVisual();
 		system.addEntity(jumpPoint1);
 		
 		// Westernesse Relay - L5 (behind)
-		SectorEntityToken westernesse_relay = system.addCustomEntity("westernesse_relay", "Westernesse Relay", "comm_relay", "persean");
+		SectorEntityToken westernesse_relay = system.addCustomEntity("westernesse_relay", "Westernesse 通讯中继站", "comm_relay", "persean");
 		westernesse_relay.setCircularOrbitPointingDown( system.getEntityById("westernesse"), 90 - 60, radiusAfter1 + 1500 , 90);
 				
 		PlanetAPI suddene = system.addPlanet("suddene", westernesse_star, "Suddene", "barren-desert", 180, 145, radiusAfter1+2600, 210);

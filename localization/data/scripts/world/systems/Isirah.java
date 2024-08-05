@@ -97,7 +97,7 @@ public class Isirah {
 					30, // max asteroid count
 					4f, // min asteroid radius 
 					14f, // max asteroid radius
-					"Corb 堆积小行星带")); // null for default name
+					"Corb 堆积小行星团")); // null for default name
 		
 		isirah_d1.setCircularOrbit(isirah_star, 180 -10, 4300, 400);
 		

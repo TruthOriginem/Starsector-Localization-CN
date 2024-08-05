@@ -75,7 +75,7 @@ public class Tyle {
 					40, // max asteroid count
 					4f, // min asteroid radius 
 					16f, // max asteroid radius
-					"Wuya 小行星带")); // null for default name
+					"Wuya 小行星团")); // null for default name
 		
 		tyle_field1.setCircularOrbit(tyle_star, 90 + 60, 4800, 260);
 		
@@ -112,7 +112,7 @@ public class Tyle {
 					60, // max asteroid count
 					4f, // min asteroid radius 
 					20f, // max asteroid radius
-					"Sargossa 小行星带")); // null for default name
+					"Sargossa 小行星团")); // null for default name
 		
 		tyle_field2.setCircularOrbit(tyle_star, 180 - 60, 9000, 750);
 		
