@@ -136,7 +136,7 @@
 			"breachpod",
 			"harpoonpod",
 			"sabotpod",
-			"phasecl",
+			#"phasecl",
 			"typhoon",
 			
 			"squall",
@@ -288,7 +288,7 @@
 		"hostilityImpactOnGrowth":true,
 		#"makesPirateBases":true, # testing
 		"punitiveExpeditionData":{
-			"vsCompetitors":true,
+			"vsCompetitors":false,
 			"vsFreePort":false,
 			"canBombard":true,
 			"territorial":true,
