@@ -89,13 +89,13 @@ public class DynamicStabilizerStats extends BaseShipSystemScript {
 		int beam = (int) Math.round(BEAM_DAMAGE * effectLevel);
 		
 		if (index == 0) {
-			return new StatusData("improved maneuverability", false);
+			return new StatusData("提高机动性", false);
 		} else if (index == 1) {
-			return new StatusData("rate of fire +" + (int) rof + "%", false);
+			return new StatusData("武器射速 +" + (int) rof + "%", false);
 		} else if (index == 2) {
-			return new StatusData("recoil -" + (int) recoil + "%", false);
+			return new StatusData("武器后坐力 -" + (int) recoil + "%", false);
 		} else if (index == 3) {
-			return new StatusData("beam damage +" + (int) beam + "%", false);
+			return new StatusData("光束武器伤害 +" + (int) beam + "%", false);
 		}
 		
 		return null;
