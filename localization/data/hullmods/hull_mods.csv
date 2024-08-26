@@ -10,7 +10,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 
 在战斗中该舰会积极迎击敌人并表现得如同战斗舰船一般。",提高船体结构、装甲强度、以及幅能容量。,,graphics/hullmods/assault_package.png
 自动修复单元,autorepair,2,,,"engines, defensive, merc, standard",防御,7500,,,,3,6,9,15,data.hullmods.AutomatedRepairUnit,降低 %s 在战斗中修复受损武器及引擎的时间。,提高战斗中武器的维修速率。,将武器与引擎的修复时间降低至 %s，且降低 %s 舰船过载持续时间。,graphics/hullmods/automated_repair_unit.png
-辅助推进器,auxiliarythrusters,1,,,"engines, merc, standard",引擎,5000,TRUE,,,4,8,12,20,data.hullmods.AuxiliaryThrusters,提高舰船 %s 机动性，如加速度/减速度/转向加速/转向角速。,提高舰船的机动性。,"Increases the 0-flux speed boost by %s, and %s the 0-flux turn rate bonus.",graphics/hullmods/auxilliary_thrusters.png
+辅助推进器,auxiliarythrusters,1,,,"engines, merc, standard",引擎,5000,TRUE,,,4,8,12,20,data.hullmods.AuxiliaryThrusters,提高舰船 %s 机动性，如加速度/减速度/转向加速/转向角速。,提高舰船的机动性。,"提高 ""零幅能加速"" 状态下的的航速增益 %s 与旋转速度增益 %s",graphics/hullmods/auxilliary_thrusters.png
 弹道测距仪,ballistic_rangefinder,2,,,"offensive, merc, standard",武器,8000,,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.BallisticRangefinder,提高实弹槽位上中小型武器的射程。,提高实弹槽位上中小型武器的射程。,,graphics/hullmods/ballistic_rangefinder.png
 防爆气密门,blast_doors,0,,,"defensive, merc, standard",防御,2500,TRUE,,,4,8,12,20,data.hullmods.BlastDoors,"在各个要害部位加装坚固的密封门，提高 %s 船体结构。
 
@@ -29,11 +29,11 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 
 为每枚导弹附加一个 CPU 辅核，能提高导弹 %s 的飞行速度以及 %s 的机动性，同时也显著改善了制导算法，即追踪能力。
 
-降低 %s 因电子战失利所造成的武器射程降低。",提高导弹速度与追踪能力，并抵抗敌方电子战的效果。,该舰发射的导弹将完全免疫 电子对抗组件 和 热诱弹 的影响。,graphics/hullmods/eccm_package.png
+降低 %s 因电子战失利所造成的武器射程降低。",提高导弹速度与追踪能力，并抵抗敌方电子战的效果。,该舰完全免疫 敌方电子战强度 导致的武器射程降低效果，且免疫 热诱弹 的干扰。,graphics/hullmods/eccm_package.png
 电子对抗组件,ecm,2,,,"offensive, special, merc, standard","武器, 支援",4000,,,,6,12,18,24,com.fs.starfarer.api.impl.hullmods.ECMPackage,在战斗时，根据舰船级别，提高 %s/%s/%s/%s 电子战强度。,增强舰船的电子战能力。,,graphics/hullmods/ecm_package.png
-护航套件,escort_package,1,,,"special, weapons, engines, standard","特殊, 武器, 引擎",8000,,,,5,7,15,25,com.fs.starfarer.api.impl.hullmods.EscortPackage,"提高 %s 的机动性，并提高所有点防御武器 %s 的射程，同时提高 %s 对战机与导弹的伤害。
+护航套件,escort_package,1,,,"special, weapons, engines, standard","特殊, 武器, 引擎",8000,,,,5,7,15,25,com.fs.starfarer.api.impl.hullmods.EscortPackage,"当附近 %s 单位距离内存在更大的友方舰船时，提高 %s 的机动性，并提高 %s 的最高航速，还将提高实弹武器和能量武器 %s 的射程。
 
-在战斗中该舰会积极迎击敌人并表现得如同战斗舰船一般。",提高舰船的机动性，点防御武器的射程以及对导弹和战机的伤害。,Destroyers: reduces the amount of damage taken by shields by %s. No added effect for cruisers.,graphics/hullmods/escort_package.png
+当自身为 驱逐舰 且附近存在友方 主力舰 时，上述增益将 %s 。",靠近更大的友方舰船时，提高机动性、最高航速、以及武器的射程。,当自身为 驱逐舰 时，额外降低护盾受到的伤害 %s 。,graphics/hullmods/escort_package.png
 扩编飞行甲板人员,expanded_deck_crew,1,,,"special, merc, standard",战机,4000,,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.ExpandedDeckCrew,"降低 %s 战机损失时整备下降速率，提高 %s 整备恢复速率。
 
 每个甲板都会让该舰的最低船员需求提高 %s 名。",提高战机整备速率，但需要更多的船员来维持。,,graphics/hullmods/expanded_deck_crew.png
@@ -54,7 +54,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 同时还将战备值 (CR) 在战斗中衰减的速度降低 %s。",提高峰值时间，且降低战备值 (CR) 的衰减速率。,,graphics/hullmods/hardened_subsystems.png
 重型装甲,heavyarmor,0,,,"defensive, merc, standard",防御,2500,,,,8,15,20,40,data.hullmods.HeavyArmor,按舰船级别，提高 %s/%s/%s/%s 装甲。,提高装甲值。,降低舰船 %s 的机动性。,graphics/hullmods/heavy_armor.png
 高散射增幅器,high_scatter_amp,3,,,"offensive, merc, standard",武器,5000,,,,4,8,12,20,com.fs.starfarer.api.impl.hullmods.HighScatterAmp,降低光束类武器的射程，并且使它们在对护盾造成伤害时产生硬幅能。,提高光束武器的伤害，还可对护盾造成硬幅能伤害，但降低其基础射程。,光束武器伤害额外提高 %s。,graphics/hullmods/high_scatter_amp.png
-整合点防御 AI,pointdefenseai,3,,,"defensive, merc, standard","武器, 防御",10000,,,,3,6,9,15,data.hullmods.IntegratedPointDefenseAI,给予所有点防御武器识别并忽略诱饵弹的能力。此外，无论战备处于何种水平，所有点防御武器均可保持最佳精准度。所有舰载武器对导弹造成的伤害提高 %s。,所有非导弹的小型武器都具备点防能力。点防武器不会再被热诱弹干扰。,"所有小型非导弹武器都将获得 ""点防御"" 武器特性，将自动向导弹开火，并受到点防御武器属性修正的影响。",graphics/hullmods/integrated_point_defense_ai.png
+整合点防御 AI,pointdefenseai,3,,,"defensive, merc, standard","武器, 防御",10000,,,,3,6,9,15,data.hullmods.IntegratedPointDefenseAI,给予所有点防御武器识别并忽略诱饵弹的能力。此外，无论战备处于何种水平，所有点防御武器均可保持最佳精准度。所有舰载武器对导弹造成的伤害提高 %s。,点防御武器不会再被热诱弹干扰，提高自动瞄准精度，对导弹造成更多伤害。,"所有小型非导弹且非打击型武器都将获得 ""点防御"" 武器特性，将自动向导弹开火，并受到点防御武器属性修正的影响。",graphics/hullmods/integrated_point_defense_ai.png
 #Point Defense Integration,pdintegration,3,,,"defensive, merc","Weapons, Defenses",10000,,,,12,15,18,24,com.fs.starfarer.api.impl.hullmods.PDIntegration,"Reduces the ordnance point cost of small point-defense weapons by %s. The cost reduction only affects weapons that have PD capability as a feature of the weapon itself, and not when it's gained through other means such as from a hullmod.
 
 In addition, all point-defense weapons deal %s more damage to all targets.","Reduces ordnance point cost of small PD weapons, increases all PD damage.",,graphics/hullmods/integrated_point_defense_ai.png
@@ -64,24 +64,20 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 导航中继器,nav_relay,2,,,"engines, special, merc, standard","引擎, 支援",5000,,,,10,15,20,25,com.fs.starfarer.api.impl.hullmods.NavRelay,"当该舰投入战斗时，根据舰船级别，提高 %s/%s/%s/%s 的舰队导航评级。
 
 导航评级会提高你所部署舰船的最高航速。",提高已部署的舰船在战斗时的最高航速。,,graphics/hullmods/nav_relay.png
-神经接口,neural_interface,3,,,"special, no_build_in, no_drop, no_drop_salvage",特殊,10000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.NeuralInterface,"将旗舰与其他舰船连接起来，使你能快速切换当前操作的舰船，而无需通过穿梭机转移。两艘船都需安装 神经接口，且不能由副官或 AI 核心操控。如果二者的总部署成本小于或等于 %s，转移将瞬间完成。
+神经接口,neural_interface,3,,,"special, no_build_in, no_drop, no_drop_salvage",特殊,10000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.NeuralInterface,"将旗舰与其他舰船连接起来，使它们均可 %s 。但诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果将不在另一艘舰船上起作用。
 
-如果被连接的舰船被摧毁或离开战场，旗舰将自动与另一艘有 神经接口 的舰船建立 神经链接。如果旗舰被击沉，指挥官必须乘穿梭舱转移到另一艘有 神经接口 的舰船上才能建立新的链接。
+允许在连接舰船之间快速切换，且无需通过穿梭机转移。如果二者的总部署成本小于或等于 %s，则切换将瞬间完成。切换目标舰船不能由副官或 AI 核心操控。",允许在舰船之间快速切换，并重置战术系统的冷却时间或恢复一次充能。,,graphics/hullmods/neural_interface.png
+神经集成器,neural_integrator,,,,"special, no_build_in, no_drop, no_drop_salvage",特殊,10000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.NeuralIntegrator,"用于自主无人舰的增强版 神经接口，通过链接直接控制舰船的所有系统，可以与你的旗舰连接起来，使它们均可 %s 。但诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果将不在另一艘舰船上起作用。
 
-和 ""转移指挥权"" 类似，无论你亲自控制其中哪一艘，被连接的这一对舰船都能从你的个人战斗技能中获益。但对诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果不起作用。",允许在舰船之间快速切换，并重置战术系统的冷却时间或恢复一次充能。,,graphics/hullmods/neural_interface.png
-神经集成器,neural_integrator,,,,"special, no_build_in, no_drop, no_drop_salvage",特殊,10000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.NeuralIntegrator,"用于自主无人舰的增强版 神经接口。通过链接直接控制舰船的所有系统，而非简单地通过控制意识对舰桥人员下达指示。
+允许在连接舰船之间快速切换，且无需通过穿梭机转移。如果二者的总部署成本小于或等于 %s，则切换将瞬间完成。切换目标舰船不能由副官或 AI 核心操控。
 
-将旗舰与其他舰船连接起来，使你能快速切换当前操作的舰船，而无需通过穿梭机转移。两艘船都需安装 神经接口，且不能由副官或 AI 核心操控。如果二者的总部署成本小于或等于 %s，转移将瞬间完成。
-
-如果被连接的舰船被摧毁或离开战场，旗舰将自动与另一艘有 神经接口 的舰船建立 神经链接。如果旗舰被击沉，指挥官必须乘穿梭舱转移到另一艘有 神经接口 的舰船上才能建立新的链接。
-
-和 ""转移指挥权"" 类似，无论你亲自控制其中哪一艘，被连接的这一对舰船都能从你的个人战斗技能中获益。但对诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果不起作用。",自动化舰船专用的神经接口。,,graphics/hullmods/neural_integrator.png
+复杂的改装将提高 %s 舰船部署点与战后恢复所需的补给。",自动化舰船专用的神经接口。,,graphics/hullmods/neural_integrator.png
 固化护盾转化器,frontemitter,2,,,"shields, defensive, merc, standard",护盾,7000,,,,3,5,8,12,data.hullmods.FrontShieldEmitter,"将全角护盾发生器锁定至正前方并额外获得 %s 的护盾角度。
 
 定向护盾的展开速度是全角护盾的两倍，这也适用于本插件转化而来的定向护盾。",将全盾转换为前盾，并增大护盾面积。,降低 %s 护盾承受的伤害。,graphics/hullmods/front_shield_emitter.png
 全角护盾转化器,adaptiveshields,3,,,"shields, defensive, merc, standard",护盾,7000,,,,3,5,8,12,data.hullmods.OmniShieldEmitter,以降低 %s 护盾角度为代价，将前置护盾转化为全角护盾。,将前盾转化为全盾，降低护盾面积。,取消本插件导致的护盾角度降低。,graphics/hullmods/omni_shield_emitter_mod.png
 作战中心,operations_center,1,,,special,特殊,5000,,,,30,30,30,30,com.fs.starfarer.api.impl.hullmods.OperationsCenter,当安装在旗舰上时，将会提高 %s 指挥点恢复速率。,如果安装在旗舰则提高指挥点恢复速率。,,graphics/hullmods/operations_center.png
-相位锚点,phase_anchor,3,,,"phase, merc, no_build_in, standard, phase_brawler",相位,7000,,,,10,20,30,50,com.fs.starfarer.api.impl.hullmods.PhaseAnchor,"将相位线圈的激活幅能降至 %s。并且在相位隐形时，将软幅能耗散速率与弹药恢复速率提高至 %s 。
+相位锚点,phase_anchor,3,,,"phase, merc, no_build_in, standard, phase_brawler",相位,7000,,,,10,20,30,50,com.fs.starfarer.api.impl.hullmods.PhaseAnchor,"将相位线圈的激活幅能降至 %s。并且在相位隐形时，将软幅能耗散速率与备弹量恢复速率提高至 %s 。
 
 当该舰即将被摧毁或停机时，将自动消耗部署成本 %s 的战备值 (CR)，然后紧急下潜至相位空间深处，视为从战斗中撤退。不过，该舰必须拥有足以用于消耗的战备值 (CR)，才能启用这种紧急下潜。
 

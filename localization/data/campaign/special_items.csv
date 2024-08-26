@@ -59,9 +59,9 @@ name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaid
 
 这颗弹头被上了保险，需要某些大概失传已久的授权代码才能解锁。目前它就只是一台死气沉沉的复杂机械而已。",10
 超空间测绘数据,topographic_data,,,,50000,1000,1,,graphics/icons/cargo/hyperspace_data.png,ui_chip_pickup,ui_modspec_drop,com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin,,这台有着基本资安措施的 TriPad 依照 人之领 开拓者们传承而下的数据格式规则，囊括了英仙座星域某片超空间最近流况数据的详尽扫描与分析结果。像这样的数据对前往 核心世界 之外探索远征的成功而言是不可或缺的。,500
-Wormhole Anchor,wormhole_anchor,,Domain Restricted,,150000,1000,1,,graphics/icons/cargo/wormhole_anchor.png,ui_cargo_special_industrial_pickup,ui_cargo_special_industrial_drop,com.fs.starfarer.api.campaign.impl.items.WormholeAnchorPlugin,,"Unfamiliar to the contemporary Persean Sector, this technology saw use by the Domain Explorarium during an era of greatness long past. Can be used to create a wormhole terminus at a stable location.
+虫洞锚定装置,wormhole_anchor,,人之领管制科技,,150000,1000,1,,graphics/icons/cargo/wormhole_anchor.png,ui_cargo_special_industrial_pickup,ui_cargo_special_industrial_drop,com.fs.starfarer.api.campaign.impl.items.WormholeAnchorPlugin,,"这是一项在久远之前的那段辉煌岁月中曾被 人之领 开拓者所使用的技术，而对当今英仙座星域来说已然相当陌生。这个装置可以在稳定点位置上创建一个虫洞节点。
 
-Initial activation requires antimatter in the form of starship fuel. Requires at least one other active and synchronized terminus to use.",1
-Wormhole Scanner,wormhole_scanner,mission_item,Domain Restricted,,100000,1000,1,,graphics/icons/cargo/wormhole_scanner.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.WormholeScannerPlugin,,"A Domain-era artifact which allows a fleet to navigate a natural wormhole, following its many twists, turns, and shifts through higher dimensions. A fleet entering a wormhole without a scanner would never be seen again, at least not as a coherent collection of baryonic matter.
+初次启动时，锚定装置会消耗星舰燃料以获取反物质。需要另外至少有一个处于激活状态、且已被同步的节点才能使用。",1
+虫洞扫描仪,wormhole_scanner,mission_item,人之领管制科技,,100000,1000,1,,graphics/icons/cargo/wormhole_scanner.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.WormholeScannerPlugin,,"一件用于引导舰队在高维空间中扭曲、转向与位移的 人之领 时代遗物，在其帮助下，舰队可以穿越一处自然虫洞。不使用扫描仪进入虫洞的舰队将再也不会现世，或者至少，不会做为连贯的重子物质被人们所观测到。
 
-The operating principles can only be dimly guessed at given the present state-of-the-art in the Persean Sector.",2
+在当今英仙座星域最尖端的技术水平下，对这件遗物运作原理的分析依然停留在有一些模糊猜测的阶段。",2

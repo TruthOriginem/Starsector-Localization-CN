@@ -6,7 +6,7 @@ name,id,flux/second,f/s (base rate),f/s (base cap),flux/use,f/u (base rate),f/u 
 追踪热诱弹发射器,flarelauncher_active,,,,,,0.1,,,,,,,5,,,,,,,,,,,,,graphics/icons/hullsys/active_flare_launcher.png
 烈焰驱动器,burndrive,1,,,,,,,,,2,5,1,10,TRUE,,,,,TRUE,TRUE,TRUE,TRUE,,,,graphics/icons/hullsys/burn_drive.png
 等离子爆裂驱动器,microburn,1,,,,,,,2,0.1,0.5,0.5,0.5,,,,,,,,TRUE,TRUE,,,,,graphics/icons/hullsys/burn_drive.png
-等离子爆裂驱动器 - 欧米伽,microburn_omega,1,,,,,,,3,0.1,0.5,0.5,0.5,,,,,,,,TRUE,TRUE,,,,restricted,graphics/icons/hullsys/burn_drive.png
+欧米伽爆裂驱动器,microburn_omega,1,,,,,,,3,0.1,0.5,0.5,0.5,,,,,,,,TRUE,TRUE,,,,restricted,graphics/icons/hullsys/burn_drive.png
 机动推进器,maneuveringjets,,,,,,,,,,1,5,1,5,,,,,,,,,,,,,graphics/icons/hullsys/maneuvering_jets.png
 动态稳定器,dynamic_stabilizer,,,,,,,,,,1,5,1,5,,,,,,,,,,,,,graphics/icons/hullsys/maneuvering_jets.png
 烈焰喷射,inferniuminjector,1,,,,,,,,,1,,1,1,TRUE,,,,,,,TRUE,,,,,graphics/icons/hullsys/infernium_injector.png
