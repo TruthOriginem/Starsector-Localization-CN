@@ -62,7 +62,7 @@ class JavaJarFile(DataFile):
             class_file = JavaClassFile(self, path, include_strings, exclude_strings)
             self.class_files[path] = class_file
         except Exception as e:
-            self.logger.warn(f'在 {self.path} 中读取 class 文件 {path} 时出错：{e}')
+            self.logger.warning(f'在 {self.path} 中读取 class 文件 {path} 时出错：{e}')
             return None
 
         return class_file

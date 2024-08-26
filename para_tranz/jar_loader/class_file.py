@@ -4,6 +4,7 @@ from typing import Union, Set, Optional, List, Tuple, Dict
 from para_tranz.jar_loader.constant_table import ConstantTable, Utf8Constant
 from para_tranz.utils.config import MAGIC, MIN_CLASS_VER, MAX_CLASS_VER, ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS, \
     EXPORTED_STRING_CONTEXT_PREFIX
+from para_tranz.utils.mapping import ClassFileMapItem
 from para_tranz.utils.util import make_logger, String, contains_chinese, contains_english, url_encode
 
 
@@ -20,6 +21,7 @@ class JavaClassFile:
 
     def __init__(self, jar_file: 'JavaJarFile', path: str, include_strings: Set[str] = None,
                  exclude_strings: Set[str] = None, no_auto_load: bool = False, **kwargs):
+        self.path_str = path
         self.path = PurePosixPath(path)
         self.include_strings = set(include_strings) if include_strings else set()
         self.exclude_strings = set(exclude_strings) if exclude_strings else set()
@@ -225,6 +227,12 @@ class JavaClassFile:
 
         self.logger.debug(
             f'class读取完成: {self.jar_file.path}:{path_str} ')
+
+    def export_map_item(self) -> ClassFileMapItem:
+        item = ClassFileMapItem(self.path_str)
+        for s in self.get_strings():
+            item.include_strings.add(s.original)
+        return item
 
     def _debug_load_from_standalone_file(self) -> None:
         with open(self.path, 'rb') as f:
