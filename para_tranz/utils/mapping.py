@@ -1,11 +1,12 @@
 import dataclasses
 import json
 from dataclasses import dataclass
-from typing import Union, List, Iterator, Optional, Set
+from typing import Union, List, Iterator, Optional, Set, Tuple
 
 from para_tranz.utils.config import MAP_PATH
-from para_tranz.utils.util import SetEncoder
+from para_tranz.utils.util import SetEncoder, make_logger
 
+logger = make_logger('MappingLoader')
 
 @dataclass
 class ParaTranzMapItem:
@@ -76,6 +77,31 @@ class ParaTranzMap:
             if item.path == path:
                 return item
         return None
+
+    def get_jar_and_class_file_item(self, path: str, create: bool = False, one_class_only: bool = False) -> Optional[
+            Tuple[JarMapItem, ClassFileMapItem]]:
+        """
+        根据路径获取jar和类文件映射项
+        :param path: 路径，格式为 jar_file.jar:com/example/Example.class
+        :param create: 如果不存在是否创建类文件映射项
+        :param one_class_only: 返回的jar映射项是否只包含这一个类文件映射项
+        """
+        jar_path, class_path = path.split(':', 1)
+
+        jar_item = self.get_item_by_path(jar_path)
+        if jar_item is None:
+            logger.error(f'在配置中未找到jar文件映射项：{jar_path}')
+            return None
+
+        class_item = jar_item.get_class_file_item(class_path, create)
+        if class_item is None:
+            return None
+
+        if one_class_only:
+            jar_item = JarMapItem(jar_item.type, jar_item.path, [class_item])
+
+        return jar_item, class_item
+
     def load(self) -> None:
         with open(MAP_PATH, 'r', encoding='utf-8') as f:
             self.items = [ParaTranzMapItem.from_dict(item) for item in json.load(f)]

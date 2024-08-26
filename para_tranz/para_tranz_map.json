@@ -7936,6 +7936,7 @@
         "\"Destroy it!\"",
         "\"No... I will keep it.\"",
         "'s hyperfield, creating a stable location",
+        "At your command the planetkiller, locked in its cradle, is boosted toward the very center of the black hole, up and over the plane of the accretion disc.\n\nWith a flash only a little more than noise in the sensor telemetry, it is gone.",
         "Consider inducing a resonance cascade in the ",
         "Created additional stable location in ",
         "Dump the planetkiller weapon into the black hole",
@@ -7949,7 +7950,9 @@
         "The procedure requires spreading prodigious amounts of antimatter ",
         "This procedure can not performed in a star system that already has numerous stable locations.",
         "You do not have the necessary resources to carry out this procedure.",
+        "Your officers respond promptly to the order, and move to the task with all alacrity. There is an edge to their call-and-response, however, as if they cannot help but acknowledge the deep sense of the gravity in this act.\n\"Package ready to drop, captain,\" your ops chief says. \"On your order.\"",
         "Your sensors officer detects no more unusual energy patterns from the inner rim of the accretion disc, just noise, as mindless as the background radiation of the cosmos itself.",
+        "Your sensors officer hesitates, then calls for your attention. \"Captain, there's a... pattern. From the black hole. Or, rather,\" they pause, looking almost embarrassed. \"-The energy radiated by the accretion disc.\n\nThey pull a collated sensor output map into the primary holo. \"It's almost a signal. See, if we chart these fluctuations in energy output over time...\n\nYou see it now, an orderly series. Not quite a sequence of prime numbers, unless you jig the math. Statistically this is nearly impossible. Possible explanations are as unlikely: a series of planets - large moons? - with specific mass-ratio relationships, all pulled into the accretion disc at just such an angle, like an intentional message... or orderly annihilation of a constructed planetary system at a scale beyond the wildest dreams of the most bloody-minded war-planners of the Domain.\n\nIt can't be known. The pattern disappears as quickly as it arose.",
         "according to calculations far beyond the ability of anything on the right side of the ",
         "black hole",
         "event horizon",
@@ -14702,6 +14705,12 @@
       "path": "com/fs/starfarer/api/impl/campaign/skills/DamageControl$Level8.class",
       "include_strings": [
         "Repairs of damaged but functional weapons and engines can continue while they are under fire*"
+      ]
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/skills/DamageControl$Level8Desc.class",
+      "include_strings": [
+        "\n\n*Normally, a damaged but functional module would not be repaired until 5 seconds have passed without it taking damage."
       ]
     },
     {
