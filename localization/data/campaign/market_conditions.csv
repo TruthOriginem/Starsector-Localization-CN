@@ -74,8 +74,8 @@ AI 行政官 (隐藏),ai_core_admin,,TRUE,com.fs.starfarer.api.impl.campaign.eco
 
 海盗很可能在附近的星系设有基地。",graphics/icons/markets/pirate_activity.png,1300
 敌对活动,hostile_activity,,TRUE,com.fs.starfarer.api.impl.campaign.intel.events.HostileActivity,,graphics/icons/markets/pirate_activity.png,1350
-Piracy Respite,piracy_respite,,TRUE,com.fs.starfarer.api.impl.campaign.econ.PiracyRespite,This colony is experiencing a respite from the depredations of piracy otherwise so common in the Sector.,graphics/icons/markets/respite40.png,1375
-Blockaded,blockaded,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Blockaded,"The system that this colony is in is experiencing a blockade, and regular trade shipping is suffering from harassment or worse. The effects will continue until the blockading force leaves or is soundly defeated.",graphics/icons/markets/blockade.png,1385
+海盗活动减缓,piracy_respite,,TRUE,com.fs.starfarer.api.impl.campaign.econ.PiracyRespite,这个殖民地正经历着一段海盗掠夺活动较星域常规水平有所减缓的时期。,graphics/icons/markets/respite40.png,1375
+遭到封锁,blockaded,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Blockaded,该殖民地所在的星系目前正遭到封锁，常规的贸易货运面临着骚扰或其他更糟糕的影响。该效果将一直持续，直到封锁部队主动撤离或彻底被击败。,graphics/icons/markets/blockade.png,1385
 左径狂信徒,pather_cells,,TRUE,com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCells,,graphics/icons/markets/pather_cells.png,1400
 ,,,,,,,
 # stand-alone conditions,,,,,,,
