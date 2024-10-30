@@ -116,7 +116,7 @@ class CsvFile(DataFile):
     # 将译文数据写回译文csv中
     def save_file(self) -> None:
         with open(self.translation_path, 'r', errors='surrogateescape', newline='', encoding='utf-8') as f:
-            csv = reader(f)
+            csv = reader(f, strict=True)
             real_column_names = csv.__next__()
 
         # 由于部分csv包含多个空列，在用DictReader读取时会被丢弃，为了与源文件保持一致，在此根据原文件重新添加
@@ -134,7 +134,7 @@ class CsvFile(DataFile):
                     row[real_column_index[col]] = value
             rows.append(row)
         with open(self.translation_path, 'w', newline='', encoding='utf-8') as f:
-            writer(f).writerows(rows)
+            writer(f, strict=True).writerows(rows)
 
     # 从原文和译文csv中读取数据
     def load_from_file(self) -> None:
