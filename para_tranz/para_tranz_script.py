@@ -3,11 +3,9 @@ import json
 import sys
 from dataclasses import asdict
 from os.path import abspath, dirname
-
-from para_tranz.utils.mapping import PARA_TRANZ_MAP
-
 sys.path.append(dirname(dirname(abspath(__file__))))
 
+from para_tranz.utils.mapping import PARA_TRANZ_MAP
 from para_tranz.csv_loader.csv_file import CsvFile
 from para_tranz.jar_loader.jar_file import JavaJarFile
 from para_tranz.utils.util import make_logger, SetEncoder

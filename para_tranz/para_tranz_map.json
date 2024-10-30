@@ -5140,6 +5140,7 @@
         " samples or higher ",
         "An antialiasing setting of ",
         "Antialiasing",
+        "Antialiasing is NOT RECOMMENDED when using UI scaling of 100%, 200%, or 300%.\n\nIt will likely negatively affect the look of certain UI elements.\n\n\n",
         "Apply",
         "Applying these settings will restart the launcher",
         "Automatic (based on enabled mods)",
@@ -5151,10 +5152,13 @@
         "Memory settings unavailable on Linux. If more memory is required to run the game with many mods, please edit starsector.sh directly.",
         "Memory settings unavailable on OS X. If more memory is required to run the game with many mods, please edit starsector_mac.sh in the app package.",
         "Off",
+        "Recommended antialiasing settings:\n\nUI scaling of 100%, 200%, or 300%: Off\nOtherwise: 12 samples or higher",
         "UI Scaling",
         "Use recommended settings",
         "Warning - memory is set too low for the enabled set of mods, the game will still run but may encounter problems",
-        "Warning - memory settings will not apply because the JVM will not be restarted on launch due to settings.json configuration"
+        "Warning - memory settings will not apply because the JVM will not be restarted on launch due to settings.json configuration",
+        "is recommended when using UI scaling other than 100%, 200%, or 300%.\n\nOtherwise, certain fonts and other UI elements ",
+        "may look pixelated or distorted.\n\n\n"
       ]
     },
     {
