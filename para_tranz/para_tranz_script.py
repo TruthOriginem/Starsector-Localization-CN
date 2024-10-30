@@ -1,9 +1,10 @@
 # 将父级目录加入到环境变量中，以便从命令行中运行本脚本
-import json
 import sys
-from dataclasses import asdict
 from os.path import abspath, dirname
 sys.path.append(dirname(dirname(abspath(__file__))))
+
+import json
+from dataclasses import asdict
 
 from para_tranz.utils.mapping import PARA_TRANZ_MAP
 from para_tranz.csv_loader.csv_file import CsvFile
