@@ -14,7 +14,7 @@ name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaid
 因该射灯需消耗大量的挥发物来确保其能安全运转，一旦供给不足，则可能使该设备失稳，进而让失控的能量输出激增。直到 大崩塌 发生时，人之领 的法庭里，关于该设备到底是存在设计缺陷还是使用不当的诉讼仍未终止。",135
 超分流阀门,coronal_portal,"hist3t, pather8",人之领管制科技,,300000,1000,1,EXTREME,graphics/icons/cargo/hypershunt_tap.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,population,"能与附近星冕分流器相连的微型虫洞连接器，为殖民地提供近乎无限的能源。
 
-装置的运作需要工业规模的稀有金属供应来维持。这些稀有金属首先被用来打开虫洞，并在虫洞的产能可以自维持后继续用于稳定虫洞。这些稀有金属在这期间会经历极其复杂的烧蚀过程最终被损耗掉。如果稀有金属供应不足，分流器就必须完全关闭。",137
+装置的运作需要工业规模的稀有元素供应来维持。这些稀有元素首先被用来打开虫洞，并在虫洞的产能可以自维持后继续用于稳定虫洞。稀有元素在这期间会经历极其复杂的烧蚀过程最终被损耗掉。如果稀有元素供应不足，分流器就必须完全关闭。",137
 全自动地幔钻机,mantle_bore,"hist3t, pather4",天苑四-乌托邦地貌改造集团,,80000,1000,1,EXTREME,graphics/icons/cargo/terraforming_bore.png,ui_cargo_special_industrial_pickup,ui_cargo_special_industrial_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,mining,虽然星区中应该已经没有还能正常运作的钻机控制单元了，但这种钻机可以托管独立运作 —— 尽管有时会没法预见它要往哪儿钻。自动模式的保险装置使这台钻机无法在宜居星球上运行。,140
 催化核心,catalytic_core,"hist3t, pather4",Ko 联合实业,,100000,1000,1,EXTREME,graphics/icons/cargo/catalytic_core.png,ui_cargo_special_industrial_pickup,ui_cargo_special_industrial_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,refining,通过应用几个渗透物理学上的古怪技术，这颗催化核心能极大地提高冶炼作业的效率。然而，这种技术操作对于真空环境的需求极为苛刻，而在有大气的行星上几乎不可能达到这样的条件。,145
 土壤纳米物质,soil_nanites,"hist3t, pather4",天苑四-乌托邦地貌改造集团,,60000,1000,1,EXTREME,graphics/icons/cargo/soil_nanites.png,ui_cargo_special_industrial_pickup,ui_cargo_special_industrial_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,farming,可将土壤增肥并使水土恢复速度提高至自然过程远无法达到的程度。[人之领纳米物质安全规定] 第 4324 条 第 81 款规定，纳米物质不得在有稀有矿石矿床或挥发物储量的星球上使用，而它内置的安全保险看上去并未失效。,150
@@ -59,9 +59,9 @@ name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaid
 
 这颗弹头被上了保险，需要某些大概失传已久的授权代码才能解锁。目前它就只是一台死气沉沉的复杂机械而已。",10
 超空间测绘数据,topographic_data,,,,50000,1000,1,,graphics/icons/cargo/hyperspace_data.png,ui_chip_pickup,ui_modspec_drop,com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin,,这台有着基本资安措施的 TriPad 依照 人之领 开拓者们传承而下的数据格式规则，囊括了英仙座星域某片超空间最近流况数据的详尽扫描与分析结果。像这样的数据对前往 核心世界 之外探索远征的成功而言是不可或缺的。,500
-虫洞锚定装置,wormhole_anchor,,人之领管制科技,,150000,1000,1,,graphics/icons/cargo/wormhole_anchor.png,ui_cargo_special_industrial_pickup,ui_cargo_special_industrial_drop,com.fs.starfarer.api.campaign.impl.items.WormholeAnchorPlugin,,"这是一项在久远之前的那段辉煌岁月中曾被 人之领 开拓者所使用的技术，而对当今英仙座星域来说已然相当陌生。这个装置可以在稳定点位置上创建一个虫洞节点。
+虫洞锚定装置,wormhole_anchor,,人之领管制科技,,150000,1000,1,,graphics/icons/cargo/wormhole_anchor.png,ui_cargo_special_industrial_pickup,ui_cargo_special_industrial_drop,com.fs.starfarer.api.campaign.impl.items.WormholeAnchorPlugin,,"尽管对当今的 英仙座星域 来说比较陌生，但这其实是 人之领 开拓者 在久远的辉煌岁月中曾经使用过的技术。该装置可以在稳定点的位置创造一个虫洞节点。
 
-初次启动时，锚定装置会消耗星舰燃料以获取反物质。需要另外至少有一个处于激活状态、且已被同步的节点才能使用。",1
-虫洞扫描仪,wormhole_scanner,mission_item,人之领管制科技,,100000,1000,1,,graphics/icons/cargo/wormhole_scanner.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.WormholeScannerPlugin,,"一件用于引导舰队在高维空间中扭曲、转向与位移的 人之领 时代遗物，在其帮助下，舰队可以穿越一处自然虫洞。不使用扫描仪进入虫洞的舰队将再也不会现世，或者至少，不会做为连贯的重子物质被人们所观测到。
+初始的激活过程需要消耗以星舰燃料形式提供的反物质。需要至少有另一个已同步的活跃节点才能起作用。",1
+虫洞扫描仪,wormhole_scanner,mission_item,人之领管制科技,,100000,1000,1,,graphics/icons/cargo/wormhole_scanner.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.WormholeScannerPlugin,,"人之领 时代的遗物，用于在天然虫洞中引导舰队航行，顺应在穿越更高维度的途中遇到的大量的扭曲、旋转和位移。不使用扫描仪就进入虫洞的舰队将再也没有机会重见天日，至少不会做为依然保有相干性的重子物质集合被人们观测到。
 
-在当今英仙座星域最尖端的技术水平下，对这件遗物运作原理的分析依然停留在有一些模糊猜测的阶段。",2
+即便用当今英仙座星域最尖端的技术也只能对这件遗物运作的原理做一些模糊猜测。",2
