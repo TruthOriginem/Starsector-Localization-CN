@@ -7980,6 +7980,21 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/api/campaign/RepLevel.class",
+      "include_strings": [
+        "Cooperative",
+        "Favorable",
+        "Friendly",
+        "Hostile",
+        "Inhospitable",
+        "Neutral",
+        "Suspicious",
+        "Vengeful",
+        "Welcoming"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/api/impl/campaign/RuleBasedInteractionDialogPluginImpl.class",
       "include_strings": [
         ", adding a failsafe option to exit dialog.",
