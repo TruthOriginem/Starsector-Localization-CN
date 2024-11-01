@@ -6,20 +6,24 @@ import json5
 import csv
 
 workplace_path = os.path.dirname(os.path.realpath(__file__))
-starsector_comment_line = re.compile(r'\s*#')
+starsector_comment_line = re.compile(r'(?<!\\)"[^"]*"|#.*')
 json_map_collection_path = "_jsonMapCollection.csv"
 source_folder = "../original"
 target_folder = "../localization"
 
 
 def getStarsectorjsonStr(file_path):
-    # Alex将 # 用在json文件中作为注释...
+    # 定义正则表达式，匹配不在双引号中的 # 及其后面的内容
     json_string = ''
     with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
         lines = f.readlines()
         for line in lines:
-            if starsector_comment_line.search(line):
-                continue
+            # 只保留不在双引号中的 # 及其后面的内容
+            parts = starsector_comment_line.findall(line)
+            for part in parts:
+                if not part.startswith('"'):
+                    line = line.replace(part, '')
+                    break
             json_string += line
     return json_string
 
