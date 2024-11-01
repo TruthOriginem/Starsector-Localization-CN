@@ -60,9 +60,10 @@ class CsvFile(DataFile):
         strings = []
         for row_id, row in self.original_id_data.items():
 
-            # 只导出不为空且没有被注释行内的词条
+            # 只导出id不为空且没有被注释行内的词条
+            # TODO: 多列id的情况下，需检查所有id列是否为空
             first_column = row[list(row.keys())[0]]
-            if not first_column or first_column[0] == '#':
+            if not row_id or first_column.startswith('#'):
                 continue
 
             context = self.generate_row_context(row)
@@ -171,9 +172,13 @@ class CsvFile(DataFile):
             for i, row in enumerate(rows):
                 if type(id_column_name) == str:
                     row_id = row[id_column_name]  # type:str
+                    if not row_id:
+                        continue
                 else:  # 存在多个 id column
-                    row_id = str(tuple([row[id] for id in id_column_name]))  # type:str
-
+                    row_id_tuple = tuple([row[id] for id in id_column_name])
+                    if not any(row_id_tuple):
+                        continue
+                    row_id = str(row_id_tuple)  # type:str
                 # 检查行内数据长度是否与文件一致
                 for col in row:
                     if row[col] is None:
@@ -182,8 +187,8 @@ class CsvFile(DataFile):
                             f'文件 {path} 第 {i} 行 {id_column_name}="{row_id}" 内的值数量不够，可能是缺少逗号')
 
                 first_column = row[columns[0]]
-                # 只在 id-row mapping 中存储不为空且没有被注释的行
-                if first_column and not first_column[0] == '#':
+                # 只在 id-row mapping 中存储没有被注释的行
+                if not first_column.startswith('#'):
                     if row_id in id_data:
                         raise ValueError(f'文件 {path} 第 {i} 行 {id_column_name}="{row_id}" 的值在文件中不唯一')
                     id_data[row_id] = row
