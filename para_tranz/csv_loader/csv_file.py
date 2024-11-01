@@ -105,6 +105,8 @@ class CsvFile(DataFile):
                                                 f'将该译文设为空字符串')
                             self.translation_id_data[id][column] = ''
                     else:
+                        if '“' in s.translation or '”' in s.translation:
+                            raise ValueError(f'文件 {self.path} 中 {self.id_column_name}="{id}" 的行中 "{column}" 列译文数据中包含中文引号，请移除后再导入')
                         # 更新译文数据
                         self.translation_id_data[id][column] = s.translation
                 elif contains_chinese(self.translation_id_data[id][column]):
