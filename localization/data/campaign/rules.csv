@@ -20042,8 +20042,8 @@ $player.offeredLostPiratesWork = true
 FireBest DialogOptionSelected","""呃，"" $HeOrShe揉了揉他的下巴。""我们在实在受不住之前会一直坐在这块石头上。""",,
 LOCRPofferWorkLuddic,DialogOptionSelected,"$option == locrp_offerTransport
 $didLuddicCorrection
-!$didLuddicCorrectionFollowup",$didLuddicCorrectionFollowup = true,"""既然你们都是卢德信徒，啊。恕我直言，$playerBrotherOrSister —— 我只代表我少数精神上不那么光明的同志们提问 —— 我们必须正式地祈祷吗？并且必须虔诚地生活吗？""","locrp_luddicPray：""是的，我会要求你按照卢德的信条生活。""
-locrp_luddicNo：""不，我的船员可以自由地实践自己的信仰。也可以不信仰这些。""",
+!$didLuddicCorrectionFollowup",$didLuddicCorrectionFollowup = true,"""既然你们都是卢德信徒，啊。恕我直言，$playerBrotherOrSister —— 我只代表我少数精神上不那么光明的同志们提问 —— 我们必须正式地祈祷吗？并且必须虔诚地生活吗？""","locrp_luddicPray:""是的，我会要求你按照卢德的信条生活。""
+locrp_luddicNo:""不，我的船员可以自由地实践自己的信仰。也可以不信仰这些。""",
 LOCRPofferWorkLuddicPrayA,DialogOptionSelected,"$option == locrp_luddicPray
 $player.mostLuddicEthosFaithful","$player.makingLostPiratesActLuddic = true
 $player.luddicAttitudeFaithful++
@@ -27545,7 +27545,7 @@ hegInvestigatorComplySel2Wk,DialogOptionSelected,"$option == hegInvestigationCom
 $entity.relativeStrength < 0",ShowPersonVisual,"庆幸的是损伤基本上没有伤及要害。但是你的船员们还是有一堆烂摊子得收拾。
 
 ""舰长，呃...虽然检查过程中出现了难以避免的损害，但非常感谢您的配合。"" 霸主 $Post 说道。""公共安全需要每一位公民共同努力。""",cutCommLinkNoText:切断通讯链接,
-hegInvestigatorComplySel,DialogOptionSelected,$option == hegInvestigationComply,"霸主ShowImageVisual quartermaster
+hegInvestigatorComplySel,DialogOptionSelected,$option == hegInvestigationComply,"ShowImageVisual quartermaster
 MakeOtherFleetPreventDisengage hassle false
 ApplyCRDamage $entity.fleetPoints 0.2 1 ""霸主调查""","检查小组不顾你的技术人员的反对，粗暴地撕开舱门，翻乱精心整理好的库存，直接对敏感设备集群进行高功率扫描，毫无疑问是在恶意破坏。
 
