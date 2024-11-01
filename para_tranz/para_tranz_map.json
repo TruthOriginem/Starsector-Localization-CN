@@ -3681,6 +3681,13 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/coreui/A/R$1.class",
+      "include_strings": [
+        "Show a \"real-space\" view of the sector.\n\nNebula color indicates the age of stars inside. (Blue: young, purple: average, yellow: old.)"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/coreui/A/R$2.class",
       "include_strings": [
         "Show the names of stars, planets, orbital stations, and other similar points of interest."
@@ -3712,6 +3719,13 @@
         "Unsurveyed planet",
         "Unvisited star system"
       ]
+    },
+    {
+      "path": "com/fs/starfarer/coreui/A/R$6.class",
+      "include_strings": [
+        "Show the maximum hyperspace range of your fleet based on the amount of fuel it's carrying.\n\nGoing beyond half the range means you'll need to refuel to be able to return."
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/coreui/A/Stringsuper.class",
@@ -6359,6 +6373,7 @@
     {
       "path": "com/fs/starfarer/ui/impl/LogisticsTooltipFactory$4.class",
       "include_strings": [
+        "Displays the average hull and armor status of the ships in your fleet. Larger ships are weighed more.\n\nDoes not include mothballed ships.",
         "Fleetwide Hull & Armor Status"
       ]
     },
