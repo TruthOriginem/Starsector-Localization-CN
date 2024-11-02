@@ -1950,19 +1950,19 @@ $voice == villain","ShowPersonVisual
 FireAll PopulateOptions","""哦，你回来了？还这么快；我可不敢多问。""",,
 convDefaultGreeting2soldier,PickGreeting,"$contact_printedFirstReturnGreeting
 $voice == soldier","ShowPersonVisual
-FireAll PopulateOptions","""收到。这里是 $personLastName，"" $heOrShe叫道。 ""继续。""",,
+FireAll PopulateOptions","""收到。这里是 $personLastName，"" $heOrShe叫道。""继续。""",,
 convDefaultGreeting2faithful,PickGreeting,"$contact_printedFirstReturnGreeting
 $voice == faithful","ShowPersonVisual
-FireAll PopulateOptions","""又一次，日安。"" $heOrShe说到。 ""请告知您的来由。""",,
+FireAll PopulateOptions","""又一次，日安。"" $heOrShe说到。""请告知您的来由。""",,
 convDefaultGreeting2pather,PickGreeting,"$contact_printedFirstReturnGreeting
 $voice == pather","ShowPersonVisual
-FireAll PopulateOptions","""你又道归此处，"" $heOrShe说到。 ""请告知您的来由。""",,
+FireAll PopulateOptions","""你又道归此处，"" $heOrShe说到。""请告知您的来由。""",,
 convDefaultGreeting2spacer,PickGreeting,"$contact_printedFirstReturnGreeting
 $voice == spacer","ShowPersonVisual
 FireAll PopulateOptions","""又见了，$personLastName。你需要什么？""",,
 convDefaultGreeting2scientist,PickGreeting,"$contact_printedFirstReturnGreeting
 $voice == scientist","ShowPersonVisual
-FireAll PopulateOptions","""又是你？"" $HeOrShe快速地扫视了你一眼。 ""是，是，我在。又怎么了？""",,
+FireAll PopulateOptions","""又是你？"" $HeOrShe快速地扫视了你一眼。""是，是，我在。又怎么了？""",,
 convDefaultGreetingActive,PickGreetingActive,,"ShowPersonVisual
 FireAll PopulateOptions","""喂？呃，抱歉，拨错号了。""",,
 addMHubOption,PopulateOptions,"$isPerson
@@ -7909,7 +7909,7 @@ cmsn_hasLeagueMembership,DialogOptionSelected,"$option == cmsn_resignCommission
 $faction.id == persean
 $player.isLeagueMember score:1000",SetEnabled cmsn_resignCommission false,"""唔，"" $Rank $personLastName 意味深长地看了你好一会，""那可能比较困难。""
 
-""因为你现在是 英仙座联盟 其中一 加盟政体 的实际掌权人，你在该状态撤销之前，不能从雇佣关系中辞职。实际上，"" $heOrShe微弱的抖了一下，似乎在信息网上查询了什么。 ""出了在最特别的情况以外，这是非法的。""",,
+""因为你现在是 英仙座联盟 其中一 加盟政体 的实际掌权人，你在该状态撤销之前，不能从雇佣关系中辞职。实际上，"" $heOrShe微弱的抖了一下，似乎在信息网上查询了什么。""出了在最特别的情况以外，这是非法的。""",,
 cmsn_lolNo,DialogOptionSelected,"$option == cmsn_askCommission
 $faction.isHostile score:100","SetEnabled cmsn_askCommission false
 FireBest CMSNTextRejectHostile",,,
@@ -20115,7 +20115,7 @@ LOCRPtransportNoRoom,DialogOptionSelected,$option == locrp_transportNoRoom,FireA
 ""最后那个 —— 只是个玩笑！没什么能比一个笑话更能打发这漫长的日子了。这日子太漫长... 太漫长了。"" $heOrShe的声音渐渐地低了下来。",,
 LOCRPtransportReconsider,DialogOptionSelected,$option == locrp_transportReconsider,"unset $player.liedToStrandedPirates
 unset $player.offeredLostPiratesWork
-FireAll LOCRPhubOptions","""哦。额"" 海盗紧张地笑了笑。 ""别让我们影响您深思熟虑，舰长。我们现在可是栽在这重力大坑里了，任您宰割。""",,
+FireAll LOCRPhubOptions","""哦。呃..."" 海盗紧张地笑了笑。""别让我们影响您深思熟虑，舰长。我们现在可是栽在这重力大坑里了，任您宰割。""",,
 ,,,,,,
 # LOCRP raid for prisoners,,,,,,
 #LOCRPraidOption,PopulateOptions,"$market.id == mazalot
@@ -20235,7 +20235,7 @@ $voice == spacer",,"""呃，看到好好一伙儿人搞砸了总是可惜。"" $
 
 $HeOrShe将通讯链接转给了能做相关安排的安保人员。",locrp_imprisonPirates2:继续,
 LOCRPimprisonPiratesSoldier,DialogOptionSelected,"$option == locrp_imprisonPirates
-$voice == soldier",,"""海盗，"" $Post $personLastName 面色凶狠地皱着眉头。 ""混乱和逆反总是和海盗行为息息相关。向来如此。"" $HeOrShe按了下$hisOrHer通讯台。 ""我会让属下来处理此事。""
+$voice == soldier",,"""海盗，"" $Post $personLastName 面色凶狠地皱着眉头。""混乱和逆反总是和海盗行为息息相关。向来如此。"" $HeOrShe按了下$hisOrHer通讯台。""我会让属下来处理此事。""
 
 通讯链接很快转给了能做相关安排的安保人员。",locrp_imprisonPirates2:继续,
 LOCRPimprisonPirates2,DialogOptionSelected,$option == locrp_imprisonPirates2,"unset $player.locr_piratesOnBoardPrisoners
@@ -20444,7 +20444,7 @@ $HisOrHer 的声音带着绝望，坚持着那个认定的事实。
 LOCRLFbringNews1,DialogOptionSelected,$option == locrlf_bringNews,"$saidBringNewsMission = true
 RemoveOption locrlf_bringNews
 RemoveOption locrlf_bringNewsPath
-FireBest LOCRLFbringNews1patherCheck","""那件事的话，额，我们感谢并祝福您。我们会祈祷宽恕，"" $heOrShe郑重地说道。 ""并等待教会的审判。""
+FireBest LOCRLFbringNews1patherCheck","""那件事的话，额，我们感谢并祝福您。我们会祈祷宽恕，"" $heOrShe郑重地说道。""并等待教会的审判。""
 
 $PersonName 看上去正在欲言又止地想要问你什么，但是却又在三思$heOrShe是否该问。","locrlf_bringNewsRespPather:""我虽行卢德之道，而此道所及之处却并不一定如教会所教。""
 locrlf_bringNewsRespA:""你有问题吗？""
@@ -20453,7 +20453,7 @@ locrlf_bringNewsRespC:""如果你想问的是教会有什么打算，我也不�
 LOCRLFbringNews1path,DialogOptionSelected,$option == locrlf_bringNewsPath,"$saidBringNewsMission = true
 RemoveOption locrlf_bringNews
 RemoveOption locrlf_bringNewsPath
-FireBest LOCRLFbringNews1patherCheck","""教会！那件事的话，额，我们感谢并祝福您。我们会祈祷宽恕，"" $heOrShe郑重地说道。 ""并等待教会的宽恕。""
+FireBest LOCRLFbringNews1patherCheck","""教会！那件事的话，额，我们感谢并祝福您。我们会祈祷宽恕，"" $heOrShe郑重地说道。""并等待教会的宽恕。""
 
 $PersonName 看上去正在欲言又止地想要问你什么，但是却又在三思$heOrShe是否该问。","locrlf_bringNewsRespPather:""我虽行卢德之道，而此道所及之处却并不一定如教会所教。""
 locrlf_bringNewsRespA:""你有问题吗？""
@@ -20473,7 +20473,7 @@ LOCRLFbringNews1respB,DialogOptionSelected,$option == locrlf_bringNewsRespB,Fire
 LOCRLFbringNews1respC,DialogOptionSelected,$option == locrlf_bringNewsRespC,FireAll LOCRLhub,被你轻易看出想法，$HeOrShe羞愧难当，认命般地鞠了个躬。,,
 LOCRLsayPather,DialogOptionSelected,$option == locrl_sayPather,,"""左..."" $heOrShe犹豫再三，还是说出了那个词。""左径。""
 
-""你代表卢德左径？"" $heOrShe揉了揉他的眼角。 ""他们的名声... 比较极端。看来不管教会怎么说，左径确实以无处不在。""
+""你代表卢德左径？"" $heOrShe揉了揉他的眼角。""他们的名声... 比较极端。看来不管教会怎么说，左径确实以无处不在。""
 
 ""唔，"" $PersonRank $personLastName紧张地看着你。""所以我没理解错您的... 提议吧？""","locrl_sayPatherYes:""是的，我会带你去 卢德左径。你会在那里发现真正的信仰。""
 locrl_sayPatherNo:""不，我们只是在讨论信仰。说说而已。""",
@@ -20481,7 +20481,7 @@ LOCRLsayPatherYes,DialogOptionSelected,$option == locrl_sayPatherYes,"$committed
 FireAll LOCRLhub","$heOrShe面色凝重地双手合十，鞠躬臣服。
 
 ""只要能把我们从这个虚假的乐园中带走，怎么都可以。""",,
-LOCRLsayPatherNo,DialogOptionSelected,$option == locrl_sayPatherNo,FireAll LOCRLhub,"$HeOrShe语无伦次道。 ""当然。只是说辞。我不是指...""
+LOCRLsayPatherNo,DialogOptionSelected,$option == locrl_sayPatherNo,FireAll LOCRLhub,"$HeOrShe语无伦次道。""当然。只是说辞。我不是指...""
 
 $HeOrShe紧张地清了清嗓子，$hisOrHer的声音渐渐缩小。",,
 LOCRLsayChurch,DialogOptionSelected,$option == locrl_sayChurch,"$saidStrayedFromChurch = true
@@ -20502,14 +20502,14 @@ FireAll LOCRLhub","""Yes,"" $hisOrHer brow furrows. ""We admit we were wrong, li
 LOCRLaskHowMany,DialogOptionSelected,$option == locrl_askHowMany,"Highlight ""198""
 $askedHowMany = true
 $option = locrl_askHowManyC 0
-FireBest DialogOptionSelected","""舰长，我么还剩 198 个人。""",,
+FireBest DialogOptionSelected","""舰长，我们还剩 198 个人。""",,
 LOCRLaskHowManyB,DialogOptionSelected,"$option == locrl_askHowMany
 !$askedPayment","Highlight ""198""
 $askedHowMany = true
 $option = locrl_askHowManyC 0
-FireBest DialogOptionSelected","""舰长，我么还剩 198 个人。""
+FireBest DialogOptionSelected","""舰长，我们还剩 198 个人。""
 
-$manOrWoman充满希望地抬起头。""我们中有些人有太空航行和其他有用技艺的经验。如果能帮得上您，我们可以在返回 核心世界 的路程上作为船员替您工作。 """,,
+$manOrWoman充满希望地抬起头。""我们中有些人有太空航行和其他有用技艺的经验。如果能帮得上您，我们可以在返回 核心世界 的路程上作为船员替您工作。""",,
 LOCRLaskHowManyCa,DialogOptionSelected,"$option == locrl_askHowManyC
 $player.crewRoom >= 198","Highlight $player.crewRoomStr
 FireAll LOCRLhub",你的$shipOrFleet有 $player.crewRoomStr 额外船员宿舍空间。这足以运送这一迷途的教派。,,
@@ -20798,7 +20798,7 @@ locrlfToldReturningHereticsChurch2,DialogOptionSelected,$option == locrlf_return
 locrlfToldReturningHereticsPath,DialogOptionSelected,$option == locrlf_returnHereticsPath,,"$personName突然瞪圆了双眼。
 
 ""啥？左...左径？你还把他们带来这里了？！卢德的大锤啊！你是中了什么邪，才能整出这种事！""",locrlf_returnHereticsChurch3:继续,
-locrlfToldReturningHereticsPath2,DialogOptionSelected,$option == locrlf_returnHereticsPath2,AdjustRep $locrlf_person INHOSPITABLE -4,"$HeOrShe自欺欺人的挥挥手，仿佛这么做就能让情况好起来。 ""不。不，这话不是你跟我说的，我什么都不知道。我只会跟大祭司汇报，说你找到异端了，再往后出什么事就看你 —— 看他们怎么折腾了。再！见！""
+locrlfToldReturningHereticsPath2,DialogOptionSelected,$option == locrlf_returnHereticsPath2,AdjustRep $locrlf_person INHOSPITABLE -4,"$HeOrShe自欺欺人的挥挥手，仿佛这么做就能让情况好起来。""不。不，这话不是你跟我说的，我什么都不知道。我只会跟大祭司汇报，说你找到异端了，再往后出什么事就看你 —— 看他们怎么折腾了。再！见！""
 
 信号断开，你眼前只剩下一款古老通讯软件的退出界面。",cutCommLinkNoText:切断通讯链接,
 locrlfToldReturningHereticsChurchB,DialogOptionSelected,"$option == locrlf_returnHereticsPath
@@ -22479,7 +22479,7 @@ $player.metReynardHannan = true
 FireAll PopulateOptions
 SetShortcut cutCommLink ""ESCAPE""","几分钟后， Reynard Hannan 本人出现在你面前，浑身散发着不怒自威的气质。
 
-""$PlayerName，"" 他说道。 ""欢迎来到 Kazeron。""",,
+""$PlayerName，"" 他说道。""欢迎来到 Kazeron。""",,
 RHannanMessageHubDEV,RHannanMessageHubOptions,$global.isDevMode,,,"RHannan_startReal:""DEV 不，说真的，我必须坚持。""",
 RHannanMsgJoinLeagueOpt,RHannanMessageHubOptions,"!$leftMessageJoinLeague
 !$player.isLeagueMember",,,"RHannan_msgJoinLeague:""我想和大统领谈谈加入 英仙座联盟 的事。""",
@@ -22546,7 +22546,7 @@ RHannanWhyHarassing2,DialogOptionSelected,$option == RHannan_whyHarassing2,,"""�
 
 他闭上眼睛片刻，轻轻地摇了摇头。
 
-大统领 看着你，说：""一个诚挚的建议，加入 联盟 吧。 ""","RHannan_whyHarassingReact2a:""我记下了。""
+大统领 看着你，说：""一个诚挚的建议，加入 联盟 吧。""","RHannan_whyHarassingReact2a:""我记下了。""
 RHannan_whyHarassingReact2b:""我会加入 —— 目的是把你从位子上赶下去。""
 RHannan_whyHarassingReact2c:""对生命的无谓消耗真是令人难以置信的冷漠无情。""",
 RHannanWhyHarassingReact2a,DialogOptionSelected,$option == RHannan_whyHarassingReact2a,FireAll PopulateOptions,"""确实如此，"" 他带着讥笑说道。",,
@@ -22564,7 +22564,7 @@ $leftMessages == 1
 RHannanMsgFollowupMany,PopulateOptions,"$id == reynard_hannan
 $leftMessages > 1
 !$askedDoYouEvenReadYourMessages",,,"RHannan_msgFollowup:""我给你秘书留了几条消息。你考虑过了吗？""",
-RHannanMsgFollowupHub,DialogOptionSelected,$option == RHannan_msgFollowup,FireAll RHannanMsgFollowHub,"Reynard 把一根手指放在嘴唇上，脸上微微向下倾斜，沉思了片刻。 ""恐怕我不记得有什么消息了，"" 他带着一种得体而大方的歉意说道...隐约透露着不屑。
+RHannanMsgFollowupHub,DialogOptionSelected,$option == RHannan_msgFollowup,FireAll RHannanMsgFollowHub,"Reynard 把一根手指放在嘴唇上，脸上微微向下倾斜，沉思了片刻。""恐怕我不记得有什么消息了。"" 他带着一种得体而大方的歉意说道...隐约透露着不屑。
 
 ""你想讨论什么？""",,
 RHannanMsgFollowupDoYouEven,RHannanMsgFollowHub,"!$askedDoYouEvenReadYourMessages
@@ -25961,7 +25961,7 @@ plEnforcerComplySel,DialogOptionSelected,$option == plEnforcerComply,"ShowImageV
 MakeOtherFleetPreventDisengage hassle false
 ApplyCRDamage $entity.fleetPoints 0.2 1 "" 英仙座联盟 检查""","检查小组毫不留情，他们撕开舱门，翻箱倒柜地搜查精心整理的库存，还直接在成堆的敏感设备中进行主动扫描。
 
-你$shipOrFleet的军官们提出的投诉遭到了官僚主义的冷漠对待。 ""可以提交索赔表，以寻求对因检查过程中 '遗憾但不可避免' 造成的损坏进行赔偿""，但是 ""调查机构至少要在一个星历年内才会给予回应，因此不要抱太大希望""。",plEnforcerComply2:继续,
+你$shipOrFleet军官们的抱怨全都被以官僚式的含糊其辞冷漠回应。军官们被告知，虽然可以提交一份索赔表，对检查过程中造成的 ""令人遗憾且不可避免的"" 损失寻求赔偿，但这 ""至少在一个星历年内很难得到调查机构的答复""。",plEnforcerComply2:继续,
 plEnforcerComplySel2,DialogOptionSelected,$option == plEnforcerComply2,"ShowPersonVisual
 $player.inspectedByLeagueEnforcer = true 60","""太空佬，你可以走了，"" 联盟 $Post 不屑地哼了一声，""别让我再在这里逮到你。""",cutCommLinkNoText:切断通讯链接,
 plEnforcerRefuseSel,DialogOptionSelected,$option == plEnforcerRefuse,"RemoveOption plEnforcerRefuse
@@ -26061,7 +26061,7 @@ PLArmadaWhyBlockadeDemand,DialogOptionSelected,$option == PLArmada_whyBlockadeDe
 ""那些骄傲过头的独立政体？他们会被毁灭，是我们的力量保护了他们。联盟 是最好的未来，值得我们为之奋斗。""",PLArmada_why2:继续,
 PLArmadaWhyBlockadeStrongarm,DialogOptionSelected,$option == PLArmada_whyBlockadeStrongarm,$saidStrongarm = true 0," $heOrShe微笑的痕迹就像恒星低轨道上的一缕水汽般消失了。
 
-""我是来帮你的，舰长，"" $heOrShe轻蔑地使用着舰队低级军官的称呼。 ""Mairaath，Opis，"" $heOrShe愤怒地吐出这几个字。
+""我是来帮你的，舰长。"" $heOrShe轻蔑地使用着舰队低级军官的称呼，""Mairaath，Opis..."" $heOrShe愤怒地吐出这几个字。
 
 ""那些骄傲过头的独立政体？他们会被死去帝国的暴君余孽或他们豢养的狂热分子烧掉。而唯一能够阻止这种事情再次发生的，只有 联盟 的力量。""",PLArmada_why2:继续,
 PLArmadaWhy2,DialogOptionSelected,$option == PLArmada_why2,FireAll PLArmadaHubOptions,"""如果不是我们在这里，就会是另一个派系。而他们可不会像我们我们这样...克制。""
@@ -26175,7 +26175,7 @@ $player.numTimesLeftLeague >= 2 score:1000",,"Reynard 的嘴唇勾起一抹小�
 plReynardHannanJoinSelNo2,DialogOptionSelected,"$option == rh_joinLeague
 $player.leftLeagueWhenGoodDeal score:1000",,"""你还记得我们曾经拥有的一切吗，$playerName？"" Reynard 梦幻般地望向远方，""共同的愿景，我的支持，一个共同的未来。我们一起。""
 
-他转过头来，用冰冷的目光盯着你，就像定向能量武器锁定了目标一样。 ""你是否记得你把这一切都抛弃了吗，就像扔掉一堆垃圾？""
+他转过头来，用冰冷的目光盯着你，就像定向能量武器锁定了目标一样。""你是否记得你把这一切都抛弃了吗，就像扔掉一堆垃圾？""
 
 ""我记得。"" 他的表情非常平静。",cutCommLinkNoText:切断通讯链接,
 plReynardHannanJoinSelYes,DialogOptionSelected,"$option == rh_joinLeague
@@ -26375,7 +26375,7 @@ PLLeaveNeverMind,PLLeaveNeverMind,,,"$HeOrShe瞪你瞪了有一会儿。
 "# Text for above, when talking to Reynard Hannan",,,,,,
 PLLeaveGoodDealWarningA2,PLLeaveGoodDealWarning,$id == reynard_hannan score:100,,"""$playerName，你这话说的很惊人。"" Reynard Hannan 冷静陈述道，""你真的要如此随意，如此欠考虑的背弃我们一同建立的一切吗？""
  
-你感觉他冷静的外表下，内心深处早已是怒火中烧。 ""你明明那么有潜力。""
+你感觉他冷静的外表下，内心深处早已是怒火中烧。""你明明那么有潜力。""
 
 他突然一退，不屑一顾的快速转过身去。""就跟我承认你说错话了吧，我会允许我自己忘记你一时失言的。""",,
 PLLeaveGoodDealWarningB2,PLLeaveGoodDealWarning,"$id == reynard_hannan score:100
@@ -26603,7 +26603,7 @@ FireAll TTCR_BountyHunterOptions","通讯信号逐渐稳定下来。
 
 ""美好的一天，我的朋友！"" $HeOrShe咧嘴大笑，然后又想了想，""不过对你来说，可能就不那么美好了？""
 
-这位 $post 在控制台通讯设备的视线范围外的某堆杂物里翻找着，不在内，然后拿起一个破旧的数据平板查看。 ""我就知道！以路德马桶里的圣洁星辰为证，是playerName！"" 
+这位 $post 在控制台通讯设备的视线范围外的某堆杂物里翻找着，不在内，然后拿起一个破旧的数据平板查看。""我就知道！以路德马桶里的圣洁星辰为证，是 $playerName！"" 
 
 ""我们要不要在开始之前一起祈祷呢？""",,
 ttcrBH_butSelDerelict,DialogOptionSelected,"$option == ttcrBH_but
@@ -26663,7 +26663,7 @@ $HeOrShe露出了一个不真诚的微笑。",,
 ttMakeDealOptSelNoHostileArroyo,DialogOptionSelected,"$option == ttMakeDeal
 RepIsAtBest tritachyon HOSTILE score:100
 $id == arroyo","HA_CMD printTriTachDealRepReq
-RemoveOption ttMakeDeal","""真的吗？"" Arroyo 的语气中带着不满。 ""你正处于与速子科技的公开战争中，你还指望他们会听从我代表你提出的什么巧妙的小交易吗？"" 
+RemoveOption ttMakeDeal","""真的吗？"" Arroyo 的语气中带着不满。""你正处于与速子科技的公开战争中，你还指望他们会听从我代表你提出的什么巧妙的小交易吗？"" 
 
 ""天啊，"" 他几乎不敢置信地摇了摇头。""光是公关方面的打击..."" ",,
 ttMakeDealOptSelNoHostileArroyoContact,DialogOptionSelected,"$option == ttMakeDeal
@@ -27428,7 +27428,7 @@ Commission personCanGiveCommission
 $player.makeDiktatDeal",,,"sdBreakDeal:""我来通知你，我将终止燃料条约。""",
 SDBreakDealSel,DialogOptionSelected,$option == sdBreakDeal,,"""你-你不能这么做！"" 这位辛达 $Post 迅速环顾四周，好像在寻找能解释你言论的信息。
 
-没有找到任何信息后，$heOrShe重新坐定，用震惊的眼神看着你，眼神中逐渐透露出愤怒。 ""别犯傻，你会为此后悔的。你不能违抗 最高元首 的意愿，否则将受到严厉惩罚。你永远不会被原谅。他会拿你当典型。如果你没在太空中丧生，他就会把你送到 Cruor。如果你试图躲藏，蜘蛛会找到你。这就是规矩。""
+没有找到任何信息后，$heOrShe重新坐定，用震惊的眼神看着你，眼神中逐渐透露出愤怒。""别犯傻，你会为此后悔的。你不能违抗 最高元首 的意愿，否则将受到严厉惩罚。你永远不会被原谅。他会拿你当典型。如果你没在太空中丧生，他就会把你送到 Cruor。如果你试图躲藏，蜘蛛会找到你。这就是规矩。""
 
 ""还有时间，"" $heOrShe低声说道，""我会装作你什么都没说。""","sdBreakDealConfirm:""你听到了。交易取消了。""
 genericGoBack:""抱歉，我一定是口误了。"" (返回)",
@@ -27539,7 +27539,7 @@ $entity.relativeStrength < 0","ShowImageVisual quartermaster
 MakeOtherFleetPreventDisengage hassle false
 ApplyCRDamage $entity.fleetPoints 0.1 1 ""霸主调查""","检查小组的行为相当粗鲁，他们粗暴地撕开舱盖，在你方精心整理的库存中肆意翻找，甚至不顾技术人员的反对，还直接在成堆的敏感设备中进行主动扫描。
 
-你$shipOrFleet的军官们提出的投诉遭到了官僚主义的冷漠对待。军官们被告知，虽然可以提交索赔表， 可以提交索赔表，以寻求对因检查过程中 ""遗憾但不可避免"" 造成的损坏进行赔偿""，但是 ""调查机构至少要在一个星历年内才会给予回应，因此不要抱太大希望""。",hegInvestigationComply2:继续,"# a weaker fleet will be less destructive, let's say."
+你$shipOrFleet军官们的抱怨全都被以毫无歉意且官僚式的含糊其辞冷漠回应。军官们被告知，虽然可以提交一份索赔表，对检查过程中造成的 ""令人遗憾且不可避免的"" 损失寻求赔偿，但这 ""至少在一个星历年内很难得到调查机构的答复""。",hegInvestigationComply2:继续,"# a weaker fleet will be less destructive, let's say."
 hegInvestigatorComplySel2Wk,DialogOptionSelected,"$option == hegInvestigationComply2
 $entity.relativeStrength < 0",ShowPersonVisual,"庆幸的是损伤基本上没有伤及要害。但是你的船员们还是有一堆烂摊子得收拾。
 
