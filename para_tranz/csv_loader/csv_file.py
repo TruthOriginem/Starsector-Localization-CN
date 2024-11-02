@@ -172,13 +172,9 @@ class CsvFile(DataFile):
             for i, row in enumerate(rows):
                 if type(id_column_name) == str:
                     row_id = row[id_column_name]  # type:str
-                    if not row_id:
-                        continue
                 else:  # 存在多个 id column
-                    row_id_tuple = tuple([row[id] for id in id_column_name])
-                    if not any(row_id_tuple):
-                        continue
-                    row_id = str(row_id_tuple)  # type:str
+                    row_id = str(tuple([row[id] for id in id_column_name]))  # type:str
+
                 # 检查行内数据长度是否与文件一致
                 for col in row:
                     if row[col] is None:
