@@ -6,7 +6,7 @@ import sys
 import urllib.parse
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, Set, List, Union
+from typing import Dict, Optional, Set, List, Union
 
 from para_tranz.utils.config import PROJECT_DIRECTORY, ORIGINAL_PATH, TRANSLATION_PATH, PARA_TRANZ_PATH, LOG_LEVEL, \
     LOG_DEBUG_OVERWRITE, OVERRIDE_STRING_STATUS
@@ -66,7 +66,7 @@ class String:
 class DataFile:
     logger = make_logger('util.py - DataFile')
 
-    def __init__(self, path: Union[str, Path], type: str, original_path: Path = None, translation_path: Path = None):
+    def __init__(self, path: Union[str, Path], type: str, original_path: Optional[Path] = None, translation_path: Optional[Path] = None):
         self.path = Path(path)  # 相对 original 或者 localization 文件夹的路径
         self.original_path = ORIGINAL_PATH / Path(original_path if original_path else path)
         self.translation_path = TRANSLATION_PATH / Path(

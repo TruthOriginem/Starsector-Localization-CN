@@ -5,7 +5,8 @@ from _csv import reader, writer
 from csv import DictReader
 from dataclasses import asdict
 from pathlib import Path
-from typing import Set, Union, List, Dict, Tuple
+from typing import Optional, Set, Union, List, Dict, Tuple
+from ast import literal_eval
 
 from para_tranz.utils.config import MAP_PATH, REMOVE_TRANSLATION_WHEN_ORIGINAL_IS_EMPTY, EXPORTED_STRING_CONTEXT_PREFIX
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, CsvMapItem
@@ -17,21 +18,21 @@ class CsvFile(DataFile):
     logger = make_logger(f'CsvFile')
 
     def __init__(self, path: Path, id_column_name: str, text_column_names: Set[str],
-                 original_path: Path = None, translation_path: Path = None, type: str = 'csv'):
+                 original_path: Optional[Path] = None, translation_path: Optional[Path] = None, type: str = 'csv'):
         super().__init__(path, type, original_path, translation_path)
 
         # csv 中作为 id 的列名
-        self.id_column_name = id_column_name  # type:Union[str, List[str]] # 作为id的列名，可能为多个
-        self.text_column_names = text_column_names  # type:Set[str]  # 包含要翻译文本的列名
+        self.id_column_name:Union[str, List[str]] = id_column_name # 作为id的列名，可能为多个
+        self.text_column_names:Set[str] = text_column_names  # 包含要翻译文本的列名
 
-        self.column_names = []  # type:List[str]
+        self.column_names:List[str] = []
 
         # 原文数据，以及id列内容到数据的映射
-        self.original_data = []  # type:List[Dict]
-        self.original_id_data = {}  # type:Dict[str, Dict]
+        self.original_data:List[Dict] = []
+        self.original_id_data:Dict[Tuple, Dict] = {}
         # 译文数据，以及id列内容到数据的映射
-        self.translation_data = []  # type:List[Dict]
-        self.translation_id_data = {}  # type:Dict[str, Dict]
+        self.translation_data:List[Dict] = []
+        self.translation_id_data:Dict[Tuple, Dict] = {}
 
         self.load_from_file()
 
@@ -61,14 +62,20 @@ class CsvFile(DataFile):
         for row_id, row in self.original_id_data.items():
 
             # 只导出id不为空且没有被注释行内的词条
-            # TODO: 多列id的情况下，需检查所有id列是否为空
             first_column = row[list(row.keys())[0]]
-            if not row_id or first_column.startswith('#'):
+            if not any(row_id) or first_column.startswith('#'):
                 continue
-
+            
+            # 将行ID转换为字符串，以便作为词条的key
+            # 如果行ID只有一个元素，则直接转换为字符串，否则转换为元组字符串
+            if len(row_id) == 1:
+                row_id_str = row_id[0]
+            else:
+                row_id_str = str(row_id)
+            
             context = self.generate_row_context(row)
             for col in self.text_column_names:
-                key = f'{self.path.name}#{row_id}${col}'  # 词条的id由 文件名-行id-列名 组成
+                key = f'{self.path.name}#{row_id_str}${col}'  # 词条的id由 文件名-行id-列名 组成
                 original = row[col]
                 translation = ''
                 stage = 0
@@ -94,27 +101,30 @@ class CsvFile(DataFile):
     # 将传入的 ParaTranz 词条数据对象中的译文数据合并到现有数据中
     def update_strings(self, strings: List[String], version_migration:bool=False) -> None:
         for s in strings:
-            _, id, column = re.split('[#$]', s.key)
-            if id in self.translation_id_data and id in self.original_id_data:
+            _, row_id_str, column = re.split('[#$]', s.key)
+            # 将行ID字符串转换为元组，以便作为译文数据的key
+            # 如果行ID是普通字符串，则转换为单元素元组，否则转换为元组
+            row_id = literal_eval(row_id_str) if ',' in row_id_str else (row_id_str,)
+            if row_id in self.translation_id_data and row_id in self.original_id_data:
                 # 如果词条已翻译并且译文不为空
                 if s.stage > 0 and s.translation:
-                    if self.original_id_data[id][column] == "":
-                        self.logger.warning(f'文件 {self.path} 中 {self.id_column_name}="{id}" 的行中 "{column}" 列原文为空，'
+                    if self.original_id_data[row_id][column] == "":
+                        self.logger.warning(f'文件 {self.path} 中 {self.id_column_name}="{row_id}" 的行中 "{column}" 列原文为空，'
                                             f'但更新的译文数据不为空，未更新该词条。原文可能已删除，请考虑删除该译文词条')
                         if REMOVE_TRANSLATION_WHEN_ORIGINAL_IS_EMPTY:
                             self.logger.warning(f'已设置 REMOVE_TRANSLATION_WHEN_ORIGINAL_IS_EMPTY 为 True，'
                                                 f'将该译文设为空字符串')
-                            self.translation_id_data[id][column] = ''
+                            self.translation_id_data[row_id][column] = ''
                     else:
                         if '“' in s.translation or '”' in s.translation:
-                            raise ValueError(f'文件 {self.path} 中 {self.id_column_name}="{id}" 的行中 "{column}" 列译文数据中包含中文引号，请移除后再导入')
+                            raise ValueError(f'文件 {self.path} 中 {self.id_column_name}="{row_id}" 的行中 "{column}" 列译文数据中包含中文引号，请移除后再导入')
                         # 更新译文数据
-                        self.translation_id_data[id][column] = s.translation
-                elif contains_chinese(self.translation_id_data[id][column]):
-                    self.logger.warning(f'文件 {self.path} 中 {self.id_column_name}="{id}" 的行已被翻译，'
+                        self.translation_id_data[row_id][column] = s.translation
+                elif contains_chinese(self.translation_id_data[row_id][column]):
+                    self.logger.warning(f'文件 {self.path} 中 {self.id_column_name}="{row_id}" 的行已被翻译，'
                                         f'但更新的译文数据未翻译该词条，保持原始翻译不变')
             else:
-                self.logger.warning(f'在文件 {self.path} 中没有找到 {self.id_column_name}="{id}" 的行，未更新该词条。原文可能已删除，请考虑删除该译文词条')
+                self.logger.warning(f'在文件 {self.path} 中没有找到 {self.id_column_name}="{row_id}" 的行，未更新该词条。原文可能已删除，请考虑删除该译文词条')
 
     # 将译文数据写回译文csv中
     def save_file(self) -> None:
@@ -155,7 +165,7 @@ class CsvFile(DataFile):
 
     @classmethod
     def load_csv(cls, path: Path, id_column_name: Union[str, List[str]]) -> Tuple[
-        List[str], List[Dict], Dict[str, Dict]]:
+        List[str], List[Dict], Dict[Tuple, Dict]]:
         """
         从csv中读取数据，并返回列名列表，数据以及id列内容到数据的映射
         :param path: csv文件路径
@@ -167,13 +177,13 @@ class CsvFile(DataFile):
         with open(path, 'r', errors="surrogateescape", encoding='utf-8') as csv_file:
             # 替换不可识别的字符，并将原文中的 \n 转换为 ^n，以与csv中的直接换行进行区分
             csv_lines = [replace_weird_chars(l).replace('\\n', '^n') for l in csv_file]
-            rows = list(DictReader(csv_lines))
+            rows:List[Dict[str,str]] = list(DictReader(csv_lines))
             columns = list(rows[0].keys())
             for i, row in enumerate(rows):
                 if type(id_column_name) == str:
-                    row_id = row[id_column_name]  # type:str
+                    row_id = tuple([row[id_column_name]])
                 else:  # 存在多个 id column
-                    row_id = str(tuple([row[id] for id in id_column_name]))  # type:str
+                    row_id = tuple([row[id] for id in id_column_name])
 
                 # 检查行内数据长度是否与文件一致
                 for col in row:
@@ -183,8 +193,8 @@ class CsvFile(DataFile):
                             f'文件 {path} 第 {i} 行 {id_column_name}="{row_id}" 内的值数量不够，可能是缺少逗号')
 
                 first_column = row[columns[0]]
-                # 只在 id-row mapping 中存储没有被注释的行
-                if not first_column.startswith('#'):
+                # 只在 id-row mapping 中存储没有被注释, 且不为空的行
+                if not first_column.startswith('#') and any(row_id):
                     if row_id in id_data:
                         raise ValueError(f'文件 {path} 第 {i} 行 {id_column_name}="{row_id}" 的值在文件中不唯一')
                     id_data[row_id] = row
