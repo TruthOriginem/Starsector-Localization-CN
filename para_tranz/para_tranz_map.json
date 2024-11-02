@@ -716,6 +716,7 @@
         "Production plan",
         "Putting blueprints into production requires a colony with %s (industry). Production quality can be improved by acquiring a %s (item).",
         "Qty",
+        "Quantity selected for production. Left-click to remove, right-click to add.\n\nClick to add/remove one item, shift-click to add/remove ",
         "Reset",
         "Ship hulls",
         "Show on map",
@@ -878,13 +879,16 @@
         "How much ship quality is favored as part of the faction's fleet doctrine. Affects the average number of d-mods and the probability of high-quality weapons being available.",
         "How much the number and quality of officers is favored as part of the faction's fleet doctrine.",
         "Hull mods",
+        "More\nships",
         "More focus on larger ships, with fewer frigates mixed in.",
         "Mostly frigates and destroyers, with few larger ships.",
         "Mostly larger ships, with as many capitals as possible, at the expense of smaller escorts.",
         "Mostly smaller ships, but without as much focus on frigates.",
         "Nanoforge",
         "No doctrine setting advocates the employment of timid officers, but they may occasionally be found for hire.",
+        "Officer\nquality",
         "Personality type of ship captains. Affects officers for the fleets created by your faction, as well as ships without officers, including the ones in your fleet. Does not affect officers you've hired.",
+        "Phase\nships",
         "Phase ships dominate the composition of any combat force.",
         "Phase ships make up the majority of a combat force.",
         "Phase ships usually make up about half of a combat force.",
@@ -892,6 +896,8 @@
         "Preference for more smaller ships, or fewer larger ones.",
         "Putting blueprints into production requires a colony with %s (industry). Production quality can be improved by acquiring a %s (item).",
         "Reset",
+        "Ship\nquality",
+        "Ship\nsize",
         "Ship hull and weapon quality increased by %s.",
         "Ship hull and weapon quality is at base level.",
         "Ship hulls",
@@ -1607,6 +1613,7 @@
       "include_strings": [
         " Initializing Domain Ident Chip ",
         " Sector Data ",
+        "A random seed used to generate the Sector. Using the same seed will result in the same Sector being generated in a new game. \n\nThe seed can be copied from the character screen in an existing game.",
         "Around 50% fewer star systems compared to normal.",
         "Average",
         "Cooler stars, fewer planets, less minerals. More habitable worlds.",
@@ -1617,6 +1624,7 @@
         "Help popups",
         "Honorific: ",
         "Hotter stars, more planets, more mineral resources. Fewer habitable worlds.",
+        "In iron mode, you can't quit without saving or load a save while still in the game. In other words, no do-overs.\n\nThis is the setting the game is intended to be played on, but since it's in alpha right now, use at your own risk.",
         "Initializing Domain Ident Chip",
         "Iron mode",
         "Mixed",
@@ -1632,6 +1640,8 @@
         "Sector Size",
         "Sector of origin",
         "Small",
+        "There is no sector generation seed in the clipboard.\n\nGet one from another player or copy it from the character screen in an existing game.",
+        "When enabled, informational dialogs explaining various campaign mechanics and warning the player of potential dangers will be shown at appropriate times.\n\nHighly recommended for new players.",
         "Young",
         "luddic: brother",
         "luddic: sister",
@@ -3229,6 +3239,7 @@
         "Ship Variants",
         "Small",
         "Support fighters",
+        "Top",
         "Vessel",
         "Weapons"
       ]
@@ -3341,6 +3352,15 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/combat/B/_.class",
+      "include_strings": [
+        "Assignments",
+        "Direct Orders",
+        "Other"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/combat/B/null.class",
       "include_strings": [
         "cr",
@@ -3389,6 +3409,7 @@
         " again to unpause.",
         ", Sleep time: ",
         "Applying random damage to enemy ships",
+        "Are you sure?\n\nOrdering a full assault will cancel all existing assignments and make your ships engage the enemy forces more aggressively, potentially exposing them to greater danger.\n\nCreating a new assignment (other than \"Eliminate\" or \"Fighter Strike\") will cancel this order; toggling it off directly uses a command point.",
         "Autopilot disabled.",
         "Autopilot enabled. Any attempt at manual ship control will disable it.",
         "Camera: free pan",
@@ -3397,6 +3418,8 @@
         "Cancel",
         "No",
         "Ok",
+        "Order a full retreat?\n\nAll ships not already retreating will be issued a \"Retreat\" order. You will not be able to deploy reinforcements or give any more orders.\n\nYour flagship can retreat from the battlefield by reaching the bottom edge of the map.",
+        "Order a full retreat?\n\nAll ships not already retreating will be issued a \"Retreat\" order. You will not be able to deploy reinforcements or give any more orders.\n\nYour flagship can retreat from the battlefield by reaching the top edge of the map.",
         "Order your flagship to retreat? You will be able to transfer command to another ship.",
         "Paused. Press ",
         "Retreat!",
@@ -5332,6 +5355,15 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/loading/specs/Y$o.class",
+      "include_strings": [
+        "Hardpoint",
+        "Hidden",
+        "Turret"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/loading/specs/Z.class",
       "include_strings": [
         "Excellent",
@@ -7192,6 +7224,15 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/ui/super/B.class",
+      "include_strings": [
+        " DEPLOY\nLEFT",
+        "DEPLOY",
+        "DEPLOY\n  RIGHT"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/util/M.class",
       "include_strings": [
         "Saving..."
@@ -7478,11 +7519,27 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/api/combat/WeaponAPI$WeaponSize.class",
+      "include_strings": [
+        "Large",
+        "Medium",
+        "Small"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/api/combat/WeaponAPI$WeaponType.class",
       "include_strings": [
+        "Ballistic",
         "Built in",
+        "Composite",
+        "Decorative",
         "Launch Bay",
-        "Station Module"
+        "Missile",
+        "Station Module",
+        "Synergy",
+        "System",
+        "Universal"
       ]
     },
     {
@@ -14668,6 +14725,14 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/api/impl/campaign/skills/CyberneticAugmentation$Level0.class",
+      "include_strings": [
+        "\n*The base maximum number of elite skills per officer is ",
+        "."
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/api/impl/campaign/skills/CyberneticAugmentation$Level1.class",
       "include_strings": [
         " to maximum number of elite skills* for officers under your command"
@@ -15368,6 +15433,7 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/skills/NeuralLink$Level0.class",
       "include_strings": [
+        "\n*Use the \"",
         "\" control [",
         "] to switch between ships."
       ]
@@ -15400,6 +15466,13 @@
       "include_strings": [
         "*The base maximum number of officers you're able to command is "
       ]
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/skills/OfficerManagement$Level1.class",
+      "include_strings": [
+        " to maximum number of officers* you're able to command"
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/api/impl/campaign/skills/OfficerManagement$Level1B.class",
@@ -15457,6 +15530,13 @@
         " flux capacity per ordnance point spent on weapons",
         "+"
       ]
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/skills/PhaseCorps$Level0.class",
+      "include_strings": [
+        "\n*The sensor strength of phase ships also contributes to the fleetwide stealth bonus granted by the Phase Field hullmod."
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/api/impl/campaign/skills/PhaseCorps$Level3.class",
@@ -15536,6 +15616,7 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/skills/PolarizedArmor$Level0.class",
       "include_strings": [
+        "\n\n*Ships without a shield or a phase cloak are treated as always having ",
         "% hard flux."
       ]
     },
@@ -16012,6 +16093,8 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/skills/WolfpackTactics$Level1A.class",
       "include_strings": [
+        "% damage to capital ships and cruisers if destroyer\n",
+        "% damage to ships larger than frigates if frigate, ",
         "% if destroyer",
         "% seconds peak operating time if frigate, "
       ]
