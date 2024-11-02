@@ -15,7 +15,9 @@
 			"effectBasedOnLevel":false,
 			"effects":[
 				{"type":"CHARACTER_STATS", "script":"com.fs.starfarer.api.impl.campaign.skills.CyberneticAugmentation$Level1"},
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.CyberneticAugmentation$Level3"},
 				#{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.CyberneticAugmentation$Level2"},
+				#{"type":"HULLMOD_UNLOCK", "hullmods":{"neural_integrator":1}},
 			]
 		},
 	],
