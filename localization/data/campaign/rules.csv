@@ -25052,8 +25052,7 @@ $entity.ignorePlayerCommRequests = true","雇佣兵叹了一口气，闭上了$h
 
 ""请不要向任何人提及这件事。""
 
-通讯链接中断了。你的战术副官通知你雇佣兵的舰队似乎正在离开。
-",cutCommLink:切断通讯链接,
+通讯链接中断了。你的战术副官通知你雇佣兵的舰队似乎正在离开。",cutCommLink:切断通讯链接,
 sdtuMercReactStronger,DialogOptionSelected,"$option == sdtu_mercUseForce
 $entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true,"""随你便。""雇佣兵说道，然后切断了通信链接。",cutCommLinkNoText:切断通讯链接,
 sdtuMercHegReact1,DialogOptionSelected,$option == sdtu_mercHegReact1,,"$HeOrShe将一根手指放在$hisOrHer的耳边，然后坐了起来，好像$heOrShe被告知了一些重要的事情。""等等，你是 $playerName。霸主 的雇佣辅助军？""
