@@ -32,7 +32,7 @@ public class AuxiliaryThrusters extends BaseHullMod {
 
 	public String getSModDescriptionParam(int index, HullSize hullSize) {
 		if (index == 0) return "" + (int) SMOD_SPEED_BONUS + "";
-		if (index == 1) return "doubles";
+		if (index == 1) return "翻倍";
 		return null;
 	}
 }
