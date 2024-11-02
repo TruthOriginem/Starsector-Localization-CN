@@ -8,8 +8,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Optional, Set, List, Union
 
-from para_tranz.utils.config import PROJECT_DIRECTORY, ORIGINAL_PATH, TRANSLATION_PATH, PARA_TRANZ_PATH, LOG_LEVEL, \
-    LOG_DEBUG_OVERWRITE, OVERRIDE_STRING_STATUS
+from para_tranz.utils.config import PROJECT_DIRECTORY, ORIGINAL_PATH, TRANSLATION_PATH, PARA_TRANZ_PATH, LOG_LEVEL, OVERRIDE_STRING_STATUS
 
 
 def relative_path(path: Path) -> Path:
@@ -18,14 +17,28 @@ def relative_path(path: Path) -> Path:
     except Exception as _:
         return path
 
-
+# From: https://stackoverflow.com/questions/384076/how-can-i-color-python-logging-output
 class CustomFormatter(logging.Formatter):
+    grey = "\x1b[38;20m"
+    yellow = "\x1b[33;20m"
+    red = "\x1b[31;20m"
+    bold_red = "\x1b[31;1m"
+    reset = "\x1b[0m"
+
+    format_str = "[%(name)s][%(levelname)s] %(message)s \n"
+
+    FORMATS = {
+        logging.DEBUG: grey + format_str + reset,
+        logging.INFO: grey + format_str + reset,
+        logging.WARNING: yellow + format_str + reset,
+        logging.ERROR: red + format_str + reset,
+        logging.CRITICAL: bold_red + format_str + reset
+    }
+    
     def format(self, record):
-        if LOG_DEBUG_OVERWRITE and record.levelno == logging.DEBUG:
-            self._style._fmt = "\r[%(name)s][%(levelname)s] %(message)s"
-        else:
-            self._style._fmt = "[%(name)s][%(levelname)s] %(message)s \n"
-        return super().format(record)
+        log_fmt = self.FORMATS.get(record.levelno)
+        formatter = logging.Formatter(log_fmt)
+        return formatter.format(record)
 
 
 def make_logger(name: str) -> logging.Logger:

@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Optional, Set, Union, List, Dict, Tuple
 from ast import literal_eval
 
-from para_tranz.utils.config import MAP_PATH, REMOVE_TRANSLATION_WHEN_ORIGINAL_IS_EMPTY, EXPORTED_STRING_CONTEXT_PREFIX
+from para_tranz.utils.config import EXPORTED_STRING_CONTEXT_PREFIX_PREFIX, IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS, MAP_PATH, REMOVE_TRANSLATION_WHEN_ORIGINAL_IS_EMPTY, EXPORTED_STRING_CONTEXT_PREFIX
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, CsvMapItem
 from para_tranz.utils.util import relative_path, String, DataFile, contains_chinese, replace_weird_chars, make_logger, \
     contains_english
@@ -105,6 +105,9 @@ class CsvFile(DataFile):
             # 将行ID字符串转换为元组，以便作为译文数据的key
             # 如果行ID是普通字符串，则转换为单元素元组，否则转换为元组
             row_id = literal_eval(row_id_str) if ',' in row_id_str else (row_id_str,)
+            if IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS and not s.context.startswith(EXPORTED_STRING_CONTEXT_PREFIX_PREFIX):
+                self.logger.debug(f'文件 {self.path} 中词条 key={s.key} 的上下文前缀与当前上下文前缀不匹配，跳过词条')
+                continue
             if row_id in self.translation_id_data and row_id in self.original_id_data:
                 # 如果词条已翻译并且译文不为空
                 if s.stage > 0 and s.translation:

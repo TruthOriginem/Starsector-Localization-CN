@@ -1,5 +1,4 @@
 import datetime
-import pdb
 import re
 import zipfile
 from dataclasses import asdict
@@ -7,7 +6,7 @@ from pathlib import Path
 from typing import List, Dict, Set, Optional, Union
 
 from para_tranz.jar_loader.class_file import JavaClassFile
-from para_tranz.utils.config import ORIGINAL_PATH, TRANSLATION_PATH
+from para_tranz.utils.config import EXPORTED_STRING_CONTEXT_PREFIX_PREFIX, IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS, ORIGINAL_PATH, TRANSLATION_PATH
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, JarMapItem, ClassFileMapItem
 from para_tranz.utils.util import DataFile, String, make_logger, normalize_class_path
 
@@ -79,8 +78,12 @@ class JavaJarFile(DataFile):
 
             if class_file is None:
                 if not version_migration:
-                    self.logger.warning(
-                        f'在更新词条 {s.key} 时，在文件 {self.path} 中找不到类 {class_file_path}。未更新该词条。')
+                    if IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS and not s.context.startswith(EXPORTED_STRING_CONTEXT_PREFIX_PREFIX):
+                        self.logger.debug(
+                            f'在 {self.path} 中词条 key={s.key} 的词条上下文前缀与当前上下文前缀不匹配，跳过词条')
+                    else:
+                        self.logger.warning(
+                            f'在更新词条 {s.key} 时，在文件 {self.path} 中找不到类 {class_file_path}。未更新该词条。')
                 else:
                     strings_without_class.append(s)
                     self.logger.debug(

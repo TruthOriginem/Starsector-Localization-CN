@@ -2,7 +2,7 @@ from pathlib import Path, PurePosixPath
 from typing import Union, Set, Optional, List, Tuple, Dict
 
 from para_tranz.jar_loader.constant_table import ConstantTable, Utf8Constant
-from para_tranz.utils.config import MAGIC, MIN_CLASS_VER, MAX_CLASS_VER, ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS, \
+from para_tranz.utils.config import EXPORTED_STRING_CONTEXT_PREFIX_PREFIX, IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS, MAGIC, MIN_CLASS_VER, MAX_CLASS_VER, ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS, \
     EXPORTED_STRING_CONTEXT_PREFIX
 from para_tranz.utils.mapping import ClassFileMapItem
 from para_tranz.utils.util import make_logger, String, contains_chinese, contains_english, url_encode
@@ -186,6 +186,10 @@ class JavaClassFile:
         update_success_count = 0
 
         for s in strings:
+            if IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS and not s.context.startswith(EXPORTED_STRING_CONTEXT_PREFIX_PREFIX):
+                self.logger.debug(
+                    f'在 {self.jar_file.path}:{self.path} 中词条 key={s.key} 的词条上下文前缀与当前上下文前缀不匹配，跳过词条')
+                continue
             # 如果原文在原文jar中存在
             if s.original in original_string_to_const_pairs:
                 for original, translation in original_string_to_const_pairs[s.original]:

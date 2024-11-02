@@ -4,8 +4,6 @@ from pathlib import Path
 
 # [日志输出]
 LOG_LEVEL = logging.INFO
-# 是否在打印DEBUG级别的日志信息时覆盖前一行的日志信息（即只输出回车\r而不是换行\n+回车\r）
-LOG_DEBUG_OVERWRITE = False
 
 # [路径配置]
 # 设置游戏原文，译文和Paratranz数据文件路径
@@ -19,7 +17,10 @@ MAP_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'para_tranz_map.json'
 # 在导出字符串时是否覆盖已导出字符串的翻译stage状态
 OVERRIDE_STRING_STATUS = False
 # 导出词条上下文前缀文本
-EXPORTED_STRING_CONTEXT_PREFIX = f'版本：0.97-RC11 {datetime.now().strftime("%Y-%m-%d %H:%M")}\n'
+EXPORTED_STRING_CONTEXT_PREFIX_PREFIX = '版本：0.97-RC11'
+EXPORTED_STRING_CONTEXT_PREFIX = f'{EXPORTED_STRING_CONTEXT_PREFIX_PREFIX} {datetime.now().strftime("%Y-%m-%d %H:%M")}\n'
+# 在将译文写回游戏文件时，是否跳过上下文前缀与当前上下文前缀不匹配的译文
+IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS = True
 
 # [jar_loader 配置]
 MAGIC = b'\xca\xfe\xba\xbe'
