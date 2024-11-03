@@ -810,6 +810,7 @@
         " colonies",
         "(size ",
         ", including ",
+        "?\n\nThis decision is irreversible.",
         "Are you sure you want to dismiss ",
         "Assign",
         "Assigned to govern ",
@@ -834,6 +835,7 @@
     {
       "path": "com/fs/starfarer/campaign/command/IntelIncomePanel.class",
       "include_strings": [
+        "\n\nAsterisks (*) indicate values that are below the top level. Values without asterisks are directly applied to your credit balance; values with asterisks are included in those.",
         "Collapse all",
         "Expand all",
         "Expand top",
@@ -848,7 +850,8 @@
         "Net income for last month",
         "No data for last month",
         "Unpaid debt",
-        "Upkeep"
+        "Upkeep",
+        "Your expenses have exceeded both your income and your available credits.\n\nIf this continues for more than a month, some crew may leave next time you're in port, and other undertakings requiring credit expenditures may fail.\n\nShutting down industries on colonies you control is a quick way to both reduce your expenses and get back most of the credits used to establish them."
       ]
     },
     {
@@ -1020,11 +1023,16 @@
     {
       "path": "com/fs/starfarer/campaign/command/MarketTooltipFactory$5.class",
       "include_strings": [
-        " ... and other considerations",
+        "    ... and other considerations",
+        "\"Free Port\" status\n",
+        "Certain industries and structures\n",
         "Factors that can affect population growth:",
         "For a size %s colony, this translates into a %s monthly growth rate.",
         "Growth Rate",
         "Growth point total: %s",
+        "Hazard pay\n",
+        "The colony's accessibility\n",
+        "The planet's hazard rating\n",
         "The population growth rate is the percentage, per month, that a colony will progress towards a size increase. If the rate is negative, progress will be lost, but colony size will not be reduced even if progress reaches zero. The primary driver of colony growth is immigration.",
         "This colony has reached its maximum size."
       ]
@@ -1109,17 +1117,20 @@
     {
       "path": "com/fs/starfarer/campaign/command/OutpostListPanel.class",
       "include_strings": [
+        "AI cores and special items in use by any industries.\n\nSorts by total number of AI cores and items, regardless of type.",
         "Admin",
         "Administrator in charge of the colony, if any.",
         "Administrators in use:",
         "Colonies under AI core control:",
         "Colonies under personal control",
         "Colonies under personal control:",
+        "Colony name.\n\nSorts colonies by date established.",
         "Colony size.",
         "Colony's stability.",
         "Conditions",
         "Items",
         "Location",
+        "Location, relative to your fleet's current position. Mouse over for distance/travel time/fuel costs.\n\nSorts by distance to your current location.",
         "Manage administrators",
         "Management bonus",
         "Mismanagement penalty",
@@ -1127,6 +1138,7 @@
         "Net income",
         "Net monthly income or expenses.",
         "No colonies or in-use rented storage",
+        "Planetary/local conditions. Does not include conditions added by human activity.\n\nSorts by number of conditions.",
         "Size",
         "St.",
         "Total administrators:",
@@ -4261,6 +4273,18 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/coreui/oOoO$o$2.class",
+      "include_strings": [
+        "\n\nYou will also receive %s bonus experience based on the s-mods you've built into this hull.",
+        "Can not be sold here.\n\n",
+        "Unavailable for purchase.\n\n",
+        "fighter wing",
+        "s-mods",
+        "ship"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/coreui/oo0O.class",
       "include_strings": [
         "Administrator name:",
@@ -5457,6 +5481,7 @@
         "TARGET: %s",
         "TARGET: NONE",
         "cr: ",
+        "flux",
         "hull"
       ]
     },
@@ -5853,6 +5878,7 @@
         "Hover over the enemy ship and press %s to target it.",
         "It'd be nice to shoot these down - we've got some point-defense lasers just for that. But, it's almost impossible to manually target all the incoming missiles.",
         "Just sit tight and let them get a few volleys off.",
+        "Let's try strafing - hold down %s and press %s or %s to circle around the enemy ship. You'll also need to use %s and %s to manage the distance.\n\nContinue when you feel comfortable with it.",
         "Moving the mouse around pans your view. You can also use the mouse wheel to zoom in and out.",
         "Note how the lasers switch to attacking the missiles as soon as they're launched - point defense weapons will prioritize targeting missiles.",
         "Now that the ship is no longer overloaded, flux is back to dissipating at a normal rate.",
@@ -5864,18 +5890,23 @@
         "Press %s to vent flux.",
         "Regular weapons will not target missiles automatically.",
         "Shields generate flux continuously while they're up, and generate even more flux every time they absorb damage.",
+        "Ships can also strafe sideways.\n\nThis is particularly useful if you want to move while keeping your front-facing weapons pointed at your target.",
         "Some ship systems have limited uses, some generate flux, some have a cooldown - and some use a combination of those.",
         "The Accelerated Ammo Feeder must cool down before it can be used again.",
+        "The Hammerhead has front-facing shields, but some ships have omni-directional shields that can rotate to face threats from any direction.\n\n%s to turn on your shields.",
+        "The Hammerhead's weapons are organized in three groups. Press %s, %s, and %s to switch between groups, and %s to fire the selected group.\n\nGive this a try, and continue when you're ready.",
         "The enemy ship has stopped firing, but your flux level still isn't going down!",
         "The flux from firing these dissipates almost as quickly as it's generated. Different ships and ship loadouts dissipate flux at different rates, and so can support varying amounts of weapons effectively.",
         "The notch on the flux bar indicates your hard flux level.",
         "There's now an enemy ship - an Enforcer-class destroyer - at your 12 o'clock. Its weapon and maneuvering systems are disabled.",
         "They're going to start launching missiles at you. Fortunately, these missiles aren't very effective vs well-armored ships.",
         "Wait for the oveload to end.",
+        "Welcome to the Starsector combat tutorial. This part will go over the combat basics.\n\nLet's get started!",
         "While the ship is overloaded, it can't fire or raise shields, dissipates flux very slowly, but can still maneuver normally.",
         "While venting, your ship can't fire or use shields, so you generally only want to do it when it's safe.",
         "You can also lock onto a specific enemy to ensure missiles go after it, and to see more information about it.",
         "You can also vent flux to dissipate it at double the normal rate.",
+        "You can press %s again to clear the target.\n\nNow, onto defenses - most ships use shields to defend against incoming damage.",
         "Your flagship for this tutorial is a Hammerhead class destroyer. First things first - let's learn how to get it moving.",
         "Your ship will turn towards your mouse pointer while you strafe, so keep the cursor on top of the target.",
         "autofire",
@@ -5931,6 +5962,7 @@
         "... and press the \"Transfer Command\" button, then wait for the shuttle pod to take you to the new flagship.",
         "... and right-click on the Comm Relay.",
         "... and select \"Avoid\" from the list of available assignments.",
+        "... and select \"Capture\" from the list of available assignments.\n\nYou can also use the keyboard shortcut displayed on the button.",
         "... and select \"Eliminate\" from the list of available assignments.",
         "A nearby frigate is automatically assigned to the task - that's what the arrow on the map indicates.",
         "An assignment appropriate to your selection, and what you right-clicked on, was created - in this case, another \"Capture\". You can also assign specific ships to existing assignments by selecting them and right-clicking on the assignment.",
@@ -5941,6 +5973,8 @@
         "Creating an assignment costs a command point, but also opens the command channel. While it's open, giving orders is free.",
         "ESCAPE",
         "Eliminate",
+        "Enemy ships in sight!\n\nLet's give a couple of orders to make the battle go smoothly for your side.",
+        "Excellent. Some enemies are arriving in the battlespace - you should encounter them shortly!\n\nThe tutorial will resume once both enemy ships are in sight.",
         "Go ahead, try it out - press the \"Show Video Feed\" button.",
         "Good. Now, let's create some assignments for our ships to carry out.",
         "Good. Now, let's order our ships to focus on the enemy destroyer.",
@@ -5963,6 +5997,7 @@
         "The tutorial will resume once both objectives are captured.",
         "To deploy ships, press the \"Reinforcements\" button in the upper right.",
         "Transfer Command",
+        "Welcome to the Starsector fleet command tutorial.\n\nLet's get started!",
         "You can also exit the feed by pressing ",
         "You can also manually assign a ship to perform a task. Select one of the other frigates...",
         "You can also press ESCAPE to leave the tutorial.",
@@ -6016,8 +6051,10 @@
     {
       "path": "com/fs/starfarer/tutorial/combat/O0OO.class",
       "include_strings": [
+        "Now, let's learn to fire your weapons.\n\nThere's a Lasher-class frigate nearby - move near it and press the left mouse button to fire your guns. Go blow it up!",
         "Press R to bring up a target overlay that gives you more information about the ship.",
-        "Press ~ to toggle the weapon firing arc display."
+        "Press ~ to toggle the weapon firing arc display.",
+        "Very good!\n\nThe Assault Chainguns you were firing use HIGH EXPLOSIVE shells which are great against armor, but not so good against shields. "
       ]
     },
     {
@@ -6038,8 +6075,10 @@
         "As you can see, your ship is not building up flux despite the shields being under fire.",
         "Assault Chainguns|1",
         "Be careful - when a ship is disabled, the explosion deals damage to all nearby ships, except for fighters.",
+        "Congratulations! You've completed the advanced combat tutorial.\n\nIt's probably a good idea to complete the fleet command tutorial next.",
         "EMP",
         "EMP damage does not affect shields, armor, or hull - but it can quickly disable enemy weapons and engines.",
+        "Each weapon deals damage of a particular damage type.\n\nKinetic damage deals 200% to shields, but only 50% to armor.",
         "Energy",
         "Energy damage deals 100% of its listed damage to everything.",
         "Excellent, the enemy ship is taking hull damage now. Let's finish it off!",
@@ -6047,6 +6086,7 @@
         "Fire enough Sabots at the enemy ship to overload its shields.",
         "Fragmentation",
         "Fragmentation damage deals only 25% to armor and shields, but usually costs little flux and has a high base DPS value, making it effective vs exposed hull, or lightly armored, unshielded targets - like missiles and fighters.",
+        "Good work.\n\nThere are two damage types we haven't looked at yet.",
         "Great work! With the shields down and an overload in progress, the enemy ship is vulnerable. The next step is to bring down its armor.",
         "High explosive",
         "High explosive damage deals 200% to armor, but only 50% to shields.",
@@ -6061,8 +6101,10 @@
         "The engine boost is particularly important for larger ships, which have a much lower top speed without it.",
         "This is because beam weapons generate soft flux when hitting shields.",
         "This may make them seem weak - but remember that this flux still needs to be dissipated, leaving that much less flux dissipation to power weapons. Beam weapons are also very efficient and need little flux to fire.",
+        "To maintain the engine boost for a ship with autofiring weapons, you can press %s to hold fire.\n\nCarriers will also need to press %s to pull back their fighters.",
         "Travel through the nebula in front of your ship, noting how your ship moves faster when the shields are down.",
         "Turning shields on - even without taking any damage - is enough to cancel the bonus.",
+        "Use the Accelerated Ammo Feeder to deal damage faster. Press %s to activate it, and fire away.\n\nIf your flux maxes out from firing, just wait a bit so it can dissipate.",
         "We've already gone over the basics of using weapons in the previous tutorial. Now, let's take a look at picking the right weapon for the job.",
         "Welcome to the advanced combat tutorial. Let's get started!",
         "Your Ion Cannons deal lots of EMP damage (and little else). Switch to the Ion Cannons and disable some of the weapons on the Enforcer.",
@@ -6503,6 +6545,7 @@
         "It is recovering %s CR per day.",
         "None",
         "Recent events affecting CR:",
+        "Refitting a ship will temporarily decrease its CR based on the number of ordnance points changed. The new CR value - should the refit be carried out - is indicated by the dimmed portion of the CR bar. \n\nUsing unspent ordnance points will not bring CR down into malfunction range, and refitting at a port will not reduce CR at all.\n",
         "Repairs suspended - CR holding at its current value.",
         "Run Simulation",
         "The current CR is %s.",
@@ -7743,7 +7786,9 @@
       "include_strings": [
         "%s officers and ship commanders.",
         "A mix of %s and %s officers and ship commanders.",
+        "Aggressive",
         "Cautious",
+        "Reckless",
         "Steady"
       ]
     },
@@ -16836,7 +16881,8 @@
     {
       "path": "com/fs/starfarer/api/impl/combat/NavBuoyEffect.class",
       "include_strings": [
-        " points"
+        " points",
+        "+%d%% top speed\n%d%% base total maximum\n+%d bonus deployment points\nup to a maximum of "
       ]
     },
     {
@@ -16921,10 +16967,34 @@
     {
       "path": "com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class",
       "include_strings": [
+        " all",
+        " negated on this ship.",
+        "Can not be installed on a frigate",
+        "Can not be installed on a phase ship",
         "Converts the ship's standard shuttle hangar to house a fighter bay. The improvised flight deck, its crew, and the related machinery all function at a pace below that of a dedicated carrier.",
+        "Deployment cost: %s",
         "Increases fighter refit time by %s, and the fighter replacement rate both decays and recovers %s more slowly. In addition, bombers returning to rearm (or fighters returning for repairs) take %s of their base refit time to relaunch, where normally it takes under a second. ",
-        "Increases the minimum crew by %s to account for pilots and flight crews. Increases the ship's deployment points and supply cost to recover from deployment by %s for every %s ordnance points spent on fighters, or by at least %s point. This comes with a proportional increase in combat readiness lost per deployment."
+        "Increases the minimum crew by %s to account for pilots and flight crews. Increases the ship's deployment points and supply cost to recover from deployment by %s for every %s ordnance points spent on fighters, or by at least %s point. This comes with a proportional increase in combat readiness lost per deployment.",
+        "Seconds to relaunch",
+        "Ship has fighter bays",
+        "Ship has standard fighter bays",
+        "Ship's combat readiness lost per deployment is too high",
+        "The ",
+        "Wing",
+        "are",
+        "deployment cost increase",
+        "increased crew requirement",
+        "is",
+        "refit time and rate recovery modifiers",
+        "relaunch delay"
       ]
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/hullmods/DefensiveTargetingArray.class",
+      "include_strings": [
+        "Ship does not have fighter bays"
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/api/impl/hullmods/DegradedLifeSupport.class",
@@ -17012,8 +17082,21 @@
     {
       "path": "com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class",
       "include_strings": [
+        " CAPACITY REMAINING",
+        "A combat-rated autoloader that provides a limited number of reloads, out of a shared reload capacity, to missile weapons installed in small missile mounts.",
+        "A partial reload is possible when running out of capacity.",
+        "Affected weapon",
+        "After a reload, the weapon requires an extra %s seconds, in addition to its normal cooldown, before it can fire again.",
+        "CAPACITY EXHAUSTED",
         "Determined by ship size and number of small missile slots, both filled and empty. Having fewer of these simplifies the task and increases the number of possible reloads.",
-        "Does not affect weapons that do not use ammo or regenerate it, or are mounted in any other type of slot. Reload size is not affected by skills or hullmods that increase missile ammo capacity."
+        "Does not affect weapons that do not use ammo or regenerate it, or are mounted in any other type of slot. Reload size is not affected by skills or hullmods that increase missile ammo capacity.",
+        "No affected weapons mounted",
+        "Reload capacity",
+        "Reload cost",
+        "Ship does not have any small missile slots",
+        "Ship size",
+        "Small missiles",
+        "missile weapons installed in small missile mounts"
       ]
     },
     {
@@ -17082,21 +17165,36 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/api/loading/WeaponGroupType.class",
+      "include_strings": [
+        "Alternating",
+        "Linked"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class",
       "include_strings": [
         "Allow black market purchases",
         "Always add \"Blast Doors\"",
         "Always add \"Reinforced Bulkheads\"",
         "Buy ordnance from market",
+        "Buy weapons and fighter LPCs from market, if docked at one.\n\nOrdnance from your cargo will be preferred if that option is checked and if the alternatives are of equal quality.",
+        "Buy weapons and fighter LPCs from the black market.\n\nNon-black-market options will be preferred if the alternatives are of equal quality.",
         "Makes the loadout only loosely based on the goal variant.",
+        "Prioritizes installing the \"Blast Doors\" hullmod, which increases hull integrity and greatly reduces crew losses suffered due to hull damage.\n\n\"Blast Doors\" may still be added if this option isn't checked, provided there are enough ordnance points.",
+        "Prioritizes installing the \"Reinforced Bulkheads\" hullmod, which increases hull integrity and makes a ship virtually certain to be recoverable if lost in battle.\n\n\"Reinforced Bulkheads\" may still be added if this option isn't checked, provided there are enough ordnance points.",
         "Randomize weapons and hullmods",
+        "Remove everything possible prior to autofitting; generally results in a better fit.\n\nHowever, refitting outside of port reduces a ship's combat readiness, and this option tends to lead to more changes and more readiness lost.",
+        "Spend any unused ordnance points on flux vents, capacitors, and essential hullmods.\n\nWill not make any changes to weapon loadout, will not affect ship modules (if any), and will not spend any credits.",
         "Spend free OP",
         "Strip before autofitting",
         "Upgrade weapons using extra OP",
         "Use ordnance from cargo",
         "Use ordnance from storage",
         "Use weapons and fighter LPCs from your fleet's cargo holds.",
-        "Use weapons and fighter LPCs from your local storage facilities."
+        "Use weapons and fighter LPCs from your local storage facilities.",
+        "Use weapons better than the ones specified in the goal variant, if there are ordnance points left to mount them.\n\nWill add flux vents and capacitors up to the number specified in the goal variant first, then upgrade weapons, and then add more vents and some common hullmods.\n\nLeaving some unspent ordnance points in a goal variant can help take advantage of this option."
       ]
     },
     {

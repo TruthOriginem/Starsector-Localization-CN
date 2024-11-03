@@ -1981,11 +1981,25 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class 的第0082个常量\n原始数据：\"A mix of %s and %s officers and ship commanders.\"\n译文数据：\"混杂着 激进 ,鲁莽 的军官与舰长。\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class#\"Aggressive\"",
+        "original": "Aggressive",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class 的第0080个常量\n原始数据：\"Aggressive\"\n译文数据：\"Aggressive\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class#\"Cautious\"",
         "original": "Cautious",
         "translation": "谨慎",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class 的第0070个常量\n原始数据：\"Cautious\"\n译文数据：\"谨慎\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class#\"Reckless\"",
+        "original": "Reckless",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class 的第0084个常量\n原始数据：\"Reckless\"\n译文数据：\"Reckless\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class#\"Steady\"",
@@ -37926,6 +37940,13 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/combat/NavBuoyEffect.class 的第0094个常量\n原始数据：\" points\"\n译文数据：\" 点\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/NavBuoyEffect.class#\"+%d%% top speed\n%d%% base total maximum\n+%d bonus deployment points\nup to a maximum of \"",
+        "original": "+%d%% top speed\n%d%% base total maximum\n+%d bonus deployment points\nup to a maximum of ",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/combat/NavBuoyEffect.class 的第0089个常量\n原始数据：\"+%d%% top speed\n%d%% base total maximum\n+%d bonus deployment points\nup to a maximum of \"\n译文数据：\"+%d%% top speed\n%d%% base total maximum\n+%d bonus deployment points\nup to a maximum of \"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/PhaseCloakStats.class#\"phase coil stress\"",
         "original": "phase coil stress",
         "translation": "相位线圈 [波动] ",
@@ -38129,11 +38150,46 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BaseLogisticsHullMod.class 的第0101个常量\n原始数据：\"two\"\n译文数据：\"二\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\" all\"",
+        "original": " all",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0534个常量\n原始数据：\" all\"\n译文数据：\" all\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\" negated on this ship.\"",
+        "original": " negated on this ship.",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0544个常量\n原始数据：\" negated on this ship.\"\n译文数据：\" negated on this ship.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Can not be installed on a frigate\"",
+        "original": "Can not be installed on a frigate",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0275个常量\n原始数据：\"Can not be installed on a frigate\"\n译文数据：\"Can not be installed on a frigate\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Can not be installed on a phase ship\"",
+        "original": "Can not be installed on a phase ship",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0281个常量\n原始数据：\"Can not be installed on a phase ship\"\n译文数据：\"Can not be installed on a phase ship\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Converts the ship's standard shuttle hangar to house a fighter bay. The improvised flight deck, its crew, and the related ~\"@f7552acb",
         "original": "Converts the ship's standard shuttle hangar to house a fighter bay. The improvised flight deck, its crew, and the related machinery all function at a pace below that of a dedicated carrier.",
         "translation": "将该舰船的标准 穿梭机库 改造为 飞行甲板。这个临时改造的 飞行甲板 以及其组员和设备的整备速度均低于正规航母。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0417个常量\n原始数据：\"Converts the ship's standard shuttle hangar to house a fighter bay. The improvised flight deck, its crew, and the related machinery all function at a pace below that of a dedicated carrier.\"\n译文数据：\"将该舰船的标准 穿梭机库 改造为 飞行甲板。这个临时改造的 飞行甲板 以及其组员和设备的整备速度均低于正规航母。\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Deployment cost: %s\"",
+        "original": "Deployment cost: %s",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0454个常量\n原始数据：\"Deployment cost: %s\"\n译文数据：\"Deployment cost: %s\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Increases fighter refit time by %s, and the fighter replacement rate both decays and recovers %s more slowly. In addition,~\"@b6f2d152",
@@ -38148,6 +38204,97 @@
         "translation": "为补充飞行员和整备人员，提高 %s 最低船员需求。舰船的部署点战后恢复所需补给都提高 %s，每在舰载机上花费 %s 装配点就会使之提高，且至少为 %s 点。这也会提高每次部署所损耗的 战备值。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0446个常量\n原始数据：\"Increases the minimum crew by %s to account for pilots and flight crews. Increases the ship's deployment points and supply cost to recover from deployment by %s for every %s ordnance points spent on fighters, or by at least %s point. This comes with a proportional increase in combat readiness lost per deployment.\"\n译文数据：\"为补充飞行员和整备人员，提高 %s 最低船员需求。舰船的部署点战后恢复所需补给都提高 %s，每在舰载机上花费 %s 装配点就会使之提高，且至少为 %s 点。这也会提高每次部署所损耗的 战备值。\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Seconds to relaunch\"",
+        "original": "Seconds to relaunch",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0478个常量\n原始数据：\"Seconds to relaunch\"\n译文数据：\"Seconds to relaunch\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Ship has fighter bays\"",
+        "original": "Ship has fighter bays",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0279个常量\n原始数据：\"Ship has fighter bays\"\n译文数据：\"Ship has fighter bays\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Ship has standard fighter bays\"",
+        "original": "Ship has standard fighter bays",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0277个常量\n原始数据：\"Ship has standard fighter bays\"\n译文数据：\"Ship has standard fighter bays\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Ship's combat readiness lost per deployment is too high\"",
+        "original": "Ship's combat readiness lost per deployment is too high",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0273个常量\n原始数据：\"Ship's combat readiness lost per deployment is too high\"\n译文数据：\"Ship's combat readiness lost per deployment is too high\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"The \"",
+        "original": "The ",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0536个常量\n原始数据：\"The \"\n译文数据：\"The \"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Wing\"",
+        "original": "Wing",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0471个常量\n原始数据：\"Wing\"\n译文数据：\"Wing\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"are\"",
+        "original": "are",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0532个常量\n原始数据：\"are\"\n译文数据：\"are\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"deployment cost increase\"",
+        "original": "deployment cost increase",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0522个常量\n原始数据：\"deployment cost increase\"\n译文数据：\"deployment cost increase\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"increased crew requirement\"",
+        "original": "increased crew requirement",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0520个常量\n原始数据：\"increased crew requirement\"\n译文数据：\"increased crew requirement\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"is\"",
+        "original": "is",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0527个常量\n原始数据：\"is\"\n译文数据：\"is\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"refit time and rate recovery modifiers\"",
+        "original": "refit time and rate recovery modifiers",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0516个常量\n原始数据：\"refit time and rate recovery modifiers\"\n译文数据：\"refit time and rate recovery modifiers\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"relaunch delay\"",
+        "original": "relaunch delay",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0518个常量\n原始数据：\"relaunch delay\"\n译文数据：\"relaunch delay\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/DefensiveTargetingArray.class#\"Ship does not have fighter bays\"",
+        "original": "Ship does not have fighter bays",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/DefensiveTargetingArray.class 的第0144个常量\n原始数据：\"Ship does not have fighter bays\"\n译文数据：\"Ship does not have fighter bays\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/DegradedLifeSupport.class#\"Degraded Life Support\"",
@@ -38346,6 +38493,48 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MilitarizedSubsystems.class 的第0193个常量\n原始数据：\"Can only be installed on civilian-grade hulls\"\n译文数据：\"只能安装在民用舰船上\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\" CAPACITY REMAINING\"",
+        "original": " CAPACITY REMAINING",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0284个常量\n原始数据：\" CAPACITY REMAINING\"\n译文数据：\" CAPACITY REMAINING\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"A combat-rated autoloader that provides a limited number of reloads, out of a shared reload capacity, to missile weapons installed in small missile mounts.\"",
+        "original": "A combat-rated autoloader that provides a limited number of reloads, out of a shared reload capacity, to missile weapons installed in small missile mounts.",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0445个常量\n原始数据：\"A combat-rated autoloader that provides a limited number of reloads, out of a shared reload capacity, to missile weapons installed in small missile mounts.\"\n译文数据：\"A combat-rated autoloader that provides a limited number of reloads, out of a shared reload capacity, to missile weapons installed in small missile mounts.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"A partial reload is possible when running out of capacity.\"",
+        "original": "A partial reload is possible when running out of capacity.",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0578个常量\n原始数据：\"A partial reload is possible when running out of capacity.\"\n译文数据：\"A partial reload is possible when running out of capacity.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"Affected weapon\"",
+        "original": "Affected weapon",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0561个常量\n原始数据：\"Affected weapon\"\n译文数据：\"Affected weapon\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"After a reload, the weapon requires an extra %s seconds, in addition to its normal cooldown, before it can fire again.\"",
+        "original": "After a reload, the weapon requires an extra %s seconds, in addition to its normal cooldown, before it can fire again.",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0580个常量\n原始数据：\"After a reload, the weapon requires an extra %s seconds, in addition to its normal cooldown, before it can fire again.\"\n译文数据：\"After a reload, the weapon requires an extra %s seconds, in addition to its normal cooldown, before it can fire again.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"CAPACITY EXHAUSTED\"",
+        "original": "CAPACITY EXHAUSTED",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0290个常量\n原始数据：\"CAPACITY EXHAUSTED\"\n译文数据：\"CAPACITY EXHAUSTED\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"Determined by ship size and number of small missile slots, both filled and empty. Having fewer of these simplifies the task and increases the number of possible reloads.\"",
         "original": "Determined by ship size and number of small missile slots, both filled and empty. Having fewer of these simplifies the task and increases the number of possible reloads.",
         "translation": "取决于舰船大小和小型导弹槽位的数量，无论这些槽位是否真的装了武器。槽位越少，装填越容易，因此可以装填更多次。",
@@ -38358,6 +38547,55 @@
         "translation": "不影响无限备弹量或会自行恢复备弹量的武器，也不影响安装在其他类型槽位上的武器。重装数量等于基础备弹量上限，不受到增加导弹备弹量的技能或船插的影响。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0457个常量\n原始数据：\"Does not affect weapons that do not use ammo or regenerate it, or are mounted in any other type of slot. Reload size is not affected by skills or hullmods that increase missile ammo capacity.\"\n译文数据：\"不影响无限备弹量或会自行恢复备弹量的武器，也不影响安装在其他类型槽位上的武器。重装数量等于基础备弹量上限，不受到增加导弹备弹量的技能或船插的影响。\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"No affected weapons mounted\"",
+        "original": "No affected weapons mounted",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0574个常量\n原始数据：\"No affected weapons mounted\"\n译文数据：\"No affected weapons mounted\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"Reload capacity\"",
+        "original": "Reload capacity",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0462个常量\n原始数据：\"Reload capacity\"\n译文数据：\"Reload capacity\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"Reload cost\"",
+        "original": "Reload cost",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0558个常量\n原始数据：\"Reload cost\"\n译文数据：\"Reload cost\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"Ship does not have any small missile slots\"",
+        "original": "Ship does not have any small missile slots",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0611个常量\n原始数据：\"Ship does not have any small missile slots\"\n译文数据：\"Ship does not have any small missile slots\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"Ship size\"",
+        "original": "Ship size",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0503个常量\n原始数据：\"Ship size\"\n译文数据：\"Ship size\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"Small missiles\"",
+        "original": "Small missiles",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0511个常量\n原始数据：\"Small missiles\"\n译文数据：\"Small missiles\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"missile weapons installed in small missile mounts\"",
+        "original": "missile weapons installed in small missile mounts",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0449个常量\n原始数据：\"missile weapons installed in small missile mounts\"\n译文数据：\"missile weapons installed in small missile mounts\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/NeuralIntegrator.class#\"Can not be installed on this ship\"",
@@ -38570,6 +38808,20 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ShieldShunt.class 的第0120个常量\n原始数据：\"Ship has no shields\"\n译文数据：\"该舰没有护盾\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/loading/WeaponGroupType.class#\"Alternating\"",
+        "original": "Alternating",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/loading/WeaponGroupType.class 的第0026个常量\n原始数据：\"Alternating\"\n译文数据：\"Alternating\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/loading/WeaponGroupType.class#\"Linked\"",
+        "original": "Linked",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/loading/WeaponGroupType.class 的第0017个常量\n原始数据：\"Linked\"\n译文数据：\"Linked\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Allow black market purchases\"",
         "original": "Allow black market purchases",
         "translation": "允许搜索黑市购买",
@@ -38598,6 +38850,20 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0298个常量\n原始数据：\"Buy ordnance from market\"\n译文数据：\"搜索市场购买装备\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Buy weapons and fighter LPCs from market, if docked at one.\n\nOrdnance from your cargo will be preferred if that option is checked and if the alternatives are of equal quality.\"",
+        "original": "Buy weapons and fighter LPCs from market, if docked at one.\n\nOrdnance from your cargo will be preferred if that option is checked and if the alternatives are of equal quality.",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0300个常量\n原始数据：\"Buy weapons and fighter LPCs from market, if docked at one.\n\nOrdnance from your cargo will be preferred if that option is checked and if the alternatives are of equal quality.\"\n译文数据：\"Buy weapons and fighter LPCs from market, if docked at one.\n\nOrdnance from your cargo will be preferred if that option is checked and if the alternatives are of equal quality.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Buy weapons and fighter LPCs from the black market.\n\nNon-black-market options will be preferred if the alternatives are of equal quality.\"",
+        "original": "Buy weapons and fighter LPCs from the black market.\n\nNon-black-market options will be preferred if the alternatives are of equal quality.",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0304个常量\n原始数据：\"Buy weapons and fighter LPCs from the black market.\n\nNon-black-market options will be preferred if the alternatives are of equal quality.\"\n译文数据：\"Buy weapons and fighter LPCs from the black market.\n\nNon-black-market options will be preferred if the alternatives are of equal quality.\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Makes the loadout only loosely based on the goal variant.\"",
         "original": "Makes the loadout only loosely based on the goal variant.",
         "translation": "基于目标基础水准随机配置。",
@@ -38605,11 +38871,39 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0324个常量\n原始数据：\"Makes the loadout only loosely based on the goal variant.\"\n译文数据：\"基于目标基础水准随机配置。\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Prioritizes installing the \"Blast Doors\" hullmod, which increases hull integrity and greatly reduces crew losses suffered ~\"@b11d9ebd",
+        "original": "Prioritizes installing the \"Blast Doors\" hullmod, which increases hull integrity and greatly reduces crew losses suffered due to hull damage.\n\n\"Blast Doors\" may still be added if this option isn't checked, provided there are enough ordnance points.",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0320个常量\n原始数据：\"Prioritizes installing the \"Blast Doors\" hullmod, which increases hull integrity and greatly reduces crew losses suffered due to hull damage.\n\n\"Blast Doors\" may still be added if this option isn't checked, provided there are enough ordnance points.\"\n译文数据：\"Prioritizes installing the \"Blast Doors\" hullmod, which increases hull integrity and greatly reduces crew losses suffered due to hull damage.\n\n\"Blast Doors\" may still be added if this option isn't checked, provided there are enough ordnance points.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Prioritizes installing the \"Reinforced Bulkheads\" hullmod, which increases hull integrity and makes a ship virtually certa~\"@0dc6a57d",
+        "original": "Prioritizes installing the \"Reinforced Bulkheads\" hullmod, which increases hull integrity and makes a ship virtually certain to be recoverable if lost in battle.\n\n\"Reinforced Bulkheads\" may still be added if this option isn't checked, provided there are enough ordnance points.",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0316个常量\n原始数据：\"Prioritizes installing the \"Reinforced Bulkheads\" hullmod, which increases hull integrity and makes a ship virtually certain to be recoverable if lost in battle.\n\n\"Reinforced Bulkheads\" may still be added if this option isn't checked, provided there are enough ordnance points.\"\n译文数据：\"Prioritizes installing the \"Reinforced Bulkheads\" hullmod, which increases hull integrity and makes a ship virtually certain to be recoverable if lost in battle.\n\n\"Reinforced Bulkheads\" may still be added if this option isn't checked, provided there are enough ordnance points.\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Randomize weapons and hullmods\"",
         "original": "Randomize weapons and hullmods",
         "translation": "随机配备武器与船体插件",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0322个常量\n原始数据：\"Randomize weapons and hullmods\"\n译文数据：\"随机配备武器与船体插件\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Remove everything possible prior to autofitting; generally results in a better fit.\n\nHowever, refitting outside of port re~\"@ef9b5663",
+        "original": "Remove everything possible prior to autofitting; generally results in a better fit.\n\nHowever, refitting outside of port reduces a ship's combat readiness, and this option tends to lead to more changes and more readiness lost.",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0312个常量\n原始数据：\"Remove everything possible prior to autofitting; generally results in a better fit.\n\nHowever, refitting outside of port reduces a ship's combat readiness, and this option tends to lead to more changes and more readiness lost.\"\n译文数据：\"Remove everything possible prior to autofitting; generally results in a better fit.\n\nHowever, refitting outside of port reduces a ship's combat readiness, and this option tends to lead to more changes and more readiness lost.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Spend any unused ordnance points on flux vents, capacitors, and essential hullmods.\n\nWill not make any changes to weapon l~\"@e66fcce5",
+        "original": "Spend any unused ordnance points on flux vents, capacitors, and essential hullmods.\n\nWill not make any changes to weapon loadout, will not affect ship modules (if any), and will not spend any credits.",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第1390个常量\n原始数据：\"Spend any unused ordnance points on flux vents, capacitors, and essential hullmods.\n\nWill not make any changes to weapon loadout, will not affect ship modules (if any), and will not spend any credits.\"\n译文数据：\"Spend any unused ordnance points on flux vents, capacitors, and essential hullmods.\n\nWill not make any changes to weapon loadout, will not affect ship modules (if any), and will not spend any credits.\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Spend free OP\"",
@@ -38659,6 +38953,13 @@
         "translation": "搜索你港口的仓库使用武器和战机 LPC .",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0296个常量\n原始数据：\"Use weapons and fighter LPCs from your local storage facilities.\"\n译文数据：\"搜索你港口的仓库使用武器和战机 LPC .\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Use weapons better than the ones specified in the goal variant, if there are ordnance points left to mount them.\n\nWill add~\"@c0a6932e",
+        "original": "Use weapons better than the ones specified in the goal variant, if there are ordnance points left to mount them.\n\nWill add flux vents and capacitors up to the number specified in the goal variant first, then upgrade weapons, and then add more vents and some common hullmods.\n\nLeaving some unspent ordnance points in a goal variant can help take advantage of this option.",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0308个常量\n原始数据：\"Use weapons better than the ones specified in the goal variant, if there are ordnance points left to mount them.\n\nWill add flux vents and capacitors up to the number specified in the goal variant first, then upgrade weapons, and then add more vents and some common hullmods.\n\nLeaving some unspent ordnance points in a goal variant can help take advantage of this option.\"\n译文数据：\"Use weapons better than the ones specified in the goal variant, if there are ordnance points left to mount them.\n\nWill add flux vents and capacitors up to the number specified in the goal variant first, then upgrade weapons, and then add more vents and some common hullmods.\n\nLeaving some unspent ordnance points in a goal variant can help take advantage of this option.\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/util/Misc.class#\" World\"",
