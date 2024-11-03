@@ -2,10 +2,12 @@
 	"id":"carrier_group",
 	"governingAptitude":"leadership",
 	"compressHullmods":false,
+	#"scope":ALL_CARRIERS,
 	"scope":CUSTOM,
 	"scopeStr":"所有带飞行甲板的舰船",
 	"scope2":CUSTOM,
 	"scopeStr2":"配备军官的舰船，包括座舰 (效果更佳)",
+	#"scopeStr":"all ships with non-built-in fighter bays",
 	"effectGroups":[
 		{
 			"requiredSkillLevel":1,

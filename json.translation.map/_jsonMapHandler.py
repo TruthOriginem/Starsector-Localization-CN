@@ -6,26 +6,10 @@ import json5
 import csv
 
 workplace_path = os.path.dirname(os.path.realpath(__file__))
-starsector_comment_line = re.compile(r'(?<!\\)"[^"]*"|#.*')
+starsector_comment_line = re.compile(r'^\s*#.*$')
 json_map_collection_path = "_jsonMapCollection.csv"
 source_folder = "../original"
 target_folder = "../localization"
-
-
-def getStarsectorjsonStr(file_path):
-    # 定义正则表达式，匹配不在双引号中的 # 及其后面的内容
-    json_string = ''
-    with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
-        lines = f.readlines()
-        for line in lines:
-            # 只保留不在双引号中的 # 及其后面的内容
-            parts = starsector_comment_line.findall(line)
-            for part in parts:
-                if not part.startswith('"'):
-                    line = line.replace(part, '')
-                    break
-            json_string += line
-    return json_string
 
 
 class MapItem(object):
@@ -159,27 +143,27 @@ class MapItem(object):
             lines = f.readlines()
             # 每行读取
             for line in lines:
-                if starsector_comment_line.search(line):
-                    continue
-                # 是否满足key的正则
-                display_match = self.key_name_re.search(line)
-                if display_match:
-                    # 文件中，key的后半段(value)
-                    value = display_match.group(1)
-                    if value:
-                        value = value.replace("\\\"", "\"")
-                        # 在目标文件中，value就是映射文件的key
-                        key = value.lower()
-                        if item_map_json.__contains__(key):
-                            if item_map_json[key].lower() != key:
-                                key_times += 1
-                                line = line[:display_match.start(
-                                    1)] + item_map_json[key] + line[
-                                        display_match.end(1):]
-                                line_changed = True
-                        elif not item_map_values.__contains__(value):
-                            no_match_item_list.append(
-                                f"{file_path}({line_count}):{key}|{value}")
+                if not starsector_comment_line.search(line):
+                    # 是否满足key的正则
+                    display_match = self.key_name_re.search(line)
+                    if display_match:
+                        # 文件中，key的后半段(value)
+                        value = display_match.group(1)
+                        if value:
+                            value = value.replace("\\\"", "\"")
+                            # 在目标文件中，value就是映射文件的key
+                            key = value.lower()
+                            if item_map_json.__contains__(key):
+                                if item_map_json[key].lower() != key:
+                                    key_times += 1
+                                    line = line[:display_match.start(
+                                        1)] + item_map_json[key] + line[
+                                            display_match.end(1):]
+                                    line_changed = True
+                            elif not item_map_values.__contains__(value):
+                                no_match_item_list.append(
+                                    f"{file_path}({line_count+1}):{key}|{value}"
+                                )
                 new_lines.append(line)
                 line_count += 1
         return (line_changed, key_times)
@@ -260,9 +244,7 @@ with open(json_map_collection_path, "r", encoding="utf-8") as f:
 def chooseAction():
     print("此脚本用于映射json条目翻译操作...")
     print("所有文本都会被转化为小写...")
-    action = input(
-        "输入1来根据指定源目录更新映射文件\n输入2来根据映射文件更新指定目标目录\n输入3远程下载装配映射文件(文件来源于汉化项目中，注意!会覆盖本地文件)\n输入其他字符或回车自动退出\n"
-    )
+    action = input("输入1来根据指定源目录更新映射文件\n输入2来根据映射文件更新指定目标目录\n输入其他字符或回车自动退出\n")
     if action == '1':
         for item in items:
             item.updateMap()
