@@ -99,7 +99,7 @@ class CsvFile(DataFile):
         return strings
 
     # 将传入的 ParaTranz 词条数据对象中的译文数据合并到现有数据中
-    def update_strings(self, strings: List[String], version_migration:bool=False) -> None:
+    def update_strings(self, strings: Set[String], version_migration:bool=False) -> None:
         for s in strings:
             _, row_id_str, column = re.split('[#$]', s.key)
             # 将行ID字符串转换为元组，以便作为译文数据的key

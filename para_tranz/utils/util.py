@@ -4,6 +4,7 @@ import logging
 import re
 import sys
 import urllib.parse
+import hashlib
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Optional, Set, List, Union
@@ -89,7 +90,7 @@ class DataFile:
     def get_strings(self) -> List[String]:
         raise NotImplementedError
 
-    def update_strings(self, strings: List[String], version_migration: bool = False) -> None:
+    def update_strings(self, strings: Set[String], version_migration: bool = False) -> None:
         raise NotImplementedError
 
     def save_json(self, ensure_ascii=False, indent=4) -> None:
@@ -150,7 +151,10 @@ class DataFile:
         return strings
 
     @staticmethod
-    def write_json_strings(path: Path, strings: List[String], ensure_ascii=False, indent=4) -> None:
+    def write_json_strings(path: Path, strings: List[String], ensure_ascii=False, indent=4, sort=True) -> None:
+        if sort:
+            strings = sorted(strings, key=lambda s: s.key)
+        
         path.parent.mkdir(parents=True, exist_ok=True)
         with open(path, 'w', encoding='utf-8') as f:
             data = []
@@ -215,6 +219,19 @@ def normalize_class_path(class_path: str) -> str:
 
 def url_encode(s: str) -> str:
     return urllib.parse.quote(s)
+
+def hash_string(s: str, length:int=4) -> str:
+    """
+    生成字符串的hash值
+
+    Args:
+        s (str): 要hash的字符串
+        length (int, optional): hash值的长度，生成的hash值长度为length*2。默认为4。
+
+    Returns:
+        str: hash值字符串
+    """
+    return hashlib.shake_128(s.encode()).hexdigest(length)
 
 class SetEncoder(json.JSONEncoder):
     """

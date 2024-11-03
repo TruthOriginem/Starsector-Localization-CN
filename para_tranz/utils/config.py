@@ -17,10 +17,12 @@ MAP_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'para_tranz_map.json'
 # 在导出字符串时是否覆盖已导出字符串的翻译stage状态
 OVERRIDE_STRING_STATUS = False
 # 导出词条上下文前缀文本
-EXPORTED_STRING_CONTEXT_PREFIX_PREFIX = '版本：0.97-RC11'
-EXPORTED_STRING_CONTEXT_PREFIX = f'{EXPORTED_STRING_CONTEXT_PREFIX_PREFIX} {datetime.now().strftime("%Y-%m-%d %H:%M")}\n'
+EXPORTED_STRING_CONTEXT_PREFIX_PREFIX = '版本：0.97-RC11 词条格式：v2'
+EXPORTED_STRING_CONTEXT_PREFIX = f'{EXPORTED_STRING_CONTEXT_PREFIX_PREFIX}\n'
 # 在将译文写回游戏文件时，是否跳过上下文前缀与当前上下文前缀不匹配的译文
 IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS = True
+# Paratranz 平台允许的最大词条key长度
+MAX_STRING_KEY_LENGTH = 256
 
 # [jar_loader 配置]
 MAGIC = b'\xca\xfe\xba\xbe'

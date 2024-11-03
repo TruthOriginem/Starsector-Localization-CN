@@ -2,10 +2,10 @@ from pathlib import Path, PurePosixPath
 from typing import Union, Set, Optional, List, Tuple, Dict
 
 from para_tranz.jar_loader.constant_table import ConstantTable, Utf8Constant
-from para_tranz.utils.config import EXPORTED_STRING_CONTEXT_PREFIX_PREFIX, IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS, MAGIC, MIN_CLASS_VER, MAX_CLASS_VER, ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS, \
+from para_tranz.utils.config import EXPORTED_STRING_CONTEXT_PREFIX_PREFIX, IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS, MAGIC, MAX_STRING_KEY_LENGTH, MIN_CLASS_VER, MAX_CLASS_VER, ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS, \
     EXPORTED_STRING_CONTEXT_PREFIX
 from para_tranz.utils.mapping import ClassFileMapItem
-from para_tranz.utils.util import make_logger, String, contains_chinese, contains_english, url_encode
+from para_tranz.utils.util import hash_string, make_logger, String, contains_chinese, contains_english, url_encode
 
 
 class JavaClassFile:
@@ -131,12 +131,34 @@ class JavaClassFile:
 
         return original_string_to_const_pairs
 
+    def generate_string_key(self, original_constant: Utf8Constant) -> str:
+        # 生成词条key
+        # 格式： jar文件路径:类文件路径.class#"原文内容"
+        full_key = f'{self.jar_file.path}:{self.path}#"{original_constant.string}"'
+        
+        if len(full_key) <= MAX_STRING_KEY_LENGTH:
+            return full_key
+        
+        # 如果key长度超过最大长度限制，则缩短key长度
+        # 生成的key格式： jar文件路径:类文件路径~#"原文内容~"@hash(key)
+        # '~'用于表示字段过长被截断，如果没有被截断则不添加
+        new_length:int = int(MAX_STRING_KEY_LENGTH * 0.8)
+        new_path_length:int = int(new_length * 0.4)
+        new_string_length:int = new_length - new_path_length
+        
+        key_hash = hash_string(full_key)
+        path_str = str(self.path)
+        new_path = path_str if len(path_str) <= new_path_length else path_str[:new_path_length-1] + '~'
+        new_string = original_constant.string if len(original_constant.string) <= new_string_length else original_constant.string[:new_string_length-1] + '~'
+        
+        return f'{self.jar_file.path}:{new_path}#"{new_string}"@{key_hash}'
+    
     def get_strings(self) -> List[String]:
         strings = []
         for _, pairs in self._get_original_string_to_const_pairs_mapping().items():
             original_constant, translated_constant = pairs[0]
 
-            key = f'{self.jar_file.path}:{self.path}#"{original_constant.string}"'
+            key = self.generate_string_key(original_constant)
 
             original = original_constant.string
             translation = ''
@@ -152,9 +174,11 @@ class JavaClassFile:
                     translation = ''
                     stage = 0
 
+            # 生成词条上下文信息
             context = ''
             for original_constant, translated_constant in pairs:
-                # 上下文信息：词条本身部分
+                # 此部分上下文信息也被用于在类名或原文内容过长时，还原词条的完整key使用
+                # 因此在修改格式时必须一并修改 jar_file.py 中的 construct_string_key_from_context 方法
                 context += f'{EXPORTED_STRING_CONTEXT_PREFIX}' \
                            f'提取自 {self.jar_file.path}:{self.path} 的第{str(original_constant.constant_index).zfill(4)}个常量\n' \
                            f'原始数据："{original_constant.string}"\n' \

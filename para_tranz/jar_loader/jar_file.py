@@ -66,6 +66,35 @@ class JavaJarFile(DataFile):
 
         return class_file
 
+    
+    re_jar_class = re.compile(r'提取自 (.*\.jar):(.*\.class)')
+    re_original_text = re.compile(r'原始数据：(\".*\")\n译文数据：', re.DOTALL)
+    
+    # TODO: 重构 String 类，添加子类 JarString，用于处理 jar 文件中的词条。将这个方法移动到 JarString 类中
+    @classmethod
+    def construct_string_key_from_context(cls, context: str) -> str:
+        """
+            用于在类名或原文内容过长导致生成的key过长时
+            从上下文中还原词条的完整key使用
+
+        Args:
+            context (str): 词条的上下文
+
+        Returns:
+            str: 根据上下文还原的词条key
+        """
+        
+        jar_class_match = cls.re_jar_class.search(context)
+        orignal_text_match = cls.re_original_text.search(context)
+        
+        if jar_class_match and orignal_text_match:
+            jar_path, class_path = jar_class_match.groups()
+            original_text = orignal_text_match.group(1)
+            return f'{jar_path}:{class_path}#{original_text}'
+        else:
+            raise ValueError(f'无法从上下文\n{context}\n中还原词条key')
+        
+
     def update_strings(self, strings: Set[String], version_migration: bool = False) -> None:
         class_file_path_strings_mapping = {class_file_path: [] for class_file_path in
                                            self.class_files}  # type: Dict[str, List[String]]
@@ -73,7 +102,12 @@ class JavaJarFile(DataFile):
         strings_without_class = []
 
         for s in strings:
-            class_file_path = re.split(r'[#:]', s.key)[1]
+            key = s.key
+            # 如果词条key中包含'~'和'@'，则说明词条key过长，有字段被截断，需要从上下文中还原词条key
+            if '~' in key and '@' in key:
+                key = self.construct_string_key_from_context(s.context)
+            class_file_path = re.split(r'[#:]', key)[1]
+            
             class_file = self.class_files.get(class_file_path, None)
 
             if class_file is None:
@@ -107,7 +141,10 @@ class JavaJarFile(DataFile):
 
         strings_by_class = {}
         for s in strings_without_class:
-            class_path = re.split(r'[#:]', s.key)[1]
+            key = s.key
+            if '~' in key and '@' in key:
+                key = self.construct_string_key_from_context(s.context)
+            class_path = re.split(r'[#:]', key)[1]
             if class_path not in strings_by_class:
                 strings_by_class[class_path] = []
             strings_by_class[class_path].append(s)
