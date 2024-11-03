@@ -31,6 +31,8 @@ MAX_CLASS_VER = 0x33  # 1.7
 
 # 原文匹配时是否忽略首尾空白字符
 ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS = True
+# 在将译文写回jar文件时，是否允许空译文
+UPDATE_STRING_ALLOW_EMPTY_TRANSLATION = True
 
 # [csv_loader 配置]
 # 在将译文写回csv文件时，是否删除原文为空的译文

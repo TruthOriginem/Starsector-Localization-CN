@@ -2,8 +2,9 @@ from pathlib import Path, PurePosixPath
 from typing import Union, Set, Optional, List, Tuple, Dict
 
 from para_tranz.jar_loader.constant_table import ConstantTable, Utf8Constant
-from para_tranz.utils.config import EXPORTED_STRING_CONTEXT_PREFIX_PREFIX, IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS, MAGIC, MAX_STRING_KEY_LENGTH, MIN_CLASS_VER, MAX_CLASS_VER, ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS, \
-    EXPORTED_STRING_CONTEXT_PREFIX
+from para_tranz.utils.config import EXPORTED_STRING_CONTEXT_PREFIX_PREFIX, IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS, \
+    MAGIC, MAX_STRING_KEY_LENGTH, MIN_CLASS_VER, MAX_CLASS_VER, ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS, \
+    EXPORTED_STRING_CONTEXT_PREFIX, UPDATE_STRING_ALLOW_EMPTY_TRANSLATION
 from para_tranz.utils.mapping import ClassFileMapItem
 from para_tranz.utils.util import hash_string, make_logger, String, contains_chinese, contains_english, url_encode
 
@@ -220,7 +221,7 @@ class JavaClassFile:
                     # 如果原文在原文jar中只被常量引用
                     if original not in const_ref_by_other_attrs:
                         # 如果译文已被翻译且不为空（这个条件写在里面是因为要优先报出“也被其他非string属性引用”的警告）
-                        if s.stage > 0 and s.translation:
+                        if s.stage > 0 and (s.translation or UPDATE_STRING_ALLOW_EMPTY_TRANSLATION):
                             translation.string = s.translation
                             update_success_count += 1
                     else:
