@@ -3,231 +3,231 @@
         "key": "commodities.csv#ai_cores$name",
         "original": "AI Cores",
         "translation": "AI 核心",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0025行\n[本行原始数据]\n{'name': 'AI Cores',\n 'id': 'ai_cores',\n 'demand class': 'ai_cores',\n 'base price': '1000',\n 'export value': '',\n 'price variability': '0',\n 'utility': '1',\n 'origin': '',\n 'tags': 'nonecon, ai_core',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/ai_core_gamma.png',\n 'sound id': 'ai_core_pickup',\n 'sound id drop': 'ui_fighter_drop',\n 'order': '30',\n 'economyTier': '',\n 'econUnitOrigUnused': '',\n 'econUnit': '',\n 'baseRaidDanger': '',\n 'eU * base value': '',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#alpha_core$name",
         "original": "Alpha Core",
         "translation": "Alpha AI 核心",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0026行\n[本行原始数据]\n{'name': 'Alpha Core',\n 'id': 'alpha_core',\n 'demand class': 'ai_cores',\n 'base price': '',\n 'export value': '',\n 'price variability': '0',\n 'utility': '150',\n 'origin': '',\n 'tags': 'nonecon, ai_core, no_loss_from_combat',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/ai_core_alpha.png',\n 'sound id': 'ai_core_pickup',\n 'sound id drop': 'ui_alpha_core_drop',\n 'order': '40',\n 'economyTier': '',\n 'econUnitOrigUnused': '',\n 'econUnit': '',\n 'baseRaidDanger': 'HIGH',\n 'eU * base value': '',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#beta_core$name",
         "original": "Beta Core",
         "translation": "Beta AI 核心",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0027行\n[本行原始数据]\n{'name': 'Beta Core',\n 'id': 'beta_core',\n 'demand class': 'ai_cores',\n 'base price': '',\n 'export value': '',\n 'price variability': '0',\n 'utility': '30',\n 'origin': '',\n 'tags': 'nonecon, ai_core, no_loss_from_combat',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/ai_core_beta.png',\n 'sound id': 'ai_core_pickup',\n 'sound id drop': 'ui_beta_core_drop',\n 'order': '39',\n 'economyTier': '',\n 'econUnitOrigUnused': '',\n 'econUnit': '',\n 'baseRaidDanger': 'MEDIUM',\n 'eU * base value': '',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#blueprints$name",
         "original": "Blueprints",
         "translation": "蓝图",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0038行\n[本行原始数据]\n{'name': 'Blueprints',\n 'id': 'blueprints',\n 'demand class': 'blueprints',\n 'base price': '1000',\n 'export value': '',\n 'price variability': '0',\n 'utility': '1',\n 'origin': '',\n 'tags': 'nonecon, meta',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/blueprintschip.png',\n 'sound id': 'ui_chip_pickup',\n 'sound id drop': 'ui_modspec_drop',\n 'order': '80',\n 'economyTier': '',\n 'econUnitOrigUnused': '',\n 'econUnit': '',\n 'baseRaidDanger': 'EXTREME',\n 'eU * base value': '',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#credits$name",
         "original": "Credits",
         "translation": "星币",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0040行\n[本行原始数据]\n{'name': 'Credits',\n 'id': 'credits',\n 'demand class': 'ship_weapons',\n 'base price': '1',\n 'export value': '',\n 'price variability': '0',\n 'utility': '1',\n 'origin': '',\n 'tags': 'nonecon, meta',\n 'stack size': '1000',\n 'cargo space': '',\n 'icon': 'graphics/icons/cargo/credit_chips.png',\n 'sound id': 'ui_chip_pickup',\n 'sound id drop': 'ui_modspec_drop',\n 'order': '100',\n 'economyTier': '',\n 'econUnitOrigUnused': '',\n 'econUnit': '',\n 'baseRaidDanger': 'HIGH',\n 'eU * base value': '',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#crew$name",
         "original": "Crew",
         "translation": "船员",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0003行\n[本行原始数据]\n{'name': 'Crew',\n 'id': 'crew',\n 'demand class': 'crew',\n 'base price': '50',\n 'export value': '0',\n 'price variability': '3',\n 'utility': '1',\n 'origin': '',\n 'tags': 'crew, personnel',\n 'stack size': '1000',\n 'cargo space': '0',\n 'icon': 'graphics/icons/cargo/crew02.png',\n 'sound id': 'ui_cargo_crew',\n 'sound id drop': 'ui_cargo_crew_drop',\n 'order': '0.8',\n 'economyTier': '3.1',\n 'econUnitOrigUnused': '200',\n 'econUnit': '500',\n 'baseRaidDanger': '',\n 'eU * base value': '25000',\n 'iconWidthMult': '0.6',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#domestic_goods$name",
         "original": "Domestic Goods",
         "translation": "日用品",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0015行\n[本行原始数据]\n{'name': 'Domestic Goods',\n 'id': 'domestic_goods',\n 'demand class': 'domestic_goods',\n 'base price': '50',\n 'export value': '300',\n 'price variability': '3',\n 'utility': '1',\n 'origin': '',\n 'tags': '',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/goods.png',\n 'sound id': 'ui_cargo_goods',\n 'sound id drop': 'ui_cargo_goods_drop',\n 'order': '5',\n 'economyTier': '2.3',\n 'econUnitOrigUnused': '200',\n 'econUnit': '1000',\n 'baseRaidDanger': '',\n 'eU * base value': '50000',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#drugs$name",
         "original": "Recreational Drugs",
         "translation": "毒品",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0018行\n[本行原始数据]\n{'name': 'Recreational Drugs',\n 'id': 'drugs',\n 'demand class': 'drugs',\n 'base price': '200',\n 'export value': '1500',\n 'price variability': '3',\n 'utility': '1',\n 'origin': '',\n 'tags': 'expensive',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/recdrugs.png',\n 'sound id': 'ui_cargo_drugs',\n 'sound id drop': 'ui_cargo_drugs_drop',\n 'order': '3',\n 'economyTier': '2.5',\n 'econUnitOrigUnused': '200',\n 'econUnit': '400',\n 'baseRaidDanger': 'HIGH',\n 'eU * base value': '80000',\n 'iconWidthMult': '0.75',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#food$name",
         "original": "Food",
         "translation": "食品",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0007行\n[本行原始数据]\n{'name': 'Food',\n 'id': 'food',\n 'demand class': 'food',\n 'base price': '20',\n 'export value': '1000',\n 'price variability': '3',\n 'utility': '1',\n 'origin': '',\n 'tags': 'food',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/food.png',\n 'sound id': 'ui_cargo_food',\n 'sound id drop': 'ui_cargo_food_drop',\n 'order': '13',\n 'economyTier': '1',\n 'econUnitOrigUnused': '500',\n 'econUnit': '2000',\n 'baseRaidDanger': '',\n 'eU * base value': '40000',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#fuel$name",
         "original": "Fuel",
         "translation": "燃料",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0002行\n[本行原始数据]\n{'name': 'Fuel',\n 'id': 'fuel',\n 'demand class': 'fuel',\n 'base price': '25',\n 'export value': '750',\n 'price variability': '3',\n 'utility': '1',\n 'origin': '',\n 'tags': 'military',\n 'stack size': '1000',\n 'cargo space': '0',\n 'icon': 'graphics/icons/cargo/fuel.png',\n 'sound id': 'ui_cargo_fuel',\n 'sound id drop': 'ui_cargo_fuel_drop',\n 'order': '0.75',\n 'economyTier': '2',\n 'econUnitOrigUnused': '500',\n 'econUnit': '1500',\n 'baseRaidDanger': '',\n 'eU * base value': '37500',\n 'iconWidthMult': '0.6',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#gamma_core$name",
         "original": "Gamma Core",
         "translation": "伽马 AI 核心",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0028行\n[本行原始数据]\n{'name': 'Gamma Core',\n 'id': 'gamma_core',\n 'demand class': 'ai_cores',\n 'base price': '',\n 'export value': '',\n 'price variability': '0',\n 'utility': '10',\n 'origin': '',\n 'tags': 'nonecon, ai_core, no_loss_from_combat',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/ai_core_gamma.png',\n 'sound id': 'ai_core_pickup',\n 'sound id drop': 'ui_gamma_core_drop',\n 'order': '38',\n 'economyTier': '',\n 'econUnitOrigUnused': '',\n 'econUnit': '',\n 'baseRaidDanger': 'MEDIUM',\n 'eU * base value': '',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#hand_weapons$name",
         "original": "Heavy Armaments",
         "translation": "重型武器",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0019行\n[本行原始数据]\n{'name': 'Heavy Armaments',\n 'id': 'hand_weapons',\n 'demand class': 'hand_weapons',\n 'base price': '500',\n 'export value': '500',\n 'price variability': '3',\n 'utility': '1',\n 'origin': '',\n 'tags': 'military',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/heavyweapons.png',\n 'sound id': 'ui_cargo_handweapons',\n 'sound id drop': 'ui_cargo_handweapons_drop',\n 'order': '2',\n 'economyTier': '2.6',\n 'econUnitOrigUnused': '100',\n 'econUnit': '200',\n 'baseRaidDanger': 'HIGH',\n 'eU * base value': '100000',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#heavy_machinery$name",
         "original": "Heavy Machinery",
         "translation": "重型机械",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0014行\n[本行原始数据]\n{'name': 'Heavy Machinery',\n 'id': 'heavy_machinery',\n 'demand class': 'heavy_machinery',\n 'base price': '150',\n 'export value': '500',\n 'price variability': '3',\n 'utility': '1',\n 'origin': '',\n 'tags': 'expensive',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/heavymachinery.png',\n 'sound id': 'ui_cargo_machinery',\n 'sound id drop': 'ui_cargo_machinery_drop',\n 'order': '0.95',\n 'economyTier': '2.2',\n 'econUnitOrigUnused': '100',\n 'econUnit': '300',\n 'baseRaidDanger': '',\n 'eU * base value': '45000',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#lobster$name",
         "original": "Volturnian Lobster",
         "translation": "蓝龙虾",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0021行\n[本行原始数据]\n{'name': 'Volturnian Lobster',\n 'id': 'lobster',\n 'demand class': 'luxury_goods',\n 'base price': '',\n 'export value': '',\n 'price variability': '',\n 'utility': '1',\n 'origin': 'volturn',\n 'tags': 'exotic, luxury, expensive',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/lobster.png',\n 'sound id': 'ui_cargo_volturn_lobster',\n 'sound id drop': 'ui_cargo_volturn_lobster_drop',\n 'order': '1.1',\n 'economyTier': '2.8',\n 'econUnitOrigUnused': '200',\n 'econUnit': '500',\n 'baseRaidDanger': '',\n 'eU * base value': '',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#luxury_goods$name",
         "original": "Luxury Goods",
         "translation": "奢侈品",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0020行\n[本行原始数据]\n{'name': 'Luxury Goods',\n 'id': 'luxury_goods',\n 'demand class': 'luxury_goods',\n 'base price': '100',\n 'export value': '500',\n 'price variability': '3',\n 'utility': '1',\n 'origin': '',\n 'tags': 'luxury, expensive',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/luxurygoods.png',\n 'sound id': 'ui_cargo_luxury',\n 'sound id drop': 'ui_cargo_luxury_drop',\n 'order': '1',\n 'economyTier': '2.7',\n 'econUnitOrigUnused': '200',\n 'econUnit': '500',\n 'baseRaidDanger': '',\n 'eU * base value': '50000',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#marines$name",
         "original": "Marines",
         "translation": "陆战队员",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0004行\n[本行原始数据]\n{'name': 'Marines',\n 'id': 'marines',\n 'demand class': 'marines',\n 'base price': '200',\n 'export value': '0',\n 'price variability': '3',\n 'utility': '1',\n 'origin': '',\n 'tags': 'marines, military, personnel',\n 'stack size': '1000',\n 'cargo space': '0',\n 'icon': 'graphics/icons/cargo/marine.png',\n 'sound id': 'ui_cargo_marines',\n 'sound id drop': 'ui_cargo_marines_drop',\n 'order': '0.9',\n 'economyTier': '3.4',\n 'econUnitOrigUnused': '200',\n 'econUnit': '100',\n 'baseRaidDanger': '',\n 'eU * base value': '20000',\n 'iconWidthMult': '0.6',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#metals$name",
         "original": "Metals",
         "translation": "金属",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0012行\n[本行原始数据]\n{'name': 'Metals',\n 'id': 'metals',\n 'demand class': 'metals',\n 'base price': '30',\n 'export value': '3000',\n 'price variability': '3',\n 'utility': '1',\n 'origin': '',\n 'tags': '',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/materials.png',\n 'sound id': 'ui_cargo_metals',\n 'sound id drop': 'ui_cargo_metals_drop',\n 'order': '8',\n 'economyTier': '1.1',\n 'econUnitOrigUnused': '500',\n 'econUnit': '2000',\n 'baseRaidDanger': '',\n 'eU * base value': '60000',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#omega_core$name",
         "original": "Omega Core",
         "translation": "Omega AI 核心",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0029行\n[本行原始数据]\n{'name': 'Omega Core',\n 'id': 'omega_core',\n 'demand class': 'ai_cores',\n 'base price': '',\n 'export value': '',\n 'price variability': '0',\n 'utility': '1000',\n 'origin': '',\n 'tags': 'nonecon, ai_core, no_loss_from_combat, no_drop',\n 'stack size': '1000',\n 'cargo space': '',\n 'icon': 'graphics/icons/cargo/ai_omega_core.png',\n 'sound id': 'ai_core_pickup',\n 'sound id drop': 'ui_gamma_core_drop',\n 'order': '41',\n 'economyTier': '',\n 'econUnitOrigUnused': '',\n 'econUnit': '',\n 'baseRaidDanger': 'EXTREME',\n 'eU * base value': '',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#ore$name",
         "original": "Ore",
         "translation": "矿石",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0010行\n[本行原始数据]\n{'name': 'Ore',\n 'id': 'ore',\n 'demand class': 'ore',\n 'base price': '10',\n 'export value': '1500',\n 'price variability': '3',\n 'utility': '1',\n 'origin': '',\n 'tags': '',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/ore.png',\n 'sound id': 'ui_cargo_ore',\n 'sound id drop': 'ui_cargo_ore_drop',\n 'order': '10',\n 'economyTier': '0.2',\n 'econUnitOrigUnused': '500',\n 'econUnit': '5000',\n 'baseRaidDanger': '',\n 'eU * base value': '50000',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#organics$name",
         "original": "Organics",
         "translation": "有机物",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0008行\n[本行原始数据]\n{'name': 'Organics',\n 'id': 'organics',\n 'demand class': 'organics',\n 'base price': '30',\n 'export value': '500',\n 'price variability': '3',\n 'utility': '1',\n 'origin': '',\n 'tags': '',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/organics.png',\n 'sound id': 'ui_cargo_organics',\n 'sound id drop': 'ui_cargo_organics_drop',\n 'order': '12',\n 'economyTier': '0',\n 'econUnitOrigUnused': '500',\n 'econUnit': '1500',\n 'baseRaidDanger': '',\n 'eU * base value': '45000',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#organs$name",
         "original": "Harvested Organs",
         "translation": "器官",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0017行\n[本行原始数据]\n{'name': 'Harvested Organs',\n 'id': 'organs',\n 'demand class': 'organs',\n 'base price': '300',\n 'export value': '2000',\n 'price variability': '3',\n 'utility': '1',\n 'origin': '',\n 'tags': 'medical, expensive',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/organs.png',\n 'sound id': 'ui_cargo_organs',\n 'sound id drop': 'ui_cargo_organs_drop',\n 'order': '4',\n 'economyTier': '2.4',\n 'econUnitOrigUnused': '200',\n 'econUnit': '200',\n 'baseRaidDanger': 'HIGH',\n 'eU * base value': '60000',\n 'iconWidthMult': '0.7',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#rare_metals$name",
         "original": "Transplutonics",
         "translation": "稀有元素",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0013行\n[本行原始数据]\n{'name': 'Transplutonics',\n 'id': 'rare_metals',\n 'demand class': 'rare_metals',\n 'base price': '200',\n 'export value': '6000',\n 'price variability': '3',\n 'utility': '1',\n 'origin': '',\n 'tags': 'expensive',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/raremetals.png',\n 'sound id': 'ui_cargo_raremetals',\n 'sound id drop': 'ui_cargo_raremetals_drop',\n 'order': '7',\n 'economyTier': '1.2',\n 'econUnitOrigUnused': '100',\n 'econUnit': '200',\n 'baseRaidDanger': '',\n 'eU * base value': '40000',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#rare_ore$name",
         "original": "Transplutonic Ore",
         "translation": "稀有矿石",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0011行\n[本行原始数据]\n{'name': 'Transplutonic Ore',\n 'id': 'rare_ore',\n 'demand class': 'rare_ore',\n 'base price': '75',\n 'export value': '2000',\n 'price variability': '3',\n 'utility': '1',\n 'origin': '',\n 'tags': 'expensive',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/rareore.png',\n 'sound id': 'ui_cargo_rareore',\n 'sound id drop': 'ui_cargo_rareore_drop',\n 'order': '9',\n 'economyTier': '0.3',\n 'econUnitOrigUnused': '200',\n 'econUnit': '500',\n 'baseRaidDanger': '',\n 'eU * base value': '37500',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#ship_weapons$name",
         "original": "Ship Equipment",
         "translation": "舰载装备",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0039行\n[本行原始数据]\n{'name': 'Ship Equipment',\n 'id': 'ship_weapons',\n 'demand class': 'ship_weapons',\n 'base price': '1000',\n 'export value': '',\n 'price variability': '0',\n 'utility': '1',\n 'origin': '',\n 'tags': 'nonecon, meta',\n 'stack size': '1000',\n 'cargo space': '',\n 'icon': 'graphics/icons/cargo/starship_weapons.png',\n 'sound id': 'ui_chip_pickup',\n 'sound id drop': 'ui_modspec_drop',\n 'order': '34',\n 'economyTier': '',\n 'econUnitOrigUnused': '',\n 'econUnit': '',\n 'baseRaidDanger': 'HIGH',\n 'eU * base value': '',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#ships$name",
         "original": "Ship Hulls & Weapons",
         "translation": "船体 & 武器",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0023行\n[本行原始数据]\n{'name': 'Ship Hulls & Weapons',\n 'id': 'ships',\n 'demand class': 'ships',\n 'base price': '100',\n 'export value': '300',\n 'price variability': '3',\n 'utility': '1',\n 'origin': '',\n 'tags': 'meta',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/ships/hound/hound_base.png',\n 'sound id': '',\n 'sound id drop': '',\n 'order': '10',\n 'economyTier': '4',\n 'econUnitOrigUnused': '200',\n 'econUnit': '200',\n 'baseRaidDanger': '',\n 'eU * base value': '',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#supplies$name",
         "original": "Supplies",
         "translation": "补给",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0001行\n[本行原始数据]\n{'name': 'Supplies',\n 'id': 'supplies',\n 'demand class': 'supplies',\n 'base price': '100',\n 'export value': '250',\n 'price variability': '3',\n 'utility': '1',\n 'origin': '',\n 'tags': 'military, expensive',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/supplies.png',\n 'sound id': 'ui_cargo_supplies',\n 'sound id drop': 'ui_cargo_supplies_drop',\n 'order': '0.5',\n 'economyTier': '2.1',\n 'econUnitOrigUnused': '200',\n 'econUnit': '750',\n 'baseRaidDanger': '',\n 'eU * base value': '75000',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#survey_data$name",
         "original": "Survey Data",
         "translation": "调查数据",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0031行\n[本行原始数据]\n{'name': 'Survey Data',\n 'id': 'survey_data',\n 'demand class': 'survey_data',\n 'base price': '1000',\n 'export value': '',\n 'price variability': '0',\n 'utility': '1',\n 'origin': '',\n 'tags': 'nonecon',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/survey_data.png',\n 'sound id': 'ui_chip_pickup',\n 'sound id drop': 'ui_modspec_drop',\n 'order': '50',\n 'economyTier': '',\n 'econUnitOrigUnused': '',\n 'econUnit': '',\n 'baseRaidDanger': '',\n 'eU * base value': '',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#survey_data_1$name",
         "original": "Class I Survey Data",
         "translation": "I 级 调查数据",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0032行\n[本行原始数据]\n{'name': 'Class I Survey Data',\n 'id': 'survey_data_1',\n 'demand class': 'survey_data',\n 'base price': '',\n 'export value': '',\n 'price variability': '0',\n 'utility': '1',\n 'origin': '',\n 'tags': 'nonecon, no_loss_from_combat',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/survey_data1.png',\n 'sound id': 'ui_chip_pickup',\n 'sound id drop': 'ui_modspec_drop',\n 'order': '45',\n 'economyTier': '',\n 'econUnitOrigUnused': '',\n 'econUnit': '',\n 'baseRaidDanger': '',\n 'eU * base value': '',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#survey_data_2$name",
         "original": "Class II Survey Data",
         "translation": "II 级 调查数据",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0033行\n[本行原始数据]\n{'name': 'Class II Survey Data',\n 'id': 'survey_data_2',\n 'demand class': 'survey_data',\n 'base price': '',\n 'export value': '',\n 'price variability': '0',\n 'utility': '3',\n 'origin': '',\n 'tags': 'nonecon, no_loss_from_combat',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/survey_data2.png',\n 'sound id': 'ui_chip_pickup',\n 'sound id drop': 'ui_modspec_drop',\n 'order': '46',\n 'economyTier': '',\n 'econUnitOrigUnused': '',\n 'econUnit': '',\n 'baseRaidDanger': '',\n 'eU * base value': '',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#survey_data_3$name",
         "original": "Class III Survey Data",
         "translation": "III 级 调查数据",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0034行\n[本行原始数据]\n{'name': 'Class III Survey Data',\n 'id': 'survey_data_3',\n 'demand class': 'survey_data',\n 'base price': '',\n 'export value': '',\n 'price variability': '0',\n 'utility': '5',\n 'origin': '',\n 'tags': 'nonecon, no_loss_from_combat',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/survey_data3.png',\n 'sound id': 'ui_chip_pickup',\n 'sound id drop': 'ui_modspec_drop',\n 'order': '47',\n 'economyTier': '',\n 'econUnitOrigUnused': '',\n 'econUnit': '',\n 'baseRaidDanger': '',\n 'eU * base value': '',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#survey_data_4$name",
         "original": "Class IV Survey Data",
         "translation": "IV 级 调查数据",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0035行\n[本行原始数据]\n{'name': 'Class IV Survey Data',\n 'id': 'survey_data_4',\n 'demand class': 'survey_data',\n 'base price': '',\n 'export value': '',\n 'price variability': '0',\n 'utility': '10',\n 'origin': '',\n 'tags': 'nonecon, no_loss_from_combat',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/survey_data4.png',\n 'sound id': 'ui_chip_pickup',\n 'sound id drop': 'ui_modspec_drop',\n 'order': '48',\n 'economyTier': '',\n 'econUnitOrigUnused': '',\n 'econUnit': '',\n 'baseRaidDanger': '',\n 'eU * base value': '',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#survey_data_5$name",
         "original": "Class V Survey Data",
         "translation": "V 级 调查数据",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0036行\n[本行原始数据]\n{'name': 'Class V Survey Data',\n 'id': 'survey_data_5',\n 'demand class': 'survey_data',\n 'base price': '',\n 'export value': '',\n 'price variability': '0',\n 'utility': '30',\n 'origin': '',\n 'tags': 'nonecon, no_loss_from_combat',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/survey_data5.png',\n 'sound id': 'ui_chip_pickup',\n 'sound id drop': 'ui_modspec_drop',\n 'order': '49',\n 'economyTier': '',\n 'econUnitOrigUnused': '',\n 'econUnit': '',\n 'baseRaidDanger': '',\n 'eU * base value': '',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     },
     {
         "key": "commodities.csv#volatiles$name",
         "original": "Volatiles",
         "translation": "挥发物",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ncommodities.csv第0009行\n[本行原始数据]\n{'name': 'Volatiles',\n 'id': 'volatiles',\n 'demand class': 'volatiles',\n 'base price': '250',\n 'export value': '5000',\n 'price variability': '3',\n 'utility': '1',\n 'origin': '',\n 'tags': 'expensive',\n 'stack size': '1000',\n 'cargo space': '1',\n 'icon': 'graphics/icons/cargo/volatilesB.png',\n 'sound id': 'ui_cargo_volatiles',\n 'sound id drop': 'ui_cargo_volatiles_drop',\n 'order': '11',\n 'economyTier': '1.2',\n 'econUnitOrigUnused': '100',\n 'econUnit': '200',\n 'baseRaidDanger': '',\n 'eU * base value': '50000',\n 'iconWidthMult': '1',\n 'plugin': '',\n 'desc': ''}"
     }
 ]
