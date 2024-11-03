@@ -1,366 +1,366 @@
 [
-  {
-    "key": "ship_systems.csv#targetingfeed$name",
-    "original": "Targeting Feed",
-    "translation": "目标馈送系统",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0035行\n[本行原始数据]\n{'name': 'Targeting Feed',\n 'id': 'targetingfeed',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.5',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.5',\n 'active': '20',\n 'down': '0.5',\n 'cooldown': '10',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/targeting_feed.png'}"
-  },
-  {
-    "key": "ship_systems.csv#chiral_figment$name",
-    "original": "Chiral Figment",
-    "translation": "镜像投射",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0041行\n[本行原始数据]\n{'name': 'Chiral Figment',\n 'id': 'chiral_figment',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.5',\n 'active': '',\n 'down': '0.5',\n 'cooldown': '30',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': 'restricted',\n 'icon': 'graphics/icons/hullsys/interdictor_array.png'}"
-  },
-  {
-    "key": "ship_systems.csv#flarelauncher_single$name",
-    "original": "Decoy Flare Launcher (Single)",
-    "translation": "诱饵发射器 (单发)",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0004行\n[本行原始数据]\n{'name': 'Decoy Flare Launcher (Single)',\n 'id': 'flarelauncher_single',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '1',\n 'regen': '0.033',\n 'charge up': '',\n 'active': '',\n 'down': '',\n 'cooldown': '5',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/flare_launcher.png'}"
-  },
-  {
-    "key": "ship_systems.csv#skimmer_drone$name",
-    "original": "Phase Skimmer (Drone)",
-    "translation": "闪现 (无人机)",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0043行\n[本行原始数据]\n{'name': 'Phase Skimmer (Drone)',\n 'id': 'skimmer_drone',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.05',\n 'cr/u': '',\n 'max uses': '3',\n 'regen': '0.25',\n 'charge up': '0.25',\n 'active': '',\n 'down': '0.25',\n 'cooldown': '',\n 'toggle': '',\n 'noDissipation': 'TRUE',\n 'noHardDissipation': '',\n 'hardFlux': 'TRUE',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/displacer.png'}"
-  },
-  {
-    "key": "ship_systems.csv#phaseteleporter$name",
-    "original": "Phase Teleporter",
-    "translation": "相位传送器",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0015行\n[本行原始数据]\n{'name': 'Phase Teleporter',\n 'id': 'phaseteleporter',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.5',\n 'active': '0',\n 'down': '0.5',\n 'cooldown': '15',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': 'TRUE',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/displacer.png'}"
-  },
-  {
-    "key": "ship_systems.csv#displacer_degraded$name",
-    "original": "Degraded Phase Skimmer",
-    "translation": "低效闪现",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0044行\n[本行原始数据]\n{'name': 'Degraded Phase Skimmer',\n 'id': 'displacer_degraded',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '2',\n 'regen': '0.067',\n 'charge up': '0.25',\n 'active': '',\n 'down': '0.25',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': 'TRUE',\n 'noHardDissipation': '',\n 'hardFlux': 'TRUE',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/displacer.png'}"
-  },
-  {
-    "key": "ship_systems.csv#flarelauncher_fighter$name",
-    "original": "Decoy Flare Launcher",
-    "translation": "诱饵发射器",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0003行\n[本行原始数据]\n{'name': 'Decoy Flare Launcher',\n 'id': 'flarelauncher_fighter',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '1',\n 'regen': '0.033',\n 'charge up': '',\n 'active': '',\n 'down': '',\n 'cooldown': '5',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/flare_launcher.png'}"
-  },
-  {
-    "key": "ship_systems.csv#burndrive$name",
-    "original": "Burn Drive",
-    "translation": "烈焰驱动器",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0006行\n[本行原始数据]\n{'name': 'Burn Drive',\n 'id': 'burndrive',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '2',\n 'active': '5',\n 'down': '1',\n 'cooldown': '10',\n 'toggle': 'TRUE',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': 'TRUE',\n 'noStrafing': 'TRUE',\n 'noAccel': 'TRUE',\n 'noShield': 'TRUE',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/burn_drive.png'}"
-  },
-  {
-    "key": "ship_systems.csv#entropyamplifier$name",
-    "original": "Entropy Amplifier",
-    "translation": "熵放大器",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0030行\n[本行原始数据]\n{'name': 'Entropy Amplifier',\n 'id': 'entropyamplifier',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.2',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.5',\n 'active': '10',\n 'down': '1',\n 'cooldown': '10',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/entropy_amplifier.png'}"
-  },
-  {
-    "key": "ship_systems.csv#displacer$name",
-    "original": "Phase Skimmer",
-    "translation": "闪现",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0016行\n[本行原始数据]\n{'name': 'Phase Skimmer',\n 'id': 'displacer',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '3',\n 'regen': '0.1',\n 'charge up': '0.25',\n 'active': '',\n 'down': '0.25',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': 'TRUE',\n 'noHardDissipation': '',\n 'hardFlux': 'TRUE',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/displacer.png'}"
-  },
-  {
-    "key": "ship_systems.csv#flarelauncher_active$name",
-    "original": "Active Flare Launcher",
-    "translation": "追踪热诱弹发射器",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0005行\n[本行原始数据]\n{'name': 'Active Flare Launcher',\n 'id': 'flarelauncher_active',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.1',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '',\n 'active': '',\n 'down': '',\n 'cooldown': '5',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/active_flare_launcher.png'}"
-  },
-  {
-    "key": "ship_systems.csv#damper_omega$name",
-    "original": "Entropy Damper",
-    "translation": "熵抑制器",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0027行\n[本行原始数据]\n{'name': 'Entropy Damper',\n 'id': 'damper_omega',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '2',\n 'regen': '0.05',\n 'charge up': '0.25',\n 'active': '3',\n 'down': '0.25',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': 'TRUE',\n 'noVent': 'TRUE',\n 'isPhaseCloak': '',\n 'tags': 'uses_damper_ai',\n 'icon': 'graphics/icons/hullsys/damper_field.png'}"
-  },
-  {
-    "key": "ship_systems.csv#flarelauncher$name",
-    "original": "Flare Launcher",
-    "translation": "热诱弹发射器",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0001行\n[本行原始数据]\n{'name': 'Flare Launcher',\n 'id': 'flarelauncher',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '5',\n 'regen': '',\n 'charge up': '',\n 'active': '',\n 'down': '',\n 'cooldown': '5',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/flare_launcher.png'}"
-  },
-  {
-    "key": "ship_systems.csv#emp$name",
-    "original": "EMP Emitter",
-    "translation": "EMP 发生器",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0024行\n[本行原始数据]\n{'name': 'EMP Emitter',\n 'id': 'emp',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.2',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.5',\n 'active': '4',\n 'down': '0.5',\n 'cooldown': '3',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': 'TRUE',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/emp_emitter.png'}"
-  },
-  {
-    "key": "ship_systems.csv#plasmajets$name",
-    "original": "Plasma Jets",
-    "translation": "等离子推进器",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0037行\n[本行原始数据]\n{'name': 'Plasma Jets',\n 'id': 'plasmajets',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '1',\n 'active': '3',\n 'down': '2',\n 'cooldown': '5',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/infernium_injector.png'}"
-  },
-  {
-    "key": "ship_systems.csv#drone_pd$name",
-    "original": "Point Defense Drones",
-    "translation": "点防无人机",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0017行\n[本行原始数据]\n{'name': 'Point Defense Drones',\n 'id': 'drone_pd',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '20',\n 'regen': '',\n 'charge up': '0',\n 'active': '',\n 'down': '0',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/drone_pd_high.png'}"
-  },
-  {
-    "key": "ship_systems.csv#ammofeed$name",
-    "original": "Accelerated Ammo Feeder",
-    "translation": "加速填弹器",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0022行\n[本行原始数据]\n{'name': 'Accelerated Ammo Feeder',\n 'id': 'ammofeed',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '1',\n 'active': '5',\n 'down': '1',\n 'cooldown': '10',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/ammo_feeder.png'}"
-  },
-  {
-    "key": "ship_systems.csv#drone_station_lt$name",
-    "original": "Merlon Drones",
-    "translation": "城齿无人机",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0047行\n[本行原始数据]\n{'name': 'Merlon Drones',\n 'id': 'drone_station_lt',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '5',\n 'regen': '',\n 'charge up': '0',\n 'active': '',\n 'down': '0',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/drone_pd_high.png'}"
-  },
-  {
-    "key": "ship_systems.csv#drone_station_mid$name",
-    "original": "Ravelin Drones",
-    "translation": "三角堡无人机",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0048行\n[本行原始数据]\n{'name': 'Ravelin Drones',\n 'id': 'drone_station_mid',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '3',\n 'regen': '',\n 'charge up': '0',\n 'active': '',\n 'down': '0',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/drone_pd_high.png'}"
-  },
-  {
-    "key": "ship_systems.csv#drone_pd_x2$name",
-    "original": "Point Defense Drones",
-    "translation": "点防无人机",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0018行\n[本行原始数据]\n{'name': 'Point Defense Drones',\n 'id': 'drone_pd_x2',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '10',\n 'regen': '',\n 'charge up': '0',\n 'active': '',\n 'down': '0',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/drone_pd_mid.png'}"
-  },
-  {
-    "key": "ship_systems.csv#temporalshell$name",
-    "original": "Temporal Shell",
-    "translation": "时流之壳",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0028行\n[本行原始数据]\n{'name': 'Temporal Shell',\n 'id': 'temporalshell',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.25',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '4',\n 'active': '10',\n 'down': '2',\n 'cooldown': '10',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/temporal_shell.png'}"
-  },
-  {
-    "key": "ship_systems.csv#microburn$name",
-    "original": "Plasma Burn",
-    "translation": "等离子爆裂驱动器",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0007行\n[本行原始数据]\n{'name': 'Plasma Burn',\n 'id': 'microburn',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '2',\n 'regen': '0.1',\n 'charge up': '0.5',\n 'active': '0.5',\n 'down': '0.5',\n 'cooldown': '',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': 'TRUE',\n 'noAccel': 'TRUE',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/burn_drive.png'}"
-  },
-  {
-    "key": "ship_systems.csv#highenergyfocus$name",
-    "original": "High Energy Focus",
-    "translation": "高能聚焦系统",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0014行\n[本行原始数据]\n{'name': 'High Energy Focus',\n 'id': 'highenergyfocus',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '3',\n 'regen': '0.05',\n 'charge up': '0.25',\n 'active': '3',\n 'down': '0.25',\n 'cooldown': '',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/high_energy_focus.png'}"
-  },
-  {
-    "key": "ship_systems.csv#maneuveringjets$name",
-    "original": "Maneuvering Jets",
-    "translation": "机动推进器",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0009行\n[本行原始数据]\n{'name': 'Maneuvering Jets',\n 'id': 'maneuveringjets',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '1',\n 'active': '5',\n 'down': '1',\n 'cooldown': '5',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/maneuvering_jets.png'}"
-  },
-  {
-    "key": "ship_systems.csv#drone_terminator$name",
-    "original": "Terminator Drone",
-    "translation": "终结者无人机",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0021行\n[本行原始数据]\n{'name': 'Terminator Drone',\n 'id': 'drone_terminator',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '1',\n 'regen': '0.0333',\n 'charge up': '0',\n 'active': '',\n 'down': '0',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/drone_pd_high.png'}"
-  },
-  {
-    "key": "ship_systems.csv#energy_conversion$name",
-    "original": "Energy Conversion",
-    "translation": "能量转换",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0040行\n[本行原始数据]\n{'name': 'Energy Conversion',\n 'id': 'energy_conversion',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0',\n 'cr/u': '',\n 'max uses': '3',\n 'regen': '0.1',\n 'charge up': '0.5',\n 'active': '',\n 'down': '2',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': 'TRUE',\n 'noHardDissipation': '',\n 'hardFlux': 'TRUE',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': 'restricted',\n 'icon': 'graphics/icons/hullsys/displacer.png'}"
-  },
-  {
-    "key": "ship_systems.csv#cryoflux$name",
-    "original": "Cryoflux Transducer",
-    "translation": "幅能场变频",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0033行\n[本行原始数据]\n{'name': 'Cryoflux Transducer',\n 'id': 'cryoflux',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.75',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.5',\n 'active': '',\n 'down': '0.5',\n 'cooldown': '',\n 'toggle': 'TRUE',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': 'restricted',\n 'icon': 'graphics/icons/hullsys/quantum_disruptor.png'}"
-  },
-  {
-    "key": "ship_systems.csv#phasecloak$name",
-    "original": "Phase Cloak",
-    "translation": "相位线圈",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0042行\n[本行原始数据]\n{'name': 'Phase Cloak',\n 'id': 'phasecloak',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.5',\n 'active': '',\n 'down': '0.5',\n 'cooldown': '2',\n 'toggle': 'TRUE',\n 'noDissipation': '',\n 'noHardDissipation': 'TRUE',\n 'hardFlux': 'TRUE',\n 'noFiring': 'TRUE',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': 'TRUE',\n 'noVent': '',\n 'isPhaseCloak': 'TRUE',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/phase_cloak.png'}"
-  },
-  {
-    "key": "ship_systems.csv#inferniuminjector$name",
-    "original": "Infernium Injector",
-    "translation": "烈焰喷射",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0011行\n[本行原始数据]\n{'name': 'Infernium Injector',\n 'id': 'inferniuminjector',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '1',\n 'active': '',\n 'down': '1',\n 'cooldown': '1',\n 'toggle': 'TRUE',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': 'TRUE',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/infernium_injector.png'}"
-  },
-  {
-    "key": "ship_systems.csv#forgevats_station$name",
-    "original": "Missile Autoforge",
-    "translation": "导弹自动工厂",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0046行\n[本行原始数据]\n{'name': 'Missile Autoforge',\n 'id': 'forgevats_station',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '1',\n 'active': '0',\n 'down': '0',\n 'cooldown': '30',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/missile_autoforge.png'}"
-  },
-  {
-    "key": "ship_systems.csv#interdictor$name",
-    "original": "Interdictor Array",
-    "translation": "阻绝阵列",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0031行\n[本行原始数据]\n{'name': 'Interdictor Array',\n 'id': 'interdictor',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.25',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.5',\n 'active': '',\n 'down': '0.5',\n 'cooldown': '20',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/interdictor_array.png'}"
-  },
-  {
-    "key": "ship_systems.csv#drone_borer$name",
-    "original": "Borer Drones",
-    "translation": "钻探无人机",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0019行\n[本行原始数据]\n{'name': 'Borer Drones',\n 'id': 'drone_borer',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '15',\n 'regen': '',\n 'charge up': '0',\n 'active': '',\n 'down': '0',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/drone_borer.png'}"
-  },
-  {
-    "key": "ship_systems.csv#microburn_omega$name",
-    "original": "Microburn",
-    "translation": "欧米伽爆裂驱动器",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0008行\n[本行原始数据]\n{'name': 'Microburn',\n 'id': 'microburn_omega',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '3',\n 'regen': '0.1',\n 'charge up': '0.5',\n 'active': '0.5',\n 'down': '0.5',\n 'cooldown': '',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': 'TRUE',\n 'noAccel': 'TRUE',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': 'restricted',\n 'icon': 'graphics/icons/hullsys/burn_drive.png'}"
-  },
-  {
-    "key": "ship_systems.csv#mine_strike$name",
-    "original": "Mine Strike",
-    "translation": "空雷突袭",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0032行\n[本行原始数据]\n{'name': 'Mine Strike',\n 'id': 'mine_strike',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.1',\n 'cr/u': '',\n 'max uses': '5',\n 'regen': '0.2',\n 'charge up': '0.25',\n 'active': '',\n 'down': '0.25',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/interdictor_array.png'}"
-  },
-  {
-    "key": "ship_systems.csv#drone_sensor$name",
-    "original": "Sensor Drones",
-    "translation": "感应无人机",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0020行\n[本行原始数据]\n{'name': 'Sensor Drones',\n 'id': 'drone_sensor',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '5',\n 'regen': '',\n 'charge up': '0',\n 'active': '',\n 'down': '0',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/drone_sensor.png'}"
-  },
-  {
-    "key": "ship_systems.csv#fastmissileracks$name",
-    "original": "Fast Missile Racks",
-    "translation": "高速导弹挂架",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0012行\n[本行原始数据]\n{'name': 'Fast Missile Racks',\n 'id': 'fastmissileracks',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.25',\n 'cr/u': '',\n 'max uses': '3',\n 'regen': '0.1',\n 'charge up': '1',\n 'active': '0',\n 'down': '0',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/missile_racks.png'}"
-  },
-  {
-    "key": "ship_systems.csv#damper$name",
-    "original": "Damper Field",
-    "translation": "阻尼力场",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0026行\n[本行原始数据]\n{'name': 'Damper Field',\n 'id': 'damper',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '2',\n 'regen': '0.05',\n 'charge up': '0.25',\n 'active': '3',\n 'down': '0.25',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': 'TRUE',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': 'TRUE',\n 'noVent': 'TRUE',\n 'isPhaseCloak': '',\n 'tags': 'uses_damper_ai',\n 'icon': 'graphics/icons/hullsys/damper_field.png'}"
-  },
-  {
-    "key": "ship_systems.csv#acausaldisruptor$name",
-    "original": "Quantum Disruptor",
-    "translation": "量子干扰",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0029行\n[本行原始数据]\n{'name': 'Quantum Disruptor',\n 'id': 'acausaldisruptor',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.25',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.5',\n 'active': '',\n 'down': '1',\n 'cooldown': '20',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/quantum_disruptor.png'}"
-  },
-  {
-    "key": "ship_systems.csv#recalldevice$name",
-    "original": "Recall Device",
-    "translation": "召回装置",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0036行\n[本行原始数据]\n{'name': 'Recall Device',\n 'id': 'recalldevice',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.5',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.5',\n 'active': '',\n 'down': '0.5',\n 'cooldown': '30',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/recall_device.png'}"
-  },
-  {
-    "key": "ship_systems.csv#drone_station_high$name",
-    "original": "Gargoyle Drones",
-    "translation": "石像鬼无人机",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0049行\n[本行原始数据]\n{'name': 'Gargoyle Drones',\n 'id': 'drone_station_high',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '4',\n 'regen': '',\n 'charge up': '0',\n 'active': '',\n 'down': '0',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/drone_pd_high.png'}"
-  },
-  {
-    "key": "ship_systems.csv#traveldrive$name",
-    "original": "Full Burn",
-    "translation": "巡航驱动",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0045行\n[本行原始数据]\n{'name': 'Full Burn',\n 'id': 'traveldrive',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '2',\n 'active': '',\n 'down': '2',\n 'cooldown': '0',\n 'toggle': 'TRUE',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': 'TRUE',\n 'noTurning': 'TRUE',\n 'noStrafing': 'TRUE',\n 'noAccel': 'TRUE',\n 'noShield': 'TRUE',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/burn_drive.png'}"
-  },
-  {
-    "key": "ship_systems.csv#forgevats$name",
-    "original": "Missile Autoforge",
-    "translation": "导弹自动工厂",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0025行\n[本行原始数据]\n{'name': 'Missile Autoforge',\n 'id': 'forgevats',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.75',\n 'cr/u': '',\n 'max uses': '2',\n 'regen': '',\n 'charge up': '1',\n 'active': '0',\n 'down': '0',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/missile_autoforge.png'}"
-  },
-  {
-    "key": "ship_systems.csv#reservewing$name",
-    "original": "Reserve Deployment",
-    "translation": "后备部署",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0034行\n[本行原始数据]\n{'name': 'Reserve Deployment',\n 'id': 'reservewing',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.5',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.1',\n 'active': '',\n 'down': '3',\n 'cooldown': '60',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/reserve_deployment.png'}"
-  },
-  {
-    "key": "ship_systems.csv#fortressshield$name",
-    "original": "Fortress Shield",
-    "translation": "堡垒护盾",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0013行\n[本行原始数据]\n{'name': 'Fortress Shield',\n 'id': 'fortressshield',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '0.025',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '1.5',\n 'active': '',\n 'down': '1.5',\n 'cooldown': '0',\n 'toggle': 'TRUE',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': 'TRUE',\n 'noFiring': 'TRUE',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/fortress_shield.png'}"
-  },
-  {
-    "key": "ship_systems.csv#mine_strike_station$name",
-    "original": "Mine Strike",
-    "translation": "传送感应空雷",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0050行\n[本行原始数据]\n{'name': 'Mine Strike',\n 'id': 'mine_strike_station',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0',\n 'cr/u': '',\n 'max uses': '7',\n 'regen': '0.33',\n 'charge up': '0.25',\n 'active': '',\n 'down': '0.25',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/interdictor_array.png'}"
-  },
-  {
-    "key": "ship_systems.csv#mote_control$name",
-    "original": "Mote Attractor",
-    "translation": "光尘吸引场",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0051行\n[本行原始数据]\n{'name': 'Mote Attractor',\n 'id': 'mote_control',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.1',\n 'active': '',\n 'down': '0.4',\n 'cooldown': '',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': 'restricted',\n 'icon': 'graphics/icons/hullsys/reserve_deployment.png'}"
-  },
-  {
-    "key": "ship_systems.csv#canister_flak$name",
-    "original": "Canister Flak",
-    "translation": "罐式高射炮",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0002行\n[本行原始数据]\n{'name': 'Canister Flak',\n 'id': 'canister_flak',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '2',\n 'regen': '0.05',\n 'charge up': '',\n 'active': '',\n 'down': '',\n 'cooldown': '3',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': ''}"
-  },
-  {
-    "key": "ship_systems.csv#drone_strike$name",
-    "original": "Termination Sequence",
-    "translation": "终结指令",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0052行\n[本行原始数据]\n{'name': 'Termination Sequence',\n 'id': 'drone_strike',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '600',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0',\n 'active': '0.05',\n 'down': '0.2',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/drone_pd_high.png'}"
-  },
-  {
-    "key": "ship_systems.csv#dynamic_stabilizer$name",
-    "original": "Dynamic Stabilizer",
-    "translation": "动态稳定器",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0010行\n[本行原始数据]\n{'name': 'Dynamic Stabilizer',\n 'id': 'dynamic_stabilizer',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '1',\n 'active': '5',\n 'down': '1',\n 'cooldown': '5',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/maneuvering_jets.png'}"
-  },
-  {
-    "key": "ship_systems.csv#lidararray$name",
-    "original": "Lidar Array",
-    "translation": "激光雷达阵列",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0023行\n[本行原始数据]\n{'name': 'Lidar Array',\n 'id': 'lidararray',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '3.25',\n 'active': '5',\n 'down': '1',\n 'cooldown': '10',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/lidar_barrage.png'}"
-  },
-  {
-    "key": "ship_systems.csv#orion_device$name",
-    "original": "Orion Device",
-    "translation": "猎户座装置",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0038行\n[本行原始数据]\n{'name': 'Orion Device',\n 'id': 'orion_device',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '4',\n 'regen': '0.2',\n 'charge up': '0',\n 'active': '0.001',\n 'down': '0',\n 'cooldown': '1',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/infernium_injector.png'}"
-  },
-  {
-    "key": "ship_systems.csv#nova_burst$name",
-    "original": "Nova Burst",
-    "translation": "新星爆裂驱动器",
-    "stage": 5,
-    "context": "版本：0.97-RC11 2024-11-01 04:01\nship_systems.csv第0039行\n[本行原始数据]\n{'name': 'Nova Burst',\n 'id': 'nova_burst',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '2',\n 'regen': '0.1',\n 'charge up': '0.5',\n 'active': '0.001',\n 'down': '0',\n 'cooldown': '1',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/infernium_injector.png'}"
-  }
+    {
+        "key": "ship_systems.csv#acausaldisruptor$name",
+        "original": "Quantum Disruptor",
+        "translation": "量子干扰",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0029行\n[本行原始数据]\n{'name': 'Quantum Disruptor',\n 'id': 'acausaldisruptor',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.25',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.5',\n 'active': '',\n 'down': '1',\n 'cooldown': '20',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/quantum_disruptor.png'}"
+    },
+    {
+        "key": "ship_systems.csv#ammofeed$name",
+        "original": "Accelerated Ammo Feeder",
+        "translation": "加速填弹器",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0022行\n[本行原始数据]\n{'name': 'Accelerated Ammo Feeder',\n 'id': 'ammofeed',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '1',\n 'active': '5',\n 'down': '1',\n 'cooldown': '10',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/ammo_feeder.png'}"
+    },
+    {
+        "key": "ship_systems.csv#burndrive$name",
+        "original": "Burn Drive",
+        "translation": "烈焰驱动器",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0006行\n[本行原始数据]\n{'name': 'Burn Drive',\n 'id': 'burndrive',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '2',\n 'active': '5',\n 'down': '1',\n 'cooldown': '10',\n 'toggle': 'TRUE',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': 'TRUE',\n 'noStrafing': 'TRUE',\n 'noAccel': 'TRUE',\n 'noShield': 'TRUE',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/burn_drive.png'}"
+    },
+    {
+        "key": "ship_systems.csv#canister_flak$name",
+        "original": "Canister Flak",
+        "translation": "罐式高射炮",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0002行\n[本行原始数据]\n{'name': 'Canister Flak',\n 'id': 'canister_flak',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '2',\n 'regen': '0.05',\n 'charge up': '',\n 'active': '',\n 'down': '',\n 'cooldown': '3',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': ''}"
+    },
+    {
+        "key": "ship_systems.csv#chiral_figment$name",
+        "original": "Chiral Figment",
+        "translation": "镜像投射",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0042行\n[本行原始数据]\n{'name': 'Chiral Figment',\n 'id': 'chiral_figment',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.5',\n 'active': '',\n 'down': '0.5',\n 'cooldown': '30',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': 'restricted',\n 'icon': 'graphics/icons/hullsys/interdictor_array.png'}"
+    },
+    {
+        "key": "ship_systems.csv#cryoflux$name",
+        "original": "Cryoflux Transducer",
+        "translation": "幅能场变频",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0033行\n[本行原始数据]\n{'name': 'Cryoflux Transducer',\n 'id': 'cryoflux',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.75',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.5',\n 'active': '',\n 'down': '0.5',\n 'cooldown': '',\n 'toggle': 'TRUE',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': 'restricted',\n 'icon': 'graphics/icons/hullsys/quantum_disruptor.png'}"
+    },
+    {
+        "key": "ship_systems.csv#damper$name",
+        "original": "Damper Field",
+        "translation": "阻尼力场",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0026行\n[本行原始数据]\n{'name': 'Damper Field',\n 'id': 'damper',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '2',\n 'regen': '0.05',\n 'charge up': '0.25',\n 'active': '3',\n 'down': '0.25',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': 'TRUE',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': 'TRUE',\n 'noVent': 'TRUE',\n 'isPhaseCloak': '',\n 'tags': 'uses_damper_ai',\n 'icon': 'graphics/icons/hullsys/damper_field.png'}"
+    },
+    {
+        "key": "ship_systems.csv#damper_omega$name",
+        "original": "Entropy Damper",
+        "translation": "熵抑制器",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0027行\n[本行原始数据]\n{'name': 'Entropy Damper',\n 'id': 'damper_omega',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '2',\n 'regen': '0.05',\n 'charge up': '0.25',\n 'active': '3',\n 'down': '0.25',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': 'TRUE',\n 'noVent': 'TRUE',\n 'isPhaseCloak': '',\n 'tags': 'uses_damper_ai',\n 'icon': 'graphics/icons/hullsys/damper_field.png'}"
+    },
+    {
+        "key": "ship_systems.csv#displacer$name",
+        "original": "Phase Skimmer",
+        "translation": "闪现",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0016行\n[本行原始数据]\n{'name': 'Phase Skimmer',\n 'id': 'displacer',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '3',\n 'regen': '0.1',\n 'charge up': '0.25',\n 'active': '',\n 'down': '0.25',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': 'TRUE',\n 'noHardDissipation': '',\n 'hardFlux': 'TRUE',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/displacer.png'}"
+    },
+    {
+        "key": "ship_systems.csv#displacer_degraded$name",
+        "original": "Degraded Phase Skimmer",
+        "translation": "低效闪现",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0048行\n[本行原始数据]\n{'name': 'Degraded Phase Skimmer',\n 'id': 'displacer_degraded',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '2',\n 'regen': '0.067',\n 'charge up': '0.25',\n 'active': '',\n 'down': '0.25',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': 'TRUE',\n 'noHardDissipation': '',\n 'hardFlux': 'TRUE',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/displacer.png'}"
+    },
+    {
+        "key": "ship_systems.csv#drone_borer$name",
+        "original": "Borer Drones",
+        "translation": "钻探无人机",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0019行\n[本行原始数据]\n{'name': 'Borer Drones',\n 'id': 'drone_borer',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '15',\n 'regen': '',\n 'charge up': '0',\n 'active': '',\n 'down': '0',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/drone_borer.png'}"
+    },
+    {
+        "key": "ship_systems.csv#drone_pd$name",
+        "original": "Point Defense Drones",
+        "translation": "点防无人机",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0017行\n[本行原始数据]\n{'name': 'Point Defense Drones',\n 'id': 'drone_pd',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '20',\n 'regen': '',\n 'charge up': '0',\n 'active': '',\n 'down': '0',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/drone_pd_high.png'}"
+    },
+    {
+        "key": "ship_systems.csv#drone_pd_x2$name",
+        "original": "Point Defense Drones",
+        "translation": "点防无人机",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0018行\n[本行原始数据]\n{'name': 'Point Defense Drones',\n 'id': 'drone_pd_x2',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '10',\n 'regen': '',\n 'charge up': '0',\n 'active': '',\n 'down': '0',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/drone_pd_mid.png'}"
+    },
+    {
+        "key": "ship_systems.csv#drone_sensor$name",
+        "original": "Sensor Drones",
+        "translation": "感应无人机",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0020行\n[本行原始数据]\n{'name': 'Sensor Drones',\n 'id': 'drone_sensor',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '5',\n 'regen': '',\n 'charge up': '0',\n 'active': '',\n 'down': '0',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/drone_sensor.png'}"
+    },
+    {
+        "key": "ship_systems.csv#drone_station_high$name",
+        "original": "Gargoyle Drones",
+        "translation": "石像鬼无人机",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0055行\n[本行原始数据]\n{'name': 'Gargoyle Drones',\n 'id': 'drone_station_high',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '4',\n 'regen': '',\n 'charge up': '0',\n 'active': '',\n 'down': '0',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/drone_pd_high.png'}"
+    },
+    {
+        "key": "ship_systems.csv#drone_station_lt$name",
+        "original": "Merlon Drones",
+        "translation": "城齿无人机",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0053行\n[本行原始数据]\n{'name': 'Merlon Drones',\n 'id': 'drone_station_lt',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '5',\n 'regen': '',\n 'charge up': '0',\n 'active': '',\n 'down': '0',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/drone_pd_high.png'}"
+    },
+    {
+        "key": "ship_systems.csv#drone_station_mid$name",
+        "original": "Ravelin Drones",
+        "translation": "三角堡无人机",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0054行\n[本行原始数据]\n{'name': 'Ravelin Drones',\n 'id': 'drone_station_mid',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '3',\n 'regen': '',\n 'charge up': '0',\n 'active': '',\n 'down': '0',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/drone_pd_high.png'}"
+    },
+    {
+        "key": "ship_systems.csv#drone_strike$name",
+        "original": "Termination Sequence",
+        "translation": "终结指令",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0058行\n[本行原始数据]\n{'name': 'Termination Sequence',\n 'id': 'drone_strike',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '600',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0',\n 'active': '0.05',\n 'down': '0.2',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/drone_pd_high.png'}"
+    },
+    {
+        "key": "ship_systems.csv#drone_terminator$name",
+        "original": "Terminator Drone",
+        "translation": "终结者无人机",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0021行\n[本行原始数据]\n{'name': 'Terminator Drone',\n 'id': 'drone_terminator',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '1',\n 'regen': '0.0333',\n 'charge up': '0',\n 'active': '',\n 'down': '0',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/drone_pd_high.png'}"
+    },
+    {
+        "key": "ship_systems.csv#dynamic_stabilizer$name",
+        "original": "Dynamic Stabilizer",
+        "translation": "动态稳定器",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0010行\n[本行原始数据]\n{'name': 'Dynamic Stabilizer',\n 'id': 'dynamic_stabilizer',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '1',\n 'active': '5',\n 'down': '1',\n 'cooldown': '5',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/maneuvering_jets.png'}"
+    },
+    {
+        "key": "ship_systems.csv#emp$name",
+        "original": "EMP Emitter",
+        "translation": "EMP 发生器",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0024行\n[本行原始数据]\n{'name': 'EMP Emitter',\n 'id': 'emp',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.2',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.5',\n 'active': '4',\n 'down': '0.5',\n 'cooldown': '3',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': 'TRUE',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/emp_emitter.png'}"
+    },
+    {
+        "key": "ship_systems.csv#energy_conversion$name",
+        "original": "Energy Conversion",
+        "translation": "能量转换",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0041行\n[本行原始数据]\n{'name': 'Energy Conversion',\n 'id': 'energy_conversion',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0',\n 'cr/u': '',\n 'max uses': '3',\n 'regen': '0.1',\n 'charge up': '0.5',\n 'active': '',\n 'down': '2',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': 'TRUE',\n 'noHardDissipation': '',\n 'hardFlux': 'TRUE',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': 'restricted',\n 'icon': 'graphics/icons/hullsys/displacer.png'}"
+    },
+    {
+        "key": "ship_systems.csv#entropyamplifier$name",
+        "original": "Entropy Amplifier",
+        "translation": "熵放大器",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0030行\n[本行原始数据]\n{'name': 'Entropy Amplifier',\n 'id': 'entropyamplifier',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.2',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.5',\n 'active': '10',\n 'down': '1',\n 'cooldown': '10',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/entropy_amplifier.png'}"
+    },
+    {
+        "key": "ship_systems.csv#fastmissileracks$name",
+        "original": "Fast Missile Racks",
+        "translation": "高速导弹挂架",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0012行\n[本行原始数据]\n{'name': 'Fast Missile Racks',\n 'id': 'fastmissileracks',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.25',\n 'cr/u': '',\n 'max uses': '3',\n 'regen': '0.1',\n 'charge up': '1',\n 'active': '0',\n 'down': '0',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/missile_racks.png'}"
+    },
+    {
+        "key": "ship_systems.csv#flarelauncher$name",
+        "original": "Flare Launcher",
+        "translation": "热诱弹发射器",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0001行\n[本行原始数据]\n{'name': 'Flare Launcher',\n 'id': 'flarelauncher',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '5',\n 'regen': '',\n 'charge up': '',\n 'active': '',\n 'down': '',\n 'cooldown': '5',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/flare_launcher.png'}"
+    },
+    {
+        "key": "ship_systems.csv#flarelauncher_active$name",
+        "original": "Active Flare Launcher",
+        "translation": "追踪热诱弹发射器",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0005行\n[本行原始数据]\n{'name': 'Active Flare Launcher',\n 'id': 'flarelauncher_active',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.1',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '',\n 'active': '',\n 'down': '',\n 'cooldown': '5',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/active_flare_launcher.png'}"
+    },
+    {
+        "key": "ship_systems.csv#flarelauncher_fighter$name",
+        "original": "Decoy Flare Launcher",
+        "translation": "诱饵发射器",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0003行\n[本行原始数据]\n{'name': 'Decoy Flare Launcher',\n 'id': 'flarelauncher_fighter',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '1',\n 'regen': '0.033',\n 'charge up': '',\n 'active': '',\n 'down': '',\n 'cooldown': '5',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/flare_launcher.png'}"
+    },
+    {
+        "key": "ship_systems.csv#flarelauncher_single$name",
+        "original": "Decoy Flare Launcher (Single)",
+        "translation": "诱饵发射器 (单发)",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0004行\n[本行原始数据]\n{'name': 'Decoy Flare Launcher (Single)',\n 'id': 'flarelauncher_single',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '1',\n 'regen': '0.033',\n 'charge up': '',\n 'active': '',\n 'down': '',\n 'cooldown': '5',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/flare_launcher.png'}"
+    },
+    {
+        "key": "ship_systems.csv#forgevats$name",
+        "original": "Missile Autoforge",
+        "translation": "导弹自动工厂",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0025行\n[本行原始数据]\n{'name': 'Missile Autoforge',\n 'id': 'forgevats',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.75',\n 'cr/u': '',\n 'max uses': '2',\n 'regen': '',\n 'charge up': '1',\n 'active': '0',\n 'down': '0',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/missile_autoforge.png'}"
+    },
+    {
+        "key": "ship_systems.csv#forgevats_station$name",
+        "original": "Missile Autoforge",
+        "translation": "导弹自动工厂",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0052行\n[本行原始数据]\n{'name': 'Missile Autoforge',\n 'id': 'forgevats_station',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '1',\n 'active': '0',\n 'down': '0',\n 'cooldown': '30',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/missile_autoforge.png'}"
+    },
+    {
+        "key": "ship_systems.csv#fortressshield$name",
+        "original": "Fortress Shield",
+        "translation": "堡垒护盾",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0013行\n[本行原始数据]\n{'name': 'Fortress Shield',\n 'id': 'fortressshield',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '0.025',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '1.5',\n 'active': '',\n 'down': '1.5',\n 'cooldown': '0',\n 'toggle': 'TRUE',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': 'TRUE',\n 'noFiring': 'TRUE',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/fortress_shield.png'}"
+    },
+    {
+        "key": "ship_systems.csv#highenergyfocus$name",
+        "original": "High Energy Focus",
+        "translation": "高能聚焦系统",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0014行\n[本行原始数据]\n{'name': 'High Energy Focus',\n 'id': 'highenergyfocus',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '3',\n 'regen': '0.05',\n 'charge up': '0.25',\n 'active': '3',\n 'down': '0.25',\n 'cooldown': '',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/high_energy_focus.png'}"
+    },
+    {
+        "key": "ship_systems.csv#inferniuminjector$name",
+        "original": "Infernium Injector",
+        "translation": "烈焰喷射",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0011行\n[本行原始数据]\n{'name': 'Infernium Injector',\n 'id': 'inferniuminjector',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '1',\n 'active': '',\n 'down': '1',\n 'cooldown': '1',\n 'toggle': 'TRUE',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': 'TRUE',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/infernium_injector.png'}"
+    },
+    {
+        "key": "ship_systems.csv#interdictor$name",
+        "original": "Interdictor Array",
+        "translation": "阻绝阵列",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0031行\n[本行原始数据]\n{'name': 'Interdictor Array',\n 'id': 'interdictor',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.25',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.5',\n 'active': '',\n 'down': '0.5',\n 'cooldown': '20',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/interdictor_array.png'}"
+    },
+    {
+        "key": "ship_systems.csv#lidararray$name",
+        "original": "Lidar Array",
+        "translation": "激光雷达阵列",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0023行\n[本行原始数据]\n{'name': 'Lidar Array',\n 'id': 'lidararray',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '3.25',\n 'active': '5',\n 'down': '1',\n 'cooldown': '10',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/lidar_barrage.png'}"
+    },
+    {
+        "key": "ship_systems.csv#maneuveringjets$name",
+        "original": "Maneuvering Jets",
+        "translation": "机动推进器",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0009行\n[本行原始数据]\n{'name': 'Maneuvering Jets',\n 'id': 'maneuveringjets',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '1',\n 'active': '5',\n 'down': '1',\n 'cooldown': '5',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/maneuvering_jets.png'}"
+    },
+    {
+        "key": "ship_systems.csv#microburn$name",
+        "original": "Plasma Burn",
+        "translation": "等离子爆裂驱动器",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0007行\n[本行原始数据]\n{'name': 'Plasma Burn',\n 'id': 'microburn',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '2',\n 'regen': '0.1',\n 'charge up': '0.5',\n 'active': '0.5',\n 'down': '0.5',\n 'cooldown': '',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': 'TRUE',\n 'noAccel': 'TRUE',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/burn_drive.png'}"
+    },
+    {
+        "key": "ship_systems.csv#microburn_omega$name",
+        "original": "Microburn",
+        "translation": "欧米伽爆裂驱动器",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0008行\n[本行原始数据]\n{'name': 'Microburn',\n 'id': 'microburn_omega',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '3',\n 'regen': '0.1',\n 'charge up': '0.5',\n 'active': '0.5',\n 'down': '0.5',\n 'cooldown': '',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': 'TRUE',\n 'noAccel': 'TRUE',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': 'restricted',\n 'icon': 'graphics/icons/hullsys/burn_drive.png'}"
+    },
+    {
+        "key": "ship_systems.csv#mine_strike$name",
+        "original": "Mine Strike",
+        "translation": "空雷突袭",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0032行\n[本行原始数据]\n{'name': 'Mine Strike',\n 'id': 'mine_strike',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.1',\n 'cr/u': '',\n 'max uses': '5',\n 'regen': '0.2',\n 'charge up': '0.25',\n 'active': '',\n 'down': '0.25',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/interdictor_array.png'}"
+    },
+    {
+        "key": "ship_systems.csv#mine_strike_station$name",
+        "original": "Mine Strike",
+        "translation": "传送感应空雷",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0056行\n[本行原始数据]\n{'name': 'Mine Strike',\n 'id': 'mine_strike_station',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0',\n 'cr/u': '',\n 'max uses': '7',\n 'regen': '0.33',\n 'charge up': '0.25',\n 'active': '',\n 'down': '0.25',\n 'cooldown': '0',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/interdictor_array.png'}"
+    },
+    {
+        "key": "ship_systems.csv#mote_control$name",
+        "original": "Mote Attractor",
+        "translation": "光尘吸引场",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0057行\n[本行原始数据]\n{'name': 'Mote Attractor',\n 'id': 'mote_control',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.1',\n 'active': '',\n 'down': '0.4',\n 'cooldown': '',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': 'restricted',\n 'icon': 'graphics/icons/hullsys/reserve_deployment.png'}"
+    },
+    {
+        "key": "ship_systems.csv#nova_burst$name",
+        "original": "Nova Burst",
+        "translation": "新星爆裂驱动器",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0039行\n[本行原始数据]\n{'name': 'Nova Burst',\n 'id': 'nova_burst',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '2',\n 'regen': '0.1',\n 'charge up': '0.5',\n 'active': '0.001',\n 'down': '0',\n 'cooldown': '1',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/infernium_injector.png'}"
+    },
+    {
+        "key": "ship_systems.csv#orion_device$name",
+        "original": "Orion Device",
+        "translation": "猎户座装置",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0038行\n[本行原始数据]\n{'name': 'Orion Device',\n 'id': 'orion_device',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '4',\n 'regen': '0.2',\n 'charge up': '0',\n 'active': '0.001',\n 'down': '0',\n 'cooldown': '1',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/infernium_injector.png'}"
+    },
+    {
+        "key": "ship_systems.csv#phasecloak$name",
+        "original": "Phase Cloak",
+        "translation": "相位线圈",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0045行\n[本行原始数据]\n{'name': 'Phase Cloak',\n 'id': 'phasecloak',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.5',\n 'active': '',\n 'down': '0.5',\n 'cooldown': '2',\n 'toggle': 'TRUE',\n 'noDissipation': '',\n 'noHardDissipation': 'TRUE',\n 'hardFlux': 'TRUE',\n 'noFiring': 'TRUE',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': 'TRUE',\n 'noVent': '',\n 'isPhaseCloak': 'TRUE',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/phase_cloak.png'}"
+    },
+    {
+        "key": "ship_systems.csv#phaseteleporter$name",
+        "original": "Phase Teleporter",
+        "translation": "相位传送器",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0015行\n[本行原始数据]\n{'name': 'Phase Teleporter',\n 'id': 'phaseteleporter',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.5',\n 'active': '0',\n 'down': '0.5',\n 'cooldown': '15',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': 'TRUE',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/displacer.png'}"
+    },
+    {
+        "key": "ship_systems.csv#plasmajets$name",
+        "original": "Plasma Jets",
+        "translation": "等离子推进器",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0037行\n[本行原始数据]\n{'name': 'Plasma Jets',\n 'id': 'plasmajets',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '1',\n 'active': '3',\n 'down': '2',\n 'cooldown': '5',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/infernium_injector.png'}"
+    },
+    {
+        "key": "ship_systems.csv#recalldevice$name",
+        "original": "Recall Device",
+        "translation": "召回装置",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0036行\n[本行原始数据]\n{'name': 'Recall Device',\n 'id': 'recalldevice',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.5',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.5',\n 'active': '',\n 'down': '0.5',\n 'cooldown': '30',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/recall_device.png'}"
+    },
+    {
+        "key": "ship_systems.csv#reservewing$name",
+        "original": "Reserve Deployment",
+        "translation": "后备部署",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0034行\n[本行原始数据]\n{'name': 'Reserve Deployment',\n 'id': 'reservewing',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.5',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.1',\n 'active': '',\n 'down': '3',\n 'cooldown': '60',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/reserve_deployment.png'}"
+    },
+    {
+        "key": "ship_systems.csv#skimmer_drone$name",
+        "original": "Phase Skimmer (Drone)",
+        "translation": "闪现 (无人机)",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0047行\n[本行原始数据]\n{'name': 'Phase Skimmer (Drone)',\n 'id': 'skimmer_drone',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.05',\n 'cr/u': '',\n 'max uses': '3',\n 'regen': '0.25',\n 'charge up': '0.25',\n 'active': '',\n 'down': '0.25',\n 'cooldown': '',\n 'toggle': '',\n 'noDissipation': 'TRUE',\n 'noHardDissipation': '',\n 'hardFlux': 'TRUE',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/displacer.png'}"
+    },
+    {
+        "key": "ship_systems.csv#targetingfeed$name",
+        "original": "Targeting Feed",
+        "translation": "目标馈送系统",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0035行\n[本行原始数据]\n{'name': 'Targeting Feed',\n 'id': 'targetingfeed',\n 'flux/second': '',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.5',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '0.5',\n 'active': '20',\n 'down': '0.5',\n 'cooldown': '10',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/targeting_feed.png'}"
+    },
+    {
+        "key": "ship_systems.csv#temporalshell$name",
+        "original": "Temporal Shell",
+        "translation": "时流之壳",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0028行\n[本行原始数据]\n{'name': 'Temporal Shell',\n 'id': 'temporalshell',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '0.25',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '4',\n 'active': '10',\n 'down': '2',\n 'cooldown': '10',\n 'toggle': '',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': '',\n 'noTurning': '',\n 'noStrafing': '',\n 'noAccel': '',\n 'noShield': '',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/temporal_shell.png'}"
+    },
+    {
+        "key": "ship_systems.csv#traveldrive$name",
+        "original": "Full Burn",
+        "translation": "巡航驱动",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\nship_systems.csv第0050行\n[本行原始数据]\n{'name': 'Full Burn',\n 'id': 'traveldrive',\n 'flux/second': '1',\n 'f/s (base rate)': '',\n 'f/s (base cap)': '',\n 'flux/use': '',\n 'f/u (base rate)': '',\n 'f/u (base cap)': '',\n 'cr/u': '',\n 'max uses': '',\n 'regen': '',\n 'charge up': '2',\n 'active': '',\n 'down': '2',\n 'cooldown': '0',\n 'toggle': 'TRUE',\n 'noDissipation': '',\n 'noHardDissipation': '',\n 'hardFlux': '',\n 'noFiring': 'TRUE',\n 'noTurning': 'TRUE',\n 'noStrafing': 'TRUE',\n 'noAccel': 'TRUE',\n 'noShield': 'TRUE',\n 'noVent': '',\n 'isPhaseCloak': '',\n 'tags': '',\n 'icon': 'graphics/icons/hullsys/burn_drive.png'}"
+    }
 ]
