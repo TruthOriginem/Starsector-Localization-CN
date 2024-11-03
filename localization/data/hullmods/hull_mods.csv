@@ -10,7 +10,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 
 在战斗中该舰会积极迎击敌人并表现得如同战斗舰船一般。",提高船体结构值、装甲强度、以及幅能容量。,,graphics/hullmods/assault_package.png
 自动修复单元,autorepair,2,,,"engines, defensive, merc, standard",防御,7500,,,,3,6,9,15,data.hullmods.AutomatedRepairUnit,降低 %s 在战斗中修复受损武器及引擎的时间。,提高战斗中武器的维修速率。,将武器与引擎的修复时间降低至 %s，且降低 %s 舰船过载持续时间。,graphics/hullmods/automated_repair_unit.png
-辅助推进器,auxiliarythrusters,1,,,"engines, merc, standard",引擎,5000,TRUE,,,4,8,12,20,data.hullmods.AuxiliaryThrusters,提高舰船 %s 机动性，如加速度/减速度/转向加速/转向角速。,提高舰船的机动性。,"提高 ""零幅能加速"" 状态下的航速增益 %s 与旋转速度增益 %s",graphics/hullmods/auxilliary_thrusters.png
+辅助推进器,auxiliarythrusters,1,,,"engines, merc, standard",引擎,5000,TRUE,,,4,8,12,20,data.hullmods.AuxiliaryThrusters,提高舰船 %s 机动性，如加速度/减速度/转向加速/转向角速。,提高舰船的机动性。,"提高 ""零幅能加速"" 状态下的航速增益 %s 且将旋转速度增益 %s 。",graphics/hullmods/auxilliary_thrusters.png
 弹道测距仪,ballistic_rangefinder,2,,,"offensive, merc, standard",武器,8000,,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.BallisticRangefinder,提高实弹槽位上中小型武器的射程。,提高实弹槽位上中小型武器的射程。,,graphics/hullmods/ballistic_rangefinder.png
 防爆气密门,blast_doors,0,,,"defensive, merc, standard",防御,2500,TRUE,,,4,8,12,20,data.hullmods.BlastDoors,"在各个要害部位加装坚固的密封门，提高 %s 船体结构值。
 

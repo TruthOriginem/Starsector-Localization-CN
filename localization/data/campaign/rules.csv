@@ -420,7 +420,7 @@ StrandedInDeepSpace0,DialogOptionSelected,$option == strandedInDeepSpace0,,"导�
 似乎有一位负责超空间引擎的高级技术人员坚持要和你谈话。他们对于重返超空间有一些疯狂的想法，并不知用什么手段说服了你的总工程师认可了其可行性。","strandedInDeepSpace1:""立刻到我的舱室开会。""",
 StrandedInDeepSpace1,DialogOptionSelected,$option == strandedInDeepSpace1,,"年事已高且饱经辐射风霜，你的资深技术员的资历确实深不可测，他在太空中作业的经验恐怕比你手下任一位军官和船员都多。 老宇宙民给了你个几乎微不可见的敬礼。""$PlayerSirOrMadam。恕俺直言，你把$shipOrFleet开进一个鬼知道那儿出来的重力井真是干了个滚泥佬才会干的蠢事。""
 
-你的 导航官 深吸一口气，打算进行一番批判，但是老宇宙民快他一步，""好消息是俺见过直接跳进超空间的。但风险挺大。"" 他低头说道， ""风险挺大。""
+你的 导航官 深吸一口气，打算进行一番批判，但是老宇宙民快他一步，""好消息是俺见过直接跳进超空间的。但风险挺大。"" 他低头说道，""风险挺大。""
 
 ""不过。"" 他咧嘴一笑，""总比不得不把军官们煮了吃要好，是不？""","strandedInDeepSpace2:""资深技术员，你有什么提议？""",
 StrandedInDeepSpace2,DialogOptionSelected,$option == strandedInDeepSpace2,"SetTextHighlights ""横轴跳跃""","把这个诀窍交给资深技术员的传奇走私船长让他发誓绝不告知外人。不过她既然都已经过世四十多年了，考虑到当前的逆境，老宇宙民同意稍微通融下誓约的规定来收拾面前的烂摊子。
@@ -1422,7 +1422,7 @@ $faction.id == independent",FireAll RelLevelMoreDescription,你的名声已有�
 relLevelFavorableIndie,RelationshipLevelDesc,"$faction.rel == FAVORABLE
 $faction.id == independent",FireAll RelLevelMoreDescription,英仙座星域的独立舰队与地方小型政体们认为你可靠，可以依赖于你，因此他们也很欢迎你与其做交易。,,
 relLevelNeutralIndie,RelationshipLevelDesc,"$faction.rel == NEUTRAL
-$faction.id == independent",FireAll RelLevelMoreDescription,你尚未在英仙座星域中出名，独立舰队与小型政体们并不认识你。如果你想和他们做生意，他们也欢迎你。,,
+$faction.id == independent",FireAll RelLevelMoreDescription,你尚未在英仙座星域中出名，独立舰队与小型政体们并不认识你。如果你想和他们做生意，他们就会照例欢迎你。,,
 relLevelSuspiciousIndie,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
 $faction.id == independent",FireAll RelLevelMoreDescription,虽然目前还没有任何确凿的犯罪证据，但 $faction 官员已经开始对你有所怀疑。你必须再三要求接入港口当局，对方才会勉强同意，同时你发现自己经常遭到调查和骚扰。,,
 relLevelInhospitableIndie,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
@@ -1941,7 +1941,7 @@ $voice == aristo","ShowPersonVisual
 FireAll PopulateOptions","""嗯？我想你还需要些什么，不是吗？""",,
 convDefaultGreeting2official,PickGreeting,"$contact_printedFirstReturnGreeting
 $voice == official","ShowPersonVisual
-FireAll PopulateOptions","""$PlayerSirOrMadam。"" $HeOrShe的视线扫向你。 ""您还需要什么？""",,
+FireAll PopulateOptions","""$PlayerSirOrMadam。"" $HeOrShe的视线扫向你。""您还需要什么？""",,
 convDefaultGreeting2business,PickGreeting,"$contact_printedFirstReturnGreeting
 $voice == business","ShowPersonVisual
 FireAll PopulateOptions","""好了，到底有什么事？我该按分钟收费的。""",,
@@ -7007,7 +7007,7 @@ LKEvirensEndingOptCResp1,DialogOptionSelected,$option == lke_virensEndingOptCRes
 
 他皱起眉头，垂下脑袋。""并非每个人的 卢德之道 都一模一样，卢德之道 展现了常人所不能及之物。这些东西 Kazeron 给不了你，霸主 给不了你，Mazalot 统一政权自然也给不了你。""
 
-他抬起头，表情快速变化，那是一种你从未见过的，既狂热又哀伤的眼神。""我们曾经迷失。然后，""道"" 找到了我们。在漆黑的太空中，在强权的阴影下，卢德 的教诲振聋发聩，就连教会也也不足以容纳其万一。""
+他抬起头，表情快速变化，那是一种你从未见过的，既狂热又哀伤的眼神。""我们曾经迷失。然后，‘道’ 找到了我们。在漆黑的太空中，在强权的阴影下，卢德 的教诲振聋发聩，就连教会也也不足以容纳其万一。""
 
 ""这，就是卢德之道。"" 他几乎是站着喊出来的，随即深深地吸了一口气，顺了顺身上精致的衣服。",lke_virensEndingOptGResp3:继续,
 LKEvirensEndingOptDResp1,DialogOptionSelected,$option == lke_virensEndingOptDResp1,,"他嘴唇卷起来，露出讽刺的微笑；微眯起的眼睛中透露着压抑着的愤懑与怒火。
@@ -16262,7 +16262,7 @@ gaProbeObjectInteractionMissing1,DialogOptionSelected,$option == gaProbe_missing
 
 过了一会儿，打捞队开始返回。你和舰桥船员一起检查他们的发现，看起来好像是探测器的中心被挖走了一个完美的球体，带走了大部分 Galatia 学院的珍贵仪器套件。
 
-不同的推测被一个个提了出来。是黑洞干的？还是外星生物？提到外星生物的时候大家都礼貌地笑了起来。你的导航技师站上前来提出了个看法，说在理论上的确有可能对物质进行大批量远距离相位转移，不过这种操作即使在人之领时代的末期也并不经济实用。而你的行动长官则还在对套件消失这整件事本身抱着将信将疑的态度。",gaProbe_missing2:继续,
+不同的推测被一个个提了出来。是黑洞干的？还是外星人？提到外星生物的时候大家都礼貌地笑了起来。你的导航技师站上前来提出了个看法，说在理论上的确有可能对物质进行大批量远距离相位转移，不过这种操作即使在人之领时代的末期也并不经济实用。而你的行动长官则还在对套件消失这整件事本身抱着将信将疑的态度。",gaProbe_missing2:继续,
 gaProbeObjectInteractionMissing2,DialogOptionSelected,$option == gaProbe_missing2,"$global.gaProbe_canReturn = true
 Call $global.gaProbe_ref updateStage
 DespawnEntity",无论如何，这意味着你没有能送回 Galatia 学院的仪器套件。你下令将这次遭遇战的所有遥测数据和全息影像资料附在加密的任务文件中。学者们喜欢数据，越多越好。这应该足以证明你已经尽职尽责了。也许其中的奥秘会分散他们的注意力，也许还够让你得到报酬。,defaultLeave:离开,
@@ -20619,7 +20619,7 @@ LOCRLoffloadToPathMarket2,DialogOptionSelected,$option == locrl_offloadHereticsT
 LOCRLoffloadToPath,PopulateOptions,"$isPerson
 $player.locr_luddicsToPath 
 $personFaction.id == luddic_path",,,locrl_hereticsToPath:询问关于卸下一整个卢德异端组织的问题,
-LOCRLoffloadToPath1,DialogOptionSelected,$option == locrl_hereticsToPath,," ""异端？"" 当你解释时， $Post $personLastName 坐了起来，急切地想要把更多的信徒带向正确的卢德左径之路。
+LOCRLoffloadToPath1,DialogOptionSelected,$option == locrl_hereticsToPath,," ""异端？"" 当你解释时，$Post $personLastName 坐了起来，急切地想要把更多的信徒带向正确的卢德左径之路。
 
 ""他们已经如此迷失，"" $heOrShe边说边摇头，""这首先归咎于教会的腐败和软弱，当然还有那个疯子的妖言惑众。""
 
@@ -20719,11 +20719,11 @@ $locrlf_HeOrShe不耐心的敲击着吧台。
 ""不过也没差，我也懂你什么意思。你非得多要钱的话，就提到 $locrlf_rewardAmountHigher 星币吧。""",,
 locrlfOfferBarAcceptFirst,DialogOptionSelected,$option == locrlf_offerBarAcceptFirst,"Call $locrlf_ref addPersonToMarket
 $option = contact_acceptBar
-FireBest DialogOptionSelected",$locrlf_personName 给了你 $locrlf_systemName 的导航坐标， $locrlf_hisOrHer的通信 ID，还有异端们所乘运输船的舰船 ID，'CGR Light of Exultation'。,,
+FireBest DialogOptionSelected",$locrlf_personName 给了你 $locrlf_systemName 的导航坐标，$locrlf_hisOrHer的通信 ID，还有异端们所乘运输船的舰船 ID，'CGR Light of Exultation'。,,
 # LOCRLF contact offer,,,,,,
 locrlfOfferTextContact,DialogOptionSelected,$option == locrlf_start,$missionId = locrlf,"""我说过，有个大祭司找到了我 - 应大祭司本人要求，姓名不便透露。但我从大祭司那里得知，有位异端妄称先知，将一群信徒带上了歧途。""
 
-""我知道。"" $heOrShe叹了口气， ""我也想过，这件事本该 卢德骑士团 出手，我也愿意让他们的审判官按照惯例处置异端。但不知为啥 教会 想自己处理这件事，具体什么原因就轮不到我来猜了。""",locrlf_startContact2:继续,
+""我知道。"" $heOrShe叹了口气，""我也想过，这件事本该 卢德骑士团 出手，我也愿意让他们的审判官按照惯例处置异端。但不知为啥 教会 想自己处理这件事，具体什么原因就轮不到我来猜了。""",locrlf_startContact2:继续,
 locrlfOfferTextContact2,DialogOptionSelected,$option == locrlf_startContact2,"Highlight $locrlf_rewardAmount
 SetTooltip locrlf_offerCynicalRewardAsk ""你足够愤世嫉俗，能够看穿这些所谓""信徒""的伪善表演。说到底，最重要的还是星币和权力。""
 FireBest LOCRLFOfferTextRemoveCynical
@@ -20899,7 +20899,7 @@ rdsmOfferTextContact,DialogOptionSelected,$option == rdsm_start,"$missionId = rd
 SetTextHighlights $rdsm_planetName $rdsm_systemName $rdsm_dist $rdsm_reward
 Call $global.rdsm_ref showMap ""目标: $rdsm_planetName""","""我们的合作一直很高效，"" $heOrShe说，""我相信你能完成这个简单的任务。""
 
-$HeOrShe滑动数据平板，召唤出一张星图。""在距离这里 $rdsm_dist 光年处， $rdsm_systemName 中的 $rdsm_planetName 上，有一座废弃的 $rdsm_target 。它曾属于 $rdsm_megacorpName 集团，但那已经是 200 星历年以前的事情了。""
+$HeOrShe滑动数据平板，召唤出一张星图。""在距离这里 $rdsm_dist 光年处，$rdsm_systemName 中的 $rdsm_planetName 上，有一座废弃的 $rdsm_target。它曾属于 $rdsm_megacorpName 集团，但那已经是 200 星历年以前的事情了。""
 
 ""我会给你提供一个数据核心和一份关于 $rdsm_target 的准确示意图。找到我需要的数据核心，用我给你的数据核心替换原有那个。做的自然点，让它看起来就像大崩塌以来一直未被触碰过。""
 
@@ -20911,7 +20911,7 @@ $option == rdsm_start","$missionId = rdsm
 SetTextHighlights $rdsm_planetName $rdsm_systemName $rdsm_dist $rdsm_reward
 Call $global.rdsm_ref showMap ""目标: $rdsm_planetName""","""我们的合作一直很高效，"" $heOrShe说，""我相信你能完成这个简单的任务。""
 
-$HeOrShe滑动数据平板，召唤出一张星图。""在距离这里 $rdsm_dist 光年处， $rdsm_systemName 中的 $rdsm_planetName 上，有一座废弃的 $rdsm_target 。它曾属于 $rdsm_megacorpName 集团，但那已经是 200 星历年以前的事情了。""
+$HeOrShe滑动数据平板，召唤出一张星图。""在距离这里 $rdsm_dist 光年处，$rdsm_systemName 中的 $rdsm_planetName 上，有一座废弃的 $rdsm_target。它曾属于 $rdsm_megacorpName 集团，但那已经是 200 星历年以前的事情了。""
 
 ""我会给你提供一个数据核心和一份关于 $rdsm_target 的准确示意图。找到我需要的数据核心，用我给你的数据核心替换原有那个。做的自然点，让它看起来就像大崩塌以来一直未被触碰过。""
 
@@ -20944,7 +20944,7 @@ contact_decline:拒绝",
 rdsmOfferAsk3,DialogOptionSelected,$option == rdsm_offerAsk3,,"""还真是执着啊你，是不是？""
 
 $HeOrShe叹了口气。""那我的买家就会宣布他们这次发现是伪造的，是对于买家专利权的蓄意破坏。""","rdsm_offerAsk4:""万一，在有人找到我们掉包的数据核心之前，就有别人找到了另一份备份的话...""",
-rdsmOfferAsk4,DialogOptionSelected,$option == rdsm_offerAsk4,$player.rdsm_askedEverything = true,"""我会引导不知情的拾荒者去 '发现' 你掉包的数据核心的。"" $heOrShe语气渐渐严厉，看来$heOrShe的耐心已经快要耗尽了， ""很明显的事。""
+rdsmOfferAsk4,DialogOptionSelected,$option == rdsm_offerAsk4,$player.rdsm_askedEverything = true,"""我会引导不知情的拾荒者去 '发现' 你掉包的数据核心的。"" $heOrShe语气渐渐严厉，看来$heOrShe的耐心已经快要耗尽了，""很明显的事。""
 
 ""聊得够多了，你到底是干还是不干？""","contact_accept:接受
 contact_decline:拒绝",
@@ -22537,9 +22537,9 @@ RHannanWhyHarassingReact1b,DialogOptionSelected,$option == RHannan_whyHarassingR
 Reynard 停顿了一下，目光移开了一会儿。""你建立了什么，舰长？别跟我谈理想；展示给我看。"" ",RHannan_whyHarassing2:继续,
 RHannanWhyHarassingReact1c,DialogOptionSelected,$option == RHannan_whyHarassingReact1c,"$player.ethosFreedom++
 $option = RHannan_whyHarassing2 0
-FireBest DialogOptionSelected","""自由对你来说意味着什么？"" 他突然变得激动起来， ""你，一个外来者，一个站在我们门外的野蛮人，率领着一支战舰舰队威胁着我们千辛万苦建立的一切。你有什么资格谈论自由？""
+FireBest DialogOptionSelected","""自由对你来说意味着什么？"" 他突然变得激动起来，""你，一个外来者，一个站在我们门外的野蛮人，率领着一支战舰舰队威胁着我们千辛万苦建立的一切。你有什么资格谈论自由？""
 
-""我的自由，"" 他用两根手指敲打着桌子， ""我将我的自由交付给了我的家园和我的氏族；看看骄傲的 Kazeron吧！你所看到的一切都是我应得的。联盟给了我那份自由，而联盟也因此而繁荣！""
+""我的自由，"" 他用两根手指敲打着桌子，""我将我的自由交付给了我的家园和我的氏族；看看骄傲的 Kazeron 吧！你所看到的一切都是我应得的。联盟给了我那份自由，而联盟也因此而繁荣！""
 
 Reynard 停顿了一下，深吸了一口气，让自己重新回到一种易碎的平静。""别跟我谈理想。直接展示给我看。""",RHannan_whyHarassing2:继续,
 RHannanWhyHarassing2,DialogOptionSelected,$option == RHannan_whyHarassing2,,"""整个 英仙座星域 正处于微妙的平衡之中。如果你在这平衡中扮演的角色偏向了的错误一方...""
@@ -25862,9 +25862,9 @@ $player.untrustworthy > 2 score:100","SetStoryOption psk_acceptStory 1 makeDealW
 ""我不会当你的下一个冤大头。咱们之间的生意只有通过战舰来谈。""","psk_acceptStory:""你会拿到我殖民地收入的 10% ，而我会告诉你为什么你会接受。""
 psk_decline:""算了。""",
 pirateStationKingBusinessSelEndedFaceToFace,DialogOptionSelected,"$option == psk_discussBusiness
-$playerEndedDealFaceToFace score:10","SetStoryOption psk_acceptStory 1 makeDealWithPirateBase ui_char_spent_story_point ""跟海盗基地头目谈妥了一个保护费协议""","""现在来吧，"" $heOrShe说， ""我尊重你...当着我的面结束了我们之前的，啊，协议。你不是个懦夫，这点我得承认。""
+$playerEndedDealFaceToFace score:10","SetStoryOption psk_acceptStory 1 makeDealWithPirateBase ui_char_spent_story_point ""跟海盗基地头目谈妥了一个保护费协议""","""现在来吧，"" $heOrShe说，""我尊重你...当着我的面结束了我们之前的，啊，协议。你不是个懦夫，这点我得承认。""
 
-$HeOrShe叹了口气，摇了摇 $hisOrHer的脑袋。""不管你是不是懦夫，你都不可信的。"" $HeOrShe摊开双手，扮演起深思熟虑的管理者角色。""我有人要照顾。如果明天你突然来找我，告诉我我们的交易取消了，那我该怎么办？这可不是做生意的方式。""","psk_acceptStory:""你会拿到我殖民地收入的 10% ，而我会告诉你为什么你会接受。""
+$HeOrShe叹了口气，摇了摇$hisOrHer的脑袋。""不管你是不是懦夫，你都不可信的。"" $HeOrShe摊开双手，扮演起深思熟虑的管理者角色。""我有人要照顾。如果明天你突然来找我，告诉我我们的交易取消了，那我该怎么办？这可不是做生意的方式。""","psk_acceptStory:""你会拿到我殖民地收入的 10% ，而我会告诉你为什么你会接受。""
 psk_decline:""算了。""",
 pirateStationKingBizOptA,PirateStationKingBizOptions,,,,psk_decline:取消交易,
 pirateStationKingBizOptB,PirateStationKingBizOptions,!$saidReasonable,,,"psk_businessTooMuchReasonable:""10% 太多了。你得讲道理。""",
@@ -25961,11 +25961,11 @@ plEnforcerComplySel,DialogOptionSelected,$option == plEnforcerComply,"ShowImageV
 MakeOtherFleetPreventDisengage hassle false
 ApplyCRDamage $entity.fleetPoints 0.2 1 "" 英仙座联盟 检查""","检查小组毫不留情，他们撕开舱门，翻箱倒柜地搜查精心整理的库存，还直接在成堆的敏感设备中进行主动扫描。
 
-你$shipOrFleet军官们的抱怨全都被以官僚式的含糊其辞冷漠回应。军官们被告知，虽然可以提交一份索赔表，对检查过程中造成的 ""令人遗憾且不可避免的"" 损失寻求赔偿，但这 ""至少在一个星历年内很难得到调查机构的答复""。",plEnforcerComply2:继续,
+你$shipOrFleet军官们的抱怨全都被以官僚式的含糊其辞冷漠回应。军官们被告知，虽然可以提交索赔表，对检查过程中造成的 ""令人遗憾但不可避免的"" 损失寻求赔偿，但这 ""至少在一个星历年内很难得到调查机构的答复""。",plEnforcerComply2:继续,
 plEnforcerComplySel2,DialogOptionSelected,$option == plEnforcerComply2,"ShowPersonVisual
 $player.inspectedByLeagueEnforcer = true 60","""太空佬，你可以走了，"" 联盟 $Post 不屑地哼了一声，""别让我再在这里逮到你。""",cutCommLinkNoText:切断通讯链接,
 plEnforcerRefuseSel,DialogOptionSelected,$option == plEnforcerRefuse,"RemoveOption plEnforcerRefuse
-$failedToRefuse = true 0","""你是不是有什么秘密？"" $HisOrHer 语气中带着不屑， ""舰长。""
+$failedToRefuse = true 0","""你是不是有什么秘密？"" $HisOrHer的语气中带着不屑，""舰长。""
 
 ""试图逃避合法的商业监管检查是违法行为。是毒品吗？还是非法采集的器官？我们会搞清楚的。""
 
@@ -26025,7 +26025,7 @@ $HeOrShe在你回答之前切断了通讯。
 OR
 通讯瞬间变得清晰。
 
-""你已经两次证明自己是个背誓者了，"" 英仙座联盟联盟 $Post 说，声音中充满了嘲讽。 $HeOrShe转身对自己的船员和军官说道， ""看看这个背叛 联盟 的暴发户强盗的下场吧！""
+""你已经两次证明自己是个背誓者了，"" 英仙座联盟联盟 $Post 说，声音中充满了嘲讽。$HeOrShe转身对自己的船员和军官说道，""看看这个背叛 联盟 的暴发户强盗的下场吧！""
 
 $HisOrHer手落下，在你来得及回答之前就切断了通讯。",cutCommLinkNoText:切断通讯链接,
 "# Persean League blockade fleet, not the Grand Armada",,,,,,
@@ -26082,10 +26082,10 @@ RemoveOption PLArmada_liftBlockade","一个淡淡而敷衍的微笑出现在脸�
 PLArmadaStickIt,DialogOptionSelected,$option == PLArmada_stickIt,"$player.ethosSarcastic++
 $player.toldPLAblockadeToStickIt = true","$Post $personLastName 耐心的等着你说完。
 
-""真是富有想象力，舰长。"" $heOrShe在你讲完后说道， ""你已经把你的立场表达得很清楚了。""",,
+""真是富有想象力，舰长。"" $heOrShe在你讲完后说道，""你已经把你的立场表达得很清楚了。""",,
 PLArmadaThisIsPiracy,DialogOptionSelected,$option == PLArmada_thisIsPiracy,$player.didPiracyTalkWithPLA = true,"""这，"" $post 踱着步，$hisOrHer的双手背在身后，""是由一个被各派系间的条约所认可的、寻求和平的政治势力组成的星际联邦执行的标准商业保护行动。""
 
-$HeOrShe面对通讯设备， ""你是这样一个势力吗？还是只是一个放任财宝在太空中漂浮、等着被掠夺的新兴势力？""","PLArmada_thisIsPiracy2a:""我猜这个问题是假设性的。""
+$HeOrShe面对通讯设备，""你是这样一个势力吗？还是只是一个放任财宝在太空中漂浮、等着被掠夺的新兴势力？""","PLArmada_thisIsPiracy2a:""我猜这个问题是假设性的。""
 PLArmada_thisIsPiracy2b:""那么自由、权利和繁荣呢？这些理想难道毫无意义吗？""
 PLArmada_thisIsPiracy2c:""不 —— 我正在建立一个摆脱你们暴政的新星域。""
 PLArmada_thisIsPiracy2d:""你们得从我冰冷僵死的手中夺取那些财宝。""",
@@ -26157,7 +26157,7 @@ HA_CMD updateLeagueData","Reynard Hannan 呆呆地看着你，口水开始从嘴
 plReynardHannanJoinSelNoPunEx,DialogOptionSelected,"$option == rh_joinLeague
 HA_CMD isPLExpeditionInProgress score:100",,"""我也无能为力，$playerName。联盟议会，即联盟所有自由人民的代表机构，要求我们宣示力量。""
 
-""我希望，"" 他压低声音， ""你能从这件事中吸取一个重要的教训。""
+""我希望，"" 他压低声音，""你能从这件事中吸取一个重要的教训。""
 
 ""等行动结束后，我们再谈谈，"" 他现在的语气完全是一副公事公办的样子。""祝你好运。""","rh_askAboutShowOfForce:""...宣示武力？""
 cutCommLinkNoText:切断通讯",
@@ -26225,7 +26225,7 @@ $weary = true 0
 $dealArgumentsMade++
 FireBest PLCheckArgumentsEnough","""一笔糟糕的交易，"" 他摆出一副非常遗憾的表情，""浪费了那么多关键资源。当然，我不得不表面上遵从联盟议会的意见来处理这件事。""
 
-""你建立了一个强大的政体。"" 他双手摊开，显得非常慷慨大度， ""我一开始就看出来了。但重要的是，你向整个议会证明了这一点。我们可以利用这一点。""
+""你建立了一个强大的政体。"" 他双手摊开，显得非常慷慨大度，""我一开始就看出来了。但重要的是，你向整个议会证明了这一点。我们可以利用这一点。""
 
 他微笑着，丝毫没有让步的意思。",,
 rh_hannanBribeSel,DialogOptionSelected,$option == rh_hannanBribe,"RemoveOption rh_hannanBribe
@@ -26366,7 +26366,7 @@ PLLeaveThreatsD,PLLeaveThreats,"!HA_CMD canSendPLPunitiveExpedition
 $player.numTimesLeftLeague >= 1","SetTextHighlightColors bad
 Highlight ""再也不能回到联盟""","""你可别忘恩负义！""英仙座联盟 $post 涨红了脸，愤怒异常：""我们可是又给了你一次机会！没什么人能得到这种机会的！"" 
 
-""联盟 会记得这种背叛的，我们还没有忘记 Mariaath，我们永不会忘记它。"" $heOrShe不得不去挖掘 联盟 过去的深仇旧恨，因为现在的 联盟 能力远不如当初， ""我们会复仇的，哪怕花上一百个 星历年。""
+""联盟 会记得这种背叛的，我们还没有忘记 Mariaath，我们永不会忘记它。"" $heOrShe不得不去挖掘 联盟 过去的深仇旧恨，因为现在的 联盟 能力远不如当初，""我们会复仇的，哪怕花上一百个 星历年。""
 
 ""而你将 再也不能回到联盟 了。大家都会鄙视你，说你背信弃义，蛮横无理，是全 联盟 自由人民的敌人。你再考虑考虑吧。""",,
 PLLeaveNeverMind,PLLeaveNeverMind,,,"$HeOrShe瞪你瞪了有一会儿。
@@ -26514,11 +26514,11 @@ $attackReversible
 !$ttma_commandHailedPlayer","HailPlayer
 $ttma_commandHailedPlayer = true 7",,,
 ttma_detachmentCommsNotHostile,OpenCommLink,"$entity.TTMA_fleet score:1000
-!$entity.isHostile",$entity.ignorePlayerCommRequests = true 7,"""你好，独立的$shipOrFleet，"" $post 说， ""请注意避让本分队，因为我们可能会进行航行机动。""
+!$entity.isHostile",$entity.ignorePlayerCommRequests = true 7,"""你好，独立的$shipOrFleet，"" $post 说，""请注意避让本分队，因为我们可能会进行航行机动。""
 
 ""如果你有业务事项需要讨论，请联系 作战指挥部。""
 
-""并且，我代表 战术之星，""$heOrShe补充道， ""祝你度过平安的一天。""",cutCommLink:切断通讯链接,
+""并且，我代表 战术之星，""$heOrShe补充道，""祝你度过平安的一天。""",cutCommLink:切断通讯链接,
 ttma_detachmentCommsHostile,OpenCommLink,"$entity.TTMA_fleet score:1000
 $entity.isHostile",$entity.ignorePlayerCommRequests = true 7,"""确认与敌对$shipOrFleet接触。"" $post 严峻地说道。
 
@@ -26555,7 +26555,7 @@ $player.bribedTTMercAttack = true","""很高兴与您做生意，$playerName 舰
 
 $HeOrShe微笑着伸手去关通讯器，然后又缩了回来，像是想起了什么。
 
-""并且，我代表塔克提斯塔，"" $heOrShe说道，""祝您度过平安的一天。""","cutCommLink:""航行顺利， $rank。""",
+""并且，我代表塔克提斯塔，"" $heOrShe说道，""祝您度过平安的一天。""","cutCommLink:""航行顺利，$rank。""",
 ,,,,,,
 # Bounty hunters sent after you as a result of the Tri-Tachyon Commerce Raiding mini-event,,,,,,
 #TTCR_BountyHunterOptionsBut,TTCR_BountyHunterOptions,"$player.counterRaidedTriTach
@@ -26607,7 +26607,7 @@ FireAll TTCR_BountyHunterOptions","通讯信号逐渐稳定下来。
 
 ""我们要不要在开始之前一起祈祷呢？""",,
 ttcrBH_butSelDerelict,DialogOptionSelected,"$option == ttcrBH_but
-$entity.ttcr_derelict",,"""哦，那我一定是 至高霸主 了！"" $HeOrShe大笑，""是，请原谅我，请原谅我 —— 你知道，宽恕是一种美德，"" $heOrShe说， ""我来查一下。""
+$entity.ttcr_derelict",,"""哦，那我一定是 至高霸主 了！"" $HeOrShe大笑，""是，请原谅我，请原谅我 —— 你知道，宽恕是一种美德，"" $heOrShe说，""我来查一下。""
 
 这位 $post 转过身，喊道：""Peregrine，通讯日志里有没有关于协议取消的任何信息？""
 
@@ -27179,7 +27179,7 @@ HA_CMD doKOLTTakeover","骑士们双手合十，低头祷告：""感谢天意，
 你呼叫副官们开会，安排了你方首席行政官们与 教会 职员的接管事宜。在双方互相确认的同时，你也有了奇妙的发现：在 骑士团 自认为严肃的武装修行外表之下，实际上也藏着天真的一面。
 
 于是，合约达成 —— 至少是开始达成，教会 要想把 $KOLT_target 吸收进他们松散的神权政体里，还得花不少工夫。",cutCommLink:切断通讯链接,
-kolt_handoverCancelSel,DialogOptionSelected,$option == kolt_handoverCancel,$player.ethosSarcastic++,"""回应这种蠢话远非 骑士 之义务。"" $post 说着说着，扬起了下巴， ""愿你在死后的永恒世界里能找到你现在仍不知晓的尊严。""
+kolt_handoverCancelSel,DialogOptionSelected,$option == kolt_handoverCancel,$player.ethosSarcastic++,"""回应这种蠢话远非 骑士 之义务。"" $post 说着说着，扬起了下巴，""愿你在死后的永恒世界里能找到你现在仍不知晓的尊严。""
 
 $HeOrShe切断了通讯。",cutCommLink:切断通讯链接,
 ,,,,,,
@@ -27195,7 +27195,7 @@ sdRaiderCommsAskHow,DialogOptionSelected,$option == sdRaider_askHow,RemoveOption
 
 ""燃料啊，蠢货！你居心不良，妄图通过燃料市场低价竞争间接破坏 辛达强权 战争机器的关键所在，别觉得我们看不出你这点伎俩。""
 
-""现在。"" $HeOrShe呆呆地站着， ""以 最高元首 之名，我要轰炸你那可怜的的燃料生产设备，我还要轰炸你拉拢来生产燃料的这帮子流浪汉、犯罪者、下流坯，我要轰炸到你的星球上只剩灰烬！荣耀归于辛达强权！""",cutCommLink:切断通讯链接,
+""现在。"" $HeOrShe呆呆地站着，""以 最高元首 之名，我要轰炸你那可怜的的燃料生产设备，我还要轰炸你拉拢来生产燃料的这帮子流浪汉、犯罪者、下流坯，我要轰炸到你的星球上只剩灰烬！荣耀归于辛达强权！""",cutCommLink:切断通讯链接,
 sdRaiderCommsAskCommission,DialogOptionSelected,$option == sdRaider_askCommission,"AdjustRepActivePerson SUSPICIOUS -1
 $option = sdPunEx_sdComReplies 0
 FireBest DialogOptionSelected","$HeOrShe向前一步，表情复杂，解释道。""或许你还算得上不无希望，舰长。辛达强权 之所以如此宣称，是因为你竟敢与我们进行市场竞争，无论你是否知晓后果，无论你是否有意为之 —— 燃料是 辛达 的经济命脉，而你尝试与我们进行市场竞争就是蓄意威胁，就是敌对行为，不管行为轻重。"" $HeOrShe顿了顿，给你留些时间思考自己的背叛行为到底多严重，""这下你懂了吧，舰长。""
@@ -27229,7 +27229,7 @@ sdPunExComms2,DialogOptionSelected,$option == sdPunEx_comms2,,"""你居心不良
 sdPunEx_sayStopMe:""你想如何阻止我呢？""
 sdPunEx_sayDeal:""我们再谈谈吧，或许我们能达成某种协议呢。""
 cutCommLink:切断通讯链接",
-sdPunExSayProfits,DialogOptionSelected,$option == sdPunEx_sayProfits,,"""自然不是因为这种事。"" $heOrShe满脸嫌弃， ""自然，你这种人也只能想到这一层 —— 你这种太空佬，自然无法理解我们能够赋予历史含义的 Andrada 伟大运动多么的光荣，多么的伟岸！""
+sdPunExSayProfits,DialogOptionSelected,$option == sdPunEx_sayProfits,,"""自然不是因为这种事。"" $heOrShe满脸嫌弃，""自然，你这种人也只能想到这一层 —— 你这种太空佬，自然无法理解我们能够赋予历史含义的 Andrada 伟大运动多么的光荣，多么的伟岸！""
 
 ""你破坏 Philip Andrada 超然愿景真实含义的阴谋诡计，就交由 辛达强权 的军力来碾碎。""",cutCommLink:切断通讯链接,
 sdPunExSayStopMe,DialogOptionSelected,$option == sdPunEx_sayStopMe,,"""我要把你那可怜的燃料生产设施炸成灰，我要把你治下的那帮子流浪汉、犯罪者炸成灰，我要摧毁一切阻挡 辛达强权 荣光的事物！""",cutCommLink:切断通讯链接,
@@ -27257,12 +27257,12 @@ $HeOrShe似乎明白了什么。""当然了，你是 $PlayerName 舰长。现在
 sdPunEx_sdComApology:""我的忠诚毫无疑问！我要求你就暗指我不忠诚一事道歉！""
 cutCommLink:切断通讯链接",
 sdPunExCommsSDcomWhatOrders,DialogOptionSelected,$option == sdPunEx_sdComWhatOrders,"$option = sdPunEx_sdComReplies 0
-FireBest DialogOptionSelected","""我将移除你小小的燃料生产设施，我也将移除你治下的这帮子流浪汉、犯罪者、下流坯。"" $heOrShe陈述道，语音不带一点起伏， ""至于为什么你有意无意对 辛达强权 关键产业发起这场多余的经济战之后，官方还允许你保留雇佣协议，就轮不到我多问了。""
+FireBest DialogOptionSelected","""我将移除你小小的燃料生产设施，我也将移除你治下的这帮子流浪汉、犯罪者、下流坯。"" $heOrShe陈述道，语音不带一点起伏，""至于为什么你有意无意对 辛达强权 关键产业发起这场多余的经济战之后，官方还允许你保留雇佣协议，就轮不到我多问了。""
 
 ""这种情形倒也是你的荣幸 —— 让我的火焰将你的 '殖民地' 与其中粗制滥造的燃料生产设施付之一炬，烧尽你作为太空佬的下贱与牟利之心！只留下你对于 辛达瑞亚之狮 与他伟大运动的绝对热忱！""",,
 sdPunExCommsSDcomApology,DialogOptionSelected,$option == sdPunEx_sdComApology,"AdjustRepActivePerson SUSPICIOUS -1
 $option = sdPunEx_sdComReplies 0
-FireBest DialogOptionSelected","""行动结束之后，我将很乐意对你道歉。"" $heOrShe坦然陈述道， ""至于为什么你有意无意对 辛达强权 关键产业发起这场多余的经济战之后，官方还允许你保留雇佣协议，就轮不到我多问了。""
+FireBest DialogOptionSelected","""行动结束之后，我将很乐意对你道歉。"" $heOrShe坦然陈述道，""至于为什么你有意无意对 辛达强权 关键产业发起这场多余的经济战之后，官方还允许你保留雇佣协议，就轮不到我多问了。""
 
 ""这种情形倒也是你的荣幸 —— 让我的火焰将你的 '殖民地' 与其中粗制滥造的燃料生产设施付之一炬，烧尽你作为太空佬的下贱与牟利之心！只留下你对于 辛达瑞亚之狮 与他伟大运动的绝对热忱！""",,
 sdPunExCommsSDcomReplies,DialogOptionSelected,$option == sdPunEx_sdComReplies,,,"sdPunEx_sdComOptCompete:""你轰炸我的殖民地，就是为了 辛达强权 燃料产业少些对手？""
@@ -27274,10 +27274,10 @@ $player.heardRumorsAboutCruor = true","$HisOrHer眯起双眼。""果然你还是
 ""也算你走运。"" $post 说着，""管理你的不是我。就现在，我还要继续执行扫荡行动。""
 
 ""荣耀归于辛达强权！"" $heOrShe一边大喊，一边敬了个礼。",cutCommLink:切断通讯链接,
-sdPunExCommsSDcomSubmit,DialogOptionSelected,$option == sdPunEx_sdComOptSubmit,,"""好。"" $post 说道， ""我还要继续执行扫荡行动。""
+sdPunExCommsSDcomSubmit,DialogOptionSelected,$option == sdPunEx_sdComOptSubmit,,"""好。"" $post 说道，""我还要继续执行扫荡行动。""
 
 ""荣耀归于辛达强权！"" $heOrShe一边大喊，一边敬了个礼。",cutCommLink:切断通讯链接,
-sdPunExCommsSDcomSubmitLie,DialogOptionSelected,$option == sdPunEx_sdComOptSubmitLie,FireBest SDpunExCommsSDcomLiarPoint,"""好。"" $post 说道， ""我还要继续执行扫荡行动。""
+sdPunExCommsSDcomSubmitLie,DialogOptionSelected,$option == sdPunEx_sdComOptSubmitLie,FireBest SDpunExCommsSDcomLiarPoint,"""好。"" $post 说道，""我还要继续执行扫荡行动。""
 
 ""荣耀归于辛达强权！"" $heOrShe一边叫着，一边敬了个礼。",cutCommLink:切断通讯链接,
 sdPunExCommsSDcomLiarPoint,SDpunExCommsSDcomLiarPoint,"$option == sdPunEx_sdComLiarPoint
@@ -27313,13 +27313,13 @@ Commission personCanGiveCommission
 HA_CMD diktatConcernedByFuelProd",,,"sdMakeDeal:""尽管我与 辛达强权 有雇佣协议，强权 还是在一直在派出袭击舰队攻击我方，这种疏忽必须纠正！""",
 SDMakeDealHostile,DialogOptionSelected,"$option == sdMakeDeal
 RepIsAtBest sindrian_diktat HOSTILE score:100","HA_CMD printSDDealRepReq
-RemoveOption sdMakeDeal","""你不仅是个无家可归的下贱太空佬，还与 辛达强权 公然为敌。"" $HeOrShe满脸嫌弃，不禁往后靠了靠， ""随你怎么求也没用，对于针对 Andrada 伟大运动公然进行恐怖主义战争的...人员...毫无慈悲可言。""
+RemoveOption sdMakeDeal","""你不仅是个无家可归的下贱太空佬，还与 辛达强权 公然为敌。"" $HeOrShe满脸嫌弃，不禁往后靠了靠，""随你怎么求也没用，对于针对 Andrada 伟大运动公然进行恐怖主义战争的...人员...毫无慈悲可言。""
 
 ""我相信，星系巡逻舰队已经将你的位置情况报告给了最高指挥部，就在我们谈话的时候，最高元首 的巨大舰队可能就在来的路上了。"" $heOrShe低头细细端详着手指甲，""我可以等，你可以吗？""",,
 SDMakeDealUntrustworthy,DialogOptionSelected,"$option == sdMakeDeal
 $player.untrustworthy > 2 score:200",RemoveOption sdMakeDeal,"""我看出你的真面目了，你这垃圾太空佬。为了保全你自己，你能对我说谎，也可以对别人说谎，为了保全自己，你什么都能说，为了保全你从 Andrada 伟大事业中捞到的不义之财，你要出卖谁就出卖谁。$playerName ，我看不起你这种人。""
 
-""然而，"" $HeOrShe说着说着，露出了残忍的微笑， ""在 辛达强权 铸造的光辉未来中，你这种人也能够存在。"" 
+""然而，"" $HeOrShe说着说着，露出了残忍的微笑，""在 辛达强权 铸造的光辉未来中，你这种人也能够存在。"" 
 
 ""你将作为我们堂堂正正击败的敌人，我们随意碾过的小小恶人而存在。你将被 Philip Andrada 最高领袖对我们未来的完美愿景摧垮。""
 
@@ -27539,7 +27539,7 @@ $entity.relativeStrength < 0","ShowImageVisual quartermaster
 MakeOtherFleetPreventDisengage hassle false
 ApplyCRDamage $entity.fleetPoints 0.1 1 ""霸主调查""","检查小组的行为相当粗鲁，他们粗暴地撕开舱盖，在你方精心整理的库存中肆意翻找，甚至不顾技术人员的反对，还直接在成堆的敏感设备中进行主动扫描。
 
-你$shipOrFleet军官们的抱怨全都被以毫无歉意且官僚式的含糊其辞冷漠回应。军官们被告知，虽然可以提交一份索赔表，对检查过程中造成的 ""令人遗憾且不可避免的"" 损失寻求赔偿，但这 ""至少在一个星历年内很难得到调查机构的答复""。",hegInvestigationComply2:继续,"# a weaker fleet will be less destructive, let's say."
+你$shipOrFleet军官们的抱怨全都被以毫无歉意且官僚式的含糊其辞冷漠回应。军官们被告知，虽然可以提交索赔表，对检查过程中造成的 ""令人遗憾但不可避免的"" 损失寻求赔偿，但这 ""至少在一个星历年内很难得到调查机构的答复""。",hegInvestigationComply2:继续,"# a weaker fleet will be less destructive, let's say."
 hegInvestigatorComplySel2Wk,DialogOptionSelected,"$option == hegInvestigationComply2
 $entity.relativeStrength < 0",ShowPersonVisual,"庆幸的是损伤基本上没有伤及要害。但是你的船员们还是有一堆烂摊子得收拾。
 
@@ -27548,7 +27548,7 @@ hegInvestigatorComplySel,DialogOptionSelected,$option == hegInvestigationComply,
 MakeOtherFleetPreventDisengage hassle false
 ApplyCRDamage $entity.fleetPoints 0.2 1 ""霸主调查""","检查小组不顾你的技术人员的反对，粗暴地撕开舱门，翻乱精心整理好的库存，直接对敏感设备集群进行高功率扫描，毫无疑问是在恶意破坏。
 
-你$shipOrFleet军官们的抱怨全都石沉大海。除了对他们进行暴力威胁，你的总工程师给出的最好建议是可以提交一份索赔表，对检查过程中造成的 ""令人遗憾且不可避免的"" 损失寻求赔偿，但这 ""至少在一个星历年内很难得到调查机构的答复""。",hegInvestigationComply2:继续,
+你$shipOrFleet军官们的抱怨全都石沉大海。除了对他们进行暴力威胁，你的总工程师给出的最好建议是提交索赔表，对检查过程中造成的 ""令人遗憾但不可避免的"" 损失寻求赔偿，但这 ""至少在一个星历年内很难得到调查机构的答复""。",hegInvestigationComply2:继续,
 hegInvestigatorComplySel2,DialogOptionSelected,$option == hegInvestigationComply2,ShowPersonVisual,"你的船员留下来清理狼藉的现场并对设备进行必要的维修。庆幸的是损伤基本上没有伤及要害。
 
 ""你可以走了，太空佬。"" 霸主 $Post 轻蔑的哼了一声，""但别让我再逮到你。""",cutCommLinkNoText:切断通讯链接,
@@ -27595,15 +27595,15 @@ hegTalkInspectionsDaudHubOptB,HEGtalkInspectDaudHubOpts,$global.gaPZ_completed,,
 hegTalkInspectionsDaudHubOptC,HEGtalkInspectDaudHubOpts,$global.gaATG_completed,,,"heg_talkInspectDaudEagle1:""还记得你那时挺自豪的那艘 雄鹰-级 吗？现在嘛...""",
 hegTalkInspectDaudBaird1,DialogOptionSelected,$option == heg_talkInspectDaudBaird1,"$broughtUpBaird = true 0
 $option = heg_talkInspectDaudEagle1 0
-FireBest DialogOptionSelected","""你不是来谈那些事的。"" 他答道， ""现在不是。""",,
+FireBest DialogOptionSelected","""你不是来谈那些事的。"" 他答道，""现在不是。""",,
 hegTalkInspectDaudEagle1,DialogOptionSelected,$option == heg_talkInspectDaudEagle1,,"至高霸主 表情没有丝毫波动地无视了你的语调。
 
 ""你是来讨论我方针对你殖民地利益的舰队行动的。""",heg_talkInspectDaud2:继续,
-hegTalkInspectDaud1,DialogOptionSelected,$option == heg_talkInspectDaud1,,"""好。"" 他说， ""可以谈。""","heg_talkInspectDaud2:""那就谈吧。""
+hegTalkInspectDaud1,DialogOptionSelected,$option == heg_talkInspectDaud1,,"""好。"" 他说，""可以谈。""","heg_talkInspectDaud2:""那就谈吧。""
 heg_talkInspectDaud1b:""我把你的舰队都击败了，你阻止不了我。""",
 hegTalkInspectDaud1b,DialogOptionSelected,$option == heg_talkInspectDaud1b,"$option = heg_talkInspectDaud2 0
 FireBest DialogOptionSelected",,,
-hegTalkInspectDaud2,DialogOptionSelected,$option == heg_talkInspectDaud2,$player.discussedHegemonyDefeat = true,"""等下再祝贺你。"" 话虽如此，他的语气没有半点开心的意思， ""你成功让 战略指挥部 原本怀有异议的成员都改变了对你的预期。""
+hegTalkInspectDaud2,DialogOptionSelected,$option == heg_talkInspectDaud2,$player.discussedHegemonyDefeat = true,"""等下再祝贺你。"" 话虽如此，他的语气没有半点开心的意思，""你成功让 战略指挥部 原本怀有异议的成员都改变了对你的预期。""
 
 他的语气变得很有官僚气派，仿佛在阅读某种组织内部的备忘录。
 
@@ -27613,7 +27613,7 @@ hegTalkInspectDaudPretend,DialogOptionSelected,$option == heg_talkInspectDaudPre
 
 ""全流程合法合规，霸主 会表明这一切都是误会，现在达成的协议本就在计划之中。""",,
 hegTalkInspectDaudDictate,DialogOptionSelected,$option == heg_talkInspectDaudDictate,"$saidVictory = true 0
-FireAll HEGtalkInspectDaudVictoryOpts","""别当傲慢的蠢货，舰长。"" Daud 放下了原本的官方态度，语气冰冷， ""这种人我处理的够多了。""
+FireAll HEGtalkInspectDaudVictoryOpts","""别当傲慢的蠢货，舰长。"" Daud 放下了原本的官方态度，语气冰冷，""这种人我处理的够多了。""
 
 他深吸一口气。
 
@@ -29505,11 +29505,11 @@ $heOrShe说话时，$HisOrHer的目光飘向了过去，""我记得清清楚楚�
 HistorianBackstoryBlurb04,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb04,SetHistorianBlurbShownAfterDelay historyBlurb04,"""我考虑过冷冻休眠。支付费用，跳过一百个星历年，看看未来如何。作为历史学家，天哪，这真的很有吸引力！但另一方面 —— 对，对 —— 我知道统计数据。如果你能找到一个好的冷冻休眠舱，现在的失败率是很低的。但它仍然让我感到害怕。你可能会睡着，然后永远醒不过来。"" 
 
 $HeOrShe阴郁地笑了笑，""不过，那不就是每天的常态吗？啊，不管怎样，我还有太多工作要做...""",,
-HistorianBackstoryBlurb05,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb05,SetHistorianBlurbShownAfterDelay historyBlurb05,"""外星人！哈哈。不，从来没有文件证明能那玩意儿存在，"" $heOrShe强调了这几个字，""正史。""
+HistorianBackstoryBlurb05,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb05,SetHistorianBlurbShownAfterDelay historyBlurb05,"""外星人！哈哈。不，从来没有文件证明能那玩意儿存在，"" $heOrShe强调着念出，""正史。""
 
 ""是的是的，如果你想见识下 异种生命，就去 Jangala，带上你的药片，然后洗个隔离澡。""
 
-""但那根本就不是我们想要的，对吧。我们想要的是有像我们一样的其他人存在，可以与之交谈，可以告诉我们我们并不孤单，可以给我们答案。一个关心我们的人。也许我们找错了地方？或者思考的方式不对？"" $HeOrSh摇了摇的$hisOrHer头，打消了这个念头。 ""哈，但这已经变成了猜测。不是我的专长！""",,
+""但那根本就不是我们想要的，对吧。我们想要的是有像我们一样的其他人存在，可以与之交谈，可以告诉我们我们并不孤单，可以给我们答案。一个关心我们的人。也许我们找错了地方？或者思考的方式不对？"" $HeOrSh摇了摇的$hisOrHer头，打消了这个念头。""哈，但这已经变成了猜测。不是我的专长！""",,
 HistorianBackstoryBlurb06,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb06,SetHistorianBlurbShownAfterDelay historyBlurb06,"""我们都听过攻势战列舰的故事，说它是抵抗外星威胁的终极武器。"" $HeOrShe不屑地挥了挥手，嘲讽道，""就好像我们活在某个关于英勇英雄和邪恶外星人的军事科幻全息影像里。""
 
 ""伟大的、改变历史进程的接触并不是那样的，至少在我们的知识体系中不是。它更加令人困惑；混乱无序。它会破坏社会的整个认知意识形态的基础，迫使社会在认识基础遭受重创的情况下进行重组。而且，为了吸取这些教训，必然会有很多人牺牲。""
@@ -29536,7 +29536,7 @@ $HeOrShe因为某个旧时的记忆而笑了起来。""我也树敌不少，真�
 HistorianBackstoryBlurb11,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb11,SetHistorianBlurbShownAfterDelay historyBlurb11,"""Baikal Daud 就任至高霸主之后，我不禁好奇他的执政会给 '英仙座星域的涅槃' 带来怎样的影响。海军仍然由老一派的人主导 —— 那是 Eventide 的势力。那些家族可以追溯到第十四军团的到来，当然。按照任何历史标准来看，这都不是一个古老的贵族阶层，但只要有适宜的条件，这种模式很快就会建立起来。我说到哪儿了 —— 对， Daud。他是人民的领袖。会触动别人的利益。就像他亲自介入 Sphinx 勋章丑闻时一样。至高霸主们通常不会这么做！但他是天生的领袖，这一点毋庸置疑。""
 
 ""这才是他真正会惹上麻烦的地方，"" $heOrShe说道，然后陷入了沉思，不再言语。",,
-HistorianBackstoryBlurb12,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb12,SetHistorianBlurbShownAfterDelay historyBlurb12,"""在我的圈子里可都是些实打实的历史学家，注意，不是那些在酒吧里闲逛的老人们。"" $heOrShe自嘲地笑了笑。""我们定了个规矩，除非有新的确凿信息出现，否则不讨论 Artemisia Sun。而这类信息从来都没有出现过！"" $HeOrShe停顿了一下，敲了敲$hisOrHer手里的书。 ""但你不是历史学家，所以这个规矩对你不适用。太好了，你可以听我讲完！""
+HistorianBackstoryBlurb12,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb12,SetHistorianBlurbShownAfterDelay historyBlurb12,"""在我的圈子里可都是些实打实的历史学家，注意，不是那些在酒吧里闲逛的老人们。"" $heOrShe自嘲地笑了笑。""我们定了个规矩，除非有新的确凿信息出现，否则不讨论 Artemisia Sun。而这类信息从来都没有出现过！"" $HeOrShe停顿了一下，敲了敲$hisOrHer手里的书。""但你不是历史学家，所以这个规矩对你不适用。太好了，你可以听我讲完！""
 
 ""所以，为什么她会因第二次 AI 战争的失利而立刻被董事会投票踢出？而她又是如何在所有反对者名誉被彻底摧毁的情况下回她的办公室？这仅仅是一次无情的回归？还是为了巩固个人权力而不惜牺牲 速子科技 资产而精心策划的骗局？"" $HeOrShe微笑着说。""也许我们哪天可以彻底探讨一下这个理论。""",,
 HistorianBackstoryBlurb13,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb13,SetHistorianBlurbShownAfterDelay historyBlurb13,"""我们多么希望能有一些关于卢德演讲或行为的记录啊。所有关于这位先知的证据似乎都消失了，这不是很不可思议吗？这个，呃，'奇迹' 当然是 银河救赎教会 信徒们的信仰所在。"" 
@@ -29567,7 +29567,7 @@ HistorianBackstoryBlurb18,HistorianBackstoryBlurb,!WasHistorianBlurbShown histor
 ""然而，必须承认，在大崩塌后的混乱以及随后的战争中，一个常备的军事组织具有实际的好处，"" $heOrShe靠回$hisOrHer的座位上，陷入了沉思。""而在教会内部，最直言不讳的反对者也认为，骑士团只是在一定程度上走错了方向，而并非完全错误。那些较少发声的反对者呢？嗯，我们可能在许多、许多个星历年内都没办法知道他们的想法。骑士团会确保这一点。""",,
 HistorianBackstoryBlurb19,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb19,SetHistorianBlurbShownAfterDelay historyBlurb19,"""据推测，Andrada 海军上将，这位自封的辛达强权最高元首 —— 从霸主角度来看是 '辛达叛乱'，正面临着独裁者普遍面临的继承问题。迄今为止，在辛达统一的外表之下，他似乎一直在利用他的主要支持者之间的互相制衡来维持政治稳定。明确指定一个继承人将会打破这种内部平衡。"" 
 
-""而现在，"" 历史学家缓缓说道，摩挲着$hisOrHer的下巴， ""随着岁月的无情流逝，加上 Andrada 据传身体状况不佳，他会出人意料的指定一个继承人吗？届时，那些下属对这位元首忠诚与否将会被...区分开来，随之而来的将是一波大清洗，甚至可以说是屠杀。""
+""而现在，"" 历史学家缓缓说道，摩挲着$hisOrHer的下巴，""随着岁月的无情流逝，加上 Andrada 据传身体状况不佳，他会出人意料的指定一个继承人吗？届时，那些下属对这位元首忠诚与否将会被...区分开来，随之而来的将是一波大清洗，甚至可以说是屠杀。""
 
 ""又或者 Andrada 有一个秘密的家族，或者一个心智模拟体，或者一个克隆体，或者更离奇的计划？"" $HeOrShe大笑一声。""这些的猜测似乎更多地反映了猜测者自己正在想些什么，而不是 Andrada。我应该向你请教一些见解！"" $HeOrShe又笑了起来。",,
 HistorianBackstoryBlurb20,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb20,SetHistorianBlurbShownAfterDelay historyBlurb20,"""如果 Philip Andrada，这位自封的辛达强权最高元首，真的如霸主宣传和他自己所声称的那样是战略大师，那么他为何没有直接征服英仙座星域，就像他最强大的手下败将 —— 军阀 Loke 那样呢？""
@@ -29589,7 +29589,7 @@ HistorianBackstoryBlurb23,HistorianBackstoryBlurb,!WasHistorianBlurbShown histor
 
 ""显而易见，"" $heOrShe继续说道，""与鼎盛时期的人之领相比，霸主在利用人工智能方面更为保守。卢德派民众的抱怨声在每个至高霸主的耳边都响个不停，而 Baikal Daud 深知在当前的妥协和平之下，最好不要激起任何动荡。""
 
-""话虽如此，"" 历史学家身体前倾，压低了$hisOrHer的声音， ""妄想症患者们提供了有趣的猜测。有一种理论认为，在遥远的行星小天体上隐藏着秘密的超级计算机，它们模拟着世界，并将数十亿进行冷冻休眠的人类思想置于奴役之下；这是冷漠的 AI 之神病态想象中上演的残酷场景。当然，这是无稽之谈，"" $heOrShe微笑着，让人安心，""这样的虐待有什么目的呢？""",,
+""话虽如此，"" 历史学家身体前倾，压低了$hisOrHer的声音，""妄想症患者们提供了有趣的猜测。有一种理论认为，在遥远的行星小天体上隐藏着秘密的超级计算机，它们模拟着世界，并将数十亿进行冷冻休眠的人类思想置于奴役之下；这是冷漠的 AI 之神病态想象中上演的残酷场景。当然，这是无稽之谈，"" $heOrShe微笑着，让人安心，""这样的虐待有什么目的呢？""",,
 HistorianBackstoryBlurb24,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb24,SetHistorianBlurbShownAfterDelay historyBlurb24,"""那些在人之领时代进入冷冻休眠，如今醒来的人，可能是最迷茫的一群人。他们中的许多人，尽管不是全部，都幻想过自己会成为富饶边疆的开拓者；他们接受了自己会抛下曾经的一切。但现在，他们发现自己与过去的一切都断了联系，在历史的长河中漂泊无依。""
 
 ""谁来照料他们呢？路德派当然会建议他们寻求宗教的慰藉。其他人则选择借酒消愁、吸毒，或者陷入虚无主义的超脱，这种超脱往往又会外化为破坏。你知道吗，不少最残忍的海盗都曾是冷冻休眠者。""
@@ -29600,7 +29600,7 @@ HistorianBackstoryBlurb25,HistorianBackstoryBlurb,!WasHistorianBlurbShown histor
 ""虽然，"" $heOrShe身体前倾，""就我个人而言，我不禁怀疑自从大崩塌之后，世界本身是否发生了变化。超空间是否变得更加混乱、神秘，几乎被外星现象所占据？还是说它以前只是没有被观察到，或者没有被报道？还是说这些报道被限制了？还是说流浪的太空船员之间的接触不够频繁，无法证实他们的观察 —— 或者，对于怀疑论者来说，仅仅是虚假故事的分享传递？""
 
 ""我只是一名历史学家，而现在，"" $heOrShe悲伤地笑了笑，""我失去了学院同事们纠正的机会。我既害怕又承认，我的记录工作可能会显得不够专业。""",,
-HistorianBackstoryBlurb26,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb26,SetHistorianBlurbShownAfterDelay historyBlurb26,"""想到大崩塌带来的损失，真是让人头晕目眩，"" $heOrShe说道。 ""暂且不说人之领，其人口数量对我们这些勉强称得上文明的人类大脑来说是无法想象的。光是英仙座星域这个边缘世界，就见证了无数死亡，因为从核心区域和人之领本身延伸出来的薄弱后勤补给线被切断。食物、生命维持系统、药品、基础机械 —— 都流失了，倾泻到太空中，化作了无数的碎片...""
+HistorianBackstoryBlurb26,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb26,SetHistorianBlurbShownAfterDelay historyBlurb26,"""想到大崩塌带来的损失，真是让人头晕目眩，"" $heOrShe说道。""暂且不说人之领，其人口数量对我们这些勉强称得上文明的人类大脑来说是无法想象的。光是英仙座星域这个边缘世界，就见证了无数死亡，因为从核心区域和人之领本身延伸出来的薄弱后勤补给线被切断。食物、生命维持系统、药品、基础机械 —— 都流失了，倾泻到太空中，化作了无数的碎片...""
 
 历史学家凝视着角落，$hisOrHer的眼神变得黯淡，$hisOrHer的注意力完全沉浸在对过去恐怖场景的想象中。",,
 HistorianBackstoryBlurb27,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb27,SetHistorianBlurbShownAfterDelay historyBlurb27,"""唉，Opis 的悲剧。损失的规模之大，让人无法理解。直到今天，仍有人为了是谁的过错而争论不休，甚至大打出手。我有我的立场，但那场争论遮掩了 Opis 政体自己的故事。为什么那些无数的死者要被杀死他们的凶手所定义呢？我认为，了解一个故事的开头对于阐明其结尾是必要的，你同意么？""
@@ -30139,7 +30139,7 @@ FireBest DialogOptionSelected","""嗯，"" $post 扫视着侧面一个显示屏�
 bqfsAskedForSuppliesHostile,DialogOptionSelected,"$option == bqfs_askForSupplies
 $faction.isHostile",$ignorePlayerCommRequests = true 7,"$post 奇怪的看了你一眼，之后又瞟了一眼另一个显示屏，最后则稍显警惕的瞪着你。
 
-""等等，你是不是 ——"" $HisOrHer快速看向显示屏， ""你是 $playerName！快滚出我的通讯链接！""
+""等等，你是不是 ——"" $HisOrHer快速看向显示屏，""你是 $playerName！快滚出我的通讯链接！""
 
 $HeOrShe猛拍按钮，切断了通讯链接。",,# don't actually flip the first-time flag 'cause player didn't get the essential game info out of this
 bqfsAskedForSuppliesScam,DialogOptionSelected,"$option == bqfs_askForSupplies2
@@ -30152,32 +30152,32 @@ FireBest DialogOptionSelected","似乎发现了什么，$hisOrHer眯起了眼睛
 
 ""干到 $post 这个位置上的没一个不是见过些小把戏的。我就是没想到有 $faction 雇佣协议的舰长还会给我来丢货这老把戏。""
 
-$HeOrShe叹了口气，摇了摇头。 ""我给你的雇佣 ID 作了一星历年记录。现在滚出我的通讯频道。""",,
+$HeOrShe叹了口气，摇了摇头。""我给你的雇佣 ID 作了一星历年记录。现在滚出我的通讯频道。""",,
 bqfsAskedForSuppliesScamHeg,DialogOptionSelected,"$option == bqfs_askForSuppliesScam
 $faction.id == hegemony","$option = bqfs_askForSuppliesScamOut 0
 FireBest DialogOptionSelected","""我可是 霸主 的 $post，不是什么鸟不拉屎的 联盟 世界。我见惯了觉得自己比政府聪明的小崽子们玩丢弃货物那一套，而且之后也还会见到。你本该军法处置，但是算你走运，我手上要处理的文件够多了，所以这次我就当你犯了个大糊涂。""
 
-$HeOrShe叹了口气，摇了摇头。 ""我给你的雇佣 ID 作了一星历年记录。现在滚出我的通讯频道。""",,
+$HeOrShe叹了口气，摇了摇头。""我给你的雇佣 ID 作了一星历年记录。现在滚出我的通讯频道。""",,
 bqfsAskedForSuppliesScamTT,DialogOptionSelected,"$option == bqfs_askForSuppliesScam
 $faction.id == tritachyon","$option = bqfs_askForSuppliesScamOut 0
 FireBest DialogOptionSelected","""我看透了你的伎俩，舰长。虽然我佩服你最大化利润的动力，你在远处丢弃补给再来寻求帮助的愚蠢伎俩却让人不敢恭维。你知道我要是被抓到挪用 速子科技 资产，我是要被迫以工作抵债的？我虽然有钱，但是不多。这是要抵一辈子的。""
 
-$HeOrShe叹了口气，摇了摇头。 ""我给你的雇佣 ID 作了一星历年记录。现在滚出我的通讯频道。""",,
+$HeOrShe叹了口气，摇了摇头。""我给你的雇佣 ID 作了一星历年记录。现在滚出我的通讯频道。""",,
 bqfsAskedForSuppliesScamChurch,DialogOptionSelected,"$option == bqfs_askForSuppliesScam
 $faction.id == luddic_church","$option = bqfs_askForSuppliesScamOut 0
 FireBest DialogOptionSelected","""我虽行路德之道，但是光靠 信 来评估每个宇宙民的话语是无法担当 $post 一职的。我希望为教会服务的舰长永远不会试图把丢货骗局用在我头上，但是你就在此。""
 
-$HeOrShe叹了口气，摇了摇头。 ""我给你的雇佣 ID 作了一星历年记录，请你反思并祷告以求宽恕。现在请你将你罪恶的脸孔移出我的通讯频道。""",,
+$HeOrShe叹了口气，摇了摇头。""我给你的雇佣 ID 作了一星历年记录，请你反思并祷告以求宽恕。现在请你将你罪恶的脸孔移出我的通讯频道。""",,
 bqfsAskedForSuppliesScamLeague,DialogOptionSelected,"$option == bqfs_askForSuppliesScam
 $faction.id == persean","$option = bqfs_askForSuppliesScamOut 0
 FireBest DialogOptionSelected","""舰长，我可不是什么关系户。我是从 Laicaille 到 Salamanca 一路干上来的，而我这个 $post 职位可不是靠傻气当上的。我只是没想到 联盟 的舰长会玩走私犯常用的丢货把戏。""
 
-$HeOrShe叹了口气，摇了摇头。 ""我给你的雇佣 ID 作了一星历年记录。现在滚出我的通讯频道。""",,
+$HeOrShe叹了口气，摇了摇头。""我给你的雇佣 ID 作了一星历年记录。现在滚出我的通讯频道。""",,
 bqfsAskedForSuppliesScamSD,DialogOptionSelected,"$option == bqfs_askForSuppliesScam
 $faction.id == sindrian_diktat","$option = bqfs_askForSuppliesScamOut 0
 FireBest DialogOptionSelected","""不了解恐怖分子和走私犯的小把戏可当不上 $post 的职位。我本以为你宣誓效忠 辛达强权 了就不会傻到玩丢货把戏。群星在上，你这会让我俩都被发配到 Cruor！""
 
-$HeOrShe叹了口气，摇了摇头。 ""我给你的雇佣 ID 作了一星历年记录。你最好祈祷 蜘蛛 不会关注此事，现在滚出我的通讯频道。""",,
+$HeOrShe叹了口气，摇了摇头。""我给你的雇佣 ID 作了一星历年记录。你最好祈祷 蜘蛛 不会关注此事，现在滚出我的通讯频道。""",,
 bqfsAskedForSuppliesScamOut,DialogOptionSelected,$option == bqfs_askForSuppliesScamOut,"AdjustRepActivePerson -2
 $faction.playerReceivedCommissionResupply = true 365
 $faction.playerReceivedCommissionResupplyOn = $global.daysSinceStart

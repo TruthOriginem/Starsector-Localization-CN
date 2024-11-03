@@ -2949,7 +2949,7 @@
   {
     "key": "hull_mods.csv#auxiliarythrusters$sModDesc",
     "original": "Increases the 0-flux speed boost by %s, and %s the 0-flux turn rate bonus.",
-    "translation": "提高 \"零幅能加速\" 状态下的航速增益 %s 与旋转速度增益 %s",
+    "translation": "提高 \"零幅能加速\" 状态下的航速增益 %s 且将旋转速度增益 %s 。",
     "stage": 5,
     "context": "版本：0.97-RC11 2024-11-01 04:01\nhull_mods.csv第0008行\n[本行原始数据]\n{'name': 'Auxiliary Thrusters',\n 'id': 'auxiliarythrusters',\n 'tier': '1',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'engines, merc, standard',\n 'uiTags': 'Engines',\n 'base value': '5000',\n 'unlocked': 'TRUE',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '4',\n 'cost_dest': '8',\n 'cost_cruiser': '12',\n 'cost_capital': '20',\n 'script': 'data.hullmods.AuxiliaryThrusters',\n 'desc': \"Increases the ship's maneuverability by %s.\",\n 'short': 'Increases maneuverability.',\n 'sModDesc': 'Increases the 0-flux speed boost by %s, and %s the 0-flux turn '\n             'rate bonus.',\n 'sprite': 'graphics/hullmods/auxilliary_thrusters.png'}"
   },
