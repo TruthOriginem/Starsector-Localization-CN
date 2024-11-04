@@ -382,9 +382,9 @@ GS_OPIS_cont2Sel,DialogOptionSelected,$option == GS_OPIS_cont2,,"船舱内唯一
 在战斗指挥中心后面，武装计算机中心中，有一个速子科技制造的 AI 核心接口。它就那么静静地裸露着，像一个随处可见的商用硬件装置。这表明这艘船的历史可以追溯到更早的人工智能战争之前。
 
 然而，核心不在接口中。也许是在舰船被遗弃时被人拿走了。",GS_OPIS_cont3:继续,
-GS_OPIS_cont3Sel,DialogOptionSelected,$option == GS_OPIS_cont3,$salvageLeaveText = Leave 0,"为了找出有关发生了什么和为什么发生的线索，你的技术专家监督了一次读取记录的尝试。但记忆库已经被一个不停重复直到备用电源耗尽的擦除程序清理干净了。
+GS_OPIS_cont3Sel,DialogOptionSelected,$option == GS_OPIS_cont3,$salvageLeaveText = Leave 0,"在你的技术专家监督下，船员们尝试读取日志，试图寻找能够说明发生了什么问题，为什么发生问题的蛛丝马迹 —— 但舰上有个擦除程序一直在循环擦除，一直工作到备用电源都耗尽了，彻底清空了舰上所有存储体。
 
-一次全面的考古式的调查可能会揭示答案，但是你不论是时间还是装备都不足以这样挥霍。","salExplore:评估舰船的打捞价值
+或许进行考古式的全面调查能够查出真相，但你的时间和装备都顶不住这么浪费。","salExplore:评估舰船的打捞价值
 defaultLeave:离开",
 ,,,,,,
 "Abyssal ghost ships, ""Pirates"" variation",,,,,,

@@ -2123,6 +2123,7 @@
         ", which could be exported if ",
         ".",
         ". ",
+        "A market chooses a single source to get its supply of a commodity. Should that source go away or become less desirable, the next best source will be used. In order of importance, a market will prefer a supplier that:\n\n- can satisfy more of the demand\n- is local to the market\n- has higher accessibility from the market\n",
         "Accessibility",
         "Alternate suppliers",
         "Competing exporters",
@@ -2136,6 +2137,7 @@
         "Market name or \"local production\"; \"current\" after the name indicates that it's the current supplier.",
         "Market name; \"current\" after the name indicates that ",
         "Market size.",
+        "Monthly income from this export. Current exports in yellow, potential exports in dim yellow. Potential smuggling profits shown in red when market is not a free port.\n\nExports to markets of the same faction do not generate income.",
         "No income - not an export.",
         "No potential exports where ",
         "No potential profitable exports where ",
@@ -2172,6 +2174,13 @@
         "units",
         "units are"
       ]
+    },
+    {
+      "path": "com/fs/starfarer/campaign/ui/marketinfo/CommodityDetailDialog$1.class",
+      "include_strings": [
+        "Hide potential export destinations that would not produce any income.\n\nThis generally means same-faction exports and smuggling."
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/campaign/ui/marketinfo/CommodityDetailDialog$2.class",
@@ -2357,6 +2366,8 @@
         "Available fuel space",
         "Cancel",
         "Danger",
+        "Danger level your marines will face to achieve this objective. Higher danger level increases casualties.\n\nCasualties are also affected by other factors; hover over the \"Projected marine casualties\" for details.",
+        "Danger level your marines will face to achieve this objective. Higher danger level increases casualties.\n\nCertain commodities and items are inherently more dangerous to acquire.\n\nA commodity shortage makes an operation more dangerous, while excess stockpiles are more easily accessible and decrease the risks faced by your marines. In addition, a commodity that's locally produced - rather than imported - is less dangerous to acquire.\n\nCasualties are also affected by other factors; hover over the \"Projected marine casualties\" for details.",
         "Disrupted?",
         "Disruption days",
         "How many additional days the target will be disrupted for, given the number of marine units currently assigned. Already-disrupted targets suffer less disruption from continued raids.",
@@ -2371,6 +2382,7 @@
         "Raid effectiveness",
         "Reset",
         "Shows the impact of achieving this objective with the assigned number of marine units. Generally shows the temporary deficit that will be caused by raiding a specific commodity.",
+        "Source of the item or commodity, usually an industry or structure at the colony.\n\nSome sources increase the danger level of the operation, for example raiding a military base for supplies is more dangerous than getting the same supplies from a spaceport.",
         "Value"
       ]
     },
@@ -2473,7 +2485,9 @@
     {
       "path": "com/fs/starfarer/campaign/ui/marketinfo/IndustryPickerDialog.class",
       "include_strings": [
+        "Actual upkeep cost, in credits per month, after taking into account the planet's hazard rating.\n\nThe upkeep cost will go up as the market gets larger.",
         "Base upkeep",
+        "Base upkeep cost, in credits per month, without taking into account the planet's hazard rating.\n\nThe upkeep cost will go up as the market gets larger.",
         "Build",
         "Build time",
         "Build time, in days. Until the industry or structure finishes construction, it will not provide any of its benefits, but any demand for commodities starts immediately.",
@@ -2770,7 +2784,9 @@
     {
       "path": "com/fs/starfarer/campaign/ui/marketinfo/ShippingPanel$1.class",
       "include_strings": [
+        " (",
         " available)",
+        "Determines whether the commodity stockpiles in Local Resources can be used to counter shortages.\n\nResources that have been dropped off at the colony do not incur a cost when used to counter shortages, while resources stockpiled locally incur a cost equal to a fraction of their base value.",
         "Required each month to counter shortages",
         "Stockpile Use",
         "There are currently no shortages to counter.",
@@ -2932,6 +2948,7 @@
         " market share",
         " with excess stockpiles",
         ". ",
+        "A colony's accessibility. The number in parentheses is the maximum out-of-faction shipping capacity, which limits how many units the colony can import, and how much its demand contributes to the global market value.\n\nIn-faction accessibility and shipping capacity are higher.",
         "Access",
         "Colony",
         "Colony name.",
@@ -2942,11 +2959,13 @@
         "Faction",
         "Faction that controls this colony.",
         "Global market value",
+        "How much income the colony is getting from exporting its production of the commodity. A lack of income means that the export activity is underground, most likely due to the commodity being illegal.\n\nIncome also depends on colony stability, so may not directly correlate with market share.",
         "How much the colony's demand contributes to the global market value for the commodity.",
         "Income",
         "Max ",
         "Max global export",
         "Maximum number of units capable of being exported by a single producer under ",
+        "Maximum number of units capable of being exported by a single producer. Imports can increase the number of units available up to this number. \n\nFor example, if a colony needs 5 units of a commodity, but the maximum export is 4, then that colony will only have 4 units, and a \"global shortage\" of 1.",
         "Mkt percent",
         "Mkt share",
         "More expensive commodities often have lower profit margins due to the high costs ",
@@ -2958,10 +2977,13 @@
         "Producers",
         "Quantity",
         "Size",
+        "The portion of the global market value that this colony contributes.\n\nIncludes player-controlled colonies, whoses market value does not contribue to the global market value the player can gain export income from.",
         "The value shown here does not include the demand at your colonies, ",
         "Total export market share for ",
         "Total profit that can be made fulfilling the demand for ",
         "Value",
+        "What percentage of the global market value the colony receives as income from its exports of the commodity.\n\nThe market share is affected by the number of units produced and the colony's accessibility.",
+        "Will be distributed among all exporters based on their market share.\n\n",
         "colony controlled by ",
         "is higher given the colony's accessibility-based shipping limits.",
         "since there is no profit to be made there.",
@@ -3526,11 +3548,14 @@
         "End Simulation",
         "Exit Campaign",
         "Exit Game",
+        "Exit the game?\n\nYour current progress will not be saved.",
         "Exit the simulation?",
         "Finish the battle as a victory? (dev-mode-only)",
+        "Go back to the main menu?\n\nYour current progress will not be saved.",
         "Ok",
         "Settings",
-        "Surrender and and go back to main menu?"
+        "Surrender and and go back to main menu?",
+        "The enemy is defeated.\n\nLeaving now will allow any remaining ships to retreat unhindered. Proceed?"
       ]
     },
     {
@@ -4245,8 +4270,11 @@
     {
       "path": "com/fs/starfarer/coreui/oOoO.class",
       "include_strings": [
+        " (",
         " credits",
+        ")",
         "Bought %s for %d credits",
+        "Buy for %s credits?\n\n(Space to confirm, Esc to cancel.)",
         "Buying ",
         "Can not put last ship into storage.",
         "Can not scuttle last ship.",
@@ -4255,6 +4283,7 @@
         "Can't transfer command or assign an officer to a fighter wing!",
         "Can't transfer the last ship in your fleet",
         "None",
+        "Sell for %s credits?\n\n(Space to confirm, Esc to cancel.)",
         "Selling ",
         "Sold %s for %d credits",
         "This ship can not be scuttled."
@@ -4492,6 +4521,7 @@
         "Enter new variant name",
         "Export Current ",
         "No",
+        "This will permanently delete the variant you've just selected.\n\nAre you sure?",
         "Yes"
       ]
     },
@@ -4662,6 +4692,7 @@
     {
       "path": "com/fs/starfarer/coreui/refit/S.class",
       "include_strings": [
+        "\n\nNote that the hull will not be affected beyond d-mod removal and will not be converted to the base hull for this ship type.",
         " available.",
         ". You have ",
         ". You only have ",
@@ -4671,6 +4702,8 @@
         "Core variant",
         "Enemy max skills",
         "Next w/ free OP",
+        "Player max skills",
+        "Restoration is more expensive than buying a new hull, and is usually reserved only for the rarest ships.\n\nRestoring this ship will remove all d-mods from it at the cost of ",
         "Restore",
         "Restore...",
         "Run simulation",
@@ -4910,6 +4943,7 @@
       "path": "com/fs/starfarer/coreui/refit/return.class",
       "include_strings": [
         "No",
+        "There are unsaved changes that will be lost if you navigate away.\n\nAre you sure?",
         "Yes"
       ]
     },
@@ -5637,6 +5671,7 @@
     {
       "path": "com/fs/starfarer/title/TitleScreenState.class",
       "include_strings": [
+        "Congratulations!\n\nNew high score of %d%% for '%s'!\n\nPrevious high score was %d%%.",
         "Exit game?",
         "Key configuration options have changed since the previous version. To avoid problems, key bindings have been reset to their new defaults.",
         "No",
@@ -6017,19 +6052,23 @@
     {
       "path": "com/fs/starfarer/tutorial/combat/B.class",
       "include_strings": [
+        "Notice that the enemy ship is now overloaded - it can't fire or use shields until it recovers.\n\nYou can avoid overload by lowering your shields before the enemy punches through them.\n\nNow, press 1 to switch back to your Assault Chainguns and destroy the enemy ship!",
         "Press 1 to switch to the Assault Chainguns and destroy the enemy ship.",
-        "Press 2 to switch to the Sabot missiles and keep firing until the enemy shields are down."
+        "Press 2 to switch to the Sabot missiles and keep firing until the enemy shields are down.",
+        "This next ship is using shields to defend itself.\n\nPress 2 to switch to the 'Sabot' missile group - these do KINETIC damage, which is excellent against shields, but poor against armor - and launch a few."
       ]
     },
     {
       "path": "com/fs/starfarer/tutorial/combat/C.class",
       "include_strings": [
+        "Excellent! Time for some live-fire training exercises.\n\nThis next frigate will fight back - use what you've learned to defeat it. Its engines are crippled, so don't worry about it running away.\n\nPress the right mouse button to turn your shields on and off - you might need them!",
         "Great work!"
       ]
     },
     {
       "path": "com/fs/starfarer/tutorial/combat/E.class",
       "include_strings": [
+        "Congratulations, you've completed the Starfarer combat tutorial.\n\nIt's time to go use your newfound skills in some missions - do them in order to get the hang of it, the first few are easier.\n\nAlso, remember that you can bring up the fleet command interface with the TAB key - it'll be covered fully in another tutorial.",
         "Here are some asteroids for company, and target practice.",
         "Tip: holding SHIFT while pressing A or D will make your ship strafe. Your ship will auto-turn towards the mouse while strafing.",
         "You have completed the tutorial. Press ESCAPE to go back to the main menu, or fly around a bit if you like."
@@ -6039,13 +6078,22 @@
       "path": "com/fs/starfarer/tutorial/combat/F.class",
       "include_strings": [
         "Good.",
-        "Press V to vent flux from your ship."
+        "Press V to vent flux from your ship.",
+        "You may have noticed that using weapons and absorbing damage with shields builds up flux.\n\nWhen flux reaches maximum, you risk overload and can't fire your weapons, but if you wait, it will slowly dissipate.\n\nThere's a faster way - press V to vent all flux from the ship. You won't be able to fire or use shields while it's venting, but it's much faster than waiting for it to dissipate naturally.\n\nPress V after dismissing this dialog to see how it works."
       ]
+    },
+    {
+      "path": "com/fs/starfarer/tutorial/combat/G.class",
+      "include_strings": [
+        "We're about done with damage types and combat basics.\n\nThere's another damage type - FRAGMENTATION - which is very poor vs both armor and shields, but effective vs hull (after the armor is stripped away) and vs missiles."
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/tutorial/combat/I.class",
       "include_strings": [
-        "Move your ship away from this billboard! Use WASD to pilot."
+        "Move your ship away from this billboard! Use WASD to pilot.",
+        "Welcome to the Starfarer combat tutorial.\n\nYou can pause it at any time by pressing SPACE, or you can press ESCAPE to go back to the main menu.\n\nLet's get started!"
       ]
     },
     {
@@ -6066,6 +6114,8 @@
     {
       "path": "com/fs/starfarer/tutorial/combat/oOOO.class",
       "include_strings": [
+        "Good work.\n\nNav buoys give your ships a speed and maneuverability boost, and other objectives have different benefits.",
+        "Good.\n\nNow, let's go capture an objective. You can see a nav buoy on the directional radar along the top edge of your screen.\n\nMove towards it and capture it!",
         "Hold C to slow down and stop near the buoy."
       ]
     },
@@ -6114,6 +6164,62 @@
         "flameout",
         "soft flux"
       ]
+    },
+    {
+      "path": "com/fs/starfarer/tutorial/super/A.class",
+      "include_strings": [
+        "Congratulations, you've completed the Starfarer fleet command tutorial!\n\n<highlight>Press Escape to go back to the main menu</highlight>, and use your newfound skills in some missions.",
+        "We're almost done.\n\nYou can transfer your command to another ship during the battle. This is particularly useful if your flagship is disabled, or if you just want to start the battle in a faster ship, but then switch over to a heavier one in the later stages.\n\nTo try it, let's transfer command to the Gemini. <highlight>Click on the Gemini and select \"Transfer Command\" from the context menu.</highlight>"
+      ],
+      "exclude_strings": []
+    },
+    {
+      "path": "com/fs/starfarer/tutorial/super/B.class",
+      "include_strings": [
+        "Excellent, your forces are in position! Now, let's order a strike on the unsuspecting enemy cruiser. <highlight>Click on it and select \"Strike\" from the context menu.</highlight>\n\nAfter that's done, you can either watch the bombers carry out their strike (\"Show Video Feed\" from their context menu) or get into the battle yourself.\n\nEither way, make sure the enemy cruiser is destroyed.",
+        "Smart work, the enemy cruiser is disabled!\n\nThe Dagger torpedo bombers are out of ammo, and will return to the nearest carrier (that'd be the Gemini) to refit. The blue arrows on the map indicate their destination.\n\nAfter repairs, the bombers will take off fully rearmed and at full wing strength - keeping a carrier around is critical to getting the most out of your fighter craft."
+      ],
+      "exclude_strings": []
+    },
+    {
+      "path": "com/fs/starfarer/tutorial/super/C.class",
+      "include_strings": [
+        "But what about the interceptors? They're not much use against a cruiser, so let's just get them off the battlefield.\n\n<highlight>Click on the interceptors and select \"Retreat\", under \"Direct Orders\".</highlight>\n\nThis costs a command point, and the order can be rescinded (\"Rescind Orders\" in the context menu).",
+        "Good, the bombers are on their way.\n\nIn the meantime, the interceptors have decided to attack the cruiser on their own, and the Gemini is moving up to do so as well. We don't want that - the Gemini is a freighter/carrier, and no match for a cruiser in direct combat, and neither are the interceptors.\n\n<highlight>Left click behind your lines to make another waypoint, and select \"Rally Carrier Group\" to keep the Gemini there and out of trouble.</highlight>",
+        "Great work. Notice how the sensor array lifts the fog of war in a large radius - and it turns out there's an enemy cruiser lurking nearby!\n\nLet's take a closer look.",
+        "Let's set up to give it a warm welcome. First, organize a strike force midway up the map - a couple of grid squares to the left of the Sensor Array we just captured is good.\n\n<highlight>Left click on the desired spot to create a waypoint, and then select \"Rally Strike Force\" from the context menu.</highlight> The Dagger torpedo bombers, being the only strike craft in your fleet, will go there."
+      ],
+      "exclude_strings": []
+    },
+    {
+      "path": "com/fs/starfarer/tutorial/super/D.class",
+      "include_strings": [
+        "Now that you've got more ships on the field, let's go take another objective. <highlight>There's a Sensor Array nearby - switch back to the map by pressing %s and order its capture. Remember to unpause the game afterwards by pressing %s, as switching to the map automatically pauses it.</highlight>\n\nNote that as Fleet Commander, you're giving the assignment to your whole fleet and not to a specific ship. Your subordinates will work out the details of which ships get which assignments."
+      ],
+      "exclude_strings": []
+    },
+    {
+      "path": "com/fs/starfarer/tutorial/super/o0OO.class",
+      "include_strings": [
+        "Well done! Now you've got more fleet points to play with (and an extra couple of command points from that Comm Relay, too), and it's time to deploy the rest of your fleet.\n\n<highlight>Go back to the map by pressing %s and click the \"Reinforcements\" button in the upper right corner of the screen, then deploy all of the remaining ships.</highlight>",
+        "Your flagship will enter the battlefield shortly. You can pilot it directly when the map is closed and give orders to other ships in your fleet when the map is open (remember, press %s to toggle the map).\n\nYou can also toggle the autopilot by pressing %s. It's useful when you want your flagship to fight while you're looking at the map, but do not want to pause the game.\n\n<highlight>Now, turn off the map and fly around for a bit. Remember to press %s to unpause, if needed.</highlight>"
+      ],
+      "exclude_strings": []
+    },
+    {
+      "path": "com/fs/starfarer/tutorial/super/return.class",
+      "include_strings": [
+        "Good! You'll need additional fleet points to deploy the rest of your fleet, and you can get them by capturing objectives.\n\n<highlight>There's a Comm Relay nearby - these give more fleet points than other objectives. Order its capture by clicking on the objective and then selecting \"Capture\" from the context menu.</highlight>\n\nCreating an assignment costs a command point, and you can't give any more orders once command points run out.",
+        "You can press %s to open and close the map, and %s to pause and unpause. To pan your view, right-click on an empty spot on the map and drag.\n\nYou can also see what your ships are doing by clicking on them and then selecting \"Show Video Feed\" from the context menu.\n\n<highlight>With the map open, select your interceptor wing and click \"Show Video Feed\" to follow along as it captures the Comm Relay.</highlight>"
+      ],
+      "exclude_strings": []
+    },
+    {
+      "path": "com/fs/starfarer/tutorial/super/void.class",
+      "include_strings": [
+        "Welcome to the fleet command tutorial.\n\nAt the start of a battle, you will want to deploy some of your ships. To do so, click on ship icons to mark them for deployment and then press the \"Deploy\" button.\n\nDeploying ships requires fleet points. Right now, you only have a few points, so go ahead and <highlight>deploy just the Wasp interceptor wing after dismissing this dialog.</highlight>"
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/ui/d.class",
@@ -7066,6 +7172,7 @@
         " ships exceeded, supply consumption will be increased and burn level reduced",
         ", ",
         "All",
+        "Available supplies, and projected supply cost to repair all recovered ships along with ships in your fleets that already need repairs or combat readiness recovery.\n\nInexact due to uncertain condition of recovered ships. Supplies will be consumed gradually as ships undergo repairs and recovery.",
         "Bonus experience",
         "Cancel",
         "Difficult recovery",
@@ -7324,6 +7431,9 @@
     {
       "path": "com/fs/starfarer/api/campaign/PersonImportance.class",
       "include_strings": [
+        "High",
+        "Low",
+        "Medium",
         "Very High",
         "Very Low"
       ]
@@ -8655,6 +8765,7 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/econ/SolarArray.class",
       "include_strings": [
+        ".\n\nIncreases food production by %s (Farming).",
         "Counters the effects of "
       ]
     },
@@ -9174,6 +9285,7 @@
         "RIGHT",
         "SPACE",
         "UP",
+        "Your health is in the top left of the screen.\n\nMake a few practice moves, then press ESCAPE to continue.",
         "skilled fighter"
       ]
     },
@@ -10022,6 +10134,7 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/intel/bar/events/DeliveryBarEvent.class",
       "include_strings": [
+        "\n\nYou recall that ",
         " TriPad.",
         " Your fleet's fuel tanks can hold an additional %s units of fuel.",
         " Your fleet's holds can accommodate an additional %s units of cargo.",
@@ -10040,6 +10153,7 @@
         " to ",
         " to %s",
         " uniform ",
+        " wastes no time in getting to the point.\n\n",
         "\"I've got %s units of ",
         "\"Oh, it's you, ",
         "\"The customer will pay %s upon delivery within %s days. Can you take this on?\"",
@@ -10134,12 +10248,16 @@
         " turns to ",
         "\"What do you say, will you help maintain a little law and order?\"",
         "\"Why, just today an amazing opportunity fell into my lap. And yours as well, how wonderful!\" ",
+        "'disloyal elements'.\n\n",
         "A grinning security officer is gesturing excitedly to a nearby patron.",
         "Accept the offer and transfer ",
         "But they insist on carrying on, and on... not that I mind the perks of the job, of course.\"",
         "Decline the offer apologetically, citing a terrible shellfish allergy",
         "Sidle up to the security officer and see what they're so pleased about",
+        "What this amounts to, you are told, is that the District 4 Gendarmerie's evidence locker - and maintenance bay, and several interrogation rooms - are filled with cases of cyro-stabilized Volturnian Lobster, nearly %s units in all. The officers eat like royalty, yes, but there's only so much one can take and the coolant cells won't last another week without replacement, so.\n\n",
         "You are told the story of tiresome property seizures from ",
+        "and the entire cargo can be transferred to your holds without the bother of tariffs.\n\n",
+        "several patrons.\n\n",
         "to encompass the scale of your shared luck, somehow managing not to spill the drinks of ",
         "you. %s will satisfy the district commandant as well as your new friend here, "
       ]
@@ -10150,6 +10268,7 @@
         " a drink and strike up a conversation. ",
         " explains that the commercial bureaucracy of ",
         " explains that there are %s units of domestic goods gathering dust ",
+        " is understaffed and overworked. \"Ludd forgive me, but bills aren't paid by prayer.\"\n\n",
         " to the guild",
         " turns out to be one of the masters of a local craft guild ",
         " whose worn but well-tailored work suit bears the ",
@@ -10245,6 +10364,7 @@
         "Decline the proposal, but stay for an \"Orbital Bombardment\" to soften the blow",
         "Join the table of tattooed roughs and see if their contract is up",
         "Some clever device provided by the mercs convinces the automated scanners that two particular cargo containers are half-filled with mildly radioactive silicate gravel and nothing else. Your logistics officer sneaks them aboard with no problems.",
+        "You prove yourself worth speaking to by partaking in a round of \"Atmo Drops\", a drink based largely on consuming eye-watering liquor as quickly as possible, with the mercenary band. They're drunk for sure, but are composed enough to speak around the precise details of why they're being investigated by local authorities.\n\nAfter a couple of the mercs head up to order a round of \"Orbital Bombardments\", their leader pulls you aside and sketches out a proposal. \"We've got %s suits, we fight in vac or black. I'll give you our contract for %s, and that's giving it away. Put us to work, or sell it off elsewhere, doesn't matter to me if you can get us outta this fix. What'dya say?\"",
         "You wake up the next day in a small room above the bar with no particular memory of how you got there. How many more rounds was it with the mercs, one? Three?"
       ]
     },
@@ -10265,6 +10385,7 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/intel/bar/events/PlanetaryShieldBarEvent.class",
       "include_strings": [
+        "\n\nThen the officers found something new in a data-cache. ",
         " a drink",
         " and the pilot got away in an ",
         " cheer at a good story. \"Ludd's hells, I swear to you it weren't anything human.\"",
@@ -10273,6 +10394,7 @@
         " finally admits.",
         " growls back. Then laughs, and taps ",
         " head, \"Captain, ",
+        " lost eyes.\n\n\"Was just two survivors from that mission, me and the pilot. ",
         " read the manual then leave",
         " rest",
         " says quietly, \"I've seen Gates, sure, and orbital works big as you like. Ain't ",
@@ -10367,6 +10489,7 @@
         "computer fried on rads would do a better job than the idiots in Fleet Supply\" ",
         "for ",
         "sends you a personal thank-you note.",
+        "slamming the glass down.\n\n",
         "transfer you've ever seen, trading your %s ",
         "unit",
         "units"
@@ -10379,6 +10502,7 @@
         " glowing TriPad.",
         " greasy TriPad. \"There’s an enormous stock of ",
         " in academic uniform is bothering some of the ",
+        " pitch through to the end.\n\n",
         " proposal and walk away",
         " story. ",
         " turns out to be a scientist, maybe a \"scientist\", ",
@@ -10518,7 +10642,8 @@
         "and statistical trends regarding your career in the Persean Sector you make a mental ",
         "information security. \"So,\" ",
         "note to have a discussion with your senior officers on the subject of ",
-        "what you could accomplish with a short-term capital infusion of let us say %s. "
+        "what you could accomplish with a short-term capital infusion of let us say %s. ",
+        "within %s days.\n\n"
       ]
     },
     {
@@ -10578,15 +10703,18 @@
         " the information and get up to leave.",
         " wants",
         " with the paper book and see what ",
+        "!\"",
         "\"And you have the means.\"",
         "\"Do you have anything for me now?\"",
         "\"However, if you did find my information valuable, I would gladly accept... donations. Think of it as patronage to fuel my research, which in turn could produce valuable leads. Or it might help to think of it as an investment, but with no obligations incurred by either party. Consider it- you could enrich your own enterprises while contributing to the sum of human knowledge!\"",
+        "\"I am what you might call a historian-adventurer; a rogue archaelogist uncovering the history of the Sector despite the danger of this exceptional era. In the course of my studies I often chance upon hints about where certain pieces of technology might be found. Retrieving those artifacts is, naturally, your role in our arrangement. ... Only if you're interested, of course - but I've done my research on your exploits and I'm sure that you will be interested.\"\n\nSpeech complete, ",
         "\"I expect you'll be wanting to get paid for this information?\"",
         "\"I understand why you would assume that; this is a mercenary age. But no, nothing quite so transactional. History is an uncertain trade, and such an approach would lead to expectations, disappointment, and recrimination. All of which I'm eager to avoid, especially the last.\" An additional wrinkle forms on ",
         "\"See you again soon, somewhere!\" ",
         "\"So good to see you again, ",
         "\"Thank you! This is fascinating and not at all alarming. Now, what do you have for me?\"",
         "\"Welcome! I've got something here that I think you'll find very interesting. Your actions over the past several cycles have caused quite a stir in certain corners, and I took it upon myself to look into your history, as it were. Here, let me transfer the synopsis.\"",
+        "\"Welcome, welcome, please sit! I'm sure you're wondering why I called you over.\"\n\n",
         "'s face for just a moment before ",
         ".",
         "... something interesting, but not of immediate import",
@@ -10976,6 +11104,24 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/BaseEventIntel$1.class",
+      "include_strings": [
+        "Event progress is influenced by various factors. Some of these apply over time, and some only apply once. As the event progresses, different stages and outcomes may unfold.",
+        "Event progress: %s out of %s points.",
+        "Projected monthly progress: %s points."
+      ],
+      "exclude_strings": []
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/BaseEventIntel$2.class",
+      "include_strings": [
+        "Something might occur when event progress reaches %s points. What that is, if anything, will be determined when event progress reaches %s points.",
+        "This event is not repeatable.",
+        "This event is repeatable."
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/BaseEventIntel$EventStageData.class",
       "include_strings": [
         " is triggered, event progress will be reset to a lower value afterwards.",
@@ -10986,6 +11132,7 @@
         " will be averted if:",
         "Event progress is reduced to %s points or below",
         "If this ",
+        "Requires %s points of event progress.",
         "This "
       ]
     },
@@ -11176,9 +11323,11 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class",
       "include_strings": [
+        " colonies",
         "A crisis is virtually inevitable at some point, and hostile fleets continually probe your defenses, but where there is danger, there is often opportunity.",
         "Colony Crises",
         "Colony threats",
+        "Danger",
         "Danger level of the stronger fleets likely to be found in the system. Approximate, there may be exceptions. Does not include hostile fleets that may be present there for other reasons.",
         "Extreme",
         "High",
@@ -11187,8 +11336,26 @@
         "Medium",
         "Minimal",
         "None",
-        "The most dangerous types of threats likely to be found in the system. Not comprehensive, and does not include hostile fleets that may be present there for other reasons."
+        "Primary threats",
+        "Star system",
+        "Star system with hostile activity, and the name (or number) of your colonies found there.\n\nUp to four of the hardest-hit systems are listed here.",
+        "The most dangerous types of threats likely to be found in the system. Not comprehensive, and does not include hostile fleets that may be present there for other reasons.",
+        "Unknown"
       ]
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/HAShipsDestroyedFactor.class",
+      "include_strings": [
+        "Hostile ships destroyed"
+      ],
+      "exclude_strings": []
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/HAShipsDestroyedFactor$1.class",
+      "include_strings": [
+        "Hostile ships destroyed by your fleet in or near one of the star systems with your colonies."
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel$2.class",
@@ -11312,7 +11479,11 @@
         ":\t",
         "If the raid is defeated, your colonies will gain increased accessibility for several cycles.",
         "If the raid is defeated, your colonies will permanently gain increased accessibility.",
+        "Pirate activity",
         "Pirate raid",
+        "Pirate raid averted",
+        "Pirates",
+        "Rumors of pirate raid",
         "There are rumors that a pirate raid targeting your colonies may be organized in the near future. If the raid is successful, the targeted colonies will suffer from reduced stability.",
         "increased accessibility",
         "reduced stability"
@@ -11429,9 +11600,20 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/StandardPirateActivityCause2.class",
+      "include_strings": [
+        "Colony presence and instability"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/StandardPirateActivityCause2$1.class",
       "include_strings": [
-        "Event progress value is based on the size and stability of the largest colony under your control. If multiple colonies have the same size, the one with higher stability is used."
+        "Any colony, especially one outside the core, attracts some degree of piracy. %s and %s colonies attract more pirates.",
+        "Biggest colony: %s, size: %s, stability: %s",
+        "Event progress value is based on the size and stability of the largest colony under your control. If multiple colonies have the same size, the one with higher stability is used.",
+        "Larger",
+        "less stable"
       ]
     },
     {
@@ -13890,6 +14072,7 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD.class",
       "include_strings": [
+        "\n\nRequires transponder to be turned off",
         " and its defenders",
         " bombardment",
         " destroyed.",
@@ -16560,6 +16743,7 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/tutorial/TutorialMissionIntel.class",
       "include_strings": [
+        "\n\nAlso: you'll need to re-dock with your transponder turned on to take advantage of Ancyra's facilities.",
         " and retrieve data",
         " as soon as possible.",
         " at Ancyra",
@@ -16577,6 +16761,7 @@
         "Active Sensor Burst",
         "Analyzing the jump-point data requires an AI Core.",
         "Approach the probe and salvage it to recover the gamma core.",
+        "Bring extra crew to man the recovered ships, and extra supplies to  help restore their combat readiness.",
         "Completed",
         "Contact ",
         "Contact must be made with the transponder off as the miners of Derinkuyu have turned pirate and your fleet will be attacked otherwise.",

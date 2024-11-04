@@ -126,6 +126,27 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/campaign/FleetAssignment.class 的第0075个常量\n原始数据：\"Travelling\"\n译文数据：\"航行中\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/campaign/PersonImportance.class#\"High\"",
+        "original": "High",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/campaign/PersonImportance.class 的第0044个常量\n原始数据：\"High\"\n译文数据：\"High\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/campaign/PersonImportance.class#\"Low\"",
+        "original": "Low",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/campaign/PersonImportance.class 的第0032个常量\n原始数据：\"Low\"\n译文数据：\"Low\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/campaign/PersonImportance.class#\"Medium\"",
+        "original": "Medium",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/campaign/PersonImportance.class 的第0038个常量\n原始数据：\"Medium\"\n译文数据：\"Medium\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/campaign/PersonImportance.class#\"Very High\"",
         "original": "Very High",
         "translation": "非常高",
@@ -800,16 +821,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/characters/SkillsChangeRemoveExcessOPEffect.class#\"Ships using more than their maximum ordnance points will have vents, capacitors, hullmods, and other equipment removed to bring them under the limit.\"",
         "original": "Ships using more than their maximum ordnance points will have vents, capacitors, hullmods, and other equipment removed to bring them under the limit.",
-        "translation": "所有 装配点 超出上限的舰船将会移除 幅能寄存器、耗散通道、船插以及武器，从而使其处于限制之下。",
+        "translation": "所有 装配点 超出上限的舰船将会移除 幅能寄存器、耗散通道、舰船插件以及武器，直至其处于限制之下。",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/characters/SkillsChangeRemoveExcessOPEffect.class 的第0187个常量\n原始数据：\"Ships using more than their maximum ordnance points will have vents, capacitors, hullmods, and other equipment removed to bring them under the limit.\"\n译文数据：\"所有 装配点 超出上限的舰船将会移除 幅能寄存器、耗散通道、船插以及武器，从而使其处于限制之下。\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/characters/SkillsChangeRemoveExcessOPEffect.class 的第0187个常量\n原始数据：\"Ships using more than their maximum ordnance points will have vents, capacitors, hullmods, and other equipment removed to bring them under the limit.\"\n译文数据：\"所有 装配点 超出上限的舰船将会移除 幅能寄存器、耗散通道、舰船插件以及武器，直至其处于限制之下。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/characters/SkillsChangeRemoveExcessOPEffect.class#\"vents, capacitors, hullmods, and other equipment removed\"",
         "original": "vents, capacitors, hullmods, and other equipment removed",
-        "translation": "幅能寄存器、耗散通道、船插以及武器，从而使其处于限制之下",
+        "translation": "幅能寄存器、耗散通道、舰船插件以及武器，直至其处于限制之下",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/characters/SkillsChangeRemoveExcessOPEffect.class 的第0198个常量\n原始数据：\"vents, capacitors, hullmods, and other equipment removed\"\n译文数据：\"幅能寄存器、耗散通道、船插以及武器，从而使其处于限制之下\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/characters/SkillsChangeRemoveExcessOPEffect.class 的第0198个常量\n原始数据：\"vents, capacitors, hullmods, and other equipment removed\"\n译文数据：\"幅能寄存器、耗散通道、舰船插件以及武器，直至其处于限制之下\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/characters/SkillsChangeRemoveSmodsEffect.class#\" OP)\"",
@@ -1983,9 +2004,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class#\"Aggressive\"",
         "original": "Aggressive",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class 的第0080个常量\n原始数据：\"Aggressive\"\n译文数据：\"Aggressive\"\n\n"
+        "translation": "激进",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class 的第0080个常量\n原始数据：\"Aggressive\"\n译文数据：\"激进\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class#\"Cautious\"",
@@ -1997,9 +2018,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class#\"Reckless\"",
         "original": "Reckless",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class 的第0084个常量\n原始数据：\"Reckless\"\n译文数据：\"Reckless\"\n\n"
+        "translation": "鲁莽",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class 的第0084个常量\n原始数据：\"Reckless\"\n译文数据：\"鲁莽\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class#\"Steady\"",
@@ -4946,7 +4967,7 @@
         "original": " c",
         "translation": "",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/ToggleAbilityWithCost.class 的第0297个常量\n原始数据：\" c\"\n译文数据：\" c\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/ToggleAbilityWithCost.class 的第0297个常量\n原始数据：\" c\"\n译文数据：\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/ToggleAbilityWithCost.class#\" of all ships, costing up to %s supplies to recover.\"",
@@ -4960,7 +4981,7 @@
         "original": " r",
         "translation": "",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/ToggleAbilityWithCost.class 的第0315个常量\n原始数据：\" r\"\n译文数据：\" r\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/ToggleAbilityWithCost.class 的第0315个常量\n原始数据：\" r\"\n译文数据：\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/ToggleAbilityWithCost.class#\" suffers damage from \"",
@@ -4981,7 +5002,7 @@
         "original": "C",
         "translation": "",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/ToggleAbilityWithCost.class 的第0295个常量\n原始数据：\"C\"\n译文数据：\"C\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/ToggleAbilityWithCost.class 的第0295个常量\n原始数据：\"C\"\n译文数据：\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/ToggleAbilityWithCost.class#\"Not enough fuel.\"",
@@ -4995,7 +5016,7 @@
         "original": "R",
         "translation": "",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/ToggleAbilityWithCost.class 的第0313个常量\n原始数据：\"R\"\n译文数据：\"R\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/ToggleAbilityWithCost.class 的第0313个常量\n原始数据：\"R\"\n译文数据：\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/ToggleAbilityWithCost.class#\"Some ships don't have enough combat readiness and may suffer damage if the ability is activated:\"",
@@ -5717,6 +5738,13 @@
         "translation": "导致流通性暂时降低 %s.",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/ShippingDisruption.class 的第0325个常量\n原始数据：\"resulting in a temporary accessibility penalty of %s.\"\n译文数据：\"导致流通性暂时降低 %s.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/SolarArray.class#\".\n\nIncreases food production by %s (Farming).\"",
+        "original": ".\n\nIncreases food production by %s (Farming).",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/SolarArray.class 的第0152个常量\n原始数据：\".\n\nIncreases food production by %s (Farming).\"\n译文数据：\".\n\nIncreases food production by %s (Farming).\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/SolarArray.class#\"Counters the effects of \"",
@@ -7847,6 +7875,13 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/eventide/DuelTutorialPanel.class 的第0137个常量\n原始数据：\"UP\"\n译文数据：\"上方向键\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/eventide/DuelTutorialPanel.class#\"Your health is in the top left of the screen.\n\nMake a few practice moves, then press ESCAPE to continue.\"",
+        "original": "Your health is in the top left of the screen.\n\nMake a few practice moves, then press ESCAPE to continue.",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/eventide/DuelTutorialPanel.class 的第0156个常量\n原始数据：\"Your health is in the top left of the screen.\n\nMake a few practice moves, then press ESCAPE to continue.\"\n译文数据：\"Your health is in the top left of the screen.\n\nMake a few practice moves, then press ESCAPE to continue.\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/eventide/DuelTutorialPanel.class#\"skilled fighter\"",
         "original": "skilled fighter",
         "translation": "熟练的战士",
@@ -9130,9 +9165,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/graid/ShipWeaponsGroundRaidObjectivePluginImpl.class#\"Ship weapons, fighter LPCs, and hullmod specs. Availability is based on the \"\"",
         "original": "Ship weapons, fighter LPCs, and hullmod specs. Availability is based on the \"",
-        "translation": "舰船、武器、战机 LPC 以及船插的质量取决于 \"",
+        "translation": "舰船、武器、战机 LPC 以及舰船插件的质量取决于 \"",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/graid/ShipWeaponsGroundRaidObjectivePluginImpl.class 的第0563个常量\n原始数据：\"Ship weapons, fighter LPCs, and hullmod specs. Availability is based on the \"\"\n译文数据：\"舰船、武器、战机 LPC 以及船插的质量取决于 \"\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/graid/ShipWeaponsGroundRaidObjectivePluginImpl.class 的第0563个常量\n原始数据：\"Ship weapons, fighter LPCs, and hullmod specs. Availability is based on the \"\"\n译文数据：\"舰船、武器、战机 LPC 以及舰船插件的质量取决于 \"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/graid/ShipWeaponsGroundRaidObjectivePluginImpl.class#\"This colony does not have heavy industry or a military presence and has no access to high-tier ship equipment.\"",
@@ -11732,6 +11767,13 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DeliveryBarEvent$1.class 的第0088个常量\n原始数据：\"You're able to negotiate the delivery fee from %s up to %s.\"\n译文数据：\"你可以尝试将 %s 运费加价至 %s.\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DeliveryBarEvent.class#\"\n\nYou recall that \"",
+        "original": "\n\nYou recall that ",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DeliveryBarEvent.class 的第0671个常量\n原始数据：\"\n\nYou recall that \"\n译文数据：\"\n\nYou recall that \"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DeliveryBarEvent.class#\" TriPad.\"",
         "original": " TriPad.",
         "translation": "的 TriPad.",
@@ -11856,6 +11898,13 @@
         "translation": " 徽章) ",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DeliveryBarEvent.class 的第0582个常量\n原始数据：\" uniform \"\n译文数据：\" 徽章) \"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DeliveryBarEvent.class#\" wastes no time in getting to the point.\n\n\"",
+        "original": " wastes no time in getting to the point.\n\n",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DeliveryBarEvent.class 的第0657个常量\n原始数据：\" wastes no time in getting to the point.\n\n\"\n译文数据：\" wastes no time in getting to the point.\n\n\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DeliveryBarEvent.class#\"\"I've got %s units of \"",
@@ -12369,6 +12418,13 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DiktatLobsterBarEvent.class 的第0126个常量\n原始数据：\"\"Why, just today an amazing opportunity fell into my lap. And yours as well, how wonderful!\" \"\n译文数据：\"\"那啥？今天有个千载难逢的好机会落在了我的头上。而且你也有份，好得很！\" \"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DiktatLobsterBarEvent.class#\"'disloyal elements'.\n\n\"",
+        "original": "'disloyal elements'.\n\n",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DiktatLobsterBarEvent.class 的第0144个常量\n原始数据：\"'disloyal elements'.\n\n\"\n译文数据：\"'disloyal elements'.\n\n\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DiktatLobsterBarEvent.class#\"A grinning security officer is gesturing excitedly to a nearby patron.\"",
         "original": "A grinning security officer is gesturing excitedly to a nearby patron.",
         "translation": "一名满脸喜色的安全部军官正兴奋地向旁边的酒客比划着什么。",
@@ -12404,11 +12460,32 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DiktatLobsterBarEvent.class 的第0112个常量\n原始数据：\"Sidle up to the security officer and see what they're so pleased about\"\n译文数据：\"不动声色地靠近这名安全部军官，看看他们在高兴什么\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DiktatLobsterBarEvent.class#\"What this amounts to, you are told, is that the District 4 Gendarmerie's evidence locker - and maintenance bay, and severa~\"@08b7f73c",
+        "original": "What this amounts to, you are told, is that the District 4 Gendarmerie's evidence locker - and maintenance bay, and several interrogation rooms - are filled with cases of cyro-stabilized Volturnian Lobster, nearly %s units in all. The officers eat like royalty, yes, but there's only so much one can take and the coolant cells won't last another week without replacement, so.\n\n",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DiktatLobsterBarEvent.class 的第0157个常量\n原始数据：\"What this amounts to, you are told, is that the District 4 Gendarmerie's evidence locker - and maintenance bay, and several interrogation rooms - are filled with cases of cyro-stabilized Volturnian Lobster, nearly %s units in all. The officers eat like royalty, yes, but there's only so much one can take and the coolant cells won't last another week without replacement, so.\n\n\"\n译文数据：\"What this amounts to, you are told, is that the District 4 Gendarmerie's evidence locker - and maintenance bay, and several interrogation rooms - are filled with cases of cyro-stabilized Volturnian Lobster, nearly %s units in all. The officers eat like royalty, yes, but there's only so much one can take and the coolant cells won't last another week without replacement, so.\n\n\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DiktatLobsterBarEvent.class#\"You are told the story of tiresome property seizures from \"",
         "original": "You are told the story of tiresome property seizures from ",
         "translation": "于是乎，你又听到了一个让人耳朵起茧的资产罚没故事",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DiktatLobsterBarEvent.class 的第0142个常量\n原始数据：\"You are told the story of tiresome property seizures from \"\n译文数据：\"于是乎，你又听到了一个让人耳朵起茧的资产罚没故事\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DiktatLobsterBarEvent.class#\"and the entire cargo can be transferred to your holds without the bother of tariffs.\n\n\"",
+        "original": "and the entire cargo can be transferred to your holds without the bother of tariffs.\n\n",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DiktatLobsterBarEvent.class 的第0169个常量\n原始数据：\"and the entire cargo can be transferred to your holds without the bother of tariffs.\n\n\"\n译文数据：\"and the entire cargo can be transferred to your holds without the bother of tariffs.\n\n\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DiktatLobsterBarEvent.class#\"several patrons.\n\n\"",
+        "original": "several patrons.\n\n",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DiktatLobsterBarEvent.class 的第0140个常量\n原始数据：\"several patrons.\n\n\"\n译文数据：\"several patrons.\n\n\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DiktatLobsterBarEvent.class#\"to encompass the scale of your shared luck, somehow managing not to spill the drinks of \"",
@@ -12444,6 +12521,13 @@
         "translation": "深吸了口气，\"我们这里有 %s 单位的日用品正积压在工会仓库里，",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/LuddicCraftBarEvent.class 的第0205个常量\n原始数据：\" explains that there are %s units of domestic goods gathering dust \"\n译文数据：\"深吸了口气，\"我们这里有 %s 单位的日用品正积压在工会仓库里，\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/LuddicCraftBarEvent.class#\" is understaffed and overworked. \"Ludd forgive me, but bills aren't paid by prayer.\"\n\n\"",
+        "original": " is understaffed and overworked. \"Ludd forgive me, but bills aren't paid by prayer.\"\n\n",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/LuddicCraftBarEvent.class 的第0203个常量\n原始数据：\" is understaffed and overworked. \"Ludd forgive me, but bills aren't paid by prayer.\"\n\n\"\n译文数据：\" is understaffed and overworked. \"Ludd forgive me, but bills aren't paid by prayer.\"\n\n\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/LuddicCraftBarEvent.class#\" to the guild\"",
@@ -12971,6 +13055,13 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/MercsOnTheRunBarEvent.class 的第0146个常量\n原始数据：\"Some clever device provided by the mercs convinces the automated scanners that two particular cargo containers are half-filled with mildly radioactive silicate gravel and nothing else. Your logistics officer sneaks them aboard with no problems.\"\n译文数据：\"佣兵提供了一些巧妙的小装置成功骗过了自动扫描仪，让这两个货箱看起来除了些有轻微辐射性的硅酸盐矿砂之外什么都没有。你的后勤官就这样神不知鬼不觉地把他们带上了船，没遇到任何麻烦。\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/MercsOnTheRunBarEvent.class#\"You prove yourself worth speaking to by partaking in a round of \"Atmo Drops\", a drink based largely on consuming eye-water~\"@ed67126b",
+        "original": "You prove yourself worth speaking to by partaking in a round of \"Atmo Drops\", a drink based largely on consuming eye-watering liquor as quickly as possible, with the mercenary band. They're drunk for sure, but are composed enough to speak around the precise details of why they're being investigated by local authorities.\n\nAfter a couple of the mercs head up to order a round of \"Orbital Bombardments\", their leader pulls you aside and sketches out a proposal. \"We've got %s suits, we fight in vac or black. I'll give you our contract for %s, and that's giving it away. Put us to work, or sell it off elsewhere, doesn't matter to me if you can get us outta this fix. What'dya say?\"",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/MercsOnTheRunBarEvent.class 的第0098个常量\n原始数据：\"You prove yourself worth speaking to by partaking in a round of \"Atmo Drops\", a drink based largely on consuming eye-watering liquor as quickly as possible, with the mercenary band. They're drunk for sure, but are composed enough to speak around the precise details of why they're being investigated by local authorities.\n\nAfter a couple of the mercs head up to order a round of \"Orbital Bombardments\", their leader pulls you aside and sketches out a proposal. \"We've got %s suits, we fight in vac or black. I'll give you our contract for %s, and that's giving it away. Put us to work, or sell it off elsewhere, doesn't matter to me if you can get us outta this fix. What'dya say?\"\"\n译文数据：\"You prove yourself worth speaking to by partaking in a round of \"Atmo Drops\", a drink based largely on consuming eye-watering liquor as quickly as possible, with the mercenary band. They're drunk for sure, but are composed enough to speak around the precise details of why they're being investigated by local authorities.\n\nAfter a couple of the mercs head up to order a round of \"Orbital Bombardments\", their leader pulls you aside and sketches out a proposal. \"We've got %s suits, we fight in vac or black. I'll give you our contract for %s, and that's giving it away. Put us to work, or sell it off elsewhere, doesn't matter to me if you can get us outta this fix. What'dya say?\"\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/MercsOnTheRunBarEvent.class#\"You wake up the next day in a small room above the bar with no particular memory of how you got there. How many more round~\"@87579f46",
         "original": "You wake up the next day in a small room above the bar with no particular memory of how you got there. How many more rounds was it with the mercs, one? Three?",
         "translation": "第二天，你在酒吧上面的一个小房间里醒了过来，根本回想不起自己是怎么到这的了。到底是又和那些佣兵喝了多少？一轮？三轮？",
@@ -13041,6 +13132,13 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/PirateBaseRumorBarEvent.class 的第0240个常量\n原始数据：\"himself\"\n译文数据：\"他\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/PlanetaryShieldBarEvent.class#\"\n\nThen the officers found something new in a data-cache. \"",
+        "original": "\n\nThen the officers found something new in a data-cache. ",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/PlanetaryShieldBarEvent.class 的第0396个常量\n原始数据：\"\n\nThen the officers found something new in a data-cache. \"\n译文数据：\"\n\nThen the officers found something new in a data-cache. \"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/PlanetaryShieldBarEvent.class#\" a drink\"",
         "original": " a drink",
         "translation": "一杯啤酒",
@@ -13095,6 +13193,13 @@
         "translation": "依旧摇了摇头：",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/PlanetaryShieldBarEvent.class 的第0449个常量\n原始数据：\" head, \"Captain, \"\n译文数据：\"依旧摇了摇头：\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/PlanetaryShieldBarEvent.class#\" lost eyes.\n\n\"Was just two survivors from that mission, me and the pilot. \"",
+        "original": " lost eyes.\n\n\"Was just two survivors from that mission, me and the pilot. ",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/PlanetaryShieldBarEvent.class 的第0386个常量\n原始数据：\" lost eyes.\n\n\"Was just two survivors from that mission, me and the pilot. \"\n译文数据：\" lost eyes.\n\n\"Was just two survivors from that mission, me and the pilot. \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/PlanetaryShieldBarEvent.class#\" read the manual then leave\"",
@@ -13685,6 +13790,13 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/QuartermasterCargoSwapBarEvent.class 的第0391个常量\n原始数据：\"sends you a personal thank-you note.\"\n译文数据：\"你就收到那名军需官发来的感谢短讯。\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/QuartermasterCargoSwapBarEvent.class#\"slamming the glass down.\n\n\"",
+        "original": "slamming the glass down.\n\n",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/QuartermasterCargoSwapBarEvent.class 的第0335个常量\n原始数据：\"slamming the glass down.\n\n\"\n译文数据：\"slamming the glass down.\n\n\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/QuartermasterCargoSwapBarEvent.class#\"transfer you've ever seen, trading your %s \"",
         "original": "transfer you've ever seen, trading your %s ",
         "translation": "用你 %s 单位的 ",
@@ -13732,6 +13844,13 @@
         "translation": ", 正",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/ScientistAICoreBarEvent.class 的第0245个常量\n原始数据：\" in academic uniform is bothering some of the \"\n译文数据：\", 正\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/ScientistAICoreBarEvent.class#\" pitch through to the end.\n\n\"",
+        "original": " pitch through to the end.\n\n",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/ScientistAICoreBarEvent.class 的第0284个常量\n原始数据：\" pitch through to the end.\n\n\"\n译文数据：\" pitch through to the end.\n\n\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/ScientistAICoreBarEvent.class#\" proposal and walk away\"",
@@ -14497,6 +14616,13 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/TriTachMajorLoanBarEvent.class 的第0181个常量\n原始数据：\"what you could accomplish with a short-term capital infusion of let us say %s. \"\n译文数据：\"我非常好奇这笔 %s 的短期投资，能让你发展到何种地步，\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/TriTachMajorLoanBarEvent.class#\"within %s days.\n\n\"",
+        "original": "within %s days.\n\n",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/TriTachMajorLoanBarEvent.class 的第0185个常量\n原始数据：\"within %s days.\n\n\"\n译文数据：\"within %s days.\n\n\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/TriTachMajorLoanBarEvent.cla~#\"You leave the lounge rich in credits, having exchanged secure comm keys with the Tri-Tachyon shark and receiving the trans~\"@af1d5fd4",
         "original": "You leave the lounge rich in credits, having exchanged secure comm keys with the Tri-Tachyon shark and receiving the transfer immediately. Your head spins with plans for how to leverage your new assets - and a bit from the drink, you admit to yourself.",
         "translation": "你和速子科技风险投资人交换了通信秘钥，立刻收到了转账，满载星币离开了洽谈室。许多使用这笔新财产的计划在你脑子里飞旋 —— 你承认也可能是有些酒劲上头。",
@@ -14777,6 +14903,13 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/historian/HistorianBarEvent.class 的第0158个常量\n原始数据：\" with the paper book and see what \"\n译文数据：\", 看看\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/historian/HistorianBarEvent.class#\"!\"\"",
+        "original": "!\"",
+        "translation": "!\"",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/historian/HistorianBarEvent.class 的第0373个常量\n原始数据：\"!\"\"\n译文数据：\"!\"\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/historian/HistorianBarEvent.class#\"\"And you have the means.\"\"",
         "original": "\"And you have the means.\"",
         "translation": "\"而你...有办法！\"",
@@ -14817,6 +14950,13 @@
         "translation": "\"谢谢！多么令人着迷，而且可真是一点都不唐突。那么你还有什么要给我的吗？\"",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/historian/HistorianBarEvent.class 的第0314个常量\n原始数据：\"\"Thank you! This is fascinating and not at all alarming. Now, what do you have for me?\"\"\n译文数据：\"\"谢谢！多么令人着迷，而且可真是一点都不唐突。那么你还有什么要给我的吗？\"\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/historian/HistorianBarEvent.class#\"\"Welcome, welcome, please sit! I'm sure you're wondering why I called you over.\"\n\n\"",
+        "original": "\"Welcome, welcome, please sit! I'm sure you're wondering why I called you over.\"\n\n",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/historian/HistorianBarEvent.class 的第0319个常量\n原始数据：\"\"Welcome, welcome, please sit! I'm sure you're wondering why I called you over.\"\n\n\"\n译文数据：\"\"Welcome, welcome, please sit! I'm sure you're wondering why I called you over.\"\n\n\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/historian/HistorianBarEvent.class#\"'s face for just a moment before \"",
@@ -14922,6 +15062,13 @@
         "translation": "\"然而，如果你认为我的信息有价值，我会很乐意接受...捐赠。把它当成对我的研究的赞助，这反过来又会产生有价值的线索。或者，把它想象成一种投资也许会更容易，但双方都不承担任何义务。想想看 —— 你既能丰富自己的事业，又能为全人类的知识储备添砖加瓦！\"",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/historian/HistorianBarEvent.class 的第0354个常量\n原始数据：\"\"However, if you did find my information valuable, I would gladly accept... donations. Think of it as patronage to fuel my research, which in turn could produce valuable leads. Or it might help to think of it as an investment, but with no obligations incurred by either party. Consider it- you could enrich your own enterprises while contributing to the sum of human knowledge!\"\"\n译文数据：\"\"然而，如果你认为我的信息有价值，我会很乐意接受...捐赠。把它当成对我的研究的赞助，这反过来又会产生有价值的线索。或者，把它想象成一种投资也许会更容易，但双方都不承担任何义务。想想看 —— 你既能丰富自己的事业，又能为全人类的知识储备添砖加瓦！\"\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/historian/HistorianBarEvent.~#\"\"I am what you might call a historian-adventurer; a rogue archaelogist uncovering the history of the Sector despite the da~\"@af4dd21b",
+        "original": "\"I am what you might call a historian-adventurer; a rogue archaelogist uncovering the history of the Sector despite the danger of this exceptional era. In the course of my studies I often chance upon hints about where certain pieces of technology might be found. Retrieving those artifacts is, naturally, your role in our arrangement. ... Only if you're interested, of course - but I've done my research on your exploits and I'm sure that you will be interested.\"\n\nSpeech complete, ",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/historian/HistorianBarEvent.class 的第0332个常量\n原始数据：\"\"I am what you might call a historian-adventurer; a rogue archaelogist uncovering the history of the Sector despite the danger of this exceptional era. In the course of my studies I often chance upon hints about where certain pieces of technology might be found. Retrieving those artifacts is, naturally, your role in our arrangement. ... Only if you're interested, of course - but I've done my research on your exploits and I'm sure that you will be interested.\"\n\nSpeech complete, \"\n译文数据：\"\"I am what you might call a historian-adventurer; a rogue archaelogist uncovering the history of the Sector despite the danger of this exceptional era. In the course of my studies I often chance upon hints about where certain pieces of technology might be found. Retrieving those artifacts is, naturally, your role in our arrangement. ... Only if you're interested, of course - but I've done my research on your exploits and I'm sure that you will be interested.\"\n\nSpeech complete, \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/historian/HistorianBarEvent.~#\"\"I understand why you would assume that; this is a mercenary age. But no, nothing quite so transactional. History is an un~\"@8df1ba0e",
@@ -16877,6 +17024,48 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/deciv/DecivIntel.class 的第0171个常量\n原始数据：\"population scrambling to survive.\"\n译文数据：\"如今这处废土 只剩下挣扎求生且痛苦不堪的难民们。\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/BaseEventIntel$1.class#\"Event progress is influenced by various factors. Some of these apply over time, and some only apply once. As the event pro~\"@dd07cfe5",
+        "original": "Event progress is influenced by various factors. Some of these apply over time, and some only apply once. As the event progresses, different stages and outcomes may unfold.",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/BaseEventIntel$1.class 的第0083个常量\n原始数据：\"Event progress is influenced by various factors. Some of these apply over time, and some only apply once. As the event progresses, different stages and outcomes may unfold.\"\n译文数据：\"Event progress is influenced by various factors. Some of these apply over time, and some only apply once. As the event progresses, different stages and outcomes may unfold.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/BaseEventIntel$1.class#\"Event progress: %s out of %s points.\"",
+        "original": "Event progress: %s out of %s points.",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/BaseEventIntel$1.class 的第0038个常量\n原始数据：\"Event progress: %s out of %s points.\"\n译文数据：\"Event progress: %s out of %s points.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/BaseEventIntel$1.class#\"Projected monthly progress: %s points.\"",
+        "original": "Projected monthly progress: %s points.",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/BaseEventIntel$1.class 的第0077个常量\n原始数据：\"Projected monthly progress: %s points.\"\n译文数据：\"Projected monthly progress: %s points.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/BaseEventIntel$2.class#\"Something might occur when event progress reaches %s points. What that is, if anything, will be determined when event progress reaches %s points.\"",
+        "original": "Something might occur when event progress reaches %s points. What that is, if anything, will be determined when event progress reaches %s points.",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/BaseEventIntel$2.class 的第0047个常量\n原始数据：\"Something might occur when event progress reaches %s points. What that is, if anything, will be determined when event progress reaches %s points.\"\n译文数据：\"Something might occur when event progress reaches %s points. What that is, if anything, will be determined when event progress reaches %s points.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/BaseEventIntel$2.class#\"This event is not repeatable.\"",
+        "original": "This event is not repeatable.",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/BaseEventIntel$2.class 的第0086个常量\n原始数据：\"This event is not repeatable.\"\n译文数据：\"This event is not repeatable.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/BaseEventIntel$2.class#\"This event is repeatable.\"",
+        "original": "This event is repeatable.",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/BaseEventIntel$2.class 的第0081个常量\n原始数据：\"This event is repeatable.\"\n译文数据：\"This event is repeatable.\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/BaseEventIntel$EventStageData.class#\" is triggered, event progress will be reset to a lower value afterwards.\"",
         "original": " is triggered, event progress will be reset to a lower value afterwards.",
         "translation": " 发生，事件进展会在此之后被重置到一个相对较低的数值。",
@@ -16931,6 +17120,13 @@
         "translation": "如果 ",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/BaseEventIntel$EventStageData.class 的第0147个常量\n原始数据：\"If this \"\n译文数据：\"如果 \"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/BaseEventIntel$EventStageData.class#\"Requires %s points of event progress.\"",
+        "original": "Requires %s points of event progress.",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/BaseEventIntel$EventStageData.class 的第0072个常量\n原始数据：\"Requires %s points of event progress.\"\n译文数据：\"Requires %s points of event progress.\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/BaseEventIntel$EventStageData.class#\"This \"",
@@ -17234,6 +17430,20 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HAPirateKingDealFactor.class 的第0019个常量\n原始数据：\"Deal made with pirate king\"\n译文数据：\"与海盗王敲定交易\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HAShipsDestroyedFactor$1.class#\"Hostile ships destroyed by your fleet in or near one of the star systems with your colonies.\"",
+        "original": "Hostile ships destroyed by your fleet in or near one of the star systems with your colonies.",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HAShipsDestroyedFactor$1.class 的第0022个常量\n原始数据：\"Hostile ships destroyed by your fleet in or near one of the star systems with your colonies.\"\n译文数据：\"Hostile ships destroyed by your fleet in or near one of the star systems with your colonies.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HAShipsDestroyedFactor.class#\"Hostile ships destroyed\"",
+        "original": "Hostile ships destroyed",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HAShipsDestroyedFactor.class 的第0019个常量\n原始数据：\"Hostile ships destroyed\"\n译文数据：\"Hostile ships destroyed\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HegemonyAICoresActivityCause$1.class#\"AI cores\"",
         "original": "AI cores",
         "translation": "AI 核心",
@@ -17402,6 +17612,13 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel$2.class 的第0042个常量\n原始数据：\"There's no crisis on the horizon right now. When this stage is reached, event progress will be reset to a lower value.\"\n译文数据：\"预计短期内不会出现危机。达成此阶段时，事件进度会被重置到一个相对较低的数值。\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class#\" colonies\"",
+        "original": " colonies",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class 的第0534个常量\n原始数据：\" colonies\"\n译文数据：\" colonies\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class#\"A crisis is virtually inevitable at some point, and hostile fleets continually probe your defenses, but where there is danger, there is often opportunity.\"",
         "original": "A crisis is virtually inevitable at some point, and hostile fleets continually probe your defenses, but where there is danger, there is often opportunity.",
         "translation": "可以预计的是，一场几乎不可避免的危机将在某个时刻发生。敌对舰队正持续不断地探测你的防御。但风险往往伴随着机遇。",
@@ -17428,6 +17645,13 @@
         "translation": "这个星系中较强舰队的大致危险度估算。可能有例外情况存在。不考虑可能因为其他原因出现在此的敌方舰队。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class 的第0430个常量\n原始数据：\"Danger level of the stronger fleets likely to be found in the system. Approximate, there may be exceptions. Does not include hostile fleets that may be present there for other reasons.\"\n译文数据：\"这个星系中较强舰队的大致危险度估算。可能有例外情况存在。不考虑可能因为其他原因出现在此的敌方舰队。\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class#\"Danger\"",
+        "original": "Danger",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class 的第0412个常量\n原始数据：\"Danger\"\n译文数据：\"Danger\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class#\"Extreme\"",
@@ -17479,11 +17703,39 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class 的第0588个常量\n原始数据：\"None\"\n译文数据：\"无\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class#\"Primary threats\"",
+        "original": "Primary threats",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class 的第0415个常量\n原始数据：\"Primary threats\"\n译文数据：\"Primary threats\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class#\"Star system with hostile activity, and the name (or number) of your colonies found there.\n\nUp to four of the hardest-hit systems are listed here.\"",
+        "original": "Star system with hostile activity, and the name (or number) of your colonies found there.\n\nUp to four of the hardest-hit systems are listed here.",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class 的第0424个常量\n原始数据：\"Star system with hostile activity, and the name (or number) of your colonies found there.\n\nUp to four of the hardest-hit systems are listed here.\"\n译文数据：\"Star system with hostile activity, and the name (or number) of your colonies found there.\n\nUp to four of the hardest-hit systems are listed here.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class#\"Star system\"",
+        "original": "Star system",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class 的第0404个常量\n原始数据：\"Star system\"\n译文数据：\"Star system\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class#\"The most dangerous types of threats likely to be found in the system. Not comprehensive, and does not include hostile flee~\"@92bfafe8",
         "original": "The most dangerous types of threats likely to be found in the system. Not comprehensive, and does not include hostile fleets that may be present there for other reasons.",
         "translation": "在该星系可能存在的最危险威胁。不是完全列表，并且不考虑可能因为其他原因出现在此处的敌方舰队。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class 的第0432个常量\n原始数据：\"The most dangerous types of threats likely to be found in the system. Not comprehensive, and does not include hostile fleets that may be present there for other reasons.\"\n译文数据：\"在该星系可能存在的最危险威胁。不是完全列表，并且不考虑可能因为其他原因出现在此处的敌方舰队。\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class#\"Unknown\"",
+        "original": "Unknown",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class 的第0859个常量\n原始数据：\"Unknown\"\n译文数据：\"Unknown\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/KantasProtectionPirateActivityCause2$1.class#\"You have %s, which is enough to dissuade most pirates from attacking your interests.\"",
@@ -17899,11 +18151,39 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class 的第0261个常量\n原始数据：\"If the raid is defeated, your colonies will permanently gain increased accessibility.\"\n译文数据：\"如果袭击者被击败，你的殖民地将永久地获得 流通性增益。\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class#\"Pirate activity\"",
+        "original": "Pirate activity",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class 的第0086个常量\n原始数据：\"Pirate activity\"\n译文数据：\"Pirate activity\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class#\"Pirate raid averted\"",
+        "original": "Pirate raid averted",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class 的第0228个常量\n原始数据：\"Pirate raid averted\"\n译文数据：\"Pirate raid averted\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class#\"Pirate raid\"",
         "original": "Pirate raid",
         "translation": "海盗袭击",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class 的第0296个常量\n原始数据：\"Pirate raid\"\n译文数据：\"海盗袭击\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class#\"Pirates\"",
+        "original": "Pirates",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class 的第0090个常量\n原始数据：\"Pirates\"\n译文数据：\"Pirates\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class#\"Rumors of pirate raid\"",
+        "original": "Rumors of pirate raid",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class 的第0209个常量\n原始数据：\"Rumors of pirate raid\"\n译文数据：\"Rumors of pirate raid\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class#\"There are rumors that a pirate raid targeting your colonies may be organized in the near future. If the raid is successful~\"@49f5f723",
@@ -18106,28 +18386,28 @@
         "original": "are",
         "translation": "",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantNexusActivityCause.class 的第0099个常量\n原始数据：\"are\"\n译文数据：\"are\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantNexusActivityCause.class 的第0099个常量\n原始数据：\"are\"\n译文数据：\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantNexusActivityCause.class#\"colonies\"",
         "original": "colonies",
         "translation": "",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantNexusActivityCause.class 的第0095个常量\n原始数据：\"colonies\"\n译文数据：\"colonies\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantNexusActivityCause.class 的第0095个常量\n原始数据：\"colonies\"\n译文数据：\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantNexusActivityCause.class#\"colony\"",
         "original": "colony",
         "translation": "",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantNexusActivityCause.class 的第0097个常量\n原始数据：\"colony\"\n译文数据：\"colony\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantNexusActivityCause.class 的第0097个常量\n原始数据：\"colony\"\n译文数据：\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantNexusActivityCause.class#\"is\"",
         "original": "is",
         "translation": "",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantNexusActivityCause.class 的第0101个常量\n原始数据：\"is\"\n译文数据：\"is\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantNexusActivityCause.class 的第0101个常量\n原始数据：\"is\"\n译文数据：\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/SindrianDiktatHostileActivityFactor$1.class#\"Sindrian raider fleets have been sighted in your space, attacking trade fleets regardless of their factional allegiance.\"",
@@ -18347,11 +18627,46 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/StandardPerseanLeagueActivityCause$1.class 的第0023个常量\n原始数据：\"Going to Kazeron and negotiating to join the League is likely to get this harassment to stop. If left unchecked, this low-grade conflict will eventually come to a head and is likely to be resolved one way or another.\"\n译文数据：\"前往 Kazeron 与英仙座联盟就 加入联盟 事宜 进行谈判 可能让这种骚扰停止。如果不加以控制，起初微小的冲突终将激烈爆发，并可能以某种方式得到解决。\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/StandardPirateActivityCause2$1.class#\"Any colony, especially one outside the core, attracts some degree of piracy. %s and %s colonies attract more pirates.\"",
+        "original": "Any colony, especially one outside the core, attracts some degree of piracy. %s and %s colonies attract more pirates.",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/StandardPirateActivityCause2$1.class 的第0023个常量\n原始数据：\"Any colony, especially one outside the core, attracts some degree of piracy. %s and %s colonies attract more pirates.\"\n译文数据：\"Any colony, especially one outside the core, attracts some degree of piracy. %s and %s colonies attract more pirates.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/StandardPirateActivityCause2$1.class#\"Biggest colony: %s, size: %s, stability: %s\"",
+        "original": "Biggest colony: %s, size: %s, stability: %s",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/StandardPirateActivityCause2$1.class 的第0060个常量\n原始数据：\"Biggest colony: %s, size: %s, stability: %s\"\n译文数据：\"Biggest colony: %s, size: %s, stability: %s\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/StandardPirateActivityCause2$1.class#\"Larger\"",
+        "original": "Larger",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/StandardPirateActivityCause2$1.class 的第0033个常量\n原始数据：\"Larger\"\n译文数据：\"Larger\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/StandardPirateActivityCause2$1.class#\"less stable\"",
+        "original": "less stable",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/StandardPirateActivityCause2$1.class 的第0035个常量\n原始数据：\"less stable\"\n译文数据：\"less stable\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/StandardPirateActivityCause2$1.c~#\"Event progress value is based on the size and stability of the largest colony under your control. If multiple colonies hav~\"@12126163",
         "original": "Event progress value is based on the size and stability of the largest colony under your control. If multiple colonies have the same size, the one with higher stability is used.",
         "translation": "事件进展点进度基于你控制下最大殖民地的规模和其稳定性。如果有多个同样规模的殖民地，使用稳定性最高的那个。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/StandardPirateActivityCause2$1.class 的第0043个常量\n原始数据：\"Event progress value is based on the size and stability of the largest colony under your control. If multiple colonies have the same size, the one with higher stability is used.\"\n译文数据：\"事件进展点进度基于你控制下最大殖民地的规模和其稳定性。如果有多个同样规模的殖民地，使用稳定性最高的那个。\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/StandardPirateActivityCause2.class#\"Colony presence and instability\"",
+        "original": "Colony presence and instability",
+        "translation": "",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/StandardPirateActivityCause2.class 的第0104个常量\n原始数据：\"Colony presence and instability\"\n译文数据：\"Colony presence and instability\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/TriTachyonHostileActivityFactor$1.class#\"Your independent polity has become enough of a presence in the Sector to start cutting into the profit margins of the Tri-Tachyon Corporation.\"",
@@ -18568,7 +18883,7 @@
         "original": "s",
         "translation": "",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTAbyssalLightFactor.class 的第0031个常量\n原始数据：\"s\"\n译文数据：\"s\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTAbyssalLightFactor.class 的第0031个常量\n原始数据：\"s\"\n译文数据：\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class#\")\"",
@@ -18925,7 +19240,7 @@
         "original": "The ",
         "translation": "",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/BlockadeFGI.class 的第0338个常量\n原始数据：\"The \"\n译文数据：\"The \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/BlockadeFGI.class 的第0338个常量\n原始数据：\"The \"\n译文数据：\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/BlockadeFGI.class#\"actively hostile\"",
@@ -18995,7 +19310,7 @@
         "original": "more ",
         "translation": "",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/BlockadeFGI.class 的第0336个常量\n原始数据：\"more \"\n译文数据：\"more \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/BlockadeFGI.class 的第0336个常量\n原始数据：\"more \"\n译文数据：\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/BlockadeFGI.class#\"not nominally hostile\"",
@@ -19016,7 +19331,7 @@
         "original": "the ",
         "translation": "",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/BlockadeFGI.class 的第0239个常量\n原始数据：\"the \"\n译文数据：\"the \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/BlockadeFGI.class 的第0239个常量\n原始数据：\"the \"\n译文数据：\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/FGRaidAction$FGRaidParams.class#\"bombarding\"",
@@ -19142,7 +19457,7 @@
         "original": " are ",
         "translation": "",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class 的第1301个常量\n原始数据：\" are \"\n译文数据：\" are \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class 的第1301个常量\n原始数据：\" are \"\n译文数据：\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class#\" at \"",
@@ -19156,7 +19471,7 @@
         "original": " is imminent",
         "translation": "",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class 的第1180个常量\n原始数据：\" is imminent\"\n译文数据：\" is imminent\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class 的第1180个常量\n原始数据：\" is imminent\"\n译文数据：\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class#\" nebula\"",
@@ -19338,7 +19653,7 @@
         "original": "The ",
         "translation": "",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class 的第1299个常量\n原始数据：\"The \"\n译文数据：\"The \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class 的第1299个常量\n原始数据：\"The \"\n译文数据：\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class#\"The defending fleets are evenly matched\"",
@@ -19660,7 +19975,7 @@
         "original": "The ",
         "translation": "",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/GenericRaidFGI.class 的第0570个常量\n原始数据：\"The \"\n译文数据：\"The \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/GenericRaidFGI.class 的第0570个常量\n原始数据：\"The \"\n译文数据：\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/GenericRaidFGI.class#\"There are no colonies for the \"",
@@ -19800,7 +20115,7 @@
         "original": "the ",
         "translation": "",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/GenericRaidFGI.class 的第0645个常量\n原始数据：\"the \"\n译文数据：\"the \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/GenericRaidFGI.class 的第0645个常量\n原始数据：\"the \"\n译文数据：\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/GenericRaidFGI.class#\"the outcome of the \"",
@@ -19940,7 +20255,7 @@
         "original": "The ",
         "translation": "",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/KnightsOfLuddTakeoverExpedition.class 的第0634个常量\n原始数据：\"The \"\n译文数据：\"The \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/KnightsOfLuddTakeoverExpedition.class 的第0634个常量\n原始数据：\"The \"\n译文数据：\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/KnightsOfLuddTakeoverExpedition.class#\"The operation will last for approximately %s \"",
@@ -19989,7 +20304,7 @@
         "original": "more ",
         "translation": "",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/KnightsOfLuddTakeoverExpedition.class 的第0615个常量\n原始数据：\"more \"\n译文数据：\"more \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/KnightsOfLuddTakeoverExpedition.class 的第0615个常量\n原始数据：\"more \"\n译文数据：\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/KnightsOfLuddTakeoverExpedition.class#\"not nominally hostile\"",
@@ -25902,9 +26217,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAKallichore.class#\"on \"",
         "original": "on ",
-        "translation": "以下设施安装黑客设备：",
+        "translation": "",
         "stage": 5,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAKallichore.class 的第0485个常量\n原始数据：\"on \"\n译文数据：\"以下设施安装黑客设备：\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAKallichore.class 的第0485个常量\n原始数据：\"on \"\n译文数据：\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAKallichore.class#\"standing off with Port Tse Station\"",
@@ -29120,6 +29435,13 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class 的第0064个常量\n原始数据：\"Moderate\"\n译文数据：\"普通\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD.class#\"\n\nRequires transponder to be turned off\"",
+        "original": "\n\nRequires transponder to be turned off",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD.class 的第2044个常量\n原始数据：\"\n\nRequires transponder to be turned off\"\n译文数据：\"\n\nRequires transponder to be turned off\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD.class#\" and its defenders\"",
         "original": " and its defenders",
         "translation": " 以及它的防御舰队",
@@ -31292,9 +31614,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/SurveyDataSpecial.class#\"The $shortName's memory banks have been scrubbed clean by hard radiation, and the systems are largely inert and non-functional.\"",
         "original": "The $shortName's memory banks have been scrubbed clean by hard radiation, and the systems are largely inert and non-functional.",
-        "translation": "$shortName的记忆库被高强度电离辐射清零了，而且大部分系统都已经失去功能无法运作。",
+        "translation": "$shortName的存储体被高强度电离辐射清零了，而且大部分系统都已经失去功能无法运作。",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/SurveyDataSpecial.class 的第0172个常量\n原始数据：\"The $shortName's memory banks have been scrubbed clean by hard radiation, and the systems are largely inert and non-functional.\"\n译文数据：\"$shortName的记忆库被高强度电离辐射清零了，而且大部分系统都已经失去功能无法运作。\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/SurveyDataSpecial.class 的第0172个常量\n原始数据：\"The $shortName's memory banks have been scrubbed clean by hard radiation, and the systems are largely inert and non-functional.\"\n译文数据：\"$shortName的存储体被高强度电离辐射清零了，而且大部分系统都已经失去功能无法运作。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/SurveyDataSpecial.class#\"While exploring $aOrAn $nameInText, your crews found partially accessible memory banks that \"",
@@ -31565,9 +31887,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/AutomatedShips$Level1.class#\"offsets built-in \"",
         "original": "offsets built-in ",
-        "translation": "用以抵消内置船插降低 ",
+        "translation": "用以抵消内置舰船插件降低 ",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/AutomatedShips$Level1.class 的第0160个常量\n原始数据：\"offsets built-in \"\n译文数据：\"用以抵消内置船插降低 \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/AutomatedShips$Level1.class 的第0160个常量\n原始数据：\"offsets built-in \"\n译文数据：\"用以抵消内置舰船插件降低 \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/AutomatedShips$Level2.class#\"Automated ships can only be captained by AI cores\"",
@@ -31649,9 +31971,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/BaseSkillEffectDescription$5.class#\"The total deployment points of all the ships in your fleet that have the \"Militarized Subsystems\" hullmod.\"",
         "original": "The total deployment points of all the ships in your fleet that have the \"Militarized Subsystems\" hullmod.",
-        "translation": "你的舰队中所有拥有 \"军事化子系统\" 船插舰船的总部署点。",
+        "translation": "你的舰队中所有拥有 \"军事化子系统\" 插件的舰船的总部署点。",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/BaseSkillEffectDescription$5.class 的第0033个常量\n原始数据：\"The total deployment points of all the ships in your fleet that have the \"Militarized Subsystems\" hullmod.\"\n译文数据：\"你的舰队中所有拥有 \"军事化子系统\" 船插舰船的总部署点。\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/BaseSkillEffectDescription$5.class 的第0033个常量\n原始数据：\"The total deployment points of all the ships in your fleet that have the \"Militarized Subsystems\" hullmod.\"\n译文数据：\"你的舰队中所有拥有 \"军事化子系统\" 插件的舰船的总部署点。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/BaseSkillEffectDescription$6.class#\"The total number of fighter bays in your fleet. Both empty and filled fighter bays are counted. Built-in fighter bays can ~\"@6c223b5a",
@@ -31957,16 +32279,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/BestOfTheBest$Level0.class#\"*The base maximum number of permanent hullmods you're able to build into a ship is \"",
         "original": "*The base maximum number of permanent hullmods you're able to build into a ship is ",
-        "translation": "* 舰船基础可内置船插的上限为 ",
+        "translation": "* 舰船基础可内置的插件的上限为 ",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/BestOfTheBest$Level0.class 的第0027个常量\n原始数据：\"*The base maximum number of permanent hullmods you're able to build into a ship is \"\n译文数据：\"* 舰船基础可内置船插的上限为 \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/BestOfTheBest$Level0.class 的第0027个常量\n原始数据：\"*The base maximum number of permanent hullmods you're able to build into a ship is \"\n译文数据：\"* 舰船基础可内置的插件的上限为 \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/BestOfTheBest$Level1.class#\" more permanent hullmod* into ships\"",
         "original": " more permanent hullmod* into ships",
-        "translation": " 个最大可 内置* 船插数",
+        "translation": " 个最大可 内置* 舰船插件数",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/BestOfTheBest$Level1.class 的第0071个常量\n原始数据：\" more permanent hullmod* into ships\"\n译文数据：\" 个最大可 内置* 船插数\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/BestOfTheBest$Level1.class 的第0071个常量\n原始数据：\" more permanent hullmod* into ships\"\n译文数据：\" 个最大可 内置* 舰船插件数\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/BestOfTheBest$Level1.class#\"Able to build \"",
@@ -34127,9 +34449,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/PolarizedArmor$Level3.class#\"%, based on current hard flux level*\"",
         "original": "%, based on current hard flux level*",
-        "translation": "% 所受到的 EMP 伤害",
+        "translation": "% 所受到的 EMP 效果",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/PolarizedArmor$Level3.class 的第0053个常量\n原始数据：\"%, based on current hard flux level*\"\n译文数据：\"% 所受到的 EMP 伤害\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/PolarizedArmor$Level3.class 的第0053个常量\n原始数据：\"%, based on current hard flux level*\"\n译文数据：\"% 所受到的 EMP 效果\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/PolarizedArmor$Level3.class#\"EMP damage taken reduced by up to \"",
@@ -34505,9 +34827,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/SpecialModifications$Level0.class#\"*The base maximum number of permanent hullmods you're able to build into a ship is \"",
         "original": "*The base maximum number of permanent hullmods you're able to build into a ship is ",
-        "translation": "* 舰船基础可内置船插的上限为 ",
+        "translation": "* 舰船基础可内置的插件的上限为 ",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/SpecialModifications$Level0.class 的第0027个常量\n原始数据：\"*The base maximum number of permanent hullmods you're able to build into a ship is \"\n译文数据：\"* 舰船基础可内置船插的上限为 \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/SpecialModifications$Level0.class 的第0027个常量\n原始数据：\"*The base maximum number of permanent hullmods you're able to build into a ship is \"\n译文数据：\"* 舰船基础可内置的插件的上限为 \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/SpecialModifications$Level1.class#\" maximum flux capacitors\"",
@@ -34526,16 +34848,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/SpecialModifications$Level3.class#\"% bonus experience from building permanent hullmods* into ships\"",
         "original": "% bonus experience from building permanent hullmods* into ships",
-        "translation": "% 内置* 船插后所获得的额外经验",
+        "translation": "% 内置* 舰船插件后所获得的额外经验",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/SpecialModifications$Level3.class 的第0075个常量\n原始数据：\"% bonus experience from building permanent hullmods* into ships\"\n译文数据：\"% 内置* 船插后所获得的额外经验\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/SpecialModifications$Level3.class 的第0075个常量\n原始数据：\"% bonus experience from building permanent hullmods* into ships\"\n译文数据：\"% 内置* 舰船插件后所获得的额外经验\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/SpecialModifications$Level4.class#\" more permanent hullmod* into ships\"",
         "original": " more permanent hullmod* into ships",
-        "translation": " 个最大可 内置* 船插数",
+        "translation": " 个最大可 内置* 舰船插件数",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/SpecialModifications$Level4.class 的第0071个常量\n原始数据：\" more permanent hullmod* into ships\"\n译文数据：\" 个最大可 内置* 船插数\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/SpecialModifications$Level4.class 的第0071个常量\n原始数据：\" more permanent hullmod* into ships\"\n译文数据：\" 个最大可 内置* 舰船插件数\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/SpecialModifications$Level4.class#\"Able to build \"",
@@ -36631,6 +36953,13 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialMissionEvent.class 的第1020个常量\n原始数据：\"Stabilize the Jump-points\"\n译文数据：\"稳定跳跃点\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialMissionIntel.class#\"\n\nAlso: you'll need to re-dock with your transponder turned on to take advantage of Ancyra's facilities.\"",
+        "original": "\n\nAlso: you'll need to re-dock with your transponder turned on to take advantage of Ancyra's facilities.",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialMissionIntel.class 的第0692个常量\n原始数据：\"\n\nAlso: you'll need to re-dock with your transponder turned on to take advantage of Ancyra's facilities.\"\n译文数据：\"\n\nAlso: you'll need to re-dock with your transponder turned on to take advantage of Ancyra's facilities.\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialMissionIntel.class#\" and retrieve data\"",
         "original": " and retrieve data",
         "translation": " 并获得调查报告",
@@ -36748,6 +37077,13 @@
         "translation": "接近探测器并打捞它来获得 AI 核心。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialMissionIntel.class 的第1191个常量\n原始数据：\"Approach the probe and salvage it to recover the gamma core.\"\n译文数据：\"接近探测器并打捞它来获得 AI 核心。\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialMissionIntel.class#\"Bring extra crew to man the recovered ships, and extra supplies to  help restore their combat readiness.\"",
+        "original": "Bring extra crew to man the recovered ships, and extra supplies to  help restore their combat readiness.",
+        "translation": "",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialMissionIntel.class 的第1199个常量\n原始数据：\"Bring extra crew to man the recovered ships, and extra supplies to  help restore their combat readiness.\"\n译文数据：\"Bring extra crew to man the recovered ships, and extra supplies to  help restore their combat readiness.\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialMissionIntel.class#\"Completed\"",
@@ -37172,9 +37508,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class#\"avoid unwanted attention from patrols and to receive docking clearance.\"",
         "original": "avoid unwanted attention from patrols and to receive docking clearance.",
-        "translation": "避免受到巡逻舰队不必要的注意，以及最终可能导致的登舰检查。",
+        "translation": "避免受到巡逻舰队不必要的注意，这可能导致被登舰检查。",
         "stage": 2,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class 的第0232个常量\n原始数据：\"avoid unwanted attention from patrols and to receive docking clearance.\"\n译文数据：\"避免受到巡逻舰队不必要的注意，以及最终可能导致的登舰检查。\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class 的第0232个常量\n原始数据：\"avoid unwanted attention from patrols and to receive docking clearance.\"\n译文数据：\"避免受到巡逻舰队不必要的注意，这可能导致被登舰检查。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class#\"double-tap\"",
@@ -37508,9 +37844,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/CRPluginImpl.class#\"Autofire accuracy\"",
         "original": "Autofire accuracy",
-        "translation": "自动射击精准度",
+        "translation": "自动开火精准度",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/combat/CRPluginImpl.class 的第0716个常量\n原始数据：\"Autofire accuracy\"\n译文数据：\"自动射击精准度\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/combat/CRPluginImpl.class 的第0716个常量\n原始数据：\"Autofire accuracy\"\n译文数据：\"自动开火精准度\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/CRPluginImpl.class#\"Basic maintenance\"",
@@ -37781,9 +38117,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/CommRelayEffect.class#\"25%% faster command point recovery\n\n+%d bonus deployment points\nup to a maximum of \"",
         "original": "25%% faster command point recovery\n\n+%d bonus deployment points\nup to a maximum of ",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/combat/CommRelayEffect.class 的第0087个常量\n原始数据：\"25%% faster command point recovery\n\n+%d bonus deployment points\nup to a maximum of \"\n译文数据：\"25%% faster command point recovery\n\n+%d bonus deployment points\nup to a maximum of \"\n\n"
+        "translation": "25%% 指挥点恢复速率增益\n\n+%d 部署点增益\n部署点至高可达 ",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/combat/CommRelayEffect.class 的第0087个常量\n原始数据：\"25%% faster command point recovery\n\n+%d bonus deployment points\nup to a maximum of \"\n译文数据：\"25%% 指挥点恢复速率增益\n\n+%d 部署点增益\n部署点至高可达 \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/CryofluxTransducerStats.class#\"% less damage taken\"",
@@ -37949,9 +38285,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/NavBuoyEffect.class#\"+%d%% top speed\n%d%% base total maximum\n+%d bonus deployment points\nup to a maximum of \"",
         "original": "+%d%% top speed\n%d%% base total maximum\n+%d bonus deployment points\nup to a maximum of ",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/combat/NavBuoyEffect.class 的第0089个常量\n原始数据：\"+%d%% top speed\n%d%% base total maximum\n+%d bonus deployment points\nup to a maximum of \"\n译文数据：\"+%d%% top speed\n%d%% base total maximum\n+%d bonus deployment points\nup to a maximum of \"\n\n"
+        "translation": "+%d%% 最高航速\n%d%% 导航效率上限\n+%d 部署点增益\n部署点至高可达 ",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/combat/NavBuoyEffect.class 的第0089个常量\n原始数据：\"+%d%% top speed\n%d%% base total maximum\n+%d bonus deployment points\nup to a maximum of \"\n译文数据：\"+%d%% 最高航速\n%d%% 导航效率上限\n+%d 部署点增益\n部署点至高可达 \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/PhaseCloakStats.class#\"phase coil stress\"",
@@ -38012,9 +38348,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/SensorArrayEffect.class#\"+%d%% ECM rating\nreduces enemy weapon range\nby half of the total ECM rating\n%d%% maximum reduction\n\n+%d bonus deployment points\nup to a maximum of \"",
         "original": "+%d%% ECM rating\nreduces enemy weapon range\nby half of the total ECM rating\n%d%% maximum reduction\n\n+%d bonus deployment points\nup to a maximum of ",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/combat/SensorArrayEffect.class 的第0089个常量\n原始数据：\"+%d%% ECM rating\nreduces enemy weapon range\nby half of the total ECM rating\n%d%% maximum reduction\n\n+%d bonus deployment points\nup to a maximum of \"\n译文数据：\"+%d%% ECM rating\nreduces enemy weapon range\nby half of the total ECM rating\n%d%% maximum reduction\n\n+%d bonus deployment points\nup to a maximum of \"\n\n"
+        "translation": "+%d%% 电子战强度\n降低敌方武器射程\n基于总电子战强度的一半\n%d%% 降低幅度上限\n\n+%d 部署点增益\n部署点至高可达 ",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/combat/SensorArrayEffect.class 的第0089个常量\n原始数据：\"+%d%% ECM rating\nreduces enemy weapon range\nby half of the total ECM rating\n%d%% maximum reduction\n\n+%d bonus deployment points\nup to a maximum of \"\n译文数据：\"+%d%% 电子战强度\n降低敌方武器射程\n基于总电子战强度的一半\n%d%% 降低幅度上限\n\n+%d 部署点增益\n部署点至高可达 \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/TargetingFeedStats.class#\"x fighter damage\"",
@@ -38166,30 +38502,30 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\" all\"",
         "original": " all",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0534个常量\n原始数据：\" all\"\n译文数据：\" all\"\n\n"
+        "translation": "均",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0534个常量\n原始数据：\" all\"\n译文数据：\"均\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\" negated on this ship.\"",
         "original": " negated on this ship.",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0544个常量\n原始数据：\" negated on this ship.\"\n译文数据：\" negated on this ship.\"\n\n"
+        "translation": "被免除。",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0544个常量\n原始数据：\" negated on this ship.\"\n译文数据：\"被免除。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Can not be installed on a frigate\"",
         "original": "Can not be installed on a frigate",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0275个常量\n原始数据：\"Can not be installed on a frigate\"\n译文数据：\"Can not be installed on a frigate\"\n\n"
+        "translation": "无法安装在护卫舰上",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0275个常量\n原始数据：\"Can not be installed on a frigate\"\n译文数据：\"无法安装在护卫舰上\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Can not be installed on a phase ship\"",
         "original": "Can not be installed on a phase ship",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0281个常量\n原始数据：\"Can not be installed on a phase ship\"\n译文数据：\"Can not be installed on a phase ship\"\n\n"
+        "translation": "无法安装在相位舰船上",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0281个常量\n原始数据：\"Can not be installed on a phase ship\"\n译文数据：\"无法安装在相位舰船上\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Converts the ship's standard shuttle hangar to house a fighter bay. The improvised flight deck, its crew, and the related ~\"@f7552acb",
@@ -38201,9 +38537,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Deployment cost: %s\"",
         "original": "Deployment cost: %s",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0454个常量\n原始数据：\"Deployment cost: %s\"\n译文数据：\"Deployment cost: %s\"\n\n"
+        "translation": "部署成本： %s",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0454个常量\n原始数据：\"Deployment cost: %s\"\n译文数据：\"部署成本： %s\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Increases fighter refit time by %s, and the fighter replacement rate both decays and recovers %s more slowly. In addition,~\"@b6f2d152",
@@ -38222,93 +38558,93 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Seconds to relaunch\"",
         "original": "Seconds to relaunch",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0478个常量\n原始数据：\"Seconds to relaunch\"\n译文数据：\"Seconds to relaunch\"\n\n"
+        "translation": "重新起飞时间 (秒)",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0478个常量\n原始数据：\"Seconds to relaunch\"\n译文数据：\"重新起飞时间 (秒)\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Ship has fighter bays\"",
         "original": "Ship has fighter bays",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0279个常量\n原始数据：\"Ship has fighter bays\"\n译文数据：\"Ship has fighter bays\"\n\n"
+        "translation": "舰船有飞行甲板",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0279个常量\n原始数据：\"Ship has fighter bays\"\n译文数据：\"舰船有飞行甲板\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Ship has standard fighter bays\"",
         "original": "Ship has standard fighter bays",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0277个常量\n原始数据：\"Ship has standard fighter bays\"\n译文数据：\"Ship has standard fighter bays\"\n\n"
+        "translation": "舰船有标准飞行甲板",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0277个常量\n原始数据：\"Ship has standard fighter bays\"\n译文数据：\"舰船有标准飞行甲板\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Ship's combat readiness lost per deployment is too high\"",
         "original": "Ship's combat readiness lost per deployment is too high",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0273个常量\n原始数据：\"Ship's combat readiness lost per deployment is too high\"\n译文数据：\"Ship's combat readiness lost per deployment is too high\"\n\n"
+        "translation": "舰船的部署 战备值 损耗太高",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0273个常量\n原始数据：\"Ship's combat readiness lost per deployment is too high\"\n译文数据：\"舰船的部署 战备值 损耗太高\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"The \"",
         "original": "The ",
         "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0536个常量\n原始数据：\"The \"\n译文数据：\"The \"\n\n"
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0536个常量\n原始数据：\"The \"\n译文数据：\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Wing\"",
         "original": "Wing",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0471个常量\n原始数据：\"Wing\"\n译文数据：\"Wing\"\n\n"
+        "translation": "战机",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0471个常量\n原始数据：\"Wing\"\n译文数据：\"战机\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"are\"",
         "original": "are",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0532个常量\n原始数据：\"are\"\n译文数据：\"are\"\n\n"
+        "translation": "方面的负面效果已",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0532个常量\n原始数据：\"are\"\n译文数据：\"方面的负面效果已\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"deployment cost increase\"",
         "original": "deployment cost increase",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0522个常量\n原始数据：\"deployment cost increase\"\n译文数据：\"deployment cost increase\"\n\n"
+        "translation": "部署点的提高",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0522个常量\n原始数据：\"deployment cost increase\"\n译文数据：\"部署点的提高\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"increased crew requirement\"",
         "original": "increased crew requirement",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0520个常量\n原始数据：\"increased crew requirement\"\n译文数据：\"increased crew requirement\"\n\n"
+        "translation": "增加船员数量需求",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0520个常量\n原始数据：\"increased crew requirement\"\n译文数据：\"增加船员数量需求\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"is\"",
         "original": "is",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0527个常量\n原始数据：\"is\"\n译文数据：\"is\"\n\n"
+        "translation": "方面的负面效果已",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0527个常量\n原始数据：\"is\"\n译文数据：\"方面的负面效果已\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"refit time and rate recovery modifiers\"",
         "original": "refit time and rate recovery modifiers",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0516个常量\n原始数据：\"refit time and rate recovery modifiers\"\n译文数据：\"refit time and rate recovery modifiers\"\n\n"
+        "translation": "战机整备速率与整备率恢复时间",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0516个常量\n原始数据：\"refit time and rate recovery modifiers\"\n译文数据：\"战机整备速率与整备率恢复时间\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"relaunch delay\"",
         "original": "relaunch delay",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0518个常量\n原始数据：\"relaunch delay\"\n译文数据：\"relaunch delay\"\n\n"
+        "translation": "补充弹药所需的时间",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0518个常量\n原始数据：\"relaunch delay\"\n译文数据：\"补充弹药所需的时间\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/DefensiveTargetingArray.class#\"Ship does not have fighter bays\"",
         "original": "Ship does not have fighter bays",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/DefensiveTargetingArray.class 的第0144个常量\n原始数据：\"Ship does not have fighter bays\"\n译文数据：\"Ship does not have fighter bays\"\n\n"
+        "translation": "舰船没有飞行甲板",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/DefensiveTargetingArray.class 的第0144个常量\n原始数据：\"Ship does not have fighter bays\"\n译文数据：\"舰船没有飞行甲板\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/DegradedLifeSupport.class#\"Degraded Life Support\"",
@@ -38509,44 +38845,44 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\" CAPACITY REMAINING\"",
         "original": " CAPACITY REMAINING",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0284个常量\n原始数据：\" CAPACITY REMAINING\"\n译文数据：\" CAPACITY REMAINING\"\n\n"
+        "translation": " 剩余容量",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0284个常量\n原始数据：\" CAPACITY REMAINING\"\n译文数据：\" 剩余容量\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"A combat-rated autoloader that provides a limited number of reloads, out of a shared reload capacity, to missile weapons installed in small missile mounts.\"",
         "original": "A combat-rated autoloader that provides a limited number of reloads, out of a shared reload capacity, to missile weapons installed in small missile mounts.",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0445个常量\n原始数据：\"A combat-rated autoloader that provides a limited number of reloads, out of a shared reload capacity, to missile weapons installed in small missile mounts.\"\n译文数据：\"A combat-rated autoloader that provides a limited number of reloads, out of a shared reload capacity, to missile weapons installed in small missile mounts.\"\n\n"
+        "translation": "一个军用自动装填器，具备有限的 \"装填容量\"，可以为小型导弹槽位内的导弹武器恢复备弹量。",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0445个常量\n原始数据：\"A combat-rated autoloader that provides a limited number of reloads, out of a shared reload capacity, to missile weapons installed in small missile mounts.\"\n译文数据：\"一个军用自动装填器，具备有限的 \"装填容量\"，可以为小型导弹槽位内的导弹武器恢复备弹量。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"A partial reload is possible when running out of capacity.\"",
         "original": "A partial reload is possible when running out of capacity.",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0578个常量\n原始数据：\"A partial reload is possible when running out of capacity.\"\n译文数据：\"A partial reload is possible when running out of capacity.\"\n\n"
+        "translation": "剩余装填装填容量用尽时仍可部分地补充备弹量。",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0578个常量\n原始数据：\"A partial reload is possible when running out of capacity.\"\n译文数据：\"剩余装填装填容量用尽时仍可部分地补充备弹量。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"Affected weapon\"",
         "original": "Affected weapon",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0561个常量\n原始数据：\"Affected weapon\"\n译文数据：\"Affected weapon\"\n\n"
+        "translation": "受影响的武器",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0561个常量\n原始数据：\"Affected weapon\"\n译文数据：\"受影响的武器\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"After a reload, the weapon requires an extra %s seconds, in addition to its normal cooldown, before it can fire again.\"",
         "original": "After a reload, the weapon requires an extra %s seconds, in addition to its normal cooldown, before it can fire again.",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0580个常量\n原始数据：\"After a reload, the weapon requires an extra %s seconds, in addition to its normal cooldown, before it can fire again.\"\n译文数据：\"After a reload, the weapon requires an extra %s seconds, in addition to its normal cooldown, before it can fire again.\"\n\n"
+        "translation": "重新装填后，武器需要额外冷却 %s 秒才能再次发射，该时间和武器本身的冷却时间叠加。",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0580个常量\n原始数据：\"After a reload, the weapon requires an extra %s seconds, in addition to its normal cooldown, before it can fire again.\"\n译文数据：\"重新装填后，武器需要额外冷却 %s 秒才能再次发射，该时间和武器本身的冷却时间叠加。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"CAPACITY EXHAUSTED\"",
         "original": "CAPACITY EXHAUSTED",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0290个常量\n原始数据：\"CAPACITY EXHAUSTED\"\n译文数据：\"CAPACITY EXHAUSTED\"\n\n"
+        "translation": "容量耗尽",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0290个常量\n原始数据：\"CAPACITY EXHAUSTED\"\n译文数据：\"容量耗尽\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"Determined by ship size and number of small missile slots, both filled and empty. Having fewer of these simplifies the task and increases the number of possible reloads.\"",
@@ -38558,58 +38894,58 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"Does not affect weapons that do not use ammo or regenerate it, or are mounted in any other type of slot. Reload size is no~\"@aaf2487f",
         "original": "Does not affect weapons that do not use ammo or regenerate it, or are mounted in any other type of slot. Reload size is not affected by skills or hullmods that increase missile ammo capacity.",
-        "translation": "不影响无限备弹量或会自行恢复备弹量的武器，也不影响安装在其他类型槽位上的武器。重装数量等于基础备弹量上限，不受到增加导弹备弹量的技能或船插的影响。",
+        "translation": "不影响无限备弹量或会自行恢复备弹量的武器，也不影响安装在其他类型槽位上的武器。重装数量等于基础备弹量上限，不受到增加导弹备弹量的技能或舰船插件的影响。",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0457个常量\n原始数据：\"Does not affect weapons that do not use ammo or regenerate it, or are mounted in any other type of slot. Reload size is not affected by skills or hullmods that increase missile ammo capacity.\"\n译文数据：\"不影响无限备弹量或会自行恢复备弹量的武器，也不影响安装在其他类型槽位上的武器。重装数量等于基础备弹量上限，不受到增加导弹备弹量的技能或船插的影响。\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0457个常量\n原始数据：\"Does not affect weapons that do not use ammo or regenerate it, or are mounted in any other type of slot. Reload size is not affected by skills or hullmods that increase missile ammo capacity.\"\n译文数据：\"不影响无限备弹量或会自行恢复备弹量的武器，也不影响安装在其他类型槽位上的武器。重装数量等于基础备弹量上限，不受到增加导弹备弹量的技能或舰船插件的影响。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"No affected weapons mounted\"",
         "original": "No affected weapons mounted",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0574个常量\n原始数据：\"No affected weapons mounted\"\n译文数据：\"No affected weapons mounted\"\n\n"
+        "translation": "没有安装可被影响的武器",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0574个常量\n原始数据：\"No affected weapons mounted\"\n译文数据：\"没有安装可被影响的武器\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"Reload capacity\"",
         "original": "Reload capacity",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0462个常量\n原始数据：\"Reload capacity\"\n译文数据：\"Reload capacity\"\n\n"
+        "translation": "装填容量",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0462个常量\n原始数据：\"Reload capacity\"\n译文数据：\"装填容量\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"Reload cost\"",
         "original": "Reload cost",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0558个常量\n原始数据：\"Reload cost\"\n译文数据：\"Reload cost\"\n\n"
+        "translation": "容量消耗 (每轮恢复)",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0558个常量\n原始数据：\"Reload cost\"\n译文数据：\"容量消耗 (每轮恢复)\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"Ship does not have any small missile slots\"",
         "original": "Ship does not have any small missile slots",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0611个常量\n原始数据：\"Ship does not have any small missile slots\"\n译文数据：\"Ship does not have any small missile slots\"\n\n"
+        "translation": "舰船没有任何小型导弹槽位",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0611个常量\n原始数据：\"Ship does not have any small missile slots\"\n译文数据：\"舰船没有任何小型导弹槽位\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"Ship size\"",
         "original": "Ship size",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0503个常量\n原始数据：\"Ship size\"\n译文数据：\"Ship size\"\n\n"
+        "translation": "舰船大小",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0503个常量\n原始数据：\"Ship size\"\n译文数据：\"舰船大小\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"Small missiles\"",
         "original": "Small missiles",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0511个常量\n原始数据：\"Small missiles\"\n译文数据：\"Small missiles\"\n\n"
+        "translation": "小型导弹槽位",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0511个常量\n原始数据：\"Small missiles\"\n译文数据：\"小型导弹槽位\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"missile weapons installed in small missile mounts\"",
         "original": "missile weapons installed in small missile mounts",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0449个常量\n原始数据：\"missile weapons installed in small missile mounts\"\n译文数据：\"missile weapons installed in small missile mounts\"\n\n"
+        "translation": "安装在小型导弹槽位上的导弹武器",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0449个常量\n原始数据：\"missile weapons installed in small missile mounts\"\n译文数据：\"安装在小型导弹槽位上的导弹武器\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/NeuralIntegrator.class#\"Can not be installed on this ship\"",
@@ -38824,16 +39160,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/loading/WeaponGroupType.class#\"Alternating\"",
         "original": "Alternating",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/loading/WeaponGroupType.class 的第0026个常量\n原始数据：\"Alternating\"\n译文数据：\"Alternating\"\n\n"
+        "translation": "交替",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/loading/WeaponGroupType.class 的第0026个常量\n原始数据：\"Alternating\"\n译文数据：\"交替\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/loading/WeaponGroupType.class#\"Linked\"",
         "original": "Linked",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/loading/WeaponGroupType.class 的第0017个常量\n原始数据：\"Linked\"\n译文数据：\"Linked\"\n\n"
+        "translation": "齐射",
+        "stage": 9,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/loading/WeaponGroupType.class 的第0017个常量\n原始数据：\"Linked\"\n译文数据：\"齐射\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Allow black market purchases\"",
@@ -38866,37 +39202,37 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Buy weapons and fighter LPCs from market, if docked at one.\n\nOrdnance from your cargo will be preferred if that option is checked and if the alternatives are of equal quality.\"",
         "original": "Buy weapons and fighter LPCs from market, if docked at one.\n\nOrdnance from your cargo will be preferred if that option is checked and if the alternatives are of equal quality.",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0300个常量\n原始数据：\"Buy weapons and fighter LPCs from market, if docked at one.\n\nOrdnance from your cargo will be preferred if that option is checked and if the alternatives are of equal quality.\"\n译文数据：\"Buy weapons and fighter LPCs from market, if docked at one.\n\nOrdnance from your cargo will be preferred if that option is checked and if the alternatives are of equal quality.\"\n\n"
+        "translation": "从市场中购买 武器 和 战机 LPC 以供装配，如果情况允许。\n\n如果你的货舱内有完全符合或质量类似的 武器 和 战机 LPC，且勾选了对应选项，那么会优先使用货舱内的装备。",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0300个常量\n原始数据：\"Buy weapons and fighter LPCs from market, if docked at one.\n\nOrdnance from your cargo will be preferred if that option is checked and if the alternatives are of equal quality.\"\n译文数据：\"从市场中购买 武器 和 战机 LPC 以供装配，如果情况允许。\n\n如果你的货舱内有完全符合或质量类似的 武器 和 战机 LPC，且勾选了对应选项，那么会优先使用货舱内的装备。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Buy weapons and fighter LPCs from the black market.\n\nNon-black-market options will be preferred if the alternatives are of equal quality.\"",
         "original": "Buy weapons and fighter LPCs from the black market.\n\nNon-black-market options will be preferred if the alternatives are of equal quality.",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0304个常量\n原始数据：\"Buy weapons and fighter LPCs from the black market.\n\nNon-black-market options will be preferred if the alternatives are of equal quality.\"\n译文数据：\"Buy weapons and fighter LPCs from the black market.\n\nNon-black-market options will be preferred if the alternatives are of equal quality.\"\n\n"
+        "translation": "从黑市中购买 武器 和 战机 LPC 以供装配。\n\n如果其他常规市场内有完全符合或质量类似的 武器 和 战机 LPC，且勾选了对应选项，那么会优先购买常规市场内的装备。",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0304个常量\n原始数据：\"Buy weapons and fighter LPCs from the black market.\n\nNon-black-market options will be preferred if the alternatives are of equal quality.\"\n译文数据：\"从黑市中购买 武器 和 战机 LPC 以供装配。\n\n如果其他常规市场内有完全符合或质量类似的 武器 和 战机 LPC，且勾选了对应选项，那么会优先购买常规市场内的装备。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Makes the loadout only loosely based on the goal variant.\"",
         "original": "Makes the loadout only loosely based on the goal variant.",
-        "translation": "基于目标基础水准随机配置。",
+        "translation": "基于目标装配水准，半随机地进行配置。",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0324个常量\n原始数据：\"Makes the loadout only loosely based on the goal variant.\"\n译文数据：\"基于目标基础水准随机配置。\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0324个常量\n原始数据：\"Makes the loadout only loosely based on the goal variant.\"\n译文数据：\"基于目标装配水准，半随机地进行配置。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Prioritizes installing the \"Blast Doors\" hullmod, which increases hull integrity and greatly reduces crew losses suffered ~\"@b11d9ebd",
         "original": "Prioritizes installing the \"Blast Doors\" hullmod, which increases hull integrity and greatly reduces crew losses suffered due to hull damage.\n\n\"Blast Doors\" may still be added if this option isn't checked, provided there are enough ordnance points.",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0320个常量\n原始数据：\"Prioritizes installing the \"Blast Doors\" hullmod, which increases hull integrity and greatly reduces crew losses suffered due to hull damage.\n\n\"Blast Doors\" may still be added if this option isn't checked, provided there are enough ordnance points.\"\n译文数据：\"Prioritizes installing the \"Blast Doors\" hullmod, which increases hull integrity and greatly reduces crew losses suffered due to hull damage.\n\n\"Blast Doors\" may still be added if this option isn't checked, provided there are enough ordnance points.\"\n\n"
+        "translation": "优先安装 \"防爆气密门\"，可以提高船体结构值并大幅降低战斗中因船体结构受损而造成的船员伤亡。\n\n如果不勾选此选项，\"防爆气密门\" 也可能在装配点足够的情况下被安装。",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0320个常量\n原始数据：\"Prioritizes installing the \"Blast Doors\" hullmod, which increases hull integrity and greatly reduces crew losses suffered due to hull damage.\n\n\"Blast Doors\" may still be added if this option isn't checked, provided there are enough ordnance points.\"\n译文数据：\"优先安装 \"防爆气密门\"，可以提高船体结构值并大幅降低战斗中因船体结构受损而造成的船员伤亡。\n\n如果不勾选此选项，\"防爆气密门\" 也可能在装配点足够的情况下被安装。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Prioritizes installing the \"Reinforced Bulkheads\" hullmod, which increases hull integrity and makes a ship virtually certa~\"@0dc6a57d",
         "original": "Prioritizes installing the \"Reinforced Bulkheads\" hullmod, which increases hull integrity and makes a ship virtually certain to be recoverable if lost in battle.\n\n\"Reinforced Bulkheads\" may still be added if this option isn't checked, provided there are enough ordnance points.",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0316个常量\n原始数据：\"Prioritizes installing the \"Reinforced Bulkheads\" hullmod, which increases hull integrity and makes a ship virtually certain to be recoverable if lost in battle.\n\n\"Reinforced Bulkheads\" may still be added if this option isn't checked, provided there are enough ordnance points.\"\n译文数据：\"Prioritizes installing the \"Reinforced Bulkheads\" hullmod, which increases hull integrity and makes a ship virtually certain to be recoverable if lost in battle.\n\n\"Reinforced Bulkheads\" may still be added if this option isn't checked, provided there are enough ordnance points.\"\n\n"
+        "translation": "优先安装 \"强化舱壁\"，可以提高船体结构值并让舰船几乎总是可在战后被打捞并修复。\n\n如果不勾选此选项，\"强化舱壁\" 也可能在装配点足够的情况下被安装。",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0316个常量\n原始数据：\"Prioritizes installing the \"Reinforced Bulkheads\" hullmod, which increases hull integrity and makes a ship virtually certain to be recoverable if lost in battle.\n\n\"Reinforced Bulkheads\" may still be added if this option isn't checked, provided there are enough ordnance points.\"\n译文数据：\"优先安装 \"强化舱壁\"，可以提高船体结构值并让舰船几乎总是可在战后被打捞并修复。\n\n如果不勾选此选项，\"强化舱壁\" 也可能在装配点足够的情况下被安装。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Randomize weapons and hullmods\"",
@@ -38908,16 +39244,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Remove everything possible prior to autofitting; generally results in a better fit.\n\nHowever, refitting outside of port re~\"@ef9b5663",
         "original": "Remove everything possible prior to autofitting; generally results in a better fit.\n\nHowever, refitting outside of port reduces a ship's combat readiness, and this option tends to lead to more changes and more readiness lost.",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0312个常量\n原始数据：\"Remove everything possible prior to autofitting; generally results in a better fit.\n\nHowever, refitting outside of port reduces a ship's combat readiness, and this option tends to lead to more changes and more readiness lost.\"\n译文数据：\"Remove everything possible prior to autofitting; generally results in a better fit.\n\nHowever, refitting outside of port reduces a ship's combat readiness, and this option tends to lead to more changes and more readiness lost.\"\n\n"
+        "translation": "在执行 自动装配 之前，清空当前装配上的所有装备或组件。这可能导致 自动装配 表现更佳。\n\n然而，在未对接港口的情况下更改装配会降低舰船的战备值 (CR)，勾选此选项将由于改动较多而使之降低得尤其多。",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0312个常量\n原始数据：\"Remove everything possible prior to autofitting; generally results in a better fit.\n\nHowever, refitting outside of port reduces a ship's combat readiness, and this option tends to lead to more changes and more readiness lost.\"\n译文数据：\"在执行 自动装配 之前，清空当前装配上的所有装备或组件。这可能导致 自动装配 表现更佳。\n\n然而，在未对接港口的情况下更改装配会降低舰船的战备值 (CR)，勾选此选项将由于改动较多而使之降低得尤其多。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Spend any unused ordnance points on flux vents, capacitors, and essential hullmods.\n\nWill not make any changes to weapon l~\"@e66fcce5",
         "original": "Spend any unused ordnance points on flux vents, capacitors, and essential hullmods.\n\nWill not make any changes to weapon loadout, will not affect ship modules (if any), and will not spend any credits.",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第1390个常量\n原始数据：\"Spend any unused ordnance points on flux vents, capacitors, and essential hullmods.\n\nWill not make any changes to weapon loadout, will not affect ship modules (if any), and will not spend any credits.\"\n译文数据：\"Spend any unused ordnance points on flux vents, capacitors, and essential hullmods.\n\nWill not make any changes to weapon loadout, will not affect ship modules (if any), and will not spend any credits.\"\n\n"
+        "translation": "将所有未使用的装配点投入到耗散通道、幅能寄存器与其他必要的舰船插件中去。\n\n不会对武器产生任何改动，也不会影响舰船的模块 (如果有)，且不会花费任何星币。",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第1390个常量\n原始数据：\"Spend any unused ordnance points on flux vents, capacitors, and essential hullmods.\n\nWill not make any changes to weapon loadout, will not affect ship modules (if any), and will not spend any credits.\"\n译文数据：\"将所有未使用的装配点投入到耗散通道、幅能寄存器与其他必要的舰船插件中去。\n\n不会对武器产生任何改动，也不会影响舰船的模块 (如果有)，且不会花费任何星币。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Spend free OP\"",
@@ -38929,9 +39265,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Strip before autofitting\"",
         "original": "Strip before autofitting",
-        "translation": "清除原有装配",
+        "translation": "清空当前装配",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0310个常量\n原始数据：\"Strip before autofitting\"\n译文数据：\"清除原有装配\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0310个常量\n原始数据：\"Strip before autofitting\"\n译文数据：\"清空当前装配\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Upgrade weapons using extra OP\"",
@@ -38957,23 +39293,23 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Use weapons and fighter LPCs from your fleet's cargo holds.\"",
         "original": "Use weapons and fighter LPCs from your fleet's cargo holds.",
-        "translation": "搜索你舰队的货舱使用武器和战机 LPC .",
+        "translation": "使用你舰队的货舱内的 武器 和 战机 LPC。",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0286个常量\n原始数据：\"Use weapons and fighter LPCs from your fleet's cargo holds.\"\n译文数据：\"搜索你舰队的货舱使用武器和战机 LPC .\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0286个常量\n原始数据：\"Use weapons and fighter LPCs from your fleet's cargo holds.\"\n译文数据：\"使用你舰队的货舱内的 武器 和 战机 LPC。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Use weapons and fighter LPCs from your local storage facilities.\"",
         "original": "Use weapons and fighter LPCs from your local storage facilities.",
-        "translation": "搜索你港口的仓库使用武器和战机 LPC .",
+        "translation": "使用当地港口的仓库内的 武器 和 战机 LPC。",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0296个常量\n原始数据：\"Use weapons and fighter LPCs from your local storage facilities.\"\n译文数据：\"搜索你港口的仓库使用武器和战机 LPC .\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0296个常量\n原始数据：\"Use weapons and fighter LPCs from your local storage facilities.\"\n译文数据：\"使用当地港口的仓库内的 武器 和 战机 LPC。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Use weapons better than the ones specified in the goal variant, if there are ordnance points left to mount them.\n\nWill add~\"@c0a6932e",
         "original": "Use weapons better than the ones specified in the goal variant, if there are ordnance points left to mount them.\n\nWill add flux vents and capacitors up to the number specified in the goal variant first, then upgrade weapons, and then add more vents and some common hullmods.\n\nLeaving some unspent ordnance points in a goal variant can help take advantage of this option.",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0308个常量\n原始数据：\"Use weapons better than the ones specified in the goal variant, if there are ordnance points left to mount them.\n\nWill add flux vents and capacitors up to the number specified in the goal variant first, then upgrade weapons, and then add more vents and some common hullmods.\n\nLeaving some unspent ordnance points in a goal variant can help take advantage of this option.\"\n译文数据：\"Use weapons better than the ones specified in the goal variant, if there are ordnance points left to mount them.\n\nWill add flux vents and capacitors up to the number specified in the goal variant first, then upgrade weapons, and then add more vents and some common hullmods.\n\nLeaving some unspent ordnance points in a goal variant can help take advantage of this option.\"\n\n"
+        "translation": "尽可能使用比目标装配中的武器更强大的武器，如果剩余装配点充足。\n\n将优先满足目标装配的耗散通道与幅能寄存器数量要求，然后才升级武器，最后补充更多耗散通道与其他舰船插件。\n\n在目标装配中预留一些冗余装配点可以让这个选项表现地更好。",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class 的第0308个常量\n原始数据：\"Use weapons better than the ones specified in the goal variant, if there are ordnance points left to mount them.\n\nWill add flux vents and capacitors up to the number specified in the goal variant first, then upgrade weapons, and then add more vents and some common hullmods.\n\nLeaving some unspent ordnance points in a goal variant can help take advantage of this option.\"\n译文数据：\"尽可能使用比目标装配中的武器更强大的武器，如果剩余装配点充足。\n\n将优先满足目标装配的耗散通道与幅能寄存器数量要求，然后才升级武器，最后补充更多耗散通道与其他舰船插件。\n\n在目标装配中预留一些冗余装配点可以让这个选项表现地更好。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/util/Misc.class#\" World\"",
