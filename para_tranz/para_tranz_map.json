@@ -1484,12 +1484,6 @@
     {
       "path": "com/fs/starfarer/campaign/save/CampaignGameManager.class",
       "include_strings": [
-        " anonymous classes being serialized.",
-        " serliazed classes not marked with DoNotObfuscate.",
-        ", implements: ",
-        ".",
-        "Class: ",
-        "Enclosing class: ",
         "Error loading",
         "Error saving game",
         "File deletion failed.\n\nPlease try saving again using the \"Save Copy\" option from the campaign menu.",
@@ -1497,8 +1491,6 @@
         "Finished loading",
         "Finished saving",
         "Finished!",
-        "Found ",
-        "Found invalid classes being serialized",
         "Game loaded",
         "Game saved",
         "Generating sector...",
@@ -1567,8 +1559,7 @@
         "Saving stage 8",
         "Saving stage 9",
         "Saving to ",
-        "Stabilizing economy...",
-        "continue"
+        "Stabilizing economy..."
       ]
     },
     {
