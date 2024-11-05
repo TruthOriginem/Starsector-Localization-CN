@@ -224,6 +224,14 @@ class JavaClassFile:
                         if s.stage > 0 and (s.translation or UPDATE_STRING_ALLOW_EMPTY_TRANSLATION):
                             translation.string = s.translation
                             update_success_count += 1
+                        else:
+                            # 如果词条尚未翻译，且译文文件内容与原文不同，则写入原文
+                            if translation.string != s.original:
+                                self.logger.warning(
+                                    f'在 {self.jar_file.path}:{self.path} 中原文为 "{s.original}" 的译文词条尚未翻译，'
+                                    f'但译文文件中内容与原文不同，将写入原文')
+                                translation.string = s.original
+                                update_success_count += 1
                     else:
                         self.logger.warning(
                             f'在 {self.jar_file.path}:{self.path} 中原文为 "{s.original}" 的常量'

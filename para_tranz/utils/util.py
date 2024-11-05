@@ -96,12 +96,12 @@ class DataFile:
     def save_json(self, ensure_ascii=False, indent=4) -> None:
         strings = [s for s in self.get_strings() if s.original]  # 只导出原文不为空的词条
 
-        # 如果Paratranz json文件已存在，则从中同步任何已翻译词条的状态
+        # 如果Paratranz json文件已存在，则从中同步任何词条的状态（包括未翻译的）
         if not OVERRIDE_STRING_STATUS and self.para_tranz_path.exists():
             self.logger.info(
                 f"Paratranz 平台数据文件 {relative_path(self.para_tranz_path)} 已存在，从中读取已翻译词条的词条stage状态")
 
-            special_stages = (1, 2, 3, 5, 9, -1)
+            special_stages = (0, 1, 2, 3, 5, 9, -1)
             para_strings = self.read_json_strings(self.para_tranz_path)
             para_key_strings = {s.key: s for s in para_strings if
                                 s.stage in special_stages}  # type:Dict[str, String]
