@@ -1380,8 +1380,7 @@
         "Important",
         "Major events",
         "Missions",
-        "New",
-        "Story"
+        "New"
       ]
     },
     {
@@ -1726,6 +1725,8 @@
         "No cost",
         "No tariffs",
         "Resources",
+        "Return to\nColony List",
+        "Return to\nMap",
         "Salvage",
         "Show on map",
         "Shows detailed information about this colony, including the industries and structures present, and supply and demand for various commodites.",
@@ -10853,6 +10854,7 @@
         "Impact",
         "Incident averted by local security forces",
         "Luddic Path Cells",
+        "Multiple planned attacks against various industrial, military, and civilian targets  were averted by the local security forces.",
         "No impact on operations due to lack of material support.",
         "No perceptible impact on operations as of yet.",
         "None",
@@ -11279,6 +11281,17 @@
       ]
     },
     {
+  "path": "com/fs/starfarer/api/impl/campaign/intel/events/HostileActivity.class",
+      "include_strings": [
+        "%s accessibility.",
+        "%s stability, %s accessibility.",
+        "%s stability.",
+        "Hostile activity",
+        "No perceptible impact on operations as of yet."
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/HegemonyHostileActivityFactor.class",
       "include_strings": [
         "Hegemony",
@@ -11456,11 +11469,39 @@
       ]
     },
     {
+  "path": "com/fs/starfarer/api/impl/campaign/intel/events/PirateBasePirateActivityCause2.class",
+  "include_strings": [
+        "---",
+        "Hidden pirate base near your ",
+        "Pirate base in the ",
+        "are",
+        "colonies",
+        "colony",
+        "is"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/PirateBasePirateActivityCause2$1.class",
       "include_strings": [
+        " in the ",
         " instead of providing a reduction in progress",
+        " within range of a pirate base located ",
+        ".",
         ". ",
-        "Assuming current colony income levels, this agreement costs you %s per month. If it was not in effect, this base would contribute %s points of event progress per month"
+        "Assuming current colony income levels, this agreement costs you %s per month. If it was not in effect, this base would contribute %s points of event progress per month",
+        "Dealing with the base",
+        "This results in a greater volume of pirate ",
+        "You have an agreement with ",
+        "Your ",
+        "agreement",
+        "fleets preying on trade. %s should address this.",
+        "harass your colonies or shipping.",
+        "in a nearby system",
+        "in the ",
+        "system",
+        "systems",
+        "the base commander, and fleets from this base do not, as a rule, "
       ]
     },
     {
@@ -11580,6 +11621,29 @@
       ]
     },
     {
+  "path": "com/fs/starfarer/api/impl/campaign/intel/events/StandardLuddicPathActivityCause2.class",
+      "include_strings": [
+        "Technology and AI core use"
+      ],
+      "exclude_strings": []
+    },
+    {
+  "path": "com/fs/starfarer/api/impl/campaign/intel/events/StandardLuddicPathActivityCause2$1.class",
+  "include_strings": [
+        " located in the ",
+        ". %s ",
+        "AI cores",
+        "Active Pather cells on some of your colonies are being supported by a Pather base",
+        "Dealing with this base",
+        "Pather cells on some of your colonies have been disrupted, reducing the Pather interest contribution from these colonies to event progress.",
+        "Use of advanced technology and AI cores attracts the attention of Pathers.",
+        "advanced technology",
+        "disrupted",
+        "will reduce the level of Pather fleet actvity."
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/StandardPerseanLeagueActivityCause$1.class",
       "include_strings": [
         " (",
@@ -11666,6 +11730,20 @@
         "Abyssal Light",
         "Disrupting an %s can provide insight into the topography of surrounding abyssal hyperspace."
       ]
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/ht/HTBlackHoleFactor.class",
+      "include_strings": [
+        "Black hole scanned"
+      ],
+      "exclude_strings": []
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/ht/HTBlackHoleFactor$1.class",
+      "include_strings": [
+        "A close-range scan of a black hole provides insight into the topography of the surrounding area in hyperspace."
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class",
@@ -12425,7 +12503,9 @@
         "Raid of %s failed",
         "Status",
         "Target: %s",
+        "The primary reason for the expedition is the colony being established in space claimed by ",
         "The primary reason for the expedition is the colony's \"free port\" status, and the concomitant export of illegal goods alongside it being a haven for various undesirables.",
+        "The primary reason for the expedition is the colony's market share in the exports of ",
         "This operation is being carried without an open declaration of war. Defeating the expeditionary force will only result in a small reputation reduction with ",
         "a saturation bombardment of the colony",
         "disrupting the colony's ",
@@ -12783,8 +12863,18 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/missions/RecoverAPlanetkiller.class",
       "include_strings": [
+        ", and implied that the planetkiller weapon could be found there.",
+        ".",
+        ". The log entry dates to the first AI War, more than a hundred cycles ago",
+        "A log entry records a large Ordo sent in pursuit; its last hyperwave report placed it near the ",
+        "A mysterious voice, some kind of AI, provided you with coordinates for the ",
+        "Investigate the ",
+        "Perhaps it brings 'much amusement' to this AI to not provide more detailed instructions.",
         "Recover information about a Hegemony fleet last seen in a Tri-Tachyon held system during the first AI War, more than a hundred cycles ago. The fleet is rumored to have been carrying a planetkiller weapon.",
+        "Recover information from remnant Nexus in the ",
+        "The Scythe of Orion",
         "The data banks of the remnant Nexus contained information about the Hegemony fleet rumored to be carrying a planetkiller weapon. ",
+        "The information should be contained in the data banks of a remnant Nexus located in the ",
         "You've destroyed a remnant Nexus and recovered information about a Hegemony fleet estimated to be carrying a planetkiller weapon."
       ]
     },
@@ -13296,12 +13386,31 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/missions/askonia/TheUsurpers.class",
       "include_strings": [
+        "ARC Raider Flotilla",
+        "ARC Raider Patrol",
         "Askonia System Defense Armada",
+        "Chief High Inspector-General Macario is based ",
+        "Extract a known double-agent who, while working for Horacio Caden, has betrayed the Sindrian Diktat.",
+        "Extract the double agent from Umbra.",
         "Find and intercept a Sindrian Diktat patrol fleet led by the 'treasonous' officer. It can be found in the Askonia system.",
+        "Intercept Macario's agent at the given location.",
+        "Intercept and assist or capture Macario's agent at the Fringe Jump-point of Askonia.",
+        "Intercept the traitor's patrol fleet in the Askonia system.",
         "Lion's Guard Grand Armada",
+        "Meet Yannick Ram at his safehouse on Volturn.",
+        "Meet Yannick Ram at his safehouse on Volturn. He has a plan to save the Sindrian Diktat from itself.",
         "Mercenary Bounty Hunter",
         "Ram gave you coordinates to his safehouse ",
+        "Report back to Macario about your conversation with Caden.",
+        "Report back to Macario about your conversation with Hyder.",
+        "Report back to Macario with news of his agent's demise.",
+        "Return to Macario, on Sindria, with news of his agent's death.",
         "Speak with Horacio Caden. He commands the Lion's Guard Grand Armada.",
+        "Speak with Oxana Hyder. She commands the Askonia System Defense Armada.",
+        "Talk to Macario, on Sindria, about Caden.",
+        "Talk to Macario, on Sindria, about Hyder.",
+        "The 'treasonous' double-agent is based ",
+        "The Usurpers",
         "Use the 'treasonous' agent as leverage to gain access to Guard High Lieutenant-Executor Caden. He can be found in command of the Lion's Guard Grand Armada, a large warfleet patrolling the Askonia star system.",
         "Use the 'treasonous' officer as leverage to gain access to Deputy Star Marshal Hyder. She can be found in command of the Askonia System Defense Armada, a large warfleet patrolling the Askonia star system."
       ]
@@ -13518,9 +13627,38 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/missions/luddic/LuddicKnightErrant.class",
       "include_strings": [
+        "A Pather, Sedge, claims that Jethro Bornanew travelled to Mazalot. Find him, or find where he has gone from there.",
+        "Contact Jethro Bornanew ",
+        "Contact Nile Virens ",
+        "Find Bornanew. His last mission was the infiltration of a Pather cell; someone must known something about where he is.",
+        "Go to ",
+        "Go to Chalcedon and find Jethro Bornanew",
+        "Go to Mazalot and find Jethro Bornanew",
+        "Go to the alleged location of Jethro Bornanew on Mazalot",
+        "Go to the spacer bar on Chalcedon and speak with the Luddic Path recruiter",
+        "Knight Errant",
         "Nile Virens has provided you with the location of Jethro Bornanew, or so he claims. This consists of coordinates for a location on the surface of Mazalot, outside of a Luddic-majority settlement.",
-        "Nile Virens runs the Luddic Path on Mazalot. If anyone knows where Bornanew is, it would be him or his organization. He might be persuaded to help by force or diplomacy."
+        "Nile Virens runs the Luddic Path on Mazalot. If anyone knows where Bornanew is, it would be him or his organization. He might be persuaded to help by force or diplomacy.",
+        "Raided Mazalot and caused a Luddic uprising",
+        "Return to Gilead with Bornanew",
+        "Return to Gilead with news of Bornanew's 'death'.",
+        "Return to the office of Archcurate Jaspis with news of Jethro Bornanew's 'death'.",
+        "Return with Jethro Bornanew to the office of Archcurate Jaspis.",
+        "Talk to or raid Nile Virens on Mazalot",
+        "You have been told to meet with someone in a spacer bar on the surface of Chalcedon, presumably a recruiter for the Luddic Path."
       ]
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/missions/luddic/LuddicPilgrimsPath.class",
+      "include_strings": [
+        "Complete the pilgrimage on Gilead, in the Canaan system",
+        "Pilgrim's Path",
+        "Return to the shrine of Gilead in the Canaan system to complete the Pilgrim's Path.",
+        "The Pilgrim's Path",
+        "Visit the six Luddic shrines",
+        "Visit the six shrines of the Pilgrim's Path. The pilgrimage is traditionally completed by returning to Gilead, in the Canaan system."
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/api/impl/campaign/plog/PLIntel.class",
@@ -14302,6 +14440,7 @@
         "Salvaged",
         "Salvaging skill",
         "Scavenging effectiveness: %s",
+        "The density of the debris field affects both the amount of resources and the number of rare items found.",
         "The field appears stable and will not drift apart any time soon.",
         "The field is unstable, but should not drift apart for ",
         "The recovery effectiveness does not affect the chance of finding rare and valuable items.",
@@ -16849,6 +16988,7 @@
         "Make sure to take all of the supplies and any other valuable cargo, but feel free to leave the cheap and bulky metals behind.",
         "Scavenging requires Heavy Machinery, but there is some in your cargo holds.",
         "To get your fleet moving, click on empty space in the direction you want to move.",
+        "Welcome to the Persean Sector! Your fleet is in the middle of nowhere and critically low on supplies.",
         "Your fleet"
       ]
     },
