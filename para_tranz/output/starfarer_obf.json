@@ -12187,13 +12187,6 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/Z.class 的第0272个常量\n原始数据：\"Relationship\"\n译文数据：\"关系\"\n\n"
     },
     {
-        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/Z.class#\"neutral\"",
-        "original": "neutral",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/Z.class 的第0282个常量\n原始数据：\"neutral\"\n译文数据：\"neutral\"\n\n"
-    },
-    {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/b.class#\" days ago\"",
         "original": " days ago",
         "translation": " 天前",
@@ -16546,6 +16539,13 @@
         "translation": "补给不足",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/a$2.class 的第0093个常量\n原始数据：\"out of supplies\"\n译文数据：\"补给不足\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/coreui/a$o.class#\"/day\"",
+        "original": "/day",
+        "translation": "/天",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/a$o.class 的第0348个常量\n原始数据：\"/day\"\n译文数据：\"/天\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/a$o.class#\"replacement chassis:\"",
@@ -21028,20 +21028,6 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/x.class 的第0135个常量\n原始数据：\"Repairs\"\n译文数据：\"维修\"\n\n"
     },
     {
-        "key": "starfarer_obf.jar:com/fs/starfarer/coreui/x.class#\"eco\"",
-        "original": "eco",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/x.class 的第0167个常量\n原始数据：\"eco\"\n译文数据：\"eco\"\n\n"
-    },
-    {
-        "key": "starfarer_obf.jar:com/fs/starfarer/coreui/x.class#\"max\"",
-        "original": "max",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/x.class 的第0021个常量\n原始数据：\"max\"\n译文数据：\"max\"\n\n"
-    },
-    {
         "key": "starfarer_obf.jar:com/fs/starfarer/launcher/B.class#\"Cancel\"",
         "original": "Cancel",
         "translation": "取消",
@@ -21618,9 +21604,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/loading/ShipHullSpecLoader.class#\"<missing hull name>\"",
         "original": "<missing hull name>",
-        "translation": "",
-        "stage": -1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/loading/ShipHullSpecLoader.class 的第0677个常量\n原始数据：\"<missing hull name>\"\n译文数据：\"<missing hull name>\"\n\n"
+        "translation": "<舰船名称 读取失败>",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/loading/ShipHullSpecLoader.class 的第0677个常量\n原始数据：\"<missing hull name>\"\n译文数据：\"<舰船名称 读取失败>\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/loading/ShipHullSpecLoader.class#\"Custom\"",
@@ -21646,16 +21632,16 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/loading/ShipHullSpreadsheetLoader.class#\"<missing name>\"",
         "original": "<missing name>",
-        "translation": "",
-        "stage": -1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/loading/ShipHullSpreadsheetLoader.class 的第0130个常量\n原始数据：\"<missing name>\"\n译文数据：\"<missing name>\"\n\n"
+        "translation": "<名称 读取失败>",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/loading/ShipHullSpreadsheetLoader.class 的第0130个常量\n原始数据：\"<missing name>\"\n译文数据：\"<名称 读取失败>\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/loading/ShipHullSpreadsheetLoader.class#\"<no designation>\"",
         "original": "<no designation>",
-        "translation": "",
-        "stage": -1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/loading/ShipHullSpreadsheetLoader.class 的第0141个常量\n原始数据：\"<no designation>\"\n译文数据：\"<no designation>\"\n\n"
+        "translation": "<设计类型 读取失败>",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/loading/ShipHullSpreadsheetLoader.class 的第0141个常量\n原始数据：\"<no designation>\"\n译文数据：\"<设计类型 读取失败>\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/loading/ShipHullSpreadsheetLoader.class#\"Common\"",
@@ -23861,6 +23847,13 @@
         "translation": "缩小",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/title/super/new$oo.class 的第0228个常量\n原始数据：\"Zoom out\"\n译文数据：\"缩小\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/title/super/new.class#\"<none>\"",
+        "original": "<none>",
+        "translation": "<未设置>",
+        "stage": 5,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/title/super/new.class 的第0896个常量\n原始数据：\"<none>\"\n译文数据：\"<未设置>\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/title/super/oOoO.class#\"\" button acts as a toggle instead of having to be held down\"",

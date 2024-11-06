@@ -2916,8 +2916,7 @@
         " units)",
         "% of exports",
         "% of imports",
-        "Relationship",
-        "neutral"
+        "Relationship"
       ]
     },
     {
@@ -4028,6 +4027,7 @@
     {
       "path": "com/fs/starfarer/coreui/a$o.class",
       "include_strings": [
+        "/day",
         "replacement chassis:"
       ]
     },
@@ -5158,9 +5158,7 @@
     {
       "path": "com/fs/starfarer/coreui/x.class",
       "include_strings": [
-        "Repairs",
-        "eco",
-        "max"
+        "Repairs"
       ]
     },
     {
@@ -5700,6 +5698,13 @@
         "Settings",
         "Yes"
       ]
+    },
+    {
+      "path": "com/fs/starfarer/title/super/new.class",
+      "include_strings": [
+        "<none>"
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/title/super/new$O0.class",
