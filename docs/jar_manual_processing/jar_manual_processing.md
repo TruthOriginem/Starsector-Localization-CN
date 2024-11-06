@@ -19,6 +19,8 @@
 ## 代码逻辑修改
 
 ### 1. 存档页面存档难度文本
+> 建议提交游戏作者修改
+
 相关文件：`starfarer_obf.jar:com/fs/starfarer/campaign/save/LoadGameDialog$o.class`
 ![difficulty_ui.png](difficulty_ui.png)
 
@@ -27,7 +29,29 @@
 两个常量在 `starfarer.api.jar:com/fs/starfarer/api/impl/campaign/ids/Difficulties.class` 中定义
 而该属性同时用作难度的id，所以不便直接翻译常量的值。需要添加处理逻辑来把难度id映射到中文难度。
 
-### 2. 舰船信息页文本换行前缺少最后一个字
+### 2. GenerateSlipsurgeAbility.getStrengthForStellarObject() 实现bug
+> 建议提交游戏作者修改
+
+相关文件：`starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/GenerateSlipsurgeAbility.class`
+![slipsurge-code.png](slipsurge-code.png)
+1. 先判断 .contains('giant') 会覆盖后续的 .contains('supergiant') 条件
+2. 建议不要使用名字来判断恒星类型
+
+### 3. 战斗UI武器伤害类型文本
+相关文件：`starfarer_obf.jar:com/fs/starfarer/renderers/oOOO/C$o.class`
+![combat_ui_damage_type.png](combat_ui_damage_type.png)
+
+这里使用了 DamageType 枚举的 .toString() 方法，但是其实应当使用 .getDisplayName()，导致无法翻译
+![combat_ui_damage_type-code.png](combat_ui_damage_type-code.png)
+
+### 4. 战斗UI武器组类型文本
+相关文件：`starfarer_obf.jar:com/fs/starfarer/renderers/oOOO/C.class`
+![combat_ui_wg_type.png](combat_ui_wg_type.png)
+
+这里使用了 WeaponGroupType 枚举的 .toString() 方法，但是其实应当使用 .getDisplayName()，导致无法翻译
+![combat_ui_wg_type-code.png](combat_ui_wg_type-code.png)
+
+### 5. 舰船信息页文本换行前缺少最后一个字
 ![line_end_char_missing-1.png](line_end_char_missing-1.png)
 ![line_end_char_missing-2.png](line_end_char_missing-2.png)
 可能与换行算法有关，待查。
