@@ -6,7 +6,7 @@
 
 ## 下载汉化
 
-**注意：本汉化包仅适用于 0.97a-RC11 版本**
+> **注意：本汉化包仅适用于 0.97a-RC11 版本**
 
 ### 从论坛下载
 
@@ -72,6 +72,8 @@
 ### 版本汉化流程
 
 ![][flow-chart]
+
+> 其中内核文件在开始翻译前可能需要手动预处理，具体请参见[Jar文件手动处理记录](docs/jar_manual_processing/jar_manual_processing.md)
 
 1. 创建以新版本号命名的分支，例如`0.97`，并切换到该分支
 2. 重命名`original`文件夹为`original.old`，`localization`文件夹为`localization.old`
