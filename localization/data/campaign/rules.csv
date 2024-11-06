@@ -4825,17 +4825,17 @@ lppHesperusShrineVisit1,DialogOptionSelected,$option == lpp_hesperusShrineVisit1
 
 你留在一座祈祷者壁龛之中，深思着这份恐怖。",lpp_hesperusShrineVisit2:继续,
 lppHesperusShrineVisit2,DialogOptionSelected,$option == lpp_hesperusShrineVisit2,"BeginConversation initiate False False
-FireAll HesperusInitiateResponses","在对面的壁龛里，一名年轻入门骑士向你送来一个挑战的眼神。他剃发的痕迹还很新鲜，想必才刚刚加入骑士团不久。
+FireAll HesperusInitiateResponses","在对面的壁龛里，一名年轻入门骑士向你送来一个审视的眼神。他剃发的痕迹还很新鲜，想必才刚刚加入骑士团不久。
 
-""你并非骑士，"" 他平静地说到，装腔作势地上下打量着你的制服，""也不是我们中的一员，至少不像。你为何来此，太空民？""",,
-lppHesperusInitiateResponseAgnostic,HesperusInitiateResponses,,,,"lpp_hesperusInitiateReplyAgnostic:""我来到此地，找寻那未定的答案。""",
+""你并非骑士，"" 他轻声说到，装腔作势地上下打量着你的制服，""也不是我们中的一员，至少不像。你为何来此，宇宙民？""",,
+lppHesperusInitiateResponseAgnostic,HesperusInitiateResponses,,,,"lpp_hesperusInitiateReplyAgnostic:""我来这里也许就是为了找到那个答案。""",
 lppHesperusInitiateResponseAtheistic,HesperusInitiateResponses,,,,"lpp_hesperusInitiateReplyAtheistic:""我来到此地，只是为见我应见之物。""",
 lppHesperusInitiateResponseFaithful,HesperusInitiateResponses,,,,"lpp_hesperusInitiateReplyFaithful:""尽管外表如此，但我是一名朝圣者，年轻的骑士。""",
 lppHesperusInitiateResponseCynical,HesperusInitiateResponses,$player.luddicAttitudeCynical > 0,,,"lpp_hesperusInitiateReplyCynical:""这么着急开打？你才刚报名入队吧。""",
 lppHesperusInitiateResponsePather,HesperusInitiateResponses,$player.luddicAttitudePather > 0,,,"lpp_hesperusInitiateReplyPather:""我所寻的 ""途径"" ，与你们并无不同。""",
 lppHesperusInitiateReplyAgnostic,DialogOptionSelected,$option == lpp_hesperusInitiateReplyAgnostic,"$player.luddicAttitudeAgnostic++
 $option = lpp_hesperusInitiateContinue1
-FireBest DialogOptionSelected",看起来，你的内省让这名志愿者很困惑。你可以看到他的想法写在了脸上 —— 你在消遣我吗？但这表情很快就收了起来，而你也被划进了 '没有威胁' 的名单里。,,
+FireBest DialogOptionSelected",你的内省似乎让这个新人不知所措。你可以看到他的想法浮现在了脸上 —— 你在消遣我吗？但这表情很快就收了起来，而你也被划进了 '没有威胁' 的行列里。,,
 lppHesperusInitiateReplyFaithful,DialogOptionSelected,$option == lpp_hesperusInitiateReplyFaithful,"$player.luddicAttitudeFaithful++
 $option = lpp_hesperusInitiateContinue1
 FireBest DialogOptionSelected","""确实，""他的胸膛稍稍挺起，将你稳妥地划入他那与生俱来的使命之中。""我发誓将守护你的命运，望你知晓。""",,
@@ -5032,9 +5032,9 @@ FireAll LKEJaspisStartHub","""尽管曾受到了粗暴的对待，他还是有�
 
 ""在日程有空闲时，我有职责 —— 而不仅是出于慈悲 —— 审查赦免请求。我发现 Jethro 心灵明澈，愿意痛改前非。他的罪行并不那么严重，与其说是天性邪恶，倒不如说是为了取悦同伴。我花了一段时间主持他的忏悔，结束之后，他取了一个新名字，并且问...他该如何为神做贡献。""
 ",lke_jaspisStartBornanew2:继续,
-lkeJaspisStartBornanew2,DialogOptionSelected,$option == lke_jaspisStartBornanew2,,"""某个人需要他的...经验。我送他去和卢德骑士们一同训练，于是他成为了一名学徒，然后在拿到了见习骑士的职称后他被派回到我的主管办公室为我服务来换取骑士职称。""
+lkeJaspisStartBornanew2,DialogOptionSelected,$option == lke_jaspisStartBornanew2,,"""我们需要有他这样...经验的人。我送他去和卢德骑士们一同训练，于是他成为了一名学徒，然后在拿到了见习修士的职称后他被派回到我的主管办公室，为我服务来换取骑士职称。""
 
-""我承认。"" 她小声地说道，""我害怕我又一次浪费了一个好人的生命。是我的傲慢 ——""Jaspis 轻轻地苦笑了一声。""可能这确实蒙蔽了我。""","lke_jaspisStartBornanew3:""你不知道他已经死了。""
+""我承认。"" 她小声地说道，""我害怕我又一次浪费了一个好人的生命。我所秉持的骄傲 ——""Jaspis 轻轻地苦笑了一声。""也许真的蒙蔽了我自己。""","lke_jaspisStartBornanew3:""你不知道他已经死了。""
 lke_jaspisStartBornanew4:""...又来？""
 lke_jaspisStartHisMission5:说一些别的事情。",
 lkeJaspisStartBornanew3,DialogOptionSelected,$option == lke_jaspisStartBornanew3,FireAll LKEJaspisStartHub,"""不。但是他的死亡如同鬼魅一般缠绕着我，一如既往。""
@@ -7077,7 +7077,7 @@ FireAll PopulateOptions","Virens 的警卫队长带着你回到了大厅。一�
 lkeRaidVirens,PopulateOptions,"$market.id == mazalot
 $market.lke_contactVirens
 $menuState == main
-#Call $lke_ref updateData",FireBest LKEvirensRaidCheckHostilesNearby,,2:lke_virensRaidStart:准备从 Virens 的据点中营救 Jethro Bornanew,
+#Call $lke_ref updateData",FireBest LKEvirensRaidCheckHostilesNearby,,2:lke_virensRaidStart:准备从 Virens 的藏身处中营救 Jethro Bornanew,
 lkeDisableVirensRaidIfNeeded,LKEvirensRaidCheckHostilesNearby,HostileFleetNearbyAndAware,"SetEnabled lkeVirensRaidStart false
 SetTooltip lkeVirensRaidStart ""附近有支敌方舰队正追踪你的行动，发动突袭是非常不明智的。""",,,
 lkeVirensRaidStart,DialogOptionSelected,$option == lke_virensRaidStart,"$raidDifficulty = 250 0
@@ -7096,7 +7096,7 @@ lkeVirensRaidFinishedA,LKEVirensRaidFinishedA,,,"您在舰桥上监督本次突�
 
 在混乱中，不止一个小组报告他们成功了。这些信息可以稍后再处理。你们在陆战队着陆后迅速有序撤离，一边掩护射击，一边运送伤员和俘虏。",,
 lkeVirensRaidFinishedB,LKEVirensRaidFinishedB,,"AdjustRepPerson virens VENGEFUL -50
-AddTextSmall ""从 Nile Virens 的据点中营救俘虏"" highlight
+AddTextSmall ""从 Nile Virens 的藏身处中营救俘虏"" highlight
 $global.lke_raidedMazalotForVirens = true
 Call $global.lke_ref didMazalotRaid","数个俘虏被带到了你的$shipOrFleet上，他们中没有哪个和你手上的 Jethro Bornanew 的简陋生物信息吻合。
 
@@ -8338,7 +8338,7 @@ tut_mainGetDataGoDark,DialogOptionSelected,$option == tutContGoDark,"Highlight "
 SetTextHighlights ""\""匿踪\""""
 AddAbility go_dark 1","""首先，确保你离港后立即关掉应答器。我已经和巡逻队打过招呼，他们不会来找你麻烦。
 
-如果你足够走运，那些海盗甚至会把你当成是自己人，让你顺利靠近 Derinkuyu。不过在你接近的时候，也可以考虑使用 ""匿踪"" 来避免他们过于清晰地获得你的舰队情报。你也可以沿着小行星带靠过去，只要你保持缓慢航行，它们能为你提供完美的掩护。""","2:tutContEBurn:""如果他们真的发现我了呢？""",
+如果你足够走运，那些海盗甚至会把你当成是自己人，让你顺利靠近 Derinkuyu。不过在你接近的时候，也可以考虑使用 ""匿踪"" 来避免他们过于清晰地获得你的舰队情报。你也可以沿着小行星带靠过去，只要你保持缓速航行，它们能为你提供完美的掩护。""","2:tutContEBurn:""如果他们真的发现我了呢？""",
 tut_mainGetDataEBurn,DialogOptionSelected,$option == tutContEBurn,"SetTextHighlights ""\""紧急加速\""""
 AddAbility emergency_burn 3","""那你就有麻烦了，立即激活 ""紧急加速"" 逃离那里，甩掉他们，然后绕回去再试一次。
 

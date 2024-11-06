@@ -1710,8 +1710,8 @@
     {
         "key": "descriptions.csv#('gryphon', 'SHIP')$text1",
         "original": "The Gryphon is a dedicated missile cruiser designed to provide a highly mobile platform for heavy fire support. It is not a front-line cruiser, and so operates best when provided with escorts.\n\nAmong the so-called \"Cruiser School\" wave of ships designed by Altair Exotech, the Gryphon was a key component of the power-projection strategy that came into vogue shortly before the collapse of the Gate system. The Gryphon was meant to allow a task force commander to rapidly concentrate bursts of specialized heavy firepower, forming a devastating hammer to the anvil of assault-class cruisers and destroyers. So reads the Domain-era tactical manual, anyway.\n\nOf particular interest is the Gryphon's hull-integrated missile nanoforge: this fixed architecture nanoforge system allows extremely rapid conversion of densely packed, pre-formulated feedstock into a narrow range of munitions in the midst of battle. This allows the Gryphon to effectively convert concentrated mass into desired armaments, allowing for mid-battle replenishment of missile stocks. The flux output of this process is, of course, tremendous so it is not advisable for captains who are relying on their shields to block enemy fire to engage the integrated missile nanoforge system.",
-        "translation": "狮鹫-级 是一种专用导弹巡洋舰，设计为搭载重型支援火力的高机动平台。由于它并不是前线作战巡洋舰，因此需要在护航编队的掩护下才能发挥最佳作战效能。\n\n狮鹫-级 是 牵牛星科技 在 \"巡洋学派\" 思潮推出的多批舰船设计之一。在 大崩溃 前不久，围绕星门系统展开的兵力投送战略开始流行，而 狮鹫-级 是其中关键的组成部分。狮鹫-级 的投入意味着特遣部队指挥能迅速集中强大的专业级重火力，形成势不可挡的重锤，摧毁由突击型巡洋舰与驱逐舰组成的铁砧拖住的敌人。至少 人之领 时代的战术手册是这么写的。\n\n狮鹫-级 特别引人注目的地方莫过于其集成在船体内的导弹纳米熔炉，这种架构固定的纳米熔炉系统可以极其迅速地把预制的高密度物料条在战斗中转化成种类有限的弹药。因此该舰能有效地将密度质量转化为所需的武器装备，使其在战斗能重新补充导弹储备。当然这个过程中会产生高额幅能，所以把 狮鹫-级 交给会一边用护盾抵挡炮火一边开启纳米机的鲁莽舰长是极不明智的行为。",
-        "stage": 5,
+        "translation": "狮鹫-级 是一种专用导弹巡洋舰，设计为搭载重型支援火力的高机动平台。由于它并不是前线作战巡洋舰，因此需要在护航编队的掩护下才能发挥最佳作战效能。\n\n狮鹫-级 是 牵牛星科技 在 \"巡洋学派\" 思潮推出的多批舰船设计之一。在 大崩塌 前不久，围绕星门系统展开的兵力投送战略开始流行，而 狮鹫-级 是其中关键的组成部分。狮鹫-级 的投入意味着特遣部队指挥能迅速集中强大的专业级重火力，形成势不可挡的重锤，摧毁由突击型巡洋舰与驱逐舰组成的铁砧拖住的敌人。至少 人之领 时代的战术手册是这么写的。\n\n狮鹫-级 特别引人注目的地方莫过于其集成在船体内的导弹纳米熔炉，这种架构固定的纳米熔炉系统可以极其迅速地把预制的高密度物料条在战斗中转化成种类有限的弹药。因此该舰能有效地将密度质量转化为所需的武器装备，使其在战斗能重新补充导弹储备。当然这个过程中会产生高额幅能，所以把 狮鹫-级 交给会一边用护盾抵挡炮火一边开启纳米机的鲁莽舰长是极不明智的行为。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\ndescriptions.csv第0412行\n[本行原始数据]\n{'id': 'gryphon',\n 'type': 'SHIP',\n 'text1': 'The Gryphon is a dedicated missile cruiser designed to provide a '\n          'highly mobile platform for heavy fire support. It is not a '\n          'front-line cruiser, and so operates best when provided with '\n          'escorts.\\n'\n          '\\n'\n          'Among the so-called \"Cruiser School\" wave of ships designed by '\n          'Altair Exotech, the Gryphon was a key component of the '\n          'power-projection strategy that came into vogue shortly before the '\n          'collapse of the Gate system. The Gryphon was meant to allow a task '\n          'force commander to rapidly concentrate bursts of specialized heavy '\n          'firepower, forming a devastating hammer to the anvil of '\n          'assault-class cruisers and destroyers. So reads the Domain-era '\n          'tactical manual, anyway.\\n'\n          '\\n'\n          \"Of particular interest is the Gryphon's hull-integrated missile \"\n          'nanoforge: this fixed architecture nanoforge system allows '\n          'extremely rapid conversion of densely packed, pre-formulated '\n          'feedstock into a narrow range of munitions in the midst of battle. '\n          'This allows the Gryphon to effectively convert concentrated mass '\n          'into desired armaments, allowing for mid-battle replenishment of '\n          'missile stocks. The flux output of this process is, of course, '\n          'tremendous so it is not advisable for captains who are relying on '\n          'their shields to block enemy fire to engage the integrated missile '\n          'nanoforge system.',\n 'text2': '',\n 'text3': '',\n 'text4': '',\n 'notes': ''}"
     },
     {
@@ -1731,15 +1731,15 @@
     {
         "key": "descriptions.csv#('hammer', 'WEAPON')$text1",
         "original": "This dumb-fire rocket was ubiquitous in the Persean Sector pre-Collapse due to civilian applications pioneered by asteroid miners. The go-to strike weapon of the desperately under-equipped, the Hammer is most often employed by poor independent militias, Pirates, and especially the Luddic Path. This has led to the mildly blasphemous alternative name for the weapon, \"Ludd's Hammer\".",
-        "translation": "大锤鱼雷早在 大崩溃 前就已经遍布英仙座星域，是一种率先被小行星矿工应用于民用开采的非制导火箭。在装备匮乏时，向来都是最廉价易得的大锤鱼雷，作为打击武器被贫困的独立民兵和海盗选用。由于卢德左径对它偏爱有佳，它还有个略微亵渎神明的绰号叫 \"卢德之锤\"。",
-        "stage": 5,
+        "translation": "大锤鱼雷早在 大崩塌 前就已遍布英仙座星域，是一种率先被小行星矿工用于开采作业的非制导火箭。在装备匮乏时，向来都是最廉价易得的大锤鱼雷，作为打击武器被贫困的独立民兵和海盗选用。由于卢德左径对它偏爱有佳，它还有个略微亵渎神明的绰号叫 \"卢德之锤\"。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\ndescriptions.csv第0413行\n[本行原始数据]\n{'id': 'hammer',\n 'type': 'WEAPON',\n 'text1': 'This dumb-fire rocket was ubiquitous in the Persean Sector '\n          'pre-Collapse due to civilian applications pioneered by asteroid '\n          'miners. The go-to strike weapon of the desperately under-equipped, '\n          'the Hammer is most often employed by poor independent militias, '\n          'Pirates, and especially the Luddic Path. This has led to the mildly '\n          'blasphemous alternative name for the weapon, \"Ludd\\'s Hammer\".',\n 'text2': '',\n 'text3': '',\n 'text4': '',\n 'notes': ''}"
     },
     {
         "key": "descriptions.csv#('hammer_single', 'WEAPON')$text1",
         "original": "This dumb-fire rocket was ubiquitous in the pre-Collapse Persean Sector due to applications pioneered by asteroid miners. The go-to strike weapon of the desperately under-equipped, the Hammer is often employed by poor independent militias, Pirates, and particularly the Luddic Path. This has led to the mildly blasphemous alternative name for the weapon, \"Ludd's Hammer\".",
-        "translation": "大锤鱼雷早在 大崩溃 前就已经遍布英仙座星域，是一种率先被小行星矿工应用于民用开采的非制导火箭。在装备匮乏时，向来都是最廉价易得的大锤鱼雷，作为打击武器被贫困的独立民兵和海盗选用。由于卢德左径对它偏爱有佳，它还有个略微亵渎神明的绰号叫 \"卢德之锤\"。",
-        "stage": 5,
+        "translation": "大锤鱼雷早在 大崩塌 前就已遍布英仙座星域，是一种率先被小行星矿工用于开采作业的非制导火箭。在装备匮乏时，向来都是最廉价易得的大锤鱼雷，作为打击武器被贫困的独立民兵和海盗选用。由于卢德左径对它偏爱有佳，它还有个略微亵渎神明的绰号叫 \"卢德之锤\"。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\ndescriptions.csv第0414行\n[本行原始数据]\n{'id': 'hammer_single',\n 'type': 'WEAPON',\n 'text1': 'This dumb-fire rocket was ubiquitous in the pre-Collapse Persean '\n          'Sector due to applications pioneered by asteroid miners. The go-to '\n          'strike weapon of the desperately under-equipped, the Hammer is '\n          'often employed by poor independent militias, Pirates, and '\n          'particularly the Luddic Path. This has led to the mildly '\n          'blasphemous alternative name for the weapon, \"Ludd\\'s Hammer\".',\n 'text2': '',\n 'text3': '',\n 'text4': '',\n 'notes': ''}"
     },
     {
@@ -1752,8 +1752,8 @@
     {
         "key": "descriptions.csv#('hammerrack', 'WEAPON')$text1",
         "original": "This dumb-fire rocket was ubiquitous in the pre-Collapse Persean Sector due to applications pioneered by asteroid miners. The go-to strike weapon of the desperately under-equipped, the Hammer is often employed by poor independent militias, Pirates, and particularly the Luddic Path. This has led to the mildly blasphemous alternative name for the weapon, \"Ludd's Hammer\".\n\nThe Hammer Barrage mount provides a stirring example of the expedience of quantity.",
-        "translation": "大锤鱼雷早在 大崩溃 前就已经遍布英仙座星域，是一种率先被小行星矿工应用于民用开采的非制导火箭。在装备匮乏时，向来都是最廉价易得的大锤鱼雷，作为打击武器被贫困的独立民兵和海盗选用。由于卢德左径对它偏爱有佳，它还有个略微亵渎神明的绰号叫 \"卢德之锤\"。\n\n大锤鱼雷发射舱生动形象地诠释了什么叫数量至上。",
-        "stage": 5,
+        "translation": "大锤鱼雷早在 大崩塌 前就已遍布英仙座星域，是一种率先被小行星矿工用于开采作业的非制导火箭。在装备匮乏时，向来都是最廉价易得的大锤鱼雷，作为打击武器被贫困的独立民兵和海盗选用。由于卢德左径对它偏爱有佳，它还有个略微亵渎神明的绰号叫 \"卢德之锤\"。\n\n大锤鱼雷发射舱生动形象地诠释了什么叫数量至上。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\ndescriptions.csv第0415行\n[本行原始数据]\n{'id': 'hammerrack',\n 'type': 'WEAPON',\n 'text1': 'This dumb-fire rocket was ubiquitous in the pre-Collapse Persean '\n          'Sector due to applications pioneered by asteroid miners. The go-to '\n          'strike weapon of the desperately under-equipped, the Hammer is '\n          'often employed by poor independent militias, Pirates, and '\n          'particularly the Luddic Path. This has led to the mildly '\n          'blasphemous alternative name for the weapon, \"Ludd\\'s Hammer\".\\n'\n          '\\n'\n          'The Hammer Barrage mount provides a stirring example of the '\n          'expedience of quantity.',\n 'text2': '',\n 'text3': '',\n 'text4': '',\n 'notes': ''}"
     },
     {
@@ -2137,8 +2137,8 @@
     {
         "key": "descriptions.csv#('jackhammer', 'WEAPON')$text1",
         "original": "This dumb-fire rocket was ubiquitous in the pre-Collapse Persean Sector due to applications pioneered by asteroid miners. The go-to strike weapon of the desperately under-equipped, the Hammer is often employed by poor independent militias, Pirates, and particularly the Luddic Path. This has led to the mildly blasphemous alternative name for the weapon, \"Ludd's Hammer\".\n\nThis particular three-shot mount earned its name when some clever spacer figured out how to modify the civilian rack-cycler into a hull-jarring one-two-three salvo. The modification spread through the Sector seemingly overnight.",
-        "translation": "大锤鱼雷早在 大崩溃 前就已经遍布英仙座星域，是一种率先被小行星矿工应用于民用开采的非制导火箭。在装备匮乏时，向来都是最廉价易得的大锤鱼雷，作为打击武器被贫困的独立民兵和海盗选用。由于卢德左径对它偏爱有佳，它还有个略微亵渎神明的绰号叫 \"卢德之锤\"。\n\n某些能干的太空船员设法把民用转轮式货架改装成了这种三连射装置，它也因其能用有节奏的三连射把船体凿穿而得名。这种改装几乎是在一夜之间就传遍了整个英仙座星域。",
-        "stage": 5,
+        "translation": "大锤鱼雷早在 大崩塌 前就已遍布英仙座星域，是一种率先被小行星矿工用于开采作业的非制导火箭。在装备匮乏时，向来都是最廉价易得的大锤鱼雷，作为打击武器被贫困的独立民兵和海盗选用。由于卢德左径对它偏爱有佳，它还有个略微亵渎神明的绰号叫 \"卢德之锤\"。\n\n某些能干的太空船员设法把民用转轮式货架改装成了这种三连射装置，它也因其能用有节奏的三连射把船体凿穿而得名。这种改装几乎是在一夜之间就传遍了整个英仙座星域。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\ndescriptions.csv第0416行\n[本行原始数据]\n{'id': 'jackhammer',\n 'type': 'WEAPON',\n 'text1': 'This dumb-fire rocket was ubiquitous in the pre-Collapse Persean '\n          'Sector due to applications pioneered by asteroid miners. The go-to '\n          'strike weapon of the desperately under-equipped, the Hammer is '\n          'often employed by poor independent militias, Pirates, and '\n          'particularly the Luddic Path. This has led to the mildly '\n          'blasphemous alternative name for the weapon, \"Ludd\\'s Hammer\".\\n'\n          '\\n'\n          'This particular three-shot mount earned its name when some clever '\n          'spacer figured out how to modify the civilian rack-cycler into a '\n          'hull-jarring one-two-three salvo. The modification spread through '\n          'the Sector seemingly overnight.',\n 'text2': '',\n 'text3': '',\n 'text4': '',\n 'notes': ''}"
     },
     {
@@ -3579,8 +3579,8 @@
     {
         "key": "descriptions.csv#('planet_mairaath', 'CUSTOM')$text1",
         "original": "Mairaath was devastated by a coordinated Luddic Path operation in cycle 82 which turned its awesome orbital station-cities into weapons thrown against the fantastically terraformed surface. What remains is a charred and broken world, the carefully nurtured weather patterns of the great Mayasuran terraforming cabal transformed into nightmarish storms that circle the globe, forever stirring the ashes of a murdered world.",
-        "translation": "大崩溃后第 82 星历年，Mairaath 在 卢德左径 发起的协同作战行动中沦为焦土。这些狂信徒将 Mairaath 精美绝伦的轨道城市太空站化作武器，砸向了它经过梦幻般精密的地貌改造后的地表。如今这里只剩下满目疮痍。曾被 Mayasuran 地貌改造集团 精心调整过的气候模式，演变成了梦魇般的风暴席卷全球，永无止境地在这颗惨遭蹂躏的星球上搅动着它的骨灰。",
-        "stage": 5,
+        "translation": "星历 82 年，Mairaath 在 卢德左径 发起的协同作战行动中沦为焦土。这些狂信徒将 Mairaath 精美绝伦的轨道城市太空站化作武器，砸向了它经过梦幻般精密的地貌改造后的地表。如今这里只剩下满目疮痍。曾被 Mayasuran 地貌改造集团 精心调整过的气候模式，演变成了梦魇般的风暴席卷全球，永无止境地在这颗惨遭蹂躏的星球上搅动着它的骨灰。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\ndescriptions.csv第0431行\n[本行原始数据]\n{'id': 'planet_mairaath',\n 'type': 'CUSTOM',\n 'text1': 'Mairaath was devastated by a coordinated Luddic Path operation in '\n          'cycle 82 which turned its awesome orbital station-cities into '\n          'weapons thrown against the fantastically terraformed surface. What '\n          'remains is a charred and broken world, the carefully nurtured '\n          'weather patterns of the great Mayasuran terraforming cabal '\n          'transformed into nightmarish storms that circle the globe, forever '\n          'stirring the ashes of a murdered world.',\n 'text2': '',\n 'text3': 'Even after its apocalyptic ruin, humanity still clings to the '\n          'surface of Mairaath, huddled in the broken shells of great cities '\n          'brought low, blasted by unending storms.',\n 'text4': '',\n 'notes': ''}"
     },
     {
@@ -4153,7 +4153,7 @@
     {
         "key": "descriptions.csv#('rescind', 'ACTION_TOOLTIP')$text1",
         "original": "Countermand the selected ship or fighter wing's direct orders and let it be assigned to tasks automatically.",
-        "translation": "取消指定的舰船的直属命令，并由系统自动为其分配任务。",
+        "translation": "取消指定的舰船的直接命令，并由系统自动为其分配任务。",
         "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\ndescriptions.csv第0202行\n[本行原始数据]\n{'id': 'rescind',\n 'type': 'ACTION_TOOLTIP',\n 'text1': \"Countermand the selected ship or fighter wing's direct orders and \"\n          'let it be assigned to tasks automatically.',\n 'text2': 'Rescind Orders',\n 'text3': '',\n 'text4': '',\n 'notes': ''}"
     },
