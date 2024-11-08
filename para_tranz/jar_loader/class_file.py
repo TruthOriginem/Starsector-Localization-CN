@@ -1,3 +1,4 @@
+import json
 from pathlib import Path, PurePosixPath
 from typing import Union, Set, Optional, List, Tuple, Dict
 
@@ -136,8 +137,10 @@ class JavaClassFile:
         # 生成词条key
         # 格式： jar文件路径:类文件路径.class#"原文内容"
         full_key = f'{self.jar_file.path}:{self.path}#"{original_constant.string}"'
-        
-        if len(full_key) <= MAX_STRING_KEY_LENGTH:
+
+        # 测量key长度
+        full_key_escaped = json.dumps(full_key)[1:-1]
+        if len(full_key_escaped) <= MAX_STRING_KEY_LENGTH:
             return full_key
         
         # 如果key长度超过最大长度限制，则缩短key长度
