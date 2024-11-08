@@ -3635,9 +3635,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/RepairGantry.class#\"Each additional ship with a salvage gantry provides diminishing returns. The higher the highest recovery bonus from a sing~\"@589e5373",
         "original": "Each additional ship with a salvage gantry provides diminishing returns. The higher the highest recovery bonus from a single ship in the fleet, the later diminishing returns kick in.",
-        "translation": "Each additional ship with a salvage gantry provides diminishing returns. The higher the highest recovery bonus from a single ship in the fleet, the later diminishing returns kick in.",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/RepairGantry.class 的第0148个常量\n原始数据：\"Each additional ship with a salvage gantry provides diminishing returns. The higher the highest recovery bonus from a single ship in the fleet, the later diminishing returns kick in.\"\n译文数据：\"Each additional ship with a salvage gantry provides diminishing returns. The higher the highest recovery bonus from a single ship in the fleet, the later diminishing returns kick in.\"\n\n"
+        "translation": "收益将随着安装有打捞起重机数量增多而下降。舰队中单一舰船的回收最高收益越高，收益下降的幅度就越低。",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/RepairGantry.class 的第0148个常量\n原始数据：\"Each additional ship with a salvage gantry provides diminishing returns. The higher the highest recovery bonus from a single ship in the fleet, the later diminishing returns kick in.\"\n译文数据：\"收益将随着安装有打捞起重机数量增多而下降。舰队中单一舰船的回收最高收益越高，收益下降的幅度就越低。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/RepairGantry.class#\"Removing this ship would decrease it to %s. Adding another ship of the same type would increase it to %s.\"",
@@ -19169,7 +19169,7 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class#\" scanned (\"",
         "original": " scanned (",
         "translation": " 已扫描 (",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class 的第0459个常量\n原始数据：\" scanned (\"\n译文数据：\" 已扫描 (\"\n\n"
     },
     {
@@ -19183,91 +19183,91 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class#\", no new topographic data acquired\"",
         "original": ", no new topographic data acquired",
         "translation": "，没有获得新的超空间测绘数据",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class 的第0507个常量\n原始数据：\", no new topographic data acquired\"\n译文数据：\"，没有获得新的超空间测绘数据\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class#\"Black hole already scanned at long range\"",
         "original": "Black hole already scanned at long range",
         "translation": "黑洞已被远距离扫描",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class 的第0341个常量\n原始数据：\"Black hole already scanned at long range\"\n译文数据：\"黑洞已被远距离扫描\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class#\"Black hole already scanned at short range\"",
         "original": "Black hole already scanned at short range",
         "translation": "黑洞已被近距离扫描",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class 的第0313个常量\n原始数据：\"Black hole already scanned at short range\"\n译文数据：\"黑洞已被近距离扫描\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class#\"Black hole scanned at long range (\"",
         "original": "Black hole scanned at long range (",
         "translation": "黑洞已被远距离扫描 (",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class 的第0343个常量\n原始数据：\"Black hole scanned at long range (\"\n译文数据：\"黑洞已被远距离扫描 (\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class#\"Black hole scanned at short range (\"",
         "original": "Black hole scanned at short range (",
         "translation": "黑洞已被近距离扫描 (",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class 的第0320个常量\n原始数据：\"Black hole scanned at short range (\"\n译文数据：\"黑洞已被近距离扫描 (\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class#\"Center of binary system\"",
         "original": "Center of binary system",
         "translation": "双星系统中心",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class 的第0424个常量\n原始数据：\"Center of binary system\"\n译文数据：\"双星系统中心\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class#\"Center of star system already scanned\"",
         "original": "Center of star system already scanned",
         "translation": "星系核心已被扫描",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class 的第0457个常量\n原始数据：\"Center of star system already scanned\"\n译文数据：\"星系核心已被扫描\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class#\"Center of starless nebula\"",
         "original": "Center of starless nebula",
         "translation": "没有恒星的星云中央",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class 的第0429个常量\n原始数据：\"Center of starless nebula\"\n译文数据：\"没有恒星的星云中央\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class#\"Center of trinary system\"",
         "original": "Center of trinary system",
         "translation": "三星系统中心",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class 的第0434个常量\n原始数据：\"Center of trinary system\"\n译文数据：\"三星系统中心\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class#\"Gas giant already scanned\"",
         "original": "Gas giant already scanned",
         "translation": "气态巨行星已被扫描",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class 的第0398个常量\n原始数据：\"Gas giant already scanned\"\n译文数据：\"气态巨行星已被扫描\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class#\"Gas giant scanned (\"",
         "original": "Gas giant scanned (",
         "translation": "气态巨行星已被扫描 (",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class 的第0400个常量\n原始数据：\"Gas giant scanned (\"\n译文数据：\"气态巨行星已被扫描 (\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class#\"Ion storm already scanned\"",
         "original": "Ion storm already scanned",
         "translation": "离子风暴已被扫描",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class 的第0365个常量\n原始数据：\"Ion storm already scanned\"\n译文数据：\"离子风暴已被扫描\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class#\"Ion storm scanned (\"",
         "original": "Ion storm scanned (",
         "translation": "离子风暴已被扫描 (",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class 的第0367个常量\n原始数据：\"Ion storm scanned (\"\n译文数据：\"离子风暴已被扫描 (\"\n\n"
     },
     {
@@ -19288,35 +19288,35 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class#\"Neutron star already scanned\"",
         "original": "Neutron star already scanned",
         "translation": "中子星已被扫描",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class 的第0477个常量\n原始数据：\"Neutron star already scanned\"\n译文数据：\"中子星已被扫描\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class#\"Neutron star scanned (\"",
         "original": "Neutron star scanned (",
         "translation": "中子星已被扫描 (",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class 的第0479个常量\n原始数据：\"Neutron star scanned (\"\n译文数据：\"中子星已被扫描 (\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class#\"Pulsar beam already scanned\"",
         "original": "Pulsar beam already scanned",
         "translation": "脉冲星光束已被扫描",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class 的第0487个常量\n原始数据：\"Pulsar beam already scanned\"\n译文数据：\"脉冲星光束已被扫描\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class#\"Pulsar beam scanned (\"",
         "original": "Pulsar beam scanned (",
         "translation": "脉冲星光束已被扫描 (",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class 的第0489个常量\n原始数据：\"Pulsar beam scanned (\"\n译文数据：\"脉冲星光束已被扫描 (\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class#\"Stellar conflux\"",
         "original": "Stellar conflux",
         "translation": "星际扰流",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class 的第0447个常量\n原始数据：\"Stellar conflux\"\n译文数据：\"星际扰流\"\n\n"
     },
     {
@@ -19330,7 +19330,7 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTHighBurnFactor.class#\"High burn sensor readings\"",
         "original": "High burn sensor readings",
         "translation": "高速传感器数据",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTHighBurnFactor.class 的第0019个常量\n原始数据：\"High burn sensor readings\"\n译文数据：\"高速传感器数据\"\n\n"
     },
     {
@@ -19365,21 +19365,21 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class#\" (hyperspace topography)\"",
         "original": " (hyperspace topography)",
         "translation": " (超空间测绘)",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class 的第0718个常量\n原始数据：\" (hyperspace topography)\"\n译文数据：\" (超空间测绘)\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class#\" arrays)\"",
         "original": " arrays)",
         "translation": "座传感器阵列",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class 的第0801个常量\n原始数据：\" arrays)\"\n译文数据：\"座传感器阵列\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class#\" ly (max: \"",
         "original": " ly (max: ",
         "translation": "光年内，最多 ",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class 的第0799个常量\n原始数据：\" ly (max: \"\n译文数据：\"光年内，最多 \"\n\n"
     },
     {
@@ -19400,56 +19400,56 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class#\"A batch of topographic data that can be sold for a considerable number of credits.\"",
         "original": "A batch of topographic data that can be sold for a considerable number of credits.",
         "translation": "一系列可以卖出可观价格的超空间测绘数据。",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class 的第0374个常量\n原始数据：\"A batch of topographic data that can be sold for a considerable number of credits.\"\n译文数据：\"一系列可以卖出可观价格的超空间测绘数据。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class#\"Able to detect slipstreams near your spaceports\"",
         "original": "Able to detect slipstreams near your spaceports",
         "translation": "可以观测到你太空港附近的 超空间滑流",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class 的第0264个常量\n原始数据：\"Able to detect slipstreams near your spaceports\"\n译文数据：\"可以观测到你太空港附近的 超空间滑流\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class#\"Base detection range\"",
         "original": "Base detection range",
         "translation": "基础探测距离",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class 的第0786个常量\n原始数据：\"Base detection range\"\n译文数据：\"基础探测距离\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class#\"Claimed sensor arrays within \"",
         "original": "Claimed sensor arrays within ",
         "translation": "在你控制下",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class 的第0797个常量\n原始数据：\"Claimed sensor arrays within \"\n译文数据：\"在你控制下\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class#\"Colony size\"",
         "original": "Colony size",
         "translation": "殖民地规模",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class 的第0791个常量\n原始数据：\"Colony size\"\n译文数据：\"殖民地规模\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class#\"Event progress will be reset to between %s and %s points when this outcome is reached.\"",
         "original": "Event progress will be reset to between %s and %s points when this outcome is reached.",
         "translation": "当该结果发生时，事件进展度 会被重置为 %s 到 %s 点之间。",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class 的第0376个常量\n原始数据：\"Event progress will be reset to between %s and %s points when this outcome is reached.\"\n译文数据：\"当该结果发生时，事件进展度 会被重置为 %s 到 %s 点之间。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class#\"Exploration\"",
         "original": "Exploration",
         "translation": "Exploration",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class 的第0485个常量\n原始数据：\"Exploration\"\n译文数据：\"Exploration\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class#\"Fuel use while traversing slipstreams reduced by %s\"",
         "original": "Fuel use while traversing slipstreams reduced by %s",
         "translation": "在 超空间滑流 中航行时，燃料花费减少 %s",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class 的第0272个常量\n原始数据：\"Fuel use while traversing slipstreams reduced by %s\"\n译文数据：\"在 超空间滑流 中航行时，燃料花费减少 %s\"\n\n"
     },
     {
@@ -19463,28 +19463,28 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class#\"Hyperspace Topography\"",
         "original": "Hyperspace Topography",
         "translation": "超空间测绘",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class 的第0448个常量\n原始数据：\"Hyperspace Topography\"\n译文数据：\"超空间测绘\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class#\"Hyperspace topography\"",
         "original": "Hyperspace topography",
         "translation": "超空间测绘",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class 的第0724个常量\n原始数据：\"Hyperspace topography\"\n译文数据：\"超空间测绘\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class#\"Maximum burn increased by %s while in hyperspace\"",
         "original": "Maximum burn increased by %s while in hyperspace",
         "translation": "超空间中的最大宇宙航速提高 %s",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class 的第0302个常量\n原始数据：\"Maximum burn increased by %s while in hyperspace\"\n译文数据：\"超空间中的最大宇宙航速提高 %s\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class#\"Maximum burn increased by %s while in hyperspace.\"",
         "original": "Maximum burn increased by %s while in hyperspace.",
         "translation": "超空间中的最大宇宙航速提高 %s。",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class 的第0365个常量\n原始数据：\"Maximum burn increased by %s while in hyperspace.\"\n译文数据：\"超空间中的最大宇宙航速提高 %s。\"\n\n"
     },
     {
@@ -19498,7 +19498,7 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class#\"Topographic data gained\"",
         "original": "Topographic data gained",
         "translation": "得到了超空间测绘数据",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class 的第0310个常量\n原始数据：\"Topographic data gained\"\n译文数据：\"得到了超空间测绘数据\"\n\n"
     },
     {
@@ -22976,9 +22976,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/punitive/PunitiveExpeditionIntel.class#\"This operation is being carried without an open declaration of war. Defeating the expeditionary force will only result in ~\"@994403e0",
         "original": "This operation is being carried without an open declaration of war. Defeating the expeditionary force will only result in a small reputation reduction with ",
-        "translation": "This operation is being carried without an open declaration of war. Defeating the expeditionary force will only result in a small reputation reduction with ",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/punitive/PunitiveExpeditionIntel.class 的第0712个常量\n原始数据：\"This operation is being carried without an open declaration of war. Defeating the expeditionary force will only result in a small reputation reduction with \"\n译文数据：\"This operation is being carried without an open declaration of war. Defeating the expeditionary force will only result in a small reputation reduction with \"\n\n"
+        "translation": "此次行动是在没有正式宣战的情况下进行。击败远征军指会稍微降低和下列势力的关系",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/punitive/PunitiveExpeditionIntel.class 的第0712个常量\n原始数据：\"This operation is being carried without an open declaration of war. Defeating the expeditionary force will only result in a small reputation reduction with \"\n译文数据：\"此次行动是在没有正式宣战的情况下进行。击败远征军指会稍微降低和下列势力的关系\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/punitive/PunitiveExpeditionIntel.class#\"a saturation bombardment of the colony\"",
@@ -31727,7 +31727,7 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/BreadcrumbSpecial.class#\"The $shortName's memory banks are partially accessible, and \"",
         "original": "The $shortName's memory banks are partially accessible, and ",
         "translation": " $shortName 的存储体仍有一部分可以访问，",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/BreadcrumbSpecial.class 的第0102个常量\n原始数据：\"The $shortName's memory banks are partially accessible, and \"\n译文数据：\" $shortName 的存储体仍有一部分可以访问，\"\n\n"
     },
     {
@@ -31741,7 +31741,7 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/BreadcrumbSpecial.class#\"While exploring $aOrAn $nameInText, your crews found a partially accessible memory bank containing information that indicates \"",
         "original": "While exploring $aOrAn $nameInText, your crews found a partially accessible memory bank containing information that indicates ",
         "translation": "在探查一处$nameInText的过程中，你的船员发现了一个仍部分能正常访问的存储体。其中包含的信息显示",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/BreadcrumbSpecial.class 的第0114个常量\n原始数据：\"While exploring $aOrAn $nameInText, your crews found a partially accessible memory bank containing information that indicates \"\n译文数据：\"在探查一处$nameInText的过程中，你的船员发现了一个仍部分能正常访问的存储体。其中包含的信息显示\"\n\n"
     },
     {
@@ -31804,7 +31804,7 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/BreadcrumbSpecial.class#\"a\"",
         "original": "a",
         "translation": "一个",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/BreadcrumbSpecial.class 的第0236个常量\n原始数据：\"a\"\n译文数据：\"一个\"\n\n"
     },
     {
@@ -32042,28 +32042,28 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/DomainSurveyDerelictSpecial.class#\"It was last seen by this $shortName \"",
         "original": "It was last seen by this $shortName ",
         "translation": "该$shortName在最后一次发现它时",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/DomainSurveyDerelictSpecial.class 的第0137个常量\n原始数据：\"It was last seen by this $shortName \"\n译文数据：\"该$shortName在最后一次发现它时\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/DomainSurveyDerelictSpecial.class#\"The $shortName's memory banks are partially accessible, and \"",
         "original": "The $shortName's memory banks are partially accessible, and ",
         "translation": " $shortName的存储体仍有一部分可以访问，且",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/DomainSurveyDerelictSpecial.class 的第0084个常量\n原始数据：\"The $shortName's memory banks are partially accessible, and \"\n译文数据：\" $shortName的存储体仍有一部分可以访问，且\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/DomainSurveyDerelictSpecial.class#\"The $shortName's memory banks have been scrubbed clean by hard radiation, and the systems are largely inert and non-functional.\"",
         "original": "The $shortName's memory banks have been scrubbed clean by hard radiation, and the systems are largely inert and non-functional.",
         "translation": " $shortName 的记忆库被高强度电离辐射清零了，而且大部分系统都已经失去功能无法运作。",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/DomainSurveyDerelictSpecial.class 的第0184个常量\n原始数据：\"The $shortName's memory banks have been scrubbed clean by hard radiation, and the systems are largely inert and non-functional.\"\n译文数据：\" $shortName 的记忆库被高强度电离辐射清零了，而且大部分系统都已经失去功能无法运作。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/DomainSurveyDerelictSpecial.class#\"While exploring $aOrAn $nameInText, your crews found partially accessible memory banks that \"",
         "original": "While exploring $aOrAn $nameInText, your crews found partially accessible memory banks that ",
         "translation": "在探索一处$nameInText时，你的船员发现了一个仍部分能正常访问的存储体，",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/DomainSurveyDerelictSpecial.class 的第0086个常量\n原始数据：\"While exploring $aOrAn $nameInText, your crews found partially accessible memory banks that \"\n译文数据：\"在探索一处$nameInText时，你的船员发现了一个仍部分能正常访问的存储体，\"\n\n"
     },
     {
@@ -36830,7 +36830,7 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/terrain/HyperspaceTerrainPlugin.class#\" damage from the storm\"",
         "original": " damage from the storm",
         "translation": " 风暴造成的损害",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/terrain/HyperspaceTerrainPlugin.class 的第1217个常量\n原始数据：\" damage from the storm\"\n译文数据：\" 风暴造成的损害\"\n\n"
     },
     {
@@ -37005,14 +37005,14 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/terrain/HyperspaceTerrainPlugin.class#\"avoids\"",
         "original": "avoids",
         "translation": "规避了",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/terrain/HyperspaceTerrainPlugin.class 的第1203个常量\n原始数据：\"avoids\"\n译文数据：\"规避了\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/terrain/HyperspaceTerrainPlugin.class#\"suffers\"",
         "original": "suffers",
         "translation": "受到了",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/terrain/HyperspaceTerrainPlugin.class 的第1198个常量\n原始数据：\"suffers\"\n译文数据：\"受到了\"\n\n"
     },
     {
@@ -39426,9 +39426,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/Automated.class#\"However, this ship was automated in a fashion that does not require special expertise to maintain. Some of the techniques ~\"@093351a4",
         "original": "However, this ship was automated in a fashion that does not require special expertise to maintain. Some of the techniques used are poorly understood, likely dating to an earlier period.",
-        "translation": "However, this ship was automated in a fashion that does not require special expertise to maintain. Some of the techniques used are poorly understood, likely dating to an earlier period.",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/Automated.class 的第0111个常量\n原始数据：\"However, this ship was automated in a fashion that does not require special expertise to maintain. Some of the techniques used are poorly understood, likely dating to an earlier period.\"\n译文数据：\"However, this ship was automated in a fashion that does not require special expertise to maintain. Some of the techniques used are poorly understood, likely dating to an earlier period.\"\n\n"
+        "translation": "但是该舰船的自动化系统并不需要特别的专长来维护。有一些使用的技术不好理解，很可能来自更早的年代。",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/Automated.class 的第0111个常量\n原始数据：\"However, this ship was automated in a fashion that does not require special expertise to maintain. Some of the techniques used are poorly understood, likely dating to an earlier period.\"\n译文数据：\"但是该舰船的自动化系统并不需要特别的专长来维护。有一些使用的技术不好理解，很可能来自更早的年代。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/Automated.class#\"does not require special expertise\"",
@@ -39448,21 +39448,21 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class#\"Affects hybrid weapons (those that can fit into both ballistic and energy slots) of all sizes.\"",
         "original": "Affects hybrid weapons (those that can fit into both ballistic and energy slots) of all sizes.",
         "translation": "根据舰船上最大实弹槽位的具体大小，影响所有大小的混合武器 (混合武器是可以放入能量或实弹槽位的武器) 。",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class 的第0274个常量\n原始数据：\"Affects hybrid weapons (those that can fit into both ballistic and energy slots) of all sizes.\"\n译文数据：\"根据舰船上最大实弹槽位的具体大小，影响所有大小的混合武器 (混合武器是可以放入能量或实弹槽位的武器) 。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class#\"Affects small and medium ballistic weapons.\"",
         "original": "Affects small and medium ballistic weapons.",
         "translation": "根据舰船上最大实弹槽位的具体大小，影响中小型实弹武器。",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class 的第0196个常量\n原始数据：\"Affects small and medium ballistic weapons.\"\n译文数据：\"根据舰船上最大实弹槽位的具体大小，影响中小型实弹武器。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class#\"Ballistic weapon range\"",
         "original": "Ballistic weapon range",
         "translation": "实弹武器射程",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class 的第0184个常量\n原始数据：\"Ballistic weapon range\"\n译文数据：\"实弹武器射程\"\n\n"
     },
     {
@@ -39476,7 +39476,7 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class#\"Hybrid weapon range\"",
         "original": "Hybrid weapon range",
         "translation": "混合武器射程",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class 的第0271个常量\n原始数据：\"Hybrid weapon range\"\n译文数据：\"混合武器射程\"\n\n"
     },
     {
@@ -39490,77 +39490,77 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class#\"Large\"",
         "original": "Large",
         "translation": "大型",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class 的第0263个常量\n原始数据：\"Large\"\n译文数据：\"大型\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class#\"Largest b. slot\"",
         "original": "Largest b. slot",
         "translation": "最大实弹槽位",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class 的第0212个常量\n原始数据：\"Largest b. slot\"\n译文数据：\"最大实弹槽位\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class#\"Medium wpn\"",
         "original": "Medium wpn",
         "translation": "中型",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class 的第0222个常量\n原始数据：\"Medium wpn\"\n译文数据：\"中型\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class#\"Medium\"",
         "original": "Medium",
         "translation": "中型",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class 的第0279个常量\n原始数据：\"Medium\"\n译文数据：\"中型\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class#\"Range cap\"",
         "original": "Range cap",
         "translation": "增益限制",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class 的第0224个常量\n原始数据：\"Range cap\"\n译文数据：\"增益限制\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class#\"Ship has no ballistic weapon slots\"",
         "original": "Ship has no ballistic weapon slots",
         "translation": "舰船没有实弹武器槽",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class 的第0308个常量\n原始数据：\"Ship has no ballistic weapon slots\"\n译文数据：\"舰船没有实弹武器槽\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class#\"Since the base range is increased, this modifier - unlike most other flat modifiers - is increased by percentage modifiers from other hullmods and skills.\"",
         "original": "Since the base range is increased, this modifier - unlike most other flat modifiers - is increased by percentage modifiers from other hullmods and skills.",
         "translation": "由于提高的是基础射程，所以本增益在绝大多数其他增益的计算之前生效，可以进一步受到其他技能和插件比例修正影响。",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class 的第0283个常量\n原始数据：\"Since the base range is increased, this modifier - unlike most other flat modifiers - is increased by percentage modifiers from other hullmods and skills.\"\n译文数据：\"由于提高的是基础射程，所以本增益在绝大多数其他增益的计算之前生效，可以进一步受到其他技能和插件比例修正影响。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class#\"Small / Medium\"",
         "original": "Small / Medium",
         "translation": "小型 / 中型",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class 的第0236个常量\n原始数据：\"Small / Medium\"\n译文数据：\"小型 / 中型\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class#\"Small wpn\"",
         "original": "Small wpn",
         "translation": "小型",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class 的第0220个常量\n原始数据：\"Small wpn\"\n译文数据：\"小型\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class#\"Small\"",
         "original": "Small",
         "translation": "小型",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class 的第0277个常量\n原始数据：\"Small\"\n译文数据：\"小型\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class#\"The range bonus is based on the size of the largest ballistic slot, and the increased base range is capped, but still subject to other modifiers.\"",
         "original": "The range bonus is based on the size of the largest ballistic slot, and the increased base range is capped, but still subject to other modifiers.",
         "translation": "提高武器的基础射程，具体增益取决于舰船最大的 实弹武器槽 的 大小。本插件的增益不会让武器的基础射程超过 \"增益限制\"，但不会干扰其他来源的影响。",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class 的第0179个常量\n原始数据：\"The range bonus is based on the size of the largest ballistic slot, and the increased base range is capped, but still subject to other modifiers.\"\n译文数据：\"提高武器的基础射程，具体增益取决于舰船最大的 实弹武器槽 的 大小。本插件的增益不会让武器的基础射程超过 \"增益限制\"，但不会干扰其他来源的影响。\"\n\n"
     },
     {
@@ -39574,14 +39574,14 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class#\"base range\"",
         "original": "base range",
         "translation": "基础射程",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class 的第0171个常量\n原始数据：\"base range\"\n译文数据：\"基础射程\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class#\"ship's largest ballistic slot\"",
         "original": "ship's largest ballistic slot",
         "translation": "舰船最大的实弹槽位",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class 的第0169个常量\n原始数据：\"ship's largest ballistic slot\"\n译文数据：\"舰船最大的实弹槽位\"\n\n"
     },
     {
