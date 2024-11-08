@@ -7334,7 +7334,7 @@ RemoveOption lke_prepMarines","你叫来六名经验最丰富的陆战队员并�
 
 在他们的外层战斗服一阵闪烁作响后，六名身着漆黑轻甲的陆战队员在你的眼前化作了一团烟雾，正如古老的 卢德 传说中那冒着火光的神杀之风。
 
-只要你一声令下，他们就能从 Mazalot 上存在的大部分军械中确保你的所在位置的安全。",,
+只需轻声说出暗语，他们就能从 Mazalot 上存在的大部分军械中确保你的所在位置的安全。",,
 LKEbornanewShuttleDown,DialogOptionSelected,$option == lke_bornanewShuttle1,,"各种各样的带电粒子与 Mazalot 大气层的光焰相互交汇，犹如海浪般涌动。
 
 你的穿梭机降入得很顺利。在和当地无精打采的交通管制取得联系后，驾驶员降落在卢德信众定居点附近的请求只受到了一些象征性的反对。
@@ -11297,7 +11297,7 @@ gaFCGroombridgeSearch1,DialogOptionSelected,$option == gaFC_groombridgeSearch1,,
 ""理论上，""导航技师说，""超空间相互作用场只能周期性地产生脉冲。只有在适当的时候捕捉到，否则就无法探测的。现在我们也不知道具体时刻。""",gaFC_groombridgeSearch2:继续,
 gaFCGroombridgeSearch2,DialogOptionSelected,$option == gaFC_groombridgeSearch2,,"通讯技师说：""同样的原理也可以应用到星系内的中继站上。数据可以被缓存，然后脉冲到栖息地，飞船，或是另一个中继站...""
 
-行动长官则开口道，"" —— 反应堆会不断地放出辐射，没人能凑近观察或长时间逗留。唯一的搜索方法是""说到这，现场的人都陷入沉思，""配备辐射保护层的无人机，只去不回。中继站里通常会有非常强大的辐射屏障。""","gaFC_groombridgeSearch3:""看起来你们知道该找什么了，不管你们有什么点子，让它变成现实吧。""",
+行动长官则开口道，"" —— 反应堆会不断地放出辐射，没人能凑近观察或长时间逗留。唯一的搜索方法是..."" 说到这，现场的人都陷入沉思，""配备辐射保护层的无人机，只去不回。中继站里通常会有非常强大的辐射屏障。""","gaFC_groombridgeSearch3:""看起来你们知道该找什么了，不管你们有什么点子，让它变成现实吧。""",
 gaFCGroombridgeSearch3,DialogOptionSelected,$option == gaFC_groombridgeSearch3,,舰桥上的船员交换了一下眼神 —— 他们的舰长随之继续下令 —— 而你的行动长官向后靠了靠，沉思起来。,gaFC_groombridgeSearch4:继续,
 gaFCGroombridgeSearch4,DialogOptionSelected,$option == gaFC_groombridgeSearch4,,"在下一次交班的时候，带有屏蔽装甲保护的无人机准备就绪，并在行动长官的监督下进行了部署。随着它们的挺进，全息投影上之前覆盖了 Groombridge 栖息地的大片模糊区域 —— 代表辐射过强或受扫描屏蔽而无法得到可靠读数 —— 逐渐被清晰的细节所取代。很快，一团受异常屏蔽的什么东西在距离死寂的空间站核心很近的一个损坏工作舱室里被发现了。
 
@@ -16607,7 +16607,7 @@ gaVIPConMerc1,DialogOptionSelected,$option == gaVIP_mercCon1,,"因为听懂了�
 
 所有人面面相觑。没有人吐出一个字来。
 
-""好吧，""行动长官抱怨道，""我想就只能这么凑合着整了。""",gaVIP_mercCon2:继续,
+""好吧，"" 行动长官抱怨道，""我想就只能这么凑合着整了。""",gaVIP_mercCon2:继续,
 gaVIPConMerc2,DialogOptionSelected,$option == gaVIP_mercCon2,,"冷冻舱固定好了之后，你的团队把好几个电子锁的密码都打乱了：冷冻舱本身的锁，草草用损控泡沫封装在货柜里的内箱上的锁，以及货柜重型活门上的锁。这个小伎俩拖不了太久，但它应该能让雇佣兵耽误好些时间，足以让你和他们拉开几光年的距离。
 
 你回到舰桥时已经忙得出了点汗。之后重新和雇佣兵舰长进行了通话，通知$himOrHer被关好的囚犯马上就会通过货运无人机上路。现在应该到了讨论赏金分配的时候了...",gaVIP_mercCon3:继续,
@@ -23288,7 +23288,7 @@ sdtuRamMacarioResponseB,SDTURamMacarioResponse,!$player.sworeRevengeOnRam,"#$opt
 sdtuRamMacarioResponseC,DialogOptionSelected,$option == sdtu_ramSafehouse9wepCheck,FireBest SDTURamMacarioWeaponCheck,,,
 sdtuRamSafehouse9checkRevA1,DialogOptionSelected,$option == sdtu_ramSafehouseRevenge1,FireBest SDTURamMacarioWeaponCheck,"Macario 看向你，做出一副通情达理的样子，""我们在这方面看法倒是一致。""",,
 sdtuRamSafehouse9checkRevA2,DialogOptionSelected,$option == sdtu_ramSafehouseRevenge2,FireBest SDTURamMacarioWeaponCheck,"""正义？"" Macario 扬起了他的眉毛，""真有趣。""",,
-sdtuRamSafehouse9checkRevA3,DialogOptionSelected,$option == sdtu_ramSafehouseRevenge3,FireBest SDTURamMacarioWeaponCheck," ""这么一说，看来我还抢了你杀人的机会了。"" Macario边说边点头，做出一副通情达理的样子。""就这种机会，我能还你一个的。""",,
+sdtuRamSafehouse9checkRevA3,DialogOptionSelected,$option == sdtu_ramSafehouseRevenge3,FireBest SDTURamMacarioWeaponCheck," ""这么一说，看来我还抢了你杀人的机会了。"" Macario 边说边点头，做出一副通情达理的样子。""就这种机会，我能还你一个的。""",,
 sdtuRamSafehouse10wepCheckNone1,SDTURamMacarioWeaponCheck,!$player.sdtu_gotWeapon,"$option = sdtu_ramSafehouse10 0
 FireBest DialogOptionSelected",,,
 sdtuRamSafehouse10wepCheckNone2,SDTURamMacarioWeaponCheck,$player.sdtu_weaponNone,"$option = sdtu_ramSafehouse10 0
