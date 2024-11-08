@@ -172,7 +172,7 @@ class JavaClassFile:
                 if not contains_english(translation):
                     stage = 1
                 elif not contains_chinese(translation):
-                    translation = ''
+                    # translation = ''
                     stage = 0
 
             # 生成词条上下文信息
