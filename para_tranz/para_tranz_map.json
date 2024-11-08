@@ -5395,6 +5395,14 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/loading/specs/I.class",
+      "include_strings": [
+        "a",
+        "is"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/loading/specs/PlanetSpec.class",
       "include_strings": [
         "Unknown",
@@ -9663,7 +9671,6 @@
         " have posted a reward for running a custom sensor package on ",
         "%s received",
         "%s reward",
-        ", faction: ",
         "Abandon",
         "Accept",
         "Analyze",
@@ -9673,6 +9680,7 @@
         "The ",
         "authorities",
         "concerns",
+        "is",
         "to complete"
       ]
     },
@@ -11753,10 +11761,36 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/ht/HTFactorTracker.class",
       "include_strings": [
+        " scanned (",
         ")",
+        ", no new topographic data acquired",
+        "Black hole already scanned at long range",
+        "Black hole already scanned at short range",
+        "Black hole scanned at long range (",
+        "Black hole scanned at short range (",
+        "Center of binary system",
+        "Center of star system already scanned",
+        "Center of starless nebula",
+        "Center of trinary system",
+        "Gas giant already scanned",
+        "Gas giant scanned (",
+        "Ion storm already scanned",
+        "Ion storm scanned (",
         "Magnetic field already scanned",
-        "Magnetic field scanned"
+        "Magnetic field scanned",
+        "Neutron star already scanned",
+        "Neutron star scanned (",
+        "Pulsar beam already scanned",
+        "Pulsar beam scanned (",
+        "Stellar conflux"
       ]
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/ht/HTHighBurnFactor.class",
+      "include_strings": [
+        "High burn sensor readings"
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/ht/HTHighBurnFactor$1.class",
@@ -11779,13 +11813,29 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class",
       "include_strings": [
+        " (hyperspace topography)",
+        " arrays)",
+        " ly (max: ",
         "%s ability unlocked",
         "-1",
+        "A batch of topographic data that can be sold for a considerable number of credits.",
+        "Able to detect slipstreams near your spaceports",
         "Allows a Spaceport to detect nearby slipstreams. Detection range increased for %s. Claimed sensor arrays within %s light-years provide extra detection range: %s ly for Domain-era arrays, and %s ly for makeshift ones. Up to %s sensor arrays can be used.",
+        "Base detection range",
+        "Claimed sensor arrays within ",
+        "Colony size",
         "Detailed sensor readings greatly aid hyperspace navigation. There are many ways of acquiring this data, including using in-system sensor arrays, using an Active Sensor Burst near interesting phenomena, traveling through hyperspace at a very high burn level, or simply buying the data from scavengers.",
+        "Event progress will be reset to between %s and %s points when this outcome is reached.",
+        "Exploration",
         "Fuel use while traveling inside slipstreams reduced by %s. This reduction is multiplicative with the baseline fuel use reduction for traveling inside a slipstream.",
+        "Fuel use while traversing slipstreams reduced by %s",
         "Generate Slipsurge",
+        "Hyperspace Topography",
+        "Hyperspace topography",
+        "Maximum burn increased by %s while in hyperspace",
+        "Maximum burn increased by %s while in hyperspace.",
         "Reverse Polarity",
+        "Topographic data gained",
         "Unlocks the %s ability, which allows your fleet to create powerful, short-lived slipstreams useful for rapid travel.",
         "Unlocks the %s ability, which allows your fleet to travel against the current of slipstreams.",
         "larger colonies"
@@ -14486,11 +14536,15 @@
         " is ",
         " primary star ",
         " star",
-        "supergiant",
+        " supergiant",
+        ".",
         "Based on the information, it's likely the ship is small, a frigate or a destroyer at the largest.",
         "Location: ",
+        "The $shortName's memory banks are partially accessible, and ",
         "The vessel is likely to be at least cruiser-sized.",
+        "While exploring $aOrAn $nameInText, your crews found a partially accessible memory bank containing information that indicates ",
         "Your salvage crews find a functional memory bank in the debris. It contains information indicating that ",
+        "a",
         "a binary star system ",
         "a black hole system ",
         "a nebula ",
@@ -14535,7 +14589,13 @@
       "include_strings": [
         " Location",
         " nearby",
+        ".",
+        ". ",
         "Derelict ",
+        "It was last seen by this $shortName ",
+        "The $shortName's memory banks are partially accessible, and ",
+        "The $shortName's memory banks have been scrubbed clean by hard radiation, and the systems are largely inert and non-functional.",
+        "While exploring $aOrAn $nameInText, your crews found partially accessible memory banks that ",
         "a black hole",
         "a blue star",
         "a dim star",
@@ -16558,6 +16618,7 @@
         "Reduces the range at which stationary or slow-moving* fleets inside it can be detected by %s.",
         "Smaller fleets are usually able to avoid the heavier impacts, and slow-moving fleets do not risk impacts at all.",
         "Travel",
+        "an",
         "slow-moving"
       ]
     },
@@ -16617,6 +16678,7 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/terrain/HyperspaceTerrainPlugin.class",
       "include_strings": [
+        " damage from the storm",
         "\"Slow-moving\" fleets do not attract storm strikes.",
         "*1 light-year = 2000 units = 1 map grid cell",
         "Being caught in a storm causes storm strikes to damage ships and reduce their combat readiness. Larger fleets attract more damaging strikes.",
@@ -16640,7 +16702,9 @@
         "Skill in navigation is of little use, and does not provide its normal benefit in countering terrain-specific maximum burn penalties.",
         "Travel",
         "Traveling through hyperspace consumes fuel based on the distance travelled. Your fleet requires %s fuel per light-year.*",
-        "Your fleet's speed is reduced by %s."
+        "Your fleet's speed is reduced by %s.",
+        "avoids",
+        "suffers"
       ]
     },
     {
@@ -17268,9 +17332,26 @@
       "path": "com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class",
       "include_strings": [
         "---",
+        "Affects hybrid weapons (those that can fit into both ballistic and energy slots) of all sizes.",
+        "Affects small and medium ballistic weapons.",
+        "Ballistic weapon range",
         "Can only be installed on destroyer-class hulls and larger",
+        "Hybrid weapon range",
         "Interactions with other modifiers",
-        "Utilizes targeting data from the ship's largest ballistic slot to benefit certain weapons, extending the base range of typical ballistic weapons to match similar but larger weapons. Also benefits hybrid weapons. Point-defense weapons are unaffected."
+        "Large",
+        "Largest b. slot",
+        "Medium",
+        "Medium wpn",
+        "Range cap",
+        "Ship has no ballistic weapon slots",
+        "Since the base range is increased, this modifier - unlike most other flat modifiers - is increased by percentage modifiers from other hullmods and skills.",
+        "Small",
+        "Small / Medium",
+        "Small wpn",
+        "The range bonus is based on the size of the largest ballistic slot, and the increased base range is capped, but still subject to other modifiers.",
+        "Utilizes targeting data from the ship's largest ballistic slot to benefit certain weapons, extending the base range of typical ballistic weapons to match similar but larger weapons. Also benefits hybrid weapons. Point-defense weapons are unaffected.",
+        "base range",
+        "ship's largest ballistic slot"
       ]
     },
     {
