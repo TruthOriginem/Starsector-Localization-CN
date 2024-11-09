@@ -61,7 +61,7 @@ def generate_class_file_mapping():
     class_item_with_strings = jar_file.class_files[class_item.path].export_map_item()
 
     print('以下是生成的类文件映射项：')
-    print(json.dumps(asdict(class_item_with_strings), indent=2, cls=SetEncoder))
+    print(json.dumps(asdict(class_item_with_strings), indent=2, cls=SetEncoder, ensure_ascii=False))
 
 
 def mian():

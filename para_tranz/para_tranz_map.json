@@ -356,18 +356,22 @@
         "Cargo",
         "Character",
         "Copies of campaign data in memory: ",
+        "Eventually, your cryopod is picked up by a passing trader.\n\nNot one to be discouraged easily, you eventually claw your way back to the spacelanes, if only just.",
         "Fleet",
+        "Food for thought: the RNG may know that you're playing a pirated copy of the game. Let the paranoia begin!",
         "Forcing garbage collection",
         "Gained %s credits",
         "Gained 25000 credits",
         "Game paused",
         "Game resumed",
         "Holding station in ",
+        "If you're enjoying the game, please consider supporting its development: www.fractalsoftworks.com",
         "In ",
         "Laying in a course for ",
         "Laying in an intercept course for ",
         "Lost %s credits",
         "Map",
+        "Memory leak detected!\n\nPlease use \"Save Copy\" to make a copy of your current save and restart the game application. Otherwise there is a risk of a crash when trying to save.\n\n(Copies of campaign data in memory: ",
         "Officers",
         "Ok",
         "Orbiting ",
@@ -375,8 +379,10 @@
         "Quickload disabled in iron mode",
         "Refit",
         "Sensors: ",
+        "Some fighters in your fleet still remain operational, but they're unable to find your command pod.\n\nAfter a while, you're picked up by a system patrol and taken back to civilization. Eventually, you acquire another craft and are able to ply the space lanes once again.",
         "Speeding up time",
-        "The previous memory leak warning was a false alarm"
+        "The previous memory leak warning was a false alarm",
+        "Your fleet is scattered, and you yourself barely escape in the command pod.\n\nAfter a while, you're picked up by a passing salvage fleet and taken back to civilization. Eventually, you acquire another couple of craft and are able to ply the space lanes once again."
       ]
     },
     {
@@ -1410,6 +1416,7 @@
       "path": "com/fs/starfarer/campaign/econ/Market.class",
       "include_strings": [
         "</b>\n\n",
+        "Base value",
         "Market: <b>",
         "at",
         "on"
@@ -2871,6 +2878,7 @@
         "Megacorp",
         "Mutuality",
         "No \"the\"",
+        "Now that you have planet-based or otherwise static assets, you'll need to set up your faction's name and flag. \n\nYou can always change these later, by clicking on your faction's name in the colony screen.",
         "Now that you have planet-based or otherwise static assets, you'll need to set up your faction's name and flag. You can always change these later, by clicking on your faction's name in the colony screen.",
         "PLC",
         "Pact",
@@ -2930,6 +2938,7 @@
     {
       "path": "com/fs/starfarer/campaign/ui/marketinfo/cdd/CommodityDetailDialogV2.class",
       "include_strings": [
+        "\n\nIn-faction shipping limits are higher.",
         " - Commodities",
         " control, to another ",
         " control.",
@@ -2937,6 +2946,8 @@
         " for all colonies under ",
         " market share",
         " with excess stockpiles",
+        ". ",
+        ".\n\n",
         ". ",
         "A colony's accessibility. The number in parentheses is the maximum out-of-faction shipping capacity, which limits how many units the colony can import, and how much its demand contributes to the global market value.\n\nIn-faction accessibility and shipping capacity are higher.",
         "Access",
@@ -2976,6 +2987,7 @@
         "Will be distributed among all exporters based on their market share.\n\n",
         "colony controlled by ",
         "is higher given the colony's accessibility-based shipping limits.",
+        "of manufacturing and transport.\n\n",
         "since there is no profit to be made there.",
         "unit",
         "unit is",
@@ -2983,6 +2995,13 @@
         "units are",
         "your control."
       ]
+    },
+    {
+      "path": "com/fs/starfarer/campaign/ui/marketinfo/cdd/CommodityDetailDialogV2$1.class",
+      "include_strings": [
+        "Only show colonies that are either suffering from a shortage or have excess stockpiles.\n\nColonies with excess stockpiles have more of the goods available on the open market and have lower prices.\n\nColonies with shortages have less or none available for sale, and have higher prices."
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/campaign/ui/marketinfo/cdd/CommodityDetailDialogV2$2.class",
@@ -7959,6 +7978,7 @@
         "Cut the comm link",
         "Disabled ships from your fleet are available for recovery",
         "Disabled ships from your fleet are available for recovery.",
+        "Disabled ships from your fleet are available for recovery.\n\nIf you proceed without recovering them, they will be lost permanently.",
         "Disengage",
         "Disengage by executing a series of special maneuvers",
         "Failed to join battle; shouldn't happen.",
@@ -8344,14 +8364,16 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/abilities/EmergencyBurnAbility.class",
       "include_strings": [
-        " ... and several other ships",
+        "      ... and several other ships",
+        " suffers damage from Emergency Burn activation",
         "Consumes %s fuel and prevents combat readiness recovery while active.",
         "Consumes %s fuel and reduces the combat readiness of all ships, costing up to %s supplies to recover. Also prevents combat readiness recovery while active.",
         "Emergency Burn",
         "Emergency burn",
         "Increases the maximum burn level by %s. Reduces sensor range by %s and increases the range at which the fleet can be detected by %s.",
         "Not enough fuel.",
-        "Some ships don't have enough combat readiness to safely initiate an emergency burn and may suffer damage if the ability is activated:"
+        "Some ships don't have enough combat readiness to safely initiate an emergency burn and may suffer damage if the ability is activated:",
+        "may suffer damage"
       ]
     },
     {
@@ -10862,10 +10884,13 @@
         " sabotage",
         ", but the local security forces were able to locate and disarm it, thereby ",
         ", provided another base exists.",
+        ".",
+        ". ",
         "AI core administrator (%s)",
         "An attempted act of sabotage against ",
         "Colony destroyed by planetbuster",
         "However, the base supporting these cells is no longer operational. It is projected that establishing a new support network will take at least %s ",
+        "If the base is destroyed, it will take some time to organize support from another base, and both ground and fleet operations will be disrupted.",
         "If they succeed, the colony will effectively be destroyed.",
         "Impact",
         "Incident averted by local security forces",
@@ -11802,6 +11827,20 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/ht/HTNeutrinoBurstFactor.class",
+      "include_strings": [
+        "Neutrino burst emitted"
+      ],
+      "exclude_strings": []
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/ht/HTNeutrinoBurstFactor$1.class",
+      "include_strings": [
+        "A neurtno burst emitted from an overloaded sensor array, revealing nearby slipstreams and providing useful topography readings."
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/ht/HTNonASBScanFactor$1.class",
       "include_strings": [
         "A scan of the right entity or location can provide insight into the topography of surrounding hyperspace. The target usually needs to be massive enough to produce a significant gravity well, produce a high energy discharge, or be exotic or unusual in some other way."
@@ -11812,6 +11851,34 @@
       "include_strings": [
         "An %s of the right entity or location can provide insight into the topography of surrounding hyperspace. The target usually needs to be massive enough to produce a significant gravity well, produce a high energy discharge, or be exotic or unusual in some other way."
       ]
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/ht/HTScavengerDataFactor.class",
+      "include_strings": [
+        "Bought topographic data"
+      ],
+      "exclude_strings": []
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/ht/HTScavengerDataFactor$1.class",
+      "include_strings": [
+        "Topographic data and sensor readings bought from a fellow traveller, far out in the black."
+      ],
+      "exclude_strings": []
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/ht/HTTopographicDataFactor.class",
+      "include_strings": [
+        "Topographic data found"
+      ],
+      "exclude_strings": []
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/ht/HTTopographicDataFactor$1.class",
+      "include_strings": [
+        "Recovered topographic data. Possibly out of date, but still valuable."
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class",
@@ -13795,6 +13862,7 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/population/CoreImmigrationPluginImpl.class",
       "include_strings": [
+        "    - Size increased to %s",
         " based on colony size)",
         "Accessibility",
         "Colony Growth - ",

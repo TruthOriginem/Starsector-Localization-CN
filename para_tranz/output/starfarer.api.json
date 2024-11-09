@@ -2366,6 +2366,13 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FleetInteractionDialogPluginImpl.class 的第1870个常量\n原始数据：\"Disabled ships from your fleet are available for recovery\"\n译文数据：\"你舰队中的那些损坏的舰船仍可被打捞恢复\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FleetInteractionDialogPluginImpl.class#\"Disabled ships from your fleet are available for recovery.\n\nIf you proceed without recovering them, they will be lost permanently.\"",
+        "original": "Disabled ships from your fleet are available for recovery.\n\nIf you proceed without recovering them, they will be lost permanently.",
+        "translation": "Disabled ships from your fleet are available for recovery.\n\nIf you proceed without recovering them, they will be lost permanently.",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FleetInteractionDialogPluginImpl.class 的第1897个常量\n原始数据：\"Disabled ships from your fleet are available for recovery.\n\nIf you proceed without recovering them, they will be lost permanently.\"\n译文数据：\"Disabled ships from your fleet are available for recovery.\n\nIf you proceed without recovering them, they will be lost permanently.\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FleetInteractionDialogPluginImpl.class#\"Disabled ships from your fleet are available for recovery.\"",
         "original": "Disabled ships from your fleet are available for recovery.",
         "translation": "你舰队中的那些损坏的舰船仍可被打捞恢复。",
@@ -4053,6 +4060,13 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/EmergencyBurnAbility.class 的第0416个常量\n原始数据：\"      ... and several other ships\"\n译文数据：\"     ... 以及其他几艘舰船\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/EmergencyBurnAbility.class#\" suffers damage from Emergency Burn activation\"",
+        "original": " suffers damage from Emergency Burn activation",
+        "translation": " suffers damage from Emergency Burn activation",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/EmergencyBurnAbility.class 的第0114个常量\n原始数据：\" suffers damage from Emergency Burn activation\"\n译文数据：\" suffers damage from Emergency Burn activation\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/EmergencyBurnAbility.class#\"Consumes %s fuel and prevents combat readiness recovery while active.\"",
         "original": "Consumes %s fuel and prevents combat readiness recovery while active.",
         "translation": "消耗 %s 单位的燃料，且启动时将停止战备值 (CR) 的恢复。",
@@ -4100,6 +4114,13 @@
         "translation": "当某些舰船战备值 (CR) 不足时，将无法安全地启动紧急加速，因此当该技能激活时，以下舰船将可能遭受损害：",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/EmergencyBurnAbility.class 的第0408个常量\n原始数据：\"Some ships don't have enough combat readiness to safely initiate an emergency burn and may suffer damage if the ability is activated:\"\n译文数据：\"当某些舰船战备值 (CR) 不足时，将无法安全地启动紧急加速，因此当该技能激活时，以下舰船将可能遭受损害：\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/EmergencyBurnAbility.class#\"may suffer damage\"",
+        "original": "may suffer damage",
+        "translation": "may suffer damage",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/EmergencyBurnAbility.class 的第0410个常量\n原始数据：\"may suffer damage\"\n译文数据：\"may suffer damage\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/FractureJumpAbility.class#\"      ... and several other ships\"",
@@ -15729,6 +15750,20 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathCellsIntel.class 的第0631个常量\n原始数据：\", provided another base exists.\"\n译文数据：\"，前提是存在另一处左径基地。\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathCellsIntel.class#\". \"",
+        "original": ". ",
+        "translation": ". ",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathCellsIntel.class 的第0675个常量\n原始数据：\". \"\n译文数据：\". \"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathCellsIntel.class#\".\"",
+        "original": ".",
+        "translation": ".",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathCellsIntel.class 的第0621个常量\n原始数据：\".\"\n译文数据：\".\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathCellsIntel.class#\"AI core administrator (%s)\"",
         "original": "AI core administrator (%s)",
         "translation": "AI 行政官 (%s) ",
@@ -15755,6 +15790,13 @@
         "translation": "然而，支援这些狂信徒的基地已经不再运作。预计建立一处新的据点至少需要 %s ",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathCellsIntel.class 的第0629个常量\n原始数据：\"However, the base supporting these cells is no longer operational. It is projected that establishing a new support network will take at least %s \"\n译文数据：\"然而，支援这些狂信徒的基地已经不再运作。预计建立一处新的据点至少需要 %s \"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathCellsIntel.class#\"If the base is destroyed, it will take some time to organize support from another base, and both ground and fleet operations will be disrupted.\"",
+        "original": "If the base is destroyed, it will take some time to organize support from another base, and both ground and fleet operations will be disrupted.",
+        "translation": "If the base is destroyed, it will take some time to organize support from another base, and both ground and fleet operations will be disrupted.",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathCellsIntel.class 的第0651个常量\n原始数据：\"If the base is destroyed, it will take some time to organize support from another base, and both ground and fleet operations will be disrupted.\"\n译文数据：\"If the base is destroyed, it will take some time to organize support from another base, and both ground and fleet operations will be disrupted.\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathCellsIntel.class#\"If they succeed, the colony will effectively be destroyed.\"",
@@ -19341,6 +19383,20 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTHighBurnFactor.class 的第0019个常量\n原始数据：\"High burn sensor readings\"\n译文数据：\"高速传感器数据\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTNeutrinoBurstFactor$1.class#\"A neurtno burst emitted from an overloaded sensor array, revealing nearby slipstreams and providing useful topography readings.\"",
+        "original": "A neurtno burst emitted from an overloaded sensor array, revealing nearby slipstreams and providing useful topography readings.",
+        "translation": "A neurtno burst emitted from an overloaded sensor array, revealing nearby slipstreams and providing useful topography readings.",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTNeutrinoBurstFactor$1.class 的第0022个常量\n原始数据：\"A neurtno burst emitted from an overloaded sensor array, revealing nearby slipstreams and providing useful topography readings.\"\n译文数据：\"A neurtno burst emitted from an overloaded sensor array, revealing nearby slipstreams and providing useful topography readings.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTNeutrinoBurstFactor.class#\"Neutrino burst emitted\"",
+        "original": "Neutrino burst emitted",
+        "translation": "Neutrino burst emitted",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTNeutrinoBurstFactor.class 的第0019个常量\n原始数据：\"Neutrino burst emitted\"\n译文数据：\"Neutrino burst emitted\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTNonASBScanFactor$1.class#\"A scan of the right entity or location can provide insight into the topography of surrounding hyperspace. The target usual~\"@a4d6fb42",
         "original": "A scan of the right entity or location can provide insight into the topography of surrounding hyperspace. The target usually needs to be massive enough to produce a significant gravity well, produce a high energy discharge, or be exotic or unusual in some other way.",
         "translation": "在一处适宜的天体或位置实施扫描能够有效获取周边地区的超空间测绘数据。这类目标通常需要具有足够大的质量，足以形成一处稳定的重力井，抑或在某种程度上具备高度的特异性或异常性。",
@@ -19353,6 +19409,34 @@
         "translation": "在一处适宜的天体或位置实施 %s 能够有效获取周边地区的超空间测绘数据。这类目标通常需要具有足够大的质量，足以形成一处稳定的重力井，抑或在某种程度上具备高度的特异性或异常性。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTScanFactor$1.class 的第0022个常量\n原始数据：\"An %s of the right entity or location can provide insight into the topography of surrounding hyperspace. The target usually needs to be massive enough to produce a significant gravity well, produce a high energy discharge, or be exotic or unusual in some other way.\"\n译文数据：\"在一处适宜的天体或位置实施 %s 能够有效获取周边地区的超空间测绘数据。这类目标通常需要具有足够大的质量，足以形成一处稳定的重力井，抑或在某种程度上具备高度的特异性或异常性。\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTScavengerDataFactor$1.class#\"Topographic data and sensor readings bought from a fellow traveller, far out in the black.\"",
+        "original": "Topographic data and sensor readings bought from a fellow traveller, far out in the black.",
+        "translation": "Topographic data and sensor readings bought from a fellow traveller, far out in the black.",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTScavengerDataFactor$1.class 的第0022个常量\n原始数据：\"Topographic data and sensor readings bought from a fellow traveller, far out in the black.\"\n译文数据：\"Topographic data and sensor readings bought from a fellow traveller, far out in the black.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTScavengerDataFactor.class#\"Bought topographic data\"",
+        "original": "Bought topographic data",
+        "translation": "Bought topographic data",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTScavengerDataFactor.class 的第0019个常量\n原始数据：\"Bought topographic data\"\n译文数据：\"Bought topographic data\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTTopographicDataFactor$1.class#\"Recovered topographic data. Possibly out of date, but still valuable.\"",
+        "original": "Recovered topographic data. Possibly out of date, but still valuable.",
+        "translation": "Recovered topographic data. Possibly out of date, but still valuable.",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTTopographicDataFactor$1.class 的第0022个常量\n原始数据：\"Recovered topographic data. Possibly out of date, but still valuable.\"\n译文数据：\"Recovered topographic data. Possibly out of date, but still valuable.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTTopographicDataFactor.class#\"Topographic data found\"",
+        "original": "Topographic data found",
+        "translation": "Topographic data found",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTTopographicDataFactor.class 的第0019个常量\n原始数据：\"Topographic data found\"\n译文数据：\"Topographic data found\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel$1.class#\"Generate Slipsurge\"",
@@ -28691,6 +28775,13 @@
         "translation": "规模为 ",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/plog/PlaythroughLog.class 的第0253个常量\n原始数据：\"size \"\n译文数据：\"规模为 \"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/population/CoreImmigrationPluginImpl.class#\"    - Size increased to %s\"",
+        "original": "    - Size increased to %s",
+        "translation": "    - Size increased to %s",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/population/CoreImmigrationPluginImpl.class 的第0257个常量\n原始数据：\"    - Size increased to %s\"\n译文数据：\"    - Size increased to %s\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/population/CoreImmigrationPluginImpl.class#\" based on colony size)\"",
