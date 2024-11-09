@@ -4904,7 +4904,9 @@
         "Confirm",
         "Cost of ordnance:",
         "Current Variant",
-        "Select autofit goal variant"
+        "Select autofit goal variant",
+        "Warning: not enough suitable fighters, new loadout likely ineffective\nAutofit uses fighters from your cargo, can buy from port when docked\nAcquire more fighter lpcs to create a better loadout",
+        "Warning: not enough suitable weapons, new loadout likely ineffective\nAutofit uses weapons from your cargo, can buy from port when docked\nAcquire more weapons to create a better loadout"
       ]
     },
     {
@@ -7529,6 +7531,7 @@
         ": already known",
         "Acquired hull mod: ",
         "Already known",
+        "Effect",
         "Right-click to learn"
       ]
     },
@@ -16888,8 +16891,10 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/tutorial/TutorialLayInCourseDialogPluginImpl.class",
       "include_strings": [
+        " as soon as possible.",
         "\"Lay in Course\"",
         "\"Show on map\"",
+        ".",
         ". You don't need to do this to travel, ",
         "After dismissing this dialog, press %s to open the intel screen to view the details of the message you've just received.",
         "Continue",
