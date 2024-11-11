@@ -59,4 +59,19 @@
 ### 6. 舰船信息页文本换行前缺少最后一个字
 ![line_end_char_missing-1.png](line_end_char_missing-1.png)
 ![line_end_char_missing-2.png](line_end_char_missing-2.png)
-可能与换行算法有关，需要调查。
+
+渡鸦：
+> 末尾掉字的问题我有头绪了，猜测是Alex偷懒。在列表一大串武器和设备的时候，
+> Alex估计是直接无脑都在string后加了“, ”(英文逗号和空格)之后，在把末尾两个字符削掉。
+> 然后这次汉化我们统一了中文标点，原来的俩字符变成了中文逗号单字符，
+> 于是末尾就被多吃了一个字符
+
+### 7. 敌对活动事件名称为英文 'Hostilities'
+相关文件：`starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/FactionHostilityIntel.class`
+
+![hostilities_intel_title.png](hostilities_intel_title.png)
+
+代码中这里直接用了事件tag `Tags.INTEL_HOSTILITIES`，无法直接翻译。
+![hostilities_intel_title-code.png](hostilities_intel_title-code.png)
+
+考虑修改为直接返回字符串 "敌对活动"
