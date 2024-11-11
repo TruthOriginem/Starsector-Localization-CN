@@ -126,7 +126,7 @@
 		"renderCircleIndicatorSelectionFlash":true,
 		"defaultName":"目标位置", # used if name=null in addCustomEntity()
 		"nameInText":"目标位置",
-		"shortName":"目标位置",
+		"shortName":"位置",
 		"aOrAn":"一处",
 		"isOrAre":"可能",
 		"customDescriptionId":"mission_location",
@@ -137,7 +137,7 @@
 	"cargo_pod_special":{
 		"defaultName":"货物吊舱", # used if name=null in addCustomEntity()
 		"nameInText":"货物吊舱",
-		"shortName":"货物吊舱",
+		"shortName":"吊舱",
 		"aOrAn":"一组",
 		"isOrAre":"可能",
 		"defaultRadius":24, # used if radius<0 in addCustomEntity()
@@ -747,7 +747,7 @@
 	"derelict_probe":{
 		"defaultName":"人之领-探测器", # used if name=null in addCustomEntity()
 		"nameInText":"人之领-探测器",
-		"shortName":"探针",
+		"shortName":"探测器",
 		"aOrAn":"一颗",
 		"isOrAre":"可能",
 		"defaultRadius":35, # used if radius<0 in addCustomEntity()
@@ -832,7 +832,7 @@
 	"derelict_cryosleeper":{
 		"defaultName":"人之领-低温休眠舱", # used if name=null in addCustomEntity()
 		"nameInText":"人之领-低温休眠舱",
-		"shortName":"低温休眠舱",
+		"shortName":"休眠舱",
 		"aOrAn":"一处",
 		"isOrAre":"可能",
 		"defaultRadius":96, # used if radius<0 in addCustomEntity()
@@ -861,7 +861,7 @@
 	"derelict_gatehauler":{
 		"defaultName":"人之领-星门运输舰", # used if name=null in addCustomEntity()
 		"nameInText":"人之领-星门运输舰",
-		"shortName":"星门运输舰",
+		"shortName":"运输舰",
 		"aOrAn":"一艘",
 		"isOrAre":"可能",
 		"defaultRadius":150, # used if radius<0 in addCustomEntity()
@@ -890,7 +890,7 @@
 	"coronal_tap":{
 		"defaultName":"星冕分流器", # used if name=null in addCustomEntity()
 		"nameInText":"星冕分流器",
-		"shortName":"星冕分流器",
+		"shortName":"分流器",
 		"aOrAn":"一座",
 		"isOrAre":"可能",
 		"defaultRadius":150, # used if radius<0 in addCustomEntity()
@@ -922,7 +922,7 @@
 	"debris_field_shared":{
 		"defaultName":"残骸区", # used if name=null in addCustomEntity()
 		"nameInText":"残骸区",
-		"shortName":"残骸",
+		"shortName":"区域",
 		"aOrAn":"一处",
 		"isOrAre":"可能",
 		"customDescriptionId":"debris_field_shared",
@@ -956,7 +956,7 @@
 		"defaultName":"隐蔽藏匿点", # used if name=null in addCustomEntity()
 		"defaultRadius":35, # used if radius<0 in addCustomEntity()
 		"nameInText":"隐蔽藏匿点",
-		"shortName":"隐蔽藏匿点",
+		"shortName":"藏匿点",
 		"aOrAn":"一处",
 		"isOrAre":"可能",
 		"showInCampaign":true,
@@ -978,7 +978,7 @@
 		"defaultName":"补给藏匿点", # used if name=null in addCustomEntity()
 		"defaultRadius":35, # used if radius<0 in addCustomEntity()
 		"nameInText":"补给藏匿点",
-		"shortName":"补给藏匿点",
+		"shortName":"藏匿点",
 		"aOrAn":"一处",
 		"isOrAre":"可能",
 		"showInCampaign":true,
@@ -1022,7 +1022,7 @@
 		"defaultName":"设备藏匿点",
 		"defaultRadius":35, 
 		"nameInText":"设备藏匿点",
-		"shortName":"设备藏匿点",
+		"shortName":"藏匿点",
 	},
 
 	# a cache that's a single large structure rather than a collection of containers etc
@@ -1156,7 +1156,7 @@
 		"defaultRadius":45, # used if radius<0 in addCustomEntity()
 		"aOrAn":"一处",
 		"nameInText":"轨道居住站",
-		"shortName":"轨道居住站",
+		"shortName":"居住站",
 		"customDescriptionId":"orbital_habitat_abandoned",
 		"interactionImage":"graphics/illustrations/orbital_construction.jpg",
 		"icon":"graphics/icons/station_broken.png",
@@ -1197,7 +1197,7 @@
 		"defaultName":"货物吊舱", # used if name=null in addCustomEntity()
 		"defaultRadius":20, # used if radius<0 in addCustomEntity()
 		"nameInText":"货物吊舱",
-		"shortName":"货物吊舱",
+		"shortName":"吊舱",
 		"aOrAn":"一组",
 		"isOrAre":"可能",
 		"showInCampaign":true,
