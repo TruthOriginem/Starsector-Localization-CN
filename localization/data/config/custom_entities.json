@@ -138,7 +138,7 @@
 		"defaultName":"货物吊舱", # used if name=null in addCustomEntity()
 		"nameInText":"货物吊舱",
 		"shortName":"货物吊舱",
-		"aOrAn":"一处",
+		"aOrAn":"一组",
 		"isOrAre":"可能",
 		"defaultRadius":24, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"cargo_pod_special",
@@ -165,7 +165,7 @@
 		"defaultName":"探针", # used if name=null in addCustomEntity()
 		"nameInText":"探针",
 		"shortName":"探针",
-		"aOrAn":"一处",
+		"aOrAn":"一颗",
 		"isOrAre":"可能",
 		"detectionRange":2000, # must be >0 for discoverable/discoveryXP to be used
 		"discoverable":true,
@@ -215,7 +215,7 @@
 	"inactive_gate":{
 		"defaultName":"不运转的星门", # used if name=null in addCustomEntity()
 		"nameInText":"不运转的星门",
-		"aOrAn":"一处",
+		"aOrAn":"一座",
 		"defaultRadius":120, # used if radius<0 in addCustomEntity()
 		"interactionImage":"graphics/illustrations/dead_gate.jpg",
 		"icon":"graphics/icons/gate0.png",
@@ -748,7 +748,7 @@
 		"defaultName":"人之领-探测器", # used if name=null in addCustomEntity()
 		"nameInText":"人之领-探测器",
 		"shortName":"探针",
-		"aOrAn":"一处",
+		"aOrAn":"一颗",
 		"isOrAre":"可能",
 		"defaultRadius":35, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"derelict_probe",
@@ -777,7 +777,7 @@
 		"defaultName":"人之领-勘探舰", # used if name=null in addCustomEntity()
 		"nameInText":"人之领-勘探舰",
 		"shortName":"勘探舰",
-		"aOrAn":"一处",
+		"aOrAn":"一艘",
 		"isOrAre":"可能",
 		"defaultRadius":47, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"derelict_surveyship",
@@ -805,7 +805,7 @@
 		"defaultName":"人之领-勘探母舰", # used if name=null in addCustomEntity()
 		"nameInText":"人之领-勘探母舰",
 		"shortName":"勘探母舰",
-		"aOrAn":"一处",
+		"aOrAn":"一艘",
 		"isOrAre":"可能",
 		"defaultRadius":67, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"derelict_mothership",
@@ -862,7 +862,7 @@
 		"defaultName":"人之领-星门运输舰", # used if name=null in addCustomEntity()
 		"nameInText":"人之领-星门运输舰",
 		"shortName":"星门运输舰",
-		"aOrAn":"一处",
+		"aOrAn":"一艘",
 		"isOrAre":"可能",
 		"defaultRadius":150, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"derelict_gatehauler",
@@ -891,7 +891,7 @@
 		"defaultName":"星冕分流器", # used if name=null in addCustomEntity()
 		"nameInText":"星冕分流器",
 		"shortName":"星冕分流器",
-		"aOrAn":"一处",
+		"aOrAn":"一座",
 		"isOrAre":"可能",
 		"defaultRadius":150, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"coronal_tap",
@@ -936,7 +936,7 @@
 		"defaultRadius":20, # used if radius<0 in addCustomEntity()
 		"nameInText":"遗弃舰",
 		"shortName":"舰船",
-		"aOrAn":"一处",
+		"aOrAn":"一艘",
 		"isOrAre":"可能",
 		"showInCampaign":true,
 		"scaleIconSizeBasedOnDefaultRadius":false,
@@ -1198,7 +1198,7 @@
 		"defaultRadius":20, # used if radius<0 in addCustomEntity()
 		"nameInText":"货物吊舱",
 		"shortName":"货物吊舱",
-		"aOrAn":"一处",
+		"aOrAn":"一组",
 		"isOrAre":"可能",
 		"showInCampaign":true,
 		"scaleIconSizeBasedOnDefaultRadius":false,
@@ -1470,7 +1470,7 @@
 		"defaultName":"不明实体", # used if name=null in addCustomEntity()
 		"nameInText":"传感器幽灵",
 		"shortName":"传感器幽灵",
-		"aOrAn":"一处",
+		"aOrAn":"一个",
 		"isOrAre":"可能",
 		"detectionRange":1000, # must be >0 for discoverable/discoveryXP to be used
 		"discoverable":true,
