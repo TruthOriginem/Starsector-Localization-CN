@@ -15795,7 +15795,7 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathCellsIntel.class#\"If the base is destroyed, it will take some time to organize support from another base, and both ground and fleet operations will be disrupted.\"",
         "original": "If the base is destroyed, it will take some time to organize support from another base, and both ground and fleet operations will be disrupted.",
         "translation": "如果该基地被摧毁，就能在其他基地发起支援之前争取到一些时间，使舰队和地面作战行动暂时被瓦解。",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathCellsIntel.class 的第0669个常量\n原始数据：\"If the base is destroyed, it will take some time to organize support from another base, and both ground and fleet operations will be disrupted.\"\n译文数据：\"如果该基地被摧毁，就能在其他基地发起支援之前争取到一些时间，使舰队和地面作战行动暂时被瓦解。\"\n\n"
     },
     {
@@ -16837,9 +16837,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/contacts/ContactIntel.class#\"Faction: \"",
         "original": "Faction: ",
-        "translation": "所属方：",
+        "translation": "所属方： ",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/contacts/ContactIntel.class 的第0598个常量\n原始数据：\"Faction: \"\n译文数据：\"所属方：\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/contacts/ContactIntel.class 的第0598个常量\n原始数据：\"Faction: \"\n译文数据：\"所属方： \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/contacts/ContactIntel.class#\"If this contact is developed, \"",
@@ -19386,14 +19386,14 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTNeutrinoBurstFactor$1.class#\"A neurtno burst emitted from an overloaded sensor array, revealing nearby slipstreams and providing useful topography readings.\"",
         "original": "A neurtno burst emitted from an overloaded sensor array, revealing nearby slipstreams and providing useful topography readings.",
         "translation": "通过超载传感器阵列发射一波中微子脉冲，揭示附近的超空间滑流并提供有价值的超空间测绘数据。",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTNeutrinoBurstFactor$1.class 的第0029个常量\n原始数据：\"A neurtno burst emitted from an overloaded sensor array, revealing nearby slipstreams and providing useful topography readings.\"\n译文数据：\"通过超载传感器阵列发射一波中微子脉冲，揭示附近的超空间滑流并提供有价值的超空间测绘数据。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTNeutrinoBurstFactor.class#\"Neutrino burst emitted\"",
         "original": "Neutrino burst emitted",
         "translation": "中微子爆发发动",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTNeutrinoBurstFactor.class 的第0023个常量\n原始数据：\"Neutrino burst emitted\"\n译文数据：\"中微子爆发发动\"\n\n"
     },
     {
@@ -19414,28 +19414,28 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTScavengerDataFactor$1.class#\"Topographic data and sensor readings bought from a fellow traveller, far out in the black.\"",
         "original": "Topographic data and sensor readings bought from a fellow traveller, far out in the black.",
         "translation": "在虚空深处从另一位旅行者手上购买的 超空间测绘数据 和 传感器数据。",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTScavengerDataFactor$1.class 的第0029个常量\n原始数据：\"Topographic data and sensor readings bought from a fellow traveller, far out in the black.\"\n译文数据：\"在虚空深处从另一位旅行者手上购买的 超空间测绘数据 和 传感器数据。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTScavengerDataFactor.class#\"Bought topographic data\"",
         "original": "Bought topographic data",
         "translation": "购买了超空间测绘数据 ",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTScavengerDataFactor.class 的第0023个常量\n原始数据：\"Bought topographic data\"\n译文数据：\"购买了超空间测绘数据 \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTTopographicDataFactor$1.class#\"Recovered topographic data. Possibly out of date, but still valuable.\"",
         "original": "Recovered topographic data. Possibly out of date, but still valuable.",
         "translation": "找到了超空间测绘数据。虽然可能过时，但依旧珍贵。",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTTopographicDataFactor$1.class 的第0029个常量\n原始数据：\"Recovered topographic data. Possibly out of date, but still valuable.\"\n译文数据：\"找到了超空间测绘数据。虽然可能过时，但依旧珍贵。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTTopographicDataFactor.class#\"Topographic data found\"",
         "original": "Topographic data found",
         "translation": "找到了超空间测绘数据",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTTopographicDataFactor.class 的第0023个常量\n原始数据：\"Topographic data found\"\n译文数据：\"找到了超空间测绘数据\"\n\n"
     },
     {
@@ -22353,9 +22353,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/misc/TradeFleetDepartureIntel.class#\"Faction: \"",
         "original": "Faction: ",
-        "translation": "所属方：",
+        "translation": "所属方： ",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/misc/TradeFleetDepartureIntel.class 的第0272个常量\n原始数据：\"Faction: \"\n译文数据：\"所属方：\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/misc/TradeFleetDepartureIntel.class 的第0272个常量\n原始数据：\"Faction: \"\n译文数据：\"所属方： \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/misc/TradeFleetDepartureIntel.class#\"Fleet departures\"",
@@ -22475,6 +22475,20 @@
         "translation": "商品与物资",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/misc/TradeFleetDepartureIntel.class 的第0359个常量\n原始数据：\"goods and materiel\"\n译文数据：\"商品与物资\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/misc/TradeFleetDepartureIntel.class#\"goods\"",
+        "original": "goods",
+        "translation": "goods",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/misc/TradeFleetDepartureIntel.class 的第0033个常量\n原始数据：\"goods\"\n译文数据：\"goods\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/misc/TradeFleetDepartureIntel.class#\"materiel\"",
+        "original": "materiel",
+        "translation": "materiel",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/misc/TradeFleetDepartureIntel.class 的第0035个常量\n原始数据：\"materiel\"\n译文数据：\"materiel\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/misc/TradeFleetDepartureIntel.class#\"until departure\"",
@@ -28773,7 +28787,7 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/population/CoreImmigrationPluginImpl.class#\"    - Size increased to %s\"",
         "original": "    - Size increased to %s",
         "translation": "    - 规模增加为 %s",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/population/CoreImmigrationPluginImpl.class 的第0258个常量\n原始数据：\"    - Size increased to %s\"\n译文数据：\"    - 规模增加为 %s\"\n\n"
     },
     {
@@ -31946,6 +31960,13 @@
         "translation": "巨行星",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/BreadcrumbSpecial.class 的第0542个常量\n原始数据：\"giant\"\n译文数据：\"巨行星\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/BreadcrumbSpecial.class#\"hyperspace\"",
+        "original": "hyperspace",
+        "translation": "超空间",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/BreadcrumbSpecial.class 的第0443个常量\n原始数据：\"hyperspace\"\n译文数据：\"超空间\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/BreadcrumbSpecial.class#\"in the \"",
@@ -37796,7 +37817,7 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialLayInCourseDialogPluginImpl.class#\" as soon as possible.\"",
         "original": " as soon as possible.",
         "translation": " 。",
-        "stage": 9,
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialLayInCourseDialogPluginImpl.class 的第0164个常量\n原始数据：\" as soon as possible.\"\n译文数据：\" 。\"\n\n"
     },
     {
