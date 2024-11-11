@@ -514,7 +514,7 @@
         "key": "hull_mods.csv#ballistic_rangefinder$desc",
         "original": "<tooltip created in the script due to lots of highlighting>",
         "translation": "提高实弹槽位上中小型武器的射程。",
-        "stage": -1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0009行\n[本行原始数据]\n{'name': 'Ballistic Rangefinder',\n 'id': 'ballistic_rangefinder',\n 'tier': '2',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'offensive, merc, standard',\n 'uiTags': 'Weapons',\n 'base value': '8000',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '5',\n 'cost_dest': '10',\n 'cost_cruiser': '15',\n 'cost_capital': '25',\n 'script': 'com.fs.starfarer.api.impl.hullmods.BallisticRangefinder',\n 'desc': '<tooltip created in the script due to lots of highlighting>',\n 'short': 'Increases base range of small and medium weapons in ballisic slots.',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/ballistic_rangefinder.png'}"
     },
     {
@@ -640,7 +640,7 @@
         "key": "hull_mods.csv#coherer$desc",
         "original": "<tooltip created in the script>",
         "translation": "",
-        "stage": -1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0080行\n[本行原始数据]\n{'name': 'Energy Bolt Coherer',\n 'id': 'coherer',\n 'tier': '',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': '',\n 'uiTags': '',\n 'base value': '',\n 'unlocked': '',\n 'hidden': 'TRUE',\n 'hiddenEverywhere': '',\n 'cost_frigate': '0',\n 'cost_dest': '0',\n 'cost_cruiser': '0',\n 'cost_capital': '0',\n 'script': 'com.fs.starfarer.api.impl.hullmods.EnergyBoltCoherer',\n 'desc': '<tooltip created in the script>',\n 'short': 'Increases base range of non-beam energy weapons.',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/coherer.png'}"
     },
     {
@@ -773,7 +773,7 @@
         "key": "hull_mods.csv#converted_hangar$desc",
         "original": "<Tooltip created in script>",
         "translation": "",
-        "stage": -1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0011行\n[本行原始数据]\n{'name': 'Converted Hangar',\n 'id': 'converted_hangar',\n 'tier': '1',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'special, non_phase, merc, standard',\n 'uiTags': 'Fighters',\n 'base value': '5000',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '0',\n 'cost_dest': '10',\n 'cost_cruiser': '10',\n 'cost_capital': '10',\n 'script': 'com.fs.starfarer.api.impl.hullmods.ConvertedHangar',\n 'desc': '<Tooltip created in script>',\n 'short': 'Improvised fighter bay for non-carriers.',\n 'sModDesc': 'Increases the rate at which the fighter replacement rate '\n             'recovers by %s for cruisers, and by %s for capital ships. No '\n             'added effect for destroyers.',\n 'sprite': 'graphics/hullmods/converted_hangar.png'}"
     },
     {
@@ -1830,7 +1830,7 @@
         "key": "hull_mods.csv#high_scatter_amp$desc",
         "original": "<tooltip created in the script due to sections>",
         "translation": "降低光束类武器的射程，并且使它们在对护盾造成伤害时产生硬幅能。",
-        "stage": -1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0031行\n[本行原始数据]\n{'name': 'High Scatter Amplifier',\n 'id': 'high_scatter_amp',\n 'tier': '3',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'offensive, merc, standard',\n 'uiTags': 'Weapons',\n 'base value': '5000',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '4',\n 'cost_dest': '8',\n 'cost_cruiser': '12',\n 'cost_capital': '20',\n 'script': 'com.fs.starfarer.api.impl.hullmods.HighScatterAmp',\n 'desc': '<tooltip created in the script due to sections>',\n 'short': 'Reduces beam range; beams deal more damage and apply hard flux to '\n          'shields.',\n 'sModDesc': 'Increases beam weapon damage by an additional %s.',\n 'sprite': 'graphics/hullmods/high_scatter_amp.png'}"
     },
     {
@@ -1865,7 +1865,7 @@
         "key": "hull_mods.csv#hiressensors$desc",
         "original": "<Tooltip created in script>",
         "translation": "",
-        "stage": -1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0059行\n[本行原始数据]\n{'name': 'High Resolution Sensors',\n 'id': 'hiressensors',\n 'tier': '2',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'req_spaceport, merc, standard',\n 'uiTags': 'Logistics, Requires Dock',\n 'base value': '9000',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '4',\n 'cost_dest': '6',\n 'cost_cruiser': '9',\n 'cost_capital': '15',\n 'script': 'com.fs.starfarer.api.impl.hullmods.HighResSensors',\n 'desc': '<Tooltip created in script>',\n 'short': \"Increases fleet's sensor range.\",\n 'sModDesc': \"Increases the ship's in-combat vision range by %s/%s/%s/%s, \"\n             'based on hull size.',\n 'sprite': 'graphics/hullmods/high_res_sensors.png'}"
     },
     {
@@ -2054,7 +2054,7 @@
         "key": "hull_mods.csv#missile_autoloader$desc",
         "original": "<tooltip created in the script due to sections/other complexity>",
         "translation": "",
-        "stage": -1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0027行\n[本行原始数据]\n{'name': 'Missile Autoloader',\n 'id': 'missile_autoloader',\n 'tier': '1',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'offensive, merc, standard',\n 'uiTags': 'Weapons',\n 'base value': '6000',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '8',\n 'cost_dest': '12',\n 'cost_cruiser': '20',\n 'cost_capital': '30',\n 'script': 'com.fs.starfarer.api.impl.hullmods.MissileAutoloader',\n 'desc': '<tooltip created in the script due to sections/other complexity>',\n 'short': 'Reloads missile weapons in small missile mounts',\n 'sModDesc': 'Increases the post-reload cooldown to %s seconds.',\n 'sprite': 'graphics/hullmods/missile_autoloader.png'}"
     },
     {
