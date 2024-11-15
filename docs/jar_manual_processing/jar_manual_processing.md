@@ -69,9 +69,20 @@
 ### 7. 敌对活动事件名称为英文 'Hostilities'
 相关文件：`starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/FactionHostilityIntel.class`
 
+> 尝试直接翻译文件内的tag
+
 ![hostilities_intel_title.png](hostilities_intel_title.png)
 
 代码中这里直接用了事件tag `Tags.INTEL_HOSTILITIES`，无法直接翻译。
 ![hostilities_intel_title-code.png](hostilities_intel_title-code.png)
 
 考虑修改为直接返回字符串 "敌对活动"
+
+### 8. 战斗页面舰船部署提示字体不显示
+相关文件：`starfarer_obf.jar:com/fs/starfarer/E/B/OOoOOOOOOOOO....class`
+
+![combat-ship_deployment_note.jpg](combat-ship_deployment_note.jpg)
+
+修改字体为标准字体，字体大小从21调整为14
+
+![combat-ship_deployment_note-after.jpg](combat-ship_deployment_note-after.jpg)
