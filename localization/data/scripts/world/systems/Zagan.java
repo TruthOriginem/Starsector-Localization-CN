@@ -175,7 +175,7 @@ public class Zagan {
 		yesod.setCustomDescriptionId("planet_yesod");
 		
 		// Zagan jump-point
-		JumpPointAPI jumpPoint2 = Global.getFactory().createJumpPoint("yesod_jump", "Yesod Jump-point");
+		JumpPointAPI jumpPoint2 = Global.getFactory().createJumpPoint("yesod_jump", "Yesod 跳跃点");
 		jumpPoint2.setCircularOrbit( zagan_star, 180 + 60, 9500, 580);
 		jumpPoint2.setRelatedPlanet(yesod);
 		system.addEntity(jumpPoint2);
