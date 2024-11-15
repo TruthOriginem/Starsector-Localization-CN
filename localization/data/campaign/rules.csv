@@ -8392,7 +8392,7 @@ AdjustRepActivePerson COOPERATIVE 6
 AddRemoveCommodity gamma_core -1 true","""做的好，我马上就让技术人员处理这东西。哦还有，这些星币应该够报销你的支出，搞不好还能多出来一些。""",tutGotCore1:继续,
 tut_mainContactCore1,DialogOptionSelected,$option == tutGotCore1,,"""等核心完成计算后我会把稳定算法发给你。有了它之后，你就可以用舰船的驱动力场和跳跃点交互，这应该不是件难事儿。
 
-不过，能离开星系的两个跳跃点都还被矿工守着，这是个问题。""","tutGotCore2:""而且你还说过它们有可观的兵力？""",
+不过，能离开星系的两个跳跃点都还被矿工守着，这是个问题。""","tutGotCore2:""而且你还说过他们有可观的兵力？""",
 tut_mainContactCore2,DialogOptionSelected,$option == tutGotCore2,,"""嗯，这是相对而言的。我们的治安舰队可以轻松处理掉他们。但和我说过的那样，他们正忙于守卫 Ancyra。
 
 而另一方面，至于你的舰队...也许你能够用优秀的驾驶技巧再加上一些运气来搞定他们，但最好还是别冒这个险。
