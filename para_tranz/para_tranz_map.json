@@ -1453,6 +1453,7 @@
         "'s",
         "Not enough crew to keep all ships combat-ready",
         "Out of supplies",
+        "Over carrying capacity or max number of ships",
         "Patrol",
         "Tactistar",
         "Unable to continue ongoing repairs"
@@ -1837,7 +1838,8 @@
         " ordnance points left",
         "Crew understrength",
         "Mothballed",
-        "Not enough crew"
+        "Not enough crew",
+        "field refit"
       ]
     },
     {
@@ -7207,6 +7209,7 @@
         "Made exceptional efforts to recover ",
         "No long-term damage",
         "Not enough story points",
+        "RECOVER",
         "Recover",
         "Select ships to recover",
         "Selected ",
@@ -7229,16 +7232,37 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/ui/newui/FleetMemberRecoveryDialog$2.class",
+      "include_strings": [
+        "Available supplies, and projected supply cost to repair all recovered ships along with ships in your fleets that already need repairs or combat readiness recovery.\n\nInexact due to uncertain condition of recovered ships. Supplies will be consumed gradually as ships undergo repairs and recovery."
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/ui/newui/FleetMemberRecoveryDialog$3.class",
       "include_strings": [
         "Total crew on board, and number of crew required to operate all ships at maximum readiness."
       ]
     },
     {
+      "path": "com/fs/starfarer/ui/newui/FleetMemberRecoveryDialog$4.class",
+      "include_strings": [
+        "Available supplies, and projected supply cost to repair all recovered ships along with ships in your fleets that already need repairs or combat readiness recovery.\n\nInexact due to uncertain condition of recovered ships. Supplies will be consumed gradually as ships undergo repairs and recovery."
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/ui/newui/FleetMemberRecoveryDialog$5.class",
       "include_strings": [
         "Total crew on board, and number of crew required to operate all ships at maximum readiness."
       ]
+    },
+    {
+      "path": "com/fs/starfarer/ui/newui/FleetMemberRecoveryDialog$6.class",
+      "include_strings": [
+        "Available supplies, and projected supply cost to repair all recovered ships along with ships in your fleets that already need repairs or combat readiness recovery.\n\nInexact due to uncertain condition of recovered ships. Supplies will be consumed gradually as ships undergo repairs and recovery."
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/ui/newui/FleetMemberRecoveryDialog$7.class",
@@ -7313,6 +7337,13 @@
       "include_strings": [
         "Your forces"
       ]
+    },
+    {
+      "path": "com/fs/starfarer/ui/newui/T.class",
+      "include_strings": [
+        "SELECT"
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/ui/newui/X.class",
@@ -10882,6 +10913,7 @@
         " operations for %s ",
         " operations was averted by the local security forces.",
         " sabotage",
+        "%s stability.",
         ", but the local security forces were able to locate and disarm it, thereby ",
         ", provided another base exists.",
         ".",
@@ -11218,19 +11250,34 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/HADefensiveMeasuresFactor.class",
       "include_strings": [
-        " Military base"
+        "    High Command",
+        "    Increased defenses",
+        "    Military base",
+        "    Military infrastructure",
+        "    Patrol HQ",
+        "Defensive measures"
       ]
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/HADefensiveMeasuresFactor$1.class",
+      "include_strings": [
+        "Defensive measures taken by your colonies."
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/HADefensiveMeasuresFactor$2.class",
       "include_strings": [
-        "Based on the size and stability of the largest colony under your control. If multiple colonies have the same size, the one with higher stability is used."
+        "Based on the size and stability of the largest colony under your control. If multiple colonies have the same size, the one with higher stability is used.",
+        "Biggest colony: %s, size: %s, stability: %s"
       ]
     },
     {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/HADefensiveMeasuresFactor$3.class",
       "include_strings": [
-        "A Patrol HQ reduces monthly progress by %s points. A Military Base and a High Command reduce progress by %s and %s the colony's size, respectively. Only the highest-scoring colony is used, building multiple military bases has no effect."
+        "A Patrol HQ reduces monthly progress by %s points. A Military Base and a High Command reduce progress by %s and %s the colony's size, respectively. Only the highest-scoring colony is used, building multiple military bases has no effect.",
+        "Based on the size the largest colony under your control that has a Patrol HQ, a Military Base, or a High Command.",
+        "Best military colony: %s, size: %s, score: %s points"
       ]
     },
     {
@@ -11455,18 +11502,31 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathAgreementHostileActivityCause2.class",
+      "include_strings": [
+        "Pather agreement"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class",
       "include_strings": [
+        ".",
         "An agreement is reached with the Luddic Path",
+        "It's possible that you might reach some kind of understanding with the Pathers, provided you find the right people to talk to.",
         "Luddic Path attack",
+        "Luddic Path attack averted",
         "Luddic Path cells disrupted",
         "Signs of a Luddic Path attack targeting %s",
+        "The Luddic Path cells on %s are disrupted",
         "There are signs of an impending Luddic Path attack targeting %s. If the attack is successful, the colony will suffer a catastrophic saturation bombardment.",
         "This attack represents a significant resource investment by the Pathers. If it is defeated, Luddic Path cells Sector-wide will be disrupted.",
         "You've %s a signficant amount to the Pathers, and their fleets and ground-based cells should leave your colonies alone for another %s ",
         "You've reached an understanding with the Pathers, and their fleets and ground-based cells should leave your colonies alone in the future, barring unexpected events.",
         "catastrophic saturation bombardment",
-        "disrupted"
+        "disrupted",
+        "find the right people",
+        "understanding"
       ]
     },
     {
@@ -11560,6 +11620,26 @@
         "increased accessibility",
         "reduced stability"
       ]
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor$1.class",
+      "include_strings": [
+        "Having %s, however, should be enough dissuade most pirates from attacking your interests.",
+        "However, you have %s, which is enough dissuade most pirates from attacking your interests.",
+        "Kanta's protection",
+        "Piracy follows interstellar civilization almost without exception.",
+        "You've %s, and it's not the sort of thing you can do over.",
+        "lost Kanta's protection"
+      ],
+      "exclude_strings": []
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor$2.class",
+      "include_strings": [
+        "A pirate raid will be launched against one of your star systems.",
+        "Pirate raid"
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/RemnantHostileActivityFactor.class",
@@ -11915,7 +11995,11 @@
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel$1.class",
       "include_strings": [
         "Generate Slipsurge",
-        "Reverse Polarity"
+        "Hyperfield optimization",
+        "Reverse Polarity",
+        "Slipstream detection",
+        "Slipstream navigation",
+        "Topographic data"
       ]
     },
     {
@@ -12473,6 +12557,19 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/misc/LuddicShrineIntel.class",
+      "include_strings": [
+        "Discovered: ",
+        "Go back",
+        "Luddic Shrine - ",
+        "Luddic shrines",
+        "Not visited",
+        "Show shrines",
+        "Visited"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/api/impl/campaign/intel/misc/ProductionReportIntel.class",
       "include_strings": [
         " ago",
@@ -12751,6 +12848,17 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/api/impl/campaign/missions/AFavorForKanta.class",
+      "include_strings": [
+        " in the ",
+        "A Favor for Kanta",
+        "Kanta's Protection lost",
+        "Perform a tactical bombardment of",
+        "Tactically bombard "
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/api/impl/campaign/missions/ANewHope.class",
       "include_strings": [
         "Deliver the mysterious old man, the kid, and their robot to Volturn in the Askonia system. Avoid patrols; they may be wanted by the authorities.",
@@ -12864,6 +12972,7 @@
         "a powdered substance in a triple-sealed container",
         "a rad-shielded salvors' TriPad",
         "a scratched golden ring",
+        "a sewing kit with strangely curved needles",
         "a single rose in a miniaturized stasis field",
         "a single vacuum-desiccated finger",
         "a small EM-shielded safe",
@@ -12876,7 +12985,8 @@
         "specified coordinates in the ",
         "the ",
         "the dead drop coordinates",
-        "the dead drop coordinates given to you by "
+        "the dead drop coordinates given to you by ",
+        "they"
       ]
     },
     {
@@ -12926,15 +13036,23 @@
       "path": "com/fs/starfarer/api/impl/campaign/missions/JailbreakMission.class",
       "include_strings": [
         " in the ",
+        ".",
         "Break target out of confinement ",
         "Conduct jailbreak ",
         "Jailbreak",
-        "the escapee from "
+        "the escapee",
+        "the escapee from ",
+        "they"
       ]
     },
     {
       "path": "com/fs/starfarer/api/impl/campaign/missions/LuddicPilgrimTransport.class",
       "include_strings": [
+        " days.",
+        " in the ",
+        ".",
+        "Luddic Pilgrim Transport",
+        "The pilgrims will expect to arrive at the shrine within ",
         "Transport a small party of Luddic pilgrims to "
       ]
     },
@@ -13424,6 +13542,7 @@
         " called ",
         " to receive your reward.",
         ".",
+        "Go to the nearest jump-point and retrieve the instrument package  from scavengers before they leave the system.",
         "Recover Instrument Package",
         "Recover an instrument package from a probe ",
         "Recover an instrument package from a probe in the ",
@@ -13444,6 +13563,7 @@
         "A reasonable place to find such a pirate would be ",
         "Arroyo is located ",
         "Get a lead on the whereabouts of Kelise Astraia",
+        "Get a lead on the whereabouts of Kelise Astraia, who is associated with a secret Tri-Tachyon research base called \"Alpha Site\".",
         "Investigate Alpha Site",
         "Investigate hyperspace area the relay was transmitting to",
         "Investigate the hyperspace coordinates that the relay was transmitting to.",
@@ -14135,6 +14255,19 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/api/impl/campaign/rulecmd/HA_CMD$StationKingScript.class",
+      "include_strings": [
+        " of ",
+        ".",
+        ". The pirate base is located in the ",
+        "Protection payment",
+        "Protection payment to the ",
+        "moving to attack ",
+        "preparing to attack "
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/api/impl/campaign/rulecmd/HailPlayer.class",
       "include_strings": [
         "You're being hailed by the ",
@@ -14369,6 +14502,7 @@
         "Danger level of objectives",
         "Defending ships are present in sufficient strength to prevent any hostile action until they are dealt with.",
         "Defending ships are present, but not in sufficient strength to want to give battle or prevent any hostile action you might take.",
+        "Designate raid objectives",
         "Disrupt the operations of a specific industry or facility",
         "Effective ground defense strength: %s",
         "Engage the ",
@@ -14433,7 +14567,9 @@
         "Your forces are ready to go, awaiting your final confirmation.",
         "Your forces have not suffered any casualties.",
         "Your forces will be able to organize another raid within a day or so.",
+        "Your ground forces commander estimates that given the relative force strengths,  the raid should disrupt all ",
         "hostile action, aside from a quick raid, unless it is dealt with.",
+        "orbital station",
         "reduced effect.",
         "regardless of transponder status.",
         "will only result in a minor penalty to your standing.",
@@ -14444,23 +14580,30 @@
       "path": "com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$1.class",
       "include_strings": [
         " a total of %s ",
+        " in your fleet.",
         " targeted: ",
+        ".",
         "The estimated value of the items obtained is projected to be around %s.",
         "The marines are ready to go, awaiting your final confirmation.",
+        "Your marine commander submits a plan for your approval. Losses during this operation are projected to be %s. There ",
         "are",
         "is",
         "marine",
         "marines",
-        "objective"
+        "objective",
+        "objectives"
       ]
     },
     {
       "path": "com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$2.class",
       "include_strings": [
         " targeted: ",
+        ".",
         "The estimated value of the items obtained is projected to be around %s.",
         "The marines are ready to go, awaiting your final confirmation. There are a total of %s marines in your fleet.",
-        "objective"
+        "Your marine commander submits a plan for your approval. Losses during this operation are projected to be %s.",
+        "objective",
+        "objectives"
       ]
     },
     {
@@ -14490,6 +14633,7 @@
         "Deploy",
         "Potential salvage",
         "Proceed with construction?",
+        "Proceed with neutrino burst?",
         "Proceed with reactivation?",
         "Proceed with salvage operation?",
         "Salvaged",
@@ -14499,7 +14643,9 @@
         "You do not have the necessary resources to build this structure.",
         "You've recently acquired topographic data within %s light-years of your current location, and a neutrino burst here will not meaningfully contribute to your understanding of hyperspace topology. It will, however, still reveal all nearby slipstreams.",
         "beyond providing redundancy if one is lost.",
-        "in this star system. Another one would have no effect "
+        "in this star system. Another one would have no effect ",
+        "will not meaningfully contribute",
+        "your"
       ]
     },
     {
@@ -14511,6 +14657,7 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/rulecmd/salvage/Objectives$2.class",
       "include_strings": [
+        "Deploying and activating a wormhole anchor, turning it into an active terminus, will consume %s fuel. Your fleet is carrying %s fuel.",
         "Once the operation is completed, the wormhole will take about a cycle to stablize,before it can be used.",
         "Usually, the wormhole will take about a cycle to stablize, but you have calibration data that will allow it to be used immediately.",
         "cycle"
@@ -14750,8 +14897,11 @@
       "include_strings": [
         " Location",
         " The world is notable for ",
+        " located ",
         " on ",
         " with a low hazard rating ",
+        ", ",
+        ".",
         "Habitable World",
         "However, you've already acquired this data through other means.",
         "Preliminary Survey of the ",
@@ -14769,6 +14919,7 @@
         "Your salvage crews find a memory bank in the debris. The data therein ",
         "being habitable.",
         "contained information about ",
+        "having ",
         " located ",
         "points to the existence of "
       ]
@@ -14854,7 +15005,8 @@
         " penalty",
         " skill",
         "+%s combat readiness (maximum: %s); ",
-        "offsets built-in "
+        "offsets built-in ",
+        "partially "
       ]
     },
     {
@@ -15357,6 +15509,13 @@
         "Deployment point cost of ships reduced by %s per d-mod*",
         "Derelict Operations skill"
       ]
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/skills/DerelictContingent$Level2.class",
+      "include_strings": [
+        "Recovered ships have more d-mods than normal"
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/api/impl/campaign/skills/ElectronicWarfare$Level0.class",
@@ -15955,7 +16114,8 @@
         "No signal",
         "Ready in ",
         "Ready on transfer",
-        "Target: "
+        "Target: ",
+        "requires physical transfer"
       ]
     },
     {
@@ -16932,7 +17092,8 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/tutorial/RogueMinerMiscFleetManager.class",
       "include_strings": [
-        "Rogue Miner Force"
+        "Rogue Miner Force",
+        "heading to"
       ]
     },
     {
@@ -17138,14 +17299,30 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/api/impl/campaign/velfield/SlipstreamEntityPlugin.class",
+      "include_strings": [
+        "Entering slipstream"
+      ],
+      "exclude_strings": []
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/velfield/SlipstreamEntityPlugin2.class",
+      "include_strings": [
+        "Entering slipstream"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/api/impl/campaign/velfield/SlipstreamTerrainPlugin2.class",
       "include_strings": [
         "Entering slipstream",
         "Fleets traveling inside a slipstream use %s less fuel for the distance covered.",
         "In addition, traveling at burn levels above %s is even more fuel-efficient. For example, a fleet traveling at burn %s will consume half as much fuel for the distance it covers.",
+        "Inside slipstream",
         "Most slipstreams are temporary, and in recent memory their ebb and flow has been unusually synchronized with the standard Domain cycle.",
         "Slipstream",
-        "These fuel use reductions are not reflected by the fuel range indicator on the map."
+        "These fuel use reductions are not reflected by the fuel range indicator on the map.",
+        "half"
       ]
     },
     {
@@ -17327,6 +17504,17 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/api/impl/combat/LidarArrayStats.class",
+      "include_strings": [
+        "lidar array - passive",
+        "projectile speed +",
+        "rate of fire +",
+        "weapon range +",
+        "weapon recoil -"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/api/impl/combat/MineStrikeStats.class",
       "include_strings": [
         "OUT OF RANGE",
@@ -17484,6 +17672,8 @@
     {
       "path": "com/fs/starfarer/api/impl/hullmods/EnergyBoltCoherer.class",
       "include_strings": [
+        "Increases the base range of all non-beam Energy and Hybrid weapons by %s.",
+        "Interactions with other modifiers",
         "Originally designed by the Tri-Tachyon Corporation for use on its combat droneships, the coherence field strength has to be dialed down to allow operation on crewed vessels.",
         "Since the base range is increased, this range modifier - unlike most other flat modifiers in the game - is increased by percentage modifiers from other hullmods and skills.",
         "The coherence field is unstable under combat conditions, with stresses on the hull resulting in spot failures that release bursts of lethal radiation. Crew casualties in combat are increased by %s."
@@ -17600,6 +17790,13 @@
         "benefit from your combat skills",
         "×"
       ]
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/hullmods/PDIntegration.class",
+      "include_strings": [
+        "Can not remove while ship has point-defense weapons installed"
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/api/impl/hullmods/PhaseAnchor.class",
