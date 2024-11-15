@@ -114,7 +114,7 @@
     {
         "key": "skill_data.csv#carrier_group$description",
         "original": "The stats tell us they'll be evaporated in a wall of flak before a half dozen missions, but we still want to be 'em. Once they're in the cockpit they're the only ones of all us who have control over their own destiny.",
-        "translation": "统计数据说他们会被防空弹幕蒸发，活不过六次出击任务。但是我们还是想成为他们中的一员。只要进了驾驶舱，他们才是舰队里唯一能完全掌握自己命运的人。",
+        "translation": "统计数据说他们会被防空弹幕全数蒸发，活不过六次出击任务。但是我们还是向往着成为他们中的一员。只要进了驾驶舱，他们才是舰队里唯一能完全掌握自己命运的人。",
         "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nskill_data.csv第0019行\n[本行原始数据]\n{'id': 'carrier_group',\n 'name': 'Carrier Group',\n 'order': '550',\n 'tier': '3',\n 'reqPoints': '0',\n 'reqPointsPerExtraSkill': '',\n 'description': \"The stats tell us they'll be evaporated in a wall of flak \"\n                \"before a half dozen missions, but we still want to be 'em. \"\n                \"Once they're in the cockpit they're the only ones of all us \"\n                'who have control over their own destiny.',\n 'author': 'Nachiketa Portside Interview Project, Ep.4',\n 'combat officer': '',\n 'admiral': 'TRUE',\n 'admin': '',\n 'tags': '',\n 'icon': 'graphics/icons/skills/carrier_command.png',\n '': ''}"
     },
@@ -156,7 +156,7 @@
     {
         "key": "skill_data.csv#combat_endurance$description",
         "original": "Through calamity, the Fourteenth endured. \nThrough hegemony, the Domain endures. \nThrough duty, humanity shall endure.",
-        "translation": "经历灾难，第十四战斗群历久弥新。\n继以霸主，人之领方得延续。\n唯有责任，人性将获永存。",
+        "translation": "坚韧不拔，曾引导十四战群渡过灾难。\n坚持不懈，正引导霸主重建人之领。\n艰苦奋斗，将引导人类达成使命。",
         "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nskill_data.csv第0003行\n[本行原始数据]\n{'id': 'combat_endurance',\n 'name': 'Combat Endurance',\n 'order': '20',\n 'tier': '1',\n 'reqPoints': '0',\n 'reqPointsPerExtraSkill': '',\n 'description': 'Through calamity, the Fourteenth endured. \\n'\n                'Through hegemony, the Domain endures. \\n'\n                'Through duty, humanity shall endure.',\n 'author': 'Admiral Kali Molina, the Declaration of Hegemony, c49',\n 'combat officer': 'TRUE',\n 'admiral': '',\n 'admin': '',\n 'tags': '',\n 'icon': 'graphics/icons/skills/combat_endurance3.png',\n '': ''}"
     },
@@ -219,7 +219,7 @@
     {
         "key": "skill_data.csv#crew_training$description",
         "original": "I know your type. Signed the contract with dirt on your boots, all ready to play spacer. Watched too many Hegemony warprop holos, didn't you. Get this now: courage is not competence. Playing hero will get us all killed. Careful, mindful work is what gets the job done.",
-        "translation": "我懂你们这群人是什么样的，刚签合约的时候靴子上甚至还满是泥巴，现在倒是一个个都准备好当太空人了？霸主的战争宣传片看太多了是吧？给我记好了：蛮勇不值得鼓励，好的船员就该踏实完成工作，逞英雄只会害得我们全部没命。",
+        "translation": "我懂你们这种人，刚签合约的时候靴子上都还满是泥巴，现在倒是一个个地准备好当太空人了？霸主的战争宣传全息片看太多了是吧？全都给我记好了：蛮勇不值得鼓励，逞英雄只会害得我们全都送命。好的船员就该踏实完成你手上的工作。",
         "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nskill_data.csv第0017行\n[本行原始数据]\n{'id': 'crew_training',\n 'name': 'Crew Training',\n 'order': '540',\n 'tier': '2',\n 'reqPoints': '0',\n 'reqPointsPerExtraSkill': '',\n 'description': 'I know your type. Signed the contract with dirt on your '\n                'boots, all ready to play spacer. Watched too many Hegemony '\n                \"warprop holos, didn't you. Get this now: courage is not \"\n                'competence. Playing hero will get us all killed. Careful, '\n                'mindful work is what gets the job done.',\n 'author': 'Chaiya Mimas, Tri-Tachyon fleet division, job training '\n           'introduction',\n 'combat officer': '',\n 'admiral': 'TRUE',\n 'admin': '',\n 'tags': '',\n 'icon': 'graphics/icons/skills/crew_training.png',\n '': ''}"
     },
@@ -450,7 +450,7 @@
     {
         "key": "skill_data.csv#gunnery_implants$description",
         "original": "Over time the augmented reality presented by implants may become difficult to distinguish from normal sensory input. The psych officer shall regularly check gunners for signs of Augment Dissociative Disorder by the following criteria...",
-        "translation": "长期使用可能导致使用者难以将植入物产生的增强现实知觉与正常感官知觉加以区分。心理健康保全员应该基于以下标准经常性地检查炮手是否有弭患植入物性思觉失调的迹象...",
+        "translation": "长期使用可能会导致使用者难以区分由植入物产生的现实增强知觉和正常的感官知觉。心理健康保全员应该经常性地参照以下标准检查炮手是否有弭患植入物性思觉失调的迹象...",
         "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nskill_data.csv第0029行\n[本行原始数据]\n{'id': 'gunnery_implants',\n 'name': 'Gunnery Implants',\n 'order': '1020',\n 'tier': '2',\n 'reqPoints': '1',\n 'reqPointsPerExtraSkill': '0',\n 'description': 'Over time the augmented reality presented by implants may '\n                'become difficult to distinguish from normal sensory input. '\n                'The psych officer shall regularly check gunners for signs of '\n                'Augment Dissociative Disorder by the following criteria...',\n 'author': 'A New Leadership Framework: Manual for Officers of the Hegemony',\n 'combat officer': 'TRUE',\n 'admiral': '',\n 'admin': '',\n 'tags': '',\n 'icon': 'graphics/icons/skills/gunnery_implants.png',\n '': ''}"
     },
@@ -492,7 +492,7 @@
     {
         "key": "skill_data.csv#hull_restoration$description",
         "original": "There's no hull a true spacer can't make home.",
-        "translation": "船体再破烂也无法阻止一名真正的宇宙民的归家之路。",
+        "translation": "对于真正的宇宙民来说，就没有开不回家的船。",
         "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nskill_data.csv第0050行\n[本行原始数据]\n{'id': 'hull_restoration',\n 'name': 'Hull Restoration',\n 'order': '1580',\n 'tier': '5',\n 'reqPoints': '4',\n 'reqPointsPerExtraSkill': '2',\n 'description': \"There's no hull a true spacer can't make home.\",\n 'author': 'Sol Secondshift, veteran salvor',\n 'combat officer': '',\n 'admiral': '',\n 'admin': '',\n 'tags': '',\n 'icon': 'graphics/icons/skills/recovery_ops.png',\n '': ''}"
     },
@@ -597,7 +597,7 @@
     {
         "key": "skill_data.csv#missile_specialization$description",
         "original": "My colleagues don't appreciate their whimsy. You get all these little spaceships to break all the rules with because there's no need to survive the landing.",
-        "translation": "我的同事也觉得他们自己的那些鬼点子很没品。你可以让这些小飞船打破所有的安全准则，毕竟完全不需要考虑它们在降落时是否撑得住。",
+        "translation": "我的同事也觉得他们的鬼点子很没品。你可以让这些小飞船打破所有的安全准则，毕竟完全不需要考虑它们在降落时是否撑得住。",
         "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nskill_data.csv第0011行\n[本行原始数据]\n{'id': 'missile_specialization',\n 'name': 'Missile Specialization',\n 'order': '100',\n 'tier': '5',\n 'reqPoints': '4',\n 'reqPointsPerExtraSkill': '2',\n 'description': \"My colleagues don't appreciate their whimsy. You get all \"\n                'these little spaceships to break all the rules with because '\n                \"there's no need to survive the landing.\",\n 'author': 'Exit interview of K. Astraia, former ordnance designer, Culann '\n           'Starforge',\n 'combat officer': 'TRUE',\n 'admiral': '',\n 'admin': '',\n 'tags': 'missile_weapons',\n 'icon': 'graphics/icons/skills/missile_specialization2.png',\n '': ''}"
     },
@@ -898,7 +898,7 @@
     {
         "key": "skill_data.csv#sensors$description",
         "original": "I see you, little fish!",
-        "translation": "我看见你了，小鱼仔！",
+        "translation": "看到你了，小鱼仔！",
         "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nskill_data.csv第0028行\n[本行原始数据]\n{'id': 'sensors',\n 'name': 'Sensors',\n 'order': '1010',\n 'tier': '1',\n 'reqPoints': '0',\n 'reqPointsPerExtraSkill': '0',\n 'description': 'I see you, little fish!',\n 'author': 'Comm buffer of ISS Green Flash, recovered in orbit of Beta Zuma B',\n 'combat officer': '',\n 'admiral': '',\n 'admin': '',\n 'tags': '',\n 'icon': 'graphics/icons/skills/sensors.png',\n '': ''}"
     },

@@ -414,13 +414,13 @@ StrandedInDeepSpaceStart,StrandedInDeepSpace,,,"不能再犹豫了。
 
 舰桥军官们非常小心地避免出现大规模的恐慌，分配了大量琐碎的维护任务并阻止了各种猜测。尽管如此，你仍然能注意到各种质疑的目光 —— 太空船员们几乎会服从任何命令，可是这是一个前所未有的错误决策。
 
-你的导航官似乎正在与总工程师进行激烈的内部通信讨论。你听到了一些关键词，比如 ""太危险""，""理论上不可能""，""只成功过一次""。","strandedInDeepSpace0:""导航官，报告情况。""",
+你的领航员似乎正在与总工程师进行激烈的内部通信讨论。你听到了一些关键词，比如 ""太危险""，""理论上不可能""，""只成功过一次""。","strandedInDeepSpace0:""导航官，报告情况。""",
 StrandedInDeepSpace0,DialogOptionSelected,$option == strandedInDeepSpace0,,"导航官在争论中被逮个正着，深感尴尬，于是赶紧行礼了个并解释了来龙去脉。
 
 似乎有一位负责超空间引擎的高级技术人员坚持要和你谈话。他们对于重返超空间有一些疯狂的想法，并不知用什么手段说服了你的总工程师认可了其可行性。","strandedInDeepSpace1:""立刻到我的舱室开会。""",
-StrandedInDeepSpace1,DialogOptionSelected,$option == strandedInDeepSpace1,,"年事已高且饱经辐射风霜，你的资深技术员的资历确实深不可测，他在太空中作业的经验恐怕比你手下任一位军官和船员都多。 老宇宙民给了你个几乎微不可见的敬礼。""$PlayerSirOrMadam。恕俺直言，你把$shipOrFleet开进一个鬼知道那儿出来的重力井真是干了个滚泥佬才会干的蠢事。""
+StrandedInDeepSpace1,DialogOptionSelected,$option == strandedInDeepSpace1,,"年事已高且饱经辐射风霜，这位资深技术员的资历确实深不可测，他在太空中作业的经验恐怕比你手下任一位军官和船员都多。 老宇宙民给了你个几乎微不可见的敬礼。""$PlayerSirOrMadam。恕俺直言，你把$shipOrFleet开进一个鬼知道那儿出来的重力井真是干了个滚泥佬才会干的蠢事。""
 
-你的 导航官 深吸一口气，打算进行一番批判，但是老宇宙民快他一步，""好消息是俺见过直接跳进超空间的。但风险挺大。"" 他低头说道，""风险挺大。""
+你的领航员深吸一口气，打算进行一番批判，但是老宇宙民快他一步，""好消息是俺见过直接跳进超空间的。但风险挺大。"" 他低头说道，""风险挺大。""
 
 ""不过。"" 他咧嘴一笑，""总比不得不把军官们煮了吃要好，是不？""","strandedInDeepSpace2:""资深技术员，你有什么提议？""",
 StrandedInDeepSpace2,DialogOptionSelected,$option == strandedInDeepSpace2,"SetTextHighlights ""横轴跳跃""","把这个诀窍交给资深技术员的传奇走私船长让他发誓绝不告知外人。不过她既然都已经过世四十多年了，考虑到当前的逆境，老宇宙民同意稍微通融下誓约的规定来收拾面前的烂摊子。
@@ -430,11 +430,11 @@ StrandedInDeepSpace2,DialogOptionSelected,$option == strandedInDeepSpace2,"SetTe
 导航看上去痛不欲生，工程官则对一个破烂 TriPad 上的改造方案大摇其头。","strandedInDeepSpace3a:""能行吗？""
 strandedInDeepSpace3b:""有什么风险？""
 strandedInDeepSpace3c:""进行改造，准备跳跃。""",
-StrandedInDeepSpace3a,DialogOptionSelected,$option == strandedInDeepSpace3a,RemoveOption strandedInDeepSpace3a,"导航官 满脸懊恼地叹了口气。
+StrandedInDeepSpace3a,DialogOptionSelected,$option == strandedInDeepSpace3a,RemoveOption strandedInDeepSpace3a,"领航员满脸懊恼地叹了口气。
 
-""理论上来说可以，"" 他揉着眼睛说道。
+""理论上来说可以，"" 领航员揉着眼睛说道。
 
-""这非常脱离常规。这个.. 倒置共振叠加 一说，"" 他指向绕着四维北方某个轴线转动的复杂图表，各类弧线直线欢跃地以非欧几里得形式跳跃在本该是三维的投影之上。
+""这非常脱离常规。这个... 倒置共振叠加 一说，"" 领航员指向绕着四维北方某个轴线转动的复杂图表，各类弧线直线欢跃地以非欧几里得形式跳跃在本该是三维的投影之上。
 
 ""这本不该能行。计算给出的答案到看上去正确，可是这过程...""",,
 StrandedInDeepSpace3b,DialogOptionSelected,$option == strandedInDeepSpace3b,RemoveOption strandedInDeepSpace3b,"你的总工程师停止摇头来开口回答你的问题。
@@ -445,7 +445,7 @@ StrandedInDeepSpace3b,DialogOptionSelected,$option == strandedInDeepSpace3b,Remo
 
 随后是一副若有所思的表情，""当然，如果成功了，有了可以调试用的遥测数据的话...""
 
-你的导航官看上去害怕透了这个主意。",,
+你的领航员看上去害怕透了这个主意。",,
 StrandedInDeepSpace3c,DialogOptionSelected,$option == strandedInDeepSpace3c,"AddAbility fracture_jump
 $makeTranverseJumpCostMoreCROnce = true","""$PlayerSirOrMadam，"" 众人一致回复道。老宇宙民再次朝着你眉头紧皱的高层军官们咧嘴一笑。",defaultLeave:回到你的指挥岗位,
 ,,,,,,
@@ -1501,7 +1501,7 @@ $faction.id == tritachyon",FireAll RelLevelMoreDescription,"在 速子科技 智
 relLevelInhospitableTriTachyon,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
 $faction.id == tritachyon",FireAll RelLevelMoreDescription,一个 速子科技 的次 AI 核心 (据称) 在星域中追踪你的行动轨迹。当你在 速子科技 及其子公司所属的设施靠港停泊时，总会有一台安保无人机光明正大的跟着你。速子科技 的员工以不信任的眼光看待你，并对你进行再三检查以避免扣除他们的季度奖金。,,
 relLevelHostileTriTachyon,RelationshipLevelDesc,"$faction.rel == HOSTILE
-$faction.id == tritachyon",FireAll RelLevelMoreDescription,如果 速子科技 的员工设法干掉了你，或，退而求其次，使你失去对 公司 利益造成进一步破坏的能力，那么他们的季度奖金便有机会大涨一笔。也许得花上一笔天文数字级的的贿赂才能让你重获一个好印象。,,
+$faction.id == tritachyon",FireAll RelLevelMoreDescription,如果 速子科技 的员工设法干掉了你，或，退而求其次，使你失去对公司利益造成进一步破坏的能力，那么他们的季度奖金便有机会大涨一笔。也许得花上一笔天文数字级的贿赂才能让你重获一个好印象。,,
 relLevelVengefulTriTachyon,RelationshipLevelDesc,"$faction.rel == VENGEFUL
 $faction.id == tritachyon",FireAll RelLevelMoreDescription,速子科技 已经指派了一个 AI 核心来计算如何干掉你，并专门划拨了一笔佣兵基金来实现计划。在公司的季度报告中，你的名字被单独以红色标注。此外，在系统生成的幼儿教育全息影像中，你的形象被修饰的更加丑恶。,,
 relLevelTriTachyonCores,RelLevelMoreDescription,"$faction.id == tritachyon
@@ -1670,10 +1670,10 @@ $entity.inspectionResultType == TOLL_AND_FINE",,,10:refuseCIFine:拒绝配合,
 # customs inspection - payment option effects,,,,,,
 optionPayCIToll,DialogOptionSelected,$option == payCIToll,"CustomsInspectionApplyResult
 AdjustRep $faction.id CUSTOMS_PAID
-FireBest CustomsInspectionEndPeaceful","""感谢你的配合。""$personName $personRank 点头之后切断了通讯链接。",,
+FireBest CustomsInspectionEndPeaceful","""感谢你的配合。"" $personName $personRank 点头之后切断了通讯链接。",,
 optionPayCIFine,DialogOptionSelected,$option == payCIFine,"CustomsInspectionApplyResult
 AdjustRep $faction.id CUSTOMS_PAID
-FireBest CustomsInspectionEndPeaceful","""感谢你的配合，这将记入你的档案。""$personName $personRank 点头之后切断了通讯链接。",,
+FireBest CustomsInspectionEndPeaceful","""感谢你的配合，这将记入你的档案。"" $personName $personRank 点头之后切断了通讯链接。",,
 optionRefuseCITollPassRep,DialogOptionSelected,"$option == refuseCIToll
 $entity.repCheckResult > 0.2
 RepIsAtWorst $faction.id FAVORABLE","AdjustRep $faction.id CUSTOMS_REFUSED_TOLL
@@ -1716,11 +1716,11 @@ FireAll InitNewGameChoices",,,
 initNewGameChoicesDev,AddNewGameChoices,$global.isDevMode,,,100:ngcDevStart:>>(dev) 快速开始,
 initNewGameChoicesDev2,AddNewGameChoices,$global.isDevMode,,,101:ngcDevStart2:>>(dev) 快速开始自定义游戏 (无时间流逝),
 initNewGameChoices,InitNewGameChoices,,FireAll AddNewGameChoices,你近期的职业是...,,
-ngcWolfStart,AddNewGameChoices,,"SetTooltip ngcWolf ""野狼-级 是一台先进而致命的护卫舰，有着适中的后勤消耗。\n\n最好在文明世界附近使用，或搭配其他具有更好的燃料和补给运载力的后勤舰船。""",,0:ngcWolf:一名赏金猎人，驾驶一艘野狼-级护卫舰,
+ngcWolfStart,AddNewGameChoices,,"SetTooltip ngcWolf ""野狼-级 是一艘先进而致命的护卫舰，有着适中的后勤消耗。\n\n最好在文明世界附近使用，或搭配其他具有更好的燃料和补给运载力的后勤舰船。""",,0:ngcWolf:一名赏金猎人，驾驶一艘 野狼-级 护卫舰,
 ngcWayfarerStart,AddNewGameChoices,,"SetTooltip ngcWayfarer ""远行者-级 是一艘刚健朴实的舰船，它有较强的运载货物、燃料和船员的能力。\n\n它的战斗力有限，但却不容忽视。这艘货船被设计为能在偏远星系开展行动，所以具备基本的自卫能力。""",,1:ngcWayfarer:一名拾荒者，驾驶一艘 远行者-级 武装商舰,
-ngcExplorerStart,AddNewGameChoices,,"SetTooltip ngcExplorer ""一支能够在星域的偏远星系开展打捞作业的舰队，并能抵御在偏远地区遇到的大多数威胁。\n\n包括一艘油轮以增加燃料容量和探索范围。舰队具有较大的货物容量，以便将打捞物运回核心世界。""",,2:ngcExplorer:一名探险者，驾驶一艘 至高点-级 巡洋舰带领着一支打捞探险舰队 (轻松开局),
-ngcMercStart,AddNewGameChoices,,"SetTooltip ngcMerc ""一支规模虽小但战力强大的特遣舰队，配置主要针对开展赏金猎杀任务。\n\n包含一艘小型油轮，在一定程度上扩大了行动范围。""",,3:ngcMerc:一名雇佣兵，驾驶一艘 锤头-级 驱逐舰，带领一支作战小队 (轻松开局),
-ngcRandomStart,AddNewGameChoices,,"SetTooltip ngcRandom ""舰队组成随机，总体上比前面的\""轻松开局\""略弱，但也算是一种简单开局。""",,4:ngcRandom:一名自由职业者，接手你能找到的任何工作 (随机开局),
+ngcExplorerStart,AddNewGameChoices,,"SetTooltip ngcExplorer ""一支能够在星域的偏远星系开展打捞作业的舰队，并能抵御在偏远地区遇到的大多数威胁。\n\n包括一艘油轮以增加燃料容量和探索范围。舰队具有较大的货物容量，以便将打捞物运回核心世界。""",,2:ngcExplorer:一名探险者，驾驶一艘 至高点-级 巡洋舰，还带领着一支打捞探险舰队 (轻松开局),
+ngcMercStart,AddNewGameChoices,,"SetTooltip ngcMerc ""一支规模虽小但战力强大的特遣舰队，配置主要针对开展赏金猎杀任务。\n\n包含一艘小型油轮，在一定程度上扩大了行动范围。""",,3:ngcMerc:一名雇佣兵，驾驶一艘 锤头-级 驱逐舰，还带领着一支作战小队 (轻松开局),
+ngcRandomStart,AddNewGameChoices,,"SetTooltip ngcRandom ""舰队组成随机，总体上比前面的 \""轻松开局\"" 略弱，但也算是一种简单开局。""",,4:ngcRandom:一名自由职业者，接手你能找到的任何工作 (随机开局),
 ngcSpacerStart,AddNewGameChoices,CheckSetting enableSpacerStart,"SetTooltip ngcSpacer ""一架非战斗用的穿梭机，仅携带着非常有限的资源，还有一笔必须偿还的债务。非常困难的开局，只打算作为献给见多识广的星际远行者的挑战。""",,"5:ngcSpacer:""一个太空梦，一架破穿梭机，一笔终身债务。"" (困难开局)",
 ,,,,,,
 #ngcDisableSpacerOption,NGCDisableSpacerOption,!NGCCanSkipTutorial,"SetEnabled ngcSpacer false
@@ -1761,8 +1761,8 @@ NGCAddCharacterPoints 1
 NGCSetStartingLocation Corvus -2500 3000
 NGCAddStandardStartingScript
 NGCDone",,,
-ngcPickSecondShip,NGCSecondShipOptions,,"SetTooltip ngcKite ""风筝-级是一种轻便灵活但武装有限的穿梭机。\n\n它本身并不能造成很大的伤害，但是它能够持续地扰乱敌人的注意力，特别是在擅长防御技能的军官掌控之下时。""
-SetTooltip ngcShepherd ""牧羊人-级不是一艘战舰，它既慢又脆弱，不过它的无人机能够为其他船只提供一些支援。\n\n然而它真正的价值在于其宽敞的货舱和多个有利于打捞/探测的船体特性上。\n\n携带的重型机械也能运用至在打捞与探测作业当中。""",此外，你的舰队还包括...,"0:ngcKite:一艘 风筝-级 穿梭机，以及一名经验丰富的军官。
+ngcPickSecondShip,NGCSecondShipOptions,,"SetTooltip ngcKite ""风筝-级 是一种轻便灵活但武装有限的穿梭机。\n\n它本身并不能造成很大的伤害，但是它能够持续地扰乱敌人的注意力，特别是在擅长防御技能的军官掌控之下时。""
+SetTooltip ngcShepherd ""牧羊人-级 不是一艘战舰，它既慢又脆弱，不过它的无人机能够为其他船只提供一些支援。\n\n然而它真正的价值在于其宽敞的货舱和多个有利于打捞/探测的船体特性上。\n\n携带的重型机械也能运用至在打捞与探测作业当中。""",此外，你的舰队还包括...,"0:ngcKite:一艘 风筝-级 穿梭机，以及一名经验丰富的军官。
 1:ngcShepherd:一艘 牧羊人-级 无人机补给舰，运载了一些重型机械。",
 ngcKitePicked,NewGameOptionSelected,$option == ngcKite,"NGCAddShip kite_Starting
 AddTextSmall ""获得一名 1 级军官"" good
@@ -3228,7 +3228,7 @@ FireAll PopulateOptions","你下令飞行员继续返航，而非跟着非常规
 在返回你$shipOrFleet的途中，没有交通管制或别种形式的后续通信向你传达反对意见。",,
 lppEnding1,DialogOptionSelected,$option == lpp_ending1,ShowImageVisual gilead,"在着陆场上，一位庄严的卢德骑士正等着你的到来。一名新晋骑士站在他身后几步远的地方，试图模仿前辈的从容镇静。
 
-""$PlayerName 舰长，""骑士说，""请允许我代表银河救赎教会表示欢迎。同时，我谨代表 Jaspis 宗师大人向你发来会面和共进茶点的邀请。""
+""$PlayerName 舰长，"" 骑士说，""请允许我代表银河救赎教会表示欢迎。同时，我谨代表 Jaspis 宗师大人向你发来会面和共进茶点的邀请。""
 
 骑士站到一旁，用戴着臂铠的手邀请你向行政建筑群进发。","lpp_ending2:和骑士一起出发
 lpp_endingKnightWhat:""这是为了什么？""
@@ -3238,7 +3238,7 @@ lppEnding1redux,DialogOptionSelected,"$option == lpp_ending1
 !$global.jaspisMadeOffer
 $global.lpp_playerRejectedFirstJaspisMeeting",ShowImageVisual gilead,"在着陆场上，一位庄严的卢德骑士正等着你的到来。一名新晋骑士站在他身后几步远的地方，试图模仿前辈的从容镇静。
 
-""$PlayerName 舰长，""骑士说，""请允许我再度代表银河救赎教会表示欢迎。同时，我谨代表 Jaspis 宗师大人向你发来会面和共进茶点的邀请。""
+""$PlayerName 舰长，"" 骑士说，""请允许我再度代表银河救赎教会表示欢迎。同时，我谨代表 Jaspis 宗师大人向你发来会面和共进茶点的邀请。""
 
 骑士站到一旁，用戴着臂铠的手邀请你向行政建筑群进发。","lpp_ending2:和骑士一起出发
 lpp_endingKnightInsist:""Jaspis 还真是执着啊。""
@@ -3286,7 +3286,7 @@ lppGileadShrineStartHubTextA0,LPPGileadShrineStartHubA,$market.lpp_finishPilgrim
 
 ""我很荣幸，$PlayerName 舰长..."" 圣务侍说道，""能够邀请您在今天为您的朝圣者之路画上句号。""","lpp_gileadPilgrimageEnd1:继续。
 lpp_gileadPilgrimageEndHowKnow:""你怎么知道这个的？""",
-lppGileadPilgrimageEndHowKnow,DialogOptionSelected,$option == lpp_gileadPilgrimageEndHowKnow,,"""忠实的信徒必须时刻对将要发生的事务保持关注。"" 圣务侍带着奇怪的表情说，然后几乎 — 但不完全地 — 微笑着。
+lppGileadPilgrimageEndHowKnow,DialogOptionSelected,$option == lpp_gileadPilgrimageEndHowKnow,,"""忠实的信徒必须时刻对将要发生的事务保持关注。"" 圣务侍带着奇怪的表情说，然后几乎 —— 但不完全地 —— 微笑着。
 
 ""我知道不必说得如此神秘；这仅仅是因为教会经历过艰难的时光，也许还会再经历一次。""","lpp_gileadPilgrimageEnd1:继续。
 lpp_gileadPilgrimageEndHowKnow2:""你认为艰难的时光会再次到来吗？""",
@@ -5703,7 +5703,7 @@ FireAll LKEchalcedonBarSedgeOpts","在一阵椅子与地板的摩擦声后，叫
 Sedge 的手缓缓划过一道弧线，模仿着做出祝福的样子，来示意那些离开房间的人，""他们明白""。
 
 又一壶茶和两个新杯子被端了上来，老板很快退了出去，脚下传来陶瓷碎裂的响声。",,
-lkeChalcedonBarSedgeRespE,DialogOptionSelected,$option == lke_chalcedonBarSedgeRespE,$gotTeapot = true 0,"你向老板示意，他用询问的眼神瞥了一眼 Sedge 的后脑勺 — 真的吗？他就在那里？你肯定地点了点头，确认了要点的东西。
+lkeChalcedonBarSedgeRespE,DialogOptionSelected,$option == lke_chalcedonBarSedgeRespE,$gotTeapot = true 0,"你向老板示意，他用询问的眼神瞥了一眼 Sedge 的后脑勺 —— 真的吗？他就在那里？你肯定地点了点头，确认了要点的东西。
 
 很快，一壶茶就被端上来了，散发着酒香。两只杯子几乎掉在了地上，老板退了出去。
 
@@ -6204,7 +6204,7 @@ $global.lke_contactVirens = true
 Call $global.lke_ref updateStage","""Virens 是 Mazalot 上的 卢德左径 成员。他是老大。在地表他有个基地。有时候会有些物流运输往来，我给你详细地址。"" $HeOrShe点了点数据面板，""当局没办法给他定罪。或者是不想定罪。太忌惮他了。""
 
 ""但你不一样。"" $heOrShe看着你，眼神闪亮，""我的意思是，不怎么忌惮，对么？希望你找到你想找的人。而如果 Virens 跌了个跟头？没人在意。""","lke_mazQMTryYaribayA4:""感谢你的服务。""",
-LKEmazQMTryYaribayA4,DialogOptionSelected,$option == lke_mazQMTryYaribayA4,FireAll PopulateOptions,"""别提了，$playerSirOrMadam，""$personName 羞怯地说。",,
+LKEmazQMTryYaribayA4,DialogOptionSelected,$option == lke_mazQMTryYaribayA4,FireAll PopulateOptions,"""别提了，$playerSirOrMadam。"" $personName 羞怯地说。",,
 LKEmazQMTryYaribayForget,DialogOptionSelected,$option == lke_mazQMTryYaribayForget,"$player.abusedYaribayCred--
 FireAll PopulateOptions","""呃..."" $heOrShe一瞬间看起来有些困惑，但随即决定配合演戏，""当然，$playerSirOrMadam。我什么也没听到。""",,
 LKEmazalotAskQMBornanew,DialogOptionSelected,"$option == lke_mazalotAskBornanew
@@ -6570,7 +6570,7 @@ SetPersonHidden virens false
 $global.lke_contactVirens = true
 Call $global.lke_ref updateStage","没过多久，你们坐进了一个小隔间。你对面的地方安全部的官员饮泣吞声，而你，拿着他的平板，用着他的账号，浏览着本地的安全报告。
 
-你准确无误地找到了你要的东西 — Nile Virens，本地左径分子中的铁腕人物。在所有重要的卢德人口中心，都有他经营的院落。
+你准确无误地找到了你要的东西 —— Nile Virens，本地左径分子中的铁腕人物。在所有重要的卢德人口中心，都有他经营的院落。
 
 把信息传输到自己的 TriPad 之后，你隔着桌子把这个官员的数据平板丢了过去。他慢了一拍，没能接住，平板摔到地上咔哒作响。","lke_barEnd:一言不发地离开
 lke_barEnd2:""您的帮助被会记录下。""",
@@ -7355,7 +7355,7 @@ LKEbornanewShuttle4a,DialogOptionSelected,"$option == lke_bornanewShuttle4
 LKEbornanewShuttle4b,DialogOptionSelected,"$option == lke_bornanewShuttle4
 $market.lke_didMarines",,"你沿着一条小径走向树林。这里的低地势抵御了干燥的风，树木似乎有一些水分来生存，但是并不够。
 
-陆战队员的战术口令在你耳边轻轻地响起。""$PlayerSirOrMadam"" 陆战队队长亲自向你报告，""目标ID已确定，视觉上与 Bronanew 匹配。看起来没有携带武装。""",lke_bornanewShuttle5:继续,
+陆战队员的战术口令在你耳边轻轻地响起。""$PlayerSirOrMadam，"" 陆战队队长亲自向你报告，""目标 ID 已确定，视觉上与 Bronanew 匹配。看起来没有携带武装。""",lke_bornanewShuttle5:继续,
 LKEbornanewShuttle5,DialogOptionSelected,$option == lke_bornanewShuttle5,"Call $global.lke_ref playMusicJethro
 AddStoryPoints 1
 BeginConversation bornanew
@@ -9136,7 +9136,7 @@ $ziggurat score:1000
 PlayerHasCargo alpha_core","#ShowDefaultVisual
 $triedSabotage = true","打捞小组将他们的无人穿梭机部署并对接在这艘巨型船体的各个入口处。在舰桥下令进入的时候，同一时间的所有的遥测信息反馈都消失了。
 
-舰桥立即发出撤退指令，并且联络下属开始执行检查并试图初始化无人机，以精准定位系统故障的位置—同时试图判断这是不是敌对行为。整个舰桥这几分钟都像热锅上的蚂蚁，打捞小组的通讯和数据反馈终于恢复了。
+舰桥立即发出撤退指令，并且联络下属开始执行检查并试图初始化无人机，以精准定位系统故障的位置 —— 同时试图判断这是不是敌对行为。整个舰桥这几分钟都像热锅上的蚂蚁，打捞小组的通讯和数据反馈终于恢复了。
 
 ""长官！"" 你的战术副官在你面前标准的敬了一个礼，并且开始向你报告状况，""有人试图对我们的穿梭机的内部电脑发送动力系统崩溃指令。幸运的是安全系统及时拦截了它，但我们不得不重启整个系统并且手动切换到备份上；以上是遥测被切断的原因。现在整个打捞小组随时可以出动。""","zigAlphaContinue:""无论是谁干的，这他妈的到底是想要干什么？""",
 zig_alphaContinueOpt,DialogOptionSelected,$option == zigAlphaContinue,,"战术副官快速的摁了几个按钮，全息投影上闪现出了更新过的数据。
@@ -9243,11 +9243,11 @@ gaDuringTutorialMoreInfo1,DialogOptionSelected,$option == gaDuringTutorialMoreIn
 ""我想你在技术层面确实算是指挥系统中的辅助军。对，我们逮捕了学院的院长，指控他一系列罪名 —— 危及太空基础设施、忽视宜居性协议、密谋操纵未经授权的技术等等。""
 
 ""看在古老的地球的份上，""你注意到$hisOrHer的下巴不自觉地紧咬着，""这是他应得的。""","0:gaDuringTutorialMoreInfo2:""为什么，他做了什么？""",
-gaDuringTutorialMoreInfo2,DialogOptionSelected,$option == gaDuringTutorialMoreInfo2,,"""我们听取了有关实验的简报，但它应该只会导致通信噪音的略微增加，可能是在跳跃点附近出现一些奇怪的读数。从未有过的！显然还有更多的事情正在发生，一些大到院长必须知道的事情，而且 —— ""
+gaDuringTutorialMoreInfo2,DialogOptionSelected,$option == gaDuringTutorialMoreInfo2,,"""我们听取了有关实验的简报，但它本应该只会略微增加通信噪音，比如在跳跃点附近出现一些奇怪的读数之类的。但像这样的事从未出现过！显然还有别的事情还在持续，这些事大到院长必须知晓，而且 —— ""
 
-上尉的副官再次在$hisOrHer耳边低语。如果你没弄错的话，背景中有一些喊叫声，中尉的手持式通讯装置几乎听不到。
+上尉的副官再次在$hisOrHer耳边低语。如果你没听错的话，背景中有一些喊叫声，几乎盖过了中尉的手持式通讯装置的声音。
 
-""暴徒正变得焦躁不安，""上尉僵硬的笑着说。$HeOrShe向某人发出命令；当他们开始移动时，全息影像会因静电而紊乱和闪烁。""我们稍后再聊，舰长。如果你能帮我们摆脱困境，我会在 Coatl 空间站请你喝上一杯。""",100:defaultLeave:感谢对方并挂断,
+""暴徒正在躁动，""上尉僵硬地笑着说。$HeOrShe向其他人下令；他们开始行动，全息影像因静电而紊乱和闪烁。""我们稍后再聊，舰长。如果你能帮我们摆脱困境，我会在 Coatl 空间站请你喝上一杯。""",100:defaultLeave:感谢对方并挂断,
 gaOpenDialogDuringTutorialAgain,GAHegOfficerInteraction,"$global.isInTutorial
 $doneFirstVisit",SetShortcut defaultLeave ESCAPE,"当你接近 Galatia 学院空间站的纯白色圆环型外壳时，你向自动化停靠队列发送的停靠请求遭到拒绝。过了一会儿，通信链接接通并显示出了 $personName 上尉的影像，$HeOrShe看起来一副早该申请休假的样子。
 
@@ -9928,7 +9928,7 @@ MakeOtherFleetLowRepImpact gaKA true
 MakeOtherFleetGoAway false
 MakeOtherFleetImportant gaKA false","在你切断通讯的前一刻，霸主 $rank 的眼睛瞪大了。接着画面变黑，$hisOrHer的咆哮随着画面的变黑变成了一片死寂。
 
-""$PlayerSirOrMadam，""战术副官报告，""他们正在展开攻击阵型。""
+""$PlayerSirOrMadam，"" 战术副官报告，""他们正在展开攻击阵型。""
 
 你想，这已经严重违反了星域中的商贸法规，因此，相较于损害自己法理上的正统地位，霸主 更有可能掩盖接下来发生的任何 ""事件""。",cutCommLink:切断通讯链接,
 gaKAPatrolWeapons,DialogOptionSelected,$option == gaKA_patrolWeapons,"EndConversation
@@ -9945,7 +9945,7 @@ gaKAPatrolLie,DialogOptionSelected,$option == gaKA_patrolLie,,"你潇洒地行�
 
 ""$SirOrMadam，我得说这是一场误会。我正指挥一支特遣辅助军追捕一名渗透进来的恐怖分子。根据 HERMES BLACK 命令，在行动的过程中我不被允许接入 霸主 的通讯网络。我上司提供的任务条件也允许我独立行动。""
 
-""$SirOrMadam。""你如此补充道，像是在说一件理所应当的事情。",gaKA_patrolLie2:继续,
+""$SirOrMadam。"" 你如此补充道，像是在说一件理所应当的事情。",gaKA_patrolLie2:继续,
 gaKAPatrolLie2,DialogOptionSelected,$option == gaKA_patrolLie2,,"当你自信地说出听起来合情合理的 霸主 行话时，$HeOrShe看起来一脸狐疑。霸主 $rank 盯着你问道：""舰长，你为谁服务？你的上司是谁？""
 
 没时间犹豫了。","gaKA_patrolLie3:""Orcus Rao 上将，Ragnar 舰队司令。""",
@@ -10044,7 +10044,7 @@ Baird 对其示意道：""Sebestyen 比他看起来的能干多了，又执着�
 Coureuse 出声道：""他在安排我的新队伍方面也帮了大忙。""",gaKA_return9b:继续,
 gaKAReturnToAcademy9b,DialogOptionSelected,$option == gaKA_return9b,,"Baird 点点头表示认同，Coureuse 继续道：""看起来我们在大约一周内就能完全解密这份档案。我也许能重启我的...上一项研究，当然这取决于我们最先获得的资料是什么。""
 
-Coureuse 看向了你。"" Galatia 跳跃点实验 "" 她开口到，说出了她上一个项目的名字，"" 那种做法并不是我期望的。但是 Tomas 院长说时间太 —— ""
+Coureuse 看向了你。"" Galatia 跳跃点实验。"" 她开口到，说出了她上一个项目的名字，""那种做法并不是我期望的。但是 Tomas 院长说时间太 —— ""
 
 Baird 打断道：""院士，你不需要为自己辩解。舰长明白当我们进入实验阶段时，你们会准备好一切合理的预防措施。事实上，他们将在实验开展时收到详细说明。""",gaKA_return10b:继续,
 gaKAReturnToAcademy10b,DialogOptionSelected,$option == gaKA_return10b,,"Baird 院长停顿了一下，看向你，观察你对她和 Coureuse 所说的话的反应。""舰长，你一定很想知道这一切是为了什么。""","gaKA_return11b1:""是的。""
@@ -12134,9 +12134,9 @@ gaPZReturnToArroyo,PickGreeting,"$isPerson
 $id == arroyo
 $global.gaPZ_inProgress
 Call $global.gaPZ_ref updateData
-$gaPZ_stage == SOLD_BLACKMAIL_MATERIAL score:1000",ShowPersonVisual,"在接入通讯链接时，Arroyo 似乎真的被逗乐了：""啊，$playername ！我无情的勒索者回来了。""他停顿了一下，一边检查数据平板一边暗自发笑，""你应该听听他们是怎么说我的，你会以为他们手上有一套全息投影记录，还是关于我在至高霸主的私人房间里 —— "" 他抬起头来，""...好吧，我们商量的事情。"" 说着他把数据平板扔到了一边。
+$gaPZ_stage == SOLD_BLACKMAIL_MATERIAL score:1000",ShowPersonVisual,"在接入通讯链接时，Arroyo 似乎真的被逗乐了：""啊，$playername！我无情的勒索者回来了。"" 他停顿了一下，一边检查数据平板一边暗自发笑，""你应该听听他们是怎么说我的，你会以为他们手上有一套全息投影记录，还是关于我在至高霸主的私人房间里 —— "" 他抬起头来，""...好吧，我们商量的事情。"" 说着他把数据平板扔到了一边。
 
-""你想要 Kelise Astraia 的档案。""他笑着说，""我甚至不需要贿赂 Culann 星际锻炉的管理人员。你敢相信我们四年前在一起工作过吗？那时候发生了一些有趣的事 —— 算了，让我们来说说你的武器工程师吧。""",gaPZ_returnArroyo1:继续,
+""你想要 Kelise Astraia 的档案。"" 他笑着说，""我甚至不需要贿赂 Culann 星际锻炉的管理人员。你敢相信我们四年前在一起工作过吗？那时候发生了一些有趣的事 —— 算了，让我们来说说你的武器工程师吧。""",gaPZ_returnArroyo1:继续,
 gaPZ_returnArroyo1,DialogOptionSelected,$option == gaPZ_returnArroyo1,"Highlight ""Hamatsu""","Arroyo 用程序远程访问了资料库，接着他点了点头，将一份个人档案覆盖在了通讯链接上，那上面显示着 Kelise Astraia 生活的细节。
 
 ""我们的 Kelise 女士有点古怪，"" Arroyo 说，""总之你可以稍后再了解这些细节。相关的部分在这里：看起来她好像加入了 速子科技 的机密项目 —— 反正就是那些机密的其中之一 —— 并被要求去现场全职工作。她留下了令人信服的辞职信，订了一艘星舰，历险-级 Hamatsu 号。这艘船已经离开过核心世界好几次了，拾荒或是什么特殊行动，总之就是为公司跑腿。""","gaPZ_returnArroyo2:""你能告诉我更多 Hamatsu 号的细节吗？""",
@@ -12145,7 +12145,7 @@ gaPZ_returnArroyo2,DialogOptionSelected,$option == gaPZ_returnArroyo2,,"""让我
 这艘船在跃进超空间离开了 Hybrasil 星系前关掉了应答器，这透露不出什么很有价值的情报，但是..."" Arroyo 思考了一会儿，然后把文件翻到了前面。","gaPZ_returnArroyo3:""但是？""",
 gaPZ_returnArroyo3,DialogOptionSelected,$option == gaPZ_returnArroyo3,"Highlight ""Callisto Ibrahim""","""但是这至少意味着他们不想被人跟踪，"" Arroyo 看了看通讯画面以外的某处，数据在他桌面的投影仪上滚动着，""我猜港务局记录的航行计划在这方面给不了我们帮助。总得有人知道些什么，嗯...""
 
-""Hamatsu 号的主人叫 Callisto Ibrahim，""他抬头看着你，""听说过她吗？没有？其实她还有点名气，我以前的合伙人雇过她。她的证书从头到尾都是谎言，""他耸耸肩，""你得承认这很有用。不管怎么说，她最近在 Arcadia 星系的 Agreus 运营着几支小舰队。""
+""Hamatsu 号的主人叫 Callisto Ibrahim。"" 他抬头看着你，""听说过她吗？没有？其实她还有点名气，我以前的合伙人雇过她。她的证书从头到尾都是谎言..."" 他耸耸肩，""但你得承认这很有用。不管怎么说，她最近在 Arcadia 星系的 Agreus 运营着几支小舰队。""
 
 Arroyo 的眼角抽了抽，他面前的资料记录消失了。",gaPZ_returnArroyo4:继续,
 gaPZ_returnArroyo4,DialogOptionSelected,$option == gaPZ_returnArroyo4,"AddPotentialContact
@@ -12284,9 +12284,9 @@ gaPZ_calHamatsu3,DialogOptionSelected,$option == gaPZ_calHamatsu3,,"""我会告�
 ""现在情况好多了，至少有人可以帮我了。找到 Hamatsu 号，然后把它带回来给我。""她闭上了眼睛，看起来很痛苦，""希望它完好无损，毕竟我在那艘老旧的太空垃圾里留下了很多回忆。""
 
 ""让我们开始吧。Hamatsu 号的舰长在完成舰船改装离开空间站之前，向我发送了一份加密的航行计划。""她敲了敲桌上的控制台。",gaPZ_calHamatsu4:继续,
-gaPZ_calHamatsu4,DialogOptionSelected,$option == gaPZ_calHamatsu4,Highlight $gaPZ_relaySystem,"一份超空间导航数据出现了："" Hybrasil 星系在这里，Hamatsu 号已经加满了燃料，计划前往 $gaPZ_relaySystem。我不知道他们是否去了那里，因为那是边缘世界，没有通讯网络覆盖。他们可能中途改变了路线。那个脑袋像被辐射烤坏了的 速子 工程师对她的意图守口如瓶，但我们的合同确保了舰长必须按照她的命令，随时进行航行计划的变更。""
+gaPZ_calHamatsu4,DialogOptionSelected,$option == gaPZ_calHamatsu4,Highlight $gaPZ_relaySystem,"一份超空间导航数据出现了：""Hybrasil 星系在这里，Hamatsu 号已经加满了燃料，计划前往 $gaPZ_relaySystem。我不知道他们是否去了那里，因为那是边缘世界，没有通讯网络覆盖。他们可能中途改变了路线。那个脑袋像被辐射烤坏了的 速子 工程师对她的意图守口如瓶，但我们的合同确保了舰长必须按照她的命令，随时进行航行计划的变更。""
 
-Ibrahim 将显示出的地图移走，取而代之的是 Hamatsu 号的示意图，驱动场感应器上做出的改动已经被高亮标记了出来。""这些就是她所做的改装。帮我找回 Hamatsu 号，舰长，拜托了...""她看着你，等着你的回答。","gaPZ_calHamatsu5a:""我会找到它的。""
+Ibrahim 将显示出的地图移走，取而代之的是 Hamatsu 号的示意图，驱动场感应器上做出的改动已经被高亮标记了出来。""这些就是她所做的改装。帮我找回 Hamatsu 号，舰长，拜托了..."" 她看着你，等着你的回答。","gaPZ_calHamatsu5a:""我会找到它的。""
 gaPZ_calHamatsu5b:""我不一定能找到它。""
 gaPZ_calHamatsu5c:""我不能做出保证。""",
 gaPZ_calHamatsu5a,DialogOptionSelected,$option == gaPZ_calHamatsu5a,FireBest GAPZCallisttoCont,"Ibrahim 点点头，皱着眉头：""这对我而言意义重大。""",,
@@ -12498,7 +12498,7 @@ $HeOrShe就这么看着你，并在你摆出意识到了什么的表情时切断
 # gaPZ - returned to the GA to complete mission, ,,,,,
 gaPZ_return0NoZig,PickGreeting,"$gaPZ_returnHere score:1000
 !PlayerFleetHasShipWithBaseHull ziggurat
-Call $global.gaPZ_ref updateData",ShowPersonVisual,"""舰长，你能带回这些有价值的数据真是太棒了。""她调出一份 通灵塔-级 原型舰的示意图。
+Call $global.gaPZ_ref updateData",ShowPersonVisual,"""舰长，你能带回这些有价值的数据真是太棒了。"" 她调出一份 通灵塔-级 原型舰的示意图。
 
 这形同蝠鲼的船体的全息投影在你和院长之间缓缓旋转，她搓着两根手指，凝视着眼前的东西。
 
@@ -12506,7 +12506,7 @@ Call $global.gaPZ_ref updateData",ShowPersonVisual,"""舰长，你能带回这�
 gaPZ_return0,PickGreeting,"$gaPZ_returnHere score:1000
 PlayerFleetHasShipWithBaseHull ziggurat
 Call $global.gaPZ_ref updateData","ShowPersonVisual
-$global.bairdToldPlayerToKeepZig = true","""舰长，你能带回这些有价值的数据真是太棒了，以及，""她调出一份 通灵塔-级 原型舰的示意图，""这艘迷人的原型舰。""
+$global.bairdToldPlayerToKeepZig = true","""舰长，你能带回这些有价值的数据真是太棒了，以及，"" 她调出一份 通灵塔-级 原型舰的示意图，""这艘迷人的原型舰。""
 
 这形如蝠鲼的船体的全息投影在你和院长之间缓缓旋转，她搓着两根手指，凝视着眼前的东西。
 
@@ -12523,16 +12523,16 @@ FireBest DialogOptionSelected",,,
 gaPZ_return1c,DialogOptionSelected,$option == gaPZ_return1c,,"Baird 继续道：""让我感兴趣的是它内部那些奇怪的装置 —— 当然，还有它产生的这些 '光尘'。我们已经进行了全面的扫描，不久后就能创造出可以用于实验的样品。Coureuse 一直在检查传感器数据，我应该听听她的见解。""",gaPZ_return2:继续,
 gaPZ_return2,DialogOptionSelected,$option == gaPZ_return2,ShowSecondPerson coureuse,"院长在她的桌面控制台上进行了一些操作，通讯显示器分出了一个显示着 Scylla Coureuse 的画面。
 
-""院长，有什么事吗？...喔！$playername 舰长怎么在这？好吧，你也许刚到。"" Coureuse 看上去很慌张。
+""院长，有什么事吗？...喔！$playerName 舰长怎么在这？好吧，你也许刚到。"" Coureuse 看上去很慌张。
 
 ""我刚刚正在和舰长讨论这一发现的科学价值，"" Baird 院长说，""我们刚刚谈到了那些奇怪的光尘。""
 
 通灵塔上的某个子系统在图像中被高光标记了出来，似乎还有一些光点正围绕着图像飞舞。",gaPZ_return3:继续,
 gaPZ_return3,DialogOptionSelected,$option == gaPZ_return3,,"""哦是的，唔。从我们的初步分析来看，它似乎不是一种武器系统 —— 不，让我想想怎么说要准确一些，"" Coureuse 向下看了看，通过数据平板操纵着图像。从她将其放大至填满整个显示器的举动来看，她关注的似乎是那个分为二阶段运作的特殊装置。
 
-""它被当成了武器来使用，但我认为这原本并非武器。这非常...嗯...""她思考着该如何进行表述，""设计方向模糊？通用性很强？不管怎么说，你可以从中看到超空间驱动核心技术的影子，""显示器上的一个部分在 Coureuse 的触摸下闪烁了起来。
+""它被当成了武器来使用，但我认为这原本并非武器。这非常...嗯..."" 她思考着该如何进行表述，""设计方向模糊？通用性很强？不管怎么说，你可以从中看到超空间驱动核心技术的影子。"" 显示器上的一个部分在 Coureuse 的触摸下闪烁了起来。
 
-""以及类似 Atherton 线圈的东西 —— 嗯，那个稳定的相位空间感应器，不是吗？""接着另一个部分发出了亮光。
+""以及类似 Atherton 线圈的东西 —— 嗯，那个稳定的相位空间感应器，不是吗？"" 接着另一个部分发出了亮光。
 
 你眯起了眼睛，觉得这玩意儿看上去有点眼熟，它好像是...","gaPZ_return4:""那是个相位线圈来着？""",
 gaPZ_return4,DialogOptionSelected,$option == gaPZ_return4,,"Coureuse 看起来印象颇深，""是，但也不完全是。嗯，让我再说明一下，"" 她揉着眼睛说，""这就好像 速子科技 团队灵光乍现，实现了一处突破 —— 我们还没搞明白他们突破了什么 —— 然后有什么人告诉他们这可以改造成武器系统。""
@@ -13341,9 +13341,9 @@ $global.gaATG_goTalkToYaribay = true
 Call $global.gaATG_ref updateStage
 $global.numGatesScanned = 0","""Baird 院长嘱咐我不要声张出去，"" Coureuse 说道。""不过看在被推上火线的家伙是你的份上...""
 
-像是不经意般，她把眼睛瞥向一边，小声地说道，"" 我们把它称为 ""双面神"" 装置。我承认现在给它起名还为时尚早，可一旦超物理学小组兴奋起来，"" 她无奈地耸了耸肩。""就没有什么能拦住他们的了。""
+像是不经意般，她把眼睛瞥向一边，小声地说道，""我们把它称为 ""双面神"" 装置。我承认现在给它起名还为时尚早，可一旦超物理学小组兴奋起来，"" 她无奈地耸了耸肩。""就没有什么能拦住他们的了。""
 
-""那装置是 — "" Coureuse 注意到了显示器上的闪光，""设备转交已经完成了，舰长。你可以走了。""","cutCommLink:""太好了，该去扫描几个星门了。""
+""那装置是 —— "" Coureuse 注意到了显示器上的闪光，""设备转交已经完成了，舰长。你可以走了。""","cutCommLink:""太好了，该去扫描几个星门了。""
 gaATG_getScannerMore:""你刚才是不是想说什么？""",
 gaATGgetScannerMore,DialogOptionSelected,$option == gaATG_getScannerMore,"#FireBest GAATGgetScannerMoreOptions
 FireAll GAATGgetScannerMoreOptions","她烦闷地叹了口气，看上去非常疲惫不堪。
@@ -14484,7 +14484,7 @@ Call $global.gaATG_ref updateStage","你立刻意识到，事情好像不对劲�
 gaATGreturnAfterJanusFail,OpenInteractionDialog,"$id == station_galatia_academy
 $global.gaATG_firstJanusResults score:1000
 !$global.gaATG_getMissionFromCoureuse","BeginConversation baird false true
-ShowSecondPerson coureuse","空间站通讯系统立马就连接到了院长办公室，导航官把通讯转接给你的命令界面。她在等着你。
+ShowSecondPerson coureuse","空间站通讯系统立马就连接到了院长办公室，领航员把通讯转接给你的命令界面。她在等着你。
 
 ""告诉我发生什么了。"" Baird 的语调和真空一样冷。Coureuse 也已经在通讯中了，她的脸看上去比平时苍白许多。
 
@@ -14753,7 +14753,7 @@ AdjustRepPerson zal COOPERATIVE 20","在一个突击穿梭机的舱室里，你�
 
 ""我想我应该感谢你，舰长，""她说着，从脸上擦去了一层薄薄的碳灰。
 
-""你的进攻让一切毁得多么彻底。至少我们救出了—""她尖锐地看向了两个陆战队员，他们在她后面拖着一个密封的箱子，""注意那个东西！它会拯救我们所有人。""
+""你的进攻让一切毁得多么彻底。至少我们救出了 —— "" 她尖锐地看向了两个陆战队员，他们在她后面拖着一个密封的箱子，""注意那个东西！它会拯救我们所有人。""
 
 你的副官打断了进来，""舰长，我们有麻烦了。""","gaATG_kantaRaidFinished3:""报告。""",
 gaATGkantaRaidFinished3,DialogOptionSelected,$option == gaATG_kantaRaidFinished3,,"当你赶回舰桥的时候，你的通讯终端便立刻被大量的信息所塞满。
@@ -15253,7 +15253,7 @@ gaATGreturnLokeGateRunB,DialogOptionSelected,$option == gaATG_returnLokeGateRunB
 gaATG_returnLokeEnd:""导航官，带我们离开这里就好。""",
 gaATGreturnLokeEnd,DialogOptionSelected,$option == gaATG_returnLokeEnd,"EndConversation DO_NOT_FIRE
 $global.gaATG_foundZal = true
-Call $global.gaATG_ref updateStage","""$ShipOrFleet准备点火，""导航官说。","gaATG_returnLokeEnd2:""祝我们成功。""",
+Call $global.gaATG_ref updateStage","""$ShipOrFleet准备点火。"" 导航官说。","gaATG_returnLokeEnd2:""祝我们成功。""",
 gaATGreturnLokeEnd2,DialogOptionSelected,$option == gaATG_returnLokeEnd2,DismissDialog,,,
 ,,,,,,
 # Zal uses Janus device with Magec Gate,,,,,,
@@ -15277,7 +15277,7 @@ gaATGMagecGateOptJanus2,GAATGmagecGateOptions,"$gateScanned
 !$global.gatesActive
 !$global.playerCanUseGates",,,"gaATG_MagecGateJanus:""连接 '双面神' 装置。""",
 gaATGMagecGateOptUse1,GAATGmagecGateOptions,"$global.gatesActive
-$global.playerCanUseGates",,""" '双面神' 装置准备完成了，""导航官报告。""我们可以穿过星门了，$playerSirOrMadam。听你的命令。""","gaATG_magecGateUse:""导航官，激活'双面神'装置，带我们进入。""",
+$global.playerCanUseGates",,""" '双面神' 装置准备完成了。"" 领航员报告。""我们可以穿过星门了，$playerSirOrMadam。听你的命令。""","gaATG_magecGateUse:""导航官，激活'双面神'装置，带我们进入。""",
 gaATGMagecGateOptUse2,GAATGmagecGateOptions,"$global.gatesActive
 $global.playerCanUseGates
 !$askedZalExplode",,,"gaATG_magecGateExplode:""Zal，我怎么能知道它不会再向我爆炸呢？""",
@@ -15854,15 +15854,15 @@ gaDADerelictPiratesTookItStart,GADADerelictInteraction,$gaDA_variation == PIRATE
 
 ""更像一次抢劫，"" 行动长官低吼道。从草率的破口和乱七八糟的废弃设备判断，先到的人并不是专业人士。
 
-你派遣了一支打捞小组，他们谨慎地进行了一次排查。你的任务目标失踪了，但队员们确实有些不寻常的发现：一套满是破洞的太空服被粗暴地拴在舱壁上，里面的人已经失去知觉。他们显然是受到过某种惩罚。他们被解救下来安置在隔离舱，医生尝试将他们救活。",gaDA_continuePirates:继续,
+你派遣了一支打捞小组，他们谨慎地进行了一次排查。你的任务目标失踪了，但队员们确实有些不寻常的发现：一套满是破洞的太空服被粗暴地拴在舱壁上，里面的人已经失去知觉。此人显然是受到过某种惩罚。此人被解救下来安置在隔离舱，医生尝试将其救活。",gaDA_continuePirates:继续,
 gaDADerelictContPirates,DialogOptionSelected,$option == gaDA_continuePirates,"$global.gaDA_piratesTookIt = true
 Call $global.gaDA_ref updateStage","这名受害者很感激，并急切地说起他的遭遇 —— 他应该是一名海盗。你通过全息影像听到了他因为违反规定而被同伴们抛下船的事。""其他人因为不怎么喜欢我而赞成我有罪，可我其实什么都没做！""
 
 通过供应一些氧气、一顿热饭和一杯烈酒，你的所有问题都得到了回答。
 
 很明显这些海盗知道残骸上有特殊的东西并专程前来寻找。他们也在附近某处储存了物资，很可能会在卖出贵重物品之前先去那里。如果你的舰队以高速航行，也许能在海盗离开前拦截他们。",gaDA_continuePirates2:继续,
-gaDADerelictContPirates2,DialogOptionSelected,$option == gaDA_continuePirates2,,剩下的就是如何处理这个倒霉的海盗。他似乎很感激并声称受到了冤枉。但这偏僻地方的海盗真的有无辜的吗？留下他们会不会有安全隐患？,"gaDA_returnPirate:海盗不可信。把他们送回破船上。
-gaDA_takePirateIn:给他们机会证明自己。(+1 船员)",
+gaDADerelictContPirates2,DialogOptionSelected,$option == gaDA_continuePirates2,,剩下的就是如何处理这个倒霉的海盗。此人似乎很感激并声称受到了冤枉。但这偏僻地方的海盗真的有无辜的吗？留下此人会不会有安全隐患？,"gaDA_returnPirate:海盗不可信。把这人送回破船上。
+gaDA_takePirateIn:给这人机会证明自己。(+1 船员)",
 gaDADerelictReturnPirate,DialogOptionSelected,$option == gaDA_returnPirate,"#DespawnEntity
 DismissDialog",,,
 gaDADerelictTakeInPirate,DialogOptionSelected,$option == gaDA_takePirateIn,AddCommodity crew 1,,gaDA_returnPirateCont:离开,
@@ -16219,7 +16219,7 @@ gaProbeObjectInteractionScavenger,GAProbeInteraction,$gaProbe_variation == SCAVE
 Call $global.gaProbe_ref updateStage
 DespawnEntity","你的$shipOrFleet靠近了探测器，发现它正好就在院长 Sebestyen 任务说明里告诉你它会在的地方。
 
-""$PlayerSirOrMadam""，传感器技师的语气告诉你这不会是好消息，""探测器内部是空的，但...""
+""$PlayerSirOrMadam。"" 传感器技师的语气告诉你这不会是好消息，""探测器内部是空的，但...""
 
 主舰桥的显示器亮起，显示出探测器上切口的温度读数，一小团喷出的碎片云的轨迹可以被逆向至一个点；缓慢消散的近距离机动推进剂云。所有的迹象表明的结论很明确，一个打捞队曾经在这，而且前脚刚走。
 
@@ -16231,7 +16231,7 @@ gaProbeObjectInteractionBlewUp1,DialogOptionSelected,$option == gaProbe_blewUp1,
 
 或是说探测器使用了某种人之领时期的超先进技术保护它自己呢？
 
-""$PlayerSirOrMadam 。""行动长官将你的注意力从铺满报告的显示器中拉了回来，""我建议在舱外活动之前将舰队撤回到安全距离外。""",gaProbe_blewUp2:继续,
+""$PlayerSirOrMadam。"" 行动长官将你的注意力从铺满报告的显示器中拉了回来，""我建议在舱外活动之前将舰队撤回到安全距离外。""",gaProbe_blewUp2:继续,
 gaProbeObjectInteractionBlewUp2,DialogOptionSelected,$option == gaProbe_blewUp2,,"打捞小组操纵着三艘装载无人机向探测器机动，你追踪着他们的进展，在接近的过程中不断进行呼叫 - 确认应答。舰桥上的实时视频里不时传来一波波的静电杂讯。可能是来自探测器的干扰。
 
 ""报告完成接触。"" 打捞小组成员协调和行动长官一同调整了仪器读数。线缆被固定到探测器的外壳上，相应设备完成了部署。
@@ -16253,11 +16253,11 @@ DespawnEntity","噪音退去。""报告确认。""
 行动后的报告描绘了一幅不明确的画面。仪器套件正在预备进行某种能量释放，但在你的打捞小组切断主电源时被打断。几乎没有造成实际损失。尽管如此，你认为 Galatia 学院本可以对这种可能性发出一些 —— 或者说是任何 —— 警告。你决定要向 Sebestyen 院士要求风险补贴。",defaultLeave:离开,
 gaProbeObjectInteractionMissing,GAProbeInteraction,$gaProbe_variation == PACKAGE_MISSING,,"你的$shipOrFleet靠近了探测器，发现它基本上就在院长 Sebestyen 任务说明里告诉你的地方。
 
-""侦测不到任何活动的能量源，探测器重量低于预期，没有碎片残骸。导航信号—无响应，""传感器技师报告道。""探测器船体看起来完好无损，船长。""
+""侦测不到任何活动的能量源，探测器重量低于预期，没有碎片残骸。导航信号 —— 无响应，"" 传感器技师报告道。""探测器船体看起来完好无损，船长。""
 
 打捞小组向着探测器机动，你透过频闪的显示器看到小队在探测器外壳上开出了几个整齐的切口并打开外壳，通讯器里充斥着混乱的交谈声。
 
-""少说废话，""行动长官吼道。""舱外活动小队长，报告！""",gaProbe_missing1:继续,
+""少说废话，"" 行动长官吼道。""舱外活动小队长，报告！""",gaProbe_missing1:继续,
 gaProbeObjectInteractionMissing1,DialogOptionSelected,$option == gaProbe_missing1,,"报告从通讯器中传来，""是空的，长官，导管都被切割得很干净，没有找到仪器套件。这里什么都没有。""
 
 过了一会儿，打捞队开始返回。你和舰桥船员一起检查他们的发现，看起来好像是探测器的中心被挖走了一个完美的球体，带走了大部分 Galatia 学院的珍贵仪器套件。
@@ -16293,7 +16293,7 @@ Call $global.gaProbe_ref updateStage","他看着你板着严苛的脸，清了�
 gaProbeMissionReturnHazardBonus,DialogOptionSelected,$option == gaProbe_returnHazard,"Call $global.gaProbe_ref updateReward
 Call $global.gaProbe_ref updateData","你解释说，探测器中的仪器套件原来是非常危险的，作为一个专业人士，你希望应该被告知这种危险存在的可能性。现在这种情况，公平起见应该在任务报酬中追加风险补贴，其数额与面临的危险应成正比。
 
-为了强调你的要求，你按下了一个按键，传送了探测器周围被炸毁的残骸的资料，还有那些旋转的碎屑—如果你仔细看，那是...不，别看得太仔细了。
+为了强调你的要求，你按下了一个按键，传送了探测器周围被炸毁的残骸的资料，还有那些旋转的碎屑 —— 如果你仔细看，那是...不，别看得太仔细了。
 
 Sebestyen 院士看起来有些恶心。""呃，对不起，舰长，请等一会。""",gaProbe_returnHazard1:继续,
 gaProbeMissionReturnHazardBonus1,DialogOptionSelected,$option == gaProbe_returnHazard1,"Highlight $gaProbe_reward
@@ -16386,7 +16386,7 @@ gaProbeConfront,DialogOptionSelected,$option == gaProbe_confront,,"$HeOrShe看�
 在你无情的凝视下，他卸下了伪装。""这是为了我们的公平和公正，"" $HeOrShe结巴的说到，""打捞权，这我们都懂的吧。""","gaProbe_confront1:询问这次""打捞""发生的时候，探测器的应答器是否处于激活状态。",
 gaProbeConfront1,DialogOptionSelected,$option == gaProbe_confront1,,"你解释道，每一个打捞舰队都知道，打捞带有应答器的无人探测器是不合法的行为。Galatia 学院的人脉很广。而且众所周知，当涉及到他们的研究设备时，学院可是相当纠缠不休的。
 
-舰长的脸上写满了内疚。""我们只是...我们打算 —""","gaProbe_confront2:""请立即将仪器套件转移到我的船上。""",
+舰长的脸上写满了内疚。""我们只是...我们打算 ——""","gaProbe_confront2:""请立即将仪器套件转移到我的船上。""",
 gaProbeConfront2,DialogOptionSelected,$option == gaProbe_confront2,"$entity.gavePackageToPlayer = true
 $global.gaProbe_canReturn = true
 Call $global.gaProbe_ref updateStage
@@ -16406,7 +16406,7 @@ gaProbeConfrontAfter,DialogOptionSelected,$option == gaProbe_confrontAfter,,"$He
 gaProbeConfrontAfter1,DialogOptionSelected,$option == gaProbe_confrontAfter1,,"""很好。"" $HeOrShe向一边瞥了一眼，似乎那边的人可能会知道比真相更好的答案。","gaProbe_confrontAfter2:向打捞者解释""道上的规矩""。",
 gaProbeConfrontAfter2,DialogOptionSelected,$option == gaProbe_confrontAfter2,,"你解释道，每一个打捞队都知道，打捞一个带应答器的无人探测器是不合法的。Galatia 学院的人脉很广。众所周知，当涉及到他们的研究设备时，该学院可是相当纠缠不休的。
 
-舰长的脸上写满了内疚。""我们只是...我们打算—""","gaProbe_confrontAfter3:""请立即将仪器套件转移到我的船上。""",
+舰长的脸上写满了内疚。""我们只是...我们打算 ——""","gaProbe_confrontAfter3:""请立即将仪器套件转移到我的船上。""",
 gaProbeConfrontAfter3,DialogOptionSelected,$option == gaProbe_confrontAfter3,"$entity.gavePackageToPlayer = true
 $global.gaProbe_canReturn = true
 Call $global.gaProbe_ref updateStage","""是的，当然。""
@@ -16735,7 +16735,7 @@ $gaOp_variation == ROGUE_AI",,"你的通讯官向 Galatia 学院提供的位置�
 通讯链接建立之后，你和前哨站的站长相互问候。他们似乎很想和你成为朋友，并邀请你和研究小组的领队们共进晚餐。这一切都让你觉得很假，但在 Galatia 学院的经历告诉你，这些学者在事业上的成就取决于他们对人脉网络的培养。
 
 在确认了穿梭机的降落细节后，你们寒暄了几句就关闭了通讯频道。",gaOp_rogueCont:继续,
-gaOpPlanetRogueAICont,DialogOptionSelected,$option == gaOp_rogueCont,FireBest GAOpUpdateBizarreProject,"""$PlayerSirOrMadam，有件事想请你过目一下，""通讯官说到。""我们收到了一个信号传输，来自低轨道上一个似乎改装过的遥测中继站。""
+gaOpPlanetRogueAICont,DialogOptionSelected,$option == gaOp_rogueCont,FireBest GAOpUpdateBizarreProject,"""$PlayerSirOrMadam，有件事想请你过目一下。"" 通讯官说到，""我们收到了一个信号传输，来自低轨道上一个似乎改装过的遥测中继站。""
 
 这是个求救信号。",gaOp_rogueCont2:继续,
 gaOpPlanetRogueAICont2,DialogOptionSelected,$option == gaOp_rogueCont2,,"在这份匆忙录制的全息影像里出现的是刚刚才和你交谈过的前哨站站长。不过在这段影像里，这人衣冠不整大汗淋漓满怀恐惧地告诉你，研究前哨站已经被某种 Beta 级 AI 核心所接管。它正强迫研究人员$gaOp_bizarreProjectStr
@@ -17187,11 +17187,11 @@ SetStoryOption pwi2_bluff general ""恐吓左径分子以保护 $entity.pwi2_ite
 ""是的，我们知道你有什么。而我们将摧毁它，要么是在你的货舱里，要么是在神圣的真空里。抉择吧。""","cutCommLink:拒绝，关闭通讯链接
 pwi2_bluff:虚张声势，摆脱左径分子
 pwi2_accept:接受，并弹出技术包裹",
-pwi2Bluff,DialogOptionSelected,$option == pwi2_bluff,,"你摆出一副忧心忡忡的样子。""$BrotherOrSister，我担心你完全误解了情况。你我一样都行在卢德之道上，只是我...""你把声音压低，""走在阴影之中。""
+pwi2Bluff,DialogOptionSelected,$option == pwi2_bluff,,"你摆出一副忧心忡忡的样子。""$BrotherOrSister，我担心你完全误解了情况。你我一样都行在卢德之道上，只是我..."" 你把声音压低，""走在阴影之中。""
 
 $HeOrShe试图揣测你的意思，这个左径分子逐渐困惑了起来。
 
-""别忘了 Mairaath。""，你就像旧地球的预言家一样咆哮着，你的头前倾，眼里燃烧着神圣的复仇焰火，""接下来是组织内部的秘密工作，你没有权限了解。你必须离开这里防止干扰我的任务，但首先 ——""",pwi2_bluff1:继续,
+""别忘了 Mairaath。"" 你就像旧地球的预言家一样咆哮着，你的头前倾，眼里燃烧着神圣的复仇焰火，""接下来是组织内部的秘密工作，你没有权限了解。你必须离开这里防止干扰我的任务，但首先 ——""",pwi2_bluff1:继续,
 pwi2Bluff1,DialogOptionSelected,$option == pwi2_bluff1,"MakeOtherFleetNonHostile true
 MakeOtherFleetGoAway true
 AdjustRep $personFaction.id COOPERATIVE 5","你夸张地双手合十，仿佛在向众人吟诵。""我为你祈祷，$brotherOrSister，而在圣卢德赐予我们的这条道路上，请跟随我的脚步。""
@@ -17269,9 +17269,9 @@ gaRRMissionTextPirateCannibals,DialogOptionSelected,$option == gaRR_cannibals,,"
 
 院士猛然意识到他所说的已经有些跑题了。他重新拿起他的数据平板，眯起眼睛说道：""嗯，我们刚才谈到哪了？""","gaRR_briefing1:""那些海盗。""",
 gaRRMissionTextPirate1,DialogOptionSelected,"$option == gaRR_briefing1
-$gaRR_variation == PIRATE",SetTextHighlights $gaRR_costNormal $gaRR_reward,"""哦对，海盗。""他清了清嗓子，低头看向了他的数据平板。
+$gaRR_variation == PIRATE",SetTextHighlights $gaRR_costNormal $gaRR_reward,"""哦对，海盗。"" 他清了清嗓子，低头看向了他的数据平板。
 
-""$gaRR_researcherName 院士被他们绑走了。他们知道 Galatia 学院肯定不会对自己人坐视不管，""说到这，他稍微松了口气，""并且会支付合理数额的赎金。这次，他们想要 $gaRR_costNormal 星币作为赎金。我们会把这笔钱交给你，并由你支付给海盗方面的联络人，呃，那人叫 $gaRR_contactName 的。你可以在 $gaRR_marketName 找到对方。""
+""$gaRR_researcherName 院士被他们绑走了。他们知道 Galatia 学院肯定不会对自己人坐视不管..."" 说到这，他稍微松了口气，""并且会支付合理数额的赎金。这次，他们想要 $gaRR_costNormal 星币作为赎金。我们会把这笔钱交给你，并由你支付给海盗方面的联络人，呃，那人叫 $gaRR_contactName 的。你可以在 $gaRR_marketName 找到对方。""
 
 ""我们会提供给你他们的通讯加密码，而你要做的就是设法潜入该港口，联系 $gaRR_contactName，并支付赎金。在把 $gaRR_researcherName 院士送回到 Galatia 学院后，会支付给你 $gaRR_reward 星币作为报酬。","gaRR_briefing2:""如果我能不付赎金就把学者救出来，那这赎金我能自己留着吗？""",
 gaRRMissionTextPirate2,DialogOptionSelected,"$option == gaRR_briefing2
@@ -17347,7 +17347,7 @@ gaRRChurchAccept3,DialogOptionSelected,$option == gaRR_acceptChurch2,#Call $glob
 你礼貌性地点点头，示意你的安全主管护送学者们到他们的宿舍，这样就可以在回 Galatia 学院的漫长旅途中避开他们。",gaRR_acceptChurch3:继续,
 gaRRChurchAccept4,DialogOptionSelected,$option == gaRR_acceptChurch3,"ShowDefaultVisual
 EndConversation NO_CONTINUE",,,
-gaRRChurchBluff,DialogOptionSelected,$option == gaRR_negotiateChurch,,"""$BrotherOrSister，""你开了口，带着不知哪儿来的抑扬顿挫，像极了之前听过的港区传教士语调，""我可以感到刚才经手的这些事务并不能让你心悦诚服。""
+gaRRChurchBluff,DialogOptionSelected,$option == gaRR_negotiateChurch,,"""$BrotherOrSister。"" 你开了口，带着不知哪儿来的抑扬顿挫，像极了之前听过的港区传教士语调，""我可以感到刚才经手的这些事务并不能让你心悦诚服。""
 
 在骑士长打算对你的多管闲事做出指责之前，你轻轻抬起手，温和地阻止了$himOrHer。你表示清楚自己没有立场去质问为何教会将此职责交由他们经手，但同为信仰的追随者，你能感同身受地体会到他们道义上的迷茫，难以面对天赋良心和机构职责之间的两难。
 
@@ -17430,7 +17430,7 @@ gaRRPirateThreaten,DialogOptionSelected,$option == gaRR_threatenPirate,"Highligh
 $gaRR_cost = $gaRR_costVeryLow 0
 DoCanAffordCheck $gaRR_cost gaRR_acceptPirate2 false","海盗的眼睛瞪大了。$HeOrShe迅速瞥了一眼屏幕外的人，轻轻摇了摇头，然后把$HeOrShe的注意力重新集中到你身上。
 
-""粗鄙。真是粗鄙。你敢拿这个威胁我？在我的地盘上？""海盗来回跳着脚，""你不知道我认识谁。我认识的海盗大佬能把你嚼成碎末。你想象不到我在给谁干活。""
+""粗鄙。真是粗鄙。你敢拿这个威胁我？在我的地盘上？"" 海盗来回跳着脚，""你不知道我认识谁。我认识的海盗大佬能把你嚼成碎末。你想象不到我在给谁干活。""
 
 ""$gaRR_costVeryLow 星币，如果这个价你也出不起的话，那我还不如直接把自己扔出气闸算了，至少还能死有全尸。我的老板可没这么仁慈。""","gaRR_acceptPirate2:同意并支付更低的 $gaRR_costVeryLow 星币赎金
 cutCommLinkNoText:拒绝并切断通讯链接
@@ -17628,7 +17628,7 @@ gaIntro2start2,DialogOptionSelected,$option == gaIntro2_start2,"Highlight ""Gala
 
 ""发射器肯定损坏了，但还可以挽救，""他们的话听上去带着一丝自豪，""走你。""
 
-""— Galatia 学院。任何找到这件物品的人，我恳请你把数据核心送回学院，你将会获得由 Tomas Kallichore 院长授权的 18,000 星币奖励。信息会重复播放。""","gaIntro2_retrieval:下令回收数据核心
+""—— Galatia 学院。任何找到这件物品的人，我恳请你把数据核心送回学院，你将会获得由 Tomas Kallichore 院长授权的 18,000 星币奖励。信息会重复播放。""","gaIntro2_retrieval:下令回收数据核心
 gaIntro2_leaveIt:把它留在原地",
 gaIntro2leaveIt,DialogOptionSelected,$option == gaIntro2_leaveIt,"$gaIntro2startLater = true
 $rejectedRetrieval = true 0
@@ -17907,7 +17907,7 @@ soeHouseRaoGoalRevenge,SOEBallEntranceGoal,$player.soe_goalDisgraceSang,,,soa_ho
 soeHouseRaoGoalUnsure,SOEBallEntranceGoal,$player.soe_goalOpenMind,,,soe_houseRaoUnsure:在行动前先审视一下屋子里的人物们,
 soeHouseRaoSchmooze1,DialogOptionSelected,$option == soa_houseRaoSchmooze,,"你的目光在人群中游荡，找寻着各种影响力相互制衡的迹象。犹如在宇宙中肆意驰骋一般，各种权豪势要云集的光景呈现了你眼前，呈众星捧月之态，携移星换斗之势。这边是一位后备舰队的太空元帅，那里则是 Eventide 行星政府的首席执行长。而旁边这位又是一家大型军事承包商的首席运营官。
 
-""$PlayerSirOrMadam。""一位服务员出现在了你身边，向你呈上了排满精致酒杯的托盘，杯子里面装着一些冒泡的饮料。","soe_takeDrink:拿过一杯饮料
+""$PlayerSirOrMadam。"" 一位服务员出现在了你身边，向你呈上了排满精致酒杯的托盘，杯子里面装着一些冒泡的饮料。","soe_takeDrink:拿过一杯饮料
 soe_noDrink:婉拒",
 soeHouseRaoParty1,DialogOptionSelected,$option == soa_houseRaoParty,,"你还没表现出口渴的样子，一个侍者就出现在了你身前，好像是从超空间里跳出来的一样。
 
@@ -17917,11 +17917,11 @@ soeHouseRaoRevenge1,DialogOptionSelected,$option == soa_houseRaoRevenge,$player.
 
 他离开了他的那群狐朋狗友，正处于向你接近的轨迹上。当发现你已经注意到他时，他立刻咧开嘴，露出一种可疑的愉悦笑容。
 
-""$PlayerSirOrMadam。""一位服务员出现在了你身边，向你呈上了排满精致酒杯的托盘，杯子里面装着一些冒泡的饮料。","soe_takeDrink:拿过一杯饮料
+""$PlayerSirOrMadam。"" 一位服务员出现在了你身边，向你呈上了排满精致酒杯的托盘，杯子里面装着一些冒泡的饮料。","soe_takeDrink:拿过一杯饮料
 soe_noDrink:婉拒",
 soeHouseRaoUnsure1,DialogOptionSelected,$option == soe_houseRaoUnsure,,"你的目光在人群中游荡，找寻着各种影响力相互制衡的迹象。犹如在宇宙中肆意驰骋一般，各种权豪势要云集的光景呈现了你眼前，呈众星捧月之态，携移星换斗之势。这边是一位后备舰队的太空元帅，那里则是 Eventide 行星政府的首席执行长。
 
-""$PlayerSirOrMadam。""一位服务员出现在了你身边，向你呈上了排满精致酒杯的托盘，杯子里面装着一些冒泡的饮料。","soe_takeDrink:拿过一杯饮料
+""$PlayerSirOrMadam。"" 一位服务员出现在了你身边，向你呈上了排满精致酒杯的托盘，杯子里面装着一些冒泡的饮料。","soe_takeDrink:拿过一杯饮料
 soe_noDrink:婉拒",
 soeSangAppearsDrink,DialogOptionSelected,"$option == soe_takeDrink
 !$player.sawCaspian","$player.sawCaspian = true 0
@@ -19373,7 +19373,7 @@ Call $extr_ref showMap ""目标: $extr_marketName""","这个$manOrWoman坐在角
 
 ""$playerName 舰长。"" $heOrShe说。""我方的一名高级特工渗透了在 $extr_marketName 的一名海盗军阀。他已经暴露并且受到监禁。当前的任务目标是以任何可行手段将其撤离 $extr_marketName，但如果我们动用正规编制的海军将会造成政治上的...不便。对此，我们提供 $extr_reward 星币，作为让我方特工安全返回的报酬。""
 
-""海盗可能预料到你的袭击。但我们有关于他们防御系统的情报。"" $manOrWoman把数据平板放在桌上供你检查。
+""海盗可能预料到你的袭击。但我们有关于他们防御系统的情报。"" 这个$manOrWoman把数据平板放在桌上供你检查。
 
 你快速审了一遍内容，并预计你需要大约 $extr_marines 陆战队员来执行这项任务。","contact_acceptBar:接受
 contact_declineBarNoContinue:拒绝",
@@ -20418,7 +20418,7 @@ LOCRLjudgeResponseA,DialogOptionSelected,$option == locrl_judgeOptA,FireAll LOCR
 LOCRLjudgeResponseB,DialogOptionSelected,$option == locrl_judgeOptB,"$player.luddicAttitudeFaithful++
 FireAll LOCRLhub","你的话让 $PersonRank $personLastName 显得更加沮丧。
 
-""你说得对，""$heOrShe哽咽着，几乎要哭了出来。""我们为我们的不虔诚受到了惩罚。""",,
+""你说得对，"" $heOrShe哽咽着，几乎要哭了出来。""我们为我们的不虔诚受到了惩罚。""",,
 LOCRLjudgeResponseC,DialogOptionSelected,$option == locrl_judgeOptC,"$player.luddicAttitudeCynical++
 FireAll LOCRLhub","$PersonRank $personLastName 听到你的话后，$hisOrHer感到非常不快，但压制住了本能的愤怒。
 
@@ -20673,7 +20673,7 @@ locrlfOfferTextBarAgain,DialogOptionSelected,"$option == locrlf_startBar
 $player.locrlf_gotBarBlurb","Highlight $locrlf_rewardAmount
 SetTooltip locrlf_offerBarCynicalRewardAsk ""你足够愤世嫉俗，能够看穿这些所谓""信徒""的伪善表演。说到底，最重要的还是星币和权力。""
 FireBest LOCRLFOfferTextBarRemoveCynical
-Call $locrlf_ref showMap ""Target: $locrlf_marketName""","""哦！""$locrlf_HeOrShe听到你的话吓了一跳。""又是你。你重新考虑过了吗？""
+Call $locrlf_ref showMap ""Target: $locrlf_marketName""","""哦！"" $locrlf_HeOrShe听到你的话吓了一跳。""又是你。你重新考虑过了吗？""
 
 $locrlf_HeOrShe压低声音，""当然，这是个棘手的问题。大祭司希望找到这群迷失的异端，而且，出于某种原因，大祭司不希望 骑士团审判官 出手。"" $locrlf_HeOrShe叹了口气，""当然，教会 的行动也轮不到我去猜。""
 
@@ -20683,14 +20683,14 @@ contact_declineBar:拒绝",
 locrlfOfferTextBarAgainB,DialogOptionSelected,"$option == locrlf_startBar
 $player.locrlf_negotiatedHigherRate
 $player.locrlf_gotBarBlurb","$missionId = locrlf
-Highlight $locrlf_rewardAmountHigher","""哦！""$locrlf_HeOrShe听到你的话吓了一跳。""又是你。你重新考虑过了吗？""
+Highlight $locrlf_rewardAmountHigher","""哦！"" $locrlf_HeOrShe听到你的话吓了一跳。""又是你。你重新考虑过了吗？""
 
 $locrlf_HeOrShe压低声音，""当然，这是个棘手的问题。大祭司希望找到这群迷失的异端，而且，出于某种原因，大祭司不希望 骑士团审判官 出手。"" $locrlf_HeOrShe叹了口气，""当然，教会 的行动也轮不到我去猜。""
 
 ""不管怎样，异端们买了一艘运输船，一头扎进了边缘地带。最后看到他们的是某个拾荒者，拾荒者向...好吧，反正是一个信徒报告了此事。现在，如果你找到他们，并带给我关于他们遭遇的确凿证据，我会给你教会提供的 $locrlf_rewardAmountHigher 星币。""","locrlf_offerBarAcceptFirst:接受
 contact_declineBar:拒绝",
 locrlfOfferTextBar,DialogOptionSelected,$option == locrlf_startBar,"$missionId = locrlf
-$player.locrlf_gotBarBlurb = true","""哦！""$locrlf_HeOrShe听到你的话先是吓了一跳，然后上下打量了你一番。""嗯，你看上去会很适合。""
+$player.locrlf_gotBarBlurb = true","""哦！"" $locrlf_HeOrShe听到你的话先是吓了一跳，然后上下打量了你一番。""嗯，你看上去会很适合。""
 
 ""我有，""$locrlf_HeOrShe压低声音，""一件微妙的事情想要讨论。一位我不方便透露姓名的大祭司告诉我，有一群信徒被一个妄称先知的异端带上了歧途。""
 
@@ -20698,11 +20698,11 @@ $locrlf_HisOrHer警觉的瞪大眼睛，""我当然会认为这是 骑士团 的
 locrlfOfferTextBar2,DialogOptionSelected,$option == locrlf_startBar2,"Highlight $locrlf_rewardAmount
 SetTooltip locrlf_offerBarCynicalRewardAsk ""你足够愤世嫉俗，能够看穿这些所谓""信徒""的虔诚。最终，最重要的还是星币。""
 FireBest LOCRLFOfferTextBarRemoveCynical
-Call $locrlf_ref showMap ""Target: $locrlf_systemName"""," ""这帮异端花了笔钱买了艘旧运输船，启程去某个边缘星系 '重新开始' 。他们多半都死了。噢对不起，卢德 在上，我就只知道这些。不管如何，最后目击他们的是一位不信教的拾荒者，他们似乎正向着个 特定星系 一头扎过去。"" 
+Call $locrlf_ref showMap ""Target: $locrlf_systemName""","""这帮异端花了笔钱买了艘旧运输船，启程去某个边缘星系 '重新开始' 。他们多半都死了。噢对不起，卢德 在上，我就只知道这些。不管如何，最后目击他们的是一位不信教的拾荒者，他们似乎正向着个 特定星系 一头扎过去。"" 
 
 $locrlf_HeOrShe掏出$locrlf_hisOrHer的廉价数据平板。
 
- "" 你能帮我找到他们不？就当是为了教会？弄明白他们最后怎么样了，把消息带给我，然后我会转告给 大祭司 。我手头有批给这次行动的资金，$locrlf_rewardAmount 星币 。只要你给我带来这帮异端下场的确凿证据，这笔钱就是你的。"" ","locrlf_offerBarCynicalRewardAsk:""教会 批给你的钱不止$locrlf_rewardAmount星币，对吧？""
+""你能帮我找到他们不？就当是为了教会？弄明白他们最后怎么样了，把消息带给我，然后我会转告给 大祭司 。我手头有批给这次行动的资金，$locrlf_rewardAmount 星币。只要你给我带来这帮异端下场的确凿证据，这笔钱就是你的。"" ","locrlf_offerBarCynicalRewardAsk:""教会 批给你的钱不止$locrlf_rewardAmount星币，对吧？""
 locrlf_offerBarAcceptFirst:接受
 contact_declineBar:拒绝",
 locrlfOfferTextBarRemoveCynical,LOCRLFOfferTextBarRemoveCynical,$player.luddicAttitudeCynical < 1,RemoveOption locrlf_offerBarCynicalRewardAsk,,,
@@ -21027,9 +21027,9 @@ RSOMblurb,rsom_blurb,,,"""一个竞争对手已经建立了一个秘密据点，
 RSOMofferOption,rsom_option,,,,rsom_start:询问摧毁$hisOrHer竞争对手秘密据点任务的细节,
 RSOMofferTextContact,DialogOptionSelected,$option == rsom_start,"$missionId = rsom
 SetTextHighlights $rsom_planetName $rsom_systemName $rsom_dist $rsom_marinesReq
-Call $global.rsom_ref showMap ""目标: $rsom_planetName""","""你已经赢得了我部分信任，""$heOrShe说道，""我想请你帮我传递一个，嗯...""$heOrShe轻笑一声，""非常重要的消息.""
+Call $global.rsom_ref showMap ""目标: $rsom_planetName""","""你已经赢得了我部分信任，"" $heOrShe说道，""我想请你帮我传递一个，嗯..."" $heOrShe轻笑一声，""非常重要的消息.""
 
-""我的一个竞争对手在 $rsom_systemName 星系的 $rsom_planetName 星球上建立了一个秘密据点，距离这里 $rsom_dist 光年。他们在那里囤积了大量的 $rsom_product 正等着运输。我不清楚他们是从哪里弄来的这些货物，可能是某个旧仓库的存货，或者是从其他经销商那里转运过来的。但有一点我非常清楚，""$heOrShe咆哮，""他们正在以远低于我们辛苦维持的、保证长久发展的价格进行倾销！""
+""我的一个竞争对手在 $rsom_systemName 星系的 $rsom_planetName 星球上建立了一个秘密据点，距离这里 $rsom_dist 光年。他们在那里囤积了大量的 $rsom_product 正等着运输。我不清楚他们是从哪里弄来的这些货物，可能是某个旧仓库的存货，或者是从其他经销商那里转运过来的。但有一点我非常清楚，"" $heOrShe开始咆哮，""他们正在以远低于我们辛苦维持的、保证长久发展的价格进行倾销！""
 
 ""突袭那个据点。带走那些 $rsom_product。你可以在任何你喜欢的黑市上以市场价出售这些战利品。这就是你的报酬。""
 
@@ -21042,7 +21042,7 @@ RSOMofferTextContact2,DialogOptionSelected,$option == rsom_offerAsk2,,"""我的�
 $HeOrShe走神了片刻，想象着那场即将到来的屠杀，$HeOrShe的脸上浮现出一种满足的神情。","rsom_offerAskSource1:""而你，呃，相信这个线人？""
 rsom_fakeAccept:接受
 contact_decline:拒绝",
-RSOMofferAsk1,DialogOptionSelected,$option == rsom_offerAskSource1,,"$HisOrHer的表情变得冷淡。""舰长，我信任我的手段，""$heOrShe说.
+RSOMofferAsk1,DialogOptionSelected,$option == rsom_offerAskSource1,,"$HisOrHer的表情变得冷淡。""舰长，我信任我的手段。"" $heOrShe说.
 
 ""你可以像过去一样相信我。你会得到报酬的。就像过去一样。""","rsom_offerAskSource2:""这无关信任，而是关于一个'线人'可能会提供的虚假情报。这可能是个陷阱。""
 rsom_fakeAccept:接受
@@ -21114,7 +21114,7 @@ rsomAvoidCombat5a,DialogOptionSelected,$option == rsom_getAvoidCombat5a,$player.
 
 ""Diego 就算被辐射烤焦，在真空里烧成灰，我也不在乎。觉得自己太了不起，不肯到这儿来干点苦活？就像 Diego 一样。""
 
-他用手指着你，""你也可以告诉他我是怎么说的的。我压根不在乎。""","rsom_getAvoidCombat6a:""当然！是时候让 Diego 面对现实了。""",
+他用手指着你，""你也可以告诉他我是怎么说的。我压根不在乎。""","rsom_getAvoidCombat6a:""当然！是时候让 Diego 面对现实了。""",
 rsomAvoidCombat6a,DialogOptionSelected,$option == rsom_getAvoidCombat6a,,"""确实如此，不是吗？"" 这个男人缓缓说道。
 
 他换了种欣赏的眼神看着你.
@@ -21413,7 +21413,7 @@ SetTextHighlightColors h h h h $jabr_factionColor
 Highlight $jabr_marketName $jabr_dist $jabr_reward $jabr_marines $jabr_marketFaction
 Call $jabr_ref showMap ""目标：$jabr_marketName ""","当你走近时，这个$jabr_manOrWoman一言不发地打量着你。片刻之后，$jabr_heOrShe似乎觉得你够格了，把一个廉价的数据平板从桌子那边滑了过来。上面显示着一份个人资料和一个安全设施的结构图。
 
-$jabr_heOrShe轻声说明到：""我需要一次解救行动，任务对象正被...呃...非法监禁在 $jabr_dist 光年之外的 $jabr_marketName。我的赞助人可以为此提供 $jabr_reward 星币。""$jabr_manOrWoman等待你的答复，依稀可见得眼睛反射着犹如星宿般的光芒。
+$jabr_heOrShe轻声说明到：""我需要一次解救行动，任务对象正被...呃...非法监禁在 $jabr_dist 光年之外的 $jabr_marketName。我的赞助人可以为此提供 $jabr_reward 星币。"" $jabr_manOrWoman等待你的答复，依稀可见得眼睛反射着犹如星宿般的光芒。
 
 你扫视了资料，他们调查得很彻底。你估计大约需要 $jabr_marines 名陆战队员才能完成这次任务。袭击 $jabr_marketFactionArticle $jabr_marketFaction 的监狱设施可能会对你的声望造成影响。你可以采取一些措施来避免暴露身份，但这些手段无法完全摆脱官方的怀疑。","contact_acceptBar:接受
 contact_declineBarNoContinue:拒绝",
@@ -22157,12 +22157,12 @@ kdKantaGreetingRouteRevisit,DialogOptionSelected,"$option == kdKanta_openComms
 $player.metKDSK",FireAll KDStationKingOptions,"""对，你是谁？"" $personName咆哮着，然后烦躁地扫了一眼布满灰尘的数据平板。""啊..."" $hisOrHer的举止像是将敌意降低了好几个等级，""又是你。对，对。""",,
 kdSKHelloFirstTimeA,DialogOptionSelected,"$option == kdKanta_openComms
 !$player.metKDSK
-$player.fleetPoints >= 70",FireAll KDStationKingOptions,"""对，你是谁？""$personName咆哮着，然后烦躁地扫了一眼布满灰尘的数据平板。
+$player.fleetPoints >= 70",FireAll KDStationKingOptions,"""对，你是谁？"" $personName咆哮着，然后烦躁地扫了一眼布满灰尘的数据平板。
 
 ""啊。"" $heOrShe咕哝了一声，哗啦一声扔掉了数据平板。""我现在明白了。你也不是什么阿猫阿狗。有支舰队是吧。有生意要谈吗？""",,
 kdSKHelloFirstTimeB,DialogOptionSelected,"$option == kdKanta_openComms
 !$player.metKDSK
-$player.numColonies > 0",FireAll KDStationKingOptions,"""对，你是谁？""$personName咆哮着，然后烦躁地扫了一眼布满灰尘的数据平板。
+$player.numColonies > 0",FireAll KDStationKingOptions,"""对，你是谁？"" $personName咆哮着，然后烦躁地扫了一眼布满灰尘的数据平板。
 
 ""啊。"" $heOrShe咕哝了一声，哗啦一声扔掉了数据平板。""我现在明白了。你也不是什么阿猫阿狗。有一两个殖民地是吧。有生意要谈吗？""",,
 kdSKHelloFirstTimeC,DialogOptionSelected,"$option == kdKanta_openComms
@@ -23026,11 +23026,11 @@ FireBest DialogOptionSelected","你当时回到了你的船上，让那些优秀
 
 他绝对记得。",,
 sdtuStartInfo3,DialogOptionSelected,$option == sdtu_startInfo3,,,sdtu_ramProposal1:继续,
-sdtuRamProposal1,DialogOptionSelected,$option == sdtu_ramProposal1,FireAll SDTURamProposalResponses,"""你好啊，$playerName 舰长。""$Rank Ram 带着超然的权威说道，""我跟踪你的职业生涯有段时间了。你，嗯，处在一个绝妙的位置。""
+sdtuRamProposal1,DialogOptionSelected,$option == sdtu_ramProposal1,FireAll SDTURamProposalResponses,"""你好啊，$playerName 舰长。"" $Rank Ram 带着超然的权威说道，""我跟踪你的职业生涯有段时间了。你，嗯，处在一个绝妙的位置。""
 
 ""我需要你帮我拯救 辛达强权。"" 他说着露出了一个痛苦的笑容，而且看来他希望得到你的回应。",,
 sdtuRamProposalResponse1,SDTURamProposalResponses,$player.commissionFactionId == sindrian_diktat,,,"sdtu_ramRespCommission:""作为一名 辛达强权 的在职雇佣兵，这是我的职责。""",
-sdtuRamProposalResponse2,SDTURamProposalResponses,,,,"sdtu_ramRespWhatWant:""你会能有什么想从我这儿得到的？""",
+sdtuRamProposalResponse2,SDTURamProposalResponses,,,,"sdtu_ramRespWhatWant:""那你究竟想要让我做些什么呢？""",
 sdtuRamProposalResponse3,SDTURamProposalResponses,,,,"sdtu_ramRespRemember:""你还记得我吗？我可还记得你呢。""",
 sdtuRamProposalResponse4,SDTURamProposalResponses,$player.wasBeatenBySD,,,"sdtu_ramRespThugsBeat:""你手下给了我一顿好打，现在你又来找我帮忙？""",
 sdtuRamProposalResponse5,SDTURamProposalResponses,$player.commissionFactionId != sindrian_diktat,,,"sdtu_ramRespHateSD:""我憎恨 辛达强权，不会打算拯救她。""",
@@ -25281,10 +25281,10 @@ anh_cantinaRobot5:""老头，这是什么意思？""
 ",
 anhCantinaRobot3,DialogOptionSelected,$option == anh_cantinaRobot3,FireAll anhCantinaAskHubOptions,"这把小伙子惹急了。
 
-""我可不是什么荒地农夫。""年轻人提高了声音说到，""我是个优秀的驾驶员，就像—— "" 老人伸出手拍了拍他的肩膀，年轻人反应了过来。
+""我可不是什么荒地农夫。"" 年轻人提高了声音说到，""我是个优秀的驾驶员，就像 —— "" 老人伸出手拍了拍他的肩膀，年轻人反应了过来。
 
 ""我年轻的伙伴想说的是我们另有需要。""",,
-anhCantinaRobot4,DialogOptionSelected,$option == anh_cantinaRobot4,FireAll anhCantinaAskHubOptions,"年轻人明显被一位星舰舰长给与他的敬意吓到了。看上去他真的在考虑你的提议 ""我做不到，感谢您，但我是个优秀的驾驶员，就像—— "" 老人忽然伸手让他打住。
+anhCantinaRobot4,DialogOptionSelected,$option == anh_cantinaRobot4,FireAll anhCantinaAskHubOptions,"年轻人明显被一位星舰舰长给与他的敬意吓到了。看上去他真的在考虑你的提议。""我做不到，感谢您，但我是个优秀的驾驶员，就像 —— "" 老人忽然伸手让他打住。
 
 ""我年轻的伙伴的意思是他的命运另在他处。""
 ",,
@@ -25514,7 +25514,7 @@ kpAudience1Bluffs,DialogOptionSelected,"$option == kpAudience2
 $player.kantaBluffs > 0
 !$didBluffResponse",,"""$playerName 舰长！我看出来你认为你自己从星域一头跑到另一头所做的一切都是打着 Kanta 的旗号！""
 
-""难道你没有自称过是在替我们敬爱的军阀办事？""小个子男人满头大汗的试图指责你。""难道不是你未经她允许... 便敢口吐她让人敬畏的大名？舰长，难道不是你自以为是的认为了解我们伟大 —""
+""难道你没有自称过是在替我们敬爱的军阀办事？"" 小个子男人满头大汗的试图指责你。""难道不是你未经她允许... 便敢口吐她让人敬畏的大名？舰长，难道不是你自以为是的认为了解我们伟大 ——""
 
 尖锐的金属摩擦声打断了喋喋不休的 Cydonia。军阀 Kanta 的披甲机械腿带着撞击摩擦声站了起来。",kp_audienceBluffs2:继续,
 kpAudience1Bluffs2,DialogOptionSelected,$option == kp_audienceBluffs2,$didBluffResponse = true,"笑声。是笑声。Kanta 笑得像自动炮的退壳声，宛如在工厂中的钢铁碰撞在一起。
@@ -25728,7 +25728,7 @@ ShowDefaultVisual
 FireAll PopulateOptions","你离开时，整个王庭处于骚动之中，你身后皆是各类针对你和针对海盗彼此的呼声，嘲笑以及指责。
 
 Kanta 之巢 通道里的其他海盗在你路过时无一不对你虎视眈眈、念念有词，等待着给你秘密放血的时刻来临。",,
-kpGiftsLeaveGotProtSel,DialogOptionSelected,$option == kpLeaveProt,KantaCMD gainProtection,"您从王座大厅的中央后退一步。Kanta 的金属身体在王座上发出嘶嘶声，她如地雷般耐心。Cydonia 快步走向另一个负责看管有待 Kanta 处置的犯人以及有求之人的海盗头目，与之交谈。
+kpGiftsLeaveGotProtSel,DialogOptionSelected,$option == kpLeaveProt,KantaCMD gainProtection,"你从王座大厅的中央后退一步。Kanta 的金属身体在王座上发出嘶嘶声，她的脾气像地雷一样随时可能爆炸。Cydonia 快步走向另一个负责看管有待 Kanta 处置的犯人以及有求之人的海盗头目，与之交谈。
 
 海盗们欢呼声和吼叫声不断，他们纷乱的装扮以及极端的生化改造无一不让 Kanta 的王庭看上去更像一个混乱魔窟。",kpLeaveProt2:离开,
 kpGiftsLeaveGotProt2Sel,DialogOptionSelected,$option == kpLeaveProt2,"unset $market.kpAudience
@@ -25751,7 +25751,7 @@ BeginMission affk false
 Call $global.affk_ref updateData","MakeOtherFleetImportant kantaFavorCourier false
 unset $entity.genericHail","通讯频道闪烁着建立了链接。面前各类报错信号闪烁不停 —— 过期的程式协定以及未经许可的改装。
 
-海盗$rank 出现在频道里，双臂交叉。""$playerName舰长。我想你带来强大以及残酷的 Kanta 军阀 之问候。她一直关注着你的生涯，也很欣慰你能在她的保护下繁荣昌盛。""
+海盗 $rank 出现在频道里，双臂交叉。""$playerName 舰长。我想你带来强大以及残酷的 Kanta 军阀 之问候。她一直关注着你的生涯，也很欣慰你能在她的保护下繁荣昌盛。""
 
 这必然是关于之前你做的约定，卖 Kanta 一个 '人情' 以获得她的保护。","affkContinue:Continue
 affkContinueWant:""Kanta 想要什么？""
@@ -25799,7 +25799,7 @@ KantaFavorCourierHailFailed,KantaFavorCourierHail,,"MakeOtherFleetImportant kant
 unset $entity.genericHail
 KantaCMD abortFavor","通讯频道闪烁着建立了链接。面前各类报错信号闪烁，似乎是关于过期的程式协定以及未经许可的改装。
 
-海盗$rank 出现在频道里，双臂交叉。""$playerName 舰长。我想你带来强大以及残酷的 Kanta 军阀 之问候。她一直关注着你的生涯，也很欣慰你能在她的保护下繁荣昌盛。""","affkFailContinueWant:""Kanta 想要什么？""
+海盗 $rank 出现在频道里，双臂交叉。""$playerName 舰长。我想你带来强大以及残酷的 Kanta 军阀 之问候。她一直关注着你的生涯，也很欣慰你能在她的保护下繁荣昌盛。""","affkFailContinueWant:""Kanta 想要什么？""
 affkFailContinueSarcastic:""就这样了？告诉她 '谢谢'。""",
 KantaFavorCourierHailFailedA,DialogOptionSelected,$option == affkFailContinueWant,,"""没什么。"" $heOrShe说到，""现在还没。"" 
 
@@ -25959,7 +25959,7 @@ $player.inspectedByLeagueEnforcer",,,"plEnforcerAgain:""你们刚才已经 '调�
 plEnforcerCutComms,PLEnforcerOptions,,,,cutCommLinkNoText:切断通讯链接并将武器充能,
 plEnforcerComplySel,DialogOptionSelected,$option == plEnforcerComply,"ShowImageVisual quartermaster
 MakeOtherFleetPreventDisengage hassle false
-ApplyCRDamage $entity.fleetPoints 0.2 1 "" 英仙座联盟 检查""","检查小组毫不留情，他们撕开舱门，翻箱倒柜地搜查精心整理的库存，还直接在成堆的敏感设备中进行主动扫描。
+ApplyCRDamage $entity.fleetPoints 0.2 1 ""英仙座联盟 检查""","检查小组毫不留情，他们撕开舱门，翻箱倒柜地搜查精心整理的库存，还直接在成堆的敏感设备中进行主动扫描。
 
 你$shipOrFleet军官们的抱怨全都被以官僚式的含糊其辞冷漠回应。军官们被告知，虽然可以提交索赔表，对检查过程中造成的 ""令人遗憾但不可避免的"" 损失寻求赔偿，但这 ""至少在一个星历年内很难得到调查机构的答复""。",plEnforcerComply2:继续,
 plEnforcerComplySel2,DialogOptionSelected,$option == plEnforcerComply2,"ShowPersonVisual
@@ -25972,12 +25972,12 @@ $failedToRefuse = true 0","""你是不是有什么秘密？"" $HisOrHer的语气
 联盟的 $Post 说：""准备登船检查。务必特别...彻底。我们面对的是一群最顶尖的太空罪犯。""",,
 plEnforcerRefusePlayerStrongerSel,DialogOptionSelected,$option == plEnforcerRefuseStronger,MakeOtherFleetPreventDisengage hassle false,"联盟 $Post 官员的脸色瞬间凝固，随后$heOrShe开口说道。
 
-""你看起来是个正直的非势力团体。""$HeOrShe点了点头，一副有理有据的权威模样。""这次我只是给你一个警告，放你一马。外面有不少坏蛋，舰长。总得有人治治他们。""
+""你看起来是个正直的独立个体。"" $HeOrShe点了点头，一副有理有据的权威模样。""这次我只是给你一个警告，放你一马。外面有不少坏蛋，舰长。总得有人治治他们。""
 
 $HeOrShe挤出一个勉强的笑容。""你可以走了。""",cutCommLinkNoText:切断通讯链接,
 plEnforcerJoinLeagueSel,DialogOptionSelected,$option == plEnforcerJoinLeague,$askedAboutJoining = true 0,"$HisOrHer 眉毛一挑。""你需要和 Kazeron 上 联盟理事会 的一位重要代表谈谈入会事宜。当然，作为会员，除非遇到特殊情况，否则你不会受到随机的商业安全检查。""
 
-""我们有真正的权利，你知道的...""$heOrShe说道，看来$heOrShe确实很相信 联盟 对权利的保护，""不像某些势力。""","plEnforcerJoinLeagueGood:""我会的。与 联盟 结成秩序邦联是有意义的。""
+""我们有真正的权利，你知道的..."" $heOrShe说道，看来$heOrShe确实很相信 联盟 对权利的保护，""不像某些势力。""","plEnforcerJoinLeagueGood:""我会的。与 联盟 结成秩序邦联是有意义的。""
 plEnforcerJoinLeagueWaffle:""我会考虑的，$post。""
 plEnforcerJoinLeagueBad:""然后任由你们欺负吗？没门儿。""",
 plEnforcerJoinLeagueGoodSel,DialogOptionSelected,"$option == plEnforcerJoinLeagueGood
@@ -26007,13 +26007,13 @@ $askedAboutRecentInspection = true 0","""说不定它们只是忘记向指挥部
 # Persean League punitive expedition fleet,,,,,,
 plPunExComms,OpenCommLink,$entity.PLPE_fleet score:1000,$entity.ignorePlayerCommRequests = true 7,"通讯发出嘈杂声，形成了一个图像。
 
-""$playerName舰长，"" 英仙座联盟 的 $post 毫不掩饰敌意地盯着你。""你曾经是我们中的一员。你曾相信我们可以共同建设一个新的星域。""$HisOrHer的声音低沉下来，""不过，我想知道，你是否曾经真正相信过我们的理想，还是这只是你的一个诡计。背叛我们的理想，你究竟能得到什么好处？""
+""$playerName舰长，"" 英仙座联盟 的 $post 毫不掩饰敌意地盯着你。""你曾经是我们中的一员。你曾相信我们可以共同建设一个新的星域。"" $HisOrHer的声音低沉下来，""不过，我想知道，你是否曾经真正相信过我们的理想，还是这只是你的一个诡计。背叛我们的理想，你究竟能得到什么好处？""
 
 $HeOrShe停顿了一下，没有进一步责备你，而是切断了通讯。
 OR
 通讯发出嘈杂声，形成了一个图像。
 
-""真没想到你曾经成为 联盟 的一员，"" $heOrShe厌恶地摇了摇头。""你选择了野蛮，那么我们就用你唯一能理解的语言来对付你：暴力。""
+""真没想到你曾经成为过 联盟 的一员，"" $heOrShe厌恶地摇了摇头。""你选择了野蛮，那么我们就用你唯一能理解的语言来对付你：暴力。""
 
 $HeOrShe突然做了个手势，切断了通讯。",cutCommLinkNoText:切断通讯链接,
 plPunExComms2,OpenCommLink,"$entity.PLPE_fleet score:1000
@@ -26423,11 +26423,11 @@ $personFaction.id == persean
 Commission personCanGiveCommission
 HA_CMD canJoinLeague
 !$player.isLeagueMember",,,"notRH_joinLeague:""我希望与你谈谈关于加入 英仙座联盟 的事宜。""",
-notRH_joinLeagueSel,DialogOptionSelected,$option == notRH_joinLeague,SetEnabled notRH_joinLeague false,"""我明白，我明白，""$heOrShe把$hisOrHer的手插在一起，斟酌$hisOrHer的下一个答复。
+notRH_joinLeagueSel,DialogOptionSelected,$option == notRH_joinLeague,SetEnabled notRH_joinLeague false,"""我明白，我明白。"" $heOrShe把$hisOrHer的手插在一起，斟酌$hisOrHer的下一个答复。
 
-""这里需要办理一个官方手续。诸如找一个担保人，派一个代表团与联盟议会会晤，过一个问答环节，过一个投票。""此时$HisOrHer的视线朝向了你，透过通讯偶然间与你的视线交汇。""但是你真正要去做的是和 Reynard Hannan 谈一谈。联盟议会的任何决议都不会通过，除非获得了 Hannan 氏族的准许。""$HisOrHer的眼神再次飘了出去，然后$heOrShe耸了耸肩
+""这里需要办理一个官方手续。诸如找一个担保人，派一个代表团与联盟议会会晤，过一个问答环节，过一个投票。"" 此时$HisOrHer的视线朝向了你，透过通讯偶然间与你的视线交汇。""但是你真正要去做的是和 Reynard Hannan 谈一谈。联盟议会的任何决议都不会通过，除非获得了 Hannan 氏族的准许。"" $HisOrHer的眼神再次飘了出去，然后$heOrShe耸了耸肩。
 
-""欢迎来到 Kazeron 。""",,
+""欢迎来到 Kazeron。""",,
 ,,,,,,
 ,,,,,,
 # Stopping payments to Gens Hannan without leaving the League,,,,,,
@@ -26492,7 +26492,7 @@ Reynard 向后靠去，双手在身前交叠。他故意不给出解释，而承
 "# Bounty hunter sent as a result of GensHannanMachinations, requires stopping payments to gens Hannan *twice*",,,,,,
 GensHannanMachinationsHail,GensHannanMachinationsHail,,$entity.ignorePlayerCommRequests = true,"通讯连接建立，佣兵舰长出现在你面前，双手交叠成尖塔状。
 
-""$playerName。"" $HeOrShe的表情坦率而中立。""当你成为汉南家族的客户时，你会签订一份协议。如果你未能履行那份协议中的职责，我就会得到报酬，并将你变成不尊重 Hannan 氏族的典型。""
+""$playerName。"" $HeOrShe的表情坦率而中立。""当你成为我们氏族的客户时，你会签订一份协议。如果你未能履行那份协议中的职责，我就会得到报酬，并将你变成不尊重 Hannan 氏族的典型。""
 
 $HeOrShe稍等了片刻，然后抱歉地补充道：""我的合同条款要求我必须告诉你这些。我现在将对你发起攻击，我建议你下令进入战斗阵型。"" $HeOrShe伸手准备切断通讯。","cutCommLink2:""有点麻烦，但可以理解。""
 cutCommLink:保持沉默",
@@ -26572,7 +26572,7 @@ TTCR_BountyHunterOptionsButDer2,TTCR_BountyHunterOptions,"$entity.ttcr_derelict
 $player.luddicFaithfulOrChurchCom",,,"ttcrBH_butFaith:""你怎么能攻击同宗信徒$playerBrotherOrSister呢？""",
 TTCR_BountyHunterOptionsCut,TTCR_BountyHunterOptions,,,,cutCommLink:切断通讯链接,
 TTCRBountyHunterWolfpack,TTCRBountyHunterHail,$entity.ttcr_wolfpack,"$entity.ignorePlayerCommRequests = true
-FireAll TTCR_BountyHunterOptions","""$PlayerName，是吗？啊-啊-啊，""$heOrShe发出了一种奇怪的结巴声。你不确定那是笑声，还是真空环境下受损的肺部发出的声音。
+FireAll TTCR_BountyHunterOptions","""$PlayerName，是吗？啊-啊-啊..."" $heOrShe发出了一种奇怪的结巴声。你不确定那是笑声，还是真空环境下受损的肺部发出的声音。
 
 ""能见到我们的劫掠目标，我真是感到 —— 如此愉悦。"" 这位 $post 坐在那里，脸上带着一种奇怪的微笑，眼睛睁得大大的。$HeOrShe似乎满足于只是这样看着你。",,
 ttcrBH_butSelWolfpack,DialogOptionSelected,"$option == ttcrBH_but
@@ -27195,7 +27195,7 @@ sdRaiderCommsAskHow,DialogOptionSelected,$option == sdRaider_askHow,RemoveOption
 
 ""燃料啊，蠢货！你居心不良，妄图通过燃料市场低价竞争间接破坏 辛达强权 战争机器的关键所在，别觉得我们看不出你这点伎俩。""
 
-""现在。"" $HeOrShe呆呆地站着，""以 最高元首 之名，我要轰炸你那可怜的的燃料生产设备，我还要轰炸你拉拢来生产燃料的这帮子流浪汉、犯罪者、下流坯，我要轰炸到你的星球上只剩灰烬！荣耀归于辛达强权！""",cutCommLink:切断通讯链接,
+""现在。"" $HeOrShe呆呆地站着，""以 最高元首 之名，我要轰炸你那可怜的燃料生产设备，我还要轰炸你拉拢来生产燃料的这帮子流浪汉、犯罪者、下流坯，我要轰炸到你的星球上只剩灰烬！荣耀归于辛达强权！""",cutCommLink:切断通讯链接,
 sdRaiderCommsAskCommission,DialogOptionSelected,$option == sdRaider_askCommission,"AdjustRepActivePerson SUSPICIOUS -1
 $option = sdPunEx_sdComReplies 0
 FireBest DialogOptionSelected","$HeOrShe向前一步，表情复杂，解释道。""或许你还算得上不无希望，舰长。辛达强权 之所以如此宣称，是因为你竟敢与我们进行市场竞争，无论你是否知晓后果，无论你是否有意为之 —— 燃料是 辛达 的经济命脉，而你尝试与我们进行市场竞争就是蓄意威胁，就是敌对行为，不管行为轻重。"" $HeOrShe顿了顿，给你留些时间思考自己的背叛行为到底多严重，""这下你懂了吧，舰长。""
@@ -27500,9 +27500,9 @@ $entity.relativeStrength < 0","$player.gaveHegInvestigatorAIresponse = true
 $player.ethosUseAI++
 FireAll HegInvestigatorOptions","$post 神情严峻。
 
-""行星杀手 也是工具呢，之所以只有我们 霸主 作为 人之领 威权的合法继承者，才能合法使用行星杀手这种东西，可不是毫无缘由的。""
+""行星杀手 也是工具呢，之所以只有我们 霸主 作为 人之领 威权的合法继承者，才能合法使用这种东西，可不是毫无缘由的。""
 
-""不管怎么说。""$heOrShe不屑地挥了挥手：""我不是来辩论的，公民，我重复一遍，请允许我方审查你的$shipOrFleet。""",,
+""不管怎么说。"" $heOrShe不屑地挥了挥手：""我不是来辩论的，公民，我重复一遍，请允许我方审查你的$shipOrFleet。""",,
 hegInevestigatorRespAItoolSel,DialogOptionSelected,$option == hegInvestigation_AIrespTool,"$player.gaveHegInvestigatorAIresponse = true
 $player.ethosUseAI++
 FireAll HegInvestigatorOptions","$post 神情更加严峻。
@@ -29739,21 +29739,21 @@ RollProbability 0.5",AddCommodity crew 47,,,
 BarHRESpeechC,DialogOptionSelected,$option == barHRE_speechC,"AdjustRep faction.id COOPERATIVE 1
 $player.ethosCocky++","你开始讲话了，声音很低，语速很慢，暗示酒吧的大家要安静，顺带还得让其他人也安静，才能听清你讲的话。
 
-正当大家都注意到你的时候，你开始添油加醋的讲述你一路上遇到的的种种危险，经历的种种试炼 —— 你到底是怎样，才能一直活到现在，来到这里，向大家讲述自己的传奇。你讲述着自己一路上的所作所为，台下观众全神贯注，时而大笑，时而欢呼，时而沉默。临近末尾，你情绪愈发高涨，不知怎的就将你的所有成就与 $theMarketFaction 的荣耀联系起来，引得满堂喝彩。
+正当大家都注意到你的时候，你开始添油加醋地讲述你一路上遇到的种种危险，经历的种种试炼 —— 你到底是怎样，才能一直活到现在，来到这里，向大家讲述自己的传奇。你讲述着自己一路上的所作所为，台下观众全神贯注，时而大笑，时而欢呼，时而沉默。临近末尾，你情绪愈发高涨，不知怎的就将你的所有成就与 $theMarketFaction 的荣耀联系起来，引得满堂喝彩。
 
 不知为何，你就成了今天的主角，虽然刚刚进入酒吧的时候只有少数几个人知晓。",barHRE_transitionOut:继续,
 BarHRESpeechCindie,DialogOptionSelected,"$option == barHRE_speechC
 $faction.id == independent","AdjustRep faction.id COOPERATIVE 1
-$player.ethosCocky++","你开始讲话了，声音很低，语速很慢，暗示酒吧的大家要安静，顺带还得让其他人也安静，才能听清你讲的话。
+$player.ethosCocky++","你开始讲话了，声音很低，语速很慢，暗示酒吧里的大家要安静，顺带还得让其他人也安静，才能听清你讲的话。
 
-正当大家都注意到你的时候，你开始添油加醋的讲述你一路上遇到的的种种危险，经历的种种试炼 —— 你到底是怎样，才能一直活到现在，来到这里，向大家讲述自己的传奇。你讲述着自己一路上的所作所为，台下观众全神贯注，时而大笑，时而欢呼，时而沉默。临近末尾，你情绪愈发高涨，不知怎的就将你的所有成就与全体独立政体与宇宙民的荣耀联系起来，引得满堂喝彩。
+正当大家都注意到你的时候，你开始添油加醋地讲述你一路上遇到的种种危险，经历的种种试炼 —— 你到底是怎样，才能一直活到现在，来到这里，向大家讲述自己的传奇。你讲述着自己一路上的所作所为，台下观众全神贯注，时而大笑，时而欢呼，时而沉默。临近末尾，你情绪愈发高涨，不知怎的就将你的所有成就与全体独立政体与宇宙民的荣耀联系起来，引得满堂喝彩。
 
 不知为何，你就成了今天的主角，虽然刚刚进入酒吧的时候只有少数几个人知晓。",barHRE_transitionOut:继续,
 BarHRESpeechCpirates,DialogOptionSelected,"$option == barHRE_speechC
 $faction.id == pirates","AdjustRep faction.id COOPERATIVE 1
-$player.ethosCocky++","你开始讲话了，声音很低，语速很慢，暗示酒吧的大家要安静，顺带还得让其他人也安静，才能听清你讲的话。
+$player.ethosCocky++","你开始讲话了，声音很低，语速很慢，暗示酒吧里的大家要安静，顺带还得让其他人也安静，才能听清你讲的话。
 
-正当大家都注意到你的时候，你开始添油加醋的讲述你一路上遇到的的种种危险，经历的种种试炼 —— 你到底是怎样，才能一直活到现在，来到这里，向大家讲述自己的传奇。你讲述着自己一路上的所作所为，台下观众全神贯注，时而大笑，时而欢呼，时而沉默。临近末尾，你情绪愈发高涨，不知怎的就将你的所有成就与全英仙座性情火爆，无拘无束的海盗们联系起来，引得满堂喝彩。
+正当大家都注意到你的时候，你开始添油加醋地讲述你一路上遇到的种种危险，经历的种种试炼 —— 你到底是怎样，才能一直活到现在，来到这里，向大家讲述自己的传奇。你讲述着自己一路上的所作所为，台下观众全神贯注，时而大笑，时而欢呼，时而沉默。临近末尾，你情绪愈发高涨，不知怎的就将你的所有成就与全英仙座性情火爆，无拘无束的海盗们联系起来，引得满堂喝彩。
 
 不知为何，你就成了今天的主角，虽然刚刚进入酒吧的时候只有少数几个人知晓。",barHRE_transitionOut:继续,
 BarHREHumble1,DialogOptionSelected,$option == barHighRepEventHumble1,"AdjustRep independent COOPERATIVE 1

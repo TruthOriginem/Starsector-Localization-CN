@@ -1,9 +1,9 @@
 id,name,order,tier,reqPoints,reqPointsPerExtraSkill,description,author,combat officer,admiral,admin,tags,icon,
 # COMBAT,,,,,,,,,,,,,
 helmsmanship,操舵技术,10,1,0,,燃料混合比对了的话，引擎就会发出像这样...[轻哼]...的歌声。浑然天成，万物合一。这样干上一班的感觉和刚睡醒一样舒服。[大笑] 这种感觉没法告诉你。,Nachiketa 港区访谈录，第三集,TRUE,,,,graphics/icons/skills/helmsmanship.png,
-combat_endurance,战斗耐力,20,1,0,,"经历灾难，第十四战斗群历久弥新。
-继以霸主，人之领方得延续。
-唯有责任，人性将获永存。",Kali Molina 海军上将 - [霸主宣言] 星历 49 年,TRUE,,,,graphics/icons/skills/combat_endurance3.png,
+combat_endurance,战斗耐力,20,1,0,,"坚韧不拔，曾引导十四战群渡过灾难。
+坚持不懈，正引导霸主重建人之领。
+艰苦奋斗，将引导人类达成使命。",Kali Molina 海军上将 - [霸主宣言] 星历 49 年,TRUE,,,,graphics/icons/skills/combat_endurance3.png,
 impact_mitigation,冲击缓解,30,2,0,,舰船采取机动，使冲击角度产生了斜向偏移，把弹体的冲击力完全分散到了泡沫金属层中。不幸的是，由于震荡产生的时机非常不凑巧，让正在进行重型机械日常运输作业的船员 York 惨遭不测。,发生于星历 120.03.08 的 Thule 小规模冲突，海军都统 Zhou 提交的行动后检视报告,TRUE,,,,graphics/icons/skills/impact_mitigation.png,
 damage_control,损伤管制,40,2,0,,逝者已逝。就让那些隔舱自己烧干净吧，把你们的精力都集中到能让我们再多活一小时的事情上去。,海军都统 Tethys，对 PLS Astelene Key 船员的最后一次演讲,TRUE,,,,graphics/icons/skills/damage_control2.png,
 field_modulation,相场调制,50,2,0,,"很少有人具有我认其为 ""主动调音"" 的天赋。我觉得音乐家才是最好的护盾操作员。",出自 Ardis Soloman，提交 COMSEC 接受算法审核时意外泄露的数据,TRUE,,,active_defenses,graphics/icons/skills/field_modulation.png,
@@ -13,16 +13,16 @@ ballistic_mastery,实弹精通,80,4,0,,"是什么阻止了速子的阴谋？(大
 是什么被老卢德忘在脑后？(大炮！)
 是什么我们有而他们没有？(更大，更大，更大的大炮！)",霸主海军的劝酒歌,TRUE,,,ballistic_weapons,graphics/icons/skills/ranged_specialization.png,
 systems_expertise,系统专长,90,5,4,2,不，我不觉得有什么矛盾的，这是一... 呃... 一场灵魂之旅，你在接受考验。不过就像那句话说的，恶魔就藏在细节之中。,"""卢德士卒"" 全息档案，对左径工程师的采访部分",TRUE,,,,graphics/icons/skills/systems_expertise.png,
-missile_specialization,导弹特化,100,5,4,2,我的同事也觉得他们自己的那些鬼点子很没品。你可以让这些小飞船打破所有的安全准则，毕竟完全不需要考虑它们在降落时是否撑得住。,前军械设计师 K.Astraia 于 Culann 星际锻炉发表的离职面谈,TRUE,,,missile_weapons,graphics/icons/skills/missile_specialization2.png,
+missile_specialization,导弹特化,100,5,4,2,我的同事也觉得他们的鬼点子很没品。你可以让这些小飞船打破所有的安全准则，毕竟完全不需要考虑它们在降落时是否撑得住。,前军械设计师 K.Astraia 于 Culann 星际锻炉发表的离职面谈,TRUE,,,missile_weapons,graphics/icons/skills/missile_specialization2.png,
 ,,,,,,,,,,,,,
 # LEADERSHIP,,,,,,,,,,,,,
 tactical_drills,战术演习,500,1,0,,"完美。
 现在再来一次。",Cameron Fourth-Phobos 附近，Coatl 射击场,,TRUE,,,graphics/icons/skills/weapon_drills.png,
 coordinated_maneuvers,协调机动,520,2,0,,长官，来袭的敌舰正在全速前进，有一艘 —— 两艘，不，三艘，还在增加... 他们数量太多了！高能读数确认，六秒后接敌。,HSS Ceraon 号最高司令官的音频档案，恢复于 189.09.13,,TRUE,,,graphics/icons/skills/coordinated_maneuvers2.png,
 wolfpack_tactics,狼群战术,530,2,0,,一支只想着摆出那些没下过办公桌的军官喜欢的花架子的舰队，不过是头引颈受戮的贱畜。放出猎犬，我们才能再次化为群狼。,军阀 Kanta 所言，引用于 [我当海盗女王的那些年],,TRUE,,,graphics/icons/skills/wolfpack.png,
-crew_training,船员训练,540,2,0,,我懂你们这群人是什么样的，刚签合约的时候靴子上甚至还满是泥巴，现在倒是一个个都准备好当太空人了？霸主的战争宣传片看太多了是吧？给我记好了：蛮勇不值得鼓励，好的船员就该踏实完成工作，逞英雄只会害得我们全部没命。,Chaiya Mimas 于速子分舰队入职培训介绍会上的讲话,,TRUE,,,graphics/icons/skills/crew_training.png,
+crew_training,船员训练,540,2,0,,我懂你们这种人，刚签合约的时候靴子上都还满是泥巴，现在倒是一个个地准备好当太空人了？霸主的战争宣传全息片看太多了是吧？全都给我记好了：蛮勇不值得鼓励，逞英雄只会害得我们全都送命。好的船员就该踏实完成你手上的工作。,Chaiya Mimas 于速子分舰队入职培训介绍会上的讲话,,TRUE,,,graphics/icons/skills/crew_training.png,
 fighter_uplink,战机传讯,1050,3,0,,那些开战机的老粗总是吹嘘着他们的传奇，但他们只不过是我手中长矛的矛尖罢了。,霸主海军 Jensulte 准将于星历 82 年,,TRUE,,,graphics/icons/skills/fighter_uplink2.png,
-carrier_group,航母集群,550,3,0,,统计数据说他们会被防空弹幕蒸发，活不过六次出击任务。但是我们还是想成为他们中的一员。只要进了驾驶舱，他们才是舰队里唯一能完全掌握自己命运的人。,Nachiketa 港区访谈录，第四集,,TRUE,,,graphics/icons/skills/carrier_command.png,
+carrier_group,航母集群,550,3,0,,统计数据说他们会被防空弹幕全数蒸发，活不过六次出击任务。但是我们还是向往着成为他们中的一员。只要进了驾驶舱，他们才是舰队里唯一能完全掌握自己命运的人。,Nachiketa 港区访谈录，第四集,,TRUE,,,graphics/icons/skills/carrier_command.png,
 officer_training,军官训练,560,4,3,,他们或许是一群放不上台面的佣兵、走私犯、海盗，但如果你给予他们值得为之而战的事物，那我认为他们一定能还你一个惊喜。,出自海军都统 Nurul Park 对 Cibolan 海军整合后的评论,,TRUE,,,graphics/icons/skills/officer_training.png,
 officer_management,军官管理,570,4,3,,作战形势严峻，因此我向佣兵船长们开出了双倍的作战报酬。但在经历了伤亡之后我只需要给剩下来的一半人付钱，所以还是挺合算的。,Carson Kang，速子科技 Valhalla 分舰队主管,,TRUE,,,graphics/icons/skills/officer_management.png,
 best_of_the_best,万里挑一,580,5,4,2,Artemisia，我们所拥有的，是星币没法买到的东西。,Orcus Rao，在结束第二次 AI 战争的谈判中 (未证实),,TRUE,,,graphics/icons/skills/best_of_the_best.png,
@@ -31,8 +31,8 @@ force_concentration,力量集中,590,5,4,2,当我在我认为合适的时间和�
 ,,,,,,,,,,,,,
 # TECHNOLOGY,,,,,,,,,,,,,
 navigation,精准导航,1000,1,0,0,只要在上面花了足够的时间，这就能成为你的第二本能。我做梦的时候都能掌舵，即使不是每个人都有这样的天分，但大部分人能做到。,Nachiketa 港区访谈录，第二集,,,,,graphics/icons/skills/navigation.png,
-sensors,传感探测,1010,1,0,0,我看见你了，小鱼仔！,出自 ISS Green Flash 号的通讯缓存，恢复于 Beta Zuma B 的轨道上,,,,,graphics/icons/skills/sensors.png,
-gunnery_implants,火控植入,1020,2,1,0,长期使用可能导致使用者难以将植入物产生的增强现实知觉与正常感官知觉加以区分。心理健康保全员应该基于以下标准经常性地检查炮手是否有弭患植入物性思觉失调的迹象...,新型领导框架：霸主 军官手册,TRUE,,,,graphics/icons/skills/gunnery_implants.png,
+sensors,传感探测,1010,1,0,0,看到你了，小鱼仔！,出自 ISS Green Flash 号的通讯缓存，恢复于 Beta Zuma B 的轨道上,,,,,graphics/icons/skills/sensors.png,
+gunnery_implants,火控植入,1020,2,1,0,长期使用可能会导致使用者难以区分由植入物产生的现实增强知觉和正常的感官知觉。心理健康保全员应该经常性地参照以下标准检查炮手是否有弭患植入物性思觉失调的迹象...,新型领导框架：霸主 军官手册,TRUE,,,,graphics/icons/skills/gunnery_implants.png,
 energy_weapon_mastery,能量精通,1030,2,1,0,天使之眼匿于面世之初，现于卑微之地，此乃神之慈悲。然今其奥妙被裸呈于无知残酷者之前，任由其可怖之怒狂躁肆虐。悲也。,卢德圣典,TRUE,,,energy_weapons,graphics/icons/skills/energy_weapon_mastery.png,
 electronic_warfare,电子对抗,1040,4,2,0,"错误。401 // 连接被拒绝 [是否重试？]
 错误。401 // 连接被拒绝 [是否重试？]
@@ -56,7 +56,7 @@ containment_procedures,密闭流程,1550,4,2,,封口查三遍，死神不来见�
 makeshift_equipment,临时设备,1560,4,2,,我们好像把备用零件忘在轨道上了，不过没事...[静电杂音]...看好了啊 ——,"""H"" 探索小队的领袖 Jericho Wheeler 的音频备份转录",,,,,graphics/icons/skills/makeshift_equipment.png,
 industrial_planning,工业规划,1570,4,2,,一个荒芜但具有潜力的星球，位置便于成为 Magec 的文化和工业中心，虚拟模型预计在开发 Guayota 吸积盘的资源上将需要大量投资。,速子科技战略开发备忘录，大崩塌前,,,TRUE,,graphics/icons/skills/industrial_planning.png,
 derelict_contingent,废船舰队,1590,5,4,2,漂亮星舰里的高管和提督们觉得我们一文不值，一旦战局不妙，他们会毫不犹豫地抛下我们。但我们才是建立这片星区的基石！只有我们才能砍翻那群混蛋！,不知名的海盗煽动者，出自 HEGINT 监视报告,,TRUE,,player_only,graphics/icons/skills/derelict_contingent.png,
-hull_restoration,船体修复,1580,5,4,2,船体再破烂也无法阻止一名真正的宇宙民的归家之路。,Sol Secondshift，资深打捞员,,,,,graphics/icons/skills/recovery_ops.png,
+hull_restoration,船体修复,1580,5,4,2,对于真正的宇宙民来说，就没有开不回家的船。,Sol Secondshift，资深打捞员,,,,,graphics/icons/skills/recovery_ops.png,
 ,,,,,,,,,,,,,
 ,,,,,,,,,,,,,
 ,,,,,,,,,,,,,
