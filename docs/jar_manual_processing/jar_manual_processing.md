@@ -15,11 +15,16 @@
 | starfarer_obf.jar:<br/>com/fs/starfarer/launcher/opengl/GLLauncher.class | `sound` |
 | starfarer_obf.jar:<br/>com/fs/starfarer/ui/newui/X.class | `next` |
 | starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class | `fleets` |
+| starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/intel/misc/TradeFleetDepartureIntel.class | `goods` |
+| starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/intel/misc/TradeFleetDepartureIntel.class | `materiel` |
 
 ## 代码逻辑修改
 
 ### 1. 存档页面存档难度文本
 相关文件：`starfarer_obf.jar:com/fs/starfarer/campaign/save/LoadGameDialog$o.class`
+
+> 解决方法：通过在API的Misc.ucFirst()注入了switch语句，将难度id映射到中文难度
+
 ![difficulty_ui.png](difficulty_ui.png)
 
 这里的 `Normal` 是直接读取了 SaveGameData 的 difficulty 属性，可能的值为 `normal` 和 `easy`，并令其开头大写。
@@ -35,6 +40,9 @@
 
 ### 3. 蓝图浏览器页面船体规模文本
 相关文件：`starfarer_obf.jar:com/fs/starfarer/campaign/command/N.class`
+
+> 解决方法：通过在API的Misc.ucFirst()注入了switch语句，将难度id映射到中文难度
+
 ![blueprint_browser_hull_size.png](blueprint_browser_hull_size.png)
 
 这里读取了舰船的 getHullSize().name().toLowerCase() 作为船体规模文本，
@@ -69,7 +77,7 @@
 ### 7. 敌对活动事件名称为英文 'Hostilities'
 相关文件：`starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/FactionHostilityIntel.class`
 
-> 尝试直接翻译文件内的tag
+> 解决方法：直接翻译文件内的tag string "Hostilities" 为 "敌对活动"
 
 ![hostilities_intel_title.png](hostilities_intel_title.png)
 
@@ -81,8 +89,8 @@
 ### 8. 战斗页面舰船部署提示字体不显示
 相关文件：`starfarer_obf.jar:com/fs/starfarer/E/B/OOoOOOOOOOOO....class`
 
-![combat-ship_deployment_note.jpg](combat-ship_deployment_note.jpg)
+> 解决方法：修改文件中调用的字体为UI标准字体，字体大小从21调整为14
 
-修改字体为标准字体，字体大小从21调整为14
+![combat-ship_deployment_note.jpg](combat-ship_deployment_note.jpg)
 
 ![combat-ship_deployment_note-after.jpg](combat-ship_deployment_note-after.jpg)
