@@ -10,7 +10,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 
 在战斗中该舰会积极迎击敌人并表现得如同战斗舰船一般。",提高船体结构值、装甲强度、以及幅能容量。,,graphics/hullmods/assault_package.png
 自动修复单元,autorepair,2,,,"engines, defensive, merc, standard",防御,7500,,,,3,6,9,15,data.hullmods.AutomatedRepairUnit,降低 %s 在战斗中修复受损武器及引擎的时间。,提高战斗中武器的维修速率。,将武器与引擎的修复时间降低至 %s，且降低 %s 舰船过载持续时间。,graphics/hullmods/automated_repair_unit.png
-辅助推进器,auxiliarythrusters,1,,,"engines, merc, standard",引擎,5000,TRUE,,,4,8,12,20,data.hullmods.AuxiliaryThrusters,提高舰船 %s 机动性，如加速度/减速度/转向加速/转向角速。,提高舰船的机动性。,"提高 ""零幅能加速"" 状态下的航速增益 %s 且将旋转速度增益 %s 。",graphics/hullmods/auxilliary_thrusters.png
+辅助推进器,auxiliarythrusters,1,,,"engines, merc, standard",引擎,5000,TRUE,,,4,8,12,20,data.hullmods.AuxiliaryThrusters,提高舰船 %s 机动性，如加速度/减速度/转向加速/转向角速。,提高舰船的机动性。,"提高 ""零幅能加速"" 状态下的航速增益 %s 且将旋转速度增益 %s。",graphics/hullmods/auxilliary_thrusters.png
 弹道测距仪,ballistic_rangefinder,2,,,"offensive, merc, standard",武器,8000,,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.BallisticRangefinder,提高实弹槽位上中小型武器的射程。,提高实弹槽位上中小型武器的射程。,,graphics/hullmods/ballistic_rangefinder.png
 防爆气密门,blast_doors,0,,,"defensive, merc, standard",防御,2500,TRUE,,,4,8,12,20,data.hullmods.BlastDoors,"在各个要害部位加装坚固的密封门，提高 %s 船体结构值。
 
@@ -33,7 +33,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 电子对抗组件,ecm,2,,,"offensive, special, merc, standard","武器, 支援",4000,,,,6,12,18,24,com.fs.starfarer.api.impl.hullmods.ECMPackage,在战斗时，根据舰船级别，提高 %s/%s/%s/%s 电子战强度。,提高舰船的电子战强度。,,graphics/hullmods/ecm_package.png
 护航套件,escort_package,1,,,"special, weapons, engines, standard","特殊, 武器, 引擎",8000,,,,5,7,15,25,com.fs.starfarer.api.impl.hullmods.EscortPackage,"当附近 %s 单位距离内存在更大的友方舰船时，提高 %s 机动性，并提高 %s 最高航速，还将提高实弹武器和能量武器 %s 射程。
 
-当自身为 驱逐舰 且附近存在友方 主力舰 时，上述增益将 %s 。",靠近更大的友方舰船时，提高机动性、最高航速、以及武器的射程。,当自身为 驱逐舰 时，额外降低护盾受到的伤害 %s 。,graphics/hullmods/escort_package.png
+当自身为 驱逐舰 且附近存在友方 主力舰 时，上述增益将 %s。",靠近更大的友方舰船时，提高机动性、最高航速、以及武器的射程。,当自身为 驱逐舰 时，额外降低护盾受到的伤害 %s。,graphics/hullmods/escort_package.png
 扩编飞行甲板人员,expanded_deck_crew,1,,,"special, merc, standard",战机,4000,,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.ExpandedDeckCrew,"降低 %s 战机损失时整备下降速率，提高 %s 整备恢复速率。
 
 每个甲板都会让该舰的最低船员需求提高 %s 名。",提高战机整备速率，但需要更多的船员来维持。,,graphics/hullmods/expanded_deck_crew.png
@@ -64,10 +64,10 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 导航中继器,nav_relay,2,,,"engines, special, merc, standard","引擎, 支援",5000,,,,10,15,20,25,com.fs.starfarer.api.impl.hullmods.NavRelay,"当该舰投入战斗时，根据舰船级别，提高 %s/%s/%s/%s 的舰队导航评级。
 
 导航评级会提高你所部署舰船的最高航速。",提高已部署的舰船在战斗时的最高航速。,,graphics/hullmods/nav_relay.png
-神经接口,neural_interface,3,,,"special, no_build_in, no_drop, no_drop_salvage",特殊,10000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.NeuralInterface,"将旗舰与其他舰船连接起来，使它们均可 %s 。但诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果将不在另一艘舰船上起作用。
+神经接口,neural_interface,3,,,"special, no_build_in, no_drop, no_drop_salvage",特殊,10000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.NeuralInterface,"将旗舰与其他舰船连接起来，使它们均可 %s。但诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果将不在另一艘舰船上起作用。
 
 允许在连接舰船之间快速切换，且无需通过穿梭机转移。如果二者的总部署成本小于或等于 %s，则切换将瞬间完成。切换目标舰船不能由副官或 AI 核心操控。",允许在舰船之间快速切换，并重置战术系统的冷却时间或恢复一次充能。,,graphics/hullmods/neural_interface.png
-神经集成器,neural_integrator,,,,"special, no_build_in, no_drop, no_drop_salvage",特殊,10000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.NeuralIntegrator,"用于自主无人舰的增强版 神经接口，通过链接直接控制舰船的所有系统，可以与你的旗舰连接起来，使它们均可 %s 。但诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果将不在另一艘舰船上起作用。
+神经集成器,neural_integrator,,,,"special, no_build_in, no_drop, no_drop_salvage",特殊,10000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.NeuralIntegrator,"用于自主无人舰的增强版 神经接口，通过链接直接控制舰船的所有系统，可以与你的旗舰连接起来，使它们均可 %s。但诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果将不在另一艘舰船上起作用。
 
 允许在连接舰船之间快速切换，且无需通过穿梭机转移。如果二者的总部署成本小于或等于 %s，则切换将瞬间完成。切换目标舰船不能由副官或 AI 核心操控。
 
@@ -77,7 +77,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 定向护盾的展开速度是全角护盾的两倍，这也适用于本插件转化而来的定向护盾。",将全盾转换为前盾，并增大护盾面积。,降低 %s 护盾承受的伤害。,graphics/hullmods/front_shield_emitter.png
 全角护盾转化器,adaptiveshields,3,,,"shields, defensive, merc, standard",护盾,7000,,,,3,5,8,12,data.hullmods.OmniShieldEmitter,以降低 %s 护盾角度为代价，将前置护盾转化为全角护盾。,将前盾转化为全盾，降低护盾面积。,取消本插件导致的护盾角度降低。,graphics/hullmods/omni_shield_emitter_mod.png
 作战中心,operations_center,1,,,special,特殊,5000,,,,30,30,30,30,com.fs.starfarer.api.impl.hullmods.OperationsCenter,当安装在旗舰上时，将会提高 %s 指挥点恢复速率。,如果安装在旗舰则提高指挥点恢复速率。,,graphics/hullmods/operations_center.png
-相位锚点,phase_anchor,3,,,"phase, merc, no_build_in, standard, phase_brawler",相位,7000,,,,10,20,30,50,com.fs.starfarer.api.impl.hullmods.PhaseAnchor,"将相位线圈的激活幅能降至 %s。并且在相位隐形时，将软幅能耗散速率与备弹量恢复速率提高至 %s 。
+相位锚点,phase_anchor,3,,,"phase, merc, no_build_in, standard, phase_brawler",相位,7000,,,,10,20,30,50,com.fs.starfarer.api.impl.hullmods.PhaseAnchor,"将相位线圈的激活幅能降至 %s。并且在相位隐形时，将软幅能耗散速率与备弹量恢复速率提高至 %s。
 
 当该舰即将被摧毁或停机时，将自动消耗部署成本 %s 的战备值 (CR)，然后紧急下潜至相位空间深处，视为从战斗中撤退。不过，该舰必须拥有足以用于消耗的战备值 (CR)，才能启用这种紧急下潜。
 
@@ -132,7 +132,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 感应雷区,stealth_minefield_lt,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.StealthMinefieldLT,战场周遭会布置大量感应空雷，并破坏靠近的敌舰。,战场周遭会布置大量感应空雷，并破坏靠近的敌舰。,,graphics/hullmods/stealth_mines.png
 后备甲板,bdeck,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.BDeck,"当战机整备速率下降到 %s 时，舰船将换用一套备用甲板，每次战斗可使用一次。
 
-切换至备用甲板时，将迅速部署后备战机以补满本舰部署的全部战机联队，并使战机整备速率恢复至 %s 。",每场战斗可以恢复一次整备速率并部署补充战机。,,graphics/hullmods/bdeck.png
+切换至备用甲板时，将迅速部署后备战机以补满本舰部署的全部战机联队，并使战机整备速率恢复至 %s。",每场战斗可以恢复一次整备速率并部署补充战机。,,graphics/hullmods/bdeck.png
 战机底盘储备,chassis_storage,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.FighterChassisStorage,即便战机遭到破坏，也不会降低战机整备速率。,战机整备速率不会下降。,,graphics/hullmods/expanded_deck_crew.png
 保持开盾,shield_always_on,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.ShieldAlwaysOn,,强制开启护盾。,,graphics/hullmods/hardened_shields.png
 导弹自动工厂,missile_reload,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PeriodicMissileReload,内置的导弹工厂会定期补满所有导弹武器。,内置的导弹工厂会定期补满所有导弹武器。,,graphics/hullmods/expanded_missile_racks.png
@@ -142,7 +142,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 磁通分流,fluxshunt,,,,,,,,TRUE,,10,20,30,50,data.hullmods.FluxShunt,允许舰船以 %s 的正常耗散速率在护盾开启时耗散硬幅能。,允许舰船在展开护盾时耗散硬幅能。,,graphics/hullmods/flux_shunt.png
 民用级舰体,civgrade,,,,,,,,TRUE,,0,0,0,0,data.hullmods.CivGrade,提高 %s 传感器截面，降低 %s 传感器探测强度。,提高传感器截面，降低传感器探测强度。,,graphics/hullmods/civilian_grade.png
 高维护需求,high_maintenance,,,,,,,,TRUE,,0,0,0,0,data.hullmods.HighMaintenance,提高 %s 的每月维护所需补给。,提高维护成本。,,graphics/hullmods/high_maintenance.png
-能量弹体同调器,coherer,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.EnergyBoltCoherer,<tooltip created in the script>,增加 非光束 能量武器的基础射程。,,graphics/hullmods/coherer.png
+能量弹体同调器,coherer,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.EnergyBoltCoherer,<tooltip created in the script>,提高 非光束 能量武器的基础射程。,,graphics/hullmods/coherer.png
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
@@ -213,9 +213,9 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 但部署所需补给下降 %s。",,,graphics/hullmods/compromised_hull.png
 老化引擎,degraded_engines,,,,"dmod, damage",,,,TRUE,,0,0,0,0,data.hullmods.DegradedEngines,"由于受到了战斗损伤，或是有生产缺陷，亦或是年久失修，该舰引擎的战斗表现已经大不如前。
 
-战斗中最大航速与机动性均降低 %s 。
+战斗中最大航速与机动性均降低 %s。
 
-但部署所需补给下降 %s 。",,,graphics/hullmods/degraded_engines.png
+但部署所需补给下降 %s。",,,graphics/hullmods/degraded_engines.png
 驱动力场故障,degraded_drive_field,,,,"dmod, damage, civOnly",,,,TRUE,,0,0,0,0,data.hullmods.DegradedDriveField,"由于受到了战斗损伤，或是有生产缺陷，亦或是年久失修，该舰的驱动力场性能已经永久性降低。
 
 宇宙航速下降 %s，被侦测范围上升 %s。

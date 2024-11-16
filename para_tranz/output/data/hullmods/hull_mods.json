@@ -478,8 +478,8 @@
     {
         "key": "hull_mods.csv#auxiliarythrusters$sModDesc",
         "original": "Increases the 0-flux speed boost by %s, and %s the 0-flux turn rate bonus.",
-        "translation": "提高 \"零幅能加速\" 状态下的航速增益 %s 且将旋转速度增益 %s 。",
-        "stage": 5,
+        "translation": "提高 \"零幅能加速\" 状态下的航速增益 %s 且将旋转速度增益 %s。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0008行\n[本行原始数据]\n{'name': 'Auxiliary Thrusters',\n 'id': 'auxiliarythrusters',\n 'tier': '1',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'engines, merc, standard',\n 'uiTags': 'Engines',\n 'base value': '5000',\n 'unlocked': 'TRUE',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '4',\n 'cost_dest': '8',\n 'cost_cruiser': '12',\n 'cost_capital': '20',\n 'script': 'data.hullmods.AuxiliaryThrusters',\n 'desc': \"Increases the ship's maneuverability by %s.\",\n 'short': 'Increases maneuverability.',\n 'sModDesc': 'Increases the 0-flux speed boost by %s, and %s the 0-flux turn '\n             'rate bonus.',\n 'sprite': 'graphics/hullmods/auxilliary_thrusters.png'}"
     },
     {
@@ -541,8 +541,8 @@
     {
         "key": "hull_mods.csv#bdeck$desc",
         "original": "Once per combat, when the fighter replacement rate reaches %s, the fighter launch bays are switched over to operate from a \"B-Deck\".\n\nStandby fighters are launched to rapidly bring the wings back up to full strength, and the fighter replacement rate is set to %s.",
-        "translation": "当战机整备速率下降到 %s 时，舰船将换用一套备用甲板，每次战斗可使用一次。\n\n切换至备用甲板时，将迅速部署后备战机以补满本舰部署的全部战机联队，并使战机整备速率恢复至 %s 。",
-        "stage": 5,
+        "translation": "当战机整备速率下降到 %s 时，舰船将换用一套备用甲板，每次战斗可使用一次。\n\n切换至备用甲板时，将迅速部署后备战机以补满本舰部署的全部战机联队，并使战机整备速率恢复至 %s。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0070行\n[本行原始数据]\n{'name': 'B-Deck',\n 'id': 'bdeck',\n 'tier': '',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': '',\n 'uiTags': '',\n 'base value': '',\n 'unlocked': '',\n 'hidden': 'TRUE',\n 'hiddenEverywhere': '',\n 'cost_frigate': '0',\n 'cost_dest': '0',\n 'cost_cruiser': '0',\n 'cost_capital': '0',\n 'script': 'com.fs.starfarer.api.impl.hullmods.BDeck',\n 'desc': 'Once per combat, when the fighter replacement rate reaches %s, the '\n         'fighter launch bays are switched over to operate from a \"B-Deck\".\\n'\n         '\\n'\n         'Standby fighters are launched to rapidly bring the wings back up to '\n         'full strength, and the fighter replacement rate is set to %s.',\n 'short': 'Launches fresh wing once per combat and replenishes the replacement '\n          'rate.',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/bdeck.png'}"
     },
     {
@@ -653,7 +653,7 @@
     {
         "key": "hull_mods.csv#coherer$short",
         "original": "Increases base range of non-beam energy weapons.",
-        "translation": "增加 非光束 能量武器的基础射程。",
+        "translation": "提高 非光束 能量武器的基础射程。",
         "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0080行\n[本行原始数据]\n{'name': 'Energy Bolt Coherer',\n 'id': 'coherer',\n 'tier': '',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': '',\n 'uiTags': '',\n 'base value': '',\n 'unlocked': '',\n 'hidden': 'TRUE',\n 'hiddenEverywhere': '',\n 'cost_frigate': '0',\n 'cost_dest': '0',\n 'cost_cruiser': '0',\n 'cost_capital': '0',\n 'script': 'com.fs.starfarer.api.impl.hullmods.EnergyBoltCoherer',\n 'desc': '<tooltip created in the script>',\n 'short': 'Increases base range of non-beam energy weapons.',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/coherer.png'}"
     },
@@ -940,8 +940,8 @@
     {
         "key": "hull_mods.csv#degraded_engines$desc",
         "original": "Whether due to battle damage, manufacturing defects, or cycles of poor maintenance, this ship's engines are suffering from permanently degraded combat performance. \n\nTop speed and maneuverability in combat reduced by %s.\n\nSupply cost to recover from deployment reduced by %s.",
-        "translation": "由于受到了战斗损伤，或是有生产缺陷，亦或是年久失修，该舰引擎的战斗表现已经大不如前。\n\n战斗中最大航速与机动性均降低 %s 。\n\n但部署所需补给下降 %s 。",
-        "stage": 5,
+        "translation": "由于受到了战斗损伤，或是有生产缺陷，亦或是年久失修，该舰引擎的战斗表现已经大不如前。\n\n战斗中最大航速与机动性均降低 %s。\n\n但部署所需补给下降 %s。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0121行\n[本行原始数据]\n{'name': 'Degraded Engines',\n 'id': 'degraded_engines',\n 'tier': '',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'dmod, damage',\n 'uiTags': '',\n 'base value': '',\n 'unlocked': '',\n 'hidden': 'TRUE',\n 'hiddenEverywhere': '',\n 'cost_frigate': '0',\n 'cost_dest': '0',\n 'cost_cruiser': '0',\n 'cost_capital': '0',\n 'script': 'data.hullmods.DegradedEngines',\n 'desc': 'Whether due to battle damage, manufacturing defects, or cycles of '\n         \"poor maintenance, this ship's engines are suffering from permanently \"\n         'degraded combat performance. \\n'\n         '\\n'\n         'Top speed and maneuverability in combat reduced by %s.\\n'\n         '\\n'\n         'Supply cost to recover from deployment reduced by %s.',\n 'short': '',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/degraded_engines.png'}"
     },
     {
@@ -1220,7 +1220,7 @@
     {
         "key": "hull_mods.csv#escort_package$desc",
         "original": "When this ship is within approximately %s su of a larger friendly vessel, increases this ship's maneuverability by %s, and top speed by %s. Also increases ballistic and energy weapon range by %s.\n\nThese bonuses are %s for destroyers when the nearby friendly is a capital ship.",
-        "translation": "当附近 %s 单位距离内存在更大的友方舰船时，提高 %s 机动性，并提高 %s 最高航速，还将提高实弹武器和能量武器 %s 射程。\n\n当自身为 驱逐舰 且附近存在友方 主力舰 时，上述增益将 %s 。",
+        "translation": "当附近 %s 单位距离内存在更大的友方舰船时，提高 %s 机动性，并提高 %s 最高航速，还将提高实弹武器和能量武器 %s 射程。\n\n当自身为 驱逐舰 且附近存在友方 主力舰 时，上述增益将 %s。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0017行\n[本行原始数据]\n{'name': 'Escort Package',\n 'id': 'escort_package',\n 'tier': '1',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'special, weapons, engines, standard',\n 'uiTags': 'Special, Weapons, Engines',\n 'base value': '8000',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '5',\n 'cost_dest': '7',\n 'cost_cruiser': '15',\n 'cost_capital': '25',\n 'script': 'com.fs.starfarer.api.impl.hullmods.EscortPackage',\n 'desc': 'When this ship is within approximately %s su of a larger friendly '\n         \"vessel, increases this ship's maneuverability by %s, and top speed \"\n         'by %s. Also increases ballistic and energy weapon range by %s.\\n'\n         '\\n'\n         'These bonuses are %s for destroyers when the nearby friendly is a '\n         'capital ship.',\n 'short': 'Increases maneuverability, top speed, and weapon range when near a '\n          'larger friendly ship.',\n 'sModDesc': 'Destroyers: reduces the amount of damage taken by shields by %s. '\n             'No added effect for cruisers.',\n 'sprite': 'graphics/hullmods/escort_package.png'}"
     },
@@ -1234,8 +1234,8 @@
     {
         "key": "hull_mods.csv#escort_package$sModDesc",
         "original": "Destroyers: reduces the amount of damage taken by shields by %s. No added effect for cruisers.",
-        "translation": "当自身为 驱逐舰 时，额外降低护盾受到的伤害 %s 。",
-        "stage": 5,
+        "translation": "当自身为 驱逐舰 时，额外降低护盾受到的伤害 %s。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0017行\n[本行原始数据]\n{'name': 'Escort Package',\n 'id': 'escort_package',\n 'tier': '1',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'special, weapons, engines, standard',\n 'uiTags': 'Special, Weapons, Engines',\n 'base value': '8000',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '5',\n 'cost_dest': '7',\n 'cost_cruiser': '15',\n 'cost_capital': '25',\n 'script': 'com.fs.starfarer.api.impl.hullmods.EscortPackage',\n 'desc': 'When this ship is within approximately %s su of a larger friendly '\n         \"vessel, increases this ship's maneuverability by %s, and top speed \"\n         'by %s. Also increases ballistic and energy weapon range by %s.\\n'\n         '\\n'\n         'These bonuses are %s for destroyers when the nearby friendly is a '\n         'capital ship.',\n 'short': 'Increases maneuverability, top speed, and weapon range when near a '\n          'larger friendly ship.',\n 'sModDesc': 'Destroyers: reduces the amount of damage taken by shields by %s. '\n             'No added effect for cruisers.',\n 'sprite': 'graphics/hullmods/escort_package.png'}"
     },
     {
@@ -2172,7 +2172,7 @@
     {
         "key": "hull_mods.csv#neural_integrator$desc",
         "original": "An augmented version of Neural Interface that works with automated ships by enabling direct control of all of the ship's systems via the link and allowing both ships to %s at the same time. As with \"transfer command\", some skill effects - such as those increasing ammo capacity, or combat readiness - do not apply to the other ship.\n\nAlso enables rapid switching between the linked ships without using a shuttle pod. The transfer is instant if the combined deployment points of the ships are %s or less. The destination ship must not be under the command of an officer or an AI core.\n\nThe complexity of the modifications increases the ship's deployment points and supply cost to recover from deployment by %s.",
-        "translation": "用于自主无人舰的增强版 神经接口，通过链接直接控制舰船的所有系统，可以与你的旗舰连接起来，使它们均可 %s 。但诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果将不在另一艘舰船上起作用。\n\n允许在连接舰船之间快速切换，且无需通过穿梭机转移。如果二者的总部署成本小于或等于 %s，则切换将瞬间完成。切换目标舰船不能由副官或 AI 核心操控。\n\n复杂的改装将提高 %s 舰船部署点与战后恢复所需的补给。",
+        "translation": "用于自主无人舰的增强版 神经接口，通过链接直接控制舰船的所有系统，可以与你的旗舰连接起来，使它们均可 %s。但诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果将不在另一艘舰船上起作用。\n\n允许在连接舰船之间快速切换，且无需通过穿梭机转移。如果二者的总部署成本小于或等于 %s，则切换将瞬间完成。切换目标舰船不能由副官或 AI 核心操控。\n\n复杂的改装将提高 %s 舰船部署点与战后恢复所需的补给。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0037行\n[本行原始数据]\n{'name': 'Neural Integrator',\n 'id': 'neural_integrator',\n 'tier': '',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'special, no_build_in, no_drop, no_drop_salvage',\n 'uiTags': 'Special',\n 'base value': '10000',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '3',\n 'cost_dest': '6',\n 'cost_cruiser': '9',\n 'cost_capital': '15',\n 'script': 'com.fs.starfarer.api.impl.hullmods.NeuralIntegrator',\n 'desc': 'An augmented version of Neural Interface that works with automated '\n         \"ships by enabling direct control of all of the ship's systems via \"\n         'the link and allowing both ships to %s at the same time. As with '\n         '\"transfer command\", some skill effects - such as those increasing '\n         'ammo capacity, or combat readiness - do not apply to the other '\n         'ship.\\n'\n         '\\n'\n         'Also enables rapid switching between the linked ships without using '\n         'a shuttle pod. The transfer is instant if the combined deployment '\n         'points of the ships are %s or less. The destination ship must not be '\n         'under the command of an officer or an AI core.\\n'\n         '\\n'\n         \"The complexity of the modifications increases the ship's deployment \"\n         'points and supply cost to recover from deployment by %s.',\n 'short': 'Specialized Neural Interface for automated ships.',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/neural_integrator.png'}"
     },
@@ -2200,7 +2200,7 @@
     {
         "key": "hull_mods.csv#neural_interface$desc",
         "original": "Links the flagship with another ship, allowing both ships to %s at the same time. As with \"transfer command\", some skill effects - such as those increasing ammo capacity, or combat readiness - do not apply to the other ship.\n\nAlso enables rapid switching between the linked ships without using a shuttle pod. The transfer is instant if the combined deployment points of the ships are %s or less. The destination ship must not be under the command of an officer or an AI core.",
-        "translation": "将旗舰与其他舰船连接起来，使它们均可 %s 。但诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果将不在另一艘舰船上起作用。\n\n允许在连接舰船之间快速切换，且无需通过穿梭机转移。如果二者的总部署成本小于或等于 %s，则切换将瞬间完成。切换目标舰船不能由副官或 AI 核心操控。",
+        "translation": "将旗舰与其他舰船连接起来，使它们均可 %s。但诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果将不在另一艘舰船上起作用。\n\n允许在连接舰船之间快速切换，且无需通过穿梭机转移。如果二者的总部署成本小于或等于 %s，则切换将瞬间完成。切换目标舰船不能由副官或 AI 核心操控。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0036行\n[本行原始数据]\n{'name': 'Neural Interface',\n 'id': 'neural_interface',\n 'tier': '3',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'special, no_build_in, no_drop, no_drop_salvage',\n 'uiTags': 'Special',\n 'base value': '10000',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '3',\n 'cost_dest': '6',\n 'cost_cruiser': '9',\n 'cost_capital': '15',\n 'script': 'com.fs.starfarer.api.impl.hullmods.NeuralInterface',\n 'desc': 'Links the flagship with another ship, allowing both ships to %s at '\n         'the same time. As with \"transfer command\", some skill effects - such '\n         'as those increasing ammo capacity, or combat readiness - do not '\n         'apply to the other ship.\\n'\n         '\\n'\n         'Also enables rapid switching between the linked ships without using '\n         'a shuttle pod. The transfer is instant if the combined deployment '\n         'points of the ships are %s or less. The destination ship must not be '\n         'under the command of an officer or an AI core.',\n 'short': 'Allows rapid switching between ships, resets system cooldown and '\n          'adds a charge.',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/neural_interface.png'}"
     },
@@ -2284,7 +2284,7 @@
     {
         "key": "hull_mods.csv#phase_anchor$desc",
         "original": "Reduces the phase cloak's activation cost to %s. Increases the soft flux dissipation and weapon recharge rate by %s while phased.\n\nWhen suffering critical damage that would otherwise destroy or disable the ship, able to initiate an emergency dive deep into p-space. The ship counts as retreated and will emerge into normal space when combat is over, suffering an additional penalty to combat readiness equal to %s its deployment cost. The ship must have enough combat readiness to cover this cost to initiate the dive.\n\nDue to the immense distortions in p-space caused by such a maneuver, only one ship per battle - regardless of which side it's on - is able to perform it.",
-        "translation": "将相位线圈的激活幅能降至 %s。并且在相位隐形时，将软幅能耗散速率与备弹量恢复速率提高至 %s 。\n\n当该舰即将被摧毁或停机时，将自动消耗部署成本 %s 的战备值 (CR)，然后紧急下潜至相位空间深处，视为从战斗中撤退。不过，该舰必须拥有足以用于消耗的战备值 (CR)，才能启用这种紧急下潜。\n\n因该行动会对相位空间造成严重扭曲，所以每场战斗 (无论敌友) 仅能进行一次这样的操作。",
+        "translation": "将相位线圈的激活幅能降至 %s。并且在相位隐形时，将软幅能耗散速率与备弹量恢复速率提高至 %s。\n\n当该舰即将被摧毁或停机时，将自动消耗部署成本 %s 的战备值 (CR)，然后紧急下潜至相位空间深处，视为从战斗中撤退。不过，该舰必须拥有足以用于消耗的战备值 (CR)，才能启用这种紧急下潜。\n\n因该行动会对相位空间造成严重扭曲，所以每场战斗 (无论敌友) 仅能进行一次这样的操作。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0041行\n[本行原始数据]\n{'name': 'Phase Anchor',\n 'id': 'phase_anchor',\n 'tier': '3',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'phase, merc, no_build_in, standard, phase_brawler',\n 'uiTags': 'Phase',\n 'base value': '7000',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '10',\n 'cost_dest': '20',\n 'cost_cruiser': '30',\n 'cost_capital': '50',\n 'script': 'com.fs.starfarer.api.impl.hullmods.PhaseAnchor',\n 'desc': \"Reduces the phase cloak's activation cost to %s. Increases the soft \"\n         'flux dissipation and weapon recharge rate by %s while phased.\\n'\n         '\\n'\n         'When suffering critical damage that would otherwise destroy or '\n         'disable the ship, able to initiate an emergency dive deep into '\n         'p-space. The ship counts as retreated and will emerge into normal '\n         'space when combat is over, suffering an additional penalty to combat '\n         'readiness equal to %s its deployment cost. The ship must have enough '\n         'combat readiness to cover this cost to initiate the dive.\\n'\n         '\\n'\n         'Due to the immense distortions in p-space caused by such a maneuver, '\n         \"only one ship per battle - regardless of which side it's on - is \"\n         'able to perform it.',\n 'short': 'Increases flux dissipation and weapon recharge while phased, '\n          'emergency dive maneuver.',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/phase_anchor.png'}"
     },
