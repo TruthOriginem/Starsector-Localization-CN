@@ -52,6 +52,9 @@
 
 ### 4. 战斗UI武器伤害类型文本
 相关文件：`starfarer_obf.jar:com/fs/starfarer/renderers/oOOO/C$o.class`
+
+> 解决方法：改为调用 DamageType.getDisplayName() 方法
+
 ![combat_ui_damage_type.png](combat_ui_damage_type.png)
 
 这里使用了 DamageType 枚举的 .toString() 方法，但是其实应当使用 .getDisplayName()，导致无法翻译
@@ -59,6 +62,9 @@
 
 ### 5. 战斗UI武器组类型文本
 相关文件：`starfarer_obf.jar:com/fs/starfarer/renderers/oOOO/C.class`
+
+> 解决方法：改为调用 WeaponGroupType.getDisplayName() 方法
+
 ![combat_ui_wg_type.png](combat_ui_wg_type.png)
 
 这里使用了 WeaponGroupType 枚举的 .toString() 方法，但是其实应当使用 .getDisplayName()，导致无法翻译
