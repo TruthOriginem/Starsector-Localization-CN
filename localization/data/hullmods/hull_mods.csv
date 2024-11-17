@@ -136,7 +136,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 战机底盘储备,chassis_storage,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.FighterChassisStorage,即便战机遭到破坏，也不会降低战机整备速率。,战机整备速率不会下降。,,graphics/hullmods/expanded_deck_crew.png
 保持开盾,shield_always_on,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.ShieldAlwaysOn,,强制开启护盾。,,graphics/hullmods/hardened_shields.png
 导弹自动工厂,missile_reload,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PeriodicMissileReload,内置的导弹工厂会定期补满所有导弹武器。,内置的导弹工厂会定期补满所有导弹武器。,,graphics/hullmods/expanded_missile_racks.png
-屏蔽货舱,shielded_holds,2,,,,,,,TRUE,,5,10,15,30,data.hullmods.ShieldedCargoHolds,原本是保护无护盾货舰免受天体辐射的影响，但经过简单调整就可用于干扰远距离货舱扫描，来降低违禁物品被发现的概率。,降低被检查到违禁品的风险。,,graphics/hullmods/shielded_cargo_hold.png
+屏蔽货舱,shielded_holds,2,,,,,,,TRUE,,5,10,15,30,data.hullmods.ShieldedCargoHolds,原本是保护无护盾货舰免受天体辐射的影响，但经过简单调整就可用于干扰远距离货舱扫描，降低违禁物品被发现的概率。,降低被检查到违禁品的风险。,,graphics/hullmods/shielded_cargo_hold.png
 打捞起重机,repair_gantry,,,,,,,,TRUE,,5,10,20,40,com.fs.starfarer.api.impl.campaign.RepairGantry,根据舰船级别，提高 %s/%s/%s/%s 从遗弃物、 舰船残骸等打捞到的资源，只影响普通资源的回收，如燃料与补给，而蓝图等稀有物资将不受影响。此外也提高 %s 战后打捞效率。,提高打捞收益。,,graphics/hullmods/repair_gantry.png
 相位力场,phasefield,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PhaseField,能长时间激活低水平相位场，使传感器截面降低 %s。,降低舰队的传感器截面。,,graphics/hullmods/phase_field.png
 磁通分流,fluxshunt,,,,,,,,TRUE,,10,20,30,50,data.hullmods.FluxShunt,允许舰船以 %s 的正常耗散速率在护盾开启时耗散硬幅能。,允许舰船在展开护盾时耗散硬幅能。,,graphics/hullmods/flux_shunt.png

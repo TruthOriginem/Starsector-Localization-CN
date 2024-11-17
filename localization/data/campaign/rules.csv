@@ -2880,9 +2880,9 @@ $saidAgnostic","$player.luddicAttitudeAgnostic++
 $player.luddicAttitudeLPPHookDone = true",,,
 lppHookCurateStart,DialogOptionSelected,$option == lpp_hookCurateStart,"BeginConversation shrine_curate
 FireBest LPPHookCurateIntro",好像是碰巧 —— 又或者是因为对方根本就没离开过 —— 此时，圣地的祭司向你和见习修士走来。,,
-lppHookCurateStartIntroA,LPPHookCurateIntro,$do_contrition,FireAll LPPHookCurateIntroResponses,"""够了，我的孩子。"" 对方温柔的言语下隐藏着钢铁一般的坚定。""在我和这位舰长谈话的时候，你能不能到小礼拜堂去做一次忏悔的祷告呢？""
+lppHookCurateStartIntroA,LPPHookCurateIntro,$do_contrition,FireAll LPPHookCurateIntroResponses,"""够了，我的孩子。"" 对方轻柔的话语里透露出铁一般的执着。""也许在我和舰长说话时，你应该在小教堂里做一个忏悔的祈祷。""
 
-见习修士羞愧地鞠了一躬，如释重负般快步离开。祭司看向你，在她脸上留下痕迹的不止有多年的耐心。",,
+见习修士羞愧地鞠了一躬，逃也似地离开了。祭司看向你，在她脸上留下痕迹的不止有多年的耐心。",,
 lppHookCurateStartIntroB,LPPHookCurateIntro,,FireAll LPPHookCurateIntroResponses,"""啊，年轻人的神圣信仰..."" 祭司点了点头，让见习修士离开了。""直率，但恐怕还有些莽撞。""
 
 ""我是 $personName，负责照看这处圣地的牧师。这位舰长，我受召来亲自招待您。""",,
@@ -19465,18 +19465,18 @@ DoCanAffordCheck $extr_storyCost extr_storyOption false","你接受了通讯请�
 extr_ignore:挂掉通讯并前往酒吧",
 extr_barStoryOption1,DialogOptionSelected,$option == extr_storyOption,RemoveCommodity credits $extr_storyCost,"对方为你提供了一个一次性账户用于转账。
 
-""太好了，舰长，""那个声音说，""我确认已经收到你了的付款。现在我需要一点时间来做些安排。""
+""太好了，舰长，"" 那个声音说，""我确认已经收到你了的付款。现在我需要一点时间来做些安排。""
 
 这个声音指示你去一个特定的酒吧，名为 $extr_barName，它在广场附近。""再见，$playerName 舰长，"" 声音最后这么说到。
 
 时间一分一秒地过去，你的目标 - 以及星币 - 可能都会离你而去，带着这种消沉的感觉，你走进了酒吧。",extr_continue1:继续,
 extr_barStoryOption2,DialogOptionSelected,$option == extr_continue1,"$market.extr_needToReturn = true
 Call $market.extr_ref updateStage
-FireAll extrBarStoryOptionHub","你一走进昏暗的灯管照明的室内，店主就抬起头来。""嘿！""你被这语气吓了一跳。""你不能就这么让你的朋友睡在这里，我这可不是开旅馆的，明白吗？""这个人一定就是 $extr_barOwner 了。
+FireAll extrBarStoryOptionHub","你一走进昏暗的灯管照明的室内，店主就抬起头来。""嘿！"" 你被这语气吓了一跳。""你不能就这么让你的朋友睡在这里，我这可不是开旅馆的，明白吗？"" 这个人一定就是 $extr_barOwner 了。
 
 $extr_barOwner 把你拉到酒吧的一个角落里，那里有一个似乎喝醉了的人，一个防辐射面具一样的东西罩住了他的脸。你把那东西拿开，发现这人果然就是你的营救目标。对方的脸色有些苍白，失去了知觉，还流着口水，但你知道这张脸和你的情报相符。
 
-""也许你的朋友在磕药，但我不想惹麻烦，我不会问不该问的。你看，我把他照顾的很好吧？我没打市政电话。所以现在你带着你的朋友走吧。走，出去！""当你抬起那松弛的身体时，他试图把你推出酒吧。","
+""也许你的朋友在磕药，但我不想惹麻烦，我不会问不该问的。你看，我把他照顾的很好吧？我没打市政电话。所以现在你带着你的朋友走吧。走，出去！"" 当你抬起那松弛的身体时，他试图把你推出酒吧。","
 
 ",
 extr_barStoryOptionHubA,extrBarStoryOptionHub,,,,extr_continue2:离开,
@@ -20613,9 +20613,9 @@ $faction.id == luddic_path
 $player.crew > 198
 !$market.locrlf_market","Highlight ""适合卸下你从边缘星系救出的卢德异端""",你们来到了一个由卢德左径控制的殖民地，这里适合卸下你从边缘星系救出的卢德异端。,"locrl_offloadHereticsToPath0:用穿梭机把救出的异端送到 $name
 locrl_offloadNotYet:还不是时候",
-LOCRLoffloadToPathMarket2,DialogOptionSelected,$option == locrl_offloadHereticsToPath0,BeginConversation POST:administrator,"在你安排卸下近两百名来自边缘星系的异端时，港口管理局这个有些不拘一格的机构对此有些尖锐的意见。
+LOCRLoffloadToPathMarket2,DialogOptionSelected,$option == locrl_offloadHereticsToPath0,BeginConversation POST:administrator,"你安排卸下近两百名来自边缘星系的异端的时候，看上去像是港口管理局的独特机构对你的行为有些尖锐的意见。
 
-你的问题被管理层一级一级上报，直到你发现自己正在与相当于最高民事管理者的人交谈。",locrl_hereticsToPath:继续,
+这一问题被迅速地逐级上报，最后你发现正坐在自己对面的是最高民事管理员。",locrl_hereticsToPath:继续,
 LOCRLoffloadToPath,PopulateOptions,"$isPerson
 $player.locr_luddicsToPath 
 $personFaction.id == luddic_path",,,locrl_hereticsToPath:询问关于卸下一整个卢德异端组织的问题,
@@ -22449,7 +22449,7 @@ $market.id == kazeron
 DevHYaribayUnhideOptionSel,DialogOptionSelected,$option == hyaribay_devUnhideOption,"SetPersonHidden horus_yaribay false
 RemoveOption hyaribay_devUnhideOption",Horus Yaribay 已暴露,,
 # Reynard Hannan,,,,,,
-RHannanGreeting,PickGreeting,$id == reynard_hannan score:1000,,"通讯立即接通，将你的链接转入等候界面。一分钟后，一位长相极尽完美的秘书接了电话。
+RHannanGreeting,PickGreeting,$id == reynard_hannan score:1000,,"通讯立即接通，将你的链接转入等候界面。一分钟后，一位长相极尽完美的秘书对你应答。
 
 ""这里是 Hannan 氏族办公室。我能帮您什么忙？""","RHannan_haveBusiness:""我和 Reynard Hannan 有笔生意要谈一下。""
 cutCommLink:切断通讯链接",
@@ -22503,7 +22503,7 @@ FireBest RHannanSecretaryMessageResp",,,
 RHannanMsgHorusYaribay,DialogOptionSelected,$option == RHannan_msgHorusYaribay,"$leftMessages++
 $leftMessageHorusYaribay = true
 FireBest RHannanSecretaryMessageResp",,,
-RHannanSecretaryMessageResp1,RHannanSecretaryMessageResp,$leftMessages == 1,FireAll RHannanMessageHubOptions,"秘书专注地点点头，双手一动不动。是在接入某种植入体吗？
+RHannanSecretaryMessageResp1,RHannanSecretaryMessageResp,$leftMessages == 1,FireAll RHannanMessageHubOptions,"秘书专注地点点头，双手一动不动。是在通过某种植入体传讯吗？
 
 ""很好。大统领一有空，我会立即告知他。""",,
 RHannanSecretaryMessageResp2,RHannanSecretaryMessageResp,$leftMessages == 2,FireAll RHannanMessageHubOptions,"秘书再次专注地点了点头。
@@ -29488,12 +29488,12 @@ greetingsScavengerCanaanQ1A,DialogOptionSelected,$option == greetingsAskTouchGil
 ""我意思就是在他们和他们的世界上，手脚干净些。"" $HeOrShe点了点头，""就当免费给你的建议。""",,
 ,,,,,,
 # Historian backstory bits,,,,,,
-HistorianBackstoryBlurb00,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb00,SetHistorianBlurbShownAfterDelay historyBlurb00,"""有时我会想，如果我在人之领里 —— 一个未崩溃的人之领里 —— 我的生活会是怎样的，"" $heOrShe沉思着说，""一片闪耀着生命之光的世界之海，每一个都充满了历史。""
+HistorianBackstoryBlurb00,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb00,SetHistorianBlurbShownAfterDelay historyBlurb00,"""有时我会想，如果我生活在人之领里 —— 一个未崩溃的人之领里 —— 我会过得怎样。"" $heOrShe沉思着说，""那是一片由无数鲜活世界所构成的光辉之海，每一个世界都充满了历史。""
 
-""虽然我怀疑，如果有人在那里到处问些令人不快的问题，可能会惹上一点麻烦，嗯？"" $HeOrShe发出一声不学者的哼笑。""我在现实世界中已经给自己惹了足够的 —— 我是说，麻烦。我认为，如果你没有激怒那些机构，那么你的工作就做得不够好。""",,
-HistorianBackstoryBlurb01,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb01,SetHistorianBlurbShownAfterDelay historyBlurb01,"""哦，'地狱火'，是的是的。这是有点卢德风格的俚语，指的是反物质星舰燃料。尽管他们真正的含义，""这里$heOrShe强调了这个单词，""要宽泛得多。""
+""虽然我怀疑，在那里到处问些令人不快的问题的人，可能会惹上一点麻烦，嗯？"" $HeOrShe发出一声不那么学者的哼笑。""我在现实世界中已经给自己惹了足够的 —— 我是说，麻烦。我认为，如果你没有激怒那些机构，那么你的工作就做得不够好。""",,
+HistorianBackstoryBlurb01,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb01,SetHistorianBlurbShownAfterDelay historyBlurb01,"""哦，'地狱火'，就是这个。这个有点卢德风格的俚语，指的是反物质星舰燃料。尽管地狱火这个词，"" 这里$heOrShe强调了这个单词，""实际上还有更多含义。""
 
-""在某些文献中，这个词涵盖了所有反物质应用，甚至所有高能过程。一位富有创造力的激进分子将其称为 '玛门与彼列之子'。我喜欢这个说法；我一直很喜欢卢德民间传教传统中那种夸张的修辞。""",,
+""在某些文档中，这个词涵盖了所有反物质相关应用，甚至所有高能过程。一位有创意的激进分子将其称为 '恶魔玛门与彼列之子'。我喜欢这个说法；我一直很喜欢卢德民间布道时常用的那种夸张修辞方式。""",,
 HistorianBackstoryBlurb02,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb02,SetHistorianBlurbShownAfterDelay historyBlurb02,"""现在我可能老了，但是比我老的多的可海了去了。如果这些记录是可靠的 —— 我当然相信他们是可靠的，霸主保存着许多非常好的记录 —— 那么海盗军阀 Kanta 出生在大崩塌发生之前。或者我们应该称她为前-人之领舰队军官 Jorien Kanta？"" $HeOrShe发出一阵喘息的笑声。
 
 ""哦，是的，她曾经和任何人一样有个名字。人们会好奇，是昂贵的生物改造还是定期的冷冻睡眠让她能够活到现在。我很想弄明白...""",,
@@ -29510,35 +29510,35 @@ HistorianBackstoryBlurb05,HistorianBackstoryBlurb,!WasHistorianBlurbShown histor
 ""是的是的，如果你想见识下 异种生命，就去 Jangala，带上你的药片，然后洗个隔离澡。""
 
 ""但那根本就不是我们想要的，对吧。我们想要的是有像我们一样的其他人存在，可以与之交谈，可以告诉我们我们并不孤单，可以给我们答案。一个关心我们的人。也许我们找错了地方？或者思考的方式不对？"" $HeOrSh摇了摇的$hisOrHer头，打消了这个念头。""哈，但这已经变成了猜测。不是我的专长！""",,
-HistorianBackstoryBlurb06,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb06,SetHistorianBlurbShownAfterDelay historyBlurb06,"""我们都听过攻势战列舰的故事，说它是抵抗外星威胁的终极武器。"" $HeOrShe不屑地挥了挥手，嘲讽道，""就好像我们活在某个关于英勇英雄和邪恶外星人的军事科幻全息影像里。""
+HistorianBackstoryBlurb06,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb06,SetHistorianBlurbShownAfterDelay historyBlurb06,"""我们都听过攻势战列舰的故事，说它是抵抗外星威胁的终极武器。"" $HeOrShe不屑地挥了挥手，嘲讽道，""就好像我们活在某个关于英勇英雄与邪恶外星人的军事科幻全息影像里。""
 
-""伟大的、改变历史进程的接触并不是那样的，至少在我们的知识体系中不是。它更加令人困惑；混乱无序。它会破坏社会的整个认知意识形态的基础，迫使社会在认识基础遭受重创的情况下进行重组。而且，为了吸取这些教训，必然会有很多人牺牲。""
+""伟大的、改变历史进程的接触并不是那样的，至少在我们的知识体系中不是。它更加令人困惑；混乱无序。它会破坏社会的整个认知意识形态的基础，迫使社会在认识基础遭受重创的情况下进行重组。而且，为了吸取这些教训，总会有很多人牺牲。""
 
 $HeOrShe短暂地陷入了沉思，然后露出一个讽刺的微笑。""和大崩塌不无相似之处，嗯？一定是外星人干的。"" $HeOrShe眨了眨眼。""肯定的。""",,
-HistorianBackstoryBlurb07,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb07,SetHistorianBlurbShownAfterDelay historyBlurb07,"""古地球，母星泰拉。吾等从此而来，而其早已不在。路德教会的故事中并非一无是处。尽管，嗯，他们在 '改进' 细节以迎合他们的道德框架时颇为肆无忌惮。""
+HistorianBackstoryBlurb07,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb07,SetHistorianBlurbShownAfterDelay historyBlurb07,"""古地球，母星泰拉。吾等从此而来，而其早已不在。路德教会的故事并非一无是处。尽管，嗯，他们在 '改进' 细节以迎合他们的道德框架时颇为肆无忌惮。""
 
-""实际的历史记录远比那些叙述复杂得多，也更让人难以下咽。但我也认为它最终更能引起人们的共鸣。我们完全依赖着我们几乎无法理解的高科技生存，而这些科技甚至可能带来真正的末日浩劫。我们会犯错，错误会导致悲剧；只是规模大小的问题。""
+""实际的历史记录远比那些叙述复杂得多，也更让人难以下咽。但我也认为它最终更能引起人们的共鸣。我们完全依赖着我们几乎无法理解的高科技生存，而这些科技甚至可能带来真正的末日浩劫。我们早已犯错，错误会导致悲剧；只是规模大小的问题。""
 
-$HeOrShe思考了一会儿，然后开始喃喃自语，批判$hisOrHer自己的想法，""但规模确实可以从根本上改变现象的性质，从而彻底改变道德分析中需要考虑的背景，嗯，正是如此如此！嗯...""",,
+$HeOrShe思考了一会儿，然后开始喃喃自语，批判$hisOrHer自己的想法，""但规模确实可以从根本上改变现象的性质，从而彻底改变道德分析中需要考虑的背景，嗯，正是如此！嗯...""",,
 HistorianBackstoryBlurb08,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb08,SetHistorianBlurbShownAfterDelay historyBlurb08,"""尽管英仙座星域在很大程度上已经有效地摆脱了人之领的技术限制 —— 当然，这并不否认霸主那些顽固的努力，"" $heOrShe对自己的努力效果半耸了耸肩，""但这个时代并没有出现任何特别巨大的技术飞跃。为什么呢？对于英仙座联盟或者是速子科技等势力来说，禁令已经取消了！""
 
 ""也许，复杂、先进的高新技术发展需要一个稳定的基础：庞大的人口基数，拥有过剩的理论和工程能力，，以及愿意将资源投入到超越单纯生存或战争之外的追求的意愿。当然，战争确实能推动某种形式的创新。但想象一下，如果那些数十亿的星币没有和那么多愚蠢的年轻人一起化为乌有... 就像我曾经认识的那些人一样，会有怎样的可能性。""
 
 $HeOrShe沉默了一会儿。""那些老旧的生产芯片和纳米锻炉就像是一架梯子，但中间的梯级却缺失了。我们努力向上攀爬，却注定会因为梯级的缺失而跌落...""",,
-HistorianBackstoryBlurb09,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb09,SetHistorianBlurbShownAfterDelay historyBlurb09,"""人之领将关键产业分散到了不同的星球上，虽然确实存在冗余 —— 它们彼此相隔甚远。如果一个生产超光速驱动器的星球试图利用自己的专业优势来对抗人之领，那么，没有原材料、没有反物质燃料，或者，实际上，没有生活必需品和市场准入，他们又能有什么利益呢？""
+HistorianBackstoryBlurb09,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb09,SetHistorianBlurbShownAfterDelay historyBlurb09,"""人之领将关键产业分散到了不同的星球世界上，并且设立了彼此相隔甚远的冗余。如果其中生产超光速驱动器的世界试图利用自己的产业特化对抗人之领的话，哈，他们在失去了原材料供应之后还能干什么呢？那么失去反物质燃料呢？这还没谈更重要的生活必需品和市场准入权呢？""
 
-""当人之领只需要控制当地的星门就能发动全面围攻时，人们怎么能反抗呢？哪一个星球可能对抗整个人之领呢？"" $HeOrShe露出了一个阴冷的微笑。""现在我们被困在这里，被人之领包围。除了那些死寂的星门以外，甚至没人愿意接受我们的投降。""""",,
-HistorianBackstoryBlurb10,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb10,SetHistorianBlurbShownAfterDelay historyBlurb10,"""Galatia 学院？哦，对的对的，我曾经在那上过学，甚至还教了几年的书，信不信由你。他们蛮快就发现了我是个麻烦制造者，不过那时候我已经溜了。不管怎么样我也算是玩过了这些，就一个像我这样的人！呵呵，你信不？
+""只需要控制当地的星门就相当于发动全面围攻，这样的人之领，人们又如何反抗得了？哪一个世界能够对抗整个人之领呢？"" $HeOrShe露出了一个阴冷的微笑。""现在我们就被人之领围困在这里。我们就算想投降都只能向那些死寂的星门投降。""",,
+HistorianBackstoryBlurb10,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb10,SetHistorianBlurbShownAfterDelay historyBlurb10,"""Galatia 学院？哦对，不管你信不信，我在那上过学，还教了几年的书。他们虽然很快就发现了我这个人是有点滑头，不过那会我早就溜了。不管怎么样我也算是入过这个局！呵呵，你信不？
 
-$HeOrShe因为某个旧时的记忆而笑了起来。""我也树敌不少，真的。""
+$HeOrShe因为曾经的回忆而笑了起来。""我也树了不少敌，确实不少。""
 
-""你听说他们让谁来管理学院了吗？ Anahita Baird！你能相信吗？狼现在竟然在牧羊，这是真的。霸主根本不知道自己做了什么。"" $HeOrShe咯咯地笑着，""根本不知道！""",,
-HistorianBackstoryBlurb11,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb11,SetHistorianBlurbShownAfterDelay historyBlurb11,"""Baikal Daud 就任至高霸主之后，我不禁好奇他的执政会给 '英仙座星域的涅槃' 带来怎样的影响。海军仍然由老一派的人主导 —— 那是 Eventide 的势力。那些家族可以追溯到第十四军团的到来，当然。按照任何历史标准来看，这都不是一个古老的贵族阶层，但只要有适宜的条件，这种模式很快就会建立起来。我说到哪儿了 —— 对， Daud。他是人民的领袖。会触动别人的利益。就像他亲自介入 Sphinx 勋章丑闻时一样。至高霸主们通常不会这么做！但他是天生的领袖，这一点毋庸置疑。""
+""你知道他们让谁来管理学院了吗？Anahita Baird！你敢相信吗？狼现在竟然在牧羊，这居然是真事。霸主根本不知道自己做了什么。"" $HeOrShe咯咯地笑着，""根本不知道！""",,
+HistorianBackstoryBlurb11,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb11,SetHistorianBlurbShownAfterDelay historyBlurb11,"""Baikal Daud 就任至高霸主之后，我不禁好奇他的执政会给这 '英仙座星域的凤凰' 带来怎样的影响。海军仍然由老一派的人主导 —— 那是 Eventide 的势力。那些家族可以追溯到第十四战斗群的到来，当然。按照任何历史标准来看，这都不是一个古老的贵族阶层，但只要有适宜的条件，类似的模式很快就会建立起来。我说到哪儿了 —— 对， Daud。他是人民的领袖。羽庇一方。就像他亲自介入 Sphinx 少尉丑闻 时一样。历任至高霸主们可通常不会那么做！但他是天生的领袖，这一点毋庸置疑。""
 
-""这才是他真正会惹上麻烦的地方，"" $heOrShe说道，然后陷入了沉思，不再言语。",,
-HistorianBackstoryBlurb12,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb12,SetHistorianBlurbShownAfterDelay historyBlurb12,"""在我的圈子里可都是些实打实的历史学家，注意，不是那些在酒吧里闲逛的老人们。"" $heOrShe自嘲地笑了笑。""我们定了个规矩，除非有新的确凿信息出现，否则不讨论 Artemisia Sun。而这类信息从来都没有出现过！"" $HeOrShe停顿了一下，敲了敲$hisOrHer手里的书。""但你不是历史学家，所以这个规矩对你不适用。太好了，你可以听我讲完！""
+""这才是真正会让他惹上麻烦的地方，"" $heOrShe说道，然后陷入了沉思，不再言语。",,
+HistorianBackstoryBlurb12,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb12,SetHistorianBlurbShownAfterDelay historyBlurb12,"""在我的圈子里 —— 我得和你说一句，那可都是些实打实的历史学家，而不是在酒吧里无所事事的老头。"" $heOrShe自嘲地笑了笑。""我们定了个规矩，除非有新的确凿消息出现，否则不讨论 Artemisia Sun。而直到现在从来都没有出现过确凿消息！"" $HeOrShe停顿了一下，敲了敲$hisOrHer手里的书。""但你不是历史学家，所以这个规矩对你不适用。太好了，你得听我讲完！""
 
-""所以，为什么她会因第二次 AI 战争的失利而立刻被董事会投票踢出？而她又是如何在所有反对者名誉被彻底摧毁的情况下回她的办公室？这仅仅是一次无情的回归？还是为了巩固个人权力而不惜牺牲 速子科技 资产而精心策划的骗局？"" $HeOrShe微笑着说。""也许我们哪天可以彻底探讨一下这个理论。""",,
+""所以，为什么她会恰巧在二次 AI 战争这一关键时间点里被董事会投票踢出？而她又是如何在所有反对者们名誉彻底扫地的情况下回到她的办公室？这仅仅是一次无情的复权？亦或从头到尾就是场为巩固个人权力而不惜牺牲 速子科技 资产的精心骗局？"" $HeOrShe微笑着说。""也许我们哪天可以彻底探讨一下这个理论。""",,
 HistorianBackstoryBlurb13,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb13,SetHistorianBlurbShownAfterDelay historyBlurb13,"""我们多么希望能有一些关于卢德演讲或行为的记录啊。所有关于这位先知的证据似乎都消失了，这不是很不可思议吗？这个，呃，'奇迹' 当然是 银河救赎教会 信徒们的信仰所在。"" 
 
 $HeOrShe对你挑了挑眉。""当然，从官方角度来看，霸主 为了安抚那些信徒，也将配合这种无稽之谈作为政策之一。"" $HeOrShe不满地皱起了$hisOrHer的眉头，""作为历史学家，我当然对此感到无比烦恼。普通人所经历的历史可能是社会讲述给自己的一个故事，因此会有所扭曲。即便如此！它也必须以事实为基础。""
@@ -29546,7 +29546,7 @@ $HeOrShe对你挑了挑眉。""当然，从官方角度来看，霸主 为了安
 ""当然，如果我发现了卢德审判的全息视频，一些狂热分子肯定会因为我分发它而谋杀我。不过我也无法克制自己不去这么做。"" $HeOrShe顽皮地笑了笑，然后思考了一下。""如果你在某艘古老的遗弃船上发现了那样的东西，你会给我一份副本，对吧？""",,
 HistorianBackstoryBlurb14,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb14,SetHistorianBlurbShownAfterDelay historyBlurb14,"""你不会相信我的工作有多少是基于物流清单的。我有一个在 Agreus 工作的学生，他们会给我发从废弃的内存核心中提取的副本。当然，真正的秘密都被删除了，但历史就在那里，通过对比上船和下船的货物量与导航使用的船体质量计算 —— 更不用说超空间驱动了，就能看出端倪。历史是用物流写就的！""
 
-""举个例子，在紧贴核心世界边缘的贸易路线上，'消失' 的食物和补给数量惊人。统计抽样表明，英仙座星域的所有经济活动中，有相当一部分是 '未记录在案的'，而这些未记录的经济活动中，有很大一部分直接流向了那些被称为 '海盗' 的人以及所谓的 '未开化' 人口... 更不用说核心世界内部那些未登记的人口了。""
+""举个例子，在紧贴核心世界边缘的贸易路线上，'消失' 的食物和补给数量惊人。统计抽样表明，英仙座星域的所有经济活动中，有相当一部分是 '未记录在案的'，而这些未记录的经济活动中，有很大一部分直接流向了那些被称为 '海盗' 的人以及所谓的 '蛮荒人' 人口... 更不用说核心世界内部那些未登记的人口了。""
 
 这位历史学家凑近了些，""英仙座星域的官方人口普查数据与事实可能相差一个数量级。令人震惊。"" $HeOrShe微笑着，摇了摇头。",,
 HistorianBackstoryBlurb15,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb15,SetHistorianBlurbShownAfterDelay historyBlurb15,"""啊，就像我刚才跟那边那些年轻人说的，"" 历史学家朝着一群尽量避免眼神接触的人挥了挥$hisOrHer的手，""-在冬眠航行的艰难试炼后，第十四战斗群勉强穿越了英仙座星域边界，发现整个星域都被军阀 Leonis 所统治。第十四战斗群的指挥官们推翻了那个残酷的统治，被誉为解放者，为 Kali Molina 海军上将在第 49 星历年的 Eventide 政权 中宣称对英仙座星域所有 人之领 殖民地的主权奠定了基础。""
@@ -29562,9 +29562,9 @@ HistorianBackstoryBlurb17,HistorianBackstoryBlurb,!WasHistorianBlurbShown histor
 ""大祭司神圣普世会议负责裁定教义事务，授权和委托执行职能，并执行某些专属的圣礼。但是，他们也可能受到绝大多数教区牧师信众的谴责，甚至被剥夺神职。那些担任更常见职位的成员由当地教区批准，但必须由一位声誉良好的大祭司任命。""
 
 $HeOrShe喝了一些茶，然后皱了皱眉，看着$hisOrHer的茶杯，意外地发现茶水变凉了。""当然，在实际操作中，情况比这要复杂得多...""",,
-HistorianBackstoryBlurb18,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb18,SetHistorianBlurbShownAfterDelay historyBlurb18,"""在银河救赎教会中，有些人 —— 简单点说，就是卢德派 —— 认为卢德骑士团是一种错误行为，与卢德派最初对教会的愿景不符。这无疑是真的，"" 历史学家在提到这种小小的异端思想时挑了挑眉。""学者们公认 [卢德之书] 中较为可信的段落表明，军事主义和 '信仰的骑士精神' 的主题可能是对一种半神圣的军事志愿者主义的抽象引用，这种志愿者主义在实践中可以从公民抗议运动一直延伸到，可以说，叛乱活动。""
+HistorianBackstoryBlurb18,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb18,SetHistorianBlurbShownAfterDelay historyBlurb18,"""银河救赎教会的人 —— 简单点说，就是卢德信徒 —— 竟然拥有卢德骑士团，简直就是个与教会最初的卢德式愿景不符的错误。这无疑就是事实，"" 历史学家在提到这一小小的异端思想时挑了挑眉。""学者们公认 [卢德之书] 中较为可信的段落表明，军事主义和 '信仰的骑士精神' 的主题可能是对一种半神圣的军事志愿者主义的抽象引用，这种志愿者主义在实践中可以从公民抗议运动一直延伸到，可以说，叛乱活动。""
 
-""然而，必须承认，在大崩塌后的混乱以及随后的战争中，一个常备的军事组织具有实际的好处，"" $heOrShe靠回$hisOrHer的座位上，陷入了沉思。""而在教会内部，最直言不讳的反对者也认为，骑士团只是在一定程度上走错了方向，而并非完全错误。那些较少发声的反对者呢？嗯，我们可能在许多、许多个星历年内都没办法知道他们的想法。骑士团会确保这一点。""",,
+""然而，必须承认，在大崩塌后的混乱以及随后的战争中，一个常备的军事组织具有实际的好处，"" $heOrShe靠回$hisOrHer的座位上，陷入了沉思。""而在教会内部，哪怕最直言不讳的反对者也不过是认为，骑士团只是在一定程度上走错了方向，而并非完全错误。那些较少发声的反对者呢？嗯，我们可能在许多、许多个星历年内都没办法知道他们的想法。骑士团会确保这一点。""",,
 HistorianBackstoryBlurb19,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb19,SetHistorianBlurbShownAfterDelay historyBlurb19,"""据推测，Andrada 海军上将，这位自封的辛达强权最高元首 —— 从霸主角度来看是 '辛达叛乱'，正面临着独裁者普遍面临的继承问题。迄今为止，在辛达统一的外表之下，他似乎一直在利用他的主要支持者之间的互相制衡来维持政治稳定。明确指定一个继承人将会打破这种内部平衡。"" 
 
 ""而现在，"" 历史学家缓缓说道，摩挲着$hisOrHer的下巴，""随着岁月的无情流逝，加上 Andrada 据传身体状况不佳，他会出人意料的指定一个继承人吗？届时，那些下属对这位元首忠诚与否将会被...区分开来，随之而来的将是一波大清洗，甚至可以说是屠杀。""
@@ -29572,24 +29572,24 @@ HistorianBackstoryBlurb19,HistorianBackstoryBlurb,!WasHistorianBlurbShown histor
 ""又或者 Andrada 有一个秘密的家族，或者一个心智模拟体，或者一个克隆体，或者更离奇的计划？"" $HeOrShe大笑一声。""这些的猜测似乎更多地反映了猜测者自己正在想些什么，而不是 Andrada。我应该向你请教一些见解！"" $HeOrShe又笑了起来。",,
 HistorianBackstoryBlurb20,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb20,SetHistorianBlurbShownAfterDelay historyBlurb20,"""如果 Philip Andrada，这位自封的辛达强权最高元首，真的如霸主宣传和他自己所声称的那样是战略大师，那么他为何没有直接征服英仙座星域，就像他最强大的手下败将 —— 军阀 Loke 那样呢？""
 
-""问的好！"" 历史学家像演说家一样举起一根手指，但转念一想，又把$hisOrHer的手放回了桌子上。""问题太多了！Andrada 在叛乱过程中只带走了霸主海军的一部分 —— 仅仅是一部分。他占领了 Askonia，却立即面临 Opis 事件的灾难性后果、持续的叛乱、后勤补给的缺乏，以及迫切需要维持一支足以对抗复仇心切的霸主的可靠军事力量。而且，事实上，这一切都要在满足关键支持者的期望的同时做到！"" 
+""问的好！"" 历史学家像演说家一样举起一根手指，但转念一想，又把$hisOrHer的手放回了桌子上。""状况大有不同！Andrada 在叛乱过程中带走了霸主海军的一部分 —— 仅仅是一部分。他占领了 Askonia，却立即面临 Opis 事件的灾难性后果，持续的叛乱、后勤补给的缺乏，以及迫切需要维持一支足以对抗复仇心切的霸主的可靠军事力量。而且，事实上，这一切都要在满足关键支持者的期望的同时全部做到！"" 
 
 ""Andrada 真正的天才之处可能就在于他的计划没有立即崩溃！""",,
-HistorianBackstoryBlurb21,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb21,SetHistorianBlurbShownAfterDelay historyBlurb21,"""在大崩塌后的时代，星舰船员和基础设施从业者 —— 如果你愿意的话，可以称之为 '太空船员'—— 的文化已经变得独具特色。他们不再仅仅作为人之领中一个庞大而分散、难以捉摸且毫无特色的统计类别而存在，而是被限制在英仙座星域，现在形成了一个关键的文化内部交流群体，从中涌现出了独特的共性。""
+HistorianBackstoryBlurb21,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb21,SetHistorianBlurbShownAfterDelay historyBlurb21,"""在大崩塌后的时代，星舰船员和相关基础设施从业者 —— 如果你愿意的话，可以称之为 '宇宙民' —— 的文化已经变得独具特色。他们不再仅仅作为人之领中一个庞大而分散、难以捉摸且毫无特色的统计类别而存在，而是扎根于英仙座星域，现在已经形成了一个关键的文化内部交流群体，从中涌现出了独特的共性。""
 
-$HeOrShe稍微停顿了一下，调整了下$hisOrHer的呼吸，然后继续说道：""事实上，大多数星际物流已经从星门转移到了超空间航道。太空船员现在每天都在目睹大崩塌和 AI 战争的废墟。这些旅程充满了阴霾，"" $heOrShe用一种既愉快又阴郁的语气说道，""可以说，是被历史所萦绕。事实上，有人可能会认为，在过去的两百年里，太空船员的文化已经变得相当迷信。""
+$HeOrShe稍微停顿了一下，调整了下$hisOrHer的呼吸，然后继续说道：""事实上，星际物流的主要存在形式已经从星门改为了超空间航道。这些太空佬现在每天都在目睹大崩塌和 AI 战争的废墟。这些旅程充满了阴霾，"" $heOrShe用一种既愉快又阴郁的语气说道，""可以说，是被历史所萦绕。事实上，有人可能会认为，在过去的两百年里，宇宙民文化已经变得相当迷信。""
 
-$HeOrShe渐渐停了下来，呼出一口气，抬头望向看不见的星辰。""前所未有的黑暗，充满了死亡和神秘，"" $heOrShe引用着某句名言。",,
-HistorianBackstoryBlurb22,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb22,SetHistorianBlurbShownAfterDelay historyBlurb22,"""古老的 Mairaath，这个古老 Mayasuran 政权的中心，本有望在英仙座星域绽放出文化和文明的光辉，成为一盏可能比 Opis 还要耀眼的明灯，假如它星球改造工作完成的话。""
+$HeOrShe渐渐停了下来，呼出一口气，抬头望向看不见的星辰。""前所未有的黑暗，充斥着死亡与神秘。"" $heOrShe引用着某句名言。",,
+HistorianBackstoryBlurb22,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb22,SetHistorianBlurbShownAfterDelay historyBlurb22,"""古老的 Mairaath，这个古老 Mayasuran 政权的中心，本有望在英仙座星域绽放出文化和文明的光辉，成为一盏可能比 Opis 还要耀眼的明灯，假如它的地貌改造工作能完成的话。""
 
 ""但现在，这两盏 '明灯' 都已经熄灭了，"" 历史学家阴郁地说道。""我想，它们缺乏霸主 Eventide-Chicomoztoc 轴心那种冷酷无情的军事工业联盟，更不用说 Kazeron 及英仙座联盟了。其他的政权也大都如此。""
 
-""看来，我们这些最坏的人在这种暴力时代反而蓬勃发展。"" $HeOrShe似乎突然意识到自己在和谁说话，于是毫无说服力地补充道，""呃，当然，不包括在场的各位。""  ",,
-HistorianBackstoryBlurb23,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb23,SetHistorianBlurbShownAfterDelay historyBlurb23,"""霸主的技术检查员没收的 '违禁' AI，特别是 AI 战争后的镇压行动中没收的 AI，到底被用来做了什么，目前 —— 还没有——准确的记录。如果 COMSEC 能如愿以偿的话，可能永远也不会有历史记录。"" $heOrShe苦涩地说道。
+""看来，我们之中最坏的某些人在这种暴力时代反而蓬勃发展。"" $HeOrShe似乎突然意识到自己在和谁说话，于是毫无说服力地补充道，""呃，当然，不包括在场的各位。""  ",,
+HistorianBackstoryBlurb23,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb23,SetHistorianBlurbShownAfterDelay historyBlurb23,"""霸主的技术检查员没收的 '违禁' AI，特别是 AI 战争后各类镇压行动中没收的 AI，到底被用来做了什么，目前 —— 还没有 —— 准确的记录。如果 COMSEC 能如愿以偿的话，可能永远也不会有历史记录。"" $heOrShe苦涩地说道。
 
-""显而易见，"" $heOrShe继续说道，""与鼎盛时期的人之领相比，霸主在利用人工智能方面更为保守。卢德派民众的抱怨声在每个至高霸主的耳边都响个不停，而 Baikal Daud 深知在当前的妥协和平之下，最好不要激起任何动荡。""
+""显而易见，"" $heOrShe继续说道，""与鼎盛时期的人之领相比，霸主在利用人工智能方面更为保守。卢德派民众的抱怨声在每一任至高霸主的耳边都响个不停，而 Baikal Daud 深知在当前的妥协和平之下，最好不要激起任何动荡。""
 
-""话虽如此，"" 历史学家身体前倾，压低了$hisOrHer的声音，""妄想症患者们提供了有趣的猜测。有一种理论认为，在遥远的行星小天体上隐藏着秘密的超级计算机，它们模拟着世界，并将数十亿进行冷冻休眠的人类思想置于奴役之下；这是冷漠的 AI 之神病态想象中上演的残酷场景。当然，这是无稽之谈，"" $heOrShe微笑着，让人安心，""这样的虐待有什么目的呢？""",,
+""话虽如此，"" 历史学家身体前倾，压低了$hisOrHer的声音，""妄想者们提供了有趣的猜测。有一种理论认为，在遥远的行星小天体上隐藏着秘密的超级计算机，它们模拟着世界，并将数十亿进行冷冻休眠的人类思想置于奴役之下；这疯狂的猜测还认为冷漠的 AI 之神会让各类残酷场景在其中上演。当然，这是无稽之谈，"" $heOrShe的微笑显得十分宽慰，""这样的虐待有什么目的呢？""",,
 HistorianBackstoryBlurb24,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb24,SetHistorianBlurbShownAfterDelay historyBlurb24,"""那些在人之领时代进入冷冻休眠，如今醒来的人，可能是最迷茫的一群人。他们中的许多人，尽管不是全部，都幻想过自己会成为富饶边疆的开拓者；他们接受了自己会抛下曾经的一切。但现在，他们发现自己与过去的一切都断了联系，在历史的长河中漂泊无依。""
 
 ""谁来照料他们呢？路德派当然会建议他们寻求宗教的慰藉。其他人则选择借酒消愁、吸毒，或者陷入虚无主义的超脱，这种超脱往往又会外化为破坏。你知道吗，不少最残忍的海盗都曾是冷冻休眠者。""

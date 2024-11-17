@@ -2599,7 +2599,7 @@
     {
         "key": "hull_mods.csv#shielded_holds$desc",
         "original": "Commonly found on ships that can't always rely on shields to protect their cargo from cosmic radiation. Only a few tweaks are needed to have the shielding confound long-range cargo scans, reducing the probability of contraband being detected.",
-        "translation": "原本是保护无护盾货舰免受天体辐射的影响，但经过简单调整就可用于干扰远距离货舱扫描，来降低违禁物品被发现的概率。",
+        "translation": "原本是保护无护盾货舰免受天体辐射的影响，但经过简单调整就可用于干扰远距离货舱扫描，降低违禁物品被发现的概率。",
         "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0074行\n[本行原始数据]\n{'name': 'Shielded Cargo Holds',\n 'id': 'shielded_holds',\n 'tier': '2',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': '',\n 'uiTags': '',\n 'base value': '',\n 'unlocked': '',\n 'hidden': 'TRUE',\n 'hiddenEverywhere': '',\n 'cost_frigate': '5',\n 'cost_dest': '10',\n 'cost_cruiser': '15',\n 'cost_capital': '30',\n 'script': 'data.hullmods.ShieldedCargoHolds',\n 'desc': \"Commonly found on ships that can't always rely on shields to protect \"\n         'their cargo from cosmic radiation. Only a few tweaks are needed to '\n         'have the shielding confound long-range cargo scans, reducing the '\n         'probability of contraband being detected.',\n 'short': 'Improves chance to avoid detection of contraband.',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/shielded_cargo_hold.png'}"
     },
