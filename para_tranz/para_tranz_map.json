@@ -341,6 +341,13 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/campaign/CampaignEngine.class",
+      "include_strings": [
+        "Hyperspace"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/campaign/CampaignPlanet.class",
       "include_strings": [
         " World",
@@ -5068,6 +5075,7 @@
         " (level ",
         " is fully integrated with its ship and can not be removed",
         " is permanently assigned to their ship",
+        ")?\n\nThis decision is irreversible.",
         ", assigned to the ",
         ", fully integrated with the ",
         ", maximum number of officers exceeded",
