@@ -24,7 +24,8 @@ def generate_class_mapping_diff_string(target_class_map: ClassFileMapItem, sourc
     included_strings = target_class_map.include_strings
     excluded_strings = target_class_map.exclude_strings
 
-    diff_str = '  "include_strings": [\n'
+    diff_str = f'  "path": "{source_class_map.path}",\n'
+    diff_str += '  "include_strings": [\n'
     for s in sorted(list(source_class_map.include_strings)):
         if s in excluded_strings:
             diff_str += f'    "{colorize(s, RED)}",\n'
