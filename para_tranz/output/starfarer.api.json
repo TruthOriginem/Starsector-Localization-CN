@@ -933,9 +933,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/combat/BaseHullMod.class#\"Aside from removing its ordnance point cost, this hullmod gains no extra effect from being built into the hull using a story point.\"",
         "original": "Aside from removing its ordnance point cost, this hullmod gains no extra effect from being built into the hull using a story point.",
-        "translation": "除了消除其装配点成本以外，该插件不会因使用故事点内置到船体中而获得额外的效果。",
+        "translation": "除了消除其装配点成本以外，该插件不会因使用 故事点 内置到船体中而获得额外的效果。",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/combat/BaseHullMod.class 的第0339个常量\n原始数据：\"Aside from removing its ordnance point cost, this hullmod gains no extra effect from being built into the hull using a story point.\"\n译文数据：\"除了消除其装配点成本以外，该插件不会因使用故事点内置到船体中而获得额外的效果。\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/combat/BaseHullMod.class 的第0339个常量\n原始数据：\"Aside from removing its ordnance point cost, this hullmod gains no extra effect from being built into the hull using a story point.\"\n译文数据：\"除了消除其装配点成本以外，该插件不会因使用 故事点 内置到船体中而获得额外的效果。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/combat/BaseHullMod.class#\"Can only be \"",
@@ -968,9 +968,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/combat/BaseHullMod.class#\"This effect only applies if this hullmod is built into the hull using a story point. Cheap hullmods have stronger effects.\"",
         "original": "This effect only applies if this hullmod is built into the hull using a story point. Cheap hullmods have stronger effects.",
-        "translation": "仅当该插件使用故事点内置到船体中时此效果才适用。使用装配点较少的插件内置奖励更强。",
+        "translation": "仅当该插件使用 故事点 内置到船体中时此效果才适用。使用装配点较少的插件内置奖励更强。",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/combat/BaseHullMod.class 的第0337个常量\n原始数据：\"This effect only applies if this hullmod is built into the hull using a story point. Cheap hullmods have stronger effects.\"\n译文数据：\"仅当该插件使用故事点内置到船体中时此效果才适用。使用装配点较少的插件内置奖励更强。\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/combat/BaseHullMod.class 的第0337个常量\n原始数据：\"This effect only applies if this hullmod is built into the hull using a story point. Cheap hullmods have stronger effects.\"\n译文数据：\"仅当该插件使用 故事点 内置到船体中时此效果才适用。使用装配点较少的插件内置奖励更强。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/combat/BaseHullMod.class#\"installed\"",
@@ -17773,6 +17773,13 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivity.class 的第0125个常量\n原始数据：\"No perceptible impact on operations as of yet.\"\n译文数据：\"目前尚未对行动产生明显影响。\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel$1.class#\"Click to open map\"",
+        "original": "Click to open map",
+        "translation": "Click to open map",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel$1.class 的第0052个常量\n原始数据：\"Click to open map\"\n译文数据：\"Click to open map\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel$2.class#\"There's no crisis on the horizon right now. When this stage is reached, event progress will be reset to a lower value.\"",
         "original": "There's no crisis on the horizon right now. When this stage is reached, event progress will be reset to a lower value.",
         "translation": "预计短期内不会出现危机。达成此阶段时，事件进度会被重置到一个相对较低的数值。",
@@ -17906,11 +17913,46 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class 的第0885个常量\n原始数据：\"Unknown\"\n译文数据：\"未知\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/KantasProtectionOneTimeFactor$1.class#\"You've recently gained Kanta's protection, and it's had a chilling effect on hostile activity in and around your systems.\"",
+        "original": "You've recently gained Kanta's protection, and it's had a chilling effect on hostile activity in and around your systems.",
+        "translation": "You've recently gained Kanta's protection, and it's had a chilling effect on hostile activity in and around your systems.",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/KantasProtectionOneTimeFactor$1.class 的第0029个常量\n原始数据：\"You've recently gained Kanta's protection, and it's had a chilling effect on hostile activity in and around your systems.\"\n译文数据：\"You've recently gained Kanta's protection, and it's had a chilling effect on hostile activity in and around your systems.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/KantasProtectionOneTimeFactor.class#\"Kanta's protection gained\"",
+        "original": "Kanta's protection gained",
+        "translation": "Kanta's protection gained",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/KantasProtectionOneTimeFactor.class 的第0023个常量\n原始数据：\"Kanta's protection gained\"\n译文数据：\"Kanta's protection gained\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/KantasProtectionPirateActivityCause2$1.class#\"You have %s, which is enough to dissuade most pirates from attacking your interests.\"",
         "original": "You have %s, which is enough to dissuade most pirates from attacking your interests.",
         "translation": "你拥有 %s，这足以说服大多数海盗不要打你资产的主意。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/KantasProtectionPirateActivityCause2$1.class 的第0029个常量\n原始数据：\"You have %s, which is enough to dissuade most pirates from attacking your interests.\"\n译文数据：\"你拥有 %s，这足以说服大多数海盗不要打你资产的主意。\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/KantasProtectionPirateActivityCause2.class#\"Kanta's protection\"",
+        "original": "Kanta's protection",
+        "translation": "Kanta's protection",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/KantasProtectionPirateActivityCause2.class 的第0049个常量\n原始数据：\"Kanta's protection\"\n译文数据：\"Kanta's protection\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/KantasWrathPirateActivityCause2$1.class#\"Warlord Kanta, the feared pirate queen, is not pleased with you. Lesser pirates see attacking your interests as a way to curry favor with her.\"",
+        "original": "Warlord Kanta, the feared pirate queen, is not pleased with you. Lesser pirates see attacking your interests as a way to curry favor with her.",
+        "translation": "Warlord Kanta, the feared pirate queen, is not pleased with you. Lesser pirates see attacking your interests as a way to curry favor with her.",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/KantasWrathPirateActivityCause2$1.class 的第0029个常量\n原始数据：\"Warlord Kanta, the feared pirate queen, is not pleased with you. Lesser pirates see attacking your interests as a way to curry favor with her.\"\n译文数据：\"Warlord Kanta, the feared pirate queen, is not pleased with you. Lesser pirates see attacking your interests as a way to curry favor with her.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/KantasWrathPirateActivityCause2.class#\"Kanta's wrath\"",
+        "original": "Kanta's wrath",
+        "translation": "Kanta's wrath",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/KantasWrathPirateActivityCause2.class 的第0066个常量\n原始数据：\"Kanta's wrath\"\n译文数据：\"Kanta's wrath\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchHostileActivityFactor.class#\"%s is tactically bombarded\"",
@@ -18067,6 +18109,13 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathAgreementHostileActivityCause2.class 的第0049个常量\n原始数据：\"Pather agreement\"\n译文数据：\"寻径派契约\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor$1.class#\"Advanced technology and artificial intelligence are anathema to the Luddic Path.\"",
+        "original": "Advanced technology and artificial intelligence are anathema to the Luddic Path.",
+        "translation": "Advanced technology and artificial intelligence are anathema to the Luddic Path.",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor$1.class 的第0030个常量\n原始数据：\"Advanced technology and artificial intelligence are anathema to the Luddic Path.\"\n译文数据：\"Advanced technology and artificial intelligence are anathema to the Luddic Path.\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor$~#\"Most of the Pather fleets are small, engaging in reconnaissance and demanding tithes from unwary travellers, but occasiona~\"@bcb38601",
         "original": "Most of the Pather fleets are small, engaging in reconnaissance and demanding tithes from unwary travellers, but occasionaly a larger raiding force will make an appearance.",
         "translation": "左径 舰队多以小型舰队为主，进行侦察或向缺乏防备的船只收取什一税，但有时也会有更大的劫掠舰队出现。",
@@ -18116,6 +18165,13 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class 的第0725个常量\n原始数据：\"Luddic Path cells disrupted\"\n译文数据：\"卢德左径 小组 已被瘫痪\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class#\"Luddic Path\"",
+        "original": "Luddic Path",
+        "translation": "Luddic Path",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class 的第0134个常量\n原始数据：\"Luddic Path\"\n译文数据：\"Luddic Path\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class#\"Signs of a Luddic Path attack targeting %s\"",
         "original": "Signs of a Luddic Path attack targeting %s",
         "translation": "迹象表明 卢德左径 即将攻击 %s",
@@ -18151,6 +18207,27 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class 的第0405个常量\n原始数据：\"catastrophic saturation bombardment\"\n译文数据：\"饱和轰炸\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class#\"crisis\"",
+        "original": "crisis",
+        "translation": "crisis",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class 的第0414个常量\n原始数据：\"crisis\"\n译文数据：\"crisis\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class#\"day\"",
+        "original": "day",
+        "translation": "",
+        "stage": 5,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class 的第0198个常量\n原始数据：\"day\"\n译文数据：\"\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class#\"days\"",
+        "original": "days",
+        "translation": "",
+        "stage": 5,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class 的第0196个常量\n原始数据：\"days\"\n译文数据：\"\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class#\"disrupted\"",
         "original": "disrupted",
         "translation": "瘫痪",
@@ -18163,6 +18240,13 @@
         "translation": "找到某个正确的人",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class 的第0241个常量\n原始数据：\"find the right people\"\n译文数据：\"找到某个正确的人\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class#\"tithed\"",
+        "original": "tithed",
+        "translation": "支付了什一税",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class 的第0221个常量\n原始数据：\"tithed\"\n译文数据：\"支付了什一税\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class#\"understanding\"",
@@ -19584,6 +19668,13 @@
         "translation": "在一处适宜的天体或位置实施扫描能够有效获取周边地区的超空间测绘数据。这类目标通常需要具有足够大的质量，足以形成一处稳定的重力井，抑或在某种程度上具备高度的特异性或异常性。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTNonASBScanFactor$1.class 的第0029个常量\n原始数据：\"A scan of the right entity or location can provide insight into the topography of surrounding hyperspace. The target usually needs to be massive enough to produce a significant gravity well, produce a high energy discharge, or be exotic or unusual in some other way.\"\n译文数据：\"在一处适宜的天体或位置实施扫描能够有效获取周边地区的超空间测绘数据。这类目标通常需要具有足够大的质量，足以形成一处稳定的重力井，抑或在某种程度上具备高度的特异性或异常性。\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTScanFactor$1.class#\"Active Sensor Burst\"",
+        "original": "Active Sensor Burst",
+        "translation": "传感器扫描",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTScanFactor$1.class 的第0039个常量\n原始数据：\"Active Sensor Burst\"\n译文数据：\"传感器扫描\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTScanFactor$1.class#\"An %s of the right entity or location can provide insight into the topography of surrounding hyperspace. The target usuall~\"@feab503c",
@@ -26978,6 +27069,13 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAFindingCoureuse.class 的第0694个常量\n原始数据：\"Confront the archon of Laicaille Habitat about hiding Scylla Coureuse on the station.\"\n译文数据：\"与 Laicaille 栖息地的执政官对峙，询问将 Scylla Coureuse 藏在空间站的问题。\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAFindingCoureuse.class#\"Ejected Cargo Pod\"",
+        "original": "Ejected Cargo Pod",
+        "translation": "被弹出的货物吊舱",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAFindingCoureuse.class 的第0517个常量\n原始数据：\"Ejected Cargo Pod\"\n译文数据：\"被弹出的货物吊舱\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAFindingCoureuse.class#\"Find Scylla Coureuse, a former academician of the Galatia Academy who went into hiding after the Hegemony crackdown on hyperspace experimentation.\"",
         "original": "Find Scylla Coureuse, a former academician of the Galatia Academy who went into hiding after the Hegemony crackdown on hyperspace experimentation.",
         "translation": "找到 Galatia 学院前院士 Scylla Coureuse。她在 霸主 开始制裁超空间实验后藏了起来。",
@@ -27006,6 +27104,13 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAFindingCoureuse.class 的第0725个常量\n原始数据：\"Go to the safehouse of Scylla Coureuse and convince her to return to the Galatia Academy\"\n译文数据：\"前往 Scylla Coureuse 的安全屋，并说服她回到 Galatia 学院\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAFindingCoureuse.class#\"Hegemony\"",
+        "original": "Hegemony",
+        "translation": "霸主",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAFindingCoureuse.class 的第0679个常量\n原始数据：\"Hegemony\"\n译文数据：\"霸主\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAFindingCoureuse.class#\"Return to the Galatia Academy and talk to Provost Baird\"",
         "original": "Return to the Galatia Academy and talk to Provost Baird",
         "translation": "回 Galatia 学院，并与 Baird 院长谈谈",
@@ -27032,6 +27137,13 @@
         "translation": "在 Isirah 星系中寻找 Scylla Coureuse。与可能参与藏匿她的人交谈，或寻找她的研究痕迹。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAFindingCoureuse.class 的第0692个常量\n原始数据：\"Search the Isirah system for Scylla Coureuse. Talk to people who might be involved in hiding her and search for signs of her research.\"\n译文数据：\"在 Isirah 星系中寻找 Scylla Coureuse。与可能参与藏匿她的人交谈，或寻找她的研究痕迹。\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAFindingCoureuse.class#\"Talk to associates of Scylla Coureuse on Fikenhild to find a lead to her location or attract attention from someone who knows where she is\"",
+        "original": "Talk to associates of Scylla Coureuse on Fikenhild to find a lead to her location or attract attention from someone who knows where she is",
+        "translation": "Talk to associates of Scylla Coureuse on Fikenhild to find a lead to her location or attract attention from someone who knows where she is",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAFindingCoureuse.class 的第0717个常量\n原始数据：\"Talk to associates of Scylla Coureuse on Fikenhild to find a lead to her location or attract attention from someone who knows where she is\"\n译文数据：\"Talk to associates of Scylla Coureuse on Fikenhild to find a lead to her location or attract attention from someone who knows where she is\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAFindingCoureuse.class#\"Talk to contacts on Fikenhild associated with Scylla Coureuse to find a lead to her current location - or attract the atte~\"@003c2cfc",
@@ -29701,6 +29813,20 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/procgen/themes/MiscellaneousThemeGenerator.class 的第0774个常量\n原始数据：\"Stellar Shade Psi\"\n译文数据：\"'普西' 恒星罩\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/procgen/themes/PKDefenderPluginImpl.class#\"Automated\"",
+        "original": "Automated",
+        "translation": "自动化",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/procgen/themes/PKDefenderPluginImpl.class 的第0294个常量\n原始数据：\"Automated\"\n译文数据：\"自动化\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/procgen/themes/PKDefenderPluginImpl.class#\"Remnants of Task Force Safeguard\"",
+        "original": "Remnants of Task Force Safeguard",
+        "translation": "Remnants of Task Force Safeguard",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/procgen/themes/PKDefenderPluginImpl.class 的第0058个常量\n原始数据：\"Remnants of Task Force Safeguard\"\n译文数据：\"Remnants of Task Force Safeguard\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/procgen/themes/RemnantAssignmentAI.class#\"patrolling\"",
         "original": "patrolling",
         "translation": "正在巡逻",
@@ -29755,6 +29881,13 @@
         "translation": "行动中",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/procgen/themes/RouteFleetAssignmentAI.class 的第0225个常量\n原始数据：\"traveling\"\n译文数据：\"行动中\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/procgen/themes/SalvageSpecialAssigner$ShipRecoverySpecialCreator.class#\"found in a sealed hangar bay\"",
+        "original": "found in a sealed hangar bay",
+        "translation": "found in a sealed hangar bay",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/procgen/themes/SalvageSpecialAssigner$ShipRecoverySpecialCreator.class 的第0098个常量\n原始数据：\"found in a sealed hangar bay\"\n译文数据：\"found in a sealed hangar bay\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/procgen/themes/SalvageSpecialAssigner.class#\" to \"",
@@ -30189,6 +30322,27 @@
         "translation": "的舰船",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/HailPlayer.class 的第0028个常量\n原始数据：\"ship\"\n译文数据：\"的舰船\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/KantaCMD$TakingBackTheNanoforgeChecker.class#\"Word of this is bound to get back to Kanta. You can't imagine she would react well to being made a fool of.\"",
+        "original": "Word of this is bound to get back to Kanta. You can't imagine she would react well to being made a fool of.",
+        "translation": "Word of this is bound to get back to Kanta. You can't imagine she would react well to being made a fool of.",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/KantaCMD$TakingBackTheNanoforgeChecker.class 的第0095个常量\n原始数据：\"Word of this is bound to get back to Kanta. You can't imagine she would react well to being made a fool of.\"\n译文数据：\"Word of this is bound to get back to Kanta. You can't imagine she would react well to being made a fool of.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/KantaCMD.class#\"Kanta's Protection gained\"",
+        "original": "Kanta's Protection gained",
+        "translation": "Kanta's Protection gained",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/KantaCMD.class 的第0645个常量\n原始数据：\"Kanta's Protection gained\"\n译文数据：\"Kanta's Protection gained\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/KantaCMD.class#\"Kanta's Protection lost\"",
+        "original": "Kanta's Protection lost",
+        "translation": "Kanta's Protection lost",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/KantaCMD.class 的第0774个常量\n原始数据：\"Kanta's Protection lost\"\n译文数据：\"Kanta's Protection lost\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/PaginatedOptions.class#\"Next page\"",

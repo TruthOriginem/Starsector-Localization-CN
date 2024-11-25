@@ -249,6 +249,7 @@
     {
       "path": "com/fs/starfarer/campaign/A/E.class",
       "include_strings": [
+        "Continue",
         "Cut comm link",
         "Persuade",
         "Surrender",
@@ -684,7 +685,8 @@
     {
       "path": "com/fs/starfarer/campaign/ai/TacticalModule.class",
       "include_strings": [
-        "Moving slowly"
+        "Moving slowly",
+        "Executing search pattern"
       ]
     },
     {
@@ -11450,6 +11452,13 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel$1.class",
+      "include_strings": [
+        "Click to open map"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/HAShipsDestroyedFactor.class",
       "include_strings": [
         "Hostile ships destroyed"
@@ -11470,10 +11479,45 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/KantasProtectionOneTimeFactor.class",
+      "include_strings": [
+        "Kanta's protection gained"
+      ],
+      "exclude_strings": []
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/KantasProtectionOneTimeFactor$1.class",
+      "include_strings": [
+        "You've recently gained Kanta's protection, and it's had a chilling effect on hostile activity in and around your systems."
+      ],
+      "exclude_strings": []
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/KantasProtectionPirateActivityCause2.class",
+      "include_strings": [
+        "Kanta's protection"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/KantasProtectionPirateActivityCause2$1.class",
       "include_strings": [
         "You have %s, which is enough to dissuade most pirates from attacking your interests."
       ]
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/KantasWrathPirateActivityCause2.class",
+      "include_strings": [
+        "Kanta's wrath"
+      ],
+      "exclude_strings": []
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/intel/events/KantasWrathPirateActivityCause2$1.class",
+      "include_strings": [
+        "Warlord Kanta, the feared pirate queen, is not pleased with you. Lesser pirates see attacking your interests as a way to curry favor with her."
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchHostileActivityFactor.class",
@@ -11529,6 +11573,7 @@
         ".",
         "An agreement is reached with the Luddic Path",
         "It's possible that you might reach some kind of understanding with the Pathers, provided you find the right people to talk to.",
+        "Luddic Path",
         "Luddic Path attack",
         "Luddic Path attack averted",
         "Luddic Path cells disrupted",
@@ -11539,14 +11584,19 @@
         "You've %s a signficant amount to the Pathers, and their fleets and ground-based cells should leave your colonies alone for another %s ",
         "You've reached an understanding with the Pathers, and their fleets and ground-based cells should leave your colonies alone in the future, barring unexpected events.",
         "catastrophic saturation bombardment",
+        "crisis",
+        "day",
+        "days",
         "disrupted",
         "find the right people",
+        "tithed",
         "understanding"
       ]
     },
     {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor$1.class",
       "include_strings": [
+        "Advanced technology and artificial intelligence are anathema to the Luddic Path.",
         "Most of the Pather fleets are small, engaging in reconnaissance and demanding tithes from unwary travellers, but occasionaly a larger raiding force will make an appearance."
       ]
     },
@@ -11944,6 +11994,7 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/intel/events/ht/HTScanFactor$1.class",
       "include_strings": [
+        "Active Sensor Burst",
         "An %s of the right entity or location can provide insight into the topography of surrounding hyperspace. The target usually needs to be massive enough to produce a significant gravity well, produce a high energy discharge, or be exotic or unusual in some other way."
       ]
     },
@@ -13478,14 +13529,17 @@
         " and search for the experimental packages possibly being used by Coureuse.",
         "Confront the archon of Laicaille Habitat about hiding Scylla Coureuse on the station",
         "Confront the archon of Laicaille Habitat about hiding Scylla Coureuse on the station.",
+        "Ejected Cargo Pod",
         "Find Scylla Coureuse, a former academician of the Galatia Academy who went into hiding after the Hegemony crackdown on hyperspace experimentation.",
         "Find former academician Scylla Coureuse",
         "Finding Coureuse",
         "Go to the safehouse of Scylla Coureuse and convince her to return to the Galatia Academy",
+        "Hegemony",
         "Return to the Galatia Academy and talk to Provost Baird",
         "Return to the Galatia Academy and talk to Provost Baird.",
         "Search the Isirah system for Scylla Coureuse, talk to people who might be hiding her, and search for signs of her research.",
         "Search the Isirah system for Scylla Coureuse. Talk to people who might be involved in hiding her and search for signs of her research.",
+        "Talk to associates of Scylla Coureuse on Fikenhild to find a lead to her location or attract attention from someone who knows where she is",
         "Talk to contacts on Fikenhild associated with Scylla Coureuse to find a lead to her current location - or attract the attention of someone who knows where she is.",
         "Visit the safehouse of Scylla Coureuse and convince her to come back to the Galatia Academy.",
         "You've found Academician Scylla Coureuse and brought her out of hiding to return her to work on Baird's secret project at the Galatia Academy.",
@@ -14145,6 +14199,14 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/api/impl/campaign/procgen/themes/PKDefenderPluginImpl.class",
+      "include_strings": [
+        "Automated",
+        "Remnants of Task Force Safeguard"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/api/impl/campaign/procgen/themes/RemnantAssignmentAI.class",
       "include_strings": [
         "patrolling",
@@ -14173,6 +14235,13 @@
         " to ",
         "Assigned "
       ]
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/procgen/themes/SalvageSpecialAssigner$ShipRecoverySpecialCreator.class",
+      "include_strings": [
+        "found in a sealed hangar bay"
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/api/impl/campaign/procgen/themes/ScavengerFleetAssignmentAI.class",
@@ -14289,6 +14358,21 @@
         "fleet",
         "ship"
       ]
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/rulecmd/KantaCMD.class",
+      "include_strings": [
+        "Kanta's Protection gained",
+        "Kanta's Protection lost"
+      ],
+      "exclude_strings": []
+    },
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/rulecmd/KantaCMD$TakingBackTheNanoforgeChecker.class",
+      "include_strings": [
+        "Word of this is bound to get back to Kanta. You can't imagine she would react well to being made a fool of."
+      ],
+      "exclude_strings": []
     },
     {
       "path": "com/fs/starfarer/api/impl/campaign/rulecmd/PaginatedOptions.class",

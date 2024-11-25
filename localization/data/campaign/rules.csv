@@ -9021,7 +9021,7 @@ psi_defenderDesc,TriggerAutomatedDefenses,$psi_planet score:1000,SalvageDefender
 psi_continuePostDefenders,BeatDefendersContinue,$psi_planet score:1000,,你的$shipOrFleet成功抵近了 $entityName，没有发生其他异常事件。,0:salBeatDefendersContinue:继续,
 psi_beatDefenders,BeginSalvage,$psi_planet score:1000,SetShortcut defaultLeave ESCAPE,"进一步的扫描显示，能量场并不均一完整，可能是由于能量源已经年久失修。同时你的舰桥人员设法发现了一个从星球表面发出讯号的遇险信标。
 
-该讯号被设定不断重播，并以因为设备老化的而出现了乱码。你从其中可以解读的信息推断，这里是 速子 的机密研究机构。在某一次 AI 战争期间，全自动防御系统对某条紧急安全命令采取了过激的响应，决定击毁任何试图离开这个星球的飞船，导致一支研究小组的部分成员被滞留在了这里。","0:psi_explore:派遣打捞小组前往研究机构
+该讯号被设定不断重播，且因为设备老化的而出现了乱码。你从其中可以解读的信息推断，这里是 速子 的机密研究机构。在某一次 AI 战争期间，全自动防御系统对某条紧急安全命令采取了过激的响应，决定击毁任何试图离开这个星球的飞船，导致一支研究小组的部分成员被滞留在了这里。","0:psi_explore:派遣打捞小组前往研究机构
 100:defaultLeave:离开",
 psi_exploreFacility,DialogOptionSelected,$option == psi_explore,,你派出一艘临时加装了护盾发生器的穿梭机，让它突入了护盾的一处破损点。穿梭机在主控制中心顺利着陆，机组人员成功突入设施，将护盾完全解除。随后，携带重型设备的后援穿梭机迅速跟进，开始全面展开打捞作业。,0:psi_salvage:进行打捞作业,
 psi_salvage,DialogOptionSelected,$option == psi_salvage,RedPlanet genLoot,,,
@@ -24366,7 +24366,7 @@ sdtuUmbraRaidFinishedA,SDTUUmbraRaidFinishedA,,,"你在舰桥上监督着这场�
 根据作战传感器对骨骼结构的扫描结果，任务目标被精准地标记了出来，并与 Macario 的档案进行对比确认。该特工已被捕获并拘束以待撤出，仅受轻伤。",,
 sdtuUmbraRaidFinishedB,SDTUUmbraRaidFinishedB,,"$global.sdtu_didUmbraRaid = true
 AddTextSmall ""狮心卫队的双面间谍被成功救出了"" highlight
-FireAll SDTUUmbraGotAgent","你的陆战队撤退了，把一片破损的舱壁连同无数响彻云霄的警报和一些零星还击抛在了身后。Umbran 民兵部队还没完成动员，港口才刚刚进入封锁状态。但最后一架陆战队穿梭机已经离地起飞，只留下喷射气流掀起的挥发物尘雪，和殖民建筑泄露出来的大气一起混溶消散。
+FireAll SDTUUmbraGotAgent","你的陆战队撤退了，把一片破损的舱壁连同无数响彻云霄的警报和一些零星还击抛在了身后。Umbra 的民兵部队还没完成动员，港口才刚刚进入封锁状态。但最后一架陆战队穿梭机已经离地起飞，只留下喷射气流掀起的挥发物尘雪，和殖民建筑泄露出来的大气一起混溶消散。
 
 双面间谍被关进了禁闭室，安排了医护人员照顾。他断了一些骨头，还有不少其他轻伤，这都在预料之中。",defaultLeave:离开,
 sdtuUmbraAdmin,PopulateOptions,"$market.id == umbra
