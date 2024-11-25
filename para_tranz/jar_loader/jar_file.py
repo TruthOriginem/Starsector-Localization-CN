@@ -6,9 +6,10 @@ from pathlib import Path
 from typing import List, Dict, Set, Optional, Union
 
 from para_tranz.jar_loader.class_file import JavaClassFile
-from para_tranz.utils.config import EXPORTED_STRING_CONTEXT_PREFIX_PREFIX, IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS, ORIGINAL_PATH, TRANSLATION_PATH
+from para_tranz.utils.config import EXPORTED_STRING_CONTEXT_PREFIX_PREFIX, IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS, \
+    ORIGINAL_PATH, TRANSLATION_PATH
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, JarMapItem, ClassFileMapItem
-from para_tranz.utils.util import DataFile, String, make_logger, normalize_class_path
+from para_tranz.utils.util import DataFile, String, make_logger, rename_class_path
 
 
 class JavaJarFile(DataFile):
@@ -66,10 +67,9 @@ class JavaJarFile(DataFile):
 
         return class_file
 
-    
     re_jar_class = re.compile(r'提取自 (.*\.jar):(.*\.class)')
     re_original_text = re.compile(r'原始数据：(\".*\")\n译文数据：', re.DOTALL)
-    
+
     # TODO: 重构 String 类，添加子类 JarString，用于处理 jar 文件中的词条。将这个方法移动到 JarString 类中
     @classmethod
     def construct_string_key_from_context(cls, context: str) -> str:
@@ -83,17 +83,16 @@ class JavaJarFile(DataFile):
         Returns:
             str: 根据上下文还原的词条key
         """
-        
+
         jar_class_match = cls.re_jar_class.search(context)
         orignal_text_match = cls.re_original_text.search(context)
-        
+
         if jar_class_match and orignal_text_match:
             jar_path, class_path = jar_class_match.groups()
             original_text = orignal_text_match.group(1)
             return f'{jar_path}:{class_path}#{original_text}'
         else:
             raise ValueError(f'无法从上下文\n{context}\n中还原词条key')
-        
 
     def update_strings(self, strings: Set[String], version_migration: bool = False) -> None:
         class_file_path_strings_mapping = {class_file_path: [] for class_file_path in
@@ -107,12 +106,13 @@ class JavaJarFile(DataFile):
             if '~' in key and '@' in key:
                 key = self.construct_string_key_from_context(s.context)
             class_file_path = re.split(r'[#:]', key)[1]
-            
+
             class_file = self.class_files.get(class_file_path, None)
 
             if class_file is None:
                 if not version_migration:
-                    if IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS and not s.context.startswith(EXPORTED_STRING_CONTEXT_PREFIX_PREFIX):
+                    if IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS and not s.context.startswith(
+                            EXPORTED_STRING_CONTEXT_PREFIX_PREFIX):
                         self.logger.debug(
                             f'在 {self.path} 中词条 key={s.key} 的词条上下文前缀与当前上下文前缀不匹配，跳过词条')
                     else:
@@ -174,13 +174,13 @@ class JavaJarFile(DataFile):
 
     def _fuzzy_match_class_file(self, class_file_path: str, strings: Optional[List[String]]) -> Optional[
         'JavaClassFile']:
-        normalized_path = normalize_class_path(class_file_path)
+        normalized_path = rename_class_path(class_file_path)
         matched_classes: List[JavaClassFile] = []
 
         normalized_class_files = {}
 
         for class_file in self.class_files.values():
-            normalized_name = normalize_class_path(str(class_file.path))
+            normalized_name = rename_class_path(str(class_file.path))
             if normalized_name not in normalized_class_files:
                 normalized_class_files[normalized_name] = [class_file]
             else:

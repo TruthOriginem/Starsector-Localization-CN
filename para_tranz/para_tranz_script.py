@@ -1,12 +1,12 @@
-# 将父级目录加入到环境变量中，以便从命令行中运行本脚本
+import json
 import sys
+from dataclasses import asdict
 from os.path import abspath, dirname
+
+# 将父级目录加入到环境变量中，以便从命令行中运行本脚本
 sys.path.append(dirname(dirname(abspath(__file__))))
 
-import json
-from dataclasses import asdict
-
-from para_tranz.utils.mapping import PARA_TRANZ_MAP
+from para_tranz.utils.mapping_generation import generate_class_file_mapping
 from para_tranz.csv_loader.csv_file import CsvFile
 from para_tranz.jar_loader.jar_file import JavaJarFile
 from para_tranz.utils.util import make_logger, SetEncoder
@@ -40,29 +40,26 @@ def paratranz_to_game_new_version():
             file.update_from_json(version_migration=True)
             file.save_file()
 
-def generate_class_file_mapping():
-    print('请输入java jar文件及其中类文件的路径，格式为 jar_file.jar:com/example/Example.class')
+def gen_mapping_by_class_path():
+    print('请输入java jar文件及其中类文件的路径，以生成类文件映射项')
     print('例如：starfarer.api.jar:com/fs/starfarer/api/campaign/FleetAssignment.class')
-    class_file_path = input('类文件路径：')
+    print('例如：com.fs.starfarer.api.campaign.FleetAssignment')
 
-    result = PARA_TRANZ_MAP.get_jar_and_class_file_item(class_file_path, create=True, one_class_only=True)
+    result = generate_class_file_mapping(input('类文件路径：'))
 
-    if not result:
-        logger.error('生成类文件映射项失败')
+    if result:
+        jar_item, class_item, diff = result
+        print('所属jar文件：', jar_item.path)
+        print('以下是生成的类文件映射项：')
+        print(json.dumps(asdict(class_item), indent=2, cls=SetEncoder, ensure_ascii=False))
 
-    jar_item, class_item = result
+        if diff:
+            print('以下是与当前存在的映射项的对比（绿色表示已包含在当前映射表中，红色表示已排除，无色表示未包含）：')
+            print(diff)
+        else:
+            print('此类未包含在当前映射表中')
 
-    # 清空原有的字符串过滤条目，以输出所有字符串
-    original_include_strings = class_item.include_strings
-    class_item.include_strings = set()
-    class_item.exclude_strings = set()
-
-    jar_file = JavaJarFile(**asdict(jar_item))
-    class_item_with_strings = jar_file.class_files[class_item.path].export_map_item()
-
-    print('以下是生成的类文件映射项：')
-    print(json.dumps(asdict(class_item_with_strings), indent=2, cls=SetEncoder, ensure_ascii=False))
-
+    logger.info('类文件映射项生成完成')
 
 def mian():
     print('欢迎使用 远行星号 ParaTranz 词条导入导出工具')
@@ -85,7 +82,7 @@ def mian():
         #     paratranz_to_game_new_version()
         #     break
         elif option == '4':
-            generate_class_file_mapping()
+            gen_mapping_by_class_path()
             break
         else:
             print('无效选项！')

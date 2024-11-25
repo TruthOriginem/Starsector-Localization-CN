@@ -9,7 +9,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Optional, Set, List, Union
 
-from para_tranz.utils.config import PROJECT_DIRECTORY, ORIGINAL_PATH, TRANSLATION_PATH, PARA_TRANZ_PATH, LOG_LEVEL, OVERRIDE_STRING_STATUS
+from para_tranz.utils.config import PROJECT_DIRECTORY, ORIGINAL_PATH, TRANSLATION_PATH, PARA_TRANZ_PATH, LOG_LEVEL, \
+    OVERRIDE_STRING_STATUS
 
 
 def relative_path(path: Path) -> Path:
@@ -18,24 +19,40 @@ def relative_path(path: Path) -> Path:
     except Exception as _:
         return path
 
+
+def normalize_class_path(class_path: str) -> str:
+    """
+    将类路径标准化为以/分隔的形式，并确保以.class结尾
+    """
+    if class_path.endswith('.class'):
+        class_path = class_path.removesuffix('.class')
+
+    class_path = class_path.replace('.', '/')
+
+    return class_path + '.class'
+
+GREY = "\x1b[38;20m"
+GREEN = "\x1b[32;20m"
+YELLOW = "\x1b[33;20m"
+RED = "\x1b[31;20m"
+BOLD_RED = "\x1b[31;1m"
+RESET = "\x1b[0m"
+
+def colorize(s: str, color: str) -> str:
+    return color + s + RESET
+
 # From: https://stackoverflow.com/questions/384076/how-can-i-color-python-logging-output
 class CustomFormatter(logging.Formatter):
-    grey = "\x1b[38;20m"
-    yellow = "\x1b[33;20m"
-    red = "\x1b[31;20m"
-    bold_red = "\x1b[31;1m"
-    reset = "\x1b[0m"
-
     format_str = "[%(name)s][%(levelname)s] %(message)s \n"
 
     FORMATS = {
-        logging.DEBUG: grey + format_str + reset,
-        logging.INFO: grey + format_str + reset,
-        logging.WARNING: yellow + format_str + reset,
-        logging.ERROR: red + format_str + reset,
-        logging.CRITICAL: bold_red + format_str + reset
+        logging.DEBUG: GREY + format_str + RESET,
+        logging.INFO: GREY + format_str + RESET,
+        logging.WARNING: YELLOW + format_str + RESET,
+        logging.ERROR: RED + format_str + RESET,
+        logging.CRITICAL: BOLD_RED + format_str + RESET
     }
-    
+
     def format(self, record):
         log_fmt = self.FORMATS.get(record.levelno)
         formatter = logging.Formatter(log_fmt)
@@ -80,7 +97,8 @@ class String:
 class DataFile:
     logger = make_logger('util.py - DataFile')
 
-    def __init__(self, path: Union[str, Path], type: str, original_path: Optional[Path] = None, translation_path: Optional[Path] = None):
+    def __init__(self, path: Union[str, Path], type: str, original_path: Optional[Path] = None,
+                 translation_path: Optional[Path] = None):
         self.path = Path(path)  # 相对 original 或者 localization 文件夹的路径
         self.original_path = ORIGINAL_PATH / Path(original_path if original_path else path)
         self.translation_path = TRANSLATION_PATH / Path(
@@ -154,7 +172,7 @@ class DataFile:
     def write_json_strings(path: Path, strings: List[String], ensure_ascii=False, indent=4, sort=True) -> None:
         if sort:
             strings = sorted(strings, key=lambda s: s.key)
-        
+
         path.parent.mkdir(parents=True, exist_ok=True)
         with open(path, 'w', encoding='utf-8') as f:
             data = []
@@ -190,7 +208,7 @@ def replace_weird_chars(s: str) -> str:
         .replace('\udc85', '...')
 
 
-def normalize_class_path(class_path: str) -> str:
+def rename_class_path(class_path: str) -> str:
     """
     将类路径中可能因混淆产生的部分替换为一个标准形式以便模糊匹配
     """
@@ -217,10 +235,12 @@ def normalize_class_path(class_path: str) -> str:
 
     return '/'.join([normalize(s) for s in segments[:-1]] + [class_name])
 
+
 def url_encode(s: str) -> str:
     return urllib.parse.quote(s)
 
-def hash_string(s: str, length:int=4) -> str:
+
+def hash_string(s: str, length: int = 4) -> str:
     """
     生成字符串的hash值
 
@@ -232,6 +252,7 @@ def hash_string(s: str, length:int=4) -> str:
         str: hash值字符串
     """
     return hashlib.shake_128(s.encode()).hexdigest(length)
+
 
 class SetEncoder(json.JSONEncoder):
     """
