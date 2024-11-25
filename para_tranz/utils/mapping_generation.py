@@ -62,7 +62,7 @@ def generate_class_file_mapping_by_path(class_file_path: str) -> Optional[
             return
 
         existing_class_item = jar_item.get_class_file_item(class_path)
-        jar_item.class_files = [existing_class_item or ClassFileMapItem(path=class_path)]
+        jar_item.class_files = [ClassFileMapItem(path=class_path)]
 
         jar_file_items = [jar_item]
 
@@ -74,7 +74,7 @@ def generate_class_file_mapping_by_path(class_file_path: str) -> Optional[
         # 如果在 para_tranz_map.json 中找到了类文件映射项，那么就可以确定所属的jar文件
         if result:
             jar_item, existing_class_item = result
-            jar_item.class_files = [existing_class_item]
+            jar_item.class_files = [ClassFileMapItem(path=class_path)]
             jar_file_items = [jar_item]
 
         # 否则，需要手动为每一个jar文件映射添加类文件映射项

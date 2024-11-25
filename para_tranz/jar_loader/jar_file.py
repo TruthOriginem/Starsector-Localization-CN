@@ -19,7 +19,7 @@ class JavaJarFile(DataFile):
 
     logger = make_logger(f'JavaJarFile')
 
-    def __init__(self, path: Union[Path, str], class_files: List[dict], type: str = 'jar', **kwargs):
+    def __init__(self, path: Union[Path, str], class_files: List[dict], type: str = 'jar', no_auto_load: bool = False, **kwargs):
         super().__init__(path, type)
 
         self.path = path
@@ -32,10 +32,11 @@ class JavaJarFile(DataFile):
 
         self.class_files = {}  # type: Dict[str, JavaClassFile]
 
-        self.logger.info(f'开始读取 {self.path} 中指定的class文件，共 {len(class_files)} 个')
-        for class_file_info in class_files:
-            self.load_class_file(**class_file_info)
-        self.logger.info(f'jar读取完成: {self.path}')
+        if not no_auto_load:
+            self.logger.info(f'开始读取 {self.path} 中指定的class文件，共 {len(class_files)} 个')
+            for class_file_info in class_files:
+                self.load_class_file(**class_file_info)
+            self.logger.info(f'jar读取完成: {self.path}')
 
     def __del__(self):
         self.close_files()

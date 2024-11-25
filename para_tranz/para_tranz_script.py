@@ -3,6 +3,8 @@ import sys
 from dataclasses import asdict
 from os.path import abspath, dirname
 
+from para_tranz.utils.search import search_for_string_in_jar_files
+
 # 将父级目录加入到环境变量中，以便从命令行中运行本脚本
 sys.path.append(dirname(dirname(abspath(__file__))))
 
@@ -62,6 +64,20 @@ def gen_mapping_by_class_path():
 
     logger.info('类文件映射项生成完成')
 
+def search_string_in_jar_files():
+    pattern = input('请输入要查找的字符串：')
+    result = search_for_string_in_jar_files(pattern.strip())
+
+    if not result:
+        print('未找到任何结果')
+        return
+    else:
+        for r in result:
+            print(r)
+
+    logger.info('字符串查找完成')
+
+
 def mian():
     print('欢迎使用 远行星号 ParaTranz 词条导入导出工具')
     print('请选择您要进行的操作：')
@@ -70,6 +86,7 @@ def mian():
     # TODO: jar版本迁移还没写好
     # print('3 - 将 ParaTranz 词条写回新版本游戏的汉化(localization)文件（版本迁移时使用，主要针对jar文件）')
     print('4 - 对指定类文件，生成包含所有string的类文件映射项(用于添加新类到para_tranz_map.json)')
+    print('5 - 在所有jar文件中查找指定原文字符串')
 
     while True:
         option = input('请输入选项数字：')
@@ -84,6 +101,9 @@ def mian():
         #     break
         elif option == '4':
             gen_mapping_by_class_path()
+            break
+        elif option == '5':
+            search_string_in_jar_files()
             break
         else:
             print('无效选项！')

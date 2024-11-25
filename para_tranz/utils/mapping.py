@@ -41,6 +41,20 @@ class ClassFileMapItem:
     def as_json(self) -> str:
         return json.dumps(dataclasses.asdict(self), indent=2, cls=SetEncoder, ensure_ascii=False)
 
+    def search_for_string(self, pattern: str) -> Tuple[List[str], List[str]]:
+        included = set()
+        excluded = set()
+
+        for s in self.include_strings:
+            if pattern in s:
+                included.add(s)
+        for s in self.exclude_strings:
+            if pattern in s:
+                excluded.add(s)
+                included.discard(s)
+
+        return sorted(list(included)), sorted(list(excluded))
+
 
 @dataclass
 class JarMapItem(ParaTranzMapItem):
