@@ -9,12 +9,23 @@ from para_tranz.utils.util import normalize_class_path, colorize, RED, GREEN, ma
 
 logger = make_logger('MappingGenerator')
 
-def generate_class_mapping_diff_string(existing_class_item: ClassFileMapItem, generated_class_map_item: ClassFileMapItem) -> str:
-    included_strings = existing_class_item.include_strings
-    excluded_strings = existing_class_item.exclude_strings
+
+def generate_class_mapping_diff_string(target_class_map: ClassFileMapItem, source_class_map: ClassFileMapItem) -> str:
+    """
+    生成类文件映射项的对比信息
+    将检测源类映射 include_strings 中的每个字符串是否在目标类映射中出现/排除
+
+    :param target_class_map: 目标类文件映射
+    :param source_class_map: 源类文件映射
+
+    :return: 可打印的对比信息，带有ANSI颜色标记
+    """
+
+    included_strings = target_class_map.include_strings
+    excluded_strings = target_class_map.exclude_strings
 
     diff_str = '  "include_strings": [\n'
-    for s in sorted(list(generated_class_map_item.include_strings)):
+    for s in sorted(list(source_class_map.include_strings)):
         if s in excluded_strings:
             diff_str += f'    "{colorize(s, RED)}",\n'
         elif s in included_strings:
@@ -26,10 +37,19 @@ def generate_class_mapping_diff_string(existing_class_item: ClassFileMapItem, ge
 
     return diff_str
 
-def generate_class_file_mapping(class_file_path: str) -> Optional[Tuple[JarMapItem, ClassFileMapItem, str]]:
-    jar_item = None # type: Optional[JarMapItem]
-    existing_class_item = None # type: Optional[ClassFileMapItem]
-    class_file = None # type: Optional[JavaClassFile]
+
+def generate_class_file_mapping_by_path(class_file_path: str) -> Optional[
+    Tuple[JarMapItem, ClassFileMapItem, Optional[ClassFileMapItem]]]:
+    """
+    通过类文件路径查找类，并生成类文件映射项
+
+    :param class_file_path: 类文件路径，格式为：[jar文件路径:]类文件路径[.class]。其中类文件路径可以使用'/'或'.'分隔每个包名和类名
+    :return: 类所处的jar文件映射项、生成的类文件映射项、已存在的类文件映射项（如果存在）
+    """
+
+    jar_item = None  # type: Optional[JarMapItem]
+    existing_class_item = None  # type: Optional[ClassFileMapItem]
+    class_file = None  # type: Optional[JavaClassFile]
 
     # 如果路径中包含冒号，说明指定了jar文件
     if ':' in class_file_path:
@@ -79,10 +99,4 @@ def generate_class_file_mapping(class_file_path: str) -> Optional[Tuple[JarMapIt
 
     generated_class_map_item = class_file.export_map_item()
 
-    diff_str = ''
-
-    # 如果在 para_tranz_map.json 中找到了已有的类文件映射项，那么就可以生成对比信息
-    if existing_class_item:
-        diff_str = generate_class_mapping_diff_string(existing_class_item, generated_class_map_item)
-
-    return jar_item, generated_class_map_item, diff_str
+    return jar_item, generated_class_map_item, existing_class_item

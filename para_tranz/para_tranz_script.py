@@ -6,7 +6,7 @@ from os.path import abspath, dirname
 # 将父级目录加入到环境变量中，以便从命令行中运行本脚本
 sys.path.append(dirname(dirname(abspath(__file__))))
 
-from para_tranz.utils.mapping_generation import generate_class_file_mapping
+from para_tranz.utils.mapping_generation import generate_class_file_mapping_by_path, generate_class_mapping_diff_string
 from para_tranz.csv_loader.csv_file import CsvFile
 from para_tranz.jar_loader.jar_file import JavaJarFile
 from para_tranz.utils.util import make_logger, SetEncoder
@@ -45,17 +45,18 @@ def gen_mapping_by_class_path():
     print('例如：starfarer.api.jar:com/fs/starfarer/api/campaign/FleetAssignment.class')
     print('例如：com.fs.starfarer.api.campaign.FleetAssignment')
 
-    result = generate_class_file_mapping(input('类文件路径：'))
+    result = generate_class_file_mapping_by_path(input('类文件路径：'))
 
     if result:
-        jar_item, class_item, diff = result
+        jar_item, class_item, existing_class_item = result
         print('所属jar文件：', jar_item.path)
         print('以下是生成的类文件映射项：')
-        print(json.dumps(asdict(class_item), indent=2, cls=SetEncoder, ensure_ascii=False))
+        print(class_item.as_json())
 
-        if diff:
+        # 如果在 para_tranz_map.json 中找到了已有的类文件映射项，那么就可以生成对比信息
+        if existing_class_item:
             print('以下是与当前存在的映射项的对比（绿色表示已包含在当前映射表中，红色表示已排除，无色表示未包含）：')
-            print(diff)
+            print(generate_class_mapping_diff_string(existing_class_item, class_item))
         else:
             print('此类未包含在当前映射表中')
 

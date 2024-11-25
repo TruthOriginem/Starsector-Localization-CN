@@ -22,6 +22,9 @@ class ParaTranzMapItem:
         else:
             raise ValueError(f'Unknown type: {d["type"]}')
 
+    def as_json(self) -> str:
+        return json.dumps(dataclasses.asdict(self), indent=2, cls=SetEncoder, ensure_ascii=False)
+
 
 @dataclass
 class CsvMapItem(ParaTranzMapItem):
@@ -34,6 +37,9 @@ class ClassFileMapItem:
     path: str
     include_strings: Optional[Set[str]] = dataclasses.field(default_factory=set)
     exclude_strings: Optional[Set[str]] = dataclasses.field(default_factory=set)
+
+    def as_json(self) -> str:
+        return json.dumps(dataclasses.asdict(self), indent=2, cls=SetEncoder, ensure_ascii=False)
 
 
 @dataclass
