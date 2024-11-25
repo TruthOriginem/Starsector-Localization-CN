@@ -15038,9 +15038,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/historian/HistorianBarEvent.class#\"I think we can help each other, you and I. See, I have the information,\" \"",
         "original": "I think we can help each other, you and I. See, I have the information,\" ",
-        "translation": "\"我想我们应该能互相帮助，对！就你和我，你看，我有知识\" ",
+        "translation": "\"我想我们应该能互相帮助，对！就你和我，你看，我有知识，\" ",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/historian/HistorianBarEvent.class 的第0330个常量\n原始数据：\"I think we can help each other, you and I. See, I have the information,\" \"\n译文数据：\"\"我想我们应该能互相帮助，对！就你和我，你看，我有知识\" \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/historian/HistorianBarEvent.class 的第0330个常量\n原始数据：\"I think we can help each other, you and I. See, I have the information,\" \"\n译文数据：\"\"我想我们应该能互相帮助，对！就你和我，你看，我有知识，\" \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/historian/HistorianBarEvent.class#\"The historian tells you about...\"",
@@ -15101,9 +15101,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/historian/HistorianBarEvent.~#\"\"I understand why you would assume that; this is a mercenary age. But no, nothing quite so transactional. History is an un~\"@8df1ba0e",
         "original": "\"I understand why you would assume that; this is a mercenary age. But no, nothing quite so transactional. History is an uncertain trade, and such an approach would lead to expectations, disappointment, and recrimination. All of which I'm eager to avoid, especially the last.\" An additional wrinkle forms on ",
-        "translation": "\"我理解你做出的假设。这确实是一个雇佣兵的时代；但不，没那么功利。历史是一门不确定的行当，这样的做法会导致希望、失望和指责。我很希望避免这些，尤其是最后一项。\" 他的脸上多了条皱纹。",
+        "translation": "\"我理解你做出的假设。这确实是一个雇佣兵的时代；但不，没那么功利。历史是一门不确定的行当，这样的做法会导致希望、失望和指责。我很希望避免这些，尤其是最后一项。\" 这么说着的同时",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/historian/HistorianBarEvent.class 的第0351个常量\n原始数据：\"\"I understand why you would assume that; this is a mercenary age. But no, nothing quite so transactional. History is an uncertain trade, and such an approach would lead to expectations, disappointment, and recrimination. All of which I'm eager to avoid, especially the last.\" An additional wrinkle forms on \"\n译文数据：\"\"我理解你做出的假设。这确实是一个雇佣兵的时代；但不，没那么功利。历史是一门不确定的行当，这样的做法会导致希望、失望和指责。我很希望避免这些，尤其是最后一项。\" 他的脸上多了条皱纹。\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/historian/HistorianBarEvent.class 的第0351个常量\n原始数据：\"\"I understand why you would assume that; this is a mercenary age. But no, nothing quite so transactional. History is an uncertain trade, and such an approach would lead to expectations, disappointment, and recrimination. All of which I'm eager to avoid, especially the last.\" An additional wrinkle forms on \"\n译文数据：\"\"我理解你做出的假设。这确实是一个雇佣兵的时代；但不，没那么功利。历史是一门不确定的行当，这样的做法会导致希望、失望和指责。我很希望避免这些，尤其是最后一项。\" 这么说着的同时\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/historian/HistorianBarEvent.~#\"\"Welcome! I've got something here that I think you'll find very interesting. Your actions over the past several cycles hav~\"@c2cf6556",
@@ -17568,6 +17568,13 @@
         "translation": "摧毁敌意舰队",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HAShipsDestroyedFactor.class 的第0023个常量\n原始数据：\"Hostile ships destroyed\"\n译文数据：\"摧毁敌意舰队\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HAShipsDestroyedFactorHint$1.class#\"Destroying hostile ships in or near one of the star systems with your colonies will reduce event progress.\"",
+        "original": "Destroying hostile ships in or near one of the star systems with your colonies will reduce event progress.",
+        "translation": "Destroying hostile ships in or near one of the star systems with your colonies will reduce event progress.",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HAShipsDestroyedFactorHint$1.class 的第0029个常量\n原始数据：\"Destroying hostile ships in or near one of the star systems with your colonies will reduce event progress.\"\n译文数据：\"Destroying hostile ships in or near one of the star systems with your colonies will reduce event progress.\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HegemonyAICoresActivityCause$1.class#\"AI cores\"",

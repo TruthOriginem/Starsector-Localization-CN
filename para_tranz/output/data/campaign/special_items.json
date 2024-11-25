@@ -170,8 +170,8 @@
     {
         "key": "special_items.csv#drone_replicator$desc",
         "original": "Mass-produces a number of drone variants, all suited to various tasks related to planetary defense against raids and invasions, as well as local security actions.\n\nIts use was banned by the Domain many cycles prior to the Collapse, so it's surprising to find a working example in the Persean Sector.",
-        "translation": "能批量制造各种型号的无人机，它们非常适合执各类行星防御任务，例如抵抗劫掠或入侵。对殖民地安保也有着极大的帮助。\n\n这种复制器早在 大崩塌 之前许久，就已被 人之领 禁止使用。因此能在 英仙座星域 找到一台可以运行的复制器，是非常令人惊讶的。",
-        "stage": 5,
+        "translation": "能大批量制造多种适合执各类行星防御任务的不同型号的无人机，用于抵抗劫掠入侵，并维持殖民地内部安保。\n\n这种复制器早在 大崩塌 之前许久，就已被 人之领 禁止使用。因此能在 英仙座星域 找到一台可以运行的复制器，是非常令人惊讶的。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nspecial_items.csv第0016行\n[本行原始数据]\n{'name': 'Combat Drone Replicator',\n 'id': 'drone_replicator',\n 'tags': 'hist3t, pather4',\n 'tech/manufacturer': 'Ko Combine',\n 'rarity': '',\n 'base price': '60000',\n 'stack size': '1000',\n 'cargo space': '1',\n 'baseRaidDanger': 'EXTREME',\n 'icon': 'graphics/icons/cargo/combat_drone_replicator.png',\n 'sound id': 'ui_cargo_special_military_pickup',\n 'sound id drop': 'ui_cargo_special_military_drop',\n 'plugin': 'com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin',\n 'plugin params': 'grounddefenses, heavybatteries',\n 'desc': 'Mass-produces a number of drone variants, all suited to various '\n         'tasks related to planetary defense against raids and invasions, as '\n         'well as local security actions.\\n'\n         '\\n'\n         'Its use was banned by the Domain many cycles prior to the Collapse, '\n         \"so it's surprising to find a working example in the Persean Sector.\",\n 'order': '175'}"
     },
     {
