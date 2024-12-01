@@ -258,7 +258,7 @@ abyssalGasGiantTurbulence3,DialogOptionSelected,$option == abyssalGasGiant_turb3
 
 ""舰长，我无法确定其来源。一股巨大的能量被释放进了巨星的大气层，就跟一股上升气流一般...但质量数据没有显示任何不正常的物体或构造，不论自然与否。""
 
-战术官狐疑地皱了皱眉，""而这一切恰好在$shipOrFleet到达时发生？我不喜欢。""","abyssalGasGiant_turb4:""所有人各就各位。传感器部，如有任何变化，紧急通告。""
+战术副官狐疑地皱了皱眉，""而这一切恰好在$shipOrFleet到达时发生？我不喜欢。""","abyssalGasGiant_turb4:""所有人各就各位。传感器部，如有任何变化，紧急通告。""
 100:defaultLeave:""我也不喜欢。导航，带我们离开。""",
 abyssalGasGiantTurbulence4,DialogOptionSelected,$option == abyssalGasGiant_turb4,"FireBest PrintHasSurveyDataTextIfSo
 FireBest OtherPlanetInteractionText
@@ -414,8 +414,8 @@ StrandedInDeepSpaceStart,StrandedInDeepSpace,,,"不能再犹豫了。
 
 舰桥军官们非常小心地避免出现大规模的恐慌，分配了大量琐碎的维护任务并阻止了各种猜测。尽管如此，你仍然能注意到各种质疑的目光 —— 太空船员们几乎会服从任何命令，可是这是一个前所未有的错误决策。
 
-你的领航员似乎正在与总工程师进行激烈的内部通信讨论。你听到了一些关键词，比如 ""太危险""，""理论上不可能""，""只成功过一次""。","strandedInDeepSpace0:""导航官，报告情况。""",
-StrandedInDeepSpace0,DialogOptionSelected,$option == strandedInDeepSpace0,,"导航官在争论中被逮个正着，深感尴尬，于是赶紧行礼了个并解释了来龙去脉。
+你的领航员似乎正在与总工程师进行激烈的内部通信讨论。你听到了一些关键词，比如 ""太危险""，""理论上不可能""，""只成功过一次""。","strandedInDeepSpace0:""领航员，报告情况。""",
+StrandedInDeepSpace0,DialogOptionSelected,$option == strandedInDeepSpace0,,"领航员在争论中被逮个正着，深感尴尬，于是赶紧行礼了个并解释了来龙去脉。
 
 似乎有一位负责超空间引擎的高级技术人员坚持要和你谈话。他们对于重返超空间有一些疯狂的想法，并不知用什么手段说服了你的总工程师认可了其可行性。","strandedInDeepSpace1:""立刻到我的舱室开会。""",
 StrandedInDeepSpace1,DialogOptionSelected,$option == strandedInDeepSpace1,,"年事已高且饱经辐射风霜，这位资深技术员的资历确实深不可测，他在太空中作业的经验恐怕比你手下任一位军官和船员都多。 老宇宙民给了你个几乎微不可见的敬礼。""$PlayerSirOrMadam。恕俺直言，你把$shipOrFleet开进一个鬼知道那儿出来的重力井真是干了个滚泥佬才会干的蠢事。""
@@ -2641,8 +2641,8 @@ sal_wreckDetailsFromGhost,ShowSalvageEntityDetails,"$customType == wreck
 $fromGhost score:100","unset $fromGhost
 ShowDefaultVisual
 PrintWreckDescription
-AddText ""你的舰桥传来一些骚动。战术副官重新检查了扫描那艘遗弃船的传感器读数，\""我们之前都没发现这船已经自己动了几小时吗？\""""
-AddText ""传感器技师迟迟才传来反应，谨慎地做出答复。\""抱歉，在超空间获取的读数往往蕴含了些许不稳定因素。我们的欧几里德解析框架也只是...用尽可能好的专业系统进行的模拟。\""他们对正显示的读数摆摆手。\""那一定只是个噪点。\""他们点点头，避开与战术副官进行眼神接触。\""就是个超空间噪点，就是那样。\""""",,,
+AddText ""你的舰桥传来一些骚动。战术副官重新向传感器技师质问了那艘遗弃船的情况，\""我们之前一直都没发现这船已经自己动了几小时吗？\""""
+AddText ""传感器技师迟迟才传来回应，并非常谨慎地做出答复。\""抱歉，在超空间获取的读数从本质上就蕴含了不准确性。而我们的欧几里德转显框架也只是...尽可能好地采用专业系统对它们进行了模拟。\"" 传感器技师对着正在显示的读数摆手比划到。\""那一定只是个噪点。\"" 边说边点头，还刻意避开与战术副官的目光。\""就是个超空间噪点，就是那样。\""""",,,
 ,,,,,,
 # Explore/Leave options and actions,,,,,,
 sal_defaultLeave1,PopulateSalvageOptions1,,SetShortcut defaultLeave ESCAPE,,100:defaultLeave:$salvageLeaveText,
@@ -3068,10 +3068,10 @@ $id != beholder_station
 $entity.id != killa","ShowDefaultVisual
 $justVisitedShrine = true 0
 FireAll PopulateOptions
-ShrineCMD endMusic",搭乘穿梭机返航的过程平稳顺利，然而你敏锐地意识到，保护你免受真空和辐射摧残的是科学的薄外衣。,,
+ShrineCMD endMusic",搭乘穿梭机返航的过程平稳顺利，然而你敏锐地意识到，保护你免受真空和辐射摧残的是一层由科技造就的薄外衣。,,
 lppHookShrineLeaveBeholder,DialogOptionSelected,"$option == shrineDoLeave 
 $id == beholder_station","ShrineCMD endMusic
-FireBest ShrineMainOptions",搭乘穿梭机返航的过程平稳顺利，然而你敏锐地意识到，保护你免受真空和辐射摧残的是科学的薄外衣。,shrineDoLeaveBeholder2:离开,
+FireBest ShrineMainOptions",搭乘穿梭机返航的过程平稳顺利，然而你敏锐地意识到，保护你免受真空和辐射摧残的是一层由科技造就的薄外衣。,shrineDoLeaveBeholder2:离开,
 lppHookShrineLeaveBeholder2,DialogOptionSelected,$option == shrineDoLeaveBeholder2,DismissDialog,,,
 # Beholder Station shrine,,,,,,
 lppBeholderOpenDialog,OpenInteractionDialog,"$id == beholder_station
@@ -4501,9 +4501,9 @@ $global.lpp_didHesperusFirstShrineAttempt
 !$player.transponderOn
 !$global.lpp_visitedShrineHesperus",,,3:lpp_hesperusSneakStart:秘密搭乘穿梭机去拜访卢德圣地,"# sneaky, sneaky ... "
 lppHesperusShrineFirstTime1,DialogOptionSelected,"$option == lpp_hesperusVisitStart
-!$global.lpp_didHesperusFirstShrineAttempt score:10",,"你刚刚开始前往穿梭机停泊港便收到了导航技师的消息：着陆请求被交通管制中心拒绝了。
+!$global.lpp_didHesperusFirstShrineAttempt score:10",,"你刚刚开始前往穿梭机停泊港便收到了领航员的消息：着陆请求被交通管制中心拒绝了。
 
-奇怪。这请求再普通不过了。","lpp_hesperusVisitFirstTime1a:""导航技师，再试一次。""
+奇怪。这请求再普通不过了。","lpp_hesperusVisitFirstTime1a:""领航员，再试一次。""
 lpp_hesperusVisitFirstTime1b:请求和负责人对话
 lpp_hesperusVisitFirstTime1c:取消访问",
 lppHesperusShrineVisitAgain,DialogOptionSelected,"$option == lpp_hesperusVisitStart
@@ -4523,16 +4523,16 @@ FireBest DialogOptionSelected",,,
 lppHesperusShrineVisitNoWait,DialogOptionSelected,"$option == lpp_hesperusVisitStart
 $global.lpp_didHesperusFirstShrineAttempt
 $global.lpp_madeToWaitForHesperus
-!$global.lpp_visitedShrineHesperus",,"你下令让一艘穿梭机准备好飞往地面。
+!$global.lpp_visitedShrineHesperus",,"你下令让一艘穿梭机做好飞往地面的准备。
 
-""舰长，""你的导航技师汇报道，""交通管制处否决了你的飞行请求。""","lpp_hesperusGetMeExcubitor:""给我呼叫行星教卫。""
+""舰长，"" 你的领航员汇报道，""交通管制处否决了你的飞行请求。""","lpp_hesperusGetMeExcubitor:""给我呼叫行星教卫。""
 lpp_hesperusShrineCancelShuttle:取消航程",
 lppHesperusShrineVisitNoDenied,DialogOptionSelected,"$option == lpp_hesperusVisitStart
 $global.lpp_deniedHesperusShrineAccess
 $global.lpp_didHesperusFirstShrineAttempt
-!$global.lpp_visitedShrineHesperus",,"你下令让穿梭机准备好载你到星球表面。
+!$global.lpp_visitedShrineHesperus",,"你下令让一艘穿梭机做好飞往地面的准备。
 
-""舰长，"" 你的导航技师报告到，""交通管制中心拒绝了你的航班请求。""","lpp_hesperusGetMeExcubitor:""给我呼叫行星教卫。""
+""舰长，"" 你的领航员汇报道，""交通管制处否决了你的飞行请求。""","lpp_hesperusGetMeExcubitor:""给我呼叫行星教卫。""
 lpp_hesperusShrineCancelShuttle:取消航程",
 lppHesperusShrineFirstTimeFallback,DialogOptionSelected,"$option == lpp_hesperusVisitStart
 !$global.lpp_visitedShrineHesperus","$option = lpp_hesperusVisitFirst1 0
@@ -4546,11 +4546,11 @@ lppHesperusShrineDeniedCancelShuttle,DialogOptionSelected,"$option == lpp_hesper
 $global.lpp_deniedHesperusShrineAccess","AddText ""你下令取消了穿梭机行程。看起来教廷哨卫 Oak 铁了心不允许你在 '寻得救赎' 之前访问圣地，无论这救赎意味着什么。""
 FireAll PopulateOptions",,,
 lppHesperausGetMeExcubitor,DialogOptionSelected,$option == lpp_hesperusGetMeExcubitor,"BeginConversation oak
-FireBest PickGreeting",导航技师将你的通讯链接路由到本地的系统网络中，在经过一段感觉上超出必要等待所需的时间后，连接终于被建立。,,
-lppHesperusShrineFirstTime1a,DialogOptionSelected,$option == lpp_hesperusVisitFirstTime1a,$global.lpp_didHesperusFirstShrineAttempt = true,"""好的，"" 导航技师说到。片刻过后。""舰长，我已经接通了交通管制中心。""
+FireBest PickGreeting",领航员将你的通讯链接路由到本地的系统网络中，在经过一段感觉上超出必要等待所需的时间后，连接终于被建立。,,
+lppHesperusShrineFirstTime1a,DialogOptionSelected,$option == lpp_hesperusVisitFirstTime1a,$global.lpp_didHesperusFirstShrineAttempt = true,"""好的，"" 领航员说到。片刻过后。""舰长，我已经接通了交通管制中心。""
 
-导航技师将你接入到通讯回路中，一个看起来很年轻的卢德骑士，可能是个新人，出现在了你的面前。",lpp_hesperusVisitFirstTime2:继续,
-lppHesperusShrineFirstTime1b,DialogOptionSelected,$option == lpp_hesperusVisitFirstTime1b,$global.lpp_didHesperusFirstShrineAttempt = true,导航技师将你接入链接，然后一个看起来很年轻的卢德骑士-或者是个新人-出现在你的面前。,lpp_hesperusVisitFirstTime2:继续,
+领航员将你接入到通讯回路中，一个看起来很年轻的卢德骑士，可能是个新人，出现在了你的面前。",lpp_hesperusVisitFirstTime2:继续,
+lppHesperusShrineFirstTime1b,DialogOptionSelected,$option == lpp_hesperusVisitFirstTime1b,$global.lpp_didHesperusFirstShrineAttempt = true,领航员将你接入链接，然后一个看起来很年轻的卢德骑士 —— 或者是个新人 —— 出现在你的面前。,lpp_hesperusVisitFirstTime2:继续,
 lppHesperusShrineFirstTime1c,DialogOptionSelected,$option == lpp_hesperusVisitFirstTime1c,"AddText ""你下令取消了穿梭机行程。谁知道这群卢德佬现在在干什么。""
 FireAll PopulateOptions",,,
 lppHesperusShrineFirstTime2,DialogOptionSelected,$option == lpp_hesperusVisitFirstTime2,,"""愿卢德保佑你，舰长。"" 他们成功地藏住了他们声音中的颤抖，""十分抱歉，你的着陆请求被拒绝了。""
@@ -7355,7 +7355,7 @@ LKEbornanewShuttle4a,DialogOptionSelected,"$option == lke_bornanewShuttle4
 LKEbornanewShuttle4b,DialogOptionSelected,"$option == lke_bornanewShuttle4
 $market.lke_didMarines",,"你沿着一条小径走向树林。这里的低地势抵御了干燥的风，树木似乎有一些水分来生存，但是并不够。
 
-陆战队员的战术口令在你耳边轻轻地响起。""$PlayerSirOrMadam，"" 陆战队队长亲自向你报告，""目标 ID 已确定，视觉上与 Bronanew 匹配。看起来没有携带武装。""",lke_bornanewShuttle5:继续,
+陆战队员的战术口令在你耳边轻轻地响起。""$PlayerSirOrMadam，"" 本次行动指派的队长亲自向你报告，""目标身份已确认，视觉匹配特征与 Bronanew 相符。似乎并未携带武器。""",lke_bornanewShuttle5:继续,
 LKEbornanewShuttle5,DialogOptionSelected,$option == lke_bornanewShuttle5,"Call $global.lke_ref playMusicJethro
 AddStoryPoints 1
 BeginConversation bornanew
@@ -8478,7 +8478,7 @@ initial_remnantGhost,BeginFleetEncounter,"$fromGhost score:1000
 $faction.id == remnant","unset $fromGhost
 $fidpi_addContinue = true 0","船体表面存在凹陷，某些地方似乎有微妙的扭曲。尽管有明显的损坏，但传感器检测到存在休眠的动力源，甚至在你的舰桥人员完成初步的战术评估时，这些动力源就开始上线了。
 
-在一阵惊讶之后，通讯技师开口了。""$PlayerSirOrMadam，我们收到了应答器信号。代码是 速子科技 标准，但根据最后一次更新的注册表显示，它们已经过期至少 100 个星历年了。""",,
+在一阵惊讶之后，通讯官开口了。""$PlayerSirOrMadam，我们收到了应答器信号。代码是 速子科技 标准，但根据最后一次更新的注册表显示，它们已经过期至少 100 个星历年了。""",,
 ,,,,,,
 # attempt to remove AI core from admin,,,,,,
 RACA_init,RemoveAICoreAdmin,,ShowPic ai_core_uninstall,"你下令暗中将管理 $marketName 的 AI 核心断开连接，从管制地堡中取出，放入安全储存库内。
@@ -8551,7 +8551,7 @@ $player.gotWormholeCalibrationData",,"根据附件所说，新部署的 虫洞�
 但是这次所需的工作已经完成：你找到的调试数据足以让这个 虫洞锚定装置 几乎立刻达到稳定状态。",,
 Stable_CheckCanBuildWormhole,Stable_CheckCanBuildWormhole,!Objectives canBuild wormhole,SetEnabled SL_select false,,,
 SL_selectAnchorSel,DialogOptionSelected,$option == SL_select,Objectives selectWormholeAnchor,,,
-WormholeDeploymentFinished,WormholeDeploymentFinished,,"SetShortcut SL_Leave ""ESCAPE""","你的 导航技师 松了口气，超空间引擎 的控制权已恢复正常；简单的状态检验显示所有子系统都正常运作。
+WormholeDeploymentFinished,WormholeDeploymentFinished,,"SetShortcut SL_Leave ""ESCAPE""","你的领航员松了口气，超空间引擎的控制权已恢复正常；简单的状态检验显示所有子系统都正常运作。
 
 虫洞锚定装置 已成功部署。",100:SL_Leave:离开,
 ,,,,,,
@@ -8697,7 +8697,7 @@ $tag:comm_relay",,通讯控制台发出的轻柔的提示音，表明嗅探器�
 cob_snifferDesc3,COB_PostActionDesc,"$cob_action == unhack
 $tag:comm_relay",,通讯控制台发出的轻柔的提示音，表明嗅探器已经离线。,,
 cob_hackDesc,COB_PreActionDesc,$cob_action == hack,,在维护短波上进行快速扫描发现了几个可用的常见漏洞。通讯官安装了数据收集脚本，确定能从 $shortName 上接收遥测数据。,,
-cob_resetDesc,COB_PreActionDesc,$cob_action == reset,,在维护短波上进行快速扫描发现了几个可用的常见漏洞，通讯技师安装了病毒，你没有去细想它的来源。,,
+cob_resetDesc,COB_PreActionDesc,$cob_action == reset,,在维护短波上进行快速扫描发现了几个可用的常见漏洞。通讯官安装了病毒，而你决定不去细想后者的来源。,,
 ,,,,,,
 # buying topographic data from a scavenger,,,,,,
 scavBuyHTDataOpt,PopulateOptions,"$menuState == fleetConvMain
@@ -9021,7 +9021,7 @@ psi_defenderDesc,TriggerAutomatedDefenses,$psi_planet score:1000,SalvageDefender
 psi_continuePostDefenders,BeatDefendersContinue,$psi_planet score:1000,,你的$shipOrFleet成功抵近了 $entityName，没有发生其他异常事件。,0:salBeatDefendersContinue:继续,
 psi_beatDefenders,BeginSalvage,$psi_planet score:1000,SetShortcut defaultLeave ESCAPE,"进一步的扫描显示，能量场并不均一完整，可能是由于能量源已经年久失修。同时你的舰桥人员设法发现了一个从星球表面发出讯号的遇险信标。
 
-该讯号被设定不断重播，且因为设备老化而出现了乱码。你从其中可以解读的信息推断，这里是 速子 的机密研究机构。在某一次 AI 战争期间，全自动防御系统对某条紧急安全命令采取了过激的响应，决定击毁任何试图离开这个星球的飞船，导致一支研究小组的部分成员被滞留在了这里。","0:psi_explore:派遣打捞小组前往研究机构
+该讯号被设定不断重播，且因为设备老化而产生了乱码。你从其中可以解读的信息推断，这里是 速子 的机密研究机构。在某一次 AI 战争期间，全自动防御系统对某条紧急安全命令采取了过激的响应，决定击毁任何试图离开这个星球的飞船，导致一支研究小组的部分成员被滞留在了这里。","0:psi_explore:派遣打捞小组前往研究机构
 100:defaultLeave:离开",
 psi_exploreFacility,DialogOptionSelected,$option == psi_explore,,你派出一艘临时加装了护盾发生器的穿梭机，让它突入了护盾的一处破损点。穿梭机在主控制中心顺利着陆，机组人员成功突入设施，将护盾完全解除。随后，携带重型设备的后援穿梭机迅速跟进，开始全面展开打捞作业。,0:psi_salvage:进行打捞作业,
 psi_salvage,DialogOptionSelected,$option == psi_salvage,RedPlanet genLoot,,,
@@ -9844,7 +9844,7 @@ IsSeenByAnyFleet",ShowDefaultVisual,你的$shipOrFleet刚刚被一支附近的�
 gaKA_relayObjectInteraction,OpenInteractionDialog,"$id == aztlan_relay
 $gaKA_installHack score:1000",ShowDefaultVisual,你的$shipOrFleet靠近了 $name。,"daKA_installHack:在 Aztlan 的中继站上安装 Gargoyle 的黑客装置
 defaultLeave:离开",
-gaKA_relayInstallHack0,DialogOptionSelected,$option == daKA_installHack,,"你向行动长官下达了命令，他则低声叮嘱了精心挑选的资深打捞技师一些注意事项，接着后者搭乘着货运无人机到达了中继站。
+gaKA_relayInstallHack0,DialogOptionSelected,$option == daKA_installHack,,"你向行动长官下达了命令，其低声叮嘱了几位精心挑选的资深打捞技师一些注意事项，接着后者搭乘着货运无人机到达了中继站。
 
 整个行动都按照事先规划好的迅速进行完毕。技师用有着低电磁信号的工具进行了几次快速切割，移除了部分舱壁，将 Gargoyle 的装置固定到位。安装在底盘上寄生微型无人机则完成了联接的关键部分 —— 主要是接入光纤线路。最后，舱壁被密封完成，队员们随着货运无人机的冷气体推进器启动开始了撤退，就如他们来时一样安静。",daKA_installHack1:继续,
 gaKA_relayInstallHack1,DialogOptionSelected,$option == daKA_installHack1,,"很快，通讯官收到了一个短脉冲信号，这证明 Gargoyle 的装置已经开始正常运作。
@@ -9856,7 +9856,7 @@ Call $global.gaKA_ref updateStage","你在想，霸主 会不会利用黑客装�
 你应该尽快从 Gargoyle 那里取得档案。",defaultLeave:离开,
 "# Gargoyle, retrieving archive",,,,,,
 gaKAGargoyle2Greeting,PickGreeting,"$id == gargoyle
-$gaKA_contactRetrieve score:1000",ShowPersonVisual,"你输入 Gargoyle 的通讯 ID，向通讯技师点头示意让对方准备好应对 Gargoyle 可能会为了找乐子从通讯器传过来的什么小惊喜之类的东西。
+$gaKA_contactRetrieve score:1000",ShowPersonVisual,"你输入 Gargoyle 的通讯 ID，向通讯官点头示意让对方准备好应对 Gargoyle 可能会为了找乐子从通讯器传过来的什么小惊喜之类的东西。
 
 但这次没遇到什么鬼把戏。显示器伤立马解析出了一张熟悉的脸，挂着一种陌生的表情：恐惧。",gaKA_gargoyle2Greeting2:继续,
 gaKAGargoyle2Greeting2,DialogOptionSelected,$option == gaKA_gargoyle2Greeting2,FireAll GAKAGargoyleHub,"""舰长，你得用你的船带上我离开这里。他们知道我在哪儿了。这次我居然真的干成了，太不可思议了。"" Gargoyle 紧张地笑了，""这可是第二次 AI 战争以来最伟大的数据大劫案！""
@@ -9885,9 +9885,9 @@ Call $global.gaKA_ref updateStage","Gargoyle 点了点头，""那样就好，舰
 
 你的穿梭机并没有收到交通管制员的质询；看起来他们还不知道发生了什么，大概吧。
 
-你下令将 Gargoyle 关到离舰桥很远的地方，并嘱咐你的通讯技师留意别放过任何可疑的动静。
+你下令将 Gargoyle 关到离舰桥很远的地方，并嘱咐你的通讯官留意别放过任何可疑的动静。
 
-""舰长，""你的战术副官提醒你留意，""霸主 舰队来了。""
+""舰长，"" 你的战术副官提醒你留意，""霸主 舰队来了。""
 
 该溜了。",gaKA_gargoyleOrderShuttle2:继续,
 gaKAGargoyle2OrderAShuttleSel2,DialogOptionSelected,$option == gaKA_gargoyleOrderShuttle2,EndConversation NO_CONTINUE,,,
@@ -9958,7 +9958,7 @@ gaKAPatrolLie4,DialogOptionSelected,$option == gaKA_patrolLie4,,"这似乎有效
 
 ""Rao 上将总是会做出一些突破底线的事，不是吗？这很不正常，舰长，我会向上级汇报的，而现在..."" $heOrShe抬了抬下巴，""专业人士将接管这场追捕，发送你观察到的任务目标最后的通讯信息和行动路线。""
 
-你带着适当的失望情绪悄悄命令导航技师和通讯官弄出一些可信的东西来，他们即兴发挥的速度令人钦佩。你看着 $Rank，注意到 $personLastName 瞥了一眼自己的控制台后露出了满意的表情。","gaKA_patrolLie5:""祝你好运，$SirOrMadam。""",
+你带着适当的失望情绪悄悄命令领航员和通讯官弄出一些可信的东西来，他们即兴发挥的速度令人钦佩。你看着 $Rank，注意到 $personLastName 瞥了一眼自己的控制台后露出了满意的表情。","gaKA_patrolLie5:""祝你好运，$SirOrMadam。""",
 gaKAPatrolLie5,DialogOptionSelected,$option == gaKA_patrolLie5,"MakeOtherFleetHostile gaKA false
 MakeOtherFleetGoAway true
 MakeOtherFleetImportant gaKA false
@@ -10110,7 +10110,7 @@ GAKARayanArroyo_expensesSel,DialogOptionSelected,$option == gaKA_arroyoExpenses,
 "# Talk to Gargoyle after asked to get hack device, but haven't done it",,,,,,
 GAKAGargoyleGreeting_GET_HACK_HARDWARE,PickGreeting,"$id == gargoyle
 Call $global.gaKA_ref updateData
-$gaKA_stage == GET_HACK_HARDWARE score:1000",ShowPersonVisual,"你输入通讯 ID，手悬停在发光的 ""确认"" 标志上。通讯技师点了点头，对方已经准备好应对任何 Gargoyle 可能为了找乐子而发过来的惊喜内容了。
+$gaKA_stage == GET_HACK_HARDWARE score:1000",ShowPersonVisual,"你输入通讯 ID，手悬停在发光的 ""确认"" 标志上。通讯官点了点头，对方已经准备好应对任何 Gargoyle 可能为了找乐子而发过来的惊喜内容了。
 
 你的主屏幕从迷人而支离破碎的电子战场变成了一张神态夸张，顽皮地向你咧嘴笑着的脸。""喔，$playerFirstName，你找不到新 Maxios 了？让我帮帮你吧，我会给你一张婴儿都能看懂的星际地图。""
 
@@ -10120,11 +10120,11 @@ $gaKA_stage == GET_HACK_HARDWARE score:1000",ShowPersonVisual,"你输入通讯 I
 "# Talk to Gargoyle after got transmitter, not installed",,,,,,
 GAKAGargoyleGreeting_INSTALL_HACK,PickGreeting,"$id == gargoyle
 Call $global.gaKA_ref updateData
-$gaKA_stage == INSTALL_HACK score:1000",ShowPersonVisual,"你输入通讯 ID，手悬停在发光的 ""确认"" 标志上。你的通讯技师点了点头，他已经准备好应对任何 Gargoyle 认为有趣的通讯内容了。
+$gaKA_stage == INSTALL_HACK score:1000",ShowPersonVisual,"你输入通讯 ID，手悬停在发光的 ""确认"" 标志上。你的通讯官点了点头，他已经准备好应对任何 Gargoyle 认为有趣的通讯内容了。
 
 你的主屏幕上显示出了一张神态夸张，顽皮地向你咧嘴笑着的脸，没有发生任何意外。""啊，$playerFirstName 舰长！你一定是忘了我简单的提示。""
 
-Gargoyle 数着手指，""第一步，收集设备。你做到了，万岁！第二步，把它安装在位于 Aztlan 星系的 —— 现在注意了，也许你该让你愁眉紧锁的通讯员做个备忘录 —— Aztlan 中继站里。第三步，回到我这里来拿你宝贵的数据档案。""
+Gargoyle 数着手指，""第一步，收集设备。你做到了，万岁！第二步，把它安装在位于 Aztlan 星系的 —— 现在注意了，也许你该让你愁眉紧锁的通讯官做个备忘录 —— Aztlan 中继站里。第三步，回到我这里来拿你宝贵的数据档案。""
 
 黑客用剩下的两根手指粗鲁地朝你挥了挥。""事情就是这样。再见，我现在很忙。""
 
@@ -11000,9 +11000,9 @@ $option == gaFC_probeEmpty1
 ","Call $global.gaFC_ref foundEmptyProbe
 DespawnEntity","打捞队员们操作着一架维修无人机，对船体上的一个标准对接口进行切割。在等离子体的闪光消失后，无人机转动其聚光灯，发现里面...什么也没有。
 
-除了悬空的粗略切割的导管末端，探测器里面是空的。已经有人清空了内部的硬件。
+除了被粗暴切断的导管末端还悬在里面之外，探测器是空的。已经有人清空了内部的硬件。
 
-""应该没过多久，""传感器技师报告说，""雷达对上一个入侵者造成的碎片的扩散轨迹进行了扫描，显示出扩散幅度较小。不管是谁干的，他们很可能还在星系内。""
+""应该没过多久，"" 传感器技师报告说，""雷达对上一个入侵者造成的碎片的扩散轨迹进行了扫描，显示出扩散幅度较小。不管是谁干的，他们很可能还在星系内。""
 
 这个星系内有人带着你需要的硬件。",defaultLeave:离开,
 gaFCProbeEmpty1Dropped,DialogOptionSelected,"$global.gaFC_scavengerDroppedProbe
@@ -11087,7 +11087,7 @@ gaFCScavengerWait,DialogOptionSelected,$option == gaFC_scavengerWait,,"""很好�
 
 打捞者将通讯频道切到通用待机信号。
 
-你命令你的导航员保持与打捞者舰队的相对位置，并注意任何异常情况。",gaFC_scavengerWait2:等着,
+你命令你的领航员保持与打捞者舰队的相对位置，并注意任何异常情况。",gaFC_scavengerWait2:等着,
 gaFCScavengerWait2,DialogOptionSelected,$option == gaFC_scavengerWait2,,"没过多久。
 
 通讯官的一声大喊打断了你的沉思：""舰长！拾荒者旗舰货舱里的某个东西刚刚发出了一道短程通讯脉冲。我们以前见过这个，符合卢德左径的特征，也有可能是海盗。""
@@ -11133,7 +11133,7 @@ MakeOtherFleetGoAway true
 MakeOtherFleetNonHostile true
 MakeOtherFleetAvoidContact true
 $gafcProbe_finishedEncounter = true
-$global.gaFC_scavengerDroppedProbe = true","""我已经命令军需官弹出货舱，它现在归你了。""拾荒者试探性地说道，""航行无阻...或者在一颗小行星上撞死，怎样都好。""
+$global.gaFC_scavengerDroppedProbe = true","""我已经命令军需官弹出货舱，它现在归你了。"" 拾荒者试探性地说道，""航行无阻...或者在一颗小行星上撞死，怎样都好。""
 
 通讯突然中断了。",cutCommLinkNoText:继续,
 ,,,,,,
@@ -11294,17 +11294,16 @@ PrintDescription 3",,"gaFC_groombridgeSearch1:在空间站里找一个临时的�
 defaultLeave:离开",
 gaFCGroombridgeSearch1,DialogOptionSelected,$option == gaFC_groombridgeSearch1,,"你召集你舰队中的高级官员讨论与 Coureuse 有关的，Isirah 星系中的超空间通讯信息。Groombridge 栖息地的初步扫描图在全息投影仪的显示屏上缓慢旋转。
 
-""理论上，""导航技师说，""超空间相互作用场只能周期性地产生脉冲。只有在适当的时候捕捉到，否则就无法探测的。现在我们也不知道具体时刻。""",gaFC_groombridgeSearch2:继续,
-gaFCGroombridgeSearch2,DialogOptionSelected,$option == gaFC_groombridgeSearch2,,"通讯技师说：""同样的原理也可以应用到星系内的中继站上。数据可以被缓存，然后脉冲到栖息地，飞船，或是另一个中继站...""
+""理论上，"" 领航员说，""超空间相互作用场只能周期性地产生脉冲。只有在适当的时候捕捉到，否则就无法探测的。现在我们也不知道具体时刻。""",gaFC_groombridgeSearch2:继续,
+gaFCGroombridgeSearch2,DialogOptionSelected,$option == gaFC_groombridgeSearch2,,"通讯官说：""同样的原理也可以应用到星系内的中继站上。数据可以被缓存，然后脉冲到栖息地，飞船，或是另一个中继站...""
 
 行动长官则开口道，"" —— 反应堆会不断地放出辐射，没人能凑近观察或长时间逗留。唯一的搜索方法是..."" 说到这，现场的人都陷入沉思，""配备辐射保护层的无人机，只去不回。中继站里通常会有非常强大的辐射屏障。""","gaFC_groombridgeSearch3:""看起来你们知道该找什么了，不管你们有什么点子，让它变成现实吧。""",
 gaFCGroombridgeSearch3,DialogOptionSelected,$option == gaFC_groombridgeSearch3,,舰桥上的船员交换了一下眼神 —— 他们的舰长随之继续下令 —— 而你的行动长官向后靠了靠，沉思起来。,gaFC_groombridgeSearch4:继续,
 gaFCGroombridgeSearch4,DialogOptionSelected,$option == gaFC_groombridgeSearch4,,"在下一次交班的时候，带有屏蔽装甲保护的无人机准备就绪，并在行动长官的监督下进行了部署。随着它们的挺进，全息投影上之前覆盖了 Groombridge 栖息地的大片模糊区域 —— 代表辐射过强或受扫描屏蔽而无法得到可靠读数 —— 逐渐被清晰的细节所取代。很快，一团受异常屏蔽的什么东西在距离死寂的空间站核心很近的一个损坏工作舱室里被发现了。
 
-技术员和通讯官开始讨论如何攻破和骇入中继站，这时行动长官吼了一句话就让他们安静下来：""如果我是那些人，就肯定会做点手脚把来看热闹的家伙给炸个稀巴烂！""
+技术专家和通讯官开始讨论如何攻破和骇入中继站，而行动长官的一句怒吼就让两人都安静了下来：""如果我是那些家伙，就肯定会做些手脚把想来看热闹的家伙都给炸个稀巴烂！""
 
-传感器技师回呛到：""那我们只能去拦截某个星系内的信号了，对吗？如果那只是个瞬时发送的东西，我们只需要部署大概一...呃...一亿个探测器？""
-行动长官瞪了传感器技师一眼，叹了口气。","gaFC_groombridgeSearch5:""就那么做吧。""",
+传感器技师回呛到：""那我们只能去拦截某个星系内的信号了，对吗？如果那只是个瞬时发送的东西，我们只需要部署大概一...呃...一亿个探测器？"" 行动长官瞪了传感器技师一眼，叹了口气。","gaFC_groombridgeSearch5:""就那么做吧。""",
 gaFCGroombridgeSearch5,DialogOptionSelected,$option == gaFC_groombridgeSearch5,"$global.gaFC_knowWhereScyllaIs = true
 $global.gaFC_foundGroombridgeRelay = true
 $global.gaFC_isirahClues++
@@ -11320,18 +11319,17 @@ PrintDescription 3",,"gaFC_groombridgeSearchB1:在空间站上寻找神秘信号
 defaultLeave:离开",
 gaFCGroombridgeSearchB1,DialogOptionSelected,$option == gaFC_groombridgeSearchB1,,"你召集你舰队中的高级官员来讨论 Isirah 星系中的秘密通讯爆发事件。Groombridge 栖息地的初步扫描图在全息投影仪的显示屏上缓缓旋转着。
 
-""为什么呢？我这只是个设问，""你的导航官说，""因为从这里向 Laicaille 传递信号的唯一可能性是，你的信号来自一个隐藏的超空间通讯中继站。""
+""为什么呢？我这只是个设问，"" 你的领航员说，""因为从这里向 Laicaille 传递信号的唯一可能性是，你的信号来自一个隐藏的超空间通讯中继站。""
 
 通讯官举起手，在你点头的时候说，""这比较非常规。但 Groombridge 是无人居住的，所以没有人会对超空间信号的冲洗提出抱怨。""
 
 行动长官接着说，""反应堆像这样放出辐射，没人会凑过去看，没有拾荒者会。""","gaFC_groombridgeSearchB2:""如果这有个超空间通讯中继站，我们该怎样找到它？""",
-gaFCGroombridgeSearchB2,DialogOptionSelected,$option == gaFC_groombridgeSearchB2,,"""中继站里通常会有非常强大的辐射屏障，""你的行动长官开口道，""所以我们可以选择配备辐射保护层的无人机，只去不回。那样就可以知道我们到底在找什么了。""","gaFC_groombridgeSearchB3:""去吧。""",
+gaFCGroombridgeSearchB2,DialogOptionSelected,$option == gaFC_groombridgeSearchB2,,"""中继站里通常会有非常强大的辐射屏障。"" 你的行动长官开口道，""所以我们可以选择配备辐射保护层的无人机，只去不回。那样就可以知道我们到底在找什么了。""","gaFC_groombridgeSearchB3:""去吧。""",
 gaFCGroombridgeSearchB3,DialogOptionSelected,$option == gaFC_groombridgeSearchB3,,"在下一次交班的时候，带有屏蔽装甲保护的无人机准备就绪，并在行动长官的监督下进行了部署。随着它们的挺进，全息投影上之前覆盖了 Groombridge 栖息地的大片模糊区域 —— 代表辐射过强或受扫描屏蔽而无法得到可靠读数 —— 逐渐被清晰的细节所取代。很快，一团受异常屏蔽的什么东西在距离死寂的空间站核心很近的一个损坏工作舱室里被发现了。
 
-技术员和通讯官开始讨论如何攻破和骇入中继站，这时行动长官吼了一句话就让他们安静下来：""如果我是那些人，就肯定会做点手脚把来看热闹的家伙给炸个稀巴烂！""
+技术专家和通讯官开始讨论如何攻破和骇入中继站，而行动长官的一句怒吼就让两人都安静了下来：""如果我是那些家伙，就肯定会做些手脚把想来看热闹的家伙都给炸个稀巴烂！""
 
-传感器技师回呛到：""那我们只能去拦截某个星系内的信号了，对吗？如果那只是个瞬时发送的东西，我们只需要部署大概一...呃...一亿个探测器？""
-行动长官瞪了传感器技师一眼，叹了口气。","gaFC_groombridgeSearchB4:""就这么做。""",
+传感器技师回呛到：""那我们只能去拦截某个星系内的信号了，对吗？如果那只是个瞬时发送的东西，我们只需要部署大概一...呃...一亿个探测器？"" 行动长官瞪了传感器技师一眼，叹了口气。","gaFC_groombridgeSearchB4:""就这么做。""",
 gaFCGroombridgeSearchB4,DialogOptionSelected,$option == gaFC_groombridgeSearchB4,"$global.gaFC_knowWhereScyllaIs = true
 $global.gaFC_foundGroombridgeRelay = true
 $global.gaFC_isirahClues++
@@ -11666,9 +11664,9 @@ IsSeenByAnyFleet",ShowDefaultVisual,你的$shipOrFleet最近才被一支附近�
 gaFC_relayInstallHack0,DialogOptionSelected,$option == gaFC_installHack,,"一支两人小队驾驶着一架工作无人机来到了中继站上，快速切割其外壳以便找到可与其内部硬件连接的接口。不到一分钟后，窥探算法安装完成，中继器的外壳也被重新密封，行动小组成功返回。
 
 现在你开始等待算法完成自己的使命。",gaFC_installHack1:继续,
-gaFC_relayInstallHack1,DialogOptionSelected,$option == gaFC_installHack1,,"紧张地等待了一个小时后，通讯技师告诉你，窥探算法的工作完成了。一组精通技术操作，信息安全和通讯的军官和专家一直在逐步分析陆续接收到的信息，并已经完成了一份初步报告。
+gaFC_relayInstallHack1,DialogOptionSelected,$option == gaFC_installHack1,,"紧张地等待了一个小时后，通讯官告诉你，窥探算法的工作完成了。一组精通技术操作，信息安全和通讯的军官和专家一直在逐步分析陆续接收到的信息，并已经完成了一份初步报告。
 
-""我们的团队仍在进行详细的分析，并尽可能地对我们得到的信息进行解密。""通讯官报告说，""但我们已经对总体情况有了一定程度的了解。""","gaFC_installHack2:""了解到了什么？""",
+""我们的团队仍在进行详细的分析，并尽可能地对我们得到的信息进行解密。"" 通讯官报告说，""但我们已经对总体情况有了一定程度的了解。""","gaFC_installHack2:""了解到了什么？""",
 gaFC_relayInstallHack2,DialogOptionSelected,$option == gaFC_installHack2,,"""看起来大多数主要势力，少数自由佣兵和地下特工在 Isirah 星系中的活动频率高的异常。这可以有不少合理的解释，但根据我们的分析，这种现象大概率是一个粗心大意地泄露了不少情报的左径分子造成的。""
 
 说到这，通讯官拿出了一份包含了通讯 ID 和英仙座联盟 ID 的列表。","gaFC_installHack3:""这上边值得注意的是哪个人？""",
@@ -11678,7 +11676,7 @@ gaFC_relayInstallHack3,DialogOptionSelected,$option == gaFC_installHack3,,"""Jen
 gaFC_relayInstallHack4,DialogOptionSelected,$option == gaFC_installHack4,"$global.gaFC_knowWhereScyllaIs = true
 $global.gaFC_hackedIsirahRelay = true
 $global.gaFC_isirahClues++
-FireBest GAFCSearchIsirahSummary","""这里有大量的通讯信息，包括文本和全息两种形式。他们认为 Coureuse 就在 Laicaille 栖息地上，只是这些人没能力接近她。同时他们认为他们的身份信息无法通过安全检查 —— 这倒是千真万确。""你的通讯技师带着一丝自豪说。""他们似乎在要求总部送来一些不得了的东西，或是派来一些狠角色。""
+FireBest GAFCSearchIsirahSummary","""这里有大量的通讯信息，包括文本和全息两种形式。他们认为 Coureuse 就在 Laicaille 栖息地上，只是这些人没能力接近她。同时他们认为他们的身份信息无法通过安全检查 —— 这倒是千真万确。"" 你的通讯官带着一丝自豪说。""他们似乎在要求总部送来一些不得了的东西，或是派来一些狠角色。""
 
 完整的调查报告将在轮班前完成，但你已经知道你需要知道的信息了：Laicaille 栖息地上有问题。",,
 ,,,,,,
@@ -12359,8 +12357,8 @@ FireBest OtherPlanetInteractionText
 FireAll PopulateOptions
 FireBest PrintNearbySurveyHostilesTextIfSo",Your $shipOrFleet approaches $entityName.,,
 gaPZ_baseRuinsOpt,PopulateOptions,"$gaPZ_baseRuins
-!$gaPZ_baseRuinsExplored",,"""舰长，这里有些东西你或许想要看看。""传感器技师将你的注意力引到了他的面前的显示屏上，画面已经聚焦到了行星表面上的一个地点。",5:gaPZ_baseRuins1:看看你的传感器技师找到了什么,
-gaPZ_baseRuins1,DialogOptionSelected,$option == gaPZ_baseRuins1,$global.gaPZ_foundBaseRuins = true,"""这里，这里，还有这里，熔融和烧焦的痕迹。说明这里曾有大型的运输机起降，一场规模庞大的行动。但是是为了什么？这里没有定居点，没有工业基地，也没有采矿设施。除了 —— ""他调出了一张雷达扫描图，图上显示了靠近烧焦地点的巨大碎石斜坡，他说着说着就笑了起来，""表面是锋利的碎片，甚至分布梯度也很均匀，这些都意味着这玩意儿是被有意设置的拆迁废墟，而且是最近才设置的。再有这个 —— 看出猫腻了吧？""
+!$gaPZ_baseRuinsExplored",,"""舰长，这里有些东西你或许想要看看。"" 传感器技师将你的注意力引到了他的面前的显示屏上，画面已经聚焦到了行星表面上的一个地点。",5:gaPZ_baseRuins1:看看你的传感器技师找到了什么,
+gaPZ_baseRuins1,DialogOptionSelected,$option == gaPZ_baseRuins1,$global.gaPZ_foundBaseRuins = true,"""这里，这里，还有这里，熔融和烧焦的痕迹。说明这里曾有大型的运输机起降，一场规模庞大的行动。但是是为了什么？这里没有定居点，没有工业基地，也没有采矿设施。除了 —— "" 一张雷达扫描图随之被调出，图上显示了靠近烧焦地点的巨大碎石斜坡，""表面是锋利的碎片，甚至分布梯度也很均匀，这些都意味着这玩意儿是被有意设置的拆迁废墟，而且是最近才设置的。再有这个 —— 看出猫腻了吧？"" 最后几乎说着笑了起来。
 
 眼前的视图被深层雷达扫描图覆盖。形状模糊，但你能看出废墟下面有明显的直线形状 —— 似乎是什么通道。
 
@@ -12370,7 +12368,7 @@ gaPZ_baseRuins2,DialogOptionSelected,$option == gaPZ_baseRuins2,,"你下令调�
 挖掘工作进行的很顺利，因为来自舰队的深度扫描已经将工作引向了最有希望的地点。搜索队员在松散的废墟中挖洞，用临时结构泡沫支撑工作面以防止出现坍塌。",gaPZ_baseRuins3:继续,
 gaPZ_baseRuins3,DialogOptionSelected,$option == gaPZ_baseRuins3,,在取得重大进展后，行动长官向你概述了一下情况：不管是谁掩埋了这个地方，他们都做得很彻底。余下的大部分东西都是由当地材料制成的混凝土地基和铺砌材料，一些嵌有被剪断锚点的泡沫金属板，以及在堆砌在裂缝里的零星垃圾。,gaPZ_baseRuins4:继续,
 gaPZ_baseRuins4,DialogOptionSelected,$option == gaPZ_baseRuins4,"$gaPZ_baseRuinsExplored = true
-FireAll PopulateOptions","""我们可以看出来，这主要是最近一段时间被弄出来的 —— 我的意思是几十年啊，并不是几百年，还可能更接近现在。""你的行动长官通过全息显示一边挥舞着只剩四个指头的手一边对你说明。""你可以看到我们在这里挖掘出了密度异常的结构，""他在投影中给了这个亮点一个标记桩，""那看起来应该是留了几只便宜的爬行机器人把垃圾都收集起来倒进了熔渣坑里，然后它们把自己也倒了进去并引爆了炸弹。""
+FireAll PopulateOptions","""我们可以看出来，这主要是最近一段时间被弄出来的 —— 差不多几十年，没几百年那么久。也可能还更接近现在些。"" 你的行动长官隔着全息显示向你一边挥舞着只剩四个指头的手一边说明。""你可以看到我们在这里挖掘出了密度异常的结构..."" 并在投影中给了这个亮点一个标记桩，""那看起来应该是留了几只便宜的爬行机器人把垃圾都收集起来倒进了熔渣坑里，然后它们把自己也倒了进去并引爆了炸弹。""
 
 行动长官一边回顾细节，一边点头佩服对手：""清理得很专业，没有散落的数据核心，没有闪闪发光的小玩意，很少有人会下功夫干得这么彻底。我搞清楚的事情就这么多了，舰长。""
 
@@ -12662,7 +12660,7 @@ gaPZ_heg2,DialogOptionSelected,$option == gaPZ_heg2,FireAll GAPZHegHub,"""我觉
 
 你意识到，霸主 是想全面扫描一遍 通灵塔-级 船体的主要系统。你可以命令舰内警卫严禁他们的扫描小组靠近与 光尘系统 有关的任何东西。或许他们的目的只是烦一烦你。但说不定他们打算使用特制的扫描仪器来尝试获知 通灵塔-级 的真实能力。
 
-""我们该怎么办，舰长？""传感器技师问道。",,
+""我们该怎么办，舰长？"" 传感器技师问道。",,
 GAPZHegHub1,GAPZHegHub,Commission hasFactionCommission,,,0:gaPZ_hegHub1:利用你的 霸主 雇佣协议提出申诉,
 GAPZHegHub2,GAPZHegHub,,,,1:gaPZ_hegHub2:允许霸主进行扫描,
 GAPZHegHub3,GAPZHegHub,,,,2:gaPZ_hegHub3:拒绝 霸主 登上 通灵塔-级,
@@ -14264,7 +14262,7 @@ FireAll PopulateGateOptions","这处由坚固材料所制成，并沉寂已久�
 gaATGscavScanEncounter,BeginFleetEncounter,"$gaATG_scavScanFleet score:1000
 !$encounteredAlready","$encounteredAlready = true
 FleetDesc
-HailPlayer","传感器技师开口了，""舰长，我有件事要向你汇报。在我们接近星门后，他们就一直在用某种古怪难懂的装备扫描我们。他们估计认为我们完全没有察觉，但是"" 他的语气中带着一丝骄傲，""我成功捕获到了一些很有意思的背景辐射。""",,
+HailPlayer","传感器技师开口了，""舰长，我有件事要向你汇报。在我们接近星门后，他们就一直在用某种古怪难懂的装备扫描我们。他们估计认为我们完全没有察觉，但是..."" 语气转而带上了一丝骄傲，""我成功捕获到了一些很有意思的背景辐射。""",,
 gaATGscavScanDialog,OpenCommLink,$entity.gaATG_scavScanFleet score:1000,"$menuState = fleetConvMain 0
 FireAll GAATGscavScanHub","随着通讯链接建立，拾荒舰队的舰长勉强堆出一张笑脸。
 
@@ -14848,11 +14846,11 @@ $global.gaATG_foundLoke = true
 $global.gaATG_gotLokeViaRaid = true
 $global.bairdWillTalk = false
 Call $global.gaATG_ref updateStage",你在穿梭机舱里会见了得手的营救小组。空虚和战斗的气味充满了你的鼻子：灼烧，辛辣和金属的气味。,gaATG_cottonRaidFinished2:继续,
-gaATGcottonRaidFinishedContinue ,DialogOptionSelected,$option == gaATG_cottonRaidFinished2,BeginConversation clone_loke,"两个穿着动力装甲的陆战队员押送着 Loke 克隆人来到你的关押室。他好奇地环顾四周。看到你，他停了下来，温和地斜着嘴笑着，说""愿卢德保佑你，我的朋友。""
+gaATGcottonRaidFinishedContinue ,DialogOptionSelected,$option == gaATG_cottonRaidFinished2,BeginConversation clone_loke,"两个穿着动力装甲的陆战队员押送着 Loke 克隆人来到你的关押室。他好奇地环顾四周。看到你，他停了下来，温和地斜着嘴笑着，说：""愿卢德保佑你，我的朋友。""
 
 你把他押进牢房看管。
 
-你的个人通讯器响了起来，分散的行星防御系统开始启动。战术副官报告称某些地面炮台进行了试探性的雷达扫描。","gaATG_cottonRaidFinished3:""导航官，带我们离开这里。""",
+你的个人通讯器响了起来，分散的行星防御系统开始启动。战术副官报告称某些地面炮台进行了试探性的雷达扫描。","gaATG_cottonRaidFinished3:""领航员，带我们离开这里。""",
 gaATGcottonRaidFinishedEnd,DialogOptionSelected,$option == gaATG_cottonRaidFinished3,"EndConversation DO_NOT_FIRE
 DismissDialog",,,
 gaATGdisableCottonRaidIfNeeded,GAATGcottonRaidCheckHostilesNearby,HostileFleetNearbyAndAware,"SetEnabled gaATG_cottonRaidStart false
@@ -15182,7 +15180,7 @@ FireBest DialogOptionSelected",,,
 gaATGreturnLokeStart,OpenInteractionDialog,"$id == kantas_den
 $global.gaATG_foundLoke score:1000
 !$global.gaATG_returnedLoke","BeginConversation kanta
-$global.gaATG_returnedLoke = true","导航技师提醒你关注舰桥上展示的本地信号；Kanta 之巢附近的交通控制系统似乎没有运行。突然通讯请求闪了起来。
+$global.gaATG_returnedLoke = true","领航员提醒你关注舰桥上展示的本地信号；Kanta 之巢附近的交通控制系统似乎没有运行。突然通讯请求闪了起来。
 
 军阀 Kanta 出现了，戴着面具坐在挂着掠夺与征服得来的战利品的王座上。",gaATG_returnLokeStart2:继续,
 gaATGreturnLokeStart2,DialogOptionSelected,$option == gaATG_returnLokeStart2,ShowSecondPerson cydonia,"在她身旁的，当然便是 Cydonia '医生'，他开口道。""啊，所以舰长，你 —— ""
@@ -15202,7 +15200,7 @@ gaATGreturnLokeBetrayal1,DialogOptionSelected,$option == gaATG_returnLokeBetraya
 FireBest DialogOptionSelected",,,
 gaATGreturnLokeBetrayal2,DialogOptionSelected,$option == gaATG_returnLokeBetrayal2,"$option = gaATG_returnLokeBetrayal3 0
 FireBest DialogOptionSelected",,,
-gaATGreturnLokeBetrayal3,DialogOptionSelected,$option == gaATG_returnLokeBetrayal3,,"战术官在你耳边轻声说道，""舰长，探测到隐形空雷正在部署。$shipOrFleet已被零散的空雷包围着。损伤预测检测中...中等。显然，他们想要展示他们拥有击沉我们的能力。""
+gaATGreturnLokeBetrayal3,DialogOptionSelected,$option == gaATG_returnLokeBetrayal3,,"战术副官在你耳边轻声说道，""舰长，探测到隐形空雷布设正在启动。$shipOrFleet已被零散的空雷包围着。损伤预测检测中...中等。显然，他们想要展示他们拥有击沉我们的能力。""
 
 Kanta 的声音从通讯器中传来，""这是 Kanta 的地盘，所以唯有 Kanta 说了才算。如果...要我们送你这件礼物，那只有在我们乐意的时候才可以。懂了么。""
 
@@ -15246,14 +15244,14 @@ gaATGkillLokeKantaCheck,GAATGkillLokeKantaCheck,$player.kantaProtection,"KantaCM
 gaATGreturnLokeGateRunStart1,DialogOptionSelected,$option == gaATG_returnLokeGateRunStart1,,"""舰长，""战术副官报告，""隐形空雷已经解除武装，我们可以撤退了。""",gaATG_returnLokeGateRun:继续,
 gaATGreturnLokeGateRun,DialogOptionSelected,$option == gaATG_returnLokeGateRun,,"Zal 大声说到，""Kanta 会召集她的舰队。他们通常在超空间附近游荡。他们会通过跳跃点进来，然后直接向我们而来。""
 
-""我们有能够不战斗离开 Magec 星系的方法，""你听到了她的声音中含笑。""在这个我带上船的装备箱里，有一个能够完全运行的 '双面神' 装置。","gaATG_returnLokeGateRunA:""导航官，航向 Magec 星门。""
+""我们有能够不战斗离开 Magec 星系的方法，""你听到了她的声音中含笑。""在这个我带上船的装备箱里，有一个能够完全运行的 '双面神' 装置。","gaATG_returnLokeGateRunA:""领航员，航向 Magec 星门。""
 gaATG_returnLokeGateRunB:""这不会重蹈 Galatia 实验的覆辙吧。""",
-gaATGreturnLokeGateRunA,DialogOptionSelected,$option == gaATG_returnLokeGateRunA,Call $global.gaATG_ref doZalEscape,"""航向已锁定。舰长，""导航官有些紧张地回答道。",gaATG_returnLokeEnd:继续,
-gaATGreturnLokeGateRunB,DialogOptionSelected,$option == gaATG_returnLokeGateRunB,,"""不会这样的，""Zal 说。""我保证。另外，如果是这样的话？可以想象铁锤会落在 Kanta 头上。""","gaATG_returnLokeGateRunA:""导航官，航向 Magec 星门。""
-gaATG_returnLokeEnd:""导航官，带我们离开这里就好。""",
+gaATGreturnLokeGateRunA,DialogOptionSelected,$option == gaATG_returnLokeGateRunA,Call $global.gaATG_ref doZalEscape,"""航向已锁定。舰长。"" 领航员有些紧张地回答道。",gaATG_returnLokeEnd:继续,
+gaATGreturnLokeGateRunB,DialogOptionSelected,$option == gaATG_returnLokeGateRunB,,"""不会这样的，""Zal 说。""我保证。另外，如果是这样的话？可以想象铁锤会落在 Kanta 头上。""","gaATG_returnLokeGateRunA:""领航员，航向 Magec 星门。""
+gaATG_returnLokeEnd:""领航员，带我们离开这里就好。""",
 gaATGreturnLokeEnd,DialogOptionSelected,$option == gaATG_returnLokeEnd,"EndConversation DO_NOT_FIRE
 $global.gaATG_foundZal = true
-Call $global.gaATG_ref updateStage","""$ShipOrFleet准备点火。"" 导航官说。","gaATG_returnLokeEnd2:""祝我们成功。""",
+Call $global.gaATG_ref updateStage","""$ShipOrFleet准备点火。"" 领航员说。","gaATG_returnLokeEnd2:""祝我们成功。""",
 gaATGreturnLokeEnd2,DialogOptionSelected,$option == gaATG_returnLokeEnd2,DismissDialog,,,
 ,,,,,,
 # Zal uses Janus device with Magec Gate,,,,,,
@@ -15277,7 +15275,7 @@ gaATGMagecGateOptJanus2,GAATGmagecGateOptions,"$gateScanned
 !$global.gatesActive
 !$global.playerCanUseGates",,,"gaATG_MagecGateJanus:""连接 '双面神' 装置。""",
 gaATGMagecGateOptUse1,GAATGmagecGateOptions,"$global.gatesActive
-$global.playerCanUseGates",,""" '双面神' 装置准备完成了。"" 领航员报告。""我们可以穿过星门了，$playerSirOrMadam。听你的命令。""","gaATG_magecGateUse:""导航官，激活'双面神'装置，带我们进入。""",
+$global.playerCanUseGates",,""" '双面神' 装置准备完成了。"" 领航员报告。""我们可以穿过星门了，$playerSirOrMadam。听你的命令。""","gaATG_magecGateUse:""领航员，激活 '双面神' 装置，带我们进入。""",
 gaATGMagecGateOptUse2,GAATGmagecGateOptions,"$global.gatesActive
 $global.playerCanUseGates
 !$askedZalExplode",,,"gaATG_magecGateExplode:""Zal，我怎么能知道它不会再向我爆炸呢？""",
@@ -15868,7 +15866,7 @@ DismissDialog",,,
 gaDADerelictTakeInPirate,DialogOptionSelected,$option == gaDA_takePirateIn,AddCommodity crew 1,,gaDA_returnPirateCont:离开,
 gaDADerelictTakeInPirateCont,DialogOptionSelected,$option == gaDA_returnPirateCont,"#DespawnEntity
 DismissDialog",,,
-gaDADerelictScavengerStart,GADADerelictInteraction,$gaDA_variation == SCAVENGER,,"你接近了残骸。你的传感器技师指出有迹象表明你们并不是首先发现这里的人：目标船身周围的废气和碎片显示最近有过一次打捞行动。""... 他们还是专业人士，"" 你的行动长官相当佩服地说道。先到的人在关键接入点上制造了有效的切口，只留下一张整齐的线网，固定在深空打捞鼠喜欢的钻孔岩钉上。
+gaDADerelictScavengerStart,GADADerelictInteraction,$gaDA_variation == SCAVENGER,,"你接近了残骸。你的传感器技师指出有迹象表明你们并不是首先发现这里的人：目标船身周围的废气和碎片显示最近有过一次打捞行动。""...他们还是专业人士，"" 你的行动长官相当佩服地说道。先到的人在关键接入点上制造了有效的切口，只留下一张整齐的线网，固定在深空打捞鼠喜欢的钻孔岩钉上。
 
 尽管可能什么也找不到，你依然派遣了打捞小组。他们进行了谨慎高效的地毯式排查。你的任务目标丢失了；你命令将小组的通讯和全息反馈附到任务档案里作为你尽力为学院完成工作的证据。",gaDA_continueScav:继续,
 gaDADerelictScavengerCont,DialogOptionSelected,$option == gaDA_continueScav,"$global.gaDA_scavengerTookIt = true
@@ -16022,7 +16020,7 @@ gaDAScavBluff2,DialogOptionSelected,$option == gaDA_scavBluff2,,"$HeOrShe看起�
 
 你开始讲述那起那次调查，还不时地摇头表示同情。事件的起因是 APCC 接到密告，得知某几个特定的 '幽灵资本' 提供者在相互转移资金，涉及一项往左径分子控制的空域走私重型武器的计划。他们打算以此对 Eventide 的优质房地产业产生杠杆式的影响。随后揭露的丑闻和一系列的法律诉讼然让 原产地供应库存联合公司 的董事会几乎全面崩溃。由于丑闻影响太大，再加上势力间的外交压力，协会肯定会在下一个星历年里让更多的人头落地。
 
-你不断地危言耸听，舰长看起来也越来越像一具太空尸体。","gaDA_scavBluff3:""但真正会给你惹麻烦的是罚沒令...""",
+你不断地危言耸听，舰长看起来也越来越像一具太空尸体。","gaDA_scavBluff3:""但真正会给你惹麻烦的是罚没令...""",
 gaDAScavBluff3,DialogOptionSelected,$option == gaDA_scavBluff3,,"""呃..."" $heOrShe甚至连一句话都说不出来了。
 
 ""对。"" 你表示遗憾并确认了$heOrShe的猜想。土产供销社 所有资产 —— 无论是其拥有的，还是其租赁的、协议担保的、契约占有的、或是其他任何通过合同成分所有的 —— 都将被 阿加雷斯临时商贸协会 没收并出售，以用于支付巨额的赔偿和罚款。而一些就算是他们声称的所有权 '仍在转移' 的资产，已经出现在匿名拍卖会上。
@@ -16095,7 +16093,7 @@ gaCOPrintHostilesText,OpenInteractionDialog,"$gaCO_object score:1000
 HostileFleetNearbyAndAware
 Call $global.gaCO_ref updateData",ShowDefaultVisual,附近的敌对舰队正在跟踪你的行动，使你不能运行扫描包中的机动程序。,defaultLeave:离开,
 gaCOObjectInteraction,OpenInteractionDialog,"$gaCO_object score:1000
-Call $global.gaCO_ref updateData",ShowDefaultVisual,"你的导航技师报告你的$shipOrFleet已经抵达 $gaCO_department 小组提供的坐标。是时候激活仪器套件了。当你向他们确认子系统准备好接收数据时，你的导航官点了点头。行动长官竖起拇指，表示仪器已经按指示部署完成。
+Call $global.gaCO_ref updateData",ShowDefaultVisual,"你的领航员报告你的$shipOrFleet已经抵达 $gaCO_department 小组提供的坐标。是时候激活仪器套件了。当你向其确认子系统准备好接收数据时，领航员点了点头。行动长官竖起拇指，表示仪器已经按指示部署完成。
 
 激活按钮在你的命令界面上轻轻闪烁。",gaCO_scan:执行扫描,
 gaCOObjectScan,DialogOptionSelected,$option == gaCO_scan,"$global.gaCO_scanCompleted = true
@@ -16223,7 +16221,7 @@ DespawnEntity","你的$shipOrFleet靠近了探测器，发现它正好就在院�
 
 主舰桥的显示器亮起，显示出探测器上切口的温度读数，一小团喷出的碎片云的轨迹可以被逆向至一个点；缓慢消散的近距离机动推进剂云。所有的迹象表明的结论很明确，一个打捞队曾经在这，而且前脚刚走。
 
-你的导航技师说道，""$PlayerSirOrMadam，如果我们现在就全速前进，我们也许能在最近的跳跃点赶上他们。""",defaultLeave:离开,
+你的领航员说道，""$PlayerSirOrMadam，如果我们现在就全速前进，我们也许能在最近的跳跃点赶上他们。""",defaultLeave:离开,
 gaProbeObjectInteractionBlewUp,GAProbeInteraction,$gaProbe_variation == IT_BLEW_UP,,"你的$shipOrFleet靠近了探测器，发现它正好就在院长 Sebestyen 任务说明里告诉你它会在的地方。然而，奇怪的是，探测器所在的位置环绕着废弃的舰船和碎片区。
 
 传感器扫描证实了这些遗弃船确实被人抛弃于此，而且还是最近的事，正好处于探测器的任务活动周期内。你下令所有在岗人员保持警戒，并要求对整个区域进行更进一步的主动扫描，将所有的遥测数据都记录在任务文件中。",gaProbe_blewUp1:继续,
@@ -16262,7 +16260,7 @@ gaProbeObjectInteractionMissing1,DialogOptionSelected,$option == gaProbe_missing
 
 过了一会儿，打捞队开始返回。你和舰桥船员一起检查他们的发现，看起来好像是探测器的中心被挖走了一个完美的球体，带走了大部分 Galatia 学院的珍贵仪器套件。
 
-不同的推测被一个个提了出来。是黑洞干的？还是外星人？提到外星生物的时候大家都礼貌地笑了起来。你的导航技师站上前来提出了个看法，说在理论上的确有可能对物质进行大批量远距离相位转移，不过这种操作即使在人之领时代的末期也并不经济实用。而你的行动长官则还在对套件消失这整件事本身抱着将信将疑的态度。",gaProbe_missing2:继续,
+不同的推测被一个个提了出来。是黑洞干的？还是外星人？提到外星生物的时候大家都礼貌地笑了起来。你的领航员站上前来提出了个看法，说在理论上的确有可能对物质进行大批量远距离相位转移，不过这种操作即使在人之领时代的末期也并不经济实用。而你的行动长官则还在对套件消失这整件事本身抱着将信将疑的态度。",gaProbe_missing2:继续,
 gaProbeObjectInteractionMissing2,DialogOptionSelected,$option == gaProbe_missing2,"$global.gaProbe_canReturn = true
 Call $global.gaProbe_ref updateStage
 DespawnEntity",无论如何，这意味着你没有能送回 Galatia 学院的仪器套件。你下令将这次遭遇战的所有遥测数据和全息影像资料附在加密的任务文件中。学者们喜欢数据，越多越好。这应该足以证明你已经尽职尽责了。也许其中的奥秘会分散他们的注意力，也许还够让你得到报酬。,defaultLeave:离开,
@@ -16619,9 +16617,9 @@ AddCommodity credits $gaVIP_mercPayment","通过一番令人印象深刻的奉�
 毕竟，就和你所说的那样，""我们是这个混乱时代的骑士。正是想你这样的船长坚持的比单纯的自由意志海盗更为高尚的荣誉准则，通过武装斗争印证了实际的美德，这些美德可能会在被抛弃的英仙座星域那些枯萎的心灵中再度绽放。""
 
 雇佣兵舰长对你的话强调地点点头。你的 TriPad 在身后响起，转账到达的资金被自动接受了。",gaVIP_mercCon4:继续,
-gaVIPConMerc4,DialogOptionSelected,$option == gaVIP_mercCon4,,"你们的交易完成后，这位雇佣兵笑都没笑一下，只是说""航行无阻，船长，我希望很快会再见到你。""
+gaVIPConMerc4,DialogOptionSelected,$option == gaVIP_mercCon4,,"你们的交易完成后，这位雇佣兵笑都没笑一下，只是说：""航行无阻，船长，我希望很快会再见到你。""
 
-你的导航官开始按照之前的命令，让$shipOrFleet从雇佣兵那悠闲地脱离出来。","cutCommLinkNoText:""我相信这将是一次令人难忘的会面，通讯完毕。""",
+你的领航员开始按照之前的命令，让$shipOrFleet从雇佣兵那悠闲地脱离出来。","cutCommLinkNoText:""我相信这将是一次令人难忘的会面，通讯完毕。""",
 gaVIPMercDecidesHostile,DialogOptionSelected,$option == gaVIP_mercDecides,"$option = gaVIP_mercHub
 $askedWhatCrime = true 0
 $askedWhatAuthority = true 0
@@ -17580,11 +17578,11 @@ gaTJinvestigateChip,DialogOptionSelected,$option == gaTJ_investigateChip,,"在�
 
 你稍作思考，便输入了之前 Sebestyen 给你的，用于联系这位'研究员'的通讯安全频率。加密的数据包被解开了，里面是一段简短的程序代码。这段代码似乎需要与一套标准的人之领超空间驱动场控制核心进行交互才能发挥作用。你把你的领航员叫了过来，以提供参考意见。",gaTJ_investigateChip2:继续,
 gaTJinvestigateChip2,DialogOptionSelected,$option == gaTJ_investigateChip2,"Call $global.gaTJ_ref triggerMercFleets
-AddAbility fracture_jump","""这个程序似乎会对超空间驱动场进行一些 '微调'。""导航员解释道，""如果这个程序的功能真的如那位研究员所说，那就可以在飞船周围，创造一种类似于跳跃点的模拟效果。"" 导航员的声音中透出难掩的兴奋。""从理论上来说，整个舰队都可以从任何地方...直接跃入超空间！""
+AddAbility fracture_jump","""这个程序似乎会对超空间驱动场进行一些 '微调'。"" 领航员解释道，""如果这个程序的功能真的如那位研究员所说，那就可以在飞船周围，创造一种类似于跳跃点的模拟效果。"" 领航员的声音中透出难掩的兴奋。""从理论上来说，整个舰队都可以从任何地方...直接跃入超空间！""
 
-你对这一结论并不感到惊讶，只是对导航员提供的见解表示了感谢。
+你对这一结论并不感到惊讶，只是对领航员提供的见解表示了感谢。
 
-""嗯，好的，$PlayerSirOrMadam。"" 导航员有点猜不透你的想法，""那我就先回我的岗位了，随时听候您的命令。""
+""嗯，好的，$PlayerSirOrMadam。"" 领航员有点猜不透你的想法，""那我就先回我的岗位了，随时听候您的命令。""
 
 保险起见，你把数据芯片里的信息也上传了一份到你的自己的 TriPad 上。",defaultLeave:离开,
 # return to Sebestyen,,,,,,
@@ -17607,7 +17605,7 @@ RollProbability 0.3 score:1000","$global.gaIntro2found = true
 $option = gaIntro2_start1 0
 FireBest DialogOptionSelected","传感器技师对着一盏闪烁的指示灯皱起眉头。""舰长，低轨道上出现了一个微弱的信号。""
 
-他把对信号源的详细扫描信息上传到主舰桥的显示器，这是一张布满图标和遥测数据的轨道导航网格图。
+传感器技师把对信号源的详细扫描信息上传到了主舰桥的显示器，这是一张布满图标和遥测数据的轨道导航网格图。
 
 ""信号源非常微弱，我们只能在勘测阵列运行完一整个校准周期时才接收到。它看起来像一个部署在低轨道的自动仪器套件。动力源已经废弃，看上去留在这里已经有一段时间了。""","gaIntro2_start2:""信号是怎样的？""","# hop in and interrupt a standard survey interaction, insert stuff about GA etc"
 gaIntro2surveyOpenAgain,PopulateOptions,"$global.gaIntro2found
@@ -17626,7 +17624,7 @@ FireBest PrintNearbySurveyHostilesTextIfSo
 AddText ""围绕这颗行星运行的一个仪器正在发送微弱的信号，Galatia 学院承诺将它回收会提供报酬。""",,gaIntro2_retrieval2:下令回收数据核心,# in case you want to immediately change your mind
 gaIntro2start2,DialogOptionSelected,$option == gaIntro2_start2,"Highlight ""Galatia 学院"" ""18,000""","传感器技师开启音频输出：一段无法辨识的杂音在循环播放，其中夹杂着断断续续的啸叫声。似乎是一段录音？
 
-""发射器肯定损坏了，但还可以挽救，""他们的话听上去带着一丝自豪，""走你。""
+""发射器肯定损坏了，但只要这样稍微操作一下..."" 解释的语调开始带上一丝自豪，""走你。""
 
 ""—— Galatia 学院。任何找到这件物品的人，我恳请你把数据核心送回学院，你将会获得由 Tomas Kallichore 院长授权的 18,000 星币奖励。信息会重复播放。""","gaIntro2_retrieval:下令回收数据核心
 gaIntro2_leaveIt:把它留在原地",
@@ -17673,7 +17671,7 @@ gaIntro2returnStart3,DialogOptionSelected,$option == gaIntro2_returnStart3,,"你
 通讯被转移至了你的个人端口。",gaIntro2_returnElek1:接受通讯请求,
 gaIntro2returnElek1,DialogOptionSelected,$option == gaIntro2_returnElek1,BeginConversation elek,"""这里是 Elek 院士，有什么能帮到你的吗...舰长？""
 
-院士以一个假定的头衔用作对你的称呼，那语气就好像他在喝茶时你没给他送饼干一样。你确定你的通讯技师在联络他时提到了你的名字。","gaIntro2_returnElek2a:""我回收了数据核心，院长承诺过提供报酬。""
+院士以一个假定的头衔用作对你的称呼，那语气就好像他在喝茶时你没给他送饼干一样。你确定你的通讯官在联络他时提到了你的名字。","gaIntro2_returnElek2a:""我回收了数据核心，院长承诺过提供报酬。""
 gaIntro2_returnElek2b:""我的名字是 $playerName，我为院长承诺的归还数据核心能得到的报酬而来。""",
 gaIntro2returnElek2a,DialogOptionSelected,$option == gaIntro2_returnElek2a,"$option = gaIntro2_returnElek2b 0
 FireBest DialogOptionSelected",,,
@@ -17846,7 +17844,7 @@ soeMeetCaspianLeave,DialogOptionSelected,$option == soe_meetCaspianEnd,BarCMD sh
 ,,,,,,
 # soe step 2: Arrive at Eventide,,,,,,# Assume the player always shows up 'just in time'
 soeArriveEventide,MarketPostDock,"$market.soe_invitedToBall
-!$market.soe_sawInvite",$market.soe_sawInvite = true,"通讯技师通知你有个传给你的通讯消息，私人的。你进行身份识别后访问了文件。Eventide 的 Rao 家族纹章充斥了整个屏幕，象征着军人的传承，显赫的威望和持久的繁荣。
+!$market.soe_sawInvite",$market.soe_sawInvite = true,"通讯官通知你有个传给你的通讯消息，私人的。你进行身份识别后访问了文件。Eventide 的 Rao 家族纹章充斥了整个屏幕，象征着军人的传承，显赫的威望和持久的繁荣。
 
 ""本次的大型社交季舞会将在 Rao 家的 春色庄园 举办，诚侯您的出席...""","soe_arriveAttendNow:搭乘穿梭机前往 Rao 的庄园
 soe_arriveAttendLater:先处理别的事情
@@ -18675,7 +18673,7 @@ $HeOrShe说道：""就这么说定了""
 OR
 $HeOrShe点头致意，""动工！""
 OR
-$HeOrShe点了点头，说道。""项目马上开始！""
+$HeOrShe点了点头，说道。""事项马上进行！""
 OR
 ""交易已确认！舰长。"" $HeOrShe点头致意，""我就等你这句。""",,
 contactPrintAcceptTextFaithful,ContactPrintAcceptText,$voice == faithful,,"$HeOrShe微笑着说：""舰长，愿卢德与你同在。""
@@ -20099,7 +20097,7 @@ EndConversation NO_CONTINUE
 AddCommodity crew 54
 $player.locr_piratesOnBoard = true","你派遣穿梭机将海盗们接了回来。
 
-这些原海盗们被打散配属到了各类船员职位上。他们的通讯都由你的安保长官严密监视以确保他们不在暗中谋划造反，并且老老实实地干活挣出他们回港的船票。",,
+这些原海盗们被打散配属到了各类船员职位上。他们的通讯都由你的安全主管严密监视以确保他们不在暗中谋划造反，并且老老实实地干活挣出他们回港的船票。",,
 LOCRPtransportShuttleWork,DialogOptionSelected,"$option == locrp_transportShuttle
 $player.offeredLostPiratesWork","unset $entity.locr_pirate
 EndConversation NO_CONTINUE
@@ -20170,7 +20168,7 @@ unset $player.locr_piratesOnBoard
 $menuState = main 0
 FireAll PopulateOptions","海盗们欢呼着下了船，彼此之间哼着吹嘘他们接下来要嗑什么乱七八糟东西的粗俗小曲儿。另一些面色沉重的家伙则低声琢磨着报复 Fenius 一伙人的计划。
 
-少数海盗则自愿留下来替你工作，并且因为你的慷慨同意不要标准的签约奖金。同时得到你的安保长官和他们的小组长认可的那些人得以留了下来。",,
+少数海盗则自愿留下来替你工作，并且因为你的慷慨同意不要标准的签约奖金。同时得到你的安全主管和其手下小组长们认可的那些人得以留了下来。",,
 LOCRPoffloadPiratesLuddic,MarketPostDock,"$player.locr_piratesOnBoard
 $marketSize > 3
 $faction.id == pirates
@@ -20182,7 +20180,7 @@ unset $player.locr_piratesOnBoard
 $menuState = main 0
 FireAll PopulateOptions","当他们离开穿梭机的闸道一段安全距离后，海盗们瞬间欢呼雀跃，为你们强加的纪律感到如释重负，他们大喊大叫，唱着他们准备滥用的各种药物。其他人则喃喃自语，计划向 Fenius 和他的船员复仇。
 
-海盗们中有一个人对卢德主义颇有好感，希望继续受雇于你。因为对你的感激，他放弃了常规的签约奖金。经你的安全主管和他的部门领导批准，他被允许留下。",,
+海盗们中有一个人对卢德主义颇有好感，希望继续受雇于你。因为对你的感激，而放弃了常规的签约奖金。经你的安全主管和其手下小组长们的批准，此人被允许留下。",,
 LOCRPoffloadPiratesToPrisonA,PopulateOptions,"$isPerson
 $player.locr_piratesOnBoardPrisoners
 $personFaction.id != pirates
@@ -20966,7 +20964,7 @@ rdsmDecivInteractionRaid,rdsmplanetInteraction,$rdsm_variation == DECIV score:10
 
 然而，在附近的降落设施上，也发现了一艘刚刚耗尽燃料没多久的穿梭机，在降落轨迹上还留下了一片明显的残骸区，看来是另一艘穿梭机遭到低速碰撞造成的。附近的建筑遗迹似乎也受到了小规模轨道轰炸，可能是出于报复。
 
-看来在你之前，就有过一群装备不足的拾荒者来执行任务，放松警惕的时候就被当地蛮荒人偷袭了。传感器技师与战术官互相协调进行精确扫描，确认敌方战斗力。",,
+看来在你之前，就有过一群装备不足的拾荒者来执行任务，放松警惕的时候就被当地蛮荒人偷袭了。传感器技师与战术副官互相协调进行精确扫描，确认敌方战斗力。",,
 rdsmDecivInteractionRaidOptions,rdsmraidBegin,,"ShowDefaultVisual
 $raidDifficulty = $rdsm_raidDifficulty
 $raidGoBackTrigger = rdsmraidBegin
@@ -21489,7 +21487,7 @@ ddroPrintHostilesText,OpenInteractionDialog,"$ddro_target score:1000
 IsSeenByAnyFleet
 Call $ddro_ref updateData",ShowDefaultVisual,你的$shipOrFleet最近刚被侦测到或者正在被跟踪，现在递交物品到指定位置是非常不明智的。,defaultLeave:离开,
 ddroObjectInteraction,OpenInteractionDialog,"$ddro_target score:1000
-Call $ddro_ref updateData",ShowDefaultVisual,"导航技师向你告知，你的$shipOrFleet已经到达由 $ddro_personName 提供的坐标位置。$ddro_thing 已经被小心地安置到了货运无人机的机械臂上，随时准备投放。
+Call $ddro_ref updateData",ShowDefaultVisual,"领航员向你告知，你的$shipOrFleet已经到达由 $ddro_personName 提供的坐标位置。$ddro_thing 已经被小心地安置到了货运无人机的机械臂上，随时准备投放。
 
 执行按钮在你的命令界面上轻轻地闪烁。","ddro_scan:把货扔到稳定轨道上
 defaultLeave:离开",
@@ -22067,9 +22065,9 @@ $global.leftCrewOnSentinel","$option = skironReturnCrewToPlayer2 0
 FireBest DialogOptionSelected",,,
 skironReturnCrewToPlayer2,DialogOptionSelected,$option == skironReturnCrewToPlayer2,"AddCommodity crew 93
 $global.gotSentinelCrewBack = true
-FireAll PopulateOptions","""我谨代表我本人和我们的殖民地对你们的技术援助表示感谢，""指挥官 Skiron 边说边露出笑容。
+FireAll PopulateOptions","""我谨代表我本人和我们的殖民地对你们的技术援助表示感谢。"" 指挥官 Skiron 边说边露出笑容。
 
-她说：""您留在我们这里的船员已经准备好返回您的$shipOrFleet；我的军需官将与您的下属协调运输事宜，""
+她说：""您留在我们这里的船员已经准备好返回您的$shipOrFleet；我的军需官将与您的下属协调运输事宜。""
 
 ""嗯，啊。他们中的大多数人都会回去。少数人在与我们相处的过程中来到了...其他地方，我们尊重他们对我们家园的贡献。""",,
 # Pirates,,,,,,
@@ -23619,9 +23617,9 @@ Call $global.sdtu_ref tryMakeHyderImportant","看来这位 辛达强权 的前�
 
 得益于此，脱离对方舰队易如反掌。
 
-不管怎么样，如果要问这个反应让你有了什么想法的话，你只能说估计自己很快就不得不和副星际元帅 Hyder 会上一面了。","sdtu_patrolLeave:""导航员，带我们离开这里。""",
+不管怎么样，如果要问这个反应让你有了什么想法的话，你只能说估计自己很快就不得不和副星际元帅 Hyder 会上一面了。","sdtu_patrolLeave:""领航员，带我们离开这里。""",
 sdtuPatrolConvinceMutiny,DialogOptionSelected,$option == sdtu_patrolConvinceMutiny,"$global.sdtu_gotPatrolCrewToMutiny = true
-ShowDefaultVisual","你命令通讯技师用所有的频道发送了你的这段声明：在最高元首的眼中，$PersonRank $PersonName 是一名彻头彻尾的叛徒，你手中有最高检察长 Dolos Macario 开出的逮捕令为证。
+ShowDefaultVisual","你命令通讯官用所有的频道发送了你的这段声明：在最高元首的眼中，$PersonRank $PersonName 是一名彻头彻尾的叛徒，你手中有最高检察长 Dolos Macario 开出的逮捕令为证。
 
 任何协助逮捕的人员都将被视为对 辛达强权 效忠有功。而任何干预此次逮捕的人员，都将被打上叛徒和恐怖主义同情者的烙印，交由 INTSEC 全权处置。
 
@@ -23646,7 +23644,7 @@ Call $global.sdtu_ref tryMakeHyderImportant","那个副指挥官确实说话算�
 
 你把这人关进了禁闭室，保护起来。
 
-现在，该和副星际元帅 Hyder 来一场高难度会谈了。","sdtu_patrolLeave:""导航员，带我们离开这里。""",
+现在，该和副星际元帅 Hyder 来一场高难度会谈了。","sdtu_patrolLeave:""领航员，带我们离开这里。""",
 sdtuPatrolLeave,DialogOptionSelected,$option == sdtu_patrolLeave,"Call $entity.sdtu_ref makeUnimportant
 DismissDialog",,,
 sdtuTraitorPatrolDefeated,sdtuPatrolDefeated,$someShipsDestroyed,"$global.sdtu_foughtDiktatPatrol = true
@@ -25437,7 +25435,7 @@ anhDiktatPatrolQuestEnd,DialogOptionSelected,$option == anh_diktatPatrolQuestEnd
 $global.anh_completed = true
 Call $global.anh_ref updateStage","事情就这么了结了。你不由得想了下如果你把那个前军官和他的小徒弟按约定送到了某个 Askonian 地下组织的手上后事情会怎样发展... 
 
-你叫导航员指定一道新航线。",cutCommLink:继续,
+你叫领航员指定一道新航线。",cutCommLink:继续,
 ,,,,,,
 # anh - arrive at Volturn,,,,,,
 anhCheckCompletionCont,MarketPostDock,"$market.anh_tookTheJob score:100
@@ -29525,9 +29523,9 @@ HistorianBackstoryBlurb08,HistorianBackstoryBlurb,!WasHistorianBlurbShown histor
 ""也许，这些复杂、先进的高新技术发展需要一个稳定的基础：比如庞大的人口基数，发达的理论和充裕的工业水平，以及向生存或战争之上更伟大领域投资的意愿。当然，战争确实在某种程度上能推动创新。但想象一下，如果那些以数十亿计的星币没有和那么多像我过去认识的那些人一样的愚蠢的年轻人一起化为乌有，将会创造怎样的未来。""
 
 $HeOrShe沉默了一会儿。""那些老旧的生产芯片和纳米锻炉就像是一架没有中间梯级的楼梯。不论我们如何努力向上攀爬，都注定会因为中间梯级的缺失而跌落...""",,
-HistorianBackstoryBlurb09,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb09,SetHistorianBlurbShownAfterDelay historyBlurb09,"""人之领将关键产业分散到了不同的星球世界上，并且设立了彼此相隔甚远的冗余。如果其中生产超光速驱动器的世界试图利用自己的产业特化优势对抗人之领的话，哈，他们被切断了原材料和反物质燃料供应之后还能干什么呢？这还没谈更重要的生活必需品和市场准入权呢？""
+HistorianBackstoryBlurb09,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb09,SetHistorianBlurbShownAfterDelay historyBlurb09,"""人之领刻意把关键产业都分散到了不同的世界上，在保证冗余的大前提下，让各产业彼此相隔甚远。假若其中某个生产超光速驱动器的世界妄图凭借自己的专长来违抗 人之领 的话，那么，没有原材料供应的他们还能赚到什么好处？又或者是没了反物质燃料供应？又或者干脆直接掐断那些能让他们活着进入市场的基本必需品供应呢？""
 
-""反观人之领只需要控制当地的星门就相当于发动全面围攻，人们又怎能反抗得了这样的人之领呢？哪一个世界能够与整个人之领抗衡呢？"" $HeOrShe露出了一个阴冷的微笑。""现在我们就被人之领围困在这里。我们就算想投降都只能向那些死寂的星门投降。""",,
+""人之领 只要掌控了当地的星门能够彻底围困整个地区，人们怎能反抗？敢问哪个世界能和整个 人之领 抗衡呢？"" $HeOrShe露出了一个阴冷的微笑。""我们现在全都被 人之领 围困在了这里。除了那些寂静无声的星门外，想投降都找不到其他东西。""",,
 HistorianBackstoryBlurb10,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb10,SetHistorianBlurbShownAfterDelay historyBlurb10,"""Galatia 学院？哦对，不管你信不信，我在那上过学，还教了几年的书。他们虽然很快就发现了我这个人是有点滑头，不过那会我早就溜了。不管怎么样我也算是入过这个局！呵呵，你信不？
 
 $HeOrShe因为曾经的回忆而笑了起来。""我也树了不少敌，确实不少。""

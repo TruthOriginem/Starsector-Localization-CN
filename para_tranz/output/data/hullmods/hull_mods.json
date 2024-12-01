@@ -1934,21 +1934,21 @@
     {
         "key": "hull_mods.csv#insulatedengine$desc",
         "original": "Increases the durability of the ship's engines by %s, and the ship's hull integrity by %s.\n\nThe ship's sensor profile is also reduced by %s.",
-        "translation": "提高 %s 舰船发动机的耐久，并提高 %s 的船体结构值。\n\n同时降低该舰 %s 的传感器截面。",
+        "translation": "提高 %s 舰船引擎的耐久，并提高 %s 的船体结构值。\n\n同时降低该舰 %s 的传感器截面。",
         "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0060行\n[本行原始数据]\n{'name': 'Insulated Engine Assembly',\n 'id': 'insulatedengine',\n 'tier': '0',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'engines, defensive, req_spaceport, merc, standard',\n 'uiTags': 'Engines, Logistics, Defenses, Requires Dock',\n 'base value': '2500',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '3',\n 'cost_dest': '6',\n 'cost_cruiser': '9',\n 'cost_capital': '15',\n 'script': 'data.hullmods.InsulatedEngines',\n 'desc': \"Increases the durability of the ship's engines by %s, and the ship's \"\n         'hull integrity by %s.\\n'\n         '\\n'\n         \"The ship's sensor profile is also reduced by %s.\",\n 'short': 'Makes engines harder to disable, lowers sensor profile.',\n 'sModDesc': 'Increases engine durability by a further %s, and Increases the '\n             'sensor profile reduction to %s.',\n 'sprite': 'graphics/hullmods/insulated_engine_assembly.png'}"
     },
     {
         "key": "hull_mods.csv#insulatedengine$name",
         "original": "Insulated Engine Assembly",
-        "translation": "发动机隔离性装配",
+        "translation": "引擎隔离性装配",
         "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0060行\n[本行原始数据]\n{'name': 'Insulated Engine Assembly',\n 'id': 'insulatedengine',\n 'tier': '0',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'engines, defensive, req_spaceport, merc, standard',\n 'uiTags': 'Engines, Logistics, Defenses, Requires Dock',\n 'base value': '2500',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '3',\n 'cost_dest': '6',\n 'cost_cruiser': '9',\n 'cost_capital': '15',\n 'script': 'data.hullmods.InsulatedEngines',\n 'desc': \"Increases the durability of the ship's engines by %s, and the ship's \"\n         'hull integrity by %s.\\n'\n         '\\n'\n         \"The ship's sensor profile is also reduced by %s.\",\n 'short': 'Makes engines harder to disable, lowers sensor profile.',\n 'sModDesc': 'Increases engine durability by a further %s, and Increases the '\n             'sensor profile reduction to %s.',\n 'sprite': 'graphics/hullmods/insulated_engine_assembly.png'}"
     },
     {
         "key": "hull_mods.csv#insulatedengine$sModDesc",
         "original": "Increases engine durability by a further %s, and Increases the sensor profile reduction to %s.",
-        "translation": "额外提高 %s 舰船发动机的耐久，将传感截面降低至 %s。",
+        "translation": "额外提高 %s 舰船引擎的耐久，将传感截面降低 %s。",
         "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0060行\n[本行原始数据]\n{'name': 'Insulated Engine Assembly',\n 'id': 'insulatedengine',\n 'tier': '0',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'engines, defensive, req_spaceport, merc, standard',\n 'uiTags': 'Engines, Logistics, Defenses, Requires Dock',\n 'base value': '2500',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '3',\n 'cost_dest': '6',\n 'cost_cruiser': '9',\n 'cost_capital': '15',\n 'script': 'data.hullmods.InsulatedEngines',\n 'desc': \"Increases the durability of the ship's engines by %s, and the ship's \"\n         'hull integrity by %s.\\n'\n         '\\n'\n         \"The ship's sensor profile is also reduced by %s.\",\n 'short': 'Makes engines harder to disable, lowers sensor profile.',\n 'sModDesc': 'Increases engine durability by a further %s, and Increases the '\n             'sensor profile reduction to %s.',\n 'sprite': 'graphics/hullmods/insulated_engine_assembly.png'}"
     },

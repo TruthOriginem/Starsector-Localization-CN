@@ -114,9 +114,9 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 
 而对于民用舰船，还会提高 %s 维护时所消耗的补给量。",提高舰船的载货量。,载货量增加值翻倍，抵消民用舰船所增加的维护成本。,graphics/hullmods/expanded_cargo.png
 高精度传感器,hiressensors,2,,,"req_spaceport, merc, standard","后勤, 需要船坞",9000,,,,4,6,9,15,com.fs.starfarer.api.impl.hullmods.HighResSensors,<Tooltip created in script>,提高舰队探测范围。,按舰船级别，战斗视野范围提高 %s/%s/%s/%s。,graphics/hullmods/high_res_sensors.png
-发动机隔离性装配,insulatedengine,0,,,"engines, defensive, req_spaceport, merc, standard","引擎, 后勤, 防御, 需要船坞",2500,,,,3,6,9,15,data.hullmods.InsulatedEngines,"提高 %s 舰船发动机的耐久，并提高 %s 的船体结构值。
+引擎隔离性装配,insulatedengine,0,,,"engines, defensive, req_spaceport, merc, standard","引擎, 后勤, 防御, 需要船坞",2500,,,,3,6,9,15,data.hullmods.InsulatedEngines,"提高 %s 舰船引擎的耐久，并提高 %s 的船体结构值。
 
-同时降低该舰 %s 的传感器截面。",令引擎更不易失效，且降低该舰的传感器截面。,额外提高 %s 舰船发动机的耐久，将传感截面降低至 %s。,graphics/hullmods/insulated_engine_assembly.png
+同时降低该舰 %s 的传感器截面。",令引擎更不易失效，且降低该舰的传感器截面。,额外提高 %s 舰船引擎的耐久，将传感截面降低 %s。,graphics/hullmods/insulated_engine_assembly.png
 军事化子系统,militarized_subsystems,0,,,"req_spaceport, merc, standard","特殊, 后勤, 需要船坞",6000,TRUE,,,4,8,12,20,com.fs.starfarer.api.impl.hullmods.MilitarizedSubsystems,"移除民用级船体的惩罚，并提高 %s 最大宇宙航速。
 
 提高 %s 最低船员需求。",消除传感器惩罚、提高最大宇宙航速、并增加所需船员数量。,取消本插件导致的额外船员需求。,graphics/hullmods/militarized_subsystems.png

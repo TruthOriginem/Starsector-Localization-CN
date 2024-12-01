@@ -968,9 +968,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/combat/BaseHullMod.class#\"This effect only applies if this hullmod is built into the hull using a story point. Cheap hullmods have stronger effects.\"",
         "original": "This effect only applies if this hullmod is built into the hull using a story point. Cheap hullmods have stronger effects.",
-        "translation": "仅当该插件使用 故事点 内置到船体中时此效果才适用。使用装配点较少的插件内置奖励更强。",
+        "translation": "仅当该插件使用 故事点 内置到船体中时此效果才生效。使用装配点较少的插件内置奖励更强。",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/combat/BaseHullMod.class 的第0337个常量\n原始数据：\"This effect only applies if this hullmod is built into the hull using a story point. Cheap hullmods have stronger effects.\"\n译文数据：\"仅当该插件使用 故事点 内置到船体中时此效果才适用。使用装配点较少的插件内置奖励更强。\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/combat/BaseHullMod.class 的第0337个常量\n原始数据：\"This effect only applies if this hullmod is built into the hull using a story point. Cheap hullmods have stronger effects.\"\n译文数据：\"仅当该插件使用 故事点 内置到船体中时此效果才生效。使用装配点较少的插件内置奖励更强。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/combat/BaseHullMod.class#\"installed\"",
@@ -2109,9 +2109,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FleetEncounterContext.class#\"weapon and engine damage sustained\"",
         "original": "weapon and engine damage sustained",
-        "translation": "武器和发动机损坏",
-        "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FleetEncounterContext.class 的第2541个常量\n原始数据：\"weapon and engine damage sustained\"\n译文数据：\"武器和发动机损坏\"\n\n"
+        "translation": "武器和引擎损坏",
+        "stage": 5,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FleetEncounterContext.class 的第2541个常量\n原始数据：\"weapon and engine damage sustained\"\n译文数据：\"武器和引擎损坏\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FleetEncounterContext.class#\"wing deployed in combat\"",
@@ -3565,9 +3565,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/PlanetInteractionDialogPluginImpl.class#\"Your officers respond promptly to the order, and move to the task with all alacrity. There is an edge to their call-and-re~\"@8d6a3aac",
         "original": "Your officers respond promptly to the order, and move to the task with all alacrity. There is an edge to their call-and-response, however, as if they cannot help but acknowledge the deep sense of the gravity in this act.\n\"Package ready to drop, captain,\" your ops chief says. \"On your order.\"",
-        "translation": "你的军官迅速对命令做出反应，有条不紊地组织着各自的任务。然而，他们传送信息的语气中却透着一丝紧张，尽管尝试去克制，但没人能真正忽视这次行动的严重性。\n\"包裹已准备好投放，舰长，\"你的行动长官说。\"等待你的指令。\"",
+        "translation": "你的军官迅速对命令做出反应，有条不紊地组织着各自的任务。然而，他们传送信息的语气中却透着一丝紧张，尽管尝试去克制，但没人能真正忽视这次行动的严重性。\n\"包裹已准备好投放，舰长，\" 你的行动长官说。\"等待你的指令。\"",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/PlanetInteractionDialogPluginImpl.class 的第0379个常量\n原始数据：\"Your officers respond promptly to the order, and move to the task with all alacrity. There is an edge to their call-and-response, however, as if they cannot help but acknowledge the deep sense of the gravity in this act.\n\"Package ready to drop, captain,\" your ops chief says. \"On your order.\"\"\n译文数据：\"你的军官迅速对命令做出反应，有条不紊地组织着各自的任务。然而，他们传送信息的语气中却透着一丝紧张，尽管尝试去克制，但没人能真正忽视这次行动的严重性。\n\"包裹已准备好投放，舰长，\"你的行动长官说。\"等待你的指令。\"\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/PlanetInteractionDialogPluginImpl.class 的第0379个常量\n原始数据：\"Your officers respond promptly to the order, and move to the task with all alacrity. There is an edge to their call-and-response, however, as if they cannot help but acknowledge the deep sense of the gravity in this act.\n\"Package ready to drop, captain,\" your ops chief says. \"On your order.\"\"\n译文数据：\"你的军官迅速对命令做出反应，有条不紊地组织着各自的任务。然而，他们传送信息的语气中却透着一丝紧张，尽管尝试去克制，但没人能真正忽视这次行动的严重性。\n\"包裹已准备好投放，舰长，\" 你的行动长官说。\"等待你的指令。\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/PlanetInteractionDialogPluginImpl.class#\"Your sensors officer detects no more unusual energy patterns from the inner rim of the accretion disc, just noise, as mind~\"@ecee6ac4",
@@ -13085,9 +13085,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/MercsOnTheRunBarEvent.class#\"You prove yourself worth speaking to by partaking in a round of \"Atmo Drops\", a drink based largely on consuming eye-water~\"@ed67126b",
         "original": "You prove yourself worth speaking to by partaking in a round of \"Atmo Drops\", a drink based largely on consuming eye-watering liquor as quickly as possible, with the mercenary band. They're drunk for sure, but are composed enough to speak around the precise details of why they're being investigated by local authorities.\n\nAfter a couple of the mercs head up to order a round of \"Orbital Bombardments\", their leader pulls you aside and sketches out a proposal. \"We've got %s suits, we fight in vac or black. I'll give you our contract for %s, and that's giving it away. Put us to work, or sell it off elsewhere, doesn't matter to me if you can get us outta this fix. What'dya say?\"",
-        "translation": "你通过和这群雇佣兵一起参加一轮 \"深海炸弹\" 游戏，证明了自己值得他们交谈。这个游戏主要是尽快喝下大量令人瞠目的烈酒。他们确实喝醉了，但还足够清醒，能够围绕为何被当局调查的细节进行讨论。\n\n几个雇佣兵又点了一轮 \"轨道轰炸\" 后，他们的老大把你拉到一边，提出了一个建议。\"我们有 %s 套战斗服，可以用它在真空或黑暗环境作战。我把我们的合同以 %s 的价格给你，这简直是白送。给我们找点活干，或者你在别的地方把合同再卖掉，只要能让我们摆脱这个困境就像，其他的我都不在乎。你怎么说？\"",
+        "translation": "你通过和这群雇佣兵一起参加一轮 \"深海炸弹\" 游戏，证明了自己值得他们交谈。这个游戏主要是尽快喝下大量令人瞠目的烈酒。他们确实喝醉了，但还足够清醒，能够围绕为何被当局调查的细节进行讨论。\n\n几个雇佣兵又点了一轮 \"轨道轰炸\" 后，他们的老大把你拉到一边，提出了一个建议。\"我们有 %s 套战斗服，我们擅长在真空里或黑暗中作战。我可以把我们的合同以 %s 的价格给你，这简直是白送。给我们找点活干，或者你在别的地方把合同再卖掉，只要能让我们摆脱这个困境就行，其他的我都不在乎。你怎么说？\"",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/MercsOnTheRunBarEvent.class 的第0096个常量\n原始数据：\"You prove yourself worth speaking to by partaking in a round of \"Atmo Drops\", a drink based largely on consuming eye-watering liquor as quickly as possible, with the mercenary band. They're drunk for sure, but are composed enough to speak around the precise details of why they're being investigated by local authorities.\n\nAfter a couple of the mercs head up to order a round of \"Orbital Bombardments\", their leader pulls you aside and sketches out a proposal. \"We've got %s suits, we fight in vac or black. I'll give you our contract for %s, and that's giving it away. Put us to work, or sell it off elsewhere, doesn't matter to me if you can get us outta this fix. What'dya say?\"\"\n译文数据：\"你通过和这群雇佣兵一起参加一轮 \"深海炸弹\" 游戏，证明了自己值得他们交谈。这个游戏主要是尽快喝下大量令人瞠目的烈酒。他们确实喝醉了，但还足够清醒，能够围绕为何被当局调查的细节进行讨论。\n\n几个雇佣兵又点了一轮 \"轨道轰炸\" 后，他们的老大把你拉到一边，提出了一个建议。\"我们有 %s 套战斗服，可以用它在真空或黑暗环境作战。我把我们的合同以 %s 的价格给你，这简直是白送。给我们找点活干，或者你在别的地方把合同再卖掉，只要能让我们摆脱这个困境就像，其他的我都不在乎。你怎么说？\"\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/MercsOnTheRunBarEvent.class 的第0096个常量\n原始数据：\"You prove yourself worth speaking to by partaking in a round of \"Atmo Drops\", a drink based largely on consuming eye-watering liquor as quickly as possible, with the mercenary band. They're drunk for sure, but are composed enough to speak around the precise details of why they're being investigated by local authorities.\n\nAfter a couple of the mercs head up to order a round of \"Orbital Bombardments\", their leader pulls you aside and sketches out a proposal. \"We've got %s suits, we fight in vac or black. I'll give you our contract for %s, and that's giving it away. Put us to work, or sell it off elsewhere, doesn't matter to me if you can get us outta this fix. What'dya say?\"\"\n译文数据：\"你通过和这群雇佣兵一起参加一轮 \"深海炸弹\" 游戏，证明了自己值得他们交谈。这个游戏主要是尽快喝下大量令人瞠目的烈酒。他们确实喝醉了，但还足够清醒，能够围绕为何被当局调查的细节进行讨论。\n\n几个雇佣兵又点了一轮 \"轨道轰炸\" 后，他们的老大把你拉到一边，提出了一个建议。\"我们有 %s 套战斗服，我们擅长在真空里或黑暗中作战。我可以把我们的合同以 %s 的价格给你，这简直是白送。给我们找点活干，或者你在别的地方把合同再卖掉，只要能让我们摆脱这个困境就行，其他的我都不在乎。你怎么说？\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/MercsOnTheRunBarEvent.class#\"You wake up the next day in a small room above the bar with no particular memory of how you got there. How many more round~\"@87579f46",
@@ -13729,9 +13729,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/QuartermasterCargoSwapBarEvent.class#\". \"A mining drone with half its Ludd-damned \"",
         "original": ". \"A mining drone with half its Ludd-damned ",
-        "translation": ".\"即便是那些左径疯子的自爆运输队，",
+        "translation": "。\"即便是那些左径疯子的自爆运输队，",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/QuartermasterCargoSwapBarEvent.class 的第0340个常量\n原始数据：\". \"A mining drone with half its Ludd-damned \"\n译文数据：\".\"即便是那些左径疯子的自爆运输队，\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/QuartermasterCargoSwapBarEvent.class 的第0340个常量\n原始数据：\". \"A mining drone with half its Ludd-damned \"\n译文数据：\"。\"即便是那些左径疯子的自爆运输队，\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/QuartermasterCargoSwapBarEvent.class#\". Afterward, the quartermaster \"",
@@ -13785,9 +13785,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/QuartermasterCargoSwapBarEvent.class#\"You exchange comms with the quartermaster and the very next day \"",
         "original": "You exchange comms with the quartermaster and the very next day ",
-        "translation": "你当即与这名军需官交换了通讯 ID, 第二天",
+        "translation": "你当即与这名军需官交换了通讯 ID，第二天",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/QuartermasterCargoSwapBarEvent.class 的第0392个常量\n原始数据：\"You exchange comms with the quartermaster and the very next day \"\n译文数据：\"你当即与这名军需官交换了通讯 ID, 第二天\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/QuartermasterCargoSwapBarEvent.class 的第0392个常量\n原始数据：\"You exchange comms with the quartermaster and the very next day \"\n译文数据：\"你当即与这名军需官交换了通讯 ID，第二天\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/QuartermasterCargoSwapBarEvent.class#\"You have %s \"",
@@ -19931,9 +19931,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventInte~#\"Fuel use while traveling inside slipstreams reduced by %s. This reduction is multiplicative with the baseline fuel use red~\"@4c5f5b26",
         "original": "Fuel use while traveling inside slipstreams reduced by %s. This reduction is multiplicative with the baseline fuel use reduction for traveling inside a slipstream.",
-        "translation": "在 超空间滑流 中航行时，燃料花费减少 %s。此减免和使用 超空间滑流 时的基础燃料花费减免相乘叠加。",
+        "translation": "在 超空间滑流 中航行时，燃料花费进一步减少 %s。此项减免与利用 超空间滑流 航行时的基础燃料花费减免相乘叠加。",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class 的第0395个常量\n原始数据：\"Fuel use while traveling inside slipstreams reduced by %s. This reduction is multiplicative with the baseline fuel use reduction for traveling inside a slipstream.\"\n译文数据：\"在 超空间滑流 中航行时，燃料花费减少 %s。此减免和使用 超空间滑流 时的基础燃料花费减免相乘叠加。\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HyperspaceTopographyEventIntel.class 的第0395个常量\n原始数据：\"Fuel use while traveling inside slipstreams reduced by %s. This reduction is multiplicative with the baseline fuel use reduction for traveling inside a slipstream.\"\n译文数据：\"在 超空间滑流 中航行时，燃料花费进一步减少 %s。此项减免与利用 超空间滑流 航行时的基础燃料花费减免相乘叠加。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ttcr/TTCRCommerceRaidersDestroyedFactor$1.class#\"Ships belonging to commerce raider fleets sent to harass your colonies by the Tri-Tachyon Corporation, destroyed by your fleet.\"",
@@ -40931,9 +40931,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"A partial reload is possible when running out of capacity.\"",
         "original": "A partial reload is possible when running out of capacity.",
-        "translation": "剩余装填装填容量用尽时仍可部分地补充备弹量。",
+        "translation": "剩余装填容量用尽时仍可部分地补充备弹量。",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0579个常量\n原始数据：\"A partial reload is possible when running out of capacity.\"\n译文数据：\"剩余装填装填容量用尽时仍可部分地补充备弹量。\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class 的第0579个常量\n原始数据：\"A partial reload is possible when running out of capacity.\"\n译文数据：\"剩余装填容量用尽时仍可部分地补充备弹量。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"Affected weapon\"",
