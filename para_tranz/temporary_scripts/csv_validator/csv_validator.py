@@ -2,7 +2,7 @@
 from enum import Enum
 import sys
 from os.path import abspath, dirname
-sys.path.append(dirname(dirname(dirname(abspath(__file__)))))
+sys.path.append(dirname(dirname(dirname(dirname(abspath(__file__))))))
 
 from para_tranz.utils.config import TRANSLATION_PATH
 
