@@ -18,13 +18,16 @@ class StringSearchResult:
     def __hash__(self):
         return hash((self.jar_name, self.class_path, self.string))
 
+    def __eq__(self, other):
+        return (self.jar_name, self.class_path, self.string) == (other.jar_name, other.class_path, other.string)
+
     def __str__(self):
         string = self.string
         if self.is_excluded:
             string = colorize(string, RED)
         elif self.is_in_mapping:
             string = colorize(string, GREEN)
-        return f'<{self.jar_name}:{self.class_path}>\n"{string}"'
+        return f'<{self.jar_name}:{self.class_path}>\n\t"{string}"'
 
 def search_for_string_in_jar_files(pattern:str) -> List[StringSearchResult]:
     # 首先在当前映射表中查找
@@ -52,7 +55,7 @@ def search_for_string_in_jar_files(pattern:str) -> List[StringSearchResult]:
             strings = class_file.get_strings()
             for s in strings:
                 if pattern in s.original:
-                    result = StringSearchResult(jar_file.path, class_file.path, s.original, False, False)
+                    result = StringSearchResult(jar_file.path, str(class_file.path), s.original, False, False)
                     if result not in results:
                         results.add(result)
 
