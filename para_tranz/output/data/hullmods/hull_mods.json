@@ -86,8 +86,8 @@
     {
         "key": "hull_mods.csv#additional_berthing$desc",
         "original": "Increases maximum crew capacity by %s/%s/%s/%s, depending on hull size, or by %s, whichever is higher.\n\nFor civilian-grade hulls, also increases maintenance supply use by %s.",
-        "translation": "根据舰船级别，提高 %s/%s/%s/%s 或至少 %s 名最大载员。\n\n而对于民用舰船，还会提高 %s 维护时所消耗的补给量。",
-        "stage": 5,
+        "translation": "根据船体级别，提高 %s/%s/%s/%s 或至少 %s 名最大载员。\n\n而对于民用舰船，还会提高 %s 维护时所消耗的补给量。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0054行\n[本行原始数据]\n{'name': 'Additional Berthing',\n 'id': 'additional_berthing',\n 'tier': '0',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'req_spaceport, merc, standard',\n 'uiTags': 'Logistics, Requires Dock',\n 'base value': '3000',\n 'unlocked': 'TRUE',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '5',\n 'cost_dest': '10',\n 'cost_cruiser': '15',\n 'cost_capital': '25',\n 'script': 'com.fs.starfarer.api.impl.hullmods.AdditionalBerthing',\n 'desc': 'Increases maximum crew capacity by %s/%s/%s/%s, depending on hull '\n         'size, or by %s, whichever is higher.\\n'\n         '\\n'\n         'For civilian-grade hulls, also increases maintenance supply use by '\n         '%s.',\n 'short': 'Increases crew capacity.',\n 'sModDesc': 'Doubles the crew capacity increase and, for civilian hulls, '\n             'negates the maintenance cost increase.',\n 'sprite': 'graphics/hullmods/berthing.png'}"
     },
     {
@@ -429,8 +429,8 @@
     {
         "key": "hull_mods.csv#auxiliary_fuel_tanks$desc",
         "original": "Increases maximum fuel capacity by %s/%s/%s/%s, depending on hull size, or by %s, whichever is higher.\n\nFor civilian-grade hulls, also increases maintenance supply use by %s.",
-        "translation": "根据舰船级别，提高 %s/%s/%s/%s 或至少 %s 单位燃料存储量。\n\n而对于民用舰船，还会提高 %s 维护时所消耗的补给量。",
-        "stage": 5,
+        "translation": "根据船体级别，提高 %s/%s/%s/%s 或至少 %s 单位燃料存储量。\n\n而对于民用舰船，还会提高 %s 维护时所消耗的补给量。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0056行\n[本行原始数据]\n{'name': 'Auxiliary Fuel Tanks',\n 'id': 'auxiliary_fuel_tanks',\n 'tier': '0',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'req_spaceport, merc, standard',\n 'uiTags': 'Logistics, Requires Dock',\n 'base value': '4000',\n 'unlocked': 'TRUE',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '5',\n 'cost_dest': '10',\n 'cost_cruiser': '15',\n 'cost_capital': '25',\n 'script': 'com.fs.starfarer.api.impl.hullmods.AuxiliaryFuelTanks',\n 'desc': 'Increases maximum fuel capacity by %s/%s/%s/%s, depending on hull '\n         'size, or by %s, whichever is higher.\\n'\n         '\\n'\n         'For civilian-grade hulls, also increases maintenance supply use by '\n         '%s.',\n 'short': 'Increases fuel capacity.',\n 'sModDesc': 'Doubles the fuel capacity increase and, for civilian hulls, '\n             'negates the maintenance cost increase.',\n 'sprite': 'graphics/hullmods/fuel_tanks.png'}"
     },
     {
@@ -541,7 +541,7 @@
     {
         "key": "hull_mods.csv#bdeck$desc",
         "original": "Once per combat, when the fighter replacement rate reaches %s, the fighter launch bays are switched over to operate from a \"B-Deck\".\n\nStandby fighters are launched to rapidly bring the wings back up to full strength, and the fighter replacement rate is set to %s.",
-        "translation": "当战机整备速率下降到 %s 时，舰船将换用一套备用甲板，每次战斗可使用一次。\n\n切换至备用甲板时，将迅速部署后备战机以补满本舰部署的全部战机联队，并使战机整备速率恢复至 %s。",
+        "translation": "当战机整备率下降到 %s 时，舰船将换用一套备用甲板，每次战斗可使用一次。\n\n切换至备用甲板时，将迅速部署后备战机以补满本舰部署的全部战机联队，并使战机整备率恢复至 %s。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0070行\n[本行原始数据]\n{'name': 'B-Deck',\n 'id': 'bdeck',\n 'tier': '',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': '',\n 'uiTags': '',\n 'base value': '',\n 'unlocked': '',\n 'hidden': 'TRUE',\n 'hiddenEverywhere': '',\n 'cost_frigate': '0',\n 'cost_dest': '0',\n 'cost_cruiser': '0',\n 'cost_capital': '0',\n 'script': 'com.fs.starfarer.api.impl.hullmods.BDeck',\n 'desc': 'Once per combat, when the fighter replacement rate reaches %s, the '\n         'fighter launch bays are switched over to operate from a \"B-Deck\".\\n'\n         '\\n'\n         'Standby fighters are launched to rapidly bring the wings back up to '\n         'full strength, and the fighter replacement rate is set to %s.',\n 'short': 'Launches fresh wing once per combat and replenishes the replacement '\n          'rate.',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/bdeck.png'}"
     },
@@ -555,8 +555,8 @@
     {
         "key": "hull_mods.csv#bdeck$short",
         "original": "Launches fresh wing once per combat and replenishes the replacement rate.",
-        "translation": "每场战斗可以恢复一次整备速率并部署补充战机。",
-        "stage": 5,
+        "translation": "每场战斗可以恢复一次战机整备率并部署补充战机。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0070行\n[本行原始数据]\n{'name': 'B-Deck',\n 'id': 'bdeck',\n 'tier': '',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': '',\n 'uiTags': '',\n 'base value': '',\n 'unlocked': '',\n 'hidden': 'TRUE',\n 'hiddenEverywhere': '',\n 'cost_frigate': '0',\n 'cost_dest': '0',\n 'cost_cruiser': '0',\n 'cost_capital': '0',\n 'script': 'com.fs.starfarer.api.impl.hullmods.BDeck',\n 'desc': 'Once per combat, when the fighter replacement rate reaches %s, the '\n         'fighter launch bays are switched over to operate from a \"B-Deck\".\\n'\n         '\\n'\n         'Standby fighters are launched to rapidly bring the wings back up to '\n         'full strength, and the fighter replacement rate is set to %s.',\n 'short': 'Launches fresh wing once per combat and replenishes the replacement '\n          'rate.',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/bdeck.png'}"
     },
     {
@@ -597,8 +597,8 @@
     {
         "key": "hull_mods.csv#chassis_storage$desc",
         "original": "Fighter replacement rate does not go down when fighters are lost.",
-        "translation": "即便战机遭到破坏，也不会降低战机整备速率。",
-        "stage": 5,
+        "translation": "即便战机遭到破坏，也不会降低战机整备率。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0071行\n[本行原始数据]\n{'name': 'Fighter Chassis Storage',\n 'id': 'chassis_storage',\n 'tier': '',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': '',\n 'uiTags': '',\n 'base value': '',\n 'unlocked': '',\n 'hidden': 'TRUE',\n 'hiddenEverywhere': '',\n 'cost_frigate': '0',\n 'cost_dest': '0',\n 'cost_cruiser': '0',\n 'cost_capital': '0',\n 'script': 'com.fs.starfarer.api.impl.hullmods.FighterChassisStorage',\n 'desc': 'Fighter replacement rate does not go down when fighters are lost.',\n 'short': 'Fighter replacement rate does not go down.',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/expanded_deck_crew.png'}"
     },
     {
@@ -611,8 +611,8 @@
     {
         "key": "hull_mods.csv#chassis_storage$short",
         "original": "Fighter replacement rate does not go down.",
-        "translation": "战机整备速率不会下降。",
-        "stage": 5,
+        "translation": "战机整备率不会下降。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0071行\n[本行原始数据]\n{'name': 'Fighter Chassis Storage',\n 'id': 'chassis_storage',\n 'tier': '',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': '',\n 'uiTags': '',\n 'base value': '',\n 'unlocked': '',\n 'hidden': 'TRUE',\n 'hiddenEverywhere': '',\n 'cost_frigate': '0',\n 'cost_dest': '0',\n 'cost_cruiser': '0',\n 'cost_capital': '0',\n 'script': 'com.fs.starfarer.api.impl.hullmods.FighterChassisStorage',\n 'desc': 'Fighter replacement rate does not go down when fighters are lost.',\n 'short': 'Fighter replacement rate does not go down.',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/expanded_deck_crew.png'}"
     },
     {
@@ -786,8 +786,8 @@
     {
         "key": "hull_mods.csv#converted_hangar$sModDesc",
         "original": "Increases the rate at which the fighter replacement rate recovers by %s for cruisers, and by %s for capital ships. No added effect for destroyers.",
-        "translation": "提高战机整备速率的恢复速度，巡洋舰提高 %s，主力舰提高 %s。对驱逐舰无效。",
-        "stage": 5,
+        "translation": "提高战机整备率的恢复速度，巡洋舰提高 %s，主力舰提高 %s。对驱逐舰无效。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0011行\n[本行原始数据]\n{'name': 'Converted Hangar',\n 'id': 'converted_hangar',\n 'tier': '1',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'special, non_phase, merc, standard',\n 'uiTags': 'Fighters',\n 'base value': '5000',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '0',\n 'cost_dest': '10',\n 'cost_cruiser': '10',\n 'cost_capital': '10',\n 'script': 'com.fs.starfarer.api.impl.hullmods.ConvertedHangar',\n 'desc': '<Tooltip created in script>',\n 'short': 'Improvised fighter bay for non-carriers.',\n 'sModDesc': 'Increases the rate at which the fighter replacement rate '\n             'recovers by %s for cruisers, and by %s for capital ships. No '\n             'added effect for destroyers.',\n 'sprite': 'graphics/hullmods/converted_hangar.png'}"
     },
     {
@@ -842,8 +842,8 @@
     {
         "key": "hull_mods.csv#dedicated_targeting_core$desc",
         "original": "Increases the range of ballistic and energy weapons by %s/%s for cruisers/capital ships.\n\nCan not be installed on a frigate or a destroyer, and can not work in conjunction with Integrated Targeting Unit.\n\nMost combat ships install either an Integrated Targeting Unit or a Dedicated Targeting Core, with the exception of more specialized variants.",
-        "translation": "提高实弹和能量武器射程，巡洋舰提高 %s，主力舰提高 %s。\n\n不能安装在护卫和驱逐上，也无法与 目标定位系统 同时工作。\n\n除了一些特化的装配，绝大多数的战斗舰船都会选择安装 目标定位系统 而非 专注型目标锁定核心。",
-        "stage": 5,
+        "translation": "提高实弹和能量武器射程，巡洋舰提高 %s，主力舰提高 %s。\n\n不能安装在护卫和驱逐上，不兼容于目标定位系统。\n\n除了一些特化的装配，绝大多数战斗舰船都会选择安装 目标定位系统 或 专注型目标锁定核心。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0013行\n[本行原始数据]\n{'name': 'Dedicated Targeting Core',\n 'id': 'dedicated_targeting_core',\n 'tier': '0',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'offensive, merc, standard',\n 'uiTags': 'Weapons',\n 'base value': '2500',\n 'unlocked': 'TRUE',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '0',\n 'cost_dest': '0',\n 'cost_cruiser': '15',\n 'cost_capital': '25',\n 'script': 'data.hullmods.DedicatedTargetingCore',\n 'desc': 'Increases the range of ballistic and energy weapons by %s/%s for '\n         'cruisers/capital ships.\\n'\n         '\\n'\n         'Can not be installed on a frigate or a destroyer, and can not work '\n         'in conjunction with Integrated Targeting Unit.\\n'\n         '\\n'\n         'Most combat ships install either an Integrated Targeting Unit or a '\n         'Dedicated Targeting Core, with the exception of more specialized '\n         'variants.',\n 'short': 'Increases weapon range, more so for larger ships.',\n 'sModDesc': 'Increases the range bonus to %s for cruisers and %s for capital '\n             'ships.',\n 'sprite': 'graphics/hullmods/targeting_core.png'}"
     },
     {
@@ -1136,8 +1136,8 @@
     {
         "key": "hull_mods.csv#ecm$desc",
         "original": "When deployed in combat, grants %s/%s/%s/%s ECM rating, depending on this ship's hull size.",
-        "translation": "在战斗时，根据舰船级别，提高 %s/%s/%s/%s 电子战强度。",
-        "stage": 5,
+        "translation": "在战斗时，根据船体级别，提高 %s/%s/%s/%s 电子战强度。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0016行\n[本行原始数据]\n{'name': 'ECM Package',\n 'id': 'ecm',\n 'tier': '2',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'offensive, special, merc, standard',\n 'uiTags': 'Weapons, Support',\n 'base value': '4000',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '6',\n 'cost_dest': '12',\n 'cost_cruiser': '18',\n 'cost_capital': '24',\n 'script': 'com.fs.starfarer.api.impl.hullmods.ECMPackage',\n 'desc': 'When deployed in combat, grants %s/%s/%s/%s ECM rating, depending on '\n         \"this ship's hull size.\",\n 'short': \"Increases ship's ECM rating.\",\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/ecm_package.png'}"
     },
     {
@@ -1276,8 +1276,8 @@
     {
         "key": "hull_mods.csv#expanded_cargo_holds$desc",
         "original": "Increases maximum cargo capacity by %s/%s/%s/%s, depending on hull size, or by %s, whichever is higher.\n\nFor civilian-grade hulls, also increases maintenance supply use by %s.",
-        "translation": "根据舰船级别，提高 %s/%s/%s/%s 或至少 %s 单位载货量。\n\n而对于民用舰船，还会提高 %s 维护时所消耗的补给量。",
-        "stage": 5,
+        "translation": "根据船体级别，提高 %s/%s/%s/%s 或至少 %s 单位载货量。\n\n而对于民用舰船，还会提高 %s 维护时所消耗的补给量。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0058行\n[本行原始数据]\n{'name': 'Expanded Cargo Holds',\n 'id': 'expanded_cargo_holds',\n 'tier': '0',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'req_spaceport, merc, standard',\n 'uiTags': 'Logistics, Requires Dock',\n 'base value': '4000',\n 'unlocked': 'TRUE',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '5',\n 'cost_dest': '10',\n 'cost_cruiser': '15',\n 'cost_capital': '25',\n 'script': 'com.fs.starfarer.api.impl.hullmods.ExpandedCargoHolds',\n 'desc': 'Increases maximum cargo capacity by %s/%s/%s/%s, depending on hull '\n         'size, or by %s, whichever is higher.\\n'\n         '\\n'\n         'For civilian-grade hulls, also increases maintenance supply use by '\n         '%s.',\n 'short': 'Increases cargo capacity.',\n 'sModDesc': 'Doubles the cargo capacity increase and, for civilian hulls, '\n             'negates the maintenance cost increase.',\n 'sprite': 'graphics/hullmods/expanded_cargo.png'}"
     },
     {
@@ -1325,8 +1325,8 @@
     {
         "key": "hull_mods.csv#expanded_deck_crew$short",
         "original": "Improves fighter replacement rate, increases crew requirements.",
-        "translation": "提高战机整备速率，但需要更多的船员来维持。",
-        "stage": 5,
+        "translation": "提高战机整备速度，但需要更多的船员来维持。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0018行\n[本行原始数据]\n{'name': 'Expanded Deck Crew',\n 'id': 'expanded_deck_crew',\n 'tier': '1',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'special, merc, standard',\n 'uiTags': 'Fighters',\n 'base value': '4000',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '5',\n 'cost_dest': '10',\n 'cost_cruiser': '15',\n 'cost_capital': '25',\n 'script': 'com.fs.starfarer.api.impl.hullmods.ExpandedDeckCrew',\n 'desc': 'Reduces the rate at which the fighter replacement rate decreases due '\n         'to fighter losses by %s, and increases the rate at which it recovers '\n         'by %s.\\n'\n         '\\n'\n         'Increases the crew required by %s per fighter bay.',\n 'short': 'Improves fighter replacement rate, increases crew requirements.',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/expanded_deck_crew.png'}"
     },
     {
@@ -1444,8 +1444,8 @@
     {
         "key": "hull_mods.csv#fluxcoil$desc",
         "original": "Increases the ship's flux capacity by %s/%s/%s/%s, depending on hull size. Not as efficient as flux capacitors - most useful when added to a design that already carries the maximum possible number of capacitors.",
-        "translation": "根据舰船级别，提高 %s/%s/%s/%s 幅能容量。但不如直接提高幅能寄存器有效，只有前者加满后才有使用价值。",
-        "stage": 5,
+        "translation": "根据船体级别，提高 %s/%s/%s/%s 幅能容量。但不如直接提高幅能寄存器有效，只有前者加满后才有使用价值。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0022行\n[本行原始数据]\n{'name': 'Flux Coil Adjunct',\n 'id': 'fluxcoil',\n 'tier': '0',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'special, merc, standard',\n 'uiTags': 'Special',\n 'base value': '4000',\n 'unlocked': 'TRUE',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '4',\n 'cost_dest': '8',\n 'cost_cruiser': '12',\n 'cost_capital': '20',\n 'script': 'data.hullmods.FluxCoilAdjunct',\n 'desc': \"Increases the ship's flux capacity by %s/%s/%s/%s, depending on hull \"\n         'size. Not as efficient as flux capacitors - most useful when added '\n         'to a design that already carries the maximum possible number of '\n         'capacitors.',\n 'short': 'Increases flux capacity.',\n 'sModDesc': 'Increases flux capacity by a further %s/%s/%s/%s, making the '\n             'coil as efficient as adding capacitors.',\n 'sprite': 'graphics/hullmods/flux_coil_adjunct.png'}"
     },
     {
@@ -1458,8 +1458,8 @@
     {
         "key": "hull_mods.csv#fluxcoil$sModDesc",
         "original": "Increases flux capacity by a further %s/%s/%s/%s, making the coil as efficient as adding capacitors.",
-        "translation": "按舰船级别，额外提高 %s/%s/%s/%s 幅能容量，使幅能线圈和增加幅能寄存器一样有效。",
-        "stage": 5,
+        "translation": "根据船体级别，额外提高 %s/%s/%s/%s 幅能容量，使幅能线圈和增加幅能寄存器一样有效。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0022行\n[本行原始数据]\n{'name': 'Flux Coil Adjunct',\n 'id': 'fluxcoil',\n 'tier': '0',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'special, merc, standard',\n 'uiTags': 'Special',\n 'base value': '4000',\n 'unlocked': 'TRUE',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '4',\n 'cost_dest': '8',\n 'cost_cruiser': '12',\n 'cost_capital': '20',\n 'script': 'data.hullmods.FluxCoilAdjunct',\n 'desc': \"Increases the ship's flux capacity by %s/%s/%s/%s, depending on hull \"\n         'size. Not as efficient as flux capacitors - most useful when added '\n         'to a design that already carries the maximum possible number of '\n         'capacitors.',\n 'short': 'Increases flux capacity.',\n 'sModDesc': 'Increases flux capacity by a further %s/%s/%s/%s, making the '\n             'coil as efficient as adding capacitors.',\n 'sprite': 'graphics/hullmods/flux_coil_adjunct.png'}"
     },
     {
@@ -1479,8 +1479,8 @@
     {
         "key": "hull_mods.csv#fluxdistributor$desc",
         "original": "Increases the ship's flux dissipation by %s/%s/%s/%s, depending on hull size. Not as efficient as flux vents - most useful when added to a design that already carries the maximum possible number of vents.",
-        "translation": "根据舰船级别，提高 %s/%s/%s/%s 幅能耗散速率，但不如直接提高耗散通道有效，只有前者加满后才有使用价值。",
-        "stage": 5,
+        "translation": "根据船体级别，提高 %s/%s/%s/%s 幅能耗散速率，但不如直接提高耗散通道有效，只有前者加满后才有使用价值。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0023行\n[本行原始数据]\n{'name': 'Flux Distributor',\n 'id': 'fluxdistributor',\n 'tier': '0',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'special, merc, standard',\n 'uiTags': 'Special',\n 'base value': '4000',\n 'unlocked': 'TRUE',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '4',\n 'cost_dest': '8',\n 'cost_cruiser': '12',\n 'cost_capital': '20',\n 'script': 'data.hullmods.FluxDistributor',\n 'desc': \"Increases the ship's flux dissipation by %s/%s/%s/%s, depending on \"\n         'hull size. Not as efficient as flux vents - most useful when added '\n         'to a design that already carries the maximum possible number of '\n         'vents.',\n 'short': 'Increases flux dissipation.',\n 'sModDesc': 'Increases flux dissipation by a further %s/%s/%s/%s, making the '\n             'distributor as efficient as adding vents.',\n 'sprite': 'graphics/hullmods/flux_distributor.png'}"
     },
     {
@@ -1493,8 +1493,8 @@
     {
         "key": "hull_mods.csv#fluxdistributor$sModDesc",
         "original": "Increases flux dissipation by a further %s/%s/%s/%s, making the distributor as efficient as adding vents.",
-        "translation": "按舰船级别，额外提高 %s/%s/%s/%s 幅能耗散，使幅能配送器和增加耗散通道一样有效。",
-        "stage": 5,
+        "translation": "根据船体级别，额外提高 %s/%s/%s/%s 幅能耗散，使幅能配送器和增加耗散通道一样有效。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0023行\n[本行原始数据]\n{'name': 'Flux Distributor',\n 'id': 'fluxdistributor',\n 'tier': '0',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'special, merc, standard',\n 'uiTags': 'Special',\n 'base value': '4000',\n 'unlocked': 'TRUE',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '4',\n 'cost_dest': '8',\n 'cost_cruiser': '12',\n 'cost_capital': '20',\n 'script': 'data.hullmods.FluxDistributor',\n 'desc': \"Increases the ship's flux dissipation by %s/%s/%s/%s, depending on \"\n         'hull size. Not as efficient as flux vents - most useful when added '\n         'to a design that already carries the maximum possible number of '\n         'vents.',\n 'short': 'Increases flux dissipation.',\n 'sModDesc': 'Increases flux dissipation by a further %s/%s/%s/%s, making the '\n             'distributor as efficient as adding vents.',\n 'sprite': 'graphics/hullmods/flux_distributor.png'}"
     },
     {
@@ -1738,8 +1738,8 @@
     {
         "key": "hull_mods.csv#heavyarmor$desc",
         "original": "Increases the ship's armor by %s/%s/%s/%s points, depending on hull size.",
-        "translation": "按舰船级别，提高 %s/%s/%s/%s 装甲。",
-        "stage": 5,
+        "translation": "根据船体级别，提高 %s/%s/%s/%s 装甲。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0030行\n[本行原始数据]\n{'name': 'Heavy Armor',\n 'id': 'heavyarmor',\n 'tier': '0',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'defensive, merc, standard',\n 'uiTags': 'Defenses',\n 'base value': '2500',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '8',\n 'cost_dest': '15',\n 'cost_cruiser': '20',\n 'cost_capital': '40',\n 'script': 'data.hullmods.HeavyArmor',\n 'desc': \"Increases the ship's armor by %s/%s/%s/%s points, depending on hull \"\n         'size.',\n 'short': 'Increases armor.',\n 'sModDesc': \"Reduces the ship's maneuverability by %s.\",\n 'sprite': 'graphics/hullmods/heavy_armor.png'}"
     },
     {
@@ -1773,8 +1773,8 @@
     {
         "key": "hull_mods.csv#heg_militarized$desc",
         "original": "This ship is - or was - on the Hegemony auxiliary list. Uparmour kits applied at Hegemony Naval yards resulting in no loss of performance for a %s/%s/%s/%s increase in armor strength, depending on hull size. Core power systems have been upgraded to military standards resulting in a %s improvement in overall handling, %s increase in flux capacity, a %s increase in flux dissipation, and an increase of maximum burn level by %s.",
-        "translation": "由于该舰在霸主的辅助舰列表中，因此才将其系统升级至军事级别标准。根据舰船级别，提高 %s/%s/%s/%s 装甲。而升级到军用标准的核心系统，让该舰的机动性提高 %s，幅能容量提高 %s，幅能耗散提高 %s。最大宇宙航速亦提高了 %s。",
-        "stage": 5,
+        "translation": "由于该舰在霸主的辅助舰列表中，因此才将其系统升级至军事级别标准。根据船体级别，提高 %s/%s/%s/%s 装甲。而升级到军用标准的核心系统，让该舰的机动性提高 %s，幅能容量提高 %s，幅能耗散提高 %s。最大宇宙航速亦提高了 %s。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0115行\n[本行原始数据]\n{'name': 'Militarized Hegemony Auxiliary',\n 'id': 'heg_militarized',\n 'tier': '',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': '',\n 'uiTags': '',\n 'base value': '',\n 'unlocked': '',\n 'hidden': 'TRUE',\n 'hiddenEverywhere': '',\n 'cost_frigate': '0',\n 'cost_dest': '0',\n 'cost_cruiser': '0',\n 'cost_capital': '0',\n 'script': 'data.hullmods.Militarized',\n 'desc': 'This ship is - or was - on the Hegemony auxiliary list. Uparmour '\n         'kits applied at Hegemony Naval yards resulting in no loss of '\n         'performance for a %s/%s/%s/%s increase in armor strength, depending '\n         'on hull size. Core power systems have been upgraded to military '\n         'standards resulting in a %s improvement in overall handling, %s '\n         'increase in flux capacity, a %s increase in flux dissipation, and an '\n         'increase of maximum burn level by %s.',\n 'short': '',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/militarized_hegemony_auxiliary.png'}"
     },
     {
@@ -1878,8 +1878,8 @@
     {
         "key": "hull_mods.csv#hiressensors$sModDesc",
         "original": "Increases the ship's in-combat vision range by %s/%s/%s/%s, based on hull size.",
-        "translation": "按舰船级别，战斗视野范围提高 %s/%s/%s/%s。",
-        "stage": 5,
+        "translation": "根据船体级别，战斗视野范围提高 %s/%s/%s/%s。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0059行\n[本行原始数据]\n{'name': 'High Resolution Sensors',\n 'id': 'hiressensors',\n 'tier': '2',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'req_spaceport, merc, standard',\n 'uiTags': 'Logistics, Requires Dock',\n 'base value': '9000',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '4',\n 'cost_dest': '6',\n 'cost_cruiser': '9',\n 'cost_capital': '15',\n 'script': 'com.fs.starfarer.api.impl.hullmods.HighResSensors',\n 'desc': '<Tooltip created in script>',\n 'short': \"Increases fleet's sensor range.\",\n 'sModDesc': \"Increases the ship's in-combat vision range by %s/%s/%s/%s, \"\n             'based on hull size.',\n 'sprite': 'graphics/hullmods/high_res_sensors.png'}"
     },
     {
@@ -2144,8 +2144,8 @@
     {
         "key": "hull_mods.csv#nav_relay$desc",
         "original": "When deployed in combat, increases nav rating of your fleet by %s/%s/%s/%s, depending on this ship's hull size.\n\nThe total nav rating of your fleet increases the top speed of your deployed ships.",
-        "translation": "当该舰投入战斗时，根据舰船级别，提高 %s/%s/%s/%s 的舰队导航评级。\n\n导航评级会提高你所部署舰船的最高航速。",
-        "stage": 5,
+        "translation": "当该舰投入战斗时，根据船体级别，提高 %s/%s/%s/%s 的舰队导航评级。\n\n导航评级会提高你所部署舰船的最高航速。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0035行\n[本行原始数据]\n{'name': 'Nav Relay',\n 'id': 'nav_relay',\n 'tier': '2',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'engines, special, merc, standard',\n 'uiTags': 'Engines, Support',\n 'base value': '5000',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '10',\n 'cost_dest': '15',\n 'cost_cruiser': '20',\n 'cost_capital': '25',\n 'script': 'com.fs.starfarer.api.impl.hullmods.NavRelay',\n 'desc': 'When deployed in combat, increases nav rating of your fleet by '\n         \"%s/%s/%s/%s, depending on this ship's hull size.\\n\"\n         '\\n'\n         'The total nav rating of your fleet increases the top speed of your '\n         'deployed ships.',\n 'short': 'Increases top speed of deployed ships.',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/nav_relay.png'}"
     },
     {
@@ -2445,8 +2445,8 @@
     {
         "key": "hull_mods.csv#repair_gantry$desc",
         "original": "Increases the resources gained from salvaging abandoned stations, derelicts, floating hulks, and other such by %s/%s/%s/%s, depending on hull size. Only affects the recovery of common resources such as fuel and supplies, and not rare items like blueprints. In addition, %s of the bonus applies to post-battle salvage.",
-        "translation": "根据舰船级别，提高 %s/%s/%s/%s 从遗弃物、 舰船残骸等打捞到的资源，只影响普通资源的回收，如燃料与补给，而蓝图等稀有物资将不受影响。此外也提高 %s 战后打捞效率。",
-        "stage": 5,
+        "translation": "根据船体级别，提高 %s/%s/%s/%s 从遗弃物、 舰船残骸等打捞到的资源，只影响普通资源的回收，如燃料与补给，而蓝图等稀有物资将不受影响。此外也提高 %s 战后打捞效率。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0075行\n[本行原始数据]\n{'name': 'Salvage Gantry',\n 'id': 'repair_gantry',\n 'tier': '',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': '',\n 'uiTags': '',\n 'base value': '',\n 'unlocked': '',\n 'hidden': 'TRUE',\n 'hiddenEverywhere': '',\n 'cost_frigate': '5',\n 'cost_dest': '10',\n 'cost_cruiser': '20',\n 'cost_capital': '40',\n 'script': 'com.fs.starfarer.api.impl.campaign.RepairGantry',\n 'desc': 'Increases the resources gained from salvaging abandoned stations, '\n         'derelicts, floating hulks, and other such by %s/%s/%s/%s, depending '\n         'on hull size. Only affects the recovery of common resources such as '\n         'fuel and supplies, and not rare items like blueprints. In addition, '\n         '%s of the bonus applies to post-battle salvage.',\n 'short': 'Increases resources gained from salvage.',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/repair_gantry.png'}"
     },
     {
@@ -2487,7 +2487,7 @@
     {
         "key": "hull_mods.csv#safetyoverrides$desc",
         "original": "Disabling safety protocols increases the ship's top speed in combat by %s/%s/%s (depending on ship size, with a corresponding increase in acceleration) and allows the zero-flux engine boost to take effect regardless of flux level. The flux dissipation rate, including that of additional vents, is increased by a factor of %s.\n\nReduces the peak performance time by a factor of %s, prevents the use of active venting, and drastically reduces weapon ranges past %s units.\n\nCan not be installed on civilian or capital ships.",
-        "translation": "禁用舰船的安全协议，根据舰船级别提高 %s/%s/%s 舰船战斗中的最高航速，也会对应提高加速度。零幅能加速在任何幅能水平下都能生效。幅能耗散将直接提高至 %s 倍 (其他改装的影响也会因此倍增)。\n\n峰值时间降低为原来的 %s 分之一，禁用强制排幅，且所有武器射程超过 %s 单位的部分将极大衰减。\n\n无法安装在民用舰或者主力舰上。",
+        "translation": "禁用舰船的安全协议，根据船体级别提高 %s/%s/%s 舰船战斗中的最高航速，也会对应提高加速度。零幅能加速在任何幅能水平下都能生效。幅能耗散将直接提高至 %s 倍 (其他改装的影响也会因此倍增)。\n\n峰值时间降低为原来的 %s 分之一，禁用强制排幅，且所有武器射程超过 %s 单位的部分将极大衰减。\n\n无法安装在民用舰或者主力舰上。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0045行\n[本行原始数据]\n{'name': 'Safety Overrides',\n 'id': 'safetyoverrides',\n 'tier': '0',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'special, engines, offensive, merc, no_build_in, standard',\n 'uiTags': 'Special, Engines',\n 'base value': '2500',\n 'unlocked': 'TRUE',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '15',\n 'cost_dest': '30',\n 'cost_cruiser': '45',\n 'cost_capital': '70',\n 'script': 'data.hullmods.SafetyOverrides',\n 'desc': \"Disabling safety protocols increases the ship's top speed in combat \"\n         'by %s/%s/%s (depending on ship size, with a corresponding increase '\n         'in acceleration) and allows the zero-flux engine boost to take '\n         'effect regardless of flux level. The flux dissipation rate, '\n         'including that of additional vents, is increased by a factor of %s.\\n'\n         '\\n'\n         'Reduces the peak performance time by a factor of %s, prevents the '\n         'use of active venting, and drastically reduces weapon ranges past %s '\n         'units.\\n'\n         '\\n'\n         'Can not be installed on civilian or capital ships.',\n 'short': 'Drastic improvement in performance, much lower peak time.',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/safety_overrides.png'}"
     },
@@ -2753,8 +2753,8 @@
     {
         "key": "hull_mods.csv#surveying_equipment$desc",
         "original": "Reduces the heavy machinery and supplies required to perform surveys by %s/%s/%s/%s depending on hull size, down to a minimum of %s for each.",
-        "translation": "根据舰船级别，降低 %s/%s/%s/%s 勘探星球时所需的重型机械和补给。所消耗资源的数量最低可降至 %s。",
-        "stage": 5,
+        "translation": "根据船体级别，降低 %s/%s/%s/%s 勘探星球时所需的重型机械和补给。所消耗资源的数量最低可降至 %s。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0063行\n[本行原始数据]\n{'name': 'Surveying Equipment',\n 'id': 'surveying_equipment',\n 'tier': '1',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'special, req_spaceport, standard',\n 'uiTags': 'Logistics, Requires Dock',\n 'base value': '5000',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '5',\n 'cost_dest': '10',\n 'cost_cruiser': '15',\n 'cost_capital': '25',\n 'script': 'data.hullmods.SurveyingEquipment',\n 'desc': 'Reduces the heavy machinery and supplies required to perform surveys '\n         'by %s/%s/%s/%s depending on hull size, down to a minimum of %s for '\n         'each.',\n 'short': 'Reduces resource requirements for surveying.',\n 'sModDesc': 'Increases the survey cost reduction by %s.',\n 'sprite': 'graphics/hullmods/surveying_equipment.png'}"
     },
     {
@@ -2788,8 +2788,8 @@
     {
         "key": "hull_mods.csv#targetingunit$desc",
         "original": "Extends the range of ballistic and energy weapons by %s/%s/%s/%s, depending on hull size. Can not work in conjunction with Dedicated Targeting Core.\n\nMost combat ships install either an Integrated Targeting Unit or a Dedicated Targeting Core, with the exception of more specialized variants.",
-        "translation": "根据舰船级别，提高实弹和能量武器 %s/%s/%s/%s 射程。不兼容于专注型目标锁定核心。\n\n除了一些特化的装配，绝大多数的战斗舰船都会选择安装 目标定位系统 而非 专注型目标锁定核心。",
-        "stage": 5,
+        "translation": "根据船体级别，提高实弹和能量武器 %s/%s/%s/%s 射程。不兼容于专注型目标锁定核心。\n\n除了一些特化的装配，绝大多数战斗舰船都会选择安装 目标定位系统 或 专注型目标锁定核心。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0034行\n[本行原始数据]\n{'name': 'Integrated Targeting Unit',\n 'id': 'targetingunit',\n 'tier': '3',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'offensive, merc, standard',\n 'uiTags': 'Weapons',\n 'base value': '10000',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '4',\n 'cost_dest': '8',\n 'cost_cruiser': '15',\n 'cost_capital': '25',\n 'script': 'data.hullmods.IntegratedTargetingUnit',\n 'desc': 'Extends the range of ballistic and energy weapons by %s/%s/%s/%s, '\n         'depending on hull size. Can not work in conjunction with Dedicated '\n         'Targeting Core.\\n'\n         '\\n'\n         'Most combat ships install either an Integrated Targeting Unit or a '\n         'Dedicated Targeting Core, with the exception of more specialized '\n         'variants.',\n 'short': 'Increases weapon range, more so for larger ships.',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/integrated_targeting_unit.png'}"
     },
     {
@@ -2900,8 +2900,8 @@
     {
         "key": "hull_mods.csv#unstable_injector$desc",
         "original": "Increases the ship's top speed in combat by %s/%s/%s/%s su/second, depending on hull size.\n\nInterferes with weapons targeting and other vulnerable systems, reducing non-missile weapon range by %s and increasing the fighter replacement time by %s.",
-        "translation": "根据舰船级别，提高 %s/%s/%s/%s 的最高航速。\n\n但干扰了武器定位与机库系统，而导致非导弹类武器射程降低 %s，且战机整备时间提高 %s。",
-        "stage": 5,
+        "translation": "根据船体级别，提高 %s/%s/%s/%s 的最高航速。\n\n但干扰了武器定位与机库系统，而导致非导弹类武器射程降低 %s，且战机整备时间提高 %s。",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0049行\n[本行原始数据]\n{'name': 'Unstable Injector',\n 'id': 'unstable_injector',\n 'tier': '0',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'engines, merc, standard',\n 'uiTags': 'Engines',\n 'base value': '2500',\n 'unlocked': 'TRUE',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '5',\n 'cost_dest': '10',\n 'cost_cruiser': '15',\n 'cost_capital': '25',\n 'script': 'data.hullmods.UnstableInjector',\n 'desc': \"Increases the ship's top speed in combat by %s/%s/%s/%s su/second, \"\n         'depending on hull size.\\n'\n         '\\n'\n         'Interferes with weapons targeting and other vulnerable systems, '\n         'reducing non-missile weapon range by %s and increasing the fighter '\n         'replacement time by %s.',\n 'short': 'Increases speed, reduces weapon range.',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/unstable_injector.png'}"
     },
     {

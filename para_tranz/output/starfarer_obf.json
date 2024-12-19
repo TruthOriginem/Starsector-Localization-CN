@@ -226,9 +226,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/E/B/o0OO.class#\"replacement rate: \"",
         "original": "replacement rate: ",
-        "translation": "整备速率：",
-        "stage": 5,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/E/B/o0OO.class 的第0278个常量\n原始数据：\"replacement rate: \"\n译文数据：\"整备速率：\"\n\n"
+        "translation": "整备率：",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/E/B/o0OO.class 的第0278个常量\n原始数据：\"replacement rate: \"\n译文数据：\"整备率：\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/E/ooOO.class#\" at location \"",
@@ -2417,9 +2417,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/command/AdminPickerDialog.class#\"cargo\"",
         "original": "cargo",
-        "translation": "cargo",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/command/AdminPickerDialog.class 的第0408个常量\n原始数据：\"cargo\"\n译文数据：\"cargo\"\n\n"
+        "translation": "货舱",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/command/AdminPickerDialog.class 的第0408个常量\n原始数据：\"cargo\"\n译文数据：\"货舱\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/command/CustomProductionPanel$1.class#\"Maximum number of credits worth of production that can be put on this order.\"",
@@ -3824,16 +3824,16 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/command/MarketTooltipFactory$2.class#\"The hazard rating results in a %s upkeep multiplier, and \"",
         "original": "The hazard rating results in a %s upkeep multiplier, and ",
-        "translation": "该危险等级不仅让维护费用 %s，还会",
+        "translation": "该危险等级不仅让维护费用改变为 %s，还会",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/command/MarketTooltipFactory$2.class 的第0184个常量\n原始数据：\"The hazard rating results in a %s upkeep multiplier, and \"\n译文数据：\"该危险等级不仅让维护费用 %s，还会\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/command/MarketTooltipFactory$2.class 的第0184个常量\n原始数据：\"The hazard rating results in a %s upkeep multiplier, and \"\n译文数据：\"该危险等级不仅让维护费用改变为 %s，还会\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/command/MarketTooltipFactory$2.class#\"The hazard rating results in a %s upkeep multiplier.\"",
         "original": "The hazard rating results in a %s upkeep multiplier.",
-        "translation": "该危险等级会让维护费用 %s.",
+        "translation": "该危险等级会让维护费用改变为 %s。",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/command/MarketTooltipFactory$2.class 的第0182个常量\n原始数据：\"The hazard rating results in a %s upkeep multiplier.\"\n译文数据：\"该危险等级会让维护费用 %s.\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/command/MarketTooltipFactory$2.class 的第0182个常量\n原始数据：\"The hazard rating results in a %s upkeep multiplier.\"\n译文数据：\"该危险等级会让维护费用改变为 %s。\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/command/MarketTooltipFactory$2.class#\"increases\"",
@@ -4741,9 +4741,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/command/ShipBlueprintBrowser.class#\"Hull size.\"",
         "original": "Hull size.",
-        "translation": "舰船级别。",
+        "translation": "船体级别。",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/command/ShipBlueprintBrowser.class 的第0232个常量\n原始数据：\"Hull size.\"\n译文数据：\"舰船级别。\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/command/ShipBlueprintBrowser.class 的第0232个常量\n原始数据：\"Hull size.\"\n译文数据：\"船体级别。\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/command/ShipBlueprintBrowser.class#\"No matching ship hull blueprints\"",
@@ -13323,9 +13323,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/trade/B.class#\"Hull size\"",
         "original": "Hull size",
-        "translation": "舰船级别",
-        "stage": 5,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/ui/trade/B.class 的第0716个常量\n原始数据：\"Hull size\"\n译文数据：\"舰船级别\"\n\n"
+        "translation": "船体级别",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/ui/trade/B.class 的第0716个常量\n原始数据：\"Hull size\"\n译文数据：\"船体级别\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/trade/B.class#\"Logistical data\"",
@@ -18111,9 +18111,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/C$4.class#\"Hull size\"",
         "original": "Hull size",
-        "translation": "舰船级别",
+        "translation": "船体级别",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/C$4.class 的第0073个常量\n原始数据：\"Hull size\"\n译文数据：\"舰船级别\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/C$4.class 的第0073个常量\n原始数据：\"Hull size\"\n译文数据：\"船体级别\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/C$4.class#\"Maximum vents\"",
@@ -18160,9 +18160,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/C$5.class#\"Hull size\"",
         "original": "Hull size",
-        "translation": "舰船级别",
+        "translation": "船体级别",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/C$5.class 的第0073个常量\n原始数据：\"Hull size\"\n译文数据：\"舰船级别\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/C$5.class 的第0073个常量\n原始数据：\"Hull size\"\n译文数据：\"船体级别\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/C$5.class#\"Maximum capacitors\"",
@@ -18986,9 +18986,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/ModPickerDialogV3$PermaModInfoWidget$2.class#\"Hull size\"",
         "original": "Hull size",
-        "translation": "舰船级别",
+        "translation": "船体级别",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/ModPickerDialogV3$PermaModInfoWidget$2.class 的第0132个常量\n原始数据：\"Hull size\"\n译文数据：\"舰船级别\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/ModPickerDialogV3$PermaModInfoWidget$2.class 的第0132个常量\n原始数据：\"Hull size\"\n译文数据：\"船体级别\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/ModPickerDialogV3$PermaModInfoWidget$2.class#\"Hull-standard built-in mods do not count against the limit. In addition, if a built-in mod has an s-mod bonus effect, it m~\"@c5b1da72",
@@ -19021,9 +19021,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/ModPickerDialogV3$PermaModInfoWidget$2.class#\"grants bonus experience, depending on hull size.\"",
         "original": "grants bonus experience, depending on hull size.",
-        "translation": "并根据舰船级别给予 额外经验。",
+        "translation": "并根据船体级别给予 额外经验。",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/ModPickerDialogV3$PermaModInfoWidget$2.class 的第0109个常量\n原始数据：\"grants bonus experience, depending on hull size.\"\n译文数据：\"并根据舰船级别给予 额外经验。\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/ModPickerDialogV3$PermaModInfoWidget$2.class 的第0109个常量\n原始数据：\"grants bonus experience, depending on hull size.\"\n译文数据：\"并根据船体级别给予 额外经验。\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/ModPickerDialogV3$PermaModInfoWidget$2.class#\"story point\"",
@@ -25958,9 +25958,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/ui/impl/CargoTooltipFactory$2.class#\"The replacement rate gradually goes down while the carrier's fighter wings are on average not at full strength, and is slo~\"@b563a044",
         "original": "The replacement rate gradually goes down while the carrier's fighter wings are on average not at full strength, and is slowly regained otherwise. It goes down more slowly while fighters are ordered to regroup.",
-        "translation": "当战机联队的残存机数低于最大值时，航母整备速率将缓缓下降，反之则逐渐上升。当战机被命令集结时，整备速率的下降也将被延缓。",
+        "translation": "当战机联队的残存机数低于最大值时，航母的战机整备率将缓缓下降，反之则逐渐上升。当战机被命令集结时，战机整备率的下降也将被延缓。",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/impl/CargoTooltipFactory$2.class 的第0486个常量\n原始数据：\"The replacement rate gradually goes down while the carrier's fighter wings are on average not at full strength, and is slowly regained otherwise. It goes down more slowly while fighters are ordered to regroup.\"\n译文数据：\"当战机联队的残存机数低于最大值时，航母整备速率将缓缓下降，反之则逐渐上升。当战机被命令集结时，整备速率的下降也将被延缓。\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/impl/CargoTooltipFactory$2.class 的第0486个常量\n原始数据：\"The replacement rate gradually goes down while the carrier's fighter wings are on average not at full strength, and is slowly regained otherwise. It goes down more slowly while fighters are ordered to regroup.\"\n译文数据：\"当战机联队的残存机数低于最大值时，航母的战机整备率将缓缓下降，反之则逐渐上升。当战机被命令集结时，战机整备率的下降也将被延缓。\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/ui/impl/CargoTooltipFactory$2.class#\"This wing is built into the hull - it can not be removed and does not cost any ordnance points.\"",

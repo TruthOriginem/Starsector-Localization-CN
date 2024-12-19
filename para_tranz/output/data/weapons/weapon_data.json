@@ -408,7 +408,7 @@
     {
         "key": "weapon_data.csv#cyclone$customPrimary",
         "original": "A booster system accelerates the torpedo to its top speed before it leaves the launch tube.",
-        "translation": "该武器加装了推进系统，鱼雷将直接以其最高可达速度离开发射管。",
+        "translation": "该武器加装了助推系统，直接以其最高速度发射鱼雷。",
         "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nweapon_data.csv第0066行\n[本行原始数据]\n{'name': 'Cyclone Reaper Launcher',\n 'id': 'cyclone',\n 'tier': '2',\n 'rarity': '',\n 'base value': '5000',\n 'range': '1200',\n 'damage/second': '',\n 'damage/shot': '4000',\n 'emp': '',\n 'impact': '75',\n 'turn rate': '20',\n 'OPs': '26',\n 'ammo': '14',\n 'ammo/sec': '',\n 'reload size': '',\n 'type': 'HIGH_EXPLOSIVE',\n 'energy/shot': '0',\n 'energy/second': '',\n 'chargeup': '0',\n 'chargedown': '14.75',\n 'burst size': '2',\n 'burst delay': '0.25',\n 'min spread': '0',\n 'max spread': '0',\n 'spread/shot': '0',\n 'spread decay/sec': '0',\n 'beam speed': '',\n 'proj speed': '400',\n 'launch speed': '400',\n 'flight time': '3.5',\n 'proj hitpoints': '500',\n 'autofireAccBonus': '',\n 'extraArcForAI': '',\n 'hints': 'STRIKE',\n 'tags': 'strike18, rocket14, rare_bp, merc, ind',\n 'groupTag': '',\n 'tech/manufacturer': '',\n 'for weapon tooltip>>': '',\n 'primaryRoleStr': 'Torpedo',\n 'speedStr': 'Fast',\n 'trackingStr': 'None',\n 'turnRateStr': '',\n 'accuracyStr': '',\n 'customPrimary': 'A booster system accelerates the torpedo to its top speed '\n                  'before it leaves the launch tube.',\n 'customPrimaryHL': '',\n 'customAncillary': '',\n 'customAncillaryHL': '',\n 'noDPSInTooltip': 'TRUE',\n 'number': '15'}"
     },
