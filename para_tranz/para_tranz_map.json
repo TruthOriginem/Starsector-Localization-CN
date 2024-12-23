@@ -1470,6 +1470,13 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/campaign/fleet/FleetData.class",
+      "include_strings": [
+        "Drive field stabilization"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/campaign/fleet/NoFuelDriftScript.class",
       "include_strings": [
         " capacity and is using an extra %s supplies per day",
@@ -1501,8 +1508,10 @@
     {
       "path": "com/fs/starfarer/campaign/save/CampaignGameManager.class",
       "include_strings": [
+        "\nSee starsector.log for details.\n\nIt's possible that the save game is from an incompatible version, or was created with mods that are now disabled.",
         "Error loading",
         "Error saving game",
+        "Error saving game. See starsector.log for details.\n\nError message: [",
         "File deletion failed.\n\nPlease try saving again using the \"Save Copy\" option from the campaign menu.",
         "File rename failed. Your current save may be corrupted, but should be manually recoverable.\n\nPlease try saving again using the \"Save Copy\" option from the campaign menu - this should create a valid save file.",
         "Finished loading",
@@ -1559,6 +1568,7 @@
         "Loading stage 8",
         "Loading stage 9",
         "Loading stage 9 (exception)",
+        "Save game operation produced a corrupted file. Your previous save is unaffected.\n\nPlease try saving again; if that doesn't work, use the \"Save Copy\" option from the campaign menu.",
         "Saving stage 10",
         "Saving stage 11",
         "Saving stage 12",
@@ -1677,7 +1687,9 @@
     {
       "path": "com/fs/starfarer/campaign/save/super.class",
       "include_strings": [
+        " class\n",
         " class ",
+        "-class\n",
         "-class ",
         "Cancel",
         "Codex",
@@ -4610,6 +4622,7 @@
         "All types",
         "Built ",
         "Design type",
+        "For a regular hullmod, shows a checkmark when installed, an X mark for a hullmod that requires a dock to be uninstalled, and \"Built-in\" for a hullmod that's built into the hull.\n\nFor a hullmod that's not already installed, shows \"Dock\" if it requires a dock to be installed.",
         "Go back",
         "Hullmod",
         "Installed",
@@ -7865,7 +7878,8 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/CoreLifecyclePluginImpl$1.class",
       "include_strings": [
-        "Ok"
+        "Ok",
+        "Your skills have been reset to accomodate the new skill system. Skill and story points have been refunded.\n\nOfficer, administrator, and AI core skills have been adjusted for the new system."
       ]
     },
     {
@@ -10864,9 +10878,11 @@
         " posted a bounty for the destruction of this base.",
         "%s received",
         "%s reward",
+        ". ",
         "Asylum",
         "Atonement",
         "Bounty faction: ",
+        "Brought in by smugglers",
         "Citadel",
         "Cleansing",
         "Development level",
@@ -10880,6 +10896,7 @@
         "It has well-developed defensive capabilities and is protected by a large number of fleets.",
         "It is rumored that this base is no longer operational.",
         "Locus",
+        "Luddic Path Base",
         "Nexus",
         "Oblation",
         "Offering",
@@ -11001,12 +11018,18 @@
         " posted a bounty for the destruction of this base.",
         "%s received",
         "%s reward",
+        ".",
         ". ",
+        "Agreement",
+        "Agreement broken",
+        "Agreement dissolved",
+        "Agreement made with base commander",
         "Astrome",
         "Asylum",
         "Barrage",
         "Bounty faction: ",
         "Briganderie",
+        "Brought in by raiders",
         "Camp",
         "Citadel",
         "Corsairie",
@@ -11041,6 +11064,7 @@
         "Mine Depot",
         "Nexus",
         "Orbit",
+        "Pirate Base",
         "Pirates operating from this base have been targeting the ",
         "Platform",
         "Port",
@@ -11111,6 +11135,7 @@
         "The opportunity to develop this contact will be available for %s more ",
         "This colony has decivilized, and you've since lost contact with ",
         "Type: ",
+        "You've lost this contact.",
         "Your contact with ",
         "access to better opportunities.",
         "decivilized",
@@ -12169,6 +12194,7 @@
         "actively hostile",
         "attempt to maintain control over the system's jump-points.",
         "attempt to maintain control over the system's jump-points. If a defended planet ",
+        "blockade",
         "blockading forces",
         "day",
         "days",
@@ -13502,9 +13528,11 @@
         " from a derelict ship ",
         " from pirates in the ",
         " from scavengers at the nearest jump-point",
+        " from scavengers before they leave the system.",
         " from the pirates as they resupply from a cache ",
         " to receive your reward.",
         " to the Galatia Academy and talk to ",
+        ".",
         "Derelict Artifact Recovery",
         "Go to the nearest jump-point and retrieve the ",
         "Retrieve ",

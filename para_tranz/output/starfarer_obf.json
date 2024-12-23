@@ -5838,6 +5838,13 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/fleet/CampaignFleet.class 的第1020个常量\n原始数据：\"Unable to continue ongoing repairs\"\n译文数据：\"无法继续进行维修\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/fleet/FleetData.class#\"Drive field stabilization\"",
+        "original": "Drive field stabilization",
+        "translation": "Drive field stabilization",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/fleet/FleetData.class 的第0766个常量\n原始数据：\"Drive field stabilization\"\n译文数据：\"Drive field stabilization\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/fleet/NoFuelDriftScript.class#\" capacity and is using an extra %s supplies per day\"",
         "original": " capacity and is using an extra %s supplies per day",
         "translation": " 超载，每天将消耗额外 %s 单位的补给",
@@ -5943,6 +5950,13 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/save/CampaignGameManager$2.class 的第0024个常量\n原始数据：\"Stabilizing economy...\"\n译文数据：\"稳定经济...\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/save/CampaignGameManager.class#\"\nSee starsector.log for details.\n\nIt's possible that the save game is from an incompatible version, or was created with mods that are now disabled.\"",
+        "original": "\nSee starsector.log for details.\n\nIt's possible that the save game is from an incompatible version, or was created with mods that are now disabled.",
+        "translation": "\nSee starsector.log for details.\n\nIt's possible that the save game is from an incompatible version, or was created with mods that are now disabled.",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/save/CampaignGameManager.class 的第1547个常量\n原始数据：\"\nSee starsector.log for details.\n\nIt's possible that the save game is from an incompatible version, or was created with mods that are now disabled.\"\n译文数据：\"\nSee starsector.log for details.\n\nIt's possible that the save game is from an incompatible version, or was created with mods that are now disabled.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/save/CampaignGameManager.class#\"Error loading\"",
         "original": "Error loading",
         "translation": "载入出错",
@@ -5955,6 +5969,13 @@
         "translation": "保存游戏时出错",
         "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/save/CampaignGameManager.class 的第1349个常量\n原始数据：\"Error saving game\"\n译文数据：\"保存游戏时出错\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/save/CampaignGameManager.class#\"Error saving game. See starsector.log for details.\n\nError message: [\"",
+        "original": "Error saving game. See starsector.log for details.\n\nError message: [",
+        "translation": "Error saving game. See starsector.log for details.\n\nError message: [",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/save/CampaignGameManager.class 的第1370个常量\n原始数据：\"Error saving game. See starsector.log for details.\n\nError message: [\"\n译文数据：\"Error saving game. See starsector.log for details.\n\nError message: [\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/save/CampaignGameManager.class#\"File deletion failed.\n\nPlease try saving again using the \"Save Copy\" option from the campaign menu.\"",
@@ -6347,6 +6368,13 @@
         "translation": "载入阶段9",
         "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/save/CampaignGameManager.class 的第1535个常量\n原始数据：\"Loading stage 9\"\n译文数据：\"载入阶段9\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/save/CampaignGameManager.class#\"Save game operation produced a corrupted file. Your previous save is unaffected.\n\nPlease try saving again; if that doesn't~\"@c42ddd62",
+        "original": "Save game operation produced a corrupted file. Your previous save is unaffected.\n\nPlease try saving again; if that doesn't work, use the \"Save Copy\" option from the campaign menu.",
+        "translation": "Save game operation produced a corrupted file. Your previous save is unaffected.\n\nPlease try saving again; if that doesn't work, use the \"Save Copy\" option from the campaign menu.",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/save/CampaignGameManager.class 的第4061个常量\n原始数据：\"Save game operation produced a corrupted file. Your previous save is unaffected.\n\nPlease try saving again; if that doesn't work, use the \"Save Copy\" option from the campaign menu.\"\n译文数据：\"Save game operation produced a corrupted file. Your previous save is unaffected.\n\nPlease try saving again; if that doesn't work, use the \"Save Copy\" option from the campaign menu.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/save/CampaignGameManager.class#\"Saving stage 10\"",
@@ -6923,11 +6951,25 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/save/OooO.class 的第0110个常量\n原始数据：\"Loading...\"\n译文数据：\"载入中...\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/save/super.class#\" class\n\"",
+        "original": " class\n",
+        "translation": " class\n",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/save/super.class 的第0308个常量\n原始数据：\" class\n\"\n译文数据：\" class\n\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/save/super.class#\" class \"",
         "original": " class ",
         "translation": " 级 ",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/save/super.class 的第0306个常量\n原始数据：\" class \"\n译文数据：\" 级 \"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/save/super.class#\"-class\n\"",
+        "original": "-class\n",
+        "translation": "-class\n",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/save/super.class 的第0300个常量\n原始数据：\"-class\n\"\n译文数据：\"-class\n\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/save/super.class#\"-class \"",
@@ -19122,6 +19164,13 @@
         "translation": "设计类型",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/ModPickerDialogV3.class 的第0440个常量\n原始数据：\"Design type\"\n译文数据：\"设计类型\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/ModPickerDialogV3.class#\"For a regular hullmod, shows a checkmark when installed, an X mark for a hullmod that requires a dock to be uninstalled, a~\"@286f787f",
+        "original": "For a regular hullmod, shows a checkmark when installed, an X mark for a hullmod that requires a dock to be uninstalled, and \"Built-in\" for a hullmod that's built into the hull.\n\nFor a hullmod that's not already installed, shows \"Dock\" if it requires a dock to be installed.",
+        "translation": "For a regular hullmod, shows a checkmark when installed, an X mark for a hullmod that requires a dock to be uninstalled, and \"Built-in\" for a hullmod that's built into the hull.\n\nFor a hullmod that's not already installed, shows \"Dock\" if it requires a dock to be installed.",
+        "stage": 0,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/ModPickerDialogV3.class 的第0492个常量\n原始数据：\"For a regular hullmod, shows a checkmark when installed, an X mark for a hullmod that requires a dock to be uninstalled, and \"Built-in\" for a hullmod that's built into the hull.\n\nFor a hullmod that's not already installed, shows \"Dock\" if it requires a dock to be installed.\"\n译文数据：\"For a regular hullmod, shows a checkmark when installed, an X mark for a hullmod that requires a dock to be uninstalled, and \"Built-in\" for a hullmod that's built into the hull.\n\nFor a hullmod that's not already installed, shows \"Dock\" if it requires a dock to be installed.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/ModPickerDialogV3.class#\"Go back\"",
