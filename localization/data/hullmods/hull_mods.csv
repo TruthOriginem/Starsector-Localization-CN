@@ -30,7 +30,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 为每枚导弹附加一个 CPU 辅核，能提高导弹 %s 的飞行速度以及 %s 的机动性，同时也显著改善了制导算法，即追踪能力。
 
 降低 %s 因电子战失利所造成的武器射程降低。",提高导弹速度与追踪能力，并抵抗敌方电子战的效果。,该舰完全免疫 敌方电子战强度 导致的武器射程降低效果，且免疫 热诱弹 的干扰。,graphics/hullmods/eccm_package.png
-电子对抗组件,ecm,2,,,"offensive, special, merc, standard","武器, 支援",4000,,,,6,12,18,24,com.fs.starfarer.api.impl.hullmods.ECMPackage,在战斗时，根据船体级别，提高 %s/%s/%s/%s 电子战强度。,提高舰船的电子战强度。,,graphics/hullmods/ecm_package.png
+电子对抗组件,ecm,2,,,"offensive, special, merc, standard","武器, 支援",4000,,,,6,12,18,24,com.fs.starfarer.api.impl.hullmods.ECMPackage,当部署于战斗中时，根据船体级别，提高 %s/%s/%s/%s 电子战强度。,提高舰船的电子战强度。,,graphics/hullmods/ecm_package.png
 护航套件,escort_package,1,,,"special, weapons, engines, standard","特殊, 武器, 引擎",8000,,,,5,7,15,25,com.fs.starfarer.api.impl.hullmods.EscortPackage,"当附近 %s 单位距离内存在更大的友方舰船时，提高 %s 机动性，并提高 %s 最高航速，还将提高实弹武器和能量武器 %s 射程。
 
 当自身为 驱逐舰 且附近存在友方 主力舰 时，上述增益将 %s。",靠近更大的友方舰船时，提高机动性、最高航速、以及武器的射程。,当自身为 驱逐舰 时，额外降低护盾受到的伤害 %s。,graphics/hullmods/escort_package.png
@@ -61,9 +61,9 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 目标定位系统,targetingunit,3,,,"offensive, merc, standard",武器,10000,,,,4,8,15,25,data.hullmods.IntegratedTargetingUnit,"根据船体级别，提高实弹和能量武器 %s/%s/%s/%s 射程。不兼容于专注型目标锁定核心。
 
 除了一些特化的装配，绝大多数战斗舰船都会选择安装 目标定位系统 或 专注型目标锁定核心。",提高武器射程，越大的舰船收益越大。,,graphics/hullmods/integrated_targeting_unit.png
-导航中继器,nav_relay,2,,,"engines, special, merc, standard","引擎, 支援",5000,,,,10,15,20,25,com.fs.starfarer.api.impl.hullmods.NavRelay,"当该舰投入战斗时，根据船体级别，提高 %s/%s/%s/%s 的舰队导航评级。
+导航中继器,nav_relay,2,,,"engines, special, merc, standard","引擎, 支援",5000,,,,10,15,20,25,com.fs.starfarer.api.impl.hullmods.NavRelay,"当部署于战斗中时，根据船体级别，提高 %s/%s/%s/%s 导航效率。
 
-导航评级会提高你所部署舰船的最高航速。",提高已部署的舰船在战斗时的最高航速。,,graphics/hullmods/nav_relay.png
+导航效率会提高你所部署舰船的最高航速。",提高已部署的舰船在战斗时的最高航速。,,graphics/hullmods/nav_relay.png
 神经接口,neural_interface,3,,,"special, no_build_in, no_drop, no_drop_salvage",特殊,10000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.NeuralInterface,"将旗舰与其他舰船连接起来，使它们均可 %s。但诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果将不在另一艘舰船上起作用。
 
 允许在连接舰船之间快速切换，且无需通过穿梭机转移。如果二者的总部署成本小于或等于 %s，则切换将瞬间完成。切换目标舰船不能由副官或 AI 核心操控。",允许在舰船之间快速切换，并重置战术系统的冷却时间或恢复一次充能。,,graphics/hullmods/neural_interface.png
@@ -137,7 +137,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 保持开盾,shield_always_on,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.ShieldAlwaysOn,,强制开启护盾。,,graphics/hullmods/hardened_shields.png
 导弹自动工厂,missile_reload,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PeriodicMissileReload,内置的导弹工厂会定期补满所有导弹武器。,内置的导弹工厂会定期补满所有导弹武器。,,graphics/hullmods/expanded_missile_racks.png
 屏蔽货舱,shielded_holds,2,,,,,,,TRUE,,5,10,15,30,data.hullmods.ShieldedCargoHolds,原本是保护无护盾货舰免受天体辐射的影响，但经过简单调整就可用于干扰远距离货舱扫描，降低违禁物品被发现的概率。,降低被检查到违禁品的风险。,,graphics/hullmods/shielded_cargo_hold.png
-打捞起重机,repair_gantry,,,,,,,,TRUE,,5,10,20,40,com.fs.starfarer.api.impl.campaign.RepairGantry,根据船体级别，提高 %s/%s/%s/%s 从遗弃物、 舰船残骸等打捞到的资源，只影响普通资源的回收，如燃料与补给，而蓝图等稀有物资将不受影响。此外也提高 %s 战后打捞效率。,提高打捞收益。,,graphics/hullmods/repair_gantry.png
+打捞起重机,repair_gantry,,,,,,,,TRUE,,5,10,20,40,com.fs.starfarer.api.impl.campaign.RepairGantry,根据船体级别，提高 %s/%s/%s/%s 从废弃空间站、遗弃物、舰船残骸等打捞到的资源。只影响普通资源的回收，如燃料与补给，而蓝图等稀有物资将不受影响。此外也提高 %s 战后打捞效率。,提高打捞收益。,,graphics/hullmods/repair_gantry.png
 相位力场,phasefield,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PhaseField,能长时间激活低水平相位场，使传感器截面降低 %s。,降低舰队的传感器截面。,,graphics/hullmods/phase_field.png
 磁通分流,fluxshunt,,,,,,,,TRUE,,10,20,30,50,data.hullmods.FluxShunt,允许舰船以 %s 的正常耗散速率在护盾开启时耗散硬幅能。,允许舰船在展开护盾时耗散硬幅能。,,graphics/hullmods/flux_shunt.png
 民用级舰体,civgrade,,,,,,,,TRUE,,0,0,0,0,data.hullmods.CivGrade,提高 %s 传感器截面，降低 %s 传感器探测强度。,提高传感器截面，降低传感器探测强度。,,graphics/hullmods/civilian_grade.png

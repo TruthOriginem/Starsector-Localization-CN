@@ -22080,8 +22080,8 @@ $global.gaATG_foundZal score:1000","ShowDefaultVisual
 在事态平息之前，在这里做任何交易都是不现实的。","20:marketConsiderHostile:考虑可以采取的军事行动
 100:defaultLeave:离开",
 gaATGGoBackFromHostileOpt,PopulateOptions,"$market.id == kantas_den
-$global.gaATG_foundZal score:1000",,,"20:marketConsiderHostile:Consider your military options
-100:defaultLeave:Leave",
+$global.gaATG_foundZal score:1000",,,"20:marketConsiderHostile:考虑可以采取的军事行动
+100:defaultLeave:离开",
 defaultGreetingKanta,PickGreeting,$id == kanta score:1000,,在短暂的等待后，你的连接请求被拒绝了。,0:cutCommLink:切断通讯链接,
 defaultGreetingCydonia,PickGreeting,$id == cydonia score:1000,,在短暂的等待后，你的连接请求被拒绝了。,0:cutCommLink:切断通讯链接,
 kdPortmasterAskForKanta,PopulateOptions,"$market.id == kantas_den

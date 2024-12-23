@@ -1136,7 +1136,7 @@
     {
         "key": "hull_mods.csv#ecm$desc",
         "original": "When deployed in combat, grants %s/%s/%s/%s ECM rating, depending on this ship's hull size.",
-        "translation": "在战斗时，根据船体级别，提高 %s/%s/%s/%s 电子战强度。",
+        "translation": "当部署于战斗中时，根据船体级别，提高 %s/%s/%s/%s 电子战强度。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0016行\n[本行原始数据]\n{'name': 'ECM Package',\n 'id': 'ecm',\n 'tier': '2',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'offensive, special, merc, standard',\n 'uiTags': 'Weapons, Support',\n 'base value': '4000',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '6',\n 'cost_dest': '12',\n 'cost_cruiser': '18',\n 'cost_capital': '24',\n 'script': 'com.fs.starfarer.api.impl.hullmods.ECMPackage',\n 'desc': 'When deployed in combat, grants %s/%s/%s/%s ECM rating, depending on '\n         \"this ship's hull size.\",\n 'short': \"Increases ship's ECM rating.\",\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/ecm_package.png'}"
     },
@@ -2144,7 +2144,7 @@
     {
         "key": "hull_mods.csv#nav_relay$desc",
         "original": "When deployed in combat, increases nav rating of your fleet by %s/%s/%s/%s, depending on this ship's hull size.\n\nThe total nav rating of your fleet increases the top speed of your deployed ships.",
-        "translation": "当该舰投入战斗时，根据船体级别，提高 %s/%s/%s/%s 的舰队导航评级。\n\n导航评级会提高你所部署舰船的最高航速。",
+        "translation": "当部署于战斗中时，根据船体级别，提高 %s/%s/%s/%s 导航效率。\n\n导航效率会提高你所部署舰船的最高航速。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0035行\n[本行原始数据]\n{'name': 'Nav Relay',\n 'id': 'nav_relay',\n 'tier': '2',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'engines, special, merc, standard',\n 'uiTags': 'Engines, Support',\n 'base value': '5000',\n 'unlocked': '',\n 'hidden': '',\n 'hiddenEverywhere': '',\n 'cost_frigate': '10',\n 'cost_dest': '15',\n 'cost_cruiser': '20',\n 'cost_capital': '25',\n 'script': 'com.fs.starfarer.api.impl.hullmods.NavRelay',\n 'desc': 'When deployed in combat, increases nav rating of your fleet by '\n         \"%s/%s/%s/%s, depending on this ship's hull size.\\n\"\n         '\\n'\n         'The total nav rating of your fleet increases the top speed of your '\n         'deployed ships.',\n 'short': 'Increases top speed of deployed ships.',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/nav_relay.png'}"
     },
@@ -2445,7 +2445,7 @@
     {
         "key": "hull_mods.csv#repair_gantry$desc",
         "original": "Increases the resources gained from salvaging abandoned stations, derelicts, floating hulks, and other such by %s/%s/%s/%s, depending on hull size. Only affects the recovery of common resources such as fuel and supplies, and not rare items like blueprints. In addition, %s of the bonus applies to post-battle salvage.",
-        "translation": "根据船体级别，提高 %s/%s/%s/%s 从遗弃物、 舰船残骸等打捞到的资源，只影响普通资源的回收，如燃料与补给，而蓝图等稀有物资将不受影响。此外也提高 %s 战后打捞效率。",
+        "translation": "根据船体级别，提高 %s/%s/%s/%s 从废弃空间站、遗弃物、舰船残骸等打捞到的资源。只影响普通资源的回收，如燃料与补给，而蓝图等稀有物资将不受影响。此外也提高 %s 战后打捞效率。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0075行\n[本行原始数据]\n{'name': 'Salvage Gantry',\n 'id': 'repair_gantry',\n 'tier': '',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': '',\n 'uiTags': '',\n 'base value': '',\n 'unlocked': '',\n 'hidden': 'TRUE',\n 'hiddenEverywhere': '',\n 'cost_frigate': '5',\n 'cost_dest': '10',\n 'cost_cruiser': '20',\n 'cost_capital': '40',\n 'script': 'com.fs.starfarer.api.impl.campaign.RepairGantry',\n 'desc': 'Increases the resources gained from salvaging abandoned stations, '\n         'derelicts, floating hulks, and other such by %s/%s/%s/%s, depending '\n         'on hull size. Only affects the recovery of common resources such as '\n         'fuel and supplies, and not rare items like blueprints. In addition, '\n         '%s of the bonus applies to post-battle salvage.',\n 'short': 'Increases resources gained from salvage.',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/repair_gantry.png'}"
     },

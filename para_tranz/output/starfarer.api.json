@@ -1500,9 +1500,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/CoreLifecyclePluginImpl$1.class#\"Your skills have been reset to accomodate the new skill system. Skill and story points have been refunded.\n\nOfficer, admin~\"@8bc25103",
         "original": "Your skills have been reset to accomodate the new skill system. Skill and story points have been refunded.\n\nOfficer, administrator, and AI core skills have been adjusted for the new system.",
-        "translation": "Your skills have been reset to accomodate the new skill system. Skill and story points have been refunded.\n\nOfficer, administrator, and AI core skills have been adjusted for the new system.",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/CoreLifecyclePluginImpl$1.class 的第0053个常量\n原始数据：\"Your skills have been reset to accomodate the new skill system. Skill and story points have been refunded.\n\nOfficer, administrator, and AI core skills have been adjusted for the new system.\"\n译文数据：\"Your skills have been reset to accomodate the new skill system. Skill and story points have been refunded.\n\nOfficer, administrator, and AI core skills have been adjusted for the new system.\"\n\n"
+        "translation": "你的技能已被重置以适应最新的技能系统。技能点和故事点已全数退还。\n\n副官、殖民地行政官以及 AI 核心的技能也已适应最新的技能系统。",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/CoreLifecyclePluginImpl$1.class 的第0053个常量\n原始数据：\"Your skills have been reset to accomodate the new skill system. Skill and story points have been refunded.\n\nOfficer, administrator, and AI core skills have been adjusted for the new system.\"\n译文数据：\"你的技能已被重置以适应最新的技能系统。技能点和故事点已全数退还。\n\n副官、殖民地行政官以及 AI 核心的技能也已适应最新的技能系统。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/CoreReputationPlugin.class#\"    - Currently at %s\"",
@@ -9326,9 +9326,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/AnalyzeEntityMissionIntel.class#\"Faction: \"",
         "original": "Faction: ",
-        "translation": "发布方: ",
+        "translation": "发布方：{",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/AnalyzeEntityMissionIntel.class 的第0481个常量\n原始数据：\"Faction: \"\n译文数据：\"发布方: \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/AnalyzeEntityMissionIntel.class 的第0481个常量\n原始数据：\"Faction: \"\n译文数据：\"发布方：{\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/AnalyzeEntityMissionIntel.class#\"The \"",
@@ -10460,9 +10460,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/PersonBountyIntel.class#\"Faction: \"",
         "original": "Faction: ",
-        "translation": "发布方: ",
+        "translation": "发布方：{",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/PersonBountyIntel.class 的第0887个常量\n原始数据：\"Faction: \"\n译文数据：\"发布方: \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/PersonBountyIntel.class 的第0887个常量\n原始数据：\"Faction: \"\n译文数据：\"发布方：{\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/PersonBountyIntel.class#\"He is\"",
@@ -10740,9 +10740,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/ProcurementMissionIntel.class#\"Faction: \"",
         "original": "Faction: ",
-        "translation": "发布方: ",
+        "translation": "发布方：{",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/ProcurementMissionIntel.class 的第0933个常量\n原始数据：\"Faction: \"\n译文数据：\"发布方: \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/ProcurementMissionIntel.class 的第0933个常量\n原始数据：\"Faction: \"\n译文数据：\"发布方：{\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/ProcurementMissionIntel.class#\"However, \"",
@@ -11139,9 +11139,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/SurveyPlanetMissionIntel.class#\"Faction: \"",
         "original": "Faction: ",
-        "translation": "发布方: ",
+        "translation": "发布方：{",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/SurveyPlanetMissionIntel.class 的第0486个常量\n原始数据：\"Faction: \"\n译文数据：\"发布方: \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/SurveyPlanetMissionIntel.class 的第0486个常量\n原始数据：\"Faction: \"\n译文数据：\"发布方：{\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/SurveyPlanetMissionIntel.class#\"Missions\"",
@@ -11272,9 +11272,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/SystemBountyIntel.class#\"Faction: \"",
         "original": "Faction: ",
-        "translation": "发布方: ",
+        "translation": "发布方：{",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/SystemBountyIntel.class 的第0572个常量\n原始数据：\"Faction: \"\n译文数据：\"发布方: \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/SystemBountyIntel.class 的第0572个常量\n原始数据：\"Faction: \"\n译文数据：\"发布方：{\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/SystemBountyIntel.class#\"Likely triggered by %s activity.\"",
@@ -12336,9 +12336,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DeliveryMissionIntel.class#\"Faction: \"",
         "original": "Faction: ",
-        "translation": "发布方: ",
+        "translation": "发布方：{",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DeliveryMissionIntel.class 的第0513个常量\n原始数据：\"Faction: \"\n译文数据：\"发布方: \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DeliveryMissionIntel.class 的第0513个常量\n原始数据：\"Faction: \"\n译文数据：\"发布方：{\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DeliveryMissionIntel.class#\"To make the delivery, either dock at \"",
@@ -15416,16 +15416,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathBaseIntel.class#\"Bounty faction: \"",
         "original": "Bounty faction: ",
-        "translation": "发布方: ",
+        "translation": "发布方：{",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathBaseIntel.class 的第1006个常量\n原始数据：\"Bounty faction: \"\n译文数据：\"发布方: \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathBaseIntel.class 的第1006个常量\n原始数据：\"Bounty faction: \"\n译文数据：\"发布方：{\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathBaseIntel.class#\"Brought in by smugglers\"",
         "original": "Brought in by smugglers",
-        "translation": "Brought in by smugglers",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathBaseIntel.class 的第1351个常量\n原始数据：\"Brought in by smugglers\"\n译文数据：\"Brought in by smugglers\"\n\n"
+        "translation": "由走私者带入",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathBaseIntel.class 的第1351个常量\n原始数据：\"Brought in by smugglers\"\n译文数据：\"由走私者带入\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathBaseIntel.class#\"Citadel\"",
@@ -15521,9 +15521,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathBaseIntel.class#\"Luddic Path Base\"",
         "original": "Luddic Path Base",
-        "translation": "Luddic Path Base",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathBaseIntel.class 的第0247个常量\n原始数据：\"Luddic Path Base\"\n译文数据：\"Luddic Path Base\"\n\n"
+        "translation": "卢德左径基地",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathBaseIntel.class 的第0247个常量\n原始数据：\"Luddic Path Base\"\n译文数据：\"卢德左径基地\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathBaseIntel.class#\"Nexus\"",
@@ -16214,30 +16214,30 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class#\"Agreement broken\"",
         "original": "Agreement broken",
-        "translation": "Agreement broken",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class 的第1279个常量\n原始数据：\"Agreement broken\"\n译文数据：\"Agreement broken\"\n\n"
+        "translation": "协议破裂",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class 的第1279个常量\n原始数据：\"Agreement broken\"\n译文数据：\"协议破裂\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class#\"Agreement dissolved\"",
         "original": "Agreement dissolved",
-        "translation": "Agreement dissolved",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class 的第1290个常量\n原始数据：\"Agreement dissolved\"\n译文数据：\"Agreement dissolved\"\n\n"
+        "translation": "协议解除",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class 的第1290个常量\n原始数据：\"Agreement dissolved\"\n译文数据：\"协议解除\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class#\"Agreement made with base commander\"",
         "original": "Agreement made with base commander",
-        "translation": "Agreement made with base commander",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class 的第1300个常量\n原始数据：\"Agreement made with base commander\"\n译文数据：\"Agreement made with base commander\"\n\n"
+        "translation": "与基地指挥官达成协议",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class 的第1300个常量\n原始数据：\"Agreement made with base commander\"\n译文数据：\"与基地指挥官达成协议\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class#\"Agreement\"",
         "original": "Agreement",
-        "translation": "Agreement",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class 的第1305个常量\n原始数据：\"Agreement\"\n译文数据：\"Agreement\"\n\n"
+        "translation": "协议",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class 的第1305个常量\n原始数据：\"Agreement\"\n译文数据：\"协议\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class#\"Astrome\"",
@@ -16263,9 +16263,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class#\"Bounty faction: \"",
         "original": "Bounty faction: ",
-        "translation": "发布方: ",
+        "translation": "发布方：{",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class 的第1309个常量\n原始数据：\"Bounty faction: \"\n译文数据：\"发布方: \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class 的第1309个常量\n原始数据：\"Bounty faction: \"\n译文数据：\"发布方：{\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class#\"Briganderie\"",
@@ -16277,9 +16277,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class#\"Brought in by raiders\"",
         "original": "Brought in by raiders",
-        "translation": "Brought in by raiders",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class 的第1747个常量\n原始数据：\"Brought in by raiders\"\n译文数据：\"Brought in by raiders\"\n\n"
+        "translation": "由劫掠者带入",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class 的第1747个常量\n原始数据：\"Brought in by raiders\"\n译文数据：\"由劫掠者带入\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class#\"Camp\"",
@@ -16522,9 +16522,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class#\"Pirate Base\"",
         "original": "Pirate Base",
-        "translation": "Pirate Base",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class 的第0329个常量\n原始数据：\"Pirate Base\"\n译文数据：\"Pirate Base\"\n\n"
+        "translation": "海盗基地",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class 的第0329个常量\n原始数据：\"Pirate Base\"\n译文数据：\"海盗基地\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class#\"Pirates operating from this base have been targeting the \"",
@@ -16851,9 +16851,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/contacts/ContactIntel.class#\", a size %s colony controlled by \"",
         "original": ", a size %s colony controlled by ",
-        "translation": "，规模：%s，且目前隶属于 ",
+        "translation": "，是规模为{%s}的殖民地，其目前的控制方为 ",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/contacts/ContactIntel.class 的第0802个常量\n原始数据：\", a size %s colony controlled by \"\n译文数据：\"，规模：%s，且目前隶属于 \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/contacts/ContactIntel.class 的第0802个常量\n原始数据：\", a size %s colony controlled by \"\n译文数据：\"，是规模为{%s}的殖民地，其目前的控制方为 \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/contacts/ContactIntel.class#\"Active contacts: %s %s %s\"",
@@ -16921,9 +16921,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/contacts/ContactIntel.class#\"Faction: \"",
         "original": "Faction: ",
-        "translation": "所属方: ",
+        "translation": "所属方：{",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/contacts/ContactIntel.class 的第0598个常量\n原始数据：\"Faction: \"\n译文数据：\"所属方: \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/contacts/ContactIntel.class 的第0598个常量\n原始数据：\"Faction: \"\n译文数据：\"所属方：{\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/contacts/ContactIntel.class#\"If this contact is developed, \"",
@@ -17040,9 +17040,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/contacts/ContactIntel.class#\"You've lost this contact.\"",
         "original": "You've lost this contact.",
-        "translation": "You've lost this contact.",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/contacts/ContactIntel.class 的第0796个常量\n原始数据：\"You've lost this contact.\"\n译文数据：\"You've lost this contact.\"\n\n"
+        "translation": "你失去了这一联络人。",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/contacts/ContactIntel.class 的第0796个常量\n原始数据：\"You've lost this contact.\"\n译文数据：\"你失去了这一联络人。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/contacts/ContactIntel.class#\"Your contact with \"",
@@ -20274,9 +20274,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/BlockadeFGI.class#\"blockade\"",
         "original": "blockade",
-        "translation": "blockade",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/BlockadeFGI.class 的第0044个常量\n原始数据：\"blockade\"\n译文数据：\"blockade\"\n\n"
+        "translation": "封锁",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/BlockadeFGI.class 的第0044个常量\n原始数据：\"blockade\"\n译文数据：\"封锁\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/BlockadeFGI.class#\"blockading forces\"",
@@ -20610,9 +20610,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class#\"Faction: \"",
         "original": "Faction: ",
-        "translation": "发起方: ",
+        "translation": "发起方：{",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class 的第1085个常量\n原始数据：\"Faction: \"\n译文数据：\"发起方: \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class 的第1085个常量\n原始数据：\"Faction: \"\n译文数据：\"发起方：{\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class#\"Fleet Group Movement\"",
@@ -22794,9 +22794,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/misc/TradeFleetDepartureIntel.class#\"Faction: \"",
         "original": "Faction: ",
-        "translation": "所属方: ",
+        "translation": "发布方：{",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/misc/TradeFleetDepartureIntel.class 的第0272个常量\n原始数据：\"Faction: \"\n译文数据：\"所属方: \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/misc/TradeFleetDepartureIntel.class 的第0272个常量\n原始数据：\"Faction: \"\n译文数据：\"发布方：{\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/misc/TradeFleetDepartureIntel.class#\"Fleet departures\"",
@@ -23886,9 +23886,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/raid/RaidIntel.class#\"Faction: \"",
         "original": "Faction: ",
-        "translation": "发起方: ",
+        "translation": "发起方：{",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/raid/RaidIntel.class 的第0380个常量\n原始数据：\"Faction: \"\n译文数据：\"发起方: \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/raid/RaidIntel.class 的第0380个常量\n原始数据：\"Faction: \"\n译文数据：\"发起方：{\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/raid/RaidIntel.class#\"However, all colonies should be safe from the raid, owing to their orbital defenses.\"",
@@ -24866,9 +24866,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/ExtractionMission.class#\"The target location is a size %s colony controlled by \"",
         "original": "The target location is a size %s colony controlled by ",
-        "translation": "规模：%s, 且目前隶属于 ",
+        "translation": "是规模为{%s}的殖民地，其目前的控制方为 ",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/ExtractionMission.class 的第0526个常量\n原始数据：\"The target location is a size %s colony controlled by \"\n译文数据：\"规模：%s, 且目前隶属于 \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/ExtractionMission.class 的第0526个常量\n原始数据：\"The target location is a size %s colony controlled by \"\n译文数据：\"是规模为{%s}的殖民地，其目前的控制方为 \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/FleetCreatorMission.class#\"patrolLarge\"",
@@ -26966,44 +26966,44 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class#\" from a derelict ship \"",
         "original": " from a derelict ship ",
-        "translation": ", 目标：",
+        "translation": "，目标：",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class 的第0542个常量\n原始数据：\" from a derelict ship \"\n译文数据：\", 目标：\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class 的第0542个常量\n原始数据：\" from a derelict ship \"\n译文数据：\"，目标：\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class#\" from a derelict ship\"",
         "original": " from a derelict ship",
-        "translation": ", 目标：废弃舰船",
+        "translation": "，目标：废弃舰船",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class 的第0597个常量\n原始数据：\" from a derelict ship\"\n译文数据：\", 目标：废弃舰船\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class 的第0597个常量\n原始数据：\" from a derelict ship\"\n译文数据：\"，目标：废弃舰船\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class#\" from pirates in the \"",
         "original": " from pirates in the ",
-        "translation": ", 目标：海盗 - ",
+        "translation": "，目标：海盗 - ",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class 的第0606个常量\n原始数据：\" from pirates in the \"\n译文数据：\", 目标：海盗 - \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class 的第0606个常量\n原始数据：\" from pirates in the \"\n译文数据：\"，目标：海盗 - \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class#\" from scavengers at the nearest jump-point\"",
         "original": " from scavengers at the nearest jump-point",
-        "translation": ", 目标为跳跃点 附近的拾荒者",
+        "translation": "，目标为跳跃点附近的拾荒者",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class 的第0611个常量\n原始数据：\" from scavengers at the nearest jump-point\"\n译文数据：\", 目标为跳跃点 附近的拾荒者\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class 的第0611个常量\n原始数据：\" from scavengers at the nearest jump-point\"\n译文数据：\"，目标为跳跃点附近的拾荒者\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class#\" from scavengers before they leave the system.\"",
         "original": " from scavengers before they leave the system.",
-        "translation": " from scavengers before they leave the system.",
-        "stage": 0,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class 的第0569个常量\n原始数据：\" from scavengers before they leave the system.\"\n译文数据：\" from scavengers before they leave the system.\"\n\n"
+        "translation": "，在目标拾荒者离开星系之前。",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class 的第0569个常量\n原始数据：\" from scavengers before they leave the system.\"\n译文数据：\"，在目标拾荒者离开星系之前。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class#\" from the pirates as they resupply from a cache \"",
         "original": " from the pirates as they resupply from a cache ",
-        "translation": ", 目标为一支在隐藏仓库 附近补给的海盗舰队，其位于 ",
+        "translation": "，目标为一支在隐藏仓库 附近补给的海盗舰队，其位于 ",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class 的第0565个常量\n原始数据：\" from the pirates as they resupply from a cache \"\n译文数据：\", 目标为一支在隐藏仓库 附近补给的海盗舰队，其位于 \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class 的第0565个常量\n原始数据：\" from the pirates as they resupply from a cache \"\n译文数据：\"，目标为一支在隐藏仓库 附近补给的海盗舰队，其位于 \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class#\" to receive your reward.\"",
@@ -27036,9 +27036,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class#\"Go to the nearest jump-point and retrieve the \"",
         "original": "Go to the nearest jump-point and retrieve the ",
-        "translation": "前往最近的跳跃点附近，并在拾荒者离开星系前，从其手中夺回 ",
+        "translation": "前往最近的跳跃点附近，并回收 ",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class 的第0567个常量\n原始数据：\"Go to the nearest jump-point and retrieve the \"\n译文数据：\"前往最近的跳跃点附近，并在拾荒者离开星系前，从其手中夺回 \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class 的第0567个常量\n原始数据：\"Go to the nearest jump-point and retrieve the \"\n译文数据：\"前往最近的跳跃点附近，并回收 \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GADerelictArtifact.class#\"Retrieve \"",
@@ -28436,9 +28436,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/cb/CBRemnantStation.class#\" - Remnant Nexus\"",
         "original": " - Remnant Nexus",
-        "translation": " - 余辉母舰",
+        "translation": " - 余辉中枢",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/cb/CBRemnantStation.class 的第0334个常量\n原始数据：\" - Remnant Nexus\"\n译文数据：\" - 余辉母舰\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/cb/CBRemnantStation.class 的第0334个常量\n原始数据：\" - Remnant Nexus\"\n译文数据：\" - 余辉中枢\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/cb/CBRemnantStation.class#\" taps a data pad, and \"",
@@ -34554,9 +34554,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/CoordinatedManeuvers$Level0.class#\"*The total nav rating for the deployed ships of the fleet increases the top speed of all ships in the fleet, up to a maximum of \"",
         "original": "*The total nav rating for the deployed ships of the fleet increases the top speed of all ships in the fleet, up to a maximum of ",
-        "translation": "* 舰队导航效率可提高已部署舰船的最高航速，最高提高 ",
+        "translation": "* 导航效率可提高已部署舰船的最高航速，最高提高 ",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/CoordinatedManeuvers$Level0.class 的第0023个常量\n原始数据：\"*The total nav rating for the deployed ships of the fleet increases the top speed of all ships in the fleet, up to a maximum of \"\n译文数据：\"* 舰队导航效率可提高已部署舰船的最高航速，最高提高 \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/CoordinatedManeuvers$Level0.class 的第0023个常量\n原始数据：\"*The total nav rating for the deployed ships of the fleet increases the top speed of all ships in the fleet, up to a maximum of \"\n译文数据：\"* 导航效率可提高已部署舰船的最高航速，最高提高 \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/CoordinatedManeuvers$Level0.class#\". Does not apply to fighters.\"",
