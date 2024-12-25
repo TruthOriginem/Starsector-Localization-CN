@@ -31,11 +31,11 @@
 如果想参与汉化或者想为汉化提出意见和建议，请通过 QQ 553816216 添加 **议长**的好友，或者申请加入 QQ 群 **788249918 汉化顾问团**，然后才申请加入本项目。
 申请入群时**请注明你的来历和英语水平**，英语水平需达到 **CET6** 或更高。
 
-之后，参照这个[非常简单的翻译指南](docs/tut_translator.md)开始使用Paratranz平台进行翻译
+之后，参照这个[非常简单的翻译指南](docs/paratranz/tut_translator.md)开始使用Paratranz平台进行翻译
 
 ## 译文格式规范
 
-请参见[远行星号译文格式规范](docs/format_standard.md)
+请参见[远行星号译文格式规范](docs/paratranz/format_standard.md)
 
 ## 译名表
 
@@ -66,7 +66,7 @@
 | _swapLangFile.py                    | 用来更替汉化文件和英文文件的脚本。                                     |
 | _updateOriginal.py                  | TODO                                                  |
 | _variant_name_map.json              | 装配名映射文件，英文名对应汉化名，可后继继续更新。                             |
-| para_tranz.py                       | 用于ParaTranz平台的数据导入导出工具，使用方法参见[本指南](docs/tut_admin.md) |
+| para_tranz.py                       | 用于ParaTranz平台的数据导入导出工具，使用方法参见[本指南](docs/paratranz/tut_admin.md) |
 | _jsonMapHandler.py                 | TODO                                                  |
 
 ### 版本汉化流程
@@ -82,10 +82,10 @@
 4. 将`localization.old/graphics`文件夹下的可以复用的图像和字体资源复制到`localization/graphics`文件夹中
 5. **将`original/data`文件夹和`starfarer.api.jar`，`starfarer_obf.jar`复制到`localization`**
    > 应当使用文件更新脚本?
-6. **参照[Paratran版本管理指南](docs/tut_admin.md)步骤，从 git 导入新的原文到 ParaTranz**
+6. **参照[Paratran版本管理指南](docs/paratranz/tut_admin.md)步骤，从 git 导入新的原文到 ParaTranz**
     - 只导入原文！**不要导入译文！**
     - 必须在导入时选择**安全模式（不删除词条）**！
-7. **参照[Paratran版本管理指南](docs/tut_admin.md)中的步骤，将翻译完成的译文导入 git**
+7. **参照[Paratran版本管理指南](docs/paratranz/tut_admin.md)中的步骤，将翻译完成的译文导入 git**
 8. 提交commit并push
     - 在提交前，请将汉化文件复制入游戏，尝试能否正常启动游戏
 
@@ -95,4 +95,4 @@
 [advance_filter]:advance_filter.png
 [filter_options]:filter_options.png
 
-[flow-chart]:docs/flow_chart.png
+[flow-chart]:docs/paratranz/flow_chart.png
