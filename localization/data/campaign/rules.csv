@@ -1747,7 +1747,7 @@ NGCAddShip dram_Light
 NGCAddCredits 18000
 $ngcMercSelected = true
 AddTextSmall ""获得一名 1 级军官"" good
-SetTextHighlights ""level 1 officer""
+SetTextHighlights ""1 级军官""
 $ngcAddOfficer = true
 FireAll NGCDifficultyOptions",,,
 ngcRandomPicked,NewGameOptionSelected,$option == ngcRandom,"NGCAddShipSilent hammerhead_Balanced
@@ -1766,7 +1766,7 @@ SetTooltip ngcShepherd ""牧羊人-级 不是一艘战舰，它既慢又脆弱�
 1:ngcShepherd:一艘 牧羊人-级 无人机补给舰，运载了一些重型机械。",
 ngcKitePicked,NewGameOptionSelected,$option == ngcKite,"NGCAddShip kite_Starting
 AddTextSmall ""获得一名 1 级军官"" good
-SetTextHighlights ""level 1 officer""
+SetTextHighlights ""1 级军官""
 $ngcAddOfficer = true
 FireAll NGCDifficultyOptions",,,
 ngcShepherdPicked,NewGameOptionSelected,$option == ngcShepherd,"NGCAddShip shepherd_Starting
@@ -11387,9 +11387,9 @@ $wasAnnoying = true",海盗头子拍打着控制台挂掉了通讯，你只能�
 gaFCKapteynBossInfoDump1,DialogOptionSelected,$option == gaFC_kapteynBossInfoDump1,,"""我从某些人那里得到了一些信息。对，这就是我的工作 —— 去调查谁在 Isirah 星系里搞小动作，以及他们是为谁而行动。""
 
 $HeOrShe凑得离通讯设备更近了一些，轻声说道：""听说 英仙座联盟 最近到处打听一个叫 'Coureuse' 的人，因为 霸主 率先对此展开了调查。""","gaFC_kapteynBossInfoDump2:""然后呢？""",
-gaFC_kapteynBossInfoDump2,DialogOptionSelected,$option == gaFC_kapteynBossInfoDump2,,"""然后，英仙座联盟里的眼线们突然就都不再问 'Coureuse' 的事了。这让我，$firstName，不禁想到估计是有人找到了他们想找的人。这同时还告诉了我那些人并不是经验老道的特工。交给英仙座联盟吧 —— 人们都在这么说，不对吗？但他们任命官员居然不考核能力而是考核影响力，真让我看不下去。""
+gaFC_kapteynBossInfoDump2,DialogOptionSelected,$option == gaFC_kapteynBossInfoDump2,,"""然后，英仙座联盟里的眼线们突然就都不再问 'Coureuse' 的事了。那我可就知道了啊，$firstName，估计是有人找到了他们想找的人。这同时还让我知道那些人并不是经验老道的特工。有什么事都直接丢给英仙座联盟 —— 对吧？他们任命官员居然不考核能力而是考核影响力，真让我看不下去。""
 
-""总之，在那之后不久，一群从 Kazeron 来的顶级英仙座联盟特工就开始在 Laicaille 栖息地 '安居乐业' 了。""",gaFC_kapteynBossInfoDump3:继续,
+""总之，在那之后不久，一群从 Kazeron 来的太子爷英仙座联盟特工就开始在 Laicaille 栖息地 '安居乐业' 了。""",gaFC_kapteynBossInfoDump3:继续,
 gaFC_kapteynBossInfoDump3,DialogOptionSelected,$option == gaFC_kapteynBossInfoDump3,"AddTextSmall ""获得了英仙座联盟在 Laicaille 栖息地进行情报行动的相关档案"" highlight","""现在，作为一个好奇心旺盛的人和那些无业游民的朋友，我估计 英仙座联盟 就要开始打击我们那些明面上的企业了。但它没有这么做。而是让一切保持着原样，那么那些间谍到底来 Laicaille 做什么呢？我这么问我自己。""
 
 ""我雇了一个专业监控团队，之后他们给了我一份清单，上面有一堆名字，租借房屋信息以及一些活动的日程表。看起来特工们在这里弄好了一些精致的安全屋。""海盗头子轻触了一下数据平板，你的通讯器则发出了接收到文件的提示音。""你给自己搞到了一份资料，我的朋友。""","gaFC_kapteynBossInfoDump4:""我确实喜欢保持消息灵通的状态。""",
@@ -15845,7 +15845,7 @@ Call $global.gaDA_ref updateStage","你的$shipOrFleet拦截到了残骸。传�
 
 你的视野随着打捞小组的扫荡行动穿过了残骸，摄像头传回的画面在被幽灵般碎片笼罩着的死寂通道间来回切换。任务目标确实在提供的坐标处，但是你怀疑对面墙上的碳硅釉并不是预期中实验副产物。$gaDA_widgetNoArticle 看上去基本完好无损。
 
-行动长官亲自监督目标的封装和回收，剩下的就是把它送回 Galatia 学院。",gaDA_continueBasic:继续,
+行动长官亲自监督目标的封装和回收，剩下的就是把它送回 Galatia 学院。",gaDA_continueBasic:离开,
 gaDADerelictContBasic,DialogOptionSelected,$option == gaDA_continueBasic,"#FireBest OpenInteractionDialog
 DismissDialog",,,
 gaDADerelictPiratesTookItStart,GADADerelictInteraction,$gaDA_variation == PIRATES,,"当你接近残骸时，传感器技师指出有迹象表明你们并不是率先来到这里的人，目标船体周围的泄露气体和残骸显示最近有过一次打捞。
@@ -27015,7 +27015,7 @@ lcMakeDealSel,DialogOptionSelected,$option == lcMakeDeal,"SetTextHighlights ""�
 lcMakeDealIntroB:""那让我们从让教会召回那些无缘无故入侵的骑士开始吧。""
 lcMakeDealIntroC:""我才是受害者，应该由我来提出要求。""",
 lcMakeDealIntroA,DialogOptionSelected,$option == lcMakeDealIntroA,"$option = lcMakeDealIntro2 0
-FireBest DialogOptionSelected","""这种情况并非 '毫无理由'，$playerSirOrMadam，"" $heOrSh带着克制和耐心说道，""越来越多的信徒前往您的殖民地，而您也允许他们在那里工作和定居。""
+FireBest DialogOptionSelected","""这种情况并非 '毫无理由'，$playerSirOrMadam，"" $heOrShe带着克制和耐心说道，""越来越多的信徒前往您的殖民地，而您也允许他们在那里工作和定居。""
 
 ""教会需要照料自己的信徒。""",,
 lcMakeDealIntroB,DialogOptionSelected,$option == lcMakeDealIntroB,"$option = lcMakeDealIntro2 0

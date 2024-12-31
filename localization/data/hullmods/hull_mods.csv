@@ -6,7 +6,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 先进光学器件,advancedoptics,2,,,"offensive, merc, standard",武器,1000,,,,5,10,15,25,data.hullmods.AdvancedOptics,提高光束武器 %s 的射程，但会降低其 %s 的转向速度，兼容于目标定位系统。,提高光束武器射程。,,graphics/hullmods/advanced_optics.png
 高级炮塔陀螺仪,turretgyros,0,,,"defensive, merc, standard",武器,2500,,,,2,4,6,10,data.hullmods.AdvancedTurretGyros,提高所有炮塔 %s 的转向速度。,提高炮塔的转向速度。,提高 %s 对导弹和战机的伤害。提高对更小级别舰船造成的伤害，船级每相差一级，伤害就提高 %s。,graphics/hullmods/advanced_turret_gyros.png
 炮塔装甲,armoredweapons,0,,,"defensive, merc, standard","武器, 防御",2500,TRUE,,,3,6,9,15,data.hullmods.ArmoredWeapons,提高 %s 武器耐久度，并降低 %s 后坐力，但降低 %s 武器转向速度。同时提高 %s 船体装甲。,令武器更难下线，并降低后坐力。,提高 非导弹 武器 %s 的射速。,graphics/hullmods/armored_weapon_emplacements.png
-突击套件,assault_package,1,,,"defensive, civ_package, no_drop, no_drop_salvage","特殊, 防御",8000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.AssaultPackage,"提高 %s 船体结构值、%s 的装甲以及 %s 的幅能容量。
+突击套件,assault_package,1,,,"defensive, civ_package, no_drop, no_drop_salvage","特殊, 防御",8000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.AssaultPackage,"提高 %s 船体结构值、{%s 的装甲以及 %s 的幅能容量。
 
 在战斗中该舰会积极迎击敌人并表现得如同战斗舰船一般。",提高船体结构值、装甲强度、以及幅能容量。,,graphics/hullmods/assault_package.png
 自动修复单元,autorepair,2,,,"engines, defensive, merc, standard",防御,7500,,,,3,6,9,15,data.hullmods.AutomatedRepairUnit,降低 %s 在战斗中修复受损武器及引擎的时间。,提高战斗中武器的维修速率。,将武器与引擎的修复时间降低至 %s，且降低 %s 舰船过载持续时间。,graphics/hullmods/automated_repair_unit.png
@@ -33,7 +33,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 电子对抗组件,ecm,2,,,"offensive, special, merc, standard","武器, 支援",4000,,,,6,12,18,24,com.fs.starfarer.api.impl.hullmods.ECMPackage,当部署于战斗中时，根据船体级别，提高 %s/%s/%s/%s 电子战强度。,提高舰船的电子战强度。,,graphics/hullmods/ecm_package.png
 护航套件,escort_package,1,,,"special, weapons, engines, standard","特殊, 武器, 引擎",8000,,,,5,7,15,25,com.fs.starfarer.api.impl.hullmods.EscortPackage,"当附近 %s 单位距离内存在更大的友方舰船时，提高 %s 机动性，并提高 %s 最高航速，还将提高实弹武器和能量武器 %s 射程。
 
-当自身为 驱逐舰 且附近存在友方 主力舰 时，上述增益将 %s。",靠近更大的友方舰船时，提高机动性、最高航速、以及武器的射程。,当自身为 驱逐舰 时，额外降低护盾受到的伤害 %s。,graphics/hullmods/escort_package.png
+当自身为 驱逐舰 且附近存在友方 主力舰 时，上述增益将 %s}。",靠近更大的友方舰船时，提高机动性、最高航速、以及武器的射程。,当自身为 驱逐舰 时，额外降低护盾受到的伤害 %s。,graphics/hullmods/escort_package.png
 扩编飞行甲板人员,expanded_deck_crew,1,,,"special, merc, standard",战机,4000,,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.ExpandedDeckCrew,"降低 %s 战机损失时整备下降速率，提高 %s 整备恢复速率。
 
 每个甲板都会让该舰的最低船员需求提高 %s 名。",提高战机整备速度，但需要更多的船员来维持。,,graphics/hullmods/expanded_deck_crew.png
@@ -51,10 +51,10 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 强化护盾,hardenedshieldemitter,3,,,"shields, defensive, merc, standard",护盾,10000,,,,5,10,15,25,data.hullmods.HardenedShieldEmitter,降低 %s 护盾所受伤害，并降低护盾被 EMP 电弧击穿的概率。,降低护盾所受伤害。,,graphics/hullmods/hardened_shields.png
 硬化子系统,hardened_subsystems,0,,,"special, merc, standard",特殊,2500,TRUE,,,5,10,15,25,data.hullmods.HardenedSubsystems,"提高 %s 峰值时间，防止舰船性能过早因长期部署而下降。
 
-同时还将战备值 (CR) 在战斗中衰减的速度降低 %s。",提高峰值时间，且降低战备值 (CR) 的衰减速率。,,graphics/hullmods/hardened_subsystems.png
+同时还将战备值 (CR) 在战斗中衰减的速度降低 %s}。",提高峰值时间，且降低战备值 (CR) 的衰减速率。,,graphics/hullmods/hardened_subsystems.png
 重型装甲,heavyarmor,0,,,"defensive, merc, standard",防御,2500,,,,8,15,20,40,data.hullmods.HeavyArmor,根据船体级别，提高 %s/%s/%s/%s 装甲。,提高装甲值。,降低舰船 %s 的机动性。,graphics/hullmods/heavy_armor.png
 高散射增幅器,high_scatter_amp,3,,,"offensive, merc, standard",武器,5000,,,,4,8,12,20,com.fs.starfarer.api.impl.hullmods.HighScatterAmp,降低光束类武器的射程，并且使它们在对护盾造成伤害时产生硬幅能。,提高光束武器的伤害，还可对护盾造成硬幅能伤害，但降低其基础射程。,光束武器伤害额外提高 %s。,graphics/hullmods/high_scatter_amp.png
-整合点防御 AI,pointdefenseai,3,,,"defensive, merc, standard","武器, 防御",10000,,,,3,6,9,15,data.hullmods.IntegratedPointDefenseAI,给予所有点防御武器识别并忽略诱饵弹的能力。此外，无论战备处于何种水平，所有点防御武器均可保持最佳精准度。所有舰载武器对导弹造成的伤害提高 %s。,点防御武器不会再被热诱弹干扰，提高自动瞄准精度，对导弹造成更多伤害。,"所有小型非导弹且非打击型武器都将获得 ""点防御"" 武器特性，将自动向导弹开火，并受到点防御武器属性修正的影响。",graphics/hullmods/integrated_point_defense_ai.png
+整合点防御 AI,pointdefenseai,3,,,"defensive, merc, standard","武器, 防御",10000,,,,3,6,9,15,data.hullmods.IntegratedPointDefenseAI,给予所有点防御武器识别并忽略诱饵弹的能力。此外，无论战备处于何种水平，所有点防御武器均可保持最佳精准度。所有舰载武器对导弹造成的伤害提高 %s}。,点防御武器不会再被热诱弹干扰，提高自动瞄准精度，对导弹造成更多伤害。,"所有小型非导弹且非打击型武器都将获得 ""点防御"" 武器特性，将自动向导弹开火，并受到点防御武器属性修正的影响。",graphics/hullmods/integrated_point_defense_ai.png
 #Point Defense Integration,pdintegration,3,,,"defensive, merc","Weapons, Defenses",10000,,,,12,15,18,24,com.fs.starfarer.api.impl.hullmods.PDIntegration,"Reduces the ordnance point cost of small point-defense weapons by %s. The cost reduction only affects weapons that have PD capability as a feature of the weapon itself, and not when it's gained through other means such as from a hullmod.
 
 In addition, all point-defense weapons deal %s more damage to all targets.","Reduces ordnance point cost of small PD weapons, increases all PD damage.",,graphics/hullmods/integrated_point_defense_ai.png
@@ -138,7 +138,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 导弹自动工厂,missile_reload,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PeriodicMissileReload,内置的导弹工厂会定期补满所有导弹武器。,内置的导弹工厂会定期补满所有导弹武器。,,graphics/hullmods/expanded_missile_racks.png
 屏蔽货舱,shielded_holds,2,,,,,,,TRUE,,5,10,15,30,data.hullmods.ShieldedCargoHolds,原本是保护无护盾货舰免受天体辐射的影响，但经过简单调整就可用于干扰远距离货舱扫描，降低违禁物品被发现的概率。,降低被检查到违禁品的风险。,,graphics/hullmods/shielded_cargo_hold.png
 打捞起重机,repair_gantry,,,,,,,,TRUE,,5,10,20,40,com.fs.starfarer.api.impl.campaign.RepairGantry,根据船体级别，提高 %s/%s/%s/%s 从废弃空间站、遗弃物、舰船残骸等打捞到的资源。只影响普通资源的回收，如燃料与补给，而蓝图等稀有物资将不受影响。此外也提高 %s 战后打捞效率。,提高打捞收益。,,graphics/hullmods/repair_gantry.png
-相位力场,phasefield,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PhaseField,能长时间激活低水平相位场，使传感器截面降低 %s。,降低舰队的传感器截面。,,graphics/hullmods/phase_field.png
+相位力场,phasefield,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PhaseField,能长时间激活低水平相位场，使传感器截面降低 %s}。,降低舰队的传感器截面。,,graphics/hullmods/phase_field.png
 磁通分流,fluxshunt,,,,,,,,TRUE,,10,20,30,50,data.hullmods.FluxShunt,允许舰船以 %s 的正常耗散速率在护盾开启时耗散硬幅能。,允许舰船在展开护盾时耗散硬幅能。,,graphics/hullmods/flux_shunt.png
 民用级舰体,civgrade,,,,,,,,TRUE,,0,0,0,0,data.hullmods.CivGrade,提高 %s 传感器截面，降低 %s 传感器探测强度。,提高传感器截面，降低传感器探测强度。,,graphics/hullmods/civilian_grade.png
 高维护需求,high_maintenance,,,,,,,,TRUE,,0,0,0,0,data.hullmods.HighMaintenance,提高 %s 的每月维护所需补给。,提高维护成本。,,graphics/hullmods/high_maintenance.png
@@ -218,9 +218,9 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 但部署所需补给下降 %s。",,,graphics/hullmods/degraded_engines.png
 驱动力场故障,degraded_drive_field,,,,"dmod, damage, civOnly",,,,TRUE,,0,0,0,0,data.hullmods.DegradedDriveField,"由于受到了战斗损伤，或是有生产缺陷，亦或是年久失修，该舰的驱动力场性能已经永久性降低。
 
-宇宙航速下降 %s，被侦测范围上升 %s。
+宇宙航速下降 %s，被侦测范围上升 %s}。
 
-但部署所需补给下降 %s。",,,graphics/hullmods/degraded_drivefield.png
+但部署所需补给下降 %s}。",,,graphics/hullmods/degraded_drivefield.png
 缺损电网,faulty_grid,,,,"dmod, damage",,,,TRUE,,0,0,0,0,data.hullmods.FaultyPowerGrid,"由于受到了战斗损伤，或是有生产缺陷，亦或是年久失修，该舰电网的运行效率无法恢复到巅峰水准。
 
 降低 %s 幅能容量与 %s 耗散速率。被侦测范围上升 %s。
@@ -228,13 +228,13 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 但部署所需补给下降 %s。",,,graphics/hullmods/faulty_power_grid.png
 不稳定相位线圈,unstable_coils,,,,"dmod, phaseDamage",,,,TRUE,,0,0,0,0,data.hullmods.PhaseCoilInstability,"因一些微妙的缺陷，导致该舰的相位线圈无法进行精细校正，降低 %s 相位时间增益，降低 %s 秒峰值时间，并且提高 %s 战备损耗率。
 
-但部署所需补给下降 %s。",,,graphics/hullmods/phase_coil_instability.png
+但部署所需补给下降 %s}。",,,graphics/hullmods/phase_coil_instability.png
 结构损伤,comp_structure,,,,"dmod, damageStruct, destroyedDamageAlways",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.CompromisedStructure,"该舰的结构曾在过去受到一些极大的损伤，而导致其被重创后更容易会四分五裂。降低 %s 装甲值，降低 %s 船体结构值。
 
-但部署所需补给下降 %s。",,,graphics/hullmods/structural_damage.png
+但部署所需补给下降 %s}。",,,graphics/hullmods/structural_damage.png
 传感器阵列失灵,glitched_sensors,,,,"dmod, damage",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.GlitchedSensorArray,"该舰的传感器阵列遭受了严重的损伤，需要彻底翻修舰体才能修复。武器射程降低 %s，探测范围降低 %s。
 
-但部署所需补给下降 %s。",,,graphics/hullmods/glitched_sensor_array.png
+但部署所需补给下降 %s}。",,,graphics/hullmods/glitched_sensor_array.png
 通讯系统故障,malfunctioning_comms,,,,"dmod, fighterBayDamage",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.MalfunctioningComms,"该舰的通讯系统遭到严重破坏，难以在复杂战况下保持通讯信号的稳定性。战机联队的最大交战距离降低 %s。
 
 但部署所需补给下降 %s。",,,graphics/hullmods/malfunctioning_comms.png
@@ -246,22 +246,22 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 但部署所需补给下降 %s。",,,graphics/hullmods/damaged_flight_deck.png
 不可靠子系统,fragile_subsystems,,,,"dmod, damage, peak_time, notPhase",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.FragileSubsystems,"过多的组件损失导致峰值时间降低 %s，且战备状态的衰减速率提高 %s。
 
-但部署所需补给下降 %s。",,,graphics/hullmods/fragile_subsystems.png
+但部署所需补给下降 %s}。",,,graphics/hullmods/fragile_subsystems.png
 受损货舱,comp_storage,,,,"dmod, damage, civOnly",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.CompromisedStorage,"该舰存储能力大大降低。船员，货物和燃料容量均降低 %s。
 
 但部署所需补给下降 %s。",,,graphics/hullmods/compromised_storage.png
 过度维护,increased_maintenance,,,,"dmod, damage, civ, notAuto",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.IncreasedMaintenance,"每月维护消耗的补给提高 %s，最低所需船员提高 %s，并降低 %s 战备值 (CR) 上限。
 
-但部署所需补给下降 %s。",提高维护成本与最低船员要求，并降低战备值 (CR) 上限。,,graphics/hullmods/increased_maintenance.png
+但部署所需补给下降 %s}。",提高维护成本与最低船员要求，并降低战备值 (CR) 上限。,,graphics/hullmods/increased_maintenance.png
 不稳定推进器,erratic_injector,,,,"dmod, damage, civ",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.ErraticInjector,"燃料消耗量提高 %s，且降低 %s 点零幅能加速所提高的航速。
 
 但部署所需补给下降 %s。",提高燃料消耗，并降低零幅能加速增益。,,graphics/hullmods/erratic_injector.png
 自动化系统损毁,faulty_auto,,,,"dmod, damage, notAuto",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.FaultyAutomatedSystems,"提高最低所需船员数量 %s，并降低 %s 战备值 (CR) 上限。
 
 但部署所需补给下降 %s。",提高最低船员需求，并降低战备值 (CR) 上限。,,graphics/hullmods/faulty_automated_systems.png
-武器位损坏,damaged_mounts,,,,"dmod, damage",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DamagedWeaponMounts,"降低武器转向速度 %s，并提高射击时的后坐力 %s。
+武器位损坏,damaged_mounts,,,,"dmod, damage",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DamagedWeaponMounts,"降低武器转向速度 %s}，并提高射击时的后坐力 %s}。
 
-但部署所需补给下降 %s。",降低武器转向速度且提高后坐力。,,graphics/hullmods/damaged_weapon_mounts.png
+但部署所需补给下降 %s}。",降低武器转向速度且提高后坐力。,,graphics/hullmods/damaged_weapon_mounts.png
 维生系统故障,degraded_life_support,,,,"dmod, damage, notAuto",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DegradedLifeSupport,"降低最大载员数量 %s，并降低 %s 战备值 (CR) 上限。
 
 但部署所需补给下降 %s。",降低最大载员数，并降低战备值 (CR) 上限。,,graphics/hullmods/degraded_life_support.png
