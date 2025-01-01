@@ -1,10 +1,11 @@
 # Jar文件手动处理记录
-对于以下两种情况，我们需要手动编辑jar文件中的数据或代码。
+对于以下三种情况，我们需要手动编辑jar文件中的数据或代码。
 
 本文件用于追踪当前版本jar文件的手动处理记录。
 
 1. 需要翻译的string对应的UTF-8常量同时被其它代码元素引用，无法直接替换。
 2. 游戏本身的代码逻辑需要修改，以适应翻译后的文本。
+3. 为了适配java24，需要替换部分class文件的字节码
 
 ## UTF-8常量被string以外的元素引用
 | 文件路径 | 原文 |
@@ -108,3 +109,9 @@
 
 > 解决方法：提高了战役地图的日期显示宽度，为日期最后显示加上了“日”字
 > 日期显示再加大到50px 50px 150px。当日进度条加长到100px
+
+# Java24适配
+
+从miko的版本中的`port_obf.jar`复制以下class文件到`original/starfarer_obf.jar`中：
+- `com/fs/starfarer/campaign/save/CampaignGameManager$5.class`
+- `com/fs/starfarer/campaign/CampaignState.class`
