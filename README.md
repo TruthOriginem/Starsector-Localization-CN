@@ -19,7 +19,7 @@
 如果您希望抢先体验汉化内容，请参照如下步骤下载汉化：
 
 1. 下载汉化文件
-   1. [点这里下载汉化文件](https://github.com/TruthOriginem/Starsector-Localization-CN/archive/refs/heads/master.zip)
+   1. [点这里下载汉化文件](https://codeload.github.com/TruthOriginem/Starsector-Localization-CN/zip/refs/heads/miko)
    2. 解压下载的文件，其中应包括名为`localization`的文件夹
 2. 安装汉化文件
    1. 打开游戏目录下的`starsector-core`文件夹
