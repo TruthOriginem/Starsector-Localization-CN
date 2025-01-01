@@ -100,3 +100,10 @@
 ![combat-ship_deployment_note.jpg](combat-ship_deployment_note.jpg)
 
 ![combat-ship_deployment_note-after.jpg](combat-ship_deployment_note-after.jpg)
+
+### 9. 战役界面左上角日期显示宽度不足
+相关文件：`starfarer_obf.jar:com/fs/starfarer/campaign/ui/e.class`
+
+![campaign_date_overlap.png](campaign_date_overlap.png)
+
+> 解决方法：提高了战役地图的日期显示宽度，为日期最后显示加上了“日”字
