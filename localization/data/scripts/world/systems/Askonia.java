@@ -183,7 +183,7 @@ public class Askonia {
 		a4.setInteractionImage("illustrations", "pirate_station");
 		
 		// makeshift sensor array in counter-orbit to Umbra
-		SectorEntityToken askonia_outer_array = system.addCustomEntity(null, "Askonia 边缘监听占点", "sensor_array_makeshift", Factions.DIKTAT); 
+		SectorEntityToken askonia_outer_array = system.addCustomEntity(null, "Askonia 边缘监听站点", "sensor_array_makeshift", Factions.DIKTAT); 
 		askonia_outer_array.setCircularOrbitPointingDown( star, 150+180, 11000, 600);
 	
 //		system.addOrbitalJunk(a1,
