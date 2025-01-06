@@ -107,3 +107,4 @@
 ![campaign_date_overlap.png](campaign_date_overlap.png)
 
 > 解决方法：提高了战役地图的日期显示宽度，为日期最后显示加上了“日”字
+> 日期显示再加大到50px 50px 150px。当日进度条加长到100px
