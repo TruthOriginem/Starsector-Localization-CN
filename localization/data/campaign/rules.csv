@@ -478,7 +478,7 @@ FireBest OtherPlanetInteractionText
 FireAll PopulateOptions
 FireBest PrintNearbySurveyHostilesTextIfSo","你的$shipOrFleet接近了 $entityName。
 
-冰巨星在你的$shipOrFleet下旋转，其表面银河中微弱的星光照耀，唯一的温度来自于其内核的重力压以及最为薄弱的放射性衰变。这个星球不大可能是在星际空间自行形成的，而更有可能是数亿万年前被某种巨大灾变从其母星系中抛出。现在它被迫承受在数亿年的星际游荡中缓缓冷缩的命运。",,
+冰巨星在你的$shipOrFleet下旋转，其表面被银河中微弱的星光照耀，唯一的温度来自于其内核的重力压以及最为薄弱的放射性衰变。这个星球不大可能是在星际空间自行形成的，而更有可能是数亿万年前被某种巨大灾变从其母星系中抛出。现在它被迫承受在数亿年的星际游荡中缓缓冷缩的命运。",,
 ,,,,,,
 # Gate Hauler interactions,,,,,,
 gateHaulerStart1,OpenInteractionDialog,"$gateHauler
@@ -514,15 +514,15 @@ gh_exploreSel2,DialogOptionSelected,$option == gh_explore2,,"行动长官命令�
 按照标准程序，人之领 会派遣一支装备精良的星门工程师探险队，重新设置主系统，让 星门运输舰 重新上路，尽管这会比原计划晚了数百个星历年。","gh_explore3:""但没有任何人过来。""",
 gh_exploreSel3a,DialogOptionSelected,$option == gh_explore3,,"古老的记录显示，为了应对失联的情况，星门运输舰 会携带一套能够自动勘测，采集和提炼的标准无人机附件。这些文件似乎暗示了其在远离故障保护位置的地方获取新的燃料和材料来源的能力。但按照其显示的规模，在假设使用 人之领 标准开拓技术的情况下，即使用上超光速，甚至超空间，这一过程也是十分低效的。
 
-你们的军官得出结论，典型的 人之领 风格，公开可知的描述似乎省略了某些关键技术和能力。
+你的军官们得出结论，典型的 人之领 风格，公开可知的描述似乎省略了某些关键技术和能力。
 
 无论如何，你的调查基本上是一无所获 —— 当然，除了那个未部署的星门本身，它现在被雄伟星舰所伸出的许多触手牢牢抓住。",gh_explore4:继续,
 gh_exploreSel3b,DialogOptionSelected,"$option == gh_explore3
-$player.gotWormholeCalibrationData",,"古老的记录显示，为了应对失去联系的情况，星门运输舰 会携带一套能够自动勘测，采集和提炼的无人机系统。这些文件似乎暗示了其在远离故障点的地方有效获取新的燃料和材料的能力。但按照所呈现出的规模，在假设使用 人之领 前沿科技的情况下，即使用上超空间和超光速，这一过程也是十分低效的。
+$player.gotWormholeCalibrationData",,"古老的记录显示，为了应对失联的情况，星门运输舰 会携带一套能够自动勘测，采集和提炼的标准无人机附件。这些文件似乎暗示了其在远离故障保护位置的地方获取新的燃料和材料来源的能力。但按照其显示的规模，在假设使用 人之领 标准开拓技术的情况下，即使用上超光速，甚至超空间，这一过程也是十分低效的。
 
 你只能这样总结：无人机探险队执行自我修复命令被派往 Limbo 星系，使用了不为人知的开拓者虫洞技术为 星门运输舰 提供补给，以便它能继续执行任务。
 
-无论如何，你的调查基本上是一无所获 —— 当然，除了那个未部署的星门本身，它现在被雄伟星舰所蔓延出的无数触手牢牢抓住",gh_explore4:继续,
+无论如何，你的调查基本上是一无所获 —— 当然，除了那个未部署的星门本身，它现在被雄伟星舰所伸出的许多触手牢牢抓住。",gh_explore4:继续,
 gh_exploreSel4,DialogOptionSelected,$option == gh_explore4,,"细节数据不断汇集到舰桥，每接到一条报告，你的高级军官们就要对着公屏敲敲打打。终于，总工程师清空全息投影，只留下下伪光照下慢慢旋转的巨舰影像。工程师清了清嗓子，难掩笑意，说道：
 
 ""$PlayerSirOrMadam。"" 虽然总工程师生性务实，此刻也突然停顿，想要吊起你的胃口。""很荣幸宣布我们能够重启星门运输舰。只要你一声令下，我们就能让它飞向英仙座内任何一个已知星系。""
@@ -1303,7 +1303,7 @@ OR
 greetingRemnantNeutral,OpenCommLink,"$faction.id == remnant score:1000
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""判断敌我识别代码回应非 [未知]...判定失败 //
-""尊敬的速子科技公司产品的客户，您好。您的船只尚未签署合约以享受速子综合空间防御系列的...
+""尊敬的速子科技公司产品的客户，您好。您的船只尚未签署合约以享受速子综合空间防御系列的...""
 
 / 进程中断 /
 
@@ -11321,9 +11321,9 @@ gaFCGroombridgeSearchB1,DialogOptionSelected,$option == gaFC_groombridgeSearchB1
 
 ""为什么在这呢？这只是个设问，"" 你的领航员说，""从这里向 Laicaille 传递信号的理由只有一种，那就是你的信号来自一个隐蔽的超空间通讯中继站。""
 
-通讯官举起手，在你点头的时候说，""这比较不同寻常，但 Groombridge 上没有居民，所以也不会有人对超空间信号的冲刷提出抱怨。""
+通讯官举起手，在你点头的时候说，""这的确不同寻常，但 Groombridge 上没有居民，所以也不会有人去抱怨自己被沐浴在超波里。""
 
-行动长官接着说，""反应堆像这样放出辐射的情况下，不会有人凑过去看。没有拾荒者会这样。""","gaFC_groombridgeSearchB2:""如果这有个超空间通讯中继站，我们该怎样找到它？""",
+行动长官接着说，""而且反应堆还一直向现在这样爆辐射，不会有人凑过去看的。所以也不会有拾荒者。""","gaFC_groombridgeSearchB2:""如果这有个超空间通讯中继站，我们该怎样找到它？""",
 gaFCGroombridgeSearchB2,DialogOptionSelected,$option == gaFC_groombridgeSearchB2,,"""中继站里通常会有非常强大的辐射屏障。"" 你的行动长官开口道，""所以我们可以选择配备辐射保护层的无人机，只去不回。那样就可以知道我们到底在找什么了。""","gaFC_groombridgeSearchB3:""去吧。""",
 gaFCGroombridgeSearchB3,DialogOptionSelected,$option == gaFC_groombridgeSearchB3,,"在下一次交班的时候，带有屏蔽装甲保护的无人机准备就绪，并在行动长官的监督下进行了部署。随着它们的挺进，全息投影上之前覆盖了 Groombridge 栖息地的大片模糊区域 —— 代表辐射过强或受扫描屏蔽而无法得到可靠读数 —— 逐渐被清晰的细节所取代。很快，一团受异常屏蔽的什么东西在距离死寂的空间站核心很近的一个损坏工作舱室里被发现了。
 
@@ -20984,7 +20984,7 @@ Call $global.rdsm_ref updateStage
 ShowImageVisual salvor_ruins
 FireAll PopulateOptions","你命令投放一小支打捞小组。
 
-行动长官仔细观察着打捞小队进入 $rdsm_target，用新的核心替换了原有的那个。",rdsm_gotTheCore:继续,
+行动长官仔细观察着打捞小组进入 $rdsm_target，用新的核心替换了原有的那个。",rdsm_gotTheCore:继续,
 rdsmPlanetGetDataDistraction,DialogOptionSelected,$option == rdsm_getAvoidCombat,AddRemoveCommodity supplies -10,"你调来了几箱补给，给它们装上了声光无线电三合一紧急信标，还有一次性着陆火箭。
 
 这算是处理蛮荒人的常用手段，但一般都能起效。不管他们是把这些补给当成你的报酬、贿赂，还是单纯知道在这种基本和星际经贸无缘的环境里，这些补给算是罕有相对高科技的产物，这几箱东西总之对他们能算得上价值非凡。
@@ -23071,7 +23071,7 @@ sdtuRamWrapA,DialogOptionSelected,"$option == sdtu_ramWrap
 $player.wasBeatenBySD","$option = sdtu_ramStartMission 0
 FireBest DialogOptionSelected","他想弄一个什么秘密会议。再也没有比这更完美的复仇机会了。
 
-你的脑海里快速运转，考虑着各种可能 —— 一把掩盖了动能的暗器，一个用来录制他在计划的什么叛国勒索的密谋的隐秘的全息录像装置。带一小队你最精锐的陆战士兵也不太难，他们只要一个隐形的信号就能出动。",,
+你的脑海里快速运转，考虑着各种可能 —— 一把将动能部分隐藏起来的暗器，一个用来录制他在计划的什么叛国勒索密谋的隐藏全息录像装置。带一小队你最精锐的陆战士兵也不太难，他们只要一个隐形的信号就能出动。",,
 sdtuRamWrapB,DialogOptionSelected,$option == sdtu_ramWrap,"$option = sdtu_ramStartMission 0
 FireBest DialogOptionSelected","他想弄一个什么秘密会议。也不知道他的行为在 辛达强权 内是否合法，或者这又代表了各部门之间权力斗争的哪部分。
 
@@ -23199,7 +23199,7 @@ FireBest DialogOptionSelected","你的眼睛快速地四处张望，寻找着能
 光照是由几条正在快速变暗的撕拉式荧光带提供的；毫无用处。你瞥到房间的阴影里有几桶液体 —— 淡水吗？—— 还有几个手提货物箱。它们都被软垫覆盖了，圆边角，确保了零重力环境下的安全。
 
 Ram 的腰带上有把随身武器，他是不用废什么功夫就能轻松抽出来。但如果他靠你更近一些的话...",,
-sdtuRamSafehouseReactionC,DialogOptionSelected,$option == sdtu_ramSafehouse4holorecCheck,$didHolorecCheck = true 0,"在 Ram 怒吼着踱步分心时，你偷看了一眼自己的数据平板。全息录像装置的指标都是绿色，但信号正在快速下降。这安全屋里肯定是有什么干扰 —— 一个自动信号反制装置？
+sdtuRamSafehouseReactionC,DialogOptionSelected,$option == sdtu_ramSafehouse4holorecCheck,$didHolorecCheck = true 0,"在 Ram 怒吼着踱步分心时，你偷看了一眼自己的数据平板。全息录像装置的指标一切正常，但信号正在快速衰减。这安全屋里肯定是有什么干扰 —— 一个自动信号反制装置？
 
 你继续传输的话 Ram 会不会发现？","sdtu_ramSafehouseHolorecOn:继续传输；更多的黑料代表更多筹码
 sdtu_ramSafehouseHolorecOff:关闭传输；记录在硬盘内存上规避警觉",
@@ -23322,8 +23322,8 @@ sdtuRamSafehouse10wepCheckF3,SDTURamMacarioWeaponSword2,,FireAll SDTURamMacarioW
 sdtuRamSafehouse10wepCheck2,DialogOptionSelected,$option == sdtu_ramSafehouse10wepCheck2,FireAll SDTURamMacarioWepDropOpt,对方整个小队纹丝不动，所有人的瞄准激光都稳稳的锁在你身上。,,
 sdtuRamMacarioWeaponDropOpt1,SDTURamMacarioWepDropOpt,"$player.sdtu_gotMarines
 !$did_marines",,,sdtu_ramMacarioMarineTry:说出暗号，召来你的陆战队员,
-sdtuRamMacarioWeaponDropOpt2s,SDTURamMacarioWepDropOpt,$sdtu_multWeps,,,sdtu_ramSafehouse10a:放下武器,
-sdtuRamMacarioWeaponDropOpt2,SDTURamMacarioWepDropOpt,!$sdtu_multWeps,,,sdtu_ramSafehouse10b:放下你的武器,
+sdtuRamMacarioWeaponDropOpt2s,SDTURamMacarioWepDropOpt,$sdtu_multWeps,,,sdtu_ramSafehouse10a:放下所有武器,
+sdtuRamMacarioWeaponDropOpt2,SDTURamMacarioWepDropOpt,!$sdtu_multWeps,,,sdtu_ramSafehouse10b:放下武器,
 sdtuRamMacarioWeaponDropOpt3,SDTURamMacarioWepDropOpt,$player.sdtu_weaponSword,,,sdtu_ramSafehouse10c:确保你的剑鞘扣好,
 sdtuRamMacarioMarineTry,DialogOptionSelected,$option == sdtu_ramMacarioMarineTry,"Call $global.sdtu_ref updateData
 $did_marines = true 0
@@ -23464,7 +23464,7 @@ sdtuSafehouseWrap1,DialogOptionSelected,$option == sdtu_safehouseWrap1,,"""你�
 ""我会发给你一份文件，内容关于 Hyder 副星际元帅手下某名军官。受 Hyder 所托，这位军官会私下面见某位走私贩子，从他那里购买武器。自然，这种行为算是叛国。""
 
 ""Hyder 相信，她必须绕开官方购买武器，才能保证星系防御舰队状态齐整。她倒是没错：狮心卫队确实经常狮子大开口。"" Macario 一边自顾自的开着玩笑，一边发出某种沉郁的怪声 —— 或许是笑声，""准确的说，是在军备购入订单中，经常狮子大开口。总之，既然有她的把柄在手，你要与她对话就有切入口了，也就有杠杆可用了。""",sdtu_safehouseWrap2:继续,
-sdtuSafehouseWrap2,DialogOptionSelected,$option == sdtu_safehouseWrap2,,"""去面见这位军官，逮捕他，他胆敢反抗的话就干掉他，哪怕你顺便把他的舰队全灭，把他的军火私吞也随便，我不计较。我能保证，哪怕情况最糟，我也能让大家认为你是临时起意要为辛达锄奸。""
+sdtuSafehouseWrap2,DialogOptionSelected,$option == sdtu_safehouseWrap2,,"""去面见这位军官，逮捕这个家伙，胆敢反抗的话就干掉，哪怕你顺便把这人属下的舰队全灭，把这货的军火私吞也随便，我不计较。我能保证，哪怕情况最糟，我也能让大家认为你是临时起意要为辛达锄奸。""
 
 ""做这一套，就是为了引出 Hyder。我会让她知道，她的军官是被你私下里截了。这么一来，再考虑下这件事的敏感程度，她八成就要面见你，干掉你，让你噤声。""
 
@@ -23670,9 +23670,9 @@ $player.ethosMercy++
 $global.sdtu_didPatrolTraitorTransfer = true
 $global.sdtu_fulfilledPromiseToPatrolTraitor = true
 AddXP 2500
-FireAll PopulateOptions","辛达强权 前舰队指挥官穿着一件借来的连体衣，痛苦不堪，站都站不稳。那人低声嘟哝了几句表达感谢，然后就汇入了 英仙座星域  飘忽不定的滚滚人流。
+FireAll PopulateOptions","辛达强权 前舰队指挥官穿上了一件借来的连体太空服，看起来即凄凉，又无助。那人低声谢过了不杀之恩，然后就汇入了 英仙座星域  被弃于船外的滚滚人流之中。
 
-不管这个家伙以后究竟会怎么样 —— 是死在 辛达强权 派来报复的刺客手里，或是在某艘海盗船只上当船员，还是加入卢德教会的某个奇怪教派，反正你承诺的事已经办妥了。",,
+无论这个家伙以后究竟会怎么样 —— 是死在 辛达强权 派来报复的刺客手里，或是跑到某艘海盗船只上当船员，还是加入卢德某个奇怪教派，你都已经算是信守承诺了。",,
 ,,,,,,
 ,,,,,,
 # SDTU step 4: Meet Hyder's fleet,,,,,,
@@ -23784,9 +23784,9 @@ sdtuHyderTalk2Transfer,DialogOptionSelected,$option == sdtu_hyderTalk2Transfer,"
 $trust++
 FireAll SDTUHyderOfficerCheckPromise
 $global.sdtu_didPatrolTraitorTransfer = true","""好。"" Hyder 说，然后她命令下属开始转移囚犯的程序。",sdtu_hyderTalk3start:继续,
-sdtuHyderTalk2TransferPromise,SDTUHyderOfficerCheckPromise,$global.sdtu_promisedToHelpPatrolLeader,$player.ethosLiar++,"你和那名军官商定将会把他释放到一个你去过的独立世界上。由于你的失信，这名军官将会看不起你，不过在此之后，那名军官只不过是一个在 英仙座星域 没啥朋友的 辛达强权 流浪军官。
+sdtuHyderTalk2TransferPromise,SDTUHyderOfficerCheckPromise,$global.sdtu_promisedToHelpPatrolLeader,$player.ethosLiar++,"你和那名军官商定将会把他释放到一个你去过的独立世界上。由于你的失信，这名军官将会看不起你，不过说到底，那名军官只不过是一个在 英仙座星域 没啥朋友的 辛达强权 流浪军官。
 
-如果说有什么可以称得上安慰的话，Hyder 的军事法庭可能并没有 Macario 想的那么残酷。",,
+如果说有什么可以称得上安慰的话，Hyder 手下的军事法庭比起 Macario 脑子里的各种折磨点子，论残酷程度要轻上不少。",,
 sdtuHyderTalk2ToMacario,DialogOptionSelected,$option == sdtu_hyderTalk2ToMacario,"AdjustRepPerson hyder VENGEFUL -1
 $trust--","""我明白了。"" Hyder平静地说。
 
@@ -23807,7 +23807,7 @@ sdtuHyderTalk2Promised3A,DialogOptionSelected,$option == sdtu_hyderTalk2Promised
 $trust++
 $global.sdtu_tabledPrisonerTransfer = true","Hyder 看起来正在思考。""然后我们将会发现我们现在陷入死局了，舰长，每个人都发誓要坚守自己的最高职责与忠诚。""
 
-一阵停顿，然后她继续说道：""你的看法是无可辩驳的，舰长。让我们把这件事暂时搁置起来。""
+一阵停顿，然后她继续说道：""你的看法无可辩驳，舰长。让我们把这件事暂时搁置起来。""
 
 听起来她会对你带着犯人逃走这件事睁一只眼闭一只眼。真是有趣，最好配合一下她。",sdtu_hyderTalk3start:继续,
 sdtuHyderTalk2Promised2SD,DialogOptionSelected,"$option == sdtu_hyderTalk2Promised2
@@ -23824,9 +23824,9 @@ sdtuHyderTalk2Promised3B2,DialogOptionSelected,$option == sdtu_hyderTalk2Promise
 $trust++
 $global.sdtu_tabledPrisonerTransfer = true","""有意思。""她的目光游离了一会，想了想别的什么事，但很快她的注意力又回到你身上。
 
-""你的信念毋庸置疑，舰长，这是值得的。让我们先搁置这件事。""
+""你的信念毋庸置疑，舰长，这种信念终究有所值。让我们先搁置这件事。""
 
-听起来她准备让你带着囚犯逃走，却不打算承认。真有趣。最好配合一下。",sdtu_hyderTalk3start:继续,
+听起来她会对你带着犯人逃走这件事睁一只眼闭一只眼。真是有趣，最好配合一下她。",sdtu_hyderTalk3start:继续,
 sdtuHyderTalk2PromisedB,DialogOptionSelected,$option == sdtu_hyderTalk2PromisedB,,"""我明白了，"" Hyder 平静地说。""我很欣赏你的这一点，作为一个军官，你总得遵守诺言的。不过无论如何，统治者制订的各类法条，都会凌驾于你个人的承诺之上。""
 
 她闭上眼睛，思考一阵，轻叹了一口气，然后说道：""给我一份你上次看目击那名军官的报告，在我看来，若是还要维护法律权威，这已经是可接受范围内你最基础的职责了。""","sdtu_hyderReleasedInfo:""我会的。""
@@ -23840,11 +23840,11 @@ $option = sdtu_hyderReleasedInsist2 0
 FireBest DialogOptionSelected",,,
 sdtuHyderReleasedInsist2,DialogOptionSelected,$option == sdtu_hyderReleasedInsist2,,"Hyder 看起来非常不快。""然后我们将会发现我们现在陷入死局了，舰长，每个人都发誓要坚守自己认定的职责。""
 
-一阵停顿，然后她继续说道：""你的看法是无可辩驳的，舰长。让我们把这件事暂时搁置起来。""
+一阵停顿，然后她继续说道：""你的看法无可辩驳，舰长。让我们把这件事暂时搁置起来。""
 
 听起来她会对你带着犯人逃走这件事睁一只眼闭一只眼。真是有趣，最好配合一下她。",sdtu_hyderTalk3start:继续,# trust is a wash here
 sdtuHyderReleaseInsistCom1,DialogOptionSelected,$option == sdtu_hyderTalk2Promised3B,"AdjustRepPerson hyder VENGEFUL -1
-$trust--","Hyder 的表情凝固了。""难道对 辛达强权 发下的就职宣誓对你来说毫无意义？你立下过誓言。那它们现在又算什么？""","sdtu_hyderReleaseInsistCom1a:""你是对的，我曾发过的誓言是更加重要的。我将会做一份报告。"" 
+$trust--","Hyder 的表情凝固了。""难道对 辛达强权 发下的就职宣誓对你来说毫无意义？你立下过誓言。那它们现在又算什么？""","sdtu_hyderReleaseInsistCom1a:""你是对的，我曾发过的誓更加重要。我将会做一份报告。"" 
 sdtu_hyderReleaseInsistCom1b:""如果我连自己内心的正义都不遵从的话，那我只不过是一个懦夫，我自愿接受一切后果。""",
 sdtuHyderReleaseInsistCom1b,DialogOptionSelected,$option == sdtu_hyderReleaseInsistCom1b,"$option = sdtu_hyderReleasedInsist2 0
 FireBest DialogOptionSelected",她看着你，盘算着一些让她不高兴的事情。,,
@@ -23879,7 +23879,7 @@ FireBest DialogOptionSelected","""所以你是 Macario 手下的喽啰。"" Hyde
 她深深地吸了一口气。",,
 sdtuHyderTalk2BattleLieC,DialogOptionSelected,$option == sdtu_hyderTalk2BattleLieC,,"Hyder 闭上了她的眼睛并擦了擦她的鼻梁；看来她不喜欢和你陷入谎言和反谎言的无尽泥潭中。
 
-""这太 Macario 了。"" 她最终说道，现在她的愤怒 —— 绝大部分 —— 都从你那里转移了。""游戏到此为止！现在立马把犯人给我交过来！只有这样才能进行一个正规的军事法庭审判。""
+""这太 Macario 了。"" 她最终说道，现在她的愤怒 —— 绝大部分 —— 都从你那里转移了。""游戏到此为止！现在立马把犯人给我交过来！只有这样才能进行正规的军事法庭审判。""
 
 她对你怒目而视。""凡事都要按次序办，每个人都各司其职。这就是 辛达强权 的行事风格。""","sdtu_hyderTalk2Transfer:""我马上就将那家伙交给你。""
 sdtu_hyderTalk2PrisonerToMacarioFinal:""Macario 发布了这则逮捕令。我会把这位军官交给他。""",
@@ -23927,7 +23927,7 @@ $trust < 1",,,"sdtu_hyderTalk3BossTalkAndrada:""然后你最后一次碰见 Andr
 sdtuHyderTalk3OptionsI,SDTUHyderTalk3Options,"$saidBoss
 !$saidAndrada
 $trust >= 2
-!$global.knowsMacarioThinksAndradaIrrelevant",,,"sdtu_hyderTalk3WaitAndrada:""'若是还有 Andrada 管理'？就是说，Andrada 已经没有行动能力了？""",
+!$global.knowsMacarioThinksAndradaIrrelevant",,,"sdtu_hyderTalk3WaitAndrada:""'若是 Andrada 尚有余心'？就是说，Andrada 已经没有行动能力了？""",
 sdtuHyderTalk3OptionsI2,SDTUHyderTalk3Options,"$saidBoss
 !$saidAndrada
 $trust == 1
@@ -24237,7 +24237,7 @@ $saidStuff++","""她能注意到这点真是太好了，"" 他说道。""可惜�
 sdtuPostHyderCaden,DialogOptionSelected,$option == sdtu_postHyderCaden,"$saidCaden = true 0
 FireAll SDTUPostHyderReports
 $saidStuff++
-$global.sdtu_gotMacarioOpinionOfCaden = true","""嗯，对。"" Macario 向后靠着，几根手指随意敲着，说，""她的看法倒是没错。哈，Caden！想想他掌权是个什么样子：整个世界分崩离析之时，那货却还在纠结着穿着打扮，忙着组织阅兵！"" 
+$global.sdtu_gotMacarioOpinionOfCaden = true","""嗯，对。"" Macario 向后靠着，几根手指随意敲着，""她的看法倒是没错。哈，Caden！想想他掌权是个什么样子：整个世界分崩离析之时，那货却还在纠结着穿着打扮，忙着组织阅兵！"" 
 
 ""不用担心。"" 他愉快地说道，""只要给 Caden 足够多的小事，分散他的注意力，让他当个空架子领袖也挺合适。""",,
 sdtuPostHyderHerLead,DialogOptionSelected,$option == sdtu_postHyderHerLead,"$saidHyderNoLead = true 0
@@ -24247,7 +24247,7 @@ sdtuPostHyderSupply,DialogOptionSelected,$option == sdtu_postHyderSupply,"$saidH
 FireAll SDTUPostHyderReports
 $saidStuff++","""至少她把事情搞清楚了."" Macario 检查了一下指甲上有没有脏东西。
 
-""这下子，Hyder 就得更有效地利用她手上的资源，还得更隐秘地搞违禁品了。我发现，许多下属受到压力之后，还能茁壮成长。"" 他又补上了一句，语气像是他在帮忙似的。
+""这下子，Hyder 就得更有效地利用她手上的资源，还得更隐秘地搞违禁品了。我发现，许多下属受到压力之后，反倒能茁壮成长。"" 他又补上了一句，语气像是他在帮忙似的。
 
 ""嗯..."" 他考虑着，""当然，茁壮成长与否，终究要取决于具体情况。""",,
 sdtuPostHyderLieBacksCaden,DialogOptionSelected,$option == sdtu_postHyderLieBacksCaden,"$saidStuff++
@@ -24293,22 +24293,22 @@ FireAll SDTUPostHyderLies","""不！"" 他大惊失色，喊道，""那她就要
 
 说着说着，他的双手又开始不自觉的摩挲起来，目光也开始四处游移，""有很多...很多事得想，很多事得做...""",,
 sdtuPostHyderMission1,DialogOptionSelected,$option == sdtu_postHyderMission1,FireBest SDTUPostHyderUsefulnessCheck,,sdtu_postHyderMission2:继续,
-sdtuPostHyderUsefulnessCheckA,SDTUPostHyderUsefulnessCheck,$saidStuff <= 1,AdjustRepPerson macario VENGEFUL -1,"""我必须承认，你让我感到失望，舰长。"" Macario 向后靠着，双手合十，目光注视着你。""或许，繁星能原谅我的举止，但或许你并没有完全坦诚？"" 
+sdtuPostHyderUsefulnessCheckA,SDTUPostHyderUsefulnessCheck,$saidStuff <= 1,AdjustRepPerson macario VENGEFUL -1,"""我必须承认，你让我感到失望，舰长。"" Macario 向后靠着，双手握在一起，目注视着你，""或许 —— 请繁星原谅我的举止 —— 但或许，你并没有完全坦诚？"" 
 
-""我非常讨厌我们之间的潜在合作机会被......怎么说呢，用一个卢德的说法，'毁于一旦'，我相信是这样说的吧？现在我们有一个象征了。"" 他毫不迷人地微笑着。
+""我非常讨厌我们之间这次小小合作的潜能......怎么说呢，用一个卢德的说法，'无果而终'，我相信是这样说的吧？这么说形象点。"" 他毫不迷人地微笑着。
 
 ""说到这里，让我给你另一个展示你价值的机会。"" 他停顿了一下，然后以一种不完全威胁的语气补充道，""我相信到最后你会留下这样一个印象，那就是我可以非常宽容。""",,
 sdtuPostHyderUsefulnessCheckB,SDTUPostHyderUsefulnessCheck,"$saidStuff > 1
 $saidStuff < 3",,"他停顿了一下，似乎注意到自己的双手紧紧握在一起，力度大到就像它们想要勒死彼此一样。他故意将手砸到桌上。
 
-""这只是轻微的兴趣。我想是为了确认其他消息源吧，""他向后靠着。""啊，情报收集的例行工作。毕竟并不是所有事情都会以一声枪响而戏剧性地结束，对吧？"" 
+""我有些感兴趣了。不如，我觉得，再确认一下其他信源？""他向后靠着，""啊，情报收集的例行工作哟，并不是所有事情都会以一声戏剧性的枪响作结，对吧？"" 
 
-""但你很幸运，我已经为你考虑到了这一点。"" 他把自己给逗乐了，""不，不，不是为了你。而是为了 Caden 的一名在 Umbra 的特工。我应该解释一下的。""",,
+""但你很幸运，我为你考虑的工作就是如此。"" 他把自己给逗乐了，""不，不，不是说要射杀你，而是要你处理 Caden 在 Umbra 的一名特工。让我解释一下。""",,
 sdtuPostHyderUsefulnessCheckC,SDTUPostHyderUsefulnessCheck,$saidStuff >= 3,AdjustRepPerson macario FRIENDLY 1,"""说实话，"" Macario 停顿了一下，压制住了一个奇怪的声音，像是打嗝，""你给我提供了很多启示。""
 
-他向后靠着，双手合十。""如果你更加谨慎的话，你可以成为一个合格的特工。"" 他茫然地笑了笑。""要更加谨慎才行。""
+他向后靠着，双手握在一起。""如果你更加谨慎的话，你可以成为一个合格的特工。"" 他茫然地笑了笑。""要更加谨慎才行。""
 
-""幸运的是，我刚好有合适的东西，正好合适。自行裁量权的等级取决于你；你会发现，与他们在我身上撒的谎相反，我的监督非常宽松。如果你需要从轨道上打下来几个小家伙来营救一个特工，那么我接受你的专业判断。但是让我来解释一下...""",,
+""幸运的是，我刚好有合适的情况，正好合适。自行裁量的等级取决于你；你会发现，与他们在我身上撒的谎相反，我的监督非常宽松。如果你需要搞轨道轰炸轰平几个定居点来营救一个特工，那么我接受你的专业判断。但是让我来解释一下...""",,
 sdtuPostHyderMission2,DialogOptionSelected,$option == sdtu_postHyderMission2,"AddTextSmall ""在 Umbra 收到了 狮心卫队 双面特工 的文件"" highlight","Macario 在个你看不到的数据平板上敲了几下。
 
 ""狮心卫队 当然有它们自己的情报部门。拘泥于让一脸正气的年轻人去端正意识形态，示范热血忠诚。"" 他的语气像是个很有耐心的恩师一样，""却不重视间谍情报技术。"" 
@@ -24452,7 +24452,7 @@ AdjustRepActivePerson FRIENDLY 5","""哦，当然了，我们两边不可能在�
 ""还有，呃...愿卢德赐福于你？"" $HeOrShe略带尴尬地补充。","sdtu_umbraTrickVIPending1:""也赐福于你。那么，这个特工的事...""",
 sdtuUmbraTrickVIPOptionG2,DialogOptionSelected,$option == sdtu_umbraTrickVIPG,"$global.toldARCplayerIsSiyavong = true
 $player.ethosLiar++
-AdjustRepActivePerson FRIENDLY 1","""啊，你从 联盟 来的呀。"" $HeOrShe抬了抬$hisOrHer的下巴，""英仙座联盟 是一伙信奉军国主义的压迫者同盟，但和 辛达强权 相比，还不算那么可憎。Siyavong 公民，我方将接受贵方的援助。"" $heOrShe说道，语气颇显大方。","sdtu_umbraTrickVIPending1:""您竟如此宽宏大量。那么关于这个特工...""",
+AdjustRepActivePerson FRIENDLY 1","""啊，你从 联盟 来的呀。"" $HeOrShe抬了抬$hisOrHer的下巴，""英仙座联盟 是一伙信奉军国主义的压迫者同盟，但和 辛达强权 相比，还不算那么可憎。Siyavong 公民，我方将接受贵方的援助。"" $heOrShe说道，语气颇显大方。","sdtu_umbraTrickVIPending1:""您竟如此宽宏大量。那么这个特工...""",
 sdtuUmbraTrickVIPending1,DialogOptionSelected,$option == sdtu_umbraTrickVIPending1,$global.sdtu_oweARCfavor = true,"""当然了。我们不会忘记你的贡献。我会把叛徒交给你，但是... 原则上本应该让此等叛徒接受我们的革命审判才是。""
 
 $HeOrShe说到此处，摆出一副大方的神态：""不过，我们的目的是建立友谊。一切为了联合战线，是吧？所以当有一天我们向你寻求帮助的时候，希望你能将心比心。总而言之，一切为了联合战线。""
@@ -24532,7 +24532,7 @@ sdtuCadenGreeting,SDTUCadenGreeting,,,"""独立舰队舰长！""他站着吼道�
 他低头看下通讯器，摆出了一个明显排练过的姿势以体现他的权威和威吓力，随后才以低沉嘶哑的声音开口。
 
 ""这是致命的错误，但很快便会被更正。""",sdtu_cadenTalk1:继续,
-sdtuCadenGreetingSD,SDTUCadenGreeting,$player.fcm_faction == sindrian_diktat,,"""你！一个宣誓效忠于辛达强权辅助军的舰长！""他站着吼到。""你的行为真是不可理喻！阻挠最高元首的意志？""他低头看下通讯器，摆出了一个明显排练过的姿势以体现他的权威和威吓力，随后以低沉嘶哑的声音开口了。""这是致命的错误，但很快便会被更正。""",sdtu_cadenTalk1:继续,
+sdtuCadenGreetingSD,SDTUCadenGreeting,$player.fcm_faction == sindrian_diktat,,"""你！一个宣誓效忠于辛达强权辅助军的舰长！""他站着吼到。""你的行为真是不可理喻！竟敢阻挠最高元首的意志？""他低头看下通讯器，摆出了一个明显排练过的姿势以体现他的权威和威吓力，随后以低沉嘶哑的声音开口了。""这是致命的错误，但很快便会被更正。""",sdtu_cadenTalk1:继续,
 sdtuCadenGreetingHeg,SDTUCadenGreeting,$player.fcm_faction == hegemony,,"""听好了，外来的恐怖分子及煽动者！""他站着吼道。""我就知道虚伪腐败的霸主会耍这种下作的手段！""他低头看下通讯器，摆出了一个明显排练过的姿势以体现他的权威和威吓力，随后以低沉嘶哑的声音开口了。""这是致命的错误，但很快便会被更正。""",sdtu_cadenTalk1:继续,
 sdtuCadenTalk1,DialogOptionSelected,$option == sdtu_cadenTalk1,FireAll SDTUCadenAgentOptions,"他转过身，彷佛你根本不配与他正面交谈。""你抓捕了归属于我辖下的人员。立刻将其归还，我或许还能考虑在宣布对你的处分时开恩。""",,
 sdtuCadenAgentC,SDTUCadenAgentOptions,,,,"sdtu_cadenAgentMacario1:""Macario 发现你的特工是个叛徒。我有证据。""",
@@ -24728,15 +24728,15 @@ FireAll SDTUCadenExecReplies2","""现在。"" 他停了下来，转过身。
 
 ""太空佬，你有些太口无遮拦了。"" 他的口气中有着威胁的意味。
 
-""这话可以理解为支持恐怖主义，反辛达的煽动，以及散步针对正当政权的恶意谣言。只要..."" 他脸上露出一个得意的笑容，""我如此认定。""",,
-sdtuCadenHyderBackWarn1,DialogOptionSelected,$option == sdtu_cadenHyderBackWarn1,$saidHyder = true 0,"""不会？"" Caden 不耐烦地问，""无稽之谈，除了我还能支持谁？""","sdtu_cadenHyderExec1:""她自己。Hyder 会试图争夺 最高元首 一位。""
+""这话可以理解为支持恐怖主义，反辛达的煽动，以及散布针对正当政权的恶意谣言。只要..."" 他脸上露出一个得意的笑容，""我如此认定。""",,
+sdtuCadenHyderBackWarn1,DialogOptionSelected,$option == sdtu_cadenHyderBackWarn1,$saidHyder = true 0,"""不会？"" Caden 不耐烦地问，""无稽之谈，除了我还能支持谁？""","sdtu_cadenHyderExec1:""她自己。Hyder 会试图争夺 最高元首 之位。""
 sdtu_cadenHyderBacksMac1:""Macario。他只相信他自己。""",
 sdtuCadenHyderExec1,DialogOptionSelected,$option == sdtu_cadenHyderExec1,"$global.sdtu_toldCadenHyderBacksHyder = true
 FireAll SDTUCadenExecReplies2","""你这话跟 Macario 最疑神疑鬼时胡扯的东西一个样子。""
 
-他从军方上弹掉了些并不存在的灰尘。""Hyder 是个鼠目寸光的小人物。她只在乎无足轻重的规定和日常数据。我指挥的 狮心卫队 所向无敌：我们配有最好的装备，我们的领导遵循 Andrada 核心理念；整个星域里都找不出比我们更加优秀的舰队。如果要是轮到主力交战..."" 
+他从军服上弹掉了些并不存在的灰尘。""Hyder 是个鼠目寸光的小人物。她只在乎无足轻重的规定和日常数据。我指挥的 狮心卫队 所向无敌：我们配有最好的装备，我们的领导遵循 Andrada 核心理念；整个星域里都找不出比我们更加优秀的舰队。如果要是轮到主力交战..."" 
 
-他停顿了一下，或许他理解了海军浪费于内战中会对 强权 造成的后果。
+他停顿了一下，或许他理解了将海军浪费在内战中会对 强权 造成的后果。
 
 ""不会走到那一步的。"" 他颇为自信地做出了这一总结。",,
 sdtuCadenHyderBacksMac1,DialogOptionSelected,$option == sdtu_cadenHyderBacksMac1,"$global.sdtu_toldCadenHyderBacksMacario = true
@@ -25021,7 +25021,7 @@ $sdtu_stage == EMERGENCY_INTERCEPT",FireAll SDTUMercOptions,"通讯链接打开�
 ""独立舰队，""雇佣兵带着无聊的专业语气说道。""我已签约执行一项仍在进行中的行动。你必须立即离开这片区域。""",,
 sdtuMercOptionsB,SDTUMercOptions,$player.fcm_faction == sindrian_diktat,,,"sdtu_mercSDCom1:""你处于 辛达强权 的星区内！我才是在这下命令的人 。""",
 sdtuMercOptionsC,SDTUMercOptions,,,,"sdtu_mercReact1whatDoing:""你在干什么？""",
-sdtuMercOptionsD,SDTUMercOptions,,,,"sdtu_mercReact1meetShip:""我在这等待一艘船或者一支舰队。""",
+sdtuMercOptionsD,SDTUMercOptions,,,,"sdtu_mercReact1meetShip:""我在这等待一艘船或者一支舰队.""",
 sdtuMercOptionsE,SDTUMercOptions,,,,"sdtu_mercReact1whoWork:""你在为谁办事？""",
 sdtuMercOptionsF,SDTUMercOptions,,,,"sdtu_mercReact1debris:""我必须调查那个残骸区。""",
 sdtuMercOptionsG,SDTUMercOptions,,,,"sdtu_mercReact1onMyWay:""我现在就离开。""",
@@ -25153,7 +25153,7 @@ FireBest SDTUNewsEndOptions
 $didPayment = true 0","""自然。"" Macario 按了下数据平板。",,
 sdtuNewsEndOptions,SDTUNewsEndOptions,,Call $global.sdtu_ref playMusicMacario,"""决断的一刻总会来临的，我亲爱的舰长。"" 他按了下数据平板。
 
-""我相信你应该能喜欢我...慷慨的领导方式。""","sdtu_returnNewsEndLoyal:""你到底忠心与谁，Macario？""
+""我相信你应该能喜欢我...慷慨的领导方式。""","sdtu_returnNewsEndLoyal:""你到底效忠谁，Macario？""
 sdtu_returnNewsEndHull:""上次对话时你提到了一个 '实验舰体' ...""",
 sdtuNewsEndOptionsPay,SDTUNewsEndOptions,!$didPayment,"AddCredits 150000
 $didPayment = true 0
@@ -29505,9 +29505,9 @@ HistorianBackstoryBlurb04,HistorianBackstoryBlurb,!WasHistorianBlurbShown histor
 $HeOrShe阴郁地笑了笑，""不过，那不就是每天的常态吗？啊，不管怎样，我还有太多工作要做...""",,
 HistorianBackstoryBlurb05,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb05,SetHistorianBlurbShownAfterDelay historyBlurb05,"""外星人！哈哈。不，从来没有文件证明能那玩意儿存在，"" $heOrShe强调着念出，""正史。""
 
-""是的是的，如果你想见识下 异种生命，就去 Jangala，带上你的药片，然后洗个隔离澡。""
+""是的是的，如果你想见识下 异种生命，就去 Jangala，别忘了吃药片，再洗个隔离澡。""
 
-""但那根本就不是我们想要的，对吧。我们想要的是有像我们一样的其他人存在，可以与之交谈，可以告诉我们我们并不孤单，可以给我们答案。一个关心我们的人。也许我们找错了地方？或者思考的方式不对？"" $heOrShe摇了摇的$hisOrHer头，打消了这个念头。""哈，但这已经变成了猜测。不是我的专长！""",,
+""但那种根本就不是我们想要的，对吧。我们想要发现的是有像我们一样的其他人，那种可以交谈，可以告诉我们我们并不孤单，可以给我们答案的人。在意我们存在的人。也许我们找错了地方？或者思考的方式不对？"" $heOrShe摇了摇的$hisOrHer头，打消了这个念头。""哈，但这已经变成了猜测。不是我的专长！""",,
 HistorianBackstoryBlurb06,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb06,SetHistorianBlurbShownAfterDelay historyBlurb06,"""我们都听过攻势战列舰的故事，说它是抵抗外星威胁的终极武器。"" $HeOrShe不屑地挥了挥手，嘲讽道，""就好像我们活在某个关于英勇英雄与邪恶外星人的军事科幻全息影像里。""
 
 ""伟大的、改变历史进程的接触并不是那样的，至少在我们的知识体系中不是。它更加令人困惑；混乱无序。它会破坏社会的整个认知意识形态的基础，迫使社会在认识基础遭受重创的情况下进行重组。而且，为了吸取这些教训，总会有很多人牺牲。""
