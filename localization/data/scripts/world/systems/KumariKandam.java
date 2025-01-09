@@ -52,7 +52,7 @@ public class KumariKandam {
 		
 		
 			// Beholder Station
-			SectorEntityToken beholder_station = system.addCustomEntity("beholder_station", "守望者 空间站", "station_side05", "luddic_church");
+			SectorEntityToken beholder_station = system.addCustomEntity("beholder_station", "Beholder 空间站", "station_side05", "luddic_church");
 			beholder_station.setCircularOrbitPointingDown(system.getEntityById("kumari_aru"), 270, 430, 30);		
 			beholder_station.setCustomDescriptionId("station_beholder");
 			beholder_station.setInteractionImage("illustrations", "luddic_shrine");
