@@ -13425,7 +13425,7 @@ gaATGcontactYaribayA4,DialogOptionSelected,$option == gaATG_contactYaribayA4,"Ad
 FireAll GAATGcontactYaribayHub","Horus 眯起眼，""的确是。而且有这个必要。精英阶层的同意对和平的政治演变来说是必不可少的。我不用向你证明我的立场，这是基于实际情况的论断，而且也确实站得住脚。""",,
 gaATGcontactYaribayB1,DialogOptionSelected,$option == gaATG_contactYaribayB1,$didOptionB = true,"""对 联盟 管辖的星球进行同化是 霸主 的政策之一，也是他们重建人之领的计划中不可或缺的一环，不过他们合法性的基石就另当别论了。""
 
-Horus 看向一边，你感觉到他是在重复某个之前多次提出的论点，""公开的说法是，霸主 的要求是 '无条件的'。在Mayasura 的事情之后，他们还能继续这样做吗？他们必须妥协。""
+Horus 看向一边，你感觉到他是在重复某个之前多次提出的论点，""公开的说法是，霸主 的要求是 '无条件的'。在 Mayasura 的事情之后，他们还能继续这样做吗？他们必须妥协。""
 
 ""但我能理解他们为什么这样做，他们维持着坚强的外表，以赢得群众和下级军官的支持，再加上，"" 他摇了一下头，""卢德教会 总是挡着他们的路。""",gaATG_contactYaribayB2:继续,
 gaATGcontactYaribayB2,DialogOptionSelected,$option == gaATG_contactYaribayB2,FireAll GAATGcontactYaribayHub,"""霸主 的高级领导人，尤其是至高霸主 Baikal Daud，对各种事情的实际看法一定比他们公开声称的更加清楚。他们知道，他们必须高举旗帜，以钢铁的决心走到鲜血的终点—— 直到他们为自己的人民带来一场伟大的胜利：霸主与联盟 和解。不用打仗就能获得胜利。想想吧！""
@@ -22086,10 +22086,10 @@ defaultGreetingKanta,PickGreeting,$id == kanta score:1000,,在短暂的等待后
 defaultGreetingCydonia,PickGreeting,$id == cydonia score:1000,,在短暂的等待后，你的连接请求被拒绝了。,0:cutCommLink:切断通讯链接,
 kdPortmasterAskForKanta,PopulateOptions,"$market.id == kantas_den
 $postId == portmaster
-!$askedForKanta",$askedForKanta = true 1,,"kd_OtherPostTalkToKanta:""我想和 Andrada 谈谈。""",
+!$askedForKanta",$askedForKanta = true 1,,"kd_OtherPostTalkToKanta:""我想和 Kanta 谈谈。""",
 kdQuartermasterAskForKanta,PopulateOptions,"$market.id == kantas_den
 $postId == supplyOfficer
-!$askedForKanta",$askedForKanta = true 1,,"kd_OtherPostTalkToKanta:""我想和 Andrada 谈谈。""",
+!$askedForKanta",$askedForKanta = true 1,,"kd_OtherPostTalkToKanta:""我想和 Kanta 谈谈。""",
 kdOtherPostAskKanta,DialogOptionSelected,$option == kd_OtherPostTalkToKanta,FireAll PopulateOptions,"$HeOrShe冲你眨了眨眼。
 
 ""那你为什么要和我说话？你自己打给她吧。"" $heOrShe冷笑道。
@@ -29849,7 +29849,7 @@ $hasMarket","FireBest BarShuttleDownPrintDesc
 FireBest BarPrintDesc
 $option = barOOCfreeDrink 0
 FireBest DialogOptionSelected",,,
-BarOwnColFreeDrink0,DialogOptionSelected,$option == barOOCfreeDrink,$player.gotFreeDrinkFromOwnColony = true,"一位服务员出现在你面前，手中的银盘上正式你最爱的饮品。 
+BarOwnColFreeDrink0,DialogOptionSelected,$option == barOOCfreeDrink,$player.gotFreeDrinkFromOwnColony = true,"一位服务员出现在你面前，手中的银盘上正是你最爱的饮品。 
 
 ""店家招待的。""","barOwnColFreeDrink0A:""呃，谢谢。""
 barOwnColFreeDrink0B:接过饮料

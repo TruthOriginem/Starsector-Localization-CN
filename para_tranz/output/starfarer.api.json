@@ -5784,9 +5784,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/SolarArray.class#\"Counters the effects of \"",
         "original": "Counters the effects of ",
-        "translation": "因抵御了 ",
+        "translation": "抵消 ",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/SolarArray.class 的第0136个常量\n原始数据：\"Counters the effects of \"\n译文数据：\"因抵御了 \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/SolarArray.class 的第0136个常量\n原始数据：\"Counters the effects of \"\n译文数据：\"抵消 \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/StealthMinefields.class#\"Stealth minefields\"",
@@ -6393,9 +6393,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/impl/Cryorevival$CryosleeperFactor.class#\"The nearest cryosleeper is located in the \"",
         "original": "The nearest cryosleeper is located in the ",
-        "translation": "最近的低温休眠舱位于 ",
+        "translation": "最近的低温休眠舰位于 ",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/impl/Cryorevival$CryosleeperFactor.class 的第0087个常量\n原始数据：\"The nearest cryosleeper is located in the \"\n译文数据：\"最近的低温休眠舱位于 \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/impl/Cryorevival$CryosleeperFactor.class 的第0087个常量\n原始数据：\"The nearest cryosleeper is located in the \"\n译文数据：\"最近的低温休眠舰位于 \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/impl/Cryorevival$CryosleeperFactor.class#\"a Cryorevival Facility built here to operate at %s effectiveness.\"",
@@ -6477,9 +6477,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/impl/Cryorevival.class#\"Distance to nearest cryosleeper: %s \"",
         "original": "Distance to nearest cryosleeper: %s ",
-        "translation": "因与最近的低温休眠舱相距：%s ",
+        "translation": "因与最近的低温休眠舰相距：%s ",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/impl/Cryorevival.class 的第0148个常量\n原始数据：\"Distance to nearest cryosleeper: %s \"\n译文数据：\"因与最近的低温休眠舱相距：%s \"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/impl/Cryorevival.class 的第0148个常量\n原始数据：\"Distance to nearest cryosleeper: %s \"\n译文数据：\"因与最近的低温休眠舰相距：%s \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/impl/Cryorevival.class#\"If any demand is unmet, the maximum growth bonus is reduced by %s.\"",
@@ -6519,9 +6519,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/impl/Cryorevival.class#\"Requires in-system cryosleeper\"",
         "original": "Requires in-system cryosleeper",
-        "translation": "需要低温休眠舱",
+        "translation": "需要低温休眠舰",
         "stage": 1,
-        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/impl/Cryorevival.class 的第0199个常量\n原始数据：\"Requires in-system cryosleeper\"\n译文数据：\"需要低温休眠舱\"\n\n"
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/impl/Cryorevival.class 的第0199个常量\n原始数据：\"Requires in-system cryosleeper\"\n译文数据：\"需要低温休眠舰\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/impl/Cryorevival.class#\"light-year\"",
@@ -31157,11 +31157,25 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$4.class 的第0117个常量\n原始数据：\"You decide to...\"\n译文数据：\"你决定...\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class#\"Extreme\"",
+        "original": "Extreme",
+        "translation": "极高",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class 的第0089个常量\n原始数据：\"Extreme\"\n译文数据：\"极高\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class#\"Heavy\"",
         "original": "Heavy",
         "translation": "很高",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class 的第0079个常量\n原始数据：\"Heavy\"\n译文数据：\"很高\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class#\"High\"",
+        "original": "High",
+        "translation": "高",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class 的第0077个常量\n原始数据：\"High\"\n译文数据：\"高\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class#\"Light\"",
@@ -31171,11 +31185,39 @@
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class 的第0058个常量\n原始数据：\"Light\"\n译文数据：\"较低\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class#\"Low\"",
+        "original": "Low",
+        "translation": "低",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class 的第0056个常量\n原始数据：\"Low\"\n译文数据：\"低\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class#\"Medium\"",
+        "original": "Medium",
+        "translation": "中等",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class 的第0065个常量\n原始数据：\"Medium\"\n译文数据：\"中等\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class#\"Minimal\"",
+        "original": "Minimal",
+        "translation": "极低",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class 的第0049个常量\n原始数据：\"Minimal\"\n译文数据：\"极低\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class#\"Moderate\"",
         "original": "Moderate",
         "translation": "普通",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class 的第0067个常量\n原始数据：\"Moderate\"\n译文数据：\"普通\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class#\"None\"",
+        "original": "None",
+        "translation": "无",
+        "stage": 1,
+        "context": "版本：0.97-RC11 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class 的第0033个常量\n原始数据：\"None\"\n译文数据：\"无\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD.class#\"\n\nRequires transponder to be turned off\"",
