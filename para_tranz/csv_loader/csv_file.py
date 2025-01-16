@@ -8,6 +8,8 @@ from pathlib import Path
 from typing import Optional, Set, Union, List, Dict, Tuple
 from ast import literal_eval
 
+from para_tranz.csv_loader.csv_util import rules_csv_find_missing_csv_tokens, \
+    rules_csv_extract_highlight_targets_from_script, rules_csv_find_text_highlight_targets_adjacent_to_non_space
 from para_tranz.utils.config import EXPORTED_STRING_CONTEXT_PREFIX_PREFIX, IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS, MAP_PATH, REMOVE_TRANSLATION_WHEN_ORIGINAL_IS_EMPTY, EXPORTED_STRING_CONTEXT_PREFIX
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, CsvMapItem
 from para_tranz.utils.util import relative_path, String, DataFile, contains_chinese, replace_weird_chars, make_logger, \
@@ -36,26 +38,6 @@ class CsvFile(DataFile):
 
         self.load_from_file()
 
-        self.validate()
-
-    # 读取完毕后检查数据有效性
-    def validate(self):
-        # 检查指定的id列和文字列在游戏文件中是否存在
-        if (type(self.id_column_name) == str and self.id_column_name not in self.column_names) and (
-                not set(self.id_column_name).issubset(set(self.column_names))):
-            raise ValueError(
-                f'从 {self.path} 中未找到指定的id列 "{self.id_column_name}"，请检查配置文件中的设置。可用的列包括： {self.column_names}')
-        if not set(self.text_column_names).issubset(set(self.column_names)):
-            raise ValueError(
-                f'从 {self.path} 中未找到指定的文字列 {self.text_column_names}，请检查配置文件中的设置。可用的列包括： {self.column_names}')
-        # 检查原文与译文数量是否匹配
-        if len(self.original_data) != len(self.translation_data):
-            self.logger.warning(
-                f'文件 {relative_path(self.path)} 所加载的原文与译文数据量不匹配：加载原文 {len(self.original_data)} 条，译文 {len(self.translation_data)} 条')
-        if len(self.original_id_data) != len(self.translation_id_data):
-            self.logger.warning(
-                f'文件 {relative_path(self.path)} 所加载的未被注释且不为空的原文与译文在去数据量不匹配：加载有效原文 {len(self.original_id_data)} 条，有效译文 {len(self.translation_id_data)} 条')
-
     # 将数据转换为 ParaTranz 词条数据对象
     def get_strings(self) -> List[String]:
         strings = []
@@ -66,16 +48,9 @@ class CsvFile(DataFile):
             if not any(row_id) or first_column.startswith('#'):
                 continue
             
-            # 将行ID转换为字符串，以便作为词条的key
-            # 如果行ID只有一个元素，则直接转换为字符串，否则转换为元组字符串
-            if len(row_id) == 1:
-                row_id_str = row_id[0]
-            else:
-                row_id_str = str(row_id)
-            
             context = self.generate_row_context(row)
             for col in self.text_column_names:
-                key = f'{self.path.name}#{row_id_str}${col}'  # 词条的id由 文件名-行id-列名 组成
+                key = self.generate_string_key(row_id, col)
                 original = row[col]
                 translation = ''
                 stage = 0
@@ -98,6 +73,16 @@ class CsvFile(DataFile):
                 strings.append(String(key, original, translation, stage, context))
         return strings
 
+    def generate_string_key(self, row_id: Tuple, column: str) -> str:
+        # 将行ID转换为字符串，以便作为词条的key
+        # 如果行ID只有一个元素，则直接转换为字符串，否则转换为元组字符串
+        if len(row_id) == 1:
+            row_id_str = row_id[0]
+        else:
+            row_id_str = str(row_id)
+        return f'{self.path.name}#{row_id_str}${column}' # 词条的id由 文件名-行id-列名 组成
+
+
     # 将传入的 ParaTranz 词条数据对象中的译文数据合并到现有数据中
     def update_strings(self, strings: Set[String], version_migration:bool=False) -> None:
         for s in strings:
@@ -119,8 +104,6 @@ class CsvFile(DataFile):
                                                 f'将该译文设为空字符串')
                             self.translation_id_data[row_id][column] = ''
                     else:
-                        if '“' in s.translation or '”' in s.translation:
-                            raise ValueError(f'文件 {self.path} 中 {self.id_column_name}="{row_id}" 的行中 "{column}" 列译文数据中包含中文引号，请移除后再导入')
                         # 更新译文数据
                         self.translation_id_data[row_id][column] = s.translation
                 elif contains_chinese(self.translation_id_data[row_id][column]):
@@ -129,8 +112,42 @@ class CsvFile(DataFile):
             else:
                 self.logger.warning(f'在文件 {self.path} 中没有找到 {self.id_column_name}="{row_id}" 的行，未更新该词条。原文可能已删除，请考虑删除该译文词条')
 
+    def validate_before_save(self) -> None:
+        for row_id, translated_row in self.translation_id_data.items():
+            original_row = self.original_id_data[row_id]
+            # 检查译文是否包含中文引号
+            for col, translated_value in translated_row.items():
+                if '“' in translated_value or '”' in translated_value:
+                    raise ValueError(f'key="{self.generate_string_key(row_id, col)}" 的词条中译文数据包含中文引号，请移除后再保存')
+            # 针对 rules.csv 的特殊检查
+            if self.path.name == 'rules.csv':
+                # 如果译文不为空
+                if translated_row['text']:
+                    # 检查译文是否包含原文里的每一个格式为 $var 的变量名
+                    for col, translated_value in translated_row.items():
+                        original_value = original_row[col]
+                        missing_tokens = rules_csv_find_missing_csv_tokens(original_value, translated_value)
+                        if missing_tokens:
+                            self.logger.warning(f'key="{self.generate_string_key(row_id, col)}" 的词条中译文数据缺失了原文中的token {missing_tokens}，请检查')
+                    # 检查译文中的高亮目标是否存在，且被空格包围
+                    script = translated_row['script']
+                    highlights = rules_csv_extract_highlight_targets_from_script(script)
+                    original_text = original_row['text']
+                    translated_text = translated_row['text']
+
+                    missing_highlights_original = {highlight for highlight in highlights if highlight not in original_text}
+                    missing_highlights = {highlight for highlight in highlights if highlight not in translated_text} - missing_highlights_original
+                    if missing_highlights:
+                        self.logger.warning(f'key="{self.generate_string_key(row_id, "text")}" 的词条中译文数据中缺失了高亮命令目标 {missing_highlights}，请检查译文数据或script列内容(key="{self.generate_string_key(row_id, "script")}")')
+
+                    not_surrounded_highlights = rules_csv_find_text_highlight_targets_adjacent_to_non_space(translated_text, highlights) - missing_highlights - missing_highlights_original
+                    if not_surrounded_highlights:
+                        self.logger.warning(f'key="{self.generate_string_key(row_id, "text")}" 的词条中译文数据中的高亮命令目标 {not_surrounded_highlights} 左右存在非英文标点和空格的字符，请检查')
+
     # 将译文数据写回译文csv中
     def save_file(self) -> None:
+        self.validate_before_save()
+
         with open(self.translation_path, 'r', errors='surrogateescape', newline='', encoding='utf-8') as f:
             csv = reader(f, strict=True)
             real_column_names = csv.__next__()
@@ -152,6 +169,24 @@ class CsvFile(DataFile):
         with open(self.translation_path, 'w', newline='', encoding='utf-8') as f:
             writer(f, strict=True).writerows(rows)
 
+    # 检查当前数据的有效性，在读取完数据后调用
+    def validate_after_load(self):
+        # 检查指定的id列和文字列在游戏文件中是否存在
+        if (type(self.id_column_name) == str and self.id_column_name not in self.column_names) and (
+                not set(self.id_column_name).issubset(set(self.column_names))):
+            raise ValueError(
+                f'从 {self.path} 中未找到指定的id列 "{self.id_column_name}"，请检查配置文件中的设置。可用的列包括： {self.column_names}')
+        if not set(self.text_column_names).issubset(set(self.column_names)):
+            raise ValueError(
+                f'从 {self.path} 中未找到指定的文字列 {self.text_column_names}，请检查配置文件中的设置。可用的列包括： {self.column_names}')
+        # 检查原文与译文数量是否匹配
+        if len(self.original_data) != len(self.translation_data):
+            self.logger.warning(
+                f'文件 {relative_path(self.path)} 所加载的原文与译文数据量不匹配：加载原文 {len(self.original_data)} 条，译文 {len(self.translation_data)} 条')
+        if len(self.original_id_data) != len(self.translation_id_data):
+            self.logger.warning(
+                f'文件 {relative_path(self.path)} 所加载的未被注释且不为空的原文与译文数据量不匹配：加载有效原文 {len(self.original_id_data)} 条，有效译文 {len(self.translation_id_data)} 条')
+
     # 从原文和译文csv中读取数据
     def load_from_file(self) -> None:
         self.column_names, self.original_data, self.original_id_data = self.load_csv(
@@ -165,6 +200,8 @@ class CsvFile(DataFile):
                 self.id_column_name)
             self.logger.info(
                 f'从 {relative_path(self.translation_path)} 中加载了 {len(self.translation_data)} 行译文数据，其中未被注释且不为空的行数为 {len(self.translation_id_data)}')
+
+        self.validate_after_load()
 
     @classmethod
     def load_csv(cls, path: Path, id_column_name: Union[str, List[str]]) -> Tuple[
