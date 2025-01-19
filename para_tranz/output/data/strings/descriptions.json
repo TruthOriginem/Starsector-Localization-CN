@@ -2256,14 +2256,14 @@
     {
         "key": "descriptions.csv#('lightdualac', 'WEAPON')$text1",
         "original": "A double barreled version of the Light Autocannon. An excellent weapon for close-range support, and quite effective at bringing shields down, it suffers from a shorter effective range due to high recoil.\n\nAn ingenious mechanical design prevents ejection ports from being jammed while expelling twice as many spent shell casings as the standard Light Autocannon chassis. Like the single barrel version, the weapon fires high velocity rounds designed to punch through enemy shields. Autoloader and liquid cooling systems are otherwise identical to the single barrel version.",
-        "translation": "连装款轻型自动加农炮。作为优秀的密接支援武器，能有效削弱敌舰的护盾系统。由于高后坐力，其有效射程相对较短。\n\n简洁巧妙的机械设计确保了在排出双倍量的弹壳时抛壳口不会被卡住。与单管版本一样，该武器发射用于过载敌舰护盾的高速动能弹头。其配备的自动装填机与水冷系统也与单管型基本相同。",
+        "translation": "联装款轻型自动加农炮。作为优秀的密接支援武器，能有效削弱敌舰的护盾系统。由于高后坐力，其有效射程相对较短。\n\n简洁巧妙的机械设计确保了在排出双倍量的弹壳时抛壳口不会被卡住。与单管版本一样，该武器发射用于过载敌舰护盾的高速动能弹头。其配备的自动装填机与水冷系统也与单管型基本相同。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\ndescriptions.csv第0007行\n[本行原始数据]\n{'id': 'lightdualac',\n 'type': 'WEAPON',\n 'text1': 'A double barreled version of the Light Autocannon. An excellent '\n          'weapon for close-range support, and quite effective at bringing '\n          'shields down, it suffers from a shorter effective range due to high '\n          'recoil.\\n'\n          '\\n'\n          'An ingenious mechanical design prevents ejection ports from being '\n          'jammed while expelling twice as many spent shell casings as the '\n          'standard Light Autocannon chassis. Like the single barrel version, '\n          'the weapon fires high velocity rounds designed to punch through '\n          'enemy shields. Autoloader and liquid cooling systems are otherwise '\n          'identical to the single barrel version.',\n 'text2': '',\n 'text3': '',\n 'text4': '',\n 'notes': ''}"
     },
     {
         "key": "descriptions.csv#('lightdualmg', 'WEAPON')$text1",
         "original": "An upgraded, twin barrel version of the venerable light machine gun. Not effective against armored targets, but has excelled in an anti-missile and fighter role since the dawn of human space combat.\n\nThis is a dual mount of the same rapid fire, inert, low-caliber chemical projectile weapon known to every pilot in the Sector. An excellent point defense mount, which excels in both a missile interdiction and anti-fighter role. \n\nThe large amount of kinetic energy delivered to shield systems of enemy craft at close-range typically causes emitter overload, a tactical option often overlooked by inexperienced captains.",
-        "translation": "轻机枪的双管升级版。虽然它无法有效对付装甲目标，但自人类太空战斗史展开以来，它就已经担任着反导弹与反战机的任务。\n\n作为一种速射小口径动能武器的连装版本，因其在拦截导弹与战机时的优秀表现而被星域中的大多数飞行员们所熟知。\n\n双管轻机枪可在近距离内对敌舰护盾倾斜大量动能弹而致其反应堆迅速过载，而这正是那些缺乏战斗经验的菜鸟舰长所经常忽视的一种有效战术。",
+        "translation": "轻机枪的双管升级版。虽然它无法有效对付装甲目标，但自人类太空战斗史展开以来，它就已经担任着反导弹与反战机的任务。\n\n作为一种速射小口径动能武器的双联装版本，因其在拦截导弹与战机时的优秀表现而被星域中的大多数飞行员们所熟知。\n\n双管轻机枪可在近距离内对敌舰护盾倾斜大量动能弹而致其反应堆迅速过载，而这正是那些缺乏战斗经验的菜鸟舰长所经常忽视的一种有效战术。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\ndescriptions.csv第0002行\n[本行原始数据]\n{'id': 'lightdualmg',\n 'type': 'WEAPON',\n 'text1': 'An upgraded, twin barrel version of the venerable light machine '\n          'gun. Not effective against armored targets, but has excelled in an '\n          'anti-missile and fighter role since the dawn of human space '\n          'combat.\\n'\n          '\\n'\n          'This is a dual mount of the same rapid fire, inert, low-caliber '\n          'chemical projectile weapon known to every pilot in the Sector. An '\n          'excellent point defense mount, which excels in both a missile '\n          'interdiction and anti-fighter role. \\n'\n          '\\n'\n          'The large amount of kinetic energy delivered to shield systems of '\n          'enemy craft at close-range typically causes emitter overload, a '\n          'tactical option often overlooked by inexperienced captains.',\n 'text2': '',\n 'text3': '',\n 'text4': '',\n 'notes': ''}"
     },
@@ -5392,7 +5392,7 @@
     {
         "key": "descriptions.csv#('trident', 'SHIP')$text1",
         "original": "Equipped with dual Atropos-class torpedoes and a top-notch shield generator, the Trident is perhaps the most feared of all bombers. Its effectiveness is somewhat limited by its low top speed and demanding logistical profile.",
-        "translation": "搭载了二连装阿特罗波斯级鱼雷发射器和顶级护盾发生器，三叉戟-级 可能是所有轰炸机里最令人恐惧的那一种。但较低的航速与苛刻的后勤整备要求限制了它的效率。",
+        "translation": "搭载了双联装阿特罗波斯级鱼雷发射器和顶级护盾发生器，三叉戟-级 可能是所有轰炸机里最令人恐惧的那一种。但较低的航速与苛刻的后勤整备要求限制了它的效率。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\ndescriptions.csv第0129行\n[本行原始数据]\n{'id': 'trident',\n 'type': 'SHIP',\n 'text1': 'Equipped with dual Atropos-class torpedoes and a top-notch shield '\n          'generator, the Trident is perhaps the most feared of all bombers. '\n          'Its effectiveness is somewhat limited by its low top speed and '\n          'demanding logistical profile.',\n 'text2': '',\n 'text3': '',\n 'text4': '',\n 'notes': ''}"
     },
