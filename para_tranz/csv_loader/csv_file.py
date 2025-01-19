@@ -113,6 +113,7 @@ class CsvFile(DataFile):
                 self.logger.warning(f'在文件 {self.path} 中没有找到 {self.id_column_name}="{row_id}" 的行，未更新该词条。原文可能已删除，请考虑删除该译文词条')
 
     def validate_before_save(self) -> None:
+        self.logger.info(f'开始在保存前校验 {relative_path(self.translation_path)} 中的译文数据')
         for row_id, translated_row in self.translation_id_data.items():
             original_row = self.original_id_data[row_id]
             # 检查译文是否包含中文引号
@@ -143,7 +144,7 @@ class CsvFile(DataFile):
                     not_surrounded_highlights = rules_csv_find_text_highlight_targets_adjacent_to_non_space(translated_text, highlights) - missing_highlights - missing_highlights_original
                     if not_surrounded_highlights:
                         self.logger.warning(f'key="{self.generate_string_key(row_id, "text")}" 的词条中译文数据中的高亮命令目标 {not_surrounded_highlights} 左右存在非英文标点和空格的字符，请检查')
-
+        self.logger.info(f'校验 {relative_path(self.translation_path)} 中的译文数据完成')
     # 将译文数据写回译文csv中
     def save_file(self) -> None:
         self.validate_before_save()

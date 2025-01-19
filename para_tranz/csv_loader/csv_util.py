@@ -3,7 +3,7 @@ from typing import Set, List
 
 REGEX_CSV_TOKEN = re.compile(r'\$[a-zA-Z0-9][a-zA-Z0-9_\.]+[a-zA-Z0-9]')
 REGEX_IGNORED_TOKENS = re.compile(r'([Pp]ersonLastName|[Pp]layerSirOrMadam|[Pp]layerName|ranks?|[Oo]nOrAt|[Ii]sOrAre|[Hh]isOrHer|[Hh]eOrShe|[Hh]imOrHer|[Hh]imOrHerself|shipOrFleet|[Aa]OrAn|[Bb]rotherOrSister|marketFactionArticle)')
-REGEX_HIGHLIGHT_TARGET = re.compile(r'^SetTextHighlights (.*)(?:\n|$)')
+REGEX_HIGHLIGHT_TARGET = re.compile(r'^(SetTextHighlights|Highlight) (.*)(?:\n|$)')
 
 def rules_csv_extract_csv_tokens(s: str) -> Set[str]:
     """
