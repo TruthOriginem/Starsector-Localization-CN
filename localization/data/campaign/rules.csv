@@ -4352,7 +4352,7 @@ lppJangalaFirstVisit2b,DialogOptionSelected,$option == lpp_JangalaFirstVisit2b,,
 lpp_JangalaFirstVisit2c:浏览图片",
 lppJangalaFirstVisit2c,DialogOptionSelected,$option == lpp_JangalaFirstVisit2c,,"-至少，从公共信息网上的全息图来看，这确实很可怕。
 
-你想知道当局是否允许传播这些图片，以此来促使人们遵守安全规定。",lpp_JangalaFirstVisit3:继续,
+你心里突然泛起一丝愤世嫉俗的想法，在想当局是否在故意放任这些图片的传播，就是为了促使人们遵守安全规定。",lpp_JangalaFirstVisit3:继续,
 lppJangalaFirstVisit3,DialogOptionSelected,$option == lpp_JangalaFirstVisit3,,"你的穿梭机刚降落在着陆点，Jangala 上的植物就重新生长在自己的灰烬上，夺回了它的领地。
 
 当人行通道需要一段时间对裸露的表面进行自清洁循环时，你可以注射标准剂量的抗异种药物，并重新检查呼吸面罩的质量。尽管这里的空气感觉也没什么不同。
@@ -18301,7 +18301,7 @@ Neriene 也来为你送行了。尽管在舞会上她玩得很尽兴，现在她
 
 ""你今晚结识了一些朋友，"" Neriene 说，脸上带着一丝微笑，但笑容渐渐消失了。""但也招惹了一些仇人。""","soe_fightWinMaybe:""很有趣的舞会。之后有缘再见吧。""
 soe_fightWinBravado:""不过那些仇人应该清楚等着他们的是什么了。""
-soe_fightWinDatingSim:""我希望你也被算作那些朋友里。""
+soe_fightWinDatingSim:""我希望你也被算进那些朋友里。""
 soe_fightWinNeverAgain:""我真不想再参加这种舞会了。""
 soe_fightWinRude:""我真不敢相信你居然说服了我，让我去参加那个堕落的血腥游戏。""
 ",
@@ -20560,7 +20560,7 @@ LOCRLofferTransportPath,DialogOptionSelected,$option == locrl_offerTransportPath
 $player.locr_luddicsToPath = true
 AddCommodity crew 198
 unset $entity.locr_luddic
-EndConversation NO_CONTINUE","""卢德保佑着你，$playerSirOrMadam！""卢德 $personRank 冷冷地说到，也许$heOrShe正在期待$hisOrHer那踏上全新道路的第一步。
+EndConversation NO_CONTINUE","""卢德保佑着你，$playerSirOrMadam！"" 卢德 $personRank 冷冷地说到，也许$heOrShe正在期待$hisOrHer那踏上全新道路的第一步。
 
 你让你的副官做好了和星球上卢德异端对接的相关安排。他们虚弱不堪毫无活力，尽管 $entity.name 的植被郁郁葱葱，但由于他们的前先知缺乏准备，他们快要饿死了。
 
@@ -20621,7 +20621,7 @@ LOCRLoffloadToPath1,DialogOptionSelected,$option == locrl_hereticsToPath,," ""�
 
 ""他们已经如此迷失，"" $heOrShe边说边摇头，""这首先归咎于教会的腐败和软弱，当然还有那个疯子的妖言惑众。""
 
-""你做得对，$playerBrotherOrSister，把他们带到我们这里来。他们踏上这条路的最初几步会很痛苦，但我们会在他们身边指引他们，给予他们心灵的支柱。""","locrl_hereticsToPath2harsh:""我会马上把他们装上穿梭机。""
+""你做得对，$playerBrotherOrSister，把他们带到我们这里来。他们返回 卢德之道 的最初几步会很痛苦，但我们会在他们身边指引他们，给予他们心灵的支柱。""","locrl_hereticsToPath2harsh:""我会马上把他们装上穿梭机。""
 locrl_hereticsToPather2mercy:""发发慈悲吧，$brotherOrSister。他们初心向善，但却误入歧途。""",
 LOCRLoffloadToPath2harsh,DialogOptionSelected,$option == locrl_hereticsToPath2harsh ,"$option = locrl_hereticsToPath3 0
 FireBest DialogOptionSelected","左径分子点了点头。""最好快点完成。""",,
@@ -23640,7 +23640,7 @@ sdtuPatrolConvinceMutiny3,DialogOptionSelected,$option == sdtu_patrolConvinceMut
 $global.sdtu_meetHyder = true
 Call $global.sdtu_ref updateStage
 ShowDefaultVisual
-Call $global.sdtu_ref tryMakeHyderImportant","那个副指挥官确实说话算话，把原本的舰队指挥官交给了你。这位前指挥官倒不是被铁链拴着送来的，而是被一套厚厚的塑料束缚具捆着送来的。他制服上的各种徽章被撕了个精光，还用了些镇静剂，已经不甚清醒了。
+Call $global.sdtu_ref tryMakeHyderImportant","那个副指挥官确实说话算话，把原本的舰队指挥官交给了你。这位前指挥官倒不是被铁链拴着送来的，而是被一套厚厚的塑料束缚具捆着送来的。那人制服上的各种徽章被撕了个精光，还用了些镇静剂，已经不甚清醒了。
 
 你把这人关进了禁闭室，保护起来。
 
@@ -25647,7 +25647,7 @@ Kanta 笑着站了起来。随后笑声停止了；她的黑眼睛直直地盯�
 Cydonia和整个王庭鞠躬接受她的裁定，但仍不免彼此之间交头接耳。",,
 kpPristineForge,KPFindGifts,"PlayerHasCargo pristine_nanoforge
 $kpNumGifts < 5
-$kpNumGifts++",,,kpPristineForge:全新的 人之领时代 纳米锻炉，真正的稀罕之物。,
+$kpNumGifts++",,,kpPristineForge:完好的 人之领时代 纳米锻炉，真正的稀罕之物。,
 kpPristineForgeSel,DialogOptionSelected,$option == kpPristineForge,,"""我... 我，好，好"" Cydonia 轻轻抚摸着他数据平板上显示的数据。他一路小跑穿过 Kanta 王座周围可怖的图腾，兴奋地向她展示平板上的数据。有那么一刻，Kanta 全神贯注地审视着屏幕。她的海盗臣下们彼此交头接耳。
 
 终于，Kanta 那生化改装后的铁拳将像只谄媚走狗般的 Cydonia 一把推开。他几乎跌下了王座平台，但在最后一刻勉强站稳了脚跟。
@@ -26210,7 +26210,7 @@ PLDealArgumentsDefeatedBlockade,PLDealArguments,"$player.defeatedLeagueBlockade
 PLDealArgumentsDefeatedPunEx,PLDealArguments,$player.defeatedLeaguePunEx,,,"rh_defeatedBlockade:""我击败了你的惩罚性远征。你试图诉诸武力，但失败了。""",
 PLDealArgumentsHannanCut,PLDealArguments,,,,"rh_hannanBribe:""也许可以直接向 Hannan 氏族支付 $hannanBribePercent 的费用，以促成这项协议？""",
 PLDealArgumentsHannanNanoforge,PLDealArguments,"HA_CMD kazeronNanoforgeMissing
-PlayerHasCargo pristine_nanoforge","Highlight ""全新的纳米锻炉""",,"rh_nanoforge:""据说 Kazeron 上 全新的纳米锻炉...不见了。我正好有一个备用的，可以捐献给联盟。""",
+PlayerHasCargo pristine_nanoforge","Highlight ""完好的纳米锻炉""",,"rh_nanoforge:""据说 Kazeron 那个完好的纳米锻炉...不见了。我正好有一个备用的，可以捐献给联盟。""",
 PLDealArgumentsNeverMind,PLDealArguments,,,,"rh_goBack:""还是算了吧。""",
 rh_goBackSel,DialogOptionSelected,$option == rh_goBack,"Highlight $plDuesPercent
 unset $willPayHouseHannan
@@ -27686,7 +27686,7 @@ AdjustRepActivePerson -5","""我会给你个面子，就当你在开玩笑。"" 
 
 ""我不会在你身上浪费更多时间了。"" $HeOrShe朝谁点了下头，链接就直接中断了，连个中断码都没有。",cutCommLinkNoText:继续,
 PSKMercOptionsStorySel,DialogOptionSelected,$option == pskMerc_story,,"""哦？请讲。"" $HeOrShe看上去既有些被冒犯，也有些好奇。就好像$heOrShe在拒绝你前想先听听你能找出什么踮脚的借口。",pskMerc_story1:继续,
-PSKMercOptionsStory1,DialogOptionSelected,$option == pskMerc_story1,,"你解释道这群海盗的威胁程度被一帮佣兵组织故意低估了。黑箭袋小队，Illm 遗子，披甲联盟，战术之星；他们全都勾结在一起，包括海盗也跟他们一伙。
+PSKMercOptionsStory1,DialogOptionSelected,$option == pskMerc_story1,,"你解释道这群海盗的威胁程度被一帮佣兵组织故意低估了。黑箭袋小队，Ilm 遗子，披甲联盟，战术之星；他们全都勾结在一起，包括海盗也跟他们一伙。
 
 现在佣兵合同的收入不如以往，这点$heOrShe自然应该知道。雇主认为他们可以拿比燃料补给费加船员工资高不了多少的低价便能请到一流 —— 例如 $personName ——的舰队。你看到$himOrHer边听边点头。",pskMerc_story2:继续,
 PSKMercOptionsStory2,DialogOptionSelected,$option == pskMerc_story2,,"问题就是同业竞争压低了价位 —— 而这帮勾结在一起的佣兵组织则和海盗达成了交易来解决这一问题。
@@ -29578,7 +29578,7 @@ HistorianBackstoryBlurb21,HistorianBackstoryBlurb,!WasHistorianBlurbShown histor
 $HeOrShe稍微停顿了一下，调整了下$hisOrHer的呼吸，然后继续说道：""事实上，星际物流的主要存在形式已经从星门改为了超空间航道。这些太空佬现在每天都在目睹大崩塌和 AI 战争的废墟。这些旅程充满了阴霾，"" $heOrShe用一种既愉快又阴郁的语气说道，""可以说，是被历史所萦绕。事实上，有人可能会认为，在过去的两百年里，宇宙民文化已经变得相当迷信。""
 
 $HeOrShe渐渐停了下来，呼出一口气，抬头望向看不见的星辰。""前所未有的黑暗，充斥着死亡与神秘。"" $heOrShe引用着某句名言。",,
-HistorianBackstoryBlurb22,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb22,SetHistorianBlurbShownAfterDelay historyBlurb22,"""古老的 Mairaath，古老 Mayasura 政权的中心，本有望在英仙座星域绽放出文化和文明的光辉，成为一盏可能比 Opis 还要耀眼的明灯，假如它的地貌改造工作能完成的话。""
+HistorianBackstoryBlurb22,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb22,SetHistorianBlurbShownAfterDelay historyBlurb22,"""古老的 Mairaath，古老 Mayasura 政权的中心，本有望在英仙座星域绽放出文化和文明的光辉，这盏明灯可能比 Opis 还要耀眼，假如它的地貌改造工作能完成的话。""
 
 ""但现在，这两盏 '明灯' 都已经熄灭了，"" 历史学家阴郁地说道。""我想，它们缺乏霸主 Eventide-Chicomoztoc 轴心那种冷酷无情的军事工业联盟，更不用说 Kazeron 及英仙座联盟了。其他的政权也大都如此。""
 
