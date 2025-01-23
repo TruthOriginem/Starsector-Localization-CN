@@ -1,5 +1,5 @@
 ; 注意：请确保 TranslationPackVarient 与当前签出的git分支一致！
-#define TranslationPackVarient "(黑体版)"
+#define TranslationPackVarient "(综艺体版)"
 ; 注意：请确保 MyAppVersion 和 GameVersion 与 localization 文件夹中的 localization_version.json 中的版本号一致！
 #define MyAppVersion "1.0.0"
 #define GameVersion "0.97a-RC11"
