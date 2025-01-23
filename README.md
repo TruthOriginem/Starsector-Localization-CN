@@ -59,6 +59,7 @@
 * "localization.old" 内存放上个版本(0.95.1a-RC6)的译文
 * "para_tranz" 内存放Paratranz平台相关脚本
 * "docs" 内存放项目文档内容
+* "packaging" 内存放安装包及汉化包打包相关脚本和素材
 
 ### 自动化脚本
 
