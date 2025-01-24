@@ -7795,6 +7795,16 @@
       ]
     },
     {
+      "path": "com/fs/starfarer/api/impl/PlayerFleetPersonnelTracker$PersonnelRank.class",
+      "include_strings": [
+        "Elite",
+        "Experienced",
+        "Regular",
+        "Veteran"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/api/impl/campaign/AICoreAdminPluginImpl.class",
       "include_strings": [
         "Alpha Core"
