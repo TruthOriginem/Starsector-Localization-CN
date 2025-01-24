@@ -6,7 +6,7 @@
 
 ## 下载汉化
 
-> 注意：本汉化包仅适用于 0.97a-RC11 **[Miko Java 24 版本](https://fractalsoftworks.com/forum/index.php?topic=29320.0)**
+> 注意：本汉化包仅适用于 0.97a-RC11 **[Miko Java 23 版本](https://fractalsoftworks.com/forum/index.php?topic=29320.0)**
 > 
 > 适用于原版 0.97a-RC11 的汉化包请前往 [主分支](https://github.com/TruthOriginem/Starsector-Localization-CN) 下载
 
@@ -34,7 +34,7 @@
       1. 如提示文件已存在，请选择【覆盖】
 3. 替换 mikohime jar 文件
    1. 打开游戏目录下的`mikohime`文件夹
-      1. 如果游戏目录下没有`mikohime`文件夹，代表您尚未安装 Miko Java 24 补丁，请先安装 [Miko Java 24 补丁](https://fractalsoftworks.com/forum/index.php?topic=29320.0)
+      1. 如果游戏目录下没有`mikohime`文件夹，代表您尚未安装 Miko Java 23 补丁，请先安装 [Miko Java 23 补丁](https://fractalsoftworks.com/forum/index.php?topic=29320.0)
    2. **将下载解压文件中`localization`文件夹内的`port_obf.jar`文件复制到`mikohime`文件夹中**
       1. 如提示文件已存在，请选择【覆盖】
 4. 正常游玩，**如果遇到翻译质量问题或bug，请向我们报告**。
