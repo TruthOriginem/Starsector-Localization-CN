@@ -136,7 +136,7 @@ class CsvFile(DataFile):
                     original_text = original_row['text']
                     translated_text = translated_row['text']
 
-                    missing_highlights_original = {highlight for highlight in highlights if highlight not in original_text}
+                    missing_highlights_original = {highlight for highlight in highlights if highlight.startswith('$') and highlight not in original_text}
                     missing_highlights = {highlight for highlight in highlights if highlight not in translated_text} - missing_highlights_original
                     if missing_highlights:
                         self.logger.warning(f'key="{self.generate_string_key(row_id, "text")}" 的词条中译文数据中缺失了高亮命令目标 {missing_highlights}，请检查译文数据或script列内容(key="{self.generate_string_key(row_id, "script")}")')

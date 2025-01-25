@@ -3,7 +3,7 @@ from typing import Set, List
 
 REGEX_CSV_TOKEN = re.compile(r'\$[a-zA-Z0-9][a-zA-Z0-9_\.]+[a-zA-Z0-9]')
 REGEX_IGNORED_TOKENS = re.compile(r'([Pp]ersonLastName|[Pp]layerSirOrMadam|[Pp]layerName|ranks?|[Oo]nOrAt|[Ii]sOrAre|[Hh]isOrHer|[Hh]eOrShe|[Hh]imOrHer|[Hh]imOrHerself|shipOrFleet|[Aa]OrAn|[Bb]rotherOrSister|marketFactionArticle)')
-REGEX_HIGHLIGHT_TARGET = re.compile(r'^(SetTextHighlights|Highlight) (.*)(?:\n|$)')
+REGEX_HIGHLIGHT_TARGET = re.compile(r'^(SetTextHighlights|Highlight) (.*)(?:\n|$)', re.MULTILINE)
 
 def rules_csv_extract_csv_tokens(s: str) -> Set[str]:
     """
@@ -59,7 +59,10 @@ def rules_csv_extract_highlight_targets_from_script(script: str) -> Set[str]:
         Set[str]: 高亮string集合
     """
     highlight_command_params = re.findall(REGEX_HIGHLIGHT_TARGET, script)
-    return {highlight for params in highlight_command_params for highlight in parse_only_quoted_strings(params)}
+    highlights = set()
+    for command, param in highlight_command_params:
+        highlights.update(parse_only_quoted_strings(param))
+    return highlights
 
 def parse_only_quoted_strings(input_text:str) -> List[str]:
     """
@@ -109,13 +112,13 @@ def rules_csv_find_text_highlight_targets_adjacent_to_non_space(text:str, highli
     Returns:
         Set[str]: 左右存在非空格和英文引号的高亮string集合
     """
-    return {highlight for highlight in highlights if not re.search(rf'(?:^|[ {{}}"]){re.escape(highlight)}(?:$|[ {{}}"])', text)}
+    return {highlight for highlight in highlights if not re.search(rf'(?:^|[ {{}}"\']){re.escape(highlight)}(?:$|[ {{}}"\'])', text, re.MULTILINE)}
 
 
 if __name__ == '__main__':
-    script = "SetTextHighlights \"3,000\" \"2000\"\nSetTextHighlights \"1,000\"\nSetTextHighlights \"500\"\nAddText \"你有 $player.creditsStrC 可用。\"\nSetTextHighlights $player.creditsStrC\nDoCanAffordCheck 3000 lke_mazBarBribe3kOffer\nDoCanAffordCheck 1000 lke_mazBarBribe1kOffer"
+    script = "Highlight \"关闭你的应答器\"\nShowPersonVisual\nSetShortcut cutCommLink \"ESCAPE\""
     highlights = rules_csv_extract_highlight_targets_from_script(script)
     print(highlights)
 
-    text = "价格为{1,000 星币，你有3,000可用。{500"
+    text = "你有种感觉，如果关闭你的应答器隐瞒身份进入港口，事情可能会有更多的进展。"
     print(rules_csv_find_text_highlight_targets_adjacent_to_non_space(text, highlights))
