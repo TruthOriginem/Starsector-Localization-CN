@@ -122,6 +122,7 @@ class CsvFile(DataFile):
                     raise ValueError(f'key="{self.generate_string_key(row_id, col)}" 的词条中译文数据包含中文引号，请移除后再保存')
             # 针对 rules.csv 的特殊检查
             if self.path.name == 'rules.csv':
+                # TODO: 此部分需要重构，以支持同时检测高亮文本在 text 和 option 中的覆盖情况
                 # 如果译文不为空
                 if translated_row['text']:
                     # 检查译文是否包含原文里的每一个格式为 $var 的变量名
