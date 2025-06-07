@@ -96,6 +96,8 @@
 7. **参照[Paratran版本管理指南](docs/paratranz/tut_admin.md)中的步骤，将翻译完成的译文导入 git**
 8. 提交commit并push
     - 在提交前，请将汉化文件复制入游戏，尝试能否正常启动游戏
+9. 待测试通过后，可以考虑将更改合并到`master`分支
+    - 在合并前，请在`master`分支上创建以上一个版本号命名的tag，例如`0.97`
 
 [update_files]:update_files.png
 [upload_folder]:upload_folder.png
