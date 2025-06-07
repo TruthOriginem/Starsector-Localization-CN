@@ -44,15 +44,15 @@
     {
         "key": "abilities.csv#generate_slipsurge$desc",
         "original": "Create a powerful short-lived slipstream useful for rapid travel.",
-        "translation": "产生一阵用于快速前进的短暂激流。",
-        "stage": 1,
+        "translation": "暂时产生一阵用于快速前进的激流。",
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nabilities.csv第0016行\n[本行原始数据]\n{'name': 'Generate Slipsurge',\n 'id': 'generate_slipsurge',\n 'type': 'DURATION',\n 'tags': 'burn-, stealth-, sensors-, disabled_by_interdict',\n 'activationDays': '0.2',\n 'activationCooldown': '',\n 'durationDays': '0.001',\n 'deactivationDays': '',\n 'deactivationCooldown': '1',\n 'unlockedAtStart': '',\n 'defaultForAIFleet': '',\n 'musicSuppression': '',\n 'uiOn': 'ui_slipsurge_on',\n 'uiOff': 'ui_slipsurge_off',\n 'uiLoop': 'ui_slipsurge_loop',\n 'worldOn': 'world_slipsurge_on',\n 'worldOff': 'world_slipsurge_off',\n 'worldLoop': 'world_slipsurge_loop',\n 'icon': 'graphics/icons/abilities/slipsurge.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.GenerateSlipsurgeAbility',\n 'ai': '',\n 'desc': 'Create a powerful short-lived slipstream useful for rapid travel.',\n 'sortOrder': '990'}"
     },
     {
         "key": "abilities.csv#generate_slipsurge$name",
         "original": "Generate Slipsurge",
         "translation": "激流迸发",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nabilities.csv第0016行\n[本行原始数据]\n{'name': 'Generate Slipsurge',\n 'id': 'generate_slipsurge',\n 'type': 'DURATION',\n 'tags': 'burn-, stealth-, sensors-, disabled_by_interdict',\n 'activationDays': '0.2',\n 'activationCooldown': '',\n 'durationDays': '0.001',\n 'deactivationDays': '',\n 'deactivationCooldown': '1',\n 'unlockedAtStart': '',\n 'defaultForAIFleet': '',\n 'musicSuppression': '',\n 'uiOn': 'ui_slipsurge_on',\n 'uiOff': 'ui_slipsurge_off',\n 'uiLoop': 'ui_slipsurge_loop',\n 'worldOn': 'world_slipsurge_on',\n 'worldOff': 'world_slipsurge_off',\n 'worldLoop': 'world_slipsurge_loop',\n 'icon': 'graphics/icons/abilities/slipsurge.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.GenerateSlipsurgeAbility',\n 'ai': '',\n 'desc': 'Create a powerful short-lived slipstream useful for rapid travel.',\n 'sortOrder': '990'}"
     },
     {
@@ -115,14 +115,14 @@
         "key": "abilities.csv#reverse_polarity$desc",
         "original": "Adjust drive field to travel in the opposite direction in slipstreams.",
         "translation": "通过调整驱动力场实现在滑流内逆向航行。",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nabilities.csv第0015行\n[本行原始数据]\n{'name': 'Reverse Polarity',\n 'id': 'reverse_polarity',\n 'type': 'TOGGLE',\n 'tags': '',\n 'activationDays': '0.05',\n 'activationCooldown': '',\n 'durationDays': '',\n 'deactivationDays': '0.05',\n 'deactivationCooldown': '',\n 'unlockedAtStart': '',\n 'defaultForAIFleet': '',\n 'musicSuppression': '',\n 'uiOn': 'ui_reverse_polarity_on',\n 'uiOff': 'ui_reverse_polarity_off',\n 'uiLoop': 'ui_reverse_polarity_loop',\n 'worldOn': 'world_reverse_polarity_on',\n 'worldOff': 'world_reverse_polarity_off',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/reverse_polarity.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.ReversePolarityToggle',\n 'ai': '',\n 'desc': 'Adjust drive field to travel in the opposite direction in '\n         'slipstreams.',\n 'sortOrder': '640'}"
     },
     {
         "key": "abilities.csv#reverse_polarity$name",
         "original": "Reverse Polarity",
         "translation": "极性逆转",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nabilities.csv第0015行\n[本行原始数据]\n{'name': 'Reverse Polarity',\n 'id': 'reverse_polarity',\n 'type': 'TOGGLE',\n 'tags': '',\n 'activationDays': '0.05',\n 'activationCooldown': '',\n 'durationDays': '',\n 'deactivationDays': '0.05',\n 'deactivationCooldown': '',\n 'unlockedAtStart': '',\n 'defaultForAIFleet': '',\n 'musicSuppression': '',\n 'uiOn': 'ui_reverse_polarity_on',\n 'uiOff': 'ui_reverse_polarity_off',\n 'uiLoop': 'ui_reverse_polarity_loop',\n 'worldOn': 'world_reverse_polarity_on',\n 'worldOff': 'world_reverse_polarity_off',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/reverse_polarity.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.ReversePolarityToggle',\n 'ai': '',\n 'desc': 'Adjust drive field to travel in the opposite direction in '\n         'slipstreams.',\n 'sortOrder': '640'}"
     },
     {

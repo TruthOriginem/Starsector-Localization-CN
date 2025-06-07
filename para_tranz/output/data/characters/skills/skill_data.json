@@ -255,14 +255,14 @@
         "key": "skill_data.csv#damage_control$author",
         "original": "Navarch Tethys, final address to the crew of the PLS Astelene Key",
         "translation": "海军都统 Tethys，对 PLS Astelene Key 船员的最后一次演讲",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nskill_data.csv第0005行\n[本行原始数据]\n{'id': 'damage_control',\n 'name': 'Damage Control',\n 'order': '40',\n 'tier': '2',\n 'reqPoints': '0',\n 'reqPointsPerExtraSkill': '',\n 'description': \"What's lost is lost. Let those compartments burn away, focus \"\n                'your efforts on what will see us through the next hour.',\n 'author': 'Navarch Tethys, final address to the crew of the PLS Astelene Key',\n 'combat officer': 'TRUE',\n 'admiral': '',\n 'admin': '',\n 'tags': '',\n 'icon': 'graphics/icons/skills/damage_control2.png',\n '': ''}"
     },
     {
         "key": "skill_data.csv#damage_control$description",
         "original": "What's lost is lost. Let those compartments burn away, focus your efforts on what will see us through the next hour.",
         "translation": "逝者已逝。就让那些隔舱自己烧干净吧，把你们的精力都集中到能让我们再多活一小时的事情上去。",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nskill_data.csv第0005行\n[本行原始数据]\n{'id': 'damage_control',\n 'name': 'Damage Control',\n 'order': '40',\n 'tier': '2',\n 'reqPoints': '0',\n 'reqPointsPerExtraSkill': '',\n 'description': \"What's lost is lost. Let those compartments burn away, focus \"\n                'your efforts on what will see us through the next hour.',\n 'author': 'Navarch Tethys, final address to the crew of the PLS Astelene Key',\n 'combat officer': 'TRUE',\n 'admiral': '',\n 'admin': '',\n 'tags': '',\n 'icon': 'graphics/icons/skills/damage_control2.png',\n '': ''}"
     },
     {
@@ -534,7 +534,7 @@
     {
         "key": "skill_data.csv#impact_mitigation$description",
         "original": "The maneuver produced an oblique impact angle, dissipating the shell's momentum into the ferrofoam applique. It was the unfortunate timing of the resulting shock which brought about Spacer York's tragic end during an otherwise routine heavy equipment transfer.",
-        "translation": "舰船采取机动，使冲击角度产生了斜向偏移，把弹体的冲击力完全分散到了泡沫金属层中。不幸的是，由于震荡产生的时机非常不凑巧，让正在进行重型机械日常运输作业的船员 York 惨遭不测。",
+        "translation": "舰船采取机动，使冲击角度产生了斜向偏移，把弹体的冲击力完全分散到了泡沫金属层中。不幸的是，由于震荡产生的时机非常不凑巧，让正在进行日常重型机械搬运作业的船员 York 惨遭不测。",
         "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nskill_data.csv第0004行\n[本行原始数据]\n{'id': 'impact_mitigation',\n 'name': 'Impact Mitigation',\n 'order': '30',\n 'tier': '2',\n 'reqPoints': '0',\n 'reqPointsPerExtraSkill': '',\n 'description': 'The maneuver produced an oblique impact angle, dissipating '\n                \"the shell's momentum into the ferrofoam applique. It was the \"\n                'unfortunate timing of the resulting shock which brought about '\n                \"Spacer York's tragic end during an otherwise routine heavy \"\n                'equipment transfer.',\n 'author': 'Thule skirmish of c120.03.08, AAR submitted by Navarch Zhou',\n 'combat officer': 'TRUE',\n 'admiral': '',\n 'admin': '',\n 'tags': '',\n 'icon': 'graphics/icons/skills/impact_mitigation.png',\n '': ''}"
     },
@@ -569,8 +569,8 @@
     {
         "key": "skill_data.csv#makeshift_equipment$author",
         "original": "audio backup transcription, Jericho Wheeler, leader of expedition \"H\"-team",
-        "translation": "\"H\" 探索小队的领袖 Jericho Wheeler 的音频备份转录",
-        "stage": 5,
+        "translation": "\"H\" 勘探队领队 Jericho Wheeler 的音频备份转录",
+        "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nskill_data.csv第0047行\n[本行原始数据]\n{'id': 'makeshift_equipment',\n 'name': 'Makeshift Equipment',\n 'order': '1560',\n 'tier': '4',\n 'reqPoints': '2',\n 'reqPointsPerExtraSkill': '',\n 'description': \"I guess we left the spares in orbit. It'll be fine ... \"\n                '[static] ... just watch.',\n 'author': 'audio backup transcription, Jericho Wheeler, leader of expedition '\n           '\"H\"-team',\n 'combat officer': '',\n 'admiral': '',\n 'admin': '',\n 'tags': '',\n 'icon': 'graphics/icons/skills/makeshift_equipment.png',\n '': ''}"
     },
     {
@@ -730,7 +730,7 @@
     {
         "key": "skill_data.csv#phase_corps$description",
         "original": "Tri-Tachyon pries open holy creation daily, and at each desecration our wholesale damnation looms. Our path is burden; our path is suffering. We shall face them with faith that the only redemption is final judgment.",
-        "translation": "速子科技 每天都在试图撬开神圣的造物，每一次的亵渎都带来了对全人类的诅咒。我们任重道远。我们遍历艰辛。我们满怀信仰，直面他们，直到末日审判为他们带来唯一的救赎之时。",
+        "translation": "速子科技 每日都在撬弄中亵渎造物的神圣，让全人类向着万劫不复的深渊更进一步。我们任重道远，我们遍历艰辛。我们将满怀信仰直面他们，直到末日审判为他们带来唯一的救赎。",
         "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nskill_data.csv第0034行\n[本行原始数据]\n{'id': 'phase_corps',\n 'name': 'Phase Coil Tuning',\n 'order': '1070',\n 'tier': '4',\n 'reqPoints': '2',\n 'reqPointsPerExtraSkill': '0',\n 'description': 'Tri-Tachyon pries open holy creation daily, and at each '\n                'desecration our wholesale damnation looms. Our path is '\n                'burden; our path is suffering. We shall face them with faith '\n                'that the only redemption is final judgment.',\n 'author': 'Livewell Cotton, Luddic Path terrorist, sermon of c205.2.12',\n 'combat officer': '',\n 'admiral': 'TRUE',\n 'admin': '',\n 'tags': '',\n 'icon': 'graphics/icons/skills/phase_corps.png',\n '': ''}"
     },
@@ -1024,8 +1024,8 @@
     {
         "key": "skill_data.csv#systems_expertise$description",
         "original": "No, I don't think it's a contradiction. It's a, uh, spiritual journey. You're tested. And it's like they say, the Devil is in the details.",
-        "translation": "不，我不觉得有什么矛盾的，这是一... 呃... 一场灵魂之旅，你在接受考验。不过就像那句话说的，恶魔就藏在细节之中。",
-        "stage": 1,
+        "translation": "不，我不觉得有什么矛盾的，这是一... 呃... 一场灵性之旅，你在接受考验。不过就像那句话说的，魔鬼就藏在细节之中。",
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nskill_data.csv第0010行\n[本行原始数据]\n{'id': 'systems_expertise',\n 'name': 'Systems Expertise',\n 'order': '90',\n 'tier': '5',\n 'reqPoints': '4',\n 'reqPointsPerExtraSkill': '2',\n 'description': \"No, I don't think it's a contradiction. It's a, uh, spiritual \"\n                \"journey. You're tested. And it's like they say, the Devil is \"\n                'in the details.',\n 'author': '\"Ludd\\'s Footsoldiers\" holodoc, interview with Pather engineer',\n 'combat officer': 'TRUE',\n 'admiral': '',\n 'admin': '',\n 'tags': '',\n 'icon': 'graphics/icons/skills/systems_expertise.png',\n '': ''}"
     },
     {

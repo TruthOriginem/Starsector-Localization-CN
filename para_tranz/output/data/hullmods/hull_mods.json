@@ -1773,8 +1773,8 @@
     {
         "key": "hull_mods.csv#heg_militarized$desc",
         "original": "This ship is - or was - on the Hegemony auxiliary list. Uparmour kits applied at Hegemony Naval yards resulting in no loss of performance for a %s/%s/%s/%s increase in armor strength, depending on hull size. Core power systems have been upgraded to military standards resulting in a %s improvement in overall handling, %s increase in flux capacity, a %s increase in flux dissipation, and an increase of maximum burn level by %s.",
-        "translation": "由于该舰在霸主的辅助舰列表中，因此才将其系统升级至军事级别标准。根据船体级别，提高 %s/%s/%s/%s 装甲。而升级到军用标准的核心系统，让该舰的机动性提高 %s}，幅能容量提高 %s}，幅能耗散提高 %s}。最大宇宙航速亦提高了 %s}。",
-        "stage": 1,
+        "translation": "该舰目前或曾经被划归于霸主辅助舰队列。在霸主海军船坞中安装的追加装甲套件能在不造成性能损失的前提下根据船体级别提高其 %s/%s/%s/%s 装甲。同时其核心动力系统被升级至军规，使该舰的整体机动性提高 %s}，幅能容量提高 %s}，幅能耗散提高 %s}，最大宇宙航速提高 %s}。",
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0115行\n[本行原始数据]\n{'name': 'Militarized Hegemony Auxiliary',\n 'id': 'heg_militarized',\n 'tier': '',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': '',\n 'uiTags': '',\n 'base value': '',\n 'unlocked': '',\n 'hidden': 'TRUE',\n 'hiddenEverywhere': '',\n 'cost_frigate': '0',\n 'cost_dest': '0',\n 'cost_cruiser': '0',\n 'cost_capital': '0',\n 'script': 'data.hullmods.Militarized',\n 'desc': 'This ship is - or was - on the Hegemony auxiliary list. Uparmour '\n         'kits applied at Hegemony Naval yards resulting in no loss of '\n         'performance for a %s/%s/%s/%s increase in armor strength, depending '\n         'on hull size. Core power systems have been upgraded to military '\n         'standards resulting in a %s improvement in overall handling, %s '\n         'increase in flux capacity, a %s increase in flux dissipation, and an '\n         'increase of maximum burn level by %s.',\n 'short': '',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/militarized_hegemony_auxiliary.png'}"
     },
     {
@@ -2445,7 +2445,7 @@
     {
         "key": "hull_mods.csv#repair_gantry$desc",
         "original": "Increases the resources gained from salvaging abandoned stations, derelicts, floating hulks, and other such by %s/%s/%s/%s, depending on hull size. Only affects the recovery of common resources such as fuel and supplies, and not rare items like blueprints. In addition, %s of the bonus applies to post-battle salvage.",
-        "translation": "根据船体级别，提高 %s/%s/%s/%s 从废弃空间站、遗弃物、舰船残骸等打捞到的资源。只影响普通资源的回收，如燃料与补给，而蓝图等稀有物资将不受影响。此外也提高 %s 战后打捞效率。",
+        "translation": "根据船体级别，提高 %s/%s/%s/%s 从废弃空间站、遗弃物、舰船残骸等打捞到的资源。只影响普通资源的回收，如燃料与补给，而蓝图等稀有物资将不受影响。此外，该效果在战后结算时仅有 %s 效率。",
         "stage": 1,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0075行\n[本行原始数据]\n{'name': 'Salvage Gantry',\n 'id': 'repair_gantry',\n 'tier': '',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': '',\n 'uiTags': '',\n 'base value': '',\n 'unlocked': '',\n 'hidden': 'TRUE',\n 'hiddenEverywhere': '',\n 'cost_frigate': '5',\n 'cost_dest': '10',\n 'cost_cruiser': '20',\n 'cost_capital': '40',\n 'script': 'com.fs.starfarer.api.impl.campaign.RepairGantry',\n 'desc': 'Increases the resources gained from salvaging abandoned stations, '\n         'derelicts, floating hulks, and other such by %s/%s/%s/%s, depending '\n         'on hull size. Only affects the recovery of common resources such as '\n         'fuel and supplies, and not rare items like blueprints. In addition, '\n         '%s of the bonus applies to post-battle salvage.',\n 'short': 'Increases resources gained from salvage.',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/repair_gantry.png'}"
     },
@@ -2887,7 +2887,7 @@
         "key": "hull_mods.csv#unstable_coils$desc",
         "original": "The phase coils on this ship are impossible to calibrate properly due to subtle flaws. Reduces the phase-time bonus by %s, reduces the peak performance time by %s, and increases the rate at which combat readiness degrades by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "因一些微妙的缺陷，导致该舰的相位线圈无法进行精细校正，降低 %s 相位时间增益，降低 %s 秒峰值时间，并且提高 %s 战备损耗率。\n\n但部署所需补给下降 %s}。",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.97-RC11 词条格式：v2\nhull_mods.csv第0124行\n[本行原始数据]\n{'name': 'Phase Coil Instability',\n 'id': 'unstable_coils',\n 'tier': '',\n 'rarity': '',\n 'tech/manufacturer': '',\n 'tags': 'dmod, phaseDamage',\n 'uiTags': '',\n 'base value': '',\n 'unlocked': '',\n 'hidden': 'TRUE',\n 'hiddenEverywhere': '',\n 'cost_frigate': '0',\n 'cost_dest': '0',\n 'cost_cruiser': '0',\n 'cost_capital': '0',\n 'script': 'data.hullmods.PhaseCoilInstability',\n 'desc': 'The phase coils on this ship are impossible to calibrate properly '\n         'due to subtle flaws. Reduces the phase-time bonus by %s, reduces the '\n         'peak performance time by %s, and increases the rate at which combat '\n         'readiness degrades by %s.\\n'\n         '\\n'\n         'Supply cost to recover from deployment reduced by %s.',\n 'short': '',\n 'sModDesc': '',\n 'sprite': 'graphics/hullmods/phase_coil_instability.png'}"
     },
     {

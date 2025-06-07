@@ -137,7 +137,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 保持开盾,shield_always_on,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.ShieldAlwaysOn,,强制开启护盾。,,graphics/hullmods/hardened_shields.png
 导弹自动工厂,missile_reload,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PeriodicMissileReload,内置的导弹工厂会定期补满所有导弹武器。,内置的导弹工厂会定期补满所有导弹武器。,,graphics/hullmods/expanded_missile_racks.png
 屏蔽货舱,shielded_holds,2,,,,,,,TRUE,,5,10,15,30,data.hullmods.ShieldedCargoHolds,原本是保护无护盾货舰免受天体辐射的影响，但经过简单调整就可用于干扰远距离货舱扫描，降低违禁物品被发现的概率。,降低被检查到违禁品的风险。,,graphics/hullmods/shielded_cargo_hold.png
-打捞起重机,repair_gantry,,,,,,,,TRUE,,5,10,20,40,com.fs.starfarer.api.impl.campaign.RepairGantry,根据船体级别，提高 %s/%s/%s/%s 从废弃空间站、遗弃物、舰船残骸等打捞到的资源。只影响普通资源的回收，如燃料与补给，而蓝图等稀有物资将不受影响。此外也提高 %s 战后打捞效率。,提高打捞收益。,,graphics/hullmods/repair_gantry.png
+打捞起重机,repair_gantry,,,,,,,,TRUE,,5,10,20,40,com.fs.starfarer.api.impl.campaign.RepairGantry,根据船体级别，提高 %s/%s/%s/%s 从废弃空间站、遗弃物、舰船残骸等打捞到的资源。只影响普通资源的回收，如燃料与补给，而蓝图等稀有物资将不受影响。此外，该效果在战后结算时仅有 %s 效率。,提高打捞收益。,,graphics/hullmods/repair_gantry.png
 相位力场,phasefield,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PhaseField,能长时间激活低水平相位场，使传感器截面降低 %s}。,降低舰队的传感器截面。,,graphics/hullmods/phase_field.png
 磁通分流,fluxshunt,,,,,,,,TRUE,,10,20,30,50,data.hullmods.FluxShunt,允许舰船以 %s 的正常耗散速率在护盾开启时耗散硬幅能。,允许舰船在展开护盾时耗散硬幅能。,,graphics/hullmods/flux_shunt.png
 民用级舰体,civgrade,,,,,,,,TRUE,,0,0,0,0,data.hullmods.CivGrade,提高 %s 传感器截面，降低 %s 传感器探测强度。,提高传感器截面，降低传感器探测强度。,,graphics/hullmods/civilian_grade.png
@@ -201,7 +201,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 ,,,,,,,,,,,,,,,,,,,
 # ship skin buffs,,,,,,,,,,,,,,,,,,,
 第十四战斗群,fourteenth,,,,,,,,TRUE,,0,0,0,0,data.hullmods.Fourteenth,"霸主 的前身 (人之领 第十四战斗群) 所配备的战舰是现如今研究 人之领 海军 ""决战"" 教条的原始样本。该舰采用大崩塌前的工业技术进行了一系列激进化的结构改装，目的是安装更加厚重的装甲板。提高 %s 点装甲值，降低 %s 的最高航速与机动性。而调整到极佳状态下的能源系统让该舰的幅能耗散/容量提高 %s}。",,,graphics/hullmods/fourteenth.png
-霸主军事配件,heg_militarized,,,,,,,,TRUE,,0,0,0,0,data.hullmods.Militarized,由于该舰在霸主的辅助舰列表中，因此才将其系统升级至军事级别标准。根据船体级别，提高 %s/%s/%s/%s 装甲。而升级到军用标准的核心系统，让该舰的机动性提高 %s}，幅能容量提高 %s}，幅能耗散提高 %s}。最大宇宙航速亦提高了 %s}。,,,graphics/hullmods/militarized_hegemony_auxiliary.png
+霸主军事配件,heg_militarized,,,,,,,,TRUE,,0,0,0,0,data.hullmods.Militarized,该舰目前或曾经被划归于霸主辅助舰队列。在霸主海军船坞中安装的追加装甲套件能在不造成性能损失的前提下根据船体级别提高其 %s/%s/%s/%s 装甲。同时其核心动力系统被升级至军规，使该舰的整体机动性提高 %s}，幅能容量提高 %s}，幅能耗散提高 %s}，最大宇宙航速提高 %s}。,,,graphics/hullmods/militarized_hegemony_auxiliary.png
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 # permanent ship debuffs,,,,,,,,,,,,,,,,,,,
