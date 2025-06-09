@@ -2,15 +2,15 @@
 
 本项目为《远行星号》游戏的中文翻译项目。
 
-目前正在进行的是游戏 **0.97a** 版本的汉化。
+目前正在进行的是游戏 **0.98a** 版本的汉化。
 
 ## 下载汉化
 
-> **注意：本汉化包仅适用于 0.97a-RC11 版本**
+> **注意：本汉化包仅适用于 0.98a-RC8 版本**
 
 ### 从论坛下载
 
-目前0.97尚且没有打包的汉化包。您可以在论坛帖子 [远行星号 0.95.1a-RC6 中文汉化v1.0.0](https://www.fossic.org/thread-3060-1-1.html) 下载最新的汉化版游戏安装包。
+目前0.98尚且没有打包的汉化包。您可以在论坛帖子 [远行星号 0.97a-RC11 中文汉化v1.0.0](https://www.fossic.org/thread-13676-1-1.html) 下载最新的汉化版游戏安装包。
 
 ### 下载 GitHub 上的最新汉化
 
@@ -90,11 +90,13 @@
 4. 复制 `original`文件夹为 `original.old`
 5. 重命名 `localization` 文件夹为 `localization.old`，并新建一个空的 `localization` 文件夹
 6. 使用脚本复制相关文件到 `original` 和 `localization` 文件夹中
-    - 运行 `_updateOriginal.py` 脚本，将 `original` 文件夹更新为最新版本的对应文件
-    - 运行 `_copyOldLocalization.py` 脚本，将 `localization.old` 文件夹中对应原文件未变更的文件复制到 `localization` 文件夹中
-    - 运行 `_overwriteLocalizationByOriginal.py` 脚本，将 `original` 中出现变化的文件覆盖到 `localization` 文件夹中
+    1. 运行 `_updateOriginal.py` 脚本，将 `original` 文件夹更新为最新版本的对应文件
+    2. 运行 `_copyOldLocalization.py` 脚本，将 `localization.old` 文件夹中对应原文件未变更的文件复制到 `localization` 文件夹中
+    3. 手动添加游戏新增加的，需要翻译的文件到 `original` 文件夹中
+    4. 运行 `_overwriteLocalizationByOriginal.py` 脚本，将 `original` 中出现变化的文件覆盖到 `localization` 文件夹中
 7. 将 `localization.old/graphics` 文件夹下的可以复用的图像和字体资源复制到 `localization/graphics` 文件夹中
-8. 手动添加游戏新增加的，需要翻译的文件到 `original` 和 `localization` 文件夹中
+8. 在使用Paratranz脚本前，请确保词条对照表文件 `para_tranz/para_tranz_map.json` 已经更新
+    - 请联系 jn_xyp 以获取最新的 `para_tranz_map.json` 文件
 9. **参照[Paratran版本管理指南](docs/paratranz/tut_admin.md)步骤，从 git 导入新的原文到 ParaTranz**
     - 只导入原文！**不要导入译文！**
     - 必须在导入时选择**安全模式（不删除词条）**！
