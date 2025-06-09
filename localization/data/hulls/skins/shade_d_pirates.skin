@@ -1,0 +1,22 @@
+{
+	"baseHullId":"shade",
+	"skinHullId":"shade_d_pirates",
+	"hullName":"阴影 (P)",
+	"descriptionId":"shade",
+	"descriptionPrefix":"第二次 AI 战争后，一些敢于冒险的拾荒者们从 速子科技 公司撤出的星系中回收了大量损坏的蓝图，且将其中的大部分都卖给了声名狼藉的黑市商人和海盗，他们迅速地将这些蓝图重新投入使用，生产出劣质但战力不俗的舰船",
+	"tags":["pirate_bp"],
+	"tech":"海盗",
+	"fleetPoints":8,
+	"ordnancePoints":35,
+	"baseValueMult":.8,
+	"suppliesToRecover":6,
+	"suppliesPerMonth":6,
+	"spriteName":"graphics/ships/shade/shade_d_pirates.png",
+	"removeWeaponSlots":["WS 003", "WS 005"], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	#"builtInMods":["unstable_coils","degraded_engines","faulty_grid"],
+	"builtInWeapons":{
+    },
+}

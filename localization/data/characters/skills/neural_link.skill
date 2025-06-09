@@ -1,0 +1,24 @@
+{
+	"id":"neural_link",
+	"governingAptitude":"technology",
+	"compressHullmods":false,
+	"scope":CUSTOM,
+	"scopeStr":"配备了 神经接口 船插的舰船",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":0,
+			"effects":[
+				{"type":"DESCRIPTION", "script":"com.fs.starfarer.api.impl.campaign.skills.NeuralLink$Level0"},
+			]
+		},
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"CHARACTER_STATS", "script":"com.fs.starfarer.api.impl.campaign.skills.NeuralLink$Level1"},
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"neural_interface":1}},
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"neural_integrator":1}},
+			]
+		},
+	],
+}

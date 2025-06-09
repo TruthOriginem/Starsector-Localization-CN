@@ -1,0 +1,30 @@
+{
+	"quality":1,
+	"displayName":"支援战斗机",
+	"hullId":"xyphos",
+	"variantId":"xyphos_Fighter",
+	"fluxVents":0,
+	"fluxCapacitors":0,
+	"hullMods":["advancedoptics"], # array of strings
+	
+	# mode is either LINKED or ALTERNATING
+	# slot ids (WS ***) must match what's in the .ship file
+	"weaponGroups":[
+		{"mode":"LINKED",
+		 "weapons":{
+		 			#"WS 001":"amblaster",
+		 			#"WS 001":"ionpulser",
+		 			#"WS 001":"pulselaser",
+		 			#"WS 001":"irpulse",
+		 			#"WS 001":"taclaser",
+		 			"WS 001":"ionbeam",
+		 		   },
+		},
+		{"mode":"LINKED",
+		 "weapons":{
+		 			"WS 002":"pdburst",
+		 			#"WS 003":"pdburst",
+		 		   },
+		},
+	],
+}

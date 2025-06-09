@@ -1,0 +1,20 @@
+{
+	"quality":0.0,
+	"displayName":"战斗机",
+	"hullId":"claw",
+	"variantId":"claw_Fighter",
+	"fluxVents":0,
+	"fluxCapacitors":0,
+	"hullMods":["no_weapon_flux"], # array of strings
+	
+	# mode is either LINKED or ALTERNATING
+	# slot ids (WS ***) must match what's in the .ship file
+	"weaponGroups":[
+		{"mode":"LINKED",
+		 "weapons":{
+		 			"WS 001":"ioncannon_fighter",
+		 			#"WS 001":"irpulse",
+		 		   },
+		},
+	],
+}

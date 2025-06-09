@@ -1,0 +1,27 @@
+{
+	"id":"target_analysis",
+	"governingAptitude":"combat",
+	"compressHullmods":false,
+	"elite":true,
+	"scope":"PILOTED_SHIP",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.TargetAnalysis$Level2"},
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.TargetAnalysis$Level3"},
+			]
+		},
+		{
+			"name":"精英",
+			"requiredSkillLevel":2,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.TargetAnalysis$Level1A"},
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.TargetAnalysis$Level1"},
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.TargetAnalysis$Level4"},
+			]
+		},
+	],
+}

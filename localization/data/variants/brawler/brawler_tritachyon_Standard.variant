@@ -1,0 +1,36 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 1,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "brawler_tritachyon",
+    "hullMods": [
+        "missleracks",
+        "advancedoptics",
+        "targetingunit",
+        "fluxbreakers"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "brawler_tritachyon_Standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "ionbeam"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 003": "sabot",
+                "WS 004": "sabot"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "gravitonbeam"}
+        }
+    ]
+}

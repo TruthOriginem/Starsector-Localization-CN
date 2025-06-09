@@ -1,0 +1,24 @@
+{
+	"id":"officer_training",
+	"governingAptitude":"leadership",
+	"compressHullmods":false,
+	"scope":"FLEET",
+	#"permanent":true,
+	"effectGroups":[
+		{
+			"requiredSkillLevel":0,
+			"effects":[
+				{"type":"DESCRIPTION", "script":"com.fs.starfarer.api.impl.campaign.skills.OfficerTraining$Level0"},
+			]
+		},
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"CHARACTER_STATS", "script":"com.fs.starfarer.api.impl.campaign.skills.OfficerTraining$Level1"},
+				{"type":"CHARACTER_STATS", "script":"com.fs.starfarer.api.impl.campaign.skills.OfficerTraining$Level2"},
+				{"type":"CHARACTER_STATS", "script":"com.fs.starfarer.api.impl.campaign.skills.OfficerTraining$Level3"},
+			]
+		},
+	],
+}

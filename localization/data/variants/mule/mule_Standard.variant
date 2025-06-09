@@ -1,0 +1,35 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 20,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "mule",
+    "hullMods": ["heavyarmor"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "mule_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "heavyac"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "heatseeker",
+                "WS 002": "heatseeker"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "lightmg",
+                "WS 005": "lightmg",
+                "WS 006": "lightmg"
+            }
+        }
+    ]
+}

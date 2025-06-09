@@ -1,0 +1,32 @@
+{
+	"quality":1,
+	"displayName":"鱼雷轰炸机",
+	"hullId":"trident",
+	"variantId":"trident_Bomber",
+	"fluxVents":0,
+	"fluxCapacitors":0,
+	"mods":[], # array of strings
+	
+	# mode is either LINKED or ALTERNATING
+	# slot ids (WS ***) must match what's in the .ship file
+	"weaponGroups":[
+		{"mode":"ALTERNATING",
+		 "weapons":{
+		 			#"WS 001":"pdlaser",
+					#"WS 002":"pdlaser",
+					#"WS 003":"pdlaser",
+		 		   },
+		},
+		{"mode":"ALTERNATING",
+		 "weapons":{
+		 			"WS 004":"atropos_single",
+		 			"WS 005":"atropos_single",
+		 		   },
+		},
+		{"mode":"ALTERNATING",
+		 "weapons":{
+		 			#"WS 005":"atropos_single",
+		 		   },
+		},
+	],
+}

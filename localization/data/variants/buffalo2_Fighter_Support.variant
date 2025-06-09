@@ -1,0 +1,49 @@
+{
+    "displayName": "Fighter Support",
+    "fluxCapacitors": 0,
+    "fluxVents": 9,
+    "goalVariant": true,
+    "hullId": "buffalo2",
+    "hullMods": [
+        "converted_hangar",
+        "missleracks"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "buffalo2_Fighter_Support",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 007": "amblaster"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 008": "pilum"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 004": "swarmer",
+                "WS 005": "swarmer"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 006": "heatseeker"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "lrpdlaser",
+                "WS 002": "vulcan",
+                "WS 003": "vulcan"
+            }
+        }
+    ],
+    "wings": ["talon_wing"]
+}

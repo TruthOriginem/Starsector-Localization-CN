@@ -1,0 +1,23 @@
+{
+	"baseHullId":"manticore",
+	"skinHullId":"manticore_luddic_path",
+	"hullName":"蝎尾狮 (LP)",
+	"descriptionId":"manticore",
+	"descriptionPrefix":"卢德左径 的狂热分子对这艘战舰进行了简陋的改装，使引擎和动力系统超负荷运转，然后用一个巨大的导弹发射器取代了原来的实弹炮塔，以便对主力舰和巡洋舰实施强势打击",
+	"tags":["rare_bp"],
+	"tech":"卢德左径",
+	"suppliesToRecover":14,
+	"suppliesPerMonth":14,
+	"spriteName":"graphics/ships/manticore/manticore_pather.png",
+	"removeWeaponSlots":[],
+	"weaponSlotChanges":{
+		"WS 000":{"type": "MISSILE"},
+		"WS 004":{"type": "BALLISTIC"},
+		"WS 005":{"type": "BALLISTIC"},
+	},
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":["ballistic_rangefinder"], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":["safetyoverrides","ill_advised"],
+    },    
+}

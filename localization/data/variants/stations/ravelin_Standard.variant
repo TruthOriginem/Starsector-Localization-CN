@@ -1,0 +1,45 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "hullId": "ravelin",
+    "hullMods": ["armoredweapons"],
+    "permaMods": [],
+    "variantId": "ravelin_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "chaingun"}
+        },
+        #{
+        #    "autofire": false,
+        #    "mode": "LINKED",
+        #    "weapons": {"WS 000": "heatseeker"}
+        #},
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 006": "ioncannon",
+                "WS 007": "ioncannon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "heavymg",
+                "WS 005": "heavymg"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "lightmg",
+                "WS 003": "lightmg"
+            }
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "displayName": "Escort",
+    "fluxCapacitors": 3,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "monitor",
+    "hullMods": [
+        "extendedshieldemitter",
+        "hardenedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "monitor_Escort",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "flak",
+                "WS 002": "flak"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "lightac",
+                "WS 004": "lightac"
+            }
+        }
+    ]
+}

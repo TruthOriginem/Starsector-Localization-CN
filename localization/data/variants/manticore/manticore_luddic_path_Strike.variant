@@ -1,0 +1,38 @@
+{
+    "displayName": "Strike",
+    "fluxCapacitors": 11,
+    "fluxVents": 11,
+    "goalVariant": true,
+    "hullId": "manticore_luddic_path",
+    "hullMods": [
+        "armoredweapons",
+        "heavyarmor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "manticore_luddic_path_Strike",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "arbalest",
+                "WS 005": "arbalest"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 000": "hammerrack"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "lightdualmg",
+                "WS 002": "lightdualmg",
+                "WS 003": "lightdualmg"
+            }
+        }
+    ]
+}

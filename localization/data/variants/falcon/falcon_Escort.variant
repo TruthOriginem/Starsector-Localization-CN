@@ -1,0 +1,50 @@
+{
+    "displayName": "Escort",
+    "fluxCapacitors": 0,
+    "fluxVents": 15,
+    "hullId": "falcon",
+    "hullMods": [
+        "magazines",
+        "targetingunit",
+        "missile_autoloader"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "falcon_Escort",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "heavyac",
+                "WS 008": "heavyac"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "gazer",
+                "WS 002": "gazer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "irautolance",
+                "WS 006": "irautolance"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "pdburst",
+                "WS 004": "pdburst",
+                "WS 009": "pdburst",
+                "WS 010": "pdburst"
+            }
+        }
+    ]
+}

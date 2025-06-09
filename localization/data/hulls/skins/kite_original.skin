@@ -1,0 +1,20 @@
+{
+	"baseHullId":"kite",
+	"skinHullId":"kite_original",
+	"hullName":"风筝 (S)",
+	"descriptionId":"kite",  # optional
+	"descriptionPrefix":"一种未经改装的原始民用型号，保存完好，很可能是古早文明时代的收藏品",
+	"tags":["rare_bp"],
+	"spriteName":"graphics/ships/aeroshuttle/aeroshuttle_original.png",
+	"addHints":[CIVILIAN],
+	"ordnancePoints":30,
+	"fleetPoints":2,
+	"baseValueMult":1.5,
+	"removeWeaponSlots":["WS 001", "WS 002", "WS 003"], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":[],
+	"builtInWeapons":{
+    },
+}

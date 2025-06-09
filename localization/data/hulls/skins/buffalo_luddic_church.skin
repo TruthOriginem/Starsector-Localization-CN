@@ -1,0 +1,17 @@
+{
+	"baseHullId":"buffalo",
+	"skinHullId":"buffalo_luddic_church",
+	"hullName":"水牛 (LC)",
+	"descriptionId":"buffalo",  # optional
+	"descriptionPrefix":"该舰除了涂装有 卢德教会 的标志以外，其系统方面几乎没有受到任何修改",
+	"tags":["LC_bp"],
+	"tech":"卢德教会",
+	"spriteName":"graphics/ships/buffalo/buffalo_luddic_church.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":[],
+	"builtInWeapons":{
+    },
+}

@@ -1,0 +1,25 @@
+{
+	"id":"energy_weapon_mastery",
+	"governingAptitude":"technology",
+	"compressHullmods":false,
+	"elite":true,
+	"scope":"PILOTED_SHIP",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.EnergyWeaponMastery$Level1"},
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"high_scatter_amp":1}},
+			]
+		},
+		{
+			"name":"精英",
+			"requiredSkillLevel":2,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.EnergyWeaponMastery$Level2"},
+			]
+		},
+	],
+}

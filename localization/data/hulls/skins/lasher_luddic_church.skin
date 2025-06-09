@@ -1,0 +1,18 @@
+{
+	"baseHullId":"lasher",
+	"skinHullId":"lasher_luddic_church",
+	"hullName":"征伐 (LC)",
+	"descriptionId":"lasher",  # optional
+	"baseValueMult":1,
+	"spriteName":"graphics/ships/lasher/lasher_luddic.png",
+	"descriptionPrefix":"该舰除了涂装有 卢德教会 的标志以外，其系统方面几乎没有受到任何修改",
+	"tags":["LC_bp"],
+	"tech":"卢德教会",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInMods":[],
+	"builtInWeapons":{
+    },
+}

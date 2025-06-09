@@ -1,0 +1,26 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 7,
+    "fluxVents": 0,
+    "hullId": "vigilance",
+    "hullMods": [
+        "missleracks",
+        "extendedshieldemitter",
+        "hardenedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "vigilance_Support2",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "heavymauler"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "gazerpod"}
+        }
+    ]
+}

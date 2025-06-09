@@ -1,0 +1,26 @@
+{
+	"id":"helmsmanship",
+	"governingAptitude":"combat",
+	"compressHullmods":false,
+	"elite":true,
+	"scope":"PILOTED_SHIP", # if specified, scope is shown on a separate line and not shown for individual skill effects
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.Helmsmanship$Level1"},
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.Helmsmanship$Level2"},
+			]
+		},
+		{
+			"name":"精英",
+			"requiredSkillLevel":2,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.Helmsmanship$Level4"},
+				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.Helmsmanship$Level3"},
+			]
+		},
+	],
+}

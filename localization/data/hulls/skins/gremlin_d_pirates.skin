@@ -1,0 +1,18 @@
+{
+	"baseHullId":"gremlin",
+	"skinHullId":"gremlin_d_pirates",
+	"hullName":"小精灵 (P)",
+	"descriptionId":"gremlin",
+	"descriptionPrefix":"这艘船遭受了海盗船员的重度改装和低劣维护",
+	"tags":["pirate_bp"],
+	"tech":"海盗",
+	#"ordnancePoints":40,
+	"spriteName":"graphics/ships/phase/gremlin_pirates.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	#"builtInMods":["unstable_coils","degraded_engines","fragile_subsystems"],
+	"builtInWeapons":{
+    },
+}

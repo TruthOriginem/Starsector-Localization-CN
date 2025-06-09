@@ -1,0 +1,42 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 7,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "lasher",
+    "hullMods": [
+        "unstable_injector",
+        "auxiliarythrusters",
+        "blast_doors"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "lasher_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "lightag",
+                "WS 003": "lightag"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "heatseeker",
+                "WS 004": "heatseeker"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "lightmg",
+                "WS 006": "lightmg",
+                "WS 007": "lightmg"
+            }
+        }
+    ]
+}

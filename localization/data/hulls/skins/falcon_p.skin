@@ -1,0 +1,51 @@
+{
+	"baseHullId":"falcon",
+	"skinHullId":"falcon_p",
+	"hullName":"猎鹰 (P)",
+	"descriptionId":"falcon",
+	"descriptionPrefix":"这艘猎鹰的推进系统被某些热心的海盗船员进行了华而不实的 \"改进\" ；东拼西凑起来的引擎组件虽然都是毛病但却还能运作，不过完全不符合任何安全标准",
+	"tags":["rare_bp"],
+	"tech":"海盗",
+	#"restoreToBaseHull":true,
+	"suppliesToRecover":20,
+	"suppliesPerMonth":20,
+	"baseValueMult":1.25,
+	"spriteName":"graphics/ships/falcon/falcon_p.png",
+	"removeWeaponSlots":["WS 003","WS 004"], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"weaponSlotChanges":{
+    	"WS 005":{
+			#"angle": 0,
+            #"arc": 210,
+            #"mount": "TURRET",
+            #"size": "SMALL",
+            "type": "COMPOSITE"
+		},	
+		"WS 006":{
+			#"angle": 0,
+            #"arc": 210,
+            #"mount": "TURRET",
+            #"size": "SMALL",
+            "type": "COMPOSITE"
+        },
+		"WS 007":{
+			#"angle": 0,
+            #"arc": 210,
+            #"mount": "TURRET",
+            #"size": "SMALL",
+            "type": "MISSILE"
+		},	
+		"WS 008":{
+			#"angle": 0,
+            #"arc": 210,
+            #"mount": "TURRET",
+            #"size": "SMALL",
+            "type": "MISSILE"
+		},
+	},
+	"builtInMods":["augmentedengines","unstable_injector"],
+	"builtInWeapons":{
+    },
+}

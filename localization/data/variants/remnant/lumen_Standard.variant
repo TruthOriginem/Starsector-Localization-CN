@@ -1,0 +1,33 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 7,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "lumen",
+    "hullMods": ["fluxbreakers"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "lumen_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {"WS 008": "atropos_single"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "swarmer"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 006": "irpulse"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 007": "ioncannon"}
+        }
+    ]
+}

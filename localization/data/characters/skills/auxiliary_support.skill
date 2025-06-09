@@ -1,0 +1,17 @@
+{
+	"id":"auxiliary_support",
+	"governingAptitude":"leadership",
+	"compressHullmods":false,
+	"scope":"CUSTOM",
+	"scopeStr":"所有安装 军事化子系统 的舰船",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"CHARACTER_STATS", "script":"com.fs.starfarer.api.impl.campaign.skills.AuxiliarySupport$Level1"},
+				#{"type":"HULLMOD_UNLOCK", "hullmods":{"escort_package":1, "assault_package":1}},
+			]
+		},
+	],
+}

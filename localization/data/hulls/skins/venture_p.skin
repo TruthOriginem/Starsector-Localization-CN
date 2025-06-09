@@ -1,0 +1,32 @@
+{
+	"baseHullId":"venture",
+	"skinHullId":"venture_p",
+	"hullName":"历险 Mk.II",
+	"hullDesignation":"巡洋舰",
+	"fleetPoints":12,
+	"ordnancePoints":115,
+	"descriptionPrefix":"这艘历险在边缘世界的非法船坞里接受了一系列大胆的改造。原本的机库和采矿甲板被一个集成了巨型导弹发射器、弹药库和相当可靠的通用自动装填系统的挂载点所替代。这个导弹发射器面向后方的事实使得各种异想天开的绰号被该舰的船员及其对手创造出来。",
+	"tags":["pirate_bp"],
+	"tech":"海盗",
+	"builtInWings": [],
+	"fighterBays":0,
+	"spriteName":"graphics/ships/venture/venture_p.png",
+	"baseValueMult":1,
+	"removeHints":[CIVILIAN],
+	"builtInMods":["comp_storage"],
+	"builtInWeapons":{
+    },
+    "weaponSlotChanges":{
+		"WS 005":{
+			"type": "BALLISTIC"
+		},
+		"WS 006":{
+			"type": "BALLISTIC"
+		},
+		"WS 009":{
+            "mount": "HARDPOINT",
+            "size": "LARGE",
+            "type": "MISSILE"
+		}	
+	},
+}

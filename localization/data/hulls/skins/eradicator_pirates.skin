@@ -1,0 +1,21 @@
+{
+	"baseHullId":"eradicator",
+	"skinHullId":"eradicator_pirates",
+	"hullName":"根除者 (P)",
+	"descriptionId":"eradicator",
+	"descriptionPrefix":"这艘船遭受了海盗船员的重度改装和低劣维护",
+	#"tags":["pirate_bp"],
+	"tags":["rare_bp"],
+	"tech":"海盗",
+	"systemId":"burndrive",
+	"suppliesToRecover":18,
+	"suppliesPerMonth":18,
+	"baseValueMult":0.75,
+	"spriteName":"graphics/ships/eradicator/eradicator_pirate.png",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"builtInWeapons":{
+    },    
+}

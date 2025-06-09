@@ -1,0 +1,28 @@
+{
+    "displayName": "Armorbreaker",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "shard_left",
+    "hullMods": [],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "shard_left_Armorbreaker",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 000": "disintegrator"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "amsrm"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "riftlance"}
+        }
+    ]
+}

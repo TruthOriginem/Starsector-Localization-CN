@@ -1,0 +1,55 @@
+{
+    "displayName": "Overdriven",
+    "fluxCapacitors": 9,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "eradicator_pirates",
+    "hullMods": [
+        "safetyoverrides",
+        "auxiliarythrusters",
+        "shield_shunt",
+        "armoredweapons"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "eradicator_pirates_Overdriven",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 006": "chaingun"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 000": "hammer",
+                "WS 001": "hammer",
+                "WS 002": "hammer",
+                "WS 003": "hammer",
+                "WS 004": "hammer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "heavymg",
+                "WS 007": "heavymg"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "vulcan",
+                "WS 009": "vulcan",
+                "WS 010": "vulcan",
+                "WS 011": "vulcan",
+                "WS 012": "vulcan",
+                "WS 013": "vulcan",
+                "WS 014": "vulcan"
+            }
+        }
+    ]
+}

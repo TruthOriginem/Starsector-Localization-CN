@@ -1,0 +1,25 @@
+{
+	"id":"derelict_contingent",
+	"governingAptitude":"industry",
+	"compressHullmods":false,
+	"scope":ALL_SHIPS,
+	#"scope":CUSTOM,
+	#"scopeStr":"all ships with officers, that also have d-mods",
+	"effectGroups":[
+		{
+			"requiredSkillLevel":0,
+			"effects":[
+				{"type":"DESCRIPTION", "script":"com.fs.starfarer.api.impl.campaign.skills.DerelictContingent$Level0"},
+			]
+		},
+		{
+			"requiredSkillLevel":1,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.DerelictContingent$Level1"},
+				#{"type":"FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.DerelictContingent$Level2"},
+				#{"type":"HULLMOD_UNLOCK", "hullmods":{"shield_shunt":1}},
+			]
+		},
+	],
+}

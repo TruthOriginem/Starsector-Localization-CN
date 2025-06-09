@@ -1,0 +1,33 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 0,
+    "fluxVents": 4,
+    "goalVariant": true,
+    "hullId": "brawler",
+    "hullMods": [
+        "fluxbreakers",
+        "missleracks",
+        "insulatedengine"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "brawler_Support",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "heavymauler",
+                "WS 002": "heavymauler"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 003": "gazer",
+                "WS 004": "gazer"
+            }
+        }
+    ]
+}

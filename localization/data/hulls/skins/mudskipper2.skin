@@ -1,0 +1,32 @@
+{
+	"baseHullId":"mudskipper",
+	"skinHullId":"mudskipper2",
+	"hullName":"弹涂鱼 Mk.II",
+	"hullDesignation":"护卫舰",
+	"fleetPoints":4,
+	"ordnancePoints":30,
+	#"systemId":"",
+	"descriptionPrefix":"一系列不明智的改装已把这种人畜无害的船体彻底武装。它到底是对它的船员还是对它的敌人更加危险，仍是码头酒吧里的争论焦点。但海盗们往往会青睐这种改装，因为他们喜欢给猎物营造一种'压倒性火力'的假象",
+	"tags":["pirate_bp"],
+	"tech":"海盗",
+	"spriteName":"graphics/ships/mudskipper/mudskipper2.png",
+	"baseValueMult":2,
+	"removeHints":[CIVILIAN],
+	#"addHints":[],
+	"removeWeaponSlots":["WS 003"], 	# ids
+	"removeEngineSlots":[], 			# indices, as engine slots have no id in the .ship file
+	#"removeBuiltInMods":["civgrade"], 	# hullmod ids
+	"removeBuiltInWeapons":[], 			# weapon slot ids
+	"builtInMods":["ill_advised", "comp_storage"],
+	"builtInWeapons":{
+    },
+    "weaponSlotChanges":{
+		"WS 002":{
+			#"angle": 0,
+            #"arc": 210,
+            "mount": "HARDPOINT",
+            "size": "LARGE",
+            "type": "BALLISTIC"
+		}	
+	},
+}
