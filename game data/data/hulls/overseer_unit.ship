@@ -1,0 +1,261 @@
+{
+    "bounds": [
+        45,
+        56,
+        66,
+        40,
+        43,
+        0,
+        65,
+        -40,
+        46,
+        -55,
+        2,
+        -67,
+        -42,
+        -58,
+        -57,
+        -25,
+        -59,
+        24,
+        -41,
+        57,
+        -1,
+        67
+    ],
+    "builtInMods": [
+        "automated",
+        "threat_hullmod"
+    ],
+    "center": [
+        74,
+        74
+    ],
+    "collisionRadius": 110,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -57,
+                49
+            ],
+            "style": "THREAT",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -58,
+                -49
+            ],
+            "style": "THREAT",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -69,
+                23
+            ],
+            "style": "THREAT",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -56,
+                55
+            ],
+            "style": "THREAT",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -69,
+                -23
+            ],
+            "style": "THREAT",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 32,
+            "location": [
+                -57,
+                -55
+            ],
+            "style": "THREAT",
+            "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -70,
+                17
+            ],
+            "style": "THREAT",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -70,
+                -16
+            ],
+            "style": "THREAT",
+            "width": 12
+        }
+    ],
+    "height": 160,
+    "hullId": "overseer_unit",
+    "hullName": "Overseer Unit",
+    "hullSize": "DESTROYER",
+    "shieldCenter": [
+        0,
+        0
+    ],
+    "shieldRadius": 110,
+    "spriteName": "graphics/ships/threat/overseer.png",
+    "style": "THREAT",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 120,
+            "arc": 210,
+            "id": "WS 001",
+            "locations": [
+                -18,
+                53
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 60,
+            "arc": 210,
+            "id": "WS 002",
+            "locations": [
+                19,
+                55
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -60,
+            "arc": 210,
+            "id": "WS 003",
+            "locations": [
+                19,
+                -55
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 240,
+            "arc": 210,
+            "id": "WS 004",
+            "locations": [
+                -19,
+                -53
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 0,
+            "arc": 150,
+            "id": "WS 006",
+            "locations": [
+                31,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 0,
+            "arc": 150,
+            "id": "WS 008",
+            "locations": [
+                34,
+                40
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 0,
+            "arc": 150,
+            "id": "WS 009",
+            "locations": [
+                34,
+                -40
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 0,
+            "arc": 360,
+            "id": "WS 010",
+            "locations": [
+                -28,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "SYSTEM"
+        },
+        {
+            "angle": 0,
+            "arc": 360,
+            "id": "WS 011",
+            "locations": [
+                -16,
+                34
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        },
+        {
+            "angle": 0,
+            "arc": 360,
+            "id": "WS 012",
+            "locations": [
+                -18,
+                -35
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        }
+    ],
+    "width": 148
+}

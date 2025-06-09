@@ -1,0 +1,37 @@
+{
+	"id":"neoferric_quadcoil",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"LARGE",
+	"turretSprite":"graphics/weapons/quadcoil_turret_base.png",
+	"turretGunSprite":"graphics/weapons/quadcoil_turret_recoil.png",
+	"turretGlowSprite":"graphics/weapons/quadcoil_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/quadcoil_hardpoint_base.png",
+	"hardpointGunSprite":"graphics/weapons/quadcoil_hardpoint_recoil.png",	
+	"hardpointGlowSprite":"graphics/weapons/quadcoil_hardpoint_glow.png",	
+	#"glowColor":[165,205,215,255],
+	#"glowColor":[235,255,215,200], #255
+	"glowColor":[225,255,125,200], #255
+	"visualRecoil":-14.0,  # the gun sprites are only used if this is non-0
+	"renderHints":[], #[RENDER_BARREL_BELOW],
+	"turretOffsets":[33, -10, 33, -4, 33, 4, 33, 10],
+	"turretAngleOffsets":[0, 0, 0, 0],
+	"hardpointOffsets":[48, -9, 48, -3, 48, 3, 48, 9],
+	"hardpointAngleOffsets":[0, 0, 0, 0],
+	"barrelMode":"ALTERNATING", # LINKED or ALTERNATING.  whether barrels fire at the same time or alternate.
+	#"animationType":"MUZZLE_FLASH",
+	"animationType":"GLOW_AND_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"muzzleFlashSpec":{"length":70.0,   # only used if animationType = MUZZLE_FLASH
+					 "spread":2.0,
+					 "particleSizeMin":8.0,
+					 "particleSizeRange":14.0,
+					 "particleDuration":0.15,
+					 "particleCount":24,
+					 #"particleColor":[245,215,170,255]},
+					#"particleColor":[245,185,170,255]},
+					"particleColor":[235,255,105,255]},
+	"projectileSpecId":"neoferric_quadcoil_shot",  # projectile that will be fired
+	#"stopPreviousFireSound":true,
+	#"fadePreviousFireSound":0.05,
+	"fireSoundTwo":"neoferric_quadcoil_fire",
+}

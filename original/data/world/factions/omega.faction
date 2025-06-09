@@ -153,6 +153,11 @@
 		"fightToTheLast":true, # order a full assault instead of retreating, in most cases
 		"noAICoresFromAutomatedDefenses":true,
 		"officersOnAutomatedDefenses":true,
+		"simulatorData":{
+			"showInSimulatorDevModeOnly":true,
+			"omegaAICores":true,
+			"includeCivShipsWithFaction":true,
+		},
 	},	
 	"fleetTypeNames":{
 		"patrolSmall":"Minor Apparition", 

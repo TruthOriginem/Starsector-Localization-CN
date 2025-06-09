@@ -1,10 +1,13 @@
 {
     "displayName": "Support",
     "fluxCapacitors": 20,
-    "fluxVents": 4,
+    "fluxVents": 2,
     "goalVariant": true,
     "hullId": "drover",
-    "hullMods": ["missleracks"],
+    "hullMods": [
+        "missleracks",
+        "recovery_shuttles"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "drover_Support",

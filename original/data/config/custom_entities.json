@@ -190,6 +190,68 @@
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 		"renderCircleIndicator":true,
 		"renderCircleIndicatorSelectionFlash":true,
+	},
+	"derelict_vambrace":{
+		"defaultName":"Derelict Structure", # used if name=null in addCustomEntity()
+		"nameInText":"derelict structure",
+		"shortName":"derelict structure",
+		"aOrAn":"a",
+		"isOrAre":"is",
+		"detectionRange":2500, # must be >0 for discoverable/discoveryXP to be used
+		"discoverable":true,
+		"discoveryXP":1000,		
+		"defaultRadius":30, # used if radius<0 in addCustomEntity()
+		"customDescriptionId":"derelict_vambrace",
+		"interactionImage":"graphics/illustrations/space_wreckage.jpg",
+		"icon":"graphics/icons/derelict.png",
+		"iconWidth":32,
+		"iconHeight":32,
+		"sprite":"graphics/stations/vambrace1.png",
+		"spriteWidth":40,
+		"spriteHeight":40,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"tags":["has_interaction_dialog",],
+		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"renderCircleIndicator":true,
+		"renderCircleIndicatorSelectionFlash":true,
+	},
+		
+	"generic_probe_active":{
+		"defaultName":"Probe", # used if name=null in addCustomEntity()
+		"nameInText":"probe",
+		"shortName":"probe",
+		"aOrAn":"a",
+		"isOrAre":"is",
+		#"detectionRange":2000, # must be >0 for discoverable/discoveryXP to be used
+		#"discoverable":true,
+		#"discoveryXP":500,		
+		"defaultRadius":25, # used if radius<0 in addCustomEntity()
+		"customDescriptionId":"generic_probe",
+		"interactionImage":"graphics/illustrations/generic_probe.jpg",
+		"icon":"graphics/icons/generic_probe_icon.png",
+		"iconWidth":16,
+		"iconHeight":16,
+		"sprite":"graphics/stations/probe.png",
+		"spriteWidth":36,
+		"spriteHeight":36,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"tags":[],
+		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"renderCircleIndicator":false,
+		"renderCircleIndicatorSelectionFlash":true,
+		"pluginClass":"com.fs.starfarer.api.impl.campaign.entities.GenericProbeEntityPlugin",
 	},	
 	
 	"test_station":{
@@ -880,7 +942,7 @@
 		"showNameOnMap":false,
 		"scaleNameWithZoom":false,
 		"scaleIconWithZoom":true,
-		"tags":["has_interaction_dialog", "salvageable", "neutrino_high"],
+		"tags":["has_interaction_dialog", "salvageable", "neutrino_high", "not_random_mission_target"],
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 		"renderCircleIndicator":true,
 		"renderCircleIndicatorSelectionFlash":true,
@@ -895,7 +957,7 @@
 		"isOrAre":"is",
 		"defaultRadius":150, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"coronal_tap",
-		"interactionImage":"graphics/illustrations/coronal_tap.jpg",
+		"interactionImage":"graphics/illustrations/coronal_tap2.jpg",
 		"icon":"graphics/icons/coronal_shunt.png",
 		"iconWidth":32,
 		"iconHeight":32,
@@ -1110,7 +1172,7 @@
 		"shortName":"station",
 		"customDescriptionId":"station_mining_remnant",
 		"interactionImage":"graphics/illustrations/orbital_construction.jpg",
-		"icon":"graphics/icons/station0.png",
+		"icon":"graphics/icons/station_mining_broken.png",
 		"iconWidth":20,
 		"iconHeight":20,
 		"sprite":"graphics/stations/station_mining00.png",
@@ -1134,7 +1196,7 @@
 		"shortName":"station",
 		"customDescriptionId":"station_research_remnant",
 		"interactionImage":"graphics/illustrations/orbital_construction.jpg",
-		"icon":"graphics/icons/station0.png",
+		"icon":"graphics/icons/station_research_broken.png",
 		"iconWidth":20,
 		"iconHeight":20,
 		"sprite":"graphics/stations/station_side00.png",
@@ -1159,7 +1221,7 @@
 		"shortName":"orbital habitat",
 		"customDescriptionId":"orbital_habitat_abandoned",
 		"interactionImage":"graphics/illustrations/orbital_construction.jpg",
-		"icon":"graphics/icons/station_broken.png",
+		"icon":"graphics/icons/station_habitat_broken.png",
 		"iconWidth":20,
 		"iconHeight":20,
 		"sprite":"graphics/stations/station_side06.png",
@@ -1188,6 +1250,7 @@
 	"makeshift_station":{
 		"baseId":"orbital_habitat",
 		"customDescriptionId":"makeshift_station",
+		"icon":"graphics/icons/station0.png",
 		"interactionImage":"graphics/illustrations/pirate_station.jpg",
 		"tags":["has_interaction_dialog", "neutrino", "station", "use_station_visual"],
 	},
@@ -1250,7 +1313,7 @@
 		#"spriteWidth":64,
 		#"spriteHeight":64,
 		"showInCampaign":true,
-		#"showIconOnMap":true,
+		"showIconOnMap":false,
 		"scaleIconWithZoom":true,
 		"customDescriptionId":"fusion_lamp",
 		"renderCircleIndicator":false,
@@ -1296,7 +1359,7 @@
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 	},
 	"station_lowtech2":{
-		"defaultName":"Battletation", # used if name=null in addCustomEntity()
+		"defaultName":"Battlestation", # used if name=null in addCustomEntity()
 		"defaultRadius":80, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/orbital.jpg",
@@ -1360,7 +1423,7 @@
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 	},
 	"station_midline2":{
-		"defaultName":"Battletation", # used if name=null in addCustomEntity()
+		"defaultName":"Battlestation", # used if name=null in addCustomEntity()
 		"defaultRadius":90, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/orbital.jpg",
@@ -1425,7 +1488,7 @@
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 	},
 	"station_hightech2":{
-		"defaultName":"Battletation", # used if name=null in addCustomEntity()
+		"defaultName":"Battlestation", # used if name=null in addCustomEntity()
 		"defaultRadius":70, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/orbital.jpg",

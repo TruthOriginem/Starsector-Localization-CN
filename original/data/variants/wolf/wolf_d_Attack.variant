@@ -3,9 +3,12 @@
     "fluxCapacitors": 9,
     "fluxVents": 10,
     "hullId": "wolf_d",
-    "hullMods": ["fluxdistributor"],
+    "hullMods": [
+        "fluxdistributor",
+        "turretgyros"
+    ],
     "permaMods": [],
-    "quality": 0.25,
+    "sMods": [],
     "variantId": "wolf_d_Attack",
     "weaponGroups": [
         {

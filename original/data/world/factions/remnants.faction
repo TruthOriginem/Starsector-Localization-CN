@@ -198,6 +198,11 @@
 		"allowsTransponderOffTrade":true, # to prevent cargoscan dialog from "patrols"
 		"postsNoBounties":true,
 		"fightToTheLast":true, # order a full assault instead of retreating, in most cases
+		"simulatorData":{
+			"showInSimulator":true,
+			"standardAICores":true,
+			"includeCivShipsWithFaction":true,
+		},
 	},	
 	"fleetTypeNames":{
 		"patrolSmall":"Fragment",

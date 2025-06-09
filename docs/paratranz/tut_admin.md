@@ -28,7 +28,10 @@
 
 在游戏版本更新后，或是通过git对csv文件进行修改后，需要进行本操作。
 
-> 注意，请不要将导出的文件内容上传到git！
+在游戏版本更新后，需要首先设置新的词条导出上下文前缀，以便区分不同版本的词条
+- 用文本编辑器打开`项目目录/para_tranz/utils/config.py`文件
+- 找到`EXPORTED_STRING_CONTEXT_PREFIX_PREFIX`变量，修改其中的游戏版本号
+  - 例如，当前游戏版本为`0.98-RC8`，则设置为`EXPORTED_STRING_CONTEXT_PREFIX_PREFIX = "版本：0.98-RC8 词条格式：v2"`
 
 （日后会尝试将此操作自动化）
 

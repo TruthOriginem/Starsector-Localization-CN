@@ -370,6 +370,7 @@
 		"useReverseLightForGlow":false,
 		"cloudRotation":-2, # degrees/second, optional
 		"doNotShowInCombat":true, # meant for brighter planets that make it hard to see what's going on
+		#"tags":["codex_unlockable"],
 	},	
 	"frozen":{
 		"name":"Frozen",
@@ -605,6 +606,7 @@
 	},	
 	"desert1":{
 		"name":"Desert",
+		"descriptionId":"desert",
 		"tilt":30, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -789,6 +791,7 @@
 		"cloudTexture":"graphics/planets/clouds_banded01.png", # omit for no cloud layer
 		"cloudColor":[220,160,100,220],
 		"cloudRotation":12, # degrees/second, optional
+		#"tags":["codex_unlockable"],
 	},
 	"terran-eccentric":{
 		"name":"Terran Eccentric",

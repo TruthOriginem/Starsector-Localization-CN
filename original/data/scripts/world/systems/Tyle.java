@@ -13,6 +13,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
 import com.fs.starfarer.api.impl.campaign.procgen.StarAge;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
+import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator.StarSystemType;
 import com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin.AsteroidFieldParams;
 import com.fs.starfarer.api.impl.campaign.terrain.MagneticFieldTerrainPlugin.MagneticFieldParams;
 
@@ -95,6 +96,7 @@ public class Tyle {
 		
 		// Canaria gas giant, Lagrangian of Antilles
 		PlanetAPI tyle_d = system.addPlanet("canaria", tyle_star, "Canaria", "ice_giant", 180 + 60, 250, 9000, 750);
+		tyle_d.setCustomDescriptionId("planet_canaria");
 			
 			PlanetAPI tyle_d1 = system.addPlanet("madeira", tyle_d, "Madeira", "tundra", 0, 80, 700, 34);
 			tyle_d1.setCustomDescriptionId("planet_madeira");
@@ -129,7 +131,8 @@ public class Tyle {
 												350, // radius
 												9000, // orbit radius
 												750); // orbit days
-		
+		system.setSecondary(antillia_star);
+		system.setType(StarSystemType.BINARY_FAR);
 		SectorEntityToken antillia_star_field = system.addTerrain(Terrain.MAGNETIC_FIELD,
 				new MagneticFieldParams(antillia_star.getRadius() + 160f, // terrain effect band width 
 				( antillia_star.getRadius() + 160f) / 2f, // terrain effect middle radius

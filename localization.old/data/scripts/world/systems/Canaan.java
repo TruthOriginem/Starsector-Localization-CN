@@ -54,13 +54,13 @@ public class Canaan {
 			// Langrangrians for Gilead: relay + jump
 			// L4
 			SectorEntityToken relay = system.addCustomEntity("gilead_relay", // unique id
-					 "Gilead Relay", // name - if null, defaultName from custom_entities.json will be used
+					 "Gilead 通讯中继站", // name - if null, defaultName from custom_entities.json will be used
 					 "comm_relay_makeshift", // type of object, defined in custom_entities.json
 					 "luddic_church"); // faction
 			relay.setCircularOrbitPointingDown(canaan_star, 60-60, 5000, 250);
 			
 			// L5
-			JumpPointAPI jumpPoint1 = Global.getFactory().createJumpPoint("gilead_jump", "Gilead Jump-point");
+			JumpPointAPI jumpPoint1 = Global.getFactory().createJumpPoint("gilead_jump", "Gilead 跳跃点");
 			jumpPoint1.setCircularOrbit( canaan_star, 60+60, 5000, 250);
 			jumpPoint1.setRelatedPlanet(gilead);
 			system.addEntity(jumpPoint1);
@@ -91,13 +91,13 @@ public class Canaan {
 					45, // max asteroid count
 					4f, // min asteroid radius 
 					12f, // max asteroid radius
-					"Gad L5 Asteroids")); // null for default name
+					"Gad L5 小行星团")); // null for default name
 		
 		gadL5.setCircularOrbit(canaan_star, 180 - 60, 6500, 350);
 		
 		// Lagrangrian gate - embedd in some lovely asteroids? - L4 is ahead
 		SectorEntityToken gate1 = system.addCustomEntity("canaan_gate", // unique id
-				 "Gate of Canaan", // name - if null, defaultName from custom_entities.json will be used
+				 "Canaan 之门", // name - if null, defaultName from custom_entities.json will be used
 				 "inactive_gate", // type of object, defined in custom_entities.json
 				 null); // faction
 		gate1.setCircularOrbit(system.getEntityById("canaan"), 180 + 60, 6500, 350);
@@ -110,7 +110,7 @@ public class Canaan {
 					45, // max asteroid count
 					4f, // min asteroid radius 
 					12f, // max asteroid radius
-					"Gad L4 Asteroids")); // null for default name
+					"Gad L4 小行星团")); // null for default name
 		
 		gadL4.setCircularOrbit(canaan_star, 180+60, 6500, 350);
 			

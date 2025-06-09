@@ -15,7 +15,7 @@ Upgraded with an orbital component that further facilitates ship construction, r
 fuelprod,Fuel Production,90,120,,10,,,"fuelprod, industry, industrial",,graphics/icons/industry/fuel_production.png,com.fs.starfarer.api.impl.campaign.econ.impl.FuelProduction,"This facility produces starship fuel, the life-blood of interstellar civilization. Lacking Domain-tech components, fuel production is a laborious and slow process.",1800,HIGH
 #advfuelprod,Advanced Fuel Production,120,60,,5,fuelprod,,fuelprod,,graphics/icons/industry/advanced_fuel_production.png,com.fs.starfarer.api.impl.campaign.econ.impl.FuelProduction,"A massive Domain-tech facility produces starship fuel, the life-blood of interstellar civilization.",1900,
 commerce,Commerce,90,90,,3,,,"industry, urban",,graphics/icons/industry/commerce.png,com.fs.starfarer.api.impl.campaign.econ.impl.TradeCenter,"Regulations, grants, and infrastructure to encourage thriving independent trade. Greatly reduces the degree of direct control the administration has over the colony.",1950,MEDIUM
-station_base,Orbital Station,,,,,,,"station, parent_item, important, structure",station,graphics/icons/industry/station_category.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"A space station that is capable of supporting friendly fleets near $market and must be reduced before invasions or bombardment can be attempted.
+station_base,Orbital Station,,,,,,,"station, parent_item, important, structure",station,graphics/icons/industry/station_category.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"A space station that is capable of supporting friendly fleets near $marketName and must be reduced before a bombardment can be attempted.
 
 Several variations are available, with differences generally being in tactical approaches rather than overall strength.",2000,
 orbitalstation,Orbital Station - Low Tech,50,90,,3,,battlestation,"station, sub_item, unraidable, structure","{
@@ -24,63 +24,63 @@ variant:station1_Standard,
 fleetName:Orbital Station,
 }",graphics/icons/industry/orbital_station.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"A low-tech space station, featuring heavy armor and medium firepower.
 
-Must be reduced before invasions or bombardment can be attempted.",2010,
+Must be reduced before a bombardment can be attempted.",2010,
 battlestation,Battlestation - Low Tech,100,120,,4,orbitalstation,starfortress,"station, battlestation, unraidable, structure","{
 radius:65,
 variant:station2_Standard,
 fleetName:Battlestation,
 }",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"A space station, augmented with a heavy bastion and point-defense citadels.
 
-Must be reduced before invasions or bombardment can be attempted.",2020,
+Must be reduced before a bombardment can be attempted.",2020,
 starfortress,Star Fortress - Low Tech,200,180,,5,battlestation,,"station, starfortress, unraidable, structure","{
 radius:70,
 variant:station3_Standard,
 fleetName:Star Fortress
 }",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"An up-armored battlestation, featuring Merlon-class defense drones and an extensive minefield.
 
-Must be reduced before invasions or bombardment can be attempted.",2030,
+Must be reduced before a bombardment can be attempted.",2030,
 orbitalstation_mid,Orbital Station - Midline,50,90,,3,,battlestation_mid,"station, sub_item, unraidable, structure","{
 radius:55,
 variant:station1_midline_Standard,
 fleetName:Orbital Station,
 }",graphics/icons/industry/orbital_station.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"A midline space station, featuring heavy firepower on one side and rapid axial rotation.
 
-Must be reduced before invasions or bombardment can be attempted.",2040,
+Must be reduced before a bombardment can be attempted.",2040,
 battlestation_mid,Battlestation - Midline,100,120,,4,orbitalstation_mid,starfortress_mid,"station, battlestation, unraidable, structure","{
 radius:65,
 variant:station2_midline_Standard,
 fleetName:Battlestation,
 }",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"A space station, augmented with missile support modules.
 
-Must be reduced before invasions or bombardment can be attempted.",2050,
+Must be reduced before a bombardment can be attempted.",2050,
 starfortress_mid,Star Fortress - Midline,200,180,,5,battlestation_mid,,"station, starfortress, unraidable, structure","{
 radius:70,
 variant:station3_midline_Standard,
 fleetName:Star Fortress
 }",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"An up-armored battlestation, featuring Ravelin-class defense drones and an extensive minefield.
 
-Must be reduced before invasions or bombardment can be attempted.",2060,
+Must be reduced before a bombardment can be attempted.",2060,
 orbitalstation_high,Orbital Station - High Tech,50,90,,3,,battlestation_high,"station, sub_item, unraidable, structure","{
 radius:55,
 variant:station1_hightech_Standard,
 fleetName:Orbital Station,
 }",graphics/icons/industry/orbital_station.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"A high-tech space station, featuring heavy rotating shields, a fighter complement, and medium firepower.
 
-Must be reduced before invasions or bombardment can be attempted.",2070,
+Must be reduced before a bombardment can be attempted.",2070,
 battlestation_high,Battlestation - High Tech,100,120,,4,orbitalstation_high,starfortress_high,"station, battlestation, unraidable, structure","{
 radius:65,
 variant:station2_hightech_Standard,
 fleetName:Battlestation,
 }",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"A space station, augmented with a defensive citadel featuring heavy firepower.
 
-Must be reduced before invasions or bombardment can be attempted.",2080,
+Must be reduced before a bombardment can be attempted.",2080,
 starfortress_high,Star Fortress - High Tech,200,180,,5,battlestation_high,,"station, starfortress, unraidable, structure","{
 radius:70,
 variant:station3_hightech_Standard,
 fleetName:Star Fortress
 }",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"An up-armored battlestation, featuring Gargoyle-class defense drones and long-range targeted mine teleporters.
 
-Must be reduced before invasions or bombardment can be attempted.",2090,
+Must be reduced before a bombardment can be attempted.",2090,
 grounddefenses,Ground Defenses,30,60,,2,,heavybatteries,"grounddefenses, unraidable, tactical_bombardment, structure",,graphics/icons/industry/ground_defenses.png,com.fs.starfarer.api.impl.campaign.econ.impl.GroundDefenses,"A dispersed, semi-autonomous network of small, hidden weapon installations which makes the prospect of a direct ground assault and even simple raids extremely costly to the attacker. Only overwhelming orbital bombardment or massively disproportionate active screening can suppress these defenses.  ",2200,
 heavybatteries,Heavy Batteries,60,90,,3,grounddefenses,,"grounddefenses, unraidable, tactical_bombardment, structure",,graphics/icons/industry/heavy_batteries.png,com.fs.starfarer.api.impl.campaign.econ.impl.GroundDefenses,"Armoured subsurface batteries supplement a dispersed network of small, hidden weapon installations. Ground-based batteries are capable of truly awesome firepower, though it only manifests by making ground operations more difficult, as no starship captain would be foolish enough to get within their firing envelopes.",2300,
 patrolhq,Patrol HQ,60,60,,8,,militarybase,"patrol, unraidable, tactical_bombardment, structure",,graphics/icons/industry/patrol_hq.png,com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase,"The requisite hangars, maintenance bays, command/control center, barracks, and logistics operations required to project force throughout a star system. Once established, militarized patrols will hunt pirates and protect friendly convoys.",2400,

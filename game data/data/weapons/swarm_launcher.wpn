@@ -1,0 +1,22 @@
+{
+	"id":"swarm_launcher",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"everyFrameEffect":"com.fs.starfarer.api.impl.combat.threat.SwarmLauncherEffect",
+	#"everyFrameEffect":"com.fs.starfarer.api.impl.combat.dweller.VortexLauncherEffect",
+	"type":"MISSILE",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/weapons/swarm_launcher_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/swarm_launcher_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/swarm_launcher_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/swarm_launcher_hardpoint_glow.png",
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"glowColor":[130,155,145,255],
+	"turretOffsets":[18, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[12, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW",
+	"projectileSpecId":"swarm_launcher_shot",  # projectile that will be fired
+	"fireSoundTwo":"threat_swarm_launched",
+}

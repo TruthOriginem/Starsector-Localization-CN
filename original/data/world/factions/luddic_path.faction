@@ -187,10 +187,11 @@
 			"graphics/portraits/portrait_luddic06.png",
 			"graphics/portraits/portrait_luddic09.png",
 			"graphics/portraits/portrait_luddic12.png",
+			"graphics/portraits/portrait_luddic13.png",
+			"graphics/portraits/portrait_luddic15.png",
 		],
 		"standard_female":[
 			"graphics/portraits/portrait_mercenary02.png",
-			"graphics/portraits/portrait14.png",
 			"graphics/portraits/portrait16.png",
 			"graphics/portraits/portrait21.png",
 			"graphics/portraits/portrait22.png",
@@ -203,6 +204,8 @@
 			"graphics/portraits/portrait_luddic08.png",
 			"graphics/portraits/portrait_luddic10.png",
 			"graphics/portraits/portrait_luddic11.png",
+			"graphics/portraits/portrait_luddic14.png",
+			"graphics/portraits/portrait_luddic16.png",
 		],
 	},
 	"ranks":{
@@ -281,6 +284,9 @@
 			"canBombard":true,
 			"territorial":true,
 			"canSendWithoutMilitaryBase":true,
+		},
+		"simulatorData":{
+			"showInSimulator":true,
 		},
 	},
 },

@@ -9,6 +9,8 @@ import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
+import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.StarTypes;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
@@ -17,7 +19,6 @@ import com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner;
 import com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin.AsteroidFieldParams;
 import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldParams;
 import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldSource;
-import com.fs.starfarer.api.impl.campaign.terrain.MagneticFieldTerrainPlugin.MagneticFieldParams;
 import com.fs.starfarer.api.util.Misc;
 
 public class TiaTaxet {
@@ -26,6 +27,10 @@ public class TiaTaxet {
 		
 		StarSystemAPI system = sector.createStarSystem("Tia");
 		LocationAPI hyper = Global.getSector().getHyperspace();
+		
+		if (Global.getSettings().getBoolean("factionsClaimUnpopulatedCoreSystems")) {
+			system.getMemoryWithoutUpdate().set(MemFlags.CLAIMING_FACTION, Factions.HEGEMONY);
+		}
 		
 		system.setBackgroundTextureFilename("graphics/backgrounds/background2.jpg");
 		
@@ -84,13 +89,13 @@ public class TiaTaxet {
 					40, // max asteroid count
 					4f, // min asteroid radius 
 					16f, // max asteroid radius
-					"Tia-Tax'et Asteroid Cluster")); // null for default name
+					"Tia-Tax'et 小行星团")); // null for default name
 		
 		tia_field1.setCircularOrbit(tia_star, 180, 4500, 250);
 		
 		
 		// Abandoned shipyard /research station
-			SectorEntityToken abandoned_station1 = system.addCustomEntity("abandoned_spacedock", "Abandoned Research Station", "station_side00", "neutral");
+			SectorEntityToken abandoned_station1 = system.addCustomEntity("abandoned_spacedock", "废弃的研究空间站", "station_side00", "neutral");
 			//abandoned_station1.setCustomDescriptionId("station_tiataxet_abandoned_spacedock");
 			abandoned_station1.setInteractionImage("illustrations", "space_wreckage");
 			abandoned_station1.setCircularOrbitPointingDown(system.getEntityById("tia"), 180, 4450, 250);
@@ -163,13 +168,13 @@ public class TiaTaxet {
 					50, // max asteroid count
 					4f, // min asteroid radius 
 					16f, // max asteroid radius
-					"The Mosquitos")); // null for default name
+					"蚊群陨石带")); // null for default name
 		
 		tia_field4.setCircularOrbit(tia_star, 180, 5700, 400);
 		
 		
 		// Tia-Tax'et Jumppoint
-		JumpPointAPI jumpPoint2 = Global.getFactory().createJumpPoint("tia-taxet_jump", "Tia-Tax'et Jump-point");
+		JumpPointAPI jumpPoint2 = Global.getFactory().createJumpPoint("tia-taxet_jump", "Tia-Tax'et 跳跃点");
 		jumpPoint2.setCircularOrbit( system.getEntityById("tia"), 270+60, 11500, 800);
 		jumpPoint2.setRelatedPlanet(tia2);
 		system.addEntity(jumpPoint2);

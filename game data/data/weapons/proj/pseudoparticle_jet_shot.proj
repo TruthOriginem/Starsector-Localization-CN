@@ -1,0 +1,19 @@
+{
+	"id":"pseudoparticle_jet_shot",
+	"specClass":"projectile",
+	"onHitEffect":"com.fs.starfarer.api.impl.combat.dweller.PseudoparticleJetEffect",
+	
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":80.0,
+	"width":60.0,
+	"hitGlowRadius":-1,
+	"fadeTime":0.25,
+	"fringeColor":[100,0,20,150],
+	"coreColor":[255,0,50,50],
+	"textureType":"ROUGH",  # only needed for BEAM spawnType
+	"textureScrollSpeed":-256,
+	"pixelsPerTexel":5.0
+	
+}

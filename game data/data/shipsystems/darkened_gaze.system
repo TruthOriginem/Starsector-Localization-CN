@@ -1,0 +1,31 @@
+{
+	"id":"darkened_gaze",
+	"type":"STAT_MOD",
+	"aiType":"CUSTOM",
+	"aiScript":"com.fs.starfarer.api.impl.combat.dweller.DarkenedGazeSystemAI",	
+	
+	"runScriptWhileIdle":true,
+	
+	"statsScript":"com.fs.starfarer.api.impl.combat.dweller.DarkenedGazeSystemScript",
+	
+	"useSound":"system_darkened_gaze_activate",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	# purely required to make the phase cloak AI/other AI understand the damage this deals
+	# not used for actually dealing this damage
+	"empDamage":2250,
+	"damage":5000,
+	"damageType":ENERGY,
+	
+	"aiHints":{
+		"threatRange":2000,
+		"threatAmount":20,
+		"threatAngle":0,
+		"threatArc":10,
+		"threatOnlyWhenCloseToActive":true,
+	}
+}
+
+
+
+

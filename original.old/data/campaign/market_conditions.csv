@@ -14,7 +14,7 @@ Decivilized Subpopulation,decivilized_subpop,,,com.fs.starfarer.api.impl.campaig
 Abandoned Station,abandoned_station,,TRUE,com.fs.starfarer.api.impl.campaign.econ.AbandonedStation,This station is abandoned.,graphics/icons/markets/abandoned.png,130
 Cottage Industry,cottage_industry,,TRUE,com.fs.starfarer.api.impl.campaign.econ.CottageIndustry,"$market has a substantial base of low-technology, labour-intensive light industry. Increases demand for simple organic fuels and materials, provides an inefficient albeit charmingly hand-crafted supply of domestic goods.",graphics/icons/markets/cottage_industry.png,230
 Outpost,outpost,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Outpost,"$market is run much like a garrison or a large spaceship, with a rigid official command structure. This improves stability, but does require some personnel to see to internal security matters.",graphics/icons/markets/outpost.png,130
-Luddic Majority,luddic_majority,,TRUE,com.fs.starfarer.api.impl.campaign.econ.LuddicMajority,"Stability is improved if $market is controlled by a Luddic faction, otherwise it is reduced. The ascetic ethos of Luddic theology reduces demand for luxury goods.",graphics/icons/markets/luddic_majority.png,142
+Luddic Majority,luddic_majority,,TRUE,com.fs.starfarer.api.impl.campaign.econ.LuddicMajority,,graphics/icons/markets/luddic_majority.png,142
 Stealth Minefields,stealth_minefields,,TRUE,com.fs.starfarer.api.impl.campaign.econ.StealthMinefields,A network of hidden mines provides $market security from meddlesome outsiders. Improves stability.,graphics/icons/markets/stealth_mines.png,510
 Regional Capital,regional_capital,,TRUE,com.fs.starfarer.api.impl.campaign.econ.RegionalCapital,"A major center of administration, security, and logistics. Improves stability.",graphics/icons/markets/capital.png,500
 Free Port,free_market,,TRUE,com.fs.starfarer.api.impl.campaign.econ.FreeMarket,"The local port authority imposes almost no regulation on what cargo is traded. Immigration controls are likewise relaxed, resulting in a greater in-flow of people, albeit sometimes of a more questionable character. This may cause other factions to view this colony with distrust.",graphics/icons/markets/free_port.png,141
@@ -74,6 +74,8 @@ Pirate Activity,pirate_activity,,TRUE,com.fs.starfarer.api.impl.campaign.intel.b
 
 The pirates most likely have a base somewhere relatively nearby.",graphics/icons/markets/pirate_activity.png,1300
 Hostile Activity,hostile_activity,,TRUE,com.fs.starfarer.api.impl.campaign.intel.events.HostileActivity,,graphics/icons/markets/pirate_activity.png,1350
+Piracy Respite,piracy_respite,,TRUE,com.fs.starfarer.api.impl.campaign.econ.PiracyRespite,This colony is experiencing a respite from the depredations of piracy otherwise so common in the Sector.,graphics/icons/markets/respite40.png,1375
+Blockaded,blockaded,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Blockaded,"The system that this colony is in is experiencing a blockade, and regular trade shipping is suffering from harassment or worse. The effects will continue until the blockading force leaves or is soundly defeated.",graphics/icons/markets/blockade.png,1385
 Luddic Path Cells,pather_cells,,TRUE,com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCells,,graphics/icons/markets/pather_cells.png,1400
 ,,,,,,,
 # stand-alone conditions,,,,,,,

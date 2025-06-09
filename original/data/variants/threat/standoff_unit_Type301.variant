@@ -1,0 +1,60 @@
+{
+    "displayName": "Type 301",
+    "fluxCapacitors": 30,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "standoff_unit",
+    "hullMods": [
+        "ballistic_rangefinder",
+        "targetingunit",
+        "missleracks",
+        "magazines",
+        "heavyarmor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "standoff_unit_Type301",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 012": "neoferric_quadcoil",
+                "WS 013": "neoferric_quadcoil"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 015": "neutron_torpedo",
+                "WS 016": "neutron_torpedo",
+                "WS 017": "neutron_torpedo"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "light_mass_driver",
+                "WS 004": "light_mass_driver"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "voltaic_cannon",
+                "WS 003": "voltaic_cannon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 010": "heavy_mass_driver",
+                "WS 011": "heavy_mass_driver"
+            }
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 0,
+    "fluxVents": 11,
+    "goalVariant": true,
+    "hullId": "anubis",
+    "hullMods": [
+        "targetingunit",
+        "hardenedshieldemitter",
+        "advancedoptics",
+        "stabilizedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "anubis_Standard",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "hveldriver",
+                "WS 004": "hveldriver"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "tachyonlance"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "guardian",
+                "WS 002": "guardian"
+            }
+        }
+    ],
+    "wings": ["xyphos_wing"]
+}

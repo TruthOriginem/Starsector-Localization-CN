@@ -1,0 +1,33 @@
+{
+    "displayName": "",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "shrouded_tendril",
+    "hullMods": [],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "shrouded_tendril_Roiling",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "pseudoparticle_jet"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "rift_lightning"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "inimical_emanation",
+                "WS 006": "inimical_emanation",
+                "WS 007": "inimical_emanation",
+                "WS 008": "inimical_emanation"
+            }
+        }
+    ]
+}

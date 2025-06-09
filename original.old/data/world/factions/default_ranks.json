@@ -1,6 +1,9 @@
 {
 	"ranks":{
 		"factionLeader":{"name":"High Commander"},
+		"houseLeader":{"name":"House Parriarch"},
+		"houseLeaderMale":{"name":"House Patriarch"},
+		"houseLeaderFemale":{"name":"House Matriarch"},
 	
 		"spaceSailor":{"name":"Spacer"},
 		"spaceChief":{"name":"Chief"},
@@ -90,6 +93,8 @@
 		
 		
 		"citizen":{"name":"Citizen"},
+		"boss":{"name":"Boss"},
+		"crewBoss":{"name":"Crew Boss"},
 		
 		"mercenary":{"name":"Mercenary Officer"},
 		"officer":{"name":"Officer"},
@@ -115,6 +120,7 @@
 		
 		"synodSubcurate":{name:"Synod Subcurate"},
 		"archcurate":{name:"Archcurate"},
+		"heretic":{name:"Heretic"},
 		"shrinePriest":{name:"Curate Sacraria"},
 		"excubitorOrbis":{"name":"Excubitor Orbis"},
 		"initiate":{"name":"Initiate"},

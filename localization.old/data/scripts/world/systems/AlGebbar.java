@@ -62,7 +62,7 @@ public class AlGebbar {
 			gebbar4.getSpec().setPlanetColor(new Color(255,240,225,255));
 			//system.addRingBand(gebbar4, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 400, 40f);
 			system.addRingBand(gebbar4, "misc", "rings_dust0", 256f, 0, Color.white, 256f, 400, 40f);
-			system.addAsteroidBelt(gebbar4, 20, 400, 40, 30, 50, Terrain.ASTEROID_BELT, "Custodes");
+			system.addAsteroidBelt(gebbar4, 20, 400, 40, 30, 50, Terrain.ASTEROID_BELT, "监管者 小行星带");
 			
 			// btw, jump-point is related to this one.
 			jumpPoint2.setRelatedPlanet(gebbar4);

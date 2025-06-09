@@ -1,0 +1,45 @@
+{
+	"id":"unstable_fragment_missile",
+	"specClass":"missile",
+	#"onFireEffect":"com.fs.starfarer.api.impl.combat.threat.UnstableFragmentMissileEffect",	
+	"missileType":"MISSILE_TWO_STAGE_SECOND_UNGUIDED",
+	"sprite":"graphics/fx/empty.png",
+	"size":[16,16],	
+	"center":[8,8],
+	"collisionRadius":12,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[155,0,0,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":120, # purely visual
+	"flameoutTime":0.1, # total time from flameout to full fadeout
+	"fadeTime":0.1, # fadeout duration
+	"noEngineGlowTime":0.05, # time spent without the engine glow being rendered	
+	"engineSpec":{"turnAcc":1440,
+				  "turnRate":720,
+				  "acc":200,
+				  "dec":200},
+	"behaviorSpec":{"behavior":"PROXIMITY_FUSE",
+					"range":50,
+					"slowToMaxSpeed":true,
+					"explosionSpec":{"duration":0.12f,
+									 "radius":120,
+									 "coreRadius":60, # full damage within core radius
+									 "collisionClass":PROJECTILE_NO_FF,
+									 "collisionClassByFighter":PROJECTILE_FIGHTER,
+									 "particleSizeMin":3.0,
+									 "particleSizeRange":3.0,
+									 "particleDuration":1,
+									 "particleCount":40,
+									 "particleColor":[155,70,70,255],
+									 #"explosionColor":[255,70,70,255],
+									 "useDetailedExplosion":true,
+									 "useDetailedExplosionColorAlpha":true,
+									 "detailedExplosionRadius":80,
+									 "detailedExplosionFlashRadius":350,
+									 "detailedExplosionFlashDuration":0.5,
+									 "detailedExplosionFlashColorFringe":[155,20,20,255],
+									 "detailedExplosionFlashColorCore":[255,185,185,255],
+									 "sound":"unstable_fragment_explosion"},
+					}
+}
+
+

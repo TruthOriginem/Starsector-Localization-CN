@@ -1,0 +1,201 @@
+{
+    "bounds": [
+        16,
+        32,
+        63,
+        81,
+        42,
+        20,
+        94,
+        35,
+        56,
+        -1,
+        88,
+        -49,
+        40,
+        -21,
+        27,
+        -81,
+        16,
+        -24,
+        -10,
+        -91,
+        -17,
+        -29,
+        -57,
+        -71,
+        -34,
+        -21,
+        -88,
+        -40,
+        -37,
+        -8,
+        -91,
+        16,
+        -35,
+        9,
+        -68,
+        66,
+        -37,
+        25,
+        -28,
+        83,
+        -16,
+        25,
+        15,
+        91
+    ],
+    "builtInMods": ["dweller_hullmod"],
+    "center": [
+        120,
+        123
+    ],
+    "collisionRadius": 300,
+    "coversColor": "",
+    "engineSlots": [{
+        "angle": 180,
+        "contrailSize": 80,
+        "length": 75,
+        "location": [
+            -166,
+            1
+        ],
+        "style": "DWELLER",
+        "width": 16
+    }],
+    "height": 240,
+    "hullId": "shrouded_maelstrom",
+    "hullName": "Shrouded Maelstrom",
+    "hullSize": "CRUISER",
+    "shieldCenter": [
+        0,
+        1
+    ],
+    "shieldRadius": 295,
+    "spriteName": "graphics/ships/shroud/maelstrom_flat.png",
+    "style": "DWELLER",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 45,
+            "arc": 360,
+            "id": "WS 005",
+            "locations": [
+                17,
+                18
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": -45,
+            "arc": 360,
+            "id": "WS 006",
+            "locations": [
+                18,
+                -18
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 135,
+            "arc": 360,
+            "id": "WS 007",
+            "locations": [
+                -16,
+                18
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 225,
+            "arc": 360,
+            "id": "WS 008",
+            "locations": [
+                -16,
+                -18
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 0,
+            "arc": 360,
+            "id": "WS 009",
+            "locations": [
+                -47,
+                21
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 360,
+            "id": "WS 010",
+            "locations": [
+                -44,
+                -26
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 360,
+            "id": "WS 011",
+            "locations": [
+                -4,
+                48
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 360,
+            "id": "WS 012",
+            "locations": [
+                5,
+                -45
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 360,
+            "id": "WS 013",
+            "locations": [
+                47,
+                21
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 360,
+            "id": "WS 014",
+            "locations": [
+                54,
+                -22
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        }
+    ],
+    "width": 240
+}

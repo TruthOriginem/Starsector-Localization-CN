@@ -99,6 +99,7 @@ public class SafetyOverrides extends BaseHullMod {
 //			   !ship.getVariant().getHullMods().contains("augmented_engines");
 		if (ship.getVariant().getHullSize() == HullSize.CAPITAL_SHIP) return false;
 		if (ship.getVariant().hasHullMod(HullMods.CIVGRADE) && !ship.getVariant().hasHullMod(HullMods.MILITARIZED_SUBSYSTEMS)) return false;
+		if (ship.getVariant().hasHullMod(HullMods.FLUX_SHUNT)) return false;
 		
 		
 		return true;
@@ -110,6 +111,9 @@ public class SafetyOverrides extends BaseHullMod {
 		}
 		if (ship.getVariant().hasHullMod(HullMods.CIVGRADE) && !ship.getVariant().hasHullMod(HullMods.MILITARIZED_SUBSYSTEMS)) {
 			return "Can not be installed on civilian ships";
+		}
+		if (ship.getVariant().hasHullMod(HullMods.FLUX_SHUNT)) {
+			return "Incompatible with Flux Shunt";
 		}
 		
 		return null;

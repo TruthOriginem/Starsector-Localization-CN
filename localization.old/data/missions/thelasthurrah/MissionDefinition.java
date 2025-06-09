@@ -16,7 +16,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
 		// Set a blurb for each fleet
 		api.setFleetTagline(FleetSide.PLAYER, "Mayasurian 海军和重型战机支援队");
-		api.setFleetTagline(FleetSide.ENEMY, "Commodore Jensulte 指挥的 霸主 舰队");
+		api.setFleetTagline(FleetSide.ENEMY, "海军准将 Jensulte 指挥的 霸主 舰队");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen

@@ -1,10 +1,13 @@
 {
     "displayName": "战机支援",
     "fluxCapacitors": 0,
-    "fluxVents": 19,
+    "fluxVents": 9,
     "goalVariant": true,
     "hullId": "buffalo2",
-    "hullMods": ["converted_hangar"],
+    "hullMods": [
+        "converted_hangar",
+        "missleracks"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "buffalo2_Fighter_Support",

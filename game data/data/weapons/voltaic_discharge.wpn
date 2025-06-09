@@ -1,0 +1,23 @@
+{
+	"id":"voltaic_discharge",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"everyFrameEffect":"com.fs.starfarer.api.impl.combat.threat.VoltaicDischargeOnFireEffect",
+	"type":"ENERGY",
+	"size":"SMALL",
+	"turretSprite":"graphics/weapons/voltaic_discharge_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/voltaic_discharge_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/voltaic_discharge_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/voltaic_discharge_hardpoint_glow.png",
+	#"glowColor":[130,155,145,255],
+	#"glowColor":[105,255,205,255],
+	"glowColor":[94,112,105,255], # important: attack swarm glow color is based on this
+	"turretOffsets":[8, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[8, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW",
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"voltaic_discharge_shot",  # projectile that will be fired
+	"fireSoundTwo":"voltaic_discharge_fire",
+}

@@ -1,0 +1,53 @@
+{
+    "displayName": "Type 350",
+    "fluxCapacitors": 30,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "hive_unit",
+    "hullMods": [
+        "fragment_swarm",
+        "fragment_coordinator",
+        "secondary_fabricator"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "hive_unit_Type350",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "seeker_fragment",
+                "WS 003": "seeker_fragment",
+                "WS 004": "seeker_fragment",
+                "WS 007": "seeker_fragment"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "kinetic_fragments",
+                "WS 009": "kinetic_fragments",
+                "WS 010": "kinetic_fragments",
+                "WS 011": "kinetic_fragments"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "unstable_fragment",
+                "WS 006": "unstable_fragment"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "swarm_launcher",
+                "WS 001": "swarm_launcher"
+            }
+        }
+    ]
+}

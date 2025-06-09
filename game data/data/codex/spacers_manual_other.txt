@@ -1,0 +1,24 @@
+CATEGORY gm_cat_other|generic|Other|game_mechanics
+
+CURRENT_CATEGORY gm_cat_other
+
+BEGIN gm_techs|Tech types
+The tech levels of certain ships - {{Low Tech}}, {{Midline}}, and {{High Tech}} - are not a progression of quality. Rather, they are just different design approaches to combat, and one is not better than the others. More powerful ships usually have a higher deployment point cost.
+
+COLOR Low Tech
+==Low Tech==
+RESET
+Heavily armored, slow, using a mix of ballistic and missile weapons. Weaker shields. {{rel:codex_system_burndrive|Burn Drive}}, a common low-tech ship system, provides only forward mobility and allows the ships to chase down and punish faster enemies, but is not much help in pulling back from a bad situation. Larger ships are often vulnerable to being flanked and require support to be effective.
+
+COLOR Midline
+==Midline==
+RESET
+Generally average armor, shields, and mobility. Using a mix of ballistic, energy, and missile weapons. The energy weapons are mostly limited to beams - while the ships can mount other energy weapons, they usually lack the flux dissipation required to make good use of them. Often depend on specialized ships working together to maximize their effectiveness.
+
+COLOR High Tech
+==High Tech==
+RESET
+Fast, with strong shields and weaker armor. Using a mix of energy and missile weapons, with sufficient flux dissipation to support a wider range of energies. The energy weapons tend to have shorter range, which is compensated by the higher top speed of the ships. Often rely on hit and run tactics and in general thrive in a more chaotic battle environment.
+
+All of these are generalizations, and exceptions exist.  
+END

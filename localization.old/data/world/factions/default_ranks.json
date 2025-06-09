@@ -1,6 +1,9 @@
 {
 	"ranks":{
 		"factionLeader":{"name":"最高指挥官"},
+		"houseLeader":{"name":"宗主"},
+		"houseLeaderMale":{"name":"宗主"},
+		"houseLeaderFemale":{"name":"宗主夫人"},
 	
 		"spaceSailor":{"name":"水手"},
 		"spaceChief":{"name":"海军上士"},
@@ -90,6 +93,8 @@
 		
 		
 		"citizen":{"name":"公民"},
+		"boss":{"name":"头目"},
+		"crewBoss":{"name":"工头"},
 		
 		"mercenary":{"name":"雇佣军官"},
 		"officer":{"name":"军官"},
@@ -113,10 +118,11 @@
 		"unknown":{"name":"身份不明"},
 		"aristocrat":{"name":"贵族"},
 		
-		"synodSubcurate":{name:"教会助理祭司"},
-		"archcurate":{name:"教会大祭司"},
-		"shrinePriest":{name:"Curate Sacraria"},
-		"excubitorOrbis":{"name":"哨卫 Orbis"},
+		"synodSubcurate":{name:"助理祭司"},
+		"archcurate":{name:"大祭司"},
+		"heretic":{name:"异教徒"},
+		"shrinePriest":{name:"住持祭司"},
+		"excubitorOrbis":{"name":"行星教卫"},
 		"initiate":{"name":"新人"},
 		"novice":{"name":"见习修士"},
 		"pilgrim":{"name":"朝圣者"},

@@ -8,7 +8,7 @@
 		{
 			"requiredSkillLevel":0,
 			"effects":[
-				{"type":"DESCRIPTION", "script":"com.fs.starfarer.api.impl.campaign.skills.ElectronicWarfare$Level0"},
+				{"type":"DESCRIPTION", "script":"com.fs.starfarer.api.impl.campaign.skills.ElectronicWarfare$Level0WithNewline"},
 			]
 		},
 		{
@@ -26,6 +26,7 @@
 			"effectBasedOnLevel":false,
 			"effects":[
 				{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.GunneryImplants$Level1A"},
+				#{"type":"SHIP", "script":"com.fs.starfarer.api.impl.campaign.skills.GunneryImplants$Level3A"},
 			]
 		},
 	],

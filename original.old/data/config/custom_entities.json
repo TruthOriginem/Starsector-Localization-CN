@@ -858,6 +858,35 @@
 		"pluginClass":"com.fs.starfarer.api.impl.campaign.CryosleeperEntityPlugin",
 	},
 	
+	"derelict_gatehauler":{
+		"defaultName":"Domain-era Gate Hauler", # used if name=null in addCustomEntity()
+		"nameInText":"Domain-era Gate Hauler",
+		"shortName":"gate hauler",
+		"aOrAn":"a",
+		"isOrAre":"is",
+		"defaultRadius":150, # used if radius<0 in addCustomEntity()
+		"customDescriptionId":"derelict_gatehauler",
+		"interactionImage":"graphics/illustrations/gate_hauler1.jpg",
+		"icon":"graphics/icons/gate_hauler2.png",
+		"iconWidth":32,
+		"iconHeight":32,
+		"sprite":"graphics/stations/gate_hauler.png",
+		"spriteWidth":152,
+		"spriteHeight":256,
+		"renderShadow":true,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"tags":["has_interaction_dialog", "salvageable", "neutrino_high"],
+		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"renderCircleIndicator":true,
+		"renderCircleIndicatorSelectionFlash":true,
+		"pluginClass":"com.fs.starfarer.api.impl.campaign.entities.GateHaulerEntityPlugin",
+	},	
+	
 	"coronal_tap":{
 		"defaultName":"Coronal Hypershunt", # used if name=null in addCustomEntity()
 		"nameInText":"coronal hypershunt",
@@ -960,7 +989,7 @@
 		"iconHeight":20,
 		"icon":"graphics/icons/cache0.png",
 		"customDescriptionId":"supply_cache",
-		"interactionImage":"graphics/illustrations/cargo_pod_drift.jpg",
+		"interactionImage":"graphics/illustrations/cache_large.jpg",
 		"layers":[TERRAIN_7A],
 		"tags":["has_interaction_dialog", "salvageable", "neutrino"],
 		"pluginClass":"com.fs.starfarer.api.impl.campaign.SupplyCacheEntityPlugin",
@@ -994,6 +1023,30 @@
 		"defaultRadius":35, 
 		"nameInText":"equipment cache",
 		"shortName":"equipment cache",
+	},
+	
+	# a cache that's a single large structure rather than a collection of containers etc
+	# set up as a salvage entity but has no salvage by default, meant to use different
+	# salage specs for particular cases 
+	"large_cache":{
+		"baseId":"supply_cache",
+		"aOrAn":"a",
+		# needs to be cache so that an override name ending in Cache does not result in a weird tooltip
+		# E.G. if this said "Large Cache" and the name was set to "Mothballed Equipment Cache"
+		# The tooltip would show Mothballed Equipment Cache (Large Cache)
+		# But if the name ends with what's in this field, the parenthetical will be omitted.
+		"defaultName":"Cache",
+		"defaultRadius":35, 
+		"nameInText":"cache",
+		"shortName":"cache",
+		"iconWidth":20,
+		"iconHeight":20,
+		"icon":"graphics/icons/cache0.png",
+		"interactionImage":"graphics/illustrations/cache_large.jpg",
+		"sprite":"graphics/stations/large_cache.png",
+		"spriteWidth":40,
+		"spriteHeight":40,
+		"pluginClass":"",
 	},
 	
 	"technology_cache":{
@@ -1442,6 +1495,21 @@
 		"renderCircleIndicatorSelectionFlash":false,
 	},
 	
+	"abyssal_light":{
+		"defaultName":"Abyssal Light", # used if name=null in addCustomEntity()
+		"defaultRadius":45, # used if radius<0 in addCustomEntity()
+		"detectionRange":0, # set in plugin code
+		"showInCampaign":true,
+		"icon":"graphics/icons/abyssal_light.png",
+		"iconWidth":18,
+		"iconHeight":18,
+		"customDescriptionId":"abyssal_light",
+		"renderCircleIndicator":false,
+		"interactionImage":"graphics/illustrations/abyssal_light.jpg",
+		"tags":["has_interaction_dialog", "neutrino_high"],
+		"layers":[STATIONS, TERRAIN_8], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"pluginClass":"com.fs.starfarer.api.impl.campaign.AbyssalLightEntityPlugin",
+	},
 }
 
 

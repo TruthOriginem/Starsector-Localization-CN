@@ -1,0 +1,18 @@
+{
+	"id":"rift_lightning_shot",
+	"onHitEffect":"com.fs.starfarer.api.impl.combat.dweller.RiftLightningEffect",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	#"collisionClass":"RAY",
+	"collisionClass":"RAY_FIGHTER",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":1000000,
+	"hitGlowRadius":-1,
+	"width":10, # required for ray to spawn facing in proper direction
+	"fadeTime":1,
+	"fringeColor":[0,0,0,0],
+	"coreColor":[0,0,0,0],
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":""
+}

@@ -312,13 +312,13 @@
 		"offersCommissions":true,
 		"engagesInHostilities":true,
 		"buysAICores":true,
-		"AICoreValueMult":1,
-		"AICoreRepMult":1,
+		"AICoreValueMult":1.5,
+		"AICoreRepMult":1.5,
 		"buysSurveyData":true,
 		"hostilityImpactOnGrowth":true,
 		"caresAboutAtrocities":true,
 		"punitiveExpeditionData":{
-			"vsCompetitors":true,
+			"vsCompetitors":false,
 			"vsFreePort":false,
 			"canBombard":false,
 			"territorial":true,
@@ -327,11 +327,17 @@
 	"ranks":{
 		"ranks":{
 			"spaceCommander":{"name":"Navarch"},
+			"spaceAdmiral":{"name":"Prime Navarch"},
+			"houseLeader":{"name":"Gens Parriarch"},
+			"houseLeaderMale":{"name":"Gens Patriarch"},
+			"houseLeaderFemale":{"name":"Gens Matriarch"},
 		},
 		"posts":{
 			"patrolCommander":{"name":"Demi-Navarch"},
 			"fleetCommander":{"name":"Navarch"},
 			"baseCommander":{"name":"Archon"},
+			#"administrator":{"name":"Demarchon"}, # might confuse players
+			"factionLeader":{"name":"Prime Demarchon"},
 		},
 	},
 	"fleetTypeNames":{

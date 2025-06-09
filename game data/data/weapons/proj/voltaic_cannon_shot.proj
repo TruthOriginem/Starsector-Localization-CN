@@ -1,0 +1,15 @@
+{
+	"id":"voltaic_cannon_shot",
+	"specClass":"projectile",
+	"onHitEffect":"com.fs.starfarer.api.impl.combat.threat.VoltaicCannonEffect",
+	"spawnType":"PLASMA",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"width":60.0,
+	"fadeTime":0.5,
+	"hitGlowRadius":100,
+	"fringeColor":[130,155,145,255],
+	"coreColor":[130,155,145,255],
+	"passThroughMissiles":true,
+	"passThroughFighters":true,
+}

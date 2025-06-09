@@ -29,6 +29,8 @@
 		"guardHighDeputyExecutor":{"name":"Guard High Deputy Executor"},
 		
 		"citizen":{"name":"Citizen"},
+		"executive":{"name":"Executive"},
+		"seniorExecutive":{"name":"Senior Executive"},
 		"agent":{"name":"Agent"},
 		"specialAgent":{"name":"Special Agent"},
 		
@@ -40,7 +42,7 @@
 		"father":{name:"Father"},
 		"mother":{name:"Mother"},
 		"elder":{name:"Elder"},
-		
+		"aristocrat":{name:"Aristocrat"},
 		"terrorist":{name:"Terrorist"},
 		"freedomFighter":{name:"Freedom Fighter"},
 		"clone":{name:"Clone"},
@@ -66,7 +68,7 @@
 		"medicalSupplier":{"name":"Medical Supplier"},
 		
 		"administrator":{"name":"Administrator"},
-		"military_administrator":{"name":"Administrator"},
+		"militaryAdministrator":{"name":"Military Governor"},
 		"freeAdmin":{"name":"Freelance Administrator"},
 		
 		"guildMaster":{"name":"Guildmaster"},
@@ -78,12 +80,14 @@
 		"spacer":{"name":"Spacer"},
 		
 		"genericMilitary":{"name":"Commander"},
+		"marineSquadLeader":{"name":"Sergeant"},
 		
 		"trader":{"name":"Trader"},
 		"merchant":{"name":"Merchant"},
 		"investor":{"name":"Investor"},
 		"commodities_agent":{"name":"Commodities Agent"},
 		"entrepreneur":{"name":"Entrepreneur"},
+		"nanoforge_engineer":{"name":"Nanoforge Engineer"},
 		
 		"shady":{"name":"Shady Character"},
 		"gangster":{"name":"Gangster"},
@@ -107,6 +111,7 @@
 		"provost":{name:"Provost"},
 		"academician":{name:"Academician"},
 		
+		"securityChief":{name:"Security Chief"},
 		"doctor":{name:"Doctor"},
 		"hacker":{name:"Hacker"},
 		"hermit":{name:"Hermit"},
@@ -118,7 +123,9 @@
 		"unknown":{name:"Unknown"},
 		"aristocrat":{name:"Aristocrat"},
 		
+		"curate":{name:"Curate"},
 		"synodSubcurate":{name:"Synod Subcurate"},
+		"subcurate":{name:"Subcurate"},
 		"archcurate":{name:"Archcurate"},
 		"heretic":{name:"Heretic"},
 		"shrinePriest":{name:"Curate Sacraria"},
@@ -126,6 +133,7 @@
 		"initiate":{"name":"Initiate"},
 		"novice":{"name":"Novice"},
 		"pilgrim":{"name":"Pilgrim"},
+		
 	},
 }
 

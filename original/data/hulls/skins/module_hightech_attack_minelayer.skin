@@ -2,7 +2,8 @@
 	"baseHullId":"module_hightech_attack",
 	"skinHullId":"module_hightech_attack_minelayer",
 	"descriptionPrefix":"Upgraded with a mine teleportation system.",
-	"restoreToBaseHull":true,
+	# so that it shows up as a "base" module in the codex, instead of reverting to the mineless one
+	"restoreToBaseHull":false,
 	"systemId":"mine_strike_station",
 	"removeWeaponSlots":[], 		# ids
 	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file

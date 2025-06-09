@@ -175,7 +175,7 @@
 		"dualflak":5,
 		
 		"reaper":5,
-		"phasecl":5,
+		#"phasecl":5,
 		"breachpod":5,
 		"harpoonpod":5,
 		"sabotpod":5,
@@ -288,7 +288,7 @@
 		"hostilityImpactOnGrowth":true,
 		#"makesPirateBases":true, # testing
 		"punitiveExpeditionData":{
-			"vsCompetitors":true,
+			"vsCompetitors":false,
 			"vsFreePort":false,
 			"canBombard":true,
 			"territorial":true,

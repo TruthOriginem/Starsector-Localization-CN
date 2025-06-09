@@ -1,0 +1,49 @@
+{
+	"id":"rift_lightning_minelayer_mine",
+	"specClass":"missile",	
+	"missileType":"PHASE_MINE",
+	"sprite":"",
+	"glowSprite":"",
+	"glowColor":[255,50,50,255], # also used for the NegativeExplosionVisual effect color
+	"size":[96,96],	
+	"center":[48,48],	
+	"collisionRadius":20,
+	"collisionClass":"NONE",
+	"collisionClassAfterFlameout":"NONE",
+	"flameoutTime":0.1, # total time from flameout to full fadeout
+	"fadeTime":0.1, # fadeout duration
+	"noEngineGlowTime":0.05, # time spent without the engine glow being rendered
+	"explosionColor":[175,100,255,255],  # unused
+	"explosionRadius":0, # purely visual	
+	"renderTargetIndicator":false, # no target diamond in combat view, not targeted by flares
+	"engineSpec":{"turnAcc":500,
+				  "turnRate":150,
+				  "acc":500,
+				  "dec":500},
+	"behaviorSpec":{"behavior":"PROXIMITY_FUSE",
+					"onExplosionEffect":"com.fs.starfarer.api.impl.combat.dweller.RiftLightningMineExplosion",
+					"range":0,
+					"slowToMaxSpeed":true,
+					"delay":0,
+					#"pingSound":"launch_flare_1",
+					"pingColor":[0,0,0,0],
+					"mineHasNoSprite":true,
+					"flashRateMult":0.25,
+					"pingRadius":100,
+					"pingDuration":0.25,
+					#"windupSound":"mine_windup_heavy",
+					#"windupDelay":1,
+					"explosionSpec":{"duration":0.1f,
+									 "radius":80,
+									 "coreRadius":40, # full damage within core radius
+									 "collisionClass":PROJECTILE_NO_FF,
+									 "collisionClassByFighter":PROJECTILE_NO_FF,
+									 "particleDuration":1,
+									 "particleCount":0,
+									 "particleColor":[0,0,0,0],
+									 "explosionColor":[0,0,0,0],
+									 "sound":"rift_lightning_explosion"},
+					}	
+}
+
+

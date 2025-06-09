@@ -11,7 +11,7 @@
 	"shipNameSources":{
 		"JAPANESE":2,
 		"EGYPTIAN":2,
-		"NORDIC":1,
+		"NORSE":1,
 		"MERCANTILE":2,
 		"SPACE":2,
 		"GENERAL":2,
@@ -30,6 +30,7 @@
 		"tags":{
 		},
 		"hulls":{
+			"anubis":0.25,
 			"scarab":0.25,
 			"hyperion":0.25,
 			"brawler_tritachyon":0.5,
@@ -76,6 +77,7 @@
 			"harbinger",
 			
 			"fury",
+			"anubis",
 			"aurora",
 			"doom",
 			
@@ -294,6 +296,7 @@
 		"ranks":{
 			"spaceAdmiral":{"name":"Senior Operation Manager"},
 			"spaceCommander":{"name":"Operation Manager"},
+			
 			"factionLeader":{"name":"CEO"},
 		},
 		"posts":{
@@ -301,6 +304,7 @@
 			"patrolCommander":{"name":"Patrol Director"},
 			"fleetCommander":{"name":"Fleet Director"},
 			"baseCommander":{"name":"Base Director"},
+			"intelligenceDirector":{"name":"Director of Special Acquisitions"},
 		},
 	},
 	"voices":{
@@ -330,6 +334,9 @@
 			"vsFreePort":false,
 			"canBombard":true,
 			"territorial":true,
+		},
+		"simulatorData":{
+			"showInSimulator":true,
 		},
 	},	
 	"fleetTypeNames":{

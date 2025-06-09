@@ -1,0 +1,295 @@
+{
+    "bounds": [
+        46,
+        62,
+        58,
+        59,
+        60,
+        47,
+        80,
+        44,
+        80,
+        -44,
+        60,
+        -45,
+        57,
+        -58,
+        44,
+        -61,
+        40,
+        -76,
+        -2,
+        -72,
+        -8,
+        -26,
+        -26,
+        -27,
+        -26,
+        -40,
+        -54,
+        -39,
+        -61,
+        -20,
+        -31,
+        1,
+        -59,
+        20,
+        -54,
+        41,
+        -26,
+        41,
+        -26,
+        25,
+        -10,
+        25,
+        1,
+        70,
+        41,
+        76
+    ],
+    "builtInMods": [
+        "automated",
+        "threat_hullmod"
+    ],
+    "center": [
+        80,
+        66
+    ],
+    "collisionRadius": 130,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 80,
+            "length": 75,
+            "location": [
+                -61,
+                26
+            ],
+            "style": "THREAT",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 60,
+            "length": 65,
+            "location": [
+                -61,
+                20
+            ],
+            "style": "THREAT",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 80,
+            "length": 55,
+            "location": [
+                -61,
+                33
+            ],
+            "style": "THREAT",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 80,
+            "length": 55,
+            "location": [
+                -61,
+                -32
+            ],
+            "style": "THREAT",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 80,
+            "length": 65,
+            "location": [
+                -61,
+                -20
+            ],
+            "style": "THREAT",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 80,
+            "length": 75,
+            "location": [
+                -61,
+                -26
+            ],
+            "style": "THREAT",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 128,
+            "length": 90,
+            "location": [
+                -11,
+                67
+            ],
+            "style": "THREAT",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 128,
+            "length": 75,
+            "location": [
+                -11,
+                63
+            ],
+            "style": "THREAT",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 128,
+            "length": 75,
+            "location": [
+                -5,
+                -63
+            ],
+            "style": "THREAT",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 128,
+            "length": 90,
+            "location": [
+                -8,
+                -69
+            ],
+            "style": "THREAT",
+            "width": 16
+        }
+    ],
+    "height": 154,
+    "hullId": "assault_unit",
+    "hullName": "Assault Unit",
+    "hullSize": "DESTROYER",
+    "shieldCenter": [
+        11,
+        1
+    ],
+    "shieldRadius": 120,
+    "spriteName": "graphics/ships/threat/threat_assault_unit.png",
+    "style": "THREAT",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 0,
+            "id": "WS 001",
+            "locations": [
+                50,
+                21
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 0,
+            "arc": 0,
+            "id": "WS 002",
+            "locations": [
+                50,
+                -21
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 003",
+            "locations": [
+                77,
+                40
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 004",
+            "locations": [
+                77,
+                -40
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 45,
+            "arc": 215,
+            "id": "WS 005",
+            "locations": [
+                20,
+                55
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": -45,
+            "arc": 215,
+            "id": "WS 006",
+            "locations": [
+                19,
+                -55
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 30,
+            "arc": 150,
+            "id": "WS 007",
+            "locations": [
+                51,
+                44
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": -30,
+            "arc": 150,
+            "id": "WS 008",
+            "locations": [
+                51,
+                -44
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 0,
+            "arc": 120,
+            "id": "WS 009",
+            "locations": [
+                55,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        }
+    ],
+    "width": 160
+}

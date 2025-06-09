@@ -1,0 +1,50 @@
+{
+	"id":"neutron_torpedo_proj",
+	"specClass":"missile",
+	"missileType":"MISSILE",
+	"onFireEffect":"com.fs.starfarer.api.impl.combat.threat.NeutronTorpedoOnFireEffect",
+	"sprite":"graphics/missiles/neutron_torpedo.png",
+	"size":[13,20],	
+	"center":[7,10],
+	"collisionRadius":10,
+	"collisionClass":"MISSILE_FF",
+	#120,110,185
+	#140,130,185
+	#140,170,185
+	"explosionColor":[140,170,185,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":175, # purely visual
+	"reduceDamageWhileFading":true,
+	"dudProbabilityOnFlameout":0,
+	"armingTime":0,
+	"glowColor":[140,170,185,75],
+	"glowRadius":175,
+	"flameoutTime":2, # total time from flameout to full fadeout
+	"noEngineGlowTime":0.5, # time spent without the engine glow being rendered
+	"fadeTime":0.5, # fadeout duration					 
+	"engineSpec":{"turnAcc":120,
+				  "turnRate":30,
+				  "acc":100,
+				  "dec":0},
+	"engineSlots":[{"id":"ES1",
+					#"loc":[-7, 0],
+					"loc":[0, 0],
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[140,170,185,0],
+						"glowSizeMult":1.5,
+						"glowAlternateColor":[140,170,185,255],
+						"contrailDuration":2,
+						"contrailWidthMult":1,
+						"contrailWidthAddedFractionAtEnd":2,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":5, # min segment length, in pixels
+						"contrailMaxSpeedMult":.0f,
+						"contrailAngularVelocityMult":0.5f,
+						"contrailSpawnDistMult":.5, # how far away from engine it starts
+						"contrailColor":[140,170,185,50],
+						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":10.0,
+				    "length":50.0,
+				    "angle":180.0}]
+}

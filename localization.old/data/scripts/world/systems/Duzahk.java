@@ -14,6 +14,7 @@ import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
+import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
 import com.fs.starfarer.api.impl.campaign.procgen.StarAge;
@@ -27,7 +28,7 @@ public class Duzahk {
 		
 		LocationAPI hyper = Global.getSector().getHyperspace();
 
-		final SectorEntityToken hyperstation = hyper.addCustomEntity("hyperstation_test", "Hyper Station", "station_mining00", Factions.INDEPENDENT);
+		final SectorEntityToken hyperstation = hyper.addCustomEntity("hyperstation_test", "Hyper 空间站", "station_mining00", Factions.INDEPENDENT);
 		hyperstation.setInteractionImage("illustrations", "orbital");
 		hyperstation.setCircularOrbit(hyper.createToken(0, 0), 0, 500, 100);
 
@@ -75,6 +76,10 @@ public class Duzahk {
 		}
 		
 		LocationAPI hyper = Global.getSector().getHyperspace();
+
+		if (Global.getSettings().getBoolean("factionsClaimUnpopulatedCoreSystems")) {
+			system.getMemoryWithoutUpdate().set(MemFlags.CLAIMING_FACTION, Factions.HEGEMONY);
+		}
 		
 		system.setBackgroundTextureFilename("graphics/backgrounds/background1.jpg");
 		
@@ -133,7 +138,7 @@ public class Duzahk {
 		
 		// Asteroid belt!
 		system.addRingBand(duzahk_star, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 2420, 34f, null, null);
-		system.addAsteroidBelt(duzahk_star, 50, 2400, 100, 30, 40, Terrain.ASTEROID_BELT, "The Daevas");
+		system.addAsteroidBelt(duzahk_star, 50, 2400, 100, 30, 40, Terrain.ASTEROID_BELT, "Daevas 陨石带");
 		
 		//system.addRingBand(duzahk_star, "misc", "rings3", 256, 2, new Color(255,245,235,255), 256, 2500, 90f);
 		//system.addRingBand(duzahk_star, "misc", "rings4", 512f, 1, new Color(235,38,8,145), 512f, 2500, 90f);

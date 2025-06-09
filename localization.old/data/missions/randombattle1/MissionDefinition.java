@@ -130,12 +130,12 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
 		// Set a small blurb for each fleet that shows up on the mission detail and
 		// mission results screens to identify each side.
-		api.setFleetTagline(FleetSide.PLAYER, "Your forces");
-		api.setFleetTagline(FleetSide.ENEMY, "Enemy forces");
+		api.setFleetTagline(FleetSide.PLAYER, "你的舰队");
+		api.setFleetTagline(FleetSide.ENEMY, "敌方舰队");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
-		api.addBriefingItem("Defeat all enemy forces");
+		api.addBriefingItem("击败所有敌舰");
 		
 		// Set up the fleets
 		generateFleet(100 + (int)((float) Math.random() * 50), FleetSide.PLAYER, ships, api);

@@ -1,0 +1,12 @@
+{
+	"id":"convulsive_lunge",
+	"type":"STAT_MOD",
+	"aiType":"CUSTOM",
+	"aiScript":"com.fs.starfarer.api.impl.combat.dweller.ConvulsiveLungeSystemAI",
+	
+	"runScriptWhileIdle":true,
+	"statsScript":"com.fs.starfarer.api.impl.combat.dweller.ConvulsiveLungeSystemScript",
+	
+	"useSound":"system_convulsive_lunge",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

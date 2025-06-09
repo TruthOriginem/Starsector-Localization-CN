@@ -19,7 +19,7 @@
 				{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuvers$Level1A"},
 				{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuvers$Level1C"},
 				#{"type":"CHARACTER_STATS", "script":"com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuvers$Level1B"},
-				{"type":"HULLMOD_UNLOCK", "hullmods":{"nav_relay":1, "operations_center":1}},
+				{"type":"HULLMOD_UNLOCK", "hullmods":{"nav_relay":1, "escort_package":1, "operations_center":1}},
 			]
 		},
 	],

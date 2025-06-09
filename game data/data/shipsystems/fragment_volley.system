@@ -1,0 +1,11 @@
+{
+	"id":"fragment_volley",
+	"type":"STAT_MOD",
+	"aiType":"NONE",
+	
+	"runScriptWhileIdle":true,
+	"statsScript":"com.fs.starfarer.api.impl.combat.threat.FragmentVolleySystemScript",
+	
+	"useSound":"system_fragment_volley",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

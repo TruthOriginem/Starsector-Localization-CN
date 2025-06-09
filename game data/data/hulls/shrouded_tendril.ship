@@ -1,0 +1,165 @@
+{
+    "bounds": [
+        17,
+        23,
+        52,
+        49,
+        39,
+        17,
+        80,
+        19,
+        53,
+        -3,
+        81,
+        -25,
+        42,
+        -22,
+        32,
+        -59,
+        13,
+        -18,
+        2,
+        -53,
+        -12,
+        -32,
+        -21,
+        -40,
+        -22,
+        -24,
+        -39,
+        -29,
+        -22,
+        -7,
+        -49,
+        -3,
+        -21,
+        6,
+        -41,
+        20,
+        -20,
+        26,
+        -30,
+        52,
+        -7,
+        29,
+        2,
+        60
+    ],
+    "builtInMods": ["dweller_hullmod"],
+    "center": [
+        87,
+        123
+    ],
+    "collisionRadius": 140,
+    "coversColor": "",
+    "engineSlots": [{
+        "angle": 180,
+        "contrailSize": 80,
+        "length": 75,
+        "location": [
+            -63,
+            1
+        ],
+        "style": "DWELLER",
+        "width": 16
+    }],
+    "height": 240,
+    "hullId": "shrouded_tendril",
+    "hullName": "Shrouded Tendril",
+    "hullSize": "DESTROYER",
+    "shieldCenter": [
+        0,
+        1
+    ],
+    "shieldRadius": 130,
+    "spriteName": "graphics/ships/shroud/tendril_base.png",
+    "style": "DWELLER",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 150,
+            "id": "WS 001",
+            "locations": [
+                57,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 0,
+            "arc": 360,
+            "id": "WS 002",
+            "locations": [
+                0,
+                1
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 180,
+            "arc": 5,
+            "id": "WS 003",
+            "locations": [
+                -7,
+                1
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 45,
+            "arc": 360,
+            "id": "WS 005",
+            "locations": [
+                17,
+                18
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": -45,
+            "arc": 360,
+            "id": "WS 006",
+            "locations": [
+                18,
+                -18
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 135,
+            "arc": 360,
+            "id": "WS 007",
+            "locations": [
+                -16,
+                18
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 225,
+            "arc": 360,
+            "id": "WS 008",
+            "locations": [
+                -16,
+                -18
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        }
+    ],
+    "width": 175
+}

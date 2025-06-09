@@ -1,0 +1,18 @@
+{
+	"id":"shrouded_vortex",
+	"type":"STAT_MOD",
+	"aiType":"NONE",
+	
+	#"statsScript":"com.fs.starfarer.api.impl.combat.dweller.ConvulsiveLungeSystemScript",
+	
+	#"useSound":"system_convulsive_lunge",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	# so that ships feel properly threatened and raise shields against the vortices
+	"aiHints":{
+		"threatRange":700,
+		"threatAmount":4,
+		"threatAngle":0,
+		"threatArc":360,
+	}
+}

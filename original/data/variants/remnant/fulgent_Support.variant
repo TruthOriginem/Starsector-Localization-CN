@@ -1,10 +1,13 @@
 {
     "displayName": "Support",
-    "fluxCapacitors": 11,
+    "fluxCapacitors": 10,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "fulgent",
-    "hullMods": ["missleracks"],
+    "hullMods": [
+        "missleracks",
+        "hardenedshieldemitter"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "fulgent_Support",

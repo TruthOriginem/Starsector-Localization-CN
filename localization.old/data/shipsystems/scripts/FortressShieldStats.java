@@ -31,7 +31,7 @@ public class FortressShieldStats extends BaseShipSystemScript {
 	
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
-			return new StatusData("护盾所受伤害降低 10 倍", false);
+			return new StatusData("护盾所受伤害降低为 10 分之 1", false);
 		}
 //		else if (index == 1) {
 //			return new StatusData("shield upkeep reduced to 0", false);

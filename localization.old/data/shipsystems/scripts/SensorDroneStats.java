@@ -28,7 +28,7 @@ public class SensorDroneStats extends BaseShipSystemScript {
 		float sensorRangePercent = SENSOR_RANGE_PERCENT * effectLevel;
 		float weaponRangePercent = WEAPON_RANGE_PERCENT * effectLevel;
 		if (index == 0) {
-			return new StatusData("探测范围 +" + (int) sensorRangePercent + "%", false);
+			return new StatusData("战场视野 +" + (int) sensorRangePercent + "%", false);
 		} else if (index == 1) {
 			//return new StatusData("increased energy weapon range", false);
 			return null;

@@ -15,7 +15,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		api.initFleet(FleetSide.ENEMY, "LSS", FleetGoal.ATTACK, true, 5);
 
 		// Set a blurb for each fleet
-		api.setFleetTagline(FleetSide.PLAYER, "由海军都统 Kato 所率领的 英仙座联盟 特遣队");
+		api.setFleetTagline(FleetSide.PLAYER, "海军都统 Kato 率领的 英仙座联盟 特遣队");
 		api.setFleetTagline(FleetSide.ENEMY, "第三神圣舰队支队和当地非正规军");
 		
 		// These show up as items in the bulleted list under 

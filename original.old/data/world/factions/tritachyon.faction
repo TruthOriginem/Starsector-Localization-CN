@@ -201,6 +201,7 @@
 		"atropos":5,
 		"breachpod":5,
 		"typhoon":5,
+		"phasecl":5,
 		
 		"cyclone":5,
 		"squall":10,
@@ -278,6 +279,7 @@
 			"graphics/portraits/portrait_corporate04.png",
 			"graphics/portraits/portrait_corporate07.png",
 			"graphics/portraits/portrait_corporate09.png",
+			"graphics/portraits/portrait_corporate11.png",
 			"graphics/portraits/portrait_mercenary02.png",
 			"graphics/portraits/portrait_mercenary08.png",
 			"graphics/portraits/portrait16.png",
@@ -324,7 +326,7 @@
 		"buysSurveyData":true,
 		"hostilityImpactOnGrowth":true,
 		"punitiveExpeditionData":{
-			"vsCompetitors":true,
+			"vsCompetitors":false,
 			"vsFreePort":false,
 			"canBombard":true,
 			"territorial":true,

@@ -1,0 +1,16 @@
+{
+	"id":"vortex_launcher_shot",
+	"specClass":"missile",
+	"missileType":"MISSILE",
+	"sprite":"graphics/fx/empty.png",
+	"size":[13,17],	
+	"center":[7,9],
+	"collisionRadius":8,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[255,50,50,0],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":0, # purely visual
+	"engineSpec":{"turnAcc":1,
+				  "turnRate":1,
+				  "acc":1,
+				  "dec":1},
+}

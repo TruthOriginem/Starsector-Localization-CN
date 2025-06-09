@@ -1,0 +1,109 @@
+{
+    "bounds": [
+        9,
+        7,
+        46,
+        7,
+        46,
+        -5,
+        9,
+        -6,
+        9,
+        -22,
+        -3,
+        -23,
+        -3,
+        -5,
+        -42,
+        -6,
+        -43,
+        6,
+        -3,
+        7,
+        -3,
+        23,
+        9,
+        23
+    ],
+    "builtInMods": ["dweller_hullmod"],
+    "center": [
+        64,
+        65
+    ],
+    "collisionRadius": 55,
+    "coversColor": "",
+    "engineSlots": [{
+        "angle": 180,
+        "contrailSize": 80,
+        "length": 75,
+        "location": [
+            -28,
+            0
+        ],
+        "style": "DWELLER",
+        "width": 16
+    }],
+    "height": 128,
+    "hullId": "shrouded_vortex",
+    "hullName": "Shrouded Vortex",
+    "hullSize": "FIGHTER",
+    "shieldCenter": [
+        1,
+        0
+    ],
+    "shieldRadius": 50,
+    "spriteName": "graphics/ships/shroud/vortex_flat.png",
+    "style": "DWELLER",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 45,
+            "arc": 360,
+            "id": "WS 005",
+            "locations": [
+                15,
+                14
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": -45,
+            "arc": 360,
+            "id": "WS 006",
+            "locations": [
+                15,
+                -13
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 135,
+            "arc": 360,
+            "id": "WS 007",
+            "locations": [
+                -11,
+                14
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 225,
+            "arc": 360,
+            "id": "WS 008",
+            "locations": [
+                -12,
+                -15
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        }
+    ],
+    "width": 128
+}

@@ -1,0 +1,18 @@
+{
+	"id":"heavy_mass_driver_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":85.0,
+	"hitGlowRadius":60,
+	"width":8.5,
+	"fadeTime":0.3,
+	"fringeColor":[250,230,195,255],
+	"coreColor":[255,250,210,255],
+	#"fringeColor":[235,255,215,255],
+	#"coreColor":[225,255,200,255],
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/missiles/shell_mass_driver.png"		
+}

@@ -89,7 +89,7 @@ public class Yma {
 		yma3.applySpecChanges();
 		
 			// Chupi Orco Siphon Project
-			SectorEntityToken neutralStation = system.addCustomEntity("yma_abandoned_station", "Abandoned Siphon Station", "station_side05", "neutral");
+			SectorEntityToken neutralStation = system.addCustomEntity("yma_abandoned_station", "废弃的虹吸空间站", "station_side05", "neutral");
 			neutralStation.setCircularOrbitPointingDown(system.getEntityById("chupi_orco"), 45, 360, 50);		
 			neutralStation.setCustomDescriptionId("station_chupi_orco");
 			neutralStation.setInteractionImage("illustrations", "abandoned_station3");
@@ -131,7 +131,7 @@ public class Yma {
 						30, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Chupi Orco L4 Asteroids")); // null for default name
+						"Chupi Orco L4 小行星团")); // null for default name
 			
 			SectorEntityToken chupi_orcoL5 = system.addTerrain(Terrain.ASTEROID_FIELD,
 					new AsteroidFieldParams(
@@ -141,20 +141,20 @@ public class Yma {
 						30, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Chupi Orco L5 Asteroids")); // null for default name
+						"Chupi Orco L5 小行星团")); // null for default name
 			
 			chupi_orcoL4.setCircularOrbit(yma_star, 45 + 60, 7300, 450);
 			chupi_orcoL5.setCircularOrbit(yma_star, 45 - 60, 7300, 450);
 			
 			// Viscacha Jumppoint
-			JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("viscacha_jump", "Viscacha Jump-point");
+			JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("viscacha_jump", "Viscacha 跳跃点");
 			jumpPoint.setCircularOrbit( system.getEntityById("yma"), 45+60, 7300, 450);
 			jumpPoint.setRelatedPlanet(yma3a);
 			system.addEntity(jumpPoint);
 			
 			// Yma Gate
 			SectorEntityToken gate = system.addCustomEntity("yma_gate", // unique id
-					 "Yma Gate", // name - if null, defaultName from custom_entities.json will be used
+					 "Yma 之门", // name - if null, defaultName from custom_entities.json will be used
 					 "inactive_gate", // type of object, defined in custom_entities.json
 					 null); // faction
 			gate.setCircularOrbit(system.getEntityById("yma"), 345 + 5, 7300, 450);
@@ -174,7 +174,7 @@ public class Yma {
 		yma_b1.setCustomDescriptionId("planet_qaras");
 		
 			// Qaras mirror system 
-			SectorEntityToken qaras_mirror1 = system.addCustomEntity("qaras_mirror1", "Qaras Stellar Mirror", "stellar_mirror", "pirates");
+			SectorEntityToken qaras_mirror1 = system.addCustomEntity("qaras_mirror1", "Qaras 恒星镜", "stellar_mirror", "pirates");
 			qaras_mirror1.setCircularOrbitPointingDown(system.getEntityById("qaras"), 0, 220, 40);		
 			qaras_mirror1.setCustomDescriptionId("stellar_mirror");
 	
@@ -182,13 +182,13 @@ public class Yma {
 		
 		// Qaras Relay - L5 (behind)
 		SectorEntityToken qaras_relay = system.addCustomEntity("qaras_relay", // unique id
-				 "Qaras Relay", // name - if null, defaultName from custom_entities.json will be used
+				 "Qaras 通讯中继站", // name - if null, defaultName from custom_entities.json will be used
 				 "comm_relay", // type of object, defined in custom_entities.json
 				 "pirates"); // faction
 		qaras_relay.setCircularOrbitPointingDown( yma_star_b, 0 - 60, 2000, 100);
 		
 		// Yma B Jumppoint
-		JumpPointAPI jumpPoint2 = Global.getFactory().createJumpPoint("viscacha_jump", "Yma B Jump-point");
+		JumpPointAPI jumpPoint2 = Global.getFactory().createJumpPoint("viscacha_jump", "Yma B 跳跃点");
 		jumpPoint2.setCircularOrbit( system.getEntityById("yma"), 270+60, 12500, 800);
 		jumpPoint2.setRelatedPlanet(yma_b1);
 		system.addEntity(jumpPoint2);
@@ -196,11 +196,11 @@ public class Yma {
 		// Warawara trojans
 		SectorEntityToken warawaraL4 = system.addTerrain(Terrain.ASTEROID_FIELD, 
 				new AsteroidFieldParams(500f, 700f,	30,	40, 4f,	24f, 
-				"Warawara Orco L4 Asteroids")); 
+				"Warawara Orco L4 小行星团")); 
 		
 		SectorEntityToken warawaraL5 = system.addTerrain(Terrain.ASTEROID_FIELD, 
 				new AsteroidFieldParams(500f, 700f,	30,	40, 4f,	24f, 
-						"Warawara Orco L5 Asteroids")); 
+						"Warawara Orco L5 小行星团")); 
 		
 		warawaraL4.setCircularOrbit(yma_star, 270-60, 12500, 800);
 		warawaraL5.setCircularOrbit(yma_star, 270+60, 12500, 800);

@@ -1,0 +1,34 @@
+{
+    "displayName": "Type 101",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "skirmish_unit",
+    "hullMods": [
+        "missleracks",
+        "magazines"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "skirmish_unit_Type101",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "heavy_mass_driver"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 000": "neutron_torpedo"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "voltaic_cannon",
+                "WS 002": "voltaic_cannon"
+            }
+        }
+    ]
+}

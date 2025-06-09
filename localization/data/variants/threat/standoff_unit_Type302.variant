@@ -1,0 +1,63 @@
+{
+    "displayName": "Type 302",
+    "fluxCapacitors": 30,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "standoff_unit",
+    "hullMods": [
+        "fragment_swarm",
+        "ballistic_rangefinder",
+        "targetingunit",
+        "heavyarmor",
+        "magazines"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "standoff_unit_Type302",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 012": "neoferric_quadcoil",
+                "WS 013": "neoferric_quadcoil"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "light_mass_driver",
+                "WS 002": "light_mass_driver",
+                "WS 003": "light_mass_driver",
+                "WS 004": "light_mass_driver"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 010": "heavy_mass_driver",
+                "WS 011": "heavy_mass_driver"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 007": "unstable_fragment",
+                "WS 014": "unstable_fragment"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "voltaic_discharge",
+                "WS 006": "voltaic_discharge",
+                "WS 008": "voltaic_discharge",
+                "WS 009": "voltaic_discharge"
+            }
+        }
+    ]
+}

@@ -6,6 +6,8 @@
 	"logo":"graphics/factions/hegemony.png",
 	"crest":"graphics/factions/crest_hegemony.png",
 	"shipNamePrefix":"HSS",
+	"personNamePrefixAOrAn":"",
+	"displayNameIsOrAre":"",
 	"shipNameSources":{
 		"HEGEMONY":1,
 		"BRITISH_NAVY":1,
@@ -83,6 +85,7 @@
 			"eagle_xiv",
 			"falcon_xiv",
 			"mora",
+			"grendel", # 0 phase doctrine, but added to combatLarge elsewhere in this file
 			
 			"legion",
 			"onslaught",
@@ -264,6 +267,11 @@
 			"includeDefault":true,
 			"gremlin_Strike":10,
 		},
+		"combatLarge":{
+			"includeDefault":true,
+			"grendel_Assault":3,
+			"grendel_Support":1,
+		},
 	},	
 	"illegalCommodities":[
 		"drugs",
@@ -355,7 +363,7 @@
 		"caresAboutAtrocities":true,
 		"punitiveExpeditionData":{
 			"vsCompetitors":false,
-			"vsFreePort":true,
+			"vsFreePort":false,
 			"canBombard":false,
 			"territorial":true,
 		},

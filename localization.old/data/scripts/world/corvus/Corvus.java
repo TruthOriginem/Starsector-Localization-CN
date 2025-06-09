@@ -197,7 +197,7 @@ public class Corvus { // implements SectorGeneratorPlugin {
 						30, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Barad L4 小行星带")); // null for default name
+						"Barad L4 小行星团")); // null for default name
 			
 			SectorEntityToken baradL5 = system.addTerrain(Terrain.ASTEROID_FIELD,
 					new AsteroidFieldParams(
@@ -207,7 +207,7 @@ public class Corvus { // implements SectorGeneratorPlugin {
 						30, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Barad L5 小行星带")); // null for default name
+						"Barad L5 小行星团")); // null for default name
 			
 			baradL4.setCircularOrbit(star, baradAngle -60f, 7800, 400);
 			baradL5.setCircularOrbit(star, baradAngle +60f, 7800, 400);

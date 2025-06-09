@@ -1,0 +1,34 @@
+{
+	"id":"voidblaster",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"everyFrameEffect":"com.fs.starfarer.api.impl.combat.threat.VoidblasterEffect",
+	"type":"ENERGY",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/weapons/voidblaster_turret_base.png",
+	"turretGunSprite":"graphics/weapons/voidblaster_turret_recoil.png",
+	"hardpointSprite":"graphics/weapons/voidblaster_hardpoint_base.png",
+	"hardpointGunSprite":"graphics/weapons/voidblaster_hardpoint_recoil.png",
+	"turretGlowSprite":"graphics/weapons/voidblaster_turret_glow.png",
+	"hardpointGlowSprite":"graphics/weapons/voidblaster_hardpoint_glow.png",
+	"glowColor":[120,110,185,255],
+	"visualRecoil":3.0,  # the gun sprites are only used if this is non-0
+	"renderHints":[RENDER_BARREL_BELOW],
+	"turretOffsets":[22, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[22, 0],
+	"hardpointAngleOffsets":[0],
+	"unaffectedByProjectileSpeedBonuses":true,
+	#"noImpactSounds":true,
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"muzzleFlashSpec":{"length":40.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":10.0,
+					   "particleSizeMin":15.0,
+					   "particleSizeRange":21.0,
+					   "particleDuration":0.5,
+					   "particleCount":15,
+					  "particleColor":[120,110,185,235]},
+	"projectileSpecId":"voidblaster_shot",  # projectile that will be fired	
+	"fireSoundTwo":"voidblaster_fire",
+	"stopPreviousFireSound":true,
+}

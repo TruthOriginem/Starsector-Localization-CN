@@ -1,0 +1,44 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 20,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "brilliant",
+    "hullMods": [
+        "targetingunit",
+        "advancedoptics",
+        "hardenedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "brilliant_Support",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {"WS 000": "guardian"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "harpoonpod"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "hveldriver",
+                "WS 006": "hveldriver"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "heavyburst",
+                "WS 002": "pdburst",
+                "WS 003": "pdburst"
+            }
+        }
+    ]
+}

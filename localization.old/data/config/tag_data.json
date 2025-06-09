@@ -19,7 +19,7 @@
 		"name":"重大事件",
 		#"color":"buttonShortcut",
 		"width":119,
-		#"putFirst":true,
+		"putFirst":true,
 		"sort":30,
 	},
 	"Contacts":{
@@ -29,7 +29,7 @@
 		"sort":32,
 	},
 	"Local":{
-		"name":"星系",
+		"name":"附近事件",
 		"width":118,
 		"putFirst":true,
 		"sort":33,
@@ -72,13 +72,53 @@
 		"name":"故事",
 		"width":119,
 		"putFirst":true,
-		"sort":31,
+		"sort":29,
 	},
 	"Luddic shrines":{
-		"name":"卢德朝圣者",
+		"name":"卢德圣地",
 		"color":[75,200,0,255],
 	},
 
+	# added by Starfarer Localization Group
+	"Fleet departures":{
+		"name":"舰队离港",
+	},
+	"Smuggling":{
+		"name":"走私活动",
+	},
+	"Exploration":{
+		"name":"探索",
+	},
+	"Trade":{
+		"name":"贸易活动",
+	},
+	"Commission":{
+		"name":"雇佣协议",
+	},
+	"Agreements":{
+		"name":"协议",
+	},
+	"Hostilities":{
+		"name":"敌对活动",
+	},
+	"Military":{
+		"name":"军事行动",
+	},
+	"Warning beacons":{
+		"name":"警告信标",
+	},
+	"Gates":{
+		"name":"星门",
+	},
+	"Comm sniffers":{
+		"name":"传感器嗅探",
+	},
+	"Decivilized":{
+		"name":"文明丧失",
+	},
+	"Production":{
+		"name":"生产",
+	},
 }
 
 

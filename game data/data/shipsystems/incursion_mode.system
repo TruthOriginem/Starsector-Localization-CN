@@ -1,0 +1,14 @@
+{
+	"id":"incursion_mode",
+	"type":"STAT_MOD",
+	"aiType":"NONE",
+	
+	"runScriptWhileIdle":true,
+	"statsScript":"com.fs.starfarer.api.impl.combat.threat.IncursionModeSystemScript",
+	
+	"weaponGlowColor":[130,155,145,50],
+	"weaponTypes":[BALLISTIC, ENERGY],
+	
+	"useSound":"system_incursion_mode",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

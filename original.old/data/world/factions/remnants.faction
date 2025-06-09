@@ -155,8 +155,10 @@
 		"autofitRandomizeProbability":0.25,
 
 		"commanderSkillsShuffleProbability":1,
-		"commanderSkills":[ # unlike other factions, can get up to 3 skills depending
-			"electronic_warfare",
+		"commanderSkills":[
+			# unlike other factions, can get up to 3 skills depending
+			#"electronic_warfare",
+			# changing this to up to 2 skills -am
 			"flux_regulation",
 			"coordinated_maneuvers",
 		],

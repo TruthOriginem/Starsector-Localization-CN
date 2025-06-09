@@ -1,12 +1,13 @@
 {
     "displayName": "Standard",
     "fluxCapacitors": 0,
-    "fluxVents": 30,
+    "fluxVents": 15,
     "goalVariant": true,
     "hullId": "rampart",
     "hullMods": [
         "armoredweapons",
-        "insulatedengine"
+        "insulatedengine",
+        "dedicated_targeting_core"
     ],
     "permaMods": [],
     "sMods": [],

@@ -4,7 +4,10 @@
     "fluxVents": 20,
     "goalVariant": true,
     "hullId": "hammerhead",
-    "hullMods": ["targetingunit"],
+    "hullMods": [
+        "targetingunit",
+        "turretgyros"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "hammerhead_Support",

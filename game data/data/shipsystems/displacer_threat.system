@@ -1,0 +1,31 @@
+{
+	"id":"displacer_threat",
+	"type":"DISPLACER",
+	"aiType":"PHASE_DISPLACER",
+	
+	
+	"jitterColor":[130,155,145,255],
+	"jitterCopies":10,
+	"jitterRange":0,
+	"jitterRangeRadiusFraction":0.5,
+	
+	"engineGlowColor":[130,155,145,125],
+
+	"range":300,
+	"randomRange":0,
+	
+	"renderCopyDuringTeleport":true,
+	
+	"runScriptWhileIdle":true,
+	"statsScript":"com.fs.starfarer.api.impl.combat.threat.DisplacerGlowScript",	
+	
+	"fadeActivationSoundOnChargedown":false,
+	"useSound":"system_phase_skimmer",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+		"activeSpeedIncrease":0,
+		"burstMovementPotential":300,
+		"averageSpeedIncrease":0,
+	}
+}
