@@ -1,13 +1,10 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 0,
-    "fluxVents": 28,
+    "fluxCapacitors": 8,
+    "fluxVents": 30,
     "goalVariant": true,
     "hullId": "eagle_LG",
-    "hullMods": [
-        "targetingunit",
-        "advancedoptics"
-    ],
+    "hullMods": ["targetingunit"],
     "permaMods": [],
     "sMods": [],
     "variantId": "eagle_LG_Assault",
@@ -16,26 +13,30 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 007": "heavyac",
-                "WS 008": "heavyac",
-                "WS 013": "heavyac"
+                "WS 007": "kineticblaster",
+                "WS 008": "kineticblaster"
             }
         },
         {
             "autofire": false,
             "mode": "ALTERNATING",
             "weapons": {
-                "WS 001": "sabot",
-                "WS 002": "sabot"
+                "WS 001": "breach",
+                "WS 002": "breach"
             }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 013": "heavyac"}
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS 005": "phasebeam",
-                "WS 006": "phasebeam",
-                "WS 009": "phasebeam"
+                "WS 005": "gravitonbeam",
+                "WS 006": "gravitonbeam",
+                "WS 009": "gravitonbeam"
             }
         },
         {

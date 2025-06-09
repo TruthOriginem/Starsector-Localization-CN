@@ -89,6 +89,7 @@ public class Eos {
 		eos2.getSpec().setUseReverseLightForGlow(true);
 		eos2.applySpecChanges();
 		eos2.setCustomDescriptionId("planet_tartessus");
+		eos2.setInteractionImage("illustrations", "tartessus");
 		
 			system.addRingBand(eos2, "misc", "rings_special0", 256f, 1, new Color(225,215,255,200), 128f, 380, 30f, Terrain.RING, "The Grace of Tartessus"); 
 			// 256f

@@ -1,12 +1,14 @@
 {
     "displayName": "Defense",
-    "fluxCapacitors": 19,
+    "fluxCapacitors": 16,
     "fluxVents": 20,
     "goalVariant": true,
     "hullId": "facet",
     "hullMods": [
         "pointdefenseai",
-        "targetingunit"
+        "targetingunit",
+        "advancedoptics",
+        "fluxdistributor"
     ],
     "permaMods": [],
     "sMods": [],

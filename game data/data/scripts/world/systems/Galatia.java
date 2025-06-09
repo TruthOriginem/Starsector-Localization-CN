@@ -187,6 +187,7 @@ public class Galatia {
 		derinkuyuStation.setCircularOrbitWithSpin(star, 135, beltOrbitRadius - 100f, 300f, 3f, 5f);
 		//derinkuyuStation.setCircularOrbitPointingDown(galatia1, 300, 350, 30);
 		derinkuyuStation.setInteractionImage("illustrations", "orbital");
+		derinkuyuStation.setCustomDescriptionId("station_derinkuyu");
 		
 		// create a market for derinkuyuStation - not connected to the rest of the economy to start with
 		market = Global.getFactory().createMarket("derinkuyu_market", derinkuyuStation.getName(), 0);

@@ -44,6 +44,7 @@ public class HeavyArmor extends BaseHullMod {
 			stats.getMaxTurnRate().modifyMult(id, 1f - SMOD_MANEUVER_PENALTY * 0.01f);
 		}
 		
+		//stats.getBeamWeaponFluxCostMult().modifyMult(id, 10f);
 //		stats.getEnergyAmmoRegenMult().modifyMult(id, 10f);
 		
 //		stats.getDynamic().getMod(Stats.MAX_LOGISTICS_HULLMODS_MOD).modifyFlat(id, 1);

@@ -3,7 +3,7 @@
 	"skinHullId":"falcon_LG",
 	"hullName":"Falcon (LG)",
 	"descriptionPrefix":"Modified for operations in the Askonia system under orders from Supreme Executor Philip Andrada, this hull includes integrated solar shielding as well as a peculiar internal cladding provided by an industrial conglomerate out of Sindria itself. That the chief designer, appointed by the Supreme Executor for his many cycles of loyal service, sits on the board of that conglomerate is simply an example of the unity and efficiency of the Sindrian Polity.",
-	"tags":["LG_bp","no_dealer"],
+	"tags":["LG_bp","no_dealer","codex_unlockable"],
 	"tech":"Lion's Guard",
 	"spriteName":"graphics/ships/falcon/falcon_lg.png",
 	"baseValueMult":1,
@@ -12,8 +12,8 @@
 	"removeBuiltInMods":[], 		# hullmod ids
 	"removeBuiltInWeapons":[], 		# weapon slot ids
 	#"systemId":"ammofeed",
-	"ordnancePoints":116,
-	"builtInMods":["andrada_mods","solar_shielding"],
+	"ordnancePoints":108,
+	"builtInMods":["andrada_mods","solar_shielding","coherer"],
 	#"builtInMods":["andrada_mods"],
 	"builtInWeapons":{
     },

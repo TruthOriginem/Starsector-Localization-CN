@@ -1,49 +1,12 @@
 {
-	#"FRIGATE":
-	#	[
-	#	"Adept",
-	#	"Adroit",
-	#	"Agile",
-	#	"Swift",
-	#	"Quicksilver",
-	#	"Reckless",
-	#	],
-	#"DESTROYER":
-	#	[
-	#	"Acrimonious",
-	#	"Antagonistic",
-	#	"Bellicose",
-	#	"Belligerent",
-	#	"Pernicious",
-	#	"Vicious",
-	#	"Vehement",	
-	#	],
-	#"CRUISER":
-	#	[
-	#	"Devoted",
-	#	"Faithful",
-	#	"Resolute",
-	#	"Steadfast",
-	#	"Unwavering",
-	#	"Victorious",
-	#	],
-	#"CAPITAL_SHIP":
-	#	[
-	#	"Enduring",
-	#	"Eternal",
-	#	"Indomitable",
-	#	"Invincible",
-	#	"Invulnerable",
-	#	"Impregnable",
-	#	"Indestructible",
-	#	"Irrepressible",
-	#	"Unassailable",			
-	#	"Unchanging",
-	#	"Unconquerable",			
-	#	"Undying",			
-	#	"Unshakable",
-	#	],
-	
+	"THREAT":
+	[
+		"Unnamed",
+	],
+	"DWELLER":
+	[
+		"Nameless",
+	],
 	"GENERAL":
 	[
 		"Last Rains of Sestramor",
@@ -120,7 +83,7 @@
 		"Miraculux",
 		"Voyageur",
 		"Three Sheets To The Wind",
-		"Nameless",
+		#"Nameless", # can't have duplicates, apparently - OLD code
 		"Arkady Sent Me",
 		"Drifter",
 		"Solo",
@@ -334,9 +297,19 @@
 		"Auster",
 		"Notos",
 		"Ghost Bird",
+		"So Far So Good",
+		"Eigengrau",
+		"Not Great Not Terrible",
+		"Anagance",
+		"Hurry-scurry",
 	],
 	"PIRATES":
 	[
+		"Voidreaver",
+		"Voidranger",
+		"Voidrover",
+		"Voidreaper",
+		"Voidstalker",
 		"Blast Tyrant",
 		"Strange Cousin",
 		"Daunty Jack",
@@ -522,6 +495,21 @@
 		"Raubritter",
 		"Fierce and Free",
 		"Anticitizen",
+		"Black Dagger",
+		"Ultrahammer",
+		"Death Collection",
+		"Sudden Death",
+		"Fire-spitter",
+		"Jumping Billy",
+		"Deadstar",
+		"Breath-taker",
+		"Smasher",
+		"Milk & Plunder",
+		"Kanta's Plaything",
+		"Hatch-knocker",
+		"Zero Remorse",
+		"Sindria Raider",
+		"Smoking Gun",
 	],
 	"BRITISH_NAVY":
 	[
@@ -623,7 +611,11 @@
 		"Expedition",
 		"Risk Accretion",
 		"Stellar Profits",
-		
+		"Fortunate Cloud",
+		"Big Mover",
+		"Prime Lavish",
+		"Free Plenty",
+		"Gold Line",
 	],
 	"SPACE":
 	[
@@ -699,8 +691,9 @@
 		"Azimyth",
 		"Laniakea Traveller",
 		"Stellarian",
-		
-		
+		"Chatelain Thea",
+		"Ion Rose",
+		"Interstellar Rain",
 	],
 	"REVOLUTIONARY":
 	[
@@ -943,6 +936,7 @@
 		"Cast-out Sin",
 		"Leaflight",
 		"Turn of Seasons",
+		"Starry Larch",
 	],
 	"ABRAHAMIC":
 	[
@@ -1049,6 +1043,23 @@
 		"Trolle",
 		"Dis",
 		"Tatzelwurm",
+		"Baldraz",
+		"Volla",
+		"Kobold",
+		"Holda",
+		"Krampus",
+		"Mano",
+		"Fasolt",
+		"Irrwurz",
+		"Tuisto",
+		"Lutzelfrau",
+		"Erlking",
+		"Uhaml",
+		"Donar",
+		"Lindworm",
+		"Drude",
+		"Drak",
+		"Austron",
 	],
 	"NORSE":
 	[
@@ -1258,7 +1269,6 @@
 		"Priapus",
 		"Procas",
 		"Promitor",
-		"Psyche",
 		"Quirinus",
 		"Remus",
 		"Romulus",
@@ -2384,7 +2394,6 @@
 		"Phobos",
 		"Phocus",
 		"Phoebe",
-		"Phoebe",
 		"Phoenix",
 		"Phonoi",
 		"Phorcys",
@@ -2417,7 +2426,6 @@
 		"Protesilaus",
 		"Proteus",
 		"Psamathe",
-		"Psyche",
 		"Psyche",
 		"Pterelaos",
 		"Ptocheia",
@@ -2593,5 +2601,5 @@
 		"7e2489",
 		"b25b9d",
 		"125b0d",
-	]
+	],
 }

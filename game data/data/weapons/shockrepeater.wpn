@@ -13,7 +13,7 @@
 	"hardpointOffsets":[8, 0],
 	"hardpointAngleOffsets":[0],
 	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
-	"animationType":"NONE",
+	"animationType":"GLOW",
 	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
 	"projectileSpecId":"shockrepeater_shot",  # projectile that will be fired
 	"fireSoundTwo":"shock_repeater_fire",

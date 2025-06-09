@@ -39,7 +39,7 @@
 	"sprite":"graphics/missiles/missile_hydra_mdem.png",
 	"size":[14,28],	
 	"center":[7,14],
-	"collisionRadius":30,
+	"collisionRadius":14,
 	"collisionClass":"MISSILE_NO_FF",
 	"explosionColor":[150,255,150,255],  # purely visual, will get a white additively blended core on top of this color
 	"explosionRadius":150, # purely visual	

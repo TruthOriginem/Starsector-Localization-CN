@@ -1,13 +1,10 @@
 {
     "displayName": "Attack",
-    "fluxCapacitors": 0,
-    "fluxVents": 22,
+    "fluxCapacitors": 5,
+    "fluxVents": 30,
     "goalVariant": true,
     "hullId": "falcon_LG",
-    "hullMods": [
-        "targetingunit",
-        "advancedoptics"
-    ],
+    "hullMods": ["targetingunit"],
     "permaMods": [],
     "sMods": [],
     "variantId": "falcon_LG_Attack",
@@ -16,8 +13,8 @@
             "autofire": false,
             "mode": "LINKED",
             "weapons": {
-                "WS 007": "heavyac",
-                "WS 008": "heavyac"
+                "WS 007": "heavymortar",
+                "WS 008": "heavymortar"
             }
         },
         {
@@ -30,10 +27,10 @@
         },
         {
             "autofire": true,
-            "mode": "ALTERNATING",
+            "mode": "LINKED",
             "weapons": {
-                "WS 005": "phasebeam",
-                "WS 006": "phasebeam"
+                "WS 005": "kineticblaster",
+                "WS 006": "kineticblaster"
             }
         },
         {

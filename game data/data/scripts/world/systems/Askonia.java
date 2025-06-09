@@ -87,7 +87,7 @@ public class Askonia {
 		a2.applySpecChanges();
 		
 			PlanetAPI a2a = system.addPlanet("cruor", a2, "Cruor", "rocky_unstable", 45, 80, 700, 25);
-			a2a.setInteractionImage("illustrations", "desert_moons_ruins");
+			//a2a.setInteractionImage("illustrations", "desert_moons_ruins");
 			a2a.setCustomDescriptionId("planet_cruor");
 			
 			system.addAsteroidBelt(a2, 50, 1100, 128, 40, 80, Terrain.ASTEROID_BELT, "Opis Ring");

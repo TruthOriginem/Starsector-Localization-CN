@@ -25,6 +25,10 @@ public class TargetingSupercomputer extends BaseHullMod {
 	
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
+//		if (stats.getFleetMember() != null) {
+//			System.out.println("FData [" + stats.getVariant().getHullVariantId() + "]: " + stats.getFleetMember().getFleetData());
+//		}
+		
 		stats.getBallisticWeaponRangeBonus().modifyPercent(id, RANGE_BONUS);
 		stats.getEnergyWeaponRangeBonus().modifyPercent(id, RANGE_BONUS);
 		//stats.getBeamWeaponRangeBonus().modifyPercent(id, RANGE_BONUS);

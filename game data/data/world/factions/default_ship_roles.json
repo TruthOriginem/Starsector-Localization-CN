@@ -73,6 +73,9 @@
 		"shard_left_Attack2":5,
 		"shard_right_Attack":10,
 		
+		"skirmish_unit_Type100":5,
+		"skirmish_unit_Type101":5,
+		
 		"fallback":{"combatSmall":1},
 	},
 	"combatSmall":{
@@ -159,6 +162,9 @@
 		"shard_left_Attack2":5,
 		"shard_right_Attack":10,
 		
+		"skirmish_unit_Type100":5,
+		"skirmish_unit_Type101":5,
+		
 		"fallback":{"combatMedium":0.5},
 	},
 	"combatMedium":{
@@ -220,14 +226,23 @@
 		"facet_Attack":5,
 		"facet_Attack2":5,
 		
+		"assault_unit_Type200":5,
+		"assault_unit_Type201":5,
+		
+		"overseer_unit_Type250":10,
+		
+		"shrouded_tendril_Roiling":10,
+		
 		"fallback":{"combatSmall":1},
 	},
 	"combatLarge":{
+		"anubis_Standard":10,
+		
 		"aurora_Assault":2,
 		"aurora_Attack":2,
 		"aurora_Strike":2,
 		"aurora_Support":2,
-		#"aurora_Balanced":2,
+		"aurora_Balanced":2,
 		"apogee_Balanced":10,
 		
 		"colossus2_Pather":10,
@@ -285,6 +300,7 @@
 		
 		"rampart_Standard":10,
 		"brilliant_Standard":10,
+		"brilliant_Support":10,
 		
 		"apex_Standard":4,
 		"apex_Assault":3,
@@ -295,6 +311,15 @@
 		"tesseract_Attack2":2.5,
 		"tesseract_Strike":2.5,
 		"tesseract_Disruptor":2.5,
+		
+		"standoff_unit_Type300":3.33,
+		"standoff_unit_Type301":3.33,
+		"standoff_unit_Type302":3.34,
+		
+		"hive_unit_Type350":10,
+		
+		"shrouded_eye_Darkened":10,
+		"shrouded_maelstrom_Menacing":10,
 		
 		"fallback":{"combatMedium":1},
 	},
@@ -329,7 +354,35 @@
 		"atlas2_Standard":10,
 		"prometheus2_Standard":10,
 		
+		"fabricator_unit_Type450":10,
+		
+		"shrouded_maw_Ravenous":10,
+		
 		"fallback":{"combatLarge":1},
+	},
+	
+	"threatFabricator":{
+		"fabricator_unit_Type450":10,
+	},
+	"threatHive":{
+		"hive_unit_Type350":10,
+	},
+	"threatOverseer":{
+		"overseer_unit_Type250":10,
+	},
+	
+	
+	"dwellerTendril":{
+		"shrouded_tendril_Roiling":10,
+	},
+	"dwellerMaelstrom":{
+		"shrouded_maelstrom_Menacing":10,
+	},
+	"dwellerEye":{
+		"shrouded_eye_Darkened":10,
+	},
+	"dwellerMaw":{
+		"shrouded_maw_Ravenous":10,
 	},
 	
 	

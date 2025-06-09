@@ -1,10 +1,13 @@
 {
     "displayName": "Assault",
-    "fluxCapacitors": 14,
+    "fluxCapacitors": 11,
     "fluxVents": 20,
     "goalVariant": true,
     "hullId": "fulgent",
-    "hullMods": ["targetingunit"],
+    "hullMods": [
+        "targetingunit",
+        "hardenedshieldemitter"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "fulgent_Assault",

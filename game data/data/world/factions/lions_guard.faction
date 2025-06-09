@@ -1,9 +1,14 @@
 {
 	id:"lions_guard",
 	#"color":[255,235,225,255],
-	"color":[160,0,95,255],
+	#"color":[160,0,95,255],
+	"baseUIColor":[200,0,125,255],
+	"darkUIColor":[100,0,60,175],
+	"gridUIColor":[200,0,125,75],
+	"brightUIColor":[231,98,206,255],	
 	"displayName":"Lion's Guard",
-	"logo":"graphics/factions/sindrian_diktat.png",
+	"logo":"graphics/factions/lg.png",
+	"crest":"graphics/factions/crest_lg.png",
 	"displayNameWithArticle":"the Lion's Guard",
 	"shipNamePrefix":"LGS",
 	"showInIntelTab":false,
@@ -235,6 +240,11 @@
 			"soldier":5,
 			"official":10,
 			"aristo":3,
+		},
+	},
+	"custom":{
+		"simulatorData":{
+			"showInSimulator":true,
 		},
 	},
 	"fleetTypeNames":{

@@ -39,7 +39,7 @@
 	"sprite":"graphics/missiles/dragonfire.png",
 	"size":[15,24],	
 	"center":[7.5,12],
-	"collisionRadius":10,
+	"collisionRadius":12,
 	"collisionClass":"MISSILE_NO_FF",
 	#"destroyedExplosionColor":[255,165,100,255],  # when the missile is destroyed by damage
 	#"explosionColor":[255,165,100,255],  # purely visual, will get a white additively blended core on top of this color
@@ -70,7 +70,7 @@
 					 #"detailedExplosionFlashColorFringe":[255,110,80,100],
 					 #"detailedExplosionFlashColorCore":[255,235,205,255],
 
-					 "detailedExplosionFlashColorFringe":[255,20,50,125],
+					 "detailedExplosionFlashColorFringe":[255,20,50,255],
 					 "detailedExplosionFlashColorCore":[155,155,155,255],
 					 "sound":"system_canister_flak_explosion"},									 
 	"engineSpec":{"turnAcc":150,

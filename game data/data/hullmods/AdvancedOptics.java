@@ -8,9 +8,9 @@ import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 
 public class AdvancedOptics extends BaseHullMod {
 
-	public static final float BEAM_RANGE_BONUS = 200f;
-	//public static final float BEAM_DAMAGE_PENALTY = 25f;
-	public static final float BEAM_TURN_PENALTY = 30f;
+	public static float BEAM_RANGE_BONUS = 200f;
+	//public static float BEAM_DAMAGE_PENALTY = 25f;
+	public static float BEAM_TURN_PENALTY = 30f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		stats.getBeamWeaponRangeBonus().modifyFlat(id, BEAM_RANGE_BONUS);

@@ -113,7 +113,10 @@
         204,
         64
     ],
-    "builtInMods": ["advancedoptics"],
+    "builtInMods": [
+        "advancedcore",
+        "missleracks"
+    ],
     "center": [
         161,
         155
@@ -355,7 +358,7 @@
             "type": "MISSILE"
         },
         {
-            "angle": 105,
+            "angle": 118,
             "arc": 200,
             "id": "WS 013",
             "locations": [
@@ -367,7 +370,7 @@
             "type": "ENERGY"
         },
         {
-            "angle": 90,
+            "angle": 85,
             "arc": 200,
             "id": "WS 014",
             "locations": [

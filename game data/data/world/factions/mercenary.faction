@@ -14,8 +14,8 @@
 	"personNamePrefix":"mercenary",
 	"personNamePrefixAOrAn":"an",
 	"displayNameIsOrAre":"are",
-	"logo":"graphics/factions/neutral_traders.png",
-	"crest":"graphics/factions/crest_neutral_traders.png",
+	"logo":"graphics/factions/tactistar.png",
+	"crest":"graphics/factions/crest_tactistar.png",
 	"shipNamePrefix":"ISS",
 	"showInIntelTab":false,
 	"shipNameSources":{
@@ -182,6 +182,9 @@
 	},	
 	"custom":{
 		"spawnsAsIndependent":true,
+		"simulatorData":{
+			"showInSimulator":true,
+		},
 	},
 	"fleetTypeNames":{
 		"patrolSmall":"Mercenary Squadron",

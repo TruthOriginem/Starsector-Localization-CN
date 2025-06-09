@@ -175,6 +175,9 @@
 		"hullMods":[
 		],
 	},
+	"shipSellFrequency":{
+		"heron":100, # it's very rare otherwise
+	},
 	"weaponSellFrequency":{
 		"gorgon":10,
 		"gorgonpod":10,
@@ -254,6 +257,8 @@
 			"graphics/portraits/portrait_league06.png",
 			"graphics/portraits/portrait_league07.png",
 			"graphics/portraits/portrait_league09.png",
+			"graphics/portraits/portrait_league11.png",
+			"graphics/portraits/portrait_league13.png",
 			"graphics/portraits/portrait_mercenary03.png",
 			"graphics/portraits/portrait12.png",
 			"graphics/portraits/portrait13.png",
@@ -276,6 +281,8 @@
 			"graphics/portraits/portrait_league05.png",
 			"graphics/portraits/portrait_league08.png",
 			"graphics/portraits/portrait_league10.png",
+			"graphics/portraits/portrait_league12.png",
+			"graphics/portraits/portrait_league14.png",
 			"graphics/portraits/portrait_mercenary05.png",
 			"graphics/portraits/portrait14.png",
 			"graphics/portraits/portrait16.png",
@@ -322,6 +329,9 @@
 			"vsFreePort":false,
 			"canBombard":false,
 			"territorial":true,
+		},
+		"simulatorData":{
+			"showInSimulator":true,
 		},
 	},
 	"ranks":{

@@ -332,6 +332,7 @@
 			"patrolCommander":{"name":"Patrol Commander"},
 			"fleetCommander":{"name":"Fleet Commander"},
 			"baseCommander":{"name":"Base Commander"},
+			"militaryAdministrator":{"name":"Military Governor"},
 		},
 	},
 	"voices":{
@@ -365,7 +366,11 @@
 			"canBombard":false,
 			"territorial":true,
 		},
+		"simulatorData":{
+			"showInSimulator":true,
+		},
 	},	
-	
-	
 },
+
+
+

@@ -1,10 +1,13 @@
 {
     "displayName": "Defense",
-    "fluxCapacitors": 7,
+    "fluxCapacitors": 8,
     "fluxVents": 10,
     "goalVariant": true,
     "hullId": "shard_left",
-    "hullMods": ["fluxdistributor"],
+    "hullMods": [
+        "fluxdistributor",
+        "fluxcoil"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "shard_left_Defense",

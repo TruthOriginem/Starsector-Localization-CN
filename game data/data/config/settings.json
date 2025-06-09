@@ -1,7 +1,7 @@
 {
 
 	##############################################################
-	# These settings CAN NOT be changed by mods.
+	# These settings CAN NOT be changed by mods. 
 	# You can still change them yourself, though.
 	##############################################################
 	
@@ -36,6 +36,8 @@
 	
 	"doRAMandVRAMChecksWhenRunningWithMods":true, # will periodically check if ram/vram is low and warn the player
 	"memoryCheckVerbose":false,
+	"enableMemoryLeakChecking":true,
+	"enableMemoryLeakCheckingDevModeOnly":true,
 	
 	"colorblindMode":false,
 	"undecoratedWindow":false,
@@ -55,6 +57,7 @@
 	"useSoftwareMouseCursor":false, # can be useful if the mouse cursor is not showing for some reason
 	
 	"allowAnyJavaVersion":true,
+	"requireTypingDeleteToDeleteSave":true,
 	
 	###
 	##############################################################
@@ -79,6 +82,12 @@
 	"legacyLauncher":false,
 	"oneClickJumpPoints":false, # does not work do not set to true
 	"altMouseMoveToMassTransfer":true,
+	
+	"allStandardShipsAndFactionsUnlockedInSimulator":false,
+	"requireAICoresInCargoForSimulator":true,
+	
+	"allCodexEntriesUnlocked":false,
+	"showLockedCodexEntries":true,
 	
 	# values above 2-3 will likely result in poor simulation fidelity
 	"combatSpeedMult":1f,
@@ -120,6 +129,13 @@
 	"renderShieldJitterEffect":true,
 	"compressSaveGameData":false, # smaller files, faster saving/loading, saveiles files not hand-editable
 	
+	"autosaveFeatureEnabled":true, # somewhat experimental, let's see how it goes
+	"autosaveEnabledByDefault":true,
+	"autosaveDefaultIntervalMinutes":30f,
+	"autosaveExtraIntervalMinutesIfNotChangedLocation":[2f, 10f],
+	"autosaveExtraIntervalMinutesIfNotChangedLocationFraction":0.5f,
+	"maxAutosaveSlots":3,
+	
 	# disabled for now, causes issues with subsequent runs if game is shut down during startup
 	"enableScriptCaching":false, # caches compiled scripts in saves/cache, faster startup time after first run
 
@@ -137,6 +153,7 @@
 	#"enableUIStaticNoise":true,
 	"noiseColor":[40,152,176,255],
 	"tripadLineColor":[158,241,240,255],
+	"enableCampaignMapGridLines":true,
 	#"enableShipExplosionWhiteout":false, # no longer used, replaced by checkbox in Gameplay Settings tab
 	"useOldShipExplosions":false, # added for compatibility with GraphicsLib ship explosions
 	"asteroidBeltMapColor":[70,50,40,255],
@@ -164,6 +181,13 @@
 	"drop_prob_mult_ai_core_cruiser":3,
 	"drop_prob_mult_ai_core_capital":4,
 	"drop_prob_mult_ai_core_station":1000, # the station always drops it
+	
+	# Shrouded Dweller substrate drops; can also do substrate_<hull_id> to override 
+	"substrate_FRIGATE":[0.0, 0.03];
+	"substrate_DESTROYER":[0.05, 0.1],
+	"substrate_CRUISER":[0.5, 1.0],
+	"substrate_CAPITAL_SHIP":[2, 4],
+	"substrate_shrouded_maw":[3, 6],
 	
 	"maxArmorDamageReduction":0.85,
 	"minArmorFraction":0.05, # effective armor never goes below max times this value, even when completely stripped
@@ -672,6 +696,7 @@
 	"salvageWeaponProb":0.25;
 	"salvageWingProb":0.25;
 	"salvageHullmodProb":0.02;
+	"salvageHullmodRequiredItemProb":0.05;
 	
 	"baseSurveyXP":20,
 	
@@ -899,6 +924,7 @@
 		"pickEliteSkillForOfficer":0,
 		"fullyIntegrateAICore":0,
 		"promoteCrewMember":1,
+		"escalateCrisis":1,
 		
 		"hireMerc":1,
 		"convinceMerc":0,
@@ -944,7 +970,7 @@
 		"sdtu_patrolConvinceMutiny":1,
 		"sdtu_patrolForAPrice":1,
 		"sdtu_umbraTrickVIP":1,
-
+		"bffi_conArroyo":1,
 
 		
 		# missions - generic "X wants thing" complications
@@ -970,6 +996,7 @@
 		"lkeEpiphanyVIPnonhostile":1,
 		"lke_mazBarAgentRespSiyavong":1,
 		"lke_patherFleetSP":1,
+		"bffi_patherStationRuse":1,
 		
 		# other
 		"kpGiftFavor":1,
@@ -977,6 +1004,7 @@
 		"pskMerc_story":1,
 		"pk_hackStory":1,
 		"LCP_notEnoughLie":1, # KoL fleet demanding supply tithe
+		"analyzeSubstrate":0,
 		
 	},
 	
@@ -998,6 +1026,7 @@
 		
 		"surveyPlugin":"com.fs.starfarer.api.impl.campaign.SurveyPluginImpl",
 		"musicPlugin":"com.fs.starfarer.api.impl.MusicPlayerPluginImpl",
+		"simulatorPlugin":"com.fs.starfarer.api.impl.SimulatorPluginImpl",
 		
 		"coordinatedManeuversPlugin":"com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuversScript",
 		"electronicWarfarePlugin":"com.fs.starfarer.api.impl.campaign.skills.ElectronicWarfareScript",
@@ -1094,10 +1123,6 @@
 
 	"designTypeColors":{
 		"Common":[190,200,200,255],
-		#"Common":[170,222,255,255],
-		#"Low Tech":[245,150,30,255],
-		#"Midline":[200,200,200,255],
-		#"High Tech":[135,206,255],
 		"Low Tech":[209,110,91,255],
 		"Midline":[221,201,104,255],
 		"High Tech":[160,213,225,255],
@@ -1120,6 +1145,10 @@
 		"Eridani-Utopia Terraforming":[204,229,255,255],
 		"Mbaye-Gogol":[233,233,121,255],
 		"Bhilai Astra":[200,80,67,255],
+		
+		"Threat":[130,155,145,255],
+		
+		"Shrouded Dweller":[150,10,30,255],
 	},
 
 	"graphics":{
@@ -1172,8 +1201,6 @@
 			"rings_asteroids0":"graphics/planets/rings_asteroids0.png",
 			"rings_special0":"graphics/planets/rings_special0.png",
 			"question_mark_actual":"graphics/fx/question_mark.png",
-			#"question_mark":"graphics/fx/particlealpha32sq.png",
-			#"question_mark":"graphics/icons/empty_fleet.png",
 			"question_mark":"graphics/icons/fleet_triangle.png",
 			"mission_important":"graphics/hud/attention_required_16x.png",
 			"cargoFighterChip":"graphics/icons/cargo/fighter_lpc.png",
@@ -1182,6 +1209,127 @@
 			"cargoPods":"graphics/debris/cargo_pod_sheet1.png",
 			"campaignDerelictOverlay":"graphics/damage/ship_damage_over5.png",
 			"THEDUEL":"graphics/misc/the_duel.png",
+			"threat_swarm_pieces":"graphics/ships/threat/threat_fragments.png",
+			"threat_swarm_glow":"graphics/fx/hit_glow.png",
+			"fragment_swarm":"graphics/damage/fragmentation.png",
+		},
+		"dweller":{
+			#"shrouded_eye_base":"graphics/ships/shroud/eye_circle5.png",
+			#"shroud_bright":"graphics/ships/shroud/shroud_bright.png",
+			
+			# uses scaled vortex graphics instead
+			#"shrouded_maelstrom":"graphics/ships/shroud/shroud.png",
+			
+			"shrouded_maw_base":"graphics/ships/shroud/maw_base.png",
+			"shrouded_maw_glow":"graphics/ships/shroud/maw_glow.png",
+			"shrouded_spot_cluster":"graphics/ships/shroud/spot_cluster.png",
+			"shrouded_eye_cluster1":"graphics/ships/shroud/eye_cluster1.png",
+			"shrouded_eye_cluster2":"graphics/ships/shroud/eye_cluster2.png",
+			"shrouded_eye_cluster3":"graphics/ships/shroud/eye_cluster3.png",
+			"shrouded_eye_base_dark":"graphics/ships/shroud/eye_circle4.png",
+			"shrouded_eye_iris":"graphics/ships/shroud/eye_iris.png",
+			"shrouded_tendril_base":"graphics/ships/shroud/shroud_tendril_base.png",
+			"shrouded_maelstrom_base":"graphics/ships/shroud/maelstrom_base.png",
+			"shrouded_vortex_base":"graphics/ships/shroud/vortex3.png",
+			"shrouded_vortex_base2":"graphics/ships/shroud/vortex2.png",
+			#"branching_structureA":"graphics/ships/shroud/branching_structureA.png",
+			#"clusterA":"graphics/ships/shroud/clusterA.png",
+			"clusterB":"graphics/ships/shroud/clusterB.png",
+			#"teeth1":"graphics/ships/shroud/teeth1.png",
+			#"teeth2":"graphics/ships/shroud/teeth2.png",
+			#"teeth3":"graphics/ships/shroud/teeth3.png",
+			#"coronet_stalks":"graphics/ships/shroud/coronet_stalks.png",
+			#"coronetA":"graphics/ships/shroud/coronetA.png",
+			#"coronetB":"graphics/ships/shroud/coronetB.png",
+			#"headA":"graphics/ships/shroud/headA.png",
+			#"headB":"graphics/ships/shroud/headB.png",
+			#"segmentA":"graphics/ships/shroud/segmentA.png",
+			#"segmentB":"graphics/ships/shroud/segmentB.png",
+			"dweller_pieces":"graphics/ships/shroud/shrouded_blobs.png",
+		},
+		"simulator":{
+			# categories
+			"defaultPlayerCrest":"graphics/factions/crest_player_flag.png",
+			"customPlayerCrest":"graphics/factions/custom/player_logo16_crest.png",
+			"otherPlayerCrest":"graphics/factions/custom/player_logo08_crest.png",
+			"devModeVariantsIcon":"graphics/factions/custom/player_logo05_crest.png",
+			
+			# option checkbox icons
+			"behavior_default":"graphics/ui/icons/sim_behavior_steady_default.png",
+			"behavior_cautious":"graphics/ui/icons/sim_behavior_cautious.png",
+			"behavior_steady":"graphics/ui/icons/sim_behavior_steady.png",
+			"behavior_aggressive":"graphics/ui/icons/sim_behavior_aggressive.png",
+			"behavior_reckelss":"graphics/ui/icons/sim_behavior_reckless.png",
+			"behavior_passive":"graphics/ui/icons/sim_behaviour_passive.png",
+			"behavior_defensive":"graphics/ui/icons/sim_behaviour_defenses.png",
+			"behavior_stationary":"graphics/ui/icons/sim_behaviour_stationary.png",
+			"cores_none":"graphics/ui/icons/sim_cores_none.png",
+			"cores_mixed":"graphics/ui/icons/sim_cores_mixed.png",
+			"cores_gamma":"graphics/ui/icons/sim_cores_gamma.png",
+			"cores_beta":"graphics/ui/icons/sim_cores_beta.png",
+			"cores_alpha":"graphics/ui/icons/sim_cores_alpha.png",
+			"cores_omega":"graphics/ui/icons/sim_cores_omega.png",
+			"officers_none":"graphics/ui/icons/sim_officer_level_none.png",
+			"officers_some":"graphics/ui/icons/sim_officer_level_some.png",
+			"officers_all":"graphics/ui/icons/sim_officer_level_all.png",
+			"officers_high":"graphics/ui/icons/sim_officer_level_all_high.png",
+			"quality_lowest":"graphics/ui/icons/sim_quality_lowest.png",
+			"quality_low":"graphics/ui/icons/sim_quality_low.png",
+			"quality_no_dmods":"graphics/ui/icons/sim_quality_average.png",
+			"quality_high":"graphics/ui/icons/sim_quality_high.png",
+			"quality_highest":"graphics/ui/icons/sim_quality_highest.png",		
+		},
+		"codex":{
+			# 24x24
+			"nav_up":"graphics/ui/icons/codex_arrow_up.png",
+			"nav_back":"graphics/ui/icons/codex_arrow_back.png",
+			"nav_forward":"graphics/ui/icons/codex_arrow_forward.png",
+			"nav_random":"graphics/ui/buttons/random24.png",
+			
+			# 32x32
+			"cat_up":"graphics/ui/buttons/codex_arrow_up_category.png",
+			
+			# 20x20 actually kinda works?
+			"locked_entry":"graphics/ui/buttons/lock20.png",
+			
+			# 18x18
+			"close":"graphics/ui/icons/codex_close_x.png",
+			"mod_info":"graphics/ui/icons/codex_mod_info.png",
+		
+			# 32x32
+			"ships":"graphics/icons/codex/ships.png",
+			"stations":"graphics/icons/codex/stations.png",
+			"fighters":"graphics/icons/codex/fighters.png",
+			"weapons":"graphics/icons/codex/weapons.png",
+			"hullmods":"graphics/icons/codex/hullmods.png",
+			"ship_systems":"graphics/icons/codex/ship_systems.png",
+			"special_items":"graphics/icons/codex/special_items.png",
+			"industries":"graphics/icons/codex/industries.png",
+			"stars_and_planets":"graphics/icons/codex/stars_planets.png",
+			"conditions":"graphics/icons/codex/market_conditions.png",
+			"commodities":"graphics/icons/codex/commodities.png",
+			"terrain":"graphics/icons/codex/abilities.png",
+			"gallery":"graphics/icons/codex/gallery.png",
+			"skills":"graphics/icons/codex/skills.png",
+			"abilities":"graphics/icons/codex/abilities.png",
+			"game_mechanics":"graphics/icons/codex/spacers_manual.png",
+			"custom_example":"graphics/icons/codex/custom.png",
+			
+			# 32x32, game mechanics entries - just testing stuff out
+			"generic":"graphics/icons/codex/custom.png",
+			
+			"manual_armor":"graphics/icons/codex/manual_armor.png",
+			"manual_ballistic_weapons":"graphics/icons/codex/manual_ballistic_weapons.png",
+			"manual_combat":"graphics/icons/codex/manual_combat.png",
+			"manual_energy_weapons":"graphics/icons/codex/manual_energy_weapons.png",
+			"manual_flux":"graphics/icons/codex/manual_flux.png",
+			"manual_missiles":"graphics/icons/codex/manual_missiles.png",
+			"manual_shields":"graphics/icons/codex/manual_shields.png",
+			"manual_tripad":"graphics/icons/codex/manual_tripad.png",
+			"manual_other":"graphics/icons/codex/manual_other.png",
+			"manual_ui":"graphics/icons/codex/manual_ui2.png",
+			"manual_venting":"graphics/icons/codex/manual_venting.png",
+			
 		},
 		"abilities":{
 			"holder":"graphics/ui/campaign_abilities.png",
@@ -1259,6 +1407,7 @@
 			"pop_low":"graphics/icons/industry/population_low.png",
 			"pop_high":"graphics/icons/industry/population_high.png",
 			"mining_low":"graphics/icons/industry/mining_low.png",
+			"mining_gas_giant":"graphics/icons/industry/gas_giant_mining.png", 
 			"light_industry_low":"graphics/icons/industry/light_industry_low.png",
 			"light_industry_high":"graphics/icons/industry/light_industry_high.png",
 			"light_industry_orbital":"graphics/icons/industry/light_industry_orbital.png",
@@ -1305,10 +1454,12 @@
 			"clone_loke":"graphics/portraits/characters/clone_loke.png",
 			"adonya_coureuse":"graphics/portraits/characters/adonya.png",
 			"bione_lata":"graphics/portraits/characters/bione_lata.png",
-			"cavin_pharoh":"graphics/portraits/portrait36.png",
+			"cavin_pharoh":"graphics/portraits/characters/cavin_pharoh.png",
 			"horus_yaribay":"graphics/portraits/characters/horus_yaribay.png",
+			"menes_yaribay":"graphics/portraits/characters/menes_yaribay.png",
 			"orcus_rao":"graphics/portraits/characters/orcus_rao.png",
 			"elek":"graphics/portraits/characters/elek.png",
+			"elek2":"graphics/portraits/characters/elek2.png",
 			"jethro_bornanew":"graphics/portraits/characters/jethro_bornanew.png",
 			"jethro_bornanew2":"graphics/portraits/characters/jethro_bornanew2.png",
 			"jaspis":"graphics/portraits/characters/jaspis.png",
@@ -1325,22 +1476,38 @@
 			"gideon_oak":"graphics/portraits/characters/gideon_oak.png",
 			"initiate":"graphics/portraits/characters/initiate00.png",
 			"standfast":"graphics/portraits/characters/standfast.png",
-			#"lamech":"graphics/portraits/characters/lamech.png",
+			"lamech":"graphics/portraits/characters/lamech.png",
 			"yannick_ram":"graphics/portraits/characters/yannick_ram.png",
 			"imoinu_kato":"graphics/portraits/characters/imoinu_kato.png",
 			"dardan_kato":"graphics/portraits/characters/dardan_kato.png",
 			"nile_virens":"graphics/portraits/characters/virens.png",
 			"sedge":"graphics/portraits/characters/sedge.png",
+			"ulmus_pond":"graphics/portraits/characters/ulmus_pond.png",
 			"laverna_tell":"graphics/portraits/characters/laverna_tell.png",
 			"skiron":"graphics/portraits/characters/skiron.png",
 			"skiron2":"graphics/portraits/characters/skiron2.png",
 			"reynard_hannan":"graphics/portraits/characters/reynard_hannan.png",
+			"damos_hannan":"graphics/portraits/characters/damos_hannan.png",
+			"cedra_keepfaith":"graphics/portraits/characters/cedra_keepfaith.png",
+			"cedra_keepfaith2":"graphics/portraits/characters/cedra_keepfaith2.png",
+			"nanoforge_engineer":"graphics/portraits/characters/nanoforge_engineer.png",
+			"larix":"graphics/portraits/characters/larix.png",
+			"glamor_rotanev":"graphics/portraits/characters/glamor_rotanev.png",
+			"threat":"graphics/portraits/threat.png",
+			"fortuna_kato":"graphics/portraits/characters/fortuna_kato.png",
+			"rivas":"graphics/portraits/characters/rivas.png",
+			"ga_recruiter":"graphics/portraits/characters/ga_recruiter.png",
+			
+			
 			# unused right now
 			#"tt_fixer_MALE":"graphics/portraits/portrait_corporate03.png",
 			#"tt_fixer_FEMALE":"graphics/portraits/characters/clone_loke.png",
 		},
 		"intel":{
 			#"bounties":"graphics/icons/intel/bounties.png",
+			
+			"planet_search_any":"graphics/ui/buttons/all22.png",
+			"planet_search_none":"graphics/ui/buttons/none22.png",
 			
 			"luddic_shrine":"graphics/icons/intel/luddic_shrine64.png",
 			
@@ -1357,6 +1524,8 @@
 			"multipleNew":"graphics/icons/intel/multiple_new.png",
 			
 			"fleet_log":"graphics/icons/intel/fleet_log3.png",
+			"simulator_update":"graphics/icons/intel/simulator.png",
+			"codex_update":"graphics/icons/intel/codex_update.png",
 			
 			"tradeFleet_valuable":"graphics/icons/intel/tradefleet_valuable.png",
 			"tradeFleet_large":"graphics/icons/intel/tradefleet_large.png",
@@ -1372,7 +1541,7 @@
 			"monthly_income_report":"graphics/icons/intel/income_report.png",
 			"production_report":"graphics/icons/intel/production_report.png",
 			"distress_call":"graphics/icons/intel/distress_call.png",
-			"stabilized_pods":"graphics/icons/skills/bulk_transport.png",
+			"stabilized_pods":"graphics/icons/intel/stabilized_pods.png",
 			
 			"repairs_finished":"graphics/icons/intel/repairs_finished.png",
 			"damage_report":"graphics/icons/intel/damage.png",
@@ -1388,20 +1557,67 @@
 			"deciv":"graphics/icons/markets/decivilized.png",
 			
 			"red_planet":"graphics/icons/intel/red_planet.png",
+
+			# these should be under "characters"; leaving here for now -am			
 			"old_spacer_female":"graphics/portraits/characters/old_spacer01.png",
 			"old_spacer_male":"graphics/portraits/characters/old_spacer02.png",
-			
 			"historian_female":"graphics/portraits/characters/historian01.png",
 			"historian_male":"graphics/portraits/characters/historian02.png",
-			
 			"curate_male":"graphics/portraits/characters/curate00.png",
 			"curate_female":"graphics/portraits/characters/curate01.png",
 
-			"historian_intel_icon":"graphics/icons/intel/fleet_log3.png",
-			
+
 			"hostile_activity":"graphics/icons/markets/pirate_activity.png",
 			
 			"border":"graphics/icons/intel_border_cyan.png",
+			
+			"salvors_tally_none":"graphics/icons/intel/salvor_none.png",
+			"salvors_tally_low":"graphics/icons/intel/salvor_low.png",
+			"salvors_tally_medium":"graphics/icons/intel/salvor_medium.png",
+			"salvors_tally_high":"graphics/icons/intel/salvor_high.png",
+			
+			"found_planet_data":"graphics/icons/intel/found_planet_data.png",
+			"remote_survey_data":"graphics/icons/intel/remote_survey_data.png",
+			"leading_to_larger_domain_derelict":"graphics/icons/intel/log_to_domain_derelict.png",
+			
+			"link_to_derelict_ship":"graphics/icons/intel/log_to_derelict_ship.png",
+			"link_to_debris_field":"graphics/icons/intel/log_to_debris_field.png",
+			"link_to_orbital_installation":"graphics/icons/intel/log_to_orbital.png",
+			"link_to_ruins":"graphics/icons/intel/to_ruins.png",
+			"link_to_other":"graphics/icons/intel/to_other.png",
+			
+			"historian_intel_icon":"graphics/icons/intel/log_historian_target.png",
+			"playthrough_log":"graphics/icons/intel/log_star.png",
+			
+			"remnant_nexus":"graphics/factions/crest_ai_remnant.png",
+			"cryosleeper":"graphics/icons/intel/log_cryosleeper2.png",
+			"hypershunt":"graphics/icons/intel/log_coronal_tap2.png",
+			"wormhole":"graphics/icons/intel/wormhole.png",
+			
+			
+			"map_markers":[
+				"graphics/icons/intel/log_blue_circle.png",
+				"graphics/icons/intel/log_blue_circle_hollow.png",
+				"graphics/icons/intel/log_green_triangle.png",
+				"graphics/icons/intel/log_green_triangle_hollow.png",
+				"graphics/icons/intel/log_yellow_square.png",
+				"graphics/icons/intel/log_yellow_square_hollow.png",
+				"graphics/icons/intel/log_orange_triangle.png",
+				"graphics/icons/intel/log_orange_triangle_hollow.png",
+				"graphics/icons/intel/log_red_diamond.png",
+				"graphics/icons/intel/log_red_diamond_hollow.png",
+				
+				"graphics/icons/intel/log_sunburst.png",
+				"graphics/icons/intel/log_checkmark.png",
+				"graphics/icons/intel/log_x_mark.png",
+				"graphics/icons/intel/log_crosshair.png",
+				"graphics/icons/intel/log_go_here.png",
+				"graphics/icons/intel/log_ships.png",
+				"graphics/icons/intel/log_star.png",
+				"graphics/icons/intel/log_treasure.png",
+				"graphics/icons/intel/log_upgrade.png",
+				"graphics/icons/intel/log_sparkle.png",
+			],
 		},
 		"events":{
 			"stage_unknown_good":"graphics/icons/campaign/event_good.png",
@@ -1434,6 +1650,8 @@
 			"triTachyonCR_SUCCESS":"graphics/icons/campaign/ttcr_success.png",
 			
 			"piracy_respite":"graphics/icons/campaign/respite.png",
+			"established_polity":"graphics/icons/markets/established_polity.png",
+			"new_league_member":"graphics/icons/markets/league_member.png",
 		},
 		"raidObjectives":{  # icons displayed at 26x26
 			"gaData":"graphics/icons/raid_objective.png",
@@ -1445,13 +1663,13 @@
 			"analyze_entity":"graphics/icons/intel/analyze_entity.png",
 			"survey_planet":"graphics/icons/intel/survey_planet.png",
 			"tutorial":"graphics/icons/intel/tutorial_mission.png",
-			
 			"luddic_pilgrim_transport":"graphics/icons/missions/luddic_pilgrim_transport.png",
 			"prisoner_luddic":"graphics/icons/missions/prisoner_luddic.png",
 			"prisoner_pirate":"graphics/icons/missions/prisoner_pirate.png",
 			"derelict_bounty":"graphics/icons/missions/derelict_bounty.png",
 			"remnant_bounty":"graphics/icons/missions/remnant_bounty.png",
 			"station_bounty":"graphics/icons/missions/station_bounty.png",
+			"shuttle_vip":"graphics/icons/missions/shuttle_vip.png",
 		},
 		"hab_glows":{
 			"barren":"graphics/planets/barren_bombarded_lights.png",
@@ -1598,6 +1816,7 @@
 			"space_bar":"graphics/illustrations/space_bar.jpg",
 			"pirate_bar":"graphics/illustrations/pirate_bar.jpg",
 			"hegemony_bar":"graphics/illustrations/hegemony_bar.jpg",
+			"tritachyon_bar":"graphics/illustrations/tritachyon_bar.jpg",
 			"sindria":"graphics/illustrations/sindria.jpg",
 			"gilead":"graphics/illustrations/gilead.jpg",
 			#"gilead_shrine":"graphics/illustrations/gilead_shrine.jpg",
@@ -1634,6 +1853,18 @@
 			"galatia_academy":"graphics/illustrations/academy.jpg",
 			"fusion_lamp":"graphics/illustrations/fusion_lamp.jpg",
 			"salvor_ruins":"graphics/illustrations/salvor_ruins.jpg",
+			"salvor_explore_hull":"graphics/illustrations/salvor_explore_hull.jpg",
+			"dead_zero_g":"graphics/illustrations/dead_zero_g.jpg",
+			"cache_large":"graphics/illustrations/cache_large.jpg",
+			"tartessus":"graphics/illustrations/tartessus.jpg",
+			"cathedral_skyline":"graphics/illustrations/cathedral_skyline.jpg",
+			"abyssal_light":"graphics/illustrations/abyssal_light.jpg",
+			"abyssal_light2":"graphics/illustrations/abyssal_light2.jpg",
+			"shrouded_weapon_assembly":"graphics/illustrations/shrouded_weapon_assembly.jpg",
+			"eochu_bres_landing":"graphics/illustrations/eochu_bres_landing.jpg",
+			"bar_diktat":"graphics/illustrations/bar_diktat.jpg",
+			"stellar_mirror":"graphics/illustrations/orbital_mirror.jpg",
+			"stellar_shade":"graphics/illustrations/orbital_shade.jpg",
 		},
 		"ui":{
 			"generate_ship_name":"graphics/ui/random23.png",
@@ -1693,6 +1924,9 @@
 			
 			"icon_tactical_missile_autoloader":"graphics/icons/tactical/cr_tactical.png",
 			
+			"icon_tactical_fragment_swarm":"graphics/icons/tactical/nebula_slowdown.png",
+			"icon_tactical_swarm_launcher":"graphics/icons/tactical/nebula_slowdown.png",
+			
 			"icon_tactical_cr_bonus":"graphics/icons/tactical/cr_tactical.png",
 			"icon_tactical_cr_neutral":"graphics/icons/tactical/cr_tactical.png",
 			"icon_tactical_cr_penalty":"graphics/icons/tactical/cr_tactical3.png",
@@ -1715,7 +1949,8 @@
 			"icon_crew_green":"graphics/icons/ranks/rank0.png",
 			"icon_crew_regular":"graphics/icons/ranks/rank1.png",
 			"icon_crew_veteran":"graphics/icons/ranks/rank2.png",
-			"icon_crew_elite":"graphics/icons/ranks/rank3.png", # used for iron mode save files in load game dialog
+			"icon_crew_elite":"graphics/icons/ranks/rank3.png",
+			"icon_iron_mode":"graphics/icons/insignia/24x_star.png", # used for iron mode save files in load game dialog
 			
 			"icon_op":"graphics/ui/icons/icon_op.png",
 		
@@ -1847,6 +2082,7 @@
 			"icon_task_intercept":"graphics/warroom/taskicons/just_kill_it.png",
 			"icon_task_defend":"graphics/warroom/taskicons/icon_defend.png",
 			"icon_task_avoid":"graphics/warroom/taskicons/icon_avoid.png",
+			"icon_task_ignore":"graphics/warroom/taskicons/icon_ignore.png",
 			"icon_task_rally_task_force":"graphics/warroom/taskicons/icon_rally_task_force.png",
 			"icon_task_rally_carrier":"graphics/warroom/taskicons/icon_carrier_group.png",
 			"icon_task_rally_civilian_craft":"graphics/warroom/taskicons/icon_civilian_craft.png",
@@ -1867,6 +2103,7 @@
 			"icon_menu_action_intercept":"graphics/warroom/taskicons/just_kill_it.png",
 			"icon_menu_action_defend":"graphics/warroom/taskicons/icon_defend.png",
 			"icon_menu_action_avoid":"graphics/warroom/taskicons/icon_avoid.png",
+			"icon_menu_action_ignore":"graphics/warroom/taskicons/icon_ignore.png",
 			"icon_menu_action_rally_task_force":"graphics/warroom/taskicons/icon_rally_task_force.png",
 			"icon_menu_action_rally_carrier":"graphics/warroom/taskicons/icon_carrier_group.png",
 			"icon_menu_action_rally_civilian_craft":"graphics/warroom/taskicons/icon_civilian_craft.png",
@@ -1986,6 +2223,34 @@
 		# In that case, the closest average-color matching scheme is used.
 		"fighterSkinsExcludeFromSharing":{
 		},
+		
+		# does not support animations
+		"weaponSkinsPlayerAndNPC":{
+			"mininglaser:LOW_TECH:TURRET":"graphics/weapons/mining_laser_turret_base.png",
+			"mininglaser:LOW_TECH:TURRET_GLOW":"graphics/weapons/mining_laser_turret_glow.png",
+			"mininglaser:LOW_TECH:HARDPOINT":"graphics/weapons/mining_laser_hardpoint_base.png",
+			"mininglaser:LOW_TECH:HARDPOINT_GLOW":"graphics/weapons/mining_laser_hardpoint_glow.png",
+			"mininglaser:MIDLINE:TURRET":"graphics/weapons/mining_laser_turret_base.png",
+			"mininglaser:MIDLINE:TURRET_GLOW":"graphics/weapons/mining_laser_turret_glow.png",
+			"mininglaser:MIDLINE:HARDPOINT":"graphics/weapons/mining_laser_hardpoint_base.png",
+			"mininglaser:MIDLINE:HARDPOINT_GLOW":"graphics/weapons/mining_laser_hardpoint_glow.png",
+			"mininglaser:HIGH_TECH:TURRET":"graphics/weapons/mining_laser_hightech_turret_base.png",
+			"mininglaser:HIGH_TECH:TURRET_GLOW":"graphics/weapons/mining_laser_hightech_turret_glow.png",
+			"mininglaser:HIGH_TECH:HARDPOINT":"graphics/weapons/mining_laser_hightech_hardpoint_base.png",
+			"mininglaser:HIGH_TECH:HARDPOINT_GLOW":"graphics/weapons/mining_laser_hightech_hardpoint_glow.png",
+			
+			"miningblaster:LOW_TECH:HARDPOINT":"graphics/weapons/blaster2_hardpoint_base.png",
+			"miningblaster:LOW_TECH:TURRET":"graphics/weapons/blaster2_turret_base.png",
+			"miningblaster:MIDLINE:HARDPOINT":"graphics/weapons/blaster2_hardpoint_base.png",
+			"miningblaster:MIDLINE:TURRET":"graphics/weapons/blaster2_turret_base.png",
+			"miningblaster:HIGH_TECH:HARDPOINT":"graphics/weapons/blaster2ht_hardpoint_base.png",
+			"miningblaster:HIGH_TECH:TURRET":"graphics/weapons/blaster2ht_turret_base.png",
+		},
+		"weaponSkinsPlayerOnly":{
+			
+		},
+		"weaponSkinsExcludeFromSharing":{
+		},		
 	}
 }
 

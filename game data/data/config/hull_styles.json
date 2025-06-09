@@ -159,7 +159,89 @@
 		"dHullOverlayMedium":"graphics/damage/dmod_overlay_hightech_medium.png",
 		"dHullOverlayHeavy":"graphics/damage/dmod_overlay_hightech_heavy.png",
 	},
+	
+	"THREAT":{
+		"hyperspaceJitterColor":[213,255,237,200],
+		"baseCampaignExplosionColor":[213,255,237,255],
+		"baseCombatExplosionColor":[213,255,237,255], # smooth flash
+		"combatExplosionNonFlashColorOverride":[106,127,118,255], # the more billowy explosion
+		#"fighterRepairFlickerColor":[130,155,145,255],
+		#"fighterChipIconColor":[130,155,145,255],
+		#"weaponDisabledExplosionColor":[130,155,145,255],
+		"fighterRepairFlickerColor":[213,255,237,255],
+		"fighterChipIconColor":[213,255,237,255],
+		"weaponDisabledExplosionColor":[213,255,237,255],
+		"shieldRingColor":[255,255,255,255],
+		"shieldInnerColor":[156,186,174,75],
+		"fluxVentCoreColor":[155,155,155,255],
+		"fluxVentFringeColor":[94,112,105,255],
+		"fluxVentTextureSheet":"graphics/fx/nebula_colorless.png", # optional, this is the default value
+		"fluxVentRadialTexture":"graphics/fx/radial_fx.png", # optional, this is the default value
+		"overloadColor":[213,255,237,255],
+		
+		"engineLoopSet":"engine_loop", 					# id of entry in sounds.json
+		"engineAccelerateSet":"engine_accelerate",		# id of entry in sounds.json
+		"empLoopSet":"emp_loop",						# id of entry in sounds.json
+		"fluxLoopSet":"flux_loop",						# id of entry in sounds.json
+		"ventFluxSet":"vent_flux",						# id of entry in sounds.json
+		"shieldBurnoutSet":"shield_burnout",			# id of entry in sounds.json
+		"shieldLowerSet":"shield_lower",				# id of entry in sounds.json
+		"shieldRaiseSet":"shield_raise",				# id of entry in sounds.json
+		"explosionShipSet":"explosion_ship",			# id of entry in sounds.json
+		"damageDecalSheet":"graphics/damage/damage_decal_sheet_base.png",
+		"damageDecalGlowSheet":"graphics/damage/damage_decal_sheet_glow.png",
+		
+		#"colorShiftCovers":true,
+		"coversColorShiftAmount":0,  # 0 to 1
+		"coversMatchShipBrightness":true,
+		
+		"slotCoverSmallTurret":"graphics/weapons/covers/cover_threat_turret_small.png",
+		"slotCoverSmallHardpoint":"graphics/weapons/covers/cover_threat_hardpoint_small.png",
+		"slotCoverMediumTurret":"graphics/weapons/covers/cover_threat_turret_medium.png",
+		"slotCoverMediumHardpoint":"graphics/weapons/covers/cover_threat_hardpoint_medium.png",
+		"slotCoverLargeTurret":"graphics/weapons/covers/cover_threat_turret_large.png",
+		"slotCoverLargeHardpoint":"graphics/weapons/covers/cover_threat_hardpoint_large.png",
+
+		"dHullOverlayLight":"graphics/damage/dmod_overlay_lowtech_light.png",
+		"dHullOverlayMedium":"graphics/damage/dmod_overlay_lowtech_medium.png",
+		"dHullOverlayHeavy":"graphics/damage/dmod_overlay_lowtech_heavy.png",
+	},
+	
+	"DWELLER":{
+		"hyperspaceJitterColor":[255,0,50,200],
+		"baseCampaignExplosionColor":[255,0,50,255],
+		"baseCombatExplosionColor":[255,50,100,255], # smooth flash
+		"combatExplosionNonFlashColorOverride":[255,50,100,255], # the more billowy explosion
+		"fighterRepairFlickerColor":[255,0,50,255],
+		"fighterChipIconColor":[255,50,100,255],
+		"weaponDisabledExplosionColor":[255,0,50,255],
+		"shieldRingColor":[255,255,255,255],
+		"shieldInnerColor":[255,0,50,75],
+		
+		# UNUSED
+		"fluxVentCoreColor":[255,255,255,255],
+		"fluxVentFringeColor":[125,0,155,255],
+		"fluxVentTextureSheet":"graphics/fx/nebula_colorless.png", # optional, this is the default value
+		"fluxVentRadialTexture":"graphics/fx/radial_fx.png", # optional, this is the default value
+		
+		
+		"engineLoopSet":"engine_loop", 					# id of entry in sounds.json
+		"engineAccelerateSet":"engine_accelerate",		# id of entry in sounds.json
+		"empLoopSet":"emp_loop",						# id of entry in sounds.json
+		"fluxLoopSet":"flux_loop",						# id of entry in sounds.json
+		"ventFluxSet":"vent_flux",						# id of entry in sounds.json
+		"shieldBurnoutSet":"shield_burnout",			# id of entry in sounds.json
+		"shieldLowerSet":"shield_lower",				# id of entry in sounds.json
+		"shieldRaiseSet":"shield_raise",				# id of entry in sounds.json
+		"explosionShipSet":"explosion_ship",			# id of entry in sounds.json
+		
+		"damageDecalSheet":"graphics/damage/damage_decal_sheet_base.png",
+		"damageDecalGlowSheet":"graphics/damage/damage_decal_sheet_glow.png",
+	},
+	
 }
+
+
 
 
 

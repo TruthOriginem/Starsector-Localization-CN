@@ -143,7 +143,7 @@ public class SectorGen implements SectorGeneratorPlugin {
 		
 		
 		
-		// ensure area round stars is clear
+		// ensure area around stars is clear
 		HyperspaceTerrainPlugin plugin = (HyperspaceTerrainPlugin) Misc.getHyperspaceTerrain().getPlugin();
 		NebulaEditor editor = new NebulaEditor(plugin);
 		float minRadius = plugin.getTileSize() * 2f;
@@ -200,6 +200,8 @@ public class SectorGen implements SectorGeneratorPlugin {
 		FactionAPI diktat = sector.getFaction(Factions.DIKTAT);
 		FactionAPI persean = sector.getFaction(Factions.PERSEAN);
 		FactionAPI remnant = sector.getFaction(Factions.REMNANTS);
+		FactionAPI threat = sector.getFaction(Factions.THREAT);
+		FactionAPI dweller = sector.getFaction(Factions.DWELLER);
 		FactionAPI derelict = sector.getFaction(Factions.DERELICT);
 		
 		player.setRelationship(hegemony.getId(), 0);
@@ -258,6 +260,31 @@ public class SectorGen implements SectorGeneratorPlugin {
 		path.setRelationship(remnant.getId(), RepLevel.HOSTILE);
 		diktat.setRelationship(remnant.getId(), RepLevel.HOSTILE);
 		persean.setRelationship(remnant.getId(), RepLevel.HOSTILE);
+		
+		player.setRelationship(threat.getId(), RepLevel.HOSTILE);
+		independent.setRelationship(threat.getId(), RepLevel.HOSTILE);
+		pirates.setRelationship(threat.getId(), RepLevel.HOSTILE);
+		hegemony.setRelationship(threat.getId(), RepLevel.HOSTILE);
+		kol.setRelationship(threat.getId(), RepLevel.HOSTILE);
+		church.setRelationship(threat.getId(), RepLevel.HOSTILE);
+		path.setRelationship(threat.getId(), RepLevel.HOSTILE);
+		diktat.setRelationship(threat.getId(), RepLevel.HOSTILE);
+		persean.setRelationship(threat.getId(), RepLevel.HOSTILE);
+		remnant.setRelationship(threat.getId(), RepLevel.HOSTILE);
+		derelict.setRelationship(threat.getId(), RepLevel.HOSTILE);
+		
+		player.setRelationship(dweller.getId(), RepLevel.HOSTILE);
+		independent.setRelationship(dweller.getId(), RepLevel.HOSTILE);
+		pirates.setRelationship(dweller.getId(), RepLevel.HOSTILE);
+		hegemony.setRelationship(dweller.getId(), RepLevel.HOSTILE);
+		kol.setRelationship(dweller.getId(), RepLevel.HOSTILE);
+		church.setRelationship(dweller.getId(), RepLevel.HOSTILE);
+		path.setRelationship(dweller.getId(), RepLevel.HOSTILE);
+		diktat.setRelationship(dweller.getId(), RepLevel.HOSTILE);
+		persean.setRelationship(dweller.getId(), RepLevel.HOSTILE);
+		remnant.setRelationship(dweller.getId(), RepLevel.HOSTILE);
+		derelict.setRelationship(dweller.getId(), RepLevel.HOSTILE);
+		threat.setRelationship(dweller.getId(), RepLevel.HOSTILE);
 		
 //		independent.setRelationship(hegemony.getId(), 0);
 //		independent.setRelationship(tritachyon.getId(), 0);

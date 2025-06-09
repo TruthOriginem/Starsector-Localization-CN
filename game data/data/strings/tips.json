@@ -7,8 +7,7 @@
 "Press TAB to toggle the command UI. Use the command UI to give orders to your fleet.",
 "Ordering one ship to escort another limits the escort's mobility. Use the command with caution.",
 "If your shields take too much damage, the ship will overload and weapons and shields will be disabled for a few seconds.",
-"Long range missiles (LRMs) can hit targets from beyond visual range. Press Tab to open the command UI and target far-away ships by clicking on them and then selecting 'Set as Target'.",
-"In combat, move the mouse around to pan the view.  Press 'T' to anchor your view to your target, and press 'T' again to go back to the normal view.",
+"Some fighters can attack targets from beyond the carrier's visual range. Press Tab to open the command UI and target far-away ships by clicking on them and then selecting 'Set as Target'.",
 "Press LMB to fire and RMB to use the shields.  Use WASD to pilot the ship.",
 "Kinetic damage is good against shields, while high-explosive damage is good against armor.",
 "Fragmentation damage is poor against everything but exposed hull, but weapons dealing it tend to be very flux-efficient.",
@@ -22,7 +21,6 @@
 "Most open-market trade is made unprofitable by tariffs. Exploit ongoing events and disruptions to make a profit.",
 "Hold Shift while adding or removing flux vents or capacitors to do it more quickly.",
 "Hold Shift while scrolling with the mousewheel to scroll more quickly.",
-#"Control-click to buy/sell a stack. Shift-click to pick up items one at a time. Hold Shift and click and drag to select a specific quantity. Hold Alt and drag to quickly sell or transfer stacks under the mouse pointer.",
 "Control-click to buy/sell a stack. Shift-click to pick up items one at a time. Hold Shift and click and drag to select a specific quantity.",
 "To pan the in-combat map, either right-click and drag or use the arrow keys.",
 "Launching torpedoes at point-blank range can be hazardous to your ship.",
@@ -32,6 +30,7 @@
 "Ships consume supplies for maintenance based on their supplies/month stat, and consume extra supplies while recovering CR or undergoing repairs.",
 "Your fleet can carry cargo, crew, or fuel in excess of its maximum capacity at the cost of extra supply consumption.",
 "You can get extra info from many tooltips by pressing F1 to expand them.",
+"You can press F2 at any time to bring up the Codex.",
 "More guns isn't always better - having enough flux capacity and dissipation for sustained fire can be more important.",
 "Refitting a ship in space will reduce its combat readiness, especially when changing hull mods.",
 "Weapons that fire energy bolts or projectiles can hit targets beyond their maximum range, but only deal soft flux damage to shields when they do.",
@@ -44,8 +43,8 @@
 "Bombers have high damage potential, but work best when combined with other fighters, weapons, and ships to ensure they can deliver the damage.",
 "Percentage increases are additive. Percentage reductions are generally multiplicative.",
 "Slow-moving fleets do not attract storm strikes in hyperspace.",
-"Weapons have halved recoil when mounted in hardpoint slots.",
-"Scuttling a ship - or simply not recovering it - will produce more value in fuel and supplies than selling it would.",
+"Weapons have halved recoil and doubled hitpoints when mounted in hardpoint slots.",
+"Scuttling a ship with d-mods - or simply not recovering it - will produce more value in fuel and supplies than selling it would.",
 "If a star system has few stable locations, you can create a new one by interacting with the star.",
 "Assigning marines to attack a low-danger objective can create a diversion and reduce casualties from a dangerous raid more than keeping those marines in reserve.",
 "The side with more capable officers in command of combat-ready ships gets more deployment points.",
@@ -53,7 +52,9 @@
 "Scuttling or losing a ship with s-mods you've built into it grants enough bonus XP to gain back the story points spent on building the hullmods in.",
 "Slipstreams are temporary and, in recent memory, synchronized with the standard Domain cycle. In the first half of the cycle, they tend to flow towards the galactic east, and in the second half, to the west.",
 "During a pursuit, you can deploy frigates from the flanks by clicking on them multiple times to cycle the deployment mode.",
-"Hullmods with a low ordnance point cost tend to have more powerful bonuses when built into the hull using a story point. More expensive hullmods tend to have penalties."      
+"Hullmods with a low ordnance point cost tend to have more powerful bonuses when built into the hull using a story point. More expensive hullmods tend to have penalties.",      
+"You can Control or Shift click to select multiple tags at the same time, in the intel screen and anywhere else tags are used.",
+"You can press Ctrl-S to save the currently selected set of tags in the intel screen, and press Q to select them again."
      ],
      
      
