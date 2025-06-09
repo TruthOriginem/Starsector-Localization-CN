@@ -1,0 +1,47 @@
+{
+    "displayName": "Type 250",
+    "fluxCapacitors": 20,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "overseer_unit",
+    "hullMods": [
+        "fragment_swarm",
+        "magazines",
+        "targetingunit",
+        "fluxbreakers"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "overseer_unit_Type250",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 006": "heavy_mass_driver"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 001": "kinetic_fragments",
+                "WS 004": "kinetic_fragments"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "voltaic_cannon",
+                "WS 009": "voltaic_cannon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "voltaic_discharge",
+                "WS 003": "voltaic_discharge"
+            }
+        }
+    ]
+}
