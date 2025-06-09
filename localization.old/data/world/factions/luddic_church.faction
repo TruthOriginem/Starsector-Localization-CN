@@ -10,8 +10,10 @@
 	#"displayNameWithArticle":"银河救赎教会",
 	"displayName":"卢德教会",
 	"displayNameWithArticle":"卢德教会",
-	"displayNameLong":"卢德教会",
-	"displayNameLongWithArticle":"卢德教会",
+	"displayNameLong":"银河救赎教会",
+	"displayNameLongWithArticle":"银河救赎教会",
+	"personNamePrefixAOrAn":"",
+	"displayNameIsOrAre":"",
 	"logo":"graphics/factions/luddic_church.png",
 	"crest":"graphics/factions/crest_luddic_church.png",
 	"shipNamePrefix":"CGR",
@@ -339,14 +341,14 @@
 		"caresAboutAtrocities":true,
 		"punitiveExpeditionData":{
 			"vsCompetitors":false,
-			"vsFreePort":true,
+			"vsFreePort":false,
 			"canBombard":false,
 			"territorial":true,
 		},
 	},
 	"fleetTypeNames":{
-		"trade":"忠诚舰队",
-		"smallTrader":"忠诚商队",
+		"trade":"传信旅人",
+		"smallTrader":"传信商队",
 		"tradeLiner":"朝圣者",
 		
 		"patrolSmall":"守护者",
@@ -361,7 +363,7 @@
 		#"mercPatrol":"十字军舰队",
 		#"mercArmada":"十字军无敌舰队",
 		
-		"taskForce":"十字军",
+		"taskForce":"受祝之事",
 	},
 	
 	

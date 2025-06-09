@@ -47,13 +47,13 @@ public class Thule {
 				SectorEntityToken array1 = system.addCustomEntity(null, null, "sensor_array", Factions.PERSEAN); 
 				array1.setCircularOrbitPointingDown( thule_star, 60, 2870, 90);
 		
-		system.addAsteroidBelt(thule_star, 90, 3750, 500, 100, 120, Terrain.ASTEROID_BELT,  "The Ingwin");
+		system.addAsteroidBelt(thule_star, 90, 3750, 500, 100, 120, Terrain.ASTEROID_BELT,  "Ingwin 陨石群");
 		system.addRingBand(thule_star, "misc", "rings_dust0", 256f, 0, Color.white, 256f, 3600, 105f, null, null);
 		system.addRingBand(thule_star, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 3720, 115f, null, null);
 		
 		PlanetAPI laki = system.addPlanet("laki", thule_star, "Laki", "barren3", 0, 95, 4000, 100);
 		
-		system.addAsteroidBelt(thule_star, 90, 4550, 500, 290, 310, Terrain.ASTEROID_BELT,  "Hama's Band");
+		system.addAsteroidBelt(thule_star, 90, 4550, 500, 290, 310, Terrain.ASTEROID_BELT,  "Hama 陨石带");
 		system.addRingBand(thule_star, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 4500, 305f, null, null);
 		system.addRingBand(thule_star, "misc", "rings_asteroids0", 256f, 1, Color.white, 256f, 4600, 295f, null, null);
 		
@@ -81,16 +81,16 @@ public class Thule {
 			draugr.applySpecChanges();
 
 			// Kazeron jump-point
-			JumpPointAPI jumpPoint1 = Global.getFactory().createJumpPoint("thule_jump", "Thule Jump-point");
+			JumpPointAPI jumpPoint1 = Global.getFactory().createJumpPoint("thule_jump", "Thule 跳跃点");
 			jumpPoint1.setCircularOrbit( system.getEntityById("thule"), 30, 5200, 225);
 			jumpPoint1.setRelatedPlanet(kazeron);
 			system.addEntity(jumpPoint1);
 			
 			// Kazeron Relay - L5 (behind)
-			SectorEntityToken kazeron_relay = system.addCustomEntity("kazeron_relay", "Kazeron Relay",  "comm_relay", Factions.PERSEAN); 
+			SectorEntityToken kazeron_relay = system.addCustomEntity("kazeron_relay", "Kazeron 通讯中继站",  "comm_relay", Factions.PERSEAN); 
 			kazeron_relay.setCircularOrbitPointingDown( thule_star, 150, 5200, 225);
 			
-		system.addAsteroidBelt(thule_star, 90, 5950, 500, 150, 300, Terrain.ASTEROID_BELT,  "Inged's Crown");
+		system.addAsteroidBelt(thule_star, 90, 5950, 500, 150, 300, Terrain.ASTEROID_BELT,  "Inged 之冠");
 		system.addRingBand(thule_star, "misc", "rings_ice0", 256f, 1, Color.white, 256f, 5900, 305f, null, null);
 		system.addRingBand(thule_star, "misc", "rings_ice0", 256f, 2, Color.white, 256f, 6020, 295f, null, null);
 			
@@ -109,7 +109,7 @@ public class Thule {
 		
 				// Gate of Thule
 				SectorEntityToken gate = system.addCustomEntity("thule_gate", // unique id
-						 "Gate of Thule", // name - if null, defaultName from custom_entities.json will be used
+						 "Thule 之门", // name - if null, defaultName from custom_entities.json will be used
 						 "inactive_gate", // type of object, defined in custom_entities.json
 						 null); // faction
 
@@ -118,13 +118,13 @@ public class Thule {
 				SectorEntityToken eldfell_stable = system.addCustomEntity(null, null, "stable_location", "neutral");
 				eldfell_stable.setCircularOrbitPointingDown( thule_star, 180-60 , 6700, 360);
 				
-		system.addAsteroidBelt(thule_star, 90, 7650, 500, 150, 300, Terrain.ASTEROID_BELT,  "Garmund's Ring");
+		system.addAsteroidBelt(thule_star, 90, 7650, 500, 150, 300, Terrain.ASTEROID_BELT,  "Garmund 之环");
 		system.addRingBand(thule_star, "misc", "rings_ice0", 256f, 2, Color.white, 256f, 7750, 385, null, null);
 		system.addRingBand(thule_star, "misc", "rings_ice0", 256f, 1, new Color(230,240,255,255), 256f, 7870, 395, null, null);
 		
 			// Pirate Station - nestled amongst the icestroids
 			SectorEntityToken thule_pirate_station = system.addCustomEntity("thule_pirate_station",
-					"Thulian Raider Base", "station_pirate_type", "pirates");
+					"Thulian 袭击者基地", "station_pirate_type", "pirates");
 			
 			thule_pirate_station.setCircularOrbitPointingDown(system.getEntityById("thule"), 240, 7900, 380);		
 			thule_pirate_station.setCustomDescriptionId("station_thulian_raiders");
@@ -148,7 +148,7 @@ public class Thule {
 					" xxx  " +
 					"  xxx ",
 					6, 6, // size of the nebula grid, should match above string
-					"terrain", "nebula", 4, 4, "Morn L5 Cloud"));
+					"terrain", "nebula", 4, 4, "Morn L5 星云"));
 			nebula1.getLocation().set(morn.getLocation().x + 1000f, morn.getLocation().y);
 			nebula1.setCircularOrbit(thule_star,
 										morn.getCircularOrbitAngle() - 60f,
@@ -164,7 +164,7 @@ public class Thule {
 					"  xx  " +
 					" x    ",
 					6, 6, // size of the nebula grid, should match above string
-					"terrain", "nebula", 4, 4, "Morn L4 Cloud"));
+					"terrain", "nebula", 4, 4, "Morn L4 星云"));
 			nebula2.getLocation().set(morn.getLocation().x - 1000f, morn.getLocation().y);
 			nebula2.setCircularOrbit(thule_star,
 									morn.getCircularOrbitAngle() + 60f,

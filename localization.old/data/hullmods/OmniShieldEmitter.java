@@ -51,7 +51,7 @@ public class OmniShieldEmitter extends BaseHullMod {
 		}
 		
 		if (ship.getVariant().getHullMods().contains("frontemitter")) {
-			return "Incompatible with Shield Conversion - Front";
+			return "不兼容于 固化护盾转化器";
 		}
 		
 		return null;

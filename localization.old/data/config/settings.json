@@ -74,12 +74,21 @@
 	"useGLFlush":true,
 	"useGLFinish":false,
 	"idleWhileWindowNotVisible":true,
+	"doNotIdleWhenUndecoratedFullcreen":true, # idling in an undecorated fullscreen window can cause issues with alt-tabbing
 	
 	"legacyLauncher":false,
 	"oneClickJumpPoints":false, # does not work do not set to true
-	"altMouseMoveToMassTransfer":false,
+	"altMouseMoveToMassTransfer":true,
 	
+	# values above 2-3 will likely result in poor simulation fidelity
 	"combatSpeedMult":1f,
+	
+	# integer, higher values speed up simulation with no loss of fidelity but at the cost of framerate
+	# values greater than 1 also make it impossible to control the player ship correctly, this is
+	# intended for AI vs AI battles only 
+	"combatStepsPerFrame":1,
+	
+	
 	"breakableShips":true,
 	"renderDHullOverlay":true,
 	"renderDHullOverlayForAllDebug":false,
@@ -124,7 +133,8 @@
 	"planetBGDimOverlayAlpha":0,
 	
 	"cloudColor":[255,255,255,255],
-	"enableUIStaticNoise":true,
+	# replaced with UI setting in the "Gameplay" Settings tab
+	#"enableUIStaticNoise":true,
 	"noiseColor":[40,152,176,255],
 	"tripadLineColor":[158,241,240,255],
 	#"enableShipExplosionWhiteout":false, # no longer used, replaced by checkbox in Gameplay Settings tab
@@ -195,6 +205,7 @@
 	"campaignMaxPan":800,
 	"campaignMaxObjectRangeAroundJumpPoint":5000,
 	
+	"factionsClaimUnpopulatedCoreSystems":true,
 	
 	"sectorWidth":164000,
 	"sectorHeight":104000,
@@ -273,10 +284,14 @@
 	"economyNoDemandPriceMult":0.5,
 	"economyGreedFraction":0.25,
 	
-	"economyDeficitPriceIncrPerUnit":0.125,
-	"economyDeficitPriceMultMax":1.5,
-	"economyExcessPriceDecrPerUnit":0.11,
-	"economyExcessPriceMultMin":0.67,
+	#"economyDeficitPriceIncrPerUnit":0.125,
+	#"economyDeficitPriceMultMax":1.5,
+	#"economyExcessPriceDecrPerUnit":0.11,
+	#"economyExcessPriceMultMin":0.67,
+	"economyDeficitPriceIncrPerUnit":0.25,
+	"economyDeficitPriceMultMax":1.25,
+	"economyExcessPriceDecrPerUnit":0.15,
+	"economyExcessPriceMultMin":0.85,
 	
 	
 	"stockpileMultProduction":0.25,
@@ -287,7 +302,7 @@
 	"stockpileShortageCostMult":0.1,
 	
 	
-	"stabilityBaseValue":6,
+	"stabilityBaseValue":5,
 	
 	"accessibilityBaseValue":0.5, # used
 	"accessibilityNoSpaceport":-1, # used
@@ -333,6 +348,7 @@
 	
 	##### HOSTILE ACTIVITY EVENT CONFIG #####
 	
+	# BEGIN UNUSED
 	# [min number of star systems, min fraction of star systems]
 	"HA_1_affects":[1, 0.25],
 	"HA_2_affects":[2, 0.5],
@@ -344,6 +360,14 @@
 	"HA_2_impact":[2, 0.2],
 	"HA_3_impact":[3, 0.3],
 	"HA_4_impact":[4, 0.4],
+	# END UNUSED
+	
+	"ha_maxMonthlyProgress":60, # monthly progress capped to this amount
+	"ha_maxMonthlyProgressEasy":30, # on easy difficulty
+	
+	"blowbackFraction":1, # of any one-time negative factor
+	"blowbackPerMonth":0.05,
+	"blowbackOnReset":1,
 	
 	# Hostile Activity event progress points, DOES NOT INCLUDE EVERYTHING
 	"pirateBaseProximityPoints":[3, 10],
@@ -351,7 +375,7 @@
 	
 	# progress multiplier applied to total Pather interest level in the colony
 	"patherProgressMultNoCells":0,
-	"patherProgressMultSleeperCells":0.5,
+	"patherProgressMultSleeperCells":0.25,
 	"patherProgressMultActiveCells":1,
 	
 	# for computing Hostile Activity Pather progress non-linearly
@@ -360,7 +384,24 @@
 	"patherProgressUnit":10,
 	"patherProgressMult":0.75,
 	
+	# for computing Hostile Activity Hegeony progress non-linearly
+	# same calculation as for Pathers (except AI cores only)
+	"hegemonyProgressUnit":10,
+	"hegemonyProgressMult":0.75,
+	"hegemonyPointsAdmin":10,
+	"hegemonyPointsAlpha":4,
+	"hegemonyPointsBeta":2,
+	"hegemonyPointsGamma":1,
+	
 	"maxHostileActivityFleetsPerSystem":11,
+	
+	# HA, max fleet counts (if not present: no limit)
+	"luddicPathMaxFleets":4,
+	"perseanLeagueMaxFleets":3,
+	"triTachyonMaxFleets":2,
+	"diktatMaxFleets":2,
+	"luddicChurchMaxFleets":1,
+	"hegemonyMaxFleets":2,
 	
 	"pirateProtectionPaymentFraction":0.1,
 	"pirateProtectionMercSpawnChance":0.1,
@@ -369,7 +410,6 @@
 	
 	# hostile activity from Pathers
 	"luddicPathSmallFleetProb":0.85,
-	"luddicPathMaxFleets":4,
 	"luddicPathSleeperCellsBase":0.05f,
 	"luddicPathSleeperCellsPerSize":0f,
 	"luddicPathActiveCellsBase":0f,
@@ -380,6 +420,28 @@
 	"luddicPathTithePerPointOfInterestPerColonySize":1000,
 	"luddicPathTitheDurationDays":730,
 	
+	# HA from the Persean League
+	"perseanLeagueFeeFraction":0.2,
+	"houseHannanFeeFraction":0.05,
+	
+	# HA from TriTach
+	"triTachyonProgressPerUnitProdMult":0.5,
+	
+	# HA from Diktat
+	"diktatProgressPerUnitProdMult":1,
+	"diktatFuelFeeFraction":0.5,
+	"diktatDefeatedExportBonus":0.25,
+	
+	# HA from Hegemony
+	#"hegemonyInvestigatorsFreq":10,
+	#"hegemonyReconFreq":2,
+	"hegemonyPerAICorePoint":0.01, # to do with investigator fleet strengths
+
+	# HA Remnant Nexus in-system
+	"remnantNexusPointsDamaged":10,
+	"remnantNexusPointsNormal":20,
+
+	
 	# some of the HA progress reductions
 	"HA_fleetPointsPerPoint":10,
 	"HA_kantaProtection":100,
@@ -389,6 +451,8 @@
 	"HA_patherBaseMax":150, 
 	"HA_megaTithe":30,
 	"HA_givePK":100,
+	"HA_tacBombardKazeron":50,
+	"HA_tacBombardHesperus":25,
 	
 	
 	##### END HOSTILE ACTIVITY EVENT CONFIG #####
@@ -625,6 +689,7 @@
 	# end faction doctrine related config
 
 	"qualityPerDMod":0.2,
+	"qualityPerSMod":0.3, # for computing approximate strength for autoresolve and similar
 	
 	"qualityPenaltyForImports":-0.25,
 	
@@ -698,13 +763,14 @@
 	"officerMaxEliteSkills":1,
 	"officerAIMax":10,
 	
-	"minSleeperPodsOfficerLevel":4, # unused but leaving it in til post 0.95.1
-	"maxSleeperPodsOfficerLevel":7, # unused but leaving it in til post 0.95.1
+	# these officers use fixed skill sets now so changing this without also changing SalvageSpecialAssigner
+	# is probably ill-advised
 	"standardSleeperPodsOfficerLevel":5,
 	"exceptionalSleeperPodsOfficerLevel":7,
 	"exceptionalSleeperPodsOfficerEliteSkills":5,
 	"maxExceptionalSleeperPodsOfficers":4, # per Sector; can be generated in derelict ships, too, so eventually there WILL be that many
 	"probSleeperPodsOfficerIsExceptional":0.2, # there's 20ish sleeper pod officers total
+	"probSleeperPodsUnexceptionalOfficerUseTemplate":0.5,
 	
 	"maxAIFleetCommanderLevel":7,
 	"commanderLevelForTwoSkills":6,
@@ -724,9 +790,9 @@
 	
 	
 	"baseRepairRateFrigate":10,
-	"baseRepairRateDestroyer":7,
-	"baseRepairRateCruiser":5,
-	"baseRepairRateCapital":3,
+	"baseRepairRateDestroyer":10,
+	"baseRepairRateCruiser":8,
+	"baseRepairRateCapital":6,
 	
 	"suppliesPerMarinePerDay":0;
 	"suppliesPerCrewPerDay":0;
@@ -815,7 +881,7 @@
 	# story point costs for things that cost more than one point
 	"historianSpecialItemBase":4, # doubles for each successive item 
 	"industryImproveBase":2,
-	"createStableLocation":5, 
+	"createStableLocation":2, 
 	
 	# Bonus XP values for most story-point-using actions
 	"bonusXP":{
@@ -889,6 +955,7 @@
 		
 		# contact missions
 		"extr_storyOption":1,
+		"rsom_avoidCombat":1,
 		
 		# story missions
 		"gaKA_storyPatrol":1,
@@ -909,6 +976,7 @@
 		"makeDealWithPirateBase":1,
 		"pskMerc_story":1,
 		"pk_hackStory":1,
+		"LCP_notEnoughLie":1, # KoL fleet demanding supply tithe
 		
 	},
 	
@@ -974,7 +1042,8 @@
 	"mountCyanColor":[0,255,200,255],
 	"mountCompositeColor":[215,255,0,255],
 	
-	"progressBarCargoColor":[225,225,160,255],
+	#"progressBarCargoColor":[225,225,160,255],
+	"progressBarCargoColor":[203,203,144,255],
 	"progressBarCrewColor":[0,225,160,255],
 	"progressBarFuelColor":[255,125,25,255],
 	"progressBarOverflowColor":[255,0,0,200],
@@ -1005,7 +1074,8 @@
 	"textFriendColor":[155,255,0,255],
 	"textEnemyColor":[255,100,0,255],
 	"textNeutralColor":[70,200,255,255],
-	"textGrayColor":[175,175,175,155],
+	#"textGrayColor":[175,175,175,155],
+	"textGrayColor":[175,175,175,180],
 	"marketFlavorTextColor":[180,180,180,255],
 	#"standardTextColor":[235,235,235,255],
 	"standardTextColor":[220,220,220,255],
@@ -1286,7 +1356,7 @@
 			"laverna_tell":"graphics/portraits/characters/laverna_tell.png",
 			"skiron":"graphics/portraits/characters/skiron.png",
 			"skiron2":"graphics/portraits/characters/skiron2.png",
-			
+			"reynard_hannan":"graphics/portraits/characters/reynard_hannan.png",
 			# unused right now
 			#"tt_fixer_MALE":"graphics/portraits/portrait_corporate03.png",
 			#"tt_fixer_FEMALE":"graphics/portraits/characters/clone_loke.png",
@@ -1296,6 +1366,7 @@
 			
 			"luddic_shrine":"graphics/icons/intel/luddic_shrine64.png",
 			
+			"gate_hauler":"graphics/icons/intel/gate_hauler.png",
 			"gate_inactive":"graphics/icons/intel/gate_inactive.png",
 			"gate_active":"graphics/icons/intel/gate_active.png",
 			
@@ -1362,11 +1433,15 @@
 			# hostile activity event
 			"hostile_activity":"graphics/icons/markets/hostile_activity.png",
 			"hostile_activity_START":"graphics/icons/campaign/hostile_activity_start.png",
-			"hostile_activity_HA_1":"graphics/icons/campaign/hostile_activity1.png",
-			"hostile_activity_HA_2":"graphics/icons/campaign/hostile_activity2.png",
-			"hostile_activity_HA_3":"graphics/icons/campaign/hostile_activity3.png",
-			"hostile_activity_HA_4":"graphics/icons/campaign/hostile_activity4.png",
-			"hostile_activity_INCREASED_DEFENSES":"graphics/icons/campaign/increased_defenses.png",
+			
+			#"hostile_activity_HA_1":"graphics/icons/campaign/hostile_activity1.png",
+			#"hostile_activity_HA_2":"graphics/icons/campaign/hostile_activity2.png",
+			#"hostile_activity_HA_3":"graphics/icons/campaign/hostile_activity3.png",
+			#"hostile_activity_HA_4":"graphics/icons/campaign/hostile_activity4.png",
+			#"hostile_activity_INCREASED_DEFENSES":"graphics/icons/campaign/increased_defenses.png",
+			
+			"luddic_majority_unhappy":"graphics/icons/markets/luddic_majority_unhappy.png",
+			
 			
 			# hyperspace topography event
 			"hyperspace_topography":"graphics/icons/markets/hyperspace_topography.png",
@@ -1375,10 +1450,18 @@
 			"hyperspace_topography_SLIPSTREAM_NAVIGATION":"graphics/icons/campaign/slipstream_fuel.png",
 			"hyperspace_topography_HYPERFIELD_OPTIMIZATION":"graphics/icons/campaign/hyperspace_burn.png",
 			"hyperspace_topography_TOPOGRAPHIC_DATA":"graphics/icons/campaign/hyperspace_topography_data.png",
+			
+			"triTachyonCR_START":"graphics/icons/campaign/ttcr_event.png",
+			"triTachyonCR_SEND_MERC":"graphics/icons/campaign/ttcr_mercs2.png",
+			"triTachyonCR_SUCCESS":"graphics/icons/campaign/ttcr_success.png",
+			
+			"piracy_respite":"graphics/icons/campaign/respite.png",
 		},
 		"raidObjectives":{  # icons displayed at 26x26
 			"gaData":"graphics/icons/raid_objective.png",
 			"genericIcon":"graphics/icons/raid_objective.png",
+			"rdsm":"graphics/icons/raid_objective.png",
+			"smuggledPlunder":"graphics/icons/intel/smuggling.png",
 		},
 		"campaignMissions":{
 			"analyze_entity":"graphics/icons/intel/analyze_entity.png",
@@ -1437,11 +1520,22 @@
 			"warning_beacon":"graphics/stations/buoy00.png",
 			"warning_beacon_glow":"graphics/stations/buoy00glow.png",
 			"fusion_lamp_glow":"graphics/fx/hit_glow.png",
+			"abyssal_light_glow":"graphics/fx/hit_glow.png",
+			
+			"campaign_engine_glow":"graphics/fx/hit_glow.png",
+			#"campaign_engine_flame":"graphics/fx/engineglow32.png",
+			#"campaign_engine_flame":"graphics/fx/beamfringec.png",
+			"campaign_engine_flame":"graphics/fx/beamfringed.png",
 		},
 		"systemMap":{
-			#"icon_jump_point":"graphics/icons/icon_portal.png",
 			"mission_indicator":"graphics/icons/missions/mission_marker2.png",
 			"icon_jump_point":"graphics/icons/jump-point2.png",
+			"icon_wormhole":"graphics/icons/icon_portal.png",
+			"icon_gas_giant_well":"graphics/icons/gas_giant_well2.png",
+			"icon_black_hole_well":"graphics/icons/black_hole_well.png",
+			"icon_nascent_well":"graphics/icons/nascent_well2.png",
+			#"icon_nascent_well":"graphics/icons/jump-point.png",
+			
 			"icon_fleet0":"graphics/icons/fleet0.png",
 			"icon_fleet1":"graphics/icons/fleet1.png",
 			"icon_fleet2":"graphics/icons/fleet2.png",
@@ -1452,15 +1546,13 @@
 			"radar_mask":"graphics/fx/circle_mask_hires.png",
 			"radar_circle":"graphics/icons/radar_circle.png",
 			"icon_derelict":"graphics/icons/derelict.png",
-			"icon_jump-point":"graphics/icons/jump-point.png",
-			#"icon_jump-point":"graphics/icons/jump-point2.png",
 			#"icon_mirror":"graphics/icons/mirror.png",
 			"icon_mirror":"graphics/icons/mirror2.png",
 			
 			"icon_relay":"graphics/icons/relay.png",
 			"icon_nav_buoy":"graphics/icons/nav_buoy.png",
 			"icon_sensor_array":"graphics/icons/sensor_array.png",
-			
+			"icon_abyssal_light":"graphics/icons/abyssal_light.png",
 			"icon_relay_makeshift":"graphics/icons/relay_makeshift.png",
 			"icon_nav_buoy_makeshift":"graphics/icons/nav_buoy_makeshift.png",
 			"icon_sensor_array_makeshift":"graphics/icons/sensor_array_makeshift.png",
@@ -1497,6 +1589,7 @@
 			"hull_breach":"graphics/illustrations/hull_breach.jpg",
 			"jump_point_normal":"graphics/illustrations/entering_hyperspace.jpg",
 			"jump_point_hyper":"graphics/illustrations/exiting_hyperspace.jpg",
+			"jump_point_wormhole":"graphics/illustrations/wormhole.jpg",
 			"city_from_above":"graphics/illustrations/city_from_above.jpg",
 			"desert_moons_ruins":"graphics/illustrations/desert_moons_ruins.jpg",
 			"quartermaster":"graphics/illustrations/quartermaster.jpg",
@@ -1550,19 +1643,19 @@
 			"sentinel":"graphics/illustrations/sentinel.jpg",
 			"sentinel2":"graphics/illustrations/sentinel2.jpg",
 			#"deciv":"graphics/illustrations/abandoned_station.jpg",
-			
+			"gate_hauler1":"graphics/illustrations/gate_hauler1.jpg",
+			"gate_hauler2":"graphics/illustrations/gate_hauler2.jpg",
 			"bombard_prepare":"graphics/illustrations/bombardment_preparation.jpg",
 			"bombard_tactical_result":"graphics/illustrations/facility_explosion.jpg",
 			"bombard_saturation_result":"graphics/illustrations/bombardment_saturation.jpg",
-			
 			"crew_leaving":"graphics/illustrations/crew_leaving.jpg",
-			
 			"nav_buoy":"graphics/illustrations/nav_buoy.jpg",
 			"free_orbit":"graphics/illustrations/free_orbit.jpg",
 			"sensor_array":"graphics/illustrations/sensor_array.jpg",
 			"sensor_array_makeshift":"graphics/illustrations/sensor_array_makeshift.jpg",
 			"galatia_academy":"graphics/illustrations/academy.jpg",
 			"fusion_lamp":"graphics/illustrations/fusion_lamp.jpg",
+			"salvor_ruins":"graphics/illustrations/salvor_ruins.jpg",
 		},
 		"ui":{
 			"generate_ship_name":"graphics/ui/random23.png",
@@ -1617,6 +1710,8 @@
 			"icon_neural_link":"graphics/icons/tactical/neural_link.png",
 			"icon_tactical_coordinated_maneuvers":"graphics/warroom/objective_nav_buoy.png",
 			"icon_tactical_electronic_warfare":"graphics/warroom/objective_sensor_array.png",
+			
+			"icon_tactical_escort_package":"graphics/warroom/escort_package_effect.png",
 			
 			"icon_tactical_missile_autoloader":"graphics/icons/tactical/cr_tactical.png",
 			

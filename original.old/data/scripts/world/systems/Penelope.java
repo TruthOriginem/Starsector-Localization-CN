@@ -10,6 +10,7 @@ import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.StarTypes;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
 import com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin.AsteroidFieldParams;
@@ -21,6 +22,10 @@ public class Penelope {
 		
 		StarSystemAPI system = sector.createStarSystem("Penelope's Star");
 		LocationAPI hyper = Global.getSector().getHyperspace();
+		
+		if (Global.getSettings().getBoolean("factionsClaimUnpopulatedCoreSystems")) {
+			system.getMemoryWithoutUpdate().set(MemFlags.CLAIMING_FACTION, Factions.LUDDIC_CHURCH);
+		}
 		
 		system.setBackgroundTextureFilename("graphics/backgrounds/background4.jpg");
 		

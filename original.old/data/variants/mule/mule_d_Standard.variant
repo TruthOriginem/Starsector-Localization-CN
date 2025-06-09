@@ -1,9 +1,12 @@
 {
     "displayName": "Standard",
-    "fluxCapacitors": 19,
+    "fluxCapacitors": 17,
     "fluxVents": 20,
     "hullId": "mule_d",
-    "hullMods": ["heavyarmor"],
+    "hullMods": [
+        "heavyarmor",
+        "armoredweapons"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "mule_d_Standard",

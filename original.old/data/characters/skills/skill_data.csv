@@ -1,19 +1,19 @@
 id,name,order,tier,reqPoints,reqPointsPerExtraSkill,description,author,combat officer,admiral,admin,tags,icon,
 # COMBAT,,,,,,,,,,,,,
-helmsmanship,Helmsmanship,10,1,0,,"It sings when you push the mix just right, like, [humming]. Everything is right in the world, from the stars down to your bones. Coming off a shift, itâ€™s like I just woke up. [laughing] Words can't tell it.","Nachiketa Portside Interview Project, Ep.3",TRUE,,,,graphics/icons/skills/helmsmanship.png,
+helmsmanship,Helmsmanship,10,1,0,,"It sings when you push the mix just right, like, [humming]. Everything is right in the world, from the stars down to your bones. Coming off a shift, it’s like I just woke up. [laughing] Words can't tell it.","Nachiketa Portside Interview Project, Ep.3",TRUE,,,,graphics/icons/skills/helmsmanship.png,
 combat_endurance,Combat Endurance,20,1,0,,"Through calamity, the Fourteenth endured. 
 Through hegemony, the Domain endures. 
 Through duty, humanity shall endure.","Admiral Kali Molina, the Declaration of Hegemony, c49",TRUE,,,,graphics/icons/skills/combat_endurance3.png,
 impact_mitigation,Impact Mitigation,30,2,0,,"The maneuver produced an oblique impact angle, dissipating the shell's momentum into the ferrofoam applique. It was the unfortunate timing of the resulting shock which brought about Spacer York's tragic end during an otherwise routine heavy equipment transfer.","Thule skirmish of c120.03.08, AAR submitted by Navarch Zhou",TRUE,,,,graphics/icons/skills/impact_mitigation.png,
-damage_control,Damage Control,40,2,0,,"Straight from the great forges of Kazeron, this ship is the very best of the League. And we shall treasure this gift, for it stands between our homes and those who would end our way of life.","Navarch Tethys, launching ceremony of the PLS Astelene Key",TRUE,,,,graphics/icons/skills/damage_control2.png,
+damage_control,Damage Control,40,2,0,,"What's lost is lost. Let those compartments burn away, focus your efforts on what will see us through the next hour.","Navarch Tethys, final address to the crew of the PLS Astelene Key",TRUE,,,,graphics/icons/skills/damage_control2.png,
 field_modulation,Field Modulation,50,2,0,,Few have a talent for what I like to think of as 'active tuning'. I find musicians make the best fields officers.,"Ardis Soloman, leaked data submitted to COMSEC redaction algorithm",TRUE,,,active_defenses,graphics/icons/skills/field_modulation.png,
 point_defense,Point Defense,60,3,0,,"Me, I don't take with them lasers and the like. Puts on a hell of a lightshow, ya'sure, but nothing stops incoming blips like the wall of DU from a good Vulcan matrix.","""Lower Deck Heroes"", a HEGCOM serial",TRUE,,,,graphics/icons/skills/advanced_countermeasures.png,
 target_analysis,Target Analysis,70,4,0,,A machine-assisted human mind is capable of intuiting effective solutions despite conflicting sensor data and contradictory tactical directives. The targeting computer alone can never truly replace a warrior.,"""On Space Combat, XXIIth ed."", from Domain Battlegroup XIV library ",TRUE,,,,graphics/icons/skills/target_analysis2.png,
 ballistic_mastery,Ballistic Mastery,80,4,0,,"What's it stopped the Tri-Tach plot? (Guns!)
 What was it that ol' Ludd forgot? (Guns!)
-Whaâ€™ve we got that they have not? (Big, big, guns!)",drinking song of the Hegemony navy,TRUE,,,ballistic_weapons,graphics/icons/skills/ranged_specialization.png,
+Wha’ve we got that they have not? (Big, big, guns!)",drinking song of the Hegemony navy,TRUE,,,ballistic_weapons,graphics/icons/skills/ranged_specialization.png,
 systems_expertise,Systems Expertise,90,5,4,2,"No, I don't think it's a contradiction. It's a, uh, spiritual journey. You're tested. And it's like they say, the Devil is in the details.","""Ludd's Footsoldiers"" holodoc, interview with Pather engineer",TRUE,,,,graphics/icons/skills/systems_expertise.png,
-missile_specialization,Missile Specialization,100,5,4,2,My colleagues donâ€™t appreciate their whimsy. You get all these little spaceships to break all the rules with because there's no need to survive the landing.,"Exit interview of K. Astraia, former ordnance designer, Culann Starforge",TRUE,,,missile_weapons,graphics/icons/skills/missile_specialization2.png,
+missile_specialization,Missile Specialization,100,5,4,2,My colleagues don’t appreciate their whimsy. You get all these little spaceships to break all the rules with because there's no need to survive the landing.,"Exit interview of K. Astraia, former ordnance designer, Culann Starforge",TRUE,,,missile_weapons,graphics/icons/skills/missile_specialization2.png,
 ,,,,,,,,,,,,,
 # LEADERSHIP,,,,,,,,,,,,,
 tactical_drills,Tactical Drills,500,1,0,,"Perfect.
@@ -27,7 +27,7 @@ officer_training,Officer Training,560,4,3,,"They may be a 'rag-tag gang of merch
 officer_management,Officer Management,570,4,3,,"The outlook was grim, so I promised the merc captains double combat bonus. With all the casualties I only had to pay out to half of them. Worked out fine.","Carson Kang, GM of Valhalla fleet division, Tri-Tachyon",,TRUE,,,graphics/icons/skills/officer_management.png,
 best_of_the_best,Best of the Best,580,5,4,2,"What we have, Artemisia, is something that cannot be bought.",Orcus Rao at the negotiations ending the Second AI War (apocryphal),,TRUE,,,graphics/icons/skills/best_of_the_best.png,
 support_doctrine,Support Doctrine,590,5,4,2,"Not every cadet has talent, skill, or even two brain cells to rub together, but by hell and radiation they'll graduate with discipline.","unattributed comment by Coatl Academy staff, COMSEC archives",,TRUE,,,graphics/icons/skills/space_ops.png,
-force_concentration,Force Concentration,590,5,4,2,When I provide victory at the time and place of my choosing history shall absolve me of the sacrifice of a planet or two.,"Fleet Admiral Andrada, address to the Hegemony executive council ",,TRUE,,"npc_only, deprecated",graphics/icons/skills/space_ops.png,
+force_concentration,Force Concentration,590,5,4,2,When I provide victory at the time and place of my choosing history shall absolve me of the sacrifice of a planet or two.,"Fleet Admiral Andrada, address to the Hegemony Strategic Assembly ",,TRUE,,"npc_only, deprecated",graphics/icons/skills/space_ops.png,
 ,,,,,,,,,,,,,
 # TECHNOLOGY,,,,,,,,,,,,,
 navigation,Navigation,1000,1,0,0,Spend enough time out here and it becomes second nature. It's how I move when I dream. Not all of us get that. Lots do.,"Nachiketa Portside Interview Project, Ep.2",,,,,graphics/icons/skills/navigation.png,
@@ -38,10 +38,10 @@ electronic_warfare,Electronic Warfare,1040,4,2,0,"err. 401 // connection refused
 err. 401 // connection refused [try again?]
 err. 401 // connection refused [try again?]","Celadon Immeasurable, alpha",,TRUE,,,graphics/icons/skills/EW.png,
 flux_regulation,Flux Regulation,1060,4,2,0,"WARNING: By changing these settings user waives responsibility of Tri-Tachyon Corporation for any resulting equipment damage, injury, death, or otherwise anomalous spacetime effect or effects. Do you wish to continue?","Tri-Tachyon Corporation, standard license",,TRUE,,,graphics/icons/skills/flux_dynamics.png,
-cybernetic_augmentation,Cybernetic Augmentation,1075,4,2,0,Don't listen to those weepy crypto-Luddics on the ethics board; the rejection rate is nowhere near what the rumors imply.,"""Doctor"" Wyatt Cydonia (alias), COMSEC intercept",,TRUE,,,graphics/icons/skills/cybernetic_augmentation.png,
+cybernetic_augmentation,Cybernetic Augmentation,1080,5,4,2,Don't listen to those weepy crypto-Luddics on the ethics board; the rejection rate is nowhere near what the rumors imply.,"""Doctor"" Wyatt Cydonia (alias), COMSEC intercept",,TRUE,,,graphics/icons/skills/cybernetic_augmentation.png,
 phase_corps,Phase Coil Tuning,1070,4,2,0,"Tri-Tachyon pries open holy creation daily, and at each desecration our wholesale damnation looms. Our path is burden; our path is suffering. We shall face them with faith that the only redemption is final judgment.","Livewell Cotton, Luddic Path terrorist, sermon of c205.2.12",,TRUE,,,graphics/icons/skills/phase_corps.png,
 special_modifications,Special Modifications,1080,5,,,"The Domainers, oh, they designed to last, it's true. But all that soft living, you can tell they were scared to really push these things to their limits.","Luna Hexagen, independent engineer, Agreus city",,,,"npc_only, deprecated",graphics/icons/skills/special_modifications.png,
-neural_link,Neural Link,1080,5,4,2,Why should a captain go down with their ship? The Tri-Tachyon corporation does not waste top talent.,"VP Operations Nereid De Jong at unveiling ceremony for ""Project Heket""",,,,,graphics/icons/skills/neural_link.png,
+neural_link,Neural Link,1075,4,2,0,Why should a captain go down with their ship? The Tri-Tachyon corporation does not waste top talent.,"VP Operations Nereid De Jong at unveiling ceremony for ""Project Heket""",,,,,graphics/icons/skills/neural_link.png,
 automated_ships,Automated Ships,1090,5,4,2,[REDACTED],Hegemony COMSEC,,,,,graphics/icons/skills/automated_ships.png,
 ,,,,,,,,,,,,,
 ,,,,,,,,,,,,,
@@ -54,7 +54,7 @@ ordnance_expert,Ordnance Expertise,1530,3,1,,The weak fear the spiritual potency
 polarized_armor,Polarized Armor,1540,3,1,,"The pre-Collapse manuals say never to do this. ... No, I don't know. Haven't had any problems so far.","engineering chief Kasi Thea-Radiative, hidden holocam interview",TRUE,,,,graphics/icons/skills/polarized_armor.png,
 containment_procedures,Containment Procedures,1550,4,2,,Check each seal three times true so that Death does not come for you.,Spacer tradition,,,,,graphics/icons/skills/containment_procedures.png,
 makeshift_equipment,Makeshift Equipment,1560,4,2,,I guess we left the spares in orbit. It'll be fine ... [static] ... just watch.,"audio backup transcription, Jericho Wheeler, leader of expedition ""H""-team",,,,,graphics/icons/skills/makeshift_equipment.png,
-industrial_planning,Industrial Planning,1570,4,2,,A barren but promising world well-situated to become the center of culture and industry of Magec. SIE models project vast investment in resource exploitation from Guayotaâ€™s Disk.,"Tri-Tachyon strategic development memo, pre-Collapse",,,TRUE,,graphics/icons/skills/industrial_planning.png,
+industrial_planning,Industrial Planning,1570,4,2,,A barren but promising world well-situated to become the center of culture and industry of Magec. SIE models project vast investment in resource exploitation from Guayota’s Disk.,"Tri-Tachyon strategic development memo, pre-Collapse",,,TRUE,,graphics/icons/skills/industrial_planning.png,
 derelict_contingent,Derelict Operations,1590,5,4,2,"They think we're trash, the execs and admirals in their shiny starships. They threw us away the second it went bad. But it's us the Sector got built on and it's us that'll cut 'em down.","anonymous pirate agitator, HEGINT surveillance feed ",,TRUE,,player_only,graphics/icons/skills/derelict_contingent.png,
 hull_restoration,Hull Restoration,1580,5,4,2,There's no hull a true spacer can't make home.,"Sol Secondshift, veteran salvor",,,,,graphics/icons/skills/recovery_ops.png,
 ,,,,,,,,,,,,,
@@ -83,7 +83,7 @@ phase_mastery,Phase Mastery,80,4,0,,"I'm not getting back on that ship, not neve
 reliability_engineering,Reliability Engineering,1530,2,0,,"In the end, by time and rads, my body will die. My comrades will return me to the stars that made me, and my ship will go on.",Spacer tradition,TRUE,,,"npc_only, deprecated",graphics/icons/skills/reliability_engineering.png,
 weapon_drills,Weapon Drills,500,1,0,,"What's it stopped the Tri-Tach plot? (Guns!)
 What was it ol' Ludd forgot? (Guns!)
-Whatâ€™ve we got that they have not? (Big, big, guns!)",drinking song of the Hegemony navy,,,,"npc_only, deprecated",graphics/icons/skills/weapon_drills.png,
+What’ve we got that they have not? (Big, big, guns!)",drinking song of the Hegemony navy,,,,"npc_only, deprecated",graphics/icons/skills/weapon_drills.png,
 auxiliary_support,Auxiliary Support,510,1,0,,No reserves? Look around you! There are a thousand space-capable ships in the civilian docks and a billion citizens in the arcologies. We need only open the stockpiles and give them weapons before the invasion arrives.,Baikal Daud at the Defense of Chicomoztoc,,,,"npc_only, deprecated",graphics/icons/skills/auxiliary_support.png,
 ,,,,,,,,,,,,,
 ,,,,,,,,,,,,,

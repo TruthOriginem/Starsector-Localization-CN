@@ -49,14 +49,14 @@ public class Valhalla {
 		system.addAsteroidBelt(star, 100, 3150, 256, 150, 250, Terrain.ASTEROID_BELT, "The Valkyries");
 		
 			// Valkyrie jump
-			JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("valkyrie_jump", "Valkyrie Jump-point");
+			JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("valkyrie_jump", "Valkyrie 跳跃点");
 			OrbitAPI orbit = Global.getFactory().createCircularOrbit(star, 180, 3325, 195);
 			jumpPoint.setOrbit(orbit);
 			jumpPoint.setStandardWormholeToHyperspaceVisual();
 			system.addEntity(jumpPoint);
 		
 		system.addRingBand(star, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 3450, 200f, null, null);
-		system.addAsteroidBelt(star, 100, 3350, 256, 150, 250, Terrain.ASTEROID_BELT, "The Valkyries");
+		system.addAsteroidBelt(star, 100, 3350, 256, 150, 250, Terrain.ASTEROID_BELT, "女武神陨石带");
 		
 	// Yggdrasil, largest gas giant in the system.
 		PlanetAPI val2 = system.addPlanet("yggdrasil", star, "Yggdrasil", "gas_giant", 230, 350, 6000, 250);
@@ -97,7 +97,7 @@ public class Valhalla {
 							30, // max asteroid count
 							4f, // min asteroid radius 
 							16f, // max asteroid radius
-							"Yggdrasil L4 Asteroids")); // null for default name
+							"Yggdrasil L4 小行星团")); // null for default name
 				
 				SectorEntityToken yggdrasilL5 = system.addTerrain(Terrain.ASTEROID_FIELD,
 						new AsteroidFieldParams(
@@ -107,7 +107,7 @@ public class Valhalla {
 							30, // max asteroid count
 							4f, // min asteroid radius 
 							16f, // max asteroid radius
-							"Yggdrasil L5 Asteroids")); // null for default name
+							"Yggdrasil L5 小行星团")); // null for default name
 				
 				yggdrasilL4.setCircularOrbit(star, 230 - 60, 6000, 250);
 				yggdrasilL5.setCircularOrbit(star, 230 + 60, 6000, 250);
@@ -125,7 +125,7 @@ public class Valhalla {
 //		SectorEntityToken mimir_station = system.addOrbitalStation("mimir_platform", val3, 45, 500, 50, "Mimir Siphon Platform", "tritachyon");
 //		mimir_station.setCustomDescriptionId("station_mimir");
 		
-		SectorEntityToken mimir_station = system.addCustomEntity("mimir_platform", "Mimir Siphon Platform", "station_side05", "tritachyon");
+		SectorEntityToken mimir_station = system.addCustomEntity("mimir_platform", "Mimir 虹吸平台", "station_side05", "tritachyon");
 		mimir_station.setCircularOrbitPointingDown(system.getEntityById("niflheim"), 45, 500, 50);		
 		mimir_station.setCustomDescriptionId("station_mimir");
 //		initStationCargo(mimir_station);
@@ -152,14 +152,14 @@ public class Valhalla {
 		system.addCorona(val4, 150, 2f, 0f, 1f);
 		
 		// Ragnar Complex
-			SectorEntityToken ragnar_station = system.addCustomEntity("ragnar_complex", "Ragnar Complex", "station_side02", "hegemony");
+			SectorEntityToken ragnar_station = system.addCustomEntity("ragnar_complex", "Ragnar 综合设施", "station_side02", "hegemony");
 			ragnar_station.setCircularOrbitPointingDown(system.getEntityById("ragnar"), 45, 1400, 50);		
 			ragnar_station.setCustomDescriptionId("station_ragnar");
 			ragnar_station.setInteractionImage("illustrations", "hound_hangar");
 			
 		// Ragnar Relay
 			SectorEntityToken relay = system.addCustomEntity("ragnar_relay", // unique id
-					 "Ragnar Relay", // name - if null, defaultName from custom_entities.json will be used
+					 "Ragnar 通讯中继站", // name - if null, defaultName from custom_entities.json will be used
 					 "comm_relay", // type of object, defined in custom_entities.json
 					 "hegemony"); // faction
 			relay.setCircularOrbitPointingDown(system.getEntityById("ragnar"), 45 + 120, 1400, 50);
@@ -174,14 +174,14 @@ public class Valhalla {
 				40, // max asteroid count
 				4f, // min asteroid radius 
 				16f, // max asteroid radius
-				"The Vipers")); // null for default name
+				"银环蛇 陨石带")); // null for default name
 			
 			ragnar_asteroid_field.setCircularOrbit(system.getEntityById("ragnar"), 45 + 240, 1400, 50);
 				
 		system.addRingBand(val4, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 2000, 250f, null, null);
 		system.addAsteroidBelt(val4, 50, 2000, 256, 200, 300, Terrain.ASTEROID_BELT, null);
 			
-		JumpPointAPI jumpPoint_ragnar = Global.getFactory().createJumpPoint("ragnar_jump", "Ragnar Jump-point");
+		JumpPointAPI jumpPoint_ragnar = Global.getFactory().createJumpPoint("ragnar_jump", "Ragnar 跳跃点");
 		OrbitAPI orbit2 = Global.getFactory().createCircularOrbit(val4, 180, 2400, 45);
 		jumpPoint_ragnar.setOrbit(orbit2);
 		jumpPoint_ragnar.setStandardWormholeToHyperspaceVisual();

@@ -32,7 +32,7 @@ public class Samarra {
 		system.setLightColor(new Color(255, 235, 205)); // light color in entire system, affects all entities
 	
 	// Tigra Ring
-		system.addAsteroidBelt(samarra_star, 100, 3000, 500, 100, 190, Terrain.ASTEROID_BELT, "Tigra Ring");
+		system.addAsteroidBelt(samarra_star, 100, 3000, 500, 100, 190, Terrain.ASTEROID_BELT, "Tigra 小行星带");
 		system.addRingBand(samarra_star, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 3000, 201f, null, null);
 		system.addRingBand(samarra_star, "misc", "rings_asteroids0", 256f, 1, Color.white, 256f, 3100, 225f, null, null);
 		
@@ -138,7 +138,7 @@ public class Samarra {
 						30, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Typhon L4 小行星带")); // null for default name
+						"Typhon L4 小行星团")); // null for default name
 			
 			SectorEntityToken typhonL5 = system.addTerrain(Terrain.ASTEROID_FIELD,
 					new AsteroidFieldParams(
@@ -148,7 +148,7 @@ public class Samarra {
 						30, // max asteroid count
 						4f, // min asteroid radius 
 						16f, // max asteroid radius
-						"Typhon L5 小行星带")); // null for default name
+						"Typhon L5 小行星团")); // null for default name
 			
 			typhonL4.setCircularOrbit(samarra_star, 60 + 60, 7000, 500);
 			typhonL5.setCircularOrbit(samarra_star, 60 - 60, 7000, 500);

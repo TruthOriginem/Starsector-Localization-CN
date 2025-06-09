@@ -14,7 +14,7 @@ Volturn 蓝龙虾养殖场,volturnian_lobster_pens,TRUE,,com.fs.starfarer.api.im
 废弃空间站,abandoned_station,,TRUE,com.fs.starfarer.api.impl.campaign.econ.AbandonedStation,这处空间站已经遭到废弃。,graphics/icons/markets/abandoned.png,130
 家庭手工业,cottage_industry,,TRUE,com.fs.starfarer.api.impl.campaign.econ.CottageIndustry,$market 拥有以低技术和密集型劳动力为基础的轻工业。有机燃料与材料需求提高，提供手工制造的日用品，虽然低效但十分令人着迷。,graphics/icons/markets/cottage_industry.png,230
 前哨站,outpost,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Outpost,具备一整套严苛指挥结构的 $market 更像是一处守备站或是一艘战舰。这样做尽管提高了稳定性，但需要一些人员来处理内部的安全事务。,graphics/icons/markets/outpost.png,130
-卢德教众,luddic_majority,,TRUE,com.fs.starfarer.api.impl.campaign.econ.LuddicMajority,如果 $market 由 卢德教会 掌控，其稳定性将大大提高，否则就会降低。且卢德教义里的禁欲主义会导致本地奢侈品的需求降低。,graphics/icons/markets/luddic_majority.png,142
+卢德教众,luddic_majority,,TRUE,com.fs.starfarer.api.impl.campaign.econ.LuddicMajority,,graphics/icons/markets/luddic_majority.png,142
 感应雷区,stealth_minefields,,TRUE,com.fs.starfarer.api.impl.campaign.econ.StealthMinefields,$market 的感应雷区不仅能抵御外敌入侵，也能为来访的外来商人提供了安全保障。稳定性提高。,graphics/icons/markets/stealth_mines.png,510
 地区首府,regional_capital,,TRUE,com.fs.starfarer.api.impl.campaign.econ.RegionalCapital,一处控制安全以及后勤的主要行政中心。稳定性提高。,graphics/icons/markets/capital.png,500
 自由港,free_market,,TRUE,com.fs.starfarer.api.impl.campaign.econ.FreeMarket,当地港务局不仅对所交易的商品不加任何管制，且同样宽松的移民管制，让大量外来人口纷纷涌入此地，其中不乏一些身份可疑的人士。而正因如此，其他势力将以不信任的态度看待着该殖民地。,graphics/icons/markets/free_port.png,141
@@ -74,6 +74,8 @@ AI 行政官 (隐藏),ai_core_admin,,TRUE,com.fs.starfarer.api.impl.campaign.eco
 
 海盗很可能在附近的星系设有基地。",graphics/icons/markets/pirate_activity.png,1300
 敌对活动,hostile_activity,,TRUE,com.fs.starfarer.api.impl.campaign.intel.events.HostileActivity,,graphics/icons/markets/pirate_activity.png,1350
+海盗活动减缓,piracy_respite,,TRUE,com.fs.starfarer.api.impl.campaign.econ.PiracyRespite,这个殖民地正经历着一段海盗掠夺活动较星域常规水平有所减缓的时期。,graphics/icons/markets/respite40.png,1375
+遭到封锁,blockaded,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Blockaded,该殖民地所在的星系目前正遭到封锁，常规的贸易货运面临着骚扰或其他更糟糕的影响。该效果将一直持续，直到封锁部队主动撤离或彻底被击败。,graphics/icons/markets/blockade.png,1385
 左径狂信徒,pather_cells,,TRUE,com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCells,,graphics/icons/markets/pather_cells.png,1400
 ,,,,,,,
 # stand-alone conditions,,,,,,,
@@ -139,11 +141,11 @@ AI 行政官 (隐藏),ai_core_admin,,TRUE,com.fs.starfarer.api.impl.campaign.eco
 富饶的矿床,ore_ultrarich,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,$market 的矿产资源存在于此地寸土寸金的地表之下，其富饶程度甚至超过 人之领 的矿业巨头的疯狂幻想。,graphics/icons/markets/ore_ultrarich.png,50
 ,,,,,,,
 ,,,,,,,
-零星的稀土矿床,rare_ore_sparse,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,此地存在着分布稀疏的稀土矿床，但因开发难度大，且不太可能产生效益，所以只可以进行科研探查而无工业利益。,graphics/icons/markets/rareore_sparse.png,60
-少量的稀土矿床,rare_ore_moderate,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,$market 含有适度的稀土矿床，只需适当的经济投资，就能获取不错的回报。,graphics/icons/markets/rareore_moderate.png,60
-大量的稀有矿床,rare_ore_abundant,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,丰富的稀土矿床存在于 $market 的地壳内，其潜在的经济价值足以刺激到一些军阀或巨头的野心。,graphics/icons/markets/rareore_abundant.png,60
-丰富的稀土矿床,rare_ore_rich,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,富饶的稀土矿床在 $market 的地壳内四处蔓延，其蕴含的强大力量足以促使拥有足够资格的人们将手伸向这里。,graphics/icons/markets/rareore_rich.png,60
-富饶的稀土矿床,rare_ore_ultrarich,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,标志着稀有矿物矿床的光点以令人难以置信的密度闪耀在传感器网格上，预示着一份伟力：它能铸造燃尽诸多星球的强大舰队，它能创造堪比大崩塌前人之领的伟大时代与无穷财富。,graphics/icons/markets/rareore_ultrarich.png,60
+零星的稀有元素,rare_ore_sparse,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,此地存在着分布稀疏的稀有元素，但因开发难度大，且不太可能产生效益，所以只可以进行科研探查而无工业利益。,graphics/icons/markets/rareore_sparse.png,60
+少量的稀有元素,rare_ore_moderate,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,$market 含有适度的稀有元素，只需适当的经济投资，就能获取不错的回报。,graphics/icons/markets/rareore_moderate.png,60
+大量的稀有元素,rare_ore_abundant,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,丰富的稀有元素存在于 $market 的地壳内，其潜在的经济价值足以刺激到一些军阀或巨头的野心。,graphics/icons/markets/rareore_abundant.png,60
+丰富的稀有元素,rare_ore_rich,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,富饶的稀有元素在 $market 的地壳内四处蔓延，其蕴含的强大力量足以促使拥有足够资格的人们将手伸向这里。,graphics/icons/markets/rareore_rich.png,60
+富饶的稀有元素,rare_ore_ultrarich,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,标志着稀有元素的光点以令人难以置信的密度闪耀在传感器网格上，预示着一份伟力：它能铸造燃尽诸多星球的强大舰队，它能创造堪比大崩塌前人之领的伟大时代与无穷财富。,graphics/icons/markets/rareore_ultrarich.png,60
 ,,,,,,,
 ,,,,,,,
 微量的挥发物,volatiles_trace,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,此地发现了一些几乎不值得提取的微量挥发物。,graphics/icons/markets/volatiles_trace.png,40

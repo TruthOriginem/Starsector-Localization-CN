@@ -1,10 +1,13 @@
 {
     "displayName": "Strike",
-    "fluxCapacitors": 20,
-    "fluxVents": 19,
+    "fluxCapacitors": 11,
+    "fluxVents": 11,
     "goalVariant": true,
     "hullId": "manticore_luddic_path",
-    "hullMods": [],
+    "hullMods": [
+        "armoredweapons",
+        "heavyarmor"
+    ],
     "permaMods": [],
     "sMods": [],
     "variantId": "manticore_luddic_path_Strike",

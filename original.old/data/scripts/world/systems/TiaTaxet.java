@@ -9,6 +9,8 @@ import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
+import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.StarTypes;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
@@ -17,7 +19,6 @@ import com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner;
 import com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin.AsteroidFieldParams;
 import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldParams;
 import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldSource;
-import com.fs.starfarer.api.impl.campaign.terrain.MagneticFieldTerrainPlugin.MagneticFieldParams;
 import com.fs.starfarer.api.util.Misc;
 
 public class TiaTaxet {
@@ -26,6 +27,10 @@ public class TiaTaxet {
 		
 		StarSystemAPI system = sector.createStarSystem("Tia");
 		LocationAPI hyper = Global.getSector().getHyperspace();
+		
+		if (Global.getSettings().getBoolean("factionsClaimUnpopulatedCoreSystems")) {
+			system.getMemoryWithoutUpdate().set(MemFlags.CLAIMING_FACTION, Factions.HEGEMONY);
+		}
 		
 		system.setBackgroundTextureFilename("graphics/backgrounds/background2.jpg");
 		
