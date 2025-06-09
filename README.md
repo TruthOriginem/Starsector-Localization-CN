@@ -93,13 +93,15 @@
     - 运行 `_updateOriginal.py` 脚本，将 `original` 文件夹更新为最新版本的对应文件
     - 运行 `_copyOldLocalization.py` 脚本，将 `localization.old` 文件夹中对应原文件未变更的文件复制到 `localization` 文件夹中
     - 运行 `_overwriteLocalizationByOriginal.py` 脚本，将 `original` 中出现变化的文件覆盖到 `localization` 文件夹中
-7. **参照[Paratran版本管理指南](docs/paratranz/tut_admin.md)步骤，从 git 导入新的原文到 ParaTranz**
+7. 将 `localization.old/graphics` 文件夹下的可以复用的图像和字体资源复制到 `localization/graphics` 文件夹中
+8. 手动添加游戏新增加的，需要翻译的文件到 `original` 和 `localization` 文件夹中
+9. **参照[Paratran版本管理指南](docs/paratranz/tut_admin.md)步骤，从 git 导入新的原文到 ParaTranz**
     - 只导入原文！**不要导入译文！**
     - 必须在导入时选择**安全模式（不删除词条）**！
-8. **参照[Paratran版本管理指南](docs/paratranz/tut_admin.md)中的步骤，将翻译完成的译文导入 git**
-9. 提交commit并push
-    - 在提交前，请将汉化文件复制入游戏，尝试能否正常启动游戏
-10. 待测试通过后，可以考虑将更改合并到`master`分支
+10. **参照[Paratran版本管理指南](docs/paratranz/tut_admin.md)中的步骤，将翻译完成的译文导入 git**
+11. 提交commit并push
+     - 在提交前，请将汉化文件复制入游戏，尝试能否正常启动游戏
+12. 待测试通过后，可以考虑将更改合并到`master`分支
      - 在合并前，请在`master`分支上创建以上一个版本号命名的tag，例如`0.97`
 
 [flow-chart]:docs/paratranz/flow_chart.png
