@@ -1,0 +1,121 @@
+{
+    "bounds": [
+        34,
+        2,
+        37,
+        -33,
+        9,
+        -31,
+        -4,
+        -37,
+        -39,
+        -32,
+        -35,
+        30,
+        -12,
+        34,
+        0,
+        43,
+        9,
+        31,
+        37,
+        24
+    ],
+    "builtInMods": [
+        "automated",
+        "threat_hullmod"
+    ],
+    "center": [
+        43,
+        43
+    ],
+    "collisionRadius": 64,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 92,
+            "location": [
+                -42,
+                -19
+            ],
+            "style": "THREAT",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 72,
+            "location": [
+                -39,
+                18
+            ],
+            "style": "THREAT",
+            "width": 12
+        }
+    ],
+    "height": 86,
+    "hullId": "skirmish_unit",
+    "hullName": "Skirmish Unit",
+    "hullSize": "FRIGATE",
+    "shieldCenter": [
+        0,
+        1
+    ],
+    "shieldRadius": 60,
+    "spriteName": "graphics/ships/threat/threat_skirmish.png",
+    "style": "THREAT",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 000",
+            "locations": [
+                32,
+                -24
+            ],
+            "mount": "HARDPOINT",
+            "size": "SMALL",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": -30,
+            "arc": 150,
+            "id": "WS 001",
+            "locations": [
+                0,
+                -22
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 40,
+            "arc": 120,
+            "id": "WS 002",
+            "locations": [
+                -1,
+                17
+            ],
+            "mount": "TURRET",
+            "size": "SMALL",
+            "type": "HYBRID"
+        },
+        {
+            "angle": 0,
+            "arc": 90,
+            "id": "WS 003",
+            "locations": [
+                22,
+                2
+            ],
+            "mount": "TURRET",
+            "size": "MEDIUM",
+            "type": "HYBRID"
+        }
+    ],
+    "width": 84
+}

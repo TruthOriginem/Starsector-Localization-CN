@@ -1,0 +1,29 @@
+{
+	"id":"devouring_swarm",
+	"specClass":"projectile",
+	"type":"MISSILE",
+	"size":"SMALL",
+	"everyFrameEffect":"com.fs.starfarer.api.impl.combat.threat.DevouringSwarmMissileEffect",
+	"turretSprite":"graphics/weapons/devouring_swarm_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/devouring_swarm_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/devouring_swarm_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/devouring_swarm_hardpoint_glow.png",
+	"glowColor":[130,165,50,255],
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	#"hardpointOffsets":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	#"turretOffsets":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	#"hardpointAngleOffsets":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	#"turretAngleOffsets":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	"hardpointOffsets":[0, 0, 0, 0, 0, 0],
+	"turretOffsets":[0, 0, 0, 0, 0, 0],
+	"hardpointAngleOffsets":[0, 0, 0],
+	"turretAngleOffsets":[0, 0, 0],
+	#"renderHints":[RENDER_LOADED_MISSILES],
+	
+	"barrelMode":"LINKED",
+	"animationType":"GLOW",
+	"interruptibleBurst":false,
+	"projectileSpecId":"devouring_swarm_missile",
+	
+	"fireSoundTwo":"devouring_swarm_fire",
+}

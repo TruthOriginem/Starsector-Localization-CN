@@ -1,0 +1,22 @@
+{
+	"id":"rift_lightning",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"everyFrameEffect":"com.fs.starfarer.api.impl.combat.dweller.RiftLightningEffect",
+	"type":"ENERGY",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/weapons/rift_lightning_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/rift_lightning_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/rift_lightning_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/rift_lightning_hardpoint_glow.png",
+	"glowColor":[255,50,70,255],
+	"turretOffsets":[8, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[8, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	#"animationType":"GLOW",
+	"animationType":"GLOW_AND_FLASH",
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"rift_lightning_shot",  # projectile that will be fired
+	"fireSoundTwo":"rift_lightning_fire",
+}

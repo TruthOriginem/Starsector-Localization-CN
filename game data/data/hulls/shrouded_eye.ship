@@ -1,0 +1,180 @@
+{
+    "bounds": [
+        57,
+        -27,
+        66,
+        -108,
+        10,
+        -63,
+        -45,
+        -109,
+        -34,
+        -23,
+        -123,
+        1,
+        -35,
+        28,
+        -46,
+        108,
+        16,
+        51,
+        76,
+        116,
+        58,
+        27,
+        130,
+        -4
+    ],
+    "builtInMods": ["dweller_hullmod"],
+    "builtInWeapons": {
+        "WS 001": "abyssal_glare",
+        "WS 002": "abyssal_glare",
+        "WS 003": "abyssal_glare",
+        "WS 004": "abyssal_glare",
+        "WS 005": "abyssal_glare",
+        "WS 006": "abyssal_glare",
+        "WS 007": "abyssal_glare",
+        "WS 008": "abyssal_glare",
+        "WS 009": "abyssal_glare"
+    },
+    "center": [
+        154,
+        172
+    ],
+    "collisionRadius": 165,
+    "coversColor": "",
+    "engineSlots": [{
+        "angle": 180,
+        "contrailSize": 80,
+        "length": 75,
+        "location": [
+            -115,
+            0
+        ],
+        "style": "DWELLER",
+        "width": 32
+    }],
+    "height": 344,
+    "hullId": "shrouded_eye",
+    "hullName": "Shrouded Eye",
+    "hullSize": "CRUISER",
+    "shieldCenter": [
+        1,
+        0
+    ],
+    "shieldRadius": 165,
+    "spriteName": "graphics/ships/shroud/eye_flat.png",
+    "style": "DWELLER",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 0,
+            "id": "WS 001",
+            "locations": [
+                1,
+                0
+            ],
+            "mount": "HARDPOINT",
+            "size": "LARGE",
+            "type": "DECORATIVE"
+        },
+        {
+            "angle": 0,
+            "arc": 0,
+            "id": "WS 002",
+            "locations": [
+                1,
+                -4
+            ],
+            "mount": "HARDPOINT",
+            "size": "LARGE",
+            "type": "DECORATIVE"
+        },
+        {
+            "angle": 0,
+            "arc": 0,
+            "id": "WS 003",
+            "locations": [
+                1,
+                4
+            ],
+            "mount": "HARDPOINT",
+            "size": "LARGE",
+            "type": "DECORATIVE"
+        },
+        {
+            "angle": 0,
+            "arc": 0,
+            "id": "WS 004",
+            "locations": [
+                1,
+                -8
+            ],
+            "mount": "HARDPOINT",
+            "size": "LARGE",
+            "type": "DECORATIVE"
+        },
+        {
+            "angle": 0,
+            "arc": 0,
+            "id": "WS 005",
+            "locations": [
+                1,
+                8
+            ],
+            "mount": "HARDPOINT",
+            "size": "LARGE",
+            "type": "DECORATIVE"
+        },
+        {
+            "angle": 0,
+            "arc": 0,
+            "id": "WS 006",
+            "locations": [
+                1,
+                -12
+            ],
+            "mount": "HARDPOINT",
+            "size": "LARGE",
+            "type": "DECORATIVE"
+        },
+        {
+            "angle": 0,
+            "arc": 0,
+            "id": "WS 007",
+            "locations": [
+                1,
+                12
+            ],
+            "mount": "HARDPOINT",
+            "size": "LARGE",
+            "type": "DECORATIVE"
+        },
+        {
+            "angle": 0,
+            "arc": 0,
+            "id": "WS 008",
+            "locations": [
+                1,
+                -16
+            ],
+            "mount": "HARDPOINT",
+            "size": "LARGE",
+            "type": "DECORATIVE"
+        },
+        {
+            "angle": 0,
+            "arc": 0,
+            "id": "WS 009",
+            "locations": [
+                1,
+                16
+            ],
+            "mount": "HARDPOINT",
+            "size": "LARGE",
+            "type": "DECORATIVE"
+        }
+    ],
+    "width": 308
+}

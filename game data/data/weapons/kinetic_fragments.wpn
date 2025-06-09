@@ -1,0 +1,25 @@
+{
+	"id":"kinetic_fragments",
+	"specClass":"projectile",
+	"type":"MISSILE",
+	"size":"SMALL",
+	"everyFrameEffect":"com.fs.starfarer.api.impl.combat.threat.KineticFragmentMissileEffect",
+	"turretSprite":"graphics/weapons/kinetic_frag_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/kinetic_frag_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/kinetic_frag_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/kinetic_frag_hardpoint_glow.png",
+	"glowColor":[235,255,215,255],
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"hardpointOffsets":[0, 0],
+	"turretOffsets":[0, 0],
+	"hardpointAngleOffsets":[0],
+	"turretAngleOffsets":[0],
+	#"renderHints":[RENDER_LOADED_MISSILES],
+	
+	"barrelMode":"ALTERNATING",
+	"animationType":"GLOW",
+	"interruptibleBurst":false,
+	"projectileSpecId":"kinetic_fragments_missile",
+	
+	"fireSoundTwo":"kinetic_fragments_fire",
+}

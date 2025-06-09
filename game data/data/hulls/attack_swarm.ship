@@ -1,0 +1,122 @@
+{
+    "bounds": [
+        16,
+        1,
+        5,
+        -2,
+        6,
+        -2,
+        9,
+        -14,
+        2,
+        -4,
+        -12,
+        -8,
+        0,
+        1,
+        -12,
+        9,
+        2,
+        5,
+        8,
+        15,
+        6,
+        3
+    ],
+    "builtInMods": [
+        "threat_hullmod",
+        "fragment_swarm"
+    ],
+    "center": [
+        65,
+        62
+    ],
+    "collisionRadius": 24,
+    "coversColor": "",
+    "engineSlots": [{
+        "angle": 180,
+        "contrailSize": 64,
+        "length": 24,
+        "location": [
+            -9,
+            1
+        ],
+        "style": "ATTACK_SWARM",
+        "width": 8
+    }],
+    "height": 128,
+    "hullId": "attack_swarm",
+    "hullName": "Swarm",
+    "hullSize": "FIGHTER",
+    "shieldCenter": [
+        1,
+        1
+    ],
+    "shieldRadius": 24,
+    "spriteName": "graphics/ships/threat/fragment_swarm.png",
+    "style": "THREAT",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 0,
+            "arc": 360,
+            "id": "WS 003",
+            "locations": [
+                1,
+                1
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 0,
+            "arc": 360,
+            "id": "WS 004",
+            "locations": [
+                1,
+                1
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 360,
+            "id": "WS 005",
+            "locations": [
+                1,
+                1
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 0,
+            "arc": 360,
+            "id": "WS 006",
+            "locations": [
+                1,
+                1
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "MISSILE"
+        },
+        {
+            "angle": 0,
+            "arc": 360,
+            "id": "WS 007",
+            "locations": [
+                1,
+                1
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "MISSILE"
+        }
+    ],
+    "width": 128
+}

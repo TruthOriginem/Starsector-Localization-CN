@@ -1,0 +1,11 @@
+{
+	"id":"extraction_protocol",
+	"type":"STAT_MOD",
+	"aiType":"NONE",
+	
+	"runScriptWhileIdle":true,
+	"statsScript":"com.fs.starfarer.api.impl.combat.threat.ExtractionProtocolSystemScript",
+	
+	"useSound":"system_extraction_protocol",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

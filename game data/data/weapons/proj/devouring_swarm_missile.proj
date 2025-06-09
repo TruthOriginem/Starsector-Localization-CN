@@ -1,0 +1,50 @@
+{
+	"id":"devouring_swarm_missile",
+	"specClass":"missile",
+	#"onFireEffect":"com.fs.starfarer.api.impl.combat.threat.DevouringSwarmMissileEffect",
+	"onHitEffect":"com.fs.starfarer.api.impl.combat.threat.DevouringSwarmMissileEffect",
+	"missileType":"MISSILE",
+	"sprite":"graphics/fx/empty.png",
+	"size":[13,17],	
+	"center":[7,9],
+	"collisionRadius":8,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[130,165,50,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":50, # purely visual
+	#"alwaysAccelerate":true,
+	"reduceDamageWhileFading":true,
+	#"noCollisionWhileFading":true,
+	"useHitGlowWhenDestroyed":true,
+	"fizzleOnReachingWeaponRange":true,
+	"dudProbabilityOnFlameout":0,
+	"armingTime":0,
+	"flameoutTime":0.5,
+	"noEngineGlowTime":0.5,
+	"fadeTime":0.5,
+	"engineSpec":{"turnAcc":1000,
+				  "turnRate":250,
+				  "acc":200,
+				  "dec":200},
+	#"engineSlots":[{"id":"ES1",
+	#				#"loc":[-7, 0],
+	#				"loc":[0, 0],
+	#			    "style":"CUSTOM",
+	#				"styleSpec":{
+	#					"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+	#					"engineColor":[150,100,255,0],
+	#					"contrailDuration":2,
+	#					"contrailWidthMult":1,
+	#					"contrailWidthAddedFractionAtEnd":2,  # can be negative. makes trail spread out/narrow at the end
+	#					"contrailMinSeg":5, # min segment length, in pixels
+	#					"contrailMaxSpeedMult":.0f,
+	#					"contrailAngularVelocityMult":0.5f,
+	#					"contrailSpawnDistMult":.5, # how far away from engine it starts
+	#					"contrailColor":[155,100,70,75],
+	#					"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
+	#				},
+	#			    "width":10.0,
+	#			    "length":50.0,
+	#			    "angle":180.0}]
+}
+
+

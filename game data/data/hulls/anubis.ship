@@ -1,0 +1,170 @@
+{
+    "bounds": [
+        -71,
+        69,
+        -3,
+        89,
+        118,
+        39,
+        94,
+        35,
+        97,
+        -4,
+        75,
+        -15,
+        84,
+        -58,
+        -4,
+        -89,
+        -70,
+        -69,
+        -65,
+        0
+    ],
+    "builtInMods": ["design_compromises"],
+    "center": [
+        92,
+        89
+    ],
+    "collisionRadius": 180,
+    "coversColor": "",
+    "engineSlots": [
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -78,
+                45
+            ],
+            "style": "HIGH_TECH",
+            "width": 16
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 74,
+            "location": [
+                -75,
+                7
+            ],
+            "style": "HIGH_TECH",
+            "width": 20
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 74,
+            "location": [
+                -75,
+                -7
+            ],
+            "style": "HIGH_TECH",
+            "width": 20
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
+                -78,
+                -44
+            ],
+            "style": "HIGH_TECH",
+            "width": 16
+        }
+    ],
+    "height": 216,
+    "hullId": "anubis",
+    "hullName": "Anubis",
+    "hullSize": "CRUISER",
+    "shieldCenter": [
+        17,
+        0
+    ],
+    "shieldRadius": 155,
+    "spriteName": "graphics/ships/anubis/anubis_base.png",
+    "style": "HIGH_TECH",
+    "viewOffset": 0,
+    "weaponSlots": [
+        {
+            "angle": 90,
+            "arc": 210,
+            "id": "WS 000",
+            "locations": [
+                0,
+                65
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 210,
+            "id": "WS 001",
+            "locations": [
+                38,
+                11
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "ENERGY"
+        },
+        {
+            "angle": -90,
+            "arc": 210,
+            "id": "WS 002",
+            "locations": [
+                0,
+                -65
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "ENERGY"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 003",
+            "locations": [
+                88,
+                27
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 0,
+            "arc": 5,
+            "id": "WS 004",
+            "locations": [
+                92,
+                3
+            ],
+            "mount": "HARDPOINT",
+            "size": "MEDIUM",
+            "type": "UNIVERSAL"
+        },
+        {
+            "angle": 0,
+            "arc": 90,
+            "id": "WS 005",
+            "locations": [
+                45,
+                -51,
+                69,
+                -37,
+                60,
+                -50,
+                -78,
+                45
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "LAUNCH_BAY"
+        }
+    ],
+    "width": 184
+}

@@ -1,0 +1,28 @@
+{
+	"id":"combat_burn",
+	"type":"ENGINE_MOD",
+	"aiType":"BURN_DRIVE_TOGGLE",
+	
+	"statsScript":"data.shipsystems.scripts.CombatBurnStats",
+	
+	"engineGlowLengthMult":1.5,
+	"engineGlowWidthMult":2,
+	"engineGlowGlowMult":2,
+	
+	"flameoutOnImpactChance":0,
+
+	"clampTurnRateAfter":true,
+	"clampMaxSpeedAfter":true,
+	"alwaysAccelerate":true,
+
+	"useSound":"system_combat_burn_activate",
+	"loopSound":"system_combat_burn_loop",
+	"deactivateSound":"system_combat_burn_deactivate",
+	"outOfUsesSound":"engine_disabled",
+	
+	"aiHints":{
+		"activeSpeedIncrease":100,
+		"burstMovementPotential":0,
+		"averageSpeedIncrease":100,
+	}
+}

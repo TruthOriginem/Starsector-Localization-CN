@@ -1,0 +1,31 @@
+{
+	"id":"pseudoparticle_jet",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"mountTypeOverride":"HYBRID",
+	"size":"MEDIUM",
+	"everyFrameEffect":"com.fs.starfarer.api.impl.combat.dweller.PseudoparticleJetEffect",
+	"turretSprite":"graphics/weapons/pseudoparticle_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/pseudoparticle_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/pseudoparticle_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/pseudoparticle_hardpoint_glow.png",
+	"glowColor":[255,10,50,255],
+	"turretOffsets":[6, 0], #15
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[8, 0],#15
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"unaffectedByProjectileSpeedBonuses":true,
+	#"animationType":"GLOW",
+	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{"length":12.0,   # only used if animationType = MUZZLE_FLASH or GLOW_AND_FLASH
+					   "spread":4.0,
+					   "particleSizeMin":8.0,
+					   "particleSizeRange":5.0,
+					   "particleDuration":0.3,
+					   "particleCount":8,
+					   "particleColor":[250,10,45,255]},
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"pseudoparticle_jet_shot",  # projectile that will be fired
+	"noImpactSounds":true,
+}

@@ -1,0 +1,21 @@
+{
+	"id":"voidblaster_shot",
+	"specClass":"projectile",
+	"onHitEffect":"com.fs.starfarer.api.impl.combat.threat.VoidblasterEffect",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":90.0,
+	"width":15.0,
+	#"fadeTime":0.25,
+	"fadeTime":0,
+	"hitGlowRadius":50,
+	"glowColor":[0,0,0,0],
+	#"fringeColor":[120,110,185,255],
+	#"coreColor":[255,255,255,200],
+	"fringeColor":[120,110,185,0],
+	"coreColor":[255,255,255,0],
+	"textureType":"SMOOTH",  # only needed for BEAM spawnType
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":1.0	
+}

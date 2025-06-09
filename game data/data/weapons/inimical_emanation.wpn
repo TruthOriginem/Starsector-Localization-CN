@@ -1,0 +1,22 @@
+{
+	"id":"inimical_emanation",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"everyFrameEffect":"com.fs.starfarer.api.impl.combat.dweller.InimicalEmanationOnFireEffect",
+	"type":"ENERGY",
+	"size":"SMALL",
+	"turretSprite":"graphics/weapons/inimical_emanation_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/inimical_emanation_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/inimical_emanation_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/inimical_emanation_hardpoint_glow.png",
+	"glowColor":[255,20,60,255], # 255,0,80
+	#"glowColor":[120,110,185,255],
+	"turretOffsets":[8, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[8, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH", #GLOW
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"inimical_emanation_shot",  # projectile that will be fired
+	"fireSoundTwo":"inimical_emanation_fire",
+}

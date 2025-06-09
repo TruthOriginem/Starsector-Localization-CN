@@ -1,0 +1,140 @@
+{
+	id:"dweller",
+	"displayName":"Shrouded Dweller",
+	"displayNameWithArticle":"the Shrouded Dweller",
+	"displayNameLong":"Shrouded Dweller",
+	"displayNameLongWithArticle":"the Shrouded Dweller",
+	"entityNamePrefix":"",
+	"personNamePrefix":"",
+	"personNamePrefixAOrAn":"is",
+	"displayNameIsOrAre":"is",
+	
+	"logo":"graphics/factions/dweller.png",
+	"crest":"graphics/factions/crest_dweller.png",
+	"shipNamePrefix":"",
+	
+	"color":[150,10,30,255],
+	"baseUIColor":[150,10,30,255],
+	
+	"showInIntelTab":false,
+	
+	"shipNameSources":{
+		"DWELLER":1,
+	},
+	"names":{
+		"ai":1,
+	},
+	"variantOverrides":{
+	},
+	# multiplier for how often hulls show up in the faction's fleets
+	"hullFrequency":{
+		"tags":{
+		},
+		"hulls":{
+		},
+	},
+	# ships the faction gets access to when importing S&W out-of-faction
+	"shipsWhenImporting":{
+		"tags":["dweller"],
+		"hulls":[
+		],
+	},
+	"knownShips":{
+		"tags":["dweller"],
+		"hulls":[
+		],
+	},
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	"priorityShips":{
+		"tags":[],
+		"hulls":[
+		],
+	},
+	"knownFighters":{
+		"tags":["dweller"],
+		"fighters":[
+		],
+	},
+	"priorityFighters":{
+		"tags":[],
+		"fighters":[
+		],
+	},
+	"knownWeapons":{
+		"tags":["dweller"],
+		"weapons":[
+		],
+	},
+	"priorityWeapons":{
+		"tags":[],
+		"weapons":[
+		],
+	},
+	"knownHullMods":{
+		"tags":["dweller"],
+		"hullMods":[
+		],
+	},
+	"factionDoctrine":{
+		"warships":5,
+		"carriers":0,
+		"phaseShips":0,
+		
+		"officerQuality":5,
+		"shipQuality":5,
+		"numShips":1,
+		
+		"shipSize":5,
+		
+		"aggression":2, # gets overridden by AI picker anyway
+		
+		"combatFreighterProbability":0,     				# instead of some portion of the freighters in a fleet
+		"combatFreighterCombatUseFraction":1,				# as part of the normal combat lineup
+		"combatFreighterCombatUseFractionWhenPriority":1,   # as part of normal combat lineup, when marked as priority ship
+		"autofitRandomizeProbability":0.25,
+
+		"commanderSkillsShuffleProbability":1,
+		"commanderSkills":[
+		],
+	},
+	#"shipRoles":{
+	#},
+	"illegalCommodities":[
+	],
+	"music":{
+		#"music_combat_set":"music_tritach_encounter_hostile",
+		"encounter_hostile":"music_dweller_encounter_hostile",
+	},	
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/characters/dwelller.png",
+		],
+		"standard_female":[
+			"graphics/portraits/characters/dwelller.png",
+		],
+	},
+	"ranks":{
+		"ranks":{
+		},
+		"posts":{
+		},
+	},
+	"custom":{
+		"engageWhenEvenStrength":true,
+		"allowsTransponderOffTrade":true, # to prevent cargoscan dialog from "patrols"
+		"postsNoBounties":true,
+		"fightToTheLast":true, # order a full assault instead of retreating, in most cases
+		#"noAICoresFromAutomatedDefenses":true,
+		#"officersOnAutomatedDefenses":true,
+		"simulatorData":{
+			"showInSimulatorDevModeOnly":true,
+			"includeCivShipsWithFaction":true,
+			"noOfficers":true,
+		},
+	},	
+	"fleetTypeNames":{
+		"patrolSmall":"Lesser Manifestation", 
+		"patrolMedium":"Greater Manifestation", 
+		"patrolLarge":"Transcendent Manifestation", 
+	},
+},

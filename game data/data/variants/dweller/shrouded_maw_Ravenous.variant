@@ -1,0 +1,59 @@
+{
+    "displayName": "",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "shrouded_maw",
+    "hullMods": [],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "shrouded_maw_Ravenous",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "pseudoparticle_jet",
+                "WS 002": "pseudoparticle_jet"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 019": "assaying_rift",
+                "WS 020": "assaying_rift",
+                "WS 021": "assaying_rift",
+                "WS 022": "assaying_rift",
+                "WS 023": "assaying_rift",
+                "WS 024": "assaying_rift"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "inimical_emanation",
+                "WS 006": "inimical_emanation",
+                "WS 007": "inimical_emanation",
+                "WS 008": "inimical_emanation",
+                "WS 009": "inimical_emanation",
+                "WS 010": "inimical_emanation",
+                "WS 011": "inimical_emanation",
+                "WS 012": "inimical_emanation",
+                "WS 013": "inimical_emanation",
+                "WS 014": "inimical_emanation"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 015": "vortex_launcher",
+                "WS 016": "vortex_launcher",
+                "WS 017": "vortex_launcher",
+                "WS 018": "vortex_launcher"
+            }
+        }
+    ]
+}

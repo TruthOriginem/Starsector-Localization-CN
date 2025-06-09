@@ -1,0 +1,17 @@
+{
+	"id":"tenebrous_expulsion",
+	"type":"STAT_MOD",
+	"aiType":"CUSTOM",
+	"aiScript":"com.fs.starfarer.api.impl.combat.dweller.TenebrousExpulsionSystemAI",	
+	
+	"runScriptWhileIdle":true,
+	
+	"statsScript":"com.fs.starfarer.api.impl.combat.dweller.TenebrousExpulsionSystemScript",
+	
+	"useSound":"system_tenebrous_expulsion_activate",
+	"outOfUsesSound":"gun_out_of_ammo",
+}
+
+
+
+

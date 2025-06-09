@@ -1,0 +1,35 @@
+{
+	"id":"light_mass_driver",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"BALLISTIC",
+	"size":"SMALL",
+	"displayArcRadius":600,
+	"turretSprite":"graphics/weapons/mass_driver_turret_base.png",
+	"turretGunSprite":"graphics/weapons/mass_driver_turret_recoil.png",
+	"hardpointSprite":"graphics/weapons/mass_driver_hardpoint_base.png",
+	"hardpointGunSprite":"graphics/weapons/mass_driver_hardpoint_recoil.png",
+	"turretGlowSprite":"graphics/weapons/mass_driver_turret_glow.png",
+	"hardpointGlowSprite":"graphics/weapons/mass_driver_hardpoint_glow.png",
+	"glowColor":[235,255,215,255],	
+	"visualRecoil":-8.0,  # the gun sprites are only used if this is non-0
+	"renderHints":["RENDER_BARREL_BELOW"],
+	"turretOffsets":[15, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[20, 0],
+	"hardpointAngleOffsets":[0],
+	"specialWeaponGlowWidth":12,
+	"specialWeaponGlowHeight":30,
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	#"animationType":"MUZZLE_FLASH",
+	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{	"length":50.0,   # only used if animationType = MUZZLE_FLASH
+				"spread":2.0,
+				"particleSizeMin":10.0,
+				"particleSizeRange":14.0,
+				"particleDuration":0.15,
+				"particleCount":16,
+				"particleColor":[245,215,170,255]},
+				#"particleColor":[235,255,215,175]},	
+	"projectileSpecId":"light_mass_driver_shot",  # projectile that will be fired
+	"fireSoundTwo":"light_mass_driver_fire",
+}

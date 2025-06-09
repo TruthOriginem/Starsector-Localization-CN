@@ -1,0 +1,82 @@
+{
+    "displayName": "Ancient",
+    "fluxCapacitors": 3,
+    "fluxVents": 50,
+    "hullId": "onslaught_mk1",
+    "hullMods": [
+        "armoredweapons",
+        "dedicated_targeting_core",
+        "fluxbreakers",
+        "insulatedengine",
+        "fluxdistributor",
+        "autorepair",
+        "magazines"
+    ],
+    "modules": [
+        {"WS 026": "module_onslaught_armor_left_Standard"},
+        {"WS 027": "module_onslaught_armor_right_Standard"}
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "onslaught_mk1_Ancient",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 016": "heavy_adjudicator",
+                "WS 017": "heavy_adjudicator"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 021": "pilum",
+                "WS 024": "pilum"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "arbalest",
+                "WS 003": "arbalest",
+                "WS 007": "arbalest",
+                "WS 012": "arbalest",
+                "WS 013": "arbalest"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 019": "devastator"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 018": "devastator",
+                "WS 020": "devastator"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 010": "flak",
+                "WS 011": "flak"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 014": "arbalest",
+                "WS 015": "arbalest",
+                "WS 028": "arbalest",
+                "WS 029": "arbalest"
+            }
+        }
+    ]
+}

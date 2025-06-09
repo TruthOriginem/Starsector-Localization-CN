@@ -1,0 +1,24 @@
+{
+	"id":"seeker_fragment",
+	"specClass":"projectile",
+	"everyFrameEffect":"com.fs.starfarer.api.impl.combat.threat.SeekerFragmentMissileEffect",
+	"type":"MISSILE",
+	"size":"SMALL",
+	"turretSprite":"graphics/weapons/seeker_fragment_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/seeker_fragment_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/seeker_fragment_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/seeker_fragment_hardpoint_glow.png",
+	"glowColor":[255,255,50,255],
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"hardpointOffsets":[0, 0],
+	"turretOffsets":[0, 0],
+	"hardpointAngleOffsets":[0],
+	"turretAngleOffsets":[0],
+	#"renderHints":[RENDER_LOADED_MISSILES],
+	
+	"barrelMode":"ALTERNATING",
+	"animationType":"GLOW",
+	"interruptibleBurst":false,
+	"projectileSpecId":"seeker_fragment_missile",
+	"fireSoundTwo":"seeker_fragment_fire",
+}
