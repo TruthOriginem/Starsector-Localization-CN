@@ -3,7 +3,7 @@
 import os
 import shutil
 
-source_folder = '097 data'
+source_folder = 'game data'
 target_folder = 'original'
 
 for root, sub_folders, filenames in os.walk(target_folder):

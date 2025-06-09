@@ -52,30 +52,31 @@
 
 ### 文件夹结构
 
-* "版本号 + data"是游戏各个版本原始的 data 文件夹
-* "original" 内存放当前版本的英文原文，不要改动
-* "original.old" 内存放上个版本(0.95.1a-RC6)的英文原文，不要改动
-* "localization" 内存放当前版本的译文
-* "localization.old" 内存放上个版本(0.95.1a-RC6)的译文
+* "game data"存档的是游戏的原始文件，包括 `starsector-core/data` 文件夹下的所有文件和 `starfarer.api.jar`、`starfarer_obf.jar` 文件。
+* "original" 内存放当前版本所有需要翻译的文件，不要直接编辑其内容
+* "original.old" 内存放上个版本所有需要翻译的文件，不要直接编辑其内容
+* "localization" 内存放当前版本翻译后的文件
+* "localization.old" 内存放上个版本的译文，不要直接编辑其内容
 * "para_tranz" 内存放Paratranz平台相关脚本
 * "docs" 内存放项目文档内容
 * "packaging" 内存放安装包及汉化包打包相关脚本和素材
+* "json.translation.map" 内存放游戏 JSON 翻译映射和相关自动化脚本
 
 ### 自动化脚本
 
 * **Python环境: 3.10 或更高**
 
-| 文件                                  | 用途及文档                                                 |
-|-------------------------------------|-------------------------------------------------------|
-| _cleanLocalization.py               | 根据original文件夹清理localization文件夹。                       |
-| _copyOldLocalization.py             | 通过比对original文件夹，更新汉化包中的未变更文件。                         |
-| _handleVariantNames.py              | 处理指定文件夹中所有装配名，并更新/使用映射 json 用于翻译。                     |
-| _overwriteLocalizationByOriginal.py | TODO                                                  |
-| _swapLangFile.py                    | 用来更替汉化文件和英文文件的脚本。                                     |
-| _updateOriginal.py                  | TODO                                                  |
-| _variant_name_map.json              | 装配名映射文件，英文名对应汉化名，可后继继续更新。                             |
-| para_tranz.py                       | 用于ParaTranz平台的数据导入导出工具，使用方法参见[本指南](docs/paratranz/tut_admin.md) |
-| _jsonMapHandler.py                 | TODO                                                  |
+| 文件                                      | 用途及文档                                                           |
+|-----------------------------------------|-----------------------------------------------------------------|
+| _cleanLocalization.py                   | 根据original文件夹清理localization文件夹。                                 |
+| _copyOldLocalization.py                 | 通过比对original文件夹，更新汉化包中的未变更文件。                                   |
+| _handleVariantNames.py                  | 处理指定文件夹中所有装配名，并更新/使用映射 json 用于翻译。                               |
+| _overwriteLocalizationByOriginal.py     | TODO                                                            |
+| _swapLangFile.py                        | 用来更替汉化文件和英文文件的脚本。                                               |
+| _updateOriginal.py                      | TODO                                                            |
+| _variant_name_map.json                  | 装配名映射文件，英文名对应汉化名，可后继继续更新。                                       |
+| para_tranz/para_tranz.py                | 用于ParaTranz平台的数据导入导出工具，使用方法参见[本指南](docs/paratranz/tut_admin.md) |
+| json.translation.map/_jsonMapHandler.py | TODO                                                            |
 
 ### 版本汉化流程
 
@@ -84,25 +85,21 @@
 > 其中内核文件在开始翻译前可能需要手动预处理，具体请参见[Jar文件手动处理记录](docs/jar_manual_processing/jar_manual_processing.md)
 
 1. 创建以新版本号命名的分支，例如`0.97`，并切换到该分支
-2. 重命名`original`文件夹为`original.old`，`localization`文件夹为`localization.old`
-3. 将新版本游戏目录下`starsector-core`文件夹中的`data`文件夹和`starfarer.api.jar`，`starfarer_obf.jar`复制到repo下`<版本号> data`文件夹中
-   > 应当使用文件更新脚本，而不是直接复制，文档待更新
-4. 将`localization.old/graphics`文件夹下的可以复用的图像和字体资源复制到`localization/graphics`文件夹中
-5. **将`original/data`文件夹和`starfarer.api.jar`，`starfarer_obf.jar`复制到`localization`**
-   > 应当使用文件更新脚本?
-6. **参照[Paratran版本管理指南](docs/paratranz/tut_admin.md)步骤，从 git 导入新的原文到 ParaTranz**
+2. 删除 `original.old` 和 `localization.old` 文件夹，清空 `game data`文件夹
+3. 将新版本游戏目录下 `starsector-core` 文件夹中的`data`文件夹和 `starfarer.api.jar`，`starfarer_obf.jar` 复制到`game data`文件夹中
+4. 复制 `original`文件夹为 `original.old`
+5. 重命名 `localization` 文件夹为 `localization.old`，并新建一个空的 `localization` 文件夹
+6. 使用脚本复制相关文件到 `original` 和 `localization` 文件夹中
+    - 运行 `_updateOriginal.py` 脚本，将 `original` 文件夹更新为最新版本的对应文件
+    - 运行 `_copyOldLocalization.py` 脚本，将 `localization.old` 文件夹中对应原文件未变更的文件复制到 `localization` 文件夹中
+    - 运行 `_overwriteLocalizationByOriginal.py` 脚本，将 `original` 中出现变化的文件覆盖到 `localization` 文件夹中
+7. **参照[Paratran版本管理指南](docs/paratranz/tut_admin.md)步骤，从 git 导入新的原文到 ParaTranz**
     - 只导入原文！**不要导入译文！**
     - 必须在导入时选择**安全模式（不删除词条）**！
-7. **参照[Paratran版本管理指南](docs/paratranz/tut_admin.md)中的步骤，将翻译完成的译文导入 git**
-8. 提交commit并push
+8. **参照[Paratran版本管理指南](docs/paratranz/tut_admin.md)中的步骤，将翻译完成的译文导入 git**
+9. 提交commit并push
     - 在提交前，请将汉化文件复制入游戏，尝试能否正常启动游戏
-9. 待测试通过后，可以考虑将更改合并到`master`分支
-    - 在合并前，请在`master`分支上创建以上一个版本号命名的tag，例如`0.97`
-
-[update_files]:update_files.png
-[upload_folder]:upload_folder.png
-[unzip]:unzip.png
-[advance_filter]:advance_filter.png
-[filter_options]:filter_options.png
+10. 待测试通过后，可以考虑将更改合并到`master`分支
+     - 在合并前，请在`master`分支上创建以上一个版本号命名的tag，例如`0.97`
 
 [flow-chart]:docs/paratranz/flow_chart.png
