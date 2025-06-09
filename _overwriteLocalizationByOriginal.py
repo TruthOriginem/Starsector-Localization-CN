@@ -18,6 +18,8 @@ def compare_and_copy_dirs(dir1, dir2, old_loc_dir, new_loc_dir):
                 if not filecmp.cmp(original_old_file,
                                    original_new_file):  # 判断文件内容是否一致
                     print(f"{original_new_file} | to | {new_loc_file}")
+
+                    os.makedirs(os.path.dirname(new_loc_file), exist_ok=True) # 确保目标目录存在
                     shutil.copy2(original_new_file, new_loc_file)  # 复制文件到目标路径
 
 
