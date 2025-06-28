@@ -272,6 +272,7 @@ public class SectorGen implements SectorGeneratorPlugin {
 		persean.setRelationship(threat.getId(), RepLevel.HOSTILE);
 		remnant.setRelationship(threat.getId(), RepLevel.HOSTILE);
 		derelict.setRelationship(threat.getId(), RepLevel.HOSTILE);
+		tritachyon.setRelationship(threat.getId(), RepLevel.HOSTILE);
 		
 		player.setRelationship(dweller.getId(), RepLevel.HOSTILE);
 		independent.setRelationship(dweller.getId(), RepLevel.HOSTILE);
@@ -285,6 +286,7 @@ public class SectorGen implements SectorGeneratorPlugin {
 		remnant.setRelationship(dweller.getId(), RepLevel.HOSTILE);
 		derelict.setRelationship(dweller.getId(), RepLevel.HOSTILE);
 		threat.setRelationship(dweller.getId(), RepLevel.HOSTILE);
+		tritachyon.setRelationship(dweller.getId(), RepLevel.HOSTILE);
 		
 //		independent.setRelationship(hegemony.getId(), 0);
 //		independent.setRelationship(tritachyon.getId(), 0);

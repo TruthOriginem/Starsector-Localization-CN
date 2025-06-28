@@ -8,13 +8,25 @@
     "permaMods": [],
     "sMods": [],
     "variantId": "shrouded_maelstrom_Menacing",
-    "weaponGroups": [{
-        "autofire": true,
-        "mode": "LINKED",
-        "weapons": {
-            "WS 010": "rift_lightning",
-            "WS 011": "rift_lightning",
-            "WS 012": "rift_lightning"
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 010": "rift_lightning",
+                "WS 011": "rift_lightning",
+                "WS 012": "rift_lightning"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "inimical_emanation",
+                "WS 006": "inimical_emanation",
+                "WS 007": "inimical_emanation",
+                "WS 008": "inimical_emanation"
+            }
         }
-    }]
+    ]
 }
