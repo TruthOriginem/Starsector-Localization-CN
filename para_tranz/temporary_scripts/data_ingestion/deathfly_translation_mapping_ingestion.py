@@ -1,15 +1,18 @@
 import csv
 import json
 import re
+from collections import defaultdict
 
 from para_tranz.utils.config import PROJECT_DIRECTORY, PARA_TRANZ_PATH
 from para_tranz.utils.util import make_logger, contains_english, contains_chinese
 
-CSV_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'temporary_scripts' / 'deathfly_097_api_mapping.csv'
+SCRIPT_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'temporary_scripts' / 'data_ingestion'
 
-MAPPING_OUTPUT_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'temporary_scripts' / 'deathfly_097_api_mapping.json'
+CSV_PATH = SCRIPT_PATH  / 'deathfly_098_obf_mapping.csv'
 
-PARATRANZ_STRINGS_PATH = PARA_TRANZ_PATH / 'starfarer.api.json'
+MAPPING_OUTPUT_PATH = SCRIPT_PATH / 'deathfly_098_obf_mapping.json'
+
+PARATRANZ_STRINGS_PATH = PARA_TRANZ_PATH / 'starfarer_obf.json'
 
 logger = make_logger(f'deathfly_translation_mapping_ingestion.py')
 
@@ -27,23 +30,22 @@ def load_deathfly_data():
     return valid_data
 
 def convert_deathfly_csv_to_paratranz_mapping():
-    data = []
-
     valid_data = load_deathfly_data()
 
-    class_to_data = {}
+    class_to_data = defaultdict(set)
 
     for row in valid_data:
-        class_name = row[1]
-        if class_name not in class_to_data:
-            class_to_data[class_name] = set()
-        original_text = row[0][1:-1]
-        if original_text.strip(' '):
-            class_to_data[class_name].add(original_text)
+        raw_labels = row[0].split(' - ')
+        if len(raw_labels) == 3:
+            original_text = row[2]
+            class_name = raw_labels[0].split('.')[0].strip()
+
+            if original_text.strip():
+                class_to_data[class_name].add(original_text)
 
     paratranz_mapping = {
         "type": "jar",
-        "path": "starfarer.api.jar",
+        "path": "starfarer_obf.jar",
         "class_files": []
     }
 
@@ -120,13 +122,13 @@ def add_translation_to_exported_strings():
 
 if __name__ == '__main__':
     # 先运行下面这个函数，生成mapping文件
-    # convert_deathfly_csv_to_paratranz_mapping()
+    convert_deathfly_csv_to_paratranz_mapping()
 
     # 然后把生成的mapping文件加到para_tranz_map.json里面
     # 然后运行脚本，选1导出string文件
 
     # 然后运行下面这个函数，把渡鸦提取的旧版本翻译加到para_tranz_map.json里面
-    add_translation_to_exported_strings()
+    # add_translation_to_exported_strings()
 
     # 然后运行脚本，选2导入string文件
     pass
