@@ -51,6 +51,7 @@ public class Samarra {
 		samarra1.getSpec().setRotation(0f);
 		samarra1.applySpecChanges();
 		samarra1.setCustomDescriptionId("planet_eventide");
+		samarra1.setInteractionImage("illustrations", "eventide");
 		
 			// Eventide mirror system 
 			SectorEntityToken eventide_mirror1 = system.addCustomEntity("eventide_mirror1", "Eventide Stellar Mirror Alpha", "stellar_mirror", "hegemony");
