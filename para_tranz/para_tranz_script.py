@@ -100,8 +100,8 @@ def mian():
         #     paratranz_to_game_new_version()
         #     break
         elif option == '4':
-            gen_mapping_by_class_path()
-            break
+            while True:
+                gen_mapping_by_class_path()
         elif option == '5':
             search_string_in_jar_files()
             break

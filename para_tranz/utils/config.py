@@ -27,7 +27,7 @@ MAX_STRING_KEY_LENGTH = 256
 # [jar_loader 配置]
 MAGIC = b'\xca\xfe\xba\xbe'
 MIN_CLASS_VER: int = 0x31  # 1.5
-MAX_CLASS_VER = 0x33  # 1.7
+MAX_CLASS_VER = 0x3D  # 17
 
 # 原文匹配时是否忽略首尾空白字符
 ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS = True
