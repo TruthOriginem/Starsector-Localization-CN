@@ -1135,7 +1135,7 @@
     {
       "path": "com/fs/starfarer/campaign/econ/CommodityOnMarket.class",
       "include_strings": [
-        " credits per unit\n\n",
+        " credits per unit\n",
         "Recent trade/events",
         "\tBuying at: ",
         "\tSelling for: ",
@@ -1146,7 +1146,7 @@
       "path": "com/fs/starfarer/campaign/econ/Market.class",
       "include_strings": [
         "Base value",
-        "Market: <\nb>\n",
+        "Market: <b>",
         "at",
         "on"
       ]
@@ -1373,12 +1373,12 @@
     {
       "path": "com/fs/starfarer/campaign/save/LoadGameDialog$o.class",
       "include_strings": [
-        "   <\n<\n<\n CURRENT SLOT",
+        "   <<< CURRENT SLOT",
         " ago",
         ", ",
         ", c.",
         ", easy",
-        "<\n<\n<\n CURRENT SLOT",
+        "<<< CURRENT SLOT",
         "AUTO",
         "Cycle ",
         "Day ",
@@ -1595,7 +1595,7 @@
     {
       "path": "com/fs/starfarer/campaign/ui/OooOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO.class",
       "include_strings": [
-        ">\n"
+        ">"
       ]
     },
     {
@@ -5238,7 +5238,7 @@
     {
       "path": "com/fs/starfarer/loading/ShipHullSpecLoader.class",
       "include_strings": [
-        "<\nmissing hull name>\n",
+        "<missing hull name>",
         "Custom",
         "Standard",
         "This ship has suffered extensive damage which can not be repaired without a costly restoration at a dockyard. However, with so much broken beyond repair, deployment recovery costs are substantially lower."
@@ -5247,8 +5247,8 @@
     {
       "path": "com/fs/starfarer/loading/ShipHullSpreadsheetLoader.class",
       "include_strings": [
-        "<\nmissing name>\n",
-        "<\nno designation>\n",
+        "<missing name>",
+        "<no designation>",
         "Common",
         "Custom",
         "Standard"
@@ -5540,8 +5540,8 @@
     {
       "path": "com/fs/starfarer/title/OoOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO/C.class",
       "include_strings": [
-        "<\nnone>\n",
-        "<\npress a key>\n",
+        "<none>",
+        "<press a key>",
         "Alt-",
         "Ctrl-",
         "Shift-"
@@ -5877,39 +5877,39 @@
     {
       "path": "com/fs/starfarer/tutorial/oOOO/B.class",
       "include_strings": [
-        "Excellent, your forces are in position! Now, let's order a strike on the unsuspecting enemy cruiser. <\nhighlight>\nClick on it and select \"Strike\" from the context menu.<\n/highlight>\n\n\nAfter that's done, you can either watch the bombers carry out their strike (\"Show Video Feed\" from their context menu) or get into the battle yourself.\n\nEither way, make sure the enemy cruiser is destroyed."
+        "Excellent, your forces are in position! Now, let's order a strike on the unsuspecting enemy cruiser. <highlight>Click on it and select \"Strike\" from the context menu.</highlight>\n\nAfter that's done, you can either watch the bombers carry out their strike (\"Show Video Feed\" from their context menu) or get into the battle yourself.\n\nEither way, make sure the enemy cruiser is destroyed."
       ]
     },
     {
       "path": "com/fs/starfarer/tutorial/oOOO/C.class",
       "include_strings": [
-        "But what about the interceptors? They're not much use against a cruiser, so let's just get them off the battlefield.\n\n<\nhighlight>\nClick on the interceptors and select \"Retreat\", under \"Direct Orders\".<\n/highlight>\n\n\nThis costs a command point, and the order can be rescinded (\"Rescind Orders\" in the context menu)."
+        "But what about the interceptors? They're not much use against a cruiser, so let's just get them off the battlefield.\n\n<highlight>Click on the interceptors and select \"Retreat\", under \"Direct Orders\".</highlight>\n\nThis costs a command point, and the order can be rescinded (\"Rescind Orders\" in the context menu)."
       ]
     },
     {
       "path": "com/fs/starfarer/tutorial/oOOO/F.class",
       "include_strings": [
-        "You can press %s to open and close the map, and %s to pause and unpause. To pan your view, right-click on an empty spot on the map and drag.\n\nYou can also see what your ships are doing by clicking on them and then selecting \"Show Video Feed\" from the context menu.\n\n<\nhighlight>\nWith the map open, select your interceptor wing and click \"Show Video Feed\" to follow along as it captures the Comm Relay.<\n/highlight>\n"
+        "You can press %s to open and close the map, and %s to pause and unpause. To pan your view, right-click on an empty spot on the map and drag.\n\nYou can also see what your ships are doing by clicking on them and then selecting \"Show Video Feed\" from the context menu.\n\n<highlight>With the map open, select your interceptor wing and click \"Show Video Feed\" to follow along as it captures the Comm Relay.</highlight>"
       ]
     },
     {
       "path": "com/fs/starfarer/tutorial/oOOO/G.class",
       "include_strings": [
-        "Welcome to the fleet command tutorial.\n\nAt the start of a battle, you will want to deploy some of your ships. To do so, click on ship icons to mark them for deployment and then press the \"Deploy\" button.\n\nDeploying ships requires fleet points. Right now, you only have a few points, so go ahead and <\nhighlight>\ndeploy just the Wasp interceptor wing after dismissing this dialog.<\n/highlight>\n"
+        "Welcome to the fleet command tutorial.\n\nAt the start of a battle, you will want to deploy some of your ships. To do so, click on ship icons to mark them for deployment and then press the \"Deploy\" button.\n\nDeploying ships requires fleet points. Right now, you only have a few points, so go ahead and <highlight>deploy just the Wasp interceptor wing after dismissing this dialog.</highlight>"
       ]
     },
     {
       "path": "com/fs/starfarer/tutorial/oOOO/o0OO.class",
       "include_strings": [
-        "Well done! Now you've got more fleet points to play with (and an extra couple of command points from that Comm Relay, too), and it's time to deploy the rest of your fleet.\n\n<\nhighlight>\nGo back to the map by pressing %s and click the \"Reinforcements\" button in the upper right corner of the screen, then deploy all of the remaining ships.<\n/highlight>\n",
-        "Your flagship will enter the battlefield shortly. You can pilot it directly when the map is closed and give orders to other ships in your fleet when the map is open (remember, press %s to toggle the map).\n\nYou can also toggle the autopilot by pressing %s. It's useful when you want your flagship to fight while you're looking at the map, but do not want to pause the game.\n\n<\nhighlight>\nNow, turn off the map and fly around for a bit. Remember to press %s to unpause, if needed.<\n/highlight>\n"
+        "Well done! Now you've got more fleet points to play with (and an extra couple of command points from that Comm Relay, too), and it's time to deploy the rest of your fleet.\n\n<highlight>Go back to the map by pressing %s and click the \"Reinforcements\" button in the upper right corner of the screen, then deploy all of the remaining ships.</highlight>",
+        "Your flagship will enter the battlefield shortly. You can pilot it directly when the map is closed and give orders to other ships in your fleet when the map is open (remember, press %s to toggle the map).\n\nYou can also toggle the autopilot by pressing %s. It's useful when you want your flagship to fight while you're looking at the map, but do not want to pause the game.\n\n<highlight>Now, turn off the map and fly around for a bit. Remember to press %s to unpause, if needed.</highlight>"
       ]
     },
     {
       "path": "com/fs/starfarer/tutorial/oOOO/oOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO.class",
       "include_strings": [
-        "Congratulations, you've completed the Starfarer fleet command tutorial!\n\n<\nhighlight>\nPress Escape to go back to the main menu<\n/highlight>\n, and use your newfound skills in some missions.",
-        "We're almost done.\n\nYou can transfer your command to another ship during the battle. This is particularly useful if your flagship is disabled, or if you just want to start the battle in a faster ship, but then switch over to a heavier one in the later stages.\n\nTo try it, let's transfer command to the Gemini. <\nhighlight>\nClick on the Gemini and select \"Transfer Command\" from the context menu.<\n/highlight>\n"
+        "Congratulations, you've completed the Starfarer fleet command tutorial!\n\n<highlight>Press Escape to go back to the main menu</highlight>, and use your newfound skills in some missions.",
+        "We're almost done.\n\nYou can transfer your command to another ship during the battle. This is particularly useful if your flagship is disabled, or if you just want to start the battle in a faster ship, but then switch over to a heavier one in the later stages.\n\nTo try it, let's transfer command to the Gemini. <highlight>Click on the Gemini and select \"Transfer Command\" from the context menu.</highlight>"
       ]
     },
     {
@@ -6080,7 +6080,7 @@
         " for stat modifiers",
         "*Per unit prices assume buying or selling a batch of %s units. Each unit bought costs more as the market's supply is reduced, and each unit sold brings in less as demand is fulfilled.",
         ", ",
-        "<\n",
+        "<",
         "Accuracy",
         "All values approximate. Prices do not include tariffs, which can be avoided through black market trade.",
         "Ammo",
@@ -6592,7 +6592,7 @@
         "2 weeks ago",
         "3 months ago",
         "3 weeks ago",
-        ">\n3 months ago",
+        ">3 months ago",
         "Today"
       ]
     },
@@ -6922,7 +6922,7 @@
         "      Destroy ships in battle\nto unlock them for simulation",
         " seconds",
         " supplies",
-        "<\n<\n<\n Hide advanced options",
+        "<<< Hide advanced options",
         "All",
         "Allies",
         "Cancel",
@@ -6935,7 +6935,7 @@
         "Opponents",
         "Projected deployment recovery cost: ",
         "Select ships from other categories\n                  to add them here",
-        "Show advanced options >\n>\n>\n"
+        "Show advanced options >>>"
       ]
     },
     {
