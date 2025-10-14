@@ -87,7 +87,7 @@
         "key": "special_items.csv#coronal_portal$desc",
         "original": "A miniaturized wormhole interface which can be activated to tap into a nearby coronal hypershunt, providing a colony with virtually unlimited power.\n\nOperation requires industrial quantities of transplutonics, which are at first used to open the wormhole, and then - once the power drawn becomes self-sustaining - is consumed in a complicated ablative process which maintains wormhole stability. Any interruption in supply requires a full shutdown of the tap.",
         "translation": "能与附近星冕分流器相连的微型虫洞连接器，为殖民地提供近乎无限的能源。\n\n装置的运作需要工业规模的稀有元素供应来维持。这些稀有元素首先被用来打开虫洞，并在虫洞的产能可以自维持后继续用于稳定虫洞。稀有元素在这期间会经历极其复杂的烧蚀过程最终被损耗掉。如果稀有元素供应不足，分流器就必须完全关闭。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nspecial_items.csv第0008行"
     },
     {
@@ -108,7 +108,7 @@
         "key": "special_items.csv#corrupted_nanoforge$desc",
         "original": "A powerful and versatile manufacturing \"black box\", capable of building itself out to an industrial scale, given the necessary raw materials and human assistance.\n\nThis one has seen better days, and is incapable of reliably producing defect-free components. Nonetheless, having access to a nanoforge at all is a step up as far as starship construction goes.",
         "translation": "全能而高效的制造设施，同时也是一个内部原理不明的 \"黑箱\" 装置。只需在足够的原材料与人力的帮助下，它就足以成为无可匹敌的工业巨兽。\n\n这台纳米锻炉当前状态不佳，无法可靠地生产无缺陷的零部件。但对于制造星际飞船来说，能够使用纳米锻炉就是一个巨大的进步。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nspecial_items.csv第0004行"
     },
     {
@@ -129,7 +129,7 @@
         "key": "special_items.csv#cryoarithmetic_engine$desc",
         "original": "A quantum computer that violates the second law of thermodynamics by getting colder instead of hotter while performing computations.\n\nA massive, planet-wide network of tendrils - ending in heatsinks - extrudes itself, using heat to fuel growth and continued computation. The hotter the planet surface, the more effective the computation engine. The unrivaled processing capacity is a boon to logistical and strategic planning.",
         "translation": "一台违背热力学第二定律的量子计算机。该计算机进行运算时非但不产生热量，反而还吸收热量。\n\n需由热管和散热片组成的行星规模级吸热网络，来源源不断地向它供应热量，才能满足它进行巨量计算时所需的能源。行星表面越热，该运算引擎的效率也就越高。这种无与伦比的算力能够极大提高后勤与战略方面的规划能力。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nspecial_items.csv第0015行"
     },
     {
@@ -150,7 +150,7 @@
         "key": "special_items.csv#dealmaker_holosuite$desc",
         "original": "Generates an interactive environment designed to stimulate negotiations with prospective business partners. Additionally, the self-adapting microemotion smart sensor systems built into such high-end VR suites  allow real-time tracking of the veracity of expression, providing a technically ethical advantage in business dealings to the facility operator.  \n\nThe built-in marketing materials are keen to emphasize that this is not an AI, but merely a sophisticated weighted network in full compliance with the relevant Domain regulations.",
         "translation": "这款全息套组能生成一个交互式环境，用来模拟和潜在商业伙伴进行谈判时的场景。此外，这款高端 VR 设备内置了自适应型智能微感情传感器，可提供实时的表情分析数据，从而用一种从技术层面来讲还算道德的行为，为设施运营者带来商业方面的优势。\n\n该套件内置的广告经常强调本设备并不是 AI，只是一种极其复杂的加权网络，绝对没有违反任何 人之领 的相关规定。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nspecial_items.csv第0017行"
     },
     {
@@ -255,7 +255,7 @@
         "key": "special_items.csv#heg_aux_package$name",
         "original": "Hegemony Auxiliary Blueprints",
         "translation": "霸主军事配件蓝图包",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nspecial_items.csv第0029行"
     },
     {
@@ -290,7 +290,7 @@
         "key": "special_items.csv#janus$desc",
         "original": "This is the first generation Janus Device created by Elissa Zal based on the theories developed by Scylla Coureuse, among others.\n\nWhile integrated with a hyperdrive this device allows a hyperwave pulse tuned to the unique resonant signatures of two Gates to be transmitted into a Gate aperture. After a tremendous energy input which requires a great quantity of fuel to generate, a temporary link between those Gates is created. One ship or fleet may then transit the Gate network.",
         "translation": "这是 Elissa Zal 基于 Scylla Coureuse 等人发展的理论而创建的第一代 \"双面神\" 装置。\n\n与超空间驱动器整合之后，这个装置能根据出发星门和目标星门独特的共振信号特征，向星门环传输调制过的超波脉冲。随后消耗大量燃料产生巨大的能量，在两个星门之间建立一条临时连接，使整个舰队能运用星门网络进行移动。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nspecial_items.csv第0040行"
     },
     {
@@ -381,7 +381,7 @@
         "key": "special_items.csv#orbital_fusion_lamp$desc",
         "original": "A miniaturized, variable-output fusion reactor capable of providing ample light and heat to a planet.\n\nSafe operation requires prodigious quantities of volatiles. If the demand is not met, the reactor suffers from potentially hazardous instability, which may lead to an uncontrolled surge in output. Litigation over whether this device is of inherently unsafe design or simply used unsafely were ongoing in Domain courts at the time of the Collapse.",
         "translation": "一座输出可控的微型化聚变反应堆，能够为一整颗星球带来光和热。\n\n因该射灯需消耗大量的挥发物来确保其能安全运转，一旦供给不足，则可能使该设备失稳，进而让失控的能量输出激增。直到 大崩塌 发生时，人之领 的法庭里，关于该设备到底是存在设计缺陷还是使用不当的诉讼仍未终止。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nspecial_items.csv第0007行"
     },
     {
@@ -416,7 +416,7 @@
         "key": "special_items.csv#planetkiller$desc",
         "original": "A specialized warhead capable of sundering a world. Operating principles are only dimly understood and are thought to involve utilizing the world's spin and some form of resonance.\n\nThis one is safed and requires authorization codes, possibly long-lost, to become anything more than a complicated, but completely inert piece of machinery.",
         "translation": "一颗足以使星球分崩离析的专用弹头。人们关于其运作原理知之甚少，只知道其通过将某种形式的共振和星球本身的自转共同产生作用。\n\n这颗弹头被上了保险，需要某些大概失传已久的授权代码才能解锁。目前它就只是一台死气沉沉的复杂机械而已。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nspecial_items.csv第0041行"
     },
     {
@@ -458,7 +458,7 @@
         "key": "special_items.csv#pristine_nanoforge$desc",
         "original": "A powerful and versatile manufacturing \"black box\", capable of building itself out to an industrial scale, given the necessary raw materials and human assistance.\n\nThis one is good as new, at least according to its on-board diagnostics. In practice, getting defect-free starship components is still a challenge given the overall state of manufacturing in the Sector, but this nanoforge is as good as it gets.",
         "translation": "全能而高效的制造设施，同时也是一个内部原理不明的 \"黑箱\" 装置。只需在足够的原材料与人力的帮助下，它就足以成为无可匹敌的工业巨兽。\n\n从主控板提供的诊断结果来看，这台锻炉几乎完好如初。鉴于当前星域的整体制造水平，在实际生产中获得毫无缺陷的星舰组件仍是一种挑战。但没有什么能比获得这样的一台纳米锻炉更能提高生产质量了。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nspecial_items.csv第0005行"
     },
     {

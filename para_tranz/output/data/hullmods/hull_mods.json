@@ -143,7 +143,7 @@
         "key": "hull_mods.csv#advancedcore$desc",
         "original": "Extends the range of ballistic and energy weapons by %s. The range of point-defense weapons is only extended by %s.\n\nPrecludes the installation of a Dedicated Targeting Core or an Integrated Targeting Unit.",
         "translation": "提高 %s 实弹与能量武器射程，但点防类武器仅提高 %s}。\n\n与 目标定位系统 和 专注性目标锁定核心 冲突。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0094行"
     },
     {
@@ -255,7 +255,7 @@
         "key": "hull_mods.csv#andrada_mods$desc",
         "original": "During an inspection of an early prototype, the Supreme Executor was heard to comment unfavorably on exposed conduits running along the passageways, and the danger these must pose to the brave and loyal crew under combat conditions. \n\nThe new chief designer, a loyal officer appointed by the Supreme Executor himself, instructed the forge-programmers to make accommodations for the installation of special blast-proof insulated paneling produced by Sindria itself.\n\nIf the passages are a bit narrower, conduits prone to overheating, and flush-set panels somewhat unwieldy to access, the official readiness reports include no criticism of the changes. Everyone agrees in both public and - as the Internal Security Ministry can attest - in private, that the stark grandeur of the Lion's Guard fleet is breathtaking.\n\nCrew casualties in combat are increased by %s. The base flux dissipation rate is reduced by %s, and the repair rate for disabled weapons and engines is reduced by %s.",
         "translation": "在检查早期原型船体时，最高元首批评了人员过道中裸露的管线，指出它们必然会在战斗中对英勇而忠诚的船员们构成危险。\n\n为此，由最高元首钦点上任的新任首席设计师下令让锻炉工程师修改了蓝图，为船体添加了 Sindria 出产的特制防爆绝缘镶板。\n\n虽然这一改动令通道更难通行，又令导管更易过热，还让检修面板更难以触及，不过官方报道对此毫无意见。辛达强权内安部也可以证明，无论是公开还是私下，所有人都认为它让狮心舰队更加伟大。\n\n提高 %s 战斗中因船体结构受损而造成的船员伤亡。降低 %s 舰船基础幅能耗散，降低 %s 在战斗中修复受损武器及引擎的速率。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0101行"
     },
     {
@@ -374,7 +374,7 @@
         "key": "hull_mods.csv#automated$desc",
         "original": "This ship is fully automated, and does not require - and can not take on - any human crew.",
         "translation": "能全自动化运作，无需人类船员操作，亦无法搭载任何人类。\n\n自动化舰船通常需要专门的设备与专业知识才能进行日常维护，从而导致 %s 的战备值 (CR) 上限惩罚。这个惩罚可被一名熟练操控自动化舰船的舰队指挥官所抵消。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0093行"
     },
     {
@@ -514,7 +514,7 @@
         "key": "hull_mods.csv#ballistic_rangefinder$desc",
         "original": "<tooltip created in the script due to lots of highlighting>",
         "translation": "提高实弹槽位上中小型武器的射程。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0009行"
     },
     {
@@ -640,7 +640,7 @@
         "key": "hull_mods.csv#coherer$desc",
         "original": "<tooltip created in the script>",
         "translation": "",
-        "stage": 5,
+        "stage": -1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0080行"
     },
     {
@@ -661,7 +661,7 @@
         "key": "hull_mods.csv#comp_armor$desc",
         "original": "This ship's armor has taken major and irreparable damage at some point in the past, or suffered from major errors in the manufacturing process. Armor rating reduced by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "在过去某刻该舰曾遭受了无法修复的巨大损伤，或是在生产组装过程中发生了极其严重的失误。装甲值降低 %s}。\n\n但部署所需补给下降 %s}。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0131行"
     },
     {
@@ -675,7 +675,7 @@
         "key": "hull_mods.csv#comp_hull$desc",
         "original": "This ship's hull has taken major and irreparable damage at some point in the past, or suffered from major errors in the manufacturing process. Hull integrity reduced by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "在过去某刻该舰曾遭受了无法修复的巨大损伤，或是在生产组装过程中发生了极其严重的失误。结构完整度降低 %s}。\n\n但部署所需补给下降 %s}。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0132行"
     },
     {
@@ -689,7 +689,7 @@
         "key": "hull_mods.csv#comp_storage$desc",
         "original": "The storage capacity of this ship is significantly degraded. Crew, cargo, and fuel capacity reduced by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "该舰存储能力大大降低。船员，货物和燃料容量均降低 %s}。\n\n但部署所需补给下降 %s}。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0143行"
     },
     {
@@ -773,7 +773,7 @@
         "key": "hull_mods.csv#converted_hangar$desc",
         "original": "<Tooltip created in script>",
         "translation": "",
-        "stage": 5,
+        "stage": -1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0011行"
     },
     {
@@ -808,7 +808,7 @@
         "key": "hull_mods.csv#damaged_deck$desc",
         "original": "The flight decks on this ship have taken major damage and seriously interfere with normal operation. Time to launch replacement fighters is increased by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "该舰的飞行甲板受到重创，严重干扰了战机联队的正常运作。提高 %s 战机联队重返战场所需要的时间。\n\n但部署所需补给下降 %s}。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0141行"
     },
     {
@@ -927,7 +927,7 @@
         "key": "hull_mods.csv#degraded_drive_field$desc",
         "original": "Whether due to battle damage, manufacturing defects, or cycles of poor maintenance, this ship's drive field is suffering from permanently degraded performance. \n\nMaximum burn level decreased by %s. Sensor profile increased by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "由于受到了战斗损伤，或是有生产缺陷，亦或是年久失修，该舰的驱动力场性能已经永久性降低。\n\n宇宙航速下降 %s}，被侦测范围上升 %s}。\n\n但部署所需补给下降 %s}。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0134行"
     },
     {
@@ -955,7 +955,7 @@
         "key": "hull_mods.csv#degraded_life_support$desc",
         "original": "Decreases maximum crew capacity by %s, and maximum combat readiness by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "降低最大载员数量 %s}，并降低 %s 战备值 (CR) 上限。\n\n但部署所需补给下降 %s}。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0148行"
     },
     {
@@ -976,7 +976,7 @@
         "key": "hull_mods.csv#degraded_shields$desc",
         "original": "Increases the amount of damage taken by shields by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "提高护盾所受伤害 %s}。\n\n但部署所需补给下降 %s}。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0149行"
     },
     {
@@ -1102,7 +1102,7 @@
         "key": "hull_mods.csv#drive_field_stabilizer$desc",
         "original": "Stabilizes the fleet's drive bubble, increasing the maximum burn of the fleet by %s. The effect of multiple stabilizers is cumulative.\n\nIncreases the ship's sensor profile by %s.",
         "translation": "稳定舰队航行时的驱动泡，来提高 %s 的舰队最高航速。多个稳定器的效果可以累加。\n\n但提高 %s 传感器截面。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0086行"
     },
     {
@@ -1137,7 +1137,7 @@
         "key": "hull_mods.csv#eccm$desc",
         "original": "Reduces the chance for missiles launched by the ship to be affected by electronic counter-measures and flares by %s.\n\nA CPU core adjunct in each missile increases missile top speed by %s and missile maneuverability by %s, as well as significantly improving the guidance algorithm.\n\nAlso reduces the weapon range reduction due to enemy ECM by %s.",
         "translation": "降低 %s 导弹被电子反制或热诱弹拦截的概率。\n\n为每枚导弹附加一个 CPU 辅核，能提高导弹 %s 的飞行速度以及 %s 的机动性，同时也显著改善了制导算法，即追踪能力。\n\n降低 %s 因电子战失利所造成的武器射程降低。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0015行"
     },
     {
@@ -1200,7 +1200,7 @@
         "key": "hull_mods.csv#efficiency_overhaul$desc",
         "original": "Reduces supply use for maintenance, fuel use, and minimum crew required by %s.\n\nIncreases the combat readiness recovery and repair rates by %s. The per-day supply consumption for CR recovery is increased to account for the increased recovery rate, but the total supply cost remains the same.",
         "translation": "降低 %s 维修消耗的补给、燃料的使用量以及最低船员需求。\n\n提高 %s 战备恢复和修理速率。但随着效率的提高，每日补给消耗量也会提高，但总补给消耗量不变。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0057行"
     },
     {
@@ -1235,7 +1235,7 @@
         "key": "hull_mods.csv#erratic_injector$desc",
         "original": "Increases fuel use by %s and decreases the zero-flux boost by %s su/second.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "燃料消耗量提高 %s}，且降低 %s 点零幅能加速所提高的航速。\n\n但部署所需补给下降 %s}。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0145行"
     },
     {
@@ -1277,7 +1277,7 @@
         "key": "hull_mods.csv#escort_package$short",
         "original": "Increases maneuverability, top speed, and weapon range when near larger friendly ship.",
         "translation": "靠近更大的友方舰船时，提高机动性、最高航速、以及武器的射程。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0017行"
     },
     {
@@ -1347,7 +1347,7 @@
         "key": "hull_mods.csv#expanded_deck_crew$desc",
         "original": "Reduces the rate at which the fighter replacement rate decreases due to fighter losses by %s, and increases the rate at which it recovers by %s.\n\nIncreases the crew required by %s per fighter bay.",
         "translation": "降低 %s 战机损失时整备下降速率，提高 %s 整备恢复速率。\n\n每个甲板都会让该舰的最低船员需求提高 %s 名。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0018行"
     },
     {
@@ -1431,7 +1431,7 @@
         "key": "hull_mods.csv#faulty_grid$desc",
         "original": "Whether due to battle damage, manufacturing defects, or cycles of poor maintenance, this ship's power grid will never be capable of achieving peak performance.\n\nFlux capacity reduced by %s. Flux dissipation rate reduced by %s. Sensor profile increased by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "由于受到了战斗损伤，或是有生产缺陷，亦或是年久失修，该舰电网的运行效率无法恢复到巅峰水准。\n\n降低 %s 幅能容量与 %s 耗散速率。被侦测范围上升 %s}。\n\n但部署所需补给下降 %s}。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0135行"
     },
     {
@@ -1585,7 +1585,7 @@
         "key": "hull_mods.csv#fragile_subsystems$desc",
         "original": "A widespread loss of redundant components reduces peak operating time by %s, and increases the rate at which combat readiness degrades by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "过多的组件损失导致峰值时间降低 %s}，且战备状态的衰减速率提高 %s}。\n\n但部署所需补给下降 %s}。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0142行"
     },
     {
@@ -1704,7 +1704,7 @@
         "key": "hull_mods.csv#frontshield$desc",
         "original": "Installs a makeshift, inefficient shield generator on the ship. The shield emitter is locked in a forward-facing position and has a %s degree arc.\n\nThe shield generator draws much of its power from engines and reduces the ship's top speed by %s.",
         "translation": "为舰船安装一部临时低效的护盾发生器。护盾为前盾且展开角度为 %s 度。\n\n该发生器会从引擎处抽取大量能源，而导致最高航速下降 %s}。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0026行"
     },
     {
@@ -1732,7 +1732,7 @@
         "key": "hull_mods.csv#glitched_sensors$desc",
         "original": "The ship's sensor array is damaged past any repair short of a complete hull overhaul. Weapon range in combat reduced by %s. Sensor strength reduced by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "该舰的传感器阵列遭受了严重的损伤，需要彻底翻修舰体才能修复。武器射程降低 %s}，探测范围降低 %s}。\n\n但部署所需补给下降 %s}。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0138行"
     },
     {
@@ -1767,7 +1767,7 @@
         "key": "hull_mods.csv#hardened_subsystems$desc",
         "original": "Increases peak operating time for ships that suffer degraded performance from extended deployment by %s.\n\nAlso reduces the rate at which combat readiness degrades by %s.",
         "translation": "提高 %s 峰值时间，防止舰船性能过早因长期部署而下降。\n\n同时还将战备值 (CR) 在战斗中衰减的速度降低 %s}。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0029行"
     },
     {
@@ -1935,7 +1935,7 @@
         "key": "hull_mods.csv#high_scatter_amp$desc",
         "original": "<tooltip created in the script due to sections>",
         "translation": "降低光束类武器的射程，并且使它们在对护盾造成伤害时产生硬幅能。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0031行"
     },
     {
@@ -1970,7 +1970,7 @@
         "key": "hull_mods.csv#hiressensors$desc",
         "original": "<Tooltip created in script>",
         "translation": "",
-        "stage": 5,
+        "stage": -1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0059行"
     },
     {
@@ -2040,7 +2040,7 @@
         "key": "hull_mods.csv#insulatedengine$desc",
         "original": "Increases the durability of the ship's engines by %s, and the ship's hull integrity by %s.\n\nThe ship's sensor profile is also reduced by %s.",
         "translation": "提高 %s 舰船引擎的耐久，并提高 %s 的船体结构值。\n\n同时降低该舰 %s 的传感器截面。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0060行"
     },
     {
@@ -2110,7 +2110,7 @@
         "key": "hull_mods.csv#malfunctioning_comms$desc",
         "original": "The comm system has suffered serious damage, making punching through battlefield jamming even more of a challenge. Fighter engagement range reduced by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "该舰的通讯系统遭到严重破坏，难以在复杂战况下保持通讯信号的稳定性。战机联队的最大交战距离降低 %s}。\n\n但部署所需补给下降 %s}。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0139行"
     },
     {
@@ -2124,7 +2124,7 @@
         "key": "hull_mods.csv#militarized_subsystems$desc",
         "original": "Removes the penalties from a civilian-grade hull, and increases maximum burn level by %s.\n\nIncreases minimum crew required by %s.",
         "translation": "移除民用级船体的惩罚，并提高 %s 最大宇宙航速。\n\n提高 %s 最低船员需求。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0061行"
     },
     {
@@ -2159,7 +2159,7 @@
         "key": "hull_mods.csv#missile_autoloader$desc",
         "original": "<tooltip created in the script due to sections/other complexity>",
         "translation": "",
-        "stage": 5,
+        "stage": -1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0027行"
     },
     {
@@ -2474,7 +2474,7 @@
         "key": "hull_mods.csv#pointdefenseai$short",
         "original": "PD ignores decoy flares, improved target leading, more damage to missiles.",
         "translation": "点防御武器不会再被热诱弹干扰，提高自动瞄准精度，对导弹造成更多伤害。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0032行"
     },
     {
@@ -2775,7 +2775,7 @@
         "key": "hull_mods.csv#shrouded_lens$desc",
         "original": "<created by script>",
         "translation": "",
-        "stage": 0,
+        "stage": -1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0123行"
     },
     {
@@ -2838,7 +2838,7 @@
         "key": "hull_mods.csv#shrouded_thunderhead$desc",
         "original": "<created by script>",
         "translation": "",
-        "stage": 0,
+        "stage": -1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0122行"
     },
     {
@@ -2866,7 +2866,7 @@
         "key": "hull_mods.csv#solar_shielding$desc",
         "original": "Originally developed by Diktat engineers after spending cycles dealing with the unique conditions of the inner Askonia system. Decreases the effect operating in a solar corona has on combat readiness by %s; also has the same effect against storms in deep hyperspace.\n\nIn combat, reduces energy damage taken by %s.",
         "translation": "最早由辛达的工程师为应对 Askonia 星系核心区的独特环境而研发。降低 %s 日冕对战备值 (CR) 的影响，对超空间内的风暴也有同样的作用。\n\n战斗中降低 %s 舰船所受到的能量伤害。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0062行"
     },
     {
@@ -2964,7 +2964,7 @@
         "key": "hull_mods.csv#stealth_minefield_lt$name",
         "original": "Stealth Minefield - Low Tech",
         "translation": "感应雷区",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0069行"
     },
     {
@@ -2978,7 +2978,7 @@
         "key": "hull_mods.csv#supercomputer$desc",
         "original": "Extends the range of ballistic and energy weapons by %s. The range of point-defense weapons is only extended by %s.\n\nAlso increases target-leading accuracy and greatly increases in-combat sensor range.",
         "translation": "提高 %s 实弹与能量武器射程，但点防类武器仅提高 %s}。\n\n同时也提高了瞄准精度，并大幅度提高战斗内的探测范围。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0095行"
     },
     {
@@ -3062,7 +3062,7 @@
         "key": "hull_mods.csv#terminator_core$desc",
         "original": "Gives all point-defense weapons the ability to identify - and ignore - decoy flares. In addition, all weapons get the best possible target leading, regardless of combat readiness, all damage to missiles and fighters is increased by %s, and beam weapon range is increased by %s units.",
         "translation": "终结者无人机的专属插件。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0066行"
     },
     {
@@ -3097,7 +3097,7 @@
         "key": "hull_mods.csv#tow_cable$desc",
         "original": "Improves the maximum burn level of the slowest ship in the fleet by 1. Multiple tugs can not be used to speed up the same ship by more than 1.\n\nCan not be used in combat.",
         "translation": "使舰队中最慢舰船的宇宙航行速度提高 1 点。多个拖船不能提高同一艘船的航速。\n\n战斗中无效。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0085行"
     },
     {
@@ -3153,7 +3153,7 @@
         "key": "hull_mods.csv#unstable_coils$desc",
         "original": "The phase coils on this ship are impossible to calibrate properly due to subtle flaws. Reduces the phase-time bonus by %s, reduces the peak performance time by %s, and increases the rate at which combat readiness degrades by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "因一些微妙的缺陷，导致该舰的相位线圈无法进行精细校正，降低 %s 相位时间增益，降低 %s 秒峰值时间，并且提高 %s 战备损耗率。\n\n但部署所需补给下降 %s}。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0136行"
     },
     {
@@ -3195,7 +3195,7 @@
         "key": "hull_mods.csv#vast_hangar$desc",
         "original": "The ship has a huge hangar and a commensurate small fleet of support craft.\n\nThe number of fighter bays added by Converted Hangar is increased by %s, and its performance matches that of a dedicated fighter bay - all of the penalties and modifiers, including those to the ship's deployment cost, are negated.",
         "translation": "该舰拥有足以支援一个小型舰队的巨型机库。\n\n若安装 改装机库，则额外再提供 %s 个甲板，并抵消其包括整备时间、舰船部署点在内的全部负面副作用。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0091行"
     },
     {

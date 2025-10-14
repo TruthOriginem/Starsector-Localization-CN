@@ -17,7 +17,7 @@
         "key": "industries.csv#battlestation$desc",
         "original": "A space station, augmented with a heavy bastion and point-defense citadels.\n\nMust be reduced before a bombardment can be attempted.",
         "translation": "升级过的轨道站，在原有基础上增建了厚重的棱堡与点防御平台，并加装了外挂装甲以提高其防御力。\n\n它的存在将阻止任何轰炸行动的发生。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nindustries.csv第0017行"
     },
     {
@@ -31,7 +31,7 @@
         "key": "industries.csv#battlestation_high$desc",
         "original": "A space station, augmented with a defensive citadel featuring heavy firepower.\n\nMust be reduced before a bombardment can be attempted.",
         "translation": "升级过的轨道站，在原有基础上增建了一处装备重型火力的防御碉堡。\n\n它的存在将阻止任何轰炸行动的发生。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nindustries.csv第0023行"
     },
     {
@@ -45,7 +45,7 @@
         "key": "industries.csv#battlestation_mid$desc",
         "original": "A space station, augmented with missile support modules.\n\nMust be reduced before a bombardment can be attempted.",
         "translation": "升级过的轨道站，在原有基础上增建了两处导弹支援平台。\n\n它的存在将阻止任何轰炸行动的发生。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nindustries.csv第0020行"
     },
     {
@@ -129,7 +129,7 @@
         "key": "industries.csv#grounddefenses$desc",
         "original": "A dispersed, semi-autonomous network of small, hidden weapon installations which makes the prospect of a direct ground assault and even simple raids extremely costly to the attacker. Only overwhelming orbital bombardment or massively disproportionate active screening can suppress these defenses.",
         "translation": "由小型隐蔽式武器所组成的一种分散的，半自动火炮阵地。能让敌方一些小规模的突袭与轰炸行动的成本变得更加昂贵。只有压倒性的轨道轰炸或大规模的突袭舰队才能压制这些地面设施。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nindustries.csv第0025行"
     },
     {
@@ -255,7 +255,7 @@
         "key": "industries.csv#orbitalstation$desc",
         "original": "A low-tech space station, featuring heavy armor and medium firepower.\n\nMust be reduced before a bombardment can be attempted.",
         "translation": "设计于主宰纪元的标准轨道站，特点是极为厚重的装甲与不俗的火力。\n\n它的存在将阻止任何轰炸行动的发生。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nindustries.csv第0016行"
     },
     {
@@ -269,7 +269,7 @@
         "key": "industries.csv#orbitalstation_high$desc",
         "original": "A high-tech space station, featuring heavy rotating shields, a fighter complement, and medium firepower.\n\nMust be reduced before a bombardment can be attempted.",
         "translation": "设计于扩展纪元的标准轨道站，配备了两处独立的重型护盾模块，以及高效的机库平台与不俗火力。\n\n它的存在将阻止任何轰炸行动的发生。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nindustries.csv第0022行"
     },
     {
@@ -283,7 +283,7 @@
         "key": "industries.csv#orbitalstation_mid$desc",
         "original": "A midline space station, featuring heavy firepower on one side and rapid axial rotation.\n\nMust be reduced before a bombardment can be attempted.",
         "translation": "设计于核心纪元的标准轨道站，拥有极为强大的单侧火力，且绕轴旋转速度更快。\n\n它的存在将阻止任何轰炸行动的发生。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nindustries.csv第0019行"
     },
     {
@@ -297,7 +297,7 @@
         "key": "industries.csv#orbitalworks$desc",
         "original": "Centralized manufacturing infrastructure for production of heavy industrial equipment, supplies, and weapons. Also capable of producing barely-spaceworthy starships; a nanoforge can be installed to improve production quality.\n\nUpgraded with an orbital component that further facilitates ship construction, resulting in fewer manufacturing defects.",
         "translation": "用于生产重型机械，补给与武器的集中制造基础设施。同时也能生产些勉强适航的星舰船体。可通过安装纳米锻炉来提高生产质量。\n\n升级添加了在轨生产设施，可以进一步提高舰船生产效率，并减少制造缺陷。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nindustries.csv第0011行"
     },
     {
@@ -381,7 +381,7 @@
         "key": "industries.csv#starfortress$desc",
         "original": "An up-armored battlestation, featuring Merlon-class defense drones and an extensive minefield.\n\nMust be reduced before a bombardment can be attempted.",
         "translation": "全副武装的作战基地，在原有基础上增建了大量的外挂装甲，在配备 城齿-级 无人机的同时布置了感应雷区。\n\n它的存在将阻止任何轰炸行动的发生。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nindustries.csv第0018行"
     },
     {
@@ -395,7 +395,7 @@
         "key": "industries.csv#starfortress_high$desc",
         "original": "An up-armored battlestation, featuring Gargoyle-class defense drones and long-range targeted mine teleporters.\n\nMust be reduced before a bombardment can be attempted.",
         "translation": "全副武装的作战基地，在原有基础上增加了强大的 石像鬼-级 无人机，并给部分平台内置了长程感应空雷传送战术系统。\n\n它的存在将阻止任何轰炸行动的发生。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nindustries.csv第0024行"
     },
     {
@@ -409,7 +409,7 @@
         "key": "industries.csv#starfortress_mid$desc",
         "original": "An up-armored battlestation, featuring Ravelin-class defense drones and an extensive minefield.\n\nMust be reduced before a bombardment can be attempted.",
         "translation": "全副武装的作战基地，在原有基础上增建了大量的外挂装甲，配备了 三角堡-级 无人机，可以部署感应雷区。\n\n它的存在将阻止任何轰炸行动的发生。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nindustries.csv第0021行"
     },
     {
@@ -423,7 +423,7 @@
         "key": "industries.csv#station_base$desc",
         "original": "A space station that is capable of supporting friendly fleets near $marketName and must be reduced before a bombardment can be attempted.\n\nSeveral variations are available, with differences generally being in tactical approaches rather than overall strength.",
         "translation": "一处能够为殖民地附近的友军舰队提供火力支援的空间站，它的存在将阻止任何轰炸行动的发生。\n\n尽管有数种不同的设计类型，但这通常仅影响其所采用的战术，而非整体战力。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nindustries.csv第0015行"
     },
     {

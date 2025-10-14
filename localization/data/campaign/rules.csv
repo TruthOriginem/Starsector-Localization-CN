@@ -8676,7 +8676,7 @@ lke_jethroWhatSedgeKilled:""Sedge？别担心，他已经被我杀了。""",
 LKEjethroWhatToldShot,DialogOptionSelected,"$toldShotSedge
 $option == lke_jethroWhat",$saidMission = true 0,"""我失败了。"" 他说道。
 
-过了一会，他又补充道：""而且老实说，我是故意失败的。在见到 Chalcedon 的那个招募人后..."" Bornanew 摇了摇头。","lke_jethroWhatSedge:""Sedge.""",
+过了一会，他又补充道：""而且老实说，我是故意失败的。在见到 Chalcedon 的那个招募人后..."" Bornanew 摇了摇头。","lke_jethroWhatSedge:""Sedge。""",
 LKEjethroWhatSedgeCheck,LKEjethroWhatSedgeCheck,!$player.shotSedge,RemoveOption lke_jethroWhatSedgeKilled,,,
 LKEjethroWhatSedgeCheck2,LKEjethroWhatSedgeCheck,$toldShotSedge,RemoveOption lke_jethroWhatSedgeKilled,,,
 LKEjethroWhat2a,DialogOptionSelected,$option == lke_jethroWhatSedge,FireAll LKEjethroWhatSedgeCheck,"""对。"" 他看起来有些惊讶，""他就是叫这个。我不喜欢他。也不喜欢要做的那些能让他喜欢我的事。""
@@ -19706,7 +19706,7 @@ gaATGhegFleetCom3,DialogOptionSelected,$option == gaATG_hegFleetCom3,,"你概括
 ""真是有趣的故事，舰长。"" $HeOrShe快速地眨了眨眼，""可是你讲这个故事的用意是什么呢？""","gaATG_hegFleetCom4:""你的扫描不管用，但我的管用。不如让我进行扫描，完成后我会把数据发给你。""",
 gaATGhegFleetCom4,DialogOptionSelected,$option == gaATG_hegFleetCom4,,"一段很长的停顿。""你的确签署有一份雇佣协议。而我则有权将你的舰队临时整合进一次 霸主 的行动中，前提是条件允许的话。""
 
-$personLastName $rank 压低声音说道 ""在第二次 AI 战争中，Daud，Rao 以及其他人无视规矩的程度可比这严重多了 ... $playerName，我正式授权你的舰队作为本次行动的辅助军。""","gaATG_hegFleetCom5:""$Rank?""",
+$personLastName $rank 压低声音说道 ""在第二次 AI 战争中，Daud，Rao 以及其他人无视规矩的程度可比这严重多了 ... $playerName，我正式授权你的舰队作为本次行动的辅助军。""","gaATG_hegFleetCom5:""$Rank？""",
 gaATGhegFleetCom5,DialogOptionSelected,$option == gaATG_hegFleetCom5,,"""常规部队会后撤到安全距离，然后我会命令你扫描这座星门。扫描完成后，你要把数据传输至我的旗舰。""
 
 $HeOrShe挺直了身板，""理解我的命令了吗，$playerName 舰长？""","gaATG_hegFleetCom6:""是，$rank。我立刻去做。""",
