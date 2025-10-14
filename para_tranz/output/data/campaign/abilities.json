@@ -2,182 +2,182 @@
     {
         "key": "abilities.csv#distress_call$desc",
         "original": "Issue a distress call.",
-        "translation": "",
+        "translation": "发出求救呼号。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0013行\n[本行原始数据]\n{'name': 'Distress Call',\n 'id': 'distress_call',\n 'type': 'DURATION',\n 'tags': '',\n 'activationDays': '0',\n 'activationCooldown': '',\n 'durationDays': '0',\n 'deactivationDays': '0',\n 'deactivationCooldown': '1',\n 'unlockedAtStart': 'TRUE',\n 'defaultForAIFleet': '',\n 'musicSuppression': '',\n 'uiOn': 'ui_distress_call_on',\n 'uiOff': '',\n 'uiLoop': '',\n 'worldOn': '',\n 'worldOff': '',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/distress_call.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.DistressCallAbility',\n 'ai': '',\n 'desc': 'Issue a distress call.',\n 'sortOrder': '1000'}"
     },
     {
         "key": "abilities.csv#distress_call$name",
         "original": "Distress Call",
-        "translation": "",
+        "translation": "求救呼号",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0013行\n[本行原始数据]\n{'name': 'Distress Call',\n 'id': 'distress_call',\n 'type': 'DURATION',\n 'tags': '',\n 'activationDays': '0',\n 'activationCooldown': '',\n 'durationDays': '0',\n 'deactivationDays': '0',\n 'deactivationCooldown': '1',\n 'unlockedAtStart': 'TRUE',\n 'defaultForAIFleet': '',\n 'musicSuppression': '',\n 'uiOn': 'ui_distress_call_on',\n 'uiOff': '',\n 'uiLoop': '',\n 'worldOn': '',\n 'worldOff': '',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/distress_call.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.DistressCallAbility',\n 'ai': '',\n 'desc': 'Issue a distress call.',\n 'sortOrder': '1000'}"
     },
     {
         "key": "abilities.csv#emergency_burn$desc",
         "original": "Briefly boost burn level at the cost of fuel and combat readiness.",
-        "translation": "",
+        "translation": "短时间内提高航行速度，消耗燃料和战备值 (CR)。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0004行\n[本行原始数据]\n{'name': 'Emergency Burn',\n 'id': 'emergency_burn',\n 'type': 'DURATION',\n 'tags': 'burn+, stealth-, sensors-',\n 'activationDays': '0.25',\n 'activationCooldown': '',\n 'durationDays': '0.7',\n 'deactivationDays': '0.25',\n 'deactivationCooldown': '1',\n 'unlockedAtStart': 'TRUE',\n 'defaultForAIFleet': 'TRUE',\n 'musicSuppression': '1',\n 'uiOn': 'ui_emergency_burn_on',\n 'uiOff': 'ui_emergency_burn_off',\n 'uiLoop': 'ui_emergency_burn_loop',\n 'worldOn': 'world_emergency_burn_on',\n 'worldOff': 'world_emergency_burn_off',\n 'worldLoop': 'world_emergency_burn_loop',\n 'icon': 'graphics/icons/abilities/emergency_burn.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility',\n 'ai': 'com.fs.starfarer.api.impl.campaign.abilities.ai.EmergencyBurnAbilityAI',\n 'desc': 'Briefly boost burn level at the cost of fuel and combat readiness.',\n 'sortOrder': '400'}"
     },
     {
         "key": "abilities.csv#emergency_burn$name",
         "original": "Emergency Burn",
-        "translation": "",
+        "translation": "紧急加速",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0004行\n[本行原始数据]\n{'name': 'Emergency Burn',\n 'id': 'emergency_burn',\n 'type': 'DURATION',\n 'tags': 'burn+, stealth-, sensors-',\n 'activationDays': '0.25',\n 'activationCooldown': '',\n 'durationDays': '0.7',\n 'deactivationDays': '0.25',\n 'deactivationCooldown': '1',\n 'unlockedAtStart': 'TRUE',\n 'defaultForAIFleet': 'TRUE',\n 'musicSuppression': '1',\n 'uiOn': 'ui_emergency_burn_on',\n 'uiOff': 'ui_emergency_burn_off',\n 'uiLoop': 'ui_emergency_burn_loop',\n 'worldOn': 'world_emergency_burn_on',\n 'worldOff': 'world_emergency_burn_off',\n 'worldLoop': 'world_emergency_burn_loop',\n 'icon': 'graphics/icons/abilities/emergency_burn.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility',\n 'ai': 'com.fs.starfarer.api.impl.campaign.abilities.ai.EmergencyBurnAbilityAI',\n 'desc': 'Briefly boost burn level at the cost of fuel and combat readiness.',\n 'sortOrder': '400'}"
     },
     {
         "key": "abilities.csv#fracture_jump$desc",
         "original": "Jump into a system through a nascent gravity well, or directly into hyperspace.",
-        "translation": "",
+        "translation": "通过亚临界重力井跳入附近的星系，或从星系内突入超空间。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0011行\n[本行原始数据]\n{'name': 'Transverse Jump',\n 'id': 'fracture_jump',\n 'type': 'DURATION',\n 'tags': 'stealth-, burn+',\n 'activationDays': '0.4',\n 'activationCooldown': '',\n 'durationDays': '0.001',\n 'deactivationDays': '0.1',\n 'deactivationCooldown': '0.5',\n 'unlockedAtStart': '',\n 'defaultForAIFleet': '',\n 'musicSuppression': '',\n 'uiOn': '',\n 'uiOff': '',\n 'uiLoop': '',\n 'worldOn': 'jump_point_open',\n 'worldOff': '',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/direct_jump.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility',\n 'ai': '',\n 'desc': 'Jump into a system through a nascent gravity well, or directly into '\n         'hyperspace.',\n 'sortOrder': '800'}"
     },
     {
         "key": "abilities.csv#fracture_jump$name",
         "original": "Transverse Jump",
-        "translation": "",
+        "translation": "横轴跳跃",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0011行\n[本行原始数据]\n{'name': 'Transverse Jump',\n 'id': 'fracture_jump',\n 'type': 'DURATION',\n 'tags': 'stealth-, burn+',\n 'activationDays': '0.4',\n 'activationCooldown': '',\n 'durationDays': '0.001',\n 'deactivationDays': '0.1',\n 'deactivationCooldown': '0.5',\n 'unlockedAtStart': '',\n 'defaultForAIFleet': '',\n 'musicSuppression': '',\n 'uiOn': '',\n 'uiOff': '',\n 'uiLoop': '',\n 'worldOn': 'jump_point_open',\n 'worldOff': '',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/direct_jump.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility',\n 'ai': '',\n 'desc': 'Jump into a system through a nascent gravity well, or directly into '\n         'hyperspace.',\n 'sortOrder': '800'}"
     },
     {
         "key": "abilities.csv#generate_slipsurge$desc",
         "original": "Create a powerful short-lived slipstream useful for rapid travel.",
-        "translation": "",
+        "translation": "暂时产生一阵用于快速前进的激流。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0016行\n[本行原始数据]\n{'name': 'Generate Slipsurge',\n 'id': 'generate_slipsurge',\n 'type': 'DURATION',\n 'tags': 'burn-, stealth-, sensors-, disabled_by_interdict, codex_unlockable',\n 'activationDays': '0.2',\n 'activationCooldown': '',\n 'durationDays': '0.001',\n 'deactivationDays': '',\n 'deactivationCooldown': '1',\n 'unlockedAtStart': '',\n 'defaultForAIFleet': '',\n 'musicSuppression': '',\n 'uiOn': 'ui_slipsurge_on',\n 'uiOff': 'ui_slipsurge_off',\n 'uiLoop': 'ui_slipsurge_loop',\n 'worldOn': 'world_slipsurge_on',\n 'worldOff': 'world_slipsurge_off',\n 'worldLoop': 'world_slipsurge_loop',\n 'icon': 'graphics/icons/abilities/slipsurge.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.GenerateSlipsurgeAbility',\n 'ai': '',\n 'desc': 'Create a powerful short-lived slipstream useful for rapid travel.',\n 'sortOrder': '990'}"
     },
     {
         "key": "abilities.csv#generate_slipsurge$name",
         "original": "Generate Slipsurge",
-        "translation": "",
+        "translation": "激流迸发",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0016行\n[本行原始数据]\n{'name': 'Generate Slipsurge',\n 'id': 'generate_slipsurge',\n 'type': 'DURATION',\n 'tags': 'burn-, stealth-, sensors-, disabled_by_interdict, codex_unlockable',\n 'activationDays': '0.2',\n 'activationCooldown': '',\n 'durationDays': '0.001',\n 'deactivationDays': '',\n 'deactivationCooldown': '1',\n 'unlockedAtStart': '',\n 'defaultForAIFleet': '',\n 'musicSuppression': '',\n 'uiOn': 'ui_slipsurge_on',\n 'uiOff': 'ui_slipsurge_off',\n 'uiLoop': 'ui_slipsurge_loop',\n 'worldOn': 'world_slipsurge_on',\n 'worldOff': 'world_slipsurge_off',\n 'worldLoop': 'world_slipsurge_loop',\n 'icon': 'graphics/icons/abilities/slipsurge.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.GenerateSlipsurgeAbility',\n 'ai': '',\n 'desc': 'Create a powerful short-lived slipstream useful for rapid travel.',\n 'sortOrder': '990'}"
     },
     {
         "key": "abilities.csv#go_dark$desc",
         "original": "Reduce sensor profile at the cost of burn level.",
-        "translation": "",
+        "translation": "缩小你的传感器截面，隐藏自身，降低航行速度。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0002行\n[本行原始数据]\n{'name': 'Go Dark',\n 'id': 'go_dark',\n 'type': 'TOGGLE',\n 'tags': 'stealth+, burn-',\n 'activationDays': '0.1',\n 'activationCooldown': '',\n 'durationDays': '',\n 'deactivationDays': '',\n 'deactivationCooldown': '',\n 'unlockedAtStart': 'TRUE',\n 'defaultForAIFleet': 'TRUE',\n 'musicSuppression': '',\n 'uiOn': 'ui_go_dark_on',\n 'uiOff': 'ui_go_dark_off',\n 'uiLoop': '',\n 'worldOn': 'world_go_dark_on',\n 'worldOff': 'world_go_dark_off',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/go_dark.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.GoDarkAbility',\n 'ai': 'com.fs.starfarer.api.impl.campaign.abilities.ai.GoDarkAbilityAI',\n 'desc': 'Reduce sensor profile at the cost of burn level.',\n 'sortOrder': '200'}"
     },
     {
         "key": "abilities.csv#go_dark$name",
         "original": "Go Dark",
-        "translation": "",
+        "translation": "匿踪",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0002行\n[本行原始数据]\n{'name': 'Go Dark',\n 'id': 'go_dark',\n 'type': 'TOGGLE',\n 'tags': 'stealth+, burn-',\n 'activationDays': '0.1',\n 'activationCooldown': '',\n 'durationDays': '',\n 'deactivationDays': '',\n 'deactivationCooldown': '',\n 'unlockedAtStart': 'TRUE',\n 'defaultForAIFleet': 'TRUE',\n 'musicSuppression': '',\n 'uiOn': 'ui_go_dark_on',\n 'uiOff': 'ui_go_dark_off',\n 'uiLoop': '',\n 'worldOn': 'world_go_dark_on',\n 'worldOff': 'world_go_dark_off',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/go_dark.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.GoDarkAbility',\n 'ai': 'com.fs.starfarer.api.impl.campaign.abilities.ai.GoDarkAbilityAI',\n 'desc': 'Reduce sensor profile at the cost of burn level.',\n 'sortOrder': '200'}"
     },
     {
         "key": "abilities.csv#gravitic_scan$desc",
         "original": "Detect in-system entities at very long range; unreliable with false readings.",
-        "translation": "",
+        "translation": "远距离检测星系范围内所有实体的信号，但获取信息的可靠度有限。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0010行\n[本行原始数据]\n{'name': 'Neutrino Detector',\n 'id': 'gravitic_scan',\n 'type': 'TOGGLE',\n 'tags': 'stealth-, sensors+',\n 'activationDays': '0.1',\n 'activationCooldown': '',\n 'durationDays': '',\n 'deactivationDays': '0.1',\n 'deactivationCooldown': '',\n 'unlockedAtStart': '',\n 'defaultForAIFleet': '',\n 'musicSuppression': '',\n 'uiOn': 'ui_neutrino_detector_on',\n 'uiOff': 'ui_neutrino_detector_off',\n 'uiLoop': '',\n 'worldOn': '',\n 'worldOff': '',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/neutrino_detector.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.GraviticScanAbility',\n 'ai': '',\n 'desc': 'Detect in-system entities at very long range; unreliable with false '\n         'readings.',\n 'sortOrder': '700'}"
     },
     {
         "key": "abilities.csv#gravitic_scan$name",
         "original": "Neutrino Detector",
-        "translation": "",
+        "translation": "中微子探测器",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0010行\n[本行原始数据]\n{'name': 'Neutrino Detector',\n 'id': 'gravitic_scan',\n 'type': 'TOGGLE',\n 'tags': 'stealth-, sensors+',\n 'activationDays': '0.1',\n 'activationCooldown': '',\n 'durationDays': '',\n 'deactivationDays': '0.1',\n 'deactivationCooldown': '',\n 'unlockedAtStart': '',\n 'defaultForAIFleet': '',\n 'musicSuppression': '',\n 'uiOn': 'ui_neutrino_detector_on',\n 'uiOff': 'ui_neutrino_detector_off',\n 'uiLoop': '',\n 'worldOn': '',\n 'worldOff': '',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/neutrino_detector.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.GraviticScanAbility',\n 'ai': '',\n 'desc': 'Detect in-system entities at very long range; unreliable with false '\n         'readings.',\n 'sortOrder': '700'}"
     },
     {
         "key": "abilities.csv#interdiction_pulse$desc",
         "original": "Slow down another fleet heading towards the source of the pulse.",
-        "translation": "",
+        "translation": "利用脉冲波来阻碍发射源附近的舰队。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0006行\n[本行原始数据]\n{'name': 'Interdiction Pulse',\n 'id': 'interdiction_pulse',\n 'type': 'DURATION',\n 'tags': 'burn-, stealth-, sensors+',\n 'activationDays': '0.3',\n 'activationCooldown': '',\n 'durationDays': '0.001',\n 'deactivationDays': '',\n 'deactivationCooldown': '1',\n 'unlockedAtStart': 'TRUE',\n 'defaultForAIFleet': 'TRUE',\n 'musicSuppression': '',\n 'uiOn': 'ui_interdict_on',\n 'uiOff': 'ui_interdict_off',\n 'uiLoop': 'ui_interdict_loop',\n 'worldOn': 'world_interdict_on',\n 'worldOff': 'world_interdict_off',\n 'worldLoop': 'world_interdict_loop',\n 'icon': 'graphics/icons/abilities/interdiction_pulse.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility',\n 'ai': 'com.fs.starfarer.api.impl.campaign.abilities.ai.InterdictionPulseAbilityAI',\n 'desc': 'Slow down another fleet heading towards the source of the pulse.',\n 'sortOrder': '650'}"
     },
     {
         "key": "abilities.csv#interdiction_pulse$name",
         "original": "Interdiction Pulse",
-        "translation": "",
+        "translation": "阻断脉冲",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0006行\n[本行原始数据]\n{'name': 'Interdiction Pulse',\n 'id': 'interdiction_pulse',\n 'type': 'DURATION',\n 'tags': 'burn-, stealth-, sensors+',\n 'activationDays': '0.3',\n 'activationCooldown': '',\n 'durationDays': '0.001',\n 'deactivationDays': '',\n 'deactivationCooldown': '1',\n 'unlockedAtStart': 'TRUE',\n 'defaultForAIFleet': 'TRUE',\n 'musicSuppression': '',\n 'uiOn': 'ui_interdict_on',\n 'uiOff': 'ui_interdict_off',\n 'uiLoop': 'ui_interdict_loop',\n 'worldOn': 'world_interdict_on',\n 'worldOff': 'world_interdict_off',\n 'worldLoop': 'world_interdict_loop',\n 'icon': 'graphics/icons/abilities/interdiction_pulse.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility',\n 'ai': 'com.fs.starfarer.api.impl.campaign.abilities.ai.InterdictionPulseAbilityAI',\n 'desc': 'Slow down another fleet heading towards the source of the pulse.',\n 'sortOrder': '650'}"
     },
     {
         "key": "abilities.csv#remote_survey$desc",
         "original": "Identify the most promising survey target in the system.",
-        "translation": "",
+        "translation": "对附近所有行星进行远程初步调查。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0012行\n[本行原始数据]\n{'name': 'Remote Survey',\n 'id': 'remote_survey',\n 'type': 'DURATION',\n 'tags': 'stealth-, burn-, sensors+',\n 'activationDays': '0.5',\n 'activationCooldown': '',\n 'durationDays': '0.1',\n 'deactivationDays': '0.1',\n 'deactivationCooldown': '',\n 'unlockedAtStart': '',\n 'defaultForAIFleet': '',\n 'musicSuppression': '',\n 'uiOn': 'ui_remote_survey_on',\n 'uiOff': '',\n 'uiLoop': '',\n 'worldOn': '',\n 'worldOff': '',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/remote_survey.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.RemoteSurveyAbility',\n 'ai': '',\n 'desc': 'Identify the most promising survey target in the system.',\n 'sortOrder': '900'}"
     },
     {
         "key": "abilities.csv#remote_survey$name",
         "original": "Remote Survey",
-        "translation": "",
+        "translation": "远程调查",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0012行\n[本行原始数据]\n{'name': 'Remote Survey',\n 'id': 'remote_survey',\n 'type': 'DURATION',\n 'tags': 'stealth-, burn-, sensors+',\n 'activationDays': '0.5',\n 'activationCooldown': '',\n 'durationDays': '0.1',\n 'deactivationDays': '0.1',\n 'deactivationCooldown': '',\n 'unlockedAtStart': '',\n 'defaultForAIFleet': '',\n 'musicSuppression': '',\n 'uiOn': 'ui_remote_survey_on',\n 'uiOff': '',\n 'uiLoop': '',\n 'worldOn': '',\n 'worldOff': '',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/remote_survey.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.RemoteSurveyAbility',\n 'ai': '',\n 'desc': 'Identify the most promising survey target in the system.',\n 'sortOrder': '900'}"
     },
     {
         "key": "abilities.csv#reverse_polarity$desc",
         "original": "Adjust drive field to travel in the opposite direction in slipstreams.",
-        "translation": "",
+        "translation": "通过调整驱动力场实现在滑流内逆向航行。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0015行\n[本行原始数据]\n{'name': 'Reverse Polarity',\n 'id': 'reverse_polarity',\n 'type': 'TOGGLE',\n 'tags': 'codex_unlockable',\n 'activationDays': '0.05',\n 'activationCooldown': '',\n 'durationDays': '',\n 'deactivationDays': '0.05',\n 'deactivationCooldown': '',\n 'unlockedAtStart': '',\n 'defaultForAIFleet': '',\n 'musicSuppression': '',\n 'uiOn': 'ui_reverse_polarity_on',\n 'uiOff': 'ui_reverse_polarity_off',\n 'uiLoop': 'ui_reverse_polarity_loop',\n 'worldOn': 'world_reverse_polarity_on',\n 'worldOff': 'world_reverse_polarity_off',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/reverse_polarity.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.ReversePolarityToggle',\n 'ai': '',\n 'desc': 'Adjust drive field to travel in the opposite direction in '\n         'slipstreams.',\n 'sortOrder': '640'}"
     },
     {
         "key": "abilities.csv#reverse_polarity$name",
         "original": "Reverse Polarity",
-        "translation": "",
+        "translation": "极性逆转",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0015行\n[本行原始数据]\n{'name': 'Reverse Polarity',\n 'id': 'reverse_polarity',\n 'type': 'TOGGLE',\n 'tags': 'codex_unlockable',\n 'activationDays': '0.05',\n 'activationCooldown': '',\n 'durationDays': '',\n 'deactivationDays': '0.05',\n 'deactivationCooldown': '',\n 'unlockedAtStart': '',\n 'defaultForAIFleet': '',\n 'musicSuppression': '',\n 'uiOn': 'ui_reverse_polarity_on',\n 'uiOff': 'ui_reverse_polarity_off',\n 'uiLoop': 'ui_reverse_polarity_loop',\n 'worldOn': 'world_reverse_polarity_on',\n 'worldOff': 'world_reverse_polarity_off',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/reverse_polarity.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.ReversePolarityToggle',\n 'ai': '',\n 'desc': 'Adjust drive field to travel in the opposite direction in '\n         'slipstreams.',\n 'sortOrder': '640'}"
     },
     {
         "key": "abilities.csv#scavenge$desc",
         "original": "Pick through a debris field for anything of value.",
-        "translation": "",
+        "translation": "在残骸区中寻找任何有价值的东西。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0009行\n[本行原始数据]\n{'name': 'Scavenge',\n 'id': 'scavenge',\n 'type': 'DURATION',\n 'tags': '',\n 'activationDays': '0',\n 'activationCooldown': '',\n 'durationDays': '0',\n 'deactivationDays': '0',\n 'deactivationCooldown': '0.2',\n 'unlockedAtStart': 'TRUE',\n 'defaultForAIFleet': '',\n 'musicSuppression': '',\n 'uiOn': 'ui_scavenge_on',\n 'uiOff': '',\n 'uiLoop': '',\n 'worldOn': '',\n 'worldOff': '',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/scavenge.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.ScavengeAbility',\n 'ai': '',\n 'desc': 'Pick through a debris field for anything of value.',\n 'sortOrder': '600'}"
     },
     {
         "key": "abilities.csv#scavenge$name",
         "original": "Scavenge",
-        "translation": "",
+        "translation": "打捞",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0009行\n[本行原始数据]\n{'name': 'Scavenge',\n 'id': 'scavenge',\n 'type': 'DURATION',\n 'tags': '',\n 'activationDays': '0',\n 'activationCooldown': '',\n 'durationDays': '0',\n 'deactivationDays': '0',\n 'deactivationCooldown': '0.2',\n 'unlockedAtStart': 'TRUE',\n 'defaultForAIFleet': '',\n 'musicSuppression': '',\n 'uiOn': 'ui_scavenge_on',\n 'uiOff': '',\n 'uiLoop': '',\n 'worldOn': '',\n 'worldOff': '',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/scavenge.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.ScavengeAbility',\n 'ai': '',\n 'desc': 'Pick through a debris field for anything of value.',\n 'sortOrder': '600'}"
     },
     {
         "key": "abilities.csv#sensor_burst$desc",
         "original": "Stop and increase detection range, fleet is more detectable.",
-        "translation": "",
+        "translation": "停止航行并增加探测距离，但也让自身容易被检测到。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0003行\n[本行原始数据]\n{'name': 'Active Sensor Burst',\n 'id': 'sensor_burst',\n 'type': 'DURATION',\n 'tags': 'stealth-, burn-, sensors+',\n 'activationDays': '0.2',\n 'activationCooldown': '',\n 'durationDays': '0.1',\n 'deactivationDays': '0.1',\n 'deactivationCooldown': '1',\n 'unlockedAtStart': 'TRUE',\n 'defaultForAIFleet': 'TRUE',\n 'musicSuppression': '',\n 'uiOn': 'ui_sensor_burst_on',\n 'uiOff': '',\n 'uiLoop': '',\n 'worldOn': 'world_sensor_burst_on',\n 'worldOff': '',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/sensor_burst.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.SensorBurstAbility',\n 'ai': 'com.fs.starfarer.api.impl.campaign.abilities.ai.SensorBurstAbilityAI',\n 'desc': 'Stop and increase detection range, fleet is more detectable.',\n 'sortOrder': '300'}"
     },
     {
         "key": "abilities.csv#sensor_burst$name",
         "original": "Active Sensor Burst",
-        "translation": "",
+        "translation": "传感器扫描",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0003行\n[本行原始数据]\n{'name': 'Active Sensor Burst',\n 'id': 'sensor_burst',\n 'type': 'DURATION',\n 'tags': 'stealth-, burn-, sensors+',\n 'activationDays': '0.2',\n 'activationCooldown': '',\n 'durationDays': '0.1',\n 'deactivationDays': '0.1',\n 'deactivationCooldown': '1',\n 'unlockedAtStart': 'TRUE',\n 'defaultForAIFleet': 'TRUE',\n 'musicSuppression': '',\n 'uiOn': 'ui_sensor_burst_on',\n 'uiOff': '',\n 'uiLoop': '',\n 'worldOn': 'world_sensor_burst_on',\n 'worldOff': '',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/sensor_burst.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.SensorBurstAbility',\n 'ai': 'com.fs.starfarer.api.impl.campaign.abilities.ai.SensorBurstAbilityAI',\n 'desc': 'Stop and increase detection range, fleet is more detectable.',\n 'sortOrder': '300'}"
     },
     {
         "key": "abilities.csv#sustained_burn$desc",
         "original": "Boost burn level at the cost of acceleration and wind-up time.",
-        "translation": "",
+        "translation": "提高宇宙航行速度，降低加速度和机动性。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0005行\n[本行原始数据]\n{'name': 'Sustained Burn',\n 'id': 'sustained_burn',\n 'type': 'TOGGLE',\n 'tags': 'burn+, stealth-',\n 'activationDays': '0.05',\n 'activationCooldown': '',\n 'durationDays': '',\n 'deactivationDays': '0.05',\n 'deactivationCooldown': '',\n 'unlockedAtStart': 'TRUE',\n 'defaultForAIFleet': 'TRUE',\n 'musicSuppression': '',\n 'uiOn': 'ui_sustained_burn_on',\n 'uiOff': 'ui_sustained_burn_off',\n 'uiLoop': 'ui_sustained_burn_loop',\n 'worldOn': 'world_sustained_burn_on',\n 'worldOff': 'world_sustained_burn_off',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/travel_drive.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.SustainedBurnAbility',\n 'ai': 'com.fs.starfarer.api.impl.campaign.abilities.ai.SustainedBurnAbilityAI',\n 'desc': 'Boost burn level at the cost of acceleration and wind-up time.',\n 'sortOrder': '500'}"
     },
     {
         "key": "abilities.csv#sustained_burn$name",
         "original": "Sustained Burn",
-        "translation": "",
+        "translation": "持续加速",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0005行\n[本行原始数据]\n{'name': 'Sustained Burn',\n 'id': 'sustained_burn',\n 'type': 'TOGGLE',\n 'tags': 'burn+, stealth-',\n 'activationDays': '0.05',\n 'activationCooldown': '',\n 'durationDays': '',\n 'deactivationDays': '0.05',\n 'deactivationCooldown': '',\n 'unlockedAtStart': 'TRUE',\n 'defaultForAIFleet': 'TRUE',\n 'musicSuppression': '',\n 'uiOn': 'ui_sustained_burn_on',\n 'uiOff': 'ui_sustained_burn_off',\n 'uiLoop': 'ui_sustained_burn_loop',\n 'worldOn': 'world_sustained_burn_on',\n 'worldOff': 'world_sustained_burn_off',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/travel_drive.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.SustainedBurnAbility',\n 'ai': 'com.fs.starfarer.api.impl.campaign.abilities.ai.SustainedBurnAbilityAI',\n 'desc': 'Boost burn level at the cost of acceleration and wind-up time.',\n 'sortOrder': '500'}"
     },
     {
         "key": "abilities.csv#transponder$desc",
         "original": "Broadcast your identity; required for legal trade.",
-        "translation": "",
+        "translation": "表明你的身份信号，这是合法贸易的必要条件。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0001行\n[本行原始数据]\n{'name': 'Transponder',\n 'id': 'transponder',\n 'type': 'TOGGLE',\n 'tags': 'stealth-',\n 'activationDays': '',\n 'activationCooldown': '',\n 'durationDays': '',\n 'deactivationDays': '0.1',\n 'deactivationCooldown': '',\n 'unlockedAtStart': 'TRUE',\n 'defaultForAIFleet': 'TRUE',\n 'musicSuppression': '',\n 'uiOn': 'ui_transponder_on',\n 'uiOff': 'ui_transponder_off',\n 'uiLoop': '',\n 'worldOn': '',\n 'worldOff': '',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/transponder.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility',\n 'ai': 'com.fs.starfarer.api.impl.campaign.abilities.ai.TransponderAbilityAI',\n 'desc': 'Broadcast your identity; required for legal trade.',\n 'sortOrder': '100'}"
     },
     {
         "key": "abilities.csv#transponder$name",
         "original": "Transponder",
-        "translation": "",
+        "translation": "应答器",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nabilities.csv第0001行\n[本行原始数据]\n{'name': 'Transponder',\n 'id': 'transponder',\n 'type': 'TOGGLE',\n 'tags': 'stealth-',\n 'activationDays': '',\n 'activationCooldown': '',\n 'durationDays': '',\n 'deactivationDays': '0.1',\n 'deactivationCooldown': '',\n 'unlockedAtStart': 'TRUE',\n 'defaultForAIFleet': 'TRUE',\n 'musicSuppression': '',\n 'uiOn': 'ui_transponder_on',\n 'uiOff': 'ui_transponder_off',\n 'uiLoop': '',\n 'worldOn': '',\n 'worldOff': '',\n 'worldLoop': '',\n 'icon': 'graphics/icons/abilities/transponder.png',\n 'plugin': 'com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility',\n 'ai': 'com.fs.starfarer.api.impl.campaign.abilities.ai.TransponderAbilityAI',\n 'desc': 'Broadcast your identity; required for legal trade.',\n 'sortOrder': '100'}"
     }
