@@ -4,69 +4,69 @@
         "original": "In combat, this officer will prefer to engage at a range that allows the use of all of their ship's weapons, will pilot civilian ships as if they were combat ships, and will employ any fighters under their command aggressively.",
         "translation": "在战斗中，这名军官将尽可能地抵近到能让所有武器开火的距离内，并积极地指挥战机出击，还会将民用舰船当作战舰操控。",
         "stage": 5,
-        "context": "版本：0.97-RC11 词条格式：v2\npersonalities.csv第0004行\n[本行原始数据]\n{'id': 'aggressive',\n 'name': 'Aggressive',\n 'desc': 'In combat, this officer will prefer to engage at a range that allows '\n         \"the use of all of their ship's weapons, will pilot civilian ships as \"\n         'if they were combat ships, and will employ any fighters under their '\n         'command aggressively.',\n 'bravery': '5',\n 'CAPTURE': '1.5',\n 'PATROL': '1',\n 'INTERCEPT': '2',\n 'ASSAULT': '2',\n 'DEFEND': '0.5',\n 'STRIKE': '2',\n 'HARASS': '2',\n 'FIRE_SUPPORT': '0.5',\n 'CARRIER_GROUP': '0.5',\n 'CIVILIAN_CRAFT': '0.5',\n 'STRIKE_FORCE': '1',\n 'LIGHT_ESCORT': '0.5',\n 'DESTROYER_ESCORT': '0.5'}"
+        "context": "版本：0.98-RC8 词条格式：v2\npersonalities.csv第0004行\n[本行原始数据]\n{'id': 'aggressive',\n 'name': 'Aggressive',\n 'desc': 'In combat, this officer will prefer to engage at a range that allows '\n         \"the use of all of their ship's weapons, will pilot civilian ships as \"\n         'if they were combat ships, and will employ any fighters under their '\n         'command aggressively.',\n 'bravery': '5',\n 'CAPTURE': '1.5',\n 'PATROL': '1',\n 'INTERCEPT': '2',\n 'ASSAULT': '2',\n 'DEFEND': '0.5',\n 'STRIKE': '2',\n 'HARASS': '2',\n 'FIRE_SUPPORT': '0.5',\n 'CARRIER_GROUP': '0.5',\n 'CIVILIAN_CRAFT': '0.5',\n 'STRIKE_FORCE': '1',\n 'LIGHT_ESCORT': '0.5',\n 'DESTROYER_ESCORT': '0.5'}"
     },
     {
         "key": "personalities.csv#aggressive$name",
         "original": "Aggressive",
         "translation": "激进",
         "stage": 5,
-        "context": "版本：0.97-RC11 词条格式：v2\npersonalities.csv第0004行\n[本行原始数据]\n{'id': 'aggressive',\n 'name': 'Aggressive',\n 'desc': 'In combat, this officer will prefer to engage at a range that allows '\n         \"the use of all of their ship's weapons, will pilot civilian ships as \"\n         'if they were combat ships, and will employ any fighters under their '\n         'command aggressively.',\n 'bravery': '5',\n 'CAPTURE': '1.5',\n 'PATROL': '1',\n 'INTERCEPT': '2',\n 'ASSAULT': '2',\n 'DEFEND': '0.5',\n 'STRIKE': '2',\n 'HARASS': '2',\n 'FIRE_SUPPORT': '0.5',\n 'CARRIER_GROUP': '0.5',\n 'CIVILIAN_CRAFT': '0.5',\n 'STRIKE_FORCE': '1',\n 'LIGHT_ESCORT': '0.5',\n 'DESTROYER_ESCORT': '0.5'}"
+        "context": "版本：0.98-RC8 词条格式：v2\npersonalities.csv第0004行\n[本行原始数据]\n{'id': 'aggressive',\n 'name': 'Aggressive',\n 'desc': 'In combat, this officer will prefer to engage at a range that allows '\n         \"the use of all of their ship's weapons, will pilot civilian ships as \"\n         'if they were combat ships, and will employ any fighters under their '\n         'command aggressively.',\n 'bravery': '5',\n 'CAPTURE': '1.5',\n 'PATROL': '1',\n 'INTERCEPT': '2',\n 'ASSAULT': '2',\n 'DEFEND': '0.5',\n 'STRIKE': '2',\n 'HARASS': '2',\n 'FIRE_SUPPORT': '0.5',\n 'CARRIER_GROUP': '0.5',\n 'CIVILIAN_CRAFT': '0.5',\n 'STRIKE_FORCE': '1',\n 'LIGHT_ESCORT': '0.5',\n 'DESTROYER_ESCORT': '0.5'}"
     },
     {
         "key": "personalities.csv#cautious$desc",
         "original": "In combat, this officer will prefer to stay out of enemy range, only occasionally moving in if out-ranged by the enemy.",
         "translation": "在战斗中，这名军官将倾向于和敌舰保持安全距离，通常在敌舰脱离本舰射程时才会主动出击。",
         "stage": 5,
-        "context": "版本：0.97-RC11 词条格式：v2\npersonalities.csv第0002行\n[本行原始数据]\n{'id': 'cautious',\n 'name': 'Cautious',\n 'desc': 'In combat, this officer will prefer to stay out of enemy range, only '\n         'occasionally moving in if out-ranged by the enemy.',\n 'bravery': '5',\n 'CAPTURE': '1',\n 'PATROL': '0.7',\n 'INTERCEPT': '0.3',\n 'ASSAULT': '0.3',\n 'DEFEND': '2',\n 'STRIKE': '0.3',\n 'HARASS': '0.3',\n 'FIRE_SUPPORT': '2',\n 'CARRIER_GROUP': '2',\n 'CIVILIAN_CRAFT': '2',\n 'STRIKE_FORCE': '1',\n 'LIGHT_ESCORT': '1',\n 'DESTROYER_ESCORT': '1'}"
+        "context": "版本：0.98-RC8 词条格式：v2\npersonalities.csv第0002行\n[本行原始数据]\n{'id': 'cautious',\n 'name': 'Cautious',\n 'desc': 'In combat, this officer will prefer to stay out of enemy range, only '\n         'occasionally moving in if out-ranged by the enemy.',\n 'bravery': '5',\n 'CAPTURE': '1',\n 'PATROL': '0.7',\n 'INTERCEPT': '0.3',\n 'ASSAULT': '0.3',\n 'DEFEND': '2',\n 'STRIKE': '0.3',\n 'HARASS': '0.3',\n 'FIRE_SUPPORT': '2',\n 'CARRIER_GROUP': '2',\n 'CIVILIAN_CRAFT': '2',\n 'STRIKE_FORCE': '1',\n 'LIGHT_ESCORT': '1',\n 'DESTROYER_ESCORT': '1'}"
     },
     {
         "key": "personalities.csv#cautious$name",
         "original": "Cautious",
         "translation": "谨慎",
         "stage": 5,
-        "context": "版本：0.97-RC11 词条格式：v2\npersonalities.csv第0002行\n[本行原始数据]\n{'id': 'cautious',\n 'name': 'Cautious',\n 'desc': 'In combat, this officer will prefer to stay out of enemy range, only '\n         'occasionally moving in if out-ranged by the enemy.',\n 'bravery': '5',\n 'CAPTURE': '1',\n 'PATROL': '0.7',\n 'INTERCEPT': '0.3',\n 'ASSAULT': '0.3',\n 'DEFEND': '2',\n 'STRIKE': '0.3',\n 'HARASS': '0.3',\n 'FIRE_SUPPORT': '2',\n 'CARRIER_GROUP': '2',\n 'CIVILIAN_CRAFT': '2',\n 'STRIKE_FORCE': '1',\n 'LIGHT_ESCORT': '1',\n 'DESTROYER_ESCORT': '1'}"
+        "context": "版本：0.98-RC8 词条格式：v2\npersonalities.csv第0002行\n[本行原始数据]\n{'id': 'cautious',\n 'name': 'Cautious',\n 'desc': 'In combat, this officer will prefer to stay out of enemy range, only '\n         'occasionally moving in if out-ranged by the enemy.',\n 'bravery': '5',\n 'CAPTURE': '1',\n 'PATROL': '0.7',\n 'INTERCEPT': '0.3',\n 'ASSAULT': '0.3',\n 'DEFEND': '2',\n 'STRIKE': '0.3',\n 'HARASS': '0.3',\n 'FIRE_SUPPORT': '2',\n 'CARRIER_GROUP': '2',\n 'CIVILIAN_CRAFT': '2',\n 'STRIKE_FORCE': '1',\n 'LIGHT_ESCORT': '1',\n 'DESTROYER_ESCORT': '1'}"
     },
     {
         "key": "personalities.csv#reckless$desc",
         "original": "In combat, this officer is aggressive to a fault, often disregarding the safety of their ship entirely in an effort to engage the enemy.",
         "translation": "在战斗中，这名军官极具攻击性，为打击敌人常奋不顾身地进行战斗。",
         "stage": 5,
-        "context": "版本：0.97-RC11 词条格式：v2\npersonalities.csv第0005行\n[本行原始数据]\n{'id': 'reckless',\n 'name': 'Reckless',\n 'desc': 'In combat, this officer is aggressive to a fault, often disregarding '\n         'the safety of their ship entirely in an effort to engage the enemy.',\n 'bravery': '5',\n 'CAPTURE': '1.5',\n 'PATROL': '1',\n 'INTERCEPT': '2',\n 'ASSAULT': '2',\n 'DEFEND': '0.5',\n 'STRIKE': '2',\n 'HARASS': '2',\n 'FIRE_SUPPORT': '0.5',\n 'CARRIER_GROUP': '0.5',\n 'CIVILIAN_CRAFT': '0.5',\n 'STRIKE_FORCE': '1',\n 'LIGHT_ESCORT': '0.5',\n 'DESTROYER_ESCORT': '0.5'}"
+        "context": "版本：0.98-RC8 词条格式：v2\npersonalities.csv第0005行\n[本行原始数据]\n{'id': 'reckless',\n 'name': 'Reckless',\n 'desc': 'In combat, this officer is aggressive to a fault, often disregarding '\n         'the safety of their ship entirely in an effort to engage the enemy.',\n 'bravery': '5',\n 'CAPTURE': '1.5',\n 'PATROL': '1',\n 'INTERCEPT': '2',\n 'ASSAULT': '2',\n 'DEFEND': '0.5',\n 'STRIKE': '2',\n 'HARASS': '2',\n 'FIRE_SUPPORT': '0.5',\n 'CARRIER_GROUP': '0.5',\n 'CIVILIAN_CRAFT': '0.5',\n 'STRIKE_FORCE': '1',\n 'LIGHT_ESCORT': '0.5',\n 'DESTROYER_ESCORT': '0.5'}"
     },
     {
         "key": "personalities.csv#reckless$name",
         "original": "Reckless",
         "translation": "鲁莽",
         "stage": 5,
-        "context": "版本：0.97-RC11 词条格式：v2\npersonalities.csv第0005行\n[本行原始数据]\n{'id': 'reckless',\n 'name': 'Reckless',\n 'desc': 'In combat, this officer is aggressive to a fault, often disregarding '\n         'the safety of their ship entirely in an effort to engage the enemy.',\n 'bravery': '5',\n 'CAPTURE': '1.5',\n 'PATROL': '1',\n 'INTERCEPT': '2',\n 'ASSAULT': '2',\n 'DEFEND': '0.5',\n 'STRIKE': '2',\n 'HARASS': '2',\n 'FIRE_SUPPORT': '0.5',\n 'CARRIER_GROUP': '0.5',\n 'CIVILIAN_CRAFT': '0.5',\n 'STRIKE_FORCE': '1',\n 'LIGHT_ESCORT': '0.5',\n 'DESTROYER_ESCORT': '0.5'}"
+        "context": "版本：0.98-RC8 词条格式：v2\npersonalities.csv第0005行\n[本行原始数据]\n{'id': 'reckless',\n 'name': 'Reckless',\n 'desc': 'In combat, this officer is aggressive to a fault, often disregarding '\n         'the safety of their ship entirely in an effort to engage the enemy.',\n 'bravery': '5',\n 'CAPTURE': '1.5',\n 'PATROL': '1',\n 'INTERCEPT': '2',\n 'ASSAULT': '2',\n 'DEFEND': '0.5',\n 'STRIKE': '2',\n 'HARASS': '2',\n 'FIRE_SUPPORT': '0.5',\n 'CARRIER_GROUP': '0.5',\n 'CIVILIAN_CRAFT': '0.5',\n 'STRIKE_FORCE': '1',\n 'LIGHT_ESCORT': '0.5',\n 'DESTROYER_ESCORT': '0.5'}"
     },
     {
         "key": "personalities.csv#steady$desc",
         "original": "In combat, this officer will favor a balanced approach with tactics matching the current situation.",
         "translation": "在战斗中，这名军官将根据现场状况选择合适而均衡的战术。",
         "stage": 5,
-        "context": "版本：0.97-RC11 词条格式：v2\npersonalities.csv第0003行\n[本行原始数据]\n{'id': 'steady',\n 'name': 'Steady',\n 'desc': 'In combat, this officer will favor a balanced approach with tactics '\n         'matching the current situation.',\n 'bravery': '5',\n 'CAPTURE': '1',\n 'PATROL': '1',\n 'INTERCEPT': '1',\n 'ASSAULT': '1',\n 'DEFEND': '1',\n 'STRIKE': '1',\n 'HARASS': '1',\n 'FIRE_SUPPORT': '1',\n 'CARRIER_GROUP': '1',\n 'CIVILIAN_CRAFT': '1',\n 'STRIKE_FORCE': '1',\n 'LIGHT_ESCORT': '1',\n 'DESTROYER_ESCORT': '1'}"
+        "context": "版本：0.98-RC8 词条格式：v2\npersonalities.csv第0003行\n[本行原始数据]\n{'id': 'steady',\n 'name': 'Steady',\n 'desc': 'In combat, this officer will favor a balanced approach with tactics '\n         'matching the current situation.',\n 'bravery': '5',\n 'CAPTURE': '1',\n 'PATROL': '1',\n 'INTERCEPT': '1',\n 'ASSAULT': '1',\n 'DEFEND': '1',\n 'STRIKE': '1',\n 'HARASS': '1',\n 'FIRE_SUPPORT': '1',\n 'CARRIER_GROUP': '1',\n 'CIVILIAN_CRAFT': '1',\n 'STRIKE_FORCE': '1',\n 'LIGHT_ESCORT': '1',\n 'DESTROYER_ESCORT': '1'}"
     },
     {
         "key": "personalities.csv#steady$name",
         "original": "Steady",
         "translation": "沉着",
         "stage": 5,
-        "context": "版本：0.97-RC11 词条格式：v2\npersonalities.csv第0003行\n[本行原始数据]\n{'id': 'steady',\n 'name': 'Steady',\n 'desc': 'In combat, this officer will favor a balanced approach with tactics '\n         'matching the current situation.',\n 'bravery': '5',\n 'CAPTURE': '1',\n 'PATROL': '1',\n 'INTERCEPT': '1',\n 'ASSAULT': '1',\n 'DEFEND': '1',\n 'STRIKE': '1',\n 'HARASS': '1',\n 'FIRE_SUPPORT': '1',\n 'CARRIER_GROUP': '1',\n 'CIVILIAN_CRAFT': '1',\n 'STRIKE_FORCE': '1',\n 'LIGHT_ESCORT': '1',\n 'DESTROYER_ESCORT': '1'}"
+        "context": "版本：0.98-RC8 词条格式：v2\npersonalities.csv第0003行\n[本行原始数据]\n{'id': 'steady',\n 'name': 'Steady',\n 'desc': 'In combat, this officer will favor a balanced approach with tactics '\n         'matching the current situation.',\n 'bravery': '5',\n 'CAPTURE': '1',\n 'PATROL': '1',\n 'INTERCEPT': '1',\n 'ASSAULT': '1',\n 'DEFEND': '1',\n 'STRIKE': '1',\n 'HARASS': '1',\n 'FIRE_SUPPORT': '1',\n 'CARRIER_GROUP': '1',\n 'CIVILIAN_CRAFT': '1',\n 'STRIKE_FORCE': '1',\n 'LIGHT_ESCORT': '1',\n 'DESTROYER_ESCORT': '1'}"
     },
     {
         "key": "personalities.csv#timid$desc",
         "original": "In combat, this officer will attempt to avoid direct engagements if at all possible, even if commanding a combat vessel.",
         "translation": "在战斗中，这名军官将尽可能地远离正面冲突，哪怕驾驶着一艘作战舰船。",
         "stage": 5,
-        "context": "版本：0.97-RC11 词条格式：v2\npersonalities.csv第0001行\n[本行原始数据]\n{'id': 'timid',\n 'name': 'Timid',\n 'desc': 'In combat, this officer will attempt to avoid direct engagements if '\n         'at all possible, even if commanding a combat vessel.',\n 'bravery': '5',\n 'CAPTURE': '0.5',\n 'PATROL': '0.5',\n 'INTERCEPT': '0.1',\n 'ASSAULT': '0',\n 'DEFEND': '1',\n 'STRIKE': '0',\n 'HARASS': '0',\n 'FIRE_SUPPORT': '3',\n 'CARRIER_GROUP': '3',\n 'CIVILIAN_CRAFT': '3',\n 'STRIKE_FORCE': '1',\n 'LIGHT_ESCORT': '1',\n 'DESTROYER_ESCORT': '1'}"
+        "context": "版本：0.98-RC8 词条格式：v2\npersonalities.csv第0001行\n[本行原始数据]\n{'id': 'timid',\n 'name': 'Timid',\n 'desc': 'In combat, this officer will attempt to avoid direct engagements if '\n         'at all possible, even if commanding a combat vessel.',\n 'bravery': '5',\n 'CAPTURE': '0.5',\n 'PATROL': '0.5',\n 'INTERCEPT': '0.1',\n 'ASSAULT': '0',\n 'DEFEND': '1',\n 'STRIKE': '0',\n 'HARASS': '0',\n 'FIRE_SUPPORT': '3',\n 'CARRIER_GROUP': '3',\n 'CIVILIAN_CRAFT': '3',\n 'STRIKE_FORCE': '1',\n 'LIGHT_ESCORT': '1',\n 'DESTROYER_ESCORT': '1'}"
     },
     {
         "key": "personalities.csv#timid$name",
         "original": "Timid",
         "translation": "胆小",
         "stage": 5,
-        "context": "版本：0.97-RC11 词条格式：v2\npersonalities.csv第0001行\n[本行原始数据]\n{'id': 'timid',\n 'name': 'Timid',\n 'desc': 'In combat, this officer will attempt to avoid direct engagements if '\n         'at all possible, even if commanding a combat vessel.',\n 'bravery': '5',\n 'CAPTURE': '0.5',\n 'PATROL': '0.5',\n 'INTERCEPT': '0.1',\n 'ASSAULT': '0',\n 'DEFEND': '1',\n 'STRIKE': '0',\n 'HARASS': '0',\n 'FIRE_SUPPORT': '3',\n 'CARRIER_GROUP': '3',\n 'CIVILIAN_CRAFT': '3',\n 'STRIKE_FORCE': '1',\n 'LIGHT_ESCORT': '1',\n 'DESTROYER_ESCORT': '1'}"
+        "context": "版本：0.98-RC8 词条格式：v2\npersonalities.csv第0001行\n[本行原始数据]\n{'id': 'timid',\n 'name': 'Timid',\n 'desc': 'In combat, this officer will attempt to avoid direct engagements if '\n         'at all possible, even if commanding a combat vessel.',\n 'bravery': '5',\n 'CAPTURE': '0.5',\n 'PATROL': '0.5',\n 'INTERCEPT': '0.1',\n 'ASSAULT': '0',\n 'DEFEND': '1',\n 'STRIKE': '0',\n 'HARASS': '0',\n 'FIRE_SUPPORT': '3',\n 'CARRIER_GROUP': '3',\n 'CIVILIAN_CRAFT': '3',\n 'STRIKE_FORCE': '1',\n 'LIGHT_ESCORT': '1',\n 'DESTROYER_ESCORT': '1'}"
     }
 ]
