@@ -10,7 +10,7 @@
 
 ### 从论坛下载
 
-目前0.98尚且没有打包的汉化包。您可以在论坛帖子 [远行星号 0.97a-RC11 中文汉化v1.0.0](https://www.fossic.org/thread-13676-1-1.html) 下载最新的汉化版游戏安装包。
+目前0.98尚且没有打包的汉化包。您可以在论坛帖子 [远行星号 0.97a-RC11 中文汉化v1.0.0](https://www.fossic.org/thread-13676-1-1.html) 下载0.97汉化版游戏安装包。
 
 ### 下载 GitHub 上的最新汉化
 
@@ -96,10 +96,11 @@
     4. 运行 `_overwriteLocalizationByOriginal.py` 脚本，将 `original` 中出现变化的文件覆盖到 `localization` 文件夹中
 7. 将 `localization.old/graphics` 文件夹下的可以复用的图像和字体资源复制到 `localization/graphics` 文件夹中
 8. 在使用Paratranz脚本前，请确保词条对照表文件 `para_tranz/para_tranz_map.json` 已经更新
-    - 请联系 jn_xyp 以获取最新的 `para_tranz_map.json` 文件
+     - 请联系 jn_xyp 以获取最新的 `para_tranz_map.json` 文件
 9. **参照[Paratran版本管理指南](docs/paratranz/tut_admin.md)步骤，从 git 导入新的原文到 ParaTranz**
-    - 只导入原文！**不要导入译文！**
-    - 必须在导入时选择**安全模式（不删除词条）**！
+     - 在导入前必须下载最新的 ParaTranz 平台数据作为备份
+     - 首先导入原文，然后导入译文
+       - 必须在导入时选择**安全模式（不删除词条）**！
 10. **参照[Paratran版本管理指南](docs/paratranz/tut_admin.md)中的步骤，将翻译完成的译文导入 git**
 11. 提交commit并push
      - 在提交前，请将汉化文件复制入游戏，尝试能否正常启动游戏
