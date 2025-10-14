@@ -14586,9 +14586,9 @@ SetShortcut defaultLeave ESCAPE","As you approach the stark torus-hulls of Galat
 
 Odd that the Hegemony Navy is controlling the docking procedures of an independent station.
 
-Your primary bridge display tags a matrix of light anti-ship batteries tracking your progress. Your tactical officer calls for your attention then pulls up a sub-display with a closer view: a Valkyrie-class troop transport and its escorts are emplaced across the primary landing bay. They clearly don’t want visitors.
+Your primary bridge display tags a matrix of light anti-ship batteries tracking your progress. Your tactical officer calls for your attention then pulls up a sub-display with a closer view: a Valkyrie-class troop transport and its escorts are emplaced across the primary landing bay. They clearly don't want visitors.
 
-You should report to Ancyra to find out what’s going on.",100:gaDuringTutorialLeave:Leave,
+You should report to Ancyra to find out what's going on.",100:gaDuringTutorialLeave:Leave,
 gaOpenDialogDuringTutorial,GAHegOfficerInteraction,"$global.isInTutorial
 !$doneFirstVisit","$doneFirstVisit = true
 ShowPersonVisual true heg_ga_officer
@@ -14598,7 +14598,7 @@ SetShortcut gaDuringTutorialLeave ESCAPE","As you approach the stark white torus
 
 An adjutant leans into frame and whispers something in his ear.
 
-""Oh, you’re the freelancer my CO on Ancyra got to help us out?"" $HeOrShe relaxes $hisOrHer tone, ""I'm Lieutenant Tseen Ke. We're carrying out the investigation into who screwed up here while you take care of the problem out there. I wish you luck, captain, because if you don't solve this it's going to get ugly.”","0:gaDuringTutorialMoreInfo1:""What's going on?""
+""Oh, you're the freelancer my CO on Ancyra got to help us out?"" $HeOrShe relaxes $hisOrHer tone, ""I'm Lieutenant Tseen Ke. We're carrying out the investigation into who screwed up here while you take care of the problem out there. I wish you luck, captain, because if you don't solve this it's going to get ugly.""","0:gaDuringTutorialMoreInfo1:""What's going on?""
 100:gaDuringTutorialLeave:Thank the officer and sign off.",
 gaDuringTutorialMoreInfo1,DialogOptionSelected,$option == gaDuringTutorialMoreInfo1,,"$HeOrShe considers whether to answer your question.
 
@@ -14734,8 +14734,8 @@ Call $global.gaIntro_ref updateStage","The academy agent makes a quiet request t
 
 The comms unit chimes softly.
 
-""Yes? ... Really? I mean, yes, we’ll come up immediately."" The agent turns to you, ""Provost Baird will see you. Right now. Please follow me, captain.""",0:gaRequestMeeting1:Follow the junior academy agent,
-gaRequestMeeting1,DialogOptionSelected,$option == gaRequestMeeting1,,"You are led through a discreet secure-access door to a series of passages that bypass the public concourses. A travel-lift activates at the academy agent’s presence and you step inside at the agent's encouraging nod.
+""Yes? ... Really? I mean, yes, we'll come up immediately."" The agent turns to you, ""Provost Baird will see you. Right now. Please follow me, captain.""",0:gaRequestMeeting1:Follow the junior academy agent,
+gaRequestMeeting1,DialogOptionSelected,$option == gaRequestMeeting1,,"You are led through a discreet secure-access door to a series of passages that bypass the public concourses. A travel-lift activates at the academy agent's presence and you step inside at the agent's encouraging nod.
 
 The lift pod is wrapped by diamond-matrix through which you can see the canyon-like sweep of plazas pass by, filled with crowds of students, academics, and technicians. Raising your gaze, you see that the pod is approaching a tiered substructure which seems to hang over the curve of the station interior. The pod slows and you shuffle to adjust to the local grav-effect field gradient.
 
@@ -14750,7 +14750,7 @@ $option = gaRequestMeeting3 0
 FireBest DialogOptionSelected",,,
 gaRequestMeeting3,DialogOptionSelected,$option == gaRequestMeeting3,BeginConversation baird,"You enter the office and the doors close silently behind you. Provost Anahita Baird turns to acknowledge your entrance while concluding a call via her desk tablet. 
 
-Ancient wooden shelves for real, paper books gleam darkly in subdued light emanating tastefully from nowhere. The shelves are only half-stocked from crates scattered around the office. A brass orrery of the Galatia system adorns a plinth in the midst of a seating cluster. Parchments mounted behind the provost’s desk display intimidating intellectual rankings, their seals of authenticity glowing softly.
+Ancient wooden shelves for real, paper books gleam darkly in subdued light emanating tastefully from nowhere. The shelves are only half-stocked from crates scattered around the office. A brass orrery of the Galatia system adorns a plinth in the midst of a seating cluster. Parchments mounted behind the provost's desk display intimidating intellectual rankings, their seals of authenticity glowing softly.
 
 ""I apologize for the mess,"" she says, having noted your examination. ""I've only just moved office.""",0:gaRequestMeeting4:Continue,
 gaRequestMeeting4noTutorial,DialogOptionSelected,"$option == gaRequestMeeting4
@@ -14834,7 +14834,7 @@ SetPersonHidden baird false
 SetPersonHidden sebestyen false
 BeginMission gaTTS","""I see."" 
 
-The provost's tone seems to suggest that you've answered her question incorrectly. ""There are other visionary space captains out there, I’m sure, who would be interested in extremely profitable work. Nonetheless, consider my offer carefully. Perhaps after some thought you will see just how reasonable it is.""
+The provost's tone seems to suggest that you've answered her question incorrectly. ""There are other visionary space captains out there, I'm sure, who would be interested in extremely profitable work. Nonetheless, consider my offer carefully. Perhaps after some thought you will see just how reasonable it is.""
 
 She turns away, to her desk console, and activates some display which casts cool light over her face. ""After you have time to properly consider my offer, contact my assistant, Academician Sebestyen. Someone will give you his comms ID.""
 
@@ -21616,16 +21616,16 @@ FireAll PopulateOptions","""Right, yes, um."" He seems nervous to be meeting a r
 
 ""...different departments within the Galatia Academy tell me what they need done, then I coordinate with freelancers like yourself to procure, uh, the necessary services. Oh, and I run jobs by the finance office. We have to make sure you get paid; that's very important.""
 
-""At any time there may be various jobs open to you, you just have to check with me. Or sometimes there might be no jobs if they’re all fulfilled."" He reads something on a tablet, ""But um, it looks like Provost Baird wants you to have first priority. She must like you.""
+""At any time there may be various jobs open to you, you just have to check with me. Or sometimes there might be no jobs if they're all fulfilled."" He reads something on a tablet, ""But um, it looks like Provost Baird wants you to have first priority. She must like you.""
 
 You're not so sure of this.",,
 asebDefaultGreeting,PickGreeting,"$id == sebestyen score:1000
 $metAlready","ShowPersonVisual
 FireAll PopulateOptions","""Welcome back captain, it's good to see you!"" Sebestyen says cheerfully.",,
 asebOpenMHOptionText,UpdateMHOpenOptionText,$id == sebestyen score:1000,"SetOptionText mh_open ""Inquire about available jobs""",,,
-asebMHOpenText,MHOpenText,$id == sebestyen score:1000,FireBest AsebPreMissionListText,"He taps at a datapad. ""Let me look at what we’ve got lined up for you today... """,,
+asebMHOpenText,MHOpenText,$id == sebestyen score:1000,FireBest AsebPreMissionListText,"He taps at a datapad. ""Let me look at what we've got lined up for you today... """,,
 asebNoMissions,AsebPreMissionListText,"$id == sebestyen score:1000
-$mh_count <= 0",,"""Oh, that's too bad. It looks like there aren’t any current requests,"" he says. He sounds genuinely sorry for you, but manages to perk up, ""Maybe next time?""",,
+$mh_count <= 0",,"""Oh, that's too bad. It looks like there aren't any current requests,"" he says. He sounds genuinely sorry for you, but manages to perk up, ""Maybe next time?""",,
 asebOneMission,AsebPreMissionListText,"$id == sebestyen score:1000
 $mh_count == 1
 $mh_firstInlineBlurb != null",$mh_doNotPrintBlurbs = true 0,"""I have just the one request here. $mh_firstInlineBlurb"", he looks to you expectantly, ""It's yours if you want it.""",,
@@ -21814,7 +21814,7 @@ $id == sebestyen score:1000
 $global.asebSayBairdWantsToTalk score:1000
 !$gaTTB_askedAlready","$gaTTB_askedAlready = true
 $global.bairdWillTalk = true
-BeginMission gaTTB","Academician Sebestyen taps at a datapad. ""Let me look at what we’ve got lined up for you today... Oh."" He puts down the datapad and looks to you, confused. 
+BeginMission gaTTB","Academician Sebestyen taps at a datapad. ""Let me look at what we've got lined up for you today... Oh."" He puts down the datapad and looks to you, confused. 
 
 ""It's, the, um, Provost Baird wants to speak with you,"" he says. He picks up the datapad again, examines it, and puts it down.
 
@@ -21848,7 +21848,7 @@ gaDataOfferOption,gaData_option,,,,gaData_start:Ask about data retrieval from th
 gaDataMissionTextBasicOrPirates,DialogOptionSelected,"$option == gaData_start
 $gaData_variation == BASIC","$missionId = gaData
 SetTextHighlights $gaData_dist $gaData_reward
-Call $global.gaData_ref showMap ""Target: $gaData_planetName""","""So this is an easy one, right? All you have to do is get to $gaData_planetName, in the $gaData_systemName system, which is,"" $heOrShe checks a different datapad, ""about $gaData_dist light-years away. We'll provide the exact coordinates of the $gaData_target you need to, um, access. Then once you're back in hypercomm range, send the encrypted contents back to the Academy and the finance office will pay you $gaData_reward credits.“","aseb_accept:Accept
+Call $global.gaData_ref showMap ""Target: $gaData_planetName""","""So this is an easy one, right? All you have to do is get to $gaData_planetName, in the $gaData_systemName system, which is,"" $heOrShe checks a different datapad, ""about $gaData_dist light-years away. We'll provide the exact coordinates of the $gaData_target you need to, um, access. Then once you're back in hypercomm range, send the encrypted contents back to the Academy and the finance office will pay you $gaData_reward credits.""","aseb_accept:Accept
 aseb_decline:Decline",
 gaDataMissionTextRemnants,DialogOptionSelected,"$option == gaData_start
 $gaData_variation == REMNANTS","$missionId = gaData
@@ -21857,25 +21857,25 @@ SetTextHighlights $gaData_dist $gaData_reward","Academician Sebestyen makes a se
 He turns to you, closes his eyes to brace for a moment, then puts on an impressive smile before proceeding. ""So this won't be a problem right? I mean, we have the exact coordinates of the $gaData_target for you. On $gaData_planetName, in the $gaData_systemName system, which is $gaData_dist light-years away. You get in, you get out, and once you're in hypercomm range, just send the encrypted contents back to the Academy and the finance office will pay you $gaData_reward credits. No problem!""","gaData_remCont:""But?""",
 gaDataMissionTextRemnants2,DialogOptionSelected,$option == gaData_remCont,"Call $global.gaData_ref showMap ""Target: $gaData_planetName""","A longish pause, which is unusual for Academician $personLastName, who has a way of filling uncomfortable gaps in conversation.
 
-""But. We’re not supposed to talk about it. But. If you recall all those rumors around the First AI War... well, you can ask in the Persean Studies department maybe? But there is a, um, possibility, maybe, that you will encounter certain, um,"" $heOrShe looks down to check the exact phrasing, ""'autonomous weapon systems'. It says it might be quite dangerous, which is why this pays more than usual. I'm sure it's nothing, right? Ha-ha. You'll be fine?""","aseb_accept:Accept
+""But. We're not supposed to talk about it. But. If you recall all those rumors around the First AI War... well, you can ask in the Persean Studies department maybe? But there is a, um, possibility, maybe, that you will encounter certain, um,"" $heOrShe looks down to check the exact phrasing, ""'autonomous weapon systems'. It says it might be quite dangerous, which is why this pays more than usual. I'm sure it's nothing, right? Ha-ha. You'll be fine?""","aseb_accept:Accept
 aseb_decline:Decline",
 gaDataMissionTextDeciv,DialogOptionSelected,"$option == gaData_start
 $gaData_variation == DECIV","$missionId = gaData
 SetTextHighlights $gaData_dist $gaData_marinesReq $gaData_reward
-Call $global.gaData_ref showMap ""Target: $gaData_planetName""","""Right. Uh. So once you get to $gaData_planetName in the $gaData_systemName system, about $gaData_dist light-years away, you’ll go to the exact coordinates of the $gaData_target. That's where things might be a little, um, complicated.""
+Call $global.gaData_ref showMap ""Target: $gaData_planetName""","""Right. Uh. So once you get to $gaData_planetName in the $gaData_systemName system, about $gaData_dist light-years away, you'll go to the exact coordinates of the $gaData_target. That's where things might be a little, um, complicated.""
 
 $HeOrShe pauses and you watch the process of $himOrHer considering how to phrase $hisOrHer next words. ""There are reports of ah, a 'decivilized' population. Probably? They don't have weapons that can take on a spaceship but it says here they have,"" $heOrShe taps at another datapad, ""a lot of handheld weapons. And they're ... fairly hostile. Usually. So, you should definitely bring,"" yet another datapad, ""around $gaData_marinesReq or so marines. Just in case. I mean, hopefully no one gets shot right? Statistically speaking, um. The data suggests that only low casualties are a possibility?""
 
-$HeOrShe looks a little ill at the thought, but recovers quickly, ""Once you’re back in hypercomms range, just send the encrypted contents back to the Academy and the finance office will pay you $gaData_reward credits. Easy!""","aseb_accept:Accept
+$HeOrShe looks a little ill at the thought, but recovers quickly, ""Once you're back in hypercomms range, just send the encrypted contents back to the Academy and the finance office will pay you $gaData_reward credits. Easy!""","aseb_accept:Accept
 aseb_decline:Decline",
 gaDataMissionTextPulsar,DialogOptionSelected,"$option == gaData_start
 $gaData_variation == PULSAR","$missionId = gaData
 SetTextHighlights $gaData_dist $gaData_reward
-Call $global.gaData_ref showMap ""Target: $gaData_planetName""","""Yes, so you’ll need to go to $gaData_planetName in the $gaData_systemName system, which is $gaData_dist light-years away. We’ll provide the exact coordinates of the $gaData_target you need to, um, access. And oh, oh, this is really important,"" $heOrShe taps a key, switching the display to a stellar diagram that appears to be exploding in two arcs on opposite poles.
+Call $global.gaData_ref showMap ""Target: $gaData_planetName""","""Yes, so you'll need to go to $gaData_planetName in the $gaData_systemName system, which is $gaData_dist light-years away. We'll provide the exact coordinates of the $gaData_target you need to, um, access. And oh, oh, this is really important,"" $heOrShe taps a key, switching the display to a stellar diagram that appears to be exploding in two arcs on opposite poles.
 
-Academician $personLastName explains, ""$gaData_pulsarName is a pulsar, so you’ll have to be very, very careful. I’m so jealous! Rapidly spinning jets of high energy charged particles, oh, it’s a once-in-a-lifetime sight. I mean, that’s what I hear from the Astrometrics people,"" $heOrShe sighs. ""So, um, hopefully your shields are up to spec?""
+Academician $personLastName explains, ""$gaData_pulsarName is a pulsar, so you'll have to be very, very careful. I'm so jealous! Rapidly spinning jets of high energy charged particles, oh, it's a once-in-a-lifetime sight. I mean, that's what I hear from the Astrometrics people,"" $heOrShe sighs. ""So, um, hopefully your shields are up to spec?""
 
-$HeOrShe continues, ""Once you’re back in hypercomms range, send the encrypted contents back to the Academy and the finance office will pay you $gaData_reward credits.""","aseb_accept:Accept
+$HeOrShe continues, ""Once you're back in hypercomms range, send the encrypted contents back to the Academy and the finance office will pay you $gaData_reward credits.""","aseb_accept:Accept
 aseb_decline:Decline",
 gaDataPlanetInteraction,OpenInteractionDialog,"$gaData_targetPlanet score:1000
 Call $global.gaData_ref updateData","ShowDefaultVisual
@@ -21922,7 +21922,7 @@ $hailing = true 0",,,
 gaDataPirateOpenComm,OpenCommLink,"$entity.gaData_pirateConv score:100
 Call $global.gaData_ref updateData","$entity.ignorePlayerCommRequests = true
 MakeOtherFleetImportant gaData false
-FireBest GADataPirateConvStart","""Eyh there cap'n. Good work finding the target! We all admire your cleverness,"" $heOrShe turns over $hisOrHer shoulder to address $hisOrHer crew, ""Don’t we, ya vac-hogs?""
+FireBest GADataPirateConvStart","""Eyh there cap'n. Good work finding the target! We all admire your cleverness,"" $heOrShe turns over $hisOrHer shoulder to address $hisOrHer crew, ""Don't we, ya vac-hogs?""
 
 You hear, quietly, the pirate bridge crew giving a round of ""Aye!""s amid hooting and applause.",,
 gaDataPirateConvBeforeGotData,GADataPirateConvStart,!$global.gaData_gotData,"$transmitNoun = ""these coordinates"" 0
@@ -21931,24 +21931,24 @@ gaData_sellCoords:Offer to transmit the coordinates ... for a price
 gaData_rejectOffer:Decline this invitation; power up combat systems
 gaData_bluff:""The deal has changed. You're here to provide me with fuel and supplies.""",
 gaDataPirateConvAfterGotData,GADataPirateConvStart,$global.gaData_gotData,"$transmitNoun = ""this data"" 0
-SetStoryOption gaData_bluff 1 gaData_bluff general ""Bluffed pirates into giving you supplies and fuel""","The pirate leader turns back to the display. ""Now if you don’t mind, we'll be takin' a copy of that data from you back to the rich-man who's paying us. Transmit now, if you'd be so kind. Or do we gotta come over and cut the memory core from that fancy flagship you're flying?""","gaData_transmitData:Transmit the data; it's just a copy
+SetStoryOption gaData_bluff 1 gaData_bluff general ""Bluffed pirates into giving you supplies and fuel""","The pirate leader turns back to the display. ""Now if you don't mind, we'll be takin' a copy of that data from you back to the rich-man who's paying us. Transmit now, if you'd be so kind. Or do we gotta come over and cut the memory core from that fancy flagship you're flying?""","gaData_transmitData:Transmit the data; it's just a copy
 gaData_sellData:Offer to transmit a copy of the data ... for a price
 gaData_rejectOffer:Decline this invitation; power up combat systems
-gaData_bluff:""The deal has changed. You’re here to provide me with fuel and supplies.""",
+gaData_bluff:""The deal has changed. You're here to provide me with fuel and supplies.""",
 gaDataGiveCoordsSel,DialogOptionSelected,$option == gaData_transmitCoords,"$global.gaData_gaveCoordsToPirates = true
 Call $global.gaData_ref updateStage
 MakeOtherFleetNonHostile gaData true
 MakeOtherFleetDoThing $gaData_planetId 2 ""retrieving data from the ruins"" true
-MakeOtherFleetGoAway false","You signal your comms officer to transmit the coordinates. Some cache of data of interest to a bunch of academics isn’t worth this trouble.
+MakeOtherFleetGoAway false","You signal your comms officer to transmit the coordinates. Some cache of data of interest to a bunch of academics isn't worth this trouble.
 
-""Transmission received, captain,"" says the pirate with a smile. ""It’s been a...""","cutCommLink:Close transmission
+""Transmission received, captain,"" says the pirate with a smile. ""It's been a...""","cutCommLink:Close transmission
 gaDataCutCommAngry:Hit the end transmission button somewhat harder than strictly necessary",
 gaDataGiveCoordsSelAngry,DialogOptionSelected,$option == gaDataCutCommAngry,"$option = cutCommLink 0
 FireBest DialogOptionSelected",,,
 gaDataGiveDataCopySel,DialogOptionSelected,$option == gaData_transmitData,"MakeOtherFleetNonHostile gaData true
-MakeOtherFleetGoAway true","You signal your comms officer to transmit a copy of the data. It’s not like the Galatia Academy explicitly requested exclusivity, right? As long as this gets the pirates off your back so you can complete your mission, there's no harm done.
+MakeOtherFleetGoAway true","You signal your comms officer to transmit a copy of the data. It's not like the Galatia Academy explicitly requested exclusivity, right? As long as this gets the pirates off your back so you can complete your mission, there's no harm done.
 
-""Transmission received, captain,"" says the pirate with a smile. ""It’s been a pleasure...""
+""Transmission received, captain,"" says the pirate with a smile. ""It's been a pleasure...""
 
 You hit the end transmission button a little harder than necessary before the pirate finishes speaking.",cutCommLink:Continue,
 gaDataGiveDataNegotiate1,DialogOptionSelected,$option == gaData_sellData,"$option = gaData_sellCoords 0
@@ -21984,7 +21984,7 @@ MakeOtherFleetGoAway true","The pirate captain stumbles on $hisOrHer words, conf
 
 You stick to your story, creating believable details on the fly, and manage to take $himOrHer in completely.
 
-""I, yes, ... you!,"" the pirate captain gestures angrily at some underling, ""Get the fuel and supplies transferred NOW."" $HeOrShe turns back to the display, sulking ""Please, just don’t tell the boss about this.""","cutCommLink:""I won't, I promise.""",
+""I, yes, ... you!,"" the pirate captain gestures angrily at some underling, ""Get the fuel and supplies transferred NOW."" $HeOrShe turns back to the display, sulking ""Please, just don't tell the boss about this.""","cutCommLink:""I won't, I promise.""",
 ,,,,,,
 # retrieve artifact from derelict mission,,,,,,
 gaDABlurb,gaDA_blurb,,,"""The $gaDA_department team has requested retrieval of an object of scientific interest from a derelict ship near $gaDA_starName.""",,
@@ -21993,9 +21993,9 @@ gaDAMissionTextBasic,DialogOptionSelected,"$option == gaDA_start
 $gaDA_notRemnants","$missionId = gaDA
 SetTextHighlights $gaDA_dist $gaDA_reward
 $aseb_givePlayerNeutrinoDetector = true 0
-Call $global.gaDA_ref showMap ""Target: $gaDA_systemName""","""The $gaDA_department team needs you to pop on over to the $gaDA_systemName, that’s $gaDA_dist light-years away, to retrieve, um,"" he squints at a datapad, ""'$gaDA_widget' from a derelict ship.""
+Call $global.gaDA_ref showMap ""Target: $gaDA_systemName""","""The $gaDA_department team needs you to pop on over to the $gaDA_systemName, that's $gaDA_dist light-years away, to retrieve, um,"" he squints at a datapad, ""'$gaDA_widget' from a derelict ship.""
 
-""I guess it’s in the ship? Or maybe the cargo? It says here they have a pretty good idea of exactly where it is within the hull itself, anyway. This should be simple, right?""
+""I guess it's in the ship? Or maybe the cargo? It says here they have a pretty good idea of exactly where it is within the hull itself, anyway. This should be simple, right?""
 
 He pauses briefly. ""Oh, the payment! Once you return the $gaDA_widgetNoArticle to the Academy, the finance office will pay you $gaDA_reward credits.""","aseb_accept:Accept
 aseb_decline:Decline",
@@ -22003,10 +22003,10 @@ gaDAMissionTextRemnants,DialogOptionSelected,"$option == gaDA_start
 !$gaDA_notRemnants","$missionId = gaDA
 SetTextHighlights $gaDA_dist $gaDA_fuel","Academician Sebestyen's eyes go wide as he reads over the datapad, then he quickly looks back to you. 
 
-He puts on a bright smile. ""This will be simple, they know exactly where to find the, um,"" $heOrShe looks back to the datapad, brow creased, ""'$gaDA_widgetNoArticle' in the target’s hull. Just send a salvage crew, get the thing, and off you go! And that’s in the $gaDA_systemName, just $gaDA_dist light-years, there and back with,” a few taps on a different datapad, ""around $gaDA_fuel units of fuel for your fleet."" The academician shifts uncomfortably, as if $heOrShe doesn’t want to deliver bad news.","gaDA_and:""And?""",
+He puts on a bright smile. ""This will be simple, they know exactly where to find the, um,"" $heOrShe looks back to the datapad, brow creased, ""'$gaDA_widgetNoArticle' in the target's hull. Just send a salvage crew, get the thing, and off you go! And that's in the $gaDA_systemName, just $gaDA_dist light-years, there and back with,"" a few taps on a different datapad, ""around $gaDA_fuel units of fuel for your fleet."" The academician shifts uncomfortably, as if $heOrShe doesn't want to deliver bad news.","gaDA_and:""And?""",
 gaDAMissionTextRemnants2,DialogOptionSelected,$option == gaDA_and,"SetTextHighlights $gaDA_reward
 $aseb_givePlayerNeutrinoDetector = true 0
-Call $global.gaDA_ref showMap ""Target: $gaDA_systemName""","""And. Well, the last expedition they sent. Um. The last transmission said something about 'hostile AI warships'. Maybe."" $HeOrShe drops $hisOrHer voice, ""We're not supposed to talk about it. Officially, I mean. But it could be ... maybe dangerous? That’s why this one pays more than usual - $gaDA_reward credits. You can handle it, right?"" Academician $personLastName resumes $hisOrHer previous volume ""- And everything will be fine! Just get in, retrieve the object, and return it to the Academy.""","aseb_accept:Accept
+Call $global.gaDA_ref showMap ""Target: $gaDA_systemName""","""And. Well, the last expedition they sent. Um. The last transmission said something about 'hostile AI warships'. Maybe."" $HeOrShe drops $hisOrHer voice, ""We're not supposed to talk about it. Officially, I mean. But it could be ... maybe dangerous? That's why this one pays more than usual - $gaDA_reward credits. You can handle it, right?"" Academician $personLastName resumes $hisOrHer previous volume ""- And everything will be fine! Just get in, retrieve the object, and return it to the Academy.""","aseb_accept:Accept
 aseb_decline:Decline",
 gaDAMissionReturn,PickGreeting,"$gaDA_returnHere score:1000
 Call $global.gaDA_ref updateData
@@ -22044,11 +22044,11 @@ You follow the sweep of salvage teams through the hulk, flicking through display
 Your ops chief personally oversees packaging and extraction of the target. All that remains is to return it to the Galatia Academy.",gaDA_continueBasic:Leave,
 gaDADerelictContBasic,DialogOptionSelected,$option == gaDA_continueBasic,"#FireBest OpenInteractionDialog
 DismissDialog",,,
-gaDADerelictPiratesTookItStart,GADADerelictInteraction,$gaDA_variation == PIRATES,,"As you approach the derelict your sensors officer points out signs that you're not the first to visit. Outgassing and debris around the target’s hull match the profile of a recent salvage operation.
+gaDADerelictPiratesTookItStart,GADADerelictInteraction,$gaDA_variation == PIRATES,,"As you approach the derelict your sensors officer points out signs that you're not the first to visit. Outgassing and debris around the target's hull match the profile of a recent salvage operation.
 
 ""More like a smash and grab,"" growls your ops chief. Whoever got here first was not a professional judging by the slipshod breaching cuts and tangle of discarded equipment.
 
-You send out a salvage team, and they perform a sweep with cautious efficiency. Your mission target is missing, but they do find something unexpected: a leaky suit crudely bolted to a bulkhead, occupant unconscious. The victim of some punishment, evidently. They’re cut free then placed in a quarantined bulkhead while a medic attempts to revive them.",gaDA_continuePirates:Continue,
+You send out a salvage team, and they perform a sweep with cautious efficiency. Your mission target is missing, but they do find something unexpected: a leaky suit crudely bolted to a bulkhead, occupant unconscious. The victim of some punishment, evidently. They're cut free then placed in a quarantined bulkhead while a medic attempts to revive them.",gaDA_continuePirates:Continue,
 gaDADerelictContPirates,DialogOptionSelected,$option == gaDA_continuePirates,"$global.gaDA_piratesTookIt = true
 Call $global.gaDA_ref updateStage","The victim is thankful and eager to talk- and definitely a pirate. You watch through a holofeed as a story comes out about being left behind due to a perceived transgression which, ""-the others got talking and decided just 'cause they didn't like me much that I was the one to blame. I didn't do a thing to deserve it!""
 
@@ -22062,7 +22062,7 @@ DismissDialog",,,
 gaDADerelictTakeInPirate,DialogOptionSelected,$option == gaDA_takePirateIn,AddCommodity crew 1,,gaDA_returnPirateCont:Leave,
 gaDADerelictTakeInPirateCont,DialogOptionSelected,$option == gaDA_returnPirateCont,"#DespawnEntity
 DismissDialog",,,
-gaDADerelictScavengerStart,GADADerelictInteraction,$gaDA_variation == SCAVENGER,,"You approach the derelict. Your sensors officer quickly points out signs that you're not the first to have found it: Outgassing and debris around the target’s hull match the profile of a recent salvage operation. ""... And they were professionals,"" growls your ops chief with more than a hint of respect. Whoever got here first made efficient breaching cuts at key access points, leaving only a neat net of lines secured to borer-pitons favored by deep-space salvage rats.
+gaDADerelictScavengerStart,GADADerelictInteraction,$gaDA_variation == SCAVENGER,,"You approach the derelict. Your sensors officer quickly points out signs that you're not the first to have found it: Outgassing and debris around the target's hull match the profile of a recent salvage operation. ""... And they were professionals,"" growls your ops chief with more than a hint of respect. Whoever got here first made efficient breaching cuts at key access points, leaving only a neat net of lines secured to borer-pitons favored by deep-space salvage rats.
 
 You send out a salvage team knowing what they'll find, and they perform their sweep with cautious efficiency. Your mission target is missing; you order the team's telemetry and holo feeds to be attached to the mission file as proof that you performed this job for the Academy to the best of your ability.",gaDA_continueScav:Continue,
 gaDADerelictScavengerCont,DialogOptionSelected,$option == gaDA_continueScav,"$global.gaDA_scavengerTookIt = true
@@ -22102,7 +22102,7 @@ DoCanAffordCheck $gaDA_piratePrice gaDA_buyAgree false","You explain to the pira
 $HeOrShe considers your words, then says ""You make some good points, captain. I do hate it when worthless mud-boots try to talk down to me. And,"" $heOrShe gives you a fierce look, ""I don't need another mass murder charge on my bounty just for some piece of junk."" 
 
 After some additional implied threats and a bit of negotiation on your part,  the pirate captain offers to sell you what they found for $gaDA_piratePayment credits.","gaDA_buyAgree:Agree to their price
-gaDA_buyDecline:Decline, it’s simply not worth it
+gaDA_buyDecline:Decline, it's simply not worth it
 gaDA_buyDeclineAggro:""I've decided to take it from you by force.""",
 gaDAPirateBuyConfirm,DialogOptionSelected,$option == gaDA_buyAgree,"RemoveCommodity credits $gaDA_piratePrice
 $global.gaDA_gotWidget = true
@@ -22119,7 +22119,7 @@ The comms snap to static; you speculate that you don't hear the fist slam on the
 gaDADeclineBuyAggroStronger,DialogOptionSelected,"$option == gaDA_buyDeclineAggro
 $entity.relativeStrength < 0","SetTextHighlights $gaDA_piratePaymentLow
 $gaDA_piratePrice = $gaDA_piratePaymentLow 0
-DoCanAffordCheck $gaDA_piratePrice gaDA_buyAgree false","The pirate captain cries out in a panic, $hisOrHer contemptuous airs dispelled in a moment. ""Wait! We’re just doing business here, I can compromise!"" $HeOrShe sweats, visibly calculating for a moment, ""How about $gaDA_piratePaymentLow credits for this piece of junk? Be reasonable, captain, we can make this work for both of us.""","gaDA_buyAgree:Accept the new price
+DoCanAffordCheck $gaDA_piratePrice gaDA_buyAgree false","The pirate captain cries out in a panic, $hisOrHer contemptuous airs dispelled in a moment. ""Wait! We're just doing business here, I can compromise!"" $HeOrShe sweats, visibly calculating for a moment, ""How about $gaDA_piratePaymentLow credits for this piece of junk? Be reasonable, captain, we can make this work for both of us.""","gaDA_buyAgree:Accept the new price
 cutCommLink:Decline. Snap comms off and power up battle-systems.",
 gaDAThreatenToAttack,DialogOptionSelected,"$option == gaDA_threaten
 $entity.relativeStrength < 0",$gaDA_piratePrice = 0 0,"The pirate captain laughs heartily, but you detect just a note of panic underlying the bravado. ""Oh, well done. I thought we were the pirates here, but no it is you. I admire you, captain.""
@@ -22136,7 +22136,7 @@ gaDAKantaSentMe,DialogOptionSelected,$option == gaDA_kantaSentMe,$player.kantaBl
 gaDA_kanta2:""I could tell her I killed you. Change your name. Change your face. Stay far away.""",
 gaDAKantaSentMe1,DialogOptionSelected,$option == gaDA_kanta1,,"""... Then,"" the pirate, almost in tears, completes your sentence, ""... she must want me alive for some reason. And I'm only useful to her if I'm alive, right?"" A deep breath. ""That makes sense. I owe her still. I always will. But she'll see how loyal I am, right? You'll tell her I'm loyal?"" The pirate looks to you, pleading.","gaDA_kanta1a:""Absolutely loyal.""",
 gaDAKantaSentMe1a,DialogOptionSelected,$option == gaDA_kanta1a,$gaDA_piratePrice = 0 0,You manage to extricate yourself from comms link-up with the blubbering pirate captain just as your operations chief confirms that a cargo drone has delivered a package from the lead pirate ship.,gaDA_buyAgree:Continue,
-gaDAKantaSentMe2,DialogOptionSelected,$option == gaDA_kanta2,,"""Yes, yes. Yes yes yes. That might work. And- yes, if I give you whatever this stupid thing is, you’ll do this? Tell her you saw me die?"" The pirate captain looks to you, pleading.","gaDA_kanta2a:""I'm picturing it right now.""",
+gaDAKantaSentMe2,DialogOptionSelected,$option == gaDA_kanta2,,"""Yes, yes. Yes yes yes. That might work. And- yes, if I give you whatever this stupid thing is, you'll do this? Tell her you saw me die?"" The pirate captain looks to you, pleading.","gaDA_kanta2a:""I'm picturing it right now.""",
 gaDAKantaSentMe2a,DialogOptionSelected,$option == gaDA_kanta2a,$gaDA_piratePrice = 0 0,"""Wonderful!"" $HeOrShe looks as though an enormous weight has lifted off $hisOrHer shoulders. ""Thank you for ... for this opportunity. Freedom! At last!""
 
 Only the promise that you'll make up a good story about how they went out guns ablaze gets the pirate captain off the comms. You sigh, and just then your operations chief pings your attention to note that a cargo drone has delivered a package from the lead pirate ship.",gaDA_buyAgree:Continue,
@@ -22163,7 +22163,7 @@ DoCanAffordCheck $gaDA_scavPrice gaDA_scavBuyAccept false","You begin to negotia
 The negotiation goes back and forth, both parties acknowledging the commercial interest of the other by various points, until the independent captain comes to a price for the $gaDA_widgetNoArticle.
 
 ""I think $gaDA_scavPayment credits is more than fair,"" $heOrShe says with that touch of finality which signals that this negotiation is at its end.","gaDA_scavBuyAccept:Agree to their price
-cutCommLink:Decline, it’s simply not worth it",
+cutCommLink:Decline, it's simply not worth it",
 gaDAScavBuyConfirm,DialogOptionSelected,$option == gaDA_scavBuyAccept,"FireBest ScavPaidText
 RemoveCommodity credits $gaDA_scavPrice
 $global.gaDA_gotWidget = true
@@ -22280,7 +22280,7 @@ gaCOMissionTextBasicPulsar,DialogOptionSelected,"$option == gaCO_start
 $gaCO_variation == PULSAR","$missionId = gaCO
 SetTextHighlights $gaCO_dist","""Right. Yes."" Academician Sebestyen seems nervous, but after a moment of ever-so-brief inner turmoil, appears to make the decision to power through the briefing.
 
-""... Okay. For this one you would need to go to $gaCO_celestialObjectNameWithTypeShort in the $gaCO_starName system, which is $gaCO_dist light-years away. Once in orbit of the target, the instrument package provided by the $gaCO_department team will link to your navigation system with the necessary information to do the, um, sweep. And um. You’ll want to time this very carefully because, um.""
+""... Okay. For this one you would need to go to $gaCO_celestialObjectNameWithTypeShort in the $gaCO_starName system, which is $gaCO_dist light-years away. Once in orbit of the target, the instrument package provided by the $gaCO_department team will link to your navigation system with the necessary information to do the, um, sweep. And um. You'll want to time this very carefully because, um.""
 
 Is his resolve wavering? ",gaCO_pulsarCont:Raise a single eyebrow,
 gaCOMissionTextBasicPulsarCont,DialogOptionSelected,$option == gaCO_pulsarCont,"SetTextHighlights $gaCO_reward
@@ -22313,7 +22313,7 @@ HailPlayer",,,
 gaCOPatherOpenComm,OpenCommLink,"$entity.gaCO_patherMissionInProgress score:1000
 !$entity.ignorePlayerCommRequests
 Call $global.gaCO_ref updateData","$entity.ignorePlayerCommRequests = true
-SetStoryOption gaCO_convince 1 gaCO_convince general ""Convinced Pather captain you were one of them""","The channel opens to the scowling face of a Pather fanatic. ""Defiler! Interloper!” $HeOrShe spits the words. ""We know well of your kind, for you are not the first to be sent from the Galatia Academy, that foul temple of Belial which vomits up corrupt servants to broadcast profanities upon holy creation!""
+SetStoryOption gaCO_convince 1 gaCO_convince general ""Convinced Pather captain you were one of them""","The channel opens to the scowling face of a Pather fanatic. ""Defiler! Interloper!"" $HeOrShe spits the words. ""We know well of your kind, for you are not the first to be sent from the Galatia Academy, that foul temple of Belial which vomits up corrupt servants to broadcast profanities upon holy creation!""
 
 ""Eject the demonic artifact,"" $heOrShe hisses the words like they're a curse, ""so that we may eliminate it. After this act of supplication, and only after, we might consider praying for your forgiveness, blessing of Ludd be upon even those who malign the Path.""
 
@@ -22361,11 +22361,11 @@ HailPlayer",,,
 gaCOPatherOpenCommAfter,OpenCommLink,"!$entity.gaCO_patherMissionInProgress
 $entity.gaCO_patherPermanentFlag score:1000
 !$entity.ignorePlayerCommRequests","$entity.ignorePlayerCommRequests = true
-DoCanAffordCheck $entity.gaCO_patherTithe gaCO_ejectAfter false","The channel opens on the scowling face of a Pather fanatic. “Defiler! Interloper!” $heOrShe spits the words like a curse, ""Your emanations are offerings to Belial, profanities broadcast upon holy creation! Eject your demonic machine of science,"" that word spoken as a hissed curse, ""that we may destroy it in cleansing fire.""
+DoCanAffordCheck $entity.gaCO_patherTithe gaCO_ejectAfter false","The channel opens on the scowling face of a Pather fanatic. ""Defiler! Interloper!"" $heOrShe spits the words like a curse, ""Your emanations are offerings to Belial, profanities broadcast upon holy creation! Eject your demonic machine of science,"" that word spoken as a hissed curse, ""that we may destroy it in cleansing fire.""
 
 Is that all? No - the Pather was drawing breath to continue the tirade ""- Then pay us a goodly sum, a tithe for your unholy crime, and only then we might consider praying for your forgiveness! Answer now, heretic!""
 
-You consider the situation. The job is already done, so you don’t need the instrument package. Paying off the Pathers would let you leave without a fight.","gaCO_ejectAfter:Eject the research package and pay a tithe of $entity.gaCO_patherTithe credits
+You consider the situation. The job is already done, so you don't need the instrument package. Paying off the Pathers would let you leave without a fight.","gaCO_ejectAfter:Eject the research package and pay a tithe of $entity.gaCO_patherTithe credits
 gaCO_reject:Reject their demands and power up weapons",
 gaCOEjectAfter1,DialogOptionSelected,$option == gaCO_ejectAfter,"RemoveCommodity credits $entity.gaCO_patherTithe
 MakeOtherFleetNonHostile gaCO true
@@ -23388,7 +23388,7 @@ SetStoryOption pwi2_bluff general ""Bluffed Pather to keep $entity.pwi2_item""",
 ""Yes, we know what you have. And we will destroy it, either in your cargo hold, or in Holy Vacuum. Choose now.""","cutCommLink:Decline, close comms
 pwi2_bluff:Bluff to get rid of the Pather
 pwi2_accept:Accept, and eject the technology package",
-pwi2Bluff,DialogOptionSelected,$option == pwi2_bluff,,"You put on a look of grave concern, “$BrotherOrSister, I fear you have misunderstood the situation completely. I walk the Path, as you do, but I?"" You lower your voice to a whisper, ""In the shadow.""
+pwi2Bluff,DialogOptionSelected,$option == pwi2_bluff,,"You put on a look of grave concern, ""$BrotherOrSister, I fear you have misunderstood the situation completely. I walk the Path, as you do, but I?"" You lower your voice to a whisper, ""In the shadow.""
 
 Confusion grows on the Pather's face as $heOrShe tries to process your meaning.
 

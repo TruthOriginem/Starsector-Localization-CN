@@ -119,7 +119,7 @@ class DataFile:
             self.logger.info(
                 f"Paratranz 平台数据文件 {relative_path(self.para_tranz_path)} 已存在，从中读取已翻译词条的词条stage状态")
 
-            special_stages = (0, 1, 2, 3, 5, 9, -1)
+            special_stages = (1, 2, 3, 5, 9, -1)
             para_strings = self.read_json_strings(self.para_tranz_path)
             para_key_strings = {s.key: s for s in para_strings if
                                 s.stage in special_stages}  # type:Dict[str, String]

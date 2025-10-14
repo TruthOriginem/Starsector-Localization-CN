@@ -11,11 +11,11 @@ from para_tranz.utils.util import make_logger, contains_english, contains_chines
 
 SCRIPT_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'temporary_scripts' / 'data_ingestion'
 
-CSV_PATH = SCRIPT_PATH  / 'deathfly_098_obf_mapping.csv'
+CSV_PATH = SCRIPT_PATH  / 'deathfly_098_api_mapping.csv'
 
-MAPPING_OUTPUT_PATH = SCRIPT_PATH / 'deathfly_098_obf_mapping.json'
+MAPPING_OUTPUT_PATH = SCRIPT_PATH / 'deathfly_098_api_mapping.json'
 
-JAR_NAME = 'starfarer_obf.jar'
+JAR_NAME = 'starfarer.api.jar'
 
 PARATRANZ_STRINGS_PATH = PARA_TRANZ_PATH / (JAR_NAME.removesuffix('.jar') + '.json')
 
@@ -30,7 +30,7 @@ def load_deathfly_data():
 
     for row in data[1:]:
         if '"' in row[0]:
-            if row[3] == '#N/A':
+            if row[3] == '#N/A' or row[3] == '#VALUE!':
                 row[3] = ''
             valid_data.append(row)
 
@@ -39,7 +39,15 @@ def load_deathfly_data():
 def remove_deathfly_escaping(text: str) -> str:
     # 渡鸦提供的对照表中，\n\t是转义字符，需要转换为真正的换行符和制表符
     # '\"'是转义字符，需要转换为真正的双引号
-    text = text.replace('<\\n', '<').replace('>\\n', '>').replace('\\n', '\n').replace('\\t', '\t').replace('\\"', '"')
+    text = (text.replace('<\\n', '<')
+            .replace('>\\n', '>')
+            .replace('\\n', '\n')
+            .replace('\\t', '\t')
+            .replace('\\"', '"')
+            .replace('&amp;', '&')
+            .replace('&lt;', '<')
+            .replace('&gt;', '>')
+            )
     return text
 
 def convert_deathfly_csv_to_paratranz_mapping():
