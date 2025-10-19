@@ -46,6 +46,8 @@ class MapItem(object):
                 if display_match:
                     value = display_match.group(1)
                     if value:
+                        # 反转义JSON中的双引号，与updateFile保持一致
+                        value = value.replace("\\\"", "\"")
                         hasValue += 1
                         if not value_list.__contains__(value):
                             hasIndieValue += 1
@@ -122,7 +124,6 @@ class MapItem(object):
                                trailing_commas=False,
                                sort_keys=True,
                                ensure_ascii=False)
-        json_str = json_str.replace(r'\\\"', r'\"')
         with open(self.item_map_file, 'w+', encoding='utf-8') as f:
             f.write(json_str)
             f.close()
@@ -156,8 +157,10 @@ class MapItem(object):
                             if item_map_json.__contains__(key):
                                 if item_map_json[key].lower() != key:
                                     key_times += 1
+                                    # 对译文中的双引号进行转义
+                                    escaped_value = item_map_json[key].replace("\"", "\\\"")
                                     line = line[:display_match.start(
-                                        1)] + item_map_json[key] + line[
+                                        1)] + escaped_value + line[
                                             display_match.end(1):]
                                     line_changed = True
                             elif not item_map_values.__contains__(value):
