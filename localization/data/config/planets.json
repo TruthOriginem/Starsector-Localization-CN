@@ -1,6 +1,6 @@
 {
 	"nebula_center_old":{
-		"name":"Nebula (Old)",
+		"name":"星云 (古老)",
 		"tilt":0, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":0, # degrees/second
@@ -18,7 +18,7 @@
 		"scaleMultStarscapeIcon":2,
 	},
 	"nebula_center_average":{
-		"name":"Nebula",
+		"name":"星云",
 		"tilt":0, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":0, # degrees/second
@@ -37,7 +37,7 @@
 		"scaleMultStarscapeIcon":2,
 	},
 	"nebula_center_young":{
-		"name":"Nebula (Young)",
+		"name":"星云 (年轻)",
 		"tilt":0, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":0, # degrees/second
@@ -56,7 +56,7 @@
 	},
 	
 	"star_neutron":{
-		"name":"Neutron Star",
+		"name":"中子星",
 		"tilt":0, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -75,7 +75,7 @@
 		"lightPosition":[0,0,10], # in planet radii.  Not used for stars.  z > 0 is above the playing field.
 	},
 	"black_hole":{
-		"name":"Black Hole",
+		"name":"黑洞",
 		"tilt":0, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -98,7 +98,7 @@
 		"lightPosition":[0,0,10], # in planet radii.  Not used for stars.  z > 0 is above the playing field.
 	},
 	"star_yellow":{
-		"name":"Yellow Star",
+		"name":"黄矮星",
 		"tilt":0, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -118,7 +118,7 @@
 	
 	# Arcadia
 	"star_white":{
-		"name":"White Dwarf",
+		"name":"白矮星",
 		"tilt":0, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -138,7 +138,7 @@
 	
 	# Magec
 	"star_blue_giant":{
-		"name":"Blue Giant",
+		"name":"蓝巨星",
 		"tilt":0, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -156,7 +156,7 @@
 		"lightPosition":[0,0,10], # in planet radii.  Not used for stars.  z > 0 is above the playing field.
 	},
 	"star_blue_supergiant":{
-		"name":"Blue Supergiant",
+		"name":"蓝超巨星",
 		"tilt":0, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -176,8 +176,8 @@
 	
 	# Valhalla
 	"star_orange":{
-		"name":"Orange Star",
-		"aOrAn":"an",
+		"name":"橙矮星",
+		"aOrAn":"一颗",
 		"tilt":0, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -195,8 +195,8 @@
 		"lightPosition":[0,0,10], # in planet radii.  Not used for stars.  z > 0 is above the playing field.
 	},
 	"star_orange_giant":{
-		"name":"Orange Giant",
-		"aOrAn":"an",
+		"name":"橙巨星",
+		"aOrAn":"一颗",
 		"tilt":0, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -214,7 +214,7 @@
 		"lightPosition":[0,0,10], # in planet radii.  Not used for stars.  z > 0 is above the playing field.
 	},
 	"star_red_supergiant":{
-		"name":"Red Supergiant",
+		"name":"红超巨星",
 		"tilt":-10, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -233,7 +233,7 @@
 	},
 	# Askonia (reusable for other stuff)
 	"star_red_giant":{
-		"name":"Red Giant",
+		"name":"红巨星",
 		"tilt":-10, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -251,7 +251,7 @@
 		"starCoronaSizeMult":5.12, # required, multiplier for star's radius
 	},
 	"star_red_dwarf":{
-		"name":"Red Dwarf",
+		"name":"红矮星",
 		"tilt":-10, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -269,7 +269,7 @@
 		"starCoronaSizeMult":5.12, # required, multiplier for star's radius
 	},
 	"star_browndwarf":{
-		"name":"Brown Dwarf",
+		"name":"褐矮星",
 		"tilt":-16, # left-right (>0 tilts to the left)
 		"pitch":10, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-5, # degrees/second
@@ -292,7 +292,7 @@
 	},
 
 	"gas_giant":{ # like Jupiter or Saturn
-		"name":"Gas Giant",
+		"name":"气态巨行星",
 		"tilt":-10, # left-right (>0 tilts to the left)
 		"pitch":-15, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -311,8 +311,8 @@
 		"cloudRotation":-7, # degrees/second, optional
 	},
 	"ice_giant":{ # like Neptune or Uranus
-		"name":"Ice Giant",
-		"aOrAn":"an",
+		"name":"冰态巨行星",
+		"aOrAn":"一颗",
 		"tilt":65, # left-right (>0 tilts to the left)
 		"pitch":-25, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -331,7 +331,7 @@
 		"cloudRotation":-5, # degrees/second, optional
 	},
 	"lava":{
-		"name":"Volcanic",
+		"name":"火山",
 		"tilt":-20, # left-right (>0 tilts to the left)
 		"pitch":-5, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3.5, # degrees/second
@@ -350,7 +350,7 @@
 		"doNotShowInCombat":true, # meant for brighter planets that make it hard to see what's going on
 	},
 	"lava_minor":{
-		"name":"Volcanic",
+		"name":"火山",
 		"tilt":-20, # left-right (>0 tilts to the left)
 		"pitch":10, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3.5, # degrees/second
@@ -373,7 +373,7 @@
 		#"tags":["codex_unlockable"],
 	},	
 	"frozen":{
-		"name":"Frozen",
+		"name":"冰冻",
 		"tilt":0, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -388,7 +388,7 @@
 		"lightPosition":[12,-2,-3], # in planet radii.  Not used for stars.  z > 0 is above the playing field.
 	},
 	"frozen1":{
-		"name":"Frozen",
+		"name":"冰冻",
 		"descriptionId":"frozen",
 		"tilt":0, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
@@ -404,7 +404,7 @@
 		"lightPosition":[12,-2,-3], # in planet radii.  Not used for stars.  z > 0 is above the playing field.
 	},
 	"frozen2":{
-		"name":"Frozen",
+		"name":"冰冻",
 		"descriptionId":"frozen",
 		"tilt":0, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
@@ -420,7 +420,7 @@
 		"lightPosition":[12,-2,-3], # in planet radii.  Not used for stars.  z > 0 is above the playing field.
 	},
 	"frozen3":{
-		"name":"Frozen",
+		"name":"冰冻",
 		"descriptionId":"frozen",
 		"tilt":0, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
@@ -436,7 +436,7 @@
 		"lightPosition":[12,-2,-3], # in planet radii.  Not used for stars.  z > 0 is above the playing field.
 	},
 	"barren":{
-		"name":"Barren",	
+		"name":"荒芜",	
 		"tilt":-27, # left-right (>0 tilts to the left)
 		"pitch":2, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -451,7 +451,7 @@
 		"lightPosition":[-2,-8,10], # in planet radii.  Not used for stars.  z > 0 is above the playing field.
 	},
 	"barren_castiron":{
-		"name":"Barren",
+		"name":"荒芜",
 		"descriptionId":"barren",
 		"tilt":-27, # left-right (>0 tilts to the left)
 		"pitch":2, # towards-away from the viewer (>0 pitches towards)
@@ -467,7 +467,7 @@
 		"lightPosition":[-2,-8,10], # in planet radii.  Not used for stars.  z > 0 is above the playing field.
 	},
 	"barren2":{
-		"name":"Barren",
+		"name":"荒芜",
 		"descriptionId":"barren",
 		"tilt":-27, # left-right (>0 tilts to the left)
 		"pitch":2, # towards-away from the viewer (>0 pitches towards)
@@ -483,7 +483,7 @@
 		"lightPosition":[-2,-8,10], # in planet radii.  Not used for stars.  z > 0 is above the playing field.
 	},
 	"barren3":{
-		"name":"Barren",
+		"name":"荒芜",
 		"descriptionId":"barren",
 		"tilt":-27, # left-right (>0 tilts to the left)
 		"pitch":2, # towards-away from the viewer (>0 pitches towards)
@@ -499,7 +499,7 @@
 		"lightPosition":[-2,-8,10], # in planet radii.  Not used for stars.  z > 0 is above the playing field.
 	},
 	"barren_venuslike":{
-		"name":"Barren",
+		"name":"荒芜",
 		"descriptionId":"barren",
 		"tilt":-27, # left-right (>0 tilts to the left)
 		"pitch":2, # towards-away from the viewer (>0 pitches towards)
@@ -515,7 +515,7 @@
 		"lightPosition":[-2,-8,10], # in planet radii.  Not used for stars.  z > 0 is above the playing field.
 	},
 	"toxic":{
-		"name":"Toxic",	
+		"name":"剧毒",	
 		"tilt":30, # left-right (>0 tilts to the left)
 		"pitch":-30, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -533,7 +533,7 @@
 		"cloudRotation":7, # degrees/second, optional
 	},
 	"toxic_cold":{
-		"name":"Toxic",	
+		"name":"剧毒",	
 		"tilt":24, # left-right (>0 tilts to the left)
 		"pitch":-24, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -551,7 +551,7 @@
 		"cloudRotation":8, # degrees/second, optional
 	},
 	"jungle":{
-		"name":"Jungle",	
+		"name":"丛林",	
 		"tilt":-40, # left-right (>0 tilts to the left)
 		"pitch":12, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-2.6, # degrees/second
@@ -569,7 +569,7 @@
 		"cloudRotation":-6, # degrees/second, optional
 	},	
 	"terran":{
-		"name":"Terran",
+		"name":"类地",
 		"tilt":20, # left-right (>0 tilts to the left)
 		"pitch":30, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -587,7 +587,7 @@
 		"cloudRotation":-5, # degrees/second, optional
 	},
 	"desert":{
-		"name":"Desert",
+		"name":"沙漠",
 		"tilt":30, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -605,7 +605,7 @@
 		"cloudRotation":-10, # degrees/second, optional
 	},	
 	"desert1":{
-		"name":"Desert",
+		"name":"沙漠",
 		"descriptionId":"desert",
 		"tilt":30, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
@@ -624,8 +624,8 @@
 		"cloudRotation":-10, # degrees/second, optional
 	},	
 	"arid":{
-		"name":"Arid",
-		"aOrAn":"an",
+		"name":"干旱",
+		"aOrAn":"一颗",
 		"tilt":30, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -643,7 +643,7 @@
 		"cloudRotation":-10, # degrees/second, optional
 	},
 	"cryovolcanic":{
-		"name":"Cryovolcanic",
+		"name":"冰火山",
 		"tilt":30, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -661,7 +661,7 @@
 		"cloudRotation":-5, # degrees/second, optional
 	},	
 	"rocky_metallic":{ #Sindria
-		"name":"Rocky Metallic",
+		"name":"金属-岩质地貌",
 		"tilt":5, # left-right (>0 tilts to the left)
 		"pitch":7, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-1, # degrees/second
@@ -674,7 +674,7 @@
 		"lightPosition":[-10,0,7], # in planet radii.  Not used for stars.  z > 0 is above the playing field.	
 	},
 	"rocky_unstable":{ #Cruor
-		"name":"Rocky Unstable",
+		"name":"不稳定岩质",
 		"tilt":0, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -687,7 +687,7 @@
 		"lightPosition":[-7,1,10], # in planet radii.  Not used for stars.  z > 0 is above the playing field.	
 	},
 	"water":{
-		"name":"Water",
+		"name":"海洋",
 		"tilt":-30, # left-right (>0 tilts to the left)
 		"pitch":15, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -705,7 +705,7 @@
 		"cloudRotation":-7, # degrees/second, optional
 	},
 	"rocky_ice":{
-		"name":"Rocky Ice",
+		"name":"冰岩",
 		"tilt":-20, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":3, # degrees/second
@@ -720,8 +720,8 @@
 		"lightPosition":[-10,-2,1], # in planet radii.  Not used for stars.  z > 0 is above the playing field.
 	},
 	"irradiated":{
-		"name":"Irradiated",
-		"aOrAn":"an",
+		"name":"辐射",
+		"aOrAn":"一颗",
 		"tilt":20, # left-right (>0 tilts to the left)
 		"pitch":15, # towards-away from the viewer (>0 pitches towards)
 		"rotation":4.5, # degrees/second
@@ -739,7 +739,7 @@
 		"cloudRotation":3, # degrees/second, optional
 	},	
 	"barren-bombarded":{
-		"name":"Barren-Bombarded",	
+		"name":"荒芜-轰击地貌",	
 		"tilt":-27, # left-right (>0 tilts to the left)
 		"pitch":2, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-4, # degrees/second
@@ -757,7 +757,7 @@
 		#"useReverseLightForGlow":true,
 	},
 	"tundra":{
-		"name":"Tundra",
+		"name":"苔原",
 		"tilt":30, # left-right (>0 tilts to the left)
 		"pitch":0, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second
@@ -775,7 +775,7 @@
 		"cloudRotation":-10, # degrees/second, optional
 	},
 	"barren-desert":{
-		"name":"Barren-Desert",
+		"name":"荒芜-沙漠地貌",
 		"tilt":20, # left-right (>0 tilts to the left)
 		"pitch":-2, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-5, # degrees/second
@@ -794,7 +794,7 @@
 		#"tags":["codex_unlockable"],
 	},
 	"terran-eccentric":{
-		"name":"Terran Eccentric",
+		"name":"异常类地",
 		"tilt":-25, # left-right (>0 tilts to the left)
 		"pitch":-20, # towards-away from the viewer (>0 pitches towards)
 		"rotation":-3, # degrees/second

@@ -16,9 +16,9 @@
 	},
 	"comm_relay":{
 		"baseId":"base_campaign_objective",
-		"defaultName":"Comm Relay", # used if name=null in addCustomEntity()
-		"nameInText":"comm relay",
-		"shortName":"relay",
+		"defaultName":"通讯中继站", # used if name=null in addCustomEntity()
+		"nameInText":"通讯中继站",
+		"shortName":"通讯中继站",
 		"icon":"graphics/icons/relay.png",
 		"iconWidth":24,
 		"iconHeight":24,
@@ -33,9 +33,9 @@
 	},
 	"nav_buoy":{
 		"baseId":"base_campaign_objective",
-		"defaultName":"Nav Buoy", # used if name=null in addCustomEntity()
-		"nameInText":"nav buoy",
-		"shortName":"buoy",
+		"defaultName":"导航浮标", # used if name=null in addCustomEntity()
+		"nameInText":"导航浮标",
+		"shortName":"导航浮标",
 		"icon":"graphics/icons/nav_buoy.png",
 		"iconWidth":24,
 		"iconHeight":24,
@@ -50,9 +50,9 @@
 	},
 	"sensor_array":{
 		"baseId":"base_campaign_objective",
-		"defaultName":"Sensor Array", # used if name=null in addCustomEntity()
-		"nameInText":"sensor array",
-		"shortName":"array",
+		"defaultName":"传感器阵列", # used if name=null in addCustomEntity()
+		"nameInText":"传感器阵列",
+		"shortName":"传感器阵列",
 		"icon":"graphics/icons/sensor_array.png",
 		"iconWidth":24,
 		"iconHeight":24,
@@ -67,7 +67,7 @@
 	},
 	"comm_relay_makeshift":{
 		"baseId":"comm_relay",
-		"defaultName":"Makeshift Comm Relay",
+		"defaultName":"临时通讯中继站",
 		"icon":"graphics/icons/relay_makeshift.png",
 		"customDescriptionId":"comm_relay_makeshift",
 		"sprite":"graphics/ships/com_relay_makeshift.png",
@@ -77,7 +77,7 @@
 	},
 	"nav_buoy_makeshift":{
 		"baseId":"nav_buoy",
-		"defaultName":"Makeshift Nav Buoy",
+		"defaultName":"临时导航浮标",
 		"icon":"graphics/icons/nav_buoy_makeshift.png",
 		"customDescriptionId":"nav_buoy_makeshift",
 		"sprite":"graphics/ships/nav_buoy_makeshift.png",
@@ -87,7 +87,7 @@
 	},
 	"sensor_array_makeshift":{
 		"baseId":"sensor_array",
-		"defaultName":"Makeshift Sensor Array",
+		"defaultName":"临时传感器阵列",
 		"icon":"graphics/icons/sensor_array_makeshift.png",
 		"customDescriptionId":"sensor_array_makeshift",
 		"interactionImage":"graphics/illustrations/sensor_array_makeshift.jpg",
@@ -99,11 +99,11 @@
 	
 	"stable_location":{
 		"baseId":"base_campaign_objective",
-		"defaultName":"Stable Location", # used if name=null in addCustomEntity()
-		"nameInText":"stable location",
-		"shortName":"stable location",
-		"aOrAn":"a",
-		"isOrAre":"is",
+		"defaultName":"稳定点", # used if name=null in addCustomEntity()
+		"nameInText":"稳定点",
+		"shortName":"稳定点",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"customDescriptionId":"stable_location",
 		"interactionImage":"graphics/illustrations/free_orbit.jpg",
 		"icon":"graphics/icons/stable_location.png",
@@ -124,22 +124,22 @@
 		"scaleIconWithZoom":true,
 		"renderCircleIndicator":true,
 		"renderCircleIndicatorSelectionFlash":true,
-		"defaultName":"Target Location", # used if name=null in addCustomEntity()
-		"nameInText":"target location",
-		"shortName":"target location",
-		"aOrAn":"a",
-		"isOrAre":"is",
+		"defaultName":"目标位置", # used if name=null in addCustomEntity()
+		"nameInText":"目标位置",
+		"shortName":"目标位置",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"customDescriptionId":"mission_location",
 		"interactionImage":"graphics/illustrations/free_orbit.jpg",
 		"tags":["has_interaction_dialog", "mission_location"],
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 	},
 	"cargo_pod_special":{
-		"defaultName":"Cargo Pod", # used if name=null in addCustomEntity()
-		"nameInText":"cargo pod",
-		"shortName":"cargo pod",
-		"aOrAn":"a",
-		"isOrAre":"is",
+		"defaultName":"货物吊舱", # used if name=null in addCustomEntity()
+		"nameInText":"货物吊舱",
+		"shortName":"货物吊舱",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"defaultRadius":24, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"cargo_pod_special",
 		"interactionImage":"graphics/illustrations/cargo_pod_drift.jpg",
@@ -162,11 +162,11 @@
 		"renderCircleIndicatorSelectionFlash":true,
 	},
 	"generic_probe":{
-		"defaultName":"Probe", # used if name=null in addCustomEntity()
-		"nameInText":"probe",
-		"shortName":"probe",
-		"aOrAn":"a",
-		"isOrAre":"is",
+		"defaultName":"探针", # used if name=null in addCustomEntity()
+		"nameInText":"探针",
+		"shortName":"探针",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"detectionRange":2000, # must be >0 for discoverable/discoveryXP to be used
 		"discoverable":true,
 		"discoveryXP":500,		
@@ -192,11 +192,11 @@
 		"renderCircleIndicatorSelectionFlash":true,
 	},
 	"derelict_vambrace":{
-		"defaultName":"Derelict Structure", # used if name=null in addCustomEntity()
-		"nameInText":"derelict structure",
-		"shortName":"derelict structure",
-		"aOrAn":"a",
-		"isOrAre":"is",
+		"defaultName":"废弃设施", # used if name=null in addCustomEntity()
+		"nameInText":"废弃设施",
+		"shortName":"废弃设施",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"detectionRange":2500, # must be >0 for discoverable/discoveryXP to be used
 		"discoverable":true,
 		"discoveryXP":1000,		
@@ -223,11 +223,11 @@
 	},
 		
 	"generic_probe_active":{
-		"defaultName":"Probe", # used if name=null in addCustomEntity()
-		"nameInText":"probe",
-		"shortName":"probe",
-		"aOrAn":"a",
-		"isOrAre":"is",
+		"defaultName":"探针", # used if name=null in addCustomEntity()
+		"nameInText":"探针",
+		"shortName":"探针",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		#"detectionRange":2000, # must be >0 for discoverable/discoveryXP to be used
 		#"discoverable":true,
 		#"discoveryXP":500,		
@@ -255,7 +255,7 @@
 	},	
 	
 	"test_station":{
-		"defaultName":"Side Station", # used if name=null in addCustomEntity()
+		"defaultName":"边防站", # used if name=null in addCustomEntity()
 		"defaultRadius":100, # used if radius<0 in addCustomEntity()
 		"icon":"graphics/icons/station0.png",
 		"iconWidth":20,
@@ -275,9 +275,9 @@
 	},
 	
 	"inactive_gate":{
-		"defaultName":"Inactive Gate", # used if name=null in addCustomEntity()
-		"nameInText":"inactive gate",
-		"aOrAn":"an",
+		"defaultName":"不运转的星门", # used if name=null in addCustomEntity()
+		"nameInText":"不运转的星门",
+		"aOrAn":"一处",
 		"defaultRadius":120, # used if radius<0 in addCustomEntity()
 		"interactionImage":"graphics/illustrations/dead_gate.jpg",
 		"icon":"graphics/icons/gate0.png",
@@ -308,7 +308,7 @@
 	},
 	
 	"station_jangala_type":{
-		"defaultName":"Side Station", # used if name=null in addCustomEntity()
+		"defaultName":"边防站", # used if name=null in addCustomEntity()
 		"defaultRadius":90, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/jangala_station.jpg",
@@ -330,7 +330,7 @@
 	},
 	
 	"station_sporeship_derelict":{
-		"defaultName":"Derelict Sporeship Station", # used if name=null in addCustomEntity()
+		"defaultName":"废弃的孢子母舰", # used if name=null in addCustomEntity()
 		"defaultRadius":70, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/abandoned_station3.jpg",
@@ -352,7 +352,7 @@
 	},
 
 	"stellar_mirror":{
-		"defaultName":"Stellar Mirror", # used if name=null in addCustomEntity()
+		"defaultName":"恒星镜", # used if name=null in addCustomEntity()
 		"defaultRadius":36, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"stellar_mirror",
 		"interactionImage":"graphics/illustrations/orbital_mirror.jpg",
@@ -377,7 +377,7 @@
 	},
 	
 	"stellar_shade":{
-		"defaultName":"Stellar Shade", # used if name=null in addCustomEntity()
+		"defaultName":"恒星罩", # used if name=null in addCustomEntity()
 		"defaultRadius":36, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"stellar_shade",
 		"interactionImage":"graphics/illustrations/orbital_shade.jpg",
@@ -401,7 +401,7 @@
 	},
 
 	"station_side00":{
-		"defaultName":"Side Station", # used if name=null in addCustomEntity()
+		"defaultName":"边防站", # used if name=null in addCustomEntity()
 		"defaultRadius":50, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/orbital.jpg",
@@ -423,7 +423,7 @@
 	},
 	
 	"station_galatia":{
-		"defaultName":"Galatia Academy Station", # used if name=null in addCustomEntity()
+		"defaultName":"Galatia 学院 空间站", # used if name=null in addCustomEntity()
 		"defaultRadius":50, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"station_galatia_academy",
 		"interactionImage":"graphics/illustrations/corporate_lobby.jpg",
@@ -445,7 +445,7 @@
 	},
 	
 	"station_side02":{
-		"defaultName":"Side Station", # used if name=null in addCustomEntity()
+		"defaultName":"边防站", # used if name=null in addCustomEntity()
 		"defaultRadius":50, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/orbital.jpg",
@@ -467,7 +467,7 @@
 	},
 	
 	"station_side03":{
-		"defaultName":"Side Station", # used if name=null in addCustomEntity()
+		"defaultName":"边防站", # used if name=null in addCustomEntity()
 		"defaultRadius":50, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/orbital.jpg",
@@ -489,7 +489,7 @@
 	},
 	
 	"station_side04":{
-		"defaultName":"Side Station", # used if name=null in addCustomEntity()
+		"defaultName":"边防站", # used if name=null in addCustomEntity()
 		"defaultRadius":50, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/orbital.jpg",
@@ -511,7 +511,7 @@
 	},
 	
 	"station_side05":{
-		"defaultName":"Side Station", # used if name=null in addCustomEntity()
+		"defaultName":"边防站", # used if name=null in addCustomEntity()
 		"defaultRadius":35, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/orbital.jpg",
@@ -533,7 +533,7 @@
 	},
 	
 	"station_mining00":{
-		"defaultName":"Side Station", # used if name=null in addCustomEntity()
+		"defaultName":"边防站", # used if name=null in addCustomEntity()
 		"defaultRadius":45, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/orbital_construction.jpg",
@@ -555,7 +555,7 @@
 	},
 	
 	"station_side07":{
-		"defaultName":"Side Station", # used if name=null in addCustomEntity()
+		"defaultName":"边防站", # used if name=null in addCustomEntity()
 		"defaultRadius":50, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/orbital.jpg",
@@ -577,7 +577,7 @@
 	},
 	
 	"station_side06":{
-		"defaultName":"Side Station", # used if name=null in addCustomEntity()
+		"defaultName":"边防站", # used if name=null in addCustomEntity()
 		"defaultRadius":50, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/orbital.jpg",
@@ -599,7 +599,7 @@
 	},
 	
 	"orbital_dockyard":{
-		"defaultName":"Orbital Dockyard", # used if name=null in addCustomEntity()
+		"defaultName":"轨道船坞", # used if name=null in addCustomEntity()
 		"defaultRadius":50, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_dockyard",
 		"interactionImage":"graphics/illustrations/orbital_construction.jpg",
@@ -621,7 +621,7 @@
 	},
 	
 	"station_pirate_type":{
-		"defaultName":"Side Station", # used if name=null in addCustomEntity()
+		"defaultName":"边防站", # used if name=null in addCustomEntity()
 		"defaultRadius":40, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/orbital_construction.jpg",
@@ -643,7 +643,7 @@
 	},
 	
 	"station_built_from_industry":{
-		"defaultName":"Orbital Station", # used if name=null in addCustomEntity()
+		"defaultName":"轨道空间站", # used if name=null in addCustomEntity()
 		"defaultRadius":65, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		#"interactionImage":"graphics/illustrations/jangala_station.jpg",
@@ -662,7 +662,7 @@
 	},
 	
 	"orbital_junk":{
-		"defaultName":"Habitat", # used if name=null in addCustomEntity()
+		"defaultName":"轨道居住站", # used if name=null in addCustomEntity()
 		"defaultRadius":0, # used if radius<0 in addCustomEntity()
 		"sheet":"graphics/stations/ministations_sheet00.png",
 		"sheetCellSize":32,
@@ -677,7 +677,7 @@
 	},
 
 	"atlantic_label":{
-		"defaultName":"Atlantian Cloud", # used if name=null in addCustomEntity()
+		"defaultName":"Atlantian 云", # used if name=null in addCustomEntity()
 		"showInCampaign":false,
 		"showIconOnMap":false,
 		"showNameOnMap":true,
@@ -690,7 +690,7 @@
 	},
 	
 	"persean_label":{
-		"defaultName":"The League Worlds", # used if name=null in addCustomEntity()
+		"defaultName":"联盟世界", # used if name=null in addCustomEntity()
 		"showInCampaign":false,
 		"showIconOnMap":false,
 		"showNameOnMap":true,
@@ -703,7 +703,7 @@
 	},
 
 	"luddic_label":{
-		"defaultName":"Pilgrim's Path", # used if name=null in addCustomEntity()
+		"defaultName":"朝圣者之路", # used if name=null in addCustomEntity()
 		"showInCampaign":false,
 		"showIconOnMap":false,
 		"showNameOnMap":true,
@@ -716,7 +716,7 @@
 	},
 	
 	"zin_label":{
-		"defaultName":"The Wastes of Zin", # used if name=null in addCustomEntity()
+		"defaultName":"遗弃之地", # used if name=null in addCustomEntity()
 		"showInCampaign":false,
 		"showIconOnMap":false,
 		"showNameOnMap":true,
@@ -729,7 +729,7 @@
 	},
 
 	"opabyss_label":{
-		"defaultName":"Orion-Perseus Abyss", # used if name=null in addCustomEntity()
+		"defaultName":"猎户座-英仙座深渊", # used if name=null in addCustomEntity()
 		"showInCampaign":false,
 		"showIconOnMap":false,
 		"showNameOnMap":true,
@@ -742,7 +742,7 @@
 	},
 
 	"telmun_label":{
-		"defaultName":"Telmun Molecular Cloud", # used if name=null in addCustomEntity()
+		"defaultName":"Telmun Molecular 云", # used if name=null in addCustomEntity()
 		"showInCampaign":false,
 		"showIconOnMap":false,
 		"showNameOnMap":true,
@@ -755,7 +755,7 @@
 	},
 	
 	"cathedral_label":{
-		"defaultName":"Cathedral Nebula", # used if name=null in addCustomEntity()
+		"defaultName":"Cathedral 星云", # used if name=null in addCustomEntity()
 		"showInCampaign":false,
 		"showIconOnMap":false,
 		"showNameOnMap":true,
@@ -768,7 +768,7 @@
 	},
 	
 	"core_label":{
-		"defaultName":"The Core Worlds", # used if name=null in addCustomEntity()
+		"defaultName":"核心世界", # used if name=null in addCustomEntity()
 		"showInCampaign":false,
 		"showIconOnMap":false,
 		"showNameOnMap":true,
@@ -781,7 +781,7 @@
 	},
 	
 	"base_constellation_label":{
-		"defaultName":"<constellation label>", # used if name=null in addCustomEntity()
+		"defaultName":"<星座标签>", # used if name=null in addCustomEntity()
 		"showInCampaign":false,
 		"showIconOnMap":false,
 		"showNameOnMap":true,
@@ -807,11 +807,11 @@
 	# procgen-related salvage things
 	
 	"derelict_probe":{
-		"defaultName":"Domain-era Probe", # used if name=null in addCustomEntity()
-		"nameInText":"Domain-era probe",
-		"shortName":"probe",
-		"aOrAn":"a",
-		"isOrAre":"is",
+		"defaultName":"人之领-探测器", # used if name=null in addCustomEntity()
+		"nameInText":"人之领-探测器",
+		"shortName":"探针",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"defaultRadius":35, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"derelict_probe",
 		"interactionImage":"graphics/illustrations/space_wreckage.jpg",
@@ -836,11 +836,11 @@
 
 
 	"derelict_survey_ship":{
-		"defaultName":"Domain-era Survey Ship", # used if name=null in addCustomEntity()
-		"nameInText":"Domain-era survey ship",
-		"shortName":"survey ship",
-		"aOrAn":"a",
-		"isOrAre":"is",
+		"defaultName":"人之领-勘探舰", # used if name=null in addCustomEntity()
+		"nameInText":"人之领-勘探舰",
+		"shortName":"勘探舰",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"defaultRadius":47, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"derelict_surveyship",
 		"interactionImage":"graphics/illustrations/space_wreckage.jpg",
@@ -864,11 +864,11 @@
 	},
 	
 	"derelict_mothership":{
-		"defaultName":"Domain-era Mothership", # used if name=null in addCustomEntity()
-		"nameInText":"Domain-era mothership",
-		"shortName":"mothership",
-		"aOrAn":"a",
-		"isOrAre":"is",
+		"defaultName":"人之领-勘探母舰", # used if name=null in addCustomEntity()
+		"nameInText":"人之领-勘探母舰",
+		"shortName":"勘探母舰",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"defaultRadius":67, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"derelict_mothership",
 		"interactionImage":"graphics/illustrations/space_wreckage.jpg",
@@ -892,11 +892,11 @@
 	},
 	
 	"derelict_cryosleeper":{
-		"defaultName":"Domain-era Cryosleeper", # used if name=null in addCustomEntity()
-		"nameInText":"Domain-era cryosleeper",
-		"shortName":"cryosleeper",
-		"aOrAn":"a",
-		"isOrAre":"is",
+		"defaultName":"人之领-低温休眠舰", # used if name=null in addCustomEntity()
+		"nameInText":"人之领-低温休眠舰",
+		"shortName":"低温休眠舰",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"defaultRadius":96, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"derelict_cryosleeper",
 		"interactionImage":"graphics/illustrations/cryosleeper_interior.jpg",
@@ -921,11 +921,11 @@
 	},
 	
 	"derelict_gatehauler":{
-		"defaultName":"Domain-era Gate Hauler", # used if name=null in addCustomEntity()
-		"nameInText":"Domain-era Gate Hauler",
-		"shortName":"gate hauler",
-		"aOrAn":"a",
-		"isOrAre":"is",
+		"defaultName":"人之领-星门运输舰", # used if name=null in addCustomEntity()
+		"nameInText":"人之领-星门运输舰",
+		"shortName":"星门运输舰",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"defaultRadius":150, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"derelict_gatehauler",
 		"interactionImage":"graphics/illustrations/gate_hauler1.jpg",
@@ -950,11 +950,11 @@
 	},	
 	
 	"coronal_tap":{
-		"defaultName":"Coronal Hypershunt", # used if name=null in addCustomEntity()
-		"nameInText":"coronal hypershunt",
-		"shortName":"coronal hypershunt",
-		"aOrAn":"a",
-		"isOrAre":"is",
+		"defaultName":"星冕分流器", # used if name=null in addCustomEntity()
+		"nameInText":"星冕分流器",
+		"shortName":"星冕分流器",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"defaultRadius":150, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"coronal_tap",
 		"interactionImage":"graphics/illustrations/coronal_tap2.jpg",
@@ -982,11 +982,11 @@
 	# not actually added to campaign engine
 	# only used as "scavenge debris field" dialog's interaction target
 	"debris_field_shared":{
-		"defaultName":"Debris Field", # used if name=null in addCustomEntity()
-		"nameInText":"debris field",
-		"shortName":"debris",
-		"aOrAn":"a",
-		"isOrAre":"is",
+		"defaultName":"残骸区", # used if name=null in addCustomEntity()
+		"nameInText":"残骸区",
+		"shortName":"残骸",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"customDescriptionId":"debris_field_shared",
 		"interactionImage":"graphics/illustrations/space_wreckage.jpg",
 		"tags":["has_interaction_dialog", "salvageable", "neutrino_low"],
@@ -994,12 +994,12 @@
 	
 	
 	"wreck":{
-		"defaultName":"Derelict Ship", # used if name=null in addCustomEntity()
+		"defaultName":"遗弃舰", # used if name=null in addCustomEntity()
 		"defaultRadius":20, # used if radius<0 in addCustomEntity()
-		"nameInText":"derelict ship",
-		"shortName":"ship",
-		"aOrAn":"a",
-		"isOrAre":"is",
+		"nameInText":"遗弃舰",
+		"shortName":"舰船",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"showInCampaign":true,
 		"scaleIconSizeBasedOnDefaultRadius":false,
 		"showIconOnMap":true,
@@ -1015,12 +1015,12 @@
 	},
 	
 	"hidden_cache":{
-		"defaultName":"Hidden Cache", # used if name=null in addCustomEntity()
+		"defaultName":"隐蔽藏匿点", # used if name=null in addCustomEntity()
 		"defaultRadius":35, # used if radius<0 in addCustomEntity()
-		"nameInText":"hidden cache",
-		"shortName":"hidden cache",
-		"aOrAn":"a",
-		"isOrAre":"is",
+		"nameInText":"隐蔽藏匿点",
+		"shortName":"隐蔽藏匿点",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"showInCampaign":true,
 		"scaleIconSizeBasedOnDefaultRadius":false,
 		"showIconOnMap":true,
@@ -1037,12 +1037,12 @@
 	
 	
 	"supply_cache":{
-		"defaultName":"Supply Cache", # used if name=null in addCustomEntity()
+		"defaultName":"补给藏匿点", # used if name=null in addCustomEntity()
 		"defaultRadius":35, # used if radius<0 in addCustomEntity()
-		"nameInText":"supply cache",
-		"shortName":"supply cache",
-		"aOrAn":"a",
-		"isOrAre":"is",
+		"nameInText":"补给藏匿点",
+		"shortName":"补给藏匿点",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"showInCampaign":true,
 		"scaleIconSizeBasedOnDefaultRadius":false,
 		"showIconOnMap":true,
@@ -1059,10 +1059,10 @@
 	
 	"weapons_cache":{
 		"baseId":"supply_cache",
-		"defaultName":"Weapons Cache",
+		"defaultName":"武器藏匿点",
 		"defaultRadius":35, 
-		"nameInText":"weapons cache",
-		"shortName":"weapons cache",
+		"nameInText":"武器藏匿点",
+		"shortName":"武器藏匿点",
 		"customDescriptionId":"weapon_cache",
 	},
 	
@@ -1080,11 +1080,11 @@
 	
 	"equipment_cache":{
 		"baseId":"supply_cache",
-		"aOrAn":"an",
-		"defaultName":"Equipment Cache",
+		"aOrAn":"一处",
+		"defaultName":"设备藏匿点",
 		"defaultRadius":35, 
-		"nameInText":"equipment cache",
-		"shortName":"equipment cache",
+		"nameInText":"设备藏匿点",
+		"shortName":"设备藏匿点",
 	},
 	
 	# a cache that's a single large structure rather than a collection of containers etc
@@ -1092,15 +1092,15 @@
 	# salage specs for particular cases 
 	"large_cache":{
 		"baseId":"supply_cache",
-		"aOrAn":"a",
+		"aOrAn":"一处",
 		# needs to be cache so that an override name ending in Cache does not result in a weird tooltip
 		# E.G. if this said "Large Cache" and the name was set to "Mothballed Equipment Cache"
 		# The tooltip would show Mothballed Equipment Cache (Large Cache)
 		# But if the name ends with what's in this field, the parenthetical will be omitted.
-		"defaultName":"Cache",
+		"defaultName":"藏匿点",
 		"defaultRadius":35, 
-		"nameInText":"cache",
-		"shortName":"cache",
+		"nameInText":"藏匿点",
+		"shortName":"藏匿点",
 		"iconWidth":20,
 		"iconHeight":20,
 		"icon":"graphics/icons/cache0.png",
@@ -1113,35 +1113,35 @@
 	
 	"technology_cache":{
 		"baseId":"supply_cache",
-		"defaultName":"Technology Cache",
+		"defaultName":"科技藏匿点",
 		"defaultRadius":35, 
-		"nameInText":"technology cache",
-		"shortName":"technology cache",
+		"nameInText":"科技藏匿点",
+		"shortName":"科技藏匿点",
 	},
 	
 	"alpha_site_weapons_cache":{
 		"baseId":"supply_cache",
-		"defaultName":"Heavily Shielded Cache",
+		"defaultName":"大型屏蔽式藏匿点",
 		"defaultRadius":35, 
-		"nameInText":"shielded cache",
-		"shortName":"cache",
+		"nameInText":"屏蔽式藏匿点",
+		"shortName":"藏匿点",
 		"tags":["has_interaction_dialog", "salvageable", "neutrino_high"],
 	},
 	
 	"supply_cache_small":{
 		"baseId":"supply_cache",
-		"defaultName":"Minor Supply Cache",
+		"defaultName":"小型补给藏匿点",
 		"defaultRadius":25, 
-		"nameInText":"minor supply cache",
-		"shortName":"supply cache",
+		"nameInText":"小型补给藏匿点",
+		"shortName":"补给藏匿点",
 	},
 	
 	"weapons_cache_small":{
 		"baseId":"supply_cache",
-		"defaultName":"Minor Weapons Cache",
+		"defaultName":"小型武器藏匿点",
 		"defaultRadius":25, 
-		"nameInText":"minor weapons cache",
-		"shortName":"weapons cache",
+		"nameInText":"小型武器藏匿点",
+		"shortName":"武器藏匿点",
 		"customDescriptionId":"weapon_cache",
 	},
 	
@@ -1159,17 +1159,17 @@
 	
 	"equipment_cache_small":{
 		"baseId":"supply_cache",
-		"defaultName":"Minor Equipment Cache",
+		"defaultName":"小型设备藏匿点",
 		"defaultRadius":25, 
-		"nameInText":"minor equipment cache",
-		"shortName":"equipment cache",
+		"nameInText":"小型设备藏匿点",
+		"shortName":"设备藏匿点",
 	},
 	
 	"station_mining":{
-		"defaultName":"Mining Station", # used if name=null in addCustomEntity()
+		"defaultName":"采矿站", # used if name=null in addCustomEntity()
 		"defaultRadius":45, # used if radius<0 in addCustomEntity()
-		"nameInText":"mining station",
-		"shortName":"station",
+		"nameInText":"采矿站",
+		"shortName":"空间站",
 		"customDescriptionId":"station_mining_remnant",
 		"interactionImage":"graphics/illustrations/orbital_construction.jpg",
 		"icon":"graphics/icons/station_mining_broken.png",
@@ -1190,10 +1190,10 @@
 	},
 	
 	"station_research":{
-		"defaultName":"Research Station", # used if name=null in addCustomEntity()
+		"defaultName":"研究站", # used if name=null in addCustomEntity()
 		"defaultRadius":45, # used if radius<0 in addCustomEntity()
-		"nameInText":"research station",
-		"shortName":"station",
+		"nameInText":"研究站",
+		"shortName":"空间站",
 		"customDescriptionId":"station_research_remnant",
 		"interactionImage":"graphics/illustrations/orbital_construction.jpg",
 		"icon":"graphics/icons/station_research_broken.png",
@@ -1214,11 +1214,11 @@
 	},
 	
 	"orbital_habitat":{
-		"defaultName":"Orbital Habitat", # used if name=null in addCustomEntity()
+		"defaultName":"轨道居住站", # used if name=null in addCustomEntity()
 		"defaultRadius":45, # used if radius<0 in addCustomEntity()
-		"aOrAn":"an",
-		"nameInText":"orbital habitat",
-		"shortName":"orbital habitat",
+		"aOrAn":"一处",
+		"nameInText":"轨道居住站",
+		"shortName":"轨道居住站",
 		"customDescriptionId":"orbital_habitat_abandoned",
 		"interactionImage":"graphics/illustrations/orbital_construction.jpg",
 		"icon":"graphics/icons/station_habitat_broken.png",
@@ -1257,12 +1257,12 @@
 
 
 	"cargo_pods":{
-		"defaultName":"Cargo Pods", # used if name=null in addCustomEntity()
+		"defaultName":"货物吊舱", # used if name=null in addCustomEntity()
 		"defaultRadius":20, # used if radius<0 in addCustomEntity()
-		"nameInText":"cargo pods",
-		"shortName":"cargo pods",
-		"aOrAn":"a",
-		"isOrAre":"are",
+		"nameInText":"货物吊舱",
+		"shortName":"货物吊舱",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"showInCampaign":true,
 		"scaleIconSizeBasedOnDefaultRadius":false,
 		"showIconOnMap":true,
@@ -1279,7 +1279,7 @@
 
 
 	"warning_beacon":{
-		"defaultName":"Warning Beacon", # used if name=null in addCustomEntity()
+		"defaultName":"警告航标", # used if name=null in addCustomEntity()
 		"defaultRadius":40, # used if radius<0 in addCustomEntity()
 		"detectionRange":3000, # must be >0 for discoverable/discoveryXP to be used
 		"discoverable":true,
@@ -1301,7 +1301,7 @@
 	},
 	
 	"fusion_lamp":{
-		"defaultName":"Fusion Lamp", # used if name=null in addCustomEntity()
+		"defaultName":"聚变射灯", # used if name=null in addCustomEntity()
 		"defaultRadius":40, # used if radius<0 in addCustomEntity()
 		#"detectionRange":3000, # must be >0 for discoverable/discoveryXP to be used
 		#"discoverable":true,
@@ -1324,7 +1324,7 @@
 	},
 	
 	"explosion":{
-		"defaultName":"Explosion", # used if name=null in addCustomEntity()
+		"defaultName":"爆炸", # used if name=null in addCustomEntity()
 		"defaultRadius":0, # used if radius<0 in addCustomEntity()
 		"showInCampaign":true,
 		"showIconOnMap":false,
@@ -1338,7 +1338,7 @@
 	# New station stuff which uses techlevels. Will clean up old stuff once this is all happy. -D
 	# lowtech stations
 	"station_lowtech1":{
-		"defaultName":"Orbital Station", # used if name=null in addCustomEntity()
+		"defaultName":"轨道空间站", # used if name=null in addCustomEntity()
 		"defaultRadius":60, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/orbital.jpg",
@@ -1359,7 +1359,7 @@
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 	},
 	"station_lowtech2":{
-		"defaultName":"Battlestation", # used if name=null in addCustomEntity()
+		"defaultName":"作战基地", # used if name=null in addCustomEntity()
 		"defaultRadius":80, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/orbital.jpg",
@@ -1380,7 +1380,7 @@
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 	},
 	"station_lowtech3":{
-		"defaultName":"Star Fortress", # used if name=null in addCustomEntity()
+		"defaultName":"星际要塞", # used if name=null in addCustomEntity()
 		"defaultRadius":110, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/orbital.jpg",
@@ -1402,7 +1402,7 @@
 	},
 	# midline stations 
 	"station_midline1":{
-		"defaultName":"Orbital Station", # used if name=null in addCustomEntity()
+		"defaultName":"轨道空间站", # used if name=null in addCustomEntity()
 		"defaultRadius":60, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/orbital.jpg",
@@ -1423,7 +1423,7 @@
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 	},
 	"station_midline2":{
-		"defaultName":"Battlestation", # used if name=null in addCustomEntity()
+		"defaultName":"作战基地", # used if name=null in addCustomEntity()
 		"defaultRadius":90, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/orbital.jpg",
@@ -1444,7 +1444,7 @@
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 	},
 	"station_midline3":{
-		"defaultName":"Star Fortress", # used if name=null in addCustomEntity()
+		"defaultName":"星际要塞", # used if name=null in addCustomEntity()
 		"defaultRadius":110, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/orbital.jpg",
@@ -1467,7 +1467,7 @@
 	
 	# hightech stations
 	"station_hightech1":{
-		"defaultName":"Orbital Station", # used if name=null in addCustomEntity()
+		"defaultName":"轨道空间站", # used if name=null in addCustomEntity()
 		"defaultRadius":50, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/orbital.jpg",
@@ -1488,7 +1488,7 @@
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 	},
 	"station_hightech2":{
-		"defaultName":"Battlestation", # used if name=null in addCustomEntity()
+		"defaultName":"作战基地", # used if name=null in addCustomEntity()
 		"defaultRadius":70, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/orbital.jpg",
@@ -1509,7 +1509,7 @@
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 	},
 	"station_hightech3":{
-		"defaultName":"Star Fortress", # used if name=null in addCustomEntity()
+		"defaultName":"星际要塞", # used if name=null in addCustomEntity()
 		"defaultRadius":100, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"orbital_station_default",
 		"interactionImage":"graphics/illustrations/orbital.jpg",
@@ -1530,11 +1530,11 @@
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 	},
 	"sensor_ghost":{
-		"defaultName":"Unidentified Entity", # used if name=null in addCustomEntity()
-		"nameInText":"sensor ghost",
-		"shortName":"sensor ghost",
-		"aOrAn":"a",
-		"isOrAre":"is",
+		"defaultName":"不明实体", # used if name=null in addCustomEntity()
+		"nameInText":"传感器幽灵",
+		"shortName":"传感器幽灵",
+		"aOrAn":"一处",
+		"isOrAre":"可能",
 		"detectionRange":1000, # must be >0 for discoverable/discoveryXP to be used
 		"discoverable":true,
 		"discoveryXP":0,		
@@ -1559,7 +1559,7 @@
 	},
 	
 	"abyssal_light":{
-		"defaultName":"Abyssal Light", # used if name=null in addCustomEntity()
+		"defaultName":"深渊光点", # used if name=null in addCustomEntity()
 		"defaultRadius":45, # used if radius<0 in addCustomEntity()
 		"detectionRange":0, # set in plugin code
 		"showInCampaign":true,
