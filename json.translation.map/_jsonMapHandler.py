@@ -104,7 +104,7 @@ class MapItem(object):
                 item_map_json = json5.load(
                     open(self.item_map_file, 'r', encoding='utf-8')
                 )
-            except:
+            except Exception:
                 item_map_json = {}
         else:
             item_map_json = {}

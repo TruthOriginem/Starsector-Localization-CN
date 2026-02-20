@@ -1,7 +1,9 @@
 # 将父级目录加入到环境变量中，以便从命令行中运行本脚本
+import json
 import sys
 from enum import Enum
 from os.path import abspath, dirname
+from typing import List, Union
 
 sys.path.append(dirname(dirname(dirname(dirname(abspath(__file__))))))
 
@@ -25,10 +27,6 @@ def validate_csv(file_path):
 
     print('CSV文件验证通过 - Alex 实现')
     print('有效数据行数：', len(data), '+ 1 行表头')
-
-
-import json
-from typing import List, Union
 
 
 # 以下为参考 Alex 的 java 代码实现的 CSV 解析器
@@ -72,8 +70,7 @@ class CSVParserAlex:
             lastQuotedString: List[str] = []
             lastRowString: Union[str, None] = None
             inQuotes: bool = False
-            isNewRow: bool = False
-            parseState: 'CSVParser.ParseState' = CSVParser.ParseState.START
+            parseState: 'CSVParserAlex.ParseState' = CSVParserAlex.ParseState.START
             isCommentRow: bool = False
 
             charIndex: int = 0
@@ -85,7 +82,7 @@ class CSVParserAlex:
                     else ' '
                 )
 
-                if parseState == CSVParser.ParseState.START:
+                if parseState == CSVParserAlex.ParseState.START:
                     if currentChar == '#':
                         isCommentRow = True
                     else:
@@ -94,15 +91,15 @@ class CSVParserAlex:
                     currentRow = {}
                     columnIndex = 0
                     isFirstRow = True
-                    parseState = CSVParser.ParseState.IN_OBJECT
+                    parseState = CSVParserAlex.ParseState.IN_OBJECT
                 else:
                     isFirstRow = False
 
-                if parseState == CSVParser.ParseState.IN_OBJECT:
+                if parseState == CSVParserAlex.ParseState.IN_OBJECT:
                     currentCellBuffer = []
-                    parseState = CSVParser.ParseState.IN_CELL
+                    parseState = CSVParserAlex.ParseState.IN_CELL
 
-                if parseState == CSVParser.ParseState.IN_CELL:
+                if parseState == CSVParserAlex.ParseState.IN_CELL:
                     if currentChar == '"':
                         if nextChar == '"':
                             currentCellBuffer.append(currentChar)
@@ -119,14 +116,14 @@ class CSVParserAlex:
                             )
                         if currentChar == ',':
                             columnIndex += 1
-                            parseState = CSVParser.ParseState.IN_OBJECT
+                            parseState = CSVParserAlex.ParseState.IN_OBJECT
                         else:
                             if not isFirstRow and not isCommentRow:
                                 resultArray.append(currentRow)
                                 lastRowString = json.dumps(
                                     currentRow, indent=2, ensure_ascii=False
                                 )
-                            parseState = CSVParser.ParseState.START
+                            parseState = CSVParserAlex.ParseState.START
                     else:
                         currentCellBuffer.append(currentChar)
                         lastQuotedString.append(currentChar)

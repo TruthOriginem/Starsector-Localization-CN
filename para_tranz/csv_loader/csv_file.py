@@ -249,7 +249,7 @@ class CsvFile(DataFile):
     def validate_after_load(self):
         # 检查指定的id列和文字列在游戏文件中是否存在
         if (
-            type(self.id_column_name) == str
+            isinstance(self.id_column_name, str)
             and self.id_column_name not in self.column_names
         ) and (not set(self.id_column_name).issubset(set(self.column_names))):
             raise ValueError(
@@ -301,11 +301,11 @@ class CsvFile(DataFile):
         id_data = {}
         with open(path, 'r', errors='surrogateescape', encoding='utf-8') as csv_file:
             # 替换不可识别的字符，并将原文中的 \n 转换为 ^n，以与csv中的直接换行进行区分
-            csv_lines = [replace_weird_chars(l).replace('\\n', '^n') for l in csv_file]
+            csv_lines = [replace_weird_chars(line).replace('\\n', '^n') for line in csv_file]
             rows: List[Dict[str, str]] = list(DictReader(csv_lines))
             columns = list(rows[0].keys())
             for i, row in enumerate(rows):
-                if type(id_column_name) == str:
+                if isinstance(id_column_name, str):
                     row_id = tuple([row[id_column_name]])
                 else:  # 存在多个 id column
                     row_id = tuple([row[id] for id in id_column_name])
@@ -357,7 +357,7 @@ class CsvFile(DataFile):
         """
         cls.logger.info('开始读取游戏csv数据')
         files = [
-            cls(**asdict(item)) for item in PARA_TRANZ_MAP if type(item) == CsvMapItem
+            cls(**asdict(item)) for item in PARA_TRANZ_MAP if isinstance(item, CsvMapItem)
         ]
         cls.logger.info('游戏csv数据读取完成')
         return files

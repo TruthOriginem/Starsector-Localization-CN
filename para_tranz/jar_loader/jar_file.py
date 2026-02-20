@@ -343,7 +343,7 @@ class JavaJarFile(DataFile):
     def load_files_from_config(cls) -> List['JavaJarFile']:
         cls.logger.info('开始读取游戏jar数据')
         files = [
-            cls(**asdict(item)) for item in PARA_TRANZ_MAP if type(item) == JarMapItem
+            cls(**asdict(item)) for item in PARA_TRANZ_MAP if isinstance(item, JarMapItem)
         ]
         cls.logger.info('游戏jar数据读取完成')
         return files

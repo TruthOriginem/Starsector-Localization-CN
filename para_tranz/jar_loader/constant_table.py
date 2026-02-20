@@ -128,7 +128,7 @@ class ConstantTable:
         return [
             self.constants[i - 1]
             for i in self.utf8_string_references
-            if type(self.constants[i - 1]) == Utf8Constant
+            if isinstance(self.constants[i - 1], Utf8Constant)
         ]
 
     def get_utf8_constants_with_extra_ref(self) -> List['Utf8Constant']:
@@ -138,7 +138,7 @@ class ConstantTable:
         return [
             self.constants[i - 1]
             for i in (self.utf8_other_references & self.utf8_string_references)
-            if type(self.constants[i - 1]) == Utf8Constant
+            if isinstance(self.constants[i - 1], Utf8Constant)
         ]
 
     def to_bytes(self) -> bytes:
