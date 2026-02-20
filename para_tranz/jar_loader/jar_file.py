@@ -38,14 +38,14 @@ class JavaJarFile(DataFile):
                 self.load_class_file(**class_file_info)
             self.logger.info(f'jar读取完成: {self.path}')
 
-    def __del__(self):
+    def __del__(self) -> None:
         self.close_files()
 
-    def open_files(self):
+    def open_files(self) -> None:
         self.original_file = zipfile.ZipFile(self.original_path, 'r')
         self.translation_file = zipfile.ZipFile(self.translation_path, 'r')
 
-    def close_files(self):
+    def close_files(self) -> None:
         self.original_file.close()
         self.translation_file.close()
 

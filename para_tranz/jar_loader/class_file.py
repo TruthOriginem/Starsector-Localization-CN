@@ -22,7 +22,7 @@ class JavaClassFile:
     logger = make_logger(f'JavaClassFile')
 
     def __init__(self, jar_file: 'JavaJarFile', path: str, include_strings: Set[str] = None,
-                 exclude_strings: Set[str] = None, no_auto_load: bool = False, **kwargs):
+                 exclude_strings: Set[str] = None, no_auto_load: bool = False, **kwargs) -> None:
         self.path_str = path
         self.path = PurePosixPath(path)
         self.include_strings = set(include_strings) if include_strings else set()
@@ -51,7 +51,7 @@ class JavaClassFile:
     def get_translation_version(self) -> int:
         return self.translation_bytes[7]
 
-    def validate(self):
+    def validate(self) -> None:
         # 检查是否为java class文件
         if self.original_bytes[:4] != MAGIC:
             raise ValueError(f'原文jar文件 {self.jar_file.path} 中的 {self.path} 不是有效的 java class 文件')

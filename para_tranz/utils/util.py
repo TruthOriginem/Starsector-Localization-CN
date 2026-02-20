@@ -7,7 +7,7 @@ import urllib.parse
 import hashlib
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, Optional, Set, List, Union
+from typing import Any, Dict, Optional, Set, List, Union
 
 from para_tranz.utils.config import PROJECT_DIRECTORY, ORIGINAL_PATH, TRANSLATION_PATH, PARA_TRANZ_PATH, LOG_LEVEL, \
     OVERRIDE_STRING_STATUS
@@ -53,7 +53,7 @@ class CustomFormatter(logging.Formatter):
         logging.CRITICAL: BOLD_RED + format_str + RESET
     }
 
-    def format(self, record):
+    def format(self, record: logging.LogRecord) -> str:
         log_fmt = self.FORMATS.get(record.levelno)
         formatter = logging.Formatter(log_fmt)
         return formatter.format(record)
@@ -84,7 +84,7 @@ class String:
     stage: int = 0  # 词条翻译状态，0为未翻译，1为已翻译，2为有疑问，3为已校对，5为已审核（二校），9为已锁定，-1为已隐藏
     context: str = ''  # 词条的备注信息
 
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         # 如果从 ParaTranz 输出的 json 导入，则需要将\\n替换回\n
         # 本程序输出的 json 不应包含 \\n，原文中的\\n使用^n替代
         self.original = self.original.replace('\\n', '\n')
@@ -98,7 +98,7 @@ class DataFile:
     logger = make_logger('util.py - DataFile')
 
     def __init__(self, path: Union[str, Path], type: str, original_path: Optional[Path] = None,
-                 translation_path: Optional[Path] = None):
+                 translation_path: Optional[Path] = None) -> None:
         self.path = Path(path)  # 相对 original 或者 localization 文件夹的路径
         self.original_path = ORIGINAL_PATH / Path(original_path if original_path else path)
         self.translation_path = TRANSLATION_PATH / Path(
@@ -111,7 +111,7 @@ class DataFile:
     def update_strings(self, strings: Set[String], version_migration: bool = False) -> None:
         raise NotImplementedError
 
-    def save_json(self, ensure_ascii=False, indent=4) -> None:
+    def save_json(self, ensure_ascii: bool = False, indent: int = 4) -> None:
         strings = [s for s in self.get_strings() if s.original]  # 只导出原文不为空的词条
 
         # 如果Paratranz json文件已存在，则从中同步任何词条的状态（包括未翻译的）
@@ -169,7 +169,7 @@ class DataFile:
         return strings
 
     @staticmethod
-    def write_json_strings(path: Path, strings: List[String], ensure_ascii=False, indent=4, sort=True) -> None:
+    def write_json_strings(path: Path, strings: List[String], ensure_ascii: bool = False, indent: int = 4, sort: bool = True) -> None:
         if sort:
             strings = sorted(strings, key=lambda s: s.key)
 
@@ -259,7 +259,7 @@ class SetEncoder(json.JSONEncoder):
     From: https://stackoverflow.com/questions/8230315/how-to-json-serialize-sets
     """
 
-    def default(self, obj):
+    def default(self, obj: Any) -> Any:
         if isinstance(obj, set):
             return sorted(list(obj))
         return json.JSONEncoder.default(self, obj)

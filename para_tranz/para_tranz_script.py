@@ -3,10 +3,10 @@ import sys
 from dataclasses import asdict
 from os.path import abspath, dirname
 
-from para_tranz.utils.search import search_for_string_in_jar_files
-
 # 将父级目录加入到环境变量中，以便从命令行中运行本脚本
 sys.path.append(dirname(dirname(abspath(__file__))))
+
+from para_tranz.utils.search import search_for_string_in_jar_files
 
 from para_tranz.utils.mapping_generation import generate_class_file_mapping_by_path, generate_class_mapping_diff_string
 from para_tranz.csv_loader.csv_file import CsvFile
@@ -21,14 +21,14 @@ logger = make_logger('ParaTranzScript')
 loaders = [JavaJarFile, CsvFile]
 
 
-def game_to_paratranz():
+def game_to_paratranz() -> None:
     for Loader in loaders:
         for file in Loader.load_files_from_config():
             file.save_json()
     logger.info('ParaTranz 词条导出完成')
 
 
-def paratranz_to_game():
+def paratranz_to_game() -> None:
     for Loader in loaders:
         for file in Loader.load_files_from_config():
             file.update_from_json()
@@ -36,13 +36,13 @@ def paratranz_to_game():
     logger.info('ParaTranz 词条导入到译文数据完成')
 
 
-def paratranz_to_game_new_version():
+def paratranz_to_game_new_version() -> None:
     for Loader in loaders:
         for file in Loader.load_files_from_config():
             file.update_from_json(version_migration=True)
             file.save_file()
 
-def gen_mapping_by_class_path():
+def gen_mapping_by_class_path() -> None:
     print('请输入java jar文件及其中类文件的路径，以生成类文件映射项')
     print('例如：starfarer.api.jar:com/fs/starfarer/api/campaign/FleetAssignment.class')
     print('例如：com.fs.starfarer.api.campaign.FleetAssignment')
@@ -64,7 +64,7 @@ def gen_mapping_by_class_path():
 
     logger.info('类文件映射项生成完成')
 
-def search_string_in_jar_files():
+def search_string_in_jar_files() -> None:
     pattern = input('请输入要查找的字符串：')
     result = search_for_string_in_jar_files(pattern.strip())
 
@@ -78,7 +78,7 @@ def search_string_in_jar_files():
     logger.info('字符串查找完成')
 
 
-def mian():
+def mian() -> None:
     print('欢迎使用 远行星号 ParaTranz 词条导入导出工具')
     print('请选择您要进行的操作：')
     print('1 - 从原始(original)和汉化(localization)文件导出 ParaTranz 词条')

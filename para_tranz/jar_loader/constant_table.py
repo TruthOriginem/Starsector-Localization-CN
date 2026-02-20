@@ -45,7 +45,7 @@ class ConstantTable:
     # TODO: 2. 考虑将被String引用的常量单独复制并添加到常量表尾部，以避免被其他非String类型的常量引用
     # TODO: 3. 分析class文件的剩余部分，找出String被引用的方法名
 
-    def __init__(self, class_bytes: bytes):
+    def __init__(self, class_bytes: bytes) -> None:
         self.class_bytes = class_bytes
         self.constant_count = int.from_bytes(class_bytes[8:10], 'big')
 
@@ -57,7 +57,7 @@ class ConstantTable:
 
         self._load_constants()
 
-    def _load_constants(self):
+    def _load_constants(self) -> None:
         byte_index = 4 + 2 + 2 + 2  # magic + minor_version + major_version + constant_count
         constant_index = 1
 
@@ -128,7 +128,7 @@ class ConstantTable:
 
 
 class BaseConstant:
-    def __init__(self, bytes: bytes, constant_index: int):
+    def __init__(self, bytes: bytes, constant_index: int) -> None:
         self.constant_index = constant_index
 
     def to_bytes(self) -> bytes:
@@ -136,7 +136,7 @@ class BaseConstant:
 
 
 class Utf8Constant(BaseConstant):
-    def __init__(self, bytes: bytes, constant_index: int):
+    def __init__(self, bytes: bytes, constant_index: int) -> None:
         super().__init__(bytes, constant_index)
         self.length = int.from_bytes(bytes[1:3], 'big')
         self.string = bytes[3:3 + self.length].decode('utf-8')
@@ -149,15 +149,15 @@ class Utf8Constant(BaseConstant):
             + self.length.to_bytes(2, 'big') \
             + string_bytes
 
-    def __str__(self):
+    def __str__(self) -> str:
         return self.string
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f'UTF8("{self.string}")'
 
 
 class StringConstant(BaseConstant):
-    def __init__(self, bytes: bytes, constant_index: int):
+    def __init__(self, bytes: bytes, constant_index: int) -> None:
         super().__init__(bytes, constant_index)
         self.string_index = int.from_bytes(bytes[1:3], 'big')
 
@@ -165,15 +165,15 @@ class StringConstant(BaseConstant):
         return ConstantType.String.value.to_bytes(1, 'big') \
             + self.string_index.to_bytes(2, 'big')
 
-    def __str__(self):
+    def __str__(self) -> str:
         return repr(self)
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f'String(# {self.string_index})'
 
 
 class NameAndTypeConstant(BaseConstant):
-    def __init__(self, bytes: bytes, constant_index: int):
+    def __init__(self, bytes: bytes, constant_index: int) -> None:
         super().__init__(bytes, constant_index)
         self.name_index = int.from_bytes(bytes[1:3], 'big')
         self.descriptor_index = int.from_bytes(bytes[3:5], 'big')
@@ -183,15 +183,15 @@ class NameAndTypeConstant(BaseConstant):
             + self.name_index.to_bytes(2, 'big') \
             + self.descriptor_index.to_bytes(2, 'big')
 
-    def __str__(self):
+    def __str__(self) -> str:
         return repr(self)
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f'NameAndType(#{self.name_index}, #{self.descriptor_index})'
 
 
 class ClassConstant(BaseConstant):
-    def __init__(self, bytes: bytes, constant_index: int):
+    def __init__(self, bytes: bytes, constant_index: int) -> None:
         super().__init__(bytes, constant_index)
         self.name_index = int.from_bytes(bytes[1:3], 'big')
 
@@ -199,8 +199,8 @@ class ClassConstant(BaseConstant):
         return ConstantType.Class.value.to_bytes(1, 'big') \
             + self.name_index.to_bytes(2, 'big')
 
-    def __str__(self):
+    def __str__(self) -> str:
         return repr(self)
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f'Class(#{self.name_index})'
