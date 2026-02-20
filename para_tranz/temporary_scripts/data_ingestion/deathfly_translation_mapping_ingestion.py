@@ -1,17 +1,16 @@
 import csv
 import json
-import re
 from collections import defaultdict
 from dataclasses import asdict
 
 from para_tranz.jar_loader.jar_file import JavaJarFile
-from para_tranz.utils.config import PROJECT_DIRECTORY, PARA_TRANZ_PATH
+from para_tranz.utils.config import PARA_TRANZ_PATH, PROJECT_DIRECTORY
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, JarMapItem
-from para_tranz.utils.util import make_logger, contains_english, contains_chinese
+from para_tranz.utils.util import contains_chinese, make_logger
 
 SCRIPT_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'temporary_scripts' / 'data_ingestion'
 
-CSV_PATH = SCRIPT_PATH  / 'deathfly_098_api_mapping.csv'
+CSV_PATH = SCRIPT_PATH / 'deathfly_098_api_mapping.csv'
 
 MAPPING_OUTPUT_PATH = SCRIPT_PATH / 'deathfly_098_api_mapping.json'
 
@@ -19,7 +18,8 @@ JAR_NAME = 'starfarer.api.jar'
 
 PARATRANZ_STRINGS_PATH = PARA_TRANZ_PATH / (JAR_NAME.removesuffix('.jar') + '.json')
 
-logger = make_logger(f'deathfly_translation_mapping_ingestion.py')
+logger = make_logger('deathfly_translation_mapping_ingestion.py')
+
 
 def load_deathfly_data():
     with open(CSV_PATH, 'r', encoding='utf-8') as f:
@@ -36,19 +36,22 @@ def load_deathfly_data():
 
     return valid_data
 
+
 def remove_deathfly_escaping(text: str) -> str:
     # 渡鸦提供的对照表中，\n\t是转义字符，需要转换为真正的换行符和制表符
     # '\"'是转义字符，需要转换为真正的双引号
-    text = (text.replace('<\\n', '<')
-            .replace('>\\n', '>')
-            .replace('\\n', '\n')
-            .replace('\\t', '\t')
-            .replace('\\"', '"')
-            .replace('&amp;', '&')
-            .replace('&lt;', '<')
-            .replace('&gt;', '>')
-            )
+    text = (
+        text.replace('<\\n', '<')
+        .replace('>\\n', '>')
+        .replace('\\n', '\n')
+        .replace('\\t', '\t')
+        .replace('\\"', '"')
+        .replace('&amp;', '&')
+        .replace('&lt;', '<')
+        .replace('&gt;', '>')
+    )
     return text
+
 
 def convert_deathfly_csv_to_paratranz_mapping():
     valid_data = load_deathfly_data()
@@ -64,11 +67,7 @@ def convert_deathfly_csv_to_paratranz_mapping():
             if original_text.strip():
                 class_to_data[class_name].add(original_text)
 
-    paratranz_mapping = {
-        "type": "jar",
-        "path": JAR_NAME,
-        "class_files": []
-    }
+    paratranz_mapping = {'type': 'jar', 'path': JAR_NAME, 'class_files': []}
 
     class_to_data_sorted = sorted(class_to_data.items(), key=lambda x: x[0])
 
@@ -80,17 +79,15 @@ def convert_deathfly_csv_to_paratranz_mapping():
         # '\"'是转义字符，需要转换为真正的双引号
         include_strings = [remove_deathfly_escaping(s) for s in include_strings]
 
-        class_desc = {
-            "path": class_name + ".class",
-            "include_strings": include_strings
-        }
+        class_desc = {'path': class_name + '.class', 'include_strings': include_strings}
 
         class_files.append(class_desc)
 
-    paratranz_mapping["class_files"] = class_files
+    paratranz_mapping['class_files'] = class_files
 
     with open(MAPPING_OUTPUT_PATH, 'w', encoding='utf-8') as f:
         json.dump(paratranz_mapping, f, indent=2, ensure_ascii=False)
+
 
 def add_translation_to_exported_strings():
     valid_data = load_deathfly_data()
@@ -104,8 +101,14 @@ def add_translation_to_exported_strings():
             class_name = raw_labels[0].split('.')[0].strip()
             class_to_data[class_name][original_text] = remove_deathfly_escaping(row[3])
 
-    jar_file_items = [item for item in PARA_TRANZ_MAP.items if isinstance(item, JarMapItem) and item.path == JAR_NAME]
-    jar_files = [JavaJarFile(**asdict(item), no_auto_load=False) for item in jar_file_items]
+    jar_file_items = [
+        item
+        for item in PARA_TRANZ_MAP.items
+        if isinstance(item, JarMapItem) and item.path == JAR_NAME
+    ]
+    jar_files = [
+        JavaJarFile(**asdict(item), no_auto_load=False) for item in jar_file_items
+    ]
 
     for jar_file in jar_files:
         if jar_file.path == JAR_NAME:
@@ -118,17 +121,23 @@ def add_translation_to_exported_strings():
                         original_text = string_item.original
                         if original_text in original_to_translation:
                             new_translation = original_to_translation[original_text]
-                            if contains_chinese(new_translation) and new_translation != string_item.translation:
-                                string_item.stage = 1 # 标记为已翻译
+                            if (
+                                contains_chinese(new_translation)
+                                and new_translation != string_item.translation
+                            ):
+                                string_item.stage = 1  # 标记为已翻译
                                 string_item.translation = new_translation
                                 updated_strings.append(string_item)
                         else:
-                            logger.warning(f'类 {klass_name} 中的词条 "{original_text}" 不在对照表中，跳过')
+                            logger.warning(
+                                f'类 {klass_name} 中的词条 "{original_text}" 不在对照表中，跳过'
+                            )
                     klass.update_strings(updated_strings)
                 else:
                     logger.warning(f'类 {klass_name} 不在对照表中，跳过')
 
             jar_file.save_json()
+
 
 if __name__ == '__main__':
     # 先运行下面这个函数，生成mapping文件

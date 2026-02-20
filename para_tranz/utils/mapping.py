@@ -1,12 +1,13 @@
 import dataclasses
 import json
 from dataclasses import dataclass
-from typing import Union, List, Iterator, Optional, Set, Tuple
+from typing import Iterator, List, Optional, Set, Tuple, Union
 
 from para_tranz.utils.config import MAP_PATH
 from para_tranz.utils.util import SetEncoder, make_logger
 
 logger = make_logger('MappingLoader')
+
 
 @dataclass
 class ParaTranzMapItem:
@@ -23,7 +24,9 @@ class ParaTranzMapItem:
             raise ValueError(f'Unknown type: {d["type"]}')
 
     def as_json(self) -> str:
-        return json.dumps(dataclasses.asdict(self), indent=2, cls=SetEncoder, ensure_ascii=False)
+        return json.dumps(
+            dataclasses.asdict(self), indent=2, cls=SetEncoder, ensure_ascii=False
+        )
 
 
 @dataclass
@@ -39,7 +42,9 @@ class ClassFileMapItem:
     exclude_strings: Optional[Set[str]] = dataclasses.field(default_factory=set)
 
     def as_json(self) -> str:
-        return json.dumps(dataclasses.asdict(self), indent=2, cls=SetEncoder, ensure_ascii=False)
+        return json.dumps(
+            dataclasses.asdict(self), indent=2, cls=SetEncoder, ensure_ascii=False
+        )
 
     def search_for_string(self, pattern: str) -> Tuple[List[str], List[str]]:
         included = set()
@@ -60,11 +65,19 @@ class ClassFileMapItem:
 class JarMapItem(ParaTranzMapItem):
     class_files: List[ClassFileMapItem]
 
-    def add_class_file_item(self, path: str, include_strings: Optional[List[str]] = None,
-                            exclude_strings: Optional[List[str]] = None):
-        self.class_files.append(ClassFileMapItem(path, include_strings, exclude_strings))
+    def add_class_file_item(
+        self,
+        path: str,
+        include_strings: Optional[List[str]] = None,
+        exclude_strings: Optional[List[str]] = None,
+    ):
+        self.class_files.append(
+            ClassFileMapItem(path, include_strings, exclude_strings)
+        )
 
-    def get_class_file_item(self, path: str, create: bool = False) -> Optional[ClassFileMapItem]:
+    def get_class_file_item(
+        self, path: str, create: bool = False
+    ) -> Optional[ClassFileMapItem]:
         for item in self.class_files:
             if item.path == path:
                 return item
@@ -98,7 +111,9 @@ class ParaTranzMap:
                 return item
         return None
 
-    def get_jar_and_class_file_item_by_class_path(self, path: str) -> Optional[Tuple[JarMapItem, ClassFileMapItem]]:
+    def get_jar_and_class_file_item_by_class_path(
+        self, path: str
+    ) -> Optional[Tuple[JarMapItem, ClassFileMapItem]]:
         for item in self.items:
             if isinstance(item, JarMapItem):
                 for class_file in item.class_files:

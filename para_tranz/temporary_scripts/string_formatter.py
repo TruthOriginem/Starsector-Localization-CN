@@ -4,16 +4,22 @@ from pathlib import Path
 from typing import List, Tuple
 
 from para_tranz.utils.config import PARA_TRANZ_PATH
-from para_tranz.utils.util import make_logger, String, DataFile
+from para_tranz.utils.util import DataFile, String, make_logger
 
-logger = make_logger(f'StringFormatter')
+logger = make_logger('StringFormatter')
 
 # 要执行的替换
 CSV_RULES = [
     # 去除中文句子中的空格，需要替换两次；不匹配前面是"级"或者后面五个字内出现"-"的情况，以免误伤船名
-    ('((?!级)[\u4e00-\u9fa5，。；：？！]) +([\u4e00-\u9fa5，。；：？！])(?!.{0,5}[-])', '$1$2'),
+    (
+        '((?!级)[\u4e00-\u9fa5，。；：？！]) +([\u4e00-\u9fa5，。；：？！])(?!.{0,5}[-])',
+        '$1$2',
+    ),
     # 去除中文句子中的空格，需要替换两次；不匹配前面是"级"或者后面五个字内出现"-"的情况，以免误伤船名
-    ('((?!级)[\u4e00-\u9fa5，。；：？！]) +([\u4e00-\u9fa5，。；：？！])(?!.{0,5}[-])', '$1$2'),
+    (
+        '((?!级)[\u4e00-\u9fa5，。；：？！]) +([\u4e00-\u9fa5，。；：？！])(?!.{0,5}[-])',
+        '$1$2',
+    ),
     # 去除英文标点符号后空格
     ('([\u4e00-\u9fa5][!?,.;:])( )', '$1'),
     # 英文标点换中文
@@ -37,13 +43,14 @@ CSV_RULES = [
     # 人称代词和$shipOrFleet两边不空格
     (
         r'( ?)(\$.{0,6}([Hh]eOrShe|[Hh]isOrHer|[Hh]imOrHer|[Hh]imOrHerself|[Mm]anOrWoman|[Ss]hipOrFleet))( ?)',
-        '$2'),
+        '$2',
+    ),
     # 双引号用英文
     ('[“”]', '"'),
     # 单引号用英文
     ('[‘’]', "'"),
     # 使用破折号替代多个连字符
-    ('--+', "——"),
+    ('--+', '——'),
     # 折号两边空格
     ('( ?)——( ?)', ' —— '),
     # 英文圆括号前空格
@@ -92,13 +99,14 @@ JAR_RULES = [
     # 人称代词和$shipOrFleet两边不空格
     (
         r'( ?)(\$.{0,6}([Hh]eOrShe|[Hh]isOrHer|[Hh]imOrHer|[Hh]imOrHerself|[Mm]anOrWoman|[Ss]hipOrFleet))( ?)',
-        '$2'),
+        '$2',
+    ),
     # 双引号用英文
     ('[“”]', '"'),
     # 单引号用英文
     ('[‘’]', "'"),
     # 使用破折号替代多个连字符
-    ('--+', "——"),
+    ('--+', '——'),
     # 折号两边空格
     ('( ?)——( ?)', ' —— '),
     # 英文圆括号前空格
@@ -136,7 +144,7 @@ def load_json_files(pattern: str) -> List[ParatranzJsonFile]:
     files = []
 
     for path_object in PARA_TRANZ_PATH.glob(pattern):
-        if path_object.is_file() and path_object.suffix == ".json":
+        if path_object.is_file() and path_object.suffix == '.json':
             file = ParatranzJsonFile(path_object)
             file.load()
             files.append(file)
@@ -155,7 +163,7 @@ def apply_rules(rules: List[Tuple[str, str]], file: ParatranzJsonFile) -> None:
             if new_translation != string.translation:
                 string.translation = new_translation
                 replace_count += 1
-        logger.info(f"\t规则 #{rule_count} 应用完毕，替换了 {replace_count} 条词条内容")
+        logger.info(f'\t规则 #{rule_count} 应用完毕，替换了 {replace_count} 条词条内容')
         rule_count += 1
     logger.info(f"处理完毕 '{file.path.relative_to(PARA_TRANZ_PATH)}'")
 
@@ -165,9 +173,13 @@ if __name__ == '__main__':
     files = load_json_files(pattern if pattern else '**/*')
     for file in files:
         logger.info(f"找到文件 '{file.path.relative_to(PARA_TRANZ_PATH)}'")
-    if input(f"确定在{len(files)}个文件上应用{len(ACTIVE_RULE_SET)}条替换规则？(y/n)").lower().startswith('y'):
+    if (
+        input(f'确定在{len(files)}个文件上应用{len(ACTIVE_RULE_SET)}条替换规则？(y/n)')
+        .lower()
+        .startswith('y')
+    ):
         for file in files:
             apply_rules(ACTIVE_RULE_SET, file)
             file.save()
-    logger.info("程序执行完毕，请按回车键退出")
+    logger.info('程序执行完毕，请按回车键退出')
     input()

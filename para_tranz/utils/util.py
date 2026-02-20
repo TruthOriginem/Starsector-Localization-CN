@@ -1,16 +1,22 @@
 import dataclasses
+import hashlib
 import json
 import logging
 import re
 import sys
 import urllib.parse
-import hashlib
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, Optional, Set, List, Union
+from typing import Any, Dict, List, Optional, Set, Union
 
-from para_tranz.utils.config import PROJECT_DIRECTORY, ORIGINAL_PATH, TRANSLATION_PATH, PARA_TRANZ_PATH, LOG_LEVEL, \
-    OVERRIDE_STRING_STATUS
+from para_tranz.utils.config import (
+    LOG_LEVEL,
+    ORIGINAL_PATH,
+    OVERRIDE_STRING_STATUS,
+    PARA_TRANZ_PATH,
+    PROJECT_DIRECTORY,
+    TRANSLATION_PATH,
+)
 
 
 def relative_path(path: Path) -> Path:
@@ -31,26 +37,29 @@ def normalize_class_path(class_path: str) -> str:
 
     return class_path + '.class'
 
-GREY = "\x1b[38;20m"
-GREEN = "\x1b[32;20m"
-YELLOW = "\x1b[33;20m"
-RED = "\x1b[31;20m"
-BOLD_RED = "\x1b[31;1m"
-RESET = "\x1b[0m"
+
+GREY = '\x1b[38;20m'
+GREEN = '\x1b[32;20m'
+YELLOW = '\x1b[33;20m'
+RED = '\x1b[31;20m'
+BOLD_RED = '\x1b[31;1m'
+RESET = '\x1b[0m'
+
 
 def colorize(s: str, color: str) -> str:
     return color + s + RESET
 
+
 # From: https://stackoverflow.com/questions/384076/how-can-i-color-python-logging-output
 class CustomFormatter(logging.Formatter):
-    format_str = "[%(name)s][%(levelname)s] %(message)s \n"
+    format_str = '[%(name)s][%(levelname)s] %(message)s \n'
 
     FORMATS = {
         logging.DEBUG: GREY + format_str + RESET,
         logging.INFO: GREY + format_str + RESET,
         logging.WARNING: YELLOW + format_str + RESET,
         logging.ERROR: RED + format_str + RESET,
-        logging.CRITICAL: BOLD_RED + format_str + RESET
+        logging.CRITICAL: BOLD_RED + format_str + RESET,
     }
 
     def format(self, record: logging.LogRecord) -> str:
@@ -97,43 +106,60 @@ class String:
 class DataFile:
     logger = make_logger('util.py - DataFile')
 
-    def __init__(self, path: Union[str, Path], type: str, original_path: Optional[Path] = None,
-                 translation_path: Optional[Path] = None) -> None:
+    def __init__(
+        self,
+        path: Union[str, Path],
+        type: str,
+        original_path: Optional[Path] = None,
+        translation_path: Optional[Path] = None,
+    ) -> None:
         self.path = Path(path)  # 相对 original 或者 localization 文件夹的路径
-        self.original_path = ORIGINAL_PATH / Path(original_path if original_path else path)
+        self.original_path = ORIGINAL_PATH / Path(
+            original_path if original_path else path
+        )
         self.translation_path = TRANSLATION_PATH / Path(
-            translation_path if translation_path else path)
+            translation_path if translation_path else path
+        )
         self.para_tranz_path = PARA_TRANZ_PATH / self.path.with_suffix('.json')
 
     def get_strings(self) -> List[String]:
         raise NotImplementedError
 
-    def update_strings(self, strings: Set[String], version_migration: bool = False) -> None:
+    def update_strings(
+        self, strings: Set[String], version_migration: bool = False
+    ) -> None:
         raise NotImplementedError
 
     def save_json(self, ensure_ascii: bool = False, indent: int = 4) -> None:
-        strings = [s for s in self.get_strings() if s.original]  # 只导出原文不为空的词条
+        strings = [
+            s for s in self.get_strings() if s.original
+        ]  # 只导出原文不为空的词条
 
         # 如果Paratranz json文件已存在，则从中同步任何词条的状态（包括未翻译的）
         if not OVERRIDE_STRING_STATUS and self.para_tranz_path.exists():
             self.logger.info(
-                f"Paratranz 平台数据文件 {relative_path(self.para_tranz_path)} 已存在，从中读取已翻译词条的词条stage状态")
+                f'Paratranz 平台数据文件 {relative_path(self.para_tranz_path)} 已存在，从中读取已翻译词条的词条stage状态'
+            )
 
             special_stages = (1, 2, 3, 5, 9, -1)
             para_strings = self.read_json_strings(self.para_tranz_path)
-            para_key_strings = {s.key: s for s in para_strings if
-                                s.stage in special_stages}  # type:Dict[str, String]
+            para_key_strings = {
+                s.key: s for s in para_strings if s.stage in special_stages
+            }  # type:Dict[str, String]
             for s in strings:
                 if s.key in para_key_strings:
                     para_s = para_key_strings[s.key]
                     if s.stage != para_s.stage:
-                        self.logger.debug(f"更新词条 {s.key} 的stage：{s.stage}->{para_s.stage}")
+                        self.logger.debug(
+                            f'更新词条 {s.key} 的stage：{s.stage}->{para_s.stage}'
+                        )
                         s.stage = para_s.stage
 
         self.write_json_strings(self.para_tranz_path, strings, ensure_ascii, indent)
 
         self.logger.info(
-            f'从 {relative_path(self.path)} 中导出了 {len(strings)} 个词条到 {relative_path(self.para_tranz_path)}')
+            f'从 {relative_path(self.path)} 中导出了 {len(strings)} 个词条到 {relative_path(self.para_tranz_path)}'
+        )
 
     def update_from_json(self, version_migration: bool = False) -> None:
         """
@@ -144,9 +170,12 @@ class DataFile:
             strings = self.read_json_strings(self.para_tranz_path)
             self.update_strings(strings, version_migration)
             self.logger.info(
-                f'从 {relative_path(self.para_tranz_path)} 加载了 {len(strings)} 个词条到 {relative_path(self.translation_path)}')
+                f'从 {relative_path(self.para_tranz_path)} 加载了 {len(strings)} 个词条到 {relative_path(self.translation_path)}'
+            )
         else:
-            self.logger.warning(f'未找到 {self.path} 所对应的 ParaTranz 数据 ({self.para_tranz_path})，未更新词条')
+            self.logger.warning(
+                f'未找到 {self.path} 所对应的 ParaTranz 数据 ({self.para_tranz_path})，未更新词条'
+            )
 
     def save_file(self) -> None:
         raise NotImplementedError
@@ -165,11 +194,24 @@ class DataFile:
             data = json.load(f)  # type:List[Dict]
         for d in data:
             strings.append(
-                String(d['key'], d['original'], d.get('translation', ''), d['stage'], d.get('context', '')))
+                String(
+                    d['key'],
+                    d['original'],
+                    d.get('translation', ''),
+                    d['stage'],
+                    d.get('context', ''),
+                )
+            )
         return strings
 
     @staticmethod
-    def write_json_strings(path: Path, strings: List[String], ensure_ascii: bool = False, indent: int = 4, sort: bool = True) -> None:
+    def write_json_strings(
+        path: Path,
+        strings: List[String],
+        ensure_ascii: bool = False,
+        indent: int = 4,
+        sort: bool = True,
+    ) -> None:
         if sort:
             strings = sorted(strings, key=lambda s: s.key)
 
@@ -200,12 +242,14 @@ def contains_english(s: str) -> bool:
 # From processWithWiredChars.py
 # 由于游戏原文文件中可能存在以Windows-1252格式编码的字符（如前后双引号等），所以需要进行转换
 def replace_weird_chars(s: str) -> str:
-    return s.replace('\udc94', '""') \
-        .replace('\udc93', '""') \
-        .replace('\udc92', "'") \
-        .replace('\udc91', "'") \
-        .replace('\udc96', "-") \
+    return (
+        s.replace('\udc94', '""')
+        .replace('\udc93', '""')
+        .replace('\udc92', "'")
+        .replace('\udc91', "'")
+        .replace('\udc96', '-')
         .replace('\udc85', '...')
+    )
 
 
 def rename_class_path(class_path: str) -> str:

@@ -1,6 +1,7 @@
 # original 文件夹应该存放应该被汉化的文件，该脚本用于删除localization文件夹里多余的文件
 import os
 
+
 def remove_excess_files(original_dir, localization_dir):
     for root, dirs, files in os.walk(original_dir):
         # 在localization目录中找到相应的路径
@@ -21,6 +22,7 @@ def remove_excess_files(original_dir, localization_dir):
             if os.path.isfile(path_to_remove):
                 print('删除{}'.format(path_to_remove))
                 os.remove(path_to_remove)
+
 
 # 调用函数，传入你的原始文件夹路径和本地化文件夹路径
 remove_excess_files('original/data', 'localization/data')

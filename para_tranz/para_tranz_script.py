@@ -1,17 +1,17 @@
-import json
 import sys
-from dataclasses import asdict
 from os.path import abspath, dirname
 
 # 将父级目录加入到环境变量中，以便从命令行中运行本脚本
 sys.path.append(dirname(dirname(abspath(__file__))))
 
-from para_tranz.utils.search import search_for_string_in_jar_files
-
-from para_tranz.utils.mapping_generation import generate_class_file_mapping_by_path, generate_class_mapping_diff_string
 from para_tranz.csv_loader.csv_file import CsvFile
 from para_tranz.jar_loader.jar_file import JavaJarFile
-from para_tranz.utils.util import make_logger, SetEncoder
+from para_tranz.utils.mapping_generation import (
+    generate_class_file_mapping_by_path,
+    generate_class_mapping_diff_string,
+)
+from para_tranz.utils.search import search_for_string_in_jar_files
+from para_tranz.utils.util import make_logger
 
 logger = make_logger('ParaTranzScript')
 
@@ -42,6 +42,7 @@ def paratranz_to_game_new_version() -> None:
             file.update_from_json(version_migration=True)
             file.save_file()
 
+
 def gen_mapping_by_class_path() -> None:
     print('请输入java jar文件及其中类文件的路径，以生成类文件映射项')
     print('例如：starfarer.api.jar:com/fs/starfarer/api/campaign/FleetAssignment.class')
@@ -57,12 +58,15 @@ def gen_mapping_by_class_path() -> None:
 
         # 如果在 para_tranz_map.json 中找到了已有的类文件映射项，那么就可以生成对比信息
         if existing_class_item:
-            print('以下是与当前存在的映射项的对比（绿色表示已包含在当前映射表中，红色表示已排除，无色表示未包含）：')
+            print(
+                '以下是与当前存在的映射项的对比（绿色表示已包含在当前映射表中，红色表示已排除，无色表示未包含）：'
+            )
             print(generate_class_mapping_diff_string(existing_class_item, class_item))
         else:
             print('此类未包含在当前映射表中')
 
     logger.info('类文件映射项生成完成')
+
 
 def search_string_in_jar_files() -> None:
     pattern = input('请输入要查找的字符串：')
@@ -85,7 +89,9 @@ def mian() -> None:
     print('2 - 将 ParaTranz 词条写回汉化(localization)文件')
     # TODO: jar版本迁移还没写好
     # print('3 - 将 ParaTranz 词条写回新版本游戏的汉化(localization)文件（版本迁移时使用，主要针对jar文件）')
-    print('4 - 对指定类文件，生成包含所有string的类文件映射项(用于添加新类到para_tranz_map.json)')
+    print(
+        '4 - 对指定类文件，生成包含所有string的类文件映射项(用于添加新类到para_tranz_map.json)'
+    )
     print('5 - 在所有jar文件中查找指定原文字符串')
 
     while True:
@@ -108,7 +114,7 @@ def mian() -> None:
         else:
             print('无效选项！')
 
-    logger.info("程序执行完毕，请按回车键退出")
+    logger.info('程序执行完毕，请按回车键退出')
     input()
 
 

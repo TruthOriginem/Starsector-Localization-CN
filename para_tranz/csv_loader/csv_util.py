@@ -1,9 +1,14 @@
 import re
-from typing import Set, List
+from typing import List, Set
 
 REGEX_CSV_TOKEN = re.compile(r'\$[a-zA-Z0-9][a-zA-Z0-9_\.]+[a-zA-Z0-9]')
-REGEX_IGNORED_TOKENS = re.compile(r'([Pp]ersonLastName|[Pp]layerSirOrMadam|[Pp]layerName|ranks?|[Oo]nOrAt|[Ii]sOrAre|[Hh]isOrHer|[Hh]eOrShe|[Hh]imOrHer|[Hh]imOrHerself|shipOrFleet|[Aa]OrAn|[Bb]rotherOrSister|marketFactionArticle)')
-REGEX_HIGHLIGHT_TARGET = re.compile(r'^(SetTextHighlights|Highlight) (.*)(?:\n|$)', re.MULTILINE)
+REGEX_IGNORED_TOKENS = re.compile(
+    r'([Pp]ersonLastName|[Pp]layerSirOrMadam|[Pp]layerName|ranks?|[Oo]nOrAt|[Ii]sOrAre|[Hh]isOrHer|[Hh]eOrShe|[Hh]imOrHer|[Hh]imOrHerself|shipOrFleet|[Aa]OrAn|[Bb]rotherOrSister|marketFactionArticle)'
+)
+REGEX_HIGHLIGHT_TARGET = re.compile(
+    r'^(SetTextHighlights|Highlight) (.*)(?:\n|$)', re.MULTILINE
+)
+
 
 def rules_csv_extract_csv_tokens(s: str) -> Set[str]:
     """
@@ -17,6 +22,7 @@ def rules_csv_extract_csv_tokens(s: str) -> Set[str]:
     """
     return set(re.findall(REGEX_CSV_TOKEN, s))
 
+
 class TokenIgnoreCase:
     def __init__(self, name: str):
         self.name = name
@@ -26,6 +32,7 @@ class TokenIgnoreCase:
 
     def __hash__(self):
         return hash(self.name.lower())
+
 
 def rules_csv_find_missing_csv_tokens(original: str, translation: str) -> Set[str]:
     """
@@ -41,12 +48,17 @@ def rules_csv_find_missing_csv_tokens(original: str, translation: str) -> Set[st
     original_tokens = rules_csv_extract_csv_tokens(original)
 
     # 去除一些不需要检查的token
-    original_token_strs = {token for token in original_tokens if not re.search(REGEX_IGNORED_TOKENS, token)}
+    original_token_strs = {
+        token for token in original_tokens if not re.search(REGEX_IGNORED_TOKENS, token)
+    }
     original_tokens = {TokenIgnoreCase(name) for name in original_token_strs}
 
-    included_tokens = {TokenIgnoreCase(name)  for name in rules_csv_extract_csv_tokens(translation)}
+    included_tokens = {
+        TokenIgnoreCase(name) for name in rules_csv_extract_csv_tokens(translation)
+    }
 
     return {token.name for token in original_tokens - included_tokens}
+
 
 def rules_csv_extract_highlight_targets_from_script(script: str) -> Set[str]:
     """
@@ -64,7 +76,8 @@ def rules_csv_extract_highlight_targets_from_script(script: str) -> Set[str]:
         highlights.update(parse_only_quoted_strings(param))
     return highlights
 
-def parse_only_quoted_strings(input_text:str) -> List[str]:
+
+def parse_only_quoted_strings(input_text: str) -> List[str]:
     """
     Parses a string and extracts only the quoted parts as a list of strings.
 
@@ -102,7 +115,10 @@ def parse_only_quoted_strings(input_text:str) -> List[str]:
 
     return result
 
-def rules_csv_find_text_highlight_targets_adjacent_to_non_space(text:str, highlights: Set[str]) -> Set[str]:
+
+def rules_csv_find_text_highlight_targets_adjacent_to_non_space(
+    text: str, highlights: Set[str]
+) -> Set[str]:
     """
     找到文本中左右存在非空格和英文引号的高亮string
 
@@ -112,13 +128,23 @@ def rules_csv_find_text_highlight_targets_adjacent_to_non_space(text:str, highli
     Returns:
         Set[str]: 左右存在非空格和英文引号的高亮string集合
     """
-    return {highlight for highlight in highlights if not re.search(rf'(?:^|[ {{}}"\']){re.escape(highlight)}(?:$|[ {{}}"\'])', text, re.MULTILINE)}
+    return {
+        highlight
+        for highlight in highlights
+        if not re.search(
+            rf'(?:^|[ {{}}"\']){re.escape(highlight)}(?:$|[ {{}}"\'])',
+            text,
+            re.MULTILINE,
+        )
+    }
 
 
 if __name__ == '__main__':
-    script = "Highlight \"关闭你的应答器\"\nShowPersonVisual\nSetShortcut cutCommLink \"ESCAPE\""
+    script = (
+        'Highlight "关闭你的应答器"\nShowPersonVisual\nSetShortcut cutCommLink "ESCAPE"'
+    )
     highlights = rules_csv_extract_highlight_targets_from_script(script)
     print(highlights)
 
-    text = "你有种感觉，如果关闭你的应答器隐瞒身份进入港口，事情可能会有更多的进展。"
+    text = '你有种感觉，如果关闭你的应答器隐瞒身份进入港口，事情可能会有更多的进展。'
     print(rules_csv_find_text_highlight_targets_adjacent_to_non_space(text, highlights))

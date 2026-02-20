@@ -1,16 +1,22 @@
-import json
 from dataclasses import asdict
 from typing import Optional, Tuple
 
-from para_tranz.jar_loader.class_file import JavaClassFile
 from para_tranz.jar_loader.jar_file import JavaJarFile
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, ClassFileMapItem, JarMapItem
-from para_tranz.utils.util import normalize_class_path, colorize, RED, GREEN, make_logger
+from para_tranz.utils.util import (
+    GREEN,
+    RED,
+    colorize,
+    make_logger,
+    normalize_class_path,
+)
 
 logger = make_logger('MappingGenerator')
 
 
-def generate_class_mapping_diff_string(target_class_map: ClassFileMapItem, source_class_map: ClassFileMapItem) -> str:
+def generate_class_mapping_diff_string(
+    target_class_map: ClassFileMapItem, source_class_map: ClassFileMapItem
+) -> str:
     """
     生成类文件映射项的对比信息
     将检测源类映射 include_strings 中的每个字符串是否在目标类映射中出现/排除
@@ -39,8 +45,9 @@ def generate_class_mapping_diff_string(target_class_map: ClassFileMapItem, sourc
     return diff_str
 
 
-def generate_class_file_mapping_by_path(class_file_path: str) -> Optional[
-    Tuple[JarMapItem, ClassFileMapItem, Optional[ClassFileMapItem]]]:
+def generate_class_file_mapping_by_path(
+    class_file_path: str,
+) -> Optional[Tuple[JarMapItem, ClassFileMapItem, Optional[ClassFileMapItem]]]:
     """
     通过类文件路径查找类，并生成类文件映射项
 
@@ -81,7 +88,9 @@ def generate_class_file_mapping_by_path(class_file_path: str) -> Optional[
         # 否则，需要手动为每一个jar文件映射添加类文件映射项
         else:
             class_item = ClassFileMapItem(path=class_path)
-            jar_file_items = [item for item in PARA_TRANZ_MAP.items if isinstance(item, JarMapItem)]
+            jar_file_items = [
+                item for item in PARA_TRANZ_MAP.items if isinstance(item, JarMapItem)
+            ]
             for jar_item in jar_file_items:
                 jar_item.class_files = [class_item]
 
@@ -91,7 +100,7 @@ def generate_class_file_mapping_by_path(class_file_path: str) -> Optional[
             jar_file = JavaJarFile(**asdict(item))
             class_file = jar_file.class_files[class_path]
             break
-        except Exception as ignored:
+        except Exception:
             pass
 
     if not class_file:

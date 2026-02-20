@@ -11,15 +11,85 @@ from para_tranz.utils.util import make_logger
 
 sys.path.append(dirname(dirname(dirname(dirname(abspath(__file__))))))
 
-CHAR_LIST_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'temporary_scripts' / 'font_coverage_checker' / 'characters.txt'
+CHAR_LIST_PATH = (
+    PROJECT_DIRECTORY
+    / 'para_tranz'
+    / 'temporary_scripts'
+    / 'font_coverage_checker'
+    / 'characters.txt'
+)
 
 logger = make_logger('FontCoverageChecker')
 loaders = [JavaJarFile, CsvFile]
 
-chars_ignored = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
-                 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
-                 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7',
-                 '8', '9', ' ', '\t', '\n', '\r'}
+chars_ignored = {
+    'a',
+    'b',
+    'c',
+    'd',
+    'e',
+    'f',
+    'g',
+    'h',
+    'i',
+    'j',
+    'k',
+    'l',
+    'm',
+    'n',
+    'o',
+    'p',
+    'q',
+    'r',
+    's',
+    't',
+    'u',
+    'v',
+    'w',
+    'x',
+    'y',
+    'z',
+    'A',
+    'B',
+    'C',
+    'D',
+    'E',
+    'F',
+    'G',
+    'H',
+    'I',
+    'J',
+    'K',
+    'L',
+    'M',
+    'N',
+    'O',
+    'P',
+    'Q',
+    'R',
+    'S',
+    'T',
+    'U',
+    'V',
+    'W',
+    'X',
+    'Y',
+    'Z',
+    '0',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    ' ',
+    '\t',
+    '\n',
+    '\r',
+}
 
 
 def load_charset(char_list_path: str | Path = CHAR_LIST_PATH) -> Set[str]:

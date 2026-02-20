@@ -3,12 +3,16 @@ import re
 import zipfile
 from dataclasses import asdict
 from pathlib import Path
-from typing import List, Dict, Set, Optional, Union
+from typing import List, Optional, Set, Union
 
 from para_tranz.jar_loader.class_file import JavaClassFile
-from para_tranz.utils.config import EXPORTED_STRING_CONTEXT_PREFIX_PREFIX, IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS, \
-    ORIGINAL_PATH, TRANSLATION_PATH
-from para_tranz.utils.mapping import PARA_TRANZ_MAP, JarMapItem, ClassFileMapItem
+from para_tranz.utils.config import (
+    EXPORTED_STRING_CONTEXT_PREFIX_PREFIX,
+    IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS,
+    ORIGINAL_PATH,
+    TRANSLATION_PATH,
+)
+from para_tranz.utils.mapping import PARA_TRANZ_MAP, JarMapItem
 from para_tranz.utils.util import DataFile, String, make_logger, rename_class_path
 
 
@@ -17,9 +21,16 @@ class JavaJarFile(DataFile):
     用于表示游戏文件中可以提取原文和译文的jar文件
     """
 
-    logger = make_logger(f'JavaJarFile')
+    logger = make_logger('JavaJarFile')
 
-    def __init__(self, path: Union[Path, str], class_files: List[dict], type: str = 'jar', no_auto_load: bool = False, **kwargs):
+    def __init__(
+        self,
+        path: Union[Path, str],
+        class_files: List[dict],
+        type: str = 'jar',
+        no_auto_load: bool = False,
+        **kwargs,
+    ):
         super().__init__(path, type)
 
         self.path = path
@@ -33,7 +44,9 @@ class JavaJarFile(DataFile):
         self.class_files = {}  # type: Dict[str, JavaClassFile]
 
         if not no_auto_load:
-            self.logger.info(f'开始读取 {self.path} 中指定的class文件，共 {len(class_files)} 个')
+            self.logger.info(
+                f'开始读取 {self.path} 中指定的class文件，共 {len(class_files)} 个'
+            )
             for class_file_info in class_files:
                 self.load_class_file(**class_file_info)
             self.logger.info(f'jar读取完成: {self.path}')
@@ -55,8 +68,13 @@ class JavaJarFile(DataFile):
             strings.extend(class_file.get_strings())
         return strings
 
-    def load_class_file(self, path: str, include_strings: List[str] = None,
-                        exclude_strings: List[str] = None, override: bool = False) -> Optional['JavaClassFile']:
+    def load_class_file(
+        self,
+        path: str,
+        include_strings: List[str] = None,
+        exclude_strings: List[str] = None,
+        override: bool = False,
+    ) -> Optional['JavaClassFile']:
         if not override and path in self.class_files:
             return self.class_files[path]
         try:
@@ -95,9 +113,12 @@ class JavaJarFile(DataFile):
         else:
             raise ValueError(f'无法从上下文\n{context}\n中还原词条key')
 
-    def update_strings(self, strings: Set[String], version_migration: bool = False) -> None:
-        class_file_path_strings_mapping = {class_file_path: [] for class_file_path in
-                                           self.class_files}  # type: Dict[str, List[String]]
+    def update_strings(
+        self, strings: Set[String], version_migration: bool = False
+    ) -> None:
+        class_file_path_strings_mapping = {
+            class_file_path: [] for class_file_path in self.class_files
+        }  # type: Dict[str, List[String]]
 
         strings_without_class = []
 
@@ -112,17 +133,24 @@ class JavaJarFile(DataFile):
 
             if class_file is None:
                 if not version_migration:
-                    if IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS and not s.context.startswith(
-                            EXPORTED_STRING_CONTEXT_PREFIX_PREFIX):
+                    if (
+                        IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS
+                        and not s.context.startswith(
+                            EXPORTED_STRING_CONTEXT_PREFIX_PREFIX
+                        )
+                    ):
                         self.logger.debug(
-                            f'在 {self.path} 中词条 key={s.key} 的词条上下文前缀与当前上下文前缀不匹配，跳过词条')
+                            f'在 {self.path} 中词条 key={s.key} 的词条上下文前缀与当前上下文前缀不匹配，跳过词条'
+                        )
                     else:
                         self.logger.warning(
-                            f'在更新词条 {s.key} 时，在文件 {self.path} 中找不到类 {class_file_path}。未更新该词条。')
+                            f'在更新词条 {s.key} 时，在文件 {self.path} 中找不到类 {class_file_path}。未更新该词条。'
+                        )
                 else:
                     strings_without_class.append(s)
                     self.logger.debug(
-                        f'在更新词条 {s.key} 时，在文件 {self.path} 中找不到类 {class_file_path}。稍后尝试进行模糊匹配。')
+                        f'在更新词条 {s.key} 时，在文件 {self.path} 中找不到类 {class_file_path}。稍后尝试进行模糊匹配。'
+                    )
                 continue
 
             class_file_path_strings_mapping[class_file_path].append(s)
@@ -134,7 +162,9 @@ class JavaJarFile(DataFile):
             return
 
         # 版本迁移时，为找不到类的词条进行模糊匹配
-        self.logger.info(f'存在未找到类的词条，准备进行模糊匹配，开始加载jar中的所有类文件')
+        self.logger.info(
+            '存在未找到类的词条，准备进行模糊匹配，开始加载jar中的所有类文件'
+        )
         self.load_all_classes_in_jar()
 
         self.logger.info(f'开始进行模糊匹配，共 {len(strings_without_class)} 个词条')
@@ -155,26 +185,33 @@ class JavaJarFile(DataFile):
             matched_class = self._fuzzy_match_class_file(class_file_path, strings)
             if matched_class is None:
                 self.logger.warning(
-                    f'在更新词条时，未能通过模糊匹配在文件 {self.path} 中找到类 {class_file_path} 对应的新类。未更新该词条。')
+                    f'在更新词条时，未能通过模糊匹配在文件 {self.path} 中找到类 {class_file_path} 对应的新类。未更新该词条。'
+                )
                 continue
             match_success_count += matched_class.update_strings(strings)
 
             # 更新mapping文件，添加该类的原文映射
             jar_map_item = PARA_TRANZ_MAP.get_item_by_path(self.path)
             if jar_map_item is None:
-                raise ValueError(f'在更新词条时，未能在mapping文件中找到 jar 文件 {self.path} 对应的映射')
-            class_map_item = jar_map_item.get_class_file_item(str(matched_class.path),
-                                                              create=True)  # type: ClassFileMapItem
+                raise ValueError(
+                    f'在更新词条时，未能在mapping文件中找到 jar 文件 {self.path} 对应的映射'
+                )
+            class_map_item = jar_map_item.get_class_file_item(
+                str(matched_class.path), create=True
+            )  # type: ClassFileMapItem
             original_strings = [s.original for s in strings]
             class_map_item.include_strings.update(original_strings)
 
-        self.logger.info(f'模糊匹配完成，共 {match_success_count} / {len(strings_without_class)} 个词条成功匹配')
+        self.logger.info(
+            f'模糊匹配完成，共 {match_success_count} / {len(strings_without_class)} 个词条成功匹配'
+        )
 
         PARA_TRANZ_MAP.save()
-        self.logger.info(f'保存mapping文件完成')
+        self.logger.info('保存mapping文件完成')
 
-    def _fuzzy_match_class_file(self, class_file_path: str, strings: Optional[List[String]]) -> Optional[
-        'JavaClassFile']:
+    def _fuzzy_match_class_file(
+        self, class_file_path: str, strings: Optional[List[String]]
+    ) -> Optional['JavaClassFile']:
         normalized_path = rename_class_path(class_file_path)
         matched_classes: List[JavaClassFile] = []
 
@@ -191,12 +228,15 @@ class JavaJarFile(DataFile):
             matched_classes = normalized_class_files[normalized_path]
 
         if not matched_classes:
-            self.logger.info(f'在文件 {self.path} 按类名模糊匹配 {class_file_path} 时，未能找到可能的结果')
+            self.logger.info(
+                f'在文件 {self.path} 按类名模糊匹配 {class_file_path} 时，未能找到可能的结果'
+            )
             return None
 
         if strings is None:
             self.logger.info(
-                f'在文件 {self.path} 中成功建立匹配关系，类 {class_file_path} ==> {matched_classes[0].path}')
+                f'在文件 {self.path} 中成功建立匹配关系，类 {class_file_path} ==> {matched_classes[0].path}'
+            )
             return matched_classes[0]
 
         best_match = None
@@ -204,7 +244,9 @@ class JavaJarFile(DataFile):
 
         for matched_class in matched_classes:
             string_match_count = 0
-            matched_class_original_strings = {s.original for s in matched_class.get_strings()}
+            matched_class_original_strings = {
+                s.original for s in matched_class.get_strings()
+            }
             for s in strings:
                 if s.original in matched_class_original_strings:
                     string_match_count += 1
@@ -216,11 +258,13 @@ class JavaJarFile(DataFile):
 
         if best_match_rate >= 0.5:
             self.logger.info(
-                f'在文件 {self.path} 中成功建立匹配关系，类 {class_file_path} => {best_match.path}，匹配率 {best_match_rate}')
+                f'在文件 {self.path} 中成功建立匹配关系，类 {class_file_path} => {best_match.path}，匹配率 {best_match_rate}'
+            )
             return best_match
         else:
             self.logger.info(
-                f'在文件 {self.path} 中找到匹配关系，类 {class_file_path} => {best_match.path}，但匹配率 {best_match_rate} 过低不予采用')
+                f'在文件 {self.path} 中找到匹配关系，类 {class_file_path} => {best_match.path}，但匹配率 {best_match_rate} 过低不予采用'
+            )
             return None
 
     def save_file(self) -> None:
@@ -260,22 +304,37 @@ class JavaJarFile(DataFile):
     def read_original_class_file(self, class_file_path: str) -> bytes:
         path = zipfile.Path(self.original_file, class_file_path)
         if not path.exists():
-            raise FileNotFoundError(f'在原始jar文件 {self.original_path} 中找不到class文件 {class_file_path}')
+            raise FileNotFoundError(
+                f'在原始jar文件 {self.original_path} 中找不到class文件 {class_file_path}'
+            )
         return path.read_bytes()
 
     def read_translation_class_file(self, class_file_path: str) -> bytes:
         path = zipfile.Path(self.translation_file, class_file_path)
         if not path.exists():
-            raise FileNotFoundError(f'在译文jar文件 {self.translation_path} 中找不到class文件 {class_file_path}')
+            raise FileNotFoundError(
+                f'在译文jar文件 {self.translation_path} 中找不到class文件 {class_file_path}'
+            )
         return path.read_bytes()
 
-    def load_all_classes_in_jar(self, from_translation: bool = False, override_loaded: bool = False) -> None:
-        jar_path = ORIGINAL_PATH / self.path if not from_translation else TRANSLATION_PATH / self.path
+    def load_all_classes_in_jar(
+        self, from_translation: bool = False, override_loaded: bool = False
+    ) -> None:
+        jar_path = (
+            ORIGINAL_PATH / self.path
+            if not from_translation
+            else TRANSLATION_PATH / self.path
+        )
 
         with zipfile.ZipFile(jar_path) as zf:
-            class_files = [{'path': info.filename} for info in zf.infolist() if
-                           info.filename.endswith('.class')]
-            self.logger.info(f'在jar文件 {jar_path} 中找到了 {len(class_files)} 个class文件。')
+            class_files = [
+                {'path': info.filename}
+                for info in zf.infolist()
+                if info.filename.endswith('.class')
+            ]
+            self.logger.info(
+                f'在jar文件 {jar_path} 中找到了 {len(class_files)} 个class文件。'
+            )
 
         for class_file_info in class_files:
             self.load_class_file(**class_file_info, override=override_loaded)
@@ -283,8 +342,9 @@ class JavaJarFile(DataFile):
     @classmethod
     def load_files_from_config(cls) -> List['JavaJarFile']:
         cls.logger.info('开始读取游戏jar数据')
-        files = [cls(**asdict(item)) for item in PARA_TRANZ_MAP if
-                 type(item) == JarMapItem]
+        files = [
+            cls(**asdict(item)) for item in PARA_TRANZ_MAP if type(item) == JarMapItem
+        ]
         cls.logger.info('游戏jar数据读取完成')
         return files
 
