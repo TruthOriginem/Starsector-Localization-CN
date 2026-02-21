@@ -73,7 +73,9 @@ def rules_csv_extract_highlight_targets_from_script(script: str) -> Set[str]:
     highlight_command_params = re.findall(REGEX_HIGHLIGHT_TARGET, script)
     highlights = set()
     for command, param in highlight_command_params:
-        highlights.update(parse_only_quoted_strings(param))
+        for s in parse_only_quoted_strings(param):
+            # 去除尾部的英文标点（这些标点是句子的一部分，不属于高亮目标本身）
+            highlights.add(s.rstrip('.,;:!?'))
     return highlights
 
 

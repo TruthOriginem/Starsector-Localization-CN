@@ -36,3 +36,6 @@ UPDATE_STRING_ALLOW_EMPTY_TRANSLATION = True
 # [csv_loader 配置]
 # 在将译文写回csv文件时，是否删除原文为空的译文
 REMOVE_TRANSLATION_WHEN_ORIGINAL_IS_EMPTY = True
+# 对于 rules.csv 的 script 列，如果原文不含双引号（即无需翻译的字符串字面量），
+# 是否直接将英文原文覆盖到译文字段中
+RULES_CSV_SCRIPT_COPY_ORIGINAL_WHEN_NO_QUOTES = True
