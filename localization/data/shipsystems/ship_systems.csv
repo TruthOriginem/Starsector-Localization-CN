@@ -5,7 +5,7 @@ name,id,flux/second,f/s (base rate),f/s (base cap),flux/use,f/u (base rate),f/u 
 诱饵发射器 (单发),flarelauncher_single,,,,,,,,1,0.033,,,,5,,,,,,,,,,,,defensive,graphics/icons/hullsys/flare_launcher.png
 追踪热诱弹发射器,flarelauncher_active,,,,,,0.1,,,,,,,5,,,,,,,,,,,,defensive,graphics/icons/hullsys/active_flare_launcher.png
 烈焰驱动器,burndrive,1,,,,,,,,,2,5,1,10,TRUE,,,,,TRUE,TRUE,TRUE,TRUE,,,movement,graphics/icons/hullsys/burn_drive.png
-Combat Burn,combat_burn,1,,,,,,,,,1,,1,0,TRUE,,,,,,TRUE,TRUE,TRUE,,,movement,graphics/icons/hullsys/combat_burn.png
+战斗驱动器,combat_burn,1,,,,,,,,,1,,1,0,TRUE,,,,,,TRUE,TRUE,TRUE,,,movement,graphics/icons/hullsys/combat_burn.png
 等离子爆裂驱动器,microburn,1,,,,,,,2,0.1,0.5,0.5,0.5,,,,,,,,TRUE,TRUE,,,,movement,graphics/icons/hullsys/plasma_burn.png
 欧米伽爆裂驱动器,microburn_omega,1,,,,,,,3,0.1,0.5,0.5,0.5,,,,,,,,TRUE,TRUE,,,,"restricted, movement",graphics/icons/hullsys/burn_drive.png
 机动推进器,maneuveringjets,,,,,,,,,,1,5,1,5,,,,,,,,,,,,movement,graphics/icons/hullsys/maneuvering_jets.png
@@ -51,21 +51,21 @@ EMP 发生器,emp,1,,,,,0.2,,,,0.5,4,0.5,3,,,,,TRUE,,,,,,,"defensive, offensive"
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
 巡航驱动,traveldrive,1,,,,,,,,,2,,2,0,TRUE,,,,TRUE,TRUE,TRUE,TRUE,TRUE,,,,graphics/icons/hullsys/burn_drive.png
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
-导弹自动工厂,forgevats_station,,,,,,0,,,,1,0,0,30,,,,,,,,,,,,,graphics/icons/hullsys/heavy_missile_autoforge.png
+重型导弹自动工厂,forgevats_station,,,,,,0,,,,1,0,0,30,,,,,,,,,,,,,graphics/icons/hullsys/heavy_missile_autoforge.png
 城齿无人机,drone_station_lt,,,,,,,,5,,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/station_defense_drones_low.png
 三角堡无人机,drone_station_mid,,,,,,,,3,,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/station_defense_drones_mid.png
 石像鬼无人机,drone_station_high,,,,,,,,4,,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/station_defense_drones_high.png
 传送感应空雷,mine_strike_station,,,,,,0,,7,0.33,0.25,,0.25,0,,,,,,,,,,,,offensive,graphics/icons/hullsys/station_mine_strike.png
 光尘吸引场,mote_control,,,,,,0,,,,0.1,,0.4,,,,,,,,,,,,,"restricted, offensive, defensive",graphics/icons/hullsys/mote_attractor.png
 终结指令,drone_strike,,,,600,,,,,,0,0.05,0.2,0,,,,,,,,,,,,offensive,graphics/icons/hullsys/termination_sequence.png
-Energy Lash,energy_lash,,,,,,,,,,1,,0.1,,,,,,,,,,,,,"restricted, offensive, defensive",graphics/icons/hullsys/energy_lash.png
-Displacer,displacer_threat,,,,,,,,3,0,0.25,,0.25,0,,TRUE,,TRUE,,,,,,,,movement,graphics/icons/hullsys/displacer.png
-Incursion Mode,incursion_mode,,,,,,,,1,,1,15,1,0,,,,,,,,,,,,offensive,graphics/icons/hullsys/incursion_mode.png
-Extraction Protocol,extraction_protocol,,,,,,,,1,,1,5,1,0,,,,,,,,,,,,defensive,graphics/icons/hullsys/extraction_protocol.png
-Fragment Volley,fragment_volley,,,,,,,,1,,1,3,1,60,,,,,,,,,,,,offensive,graphics/icons/hullsys/fragment_volley.png
-Construction Swarm,construction_swarm,,,,,,,,,,0.1,,0.4,,,,,,,,,,,,,,graphics/icons/hullsys/construction_swarm.png
+充能鞭笞,energy_lash,,,,,,,,,,1,,0.1,,,,,,,,,,,,,"restricted, offensive, defensive",graphics/icons/hullsys/energy_lash.png
+移位器,displacer_threat,,,,,,,,3,0,0.25,,0.25,0,,TRUE,,TRUE,,,,,,,,movement,graphics/icons/hullsys/displacer.png
+入侵模式,incursion_mode,,,,,,,,1,,1,15,1,0,,,,,,,,,,,,offensive,graphics/icons/hullsys/incursion_mode.png
+撤离协议,extraction_protocol,,,,,,,,1,,1,5,1,0,,,,,,,,,,,,defensive,graphics/icons/hullsys/extraction_protocol.png
+碎片齐射,fragment_volley,,,,,,,,1,,1,3,1,60,,,,,,,,,,,,offensive,graphics/icons/hullsys/fragment_volley.png
+工程集群,construction_swarm,,,,,,,,,,0.1,,0.4,,,,,,,,,,,,,,graphics/icons/hullsys/construction_swarm.png
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Convulsive Lunge,convulsive_lunge,,,,,,,,,,2,3,0.5,,,,,,TRUE,,,,,,,movement,graphics/icons/hullsys/convulsive_lunge.png
-Darkened Gaze,darkened_gaze,1000,,,,,,,,,2,,1,0,TRUE,TRUE,,,,,,,,,,offensive,graphics/icons/hullsys/darkened_gaze.png
-Shrouded Vortex,shrouded_vortex,,,,,,,,,,,,,,,,,,,,,,,,,hide_in_codex,graphics/icons/hullsys/darkened_gaze.png
-Tenebrous Expulsion,tenebrous_expulsion,,,,,,,,,,0.1,1,1,20,,,,,TRUE,,,,TRUE,,,defensive,graphics/icons/hullsys/tenebrous_expulsion.png
+痉挛急扑,convulsive_lunge,,,,,,,,,,2,3,0.5,,,,,,TRUE,,,,,,,movement,graphics/icons/hullsys/convulsive_lunge.png
+深黯凝视,darkened_gaze,1000,,,,,,,,,2,,1,0,TRUE,TRUE,,,,,,,,,,offensive,graphics/icons/hullsys/darkened_gaze.png
+渊幕涡流,shrouded_vortex,,,,,,,,,,,,,,,,,,,,,,,,,hide_in_codex,graphics/icons/hullsys/darkened_gaze.png
+冥暗喷射,tenebrous_expulsion,,,,,,,,,,0.1,1,1,20,,,,,TRUE,,,,TRUE,,,defensive,graphics/icons/hullsys/tenebrous_expulsion.png

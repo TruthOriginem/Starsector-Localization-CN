@@ -1,6 +1,6 @@
 id,name,cost mult,build time,income,upkeep,downgrade,upgrade,tags,data,image,plugin,desc,order,disruptDanger
 population,居住区 & 基础设施,,,10,3,,,"population, unraidable, no_saturation_bombardment",,graphics/icons/industry/population.png,com.fs.starfarer.api.impl.campaign.econ.impl.PopulationAndInfrastructure,从摇摇欲坠的轨道居住舱模块到繁华的不夜之都，这里包含了一切殖民地常住人口所需的基础设施。,100,
-farming,农业,15,60,,1,,,"farming, industry, rural",,graphics/icons/industry/farming.png,com.fs.starfarer.api.impl.campaign.econ.impl.Farming,农业是同文明本身一样悠久的技术和产业。千百年来，人类一直选育各种天然的、改良的、抑或是人造的农作物，以获取营养。只要人还为人，农业就将长期以往，亘古不变。,200,LOW
+farming,农业,15,60,,1,,,"farming, industry, rural",,graphics/icons/industry/farming.png,com.fs.starfarer.api.impl.campaign.econ.impl.Farming,农业是同文明本身一样悠久的技术和产业。千百年来，人类一直通过驾驭各种生物学机制来获取营养，无论是天然的、转基因的、还是人造的。只要人还为人，农业就将长期以往，亘古不变。,200,LOW
 aquaculture,水产养殖,50,60,,3,,,"farming, industry, rural",,graphics/icons/industry/aquaculture.png,com.fs.starfarer.api.impl.campaign.econ.impl.Farming,在海洋行星上耕海牧渔需要大量的初始投入，主要用于对合适的物种进行生物工程改造。不过在这之后，普罗大众也可以胜任海藻田和渔场的运营，无需太多专业培训和设备的支持。,210,MEDIUM
 mining,采矿业,20,60,,2,,,"mining, industry, industrial",,graphics/icons/industry/mining.png,com.fs.starfarer.api.impl.campaign.econ.impl.Mining,金属矿石/稀有元素、有机物和挥发物的开采都需重型设备，特殊基础设施与娴熟劳动力的支持。尽管工作条件十分苛刻，但对于某些特殊群体而言仍极具吸引力。如果政府不愿意对某些行为网开一面，那么迟早会面临矿工短缺的窘境。,300,MEDIUM
 techmining,技术挖掘,30,45,,2,,,"techmining, industry, industrial",,graphics/icons/industry/techmining.png,com.fs.starfarer.api.impl.campaign.econ.impl.TechMining,技术挖掘是一种从 人之领 废墟中回收珍稀文物的复杂艺术。通常需要大量特殊工具来处理各种潜在危险，以及来自专家的指点来判断高收益的探索区域。而那些性格怪癖的年长技术矿工，不仅喜欢佩戴着奇异的幸运护符，且拒绝未经仪式洗礼的挖掘工作。,400,MEDIUM
@@ -91,4 +91,4 @@ planetaryshield,行星护盾,150,90,,3,,,"grounddefenses, structure, codex_unloc
 waystation,星际驿站,20,60,,2,,,"waystation, structure",,graphics/icons/industry/waystation.png,com.fs.starfarer.api.impl.campaign.econ.impl.Waystation,为星际舰队提供补给和维修服务的中途站。增加殖民地的流通性。,155,MEDIUM
 cryosanctum,低温避难所,150,90,,5,,,"cryosanctum, structure, codex_unlockable",,graphics/icons/industry/cryosanctum.png,com.fs.starfarer.api.impl.campaign.econ.impl.Cryosanctum,一座巨大如墓穴般的建筑，用来安放为度过这次危机而冒险选择冷冻睡眠的人们，有可能的话，他们将在一个更文明的时代醒来。建筑配备了多套冗余的维生设施，大规模自动化保安系统以及反舰防御阵列。与之相比，冷冻舱本身的体积简直微不足道，而这一切都被安置在四通八达如迷宫般的地下堡垒内。,3000,EXTREME
 ,,,,,,,,,,,,,,
-cryorevival,低温复苏设施,60,60,,5,,,"cryorevival, structure, codex_unlockable",,graphics/icons/industry/cryorevival.png,com.fs.starfarer.api.impl.campaign.econ.impl.Cryorevival,一处为 人之领 时代的低温睡眠者提供复苏与同化的重要设施。大幅度提高人口增长率。,3200,MEDIUM
+cryorevival,低温复苏设施,60,60,,5,,,"cryorevival, structure, codex_unlockable",,graphics/icons/industry/cryorevival.png,com.fs.starfarer.api.impl.campaign.econ.impl.Cryorevival,一处为 人之领 时代的低温休眠者提供复苏与同化的重要设施。大幅度提高人口增长率。,3200,MEDIUM

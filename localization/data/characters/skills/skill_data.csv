@@ -6,7 +6,7 @@ combat_endurance,战斗耐力,20,1,0,,"坚韧不拔，曾引导十四战群渡�
 艰苦奋斗，将引导人类达成使命。",Kali Molina 海军上将 - [霸主宣言] 星历 49 年,TRUE,,,,graphics/icons/skills/combat_endurance3.png,
 impact_mitigation,冲击缓解,30,2,0,,舰船采取机动，使冲击角度产生了斜向偏移，把弹体的冲击力完全分散到了泡沫金属层中。不幸的是，由于震荡产生的时机非常不凑巧，让正在进行日常重型机械搬运作业的船员 York 惨遭不测。,发生于星历 120.03.08 的 Thule 小规模冲突，海军都统 Zhou 提交的行动后检视报告,TRUE,,,,graphics/icons/skills/impact_mitigation.png,
 damage_control,损伤管制,40,2,0,,逝者已逝。就让那些隔舱自己烧干净吧，把你们的精力都集中到能让我们再多活一小时的事情上去。,海军都统 Tethys，对 PLS Astelene Key 船员的最后一次演讲,TRUE,,,,graphics/icons/skills/damage_control2.png,
-field_modulation,相场调制,50,2,0,,"很少有人具有我认其为 ""主动调音"" 的天赋。我觉得音乐家才是最好的护盾操作员。",出自 Ardis Soloman，提交 COMSEC 接受算法审核时意外泄露的数据,TRUE,,,active_defenses,graphics/icons/skills/field_modulation.png,
+field_modulation,相场调制,50,2,0,,"很少有人具有我认其为 ""主动调谐"" 的天赋。我觉得音乐家才能成为最好的场控军官。",出自 Ardis Soloman，提交 COMSEC 接受算法审核时意外泄露的数据,TRUE,,,active_defenses,graphics/icons/skills/field_modulation.png,
 point_defense,点防专精,60,3,0,,"我？我对那种什么激光可不感冒。的确，乱七八糟的灯光秀是很好看啊，但真要挡住那些飞过来的 ""小亮点"" 的话，没有什么能比的上火神炮阵列的贫铀弹幕。","""舱底英雄""，HEGCOM 制作的连续剧",TRUE,,,,graphics/icons/skills/advanced_countermeasures.png,
 target_analysis,目标解析,70,4,0,,在机械的协助下，人脑有能力从大量互相冲突的传感器数据和自相矛盾的战术指示中分析出高效的火力投送方案。辅助瞄准计算机永远无法独立地取代一名真正的战士。,"""太空战斗，第二十二卷卷末""，来自人之领第十四战斗群图书馆",TRUE,,,,graphics/icons/skills/target_analysis2.png,
 ballistic_mastery,实弹精通,80,4,0,,"是什么阻止了速子的阴谋？(大炮！)
@@ -17,7 +17,7 @@ missile_specialization,导弹特化,100,5,4,2,我的同事也觉得他们的鬼�
 ,,,,,,,,,,,,,
 # LEADERSHIP,,,,,,,,,,,,,
 tactical_drills,战术演习,500,1,0,,"完美。
-现在再来一次。",Cameron Fourth-Phobos 附近，Coatl 射击场,,TRUE,,,graphics/icons/skills/weapon_drills.png,
+现在再来一次。",Cameron Fourth-Phobos，Coatl 射击场,,TRUE,,,graphics/icons/skills/weapon_drills.png,
 coordinated_maneuvers,协调机动,520,2,0,,长官，来袭的敌舰正在全速前进，有一艘 —— 两艘，不，三艘，还在增加... 他们数量太多了！高能读数确认，六秒后接敌。,HSS Ceraon 号最高司令官的音频档案，恢复于 189.09.13,,TRUE,,,graphics/icons/skills/coordinated_maneuvers2.png,
 wolfpack_tactics,狼群战术,530,2,0,,一支只想着摆出那些没下过办公桌的军官喜欢的花架子的舰队，不过是头引颈受戮的贱畜。放出猎犬，我们才能再次化为群狼。,军阀 Kanta 所言，引用于 [我当海盗女王的那些年],,TRUE,,,graphics/icons/skills/wolfpack.png,
 crew_training,船员训练,540,2,0,,我懂你们这种人，刚签合约的时候靴子上都还满是泥巴，现在倒是一个个地准备好当太空人了？霸主的战争宣传全息片看太多了是吧？全都给我记好了：蛮勇不值得鼓励，逞英雄只会害得我们全都送命。好的船员就该踏实完成你手上的工作。,Chaiya Mimas 于速子分舰队入职培训介绍会上的讲话,,TRUE,,,graphics/icons/skills/crew_training.png,
@@ -74,11 +74,11 @@ hypercognition,超越认知,10001,0,,,"一台拥有无限可能的机器可将�
 space_operations,太空行动,590,5,4,2,每个世界仰望的都是同一片星空。,英仙座联盟宪章,,,,"npc_only, deprecated",graphics/icons/skills/space_ops.png,
 planetary_operations,地表行动,600,5,4,2,"泥？我不在乎沾上泥巴，那些太空佬总是担心泥巴。
 沾上血才会让我受不了。",出自 Griffin Sweet，一名佣兵陆战队员之口,,,,"npc_only, deprecated",graphics/icons/skills/planetary_ops.png,
-colony_management,殖民管理,1590,5,4,2,此有普罗众生，此为上帝之座，此乃万有之地。,卢德圣本,,,,"npc_only, deprecated",graphics/icons/skills/colony_management.png,
+colony_management,殖民管理,1590,5,4,2,此有普罗众生，此为上帝之座，此乃万有之地。,卢德圣典,,,,"npc_only, deprecated",graphics/icons/skills/colony_management.png,
 strike_commander,打击指挥,20,1,0,,诸位马上就要起飞，诸位将形成一场敌人从未见过的风暴。诸位就是划破天际的雷霆！,"海军都统 Mars Kato，对 Sirocco 号轰炸机组员的演讲
 ",TRUE,,,"carrier, spec, npc_only, deprecated",graphics/icons/skills/strike_commander.png,
 ranged_specialization,远程特化,60,3,0,,看到这个火力投射方案了吗？它能让防御算法在正好错误的时间点上反应过度。关键就在于，要故意让对手看见你的攻击。,出自首席士官 Cameron Fourth-Phobos 于 Coatl 炮兵训练场发布的指导意见,TRUE,,,"spec, npc_only, deprecated",graphics/icons/skills/ranged_specialization.png,
-shield_modulation,护盾调制,70,4,0,,"很少人拥有我称之为""主动调频""的天分，我发现音乐家总能成为最好的护盾长。",出自 Ardis Soloman，提交 COMSEC 接受算法审核时意外泄露的数据,TRUE,,,"npc_only, deprecated",graphics/icons/skills/defensive_systems.png,
+shield_modulation,护盾调制,70,4,0,,"很少有人具有我认其为 ""主动调谐"" 的天赋。我觉得音乐家才能成为最好的护盾长。",出自 Ardis Soloman，提交 COMSEC 接受算法审核时意外泄露的数据,TRUE,,,"npc_only, deprecated",graphics/icons/skills/defensive_systems.png,
 phase_mastery,相位精通,80,4,0,,我永远不会回到那艘船上的 —— 绝不。,军事法庭记录 [数据删除]，大约于 ~星历 196 年？,TRUE,,,"phase, spec, elite_player_only, npc_only, deprecated",graphics/icons/skills/phase_mastery.png,
 reliability_engineering,可靠工程,1530,2,0,,时至终，辐尽散，吾命亦空。袍泽送吾归星宇，吾舟永航彼岸辰。,太空舰长俗语,TRUE,,,"npc_only, deprecated",graphics/icons/skills/reliability_engineering.png,
 weapon_drills,武装演习,500,1,0,,"是什么阻止了速子的阴谋？(大炮！)

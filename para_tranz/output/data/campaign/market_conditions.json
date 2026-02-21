@@ -1,1472 +1,1479 @@
 [
-    {
-        "key": "market_conditions.csv#abandoned_station$desc",
-        "original": "This station is abandoned.",
-        "translation": "这处空间站已经遭到废弃。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0013行"
-    },
-    {
-        "key": "market_conditions.csv#abandoned_station$name",
-        "original": "Abandoned Station",
-        "translation": "废弃空间站",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0013行"
-    },
-    {
-        "key": "market_conditions.csv#ai_core_admin$desc",
-        "original": "Hidden condition to track when the core becomes un-removable. Does not need an icon.",
-        "translation": "隐藏的特性，用于 AI 核心机制检测。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0058行"
-    },
-    {
-        "key": "market_conditions.csv#ai_core_admin$name",
-        "original": "AI Core Admin (hidden)",
-        "translation": "AI 行政官 (隐藏)",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0058行"
-    },
-    {
-        "key": "market_conditions.csv#arid$desc",
-        "original": "$Market is covered by vast, dry plains and wastes. Water is uncommon and large-scale farming is difficult.",
-        "translation": "$market 被辽阔而干燥的平原与荒地覆盖着。由于水资源非常稀缺，因此想要大规模发展农业将非常困难。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0025行"
-    },
-    {
-        "key": "market_conditions.csv#arid$name",
-        "original": "Arid World",
-        "translation": "干旱地貌",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0025行"
-    },
-    {
-        "key": "market_conditions.csv#barren_marginal$desc",
-        "original": "Inhospitable and unforgiving, outside conditions on $market are barely survivable to a human with an air mask and protective equipment, though certain engineered terraforming lichens find it tolerable enough.",
-        "translation": "$market 的外界环境荒凉且无情，即便装备有空气面罩和防护设备，人们依旧难以在外生存，只有部分专门用于地貌改造的基因工程改造地衣才能勉强存活。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0029行"
-    },
-    {
-        "key": "market_conditions.csv#barren_marginal$name",
-        "original": "Barren-marginal World",
-        "translation": "贫瘠地貌",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0029行"
-    },
-    {
-        "key": "market_conditions.csv#blockaded$desc",
-        "original": "The system that this colony is in is experiencing a blockade, and regular trade shipping is suffering from harassment or worse. The effects will continue until the blockading force leaves or is soundly defeated.",
-        "translation": "该殖民地所在的星系目前正遭到封锁，常规的贸易货运面临着骚扰或其他更糟糕的影响。该效果将一直持续，直到封锁部队主动撤离或彻底被击败。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0063行"
-    },
-    {
-        "key": "market_conditions.csv#blockaded$name",
-        "original": "Blockaded",
-        "translation": "遭到封锁",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0063行"
-    },
-    {
-        "key": "market_conditions.csv#closed_immigration$desc",
-        "original": "Officially, immigration to $market is not allowed. In practice, this results in slowing overall immigration significantly, and creating room for certain kinds of criminals to operate.",
-        "translation": "当地政府禁止了一切移民到 $market 的请求。在该政策下，不仅会导致人口增长率显著放缓，也为某些犯罪分子创造了活动空间。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0020行"
-    },
-    {
-        "key": "market_conditions.csv#closed_immigration$name",
-        "original": "Closed Immigration",
-        "translation": "禁止移民",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0020行"
-    },
-    {
-        "key": "market_conditions.csv#cold$desc",
-        "original": "The low temperatures found on $market necessitate specialized equipment to perform normal operations, complicating life support and infrastructure.",
-        "translation": "$market 因较低的地表温度而需要专业的设备确保行动安全，且对维生设备和基础设施的要求也有所增加。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0083行"
-    },
-    {
-        "key": "market_conditions.csv#cold$name",
-        "original": "Cold",
-        "translation": "寒冷",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0083行"
-    },
-    {
-        "key": "market_conditions.csv#comm_relay$desc",
-        "original": "Hidden condition; does not need icon.",
-        "translation": "隐藏的特性。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0070行"
-    },
-    {
-        "key": "market_conditions.csv#comm_relay$name",
-        "original": "Comm Relay (hidden)",
-        "translation": "通讯中继站 (隐藏)",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0070行"
-    },
-    {
-        "key": "market_conditions.csv#cottage_industry$desc",
-        "original": "$Market has a substantial base of low-technology, labour-intensive light industry. Increases demand for simple organic fuels and materials, provides an inefficient albeit charmingly hand-crafted supply of domestic goods.",
-        "translation": "$market 拥有以低技术和密集型劳动力为基础的轻工业。有机燃料与材料需求提高，提供手工制造的日用品，虽然低效但十分令人着迷。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0014行"
-    },
-    {
-        "key": "market_conditions.csv#cottage_industry$name",
-        "original": "Cottage Industry",
-        "translation": "家庭手工业",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0014行"
-    },
-    {
-        "key": "market_conditions.csv#cryovolcanic$desc",
-        "original": "A world frozen beyond deepest chill, methane snow falls on mountains of water-ice and volcanos erupt with ammonia. Stellar radiation breaks down the volatiles to form an atmosphere of light gases such as nitrogen and oxygen while hydrogen is whisked into space. ",
-        "translation": "一个冰封的极寒世界。除了被甲烷雪所覆盖的冰川和随时会喷发的氨火山，那些因恒星辐射所分解的挥发物，让氢气得以逸散进入太空，并留下主要由氧气和氮气等轻质气体所组成的大气层。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0032行"
-    },
-    {
-        "key": "market_conditions.csv#cryovolcanic$name",
-        "original": "Cryovolcanic World",
-        "translation": "冰火山地貌",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0032行"
-    },
-    {
-        "key": "market_conditions.csv#dark$desc",
-        "original": "The surface of $market is dark and full of shadow, receiving effectively zero illumination from its primary.",
-        "translation": "$market 的表面一片黑暗，它的主要光源基本都来自于人工照明。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0114行"
-    },
-    {
-        "key": "market_conditions.csv#dark$name",
-        "original": "Darkness",
-        "translation": "黑暗",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0114行"
-    },
-    {
-        "key": "market_conditions.csv#decivilized$desc",
-        "original": "There is no stable ruling polity here. Civilization is collapsed and current population is effectively unknown, though groups of survivors, bandits, and looters can be detected.",
-        "translation": "此地没有稳定的政体，文明早已崩溃。虽然能探测到幸存者、土匪和强盗的群体，但实际人口依然不明。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0011行"
-    },
-    {
-        "key": "market_conditions.csv#decivilized$name",
-        "original": "Decivilized",
-        "translation": "荒蛮之地",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0011行"
-    },
-    {
-        "key": "market_conditions.csv#decivilized_subpop$desc",
-        "original": "Civilization has been brought back to parts of $market, often at the point of a gauss rifle. However, an effectively unknown population of survivors, bandits, and looters still remains on the fringes.",
-        "translation": "在武力保护下的 $market 已经有文明复苏的迹象，但这一法外之地的边缘地带仍然充斥着幸存者、强盗以及掠夺者。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0012行"
-    },
-    {
-        "key": "market_conditions.csv#decivilized_subpop$name",
-        "original": "Decivilized Subpopulation",
-        "translation": "法外之地",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0012行"
-    },
-    {
-        "key": "market_conditions.csv#dense_atmosphere$desc",
-        "original": "The surface of $market is shrouded in a thick atmosphere, turbulent vortices at its crown and a cloying soup at its lowest foothold. Sensors are impaired, and operations must be made with care.",
-        "translation": "$market 的表面被厚重的大气层所覆盖，大气的外层盘踞着汹涌的涡流，而底层则搅成一团，仿佛一锅倒人胃口的汤。传感器在这里会受到干扰，因此执行任务时需要多加小心。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0097行"
-    },
-    {
-        "key": "market_conditions.csv#dense_atmosphere$name",
-        "original": "Dense Atmosphere",
-        "translation": "稠密大气层",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0097行"
-    },
-    {
-        "key": "market_conditions.csv#desert$desc",
-        "original": "$Market: desert planet. A xerophile biosphere maintains an atmosphere breathable with only a light mask. Farming is nearly impossible.",
-        "translation": "$market 作为一颗沙漠星球，因其仅有的旱生植物只维持着一个稀薄的大气层，所以此地几乎无法进行农耕作业。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0024行"
-    },
-    {
-        "key": "market_conditions.csv#desert$name",
-        "original": "Desert World",
-        "translation": "沙漠地貌",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0024行"
-    },
-    {
-        "key": "market_conditions.csv#dissident$desc",
-        "original": "$Market is a dumping-ground for dissidents, rebels, free-thinkers, artists, and other troublemakers. Increases demand for weapons and marines to police the rabble. Increases availability of crew due to emigration.",
-        "translation": "$market 聚集着各种异政者、反叛者、自由思想家，艺术家和其他麻烦制造者。为管理这群乌合之众，武器和陆战队的需求增加。因频繁的移民也使可雇佣的船员增多。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0034行"
-    },
-    {
-        "key": "market_conditions.csv#dissident$name",
-        "original": "Dissident Population",
-        "translation": "异议人士",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0034行"
-    },
-    {
-        "key": "market_conditions.csv#established_polity$name",
-        "original": "Established Polity",
-        "translation": "",
-        "stage": 0,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0062行"
-    },
-    {
-        "key": "market_conditions.csv#event_bounty$name",
-        "original": "System Bounty",
-        "translation": "星系悬赏",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0056行"
-    },
-    {
-        "key": "market_conditions.csv#event_food_shortage$desc",
-        "original": "There's a temporary lack of available food on $market.\n- Stability reduced by $stabilityPenalty\n- Approximately $neededFood units of food needed to end shortage\n- Food prices increased due to lowered food supply\n- Increased reputation and experience from selling food",
-        "translation": "此地的食品暂时出现短缺。\n-稳定性降低 $stabilityPenalty\n-解决食品短缺需要 $neededFood 单位\n-由于供应缺口而导致食品价格上升\n-倒卖食品可以提升关系和经验",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0052行"
-    },
-    {
-        "key": "market_conditions.csv#event_food_shortage$name",
-        "original": "Food Shortage",
-        "translation": "食品短缺",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0052行"
-    },
-    {
-        "key": "market_conditions.csv#event_smuggling$desc",
-        "original": "$market is experiencing a high volume of smuggling activity.\n\n- Stability reduced by $smugglingPenalty",
-        "translation": "$market 正经历相当猖獗的走私活动。\n\n- 稳定性降低 $smugglingPenalty",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0055行"
-    },
-    {
-        "key": "market_conditions.csv#event_smuggling$name",
-        "original": "Smuggling",
-        "translation": "走私",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0055行"
-    },
-    {
-        "key": "market_conditions.csv#event_trade_disruption$desc",
-        "original": "Trade fleets going to or from $market are taking significant losses. Piracy or war are most likely to blame.\n\nThe following commodities are affected:\n$commoditySummary",
-        "translation": "进出 $market 的贸易舰队在运输途中遭受巨大损失，罪魁祸首可能是战争或海盗。\n\n受影响的商品包括：\n$commoditySummary",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0054行"
-    },
-    {
-        "key": "market_conditions.csv#event_trade_disruption$name",
-        "original": "Trade Disruption",
-        "translation": "贸易中断",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0054行"
-    },
-    {
-        "key": "market_conditions.csv#extreme_tectonic_activity$desc",
-        "original": "$market's crust roils chaotically with extreme quakes and cataclysmic volcanism events. Any operations will require exceptional care and use of many-times redundant warning systems so that the worst dangers can be avoided. Construction on this world can only ever be considered semi-permanent.",
-        "translation": "$market 的地表长期经受着极端地震与火山爆发等灾难性事件的蹂躏。任何操作都需格外谨慎，并需要遍地铺设警报系统以起预防作用。即便如此，这里的建筑均无法长时维持存在。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0091行"
-    },
-    {
-        "key": "market_conditions.csv#extreme_tectonic_activity$name",
-        "original": "Extreme Tectonic Activtity",
-        "translation": "极端构造活动性",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0091行"
-    },
-    {
-        "key": "market_conditions.csv#extreme_weather$desc",
-        "original": "Violent storms bristling lightning rage across the skies of $market. Though a sublime beauty from orbit, this produces harsh surface conditions making transportation and habitation highly inconvenient.",
-        "translation": "猛烈风暴与闪电肆虐着 $market 的天空。虽然从轨道上看起来壮观美丽，但是这样恶劣的地面条件，使运输与居住条件都非常糟糕。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0101行"
-    },
-    {
-        "key": "market_conditions.csv#extreme_weather$name",
-        "original": "Extreme Weather",
-        "translation": "极端气候",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0101行"
-    },
-    {
-        "key": "market_conditions.csv#farmland_adequate$desc",
-        "original": "A robust terran-compatible biosphere allows agricultural cultivation to take place on $market.",
-        "translation": "$market 有稳定且友好的生物圈，足以让人们在其地表进行农产品种植。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0149行"
-    },
-    {
-        "key": "market_conditions.csv#farmland_adequate$name",
-        "original": "Adequate Farmland",
-        "translation": "充足的耕地",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0149行"
-    },
-    {
-        "key": "market_conditions.csv#farmland_bountiful$desc",
-        "original": "$Market is a veritable Eden; flowering, riotous, lush, and luminous with plant life. Branches hang low, laden with fruit; fields of golden grain shimmer in the herbaceous breeze.",
-        "translation": "$market 是名副其实的伊甸园。草木缤纷、繁花似锦、枝繁叶茂、郁郁葱葱，俨然是生机盎然的植物乐土。树枝低垂，果实累累，金色的田野在微风中闪闪发光。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0151行"
-    },
-    {
-        "key": "market_conditions.csv#farmland_bountiful$name",
-        "original": "Bountiful Farmland",
-        "translation": "肥沃的耕地",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0151行"
-    },
-    {
-        "key": "market_conditions.csv#farmland_poor$desc",
-        "original": "Terran plant life grows only stunted and wearily here. It would require farmers with talent equal to their desperation to make these lands bear fruit.",
-        "translation": "植物在此地生长缓慢，状况不佳。只有身怀天赋的农民，才能在这些土地里收获一些成果。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0148行"
-    },
-    {
-        "key": "market_conditions.csv#farmland_poor$name",
-        "original": "Poor Farmland",
-        "translation": "贫瘠的耕地",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0148行"
-    },
-    {
-        "key": "market_conditions.csv#farmland_rich$desc",
-        "original": "The fields of $market promise a rich harvest to reward the farmers that work these fertile lands.",
-        "translation": "$market 的田野将以大丰收的硕果奖励所有在这肥沃土地上耕作的农民们。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0150行"
-    },
-    {
-        "key": "market_conditions.csv#farmland_rich$name",
-        "original": "Rich Farmland",
-        "translation": "丰富的耕地",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0150行"
-    },
-    {
-        "key": "market_conditions.csv#free_market$desc",
-        "original": "The local port authority imposes almost no regulation on what cargo is traded. Immigration controls are likewise relaxed, resulting in a greater in-flow of people, albeit sometimes of a more questionable character. This may cause other factions to view this colony with distrust.",
-        "translation": "当地港务局不仅对所交易的商品不加任何管制，且同样宽松的移民管制，让大量外来人口纷纷涌入此地，其中不乏一些身份可疑的人士。而正因如此，其他势力将以不信任的态度看待着该殖民地。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0019行"
-    },
-    {
-        "key": "market_conditions.csv#free_market$name",
-        "original": "Free Port",
-        "translation": "自由港",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0019行"
-    },
-    {
-        "key": "market_conditions.csv#frontier$desc",
-        "original": "Far from the cosmopolitan centers of population, mere survival, self-reliance, and only-the-necessities are the rules of the frontier. Increased demand for weapons and supplies, reduced demand for luxury goods.",
-        "translation": "远离人口聚集地，仅为生存，自力更生，拥有生活必需品即可。武器与日用品需求增加，奢侈品需求降低 - 活下去才是边境生存的首要法则。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0008行"
-    },
-    {
-        "key": "market_conditions.csv#frontier$name",
-        "original": "Frontier",
-        "translation": "边境之地",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0008行"
-    },
-    {
-        "key": "market_conditions.csv#habitable$desc",
-        "original": "Human beings can survive unprotected exposure to the surface conditions of $market.",
-        "translation": "人类能够在无需保护的情况下生存于 $market 的地表之上。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0074行"
-    },
-    {
-        "key": "market_conditions.csv#habitable$name",
-        "original": "Habitable",
-        "translation": "宜居",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0074行"
-    },
-    {
-        "key": "market_conditions.csv#headquarters$desc",
-        "original": "$Market is a center of military command and logistical operation for the ruling polity. Increases market stability.\n\nIncreases the quality and number of officers in $market's fleets.",
-        "translation": "$market 是军事指挥和后勤运作的枢纽。提升市场稳定性。\n\n提高此地舰队的军官质量与数量。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0035行"
-    },
-    {
-        "key": "market_conditions.csv#headquarters$name",
-        "original": "Headquarters",
-        "translation": "指挥中心",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0035行"
-    },
-    {
-        "key": "market_conditions.csv#high_gravity$desc",
-        "original": "The force of gravity on the surface of $market is crushingly high. Humans require powered exoskeletons for regular movement and find even basic actions exhausting. Continual habitation is grueling at best. All operations take place with a heightened danger of falls and - if specialized engineering is not performed with adequete paranoia - structural collapse.",
-        "translation": "$market 的地表引力高得惊人。在此的人类必须配备动力外骨骼才可进行日常活动，即便如此，任何简单的行动仍会让他们感到异常疲惫，因此，对于那些长期定居于此的人们来说，简直就是一种折磨。由于任何行动都可能导致崩塌，所以如果不用近乎偏执的严谨来开展专业工程的话，将极有可能发生结构性的大面积坍塌。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0104行"
-    },
-    {
-        "key": "market_conditions.csv#high_gravity$name",
-        "original": "High Gravity",
-        "translation": "高重力",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0104行"
-    },
-    {
-        "key": "market_conditions.csv#hostile_activity$name",
-        "original": "Hostile Activity",
-        "translation": "敌对活动",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0060行"
-    },
-    {
-        "key": "market_conditions.csv#hot$desc",
-        "original": "The high temperature conditions of $market necessitate specialized equipment to perform normal operations, complicating life support and infrastructure.",
-        "translation": "$market 因较高的地表温度而需要专业的设备确保行动安全，对维生设备和基础设施的要求也有所增加。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0086行"
-    },
-    {
-        "key": "market_conditions.csv#hot$name",
-        "original": "Hot",
-        "translation": "炎热",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0086行"
-    },
-    {
-        "key": "market_conditions.csv#hydroponics_complex$desc",
-        "original": "Sealed-biosphere agricultural production facilities which allow farming in orbit or on the surface of inhospitable worlds. Requires crew to operate, organic growth medium, and heavy machinery for upkeep.",
-        "translation": "包含密封式生物圈的农业生产设施，可在轨道空间站或荒凉行星的表面上进行农业生产。需要人员进行操作，以及充足的有机物来供给培养基，并由重型机械来维持设施的运转。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0036行"
-    },
-    {
-        "key": "market_conditions.csv#hydroponics_complex$name",
-        "original": "Hydroponics Complex",
-        "translation": "水培复合体",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0036行"
-    },
-    {
-        "key": "market_conditions.csv#ice$desc",
-        "original": "$Market's average temperature is far below the freezing point of water and some common terran atmospheric gases fall as snow. The drifts and glaciers of light, volatile elements may be harvested.",
-        "translation": "$market 的平均温度非常之低，且宜居的大气成分已成为降雪。所以可以在此地开采那些轻质挥发物形成的积雪与冰川。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0023行"
-    },
-    {
-        "key": "market_conditions.csv#ice$name",
-        "original": "Ice World",
-        "translation": "冰川地貌",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0023行"
-    },
-    {
-        "key": "market_conditions.csv#industrial_polity$desc",
-        "original": "A bustling industrial center. The policies of the local government encourage thriving industry, at the expense of all other concerns.",
-        "translation": "一处繁荣的工业中心，因地方政府大肆鼓励工业发展，而牺牲了其他所有方面的利益。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0002行"
-    },
-    {
-        "key": "market_conditions.csv#industrial_polity$name",
-        "original": "Industrial Polity",
-        "translation": "工业化",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0002行"
-    },
-    {
-        "key": "market_conditions.csv#inimical_biosphere$desc",
-        "original": "The biosphere of $market is deadly to unprotected human beings. While the conditions are fascinating to biological scientists, surface technicians are hampered by strict quarantine protocols when carrying out routine tasks.",
-        "translation": "$market 的生物圈对无保护措施的人是极其致命的。虽然此地的自然条件令生物学者痴迷，但这些技术人员都必须经过严格检疫手续后才能执行日常任务。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0109行"
-    },
-    {
-        "key": "market_conditions.csv#inimical_biosphere$name",
-        "original": "Inimical Biosphere",
-        "translation": "敌意生物圈",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0109行"
-    },
-    {
-        "key": "market_conditions.csv#irradiated$desc",
-        "original": "The surface of $market is ravaged by radiation. Any living being must be confined to a shielded habitat to live for long here. Unhardened circuits and nanoscale materials or machinery will also rapidly fail in these harsh conditions.",
-        "translation": "$market 的地表因长期遭受辐射的侵袭，导致任何生物都必须在狭小的圆顶栖息地中生存。而暴露在恶劣条件中的电路，纳米材料与机械都将会迅速老化。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0106行"
-    },
-    {
-        "key": "market_conditions.csv#irradiated$name",
-        "original": "Irradiated",
-        "translation": "辐射",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0106行"
-    },
-    {
-        "key": "market_conditions.csv#jungle$desc",
-        "original": "$Market is a wet, warm jungle world covered in riotous vegetation and exotic lifeforms, making farming and maintaining permanent infrastructure difficult.",
-        "translation": "$market 是一个潮湿温暖的丛林世界，遍布此地的那些广沃茂密的丛林植被和形态各异的生物类群，使这里的农业和设施的维护变得异常困难。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0027行"
-    },
-    {
-        "key": "market_conditions.csv#jungle$name",
-        "original": "Jungle World",
-        "translation": "丛林地貌",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0027行"
-    },
-    {
-        "key": "market_conditions.csv#large_refugee_population$desc",
-        "original": "Desperate refugees fleeing some disaster have ended up here. Refugees live at the bottom of society with little opportunity for betterment, straining domestic infrastructure living in tense semi-legal status. Reduced overall production. More prospective crew members are likely to be found among those trying to escape the squalid living conditions.",
-        "translation": "这里充斥着大量为逃离灾难而涌入的难民。这些勉强维持半合法身份的人们，只能无望地在社会的最底层挣扎，他们不仅会对社会基础设施带来很大的压力，还会让本地劳动生产率降低。而为了逃离这种恶劣的生活环境，许多人都愿意成为雇佣船员。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0004行"
-    },
-    {
-        "key": "market_conditions.csv#large_refugee_population$name",
-        "original": "Large Refugee Population",
-        "translation": "难民潮",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0004行"
-    },
-    {
-        "key": "market_conditions.csv#low_gravity$desc",
-        "original": "Gravity is exceptionally low, though significantly above zero-g, on the surface of $market. Workflow and operation of (relatively) heavy machinery is complicated by the non-standard procedures required to deal with altered conditions of friction, weight, and pressure dynamics.",
-        "translation": "尽管重力较低，但明显高于零重力，在 $market 的地表之上，重型机械的工作流程相对于标准程序来说，因摩擦、重量、压力的动态变化而变得更加复杂。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0103行"
-    },
-    {
-        "key": "market_conditions.csv#low_gravity$name",
-        "original": "Low Gravity",
-        "translation": "低重力",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0103行"
-    },
-    {
-        "key": "market_conditions.csv#luddic_majority$name",
-        "original": "Luddic Majority",
-        "translation": "卢德教众",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0016行"
-    },
-    {
-        "key": "market_conditions.csv#meteor_impacts$desc",
-        "original": "This world is bombarded at an appalling rate by regular meteor-showers. Any human inhabitant, however temporary, must keep a wary eye skyward. Any permanent installations would be best buried deep and well fortified.",
-        "translation": "这个世界经常遭受各种规格与速度的流星轰击。所有居住于此或暂时驻留的人类，都必须时刻警惕天空。而想在此永久定居就最好生活在地下深处的强化建筑内。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0116行"
-    },
-    {
-        "key": "market_conditions.csv#meteor_impacts$name",
-        "original": "Meteor Impacts",
-        "translation": "流星撞击",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0116行"
-    },
-    {
-        "key": "market_conditions.csv#mild_climate$desc",
-        "original": "The climate of $market is welcoming and docile; a light mist greets each sunrise before retreating into soft clouds that glow appealingly at every sunset.",
-        "translation": "$market 的气候舒适而平和。薄雾消散，回归柔云的怀抱，迎来今日的朝阳；黄昏造访，呼唤夕阳的暖煦，留下明日的期待。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0100行"
-    },
-    {
-        "key": "market_conditions.csv#mild_climate$name",
-        "original": "Mild Climate",
-        "translation": "温和气候",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0100行"
-    },
-    {
-        "key": "market_conditions.csv#no_atmosphere$desc",
-        "original": "No appreciable atmosphere exists on $market. Its surface is exposed to the hard weathering of space, a steady drizzle of radiation and micrometeorites.",
-        "translation": "因 $market 不存在任何大气层，所以该行星就暴露在各种陨石辐射等恶劣的太空环境中。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0094行"
-    },
-    {
-        "key": "market_conditions.csv#no_atmosphere$name",
-        "original": "No Atmosphere",
-        "translation": "没有大气层",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0094行"
-    },
-    {
-        "key": "market_conditions.csv#ore_abundant$desc",
-        "original": "Abundant, widespread, and profitably extractable ore deposits can be found on $market.",
-        "translation": "$market 拥有丰富、广阔且价值较高的矿床。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0124行"
-    },
-    {
-        "key": "market_conditions.csv#ore_abundant$name",
-        "original": "Abundant Ore Deposits",
-        "translation": "大量的矿床",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0124行"
-    },
-    {
-        "key": "market_conditions.csv#ore_moderate$desc",
-        "original": "$Market contains moderate ore deposits that, under the right economic conditions, could be profitably exploited.",
-        "translation": "$market 含有适度的矿床，只需适当的经济投资，就能获取不错的回报。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0123行"
-    },
-    {
-        "key": "market_conditions.csv#ore_moderate$name",
-        "original": "Moderate Ore Deposits",
-        "translation": "少量的矿床",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0123行"
-    },
-    {
-        "key": "market_conditions.csv#ore_rich$desc",
-        "original": "Rich mineral deposits form a thick lattice within the crust of $market but require an ambitious industrialist to exploit them for fabulous profit.",
-        "translation": "富饶的矿床在 $market 的地壳内闪闪发光，但只有雄心勃勃的企业家才能利用它们获取丰厚回报。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0125行"
-    },
-    {
-        "key": "market_conditions.csv#ore_rich$name",
-        "original": "Rich Ore Deposits",
-        "translation": "丰富的矿床",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0125行"
-    },
-    {
-        "key": "market_conditions.csv#ore_sparse$desc",
-        "original": "A few sparse ore deposits exist here, but they are more of academic than industrial interest for their extraction is barely economical.",
-        "translation": "此地存在着分布稀疏的矿床，但因开发难度大，且不太可能产生效益，所以只可以进行科研探查而无工业利益。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0122行"
-    },
-    {
-        "key": "market_conditions.csv#ore_sparse$name",
-        "original": "Sparse Ore Deposits",
-        "translation": "零星的矿床",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0122行"
-    },
-    {
-        "key": "market_conditions.csv#ore_ultrarich$desc",
-        "original": "Mineral wealth exists on $market, Midas-touched beyond the wildest fantasies of the legendary mining megacorps of the Domain era.",
-        "translation": "$market 的矿产资源存在于此地寸土寸金的地表之下，其富饶程度甚至超过 人之领 的矿业巨头的疯狂幻想。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0126行"
-    },
-    {
-        "key": "market_conditions.csv#ore_ultrarich$name",
-        "original": "Ultrarich Ore Deposits",
-        "translation": "富饶的矿床",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0126行"
-    },
-    {
-        "key": "market_conditions.csv#organics_abundant$desc",
-        "original": "A river of wealth flows beneath the surface of $market - for those that would find and tap it.",
-        "translation": "财富的河流在 $market 的表面流动 - 对于那些发现并提取它的人来说。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0144行"
-    },
-    {
-        "key": "market_conditions.csv#organics_abundant$name",
-        "original": "Abundant Organics",
-        "translation": "丰富的有机物",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0144行"
-    },
-    {
-        "key": "market_conditions.csv#organics_common$desc",
-        "original": "Economically exploitable reserves of organics can be found on $market.",
-        "translation": "$market 拥有适合提取的有机物。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0143行"
-    },
-    {
-        "key": "market_conditions.csv#organics_common$name",
-        "original": "Common Organics",
-        "translation": "少量的有机物",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0143行"
-    },
-    {
-        "key": "market_conditions.csv#organics_plentiful$desc",
-        "original": "Reservoirs of valuable organics burst through the surface of $market in gouts over deep, dark pools that promise oceans of wealth to be found just below.",
-        "translation": "有机物自动从 $market 的地底喷涌而出洒满大地，这些黑暗而神秘的喷泉，预示着财富的海洋就在下面。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0145行"
-    },
-    {
-        "key": "market_conditions.csv#organics_plentiful$name",
-        "original": "Plentiful Organics",
-        "translation": "富足的有机物",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0145行"
-    },
-    {
-        "key": "market_conditions.csv#organics_trace$desc",
-        "original": "$Market is nearly barren of organics reserves, though some extraction is possible.",
-        "translation": "虽然 $market 存在有机物可供提取，但储量少的可怜。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0142行"
-    },
-    {
-        "key": "market_conditions.csv#organics_trace$name",
-        "original": "Trace Organics",
-        "translation": "微量的有机物",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0142行"
-    },
-    {
-        "key": "market_conditions.csv#organized_crime$desc",
-        "original": "Criminal activity produces drugs and harvested organs. Increases demand for hand weapons (by both various crime bosses and local citizenry) and marines (by the local authorities).",
-        "translation": "包括了生产毒品和收割器官。增加对重型武器 (各个犯罪集团的首脑与本地居民) 和陆战队员 (地方政府) 的需求。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0007行"
-    },
-    {
-        "key": "market_conditions.csv#organized_crime$name",
-        "original": "Organized Crime",
-        "translation": "犯罪组织",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0007行"
-    },
-    {
-        "key": "market_conditions.csv#outpost$desc",
-        "original": "$Market is run much like a garrison or a large spaceship, with a rigid official command structure. This improves stability, but does require some personnel to see to internal security matters.",
-        "translation": "具备一整套严苛指挥结构的 $market 更像是一处守备站或是一艘战舰。这样做尽管提高了稳定性，但需要一些人员来处理内部的安全事务。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0015行"
-    },
-    {
-        "key": "market_conditions.csv#outpost$name",
-        "original": "Outpost",
-        "translation": "前哨站",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0015行"
-    },
-    {
-        "key": "market_conditions.csv#pather_cells$name",
-        "original": "Luddic Path Cells",
-        "translation": "左径狂信徒",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0064行"
-    },
-    {
-        "key": "market_conditions.csv#piracy_respite$desc",
-        "original": "This colony is experiencing a respite from the depredations of piracy otherwise so common in the Sector.",
-        "translation": "这个殖民地正经历着一段海盗掠夺活动较星域常规水平有所减缓的时期。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0061行"
-    },
-    {
-        "key": "market_conditions.csv#piracy_respite$name",
-        "original": "Piracy Respite",
-        "translation": "海盗活动减缓",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0061行"
-    },
-    {
-        "key": "market_conditions.csv#pirate_activity$desc",
-        "original": "There have been signs that pirates are targeting shipping and colonies in this system - from port inspectors being pressured to turn a blind eye, to inconsistencies in cargo manifests, to other increased criminal activity.\n\nThe pirates most likely have a base somewhere relatively nearby.",
-        "translation": "有迹象表明，该星系的舰队与殖民地将成为海盗袭击的目标。无论是港口检查员因迫于压力而选择视而不见，还是货物清单的不一致，加上其他犯罪活动增加，都预示着此地已不再太平。\n\n海盗很可能在附近的星系设有基地。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0059行"
-    },
-    {
-        "key": "market_conditions.csv#pirate_activity$name",
-        "original": "Pirate Activity",
-        "translation": "海盗袭击",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0059行"
-    },
-    {
-        "key": "market_conditions.csv#pollution$desc",
-        "original": "Human industry has left this world filled with dioxins, sulphur compounds, ash, and the steady ticking of decaying radioactive dust. Scraps of plastic cling to shards of foam-metal, the sky tuned to a dead channel.",
-        "translation": "人类的工业对这个世界造成了毁灭性的破坏。空气中充满了二恶英、硫化物、粉尘，以及散落四周的、腐烂的放射性尘埃。而由塑料碎屑与泡沫金属碎片所组成的大风暴则将天空搅动成骇人的死亡通道。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0119行"
-    },
-    {
-        "key": "market_conditions.csv#pollution$name",
-        "original": "Pollution",
-        "translation": "污染",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0119行"
-    },
-    {
-        "key": "market_conditions.csv#poor_light$desc",
-        "original": "The light of $market's primary only provides feeble illumination and energy to this world.",
-        "translation": "因距离较远，使得恒星只能为 $market 提供微弱的照明与能量。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0113行"
-    },
-    {
-        "key": "market_conditions.csv#poor_light$name",
-        "original": "Poor Light",
-        "translation": "昏暗",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0113行"
-    },
-    {
-        "key": "market_conditions.csv#population_1$desc",
-        "original": "Only tens of people live here permanently.",
-        "translation": "只有数十人永久居住在这里。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0038行"
-    },
-    {
-        "key": "market_conditions.csv#population_1$name",
-        "original": "Population",
-        "translation": "人口",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0038行"
-    },
-    {
-        "key": "market_conditions.csv#population_10$desc",
-        "original": "$MarketName is a dominant population center in the Sector, a rival to Old Earth as home to tens of billions of humans.",
-        "translation": "$marketName 是星域主要的人口中心，一处与旧地球一样的数百亿人类的家园。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0047行"
-    },
-    {
-        "key": "market_conditions.csv#population_10$name",
-        "original": "Population",
-        "translation": "人口",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0047行"
-    },
-    {
-        "key": "market_conditions.csv#population_2$desc",
-        "original": "Mere hundreds of people populate $marketName.",
-        "translation": "仅有数百人在 $marketName 定居。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0039行"
-    },
-    {
-        "key": "market_conditions.csv#population_2$name",
-        "original": "Population",
-        "translation": "人口",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0039行"
-    },
-    {
-        "key": "market_conditions.csv#population_3$desc",
-        "original": "Thousands of people call $marketName home.",
-        "translation": "有数千人把 $marketName 当作家园。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0040行"
-    },
-    {
-        "key": "market_conditions.csv#population_3$name",
-        "original": "Population",
-        "translation": "人口",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0040行"
-    },
-    {
-        "key": "market_conditions.csv#population_4$desc",
-        "original": "Tens of thousands of people live on $marketName.",
-        "translation": "数万人生活在 $marketName。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0041行"
-    },
-    {
-        "key": "market_conditions.csv#population_4$name",
-        "original": "Population",
-        "translation": "人口",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0041行"
-    },
-    {
-        "key": "market_conditions.csv#population_5$desc",
-        "original": "$MarketName is home to hundreds of thousands of people.",
-        "translation": "$marketName 有数十万的固定居民。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0042行"
-    },
-    {
-        "key": "market_conditions.csv#population_5$name",
-        "original": "Population",
-        "translation": "人口",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0042行"
-    },
-    {
-        "key": "market_conditions.csv#population_6$desc",
-        "original": "The population of $marketName is in the millions.",
-        "translation": "$marketName 拥有数百万的人口。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0043行"
-    },
-    {
-        "key": "market_conditions.csv#population_6$name",
-        "original": "Population",
-        "translation": "人口",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0043行"
-    },
-    {
-        "key": "market_conditions.csv#population_7$desc",
-        "original": "$MarketName is a world of tens of millions.",
-        "translation": "$marketName 拥有数千万的人口。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0044行"
-    },
-    {
-        "key": "market_conditions.csv#population_7$name",
-        "original": "Population",
-        "translation": "人口",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0044行"
-    },
-    {
-        "key": "market_conditions.csv#population_8$desc",
-        "original": "$MarketName is one of the few worlds in the Sector with a population of hundreds of millions.",
-        "translation": "$marketName 是世界上少数几个人口数亿的行星之一。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0045行"
-    },
-    {
-        "key": "market_conditions.csv#population_8$name",
-        "original": "Population",
-        "translation": "人口",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0045行"
-    },
-    {
-        "key": "market_conditions.csv#population_9$desc",
-        "original": "A precious refuge for humanity in a dangerous galaxy, $marketName is home to billions of souls.",
-        "translation": "人类在危险星域中的宝贵避难所，$marketName 正是数十亿灵魂的家园。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0046行"
-    },
-    {
-        "key": "market_conditions.csv#population_9$name",
-        "original": "Population",
-        "translation": "人口",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0046行"
-    },
-    {
-        "key": "market_conditions.csv#rare_ore_abundant$desc",
-        "original": "Abundant transplutonic deposits lay within the crust of $market, enough to fuel the ambitions of any worthwhile warlord or magnate.",
-        "translation": "丰富的稀有元素存在于 $market 的地壳内，其潜在的经济价值足以刺激到一些军阀或巨头的野心。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0131行"
-    },
-    {
-        "key": "market_conditions.csv#rare_ore_abundant$name",
-        "original": "Abundant Rare Ore Deposits",
-        "translation": "大量的稀有元素",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0131行"
-    },
-    {
-        "key": "market_conditions.csv#rare_ore_moderate$desc",
-        "original": "$Market contains modest transplutonic deposits that, with sustained industry and investment, could be profitably tapped.",
-        "translation": "$market 含有适度的稀有元素，只需适当的经济投资，就能获取不错的回报。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0130行"
-    },
-    {
-        "key": "market_conditions.csv#rare_ore_moderate$name",
-        "original": "Moderate Rare Ore Deposits",
-        "translation": "少量的稀有元素",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0130行"
-    },
-    {
-        "key": "market_conditions.csv#rare_ore_rich$desc",
-        "original": "Thick bands of transplutonics spread with glorious profusion through the crust of $market, promising great and potent power to they who would but reach out and take them.",
-        "translation": "富饶的稀有元素在 $market 的地壳内四处蔓延，其蕴含的强大力量足以促使拥有足够资格的人们将手伸向这里。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0132行"
-    },
-    {
-        "key": "market_conditions.csv#rare_ore_rich$name",
-        "original": "Rich Rare Ore Deposits",
-        "translation": "丰富的稀有元素",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0132行"
-    },
-    {
-        "key": "market_conditions.csv#rare_ore_sparse$desc",
-        "original": "A few sparse transplutonic ore deposits exist here, but they are more of academic than industrial interest for their extraction is barely economical.",
-        "translation": "此地存在着分布稀疏的稀有元素，但因开发难度大，且不太可能产生效益，所以只可以进行科研探查而无工业利益。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0129行"
-    },
-    {
-        "key": "market_conditions.csv#rare_ore_sparse$name",
-        "original": "Sparse Rare Ore Deposits",
-        "translation": "零星的稀有元素",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0129行"
-    },
-    {
-        "key": "market_conditions.csv#rare_ore_ultrarich$desc",
-        "original": "The transplutonic deposits glimmering with unbelievable density on the sensor-grid evoke portents of a power which could forge mighty war-fleets to burn worlds to ash -- or an eon of splendour and wealth for a polity of crystal towers as existed in the pre-collapse cycles of the Domain.",
-        "translation": "标志着稀有元素的光点以令人难以置信的密度闪耀在传感器网格上，预示着一份伟力：它能铸造燃尽诸多星球的强大舰队，它能创造堪比大崩塌前人之领的伟大时代与无穷财富。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0133行"
-    },
-    {
-        "key": "market_conditions.csv#rare_ore_ultrarich$name",
-        "original": "Ultrarich Rare Ore Deposits",
-        "translation": "富饶的稀有元素",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0133行"
-    },
-    {
-        "key": "market_conditions.csv#recent_unrest$desc",
-        "original": "$Market has recently experienced tumultous events with a lingering effect on stability.",
-        "translation": "$market 最近经历了一些动荡，即使骚乱已结束，但影响仍在持续。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0053行"
-    },
-    {
-        "key": "market_conditions.csv#recent_unrest$name",
-        "original": "Recent Unrest",
-        "translation": "最近动乱",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0053行"
-    },
-    {
-        "key": "market_conditions.csv#regional_capital$desc",
-        "original": "A major center of administration, security, and logistics. Improves stability.",
-        "translation": "一处控制安全以及后勤的主要行政中心。稳定性提高。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0018行"
-    },
-    {
-        "key": "market_conditions.csv#regional_capital$name",
-        "original": "Regional Capital",
-        "translation": "地区首府",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0018行"
-    },
-    {
-        "key": "market_conditions.csv#rogue_ai_core$desc",
-        "original": "There is a rogue AI core operating on or near $market. Its long-term plans and ambitions, beyond its own survival, are unknown.\n\nAt a minimum, the need to be on guard against its possible actions makes day-to-day operations less efficient and creates fertile ground for alarming rumours.",
-        "translation": "$market 内部或者附近正运行着一个失控且抱有恶意的 AI 核心。除了保全自身之外，它有何种长期计划与抱负尚不得而知。\n\n至少，因对它可能采取的行动而随时保持着的警惕心，也让日常行动的效率降低，并为令人担忧的谣言创造了肥沃的土壤。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0057行"
-    },
-    {
-        "key": "market_conditions.csv#rogue_ai_core$name",
-        "original": "Rogue AI Core",
-        "translation": "失控的 AI 核心",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0057行"
-    },
-    {
-        "key": "market_conditions.csv#ruins_extensive$desc",
-        "original": "Ruined cities can be found across the surface of $market, spilling from their broken hearts pitted roadways and crumbling magrail lines to the skeletons of factories, aquaponics domes, and comm-towers.",
-        "translation": "破败的城市废墟遍布于 $market 地表。以它们为中心，失修的道路和损坏的磁轨线四向放射出去，连接着只剩下遗骸的制造厂房，水培建筑和通讯塔楼。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0079行"
-    },
-    {
-        "key": "market_conditions.csv#ruins_extensive$name",
-        "original": "Extensive Ruins",
-        "translation": "大量的废墟",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0079行"
-    },
-    {
-        "key": "market_conditions.csv#ruins_scattered$desc",
-        "original": "This world was only lightly touched by the great project of the Domain before the collapse. Only scattered, broken domes remain, perchance holding lost caches of valuable materials.",
-        "translation": "在 大崩塌 之前，$market 只不过被 人之领 的伟大项目所轻微触动。如今地表只有零散且破碎的圆顶或一些早已被掠夺一空的贮藏点。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0077行"
-    },
-    {
-        "key": "market_conditions.csv#ruins_scattered$name",
-        "original": "Scattered Ruins",
-        "translation": "散落的废墟",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0077行"
-    },
-    {
-        "key": "market_conditions.csv#ruins_vast$desc",
-        "original": "$Market is covered in vast ruins; cities, factories, mines, farms, homes. The dead are in dread abundance, entwined with salvageable materials, goods, tools, and weapons. This world is a tomb for the hubris of the Domain's project of galactic colonization and hegemony. ",
-        "translation": "$market 被大量的城市遗迹、工厂废墟、矿山残骸、农场遗址和住宅碎片覆盖。死者不计其数，尸体与可回收的材料、货物、工具和武器交缠在一起，触目惊心。这个世界是一座坟墓，人之领 狂妄的银河殖民统治计划被埋葬于此。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0080行"
-    },
-    {
-        "key": "market_conditions.csv#ruins_vast$name",
-        "original": "Vast Ruins",
-        "translation": "巨大的废墟",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0080行"
-    },
-    {
-        "key": "market_conditions.csv#ruins_widespread$desc",
-        "original": "Widespread ruins, blips from radiation sources, and the distinctive burred radar-ping of foamed cerametal structures can be found across $market, evidence of a small but concerted colonization effort dating to the late expansion period of the Domain.",
-        "translation": "大量的废墟、辐射源讯号与泡沫陶化金属建筑物的独特雷达回波一起广泛地分布在 $market 上，印证了这里曾进行过的可追溯到人之领开拓纪元末期的规模虽小但运作协调的殖民活动。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0078行"
-    },
-    {
-        "key": "market_conditions.csv#ruins_widespread$name",
-        "original": "Widespread Ruins",
-        "translation": "普遍的废墟",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0078行"
-    },
-    {
-        "key": "market_conditions.csv#rural_polity$desc",
-        "original": "A sparsely populated polity of homesteads and insular townships. In these troubled times, outsiders are generally treated with suspicion.",
-        "translation": "人口稀少，由农庄与偏远乡镇组成的共和政体。在这乱世中，任何外来者一般都难以得到本地居民的信任。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0003行"
-    },
-    {
-        "key": "market_conditions.csv#rural_polity$name",
-        "original": "Rural Polity",
-        "translation": "村镇化",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0003行"
-    },
-    {
-        "key": "market_conditions.csv#shipbreaking_center$desc",
-        "original": "A major center of shipbreaking in this region of the Sector, hulks are consigned to scrapping here by the navies of major factions and many other clients from among the Sector core worlds.",
-        "translation": "这片星域的一处舰船拆解中心。核心世界各不同势力的军队与其它客户都会将报废船只送往这里以供拆解。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0009行"
-    },
-    {
-        "key": "market_conditions.csv#shipbreaking_center$name",
-        "original": "Shipbreaking Center",
-        "translation": "拆船中心",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0009行"
-    },
-    {
-        "key": "market_conditions.csv#shipping_disruption$name",
-        "original": "Trade Disruption",
-        "translation": "贸易中断",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0067行"
-    },
-    {
-        "key": "market_conditions.csv#solar_array$desc",
-        "original": "This planet has an array of solar shades or mirrors in orbit, judiciously positioned to bring its surface conditions closer to terran norms.",
-        "translation": "这颗行星的轨道上有一排用于调节光照的恒星罩或恒星镜，它们被合理安置，可以使星球地表条件更接近人类宜居的标准。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0153行"
-    },
-    {
-        "key": "market_conditions.csv#solar_array$name",
-        "original": "Orbital Solar Array",
-        "translation": "轨道光照阵列",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0153行"
-    },
-    {
-        "key": "market_conditions.csv#stealth_minefields$desc",
-        "original": "A network of hidden mines provides $market security from meddlesome outsiders. Improves stability.",
-        "translation": "$market 的感应雷区不仅能抵御外敌入侵，也能为来访的外来商人提供了安全保障。稳定性提高。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0017行"
-    },
-    {
-        "key": "market_conditions.csv#stealth_minefields$name",
-        "original": "Stealth Minefields",
-        "translation": "感应雷区",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0017行"
-    },
-    {
-        "key": "market_conditions.csv#tectonic_activity$desc",
-        "original": "The surface of $market is unstable and prone to violent quakes. Any structures require special reinforcement and any excavation will involve a great deal of risk.",
-        "translation": "$market 的地壳很不稳定且容易发生剧烈地震。因此任何结构都需经过特殊加固，且任何开挖都要冒着很大的风险。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0090行"
-    },
-    {
-        "key": "market_conditions.csv#tectonic_activity$name",
-        "original": "Tectonic Activity",
-        "translation": "构造活动性",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0090行"
-    },
-    {
-        "key": "market_conditions.csv#terran$desc",
-        "original": "$Market is as close to Old Earth's condition as can be found in the Sector, providing ideal conditions for farming and settlement.",
-        "translation": "$market 有着与旧地球环境非常接近的地形地貌，并为居住和农业提供了良好的环境。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0028行"
-    },
-    {
-        "key": "market_conditions.csv#terran$name",
-        "original": "Terran World",
-        "translation": "宜居地貌",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0028行"
-    },
-    {
-        "key": "market_conditions.csv#thin_atmosphere$desc",
-        "original": "A rarefied atmosphere clings determinedly to $market's surface.",
-        "translation": "一个稀薄的大气层依附于此地的表面。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0095行"
-    },
-    {
-        "key": "market_conditions.csv#thin_atmosphere$name",
-        "original": "Thin Atmosphere",
-        "translation": "稀薄大气层",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0095行"
-    },
-    {
-        "key": "market_conditions.csv#toxic_atmosphere$desc",
-        "original": "The atmosphere of $market is exceptionally toxic and corrosive, abrading unprotected surfaces and requiring the hermetic sealing of any inhabited spaces.",
-        "translation": "$market 的大气剧毒而充满腐蚀性，侵蚀着毫无保护的地表。任何居住的空间都需要进行气密封装。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0096行"
-    },
-    {
-        "key": "market_conditions.csv#toxic_atmosphere$name",
-        "original": "Toxic Atmosphere",
-        "translation": "剧毒大气层",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0096行"
-    },
-    {
-        "key": "market_conditions.csv#trade_center$desc",
-        "original": "A major center of trade, merchant vessels from across the Sector dock here expecting to find a buyer for their goods- and to find something to buy in turn for a nice profit.",
-        "translation": "主要的贸易中心，星域各地的商船都会停靠于此，并期待为他们的货物找到买家或买到那些能赚取更高利润的廉价货物。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0010行"
-    },
-    {
-        "key": "market_conditions.csv#trade_center$name",
-        "original": "Trade Center",
-        "translation": "贸易中心",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0010行"
-    },
-    {
-        "key": "market_conditions.csv#tundra$desc",
-        "original": "Terraforming has brought terran life to $market but the world remains as cold as the deepest of Earth's ice ages. Though millions of square kilometers are covered in glacier, there are also taiga provinces and rolling steppe where warmer conditions prevail.",
-        "translation": "$market 经地貌改造后已经足以让人类居住，但仍处在旧地球的冰河时期水平。虽数百万平方公里都覆盖着冰川，但在温和的地方也存在着针叶林和草原。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0031行"
-    },
-    {
-        "key": "market_conditions.csv#tundra$name",
-        "original": "Tundra World",
-        "translation": "苔原地貌",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0031行"
-    },
-    {
-        "key": "market_conditions.csv#twilight$desc",
-        "original": "Tidally locked to its primary, or near enough, $market is a terraformed world with days the length of seasons. Day/night temperature variation is accordingly harsh even to engineered terran life. Islands of 'civilized' mild biomes are maintained through judicious use of solar shades and mirrors. ",
-        "translation": "这个经地貌改造的星球，因被潮汐力所牢牢锁住，而导致其昼夜交替有如季节轮转之长。鉴于其极端的昼夜温差甚至对人工培育的类地生命都过于严酷，所以必须明智地使用恒星罩和恒星镜，才能勉强维持一个个温和的生态圈来支持文明的存续。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0030行"
-    },
-    {
-        "key": "market_conditions.csv#twilight$name",
-        "original": "Twilight World",
-        "translation": "暮光之地",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0030行"
-    },
-    {
-        "key": "market_conditions.csv#uninhabitable$desc",
-        "original": "A barren planet, the surface of $market can not support organic life as we know it, and farming is impossible outside of sealed artificial ecosystems.",
-        "translation": "一颗贫瘠的星球，正如我们所知，$market 的地表不仅没有有机生命，也无法在封闭的生态系统之外进行农业活动。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0022行"
-    },
-    {
-        "key": "market_conditions.csv#uninhabitable$name",
-        "original": "Uninhabitable World",
-        "translation": "死寂之地",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0022行"
-    },
-    {
-        "key": "market_conditions.csv#urbanized_polity$desc",
-        "original": "A dense and cosmopolitan center of population, people of all walks of life live, work, and die in the stacked hab-complexes, commercial concourses, and modular workshops.",
-        "translation": "人口稠密的民族熔炉。各行各业的人们在城中的高层住宅群，商业中心与各种工业园区中生活，工作直至死亡。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0001行"
-    },
-    {
-        "key": "market_conditions.csv#urbanized_polity$name",
-        "original": "Urbanized Polity",
-        "translation": "城市化",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0001行"
-    },
-    {
-        "key": "market_conditions.csv#very_cold$desc",
-        "original": "Extreme cold necessitates specialized equipment and protocol to perform operations safely on $market, complicating logistics, life support, and infrastructure.",
-        "translation": "$market 因极低的地表温度而需要专业的设备和协议确保行动安全，对后勤管理、维生设备和基础设施的要求也有所增加。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0084行"
-    },
-    {
-        "key": "market_conditions.csv#very_cold$name",
-        "original": "Extreme Cold",
-        "translation": "极端寒冷",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0084行"
-    },
-    {
-        "key": "market_conditions.csv#very_hot$desc",
-        "original": "Extreme heat necessitates specialized equipment and protocol to safely operate on $market, seriously complicating logistics, life support, and long-term stability of infrastructure.",
-        "translation": "$market 因极高的地表温度而需要专业的设备和协议确保行动安全，对后勤管理、维生设备和基础设施的要求也有所增加。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0087行"
-    },
-    {
-        "key": "market_conditions.csv#very_hot$name",
-        "original": "Extreme Heat",
-        "translation": "极端炎热",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0087行"
-    },
-    {
-        "key": "market_conditions.csv#vice_demand$desc",
-        "original": "The demand for vice goods is unusually high here.",
-        "translation": "这里有着非常高的违禁品需求。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0006行"
-    },
-    {
-        "key": "market_conditions.csv#vice_demand$name",
-        "original": "Vice Demand",
-        "translation": "违禁品需求",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0006行"
-    },
-    {
-        "key": "market_conditions.csv#volatiles_abundant$desc",
-        "original": "Abundant volatiles may be economically extracted from $market.",
-        "translation": "可以从 $market 中提取出丰富的挥发物。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0138行"
-    },
-    {
-        "key": "market_conditions.csv#volatiles_abundant$name",
-        "original": "Abundant Volatiles",
-        "translation": "丰富的挥发物",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0138行"
-    },
-    {
-        "key": "market_conditions.csv#volatiles_diffuse$desc",
-        "original": "Diffuse volatiles can be found here, and may be sufficient for industrial extraction.",
-        "translation": "弥漫着的挥发物可以在这里找到，其含量足以用于工业提取。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0137行"
-    },
-    {
-        "key": "market_conditions.csv#volatiles_diffuse$name",
-        "original": "Diffuse Volatiles",
-        "translation": "少量的挥发物",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0137行"
-    },
-    {
-        "key": "market_conditions.csv#volatiles_plentiful$desc",
-        "original": "$Market is a world-sized wellspring of volatiles - rich, deep, and potent.",
-        "translation": "$market 拥有世界级的挥发物储量，其蕴含的经济价值难以想象。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0139行"
-    },
-    {
-        "key": "market_conditions.csv#volatiles_plentiful$name",
-        "original": "Plentiful Volatiles",
-        "translation": "富足的挥发物",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0139行"
-    },
-    {
-        "key": "market_conditions.csv#volatiles_trace$desc",
-        "original": "The trace volatiles found here barely warrant harvesting.",
-        "translation": "此地发现了一些几乎不值得提取的微量挥发物。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0136行"
-    },
-    {
-        "key": "market_conditions.csv#volatiles_trace$name",
-        "original": "Trace Volatiles",
-        "translation": "微量的挥发物",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0136行"
-    },
-    {
-        "key": "market_conditions.csv#volturnian_lobster_pens$desc",
-        "original": "A mix of several Old Earth species and a little imagination produced this creature which grows wild in the crushing depths of Volturn's sea-floor. The flavor is said to be exceptional.",
-        "translation": "混合了多种旧地球物种和一点想象力而创造出的生物，它们主要栖息在 Volturn 海底深处的破碎海床上，据说味道非常独特。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0005行"
-    },
-    {
-        "key": "market_conditions.csv#volturnian_lobster_pens$name",
-        "original": "Volturnian Lobster Pens",
-        "translation": "Volturn 蓝龙虾养殖场",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0005行"
-    },
-    {
-        "key": "market_conditions.csv#water$desc",
-        "original": "The climate of $market is hospitable but farming is limited largely to aquaculture and highly specialized infrastructure is required for any development of habitats and industry.",
-        "translation": "尽管 $market 的气候十分宜人，但其大多数的农业却被限制在水产养殖业当中，且所有居住区和工业的发展都需要借助高度专业化的设施支持。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0026行"
-    },
-    {
-        "key": "market_conditions.csv#water$name",
-        "original": "Water World",
-        "translation": "海洋地貌",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0026行"
-    },
-    {
-        "key": "market_conditions.csv#water_surface$desc",
-        "original": "This is an ocean world with no substantial solid surface to land, walk, or build upon. Operations are complicated by the need for specialized training and equipment.",
-        "translation": "这是一个海洋世界，没有足够面积的固态地表可供降落、行走或进行建设。对专业的培训与设备的需求让在此的一切行动变得复杂。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0111行"
-    },
-    {
-        "key": "market_conditions.csv#water_surface$name",
-        "original": "Water-covered Surface",
-        "translation": "海洋覆盖",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0111行"
-    }
+  {
+    "key": "market_conditions.csv#rare_ore_abundant$name",
+    "original": "Abundant Rare Ore Deposits",
+    "translation": "大量的稀有元素",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0131行"
+  },
+  {
+    "key": "market_conditions.csv#organics_common$desc",
+    "original": "Economically exploitable reserves of organics can be found on $market.",
+    "translation": "$Market 拥有适合提取的有机物。",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0143行"
+  },
+  {
+    "key": "market_conditions.csv#ruins_vast$desc",
+    "original": "$Market is covered in vast ruins; cities, factories, mines, farms, homes. The dead are in dread abundance, entwined with salvageable materials, goods, tools, and weapons. This world is a tomb for the hubris of the Domain's project of galactic colonization and hegemony. ",
+    "translation": "$Market 被大量的城市遗迹、工厂废墟、矿山残骸、农场遗址和住宅碎片覆盖。死者不计其数，尸体与可回收的材料、货物、工具和武器交缠在一起，触目惊心。这个世界是一座坟墓，人之领 狂妄的银河殖民统治计划被埋葬于此。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0080行"
+  },
+  {
+    "key": "market_conditions.csv#pollution$desc",
+    "original": "Human industry has left this world filled with dioxins, sulphur compounds, ash, and the steady ticking of decaying radioactive dust. Scraps of plastic cling to shards of foam-metal, the sky tuned to a dead channel.",
+    "translation": "人类的工业对这个世界造成了毁灭性的破坏。空气中充满了二恶英、硫化物、粉尘，以及散落四周的、腐烂的放射性尘埃。而由塑料碎屑与泡沫金属碎片所组成的大风暴则将天空搅动成骇人的死亡通道。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0119行"
+  },
+  {
+    "key": "market_conditions.csv#volatiles_trace$name",
+    "original": "Trace Volatiles",
+    "translation": "微量的挥发物",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0136行"
+  },
+  {
+    "key": "market_conditions.csv#rare_ore_sparse$desc",
+    "original": "A few sparse transplutonic ore deposits exist here, but they are more of academic than industrial interest for their extraction is barely economical.",
+    "translation": "此地存在着分布稀疏的稀有元素，但因开发难度大而不太可能产生可观效益，所以只适合进行科研探查而非工业采掘。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0129行"
+  },
+  {
+    "key": "market_conditions.csv#population_3$desc",
+    "original": "Thousands of people call $marketName home.",
+    "translation": "有数千人把 $marketName 当作家园。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0040行"
+  },
+  {
+    "key": "market_conditions.csv#terran$name",
+    "original": "Terran World",
+    "translation": "宜居地貌",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0028行"
+  },
+  {
+    "key": "market_conditions.csv#population_9$desc",
+    "original": "A precious refuge for humanity in a dangerous galaxy, $marketName is home to billions of souls.",
+    "translation": "人类在危险星域中的宝贵避难所，$marketName 正是数十亿灵魂的家园。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0046行"
+  },
+  {
+    "key": "market_conditions.csv#toxic_atmosphere$name",
+    "original": "Toxic Atmosphere",
+    "translation": "剧毒大气层",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0096行"
+  },
+  {
+    "key": "market_conditions.csv#event_food_shortage$desc",
+    "original": "There's a temporary lack of available food on $market.\n- Stability reduced by $stabilityPenalty\n- Approximately $neededFood units of food needed to end shortage\n- Food prices increased due to lowered food supply\n- Increased reputation and experience from selling food",
+    "translation": "此地的食品暂时出现短缺。\n- 稳定性降低 $stabilityPenalty\n- 解决食品短缺需要 $neededFood 单位\n- 由于供应缺口而导致食品价格上升\n- 出售食品可以提升关系和经验",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0052行"
+  },
+  {
+    "key": "market_conditions.csv#ice$name",
+    "original": "Ice World",
+    "translation": "冰川地貌",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0023行"
+  },
+  {
+    "key": "market_conditions.csv#jungle$desc",
+    "original": "$Market is a wet, warm jungle world covered in riotous vegetation and exotic lifeforms, making farming and maintaining permanent infrastructure difficult.",
+    "translation": "$Market 是一个潮湿温暖的丛林世界，广沃茂密的丛林植被和形态各异的生物类群都遍布此地，使农业和设施的维护变得异常困难。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0027行"
+  },
+  {
+    "key": "market_conditions.csv#rural_polity$desc",
+    "original": "A sparsely populated polity of homesteads and insular townships. In these troubled times, outsiders are generally treated with suspicion.",
+    "translation": "人口稀少，由农庄与偏远乡镇组成的共和政体。在这乱世中，任何外来者一般都难以得到本地居民的信任。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0003行"
+  },
+  {
+    "key": "market_conditions.csv#industrial_polity$name",
+    "original": "Industrial Polity",
+    "translation": "工业化",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0002行"
+  },
+  {
+    "key": "market_conditions.csv#population_7$name",
+    "original": "Population",
+    "translation": "人口",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0044行"
+  },
+  {
+    "key": "market_conditions.csv#population_9$name",
+    "original": "Population",
+    "translation": "人口",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0046行"
+  },
+  {
+    "key": "market_conditions.csv#hot$desc",
+    "original": "The high temperature conditions of $market necessitate specialized equipment to perform normal operations, complicating life support and infrastructure.",
+    "translation": "此地因较高的地表温度而需要专业的设备确保行动安全，对维生设备和基础设施的要求也有所增加。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0086行"
+  },
+  {
+    "key": "market_conditions.csv#population_4$desc",
+    "original": "Tens of thousands of people live on $marketName.",
+    "translation": "数万人生活在 $marketName。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0041行"
+  },
+  {
+    "key": "market_conditions.csv#dark$desc",
+    "original": "The surface of $market is dark and full of shadow, receiving effectively zero illumination from its primary.",
+    "translation": "$Market 的表面一片黑暗，它的主要光源基本都来自于人工照明。",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0114行"
+  },
+  {
+    "key": "market_conditions.csv#water$desc",
+    "original": "The climate of $market is hospitable but farming is limited largely to aquaculture and highly specialized infrastructure is required for any development of habitats and industry.",
+    "translation": "尽管 $market 的气候十分宜人，但其大多数的农业却被限制在水产养殖业当中，且所有居住区和工业的发展都需要借助高度专业化的设施支持。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0026行"
+  },
+  {
+    "key": "market_conditions.csv#headquarters$desc",
+    "original": "$Market is a center of military command and logistical operation for the ruling polity. Increases market stability.\n\nIncreases the quality and number of officers in $market's fleets.",
+    "translation": "$Market 是军事指挥和后勤运作的枢纽。市场稳定性提高。\n\n提高此地舰队的军官质量与数量。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0035行"
+  },
+  {
+    "key": "market_conditions.csv#large_refugee_population$name",
+    "original": "Large Refugee Population",
+    "translation": "难民潮",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0004行"
+  },
+  {
+    "key": "market_conditions.csv#abandoned_station$desc",
+    "original": "This station is abandoned.",
+    "translation": "这处空间站已经遭到废弃。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0013行"
+  },
+  {
+    "key": "market_conditions.csv#water_surface$name",
+    "original": "Water-covered Surface",
+    "translation": "海洋覆盖",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0111行"
+  },
+  {
+    "key": "market_conditions.csv#large_refugee_population$desc",
+    "original": "Desperate refugees fleeing some disaster have ended up here. Refugees live at the bottom of society with little opportunity for betterment, straining domestic infrastructure living in tense semi-legal status. Reduced overall production. More prospective crew members are likely to be found among those trying to escape the squalid living conditions.",
+    "translation": "这里充斥着大量为逃离灾难而涌入的难民。这些勉强维持半合法身份的人们，只能无望地在社会的最底层挣扎，他们不仅会对社会基础设施带来很大的压力，还会让本地劳动生产率降低。而为了逃离这种恶劣的生活环境，许多人都愿意成为雇佣船员。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0004行"
+  },
+  {
+    "key": "market_conditions.csv#free_market$desc",
+    "original": "The local port authority imposes almost no regulation on what cargo is traded. Immigration controls are likewise relaxed, resulting in a greater in-flow of people, albeit sometimes of a more questionable character. This may cause other factions to view this colony with distrust.",
+    "translation": "当地港务局不仅对所交易的商品不加任何管制，且同样宽松的移民管制，让大量外来人口纷纷涌入此地，其中不乏一些身份可疑的人士。而正因如此，其他势力将以不信任的态度看待着该殖民地。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0019行"
+  },
+  {
+    "key": "market_conditions.csv#cryovolcanic$desc",
+    "original": "A world frozen beyond deepest chill, methane snow falls on mountains of water-ice and volcanos erupt with ammonia. Stellar radiation breaks down the volatiles to form an atmosphere of light gases such as nitrogen and oxygen while hydrogen is whisked into space. ",
+    "translation": "一个冰封的极寒世界。除了被甲烷雪所覆盖的冰川和随时会喷发的氨火山，那些因恒星辐射所分解的挥发物，让氢气得以逸散进入太空，并留下主要由氧气和氮气等轻质气体所组成的大气层。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0032行"
+  },
+  {
+    "key": "market_conditions.csv#population_8$name",
+    "original": "Population",
+    "translation": "人口",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0045行"
+  },
+  {
+    "key": "market_conditions.csv#pirate_activity$name",
+    "original": "Pirate Activity",
+    "translation": "海盗袭击",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0059行"
+  },
+  {
+    "key": "market_conditions.csv#frontier$name",
+    "original": "Frontier",
+    "translation": "边境之地",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0008行"
+  },
+  {
+    "key": "market_conditions.csv#volatiles_diffuse$name",
+    "original": "Diffuse Volatiles",
+    "translation": "少量的挥发物",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0137行"
+  },
+  {
+    "key": "market_conditions.csv#twilight$desc",
+    "original": "Tidally locked to its primary, or near enough, $market is a terraformed world with days the length of seasons. Day/night temperature variation is accordingly harsh even to engineered terran life. Islands of 'civilized' mild biomes are maintained through judicious use of solar shades and mirrors. ",
+    "translation": "这个经地貌改造的星球，因被潮汐力所牢牢锁住，而导致其昼夜交替有如季节轮转之长。鉴于其极端的昼夜温差甚至对人工培育的类地生命都过于严酷，所以必须明智地使用恒星罩和恒星镜，才能勉强维持一个个温和的生态圈来支持文明的存续。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0030行"
+  },
+  {
+    "key": "market_conditions.csv#population_7$desc",
+    "original": "$MarketName is a world of tens of millions.",
+    "translation": "$MarketName 拥有数千万的人口。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0044行"
+  },
+  {
+    "key": "market_conditions.csv#organics_plentiful$name",
+    "original": "Plentiful Organics",
+    "translation": "富足的有机物",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0145行"
+  },
+  {
+    "key": "market_conditions.csv#farmland_adequate$desc",
+    "original": "A robust terran-compatible biosphere allows agricultural cultivation to take place on $market.",
+    "translation": "$Market 有稳定且友好的生物圈，足以让人们在其地表进行农产品种植。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0149行"
+  },
+  {
+    "key": "market_conditions.csv#trade_center$desc",
+    "original": "A major center of trade, merchant vessels from across the Sector dock here expecting to find a buyer for their goods- and to find something to buy in turn for a nice profit.",
+    "translation": "主要的贸易中心，星域各地的商船都会停靠于此，并期待为他们的货物找到买家或买到那些能赚取更高利润的廉价货物。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0010行"
+  },
+  {
+    "key": "market_conditions.csv#shipbreaking_center$desc",
+    "original": "A major center of shipbreaking in this region of the Sector, hulks are consigned to scrapping here by the navies of major factions and many other clients from among the Sector core worlds.",
+    "translation": "这片星域的一处舰船拆解中心。核心世界各势力的军队与其它客户都会将报废船只送往这里以供拆解。",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0009行"
+  },
+  {
+    "key": "market_conditions.csv#rare_ore_sparse$name",
+    "original": "Sparse Rare Ore Deposits",
+    "translation": "零星的稀有元素",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0129行"
+  },
+  {
+    "key": "market_conditions.csv#decivilized_subpop$name",
+    "original": "Decivilized Subpopulation",
+    "translation": "法外之地",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0012行"
+  },
+  {
+    "key": "market_conditions.csv#farmland_poor$name",
+    "original": "Poor Farmland",
+    "translation": "贫瘠的耕地",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0148行"
+  },
+  {
+    "key": "market_conditions.csv#ore_abundant$desc",
+    "original": "Abundant, widespread, and profitably extractable ore deposits can be found on $market.",
+    "translation": "$Market 拥有丰富、广阔且价值较高的矿床。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0124行"
+  },
+  {
+    "key": "market_conditions.csv#ruins_extensive$name",
+    "original": "Extensive Ruins",
+    "translation": "大量的废墟",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0079行"
+  },
+  {
+    "key": "market_conditions.csv#rare_ore_ultrarich$name",
+    "original": "Ultrarich Rare Ore Deposits",
+    "translation": "富饶的稀有元素",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0133行"
+  },
+  {
+    "key": "market_conditions.csv#abandoned_station$name",
+    "original": "Abandoned Station",
+    "translation": "废弃空间站",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0013行"
+  },
+  {
+    "key": "market_conditions.csv#barren_marginal$desc",
+    "original": "Inhospitable and unforgiving, outside conditions on $market are barely survivable to a human with an air mask and protective equipment, though certain engineered terraforming lichens find it tolerable enough.",
+    "translation": "$market 的外界环境荒凉且无情，即便装备有空气面罩和防护设备，人们依旧难以在外生存，只有部分专门用于地貌改造的基因工程改造地衣才能勉强存活。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0029行"
+  },
+  {
+    "key": "market_conditions.csv#population_6$desc",
+    "original": "The population of $marketName is in the millions.",
+    "translation": "$marketName 拥有数百万的人口。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0043行"
+  },
+  {
+    "key": "market_conditions.csv#jungle$name",
+    "original": "Jungle World",
+    "translation": "丛林地貌",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0027行"
+  },
+  {
+    "key": "market_conditions.csv#rogue_ai_core$name",
+    "original": "Rogue AI Core",
+    "translation": "失控的 AI 核心",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0057行"
+  },
+  {
+    "key": "market_conditions.csv#headquarters$name",
+    "original": "Headquarters",
+    "translation": "指挥中心",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0035行"
+  },
+  {
+    "key": "market_conditions.csv#tectonic_activity$desc",
+    "original": "The surface of $market is unstable and prone to violent quakes. Any structures require special reinforcement and any excavation will involve a great deal of risk.",
+    "translation": "$market 的地壳很不稳定且容易发生剧烈地震。因此任何结构都需经过特殊加固，且任何开挖都要冒着很大的风险。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0090行"
+  },
+  {
+    "key": "market_conditions.csv#rare_ore_rich$desc",
+    "original": "Thick bands of transplutonics spread with glorious profusion through the crust of $market, promising great and potent power to they who would but reach out and take them.",
+    "translation": "富饶的稀有元素在 $market 的地壳内四处蔓延，其蕴含的强大力量足以促使拥有足够资格的人们将手伸向这里。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0132行"
+  },
+  {
+    "key": "market_conditions.csv#high_gravity$desc",
+    "original": "The force of gravity on the surface of $market is crushingly high. Humans require powered exoskeletons for regular movement and find even basic actions exhausting. Continual habitation is grueling at best. All operations take place with a heightened danger of falls and - if specialized engineering is not performed with adequete paranoia - structural collapse.",
+    "translation": "$Market 的地表引力高得惊人。在此的人类必须配备动力外骨骼才可进行日常活动，即便如此，任何简单的行动仍会让他们感到异常疲惫，因此，对于那些长期定居于此的人们来说，简直就是一种折磨。由于任何行动都可能导致崩塌，所以如果不用近乎偏执的严谨来开展专业工程的话，将极有可能发生结构性的大面积坍塌。",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0104行"
+  },
+  {
+    "key": "market_conditions.csv#population_4$name",
+    "original": "Population",
+    "translation": "人口",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0041行"
+  },
+  {
+    "key": "market_conditions.csv#habitable$desc",
+    "original": "Human beings can survive unprotected exposure to the surface conditions of $market.",
+    "translation": "人类能够在无需保护的情况下生存于 $market 的地表之上。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0074行"
+  },
+  {
+    "key": "market_conditions.csv#comm_relay$desc",
+    "original": "Hidden condition; does not need icon.",
+    "translation": "隐藏的特性。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0070行"
+  },
+  {
+    "key": "market_conditions.csv#poor_light$name",
+    "original": "Poor Light",
+    "translation": "昏暗",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0113行"
+  },
+  {
+    "key": "market_conditions.csv#uninhabitable$desc",
+    "original": "A barren planet, the surface of $market can not support organic life as we know it, and farming is impossible outside of sealed artificial ecosystems.",
+    "translation": "一颗贫瘠的星球，正如我们所知，$market 的地表不仅没有有机生命，也无法在封闭的生态系统之外进行农业活动。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0022行"
+  },
+  {
+    "key": "market_conditions.csv#stealth_minefields$name",
+    "original": "Stealth Minefields",
+    "translation": "感应雷区",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0017行"
+  },
+  {
+    "key": "market_conditions.csv#cottage_industry$name",
+    "original": "Cottage Industry",
+    "translation": "家庭手工业",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0014行"
+  },
+  {
+    "key": "market_conditions.csv#event_bounty$name",
+    "original": "System Bounty",
+    "translation": "星系悬赏",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0056行"
+  },
+  {
+    "key": "market_conditions.csv#ruins_vast$name",
+    "original": "Vast Ruins",
+    "translation": "巨大的废墟",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0080行"
+  },
+  {
+    "key": "market_conditions.csv#ore_rich$desc",
+    "original": "Rich mineral deposits form a thick lattice within the crust of $market but require an ambitious industrialist to exploit them for fabulous profit.",
+    "translation": "富饶的矿床在 $market 的地壳内闪闪发光，但只有雄心勃勃的企业家才能利用它们获取丰厚回报。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0125行"
+  },
+  {
+    "key": "market_conditions.csv#ore_sparse$desc",
+    "original": "A few sparse ore deposits exist here, but they are more of academic than industrial interest for their extraction is barely economical.",
+    "translation": "此地存在着分布稀疏的矿床，但因开发难度大而不太可能产生可观效益，所以只适合进行科研探查而非工业采掘。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0122行"
+  },
+  {
+    "key": "market_conditions.csv#low_gravity$name",
+    "original": "Low Gravity",
+    "translation": "低重力",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0103行"
+  },
+  {
+    "key": "market_conditions.csv#low_gravity$desc",
+    "original": "Gravity is exceptionally low, though significantly above zero-g, on the surface of $market. Workflow and operation of (relatively) heavy machinery is complicated by the non-standard procedures required to deal with altered conditions of friction, weight, and pressure dynamics.",
+    "translation": "尽管重力较低，但依然明显高于零重力，在 $market 的地表之上，重型机械的工作流程相对于标准程序来说，因摩擦、重量、压力的动态变化而变得更加复杂。",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0103行"
+  },
+  {
+    "key": "market_conditions.csv#volatiles_abundant$desc",
+    "original": "Abundant volatiles may be economically extracted from $market.",
+    "translation": "可以从 $market 中提取出丰富的挥发物。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0138行"
+  },
+  {
+    "key": "market_conditions.csv#regional_capital$desc",
+    "original": "A major center of administration, security, and logistics. Improves stability.",
+    "translation": "一处控制安全以及后勤的主要行政中心。稳定性提高。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0018行"
+  },
+  {
+    "key": "market_conditions.csv#dissident$name",
+    "original": "Dissident Population",
+    "translation": "异议人士",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0034行"
+  },
+  {
+    "key": "market_conditions.csv#extreme_tectonic_activity$desc",
+    "original": "$market's crust roils chaotically with extreme quakes and cataclysmic volcanism events. Any operations will require exceptional care and use of many-times redundant warning systems so that the worst dangers can be avoided. Construction on this world can only ever be considered semi-permanent.",
+    "translation": "$Market 的地表长期经受着极端地震与火山爆发等灾难性事件的蹂躏。任何操作都需格外谨慎，并需要遍地铺设警报系统以起预防作用。即便如此，这里的建筑均无法长时维持存在。",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0091行"
+  },
+  {
+    "key": "market_conditions.csv#volatiles_diffuse$desc",
+    "original": "Diffuse volatiles can be found here, and may be sufficient for industrial extraction.",
+    "translation": "弥漫着的挥发物可以在这里找到，其含量足以用于工业提取。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0137行"
+  },
+  {
+    "key": "market_conditions.csv#pollution$name",
+    "original": "Pollution",
+    "translation": "污染",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0119行"
+  },
+  {
+    "key": "market_conditions.csv#volatiles_abundant$name",
+    "original": "Abundant Volatiles",
+    "translation": "丰富的挥发物",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0138行"
+  },
+  {
+    "key": "market_conditions.csv#ai_core_admin$name",
+    "original": "AI Core Admin (hidden)",
+    "translation": "AI 管理员 (隐藏)",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0058行"
+  },
+  {
+    "key": "market_conditions.csv#water$name",
+    "original": "Water World",
+    "translation": "海洋地貌",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0026行"
+  },
+  {
+    "key": "market_conditions.csv#farmland_bountiful$name",
+    "original": "Bountiful Farmland",
+    "translation": "肥沃的耕地",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0151行"
+  },
+  {
+    "key": "market_conditions.csv#rare_ore_rich$name",
+    "original": "Rich Rare Ore Deposits",
+    "translation": "丰富的稀有元素",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0132行"
+  },
+  {
+    "key": "market_conditions.csv#population_5$desc",
+    "original": "$MarketName is home to hundreds of thousands of people.",
+    "translation": "$MarketName 有数十万的固定居民。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0042行"
+  },
+  {
+    "key": "market_conditions.csv#no_atmosphere$desc",
+    "original": "No appreciable atmosphere exists on $market. Its surface is exposed to the hard weathering of space, a steady drizzle of radiation and micrometeorites.",
+    "translation": "因 $market 不存在任何大气层，所以该行星就暴露在各种陨石辐射等恶劣的太空环境中。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0094行"
+  },
+  {
+    "key": "market_conditions.csv#trade_center$name",
+    "original": "Trade Center",
+    "translation": "贸易中心",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0010行"
+  },
+  {
+    "key": "market_conditions.csv#ore_sparse$name",
+    "original": "Sparse Ore Deposits",
+    "translation": "零星的矿床",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0122行"
+  },
+  {
+    "key": "market_conditions.csv#population_2$name",
+    "original": "Population",
+    "translation": "人口",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0039行"
+  },
+  {
+    "key": "market_conditions.csv#ice$desc",
+    "original": "$Market's average temperature is far below the freezing point of water and some common terran atmospheric gases fall as snow. The drifts and glaciers of light, volatile elements may be harvested.",
+    "translation": "$Market 的平均温度非常之低，且宜居的大气成分已成为降雪。所以可以在此地开采那些轻质挥发物形成的积雪与冰川。",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0023行"
+  },
+  {
+    "key": "market_conditions.csv#extreme_tectonic_activity$name",
+    "original": "Extreme Tectonic Activtity",
+    "translation": "极端构造活动性",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0091行"
+  },
+  {
+    "key": "market_conditions.csv#industrial_polity$desc",
+    "original": "A bustling industrial center. The policies of the local government encourage thriving industry, at the expense of all other concerns.",
+    "translation": "一处繁荣的工业中心，因地方政府大肆鼓励工业发展，而牺牲了其他所有方面的利益。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0002行"
+  },
+  {
+    "key": "market_conditions.csv#organics_trace$desc",
+    "original": "$Market is nearly barren of organics reserves, though some extraction is possible.",
+    "translation": "虽然 $Market 存在有机物可供提取，但储量少得可怜。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0142行"
+  },
+  {
+    "key": "market_conditions.csv#organics_abundant$name",
+    "original": "Abundant Organics",
+    "translation": "丰富的有机物",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0144行"
+  },
+  {
+    "key": "market_conditions.csv#outpost$name",
+    "original": "Outpost",
+    "translation": "前哨站",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0015行"
+  },
+  {
+    "key": "market_conditions.csv#shipbreaking_center$name",
+    "original": "Shipbreaking Center",
+    "translation": "拆船中心",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0009行"
+  },
+  {
+    "key": "market_conditions.csv#tundra$name",
+    "original": "Tundra World",
+    "translation": "苔原地貌",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0031行"
+  },
+  {
+    "key": "market_conditions.csv#very_hot$name",
+    "original": "Extreme Heat",
+    "translation": "极端炎热",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0087行"
+  },
+  {
+    "key": "market_conditions.csv#cold$desc",
+    "original": "The low temperatures found on $market necessitate specialized equipment to perform normal operations, complicating life support and infrastructure.",
+    "translation": "$Market 因较低的地表温度而需要专业的设备确保行动安全，且对维生设备和基础设施的要求也有所增加。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0083行"
+  },
+  {
+    "key": "market_conditions.csv#uninhabitable$name",
+    "original": "Uninhabitable World",
+    "translation": "死寂之地",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0022行"
+  },
+  {
+    "key": "market_conditions.csv#volatiles_plentiful$name",
+    "original": "Plentiful Volatiles",
+    "translation": "富足的挥发物",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0139行"
+  },
+  {
+    "key": "market_conditions.csv#tectonic_activity$name",
+    "original": "Tectonic Activity",
+    "translation": "构造活动性",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0090行"
+  },
+  {
+    "key": "market_conditions.csv#desert$desc",
+    "original": "$Market: desert planet. A xerophile biosphere maintains an atmosphere breathable with only a light mask. Farming is nearly impossible.",
+    "translation": "$Market 是一颗沙漠星球，其仅有的旱生植物只能维持一个稀薄的大气层。几乎无法进行农耕作业。",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0024行"
+  },
+  {
+    "key": "market_conditions.csv#population_8$desc",
+    "original": "$MarketName is one of the few worlds in the Sector with a population of hundreds of millions.",
+    "translation": "$MarketName 是本星域少数几个人口数亿的世界之一。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0045行"
+  },
+  {
+    "key": "market_conditions.csv#volatiles_plentiful$desc",
+    "original": "$Market is a world-sized wellspring of volatiles - rich, deep, and potent.",
+    "translation": "$Market 拥有世界级的挥发物储量，其蕴含的经济价值难以想象。",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0139行"
+  },
+  {
+    "key": "market_conditions.csv#decivilized$name",
+    "original": "Decivilized",
+    "translation": "荒蛮之地",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0011行"
+  },
+  {
+    "key": "market_conditions.csv#pirate_activity$desc",
+    "original": "There have been signs that pirates are targeting shipping and colonies in this system - from port inspectors being pressured to turn a blind eye, to inconsistencies in cargo manifests, to other increased criminal activity.\n\nThe pirates most likely have a base somewhere relatively nearby.",
+    "translation": "有迹象表明，该星系的舰队与殖民地将成为海盗袭击的目标。无论是港口检查员因迫于压力而选择视而不见，还是货物清单的不一致，加上其他犯罪活动增加，都预示着此地已不再太平。\n\n海盗很可能在附近的星系设有基地。",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0059行"
+  },
+  {
+    "key": "market_conditions.csv#recent_unrest$desc",
+    "original": "$Market has recently experienced tumultous events with a lingering effect on stability.",
+    "translation": "$Market 最近经历了一些动荡，对其稳定性有所影响。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0053行"
+  },
+  {
+    "key": "market_conditions.csv#very_cold$name",
+    "original": "Extreme Cold",
+    "translation": "极端寒冷",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0084行"
+  },
+  {
+    "key": "market_conditions.csv#high_gravity$name",
+    "original": "High Gravity",
+    "translation": "高重力",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0104行"
+  },
+  {
+    "key": "market_conditions.csv#dissident$desc",
+    "original": "$Market is a dumping-ground for dissidents, rebels, free-thinkers, artists, and other troublemakers. Increases demand for weapons and marines to police the rabble. Increases availability of crew due to emigration.",
+    "translation": "$Market 聚集着各种异政者、反叛者、自由思想家，艺术家和其他麻烦制造者。为管理这群乌合之众，武器和陆战队的需求增加。因频繁的移民也使可雇佣的船员增多。",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0034行"
+  },
+  {
+    "key": "market_conditions.csv#rare_ore_moderate$desc",
+    "original": "$Market contains modest transplutonic deposits that, with sustained industry and investment, could be profitably tapped.",
+    "translation": "$Market 含有适度的稀有元素，只需适当的经济投资，就能获取不错的回报。",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0130行"
+  },
+  {
+    "key": "market_conditions.csv#decivilized_subpop$desc",
+    "original": "Civilization has been brought back to parts of $market, often at the point of a gauss rifle. However, an effectively unknown population of survivors, bandits, and looters still remains on the fringes.",
+    "translation": "在武力保护下的 $market 已经有文明复苏的迹象，但这一法外之地的边缘地带仍然充斥着幸存者、强盗以及掠夺者。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0012行"
+  },
+  {
+    "key": "market_conditions.csv#comm_relay$name",
+    "original": "Comm Relay (hidden)",
+    "translation": "通讯中继站 (隐藏)",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0070行"
+  },
+  {
+    "key": "market_conditions.csv#ore_moderate$desc",
+    "original": "$Market contains moderate ore deposits that, under the right economic conditions, could be profitably exploited.",
+    "translation": "$Market 含有适度的矿床，只需适当的经济投资，就能获取不错的回报。",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0123行"
+  },
+  {
+    "key": "market_conditions.csv#luddic_majority$desc",
+    "original": "Stability is improved if $market is controlled by a Luddic faction, otherwise it is reduced. The ascetic ethos of Luddic theology reduces demand for luxury goods.",
+    "translation": "如果 $market 由 卢德教会 掌控，其稳定性将大大提高，否则就会降低。且卢德教义里的禁欲主义会导致本地奢侈品的需求降低。",
+    "stage": 9,
+    "context": "market_conditions.csv第0016行\n[本行原始数据]\n{'name': 'Luddic Majority',\n 'id': 'luddic_majority',\n 'planetary': '',\n 'decivRemove': 'TRUE',\n 'script': 'com.fs.starfarer.api.impl.campaign.econ.LuddicMajority',\n 'desc': 'Stability is improved if $market is controlled by a Luddic faction, '\n         'otherwise it is reduced. The ascetic ethos of Luddic theology '\n         'reduces demand for luxury goods.',\n 'icon': 'graphics/icons/markets/luddic_majority.png',\n 'order': '142'}"
+  },
+  {
+    "key": "market_conditions.csv#organics_plentiful$desc",
+    "original": "Reservoirs of valuable organics burst through the surface of $market in gouts over deep, dark pools that promise oceans of wealth to be found just below.",
+    "translation": "有机物自动从 $market 的地底喷涌而出洒满大地，这些黑暗而神秘的喷泉，预示着财富的海洋就在下面。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0145行"
+  },
+  {
+    "key": "market_conditions.csv#farmland_rich$name",
+    "original": "Rich Farmland",
+    "translation": "丰富的耕地",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0150行"
+  },
+  {
+    "key": "market_conditions.csv#luddic_majority$name",
+    "original": "Luddic Majority",
+    "translation": "卢德教众",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0016行"
+  },
+  {
+    "key": "market_conditions.csv#organics_trace$name",
+    "original": "Trace Organics",
+    "translation": "微量的有机物",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0142行"
+  },
+  {
+    "key": "market_conditions.csv#dark$name",
+    "original": "Darkness",
+    "translation": "黑暗",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0114行"
+  },
+  {
+    "key": "market_conditions.csv#mild_climate$name",
+    "original": "Mild Climate",
+    "translation": "温和气候",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0100行"
+  },
+  {
+    "key": "market_conditions.csv#ruins_scattered$desc",
+    "original": "This world was only lightly touched by the great project of the Domain before the collapse. Only scattered, broken domes remain, perchance holding lost caches of valuable materials.",
+    "translation": "在 大崩塌 之前，$market 只不过被 人之领 的伟大项目所轻微触动。如今地表只有零散且破碎的圆顶或一些早已被掠夺一空的贮藏点。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0077行"
+  },
+  {
+    "key": "market_conditions.csv#population_1$name",
+    "original": "Population",
+    "translation": "人口",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0038行"
+  },
+  {
+    "key": "market_conditions.csv#irradiated$desc",
+    "original": "The surface of $market is ravaged by radiation. Any living being must be confined to a shielded habitat to live for long here. Unhardened circuits and nanoscale materials or machinery will also rapidly fail in these harsh conditions.",
+    "translation": "$Market 的地表长期遭受辐射的侵袭，任何生物都必须在狭小的避难栖息地中生存。而暴露在恶劣条件中的电路，纳米材料与机械都将会迅速老化。",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0106行"
+  },
+  {
+    "key": "market_conditions.csv#habitable$name",
+    "original": "Habitable",
+    "translation": "宜居",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0074行"
+  },
+  {
+    "key": "market_conditions.csv#very_cold$desc",
+    "original": "Extreme cold necessitates specialized equipment and protocol to perform operations safely on $market, complicating logistics, life support, and infrastructure.",
+    "translation": "$Market 因极低的地表温度而需要专业的设备和协议确保行动安全，对后勤管理、维生设备和基础设施的要求也有所增加。",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0084行"
+  },
+  {
+    "key": "market_conditions.csv#cottage_industry$desc",
+    "original": "$Market has a substantial base of low-technology, labour-intensive light industry. Increases demand for simple organic fuels and materials, provides an inefficient albeit charmingly hand-crafted supply of domestic goods.",
+    "translation": "$Market 拥有以低技术和密集型劳动力为基础的轻工业。有机燃料与材料需求提高，提供手工制造的日用品，虽然低效但十分令人着迷。",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0014行"
+  },
+  {
+    "key": "market_conditions.csv#terran$desc",
+    "original": "$Market is as close to Old Earth's condition as can be found in the Sector, providing ideal conditions for farming and settlement.",
+    "translation": "$Market 有着与旧地球环境非常接近的地形地貌，并为居住和农业提供了良好的环境。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0028行"
+  },
+  {
+    "key": "market_conditions.csv#twilight$name",
+    "original": "Twilight World",
+    "translation": "暮光之地",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0030行"
+  },
+  {
+    "key": "market_conditions.csv#extreme_weather$desc",
+    "original": "Violent storms bristling lightning rage across the skies of $market. Though a sublime beauty from orbit, this produces harsh surface conditions making transportation and habitation highly inconvenient.",
+    "translation": "猛烈风暴与闪电肆虐着 $market 的天空。虽然从轨道上看起来壮观美丽，但是这样恶劣的地面条件，使运输与居住条件都非常糟糕。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0101行"
+  },
+  {
+    "key": "market_conditions.csv#organics_abundant$desc",
+    "original": "A river of wealth flows beneath the surface of $market - for those that would find and tap it.",
+    "translation": "财富的河流在 $market 的表面流动 - 对于那些发现并提取它的人来说。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0144行"
+  },
+  {
+    "key": "market_conditions.csv#outpost$desc",
+    "original": "$Market is run much like a garrison or a large spaceship, with a rigid official command structure. This improves stability, but does require some personnel to see to internal security matters.",
+    "translation": "具备一整套严苛指挥结构的 $market 更像是一处守备站或是一艘战舰。这样做尽管提高了稳定性，但需要一些人员来处理内部的安全事务。",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0015行"
+  },
+  {
+    "key": "market_conditions.csv#rare_ore_moderate$name",
+    "original": "Moderate Rare Ore Deposits",
+    "translation": "少量的稀有元素",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0130行"
+  },
+  {
+    "key": "market_conditions.csv#meteor_impacts$desc",
+    "original": "This world is bombarded at an appalling rate by regular meteor-showers. Any human inhabitant, however temporary, must keep a wary eye skyward. Any permanent installations would be best buried deep and well fortified.",
+    "translation": "这个世界经常遭受各种规格与速度的流星轰击。所有居住于此或暂时驻留的人类，都必须时刻警惕天空。而想在此永久定居就最好生活在地下深处的强化建筑内。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0116行"
+  },
+  {
+    "key": "market_conditions.csv#ruins_widespread$desc",
+    "original": "Widespread ruins, blips from radiation sources, and the distinctive burred radar-ping of foamed cerametal structures can be found across $market, evidence of a small but concerted colonization effort dating to the late expansion period of the Domain.",
+    "translation": "大量的废墟、辐射源讯号与泡沫陶化金属建筑物的独特雷达回波一起广泛地分布在 $market 上，印证了这里曾进行过的可追溯到人之领开拓纪元末期的规模虽小但运作协调的殖民活动。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0078行"
+  },
+  {
+    "key": "market_conditions.csv#stealth_minefields$desc",
+    "original": "A network of hidden mines provides $market security from meddlesome outsiders. Improves stability.",
+    "translation": "$Market 的感应雷区能保障此地免受某些外人的打扰。稳定性提高。",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0017行"
+  },
+  {
+    "key": "market_conditions.csv#tundra$desc",
+    "original": "Terraforming has brought terran life to $market but the world remains as cold as the deepest of Earth's ice ages. Though millions of square kilometers are covered in glacier, there are also taiga provinces and rolling steppe where warmer conditions prevail.",
+    "translation": "$market 经地貌改造后已经足以让人类居住，但仍处在旧地球的冰河时期水平。虽数百万平方公里都覆盖着冰川，但在温和的地方也存在着针叶林和草原。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0031行"
+  },
+  {
+    "key": "market_conditions.csv#ruins_extensive$desc",
+    "original": "Ruined cities can be found across the surface of $market, spilling from their broken hearts pitted roadways and crumbling magrail lines to the skeletons of factories, aquaponics domes, and comm-towers.",
+    "translation": "破败的城市废墟遍布于 $market 地表。以它们为中心，失修的道路和损坏的磁轨线四向放射出去，连接着只剩下遗骸的制造厂房，水培建筑和通讯塔楼。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0079行"
+  },
+  {
+    "key": "market_conditions.csv#ruins_scattered$name",
+    "original": "Scattered Ruins",
+    "translation": "散落的废墟",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0077行"
+  },
+  {
+    "key": "market_conditions.csv#barren_marginal$name",
+    "original": "Barren-marginal World",
+    "translation": "贫瘠地貌",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0029行"
+  },
+  {
+    "key": "market_conditions.csv#solar_array$desc",
+    "original": "This planet has an array of solar shades or mirrors in orbit, judiciously positioned to bring its surface conditions closer to terran norms.",
+    "translation": "这颗行星的轨道上有一排用于调节光照的恒星罩或恒星镜，它们被合理安置，可以使星球地表条件更接近人类宜居的标准。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0153行"
+  },
+  {
+    "key": "market_conditions.csv#no_atmosphere$name",
+    "original": "No Atmosphere",
+    "translation": "没有大气层",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0094行"
+  },
+  {
+    "key": "market_conditions.csv#population_10$desc",
+    "original": "$MarketName is a dominant population center in the Sector, a rival to Old Earth as home to tens of billions of humans.",
+    "translation": "$MarketName 是星域主要的人口中心，一处可与旧地球比肩的数百亿人类的家园。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0047行"
+  },
+  {
+    "key": "market_conditions.csv#volturnian_lobster_pens$name",
+    "original": "Volturnian Lobster Pens",
+    "translation": "Volturn 蓝龙虾养殖场",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0005行"
+  },
+  {
+    "key": "market_conditions.csv#population_2$desc",
+    "original": "Mere hundreds of people populate $marketName.",
+    "translation": "仅有数百人在 $marketName 定居。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0039行"
+  },
+  {
+    "key": "market_conditions.csv#hydroponics_complex$desc",
+    "original": "Sealed-biosphere agricultural production facilities which allow farming in orbit or on the surface of inhospitable worlds. Requires crew to operate, organic growth medium, and heavy machinery for upkeep.",
+    "translation": "包含密封式生物圈的农业生产设施，可在轨道空间站或荒凉行星的表面上进行农业生产。需要人员进行操作，以及充足的有机物来供给培养基，并由重型机械来维持设施的运转。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0036行"
+  },
+  {
+    "key": "market_conditions.csv#decivilized$desc",
+    "original": "There is no stable ruling polity here. Civilization is collapsed and current population is effectively unknown, though groups of survivors, bandits, and looters can be detected.",
+    "translation": "此地没有稳定的政体，文明早已崩溃。虽然能探测到幸存者、土匪和强盗的群体，但实际人口依然不明。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0011行"
+  },
+  {
+    "key": "market_conditions.csv#closed_immigration$desc",
+    "original": "Officially, immigration to $market is not allowed. In practice, this results in slowing overall immigration significantly, and creating room for certain kinds of criminals to operate.",
+    "translation": "当地政府禁止了一切移民到 $market 的请求。在该政策下，不仅会导致人口增长率显著放缓，也为某些犯罪分子创造了活动空间。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0020行"
+  },
+  {
+    "key": "market_conditions.csv#vice_demand$desc",
+    "original": "The demand for vice goods is unusually high here.",
+    "translation": "这里有着非常高的违禁品需求。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0006行"
+  },
+  {
+    "key": "market_conditions.csv#volatiles_trace$desc",
+    "original": "The trace volatiles found here barely warrant harvesting.",
+    "translation": "此地发现了一些几乎不值得提取的微量挥发物。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0136行"
+  },
+  {
+    "key": "market_conditions.csv#hydroponics_complex$name",
+    "original": "Hydroponics Complex",
+    "translation": "水培复合体",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0036行"
+  },
+  {
+    "key": "market_conditions.csv#cryovolcanic$name",
+    "original": "Cryovolcanic World",
+    "translation": "冰火山地貌",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0032行"
+  },
+  {
+    "key": "market_conditions.csv#vice_demand$name",
+    "original": "Vice Demand",
+    "translation": "违禁品需求",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0006行"
+  },
+  {
+    "key": "market_conditions.csv#ore_abundant$name",
+    "original": "Abundant Ore Deposits",
+    "translation": "大量的矿床",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0124行"
+  },
+  {
+    "key": "market_conditions.csv#very_hot$desc",
+    "original": "Extreme heat necessitates specialized equipment and protocol to safely operate on $market, seriously complicating logistics, life support, and long-term stability of infrastructure.",
+    "translation": "$market 因极高的地表温度而需要专业的设备和协议确保行动安全，对后勤管理、维生设备和基础设施的要求也有所增加。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0087行"
+  },
+  {
+    "key": "market_conditions.csv#population_1$desc",
+    "original": "Only tens of people live here permanently.",
+    "translation": "只有数十人永久居住在这里。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0038行"
+  },
+  {
+    "key": "market_conditions.csv#organized_crime$desc",
+    "original": "Criminal activity produces drugs and harvested organs. Increases demand for hand weapons (by both various crime bosses and local citizenry) and marines (by the local authorities).",
+    "translation": "包括了生产毒品和收割器官。增加对重型武器 (各个犯罪集团的首脑与本地居民) 和陆战队员 (地方政府) 的需求。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0007行"
+  },
+  {
+    "key": "market_conditions.csv#arid$name",
+    "original": "Arid World",
+    "translation": "干旱地貌",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0025行"
+  },
+  {
+    "key": "market_conditions.csv#population_5$name",
+    "original": "Population",
+    "translation": "人口",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0042行"
+  },
+  {
+    "key": "market_conditions.csv#rural_polity$name",
+    "original": "Rural Polity",
+    "translation": "村镇化",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0003行"
+  },
+  {
+    "key": "market_conditions.csv#dense_atmosphere$name",
+    "original": "Dense Atmosphere",
+    "translation": "稠密大气层",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0097行"
+  },
+  {
+    "key": "market_conditions.csv#event_trade_disruption$name",
+    "original": "Trade Disruption",
+    "translation": "贸易中断",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0054行"
+  },
+  {
+    "key": "market_conditions.csv#ore_moderate$name",
+    "original": "Moderate Ore Deposits",
+    "translation": "少量的矿床",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0123行"
+  },
+  {
+    "key": "market_conditions.csv#event_smuggling$desc",
+    "original": "$market is experiencing a high volume of smuggling activity.\n\n- Stability reduced by $smugglingPenalty",
+    "translation": "$market 正经历相当猖獗的走私活动。\n\n- 稳定性降低 $smugglingPenalty",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0055行"
+  },
+  {
+    "key": "market_conditions.csv#free_market$name",
+    "original": "Free Port",
+    "translation": "自由港",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0019行"
+  },
+  {
+    "key": "market_conditions.csv#event_trade_disruption$desc",
+    "original": "Trade fleets going to or from $market are taking significant losses. Piracy or war are most likely to blame.\n\nThe following commodities are affected:\n$commoditySummary",
+    "translation": "进出 $market 的贸易舰队在运输途中遭受巨大损失，罪魁祸首可能是战争或海盗。\n\n受影响的商品包括：\n$commoditySummary",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0054行"
+  },
+  {
+    "key": "market_conditions.csv#event_food_shortage$name",
+    "original": "Food Shortage",
+    "translation": "食品短缺",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0052行"
+  },
+  {
+    "key": "market_conditions.csv#cold$name",
+    "original": "Cold",
+    "translation": "寒冷",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0083行"
+  },
+  {
+    "key": "market_conditions.csv#mild_climate$desc",
+    "original": "The climate of $market is welcoming and docile; a light mist greets each sunrise before retreating into soft clouds that glow appealingly at every sunset.",
+    "translation": "$market 的气候舒适而平和。薄雾消散，回归柔云的怀抱，迎来今日的朝阳；黄昏造访，呼唤夕阳的暖煦，留下明日的期待。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0100行"
+  },
+  {
+    "key": "market_conditions.csv#population_10$name",
+    "original": "Population",
+    "translation": "人口",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0047行"
+  },
+  {
+    "key": "market_conditions.csv#meteor_impacts$name",
+    "original": "Meteor Impacts",
+    "translation": "流星撞击",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0116行"
+  },
+  {
+    "key": "market_conditions.csv#ai_core_admin$desc",
+    "original": "Hidden condition to track when the core becomes un-removable. Does not need an icon.",
+    "translation": "隐藏的特性，用于 AI 核心机制检测。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0058行"
+  },
+  {
+    "key": "market_conditions.csv#inimical_biosphere$desc",
+    "original": "The biosphere of $market is deadly to unprotected human beings. While the conditions are fascinating to biological scientists, surface technicians are hampered by strict quarantine protocols when carrying out routine tasks.",
+    "translation": "$market 的生物圈对无保护措施的人是极其致命的。虽然此地的自然条件令生物学者痴迷，但这些技术人员都必须经过严格检疫手续后才能执行日常任务。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0109行"
+  },
+  {
+    "key": "market_conditions.csv#extreme_weather$name",
+    "original": "Extreme Weather",
+    "translation": "极端气候",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0101行"
+  },
+  {
+    "key": "market_conditions.csv#organized_crime$name",
+    "original": "Organized Crime",
+    "translation": "犯罪组织",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0007行"
+  },
+  {
+    "key": "market_conditions.csv#event_smuggling$name",
+    "original": "Smuggling",
+    "translation": "走私",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0055行"
+  },
+  {
+    "key": "market_conditions.csv#farmland_rich$desc",
+    "original": "The fields of $market promise a rich harvest to reward the farmers that work these fertile lands.",
+    "translation": "$market 的田野将以大丰收的硕果奖励所有在这肥沃土地上耕作的农民们。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0150行"
+  },
+  {
+    "key": "market_conditions.csv#population_3$name",
+    "original": "Population",
+    "translation": "人口",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0040行"
+  },
+  {
+    "key": "market_conditions.csv#hot$name",
+    "original": "Hot",
+    "translation": "炎热",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0086行"
+  },
+  {
+    "key": "market_conditions.csv#organics_common$name",
+    "original": "Common Organics",
+    "translation": "少量的有机物",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0143行"
+  },
+  {
+    "key": "market_conditions.csv#urbanized_polity$name",
+    "original": "Urbanized Polity",
+    "translation": "城市化",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0001行"
+  },
+  {
+    "key": "market_conditions.csv#toxic_atmosphere$desc",
+    "original": "The atmosphere of $market is exceptionally toxic and corrosive, abrading unprotected surfaces and requiring the hermetic sealing of any inhabited spaces.",
+    "translation": "$market 的大气剧毒而充满腐蚀性，侵蚀着毫无保护的地表。任何居住的空间都需要进行气密封装。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0096行"
+  },
+  {
+    "key": "market_conditions.csv#shipping_disruption$name",
+    "original": "Trade Disruption",
+    "translation": "贸易中断",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0067行"
+  },
+  {
+    "key": "market_conditions.csv#farmland_bountiful$desc",
+    "original": "$Market is a veritable Eden; flowering, riotous, lush, and luminous with plant life. Branches hang low, laden with fruit; fields of golden grain shimmer in the herbaceous breeze.",
+    "translation": "$Market 是名副其实的伊甸园。草木缤纷、繁花似锦、枝繁叶茂、郁郁葱葱，俨然是生机盎然的植物乐土。树枝低垂，果实累累，金色的田野在微风中闪闪发光。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0151行"
+  },
+  {
+    "key": "market_conditions.csv#rare_ore_ultrarich$desc",
+    "original": "The transplutonic deposits glimmering with unbelievable density on the sensor-grid evoke portents of a power which could forge mighty war-fleets to burn worlds to ash -- or an eon of splendour and wealth for a polity of crystal towers as existed in the pre-collapse cycles of the Domain.",
+    "translation": "标志着稀有元素的光点以令人难以置信的密度闪耀在传感器网格上，预示着一份伟力：它能铸造燃尽诸多星球的强大舰队，它能创造堪比大崩塌前人之领的伟大时代与无穷财富。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0133行"
+  },
+  {
+    "key": "market_conditions.csv#solar_array$name",
+    "original": "Orbital Solar Array",
+    "translation": "轨道光照阵列",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0153行"
+  },
+  {
+    "key": "market_conditions.csv#ruins_widespread$name",
+    "original": "Widespread Ruins",
+    "translation": "普遍的废墟",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0078行"
+  },
+  {
+    "key": "market_conditions.csv#recent_unrest$name",
+    "original": "Recent Unrest",
+    "translation": "最近动乱",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0053行"
+  },
+  {
+    "key": "market_conditions.csv#urbanized_polity$desc",
+    "original": "A dense and cosmopolitan center of population, people of all walks of life live, work, and die in the stacked hab-complexes, commercial concourses, and modular workshops.",
+    "translation": "人口稠密的民族熔炉。各行各业的人们在城中的高层住宅群，商业中心与各种工业园区中生活，工作直至死亡。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0001行"
+  },
+  {
+    "key": "market_conditions.csv#farmland_poor$desc",
+    "original": "Terran plant life grows only stunted and wearily here. It would require farmers with talent equal to their desperation to make these lands bear fruit.",
+    "translation": "农作物在此地生长缓慢，状况不佳。只有身怀天赋的农民，才能在这些土地里收获一些成果。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0148行"
+  },
+  {
+    "key": "market_conditions.csv#dense_atmosphere$desc",
+    "original": "The surface of $market is shrouded in a thick atmosphere, turbulent vortices at its crown and a cloying soup at its lowest foothold. Sensors are impaired, and operations must be made with care.",
+    "translation": "$market 的表面被厚重的大气层所覆盖，大气的外层盘踞着汹涌的涡流，而底层则搅成一团，仿佛一锅倒人胃口的汤。传感器在这里会受到干扰，因此执行任务时需要多加小心。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0097行"
+  },
+  {
+    "key": "market_conditions.csv#arid$desc",
+    "original": "$Market is covered by vast, dry plains and wastes. Water is uncommon and large-scale farming is difficult.",
+    "translation": "$Market 被辽阔而干燥的平原与荒地覆盖着。由于水资源非常稀缺，因此想要大规模发展农业将非常困难。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0025行"
+  },
+  {
+    "key": "market_conditions.csv#closed_immigration$name",
+    "original": "Closed Immigration",
+    "translation": "禁止移民",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0020行"
+  },
+  {
+    "key": "market_conditions.csv#ore_rich$name",
+    "original": "Rich Ore Deposits",
+    "translation": "丰富的矿床",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0125行"
+  },
+  {
+    "key": "market_conditions.csv#desert$name",
+    "original": "Desert World",
+    "translation": "沙漠地貌",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0024行"
+  },
+  {
+    "key": "market_conditions.csv#poor_light$desc",
+    "original": "The light of $market's primary only provides feeble illumination and energy to this world.",
+    "translation": "因距离较远，使得恒星只能为 $market 提供微弱的照明与能量。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0113行"
+  },
+  {
+    "key": "market_conditions.csv#ore_ultrarich$desc",
+    "original": "Mineral wealth exists on $market, Midas-touched beyond the wildest fantasies of the legendary mining megacorps of the Domain era.",
+    "translation": "$Market 的矿产资源存在于此地寸土寸金的地表之下，其富饶程度甚至超过 人之领 的矿业巨头的疯狂幻想。",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0126行"
+  },
+  {
+    "key": "market_conditions.csv#frontier$desc",
+    "original": "Far from the cosmopolitan centers of population, mere survival, self-reliance, and only-the-necessities are the rules of the frontier. Increased demand for weapons and supplies, reduced demand for luxury goods.",
+    "translation": "远离人口聚集地，仅为生存，自力更生，拥有生活必需品即可。武器与日用品需求增加，奢侈品需求降低 - 活下去才是边境生存的首要法则。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0008行"
+  },
+  {
+    "key": "market_conditions.csv#rogue_ai_core$desc",
+    "original": "There is a rogue AI core operating on or near $market. Its long-term plans and ambitions, beyond its own survival, are unknown.\n\nAt a minimum, the need to be on guard against its possible actions makes day-to-day operations less efficient and creates fertile ground for alarming rumours.",
+    "translation": "$Market 内部或者附近正运行着一个失控且抱有恶意的 AI 核心。除了保全自身之外，它有何种长期计划与抱负尚不得而知。\n\n至少，因对它可能采取的行动而随时保持着的警惕心，也让日常行动的效率降低，并为令人担忧的谣言创造了肥沃的土壤。",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0057行"
+  },
+  {
+    "key": "market_conditions.csv#thin_atmosphere$desc",
+    "original": "A rarefied atmosphere clings determinedly to $market's surface.",
+    "translation": "一个稀薄的大气层依附于 $market 的表面。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0095行"
+  },
+  {
+    "key": "market_conditions.csv#ore_ultrarich$name",
+    "original": "Ultrarich Ore Deposits",
+    "translation": "富饶的矿床",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0126行"
+  },
+  {
+    "key": "market_conditions.csv#irradiated$name",
+    "original": "Irradiated",
+    "translation": "辐射",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0106行"
+  },
+  {
+    "key": "market_conditions.csv#farmland_adequate$name",
+    "original": "Adequate Farmland",
+    "translation": "充足的耕地",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0149行"
+  },
+  {
+    "key": "market_conditions.csv#inimical_biosphere$name",
+    "original": "Inimical Biosphere",
+    "translation": "敌意生物圈",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0109行"
+  },
+  {
+    "key": "market_conditions.csv#regional_capital$name",
+    "original": "Regional Capital",
+    "translation": "地区首府",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0018行"
+  },
+  {
+    "key": "market_conditions.csv#rare_ore_abundant$desc",
+    "original": "Abundant transplutonic deposits lay within the crust of $market, enough to fuel the ambitions of any worthwhile warlord or magnate.",
+    "translation": "丰富的稀有元素存在于 $market 的地壳内，其潜在的经济价值足以刺激到一些军阀或巨头的野心。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0131行"
+  },
+  {
+    "key": "market_conditions.csv#pather_cells$name",
+    "original": "Luddic Path Cells",
+    "translation": "左径狂信徒",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0064行"
+  },
+  {
+    "key": "market_conditions.csv#volturnian_lobster_pens$desc",
+    "original": "A mix of several Old Earth species and a little imagination produced this creature which grows wild in the crushing depths of Volturn's sea-floor. The flavor is said to be exceptional.",
+    "translation": "混合了多种旧地球物种和一点想象力而创造出的生物，它们主要栖息在 Volturn 海底深处的破碎海床上，据说味道非常独特。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0005行"
+  },
+  {
+    "key": "market_conditions.csv#thin_atmosphere$name",
+    "original": "Thin Atmosphere",
+    "translation": "稀薄大气层",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0095行"
+  },
+  {
+    "key": "market_conditions.csv#population_6$name",
+    "original": "Population",
+    "translation": "人口",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0043行"
+  },
+  {
+    "key": "market_conditions.csv#water_surface$desc",
+    "original": "This is an ocean world with no substantial solid surface to land, walk, or build upon. Operations are complicated by the need for specialized training and equipment.",
+    "translation": "这是一个海洋世界，没有足够面积的固态地表可供降落、行走或进行建设。对专业的培训与设备的需求让在此的一切行动变得复杂。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0111行"
+  },
+  {
+    "key": "market_conditions.csv#hostile_activity$name",
+    "original": "Hostile Activity",
+    "translation": "敌对活动",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0060行"
+  },
+  {
+    "key": "market_conditions.csv#piracy_respite$name",
+    "original": "Piracy Respite",
+    "translation": "海盗活动减缓",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0061行"
+  },
+  {
+    "key": "market_conditions.csv#piracy_respite$desc",
+    "original": "This colony is experiencing a respite from the depredations of piracy otherwise so common in the Sector.",
+    "translation": "这个殖民地正经历着一段海盗掠夺活动较星域常规水平有所减缓的时期。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0061行"
+  },
+  {
+    "key": "market_conditions.csv#blockaded$name",
+    "original": "Blockaded",
+    "translation": "遭到封锁",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0063行"
+  },
+  {
+    "key": "market_conditions.csv#blockaded$desc",
+    "original": "The system that this colony is in is experiencing a blockade, and regular trade shipping is suffering from harassment or worse. The effects will continue until the blockading force leaves or is soundly defeated.",
+    "translation": "该殖民地所在的星系目前正遭到封锁，常规的贸易货运面临着骚扰或其他更糟糕的影响。该效果将一直持续，直到封锁部队主动撤离或彻底被击败。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0063行"
+  },
+  {
+    "key": "market_conditions.csv#established_polity$name",
+    "original": "Established Polity",
+    "translation": "成型政体",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nmarket_conditions.csv第0062行"
+  }
 ]

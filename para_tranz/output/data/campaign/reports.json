@@ -2221,7 +2221,7 @@
   {
     "key": "reports.csv#('sindria_terrorists', 'likely', '', 'sindrian_diktat_internal')$summary",
     "original": "Intelligence indicates that terrorists have obtained a cache of illegal weapons and intend to use them against government targets.",
-    "translation": "情报显示，恐怖分子获得了一批非法武器，并计划使用这些武器对付政府的目标",
+    "translation": "情报显示，恐怖分子获取了一批非法武器，并计划使用这些武器对付政府的目标。",
     "stage": 1,
     "context": "reports.csv第0158行\n[本行原始数据]\n{'event_type': 'sindria_terrorists',\n 'event_stage': 'likely',\n 'p': '',\n 'target_rel': '',\n 'channels': 'sindrian_diktat_internal',\n 'subject': 'Possible terrorist attacks on Sindria',\n 'summary': 'Intelligence indicates that terrorists have obtained a cache of '\n            'illegal weapons and intend to use them against government '\n            'targets.',\n 'assessment': 'Likely decreased production on Sindria.',\n 'image': '',\n 'icon': '',\n 'tags': '',\n 'sound_id': '',\n 'implementation notes': 'precursor to terrorist attacks'}"
   },

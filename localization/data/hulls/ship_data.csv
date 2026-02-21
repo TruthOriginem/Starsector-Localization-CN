@@ -2,12 +2,12 @@ name,id,designation,tech/manufacturer,system id,fleet pts,hitpoints,armor rating
 PD 无人机,drone_pd,,,,,30,10,100,,50,,,200,250,250,180,360,5,NONE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Not available (drone),,,0,,,,0
 PD 无人机,drone_pd_midline,,,,,30,10,100,,50,,,200,250,250,180,360,5,NONE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Not available (drone),,,0,,,,1
 冥蜂,drone_borer,,,,,200,25,200,,100,,,100,200,200,180,360,5,NONE,,,,,,,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,,,,1.5
-攻击无人机,drone_assault,,,,,300,100,500,,100,,,150,200,200,90,180,5,OMNI,,120,0.25,1,,,,,,,,,,,,,,,,,,,,,,,,,Not available (drone),,,0,,,,2
+突击无人机,drone_assault,,,,,300,100,500,,100,,,150,200,200,90,180,5,OMNI,,120,0.25,1,,,,,,,,,,,,,,,,,,,,,,,,,Not available (drone),,,0,,,,2
 感应无人机,drone_sensor,,,,,30,10,400,,100,,,100,150,150,120,240,5,NONE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Not available (drone),,,0,,,,3
 终结者,drone_terminator,,,,,500,100,200,,50,,,300,400,400,200,400,5,NONE,,360,0,1,,,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,,,,4
-城齿,merlon,Drone,,,,3000,400,1600,,400,50,,250,400,300,60,90,200,NONE,,0,0,0,,,0,0,,,,,,,,,,,,,,,,,,,UNBOARDABLE,no_dealer,Not available (drone),,,0.4,2,2,,5
-石像鬼,gargoyle,Drone,,fortressshield,,1600,250,3000,3750,300,50,,250,400,300,60,90,200,OMNI,,360,0,0.6,,,0,0,,,,,,,,,,,,,,,,,,,UNBOARDABLE,no_dealer,Not available (drone),,,0.4,2,2,,6
-三角堡,ravelin,Drone,,forgevats_station,,4000,500,2400,,500,90,,250,400,300,60,90,200,FRONT,,120,0,1,,,0,0,,,,,,,,,,,,,,,,,,,UNBOARDABLE,no_dealer,Not available (drone),,,0.4,2,2,,7
+城齿,merlon,无人机,,,,3000,400,1600,,400,50,,250,400,300,60,90,200,NONE,,0,0,0,,,0,0,,,,,,,,,,,,,,,,,,,UNBOARDABLE,no_dealer,Not available (drone),,,0.4,2,2,,5
+石像鬼,gargoyle,无人机,,fortressshield,,1600,250,3000,3750,300,50,,250,400,300,60,90,200,OMNI,,360,0,0.6,,,0,0,,,,,,,,,,,,,,,,,,,UNBOARDABLE,no_dealer,Not available (drone),,,0.4,2,2,,6
+三角堡,ravelin,无人机,,forgevats_station,,4000,500,2400,,500,90,,250,400,300,60,90,200,FRONT,,120,0,1,,,0,0,,,,,,,,,,,,,,,,,,,UNBOARDABLE,no_dealer,Not available (drone),,,0.4,2,2,,7
 DEM 无人机,dem_drone,,,,,10000000,0,100000,,100000,,,100,100,100,100,100,100,NONE,,,,,,,,,,,,,,,,,,,,,,,,,,,,"restricted, no_sell",,,,0,,,,8
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 利爪,talon,,主宰纪元,,,200,25,400,,100,0,,325,400,300,150,300,10,NONE,,0,0,0,,,1,1,,,,,,,,,,,,,,,,,,,,,,,,0,,,,100
@@ -31,9 +31,9 @@ DEM 无人机,dem_drone,,,,,10000000,0,100000,,100000,,,100,100,100,100,100,100,
 眼镜蛇,cobra,,扩展纪元,,,400,25,400,,50,0,,160,200,200,30,120,40,OMNI,,120,0,1,,,4,4,,,,,,,,,,,,,,,,,,,,,,,,0,,,,118
 希腊矛,sarissa,,主宰纪元,canister_flak,,750,200,180,,100,0,,140,250,200,100,200,40,NONE,,0,0,0,,,3,3,,,,,,,,,,,,,,,,,,,,,,,,0,,,,118.5
 ,aspect,位向,未知,,,600,300,1000,,200,0,,350,350,350,120,360,50,NONE,,0,0,0,,,0,0,,,,,,,,,,,,,,,,,,,HIDE_IN_CODEX,,,,,0,,,,119
-,attack_swarm,Swarm,Threat,,,2000,1,1000,,200,0,,250,400,400,150,300,10,NONE,,0,0,0,,,0,0,,,,,,,,,,,,,,,,,,,,"threat_swarm_ai, swarm_fighter, threat",,,,0,,,,120
-,shrouded_vortex,Shrouded Vortex,Shrouded Dweller,shrouded_vortex,,5000,1,0,,0,1000,,200,100,100,720,90,300,NONE,,0,0,0.7,,,0,0,,,,,,,,,,,,,,,,,,,,"dweller, dweller_vortex, no_armor_schematic, codex_unlockable, show_in_codex_as_ship, monster, module_hull_bar_only, limited_tooltip_if_locked, no_battle_salvage",Not available,shrouded_vortex_Churning,,0,,,,121
-,shrouded_ejecta,Shrouded Ejecta,Shrouded Dweller,,,8000,1,0,,0,1000,,300,100,100,720,90,300,NONE,,0,0,0.7,,,0,0,,,,,,,,,,,,,,,,,,,,"dweller, dweller_ejecta, no_armor_schematic, monster, module_hull_bar_only, limited_tooltip_if_locked, no_battle_salvage",Not available,shrouded_ejecta_Churning,,0,,,,122
+,attack_swarm,集群,威胁,,,2000,1,1000,,200,0,,250,400,400,150,300,10,NONE,,0,0,0,,,0,0,,,,,,,,,,,,,,,,,,,,"threat_swarm_ai, swarm_fighter, threat",,,,0,,,,120
+,shrouded_vortex,渊幕涡流,渊幕住民,shrouded_vortex,,5000,1,0,,0,1000,,200,100,100,720,90,300,NONE,,0,0,0.7,,,0,0,,,,,,,,,,,,,,,,,,,,"dweller, dweller_vortex, no_armor_schematic, codex_unlockable, show_in_codex_as_ship, monster, module_hull_bar_only, limited_tooltip_if_locked, no_battle_salvage",Not available,shrouded_vortex_Churning,,0,,,,121
+,shrouded_ejecta,渊幕飞沫,渊幕住民,,,8000,1,0,,0,1000,,300,100,100,720,90,300,NONE,,0,0,0.7,,,0,0,,,,,,,,,,,,,,,,,,,,"dweller, dweller_ejecta, no_armor_schematic, monster, module_hull_bar_only, limited_tooltip_if_locked, no_battle_salvage",Not available,shrouded_ejecta_Churning,,0,,,,122
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 野狼,wolf,护卫舰,扩展纪元,displacer,5,1500,150,2250,1875,150,55,,150,130,100,60,120,200,FRONT,,150,0.4,0.7,,,15,30,50,20,1,20,10,12000,10,20,180,0.25,5,5,,,,,,,,"hightech_bp, merc, ind",,,,0.5,2,2,,200
 猎犬,hound,武装商舰,主宰纪元,flarelauncher,3,2000,400,750,1250,100,38,,180,175,100,90,120,200,NONE,,0,0,0,,,10,40,75,30,1,30,10,7500,5,10,240,0.25,3,3,25,75,,,,,,"base_bp, ind",,,,0.4,2,2,,201
@@ -67,7 +67,7 @@ DEM 无人机,dem_drone,,,,,10000000,0,100000,,100000,,,100,100,100,100,100,100,
 小精灵,gremlin,相位护卫舰,主宰纪元,flarelauncher_fighter,6,2500,450,1200,2000,160,35,,90,120,90,45,90,200,PHASE,phasecloak,90,,,0.06,0.06,4,10,10,20,1,20,9,26000,10,20,180,0.25,6,6,,,,,,,,base_bp,,,,0.5,2,2,,228
 ,shard_left,左旋,未知,microburn_omega,12,2000,500,4000,5000,400,50,,200,250,200,120,360,200,OMNI,,150,0,0.5,,,0,0,10,50,1,50,12,100000,20,5,,,6,6,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","omega, no_autofit, restricted",,,,0.5,2,2,,229
 ,shard_right,右旋,未知,microburn_omega,12,2000,500,4000,5000,400,50,,200,250,200,120,360,200,OMNI,,150,0,0.5,,,0,0,10,50,1,50,12,100000,20,5,,,6,6,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","omega, no_autofit, restricted",,,,0.5,2,2,,230
-,skirmish_unit,Skirmish Unit,Threat,displacer_threat,7,3000,600,2500,2500,200,1000,,130,150,100,60,90,250,FRONT,,150,0.4,1.2,,,0,0,10,50,0.25,200,10,10000,100,10,,,4,4,,,,,,,UNBOARDABLE,"threat, threat_combat, threat_skirmish, codex_unlockable, limited_tooltip_if_locked",,,,0.5,2,2,,231
+,skirmish_unit,游击单元,威胁,displacer_threat,7,3000,600,2500,2500,200,1000,,130,150,100,60,90,250,FRONT,,150,0.4,1.2,,,0,0,10,50,0.25,200,10,10000,100,10,,,4,4,,,,,,,UNBOARDABLE,"threat, threat_combat, threat_skirmish, codex_unlockable, limited_tooltip_if_locked",,,,0.5,2,2,,231
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 锤头,hammerhead,驱逐舰,核心纪元,ammofeed,10,5000,500,4200,4167,250,95,,90,60,40,30,60,400,FRONT,,300,0.4,0.8,,,50,100,100,60,2,30,9,40000,5,12,360,0.25,10,10,,,,,,,,"midline_bp, merc, ind",,,,0.5,2,3,,300
 破阵,sunder,驱逐舰,核心纪元,highenergyfocus,10,4000,250,7500,8333,500,105,,90,80,60,30,30,350,FRONT,,300,0.4,1.2,,,50,70,80,50,2,25,9,45000,5,15,300,0.25,11,11,,,,,,,,"midline_bp, merc, ind",,,,0.5,2,3,,301
@@ -93,9 +93,9 @@ DEM 无人机,dem_drone,,,,,10000000,0,100000,,100000,,,100,100,100,100,100,100,
 赶牛人,drover,轻型航母,核心纪元,flarelauncher_active,11,4250,400,3000,2813,225,80,2,75,60,50,25,25,450,FRONT,,300,0.4,0.8,,,90,150,40,40,2,20,9,40000,5,15,360,0.25,12,12,,,,,,,"CARRIER, COMBAT","midline_bp, merc, ind",,,,0.5,2,3,,318
 伯劳鸟,shrike,轻型驱逐舰,扩展纪元,microburn,9,2800,250,5400,5833,350,85,,100,100,80,35,80,250,OMNI,,150,0.3,0.7,,,20,40,40,60,2,30,10,20000,5,15,300,0.25,8,8,,,,,,,,"hightech_bp, merc, ind",,,,0.7,2,3,,319
 ,facet,构面,未知,damper_omega,20,5000,800,10000,13333,800,140,,120,150,150,60,180,400,OMNI,,150,0,0.5,,,0,0,20,100,2,50,11,200000,20,5,,,12,12,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","omega, no_autofit, restricted",,,,0.5,2,3,,320
-,overseer_unit,Overseer Unit,Threat,energy_lash,25,5000,900,5000,5000,400,1000,,90,90,70,30,60,350,OMNI,,150,0.4,1.2,,,0,0,40,100,0.5,200,9,100000,100,10,,,8,8,,,,,,,UNBOARDABLE,"threat, threat_overseer, codex_unlockable, limited_tooltip_if_locked",,,,0.5,2,3,,321
-,assault_unit,Assault Unit,Threat,incursion_mode,12,7000,1000,6000,5000,400,1000,,90,90,80,30,60,500,FRONT,,150,0.4,1.2,,,0,0,80,100,0.5,200,9,80000,100,10,,,10,10,,,,,,,UNBOARDABLE,"threat, threat_aggressive, threat_combat, codex_unlockable, limited_tooltip_if_locked",,,,0.5,2,2,,322
-,shrouded_tendril,Shrouded Tendril,Shrouded Dweller,convulsive_lunge,20,15000,1,6000,6250,500,1000,,120,240,240,50,100,500,OMNI,,180,0,0.7,,,0,0,0,0,1,0,5,0,100,1,,,10,10,,,,,,,UNBOARDABLE,"dweller, dweller_reckless, no_armor_schematic, codex_unlockable, monster, limited_tooltip_if_locked, no_battle_salvage",Not available,shrouded_tendril_Roiling,,0,,,,323
+,overseer_unit,督战单元,威胁,energy_lash,25,5000,900,5000,5000,400,1000,,90,90,70,30,60,350,OMNI,,150,0.4,1.2,,,0,0,40,100,0.5,200,9,100000,100,10,,,8,8,,,,,,,UNBOARDABLE,"threat, threat_overseer, codex_unlockable, limited_tooltip_if_locked",,,,0.5,2,3,,321
+,assault_unit,突击单元,威胁,incursion_mode,12,7000,1000,6000,5000,400,1000,,90,90,80,30,60,500,FRONT,,150,0.4,1.2,,,0,0,80,100,0.5,200,9,80000,100,10,,,10,10,,,,,,,UNBOARDABLE,"threat, threat_aggressive, threat_combat, codex_unlockable, limited_tooltip_if_locked",,,,0.5,2,2,,322
+,shrouded_tendril,渊幕卷须,渊幕住民,convulsive_lunge,20,15000,1,6000,6250,500,1000,,120,240,240,50,100,500,OMNI,,180,0,0.7,,,0,0,0,0,1,0,5,0,100,1,,,10,10,,,,,,,UNBOARDABLE,"dweller, dweller_reckless, no_armor_schematic, codex_unlockable, monster, limited_tooltip_if_locked, no_battle_salvage",Not available,shrouded_tendril_Roiling,,0,,,,323
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 猎鹰,falcon,轻型巡洋舰,核心纪元,maneuveringjets,12,6000,750,7000,8000,400,125,,80,70,50,20,25,650,FRONT,,270,0.4,0.8,,,100,180,120,100,3,33,9,80000,4,12,480,0.25,14,14,,,,,,,,"midline_bp, merc, ind",,,,0.5,2,3,,400
 雄鹰,eagle,巡洋舰,核心纪元,maneuveringjets,14,8000,1000,11000,14000,700,155,,60,40,30,15,20,1200,FRONT,,270,0.4,0.8,,,150,250,150,100,3,33,8,100000,3,12,480,0.25,20,20,,,,,,,,"rare_bp, merc, ind",,,,0.5,2,3,,401
@@ -119,15 +119,15 @@ DEM 无人机,dem_drone,,,,,10000000,0,100000,,100000,,,100,100,100,100,100,100,
 辉煌,brilliant,无人巡洋舰,余辉,microburn,16,8000,900,10000,12000,600,140,,60,35,30,20,25,2000,OMNI,,270,0.4,0.6,,,0,0,120,90,3,30,9,140000,5,15,540,0.25,25,25,,,,,,,UNBOARDABLE,"remnant, auto_rec, codex_unlockable",,,,0.5,2,3,,413
 折光,apex,重型无人巡洋舰,余辉,drone_strike,18,12000,1100,12000,11000,550,150,2,50,35,30,12,20,3000,FRONT,,180,0.4,0.6,,,0,0,120,90,3,30,9,170000,5,15,540,0.25,30,30,,,,,,,UNBOARDABLE,"remnant, auto_rec, codex_unlockable",,,,0.5,2,3,,414
 狂怒,fury,轻型巡洋舰,扩展纪元,microburn,14,5000,600,9000,12000,600,130,,95,100,80,30,60,1650,OMNI,,180,0.3,0.7,,,60,120,60,80,3,27,9,115000,4,12,420,0.25,20,20,,,,,,,,"hightech_bp, merc, ind",,,,0.7,2,3,,415
-Anubis,anubis,Experimental Cruiser,High Tech,temporalshell,14,7000,700,12000,14000,700,170,1,80,100,90,30,60,1500,OMNI,,210,0.3,0.6,,,50,100,100,80,3,27,8,100000,4,12,420,0.25,18,18,,,,,,,,"rare_bp, merc",,,,0.6,2,3,,415.1
+阿努比斯,anubis,实验性巡洋舰,扩展纪元,temporalshell,14,7000,700,12000,14000,700,170,1,80,100,90,30,60,1500,OMNI,,210,0.3,0.6,,,50,100,100,80,3,27,8,100000,4,12,420,0.25,18,18,,,,,,,,"rare_bp, merc",,,,0.6,2,3,,415.1
 ,tesseract,超体,未知,temporalshell,40,10000,1500,15000,25000,1500,180,,100,120,120,45,135,2000,OMNI,,150,0,0.5,,,0,0,40,150,3,50,11,500000,20,5,,,24,24,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","omega, no_autofit, restricted, no_derelict",,,,0.5,2,3,,416
-,hive_unit,Hive Unit,Threat,fragment_volley,20,16000,1600,10000,8333,500,1000,,70,50,40,15,20,2000,FRONT,,210,0.4,1.2,,,0,0,150,150,0.75,200,10,200000,100,10,,,22,22,,,,,,,UNBOARDABLE,"threat, threat_timid, threat_hive, codex_unlockable, limited_tooltip_if_locked",,,,0.5,2,3,,417
-,standoff_unit,Line Unit,Threat,extraction_protocol,18,18000,1700,12000,11667,700,1000,,70,70,60,15,30,500,FRONT,,150,0.4,1.2,,,0,0,120,150,0.75,200,9,150000,100,10,,,20,20,,,,,,,UNBOARDABLE,"threat, threat_combat, codex_unlockable, limited_tooltip_if_locked",,,,0.5,2,3,,418
-,shrouded_eye,Shrouded Eye,Shrouded Dweller,darkened_gaze,40,25000,1,20000,16667,1000,1000,,100,200,200,40,80,1500,OMNI,,360,0,0.7,,,0,0,0,0,1,0,5,0,100,1,,,20,20,,,,,,,"COMBAT, UNBOARDABLE","dweller, dweller_reckless, no_armor_schematic, codex_unlockable, monster, limited_tooltip_if_locked, no_battle_salvage",Not available,shrouded_eye_Darkened,,0,,,,323
-,shrouded_maelstrom,Shrouded Maelstrom,Shrouded Dweller,tenebrous_expulsion,40,40000,1,15000,16667,1000,1000,,50,100,100,30,60,2500,FRONT,,150,0,0.7,,,0,0,0,0,1,0,5,0,100,1,,,20,20,,,,,,,UNBOARDABLE,"dweller, dweller_timid, no_armor_schematic, codex_unlockable, monster, limited_tooltip_if_locked, no_battle_salvage",Not available,shrouded_maelstrom_Menacing,,0,,,,324
+,hive_unit,巢群单元,威胁,fragment_volley,20,16000,1600,10000,8333,500,1000,,70,50,40,15,20,2000,FRONT,,210,0.4,1.2,,,0,0,150,150,0.75,200,10,200000,100,10,,,22,22,,,,,,,UNBOARDABLE,"threat, threat_timid, threat_hive, codex_unlockable, limited_tooltip_if_locked",,,,0.5,2,3,,417
+,standoff_unit,线列单元,威胁,extraction_protocol,18,18000,1700,12000,11667,700,1000,,70,70,60,15,30,500,FRONT,,150,0.4,1.2,,,0,0,120,150,0.75,200,9,150000,100,10,,,20,20,,,,,,,UNBOARDABLE,"threat, threat_combat, codex_unlockable, limited_tooltip_if_locked",,,,0.5,2,3,,418
+,shrouded_eye,渊幕之眼,渊幕住民,darkened_gaze,40,25000,1,20000,16667,1000,1000,,100,200,200,40,80,1500,OMNI,,360,0,0.7,,,0,0,0,0,1,0,5,0,100,1,,,20,20,,,,,,,"COMBAT, UNBOARDABLE","dweller, dweller_reckless, no_armor_schematic, codex_unlockable, monster, limited_tooltip_if_locked, no_battle_salvage",Not available,shrouded_eye_Darkened,,0,,,,323
+,shrouded_maelstrom,渊幕漩涡,渊幕住民,tenebrous_expulsion,40,40000,1,15000,16667,1000,1000,,50,100,100,30,60,2500,FRONT,,150,0,0.7,,,0,0,0,0,1,0,5,0,100,1,,,20,20,,,,,,,UNBOARDABLE,"dweller, dweller_timid, no_armor_schematic, codex_unlockable, monster, limited_tooltip_if_locked, no_battle_salvage",Not available,shrouded_maelstrom_Menacing,,0,,,,324
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 攻势,onslaught,战列舰,主宰纪元,burndrive,28,20000,1750,17000,15000,600,360,,25,10,10,4,4,3500,FRONT,,180,0.4,1,,,750,1500,300,400,15,27,7,350000,3,12,720,0.25,40,40,,,,,,,,"rare_bp, merc",,,,0.4,2,4,,500
-Onslaught Mk.I,onslaught_mk1,Battleship,Domain Restricted,combat_burn,28,30000,1200,15000,12500,500,300,,20,8,8,4,4,4000,NONE,,0,0,0,,,0,0,700,800,10,80,7,300000,5,10,,,50,50,,,,,,,SHIP_WITH_MODULES,"no_auto_penalty, codex_unlockable, no_dealer",,,,0.4,2,4,,500.5
+攻势 Mk.I,onslaught_mk1,战列舰,人之领管制科技,combat_burn,28,30000,1200,15000,12500,500,300,,20,8,8,4,4,4000,NONE,,0,0,0,,,0,0,700,800,10,80,7,300000,5,10,,,50,50,,,,,,,SHIP_WITH_MODULES,"no_auto_penalty, codex_unlockable, no_dealer",,,,0.4,2,4,,500.5
 星体,astral,航母,扩展纪元,recalldevice,27,10000,900,12000,15000,600,270,6,30,15,10,7,4,3000,FRONT,,360,0.7,0.7,,,450,1000,250,200,10,20,7,400000,3,15,600,0.25,50,50,,,,,,,CARRIER,"rare_bp, merc",,,,0.6,2,4,,501
 阿特拉斯,atlas,超级货舰,主宰纪元,flarelauncher,7,8000,250,4000,5000,200,65,,25,5,2,3,2,4000,OMNI,,45,0.5,1,,,50,100,2000,400,6,67,6,75000,2,20,720,0.25,10,10,200,333,,,,,"CIVILIAN, FREIGHTER","rare_bp, merc, ind",,,,0.7,2,4,,502
 阿特拉斯 Mk.II,atlas2,改装超级货舰,海盗,ammofeed,18,9000,750,8000,8750,350,220,,30,8,4,4,2,4000,OMNI,,60,0.5,1,,,250,300,200,400,10,40,7,150000,2,20,720,0.25,24,24,,,,,,,,rare_bp,,,,0.7,2,4,,502.5
@@ -144,23 +144,23 @@ Onslaught Mk.I,onslaught_mk1,Battleship,Domain Restricted,combat_burn,28,30000,1
 天马,pegasus,战列舰,核心纪元,fastmissileracks,30,17000,1500,14000,12500,500,365,,35,35,25,6,6,3000,FRONT,,270,0.4,0.8,,,500,600,400,300,10,30,7,400000,4,12,720,0.25,50,50,,,,,,,,"rare_bp, merc",,,,0.5,2,4,,512
 惩戒,retribution,战列巡洋舰,主宰纪元,orion_device,20,10000,800,15000,17500,700,300,,75,50,40,10,10,2500,OMNI,,60,0.2,1.2,,,300,400,200,300,10,30,8,200000,3,12,600,0.25,35,35,,,,,,,,rare_bp,,,,0.5,2,4,,513
 新星,nova,无人战列巡洋舰,余辉,nova_burst,24,12000,1000,18000,25000,1000,280,,80,70,50,12,16,3000,FRONT,,90,0.4,0.6,,,0,0,150,300,10,30,9,350000,3,15,600,0.25,40,40,,,,,,,UNBOARDABLE,"remnant, auto_rec, codex_unlockable",,,,0.5,2,4,,514
-,fabricator_unit,Fabricator Unit,Threat,construction_swarm,600,30000,2000,20000,25000,1000,1000,,40,20,15,6,9,10000,OMNI,,150,0.4,1.2,,,0,0,2000,1000,1,1000,8,500000,1000,10,,,20,20,,,,,,,UNBOARDABLE,"threat, threat_fabricator, codex_unlockable, limited_tooltip_if_locked, full_cr_recovery",,,,0.5,3,4,,515
-,shrouded_maw,Shrouded Maw,Shrouded Dweller,convulsive_lunge,200,100000,1,40000,66667,4000,1000,,70,150,150,15,15,10000,FRONT,,90,0,0.7,,,0,0,0,0,1,0,5,0,100,1,,,40,40,,,,,,,"COMBAT, UNBOARDABLE","dweller, dweller_reckless, no_armor_schematic, codex_unlockable, monster, center_diamond_on_hull_center, limited_tooltip_if_locked, no_battle_salvage",Not available,shrouded_maw_Ravenous,,0,,,,516
+,fabricator_unit,仿织单元,威胁,construction_swarm,600,30000,2000,20000,25000,1000,1000,,40,20,15,6,9,10000,OMNI,,150,0.4,1.2,,,0,0,2000,1000,1,1000,8,500000,1000,10,,,20,20,,,,,,,UNBOARDABLE,"threat, threat_fabricator, codex_unlockable, limited_tooltip_if_locked, full_cr_recovery",,,,0.5,3,4,,515
+,shrouded_maw,渊幕巨口,渊幕住民,convulsive_lunge,200,100000,1,40000,66667,4000,1000,,70,150,150,15,15,10000,FRONT,,90,0,0.7,,,0,0,0,0,1,0,5,0,100,1,,,40,40,,,,,,,"COMBAT, UNBOARDABLE","dweller, dweller_reckless, no_armor_schematic, codex_unlockable, monster, center_diamond_on_hull_center, limited_tooltip_if_locked, no_battle_salvage",Not available,shrouded_maw_Ravenous,,0,,,,516
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 穿梭舱,shuttlepod,载员舱,,,1,1000,100,150,,50,0,,400,800,500,150,450,100,NONE,,0,0,0,,,1,1,1,1,1,1,,1000,,,,,,,,,,,,,,,,,,,,,,1000
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Moduleship Test,station_small,小型轨道站,Midline,drone_pd,30,10000,1500,1000,2500,100,0,,30,200,200,5,5,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,50,50,,,,,,,"SHIP_WITH_MODULES, HIDE_IN_CODEX",,,,,0,,,,2000
-,station_derelict_survey_mothership,人之领勘探母舰,Explorarium,,30,40000,1600,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,50,50,,,,,,,"STATION, UNBOARDABLE","derelict, codex_unlockable",,,,0,,,,2001
-轨道站,station1,轨道站,Low Tech,,100,40000,1600,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,50,50,,,,,,,"STATION, UNBOARDABLE",,,,,0,,,,2002
-轨道站,station1_midline,轨道站,Midline,,100,40000,1600,1000,2500,100,0,,30,200,200,7,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,50,50,,,,,,,"STATION, UNBOARDABLE",,,,,0,,,,2002.1
-轨道站,station1_hightech,轨道站,High Tech,,100,40000,1600,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,50,50,,,,,,,"STATION, UNBOARDABLE",,,,,0,,,,2002.2
-作战基地,station2,作战基地,Low Tech,,200,80000,2000,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,75,50,,,,,,,"STATION, UNBOARDABLE",codex_unlockable,,,,0,,,,2003
-作战基地,station2_midline,作战基地,Midline,,200,80000,2000,1000,2500,100,0,,30,200,200,7,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,75,50,,,,,,,"STATION, UNBOARDABLE",codex_unlockable,,,,0,,,,2003.5
-作战基地,station2_hightech,作战基地,High Tech,,200,80000,2000,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,75,50,,,,,,,"STATION, UNBOARDABLE",codex_unlockable,,,,0,,,,2003.5
-作战基地,station3,星际要塞,Low Tech,drone_station_lt,400,160000,2400,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,100,50,,,,,,,"STATION, UNBOARDABLE",codex_unlockable,,,,0,,,,2004
-作战基地,station3_midline,星际要塞,Midline,drone_station_mid,400,160000,2400,1000,2500,100,0,,30,200,200,7,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,100,50,,,,,,,"STATION, UNBOARDABLE",codex_unlockable,,,,0,,,,2004.5
-作战基地,station3_hightech,星际要塞,High Tech,drone_station_high,400,160000,2400,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,100,50,,,,,,,"STATION, UNBOARDABLE",codex_unlockable,,,,0,,,,2004.5
+模块测试舰,station_small,小型轨道站,核心纪元,drone_pd,30,10000,1500,1000,2500,100,0,,30,200,200,5,5,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,50,50,,,,,,,"SHIP_WITH_MODULES, HIDE_IN_CODEX",,,,,0,,,,2000
+,station_derelict_survey_mothership,人之领勘探母舰,开拓者,,30,40000,1600,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,50,50,,,,,,,"STATION, UNBOARDABLE","derelict, codex_unlockable",,,,0,,,,2001
+轨道站,station1,轨道站,主宰纪元,,100,40000,1600,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,50,50,,,,,,,"STATION, UNBOARDABLE",,,,,0,,,,2002
+轨道站,station1_midline,轨道站,核心纪元,,100,40000,1600,1000,2500,100,0,,30,200,200,7,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,50,50,,,,,,,"STATION, UNBOARDABLE",,,,,0,,,,2002.1
+轨道站,station1_hightech,轨道站,扩展纪元,,100,40000,1600,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,50,50,,,,,,,"STATION, UNBOARDABLE",,,,,0,,,,2002.2
+作战基地,station2,作战基地,主宰纪元,,200,80000,2000,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,75,50,,,,,,,"STATION, UNBOARDABLE",codex_unlockable,,,,0,,,,2003
+作战基地,station2_midline,作战基地,核心纪元,,200,80000,2000,1000,2500,100,0,,30,200,200,7,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,75,50,,,,,,,"STATION, UNBOARDABLE",codex_unlockable,,,,0,,,,2003.5
+作战基地,station2_hightech,作战基地,扩展纪元,,200,80000,2000,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,75,50,,,,,,,"STATION, UNBOARDABLE",codex_unlockable,,,,0,,,,2003.5
+作战基地,station3,星际要塞,主宰纪元,drone_station_lt,400,160000,2400,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,100,50,,,,,,,"STATION, UNBOARDABLE",codex_unlockable,,,,0,,,,2004
+作战基地,station3_midline,星际要塞,核心纪元,drone_station_mid,400,160000,2400,1000,2500,100,0,,30,200,200,7,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,100,50,,,,,,,"STATION, UNBOARDABLE",codex_unlockable,,,,0,,,,2004.5
+作战基地,station3_hightech,星际要塞,扩展纪元,drone_station_high,400,160000,2400,1000,2500,100,0,,30,200,200,2,2,5000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,100,50,,,,,,,"STATION, UNBOARDABLE",codex_unlockable,,,,0,,,,2004.5
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,module_bastion_pd1,PD 堡垒,,flarelauncher_active,1,3000,500,1250,3500,140,44,0,0,0,0,10,10,240,FRONT,,170,0.4,0.8,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2050
 ,module_armour1,空间站装甲,,,1,5000,1500,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",module_hull_bar_only,,,,1,2,3,,2051
@@ -172,41 +172,41 @@ Moduleship Test,station_small,小型轨道站,Midline,drone_pd,30,10000,1500,100
 ,module_armour3,空间站支撑结构,,,1,5000,1500,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",module_hull_bar_only,,,,1,2,3,,2057
 ,module_armour4,空间站支撑结构,,,1,5000,1500,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",module_hull_bar_only,,,,1,2,3,,2058
 ,module_armour5,空间站支撑结构,,,1,5000,1500,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",module_hull_bar_only,,,,1,2,3,,2059
-,module_decor_midline1,空间站外延结构,Midline,,1,5000,1500,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,1,2,3,,2060
-,module_decor_midline2,空间站外延结构,Midline,,1,5000,1500,0,2500,100,0,,0,0,0,2,2,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,1,2,3,,2061
-,platform1,武器平台,Midline,,1,10000,1000,2000,2500,100,100,,0,0,0,10,10,600,FRONT,,50,1,0.7,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0,,,,2062
-,module_large1_lowtech,重型战斗模块,Low Tech,forgevats_station,1,20000,2000,30000,30000,1200,1000,,0,0,0,10,10,3500,FRONT,,120,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,4,,2063
-,module_large2_lowtech,重型支援模块,Low Tech,forgevats_station,1,10000,1500,10000,12500,500,1000,2,0,0,0,10,10,2500,FRONT,,130,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,4,,2064
-,module_bastion1_lowtech,PD 堡垒,Low Tech,forgevats_station,1,7500,1250,7000,7500,300,1000,,0,0,0,10,10,240,FRONT,,170,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,1,2,2,,2065
-,module_citadel1_lowtech,重型星堡,Low Tech,forgevats_station,1,15000,2000,30000,43750,1750,1000,,0,0,0,10,10,1000,FRONT,,300,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,1,2,4,,2066
-,module_midline_broadside,重型侧舷模块,Midline,forgevats_station,1,50000,1750,30000,31250,1250,1000,,0,0,0,10,10,3500,FRONT,,90,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,4,,2067
-,module_midline_citadel,重型空间站炮台,Midline,forgevats_station,1,20000,1750,25000,37500,1500,1000,,0,0,0,10,10,3500,FRONT,,40,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,4,,2068
-,module_midline_support,重型支援模块,Midline,forgevats_station,1,15000,1500,10000,10000,400,1000,4,0,0,0,10,10,2500,FRONT,,100,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,4,,2069
-,module_midline_bastion,轻型支援模块,Midline,forgevats_station,1,12000,1500,10000,10000,400,1000,,0,0,0,10,10,240,FRONT,,240,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,1,2,2,,2070
-,module_hightech_shield,护盾模块,High Tech,fortressshield,1,7500,1000,15000,25000,1000,0,,0,0,0,3,6,200,FRONT,,120,1,0.6,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,1,2,2,,2071
-,module_hightech_citadel,重型星堡,High Tech,fortressshield,1,12000,1750,22000,25000,1000,1000,,0,0,0,3,6,1000,FRONT,,220,0.4,0.6,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,4,,2072
-,module_hightech_hangar,机库模块,High Tech,recalldevice,1,7000,1250,7500,12500,500,1000,4,0,0,0,10,10,2500,NONE,,0,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,4,,2073
-,module_hightech_armour,空间站装甲,High Tech,,1,20000,4000,0,2500,100,0,,0,0,0,3,6,1000,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",module_hull_bar_only,,,,1,2,3,,2074
-,module_hightech_strut,空间站外延结构,High Tech,,1,5000,1500,0,2500,100,0,,0,0,0,3,10,500,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, UNDER_PARENT, MODULE",,,,,1,2,3,,2075
-,module_hightech_attack,空间站炮台,High Tech,,1,12000,1750,15000,25000,1000,1000,,0,0,0,10,10,1000,NONE,,0,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,4,,2076
+,module_decor_midline1,空间站外延结构,核心纪元,,1,5000,1500,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,1,2,3,,2060
+,module_decor_midline2,空间站外延结构,核心纪元,,1,5000,1500,0,2500,100,0,,0,0,0,2,2,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,1,2,3,,2061
+,platform1,武器平台,核心纪元,,1,10000,1000,2000,2500,100,100,,0,0,0,10,10,600,FRONT,,50,1,0.7,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0,,,,2062
+,module_large1_lowtech,重型战斗模块,主宰纪元,forgevats_station,1,20000,2000,30000,30000,1200,1000,,0,0,0,10,10,3500,FRONT,,120,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,4,,2063
+,module_large2_lowtech,重型支援模块,主宰纪元,forgevats_station,1,10000,1500,10000,12500,500,1000,2,0,0,0,10,10,2500,FRONT,,130,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,4,,2064
+,module_bastion1_lowtech,PD 堡垒,主宰纪元,forgevats_station,1,7500,1250,7000,7500,300,1000,,0,0,0,10,10,240,FRONT,,170,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,1,2,2,,2065
+,module_citadel1_lowtech,重型星堡,主宰纪元,forgevats_station,1,15000,2000,30000,43750,1750,1000,,0,0,0,10,10,1000,FRONT,,300,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,1,2,4,,2066
+,module_midline_broadside,重型侧舷模块,核心纪元,forgevats_station,1,50000,1750,30000,31250,1250,1000,,0,0,0,10,10,3500,FRONT,,90,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,4,,2067
+,module_midline_citadel,重型空间站炮台,核心纪元,forgevats_station,1,20000,1750,25000,37500,1500,1000,,0,0,0,10,10,3500,FRONT,,40,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,4,,2068
+,module_midline_support,重型支援模块,核心纪元,forgevats_station,1,15000,1500,10000,10000,400,1000,4,0,0,0,10,10,2500,FRONT,,100,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,4,,2069
+,module_midline_bastion,轻型支援模块,核心纪元,forgevats_station,1,12000,1500,10000,10000,400,1000,,0,0,0,10,10,240,FRONT,,240,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,1,2,2,,2070
+,module_hightech_shield,护盾模块,扩展纪元,fortressshield,1,7500,1000,15000,25000,1000,0,,0,0,0,3,6,200,FRONT,,120,1,0.6,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,1,2,2,,2071
+,module_hightech_citadel,重型星堡,扩展纪元,fortressshield,1,12000,1750,22000,25000,1000,1000,,0,0,0,3,6,1000,FRONT,,220,0.4,0.6,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,4,,2072
+,module_hightech_hangar,机库模块,扩展纪元,recalldevice,1,7000,1250,7500,12500,500,1000,4,0,0,0,10,10,2500,NONE,,0,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,4,,2073
+,module_hightech_armour,空间站装甲,扩展纪元,,1,20000,4000,0,2500,100,0,,0,0,0,3,6,1000,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",module_hull_bar_only,,,,1,2,3,,2074
+,module_hightech_strut,空间站外延结构,扩展纪元,,1,5000,1500,0,2500,100,0,,0,0,0,3,10,500,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, UNDER_PARENT, MODULE",,,,,1,2,3,,2075
+,module_hightech_attack,空间站炮台,扩展纪元,,1,12000,1750,15000,25000,1000,1000,,0,0,0,10,10,1000,NONE,,0,0.4,1,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,4,,2076
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,derelict_mothership_pod_s_right,小型武器吊舱,Explorarium,,1,1500,300,1000,2500,100,14,,0,0,0,10,10,70,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2101
-,derelict_mothership_pod_m_right,中型武器吊舱,Explorarium,,1,2500,400,1500,5000,200,22,,0,0,0,10,10,120,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2102
-,derelict_mothership_pod_m_left,中型武器吊舱,Explorarium,,1,3200,400,2000,5000,200,26,,0,0,0,10,10,150,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2103
-,derelict_mothership_pod_engine_left,尾部武器吊舱,Explorarium,,1,3200,400,2000,5000,200,28,,0,0,0,10,10,220,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2104
-,derelict_mothership_bow_module,前端阻抗模块,Explorarium,,1,3000,600,3000,6250,250,16,,0,0,0,10,10,200,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2105
-,derelict_mothership_sensor_mast,前端传感桅杆,Explorarium,,1,5000,400,3000,6250,250,32,,0,0,0,10,10,280,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.7,2,2,,2106
+,derelict_mothership_pod_s_right,小型武器吊舱,开拓者,,1,1500,300,1000,2500,100,14,,0,0,0,10,10,70,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2101
+,derelict_mothership_pod_m_right,中型武器吊舱,开拓者,,1,2500,400,1500,5000,200,22,,0,0,0,10,10,120,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2102
+,derelict_mothership_pod_m_left,中型武器吊舱,开拓者,,1,3200,400,2000,5000,200,26,,0,0,0,10,10,150,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2103
+,derelict_mothership_pod_engine_left,尾部武器吊舱,开拓者,,1,3200,400,2000,5000,200,28,,0,0,0,10,10,220,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2104
+,derelict_mothership_bow_module,前端阻抗模块,开拓者,,1,3000,600,3000,6250,250,16,,0,0,0,10,10,200,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2105
+,derelict_mothership_sensor_mast,前端传感桅杆,开拓者,,1,5000,400,3000,6250,250,32,,0,0,0,10,10,280,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.7,2,2,,2106
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,remnant_station1,余辉空间站,Remnant,,100,50000,1600,1000,2500,100,0,,30,200,200,3,3,6000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,50,50,,,,,,,"STATION, UNBOARDABLE, HIDE_IN_CODEX",,,,,0,,,,2200
-,remnant_station2,余辉空间站,Remnant,,200,50000,1600,1000,2500,100,0,,30,200,200,3,3,6000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,75,50,,,,,,,"STATION, UNBOARDABLE","remnant, codex_unlockable",,,,0,,,,2201
-,remnant_armour1,余辉空间站装甲,Remnant,,1,10000,2000,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",module_hull_bar_only,,,,1,2,3,,2210
-,remnant_armour2,余辉空间站装甲,Remnant,,1,5000,800,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",module_hull_bar_only,,,,1,2,3,,2211
-,remnant_armour3,余辉空间站装甲,Remnant,,1,5000,800,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",module_hull_bar_only,,,,1,2,4,,2212
-,remnant_weapon_platform1,余辉武器平台,Remnant,forgevats_station,1,10000,1500,15000,25000,1000,1000,,0,0,0,10,10,800,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2220
-,remnant_weapon_platform2,余辉武器平台,Remnant,,1,6000,1000,10000,18750,750,1000,,0,0,0,10,10,600,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2221
-,remnant_weapon_platform3,余辉武器平台,Remnant,,1,6000,1250,6000,7500,300,1000,,0,0,0,10,10,400,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2223
-,remnant_shield1,余辉空间站星堡,Remnant,,1,6000,1250,7000,10000,400,1000,,0,0,0,10,10,500,FRONT,,50,0.4,0.8,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2230
-,remnant_shield2,余辉空间站星堡,Remnant,,1,5000,500,20000,25000,1000,1000,,0,0,0,10,10,600,FRONT,,90,0.4,0.8,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2231
-,remnant_hangar1,余辉空间站机库,Remnant,recalldevice,1,5000,750,5000,7500,300,1000,3,0,0,0,10,10,600,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2240
-,module_onslaught_armor_left,Vambrace Module,Domain Restricted,,1,15000,1200,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",module_hull_bar_only,,,,1,2,4,,2241
-,module_onslaught_armor_right,Vambrace Module,Domain Restricted,,1,15000,1200,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",module_hull_bar_only,,,,1,2,4,,2242
+,remnant_station1,余辉空间站,余辉,,100,50000,1600,1000,2500,100,0,,30,200,200,3,3,6000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,50,50,,,,,,,"STATION, UNBOARDABLE, HIDE_IN_CODEX",,,,,0,,,,2200
+,remnant_station2,余辉中枢,余辉,,200,50000,1600,1000,2500,100,0,,30,200,200,3,3,6000,NONE,,0,0,0,,,0,0,0,0,1,0,0,500000,10,10,,,75,50,,,,,,,"STATION, UNBOARDABLE","remnant, codex_unlockable",,,,0,,,,2201
+,remnant_armour1,余辉空间站装甲,余辉,,1,10000,2000,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",module_hull_bar_only,,,,1,2,3,,2210
+,remnant_armour2,余辉空间站装甲,余辉,,1,5000,800,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",module_hull_bar_only,,,,1,2,3,,2211
+,remnant_armour3,余辉空间站装甲,余辉,,1,5000,800,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",module_hull_bar_only,,,,1,2,4,,2212
+,remnant_weapon_platform1,余辉武器平台,余辉,forgevats_station,1,10000,1500,15000,25000,1000,1000,,0,0,0,10,10,800,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2220
+,remnant_weapon_platform2,余辉武器平台,余辉,,1,6000,1000,10000,18750,750,1000,,0,0,0,10,10,600,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2221
+,remnant_weapon_platform3,余辉武器平台,余辉,,1,6000,1250,6000,7500,300,1000,,0,0,0,10,10,400,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2223
+,remnant_shield1,余辉空间站星堡,余辉,,1,6000,1250,7000,10000,400,1000,,0,0,0,10,10,500,FRONT,,50,0.4,0.8,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2230
+,remnant_shield2,余辉空间站星堡,余辉,,1,5000,500,20000,25000,1000,1000,,0,0,0,10,10,600,FRONT,,90,0.4,0.8,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2231
+,remnant_hangar1,余辉空间站机库,余辉,recalldevice,1,5000,750,5000,7500,300,1000,3,0,0,0,10,10,600,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",,,,,0.5,2,2,,2240
+,module_onslaught_armor_left,护腕模块,人之领管制科技,,1,15000,1200,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",module_hull_bar_only,,,,1,2,4,,2241
+,module_onslaught_armor_right,护腕模块,人之领管制科技,,1,15000,1200,0,2500,100,0,,0,0,0,10,10,300,NONE,,0,0,0,,,0,0,0,0,1,0,,500000,,1,,,0,0,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX, MODULE",module_hull_bar_only,,,,1,2,4,,2242

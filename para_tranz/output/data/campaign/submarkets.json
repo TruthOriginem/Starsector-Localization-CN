@@ -1,58 +1,58 @@
 [
-    {
-        "key": "submarkets.csv#black_market$desc",
-        "original": "The black market. Anything and everything can be bought or sold, and there are no tariffs. More goods are available when stability is low.\n\nSelling enough of a commodity will temporarily resolve a shortage.\n\nBlack market transactions may catch the eye of authorities, resulting in cargo scans and reduced faction standing, unless the trades are carried out with the transponder turned off.\n\nEngaging in legitimate trade as a \"cover\" also reduces the probability of attracting the attention of authorities.",
-        "translation": "地下黑市。任何东西都可在此交易，且没有关税。当稳定性较低时，黑市的商品数量将会增加。\n\n将大量商品出售给黑市可能暂时解决当地的短缺问题。\n\n黑市交易可能会引起当局的注意，除非在关闭应答器的情况下交易，否则将很可能导致当地巡逻队强制扫描你的货物且让声望降低。\n\n在公开市场进行大量合法交易作为 \"掩护\"，可降低吸引当局注意的几率。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nsubmarkets.csv第0002行"
-    },
-    {
-        "key": "submarkets.csv#black_market$name",
-        "original": "Black\nMarket",
-        "translation": "黑市",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nsubmarkets.csv第0002行"
-    },
-    {
-        "key": "submarkets.csv#generic_military$desc",
-        "original": "Trade with $theFaction military base.\n\nWeapons and other military hardware can be bought and sold here even if they're illegal on the open market. A commission and better standing with $theFaction results in higher-grade hardware being available.\n\nWill buy locally illegal goods as part of a no-questions-asked buyback program.\n\nSelling enough of a commodity will temporarily resolve a shortage.",
-        "translation": "与 $theFaction 的军事基地贸易。\n\n武器和各类军用产品可以在这里交易，即便它们在公开市场属于非法货物。拥有雇佣协议并与 $theFaction 享有着更好的关系，就能够买更多/更好的军方产品。\n\n会收购当地的非法商品，作为特权回购计划的一部分。\n\n出售足够多的商品可以暂时解决当地短缺。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nsubmarkets.csv第0004行"
-    },
-    {
-        "key": "submarkets.csv#local_resources$name",
-        "original": "Resource\nStockpiles",
-        "translation": "资源库存",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nsubmarkets.csv第0005行"
-    },
-    {
-        "key": "submarkets.csv#open_market$desc",
-        "original": "The open market. Only legal goods may be traded here, and transactions are subject to tariffs. More goods are available when stability is high.\n\nSelling enough of a commodity will temporarily resolve a shortage.",
-        "translation": "开放性市场，只有合法的货物可在此交易，且有关税。当稳定性较高时，此处的商品数量将会增加。\n\n出售足够多的商品可以暂时解决当地短缺。",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nsubmarkets.csv第0001行"
-    },
-    {
-        "key": "submarkets.csv#open_market$name",
-        "original": "Open\nMarket",
-        "translation": "开放市场",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nsubmarkets.csv第0001行"
-    },
-    {
-        "key": "submarkets.csv#storage$desc",
-        "original": "Storage space for ships and cargo.",
-        "translation": "可以储存舰船或货物的仓库。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nsubmarkets.csv第0003行"
-    },
-    {
-        "key": "submarkets.csv#storage$name",
-        "original": "Storage",
-        "translation": "仓库",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nsubmarkets.csv第0003行"
-    }
+  {
+    "key": "submarkets.csv#storage$name",
+    "original": "Storage",
+    "translation": "仓库",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nsubmarkets.csv第0003行"
+  },
+  {
+    "key": "submarkets.csv#generic_military$desc",
+    "original": "Trade with $theFaction military base.\n\nWeapons and other military hardware can be bought and sold here even if they're illegal on the open market. A commission and better standing with $theFaction results in higher-grade hardware being available.\n\nWill buy locally illegal goods as part of a no-questions-asked buyback program.\n\nSelling enough of a commodity will temporarily resolve a shortage.",
+    "translation": "与 $theFaction 的军事基地贸易。\n\n武器和各类军用产品可以在这里交易，即便它们在公开市场属于非法货物。拥有雇佣协议并与 $theFaction 享有着更好的关系，就能够买更多/更好的军方产品。\n\n会收购当地的非法商品，作为特权回购计划的一部分。\n\n出售足够多的商品可以暂时解决当地短缺。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nsubmarkets.csv第0004行"
+  },
+  {
+    "key": "submarkets.csv#open_market$name",
+    "original": "Open\nMarket",
+    "translation": "开放市场",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nsubmarkets.csv第0001行"
+  },
+  {
+    "key": "submarkets.csv#open_market$desc",
+    "original": "The open market. Only legal goods may be traded here, and transactions are subject to tariffs. More goods are available when stability is high.\n\nSelling enough of a commodity will temporarily resolve a shortage.",
+    "translation": "开放性市场，只有合法的货物可在此交易，且可能有关税。当稳定性较高时，此处的商品数量将会增加。\n\n出售足够多的商品可以暂时解决当地短缺。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nsubmarkets.csv第0001行"
+  },
+  {
+    "key": "submarkets.csv#local_resources$name",
+    "original": "Resource\nStockpiles",
+    "translation": "资源库存",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nsubmarkets.csv第0005行"
+  },
+  {
+    "key": "submarkets.csv#storage$desc",
+    "original": "Storage space for ships and cargo.",
+    "translation": "可以储存舰船或货物的仓库。",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nsubmarkets.csv第0003行"
+  },
+  {
+    "key": "submarkets.csv#black_market$name",
+    "original": "Black\nMarket",
+    "translation": "黑市",
+    "stage": 5,
+    "context": "版本：0.98-RC8 词条格式：v2\nsubmarkets.csv第0002行"
+  },
+  {
+    "key": "submarkets.csv#black_market$desc",
+    "original": "The black market. Anything and everything can be bought or sold, and there are no tariffs. More goods are available when stability is low.\n\nSelling enough of a commodity will temporarily resolve a shortage.\n\nBlack market transactions may catch the eye of authorities, resulting in cargo scans and reduced faction standing, unless the trades are carried out with the transponder turned off.\n\nEngaging in legitimate trade as a \"cover\" also reduces the probability of attracting the attention of authorities.",
+    "translation": "地下黑市。任何东西都可在此交易，且没有关税。当稳定性较低时，黑市的商品数量将会增加。\n\n出售足够多的商品可以暂时解决当地短缺。\n\n黑市交易可能会引起当局的注意，除非在关闭应答器的情况下交易，否则将很可能导致当地巡逻队强制扫描你的货物且让声望降低。\n\n在公开市场进行大量合法交易作为 \"掩护\"，可降低吸引当局注意的几率。",
+    "stage": 1,
+    "context": "版本：0.98-RC8 词条格式：v2\nsubmarkets.csv第0002行"
+  }
 ]
