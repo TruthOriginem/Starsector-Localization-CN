@@ -16,15 +16,16 @@
 
 #### 分支版本
 **对于不同的使用需求，我们提供了不同版本的汉化文件，请在下载前根据自身需要自行选择：**
-- 主分支 [master](https://github.com/TruthOriginem/Starsector-Localization-CN/tree/master) 为最新版本的汉化，**字库采用宋体作为正文字体**
-- 旧版字体分支 [font-lantinghei](https://github.com/TruthOriginem/Starsector-Localization-CN/tree/font-lantinghei) 为最新版本的汉化，**字库采用兰亭黑体作为正文字体**
+- 主分支 [master](https://github.com/TruthOriginem/Starsector-Localization-CN/tree/master) 为最新版本的汉化，**字库采用兰亭黑体作为正文字体**
+- 宋体字体分支 [font-simsong](https://github.com/TruthOriginem/Starsector-Localization-CN/tree/font-simsong) 为最新版本的汉化，**字库采用宋体作为正文字体**
 - 综艺字体分支 [font-zongyi](https://github.com/TruthOriginem/Starsector-Localization-CN/tree/font-zongyi) 为最新版本的汉化，**字库采用综艺体作为正文字体**
+- [font-lantinghei](https://github.com/TruthOriginem/Starsector-Localization-CN/tree/font-lantinghei) 为 master 分支的镜像
 - Miko24适配分支 [miko](https://github.com/TruthOriginem/Starsector-Localization-CN/tree/miko) 为适配 Miko Java 24 版本的汉化，字库字体与主分支相同
 
 如果您希望抢先体验汉化内容，请参照如下步骤下载汉化：
 
 1. 下载汉化文件
-   1. [点这里下载汉化文件](https://github.com/TruthOriginem/Starsector-Localization-CN/archive/refs/heads/font-lantinghei.zip)
+   1. [点这里下载汉化文件](https://github.com/TruthOriginem/Starsector-Localization-CN/archive/refs/heads/master.zip)
    2. 解压下载的文件，其中应包括名为`localization`的文件夹
 2. 安装汉化文件
    1. 打开游戏目录下的`starsector-core`文件夹
