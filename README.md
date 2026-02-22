@@ -17,7 +17,7 @@
 #### 分支版本
 **对于不同的使用需求，我们提供了不同版本的汉化文件，请在下载前根据自身需要自行选择：**
 - 主分支 [master](https://github.com/TruthOriginem/Starsector-Localization-CN/tree/master) 为最新版本的汉化，**字库采用宋体作为正文字体**
-- 旧版字体分支 [legacy-font](https://github.com/TruthOriginem/Starsector-Localization-CN/tree/legacy-font) 为最新版本的汉化，**字库采用兰亭黑体作为正文字体**
+- 旧版字体分支 [font-lantinghei](https://github.com/TruthOriginem/Starsector-Localization-CN/tree/font-lantinghei) 为最新版本的汉化，**字库采用兰亭黑体作为正文字体**
 - 综艺字体分支 [font-zongyi](https://github.com/TruthOriginem/Starsector-Localization-CN/tree/font-zongyi) 为最新版本的汉化，**字库采用综艺体作为正文字体**
 - Miko24适配分支 [miko](https://github.com/TruthOriginem/Starsector-Localization-CN/tree/miko) 为适配 Miko Java 24 版本的汉化，字库字体与主分支相同
 
