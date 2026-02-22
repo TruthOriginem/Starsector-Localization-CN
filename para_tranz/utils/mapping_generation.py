@@ -1,9 +1,10 @@
 from dataclasses import asdict
-from typing import Optional, Tuple
+from typing import Optional, Set, Tuple
 
 from para_tranz.jar_loader.jar_file import JavaJarFile
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, ClassFileMapItem, JarMapItem
 from para_tranz.utils.util import (
+    BG_YELLOW,
     GREEN,
     RED,
     colorize,
@@ -15,7 +16,9 @@ logger = make_logger('MappingGenerator')
 
 
 def generate_class_mapping_diff_string(
-    target_class_map: ClassFileMapItem, source_class_map: ClassFileMapItem
+    target_class_map: ClassFileMapItem,
+    source_class_map: ClassFileMapItem,
+    extra_ref_strings: Optional[Set[str]] = None,
 ) -> str:
     """
     生成类文件映射项的对比信息
@@ -23,6 +26,7 @@ def generate_class_mapping_diff_string(
 
     :param target_class_map: 目标类文件映射
     :param source_class_map: 源类文件映射
+    :param extra_ref_strings: 同时被非string属性引用的字符串集合（无法自动写回，用黄色背景标注）
 
     :return: 可打印的对比信息，带有ANSI颜色标记
     """
@@ -34,11 +38,14 @@ def generate_class_mapping_diff_string(
     diff_str += '  "include_strings": [\n'
     for s in sorted(list(source_class_map.include_strings)):
         if s in excluded_strings:
-            diff_str += f'    "{colorize(s, RED)}",\n'
+            text = colorize(s, RED)
         elif s in included_strings:
-            diff_str += f'    "{colorize(s, GREEN)}",\n'
+            text = colorize(s, GREEN)
         else:
-            diff_str += f'    "{s}",\n'
+            text = s
+        if extra_ref_strings and s in extra_ref_strings:
+            text = colorize(text, BG_YELLOW)
+        diff_str += f'    "{text}",\n'
     diff_str = diff_str[:-2] + '\n'
     diff_str += '  ]\n'
 
@@ -47,7 +54,7 @@ def generate_class_mapping_diff_string(
 
 def generate_class_file_mapping_by_path(
     class_file_path: str,
-) -> Optional[Tuple[JarMapItem, ClassFileMapItem, Optional[ClassFileMapItem]]]:
+) -> Optional[Tuple[Optional[JarMapItem], ClassFileMapItem, Optional[ClassFileMapItem], Set[str]]]:
     """
     通过类文件路径查找类，并生成类文件映射项
 
@@ -108,5 +115,9 @@ def generate_class_file_mapping_by_path(
         return
 
     generated_class_map_item = class_file.export_map_item()
+    extra_ref_strings = {
+        c.string
+        for c in class_file.original_constant_table.get_utf8_constants_with_extra_ref()
+    }
 
-    return jar_item, generated_class_map_item, existing_class_item
+    return jar_item, generated_class_map_item, existing_class_item, extra_ref_strings

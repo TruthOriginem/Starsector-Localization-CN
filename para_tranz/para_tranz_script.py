@@ -10,6 +10,7 @@ from para_tranz.utils.mapping_generation import (
     generate_class_file_mapping_by_path,
     generate_class_mapping_diff_string,
 )
+from para_tranz.utils.util import BG_YELLOW, GREEN, RED, colorize
 from para_tranz.utils.search import search_for_string_in_jar_files
 from para_tranz.utils.util import make_logger
 
@@ -51,7 +52,7 @@ def gen_mapping_by_class_path() -> None:
     result = generate_class_file_mapping_by_path(input('类文件路径：'))
 
     if result:
-        jar_item, class_item, existing_class_item = result
+        jar_item, class_item, existing_class_item, extra_ref_strings = result
         print('所属jar文件：', jar_item.path)
         print('以下是生成的类文件映射项：')
         print(class_item.as_json())
@@ -59,9 +60,17 @@ def gen_mapping_by_class_path() -> None:
         # 如果在 para_tranz_map.json 中找到了已有的类文件映射项，那么就可以生成对比信息
         if existing_class_item:
             print(
-                '以下是与当前存在的映射项的对比（绿色表示已包含在当前映射表中，红色表示已排除，无色表示未包含）：'
+                f'以下是与当前存在的映射项的对比'
+                f'（{colorize("绿色", GREEN)}=已包含  '
+                f'{colorize("红色", RED)}=已排除  '
+                f'无色=未包含  '
+                f'{colorize("黄色背景", BG_YELLOW)}=同时被非string属性引用，无法自动写回）：'
             )
-            print(generate_class_mapping_diff_string(existing_class_item, class_item))
+            print(
+                generate_class_mapping_diff_string(
+                    existing_class_item, class_item, extra_ref_strings
+                )
+            )
         else:
             print('此类未包含在当前映射表中')
 
@@ -100,7 +109,7 @@ def mian() -> None:
         print('5 - 在所有jar文件中查找指定原文字符串')
         option = input('请输入选项数字：')
 
-    from_args = len(sys.argv) > 1
+    non_interactive = len(sys.argv) > 1
     while True:
         if option == '1':
             game_to_paratranz()
@@ -112,13 +121,21 @@ def mian() -> None:
         #     paratranz_to_game_new_version()
         #     break
         elif option == '4':
-            while True:
+            if non_interactive:
                 gen_mapping_by_class_path()
+            else:
+                while True:
+                    gen_mapping_by_class_path()
+            break
         elif option == '5':
-            search_string_in_jar_files()
+            if non_interactive:
+                search_string_in_jar_files()
+            else:
+                while True:
+                    search_string_in_jar_files()
             break
         else:
-            if from_args:
+            if non_interactive:
                 print(f'无效选项：{option}')
                 sys.exit(1)
             print('无效选项！')

@@ -43,6 +43,7 @@ GREEN = '\x1b[32;20m'
 YELLOW = '\x1b[33;20m'
 RED = '\x1b[31;20m'
 BOLD_RED = '\x1b[31;1m'
+BG_YELLOW = '\x1b[43m'
 RESET = '\x1b[0m'
 
 
