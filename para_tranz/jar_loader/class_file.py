@@ -312,9 +312,17 @@ class JavaClassFile:
                             f'也被其他非string属性引用，未更新该词条，需要手动更新'
                         )
             else:
-                self.logger.warning(
-                    f'在 {self.jar_file.path}:{self.path} 中没有找到原文为 "{s.original}" 的常量，未更新该词条'
-                )
+                if (
+                    s.original not in self.include_strings
+                    or s.original in self.exclude_strings
+                ):
+                    self.logger.debug(
+                        f'在 {self.jar_file.path}:{self.path} 中原文为 "{s.original}" 的词条不在 include_strings 或在 exclude_strings 中，请从平台上删除该词条 key={s.key} 或修改 include_strings 和 exclude_strings'
+                    )
+                else:
+                    self.logger.warning(
+                        f'在 {self.jar_file.path}:{self.path} 中没有找到原文为 "{s.original}" 的常量，未写入词条 key={s.key} 的译文'
+                    )
 
         return update_success_count
 

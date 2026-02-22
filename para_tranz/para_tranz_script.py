@@ -83,19 +83,25 @@ def search_string_in_jar_files() -> None:
 
 
 def mian() -> None:
-    print('欢迎使用 远行星号 ParaTranz 词条导入导出工具')
-    print('请选择您要进行的操作：')
-    print('1 - 从原始(original)和汉化(localization)文件导出 ParaTranz 词条')
-    print('2 - 将 ParaTranz 词条写回汉化(localization)文件')
-    # TODO: jar版本迁移还没写好
-    # print('3 - 将 ParaTranz 词条写回新版本游戏的汉化(localization)文件（版本迁移时使用，主要针对jar文件）')
-    print(
-        '4 - 对指定类文件，生成包含所有string的类文件映射项(用于添加新类到para_tranz_map.json)'
-    )
-    print('5 - 在所有jar文件中查找指定原文字符串')
-
-    while True:
+    # 支持通过命令行参数直接指定操作，跳过交互式菜单
+    # 用法：python para_tranz_script.py [1|2|4|5]
+    if len(sys.argv) > 1:
+        option = sys.argv[1]
+    else:
+        print('欢迎使用 远行星号 ParaTranz 词条导入导出工具')
+        print('请选择您要进行的操作：')
+        print('1 - 从原始(original)和汉化(localization)文件导出 ParaTranz 词条')
+        print('2 - 将 ParaTranz 词条写回汉化(localization)文件')
+        # TODO: jar版本迁移还没写好
+        # print('3 - 将 ParaTranz 词条写回新版本游戏的汉化(localization)文件（版本迁移时使用，主要针对jar文件）')
+        print(
+            '4 - 对指定类文件，生成包含所有string的类文件映射项(用于添加新类到para_tranz_map.json)'
+        )
+        print('5 - 在所有jar文件中查找指定原文字符串')
         option = input('请输入选项数字：')
+
+    from_args = len(sys.argv) > 1
+    while True:
         if option == '1':
             game_to_paratranz()
             break
@@ -112,12 +118,15 @@ def mian() -> None:
             search_string_in_jar_files()
             break
         else:
+            if from_args:
+                print(f'无效选项：{option}')
+                sys.exit(1)
             print('无效选项！')
+            option = input('请输入选项数字：')
 
     logger.info('程序执行完毕，请按回车键退出')
     input()
 
 
 if __name__ == '__main__':
-    # 如果是main就执行mian捏
     mian()
