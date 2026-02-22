@@ -7,10 +7,10 @@
 2. 游戏本身的代码逻辑需要修改，以适应翻译后的文本。
 
 ## UTF-8常量被string以外的元素引用
-| 文件路径 | 原文 |
-|---|---|
+| 文件路径 | 原文 | 备注 |
+|---|---|---|
 | starfarer_obf.jar:<br/>com/fs/starfarer/campaign/CharacterStats.class | `points` |
-| starfarer_obf.jar:<br/>com/fs/starfarer/coreui/x.class | `max` |
+| starfarer_obf.jar:<br/>com/fs/starfarer/coreui/x.class | `max` | 可能不需要翻译，需要测试 |
 | starfarer_obf.jar:<br/>com/fs/starfarer/launcher/opengl/GLLauncher.class | `fullscreen` |
 | starfarer_obf.jar:<br/>com/fs/starfarer/launcher/opengl/GLLauncher.class | `sound` |
 | starfarer_obf.jar:<br/>com/fs/starfarer/ui/newui/X.class | `next` |
@@ -20,55 +20,7 @@
 
 ## 代码逻辑修改
 
-### 1. 存档页面存档难度文本
-相关文件：`starfarer_obf.jar:com/fs/starfarer/campaign/save/LoadGameDialog$o.class`
-
-> 解决方法：通过在API的Misc.ucFirst()注入了switch语句，将难度id映射到中文难度
-
-![difficulty_ui.png](difficulty_ui.png)
-
-这里的 `Normal` 是直接读取了 SaveGameData 的 difficulty 属性，可能的值为 `normal` 和 `easy`，并令其开头大写。
-![difficulty_code-1.png](difficulty_code-1.png)
-两个常量在 `starfarer.api.jar:com/fs/starfarer/api/impl/campaign/ids/Difficulties.class` 中定义
-而该属性同时用作难度的id，所以不便直接翻译常量的值。需要添加处理逻辑来把难度id映射到中文难度。
-
-### 2. GenerateSlipsurgeAbility.getStrengthForStellarObject() 实现bug
-相关文件：`starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/GenerateSlipsurgeAbility.class`
-![slipsurge-code.png](slipsurge-code.png)
-1. 先判断 .contains('giant') 会覆盖后续的 .contains('supergiant') 条件
-2. 建议不要使用名字来判断恒星类型
-
-### 3. 蓝图浏览器页面船体规模文本
-相关文件：`starfarer_obf.jar:com/fs/starfarer/campaign/command/N.class`
-
-> 解决方法：通过在API的Misc.ucFirst()注入了switch语句，将难度id映射到中文难度
-
-![blueprint_browser_hull_size.png](blueprint_browser_hull_size.png)
-
-这里读取了舰船的 getHullSize().name().toLowerCase() 作为船体规模文本，
-且 HullSize 枚举未指定 displayName，所以无法直接翻译。
-注意到下方针对主力舰单独写了一个if，也许可以暂时为其它船体规模页加几个if来显示。
-![blueprint_browser_hull_size-code.png](blueprint_browser_hull_size-code.png)
-
-### 4. 战斗UI武器伤害类型文本
-相关文件：`starfarer_obf.jar:com/fs/starfarer/renderers/oOOO/C$o.class`
-
-> 解决方法：改为调用 DamageType.getDisplayName() 方法
-
-![combat_ui_damage_type.png](combat_ui_damage_type.png)
-
-这里使用了 DamageType 枚举的 .toString() 方法，但是其实应当使用 .getDisplayName()，导致无法翻译
-![combat_ui_damage_type-code.png](combat_ui_damage_type-code.png)
-
-### 5. 战斗UI武器组类型文本
-相关文件：`starfarer_obf.jar:com/fs/starfarer/renderers/oOOO/C.class`
-
-> 解决方法：改为调用 WeaponGroupType.getDisplayName() 方法
-
-![combat_ui_wg_type.png](combat_ui_wg_type.png)
-
-这里使用了 WeaponGroupType 枚举的 .toString() 方法，但是其实应当使用 .getDisplayName()，导致无法翻译
-![combat_ui_wg_type-code.png](combat_ui_wg_type-code.png)
+> 098 版本修改1-6已不再适用，已删除。以下是目前仍然存在的问题。
 
 ### 6. 舰船信息页文本换行前缺少最后一个字
 ![line_end_char_missing-1.png](line_end_char_missing-1.png)
@@ -81,6 +33,9 @@
 > 于是末尾就被多吃了一个字符
 
 ### 7. 敌对活动事件名称为英文 'Hostilities'
+
+> 098 相关代码已改变，需要重新测试
+
 相关文件：`starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/FactionHostilityIntel.class`
 
 > 解决方法：直接翻译文件内的tag string "Hostilities" 为 "敌对活动"
