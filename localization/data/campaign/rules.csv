@@ -2474,41 +2474,41 @@ FireAll PopulateOptions","""人之领的公民，依照任务参数设定，这�
 ,,,,,,
 ,,,,,,
 # Trade panel flavor text,,,,,,
-flavorTextMarketGeneric,TradePanelFlavorText,$global.tradePanelMode == MARKET,"AddText ""港区内挤满了各种大小的贸易星船。投机者挤在卸货的船长们身边开出交易条件，小贩们拿着商品并投射着个人全息广告向船员们叫卖。"" marketFlavorTextColor",,,
+flavorTextMarketGeneric,TradePanelFlavorText,$global.tradePanelMode == MARKET,"AddText ""港区内挤满了大小各异的贸易星舰。投机者挤在卸货的舰长们身边推销交易，小贩们拿着商品并投射着个人全息广告向船员们叫卖。"" marketFlavorTextColor",,,
 flavorTextMarketGenericSmall,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $marketSize < 4
-$stability > 1","AddText ""简陋的港区内充满了小型货船和自由职业者。他们的运气好坏，可以通过他们的船舶装甲的是光鲜程度，以及船上装载的货物多寡来判断。一小群投机者似乎都彼此相识，他们在卸货的船长们到来时总是一起挤过去。而小贩们拿着商品并投射着个人全息广告向船员们叫卖。"" marketFlavorTextColor",,,
+$stability > 1","AddText ""简陋的港区内挤满了小型货船和自由职业者。他们的运气好坏，可以通过他们的舰船装甲的光鲜程度，以及船上装载的货物多寡来判断。几个投机者似乎彼此都认识，每当有舰长到港卸货，他们就一拥而上，而小贩们则手持商品并投射着个人全息广告向船员们叫卖。"" marketFlavorTextColor",,,
 flavorTextMarketGenericUnstable,TradePanelFlavorText,"$global.tradePanelMode == MARKET
-$stability == 1","AddText ""港区内只散落着几艘贸易飞船。一些看上去焦躁不安的投机者在寻求与卸货的船长进行交易。从遍地的垃圾来看，大多数小贩似乎已经匆忙地逃走了。不过还有几个有魄力的商人仍然在做生意。当地警方似乎已经部署了动力装甲部队进行巡逻，随处可见的安保无人机在上头嗡嗡作响。"" marketFlavorTextColor",,,
+$stability == 1","AddText ""港区内只散落着几艘贸易星舰。一些看上去焦躁不安的投机者在寻求与卸货的舰长进行交易。大多数小贩似乎都已溜之大吉 —— 从留下的杂物来看，他们走得还很匆忙。不过仍有少数几个胆大的商人仍然在做生意。当地警方似乎已经部署了动力装甲部队进行巡逻，而安保无人机在上头嗡嗡作响，引人注目。"" marketFlavorTextColor",,,
 flavorTextMarketGenericVeryUnstable,TradePanelFlavorText,"$global.tradePanelMode == MARKET
-$stability == 0","AddText ""港区里只有几艘船，且其中一半看起来是战舰。全副武装的船员班组聚集在各自的飞船周围，守卫着正在装卸的货物。安保无人机在头顶上嗡嗡作响，疲于奔命，而一些勇敢的投机者正忙于穿梭在那些他们认为可以避开监视的地点之间。"" marketFlavorTextColor",,,
+$stability == 0","AddText ""港区里只有几艘舰船，且其中一半看起来是战舰。全副武装的船员班组聚集在各自的飞船周围，守卫着正在装卸的货物。安保无人机在头顶上嗡嗡作响，疲于奔命，而一些勇敢的投机者正忙于穿梭在那些他们认为可以避开监视的地点之间。"" marketFlavorTextColor",,,
 flavorTextMarketPirateUnstable,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $stability == 1
-$faction.id == pirates","AddText ""港区里只有一些伤痕累累的船只四处停靠着，海盗们烧毁货物集装箱的 ID 芯片的轻微光芒照亮了船体。全副武装的海盗船员们挤在他们的船周围，吹胡子瞪眼地向同行们挑衅着。令人疑惧的焦痕和污迹横跨了好几块隔墙，让整个设施看上去缺少维护。港口老大的亲信们冷眼盯着这边，随时准备动用他们的武器。"" marketFlavorTextColor",,,
+$faction.id == pirates","AddText ""港区里只有一些伤痕累累的船只四处停靠着，海盗们烧毁货物集装箱的 ID 芯片的轻微光芒照亮了船体。全副武装的海盗船员们挤在他们的舰船周围，吹胡子瞪眼地向同行们挑衅着。令人疑惧的焦痕和污迹横跨了好几块隔墙，让整个设施看上去缺少维护。港口老大的亲信们冷眼盯着这边，随时准备动用他们的武器。"" marketFlavorTextColor",,,
 flavorTextMarketPirateVeryUnstable,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $stability == 0
-$faction.id == pirates","AddText ""只有一两艘外装醒目的海盗船停靠在港区内，它们的点防御炮塔瞄准着你的穿梭机 —— 明摆着的挑衅。一个港口老大的副手在武装打手的簇拥下大摇大摆地走了过来。他向你索贿，但低沉的枪声打断了他。看着你的反应他居然笑了起来，让你马上发觉到他不是药嗑嗨了就酒喝高了。这里的空气总是弥漫着一股烟雾和高能电离混杂的味道。"" marketFlavorTextColor",,,
+$faction.id == pirates","AddText ""只有一两艘外装醒目的海盗船只停靠在港区内，它们的点防御炮塔瞄准着你的穿梭机 —— 这是赤裸的挑衅。一个港口老大的副手在武装打手的簇拥下大摇大摆地走了过来。他向你索贿，但低沉的枪声打断了他。看着你的反应，他居然笑了起来，让你马上发觉到他不是药嗑嗨了就酒喝高了。这里的空气总是弥漫着一股烟雾和高能电离混杂的味道。"" marketFlavorTextColor",,,
 flavorTextMarketPerseanLeague,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == persean
-$stability > 1","AddText ""港区内挤满了外形和大小不一的贸易星舰。投机者拥挤在卸货的船长们身边开出交易条件，小贩们拿着商品并投射着个人全息广告向船员们叫卖。成群的联盟海军船员和军官显得格外醒目，因他们都身着整齐划一的制服，还有在不执勤时也列队行动的习惯。同时，当地警察的衣着服饰与其他联盟行星的警察截然不同，不过他们都一样保有着共通的威风而机警的举止。联盟的标志出现在一些市政建筑的外表面上，看起来有点像建好后才加上去的样子。"" marketFlavorTextColor",,,
+$stability > 1","AddText ""港区内挤满了大小各异的贸易星舰。投机者挤在卸货的舰长们身边推销交易，小贩们拿着商品并投射着个人全息广告向船员们叫卖。成群的联盟海军船员和军官显得格外醒目，因他们都身着整齐划一的制服，以及在不执勤时也保持列队行动的习惯。同时，当地警察的衣着服饰与其他联盟行星的警察截然不同，不过他们都同样保有着共通的威风而机警的举止。联盟的标志出现在一些市政建筑的动态表面上，看起来有点像建好后才加上去的样子。"" marketFlavorTextColor",,,
 flavorTextMarketLuddicPath,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == luddic_path
-$stability > 1","AddText ""破旧的贸易飞船挤在港口大厅里，旁边则并排停靠着披着艳丽涂装但伤痕累累的左径劫掠船。卢德商人在等待与卸货的船长们会面。小贩们向宇宙民贩卖街头食品和手工艺品。而僧侣们则在自己的托钵前安静地祈祷。少数狂热教徒正大声叱责着那些外来者，而左径圣人武装分子正盯着这边，以防意外发生。"" marketFlavorTextColor
-AddText ""在这里公开展示并非为使命或生存所必需的恶之科技是无法被容忍的。因此人们很快就学会了不去夸耀自己的生化改装或其他显眼的科技玩意。由于没有全息投影，这里给人一种仿佛身处于描绘古代历史的寓教于乐型模拟游戏中的错觉。"" marketFlavorTextColor",,,
+$stability > 1","AddText ""港区里挤满了破旧的贸易星舰，旁边则并排停靠着披着艳丽涂装但伤痕累累的左径劫掠船。卢德商人在等待与卸货的舰长们会面。小贩们向宇宙民贩卖着街头食品和手工艺品。而僧侣们则在自己的托钵前安静地祈祷。少数狂热教徒正大声叱责着那些外来者，而那些严肃的左径武装分子也正盯着这边，以防意外发生。"" marketFlavorTextColor
+AddText ""在这里公开展示并非为使命或生存所必需的罪恶科技是无法被容忍的。因此人们很快就学会了不去夸耀自己的生化改装或其他显眼的科技玩意。由于没有全息投影，这里给人一种仿佛身处于描绘古代历史的寓教于乐型模拟游戏中的错觉。"" marketFlavorTextColor",,,
 flavorTextMarketTriTachyon,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == tritachyon
-$marketSize >= 4","AddText ""港区内挤满了各种大小的贸易星船。投机者拥挤在卸货的船长们身边开出交易条件，小贩们拿着商品并投射着个人全息广告向船员们叫卖。"" marketFlavorTextColor
+$marketSize >= 4","AddText ""港区内挤满了大小各异的贸易星舰。投机者挤在卸货的舰长们身边推销交易，小贩们拿着商品并投射着个人全息广告向船员们叫卖。"" marketFlavorTextColor
 AddText ""一位速子科技的特许经销官员招待了你，并主动为你的速子平板更新了当地商品市场的最新公司报价。"" marketFlavorTextColor",,,
 flavorTextMarketPirates,TradePanelFlavorText,"$global.tradePanelMode == MARKET
-$faction.id == pirates","AddText ""港区里到处是伤痕累累的舰船。海盗们忙着用激光烧坏货物集装箱的 ID 芯片，产生的闪烁略微照亮了船体。海盗们成群结队，互相打量，他们的船长则在乌烟瘴气的密室里忙着讨价还价。一群港口老大的马仔拿着武器在一旁看着。"" marketFlavorTextColor",,,
+$faction.id == pirates","AddText ""港区里到处是伤痕累累的舰船，海盗们忙着用激光烧坏货物集装箱的 ID 芯片，产生的闪烁略微照亮了船体。海盗们成群结队，互相打量，他们的舰长则在乌烟瘴气的密室里忙着讨价还价。一群港口老大的马仔则拿着武器在一旁看着。"" marketFlavorTextColor",,,
 flavorTextMarketHegemony,TradePanelFlavorText,"$global.tradePanelMode == MARKET
-$faction.id == hegemony","AddText ""港区被正在靠港的巨型货船和遍布坑洼的战斗货船给占满了，而霸主的巡逻艇在它们之间穿行着。卸货的船长被霸主的后勤官员干脆利落地接待，过审，然后被放行到一大群商人、军火商和投机者之中。"" marketFlavorTextColor
+$faction.id == hegemony","AddText ""港区内挤满了正在靠港的巨型货船和遍布坑洼的战斗货船，而霸主的巡逻艇也正在其中穿行着。卸货的舰船被霸主的后勤官员干脆利落地接待，过审，然后被放行到一大群商人、军火商和投机者之中。"" marketFlavorTextColor
 AddText ""在一处临时隔墙上投影着霸主的火凤凰标志，而在人之领的闪星标志周围滚动显示着当地海军招募中心的通讯 ID 和征兵口号。' 游历星域，光荣服役，复兴人之领 '。"" marketFlavorTextColor",,,
 flavorTextMarketLuddicChurch,TradePanelFlavorText,"$global.tradePanelMode == MARKET
-$faction.id == luddic_church","AddText ""港区内挤满了各种大小的贸易飞船。衣着服饰低调的卢德商人们等待着着与卸货的船长们会面。小贩们向太空船员们贩卖街头食品和手工艺品，而僧侣们则在自己的托钵前安静地祈祷。偶尔会出现一些狂热教徒执意要叱责外来者公开展示他们的科技物件和生化植入体，但很快就会被身披手纺卢德绿袍背着 CP 卡宾枪的卢德骑士及时送走。毕竟教会也讲究务实，在商人区，这点罪过可以被容忍。"" marketFlavorTextColor",,,
+$faction.id == luddic_church","AddText ""港区内挤满了大小各异的贸易星舰。衣着朴素的卢德商人们等待着与卸货的舰长们会面。小贩们向宇宙民贩卖着街头食品和手工艺品。而僧侣们则在自己的托钵前安静地祈祷。偶尔会出现一些狂热教徒，执意要叱责外来者公开展示自身科技物件和生化植入体的行径，但他们很快就会被身披手纺卢德绿袍、背着 CP 卡宾枪的卢德骑士及时送走。教会是务实的；在商贸区，这类罪过尚且可被容忍。"" marketFlavorTextColor",,,
 flavorTextMarketPirateUmbra,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == pirates
-$market.id == umbra score:100","AddText ""几艘军舰被喷满了 Askonia 革命者委员会的革命口号，与同样战痕累累的海盗船并排停靠在一起。卸货区里充满了真空的金属味，还混有些许维生系统的不堪负荷与人性的龌龊。货物全都会被检查，其中一小部分会被没收。这里的一切都由那些领着护卫居高临下俯视着一众卸货船员们的部门长官所负责。"" marketFlavorTextColor",,,
+$market.id == umbra score:100","AddText ""几艘军舰被喷满了 Askonia 革命者委员会的革命口号，与同样战痕累累的海盗船并排停靠在一起。卸货区里充满了真空的金属味，还混有些许维生系统的不堪负荷与人性的龌龊。货物全都会被检查，其中一小部分会被没收。而负责这一切的部门长官正俯视着卸货的太空船们，身边挤满了陪同的护卫。"" marketFlavorTextColor",,,
 flavorTextMarketCryosanctum,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $market.ind:cryosanctum == true score:100
 $stability > 3","AddText ""深穴般的停机坪让停靠的寥寥几艘星际飞船显得格外渺小。传感器探测到隐蔽休眠中的自动炮塔阵列之间的耳语般的电磁波交互，暗示着这里的部署了远超过仅需确保访问低温避难所的少数商人、雇佣兵和有钱的怪胎的行为良好所必需的火力。一位官员会见了卸货的船长们，把他们领到了访客休息室，并他们提供了有关标准超低温冬眠套餐的服务目录。"" marketFlavorTextColor",,,
@@ -21782,7 +21782,7 @@ SetTooltipHighlightColors gaData_getAvoidCombat highlight bad",,,
 gaDataStandardPlanetInteraction,GADataPlanetInteraction,,"SetShortcut defaultLeave ""ESCAPE""
 FireBest GADataAdjustOptions",通过对 Sebestyen 院士提供的坐标进行扫描，发现该地区早已荒废许久。你的传感器技官初步确认了数据显示上的 $gaData_target。而它看起来状态不错。,"gaData_get:派出小组接收数据
 defaultLeave:离开",
-gaDataDecivInteractionRaid,GADataPlanetInteraction,$gaData_variation == DECIV score:1000,FireBest GADataRaidBegin,"通过对 Sebestyen 院士提供的坐标进行扫描，发现该地区存在人类活动的迹象。虽有迹象表明，最近这里存在过手持武器射击与小型炸弹爆炸的情况，但值得庆幸的是，$gaData_target 似乎没有遭到任何严重的损坏。
+gaDataDecivInteractionRaid,GADataPlanetInteraction,$gaData_variation == DECIV score:1000,FireBest GADataRaidBegin,"通过对 Sebestyen 院士提供的坐标进行扫描，发现该地区存在人类活动的迹象。虽然迹象表明，最近这里有手持武器射击与小型炸弹爆炸的情况，但值得庆幸的是，$gaData_target 似乎没有遭到任何严重的损坏。
 
 不过，恢复数据的过程中可能会遭遇到一些战斗。",,
 gaDataDecivInteractionRaidOptions,GADataRaidBegin,,"ShowDefaultVisual
@@ -27501,7 +27501,7 @@ Call $market.dhi_ref updateStage","当突击穿梭机返回你的$shipOrFleet时
 dspBlurb,dsp_blurb,,,"""这有一项很重的任务，并且我愿意为此提供相当丰厚的报酬：我需要人去瘫痪 $dsp_marketName 上的 $dsp_industry。""",,
 dspBlurb_villain,dsp_blurb,$voice == villain,,"""鉴于我们已经互相信任，我就直说了：在 $dsp_marketName 上搞出一些麻烦会对我的计划有帮助，你能帮我瘫痪那里的 $dsp_industry 吗？酬劳是不会少的。""",,
 dspOfferOption,dsp_option,,,,dsp_start:询问瘫痪 $dsp_industry 一事的细节,
-dspBlurbBar,dsp_blurbBar,,,某个黑道大佬懒洋洋地躺在一个小隔间里，从旁边那些盯着任何胆敢靠近的人的保镖就可以看出来，恐怕在那能接到的不是什么好工作。,,
+dspBlurbBar,dsp_blurbBar,,,一个黑道大佬模样的人懒洋洋地躺在隔间里，旁边那些保镖死死盯着任何胆敢靠近的人。看来能在这儿接到的恐怕不会是什么好工作。,,
 dspOfferOptionBar,dsp_optionBar,,,,dsp_startBar:看看隔间里的黑道大佬会让你搅什么浑水,
 dspOfferTextBar,DialogOptionSelected,$option == dsp_startBar,$missionId = dsp,"当你靠近时，一个接受过生化改装的暴徒拦住了你，脸上挂着无机感十足的笑容，仿佛因为自己终于可以揍人而感到十分开心。一直跟着你的一个保镖则感觉这就是自己受雇于你的理由，快步走了过来。
 

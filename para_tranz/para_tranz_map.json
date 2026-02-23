@@ -3635,6 +3635,13 @@
         "exclude_strings": []
       },
       {
+        "path": "com/fs/starfarer/codex2/B.class",
+        "include_strings": [
+          "Locked entry"
+        ],
+        "exclude_strings": []
+      },
+      {
         "path": "com/fs/starfarer/codex2/CodexDetailPanel$2.class",
         "include_strings": [
           "Third party data provided by %s. The Tri-Tachyon corporation is not responsible for the accuracy or reliability of information supplied by external sources. By accessing this Codex adjunct, you acknowledge and agree to relieve Tri-Tachyon of any liability and responsibility for any damages resulting from use or cognition of third party data."
@@ -3773,13 +3780,6 @@
         "include_strings": [
           "Command Shuttle",
           "Standard"
-        ],
-        "exclude_strings": []
-      },
-      {
-        "path": "com/fs/starfarer/combat/CombatEngine.class",
-        "include_strings": [
-          "Advancing fast-time ships"
         ],
         "exclude_strings": []
       },
@@ -5976,6 +5976,16 @@
         "exclude_strings": []
       },
       {
+        "path": "com/fs/starfarer/loading/specs/g.class",
+        "include_strings": [
+          " class",
+          " class ",
+          "-class",
+          "-class "
+        ],
+        "exclude_strings": []
+      },
+      {
         "path": "com/fs/starfarer/loading/specs/nullsuper$o.class",
         "include_strings": [
           "Hardpoint",
@@ -6788,13 +6798,6 @@
         "path": "com/fs/starfarer/ui/OO0O.class",
         "include_strings": [
           "[%f,%f: %fx%f]"
-        ],
-        "exclude_strings": []
-      },
-      {
-        "path": "com/fs/starfarer/ui/W.class",
-        "include_strings": [
-          "Attempt to release focus by non-owner"
         ],
         "exclude_strings": []
       },
@@ -11965,7 +11968,7 @@
           "\"And you have the means.\"",
           "\"Do you have anything for me now?\"",
           "\"However, if you did find my information valuable, I would gladly accept... donations. Think of it as patronage to fuel my research, which in turn could produce valuable leads. Or it might help to think of it as an investment, but with no obligations incurred by either party. Consider it- you could enrich your own enterprises while contributing to the sum of human knowledge!\"",
-          "\"I am what you might call a historian-adventurer; a rogue archaelogist uncovering the history of the Sector despite the danger of this exceptional era. In the course of my studies I often chance upon hints about where certain pieces of technology might be found. Retrieving those artifacts is, naturally, your role in our arrangement. ... Only if you're interested, of course - but I've done my research on your exploits and I'm sure that you will be interested.",
+          "\"I am what you might call a historian-adventurer; a rogue archaelogist uncovering the history of the Sector despite the danger of this exceptional era. In the course of my studies I often chance upon hints about where certain pieces of technology might be found. Retrieving those artifacts is, naturally, your role in our arrangement. ... Only if you're interested, of course - but I've done my research on your exploits and I'm sure that you will be interested.\"\n\nSpeech complete, ",
           "\"I expect you'll be wanting to get paid for this information?\"",
           "\"I understand why you would assume that; this is a mercenary age. But no, nothing quite so transactional. History is an uncertain trade, and such an approach would lead to expectations, disappointment, and recrimination. All of which I'm eager to avoid, especially the last.\" An additional wrinkle forms on ",
           "\"See you again soon, somewhere!\" ",
