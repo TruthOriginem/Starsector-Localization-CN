@@ -5986,6 +5986,14 @@
         "exclude_strings": []
       },
       {
+        "path": "com/fs/starfarer/loading/specs/int.class",
+        "include_strings": [
+          "a",
+          "is"
+        ],
+        "exclude_strings": []
+      },
+      {
         "path": "com/fs/starfarer/loading/specs/nullsuper$o.class",
         "include_strings": [
           "Hardpoint",
@@ -8479,11 +8487,29 @@
         "exclude_strings": []
       },
       {
+        "path": "com/fs/starfarer/api/combat/WeaponAPI$WeaponSize.class",
+        "include_strings": [
+          "Large",
+          "Medium",
+          "Small"
+        ],
+        "exclude_strings": []
+      },
+      {
         "path": "com/fs/starfarer/api/combat/WeaponAPI$WeaponType.class",
         "include_strings": [
+          "Ballistic",
           "Built in",
+          "Composite",
+          "Decorative",
+          "Energy",
+          "Hybrid",
           "Launch Bay",
-          "Station Module"
+          "Missile",
+          "Station Module",
+          "Synergy",
+          "System",
+          "Universal"
         ],
         "exclude_strings": []
       },
@@ -10905,6 +10931,7 @@
           "Analyze ",
           "Faction: ",
           "The ",
+          "a",
           "authorities",
           "concerns",
           "is",
@@ -18925,11 +18952,19 @@
         "exclude_strings": []
       },
       {
+        "path": "com/fs/starfarer/api/impl/campaign/terrain/BaseRingTerrain.class",
+        "include_strings": [
+          "a"
+        ],
+        "exclude_strings": []
+      },
+      {
         "path": "com/fs/starfarer/api/impl/campaign/terrain/BaseTerrain.class",
         "include_strings": [
           "Combat",
           "Travel",
-          "Unknown"
+          "Unknown",
+          "a"
         ],
         "exclude_strings": []
       },

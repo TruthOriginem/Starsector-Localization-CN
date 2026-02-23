@@ -2508,10 +2508,10 @@ flavorTextMarketLuddicChurch,TradePanelFlavorText,"$global.tradePanelMode == MAR
 $faction.id == luddic_church","AddText ""港区内挤满了大小各异的贸易星舰。衣着朴素的卢德商人们等待着与卸货的舰长们会面。小贩们向宇宙民贩卖着街头食品和手工艺品。而僧侣们则在自己的托钵前安静地祈祷。偶尔会出现一些狂热教徒，执意要叱责外来者公开展示自身科技物件和生化植入体的行径，但他们很快就会被身披手纺卢德绿袍、背着 CP 卡宾枪的卢德骑士及时送走。教会是务实的；在商贸区，这类罪过尚且可被容忍。"" marketFlavorTextColor",,,
 flavorTextMarketPirateUmbra,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == pirates
-$market.id == umbra score:100","AddText ""几艘军舰被喷满了 Askonia 革命者委员会的革命口号，与同样战痕累累的海盗船并排停靠在一起。卸货区里充满了真空的金属味，还混有些许维生系统的不堪负荷与人性的龌龊。货物全都会被检查，其中一小部分会被没收。而负责这一切的部门长官正俯视着卸货的太空船们，身边挤满了陪同的护卫。"" marketFlavorTextColor",,,
+$market.id == umbra score:100","AddText ""几艘军舰被喷满了 Askonia 革命者委员会的革命口号，与同样战痕累累的海盗船并排停靠在一起。卸货区里充满了真空的金属味，还混有些许维生系统的不堪负荷与人性的龌龊。货物全都会被检查，其中一小部分会被没收。而负责这一切的部门长官正俯视着卸货的太空船员们，身边簇拥着陪同的护卫。"" marketFlavorTextColor",,,
 flavorTextMarketCryosanctum,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $market.ind:cryosanctum == true score:100
-$stability > 3","AddText ""深穴般的停机坪让停靠的寥寥几艘星际飞船显得格外渺小。传感器探测到隐蔽休眠中的自动炮塔阵列之间的耳语般的电磁波交互，暗示着这里的部署了远超过仅需确保访问低温避难所的少数商人、雇佣兵和有钱的怪胎的行为良好所必需的火力。一位官员会见了卸货的船长们，把他们领到了访客休息室，并他们提供了有关标准超低温冬眠套餐的服务目录。"" marketFlavorTextColor",,,
+$stability > 3","AddText ""深穴般的停机坪让停靠的寥寥几艘星舰显得格外渺小。传感器探测到隐蔽休眠中的自动炮塔阵列之间那耳语般的电磁波交互，暗示着这里的部署了远超过仅需确保访问低温避难所的少数商人、雇佣兵和有钱的怪胎的行为良好所必需的火力。一位官员会见了卸货的舰长们，把他们领到了访客休息室，并他们提供了有关标准超低温休眠套餐的服务目录。"" marketFlavorTextColor",,,
 flavorTextMarketDecivilized,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $market.mc:decivilized == true score:1000
 $marketSize <= 3","AddText ""你们降落在了一个通过加密传输安排的地点。起初，一切似乎都很平静，但随后就有身着迷彩的人带着武器从隐蔽的通道里走出来。他们非常多疑，态度也很不友善。经过一番安抚之后，贸易意向终于被接受，使得谈判最终得以开始。"" marketFlavorTextColor",,,
@@ -21805,7 +21805,7 @@ $global.gaData_gotData = true
 Call $global.gaData_ref updateStage
 FireAll PopulateOptions","你调来了装着补给的货箱以及刚好够用于着陆的固体推进器。在补给着陆并吸引了足够的注意力之后，一小支打捞小组访问了 $gaData_target 并提取了特定的几个数据核心。
 
-小组不得不迅速离开，但万幸提取穿梭机上除了有少量小型武器弹痕外，没有任何损伤。",,
+小组不得不迅速离开，但万幸撤离穿梭机上除了有少量小型武器弹痕外，没有任何损伤。",,
 # pirate fleet interactions,,,,,,
 gaDataPirateFleetEncounter,BeginFleetEncounter,"$gaData_pirate score:1000
 !$ignorePlayerCommRequests","$gaData_pirateConv = true 0
