@@ -308,5 +308,16 @@ def chooseAction():
 #     return True
 
 if __name__ == '__main__':
-    chooseAction()
-    # updateMap()
+    import sys
+    if len(sys.argv) > 1:
+        action = sys.argv[1]
+        if action == '1':
+            for item in items:
+                item.updateMap()
+        elif action == '2':
+            for item in items:
+                item.updateTargetItems()
+        else:
+            print(f'未知参数: {action}')
+    else:
+        chooseAction()

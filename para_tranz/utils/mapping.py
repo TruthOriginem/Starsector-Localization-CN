@@ -41,6 +41,13 @@ class ClassFileMapItem:
     include_strings: Optional[Set[str]] = dataclasses.field(default_factory=set)
     exclude_strings: Optional[Set[str]] = dataclasses.field(default_factory=set)
 
+    def __post_init__(self):
+        # 从 JSON 加载时 include_strings/exclude_strings 是 list，需转为 set 以去重
+        if not isinstance(self.include_strings, set):
+            self.include_strings = set(self.include_strings) if self.include_strings else set()
+        if not isinstance(self.exclude_strings, set):
+            self.exclude_strings = set(self.exclude_strings) if self.exclude_strings else set()
+
     def as_json(self) -> str:
         return json.dumps(
             dataclasses.asdict(self), indent=2, cls=SetEncoder, ensure_ascii=False
