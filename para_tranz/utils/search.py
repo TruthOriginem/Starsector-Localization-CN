@@ -1,11 +1,28 @@
 from dataclasses import asdict, dataclass
-from typing import List
+from typing import List, Optional
 
 from para_tranz.jar_loader.jar_file import JavaJarFile
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, JarMapItem
 from para_tranz.utils.util import GREEN, RED, colorize, make_logger
 
 logger = make_logger('JarStringSearch')
+
+# 缓存已加载的 jar 文件，避免每次搜索都重新解析所有 class 文件
+_jar_files_cache: Optional[List[JavaJarFile]] = None
+
+
+def _get_loaded_jar_files() -> List[JavaJarFile]:
+    global _jar_files_cache
+    if _jar_files_cache is None:
+        logger.info('首次加载，正在解析所有 jar 文件中的 class，耗时较长请耐心等待...')
+        jar_file_items = [item for item in PARA_TRANZ_MAP.items if isinstance(item, JarMapItem)]
+        _jar_files_cache = [
+            JavaJarFile(**asdict(item), no_auto_load=True) for item in jar_file_items
+        ]
+        for jar_file in _jar_files_cache:
+            jar_file.load_all_classes_in_jar(False, True)
+        logger.info('加载完成，后续搜索将直接复用缓存')
+    return _jar_files_cache
 
 
 @dataclass
@@ -60,15 +77,10 @@ def search_for_string_in_jar_files(pattern: str) -> List[StringSearchResult]:
                     )
                 )
 
-    # 然后在所有类文件中查找
-    logger.info(f'正在在所有类文件中查找字符串 "{pattern}"，耗时较长请耐心等待...')
+    # 然后在所有类文件中查找（jar 文件首次使用时加载，后续复用缓存）
+    logger.info(f'正在在所有类文件中查找字符串 "{pattern}"...')
 
-    jar_files = [
-        JavaJarFile(**asdict(item), no_auto_load=True) for item in jar_file_items
-    ]
-    for jar_file in jar_files:
-        jar_file.load_all_classes_in_jar(False, True)
-
+    for jar_file in _get_loaded_jar_files():
         for class_file in jar_file.class_files.values():
             strings = class_file.get_strings()
             for s in strings:

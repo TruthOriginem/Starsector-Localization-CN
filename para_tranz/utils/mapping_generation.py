@@ -1,3 +1,5 @@
+import dataclasses
+import json
 from dataclasses import asdict
 from typing import Optional, Set, Tuple
 
@@ -37,12 +39,14 @@ def generate_class_mapping_diff_string(
     diff_str = f'  "path": "{source_class_map.path}",\n'
     diff_str += '  "include_strings": [\n'
     for s in sorted(list(source_class_map.include_strings)):
+        # JSON 转义字符串内容（去掉 json.dumps 产生的外层引号），保证含双引号的字符串输出合法
+        s_escaped = json.dumps(s, ensure_ascii=False)[1:-1]
         if s in excluded_strings:
-            text = colorize(s, RED)
+            text = colorize(s_escaped, RED)
         elif s in included_strings:
-            text = colorize(s, GREEN)
+            text = colorize(s_escaped, GREEN)
         else:
-            text = s
+            text = s_escaped
         if extra_ref_strings and s in extra_ref_strings:
             text = colorize(text, BG_YELLOW)
         diff_str += f'    "{text}",\n'
@@ -89,17 +93,20 @@ def generate_class_file_mapping_by_path(
         # 如果在 para_tranz_map.json 中找到了类文件映射项，那么就可以确定所属的jar文件
         if result:
             jar_item, existing_class_item = result
-            jar_item.class_files = [ClassFileMapItem(path=class_path)]
-            jar_file_items = [jar_item]
+            # 用 dataclasses.replace 创建副本而非直接修改 jar_item，
+            # 避免污染 PARA_TRANZ_MAP 中的原始对象（否则循环调用时后续查找会失败）
+            jar_file_items = [
+                dataclasses.replace(jar_item, class_files=[ClassFileMapItem(path=class_path)])
+            ]
 
         # 否则，需要手动为每一个jar文件映射添加类文件映射项
         else:
             class_item = ClassFileMapItem(path=class_path)
             jar_file_items = [
-                item for item in PARA_TRANZ_MAP.items if isinstance(item, JarMapItem)
+                dataclasses.replace(item, class_files=[class_item])  # 同上，创建副本
+                for item in PARA_TRANZ_MAP.items
+                if isinstance(item, JarMapItem)
             ]
-            for jar_item in jar_file_items:
-                jar_item.class_files = [class_item]
 
     # 依次尝试在每一个jar中加载类文件
     for item in jar_file_items:
