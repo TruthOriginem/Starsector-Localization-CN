@@ -81,9 +81,10 @@ def generate_class_file_mapping_by_path(
             return
 
         existing_class_item = jar_item.get_class_file_item(class_path)
-        jar_item.class_files = [ClassFileMapItem(path=class_path)]
-
-        jar_file_items = [jar_item]
+        # 同 else 分支，创建副本避免污染 PARA_TRANZ_MAP
+        jar_file_items = [
+            dataclasses.replace(jar_item, class_files=[ClassFileMapItem(path=class_path)])
+        ]
 
     # 否则，只有类文件路径，需要尝试在所有jar文件中搜索
     else:
