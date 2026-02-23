@@ -76,7 +76,7 @@
 | _updateOriginal.py                      | TODO                                                            |
 | _variant_name_map.json                  | 装配名映射文件，英文名对应汉化名，可后继继续更新。                                       |
 | para_tranz/para_tranz.py                | 用于ParaTranz平台的数据导入导出工具，使用方法参见[本指南](docs/paratranz/tut_admin.md) |
-| json.translation.map/_jsonMapHandler.py | TODO                                                            |
+| json.translation.map/_jsonMapHandler.py | 批量替换游戏 JSON 文件中特定键的译文，通过映射文件实现中英文对照。使用方法参见 [json.translation.map/README.md](json.translation.map/README.md) |
 | packaging/make_zip.py                   | 将 `localization` 文件夹打包为汉化补丁压缩包，文件名包含游戏版本、汉化版本、日期及字体变体（根据当前 git 分支自动判断）。直接运行即可，输出到 `packaging/Output/`。 |
 
 ### 版本汉化流程

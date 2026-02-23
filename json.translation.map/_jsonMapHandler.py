@@ -8,7 +8,7 @@ import json5
 
 workplace_path = os.path.dirname(os.path.realpath(__file__))
 starsector_comment_line = re.compile(r'^\s*#.*$')
-json_map_collection_path = '_jsonMapCollection.csv'
+json_map_collection_path = os.path.join(workplace_path, '_jsonMapCollection.csv')
 source_folder = '../original'
 target_folder = '../localization'
 
