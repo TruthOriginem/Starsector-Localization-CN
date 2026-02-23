@@ -17,10 +17,11 @@
 | starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class | `fleets` |
 | starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/intel/misc/TradeFleetDepartureIntel.class | `goods` |
 | starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/intel/misc/TradeFleetDepartureIntel.class | `materiel` |
+| starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/intel/misc/SalvorsTallyIntel.class | `orbital` |
 
 ## 代码逻辑修改
 
-> 098 版本修改1-6已不再适用，已删除。以下是目前仍然存在的问题。
+> 098 版本修改1-5已不再适用，已删除。以下是目前仍然存在的问题。
 
 ### 6. 舰船信息页文本换行前缺少最后一个字
 ![line_end_char_missing-1.png](line_end_char_missing-1.png)
