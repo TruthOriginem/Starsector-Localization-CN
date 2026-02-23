@@ -165,6 +165,13 @@
   "path": "starfarer_obf.jar",
   "class_files": [
     {
+      "path": "com/fs/starfarer/ui/newui/OoOoOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO.class",
+      "include_strings": [
+        "SELECT"
+      ],
+      "exclude_strings": []
+    },
+    {
       "path": "com/fs/starfarer/StarfarerLauncher.class",
       "include_strings": [
         "Java 7 is the only supported version of Java. Trying to use version: [",
@@ -1370,6 +1377,7 @@
     {
       "path": "com/fs/starfarer/campaign/fleet/RepairTracker.class",
       "include_strings": [
+        " - repairs completed",
         " ships)",
         "Lack of supplies for maintenance",
         "Repairs completed ("
@@ -3387,6 +3395,7 @@
         "No related entries",
         "Ordnance points",
         "Production",
+        "Regular marines - tough, competent, and disciplined.",
         "Related entries",
         "Select an entry to view details",
         "Special",
@@ -3396,6 +3405,7 @@
         "These marines are veterans of many ground operations. Well-motivated and highly effective.",
         "This fighter is used by this faction, and may be found for sale at this faction's colonies.",
         "This hullmod is more likely to be found for sale at this faction's colonies.",
+        "This is a d-mod - usually a result of near-permanent damage suffered by the hull - and can only be removed with a full restoration at a dockyard.",
         "This ship is used by this faction, and may sometimes be found for sale at their colonies.",
         "This weapon is more likely to be found for sale at this faction's colonies.",
         "Type: %s",
@@ -6840,6 +6850,10 @@
     {
       "path": "com/fs/starfarer/ui/impl/StandardTooltipV2$12.class",
       "include_strings": [
+        "This d-mod - a result of near-permanent damage suffered by the hull - can only be removed with a full restoration at a dockyard.",
+        "This enhanced hullmod is built into the hull - it can not be removed and does not cost any ordnance points.",
+        "This hullmod is built into the hull - it can not be removed and does not cost any ordnance points.",
+        "This s-mod has been built into this ship - it can not be removed and does not cost any ordnance points.",
         "built into",
         "d-mod",
         "enhanced",
@@ -7318,7 +7332,9 @@
         "  Organizational & aggregate listings",
         "  Personnel listings",
         "Back",
+        "Comm Directory - ",
         "Dismiss",
+        "Missions - ",
         "No available listings",
         "No available postings"
       ]
@@ -7438,6 +7454,28 @@
   "type": "jar",
   "path": "starfarer.api.jar",
   "class_files": [
+    {
+      "path": "com/fs/starfarer/api/impl/campaign/GateExplosionScript.class",
+      "include_strings": [
+        "Gate Explosion"
+      ],
+      "exclude_strings": []
+    },
+    {
+      "path": "com/fs/starfarer/api/campaign/RepLevel.class",
+      "include_strings": [
+        "Cooperative",
+        "Favorable",
+        "Friendly",
+        "Hostile",
+        "Inhospitable",
+        "Neutral",
+        "Suspicious",
+        "Vengeful",
+        "Welcoming"
+      ],
+      "exclude_strings": []
+    },
     {
       "path": "com/fs/starfarer/api/campaign/FleetAssignment.class",
       "include_strings": [
@@ -7720,7 +7758,11 @@
         "200% vs armor, 50% vs shields",
         "200% vs shields, 50% vs armor",
         "25% vs shields and armor, 100% vs hull",
-        "High Explosive"
+        "Energy",
+        "Fragmentation",
+        "High Explosive",
+        "Kinetic",
+        "Other"
       ]
     },
     {
@@ -8791,11 +8833,17 @@
         " (off)",
         " (on)",
         " and ",
+        " hostile.\n\n",
+        ",",
+        ".",
+        "Activating the transponder will reveal your identity - use again to confirm",
         "Are you sure you want to do this?",
         "Cancel",
         "Confirm",
         "In most places, running with the transponder off will attract the attention of nearby patrols, although several factions and certain free ports allow it. Having the transponder off does not grant perfect anonymity.",
         "Transponder on",
+        "Transponder primed - use again to activate",
+        "Transponder shutdown initiated - use again to deactivate",
         "Transponder status also affects the reputation changes from combat and trade. With it turned off, you might be able to trade with otherwise inhospitable factions.",
         "Transponders transmit identifying information to all fleets within range.",
         "Turning the transponder on now would reveal your hostile actions to",
@@ -11003,17 +11051,27 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathBaseIntel.class",
       "include_strings": [
-        " Base",
+        " Base",    
+        " Base - ",
+        " Base - Abandoned",
+        " Base - Bounty Completed",
+        " Base - Bounty Expired",
+        " Base - Bounty Posted",
+        " Base - Destroyed",
+        " Base - Discovered",
+        " Base - Exact Location Unknown",
         " established a base in the ",
         " posted a bounty for the destruction of this base.",
         "%s received",
         "%s reward",
         "Asylum",
         "Atonement",
+        "Bounties",
         "Bounty faction: ",
         "Brought in by smugglers",
         "Citadel",
         "Cleansing",
+        "Colony threats",
         "Development level",
         "Devotion",
         "Exploration",
@@ -11047,6 +11105,7 @@
         "You have not yet discovered the exact location or capabilities of this base.",
         "You have successfully completed this bounty.",
         "remaining",
+        "the ",
         "to cause widespread damage and destruction."
       ]
     },
@@ -12328,7 +12387,6 @@
         "days",
         "evenly matched",
         "fleet",
-        "fleets",
         "outmatched",
         "owing to their orbital defenses.",
         "projected to be %s and likely comprised of %s ",
@@ -12619,9 +12677,11 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/intel/misc/DistressCallIntel.class",
       "include_strings": [
+        " - Investigated",
         ". ",
         "Distress Call",
         "Originating in the ",
+        "There's no additional information, but that's not surprising - ",
         "You receive a distress call from the nearby ",
         "You've investigated the system this distress call came from.",
         "a typical fleet doesn't carry the equipment to broadcast a full-fledged data ",
@@ -12692,6 +12752,7 @@
       "include_strings": [
         "Discovered: ",
         "Go back",
+        "Luddic Shrine - ",
         "Luddic shrines",
         "Not visited",
         "Show shrines",
@@ -12769,8 +12830,8 @@
         "Other, as yet undiscovered, salvage may be present in the system.",
         "Projected value: %s",
         "Salvage",
+        "Salvor's Tally - ",
         "habitat",
-        "orbital",
         "s",
         "station",
         "wreck"
@@ -12830,9 +12891,7 @@
         "Trade Fleet",
         "Trade Fleet Departure",
         "Your contacts ",
-        "goods",
         "goods and materiel",
-        "materiel",
         "until departure"
       ]
     },
@@ -14988,6 +15047,7 @@
         " crew and ",
         " crew.",
         " heavy machinery.",
+        ".",
         "An accident during the operation has resulted in the loss of ",
         "Base effectiveness",
         "Continue",
@@ -15271,6 +15331,7 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/skills/AptitudeDesc$Level0.class",
       "include_strings": [
+        "    - Choose enough skills in lower tiers to unlock the next tier\n    - It's possible to skip a tier by taking more skills in lower tiers instead\n    - Reaching the top tier requires 4 skill points, plus 1 more to take one of the top skills\n    - Taking the second top tier skill requires an additional 2 points spent in lower tier skills\n    - Skills that only affect the piloted ship can be made \"elite\" at the cost of a ",
         " point",
         " point\n",
         "Skills that have been made elite in the past can be re-made elite at no cost\n"
@@ -15282,6 +15343,7 @@
         " for a Beta Core, and ",
         " for a Gamma Core. ",
         " for an Alpha Core, ",
+        "*The total \"automated ship points\" are equal to the deployment points cost of all automated ships in the fleet, with a multiplier for installed AI cores - ",
         "Due to safety interlocks, ships with AI cores do not contribute to the deployment point distribution.",
         "do not contribute to the deployment point distribution",
         "×"
@@ -16689,6 +16751,7 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/skills/Salvaging$Level1.class",
       "include_strings": [
+        "% resources - but not rare items, such as blueprints - recovered from abandoned stations and other derelicts",
         "Salvaging skill"
       ]
     },
@@ -17373,6 +17436,7 @@
         "A slow-moving fleet avoids this danger. Press and hold %s to move slowly, until you're through the asteroid belt.",
         "Continue",
         "If you go through at full speed, there's a chance your fleet may be knocked off course, and some of your ships might even suffer damage from asteroid impacts.",
+        "The danger is low, however - especially since the belt is thin, and you're only going across it - so you could also get away with just going full speed.",
         "You're coming up on an asteroid belt!",
         "Your fleet"
       ]
@@ -17408,21 +17472,27 @@
         "Continue",
         "Finish",
         "Press %s to open the character tab and consider your options. You don't have to actually spend the points now if you don't want to.",
+        "Skill points are used to learn skills. Skills are arranged in four aptitudes - Combat, Leadership, Technology, and Industry. Each aptitude has a number of tiers, you advance to the higher tiers by picking skills from the lower ones.",
+        "Skills that affect your piloted ship - all Combat skills, and a few skills in other aptitudes - can be made \"elite\" at the cost of a ",
         "The maximum level you can reach is %s.",
         "You also gain ",
         "You gain %s skill point with each level-up, and an additional point at the start of the campaign.",
         "You've gained a level!",
         "Your fleet",
+        "take exceptional actions - to \"make your own story\", in a way. The tutorial will introduce ",
         "using these a bit later."
       ]
     },
     {
       "path": "com/fs/starfarer/api/impl/campaign/tutorial/TutorialMissionEvent.class",
       "include_strings": [
+        "\n\nAlso: you'll need to re-dock with your transponder turned on to take advantage of Ancyra's facilities.",
         "\"Storage\"",
         "\"autofit\"",
+        "(Once this conversation is over, press %s to open the refit screen. After selecting a specific ship, you can press %s to %s - pick a desired loadout, and the ship will be automatically refitted to match it, using what weapons are available.",
         "Contact ",
         "Deliver Report to Jangala",
+        "Deliver Report to Jangala - completed",
         "In addition, you now have access to local storage at Ancyra, and some weapons and supplies have been placed there. To access it, click on the \"Storage\" button in the trade screen.)",
         "Stabilize the Jump-points"
       ]
@@ -17486,7 +17556,9 @@
     {
       "path": "com/fs/starfarer/api/impl/campaign/tutorial/TutorialPirateApproachesDialogPluginImpl.class",
       "include_strings": [
+        "A pirate fleet is approaching! First you'll spot it as a sensor contact, then as an unidentified fleet, and then - when it gets very close - you'll see its true colors.",
         "Continue",
+        "Don't worry - the pirate ship is a shoddy rust bucket, and if you do lose, you can press %s to quick-load.",
         "Even so, combat can be expensive, especially if there's no bounty on the enemy you fight. Deploying ships into battle reduces their combat readiness, and recovering CR consumes supplies. Battle damage can cost even more supplies to repair.",
         "Finish",
         "However, fighting is often necessary to survive. Wait for the pirate fleet to approach, then defeat them!",
@@ -17518,10 +17590,13 @@
       "path": "com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class",
       "include_strings": [
         ", both to ",
+        ", which is controlled by the Hegemony - ",
         "Activate the %s before getting closer to ",
         "Continue",
         "Finish",
         "Keeping your transponder on is a crippling disadvantage in hostile space, but as we're getting closer to port and we'd like to dock there, it's a good idea to turn it on.",
+        "Since turning it on and off has major consequences, it requires a double-tap to turn on or off - once to prime, and once more to confirm.",
+        "Turning on the transponder makes your fleet highly visible, and everyone seeing it will know who you are - unlike that pirate fleet you fought earlier, which had to be very close to positively identify.",
         "While in Hegemony space, a fleet is required by law to identify itself by keeping its transponder turned on. This is a view shared by most, though not all, major factions.",
         "Your fleet",
         "Your fleet is getting closer to ",
@@ -18203,6 +18278,7 @@
         "Medium wpn",
         "Range cap",
         "Ship has no ballistic weapon slots",
+        "Since the base range is increased, this modifier - unlike most other flat modifiers - is increased by percentage modifiers from other hullmods and skills.", 
         "Small",
         "Small / Medium",
         "Small wpn",
@@ -18274,6 +18350,7 @@
         "Increases the base range of all non-beam Energy and Hybrid weapons by %s.",
         "Interactions with other modifiers",
         "Originally designed by the Tri-Tachyon Corporation for use on its combat droneships, the coherence field strength has to be dialed down to allow operation on crewed vessels.",
+        "Since the base range is increased, this range modifier - unlike most other flat modifiers in the game - is increased by percentage modifiers from other hullmods and skills.",
         "The coherence field is unstable under combat conditions, with stresses on the hull resulting in spot failures that release bursts of lethal radiation. Crew casualties in combat are increased by %s."
       ]
     },
@@ -18329,7 +18406,8 @@
         "Beam weapons deal %s more damage and deal hard flux damage to shields.",
         "Incompatible with Advanced Optics",
         "Interactions with other modifiers",
-        "Reduces the portion of the range of beam weapons that is above %s units by %s. The base range is affected."
+        "Reduces the portion of the range of beam weapons that is above %s units by %s. The base range is affected.",
+        "The base range is reduced, thus percentage and multiplicative modifiers - such as from Integrated Targeting Unit, skills, or similar sources - apply to the reduced base value."
       ]
     },
     {
@@ -18411,6 +18489,7 @@
     {
       "path": "com/fs/starfarer/api/impl/hullmods/PhaseField.class",
       "include_strings": [
+        "Fleetwide sensor strength increases - such as from High Resolution Sensors - do not factor into this calculation.",
         "In addition, the fleet's detected-at range is reduced by a multiplier based on the total sensor profile of the %s highest-profile ships in the fleet, and the total sensor strength of the %s phase ships with the highest sensor strength values. This effect only applies when the fleet's transponder is turned off.",
         "Phase ships in fleet",
         "Removing this ship would change the multiplier to %s. Adding another ship with the same sensor strength would improve it to %s.",
