@@ -43,16 +43,20 @@ def paratranz_to_game_new_version() -> None:
             file.save_file()
 
 
-def gen_mapping_by_class_path() -> None:
+def gen_mapping_by_class_path(class_path: str | None = None) -> None:
     print('请输入java jar文件及其中类文件的路径，以生成类文件映射项')
     print('例如：starfarer.api.jar:com/fs/starfarer/api/campaign/FleetAssignment.class')
     print('例如：com.fs.starfarer.api.campaign.FleetAssignment')
 
-    result = generate_class_file_mapping_by_path(input('类文件路径：'))
+    if class_path is None:
+        class_path = input('类文件路径：')
+    else:
+        print(f'类文件路径：{class_path}')
+    result = generate_class_file_mapping_by_path(class_path)
 
     if result:
         jar_item, class_item, existing_class_item, extra_ref_strings = result
-        print('所属jar文件：', jar_item.path)
+        print('所属jar文件：', jar_item.path if jar_item else '未知')
         print('以下是生成的类文件映射项：')
         print(class_item.as_json())
 
@@ -76,8 +80,11 @@ def gen_mapping_by_class_path() -> None:
     logger.info('类文件映射项生成完成')
 
 
-def search_string_in_jar_files() -> None:
-    pattern = input('请输入要查找的字符串：')
+def search_string_in_jar_files(pattern: str | None = None) -> None:
+    if pattern is None:
+        pattern = input('请输入要查找的字符串：')
+    else:
+        print(f'查找字符串：{pattern}')
     result = search_for_string_in_jar_files(pattern.strip())
 
     if not result:
@@ -109,6 +116,7 @@ def mian() -> None:
         option = input('请输入选项数字：')
 
     non_interactive = len(sys.argv) > 1
+    arg2 = sys.argv[2] if len(sys.argv) > 2 else None
     while True:
         if option == '1':
             game_to_paratranz()
@@ -121,14 +129,14 @@ def mian() -> None:
         #     break
         elif option == '4':
             if non_interactive:
-                gen_mapping_by_class_path()
+                gen_mapping_by_class_path(arg2)
             else:
                 while True:
                     gen_mapping_by_class_path()
             break
         elif option == '5':
             if non_interactive:
-                search_string_in_jar_files()
+                search_string_in_jar_files(arg2)
             else:
                 while True:
                     search_string_in_jar_files()
@@ -140,8 +148,11 @@ def mian() -> None:
             print('无效选项！')
             option = input('请输入选项数字：')
 
-    logger.info('程序执行完毕，请按回车键退出')
-    input()
+    if non_interactive:
+        logger.info('程序执行完毕')
+    else:
+        logger.info('程序执行完毕，请按回车键退出')
+        input()
 
 
 if __name__ == '__main__':
