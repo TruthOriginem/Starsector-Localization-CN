@@ -2467,10 +2467,10 @@ greetingDerelictFriendly,OpenCommLink,"$faction.id == derelict score:1000
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""人之领 MINEX 许可已接受，防篡改系统已被设为待命状态，将允许目标接近进行检修。""",,
 greetingDerelictHostile,OpenCommLink,"$faction.id == derelict score:1000
-$entity.isHostile",$entity.ignorePlayerCommRequests = true 1,"""警告：这艘船是 人之领开拓者 的财产，任何方式的篡改和/或破坏或侵入信号传送，都将回以致命武力。根据 [MINEX 创立法案] 及适用于人之领当地的殖民政体宪章，任何破坏或损毁 人之领开拓者 的财产的行为都将受到相应的惩处。本次违规行为已记录在案。""",cutCommLink:切断通讯链接,
+$entity.isHostile",$entity.ignorePlayerCommRequests = true 1,"""警告：这艘船是 人之领开拓者 的财产，任何方式的篡改和/或破坏或侵入信号传送，都将回以致命武力。根据 [MINEX 创立法案] 及适用于 人之领 当地的殖民政体宪章，任何破坏或损毁 人之领开拓者 的财产的行为都将受到相应的惩处。本次违规行为已记录在案。""",cutCommLink:切断通讯链接,
 greetingDerelictNeutral,OpenCommLink,"$faction.id == derelict score:1000
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""人之领的公民，依照任务参数设定，这艘自动无人舰在航行中已经识别并记录了你的船只或居住地。同时，依照程序设定，人之领开拓者自主舰船会以致命武力回应任何方式的篡改企图，包括破坏或侵入信号传送。破坏或损毁人之领开拓者的财产，除了应接受人之领当地的殖民政体宪章裁决外，还将根据 [MINEX 创立法案] 受到相应的惩处。""",,
+FireAll PopulateOptions","""人之领 的公民，依照任务参数设定，这艘自动无人舰在航行中已经识别并记录了你的船只或居住地。同时，依照程序设定，人之领开拓者自主舰船会以致命武力回应任何方式的篡改企图，包括破坏或侵入信号传送。破坏或损毁人之领开拓者的财产，除了应接受人之领当地的殖民政体宪章裁决外，还将根据 [MINEX 创立法案] 受到相应的惩处。""",,
 ,,,,,,
 ,,,,,,
 # Trade panel flavor text,,,,,,
@@ -2503,7 +2503,7 @@ flavorTextMarketPirates,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == pirates","AddText ""港区里到处是伤痕累累的舰船，海盗们忙着用激光烧坏货物集装箱的 ID 芯片，产生的闪烁略微照亮了船体。海盗们成群结队，互相打量，他们的舰长则在乌烟瘴气的密室里忙着讨价还价。一群港口老大的马仔则拿着武器在一旁看着。"" marketFlavorTextColor",,,
 flavorTextMarketHegemony,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == hegemony","AddText ""港区内挤满了正在靠港的巨型货船和遍布坑洼的战斗货船，而霸主的巡逻艇也正在其中穿行着。卸货的舰船被霸主的后勤官员干脆利落地接待，过审，然后被放行到一大群商人、军火商和投机者之中。"" marketFlavorTextColor
-AddText ""在一处临时隔墙上投影着霸主的火凤凰标志，而在人之领的闪星标志周围滚动显示着当地海军招募中心的通讯 ID 和征兵口号。' 游历星域，光荣服役，复兴人之领 '。"" marketFlavorTextColor",,,
+AddText ""在一处临时隔墙上投影着霸主的火凤凰标志，而在 人之领 的闪星标志周围滚动显示着当地海军招募中心的通讯 ID 和征兵口号。' 游历星域，光荣服役，复兴人之领 '。"" marketFlavorTextColor",,,
 flavorTextMarketLuddicChurch,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == luddic_church","AddText ""港区内挤满了大小各异的贸易星舰。衣着朴素的卢德商人们等待着与卸货的舰长们会面。小贩们向宇宙民贩卖着街头食品和手工艺品。而僧侣们则在自己的托钵前安静地祈祷。偶尔会出现一些狂热教徒，执意要叱责外来者公开展示自身科技物件和生化植入体的行径，但他们很快就会被身披手纺卢德绿袍、背着 CP 卡宾枪的卢德骑士及时送走。教会是务实的；在商贸区，这类罪过尚且可被容忍。"" marketFlavorTextColor",,,
 flavorTextMarketPirateUmbra,TradePanelFlavorText,"$global.tradePanelMode == MARKET
@@ -2516,23 +2516,23 @@ flavorTextMarketDecivilized,TradePanelFlavorText,"$global.tradePanelMode == MARK
 $market.mc:decivilized == true score:1000
 $marketSize <= 3","AddText ""你们降落在了一个通过加密传输安排的地点。起初，一切似乎都很平静，但随后就有身着迷彩的人带着武器从隐蔽的通道里走出来。他们非常多疑，态度也很不友善。经过一番安抚之后，贸易意向终于被接受，使得谈判最终得以开始。"" marketFlavorTextColor",,,
 flavorTextMarketDiktat,TradePanelFlavorText,"$global.tradePanelMode == MARKET
-$faction.id == sindrian_diktat","AddText ""商船和军舰交错着塞满了港区。卸货的船长们都要先接受一个呆板辛达后勤官员的审查后才能继续前行。商人们都穿着两侧衣领上别有辛达徽章的沉闷西装，安静地互相传递载有船货清单的数据平板。"" marketFlavorTextColor
-AddText ""由在风中挥舞的辛达旗帜簇拥在两侧，一个全息投影仪正展示辛达瑞亚之狮 Andrada 上将 的形象。虽然看起来比真人更加伟岸，但他运筹帷幄的目光却只投向了面前的一个排气管。"" marketFlavorTextColor",,,
+$faction.id == sindrian_diktat","AddText ""商船和军舰交错着塞满了港区。卸货的舰长们都要先接受一个呆板辛达后勤官的审查后才能继续前行。商人们都穿着两侧衣领上别有辛达徽章的沉闷西装，一边安静地互相传递载有货物清单的数据平板。"" marketFlavorTextColor
+AddText ""一个全息投影仪正展示着辛达瑞亚之狮 Andrada 上将的形象，于风中挥舞的辛达旗帜簇拥在他的两侧。在投影仪所营造的比真人更加伟岸的效果下，他那运筹帷幄的目光投向了面前的一个排气管。"" marketFlavorTextColor",,,
 flavorTextMarketDiktatCruor,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == sindrian_diktat
 $market.id == cruor score:100
-$player.transponderOn == true","AddText ""巨大的履带式都市列车永不停歇地在 Cruor 的破碎平原上四处蠕动，你降落在了其中一节港务车段的可用停机坪上。下船后，伤痕累累的甲板以难以察觉的速度平移和转动了起来。一个被卫兵环绕的 辛达 官员面无表情地接过你的证件，对你所填的每一条普通信息都进行了盘问，仿佛你犯了下过世间所有的罪一样。"" marketFlavorTextColor
-AddText ""当其他船长遭受类似的待遇时，辛达 的旗帜和往常一样无精打采地遮满了港区。你漫无目的地看着装在每个下货台上的那些脏兮兮的敞篷笼子，开始胡思乱想起来。"" marketFlavorTextColor",,,
+$player.transponderOn == true","AddText ""巨大的履带式都市列车永不停歇地在 Cruor 的破碎平原上四处蠕动，你降落在了其中一节港务车段的可用停机坪上。下船后，伤痕累累的甲板以难以察觉的速度平移和转动了起来。一个被卫兵环绕的辛达官员面无表情地接过你的证件，对你所填的每一条普通信息都进行了盘问，仿佛你犯了下过世间所有的罪一样。"" marketFlavorTextColor
+AddText ""辛达的旗帜和往常一样无精打采地遮满了港区，旗帜下的其他舰长们也遭受着类似的待遇。你不禁暗自琢磨，安装在每个收货区里的那些肮脏的敞口笼子是干什么用的。"" marketFlavorTextColor",,,
 flavorTextMarketDiktatCruorSneak,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == sindrian_diktat
 $market.id == cruor score:100
 $player.transponderOn == false","AddText ""巨大的履带式都市列车永不停歇地在 Cruor 的破碎平原上四处蠕动，你的穿梭机降落到了其中一节辅助车段的维修平台上。接下来紧张的几分钟内，伤痕累累的甲板经过了一系列的平移和转动，一个锁着的舱门最终开启，放了你进去。不管你是靠着什么阴谋诡计还是熟人照顾来获得了进入的机会，现在都已经成功了。"" marketFlavorTextColor
-AddText ""你和你的随行人员穿过迷宫般的通道，来到了一条公共走廊。迎接你的是有些要掉下来的辛达强权宣传画和下班工人们死气沉沉地冷眼相待。"" marketFlavorTextColor",,,
+AddText ""你和你的随行人员穿过迷宫般的通道，来到了一条公共走廊。迎接你的是剥落的辛达强权宣传海报，还有几个默不作声的下班工人投来的古怪目光。"" marketFlavorTextColor",,,
 flavorTextMarketDiktatVolturn,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == sindrian_diktat
 $market.id == volturn score:100
-$player.transponderOn == true","AddText ""Volturn 的主要港口由一系列巨大驳船所组成。驳船满是焦痕，而周围的水面充满了油渍。你一下船，臭氧和海盐的气味就向你扑面袭来。卸货的船长们都要先接受一个呆板辛达后勤官员的审查之后才能继续前行之。商人们都穿着两侧衣领上别有辛达徽章的深色西装，安静地传递着一个载有船货清单的数据平板。"" marketFlavorTextColor
-AddText ""被风中挥舞的辛达旗帜两侧簇拥着，一个有些闪烁的全息投影仪正在展示辛达瑞亚之狮 Andrada 上将 的形象，比他真人更伟岸。不过他运筹帷幄般的目光却只是投向了在上空盘旋的类似海鸥的鸟群。"" marketFlavorTextColor",,,
+$player.transponderOn == true","AddText ""Volturn 的主要港口由一系列巨大驳船所组成。驳船满是焦痕，而周围的水面充满了油渍。你一下船，臭氧和海盐的气味就向你扑面袭来。卸货的舰长们都要先接受一个呆板辛达后勤官的审查后才能继续前行。商人们都穿着两侧衣领上别有辛达徽章的沉闷西装，一边安静地互相传递载有货物清单的数据平板。"" marketFlavorTextColor
+AddText ""一个全息投影仪正展示着辛达瑞亚之狮 Andrada 上将的形象，于风中挥舞的辛达旗帜簇拥在他的两侧。在投影仪所营造的比真人更加伟岸的效果下，他那运筹帷幄的目光投向了在上空盘旋的类似海鸥的鸟群。"" marketFlavorTextColor",,,
 flavorTextMarketDiktatVolturnSneak,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $faction.id == sindrian_diktat
 $market.id == volturn score:100
@@ -2544,42 +2544,42 @@ flavorTextCargoPlaceholder,TradePanelFlavorText,"$global.tradePanelMode == CARGO
 flavorTextSalvagePlaceholder,TradePanelFlavorText,"$global.tradePanelMode == SALVAGE
 ","AddText ""你的太空作业人员装备了激光切割器和框架式货运艇，穿行于船体残骸之间，搜索着可用的货物商品、武器装备和贵重物品。"" textGrayColor",,,
 flavorTextAbandonedStation,TradePanelFlavorText,"$global.tradePanelMode == MARKET
-$abandonedStation == true score:100","AddText ""空荡的船坞漆黑一片，大气读数几乎真空，但自动化系统还能提供足够电力来运行基本的生命支持和仓储功能。"" marketFlavorTextColor",,,
+$abandonedStation == true score:100","AddText ""港区昏暗而空旷，只剩下几具被洗劫过的废船残骸。大气读数几乎为真空，但强化型无源收集器提供的电力尚且还足以维持基础维生与仓储功能。"" marketFlavorTextColor",,,
 ,,,,,,
 # relationship level descriptions,,,,,,
 relLevelCooperative,RelationshipLevelDesc,$faction.rel == COOPERATIVE,,你深受 $theFaction 的信任与尊重，巡逻队和港务局对你大开绿灯，同高层官员会面接洽也不是难事。你能从诸多事物中获得回旋的余地，可以在交易中争得更大的让利空间，并有资格获取高质量的舰船与武器。,,
 relLevelFriendly,RelationshipLevelDesc,$faction.rel == FRIENDLY,,你在 $theFaction 内部已经小有名气，不少人都对你有所耳闻，或是有所私交。官场里的小角色都知道别去碍着你的事。,,
-relLevelWelcoming,RelationshipLevelDesc,$faction.rel == WELCOMING,,你的名号被一些 $theFaction 高层官员所知晓。无故骚扰你对地方巡逻指挥来说已经是比较冒险的行为了。,,
+relLevelWelcoming,RelationshipLevelDesc,$faction.rel == WELCOMING,,你的名号被一些 $theFaction 的高层官员所知晓。无故骚扰你对地方巡逻指挥来说已经是比较冒险的行为了。,,
 relLevelFavorable,RelationshipLevelDesc,$faction.rel == FAVORABLE,,$faction 的官员普遍对你抱有好感，不过这影响并不大。充其量，你只是能被允许购买一些低档的过剩军用装备，或是在有其他更趁手的替罪羊时避免成为审查的首要目标。,,
 relLevelNeutral,RelationshipLevelDesc,$faction.rel == NEUTRAL,,你并未被 $faction 的要员们广泛熟知，名声不好不坏。,,
-relLevelSuspicious,RelationshipLevelDesc,$faction.rel == SUSPICIOUS,,虽然目前还没有任何确凿的犯罪证据，但 $faction 官员已经开始对你有所怀疑。你必须再三要求接入港口当局，对方才会勉强同意，同时你发现自己经常遭到调查和骚扰。,,
+relLevelSuspicious,RelationshipLevelDesc,$faction.rel == SUSPICIOUS,,虽然目前还没有任何确凿的犯罪证据，但 $faction 的官员已经开始对你有所怀疑。你必须再三要求接入港口当局，对方才会勉强同意，同时你发现自己经常遭到调查和骚扰。,,
 relLevelInhospitable,RelationshipLevelDesc,$faction.rel == INHOSPITABLE,,对你的怀疑程度已经到了可以付诸行动的地步。虽然目前还没到要求对你格杀勿论的程度，但 $faction 的港口拒绝与你交易，而执勤中的巡逻队也乐得给你找点麻烦。,,
-relLevelHostile,RelationshipLevelDesc,$faction.rel == HOSTILE,,$Faction 的指挥官有权在发现你的舰队后不经询问立即交战，同时它们所有市场都被禁止与你交易。你也许还有机会恢复与 $theFaction 的良好关系，但这已经不是能靠做几件小事就能解决的问题。,,
-relLevelVengeful,RelationshipLevelDesc,$faction.rel == VENGEFUL,,你的面部全息图像和你舰队最后被发现时的识别信息快照已经成为了星系间安全通知公告的常规部分。可以肯定的是，已经有一个高级别的 $faction 官员将负责追捕你作为首要任务进行。,,
+relLevelHostile,RelationshipLevelDesc,$faction.rel == HOSTILE,,$Faction 的指挥官有权在发现你的舰队后不经询问立即交战，同时它们的所有市场都被禁止与你交易。你也许还有机会恢复与 $theFaction 的良好关系，但这已经不是能靠做几件小事就能解决的问题。,,
+relLevelVengeful,RelationshipLevelDesc,$faction.rel == VENGEFUL,,你的面部全息图像和你舰队最后被发现时的识别信息快照已经成为了星系间安全通知公告的常规部分。可以肯定的是，有一名高级别的 $faction 官员的首要任务便是负责追捕你。,,
 relLevelCooperativeIndie,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
-$faction.id == independent",FireAll RelLevelMoreDescription,独立舰队的运营者和中立政体的领导阶层将你视为宝贵的财富和亲密的友人。你在生意场上与合同中能够得到较为有利的条款，获得港口的优先停泊权，受邀与VIP们一起进餐。因为这份你为自己挣来的好感，你在大部分事务中都能获得许多回旋的余地。,,
+$faction.id == independent",FireAll RelLevelMoreDescription,独立舰队的运营者和中立政体的领导阶层将你视为宝贵的财富和亲密的友人。你在生意场上与合同中能够得到较为有利的条款，获得港口的优先停泊权，并受邀与 VIP 们一起进餐。因为这份你为自己挣来的好感，你在大部分事务中都能获得许多回旋的余地。,,
 relLevelFriendlyIndie,RelationshipLevelDesc,"$faction.rel == FRIENDLY
 $faction.id == independent",FireAll RelLevelMoreDescription,在英仙座星域你声名大噪，不少高级独立舰队的长官和中立政体的官员们都对你刮目相看。你精明能干，在各种生意中备受青睐，就算是犯了点小错，人们也视而不见。,,
 relLevelWelcomingIndie,RelationshipLevelDesc,"$faction.rel == WELCOMING
-$faction.id == independent",FireAll RelLevelMoreDescription,你的名声已有众多独立舰队的运营者和中立政体的官员知晓，百举百捷，在生意场上人人欢迎，少许失误也容易被谅解。,,
+$faction.id == independent",FireAll RelLevelMoreDescription,你的名声已被众多独立舰队的运营者和中立政体的官员所知晓，百举百捷，在生意场上人人欢迎，少许失误也容易被谅解。,,
 relLevelFavorableIndie,RelationshipLevelDesc,"$faction.rel == FAVORABLE
-$faction.id == independent",FireAll RelLevelMoreDescription,英仙座星域的独立舰队与地方小型政体们认为你可靠，可以依赖于你，因此他们也很欢迎你与其做交易。,,
+$faction.id == independent",FireAll RelLevelMoreDescription,你被英仙座星域的独立舰队与地方小型政体们视为可靠的合作伙伴，因此他们也很欢迎你与其做交易。,,
 relLevelNeutralIndie,RelationshipLevelDesc,"$faction.rel == NEUTRAL
 $faction.id == independent",FireAll RelLevelMoreDescription,你尚未在英仙座星域中出名，独立舰队与小型政体们并不认识你。如果你想和他们做生意，他们就会照例欢迎你。,,
 relLevelSuspiciousIndie,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
-$faction.id == independent",FireAll RelLevelMoreDescription,虽然目前还没有任何确凿的犯罪证据，但 $faction 官员已经开始对你有所怀疑。你必须再三要求接入港口当局，对方才会勉强同意，同时你发现自己经常遭到调查和骚扰。,,
+$faction.id == independent",FireAll RelLevelMoreDescription,虽然目前还没有任何确凿的犯罪证据，但 $faction 的官员已经开始对你有所怀疑。你必须再三要求接入港口当局，对方才会勉强同意，同时你发现自己经常遭到调查和骚扰。,,
 relLevelInhospitableIndie,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
 $faction.id == independent",FireAll RelLevelMoreDescription,对你的怀疑程度已经到了可以付诸行动的地步。虽然目前还没到要求对你格杀勿论的程度，但 $faction 的港口拒绝与你交易，而执勤中的巡逻队也乐得给你找点麻烦。,,
 relLevelHostileIndie,RelationshipLevelDesc,"$faction.rel == HOSTILE
-$faction.id == independent",FireAll RelLevelMoreDescription,投机取巧的独立舰队舰长们只要一看到你就会立马开火，你头上顶着的一大笔赏金就是为了让你伏法而设。因为人们觉得你比大多数海盗都还差劲，就连没什么政治倾向的独立市场也不愿意对你开放。或许，你还有机会修复与星域里林立的中立政体之间的关系，但这可得花上不少功夫。,,
+$faction.id == independent",FireAll RelLevelMoreDescription,投机取巧的独立舰队舰长们只要一看到你就会立马开火，以争取你头上那笔为了让你伏法而筹集的公开悬赏。就连没什么政治倾向的独立市场也不愿意对你开放，因为人们觉得你比大多数海盗都还差劲。你也许还有机会恢复与星域里林立的中立政体之间的关系，但这已经不是能靠做几件小事就能解决的问题。,,
 relLevelVengefulIndie,RelationshipLevelDesc,"$faction.rel == VENGEFUL
-$faction.id == independent",FireAll RelLevelMoreDescription,你就是空间航道上的大灾星。作为独立舰队和地方政体管理者之间非正式集体安全协定的一部分，你的全息头像和你麾下$shipOrFleet的情资时常被他们互相交换。很可能已经有某个服务价格不菲的佣兵公司把追杀你提上了他们的日程。,,
+$faction.id == independent",FireAll RelLevelMoreDescription,你就是空间航道上的大灾星。作为独立舰队和地方政体管理者之间非正式集体安全协定的一部分，你的全息头像和你麾下$shipOrFleet的情资时常被他们互相交换。很可能已经有某个服务价格不菲的佣兵公司把对你的追猎提上了他们的日程。,,
 relLevelIndieBaird,RelLevelMoreDescription,"$faction.id == independent
 $global.gaKA_completed",,众所周知，你曾为 Galatia 学院的 Baird 院长效力。,,
 relLevelCooperativePirates,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
 $faction.id == pirates",FireAll RelLevelMoreDescription,你的事迹已经成为传说故事，激励了无数的模仿者。你在犯罪社会里的人脉与影响力惹人眼红，各地的黑市与地下佣兵都对你敞开怀抱。只要你想，就会有一条满溢着走私货物、违禁药物和军火的河流随你取用。,,
 relLevelFriendlyPirates,RelationshipLevelDesc,"$faction.rel == FRIENDLY
-$faction.id == pirates",FireAll RelLevelMoreDescription,你已经赢得了星域中不少犯罪集团领导人的赏识，对于一般的小海盗来说，招惹你造成的麻烦可能比起获得的利益更大 —— 只要他还想呼吸点像样的空气，而不是被丢出舱门体验真空呼吸的话。,,
+$faction.id == pirates",FireAll RelLevelMoreDescription,你已经赢得了星域中不少犯罪集团领导人的赏识，对于一般的小海盗来说，招惹你造成的麻烦可能比起获得的利益更大 —— 只要他还想呼吸点像样的空气，而不是被丢出舱门体验在真空中呼吸的话。,,
 relLevelWelcomingPirates,RelationshipLevelDesc,"$faction.rel == WELCOMING
 $faction.id == pirates",FireAll RelLevelMoreDescription,你在犯罪团伙之间已经小有恶名，海盗们都对你肃然起敬，而你也知道如何活用这些在黑道的影响力来夺得你想要的东西。,,
 relLevelFavorablePirates,RelationshipLevelDesc,"$faction.rel == FAVORABLE
@@ -2589,21 +2589,21 @@ $faction.id == pirates",FireAll RelLevelMoreDescription,"你花了不少时间�
 relLevelSuspiciousPirates,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
 $faction.id == pirates",FireAll RelLevelMoreDescription,"一般来讲，海盗只是对你不信任，相比起他们对大多数 ""官方"" 太空舰长的厌恶，这种态度要好得多。当然，如果报酬丰厚，他们还是会攻击你。毕竟，本性难移。",,
 relLevelInhospitablePirates,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
-$faction.id == pirates",FireAll RelLevelMoreDescription,海盗会一边用不信任的眼神看待你，一边在你的$shipOrFleet周围预热他们的武器。大多数他们时候看待自己同僚的眼光也好不到哪去，所以只要有够多的星币或足量的恐吓，这点敌意也不是不能放在一旁。,,
+$faction.id == pirates",FireAll RelLevelMoreDescription,海盗会一边用不信任的眼神看待你，一边在你的$shipOrFleet周围预热他们的武器。大多数时候他们看待自己同僚的眼光也好不到哪去，所以只要有够多的星币或足量的恐吓，这点敌意也不是不能放在一旁。,,
 relLevelHostilePirates,RelationshipLevelDesc,"$faction.rel == HOSTILE
-$faction.id == pirates",FireAll RelLevelMoreDescription,"你被海盗们如其它猎物一视同仁地对待，一旦机会绝佳还有利可图，他们就会蜂拥而至。
-无聊的海盗也会用你的舰队来找点乐子。",,
+$faction.id == pirates",FireAll RelLevelMoreDescription,"虽然还没到被记恨的地步，但如果海盗觉得你有星币或货物可抢，他们是绝对不介意动手的。
+或者，只是因为他们闲得发慌。",,
 relLevelHostilePiratesFleet,RelationshipLevelDesc,"$faction.rel == HOSTILE
 $faction.id == pirates
-$player.fleetPoints >= 120",FireAll RelLevelMoreDescription,大多数海盗都只是惧怕你强大的舰队，并没有对你有一丝尊敬之情。为了避免惹上成为你'帮凶'的名号，海盗基地不愿与你公开交易，不仅如此，海盗们还会乘人之危对你发动袭击。,,
+$player.fleetPoints >= 120",FireAll RelLevelMoreDescription,"大多数海盗都只是惧怕你强大的舰队，并没有对你有一丝尊敬之情。为了避免惹上成为你 ""帮凶"" 的名号，海盗基地不愿与你公开交易，不仅如此，海盗们还会乘人之危对你发动袭击。",,
 relLevelVengefulPirates,RelationshipLevelDesc,"$faction.rel == VENGEFUL
 $faction.id == pirates",FireAll RelLevelMoreDescription,你不过是被海盗们嗤之以鼻的猎物，并且作为那些英仙座星区里臃肿流油的主要势力们的一条看门杂种为海盗舰长们所不齿。,,
 relLevelVengefulPiratesFleet,RelationshipLevelDesc,"$faction.rel == VENGEFUL
 $faction.id == pirates
-$player.fleetPoints >= 120",FireAll RelLevelMoreDescription,"你现在就是海盗们的眼中钉；他们甚至用你的全息脸像来练习打靶。不难想象，英仙座星域无法地带的阴影中，初出茅庐的年轻海盗们有一个算一个，都准备集结舰队猎杀你，你的人头便是他们""万古流芳""之路的开始。",,
+$player.fleetPoints >= 120",FireAll RelLevelMoreDescription,"你现在就是海盗们的眼中钉；他们甚至用你的全息脸像来练习打靶。不难想象，英仙座星域无法地带的阴影中，初出茅庐的年轻海盗们有一个算一个，都准备集结舰队猎杀你，你的人头便是他们 ""万古流芳"" 之路的开始。",,
 relLevelPiratesKantasProtection,RelLevelMoreDescription,"$faction.id == pirates
 $player.kantaProtection
-$player.everHadKantaProtection",,你已经买通了军阀 Kanta 来确保海盗们更倾向于避开你的殖民地。,,
+$player.everHadKantaProtection",,你已经买通了军阀 Kanta 来确保海盗们避开你的殖民地，至少在大多数时候。,,
 relLevelPiratesKantasProtectionNo,RelLevelMoreDescription,"$faction.id == pirates
 !$player.kantaProtection
 $player.everHadKantaProtection",,你已经失去了军阀 Kanta 对你财产的保护。,,
@@ -2612,7 +2612,7 @@ $global.murderedCloneLoke",,你就是那个把 Kanta 克隆的 Loke 送入太空
 relLevelCooperativeDiktat,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
 $faction.id == sindrian_diktat",FireAll RelLevelMoreDescription,你被视做挺身维护 Andrada 伟大愿景的楷模。巡逻队指挥官知道他们的事业前程，甚至身家性命，都取决于他们能否尽心尽力确保你的日常生活能够顺风顺水。在辛达的全息宣传短片中，你作为最高元首思想所铸核心价值观的伟大践行者出场，形象被塑造得比平日里更加伟岸。,,
 relLevelFriendlyDiktat,RelationshipLevelDesc,"$faction.rel == FRIENDLY
-$faction.id == sindrian_diktat",FireAll RelLevelMoreDescription,在 辛达强权 政府的官方的接待准则中，你被标注为一位 Andrada 伟大运动的坚定支持者，是一位老朋友，一个好伙伴。基层公务员都很清楚，你在 辛达 领空内的公务是否顺利，是一件事关他们事业前程乃至身家性命的头等大事。,,
+$faction.id == sindrian_diktat",FireAll RelLevelMoreDescription,在 辛达强权 政府的官方的接待准则中，你被标注为一位 Andrada 伟大运动的坚定支持者，是一位老朋友，一个好伙伴。基层公务员都很清楚，你在辛达领空内的公务是否顺利，是一件事关他们事业前程乃至身家性命的头等大事。,,
 relLevelWelcomingDiktat,RelationshipLevelDesc,"$faction.rel == WELCOMING
 $faction.id == sindrian_diktat",FireAll RelLevelMoreDescription,你的好名声已经在 辛达强权 各部门的高官之间流传，并且可以确定的是，你的记录上被附上了官方备注。当地的巡逻队长官和港务局官员都待你友善，并高效的处理你的请求。他们都知道这对他们的职业生涯百利而无一害。,,
 relLevelFavorableDiktat,RelationshipLevelDesc,"$faction.rel == FAVORABLE
@@ -2622,7 +2622,7 @@ $faction.id == sindrian_diktat",FireAll RelLevelMoreDescription,你在 辛达强
 relLevelSuspiciousDiktat,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
 $faction.id == sindrian_diktat",FireAll RelLevelMoreDescription,虽然还没有宣布你为国家的敌人，但是很明显你已经在 辛达强权 政府的安全机构的记录里留下了注脚。港务局官员们都用怀疑的目光审视你，规章申报处理缓慢，并时常对你进行不必要的检查。,,
 relLevelInhospitableDiktat,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
-$faction.id == sindrian_diktat",FireAll RelLevelMoreDescription,辛达强权 政府的安全机构已经将你标记为恐怖分子嫌犯，但目前还没下达格杀勿论的指令。辛达 控制下的港口会拒绝与你贸易，而巡逻队们仿佛是接到了指示一样处处让你苦不堪言。,,
+$faction.id == sindrian_diktat",FireAll RelLevelMoreDescription,辛达强权 政府的安全机构已经将你标记为恐怖分子嫌犯，但目前还没下达格杀勿论的指令。辛达控制下的港口会拒绝与你贸易，而巡逻队们仿佛是接到了指示一样处处让你苦不堪言。,,
 relLevelHostileDiktat,RelationshipLevelDesc,"$faction.rel == HOSTILE
 $faction.id == sindrian_diktat",FireAll RelLevelMoreDescription,你已经跻身于国家公敌的行列。辛达强权 海军已被授权与你的舰队交火，同时商人都被禁止与你交易，违者恐怕会被认定为支持恐怖主义。,,
 relLevelVengefulDiktat,RelationshipLevelDesc,"$faction.rel == VENGEFUL
@@ -2652,9 +2652,9 @@ $faction.turnedIn_allCores > 3",,一个特殊部门很想知道你是如何找�
 relLevelCooperativePather,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
 $faction.id == luddic_path",FireAll RelLevelMoreDescription,诚然，你已踏上循径之道。循径之道绝不平和，每一次的迈步前行都只会向并不遥远的末日更进一步。同行之人将和你一起共守誓约，无论是要迈向神圣的光荣殉道之战，还是将要接受神赐的伟大未知试炼。只有最伟大的先知，比如 卢德 本人或者某些人认为值此称号的 Cotton 修士，才有能力揭示你的命运。,,
 relLevelFriendlyPather,RelationshipLevelDesc,"$faction.rel == FRIENDLY
-$faction.id == luddic_path",FireAll RelLevelMoreDescription,你现在是左径道途上一名求道者了。你的名字在那些暗地里怀揣着信仰的秘密注视者当中广为流传，这些注视者密布于每一个港口、每一只舰队、乃至编织出一整个建立于人情之上的情报网络，会在出乎意料的时候以你意想不到的方式帮助到你。,,
+$faction.id == luddic_path",FireAll RelLevelMoreDescription,你现在是左径道途上一名求道者了。你的名字在那些暗地里怀揣着信仰的秘密注视者当中广为流传，这些注视者密布于每一个港口、每一支舰队、乃至编织出一整个建立于人情之上的情报网络，会在出乎意料的时候以你意想不到的方式帮助到你。,,
 relLevelWelcomingPather,RelationshipLevelDesc,"$faction.rel == WELCOMING
-$faction.id == luddic_path",FireAll RelLevelMoreDescription,组成 卢德左径 的各个秘密团体与各支教派间流传着你的大名。左径 控制下的少数几个殖民地欢迎与你贸易，也会尽其所能避免一些极端的狂热分子前去袭击你。,,
+$faction.id == luddic_path",FireAll RelLevelMoreDescription,组成 卢德左径 的各个秘密团体与各支教派间流传着你的大名。左径控制下的少数几个殖民地欢迎与你贸易，也会尽其所能避免一些极端的狂热分子前去袭击你。,,
 relLevelFavorablePather,RelationshipLevelDesc,"$faction.rel == FAVORABLE
 $faction.id == luddic_path",FireAll RelLevelMoreDescription,你的名字时常在左径的秘密网络当中被提起，也常伴随委婉的赞扬与信任。尽管如此，左径仍然是一个松散的联盟，一些狂热分子可能仍然会有错误的认识并试图从你那里勒索什一税，甚至更糟。,,
 relLevelNeutralPather,RelationshipLevelDesc,"$faction.rel == NEUTRAL
@@ -2662,9 +2662,9 @@ $faction.id == luddic_path",FireAll RelLevelMoreDescription,"卢德左径 并不
 relLevelSuspiciousPather,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
 $faction.id == luddic_path",FireAll RelLevelMoreDescription,你以一个或许已经拥抱卢德真正的教诲的形象被一些左径人士所知。也可能并不是，只因你仍然是恶魔摩洛克的徒众，并且众所周知卢德不会对毁灭你感到不满。,,
 relLevelInhospitablePather,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
-$faction.id == luddic_path",FireAll RelLevelMoreDescription,左径的注视者无处不在，当你出现后他们低语道或许你不是一颗迷途太远的灵魂。尽管如此，激进的左径舰队船长仍有可能试图以在神圣真空中毁灭你为威胁，向你勒索什一税。,,
+$faction.id == luddic_path",FireAll RelLevelMoreDescription,左径的注视者无处不在，他们低语着，说你或许并不像表面上那样是个迷失的灵魂。尽管如此，激进的左径舰队舰长仍有可能试图以在神圣真空中毁灭你为威胁，向你勒索什一税。,,
 relLevelHostilePather,RelationshipLevelDesc,"$faction.rel == HOSTILE
-$faction.id == luddic_path",FireAll RelLevelMoreDescription,对于卢德左径而言你被认为是摩洛克的宠儿、科技恶魔的奴隶。你是恶魔玛门愚蠢的盟仆，在这个浸满罪恶的世界中奋斗不是出于对神的敬爱，而是仅仅为了从那些可悲的对卢德的启示视而不见，沉浸享乐的不信者身上榨取不义之财。,,
+$faction.id == luddic_path",FireAll RelLevelMoreDescription,对于 卢德左径 而言你被认为是摩洛克的宠儿、科技恶魔的奴隶。你是恶魔玛门愚蠢的盟仆，在这个浸满罪恶的世界中奋斗不是出于对神的敬爱，而是仅仅为了从那些可悲的对卢德的启示视而不见，沉浸享乐的不信者身上榨取不义之财。,,
 relLevelVengefulPather,RelationshipLevelDesc,"$faction.rel == VENGEFUL
 $faction.id == luddic_path",FireAll RelLevelMoreDescription,站在左径分子一侧的牧师在他们的布道中谴责你；他们称你是一个气急败坏的 AI 造出的侏儒。毁灭你是一项神圣的使命。距离你在酒吧里被狂热分子的冷枪命中或者被试图殉教的左径舰队拦截只是时间问题。,,
 relLevelPatherPK,RelLevelMoreDescription,"$faction.id == luddic_path
@@ -2679,7 +2679,7 @@ $player.metBrotherCotton",,人尽皆知你与 Cotton 修士面见交谈 —— �
 relLevelCooperativeLuddic,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
 $faction.id == luddic_church",FireAll RelLevelMoreDescription,无疑，你行在卢德之道上。即便最虔诚的牧师也承认你的世俗行为支持着信仰，他们愿为你的幸福祈祷。卢德骑士充分信任你为正义驱使着科技。即使是异端派系也钦佩你的行为，即使那悖离了教会的教义。,,
 relLevelFriendlyLuddic,RelationshipLevelDesc,"$faction.rel == FRIENDLY
-$faction.id == luddic_church",FireAll RelLevelMoreDescription,卢德神圣教会将你视作朋友，欢迎你进入他们的领土并且在贸易中对你保持信任。你被允许依靠自我约束在不作担保的情况下使用科技而毋需卢德骑士团那严格的规范来指导你如何迈向正途。,,
+$faction.id == luddic_church",FireAll RelLevelMoreDescription,卢德神圣教会将你视作朋友，欢迎你进入他们的领土并且在贸易中对你保持信任。你被允许依靠自我约束在不作担保的情况下使用科技，而毋需卢德骑士团那严格的规范来指导你如何迈向正途。,,
 relLevelWelcomingLuddic,RelationshipLevelDesc,"$faction.rel == WELCOMING
 $faction.id == luddic_church",FireAll RelLevelMoreDescription,教会欢迎你进入他们掌控的区域，并且卢德骑士团对你的监视比对其他多数访客的更为疏松。你知道如何做出得体的礼仪手势以表达尊重，并且谦逊地把那些可能会冒犯到最为保守的信徒的科技制品隐藏起来。,,
 relLevelFavorableLuddic,RelationshipLevelDesc,"$faction.rel == FAVORABLE
@@ -2687,21 +2687,21 @@ $faction.id == luddic_church",FireAll RelLevelMoreDescription,信徒们待你温
 relLevelNeutralLuddic,RelationshipLevelDesc,"$faction.rel == NEUTRAL
 $faction.id == luddic_church",FireAll RelLevelMoreDescription,你对卢德教会的信仰与习俗已经有了足够的了解，学会了避免在无意中冒犯信徒。他们也会礼貌地与你这个外人打交道或做生意。,,
 relLevelSuspiciousLuddic,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
-$faction.id == luddic_church",FireAll RelLevelMoreDescription,你被视为一名典型的宇宙民；对卢德的启示不屑一顾、蔑视教会。你鲁莽地运用着高科技造物，用物质世界的虚假舒适填补你灵魂的空虚。虔信者中一些人怜悯你，另一些则不相信你。,,
+$faction.id == luddic_church",FireAll RelLevelMoreDescription,你被视为一名典型的宇宙民；对卢德的启示不屑一顾、蔑视教会。你鲁莽地运用着高科技造物，用物质世界的虚假舒适填补你灵魂的空虚。信徒中一些人怜悯你，另一些则不信任你。,,
 relLevelInhospitableLuddic,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
-$faction.id == luddic_church",FireAll RelLevelMoreDescription,银河救赎教会的牧师将你看作被机器所惑、背离卢德启示之人的范例；也许还没有落入 恶魔摩洛克 的掌控，但已无意中沦为邪恶的帮凶。骑士们对你满怀警惕，常让你受到不必要的拖延和调查。,,
+$faction.id == luddic_church",FireAll RelLevelMoreDescription,银河救赎教会 的牧师将你看作被机器所惑、背离卢德启示之人的范例；也许还没有恶魔摩的掌控，但已无意中沦为邪恶的帮凶。骑士们对你满怀警惕，常让你受到不必要的拖延和调查。,,
 relLevelHostileLuddic,RelationshipLevelDesc,"$faction.rel == HOSTILE
-$faction.id == luddic_church",FireAll RelLevelMoreDescription,教会视你为 恶魔摩洛克 的爪牙，恶魔技术的奴隶。你是 恶魔玛门 的愚蠢盟友，只为那些无视 卢德启示 的悲惨不信者们的享乐而奋斗。是的，你是邪恶的代理人，也理当受到应有的对待。,,
+$faction.id == luddic_church",FireAll RelLevelMoreDescription,教会视你为恶魔摩洛克的爪牙，恶魔技术的奴隶。你是恶魔玛门的愚蠢盟友，只为那些无视卢德启示的悲惨不信者们的享乐而奋斗。是的，你是邪恶的代理人，也理当受到应有的对待。,,
 relLevelVengefulLuddic,RelationshipLevelDesc,"$faction.rel == VENGEFUL
-$faction.id == luddic_church",FireAll RelLevelMoreDescription,卢德教会将你形容为一个狂躁的堕落者，罪孽深重且不知悔改，是对所有圣洁和美好事物的亵渎。卢德骑士团已经专门为处理你而指派了一位精干的异端审判官。甚至有些祭司隐晦地暗示，杀死你可能算不上是一种罪过，因此迟早会有狂热信徒开始这么做。,,
+$faction.id == luddic_church",FireAll RelLevelMoreDescription,卢德教会 将你形容为一个狂躁的堕落者，罪孽深重且不知悔改，是对所有圣洁和美好事物的亵渎。卢德骑士团已经专门为处理你而指派了一位精干的异端审判官。甚至有些祭司隐晦地暗示，杀死你可能算不上是一种罪过，因此迟早会有狂热信徒开始这么做。,,
 relLevelLuddicShrines,RelLevelMoreDescription,"$faction.id == luddic_church
 $global.lpp_completed",,人们已知晓你曾朝圣过，至少是拜访过，朝圣者之路上的诸多圣地。,,
 relLevelCooperativeLeague,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
 $faction.id == persean",FireAll RelLevelMoreDescription,你被 英仙座联盟 (以及其内部各氏族) 视作朋友，盟友，爱国者；你为那些想要在星系中建立一个全新而自由的联邦政体的人树立了一个很好的榜样，用以对抗那些想重拾 人之领 霸权的人。,,
 relLevelFriendlyLeague,RelationshipLevelDesc,"$faction.rel == FRIENDLY
-$faction.id == persean",FireAll RelLevelMoreDescription,英仙座联盟 的政治代理，包括舰队，海关，以及情报部门都对您表示友好欢迎。Kazeron 的几个大型氏族在生意上十分青睐你，就算犯了点小错，他们也会选择视而不见。,,
+$faction.id == persean",FireAll RelLevelMoreDescription,英仙座联盟 的政治代理，包括舰队，海关，以及情报部门都对你表示友好欢迎。Kazeron 的几个显赫氏族在生意上十分青睐你，就算犯了点小错，他们也会选择视而不见。,,
 relLevelWelcomingLeague,RelationshipLevelDesc,"$faction.rel == WELCOMING
-$faction.id == persean",FireAll RelLevelMoreDescription,你在 英仙座联盟 治下世界和他们的海军中 —— 还有 Kazeron 的几个氏族之中，都颇具声望，备受欢迎。你被认为是一个可靠而安全的人，商业上大受欢迎，就算犯了点小错，他们也会选择视而不见。,,
+$faction.id == persean",FireAll RelLevelMoreDescription,你在 英仙座联盟 治下世界和他们的海军中 —— 还有 Kazeron 的几个氏族之中，都颇具声望，备受欢迎。你被认为是一个可靠而安全的人，在商业上大受欢迎，就算犯了点小错，他们也会选择视而不见。,,
 relLevelFavorableLeague,RelationshipLevelDesc,"$faction.rel == FAVORABLE
 $faction.id == persean",FireAll RelLevelMoreDescription,在 英仙座联盟 和他们的海军中，你被当做了个可靠的人，可以依赖于你。Kazeron 的几个氏族都愿意与你做生意，即使你还是被当做外来者。,,
 relLevelNeutralLeague,RelationshipLevelDesc,"$faction.rel == NEUTRAL
@@ -2720,15 +2720,15 @@ $faction.id == persean",FireAll RelLevelMoreDescription,你已被 英仙座联�
 relLevelInhospitableLeague,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
 $faction.id == persean",FireAll RelLevelMoreDescription,英仙座联盟 的舰队情报部已经认定你为可疑或犯罪活动的参与者。联盟所属的市场拒绝与你交易。巡逻队也同样视你为潜在的危险分子，尽管舰队司令并没有下达格杀勿论的指令 —— 只是现在还没有下达。,,
 relLevelHostileLeague,RelationshipLevelDesc,"$faction.rel == HOSTILE
-$faction.id == persean",FireAll RelLevelMoreDescription,在 英仙座联盟 的巡逻队眼里，你没比海盗好哪去。他们已经接到命令，只要发现你的舰队便可以伺机进攻。联盟所属市场拒绝与你交易，同时据说 Kazeron 的氏族们正计划一劳永逸地干掉你这个讨厌鬼。,,
+$faction.id == persean",FireAll RelLevelMoreDescription,在 英仙座联盟 的巡逻队眼里，你没比海盗好哪去。他们已经接到命令，只要发现你的舰队便可以伺机进攻。联盟所属市场拒绝与你交易，同时据说 Kazeron 的氏族们正计划一劳永逸地处理掉你这个麻烦。,,
 relLevelVengefulLeague,RelationshipLevelDesc,"$faction.rel == VENGEFUL
-$faction.id == persean",FireAll RelLevelMoreDescription,你是天外来祸，是 英仙座联盟 及其自由子民的公敌。然而你更需要担心的是，Kazeron 的几个大型氏族愿意放下彼此的成见，穷尽一切资源来追捕你。,,
+$faction.id == persean",FireAll RelLevelMoreDescription,你是航道上的灾星，是 英仙座联盟 及其自由子民的公敌。然而你更需要担心的是，Kazeron 的显赫氏族愿意放下彼此的成见，穷尽一切资源来追捕你。,,
 relLevelLeagueYaribay,RelLevelMoreDescription,"$faction.id == persean
 $player.metDaud",,据传你是 Kazeron 上 Yaribay 氏族的特工。,,
 relLevelCooperativeHegemony,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
 $faction.id == hegemony",FireAll RelLevelMoreDescription,你深受 $theFaction 的信任与尊重，巡逻队和港务局对你大开绿灯，同高层官员会面接洽也不是难事。你能从诸多事物中获得回旋的余地，可以在交易中争得更大的让利空间，并有资格获取高质量的舰船与武器。,,
 relLevelFriendlyHegemony,RelationshipLevelDesc,"$faction.rel == FRIENDLY
-$faction.id == hegemony",FireAll RelLevelMoreDescription,你的大名远闻于 霸主。你的正直受军官们的尊敬，你的坦诚受文官们的赞赏。公务员们清楚，有些规定可能并不适用于你，而他们对你的信任足以让你弄到管制的军用装备。,,
+$faction.id == hegemony",FireAll RelLevelMoreDescription,你的大名广闻于 霸主。你的正直受军官们的尊敬，你的坦诚受文官们的赞赏。公务员们清楚，有些规定可能并不适用于你，而他们对你的信任足以让你弄到管制的军用装备。,,
 relLevelWelcomingHegemony,RelationshipLevelDesc,"$faction.rel == WELCOMING
 $faction.id == hegemony",FireAll RelLevelMoreDescription,你的正直已经在 霸主 的官僚系统中广为人知，使你在官员和文职人员当中有着良好的声誉。他们愿意向你出售一些管制品，并且省略一些冗长的检查程序。,,
 relLevelFavorableHegemony,RelationshipLevelDesc,"$faction.rel == FAVORABLE
@@ -2736,13 +2736,13 @@ $faction.id == hegemony",FireAll RelLevelMoreDescription,你勉强得到了 霸�
 relLevelNeutralHegemony,RelationshipLevelDesc,"$faction.rel == NEUTRAL
 $faction.id == hegemony",FireAll RelLevelMoreDescription,你并未被 $faction 的要员们广泛熟知，名声不好不坏。,,
 relLevelSuspiciousHegemony,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
-$faction.id == hegemony",FireAll RelLevelMoreDescription,虽然目前还没有任何确凿的犯罪证据，但 $faction 官员已经开始对你有所怀疑。你必须再三要求接入港口当局，对方才会勉强同意，同时你发现自己经常遭到调查和骚扰。,,
+$faction.id == hegemony",FireAll RelLevelMoreDescription,虽然目前还没有任何确凿的犯罪证据，但 $faction 的官员已经开始对你有所怀疑。你必须再三要求接入港口当局，对方才会勉强同意，同时你发现自己经常遭到调查和骚扰。,,
 relLevelInhospitableHegemony,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
 $faction.id == hegemony",FireAll RelLevelMoreDescription,对你的怀疑程度已经到了可以付诸行动的地步。虽然目前还没到要求对你格杀勿论的程度，但 $faction 的港口拒绝与你交易，而执勤中的巡逻队也乐得给你找点麻烦。,,
 relLevelHostileHegemony,RelationshipLevelDesc,"$faction.rel == HOSTILE
-$faction.id == hegemony",FireAll RelLevelMoreDescription,$Faction 的指挥官有权在发现你的舰队后不经询问立即交战，同时它们所有市场都被禁止与你交易。你也许还有机会恢复与 $theFaction 的良好关系，但这已经不是能靠做几件小事就能解决的问题。,,
+$faction.id == hegemony",FireAll RelLevelMoreDescription,$Faction 的指挥官有权在发现你的舰队后不经询问立即交战，同时它们的所有市场都被禁止与你交易。你也许还有机会恢复与 $theFaction 的良好关系，但这已经不是能靠做几件小事就能解决的问题。,,
 relLevelVengefulHegemony,RelationshipLevelDesc,"$faction.rel == VENGEFUL
-$faction.id == hegemony",FireAll RelLevelMoreDescription,你的面部全息图像和你舰队最后被发现时的识别信息快照已经成为了星系间安全通知公告的常规部分。可以肯定的是，已经有一个高级别的 $faction 官员将负责追捕你作为首要任务进行。,,
+$faction.id == hegemony",FireAll RelLevelMoreDescription,你的面部全息图像和你舰队最后被发现时的识别信息快照已经成为了星系间安全通知公告的常规部分。可以肯定的是，有一名高级别的 $faction 官员的首要任务便是负责追捕你。,,
 relLevelHegemonyDaud,RelLevelMoreDescription,"$faction.id == hegemony
 $player.metDaud",,高层官员都在猜测你与至高霸主的会面都谈了什么。,,
 ,,,,,,
@@ -2758,7 +2758,7 @@ $ignorePlayerCommRequests = false 0
 $customsInspectionStage = 0 4
 AddText ""你被 $faction $otherShipOrFleet呼叫了。"" $faction.baseColor",,,
 customsInspectionConvStart,OpenCommLink,"$entity.doingCustomsInspection score:100
-$entity.customsInspectionStage == 0","SetTooltip ciAgree ""扫描将计算你的舰队和它所携带的货物的价值，并将评估收费。\n\n如果你的$shipOrFleet携带有非法货物，则有可能会被发现。如果你同时也携带合法货物，并且你与该派别的关系是良好，那么非法货物被发现的几率就会降低。如果违禁品被发现，则将被没收并被处以罚款。""","$PersonRank $personName 把目光从$hisOrHer的控制台上移开，抬眼看了你一下。""在我们扫描你们的货物时，请在旁等待。扫描完成之后我们再继续谈。""","0:ciAgree:允许扫描继续进行
+$entity.customsInspectionStage == 0","SetTooltip ciAgree ""扫描将计算你舰队及其所载货物的价值，并据此征收关税。\n\n如果你的$shipOrFleet载有违禁品，则有可能会被发现。如果你同时也载有合法货物，并且你与该势力关系良好，那么违禁品被发现的几率就会降低。如果违禁品被发现，则将被没收并被处以罚款。""","$PersonRank $personName 把目光从$hisOrHer的控制台上移开，抬眼看了你一下。""在我们扫描你们的货物时，请在旁等待。扫描完成之后我们再继续谈。""","0:ciAgree:允许扫描继续进行
 1:ciDisagree:""我可不干。""",
 customsInspectionAgree,DialogOptionSelected,"$entity.doingCustomsInspection score:100
 $option == ciAgree score:100","EndConversation DO_NOT_FIRE
@@ -2772,7 +2772,7 @@ $entity.ignorePlayerCommRequests = true 1
 #MakeNearbyFleetsHostile $faction.id 2000 10
 EndConversation","""哦？那你会后悔的。""
 
-通讯链接在你做出回应前就被切断。",,
+没等你做出回应，通讯链接就被切断了。",,
 customsInspectionWaitFinished,BeginFleetEncounter,"$doingCustomsInspection score:100
 $global.ciFinished","MakeOtherFleetHostile customs true
 MakeOtherFleetAggressive customs true
@@ -2789,20 +2789,20 @@ $entity.inspectionResultType == TOLL","SetTextHighlights $entity.tollAmount
 FireAll CustomsInspectionPayOptions","$PersonRank $personName 把目光从$hisOrHer的控制台上移开，抬眼看向你。""看来全部都查清了，关税和检查费总共为 $tollAmount 星币。""",,
 customsInspectionResultTollFine,InspectionResultResponse,"$entity.doingCustomsInspection score:100
 $entity.inspectionResultType == TOLL_AND_FINE","SetTextHighlights $entity.tollAmount
-FireAll CustomsInspectionPayOptions","$PersonRank $personName 看起来很高兴。""好好看看我们找到了什么！当然，我们会罚没所有的违禁品。关税和检查费，再加上对持有并意图出售违禁货物的罚款，一共 $tollAmount 星币。""",,
+FireAll CustomsInspectionPayOptions","$PersonRank $personName 看起来很高兴。""好啊，看看我们发现了什么！当然，所有违禁品我们都要没收。关税、检查费，再加上对持有违禁品并意图销售的罚款的罚款，一共 $tollAmount 星币。""",,
 customsInspectionResultTollFineHostile,InspectionResultResponse,"$entity.doingCustomsInspection score:100
 $entity.inspectionResultType == TOLL_AND_FINE
-RepIsAtBest $faction.id HOSTILE score:100",FireBest CustomsInspectionEndHostile,$personName 看了看报告，又看了看你，接着再看了看报告，就一言不发地切断了通讯联系。这时你的扫描器检测到了武器启动的特征讯号。,,
+RepIsAtBest $faction.id HOSTILE score:100",FireBest CustomsInspectionEndHostile,$personName 看了看报告，又看了看你，接着再看了看报告，随即一言不发地切断了通讯链接。与此同时，你的扫描器检测到了武器启动的特征讯号。,,
 # customs inspection -payment options,,,,,,
 customsInspectionPayToll,CustomsInspectionPayOptions,"$entity.doingCustomsInspection score:100
 $entity.inspectionResultType == TOLL
 $entity.playerCanAffordPayment",,,0:payCIToll:缴纳关税 ( $tollAmount 星币),
 customsInspectionPayTollAndFine,CustomsInspectionPayOptions,"$entity.doingCustomsInspection score:100
 $entity.inspectionResultType == TOLL_AND_FINE
-$entity.playerCanAffordPayment",,,0:payCIFine:上缴违禁物品，缴纳关税与罚款 ( $tollAmount 星币),
+$entity.playerCanAffordPayment",,,0:payCIFine:上缴违禁品，缴纳关税与罚款 ( $tollAmount 星币),
 customsInspectionCantAffordToll,CustomsInspectionPayOptions,"$entity.doingCustomsInspection score:100
 $entity.inspectionResultType == TOLL
-!$entity.playerCanAffordPayment",,,0:cantAffordToll:向其解释你付不起这笔费用,
+!$entity.playerCanAffordPayment",,,0:cantAffordToll:解释说你缴不起这笔费用,
 customsInspectionCantAffordFine,CustomsInspectionPayOptions,"$entity.doingCustomsInspection score:100
 $entity.inspectionResultType == TOLL_AND_FINE
 !$entity.playerCanAffordPayment",,,0:cantAffordFine:解释说你缴不起这笔费用,
@@ -2813,10 +2813,10 @@ $entity.inspectionResultType == TOLL_AND_FINE",,,10:refuseCIFine:拒绝配合,
 # customs inspection - payment option effects,,,,,,
 optionPayCIToll,DialogOptionSelected,$option == payCIToll,"CustomsInspectionApplyResult
 AdjustRep $faction.id CUSTOMS_PAID
-FireBest CustomsInspectionEndPeaceful","""感谢你的配合。"" $personName $personRank 点头之后切断了通讯链接。",,
+FireBest CustomsInspectionEndPeaceful","""感谢你的配合。"" $personName $personRank 点点头，随即切断了通讯链接。",,
 optionPayCIFine,DialogOptionSelected,$option == payCIFine,"CustomsInspectionApplyResult
 AdjustRep $faction.id CUSTOMS_PAID
-FireBest CustomsInspectionEndPeaceful","""感谢你的配合，这将记入你的档案。"" $personName $personRank 点头之后切断了通讯链接。",,
+FireBest CustomsInspectionEndPeaceful","""感谢你的配合，这将记入你的档案。"" $personName $personRank 点点头，随即切断了通讯链接。",,
 optionRefuseCITollPassRep,DialogOptionSelected,"$option == refuseCIToll
 $entity.repCheckResult > 0.2
 RepIsAtWorst $faction.id FAVORABLE","AdjustRep $faction.id CUSTOMS_REFUSED_TOLL
@@ -2824,15 +2824,15 @@ FireBest CustomsInspectionEndPeaceful",$personName 瞪着你，但出于某些�
 optionRefuseCIToll,DialogOptionSelected,$option == refuseCIToll,"AdjustRep $faction.id CUSTOMS_REFUSED_TOLL
 FireBest CustomsInspectionEndHostile","""你会后悔的。""
 
-在你做出回应之前，通讯链接就被切断了。",,
+没等你做出回应，通讯链接就被切断了。",,
 optionRefuseCIFinePassRep,DialogOptionSelected,"$option == refuseCIFine
 $entity.repCheckResult > 0.6
 RepIsAtWorst $faction.id FAVORABLE","AdjustRep $faction.id CUSTOMS_REFUSED_FINE
-FireBest CustomsInspectionEndPeaceful",$personName 诚惶诚恐地看着你，但总之不管出于什么原因，$heOrShe并没有与你发生争执。沉默了几秒钟后，你切断了通讯链接。,,
+FireBest CustomsInspectionEndPeaceful",$personName 诚惶诚恐地看着你，但总之不管出于什么原因，$heOrShe并没有与你发生争执。经历了几秒钟的沉默之后，你切断了通讯链接。,,
 optionRefuseCIFine,DialogOptionSelected,$option == refuseCIFine,"AdjustRep $faction.id CUSTOMS_REFUSED_FINE
 FireBest CustomsInspectionEndHostile","""你会非常后悔这个决定的。""
 
-在你做出回应之前，通讯链接就被切断了。",,
+没等你做出回应，通讯链接就被切断了。",,
 optionCantAffordToll,DialogOptionSelected,$option == cantAffordToll,"AdjustRep $faction.id CUSTOMS_COULD_NOT_AFFORD
 FireBest CustomsInspectionEndPeaceful","""那还真是不幸。你无法缴清费用的行为将被记录在案。""",,
 optionCantAffordFine,DialogOptionSelected,$option == cantAffordFine,AdjustRep $faction.id CUSTOMS_COULD_NOT_AFFORD,"""那还真是不幸。但我相信你还是打算及时交出违禁品，对吧？""","0:payCIFine:""是的，当然。""
@@ -2864,7 +2864,7 @@ ngcWayfarerStart,AddNewGameChoices,,"SetTooltip ngcWayfarer ""远行者-级 是�
 ngcExplorerStart,AddNewGameChoices,,"SetTooltip ngcExplorer ""一支能够在星域的偏远星系开展打捞作业的舰队，并能抵御在偏远地区遇到的大多数威胁。\n\n包括一艘油轮以增加燃料容量和探索范围。舰队具有较大的货物容量，以便将打捞物运回核心世界。""",,2:ngcExplorer:一名探险者，驾驶一艘 至高点-级 巡洋舰，还带领着一支打捞探险舰队 (轻松开局),
 ngcMercStart,AddNewGameChoices,,"SetTooltip ngcMerc ""一支规模虽小但战力强大的特遣舰队，配置主要针对开展赏金猎杀任务。\n\n包含一艘小型油轮，在一定程度上扩大了行动范围。""",,3:ngcMerc:一名雇佣兵，驾驶一艘 锤头-级 驱逐舰，还带领着一支作战小队 (轻松开局),
 ngcRandomStart,AddNewGameChoices,,"SetTooltip ngcRandom ""舰队组成随机，总体上比前面的 \""轻松开局\"" 略弱，但也算是一种简单开局。""",,4:ngcRandom:一名自由职业者，接手你能找到的任何工作 (随机开局),
-ngcSpacerStart,AddNewGameChoices,CheckSetting enableSpacerStart,"SetTooltip ngcSpacer ""一架非战斗用的穿梭机，仅携带着非常有限的资源，还有一笔必须偿还的债务。非常困难的开局，只打算作为献给见多识广的星际远行者的挑战。""",,"5:ngcSpacer:""一个太空梦，一架破穿梭机，一笔终身债务。"" (困难开局)",
+ngcSpacerStart,AddNewGameChoices,CheckSetting enableSpacerStart,"SetTooltip ngcSpacer ""一架非战斗用的穿梭机，仅携带着非常有限的资源，还有一笔必须偿还的债务。非常困难的开局，只打算作为献给见多识广的星际远行者的挑战。""",,"5:ngcSpacer:""一位宇宙民，一架破穿梭机，以及一笔终身债务。"" (困难开局)",
 ,,,,,,
 #ngcDisableSpacerOption,NGCDisableSpacerOption,!NGCCanSkipTutorial,"SetEnabled ngcSpacer false
 SetTooltip ngcSpacer ""Need to start at least one game with the tutorial in order to be able to select this starting option.""",,,
@@ -2905,7 +2905,7 @@ NGCSetStartingLocation Corvus -2500 3000
 NGCAddStandardStartingScript
 NGCDone",,,
 ngcPickSecondShip,NGCSecondShipOptions,,"SetTooltip ngcKite ""风筝-级 是一种轻便灵活但武装有限的穿梭机。\n\n它本身并不能造成很大的伤害，但是它能够持续地扰乱敌人的注意力，特别是在擅长防御技能的军官掌控之下时。""
-SetTooltip ngcShepherd ""牧羊人-级 不是一艘战舰，它既慢又脆弱，不过它的无人机能够为其他船只提供一些支援。\n\n然而它真正的价值在于其宽敞的货舱和多个有利于打捞/探测的船体特性上。\n\n携带的重型机械也能运用至在打捞与探测作业当中。""",此外，你的舰队还包括...,"0:ngcKite:一艘 风筝-级 穿梭机，以及一名经验丰富的军官。
+SetTooltip ngcShepherd ""牧羊人-级 不是一艘战舰，它缓慢而脆弱，不过它的无人机能够为其他舰船提供一些支援。\n\n然而它真正的价值在于其宽敞的货舱和多个有利于打捞/探测的船体特性上。\n\n其携带的重型机械也能运用至打捞与探测作业中。""",此外，你的舰队还包括...,"0:ngcKite:一艘 风筝-级 穿梭机，以及一名经验丰富的军官。
 1:ngcShepherd:一艘 牧羊人-级 无人机补给舰，运载了一些重型机械。",
 ngcKitePicked,NewGameOptionSelected,$option == ngcKite,"NGCAddShip kite_Starting
 AddTextSmall ""获得一名 1 级军官"" good
@@ -2918,7 +2918,7 @@ FireAll NGCDifficultyOptions",,,
 ngcDifficulty,NGCDifficultyOptions,,"SetTooltip ngcEasy ""- 你的舰船获得 25% 的伤害减免\n- 探测范围增加 500 单位\n- 打捞收益增加 50%""
 SetTooltipHighlightColors ngcEasy hColor hColor hColor
 SetTooltipHighlights ngcEasy ""25%"" ""500"" ""50%""
-SetTooltip ngcNormal ""默认设置以提供具有挑战性的游戏体验为目标进行平衡。""","选择生涯模式的难度。""简单"" 适合初次游玩的玩家。","0:ngcNormal:普通
+SetTooltip ngcNormal ""经过平衡的默认设置，能带来充满挑战的游戏体验。""","选择生涯模式的难度。""简单"" 适合初次游玩的玩家。","0:ngcNormal:普通
 1:ngcEasy:简单",
 ngcEasyPicked,NewGameOptionSelected,$option == ngcEasy,"NGCSetDifficulty easy
 FireAll NGCTutorialOptions",,,
@@ -3025,7 +3025,7 @@ OR
 
 $HeOrShe看着你，""以利剑与铁锤之名向你致敬。""
 OR
-短暂的等待之后，尽管出现了一些协议不匹配的警告，你的连接请求也被接受了。
+短暂的等待之后，尽管出现了一些协议不匹配的警告，你的连接请求还是被接受了。
 
 ""手持铁锤，礼赞终末之时。"" $post充满敬意地说道。",,
 convDefaultGreetingSpacer,PickGreeting,"!$contact_printedFirstReturnGreeting
@@ -3037,7 +3037,7 @@ FireAll PopulateOptions","经过短暂的等待，你的连接请求被接受了
 OR
 经过几次尝试后，通信视频终于成功被解析，不过偶尔还是会出现闪烁。$PersonName 似乎在使用老旧的，甚至可能遭到过辐射的通讯装置。
 
-""祝你闪耀群星，航程不熄。我能帮上什么忙吗？""",,
+""祝闪耀群星，航程不熄。我能帮上什么忙吗？""",,
 convDefaultGreetingAristo,PickGreeting,"!$contact_printedFirstReturnGreeting
 $voice == aristo","$contact_printedFirstReturnGreeting = true 0
 ShowPersonVisual
@@ -3051,7 +3051,7 @@ OR
 OR
 通讯解析出了 $personName 看上去像是正忙着其他事物的脸。""哦，你稍微等一下...好的...嗯...嗯...已经造成损失了。""
 
-""你！"" 这句话是对视讯外的人说的，""你待会儿再和我讲完这事，我现在必须接这个通话。""
+""你！"" 这句话是对视讯外的人说的，""你待会儿再和我讲完这事，我必须要处理这边了。""
 
 $PersonName 终于面向了你，""—— 好的，说吧，是什么事这么重要？""",,
 convDefaultGreetingOfficial,PickGreeting,"!$contact_printedFirstReturnGreeting
@@ -3086,16 +3086,16 @@ OR
 $HeOrShe抬起头，""哦，又见面了。""",,"# this will fire when talking to same person again without leaving the station, but that seems fine"
 convDefaultGreeting2aristo,PickGreeting,"$contact_printedFirstReturnGreeting
 $voice == aristo","ShowPersonVisual
-FireAll PopulateOptions","""嗯？我想你还需要些什么，不是吗？""",,
+FireAll PopulateOptions","""嗯？我想你还有别的事，对吧。""",,
 convDefaultGreeting2official,PickGreeting,"$contact_printedFirstReturnGreeting
 $voice == official","ShowPersonVisual
 FireAll PopulateOptions","""$PlayerSirOrMadam。"" $HeOrShe的视线扫向你。""您还需要什么？""",,
 convDefaultGreeting2business,PickGreeting,"$contact_printedFirstReturnGreeting
 $voice == business","ShowPersonVisual
-FireAll PopulateOptions","""好了，到底有什么事？我该按分钟收费的。""",,
+FireAll PopulateOptions","""好了，到底有什么事？"" $HeOrShe说道，""我该按分钟收费的。""",,
 convDefaultGreeting2villain,PickGreeting,"$contact_printedFirstReturnGreeting
 $voice == villain","ShowPersonVisual
-FireAll PopulateOptions","""哦，你回来了？还这么快；我可不敢多问。""",,
+FireAll PopulateOptions","""哦，你回来了？"" $HeOrShe装出一副虚假的关切表情。""还这么快；我都不敢多问了。""",,
 convDefaultGreeting2soldier,PickGreeting,"$contact_printedFirstReturnGreeting
 $voice == soldier","ShowPersonVisual
 FireAll PopulateOptions","""收到。这里是 $personLastName，"" $heOrShe叫道。""继续。""",,
@@ -3107,7 +3107,7 @@ $voice == pather","ShowPersonVisual
 FireAll PopulateOptions","""你又道归此处，"" $heOrShe说到。""请告知您的来由。""",,
 convDefaultGreeting2spacer,PickGreeting,"$contact_printedFirstReturnGreeting
 $voice == spacer","ShowPersonVisual
-FireAll PopulateOptions","""又见了，$personLastName。你需要什么？""",,
+FireAll PopulateOptions","""又见面了，$personLastName。你需要什么？""",,
 convDefaultGreeting2scientist,PickGreeting,"$contact_printedFirstReturnGreeting
 $voice == scientist","ShowPersonVisual
 FireAll PopulateOptions","""又是你？"" $HeOrShe快速地扫视了你一眼。""是，是，我在。又怎么了？""",,
@@ -3136,7 +3136,7 @@ EndConversation NO_CONTINUE",,,
 convEndNoText2,DialogOptionSelected,$option == cutCommLinkNoText2,"ShowDefaultVisual
 EndConversation NO_CONTINUE",,,
 convEndPolite,DialogOptionSelected,$option == cutCommLinkPolite,"ShowDefaultVisual
-EndConversation",你在礼貌地寒暄了几句之后中断了通讯链接。,,
+EndConversation",你在寒暄了几句后切断了通讯链接。,,
 # NPC comm requests when player enters market,,,,,,
 checkNPCWantingToTalk,MarketPostOpen,"!$global.initiatedCommsAlready
 NPCWantsComms
@@ -3234,7 +3234,7 @@ $hailing = true 0",,,
 mpm_pirateOpenComms,OpenCommLink,"$isPerson
 $entity.mpm_isSpawnedByMPM score:100",FireAll MPMHandOverOptions,"海盗 $personRank 从$hisOrHer控制台后抬起头来看向你。
 
-""现在怎么样？我们都知道的你的货舱有一批 $mpm_commodityName，只要把货物交出来，我就放你走。""",,
+""好了，现在。咱俩都知道的你的货舱有一批 $mpm_commodityName，只要把货物交出来，我就放你走。""",,
 mpm_handOverPirateOption,MPMHandOverOptions,CallEvent $mpm_eventRef hasEnough,,,0:mpm_handOver:交出 $mpm_commodityName,
 mpm_notEnoughPirateOption,MPMHandOverOptions,!CallEvent $mpm_eventRef hasEnough,,,0:mpm_notEnoughPirate:向他解释你并没有 $mpm_commodityName,
 mpm_refusePirateOption,MPMHandOverOptions,,,,"
@@ -3279,19 +3279,19 @@ FireAll PopulateOptionsHire","你的连接请求在长时间的等待后被接�
 
 $personName 以不加掩饰的怀疑态度打量着你。
 
-""你在...嗯...自由佣兵群体里有些不好的名声。不过我现在的确要赚些星币。所以如果你想雇一个活干的比你平时能遇到的船长更好的家伙，那么现在就有机会。当然，我将不得不为受你聘用所带来的风险加收一笔费用。""
+""你在...嗯...自由佣兵群体里有些不好的名声。不过我现在的确要赚些星币。所以如果你想雇一个活干的比你平时能遇到的舰长更好的家伙，那么现在就有机会。当然，我将不得不为受你聘用所带来的风险加收一笔费用。""
 OR
 通讯链接在经过明显拖延之后接通了。
 
 $personName 看了看你，眼中带着一丝不满。
 
-""我听说过你，$playerName，尽管你的名声有点，嗯...褒贬不一，但我还是愿意和你谈谈。毕竟..."" $heOrShe用一股哲学腔说到，""只要星币给够，谁都会见钱眼开，如果我不是这种人，就不会干雇佣兵这一行。""
+""我听说过你，$playerName，尽管你的名声有点，嗯...褒贬不一，但我还是愿意和你谈谈。毕竟..."" $heOrShe用一股哲学腔说到，""有钱能使鬼推磨，如果我不是这种人，就不会干雇佣兵这一行。""
 
 ""怎样？让我开开眼？""",,
 ome_greetingMercPlayerWasJerkReject,PickGreeting,"$ome_hireable
 $isMercenary
 $player.wasJerkToMerc
-$level >= 6",ShowPersonVisual,"你提交了连接请求。待机信号持续了很久，你正准备让通讯军官检查他们的设备时，通讯接通了。
+$level >= 6",ShowPersonVisual,"你提交了连接请求。待机信号持续了很久，你正准备让通讯军官检查他的设备时，通讯接通了。
 
 $personName 带着几乎毫不掩饰的敌意看了你一眼。
 
@@ -3299,15 +3299,15 @@ $personName 带着几乎毫不掩饰的敌意看了你一眼。
 
 $HeOrShe停顿了一会儿。
 
-""我祝你出门别出事。""
+""出门时小心点。""
 
 $HeOrShe切断了通讯链接。
 OR
-通信链路的待机画面一直在没完没了地闪烁着。你的通讯官耸了耸肩，表示它确实在正常工作。你正准备下令取消这个请求时，通讯接通了。
+通讯链接的待机画面一直在没完没了地闪烁着。你的通讯军官耸了耸肩，表示它确实在正常工作。你正准备下令取消这个请求时，通讯接通了。
 
 $personName 看向你，装作一副惊讶的样子。""很抱歉耽误了您宝贵的时间，我才刚听说了所有关于 $playerName 的故事，有点不敢相信真的遇到了您。而您居然主动跟我联系？真走运！""
 
-你开始感觉到一种讽刺的气氛，而这时$heOrShe继续说了下去：""... 因为现在我可以和大伙炫耀，我终于有机会对你讲，吸他妈的真空去吧！""
+你开始感觉到一种讽刺的气氛，而这时$heOrShe继续说了下去：""... 因为现在我可以和大伙炫耀，我终于有机会对你讲 —— 吸他妈的真空去吧！""
 
 $personName 做出一个粗鲁的手势并强行切断了通讯。屏幕清空了，你的通讯军官看着控制台，宛如石化了一般。",ome_convEnd2:继续,
 ome_greetingAdmin,PickGreeting,"$ome_hireable score:100
@@ -3360,7 +3360,7 @@ ome_askHireSelMerc,DialogOptionSelected,"$option == ome_askHire
 $isMercenary","AddText ""\""典型的合同期是 $mercContractDurStr 天，可以根据我们回港的情况留一些延长的余地。期间任何一方都可以提前终止合同等诸如此类的常规条款就不再细说。当合同到期时，如果双方都同意，我们可以讨论延长合同。\n\n 我希望得到 $ome_hiringBonus credit 的签约佣金，以及 $ome_salary credit 的月薪。在首笔转账完成之后，我可以在一小时内做好登舰准备。\""""
 SetTextHighlightColors hColor hColor hColor
 SetTextHighlights $mercContractDurStr $ome_hiringBonus $ome_salary
-AddText ""你有 $player.creditsStr 星币。\n\n 这个军官是一个高度职业化的佣兵，不计入普通军官的上限。""
+AddText ""你有 $player.creditsStr 星币。\n\n 这名军官是一位高度职业化的佣兵，不计入普通军官的上限。""
 SetTextHighlightColors hColor
 SetTextHighlights $player.creditsStr
 FireBest HireOptionSet",,,
@@ -3448,7 +3448,7 @@ $entity.sawPlayerWithTOffCount == 2.0 score:10
 $entity.relativeStrength >= 0","AddText""\""我和你说了要让你的应答器一直开着。\""""
 AdjustRep $faction.id TRANSPONDER_OFF
 AdjustRepActivePerson TRANSPONDER_OFF
-AddText ""在你有机会回应之前，通讯链接就被切断了。""
+AddText ""没等你做出回应，通讯链接就被切断了。""
 $entity.ignorePlayerCommRequests = true 0
 unset $entity.transponderOffConv
 #MakeHostileWhileTOff tOff true 7
@@ -3490,16 +3490,16 @@ $entity.relativeStrength < 0","MakeOtherFleetAggressive tOff false
 MakeOtherFleetPreventDisengage tOff false
 ShowDefaultVisual
 EndConversation",然而，$faction $fleetName 没有继续进行扫描，而是关闭了通讯并启动了战斗系统。,,
-tOffCargoScanPods,TOffScanResult,$scan_podsFound score:1000,unset $scan_podsFound,"$faction $personRank 停了下来，看着屏幕外。
+tOffCargoScanPods,TOffScanResult,$scan_podsFound score:1000,unset $scan_podsFound,"$faction $personRank 停了下来，并把视线从屏幕上移开了。
 
-""但外面这些货物舱呢，让我检查一下 - 为什么，它们居然装有非法货物？这些应该不是你的吧？对吧？很好。那么我们将没收这些货物。""",0:tOff_podsCont:继续,
+""请你解释下这些货舱是怎么回事，为什么它们装的是违禁品？这不是你的，对吧？不是？很好，我们之后会没收这些玩意。""",0:tOff_podsCont:继续,
 tOffCargoScanPodsCont,DialogOptionSelected,$option == tOff_podsCont,FireBest TOffScanResult,,,
 tOffCargoScanClean,TOffScanResult,"!$scan_contrabandFound
 !$scan_suspiciousCargoFound","Highlight ""应答器""","$personName $PersonRank 看上去很失望。
 
 ""如果再让我抓到你关着{应答器}晃悠，事情就不会这么简单了。""
 
-通讯链接在你未回应前就被切断了。",0:tOff_cleanCont1:继续,
+没等你做出回应，通讯链接就被切断了。",0:tOff_cleanCont1:继续,
 #tOffCargoScanSuspicious,TOffScanResult,$scan_suspiciousCargoFound,,"While the scan finds no overt contraband, the quantity of cargo found, combined with indirect evidence of your prior black market activities, is enough to raise suspicions.
 
 It is not, however, enough to do anything about. Correspondingly, $personRank $personName looks displeased.
@@ -3514,13 +3514,13 @@ tOffCargoScanBoarding1,TOffScanResult,$scan_suspiciousCargoFound,,"扫描没有�
 tOffCargoScanBoarding2,DialogOptionSelected,$option == tOff_comply_boarding,"CargoScanApplyResult $scan_cargoScanResult
 MakeOtherFleetPreventDisengage tOff false
 BroadcastCancelPlayerAction 5000 $sawPlayerTransponderOff
-$sourceMarket.smugglingScanTimeout = true 30","情况和你预计得差不多，你的几艘船报告说在作战能力上受到了轻微但令人不快的损失。幸运的是，检查人员似乎更热衷于制造 ""意外"" 损害，而不是去实际寻找违禁品，因此他们没有发现有问题货物。",cutCommLinkNoText:继续,
+$sourceMarket.smugglingScanTimeout = true 30","情况和你预计得差不多，你的几艘船报告说在作战能力上受到了轻微但令人不快的损失。幸运的是，检查人员似乎更热衷于制造 ""意外"" 损害，而不是去实际寻找违禁品，因此他们没有发现问题货物。",cutCommLinkNoText:继续,
 tOffCargoScanClean2,DialogOptionSelected,$option == tOff_cleanCont1,"MakeOtherFleetPreventDisengage tOff false
 BroadcastCancelPlayerAction 5000 $sawPlayerTransponderOff
 ShowDefaultVisual
 EndConversation NO_CONTINUE
 $sourceMarket.smugglingScanTimeout = true 30",,,
-tOffCargoScanContraband,TOffScanResult,$scan_contrabandFound score:10,,"""很好很好。正如我所料，我们在这里逮到了个走私犯。遵照 $faction 的标准流程，你必须将违禁品释放到太空中，由巡逻队指挥官决定是拾取还是焚毁。""
+tOffCargoScanContraband,TOffScanResult,$scan_contrabandFound score:10,,"""好啊。正如我所料，我们在这里逮到了个走私犯。遵照 $faction 的标准流程，你必须将违禁品释放到太空中，由巡逻队指挥官决定是拾取还是焚毁。""
 
 $PersonRank $personLastName 看上去相当高兴，让你觉得今天的命令应该是 ""拾取"" 而不是 ""焚毁""。","0:tOff_comply_contraband:上交违禁品并切断通讯
 1:tOff_refuse:拒绝并切断通讯",
@@ -3575,7 +3575,7 @@ cargoScanClean,CargoScanResult,"!$scan_contrabandFound
 
 ""好吧，看来并没有什么异常。""
 
-通讯链接在你有机会回话之前就被切断了。",0:cargoScan_cleanCont:继续,
+没等你做出回应，通讯链接就被切断了。",0:cargoScan_cleanCont:继续,
 #cargoScanSuspicious,CargoScanResult,$scan_suspiciousCargoFound,,"While the scan finds no overt contraband, the quantity of cargo found, combined with indirect evidence of your prior black market activities, is enough to raise suspicions.
 
 It is not, however, enough to do anything about. Correspondingly, $personRank $personName looks displeased.
@@ -3593,7 +3593,7 @@ MakeOtherFleetAggressive cargoScan false
 unset $entity.pursuePlayer_smugglingScan
 unset $entity.cargoScanConv
 $entity.smugglingScanComplete = true 1
-$sourceMarket.smugglingScanTimeout = true 30","情况和你预计得差不多，你的几艘船报告说在作战能力上受到了轻微但令人不快的损失。幸运的是，检查人员似乎更热衷于制造 ""意外"" 损害，而不是去实际寻找违禁品，因此他们没有发现有问题货物。",cutCommLinkNoText:继续,
+$sourceMarket.smugglingScanTimeout = true 30","情况和你预计得差不多，你的几艘船报告说在作战能力上受到了轻微但令人不快的损失。幸运的是，检查人员似乎更热衷于制造 ""意外"" 损害，而不是去实际寻找违禁品，因此他们没有发现问题货物。",cutCommLinkNoText:继续,
 cargoScanClean2,DialogOptionSelected,$option == cargoScan_cleanCont,"MakeOtherFleetPreventDisengage cargoScan false
 MakeOtherFleetAggressive cargoScan false
 unset $entity.pursuePlayer_smugglingScan
@@ -3602,7 +3602,7 @@ $entity.smugglingScanComplete = true 1
 $sourceMarket.smugglingScanTimeout = true 30
 ShowDefaultVisual
 EndConversation NO_CONTINUE",,,
-cargoScanContraband,CargoScanResult,$scan_contrabandFound score:10,,"""很好很好。正如我所料，我们在这里逮到了个走私犯。遵照 $faction 的标准流程，你必须将违禁品释放到太空中，由巡逻队指挥官决定是拾取还是焚毁。""
+cargoScanContraband,CargoScanResult,$scan_contrabandFound score:10,,"""好啊。正如我所料，我们在这里逮到了个走私犯。遵照 $faction 的标准流程，你必须将违禁品释放到太空中，由巡逻队指挥官决定是拾取还是焚毁。""
 
 $PersonRank $personLastName 看上去相当高兴，让你觉得今天的命令应该是 ""拾取"" 而不是 ""焚毁""。","0:cargoScan_comply_contraband:上交违禁品并切断通讯
 1:cargoScan_refuse:拒绝并切断通讯",
@@ -3722,24 +3722,24 @@ igr_offerBribeAccepedEndNormal,IGRBribeEnd,,"SetShortcut cutCommLink ""ESCAPE"""
 ,,,,,,
 remnantStationFleetOpenDefault,BeginFleetEncounter,"$isStation
 $faction.id == remnant
-!$printedDesc",$printedDesc = true 0,"阴森而巨大的余辉战斗堡垒填满了你的显示屏。一名舰桥军官重新调整了战术目标显示的缩放比例，以便展示这个庞然巨物的全貌。
+!$printedDesc",$printedDesc = true 0,"阴森而巨大的 余辉 作战基地填满了你的显示屏。一名舰桥军官重新调整了战术目标显示屏的比例，以便展示这个庞然巨物的全貌。
 
-虽然是第一次 AI 战争的遗迹，但这个空间站看起来仍全副武装正常运作。
+虽然是第一次 AI 战争的遗迹，但这座空间站如今却依然全副武装且运转如常。
 
-作战分析系统在捣腾了几秒钟之后，并没有像往常那样给出一系列的战术建议，而是猛烈地哔哔作响。",,
+作战分析系统在运转了几秒钟之后，并没有像往常那样给出一系列的战术建议，而是猛烈地哔哔作响。",,
 remnantStationFleetOpenDamaged,BeginFleetEncounter,"$isStation
 $damagedStation
 $faction.id == remnant
-!$printedDesc",$printedDesc = true 0,"阴森而巨大的余辉战斗堡垒填满了你的显示屏。一名舰桥军官重新调整了战术目标显示的缩放比例，以便展示这个庞然巨物的全貌。
+!$printedDesc",$printedDesc = true 0,"阴森而巨大的 余辉 作战基地填满了你的显示屏。一名舰桥军官重新调整了战术目标显示屏的比例，以便展示这个庞然巨物的全貌。
 
-作为第一次 AI 战争的遗迹，这个空间站巨大的外周结构上有多个豁口，一些曾是武器平台和炮廓的地方只留下了空荡荡的连接处。尽管受到过明显的损伤，这个空间站看起来仍保有武装正常运作。
+作为第一次 AI 战争的遗迹，在这座空间站漫长的弧面上，那些曾安装着武器平台和壁垒的地方如今只剩下空荡荡的接口。尽管受损明显，这座空间站却依然全副武装且运转如常。
 
-作战分析系统在捣腾了几秒钟之后，并没有像往常一样给出一系列的战术建议，而是猛烈地哔哔作响。",,
+作战分析系统在运转了几秒钟之后，并没有像往常那样给出一系列的战术建议，而是猛烈地哔哔作响。",,
 # SALVAGE,,,,,,
 sal_tutorial_storyPointUse1,OpenInteractionDialog,"$tutorialUseStoryPoint score:1000
 $global.isInTutorial","ShowDefaultVisual
-AddText ""这艘船不容易修复，但它在随后与守卫跳跃点的矿工部队的战斗中会非常有用。""
-AddText ""你可以用一个故事点来使一艘船可以被修复。现在就做吧，在探索废弃的船只时选择 适当的选项。""
+AddText ""这艘舰船难以修复，但它在随后与守卫跳跃点的矿工部队的战斗中会非常有用。""
+AddText ""你可以用一个故事点来使一艘船可以被修复。现在就做吧，在探索废弃的船只时选择 适当的选项}。""
 SetTextHighlightColors story
 SetTextHighlights ""适当的选项""",,salTutorialContinue:继续,
 sal_tutorial_storyPointUse2,DialogOptionSelected,$option == salTutorialContinue,"SalvageGenFromSeed
@@ -7097,7 +7097,7 @@ AdjustRepActivePerson HOSTILE -1","""我祈愿我可以相信你，"" $HeOrShe�
 $HeOrShe让$hisOrHer的手垂下。""没有。毫无价值。即使是真的，假使的确是真的，也是从你这异端之口中说出的谎言。""",,
 LKEpatherFleetServeFaith,DialogOptionSelected,$option == lke_patherFleetServeFaith,,"""你需为此祈祷，$playerBrotherOrSister。"" $heOrShe真诚的关心着你。""我们所行之道为窄，易为那些信奉异端邪说，扭曲卢德教导之人所迷惑。""
 
-""让我来告诉你真相：我不想与你战斗。当我们自相残杀时，信徒的力量就被虚耗；而那些人之领的恶魔之子会看着我们大笑。你知道的，他们觉得我们是被误导的蠢货。""","lke_patherFleetServeFaithA1:""我们不是蠢货。节省你的力量，$brotherOrSister。""
+""让我来告诉你真相：我不想与你战斗。当我们自相残杀时，信徒的力量就被虚耗；而那些 人之领 的恶魔之子会看着我们大笑。你知道的，他们觉得我们是被误导的蠢货。""","lke_patherFleetServeFaithA1:""我们不是蠢货。节省你的力量，$brotherOrSister。""
 lke_patherFleetServeFaithB1:""如果你挡了我的路，那你就是个蠢货，而且还是个异端。""",
 LKEpatherFleetServeFaithA1,DialogOptionSelected,$option == lke_patherFleetServeFaithA1,"$player.ethosMercy++
 AdjustRepActivePerson WELCOMING 1
@@ -7114,7 +7114,7 @@ $option = lke_patherFleetEndFight 0
 FireBest DialogOptionSelected","$HisOrHer双眼紧盯着你。""这就是我害怕的。你已经被那虚假的教会腐化。据说卢德之敌会用圣礼掩盖谎言，正如我现在所见。""
 
 ""愿神圣虚空将你净化。"" $heOrShe嘶嘶地说。",,
-LKEpatherFleetServePath,DialogOptionSelected,$option == lke_patherFleetServePath,,"""你需为此祈祷，$playerBrotherOrSister。"" $heOrShe真诚地关心着你，""我们所行之道是窄的，是险的，被虚伪谎言的异端教会所困，又被人之领的恶魔之子所围。""
+LKEpatherFleetServePath,DialogOptionSelected,$option == lke_patherFleetServePath,,"""你需为此祈祷，$playerBrotherOrSister。"" $heOrShe真诚地关心着你，""我们所行之道是窄的，是险的，被虚伪谎言的异端教会所困，又被 人之领 的恶魔之子所围。""
 
 $HeOrShe叹了口气，然后将$hisOrHer的手合起。""愿上天示我前路；以星辰、圣灵和启示。""",lke_patherFleetServePath2:继续,
 LKEpatherFleetServePath2,DialogOptionSelected,$option == lke_patherFleetServePath2,"AdjustRepActivePerson WELCOMING 1
@@ -7218,7 +7218,7 @@ FireBest DialogOptionSelected",你切断了通讯链接。,,
 LKEmazConvEndPolite,DialogOptionSelected,$option == lke_MazCutCommLinkPolite,"ShowDefaultVisual
 EndConversation
 $option = lke_mazFreebie0 0
-FireBest DialogOptionSelected",你在礼貌地寒暄了几句之后中断了通讯链接。,,
+FireBest DialogOptionSelected",你在寒暄了几句后切断了通讯链接。,,
 # LKE Mazalot portmaster,,,,,,
 LKEmazalotPortmasterSetLuddic,PopulateOptions,"$market.lke_searchForBornanew2
 $market.id == mazalot
@@ -13647,7 +13647,7 @@ $global.tutStage == INIT",ShowPersonVisual,"你的连接请求接通的速度出
 
 ""啊，你已经到了，很好！你应该很清楚，最近...嗯，我觉得这些破事可以不用再提了。""","0:tutBackground:""我想再回顾一下最近发生的事件。""
 1:tutCont1:""是的，我们都知道情况不太理想。现在我该从哪开始着手？""",
-tut_mainBackground1,DialogOptionSelected,$option == tutBackground,,"""Galatia 学院的一个团队一直在本星系中的休眠星门上开展实验，尝试重新将它与人之领的星门网络连接起来。
+tut_mainBackground1,DialogOptionSelected,$option == tutBackground,,"""Galatia 学院的一个团队一直在本星系中的休眠星门上开展实验，尝试重新将它与 人之领 的星门网络连接起来。
 
 实验前景乐观 —— 至少他们是这么想的，但在星门按照我们的预期发出能量脉冲回应时，破坏了星系入口跳跃点的稳定性，把我们与星域其他地方隔绝开来。
 
@@ -14627,7 +14627,7 @@ gaMeetHegLieutenantOnCoatl,AddBarEvents,"$market.id == coatl
 !$player.metTseenKe
 $global.metTseenKeDuringTutorial","AddBarEvent coatlOfficer_barEvent ""和上尉一起去喝一杯"" ""你在酒吧里看到了你在 Galatia 认识的那位上尉，你记得他说过你要是来 Coatl 他要请你喝一杯。""",,,
 gaMeetHegLieutenantOnCoatlB,AddBarEvents,"$market.id == coatl
-!$player.metTseenKe","AddBarEvent coatlOfficer_barEvent ""跟提到了 Galatia 的 上尉 交谈"" ""酒吧中，一名 霸主 上尉 友好地向你招了招手，提到了关于 Galatia 星系中什么事件的事情。""",,,
+!$player.metTseenKe","AddBarEvent coatlOfficer_barEvent ""跟提到了 Galatia 的 上尉 交谈"" ""酒吧中，一名 霸主 上尉 友好地向你招了招手，提到了关于 Galatia 星系中的某个事件。""",,,
 gaMeetHegLieutenantOnCoatlSel,DialogOptionSelected,"$option == coatlOfficer_barEvent
 $global.metTseenKeDuringTutorial","$player.metTseenKe = true
 AddGAOfficerToCoatl
@@ -14644,8 +14644,8 @@ BeginConversation heg_ga_officer","还没等你的自我介绍说出两个字，
 
 ""我是 Caliban Tseen Ke。当时在 Galatia 学院空间站 上逮捕那些不负责的人们。"" 他笑道，""而那时你正在处理那些往 跳跃点 跑路的怂包们。""
 
-他买给了你一杯酒 —— 之后又买了几杯 —— 回忆着往事。""我们搞定他了，知道吗。"" 他说着，""那个 Kallichore。同意了那个疯狂科学实验的学院的老大。差点让整个星系里所有人完蛋，你能相信吗？""","coatlOfficer_barEvent1:就笑着点头
-coatlOfficer_barEvent2:""你说得对，完全不负责任。""
+他买给了你一杯酒 —— 之后又买了几杯 —— 回忆着往事。""我们搞定他了，知道吗。"" 他说着，""那个 Kallichore，同意了那个疯狂科学实验的学院老大。差点让整个星系里的所有人完蛋，你能相信吗？""","coatlOfficer_barEvent1:就笑着点头
+coatlOfficer_barEvent2:""你说得对，完全是不负责任。""
 coatlOfficer_barEvent3:""或许这风险是值得的。""",
 gaMeetHegLtCoatl1,DialogOptionSelected,$option == coatlOfficer_barEvent1,"$option = coatlOfficer_barEvent4 0
 FireBest DialogOptionSelected",,,
@@ -14888,7 +14888,7 @@ bairdIntro4,DialogOptionSelected,$option == bairdIntroC4,FireAll BairdIntroHub,"
 
 ""我不要求你喜欢我，我也不会试着用高尚的理由来触动你的情感。我需要你理性地认识到，我所追求的行动方针不受势力要求的影响。事实上，这将是确保我们的文明免于彻底崩溃的前提。""
 
-""龟缩回脆弱岩球上的家园里无法拯救我们，把宝贵的资源扔进势力冲突的火堆中也无法拯救我们。我们必须超越已知，建立起粉碎旧时代造物的新理论，发展新的激进的技术来确保我们的生存。我们必须超越人之领的成就！"" 当她说话时，目光投向上方，就像是看着那抽象的概念。
+""龟缩回脆弱岩球上的家园里无法拯救我们，把宝贵的资源扔进势力冲突的火堆中也无法拯救我们。我们必须超越已知，建立起粉碎旧时代造物的新理论，发展新的激进的技术来确保我们的生存。我们必须超越 人之领 的成就！"" 当她说话时，目光投向上方，就像是看着那抽象的概念。
 
 你感觉，这就是她所笃信的。",,
 bairdIntroHubA1,BairdIntroHub,!$bairdIntro_whyShould,,,"0:bairdIntro_tellMeMore:""再说些。""",
@@ -14941,7 +14941,7 @@ bairdIntro_continueToWhat,DialogOptionSelected,$option == bairdIntro_continueToW
 FireBest DialogOptionSelected",,,
 bairdIntro_whatSel,DialogOptionSelected,$option == bairdIntro_what,"Highlight ""重新打开星门""","""我的前任，Tomas Kallichore 院长，领导了一系列错误的超空间操纵实验。呃，怎么说得通俗一点呢？""
 
-看起来这确实让 Baird 很伤脑筋，她叹了口气，然后开口：""舰长，你的飞船都用特殊的引擎在超空间飞行，这和人之领的星门网络有点类似，但也非常不同。而 Kallichore 当时认为可能有办法利用星舰的超空间引擎来 重新打开星门 。""
+看起来这确实让 Baird 很伤脑筋，她叹了口气，然后开口：""舰长，你的飞船都用特殊的引擎在超空间飞行，这和 人之领 的星门网络有点类似，但也非常不同。而 Kallichore 当时认为可能有办法利用星舰的超空间引擎来 重新打开星门 。""
 
 ""显然这些实验出了大问题，而 Galatia 星系也在跳跃点被损害至无法修复后与超空间断开了。虽然我们听说一些疯子找到了穿越不稳定跳跃点的方法，但考虑到谐振级联的可能性，这种行为已经不能用不负责任来形容了 —— 啊，我道歉。那和我们要讨论的没什么关联。""",bairdIntroC5:继续,
 bairdIntro6,DialogOptionSelected,$option == bairdIntroC5,,"""重要的是，当这个烂摊子最终收拾干净的时候，霸主 就派遣了科技审查舰队来到 Galatia 学院。他们把这个地方拆得七零八落，逮捕了超物理部门和几个实验室的负责人，当然还有 Kallichore 院长，一并抓去审问。""
@@ -15385,7 +15385,7 @@ GAKABairdHubC,GAKABairdHub,,,,gaKA_return7:什么也不说,
 GAKABairdHubASel,DialogOptionSelected,$option == gaKA_returnWhatWillHegDo,"$gaKA_returnWhatWillHegDo = true 0
 FireAll GAKABairdHub","Baird 看了看你，""当然，他们已经开始怀疑我了。""
 
-""Galatia 学院将对原始数据的查封提出上诉，并要求归还基本的科学研究材料 —— 即使在旧时代人之领的法律下，这也是合规的。'这种数据泄露只能证明限制基础研究的危险，因为这样会使一些让人讨厌的家伙们在缺乏舆论监督的情况下私自探索它们'。""
+""Galatia 学院将对原始数据的查封提出上诉，并要求归还基本的科学研究材料 —— 即使在旧时代 人之领 的法律下，这也是合规的。'这种数据泄露只能证明限制基础研究的危险，因为这样会使一些让人讨厌的家伙们在缺乏舆论监督的情况下私自探索它们'。""
 
 ""我欣然带着讽刺的意味去提出上诉，这是一场公关战争，没有顾忌的余地。我会表现得如同他们对我的想象那般愤世嫉俗，他们则会对此深信不疑，因为我的表现不是表演。""当 Baird 做出解释时，你从她对这种阴谋和反阴谋的描述中感受到了她的满足感。""然而，隐藏于那之下的，""她继续说道，""是我们的真实目的。一旦他们对此有所察觉，那将成为切实的证据和难以公开的尴尬事实。""",,
 GAKABairdHubBSel,DialogOptionSelected,$option == gaKA_returnThinkOfGargoyle,"$gaKA_returnThinkOfGargoyle = true 0
@@ -18532,7 +18532,7 @@ gaPZHegemonyEncounterNoZig,GAPZHegInitial,!$entity.hasZiggurat,FireBest GAPZHegI
 gaPZHegemonyEncounterOnlyZig,GAPZHegInitial,$entity.hasOnlyZiggurat,FireBest GAPZHegInitialCont,"""你好，舰长，"" 这位霸主 $personRank 用清脆的声音说道。"" 我们的传感器探测到一艘来源未知的舰船。""",,
 gaPZHegemonyEncounterInitialCont,GAPZHegInitialCont,,"MakeOtherFleetNonHostile gaPZ true
 MakeOtherFleetImportant gaPZ false
-MakeOtherFleetGoAway true","""尽管工业上的进步和革新与霸主的利益，乃至人之领的复兴相符合..."" $heOrShe像在背诵演讲稿的官僚那样机械般地说出这段话，""但为了保护所有人的安全，我们有必要对此适当监管和限制。请你知会，科技标准部在此宣布，我们将全力辅佐人之领的继承者，即 霸主 联合体，为此我们会确保你那所谓的 通灵塔-级 船体完全遵守星历 194 年签署的 Crom Cruach 条约，"" $hisOrHer的目光和你对上，""就是那份标志着第二次 AI 战争结束的条约。""
+MakeOtherFleetGoAway true","""尽管工业上的进步和革新与霸主的利益，乃至人之领的复兴相符合..."" $heOrShe像在背诵演讲稿的官僚那样机械般地说出这段话，""但为了保护所有人的安全，我们有必要对此适当监管和限制。请你知会，科技标准部在此宣布，我们将全力辅佐 人之领 的继承者，即 霸主 联合体，为此我们会确保你那所谓的 通灵塔-级 船体完全遵守星历 194 年签署的 Crom Cruach 条约，"" $hisOrHer的目光和你对上，""就是那份标志着第二次 AI 战争结束的条约。""
 
 这位霸主 $personRank 毫无感情地结束道，""请你将这次谈话视作警告。"" 接着，$HeOrShe切断了通讯，连一句惯例的 '航行无阻' 都没有说。",cutCommLinkNoText:继续,
 gaPZ_heg1,DialogOptionSelected,$option == gaPZ_heg1,,"你找了些借口来拖延这位 霸主 $personRank 几分钟的时间，以便和你的舰桥组员商讨对策。
@@ -19363,7 +19363,7 @@ FireAll GAATGcontactYaribayHub","Horus 微笑，""很好。谢谢你。""",,
 gaATGcontactYaribayA3,DialogOptionSelected,$option == gaATG_contactYaribayA3,FireAll GAATGcontactYaribayHub,"Horus 低头沉思。""大概吧。但是群众可以被操控。他们很善变。而且，到头来，他们只能被迫接受。""",,
 gaATGcontactYaribayA4,DialogOptionSelected,$option == gaATG_contactYaribayA4,"AdjustRepPerson horus_yaribay INHOSPITABLE -2
 FireAll GAATGcontactYaribayHub","Horus 眯起眼，""的确是。而且有这个必要。精英阶层的同意对和平的政治演变来说是必不可少的。我不用向你证明我的立场，这是基于实际情况的论断，而且也确实站得住脚。""",,
-gaATGcontactYaribayB1,DialogOptionSelected,$option == gaATG_contactYaribayB1,$didOptionB = true,"""对 联盟 管辖的星球进行同化是 霸主 的政策之一，也是他们重建人之领的计划中不可或缺的一环，不过他们合法性的基石就另当别论了。""
+gaATGcontactYaribayB1,DialogOptionSelected,$option == gaATG_contactYaribayB1,$didOptionB = true,"""对 联盟 管辖的星球进行同化是 霸主 的政策之一，也是他们重建 人之领 的计划中不可或缺的一环，不过他们合法性的基石就另当别论了。""
 
 Horus 看向一边，你感觉到他是在重复某个之前多次提出的论点，""公开的说法是，霸主 的要求是 '无条件的'。在 Mayasura 的事情之后，他们还能继续这样做吗？他们必须妥协。""
 
@@ -21060,7 +21060,7 @@ FireAll GAATGmeetCottonTeaHub","""霸主 的战术家们和会思考的机器都
 
 他抿着茶。""现在挺好了。你也喝点。""",,
 gaATGmeetCottonUngodly,DialogOptionSelected,$option == gaATG_meetCottonUngodly,"$askedUngodly = true 0
-FireAll GAATGmeetCottonTeaHub","""你了解关于伟大而恐怖的军阀 Onesimos Loke 的历史，不是吗？他曾经是人之领的高级军官...""Cotton 看起来有些恍惚，""卢德骑士当时与 霸主 站在一起。与荣耀一起对抗愤怒。那是正确的道路吗？""
+FireAll GAATGmeetCottonTeaHub","""你了解关于伟大而恐怖的军阀 Onesimos Loke 的历史，不是吗？他曾经是 人之领 的高级军官...""Cotton 看起来有些恍惚，""卢德骑士当时与 霸主 站在一起。与荣耀一起对抗愤怒。那是正确的道路吗？""
 
 ""这个令人厌恶的东西是所谓的 '医生' Cydonia 制作的 Onesimos Loke 悲惨的复制体。Cydonia 是一个病态的人，因为我不知道的原因讨好 Kanta，他用生命的奇迹开了个恶心的玩笑。""",,
 gaATGmeetCottonUngodly2,DialogOptionSelected,$option == gaATG_meetCottonUngodly2,"$cloneQuestion = true 0
@@ -22100,19 +22100,19 @@ gaDAScavBluff1,DialogOptionSelected,$option == gaDA_scavBluff,,"拾荒者眼神�
 
 现在轮到你了。你开始回想起了之前在某个港口里读过的一些琐碎的报告，你也搞不懂当时你为什么会这么细致地查阅邻近船只的所有权状况和公共合同关系的记录。也许只是为了在装货时打发时间。
 
-根据刚回忆到的一些细节，你解释道自己清楚他们是 $personName，与注册在 阿加雷斯临时商贸协会 旗下的 土产供销社 签有长期服务合同。而幸运的是，他们是现在碰到了你，而不是在返回 Nortia 之后才发现情况不对。
+根据刚回忆到的一些细节，你解释道自己清楚他是 $personName，与在 APCC，也就是 Agreus 临时商业协定 框架下的 原产地供应库存联合公司 （简称PSSC）签有长期服务合同。而幸运的是，他们是现在碰到了你，而不是在返回 Nortia 之后才发现情况不对。
 
 ""发现什么情况？"" $heOrShe的语气毫无起伏，显然已经对坏消息做好了心理准备。","gaDA_scavBluff2:""当然是调查的结果。""",
 gaDAScavBluff2,DialogOptionSelected,$option == gaDA_scavBluff2,,"$HeOrShe看起来相当担心，""调查？""
 
-你开始讲述那起那次调查，还不时地摇头表示同情。事件的起因是 APCC 接到密告，得知某几个特定的 '幽灵资本' 提供者在相互转移资金，涉及一项往左径分子控制的空域走私重型武器的计划。他们打算以此对 Eventide 的优质房地产业产生杠杆式的影响。随后揭露的丑闻和一系列的法律诉讼然让 原产地供应库存联合公司 的董事会几乎全面崩溃。由于丑闻影响太大，再加上势力间的外交压力，协会肯定会在下一个星历年里让更多的人头落地。
+你开始讲述那起那次调查，还不时地摇头表示同情。事件的起因是 APCC 接到密告，得知某几个特定的 ""幽灵资本"" 提供者在相互转移资金，涉及一项以 Eventide 的优质房地产作为抵押杠杆，往左径分子控制的空域走私重型武器的计划。这项丑闻和随之而来的司法行动让 PSSC 的董事会几乎全面倒台。由于丑闻影响太大，再加上势力间的外交压力，APCC 肯定会在下一个星历年里让更多的人头落地。
 
 你不断地危言耸听，舰长看起来也越来越像一具太空尸体。","gaDA_scavBluff3:""但真正会给你惹麻烦的是罚没令...""",
 gaDAScavBluff3,DialogOptionSelected,$option == gaDA_scavBluff3,,"""呃..."" $heOrShe甚至连一句话都说不出来了。
 
-""对。"" 你表示遗憾并确认了$heOrShe的猜想。土产供销社 所有资产 —— 无论是其拥有的，还是其租赁的、协议担保的、契约占有的、或是其他任何通过合同成分所有的 —— 都将被 阿加雷斯临时商贸协会 没收并出售，以用于支付巨额的赔偿和罚款。而一些就算是他们声称的所有权 '仍在转移' 的资产，已经出现在匿名拍卖会上。
+""对。"" 你表示遗憾并确认了$heOrShe的猜想。PSSC 所有资产 —— 无论是其拥有的，还是其租赁的、协议担保的、契约占有的、或是其他任何通过合同成分所有的 —— 都将被 APCC 没收并出售，以用于支付巨额的赔偿和罚款。而就算是一些他们声称的所有权 '仍在转移' 的资产，也已经出现在匿名拍卖会上。
 
-总而言之，你今天算是做了件好事，因为是你最先到这儿来告诉他们这些乱七八糟的事情。毕竟如果是某个讨债人首先找到了他们，那么他们可能就会被摘掉所有能摘的器官，然后在一个漂在太空中逃生舱里醒来。有了这个警告，他们就有机会洗掉自己的应答器 ID，找一个黑市卖掉他们船上的所有东西，再在随便哪个独立政体那里买个公民身份，兴许还能剩下点启动资金来拥抱接下来可能碰到的机遇。","gaDA_scavBluff4:""作为通风报信的小费，也许我可以拿一些打捞物...""",
+总而言之，你今天算是做了件好事，因为是你最先到这儿来告诉他们这些乱七八糟的事情。毕竟如果是某个讨债人首先找到了他们，那么他们大概会被摘掉所有能摘的器官，然后在一个飘在太空中的逃生舱里醒来。有了这个警告，他们就有机会洗掉自己的应答器 ID，找一个黑市卖掉他们船上的所有东西，再在随便哪个独立政体那里买个公民身份，兴许还能剩下点启动资金来拥抱接下来可能碰到的机遇。x`","gaDA_scavBluff4:""作为通风报信的小费，也许我可以拿一些打捞物...""",
 gaDAScavBluff4,DialogOptionSelected,$option == gaDA_scavBluff4,$gaDA_scavPrice = 0 0,"$personLastName 舰长马上同意了提议。你确实帮了大忙，一箱打捞物根本就回报不了你的恩情。你摇头微笑，解释说，在群星之中，像你和$himOrHer这样的独立舰长必须互相照应。
 
 当你们说再见时，拾荒者带着严峻的决心看着你。""一路顺风，$playerName 舰长。再次感谢你。"" 当后勤官报告一架货运无人机已交付任务目标时，你关闭了通信链路。",gaDA_scavBluffEnd:继续,
@@ -23568,7 +23568,7 @@ gaTJMissionText,DialogOptionSelected,$option == gaTJ_start,$missionId = gaTJ,"""
 
 ""院长说在你接受任务前，我不应该...呃，不能告诉你目标所在的星系位置。所以...""，他渐渐说不下去了，开始整理桌上的数据平板，似乎觉得这样做可能会有点用。所有东西都摆好之后，他别无选择，只能继续说。
 
-""这项任务需要...谨慎行事。想必你也知道，在核心星域外，有很多理论上无人占有的星系。如果某个政体希望占领某处，他们必须获得来自人之领的特许，这相当于人之领拥有了此地的管辖权。当然，在人之领消失后，霸主已经自诩为其继承者，并据此开始行使人之领的权力...""",gaTJ_briefing1:继续,
+""这项任务需要...谨慎行事。想必你也知道，在核心星域外，有很多理论上无人占有的星系。如果某个政体希望占领某处，他们必须获得来自 人之领 的特许，这相当于 人之领 拥有了此地的管辖权。当然，在人之领消失后，霸主已经自诩为其继承者，并据此开始行使人之领的权力...""",gaTJ_briefing1:继续,
 gaTJMissionText1,DialogOptionSelected,$option == gaTJ_briefing1,,"Sebestyen 注意到你有点走神。
 
 ""不好意思，舰长。我其实是想说，速子科技 认为这个地方不属于，呃... 任何人的管辖范围，因此他们有权建立，嗯，那种秘密研究基地，并会以他们认为合适的方式自卫。霸主 对此颇有微词。""
@@ -24769,7 +24769,7 @@ $HeOrShe说道：""就这么说定了""
 OR
 $HeOrShe点头致意，""动工！""
 OR
-$HeOrShe点了点头，说道。""事项马上进行！""
+$HeOrShe点了点头，说道。""项目就此启动！""
 OR
 ""交易已确认！舰长。"" $HeOrShe点头致意，""我就等你这句。""",,
 contactPrintAcceptTextFaithful,ContactPrintAcceptText,$voice == faithful,,"$HeOrShe微笑着说：""舰长，愿卢德与你同在。""
@@ -25145,7 +25145,7 @@ cpmBlurbBarPather,cpm_blurbBar,$faction.id == luddic_path,,一个$cpm_manOrWoman
 cpmOfferOptionBarPather,cpm_optionBar,$faction.id == luddic_path,,,cpm_startBar:接近这位坐在隔间里深思熟虑的走私者。,
 cpmOfferTextBar,DialogOptionSelected,$option == cpm_startBar,$missionId = cpm,"你走近这个专属座位，尽量让自己看起来像个有影响的大人物。你的伪装奏效了，这个$cpm_manOrWoman从$HeOrShe的 TriPad 上开了目光，想你示意，请你过去和$HeOrShe聊聊。
 
-""请坐，$playerName 舰长。"" $heOrShe在你不知所措的时侯露出一丝微笑，然后从瓶子里倒了一小杯纨绔子弟才会享用的美味，""我听说过你的很多成就，你是个很有事业心的人，我很欣赏。""
+""请坐，$playerName 舰长。"" $heOrShe在你不知所措的时侯露出一丝微笑，然后从瓶子里倒了一小杯纨绔子弟才会享用的琼浆，""我听说过你的很多成就，你是个很有事业心的人，我很欣赏。""
 
 $HeOrShe举起小酒杯，""祝未来机会多多！"" 抿了一口后，将酒杯放在了$HeOrShe的 TriPad 旁边。""我有个提议，对你来说是个机会。""","cpm_startBar2:""什么样的机会呢？""
 contact_declineBarNoContinue:婉拒",
@@ -27546,7 +27546,7 @@ taboOfferTextBar,DialogOptionSelected,$option == tabo_startBar,"$missionId = tab
 Highlight $tabo_dist $tabo_reward $tabo_fuel
 Call $tabo_ref showMap ""目标：$tabo_marketName ""","""$playerName 舰长，"" $heOrShe在你走近时严肃地点点头，""你可是名声在外。""
 
-$HeOrShe抿了一口水晶杯里的无色液体，然后轻触了几下$hisOrHer的数据平板，私人力场隔绝了声音，领域外的景象也变得模糊了起来。
+$HeOrShe抿了一口水晶杯里的无色液体，然后点了几下$hisOrHer的数据平板，私人力场隔绝了声音，领域外的景象也变得模糊了起来。
 
 ""我需要一支精锐但不在编制内的舰队，以对 $tabo_dist 光年外的 $tabo_marketName 进行战术轰炸。如果你能按照相关指示执行任务，$tabo_reward 星币将会汇到你的账户内。""
 
@@ -27614,11 +27614,11 @@ hijackBlurbBar,hijack_blurbBar,,,一个穿着动力盔甲内衬，长相彪悍�
 hijackOfferOptionBar,hijack_optionBar,,,,hijack_startBar:和穿着动力装甲内衬长相彪悍的$hijack_manOrWoman谈谈,
 hijackOfferTextBar,DialogOptionSelected,$option == hijack_startBar,$missionId = hijack,"你走了过去，冷静地面对着对方那令人生畏的目光。那个$hijack_manOrWoman对你的冷静报以大笑，带着一股呛眼睛的酒味邀请你坐在$heOrShe身边。""我喜欢你，"" $heOrShe对着全酒吧大喊，但被无视了，""你不是个孬种！""
 
-你这位新交的好朋友一直在满嘴跑火车，但你惊讶地发现$heOrShe实际上比$heOrShe看上去的样子要聪明得多，因为$heOrShe在吹牛的时候用看似不经意地发问刺探了你的背景和能力。
+你这位新交的好朋友一直在满嘴跑火车，但你惊讶地发现$heOrShe实际上比$heOrShe看上去的样子要聪明得多，因为$heOrShe在吹牛的时候旁敲侧击地刺探了你的背景和能力。
 
 $heOrShe放轻了嗓门，但始终用双眼警戒着四周：""我坦率地说吧，舰长。你进退有度，这我很欣赏。不知道你想不想和我一起干一票。"" $HeOrShe咧开嘴微笑，露出了满嘴的钛合金牙。""要细说吗？""","hijack_startBar2:""说吧。""
 contact_declineBarNoContinue:拒绝",
-hijackOfferTextBar2,DialogOptionSelected,$option == hijack_startBar2,Highlight $hijack_price $hijack_marines,"""在一个守卫薄弱的轨道船坞里，有一艘 $hijack_hull $hijack_designation 正在吃灰。我制定了一个偷船的计划，但最初的赞助商临阵退缩了。就像我之前说的，胆小鬼。做了这么多准备，不去干就太浪费了，对吧？但一艘星际飞船对我没有任何用处。""
+hijackOfferTextBar2,DialogOptionSelected,$option == hijack_startBar2,Highlight $hijack_price $hijack_marines,"""在一个守卫薄弱的轨道船坞里，有一艘 $hijack_hull $hijack_designation 正在吃灰。我制定了一个偷船的计划，但最初的合伙人临阵退缩了。就像我之前说的，胆小鬼。做了这么多准备，不去干就太浪费了，对吧？但一艘星际飞船对我没有任何用处。""
 
 ""机库的结构图、安全码、警卫轮值表，应有尽有。我甚至会亲自参加行动，这样你或许能放心一些。""
 
@@ -27631,11 +27631,11 @@ SetTextHighlights $hijack_price $hijack_marines","""有一艘 $hijack_hull $hija
 contact_decline:拒绝",
 hijackBarLookAtFreighter,DialogOptionSelected,$option == hijack_lookBar,"Call $hijack_ref showShip
 DoCanAffordCheck $hijack_price hijack_op1 false
-FireBest HijackNotEnoughMarines","这个$hijack_manOrWoman在$hijack_hisOrHer的破旧 TriPad 上轻触了几下，目标舰船的相关数据就出现在了上面。""很能飞的家伙，不是吗？""","hijack_op1:同意
+FireBest HijackNotEnoughMarines","这个$hijack_manOrWoman在$hijack_hisOrHer的破旧 TriPad 上点了几下，目标舰船的相关数据就出现在了上面。""很能飞的家伙，不是吗？""","hijack_op1:同意
 contact_declineBarNoContinue:拒绝",
 hijackLookAtFreighter,DialogOptionSelected,$option == hijack_look,"Call $hijack_ref showShip
 DoCanAffordCheck $hijack_price hijack_op1 false
-FireBest HijackNotEnoughMarines","$personName 轻触了几下手中的电子设备，将目标舰船的相关数据分享给你。""看看吧。"" $heOrShe说。","hijack_op1:同意
+FireBest HijackNotEnoughMarines","$personName 点了几下手中的电子设备，将目标舰船的相关数据分享给你。""看看吧。"" $heOrShe说。","hijack_op1:同意
 contact_decline:拒绝",
 HijackNotEnoughMarines,HijackNotEnoughMarines,$player.marines < $hijack_marines,SetEnabled hijack_op1 false,你没有足够的陆战队员来执行这次任务。,,
 hijackOperation1,DialogOptionSelected,$option == hijack_op1,,"让两支队伍乘坐伪装成民用后勤无人机的穿梭机溜进轨道船坞非常简单。一颗出现得很不是时候的小陨石的撞击导致船坞里的基础通讯系统失灵了，然后一位拥有完整安全权限的 ""某人"" 的失误重置了机库的电力系统，使内部传感器和过时了几个世纪的门锁失去了作用。
@@ -27648,7 +27648,7 @@ Call $hijack_ref addContacts",你在全息影像上看到 $personName 正透过$
 hijackOperation3Bar,DialogOptionSelected,"$option == hijack_op3
 $hijack_barEvent",,"你回到酒吧，与 $personName 畅饮着对方喜欢用来庆祝的烈酒。
 
-""真有趣，舰长！只要你愿意，我随时都可以和你一起再偷一艘船。"" $heOrShe的声音大得周围的人都能听见，但他们还是聪明地装出没听见的样子。",contact_acceptBarNoText:继续,
+""真有趣，舰长！只要你愿意，我随时都可以和你一起再偷一艘船。"" $heOrShe的声音大得周围的人都能听见，但他们还是识趣地装出没听见的样子。",contact_acceptBarNoText:继续,
 hijackOperation3NotBar,DialogOptionSelected,"$option == hijack_op3
 !$hijack_barEvent",,"在新船加入你的舰队后，你和 $personName 一起看着行动报告。
 
@@ -28314,7 +28314,7 @@ TseenKeAskRao,PopulateOptions,"$id == heg_ga_officer
 TseenKeAskDaud,PopulateOptions,"$id == heg_ga_officer
 #$player.metDaud
 !$saidDaud",,,"tseenKe_askDaud:""你对至高霸主 Baikal Daud 有什么看法？""",
-TseenKeAskRao2,DialogOptionSelected,$option == tseenKe_askRao,$saidRao = true,"""Rao 上将？"" Tseen Ke 摩挲着下巴，""Rao 这人有点公子哥派头，毕竟是 Eventide 出身，你知道吧？当然你也知道，毕竟他姓氏上就写着呢，哈哈。他们家富可敌国。不过他人不坏，真的不坏。""
+TseenKeAskRao2,DialogOptionSelected,$option == tseenKe_askRao,$saidRao = true,"""Rao 上将？"" Tseen Ke 摩挲着下巴，""Rao 这人有点公子哥派头，毕竟是 Eventide 出身，你知道吧？你肯定知道，毕竟他姓氏上就写着呢，哈哈。他们家富可敌国。不过他人不坏，真的不坏。""
 
 ""他按自己的方式打仗，而且赢了很多次。"" 他压低声音 —— 虽然在通讯线路上这并无必要，系统会自动调节音量。
 
@@ -28363,7 +28363,7 @@ FireAll TseenKeAskDaudOpts","""他们，呃..."" 他瞥向一旁。
 TseenKeAskDaudSelC,DialogOptionSelected,$option == tseenKe_askDaudSelC,"$gaveDaudOpinion = true
 FireAll TseenKeAskDaudOpts","""啊，他可是我们的霸主！"" 他捶胸强调道。
 
-""老爷子 Daud 从 Chicomoztoc 的底层爬上来，最后爬到了顶部。不管 Eventid 上的贵族们怎么想，战争就是打响了，而他想办法打赢了。当然不是单枪匹马，但确实是他拯救了 Mozzy。没有 Mozzy 就没有 霸主，没有 Mozzy 就没有英仙座星域，一切未来都无从谈起。这可不是能轻易否定的功绩。""",,
+""老爷子 Daud 从 Chicomoztoc 的底层爬上来，最后爬到了金字塔尖。不管 Eventid 上的贵族们怎么想，战争就是打响了，而他想办法打赢了。当然不是单枪匹马，但确实是他拯救了 Mozzy。没有 Mozzy 就没有 霸主，没有 Mozzy 就没有英仙座星域，一切未来都无从谈起。这可不是能轻易否定的功绩。""",,
 TseenKeAskDaudOpA,DialogOptionSelected,$option == tseenKe_askDaudOpA,"$saidDaudOp = true
 FireAll TseenKeAskDaudOpts","""哦豁 —— 你现在成外交家了是吧？随你便。""",,
 TseenKeAskDaudOpB,DialogOptionSelected,$option == tseenKe_askDaudOpB,"$saidDaudOp = true
@@ -28378,7 +28378,7 @@ FireAll TseenKeAskDaudOpts","他靠了回去，鼓起腮帮子吹了口气，仿
 
 ""这超出了我的职权范围，舰长。而我也为此庆幸。"" 他的脸上掠过一丝阴郁，""如果是 Daud 要求的，那么我会执行。我只能说到这里。""",,
 TseenKeAskDaudOpD,DialogOptionSelected,$option == tseenKe_askDaudOpD,"$saidDaudOp = true
-FireAll TseenKeAskDaudOpts","""舰长，"" Caliban 摇头道，""我觉得这对老爷子不公平。""
+FireAll TseenKeAskDaudOpts","""舰长，"" Caliban 摇头道，""我觉得这样说老爷子不合适。""
 
 ""当然，你有权持有不同看法，别误会。这也是 霸主 体制的一部分 —— 我们能在合理的范围内保留自己的思想和言论自由，考虑到紧急状态的话。""
 
@@ -36898,7 +36898,7 @@ pk_investigateSel,DialogOptionSelected,$option == pk_investigate,,"通讯军官�
 
 战术军官向你报告道，""根据信号情报... 这几乎匹配... 匹配于我们之前遭遇过的人之领的自动化战舰。""
 
-""我认为..."" 你的通讯军官插话道，""我认为我可以命令它们的主控程序退出攻击性警戒模式。霸主辅助军组件中有一部分非常古老的人之领指令集，用于帮助辅助军避免被那些自动防御系统摧毁。不过我们不能命令它们完全解除警戒，霸主没有把所有指令全交给我们。""","pk_proceed:""试试那条指令。我们或许可以避免与之一战""
+""我认为..."" 你的通讯军官插话道，""我认为我可以命令它们的主控程序退出攻击性警戒模式。霸主辅助军组件中有一部分非常古老的 人之领 指令集，用于帮助辅助军避免被那些自动防御系统摧毁。不过我们不能命令它们完全解除警戒，霸主没有把所有指令全交给我们。""","pk_proceed:""试试那条指令。我们或许可以避免与之一战""
 pk_almost:""战术副官，你说的 '几乎匹配' 是有多匹配？""
 pk_ignore:关闭链接并接近小行星",
 pkAlmost,DialogOptionSelected,$option == pk_almost,RemoveOption pk_almost,"""这很奇怪，$playerSirOrMadam，"" 你战术军官的眼神来回扫过各个显示器，并向你说到，""他们的协议相较人之领时代的要更新些，但肯定又不是那些霸主最近的协议。这似乎是出自于...要我说的话，第一次 AI 战争。""
@@ -38707,7 +38707,7 @@ HistorianBackstoryBlurb27,HistorianBackstoryBlurb,!WasHistorianBlurbShown histor
 
 $HeOrShe没有等待回答，便开始讲解起来。""Opis 曾是人口、艺术和商业的中心。不过，它并不是重工业的中心，他们将重工业转移到了 Sindria；而农业则交给了到了 Volturn。或许是眼不见为净，Opis 宪章联合体的统治者们开始觉得，自己只需要讨好本地的权贵网络即可。财富向权力的中心汇聚，而边缘地区则被彻底遗忘。""
 
-""这是否是人之领的罪孽在一处小得多的舞台上重演？"" $HeOrShe挑了挑$hisOrHer的眉毛。",,
+""这是否是 人之领 的罪孽在一处小得多的舞台上重演？"" $HeOrShe挑了挑$hisOrHer的眉毛。",,
 HistorianBackstoryBlurb28,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb28,SetHistorianBlurbShownAfterDelay historyBlurb28,"""这个？"" $HeOrShe拍了拍一直放在$heOrShe身边、时常翻阅的纸质书本。""这是... 一种符合我自我形象的一种装饰。""
 
 ""当然有独立的高科技制造商生产着那些早已经脱离传统造纸工艺的物品。那些集成数字界面的'仿纸载体'确实功能强大地惊人，但我的笔记本呢？我是从 Tartessus 的一个卢德派手工艺行会购买的。是的，它的主要成分是死去植物的纤维。""

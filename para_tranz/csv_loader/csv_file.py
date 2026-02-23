@@ -379,4 +379,4 @@ class CsvFile(DataFile):
     # 根据行ID，生成该行的词条上下文内容，用于辅助翻译
     def generate_row_context(self, row: dict) -> str:
         row_num = self.original_data.index(row)
-        return f'{EXPORTED_STRING_CONTEXT_PREFIX}{self.path.name}第{str(row_num + 1).zfill(4)}行'
+        return f'{EXPORTED_STRING_CONTEXT_PREFIX}{self.path.name}第{str(row_num + 1).zfill(5)}行'

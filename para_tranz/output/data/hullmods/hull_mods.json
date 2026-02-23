@@ -4,3226 +4,3226 @@
         "original": "An ancient design intended to stop micro-meteorites through sheer volume of material in place, before the advent of \"spaced\" armor.\n\nReduces the effective armor strength for the damage reduction calculation to %s of its actual value. However, ships of this design tend to carry extremely heavy armor.",
         "translation": "在现代 \"间隙\" 装甲出现之前的一种古老设计，通过纯粹堆砌大量材料以抵御微陨石。\n\n将减少伤害计算的有效装甲强度降低到其实际值的{%s}。不过，采用这种设计的舰船往往拥有极其厚重的装甲。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0098行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00098行"
     },
     {
         "key": "hull_mods.csv#ablative_armor$name",
         "original": "Ablative Armor",
         "translation": "烧蚀装甲",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0098行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00098行"
     },
     {
         "key": "hull_mods.csv#ablative_armor$short",
         "original": "Reduces damage reduction by armor.",
         "translation": "降低装甲的减伤效果。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0098行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00098行"
     },
     {
         "key": "hull_mods.csv#adaptive_coils$desc",
         "original": "Phase coils are less able to maintain a connection with normal space as the ship's hard flux levels rise, resulting in a greatly reduced top speed as the coils struggle to gain traction.\n\nThis modification allows the coils to handle higher levels of hard flux, increasing the threshold at which speed bottoms out by %s. For standard-design coils with no other modifications, this takes the threshold from %s to %s.",
         "translation": "当舰船的硬幅能水平上升时，相位线圈与正常空间保持连接的能力会逐渐下降，导致线圈难以获得牵引力，极大地降低最高航速。\n\n该调整能让线圈处理更高水平的硬幅能，使航速降至最低的硬幅能阈值提高{%s}。未经处理的标准线圈在硬幅能处于{%s}时航速就会降低，而调整后的则达到{%s}后才会降低。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0002行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00002行"
     },
     {
         "key": "hull_mods.csv#adaptive_coils$name",
         "original": "Adaptive Phase Coils",
         "translation": "自适应相位线圈",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0002行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00002行"
     },
     {
         "key": "hull_mods.csv#adaptive_coils$short",
         "original": "Reduces impact of hard flux level on top speed while phased.",
         "translation": "降低硬幅能水平对最高航速的惩罚。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0002行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00002行"
     },
     {
         "key": "hull_mods.csv#adaptive_coils$uiTags",
         "original": "Phase",
         "translation": "相位",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0002行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00002行"
     },
     {
         "key": "hull_mods.csv#adaptiveshields$desc",
         "original": "Converts frontal shields to omni-directional. Reduces the shield's arc by %s.",
         "translation": "以降低{%s}护盾角度为代价，将前置护盾转化为全角护盾。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0039行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00039行"
     },
     {
         "key": "hull_mods.csv#adaptiveshields$name",
         "original": "Shield Conversion - Omni",
         "translation": "全角护盾转化器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0039行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00039行"
     },
     {
         "key": "hull_mods.csv#adaptiveshields$sModDesc",
         "original": "Negates the shield arc penalty.",
         "translation": "豁免本插件导致的护盾角度减益。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0039行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00039行"
     },
     {
         "key": "hull_mods.csv#adaptiveshields$short",
         "original": "Converts front shield to omni, reduces arc.",
         "translation": "将前盾转化为全盾，降低护盾面积。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0039行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00039行"
     },
     {
         "key": "hull_mods.csv#adaptiveshields$uiTags",
         "original": "Shields",
         "translation": "护盾",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0039行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00039行"
     },
     {
         "key": "hull_mods.csv#additional_berthing$desc",
         "original": "Increases maximum crew capacity by %s/%s/%s/%s, depending on hull size, or by %s, whichever is higher.\n\nFor civilian-grade hulls, also increases maintenance supply use by %s.",
         "translation": "根据船体级别，提高{%s}/{%s}/{%s}/{%s}或至少{%s}名最大载员。\n\n而对于民用舰船，还会提高{%s}维护时所消耗的补给量。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0054行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00054行"
     },
     {
         "key": "hull_mods.csv#additional_berthing$name",
         "original": "Additional Berthing",
         "translation": "船员宿舍扩容",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0054行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00054行"
     },
     {
         "key": "hull_mods.csv#additional_berthing$sModDesc",
         "original": "Doubles the crew capacity increase and, for civilian hulls, negates the maintenance cost increase.",
         "translation": "最大载员增加值翻倍，抵消民用舰船所增加的维护成本。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0054行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00054行"
     },
     {
         "key": "hull_mods.csv#additional_berthing$short",
         "original": "Increases crew capacity.",
         "translation": "提高舰船的最大载员。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0054行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00054行"
     },
     {
         "key": "hull_mods.csv#additional_berthing$uiTags",
         "original": "Logistics, Requires Dock",
         "translation": "后勤, 需要船坞",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0054行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00054行"
     },
     {
         "key": "hull_mods.csv#advanced_ground_support$desc",
         "original": "Close support weapons and counter-measures for ground defenses. Increases the effective strength of planetary raids by %s, up to the total number of marines in the fleet.",
         "translation": "配备近距离支援武器与地面防御对策。提高{%s}突袭殖民地的有效强度，该加成不会超过携带陆战队员的总人数。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0088行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00088行"
     },
     {
         "key": "hull_mods.csv#advanced_ground_support$name",
         "original": "Advanced Ground Support",
         "translation": "进阶地面支援",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0088行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00088行"
     },
     {
         "key": "hull_mods.csv#advanced_ground_support$short",
         "original": "Improves effectiveness of raids.",
         "translation": "提高突袭的效率。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0088行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00088行"
     },
     {
         "key": "hull_mods.csv#advancedcore$desc",
         "original": "Extends the range of ballistic and energy weapons by %s. The range of point-defense weapons is only extended by %s.\n\nPrecludes the installation of a Dedicated Targeting Core or an Integrated Targeting Unit.",
         "translation": "提高{%s}实弹与能量武器射程，但点防类武器仅提高{%s}。\n\n与目标定位系统和专注性目标锁定核心冲突。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0094行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00094行"
     },
     {
         "key": "hull_mods.csv#advancedcore$name",
         "original": "Advanced Targeting Core",
         "translation": "先进目标定位核心",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0094行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00094行"
     },
     {
         "key": "hull_mods.csv#advancedcore$short",
         "original": "Greatly extends non-missile weapon range.",
         "translation": "极大地提高非导弹武器的射程。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0094行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00094行"
     },
     {
         "key": "hull_mods.csv#advancedoptics$desc",
         "original": "Extends the range of beam weapons by %s, but reduces their turn rate by %s. Cumulative with Integrated Targeting Unit.",
         "translation": "提高光束武器{%s}的射程，但会降低其{%s}的转向速度，兼容于目标定位系统。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0003行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00003行"
     },
     {
         "key": "hull_mods.csv#advancedoptics$name",
         "original": "Advanced Optics",
         "translation": "先进光学器件",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0003行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00003行"
     },
     {
         "key": "hull_mods.csv#advancedoptics$short",
         "original": "Increases beam weapon range.",
         "translation": "提高光束武器射程。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0003行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00003行"
     },
     {
         "key": "hull_mods.csv#advancedoptics$uiTags",
         "original": "Weapons",
         "translation": "武器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0003行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00003行"
     },
     {
         "key": "hull_mods.csv#advancedshieldemitter$desc",
         "original": "Increases the turn rate of the ship's shields by %s and the rate at which the shields are raised by %s.",
         "translation": "提高舰船护盾{%s}的转向速度以及{%s}的展开速度。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0001行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00001行"
     },
     {
         "key": "hull_mods.csv#advancedshieldemitter$name",
         "original": "Accelerated Shields",
         "translation": "敏捷护盾",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0001行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00001行"
     },
     {
         "key": "hull_mods.csv#advancedshieldemitter$sModDesc",
         "original": "Increases the shield's turn rate and raise rate by an additional %s.",
         "translation": "额外提高{%s}的护盾转向速度和展开速度。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0001行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00001行"
     },
     {
         "key": "hull_mods.csv#advancedshieldemitter$short",
         "original": "Increases shield turn rate and extension speed.",
         "translation": "提高护盾转速及展开速度。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0001行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00001行"
     },
     {
         "key": "hull_mods.csv#advancedshieldemitter$uiTags",
         "original": "Shields",
         "translation": "护盾",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0001行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00001行"
     },
     {
         "key": "hull_mods.csv#always_detaches$desc",
         "original": "Always detaches from parent structure when destroyed.",
         "translation": "当被破坏时，总是会从主体上分离。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0106行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00106行"
     },
     {
         "key": "hull_mods.csv#always_detaches$name",
         "original": "Always Detaches",
         "translation": "总是分离",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0106行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00106行"
     },
     {
         "key": "hull_mods.csv#anchorrotation$desc",
         "original": "This structure rotates around its anchor attachment point. For station modules only.",
         "translation": "该结构围绕着固定锚点进行旋转，仅适用于空间站模块。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0104行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00104行"
     },
     {
         "key": "hull_mods.csv#anchorrotation$name",
         "original": "Anchor Rotation",
         "translation": "固定旋转",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0104行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00104行"
     },
     {
         "key": "hull_mods.csv#andrada_mods$desc",
         "original": "During an inspection of an early prototype, the Supreme Executor was heard to comment unfavorably on exposed conduits running along the passageways, and the danger these must pose to the brave and loyal crew under combat conditions. \n\nThe new chief designer, a loyal officer appointed by the Supreme Executor himself, instructed the forge-programmers to make accommodations for the installation of special blast-proof insulated paneling produced by Sindria itself.\n\nIf the passages are a bit narrower, conduits prone to overheating, and flush-set panels somewhat unwieldy to access, the official readiness reports include no criticism of the changes. Everyone agrees in both public and - as the Internal Security Ministry can attest - in private, that the stark grandeur of the Lion's Guard fleet is breathtaking.\n\nCrew casualties in combat are increased by %s. The base flux dissipation rate is reduced by %s, and the repair rate for disabled weapons and engines is reduced by %s.",
         "translation": "在检查早期原型船体时，最高元首批评了人员过道中裸露的管线，指出它们必然会在战斗中对英勇而忠诚的船员们构成危险。\n\n为此，由最高元首钦点上任的新任首席设计师下令让锻炉工程师修改了蓝图，为船体添加了 Sindria 出产的特制防爆绝缘镶板。\n\n虽然这一改动令通道更难通行，又令导管更易过热，还让检修面板更难以触及，不过官方报道对此毫无意见。辛达强权内安部也可以证明，无论是公开还是私下，所有人都认为它让狮心舰队更加伟大。\n\n提高{%s}战斗中因船体结构受损而造成的船员伤亡。降低{%s}舰船基础幅能耗散，降低{%s}在战斗中修复受损武器及引擎的速率。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0101行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00101行"
     },
     {
         "key": "hull_mods.csv#andrada_mods$name",
         "original": "Special Modifications",
         "translation": "忠诚改装",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0101行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00101行"
     },
     {
         "key": "hull_mods.csv#andrada_mods$short",
         "original": "Reduces the ship's performance.",
         "translation": "降低舰船性能。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0101行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00101行"
     },
     {
         "key": "hull_mods.csv#armoredweapons$desc",
         "original": "Increases the durability of all weapons by %s and reduces recoil by %s, but decreases weapon turn rate by %s. Also increases the ship's armor by %s.",
         "translation": "提高{%s}武器耐久度，并降低{%s}后坐力，但降低{%s}武器转向速度。同时提高{%s}船体装甲。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0005行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00005行"
     },
     {
         "key": "hull_mods.csv#armoredweapons$name",
         "original": "Armored Weapon Mounts",
         "translation": "炮塔装甲",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0005行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00005行"
     },
     {
         "key": "hull_mods.csv#armoredweapons$sModDesc",
         "original": "Increases the rate of fire of all non-missile weapons by %s.",
         "translation": "提高所有非导弹武器{%s}的射速。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0005行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00005行"
     },
     {
         "key": "hull_mods.csv#armoredweapons$short",
         "original": "Makes weapons harder to disable, reduces recoil.",
         "translation": "令武器更难下线，并降低后坐力。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0005行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00005行"
     },
     {
         "key": "hull_mods.csv#armoredweapons$uiTags",
         "original": "Weapons, Defenses",
         "translation": "武器, 防御",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0005行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00005行"
     },
     {
         "key": "hull_mods.csv#assault_package$desc",
         "original": "Increases the ship's hull integrity by %s, armor by %s, and flux capacity by %s.\n\nWill try to engage enemies and otherwise act as a combat ship in battle.",
         "translation": "提高{%s}船体结构值、{%s}的装甲以及{%s}的幅能容量。\n\n在战斗中该舰会积极迎击敌人并表现得如同战斗舰船一般。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0006行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00006行"
     },
     {
         "key": "hull_mods.csv#assault_package$name",
         "original": "Assault Package",
         "translation": "突击套件",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0006行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00006行"
     },
     {
         "key": "hull_mods.csv#assault_package$short",
         "original": "Increases hull integrity, armor, and flux capacity.",
         "translation": "提高船体结构值、装甲强度、以及幅能容量。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0006行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00006行"
     },
     {
         "key": "hull_mods.csv#assault_package$uiTags",
         "original": "Special, Defenses",
         "translation": "特殊, 防御",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0006行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00006行"
     },
     {
         "key": "hull_mods.csv#augmentedengines$desc",
         "original": "Increases maximum burn level by %s.",
         "translation": "最大宇宙航速提高{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0055行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00055行"
     },
     {
         "key": "hull_mods.csv#augmentedengines$name",
         "original": "Augmented Drive Field",
         "translation": "增强驱动力场",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0055行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00055行"
     },
     {
         "key": "hull_mods.csv#augmentedengines$sModDesc",
         "original": "Increases maximum burn level by a further %s.",
         "translation": "额外提高{%s}最大宇宙航速。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0055行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00055行"
     },
     {
         "key": "hull_mods.csv#augmentedengines$short",
         "original": "Increases maximum burn level.",
         "translation": "提高最大宇宙航速。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0055行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00055行"
     },
     {
         "key": "hull_mods.csv#augmentedengines$uiTags",
         "original": "Logistics, Requires Dock",
         "translation": "后勤, 需要船坞",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0055行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00055行"
     },
     {
         "key": "hull_mods.csv#automated$desc",
         "original": "This ship is fully automated, and does not require - and can not take on - any human crew.",
         "translation": "能全自动化运作，无需人类船员操作，亦无法搭载任何人类。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0093行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00093行"
     },
     {
         "key": "hull_mods.csv#automated$name",
         "original": "Automated Ship",
         "translation": "全自动舰船",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0093行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00093行"
     },
     {
         "key": "hull_mods.csv#automated$short",
         "original": "Does not require and can not support crew.",
         "translation": "无需船员也无法搭载船员。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0093行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00093行"
     },
     {
         "key": "hull_mods.csv#autorepair$desc",
         "original": "Reduces the time required to repair disabled weapons and engines (in combat) by %s.",
         "translation": "降低{%s}在战斗中修复受损武器及引擎的时间。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0007行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00007行"
     },
     {
         "key": "hull_mods.csv#autorepair$name",
         "original": "Automated Repair Unit",
         "translation": "自动修复单元",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0007行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00007行"
     },
     {
         "key": "hull_mods.csv#autorepair$sModDesc",
         "original": "Reduces repair time to %s, and reduces overload duration by %s.",
         "translation": "将武器与引擎的修复时间降低至{%s}，且降低{%s}舰船过载持续时间。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0007行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00007行"
     },
     {
         "key": "hull_mods.csv#autorepair$short",
         "original": "Increases weapon repair rate in combat.",
         "translation": "提高战斗中武器的维修速率。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0007行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00007行"
     },
     {
         "key": "hull_mods.csv#autorepair$uiTags",
         "original": "Defenses",
         "translation": "防御",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0007行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00007行"
     },
     {
         "key": "hull_mods.csv#auxiliary_fuel_tanks$desc",
         "original": "Increases maximum fuel capacity by %s/%s/%s/%s, depending on hull size, or by %s, whichever is higher.\n\nFor civilian-grade hulls, also increases maintenance supply use by %s.",
         "translation": "根据船体级别，提高{%s}/{%s}/{%s}/{%s}或至少{%s}单位燃料存储量。\n\n而对于民用舰船，还会提高{%s}维护时所消耗的补给量。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0056行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00056行"
     },
     {
         "key": "hull_mods.csv#auxiliary_fuel_tanks$name",
         "original": "Auxiliary Fuel Tanks",
         "translation": "辅助燃料罐",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0056行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00056行"
     },
     {
         "key": "hull_mods.csv#auxiliary_fuel_tanks$sModDesc",
         "original": "Doubles the fuel capacity increase and, for civilian hulls, negates the maintenance cost increase.",
         "translation": "燃料存储量增加值翻倍，豁免民用舰船所增加的维护成本。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0056行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00056行"
     },
     {
         "key": "hull_mods.csv#auxiliary_fuel_tanks$short",
         "original": "Increases fuel capacity.",
         "translation": "提高舰船的燃料存储量。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0056行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00056行"
     },
     {
         "key": "hull_mods.csv#auxiliary_fuel_tanks$uiTags",
         "original": "Logistics, Requires Dock",
         "translation": "后勤, 需要船坞",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0056行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00056行"
     },
     {
         "key": "hull_mods.csv#auxiliarythrusters$desc",
         "original": "Increases the ship's maneuverability by %s.",
         "translation": "提高舰船{%s}机动性，如加速度/减速度/转向加速/转向角速度。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0008行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00008行"
     },
     {
         "key": "hull_mods.csv#auxiliarythrusters$name",
         "original": "Auxiliary Thrusters",
         "translation": "辅助推进器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0008行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00008行"
     },
     {
         "key": "hull_mods.csv#auxiliarythrusters$sModDesc",
         "original": "Increases the 0-flux speed boost by %s, and %s the 0-flux turn rate bonus.",
         "translation": "提高 \"零幅能加速\" 状态下的航速增益{%s}且将旋转速度增益{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0008行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00008行"
     },
     {
         "key": "hull_mods.csv#auxiliarythrusters$short",
         "original": "Increases maneuverability.",
         "translation": "提高舰船的机动性。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0008行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00008行"
     },
     {
         "key": "hull_mods.csv#auxiliarythrusters$uiTags",
         "original": "Engines",
         "translation": "引擎",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0008行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00008行"
     },
     {
         "key": "hull_mods.csv#axialrotation$desc",
         "original": "This structure constantly rotates around its axis.",
         "translation": "这个结构一直绕着它的中心轴旋转。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0103行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00103行"
     },
     {
         "key": "hull_mods.csv#axialrotation$name",
         "original": "Axial Rotation",
         "translation": "绕轴旋转",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0103行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00103行"
     },
     {
         "key": "hull_mods.csv#ballistic_rangefinder$desc",
         "original": "<tooltip created in the script due to lots of highlighting>",
         "translation": "提高实弹槽位上中小型武器的射程。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0009行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00009行"
     },
     {
         "key": "hull_mods.csv#ballistic_rangefinder$name",
         "original": "Ballistic Rangefinder",
         "translation": "弹道测距仪",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0009行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00009行"
     },
     {
         "key": "hull_mods.csv#ballistic_rangefinder$short",
         "original": "Increases base range of small and medium weapons in ballisic slots.",
         "translation": "提高实弹槽位上中小型武器的射程。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0009行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00009行"
     },
     {
         "key": "hull_mods.csv#ballistic_rangefinder$uiTags",
         "original": "Weapons",
         "translation": "武器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0009行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00009行"
     },
     {
         "key": "hull_mods.csv#bdeck$desc",
         "original": "Once per combat, when the fighter replacement rate reaches %s, the fighter launch bays are switched over to operate from a \"B-Deck\".\n\nStandby fighters are launched to rapidly bring the wings back up to full strength, and the fighter replacement rate is set to %s.",
         "translation": "当战机整备率下降到{%s}时，舰船将换用一套备用战机甲板，每次战斗可使用一次。\n\n切换至备用甲板时，将迅速部署后备战机以补满本舰部署的全部战机联队，并使战机整备率恢复至{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0070行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00070行"
     },
     {
         "key": "hull_mods.csv#bdeck$name",
         "original": "B-Deck",
         "translation": "后备甲板",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0070行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00070行"
     },
     {
         "key": "hull_mods.csv#bdeck$short",
         "original": "Launches fresh wing once per combat and replenishes the replacement rate.",
         "translation": "每场战斗可以恢复一次战机整备率并部署补充战机。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0070行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00070行"
     },
     {
         "key": "hull_mods.csv#blast_doors$desc",
         "original": "Installs additional hermetic and heavily reinforced doors at critical junctures throughout the ship. Increases hull integrity by %s.\n\nShip takes %s fewer crew casualties from hull damage sustained in combat.",
         "translation": "在各个要害部位加装坚固的密封门，提高{%s}船体结构值。\n\n降低 %s 战斗中因船体结构受损而造成的船员伤亡。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0010行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00010行"
     },
     {
         "key": "hull_mods.csv#blast_doors$name",
         "original": "Blast Doors",
         "translation": "防爆气密门",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0010行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00010行"
     },
     {
         "key": "hull_mods.csv#blast_doors$sModDesc",
         "original": "Increases the crew casualty reduction to %s.",
         "translation": "将减免船员伤亡的效果提高至{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0010行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00010行"
     },
     {
         "key": "hull_mods.csv#blast_doors$short",
         "original": "Increases hull integrity, reduces crew casualties.",
         "translation": "提高舰船结构值，降低船员伤亡。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0010行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00010行"
     },
     {
         "key": "hull_mods.csv#blast_doors$uiTags",
         "original": "Defenses",
         "translation": "防御",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0010行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00010行"
     },
     {
         "key": "hull_mods.csv#chassis_storage$desc",
         "original": "Fighter replacement rate does not go down when fighters are lost.",
         "translation": "即便战机遭到破坏，也不会降低战机整备率。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0071行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00071行"
     },
     {
         "key": "hull_mods.csv#chassis_storage$name",
         "original": "Fighter Chassis Storage",
         "translation": "战机底盘储备",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0071行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00071行"
     },
     {
         "key": "hull_mods.csv#chassis_storage$short",
         "original": "Fighter replacement rate does not go down.",
         "translation": "战机整备率不会下降。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0071行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00071行"
     },
     {
         "key": "hull_mods.csv#civgrade$desc",
         "original": "Increases sensor profile by %s. Reduces sensor strength by %s.",
         "translation": "提高{%s}传感器截面，降低{%s}传感器探测强度。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0078行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00078行"
     },
     {
         "key": "hull_mods.csv#civgrade$name",
         "original": "Civilian-grade Hull",
         "translation": "民用级舰体",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0078行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00078行"
     },
     {
         "key": "hull_mods.csv#civgrade$short",
         "original": "Increases sensor profile, reduces sensor strength.",
         "translation": "提高传感器截面，降低传感器探测强度。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0078行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00078行"
     },
     {
         "key": "hull_mods.csv#coherer$desc",
         "original": "<tooltip created in the script>",
         "translation": "<tooltip created in the script>",
         "stage": -1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0080行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00080行"
     },
     {
         "key": "hull_mods.csv#coherer$name",
         "original": "Energy Bolt Coherer",
         "translation": "能量弹体同调器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0080行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00080行"
     },
     {
         "key": "hull_mods.csv#coherer$short",
         "original": "Increases base range of non-beam energy weapons.",
         "translation": "提高非光束能量武器的基础射程。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0080行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00080行"
     },
     {
         "key": "hull_mods.csv#comp_armor$desc",
         "original": "This ship's armor has taken major and irreparable damage at some point in the past, or suffered from major errors in the manufacturing process. Armor rating reduced by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "该舰的装甲曾在过去某刻遭受了无法修复的巨大损伤，或是在生产组装过程中发生了极其严重的失误。装甲值降低{%s}。\n\n但部署所需补给下降{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0131行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00131行"
     },
     {
         "key": "hull_mods.csv#comp_armor$name",
         "original": "Compromised Armor",
         "translation": "受损装甲",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0131行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00131行"
     },
     {
         "key": "hull_mods.csv#comp_hull$desc",
         "original": "This ship's hull has taken major and irreparable damage at some point in the past, or suffered from major errors in the manufacturing process. Hull integrity reduced by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "该舰的船体曾在过去某刻遭受了无法修复的巨大损伤，或是在生产组装过程中发生了极其严重的失误。船体结构值降低{%s}。\n\n但部署所需补给下降{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0132行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00132行"
     },
     {
         "key": "hull_mods.csv#comp_hull$name",
         "original": "Compromised Hull",
         "translation": "受损船体",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0132行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00132行"
     },
     {
         "key": "hull_mods.csv#comp_storage$desc",
         "original": "The storage capacity of this ship is significantly degraded. Crew, cargo, and fuel capacity reduced by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "该舰存储能力大大降低。船员，货物和燃料容量均降低{%s}。\n\n但部署所需补给下降{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0143行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00143行"
     },
     {
         "key": "hull_mods.csv#comp_storage$name",
         "original": "Compromised Storage",
         "translation": "受损货舱",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0143行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00143行"
     },
     {
         "key": "hull_mods.csv#comp_structure$desc",
         "original": "This ship's hull has likely taken extreme damage in the past, possibly to the point of breaking apart. Armor rating reduced by %s, hull integrity reduced by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "该舰的结构曾在过去受到一些极大的损伤，而导致其被重创后更容易会四分五裂。降低{%s}装甲值，降低{%s}船体结构值。\n\n但部署所需补给下降{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0137行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00137行"
     },
     {
         "key": "hull_mods.csv#comp_structure$name",
         "original": "Structural Damage",
         "translation": "结构损伤",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0137行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00137行"
     },
     {
         "key": "hull_mods.csv#converted_bay$desc",
         "original": "This ship's cargo hold has been converted to house a pair of fighter bays. The improvised manufactory that produces fighter chassis is unreliable, and most components have minor defects. Fighter speed reduced by %s, and damage taken increased by %s.",
         "translation": "该舰的标准货舱已被改装成临时战机甲板。不可靠的简易制造车间只能产出劣质的战机底盘，且大量内部构件都具有轻微缺陷，导致战机航速降低{%s}且所受伤害提高{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0100行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00100行"
     },
     {
         "key": "hull_mods.csv#converted_bay$name",
         "original": "Converted Cargo Bay",
         "translation": "货舱改装",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0100行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00100行"
     },
     {
         "key": "hull_mods.csv#converted_bay$short",
         "original": "Pair of improvised fighter bays.",
         "translation": "用货舱临时改装成的战机甲板。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0100行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00100行"
     },
     {
         "key": "hull_mods.csv#converted_fighterbay$desc",
         "original": "Converts the ship's fighter bays housing built-in wings into improvised cargo holds, giving it an additional %s cargo capacity and reducing its crew requirements by %s per fighter bay. The crew reduction is limited to a maximum of %s.",
         "translation": "将该舰内置战机的战机甲板改造为临时的货舱，提高该舰{%s}的货舱容量。每移除一个战机甲板就会降低{%s}最低船员需求，最多可降低{%s}船员需求。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0012行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00012行"
     },
     {
         "key": "hull_mods.csv#converted_fighterbay$name",
         "original": "Converted Fighter Bay",
         "translation": "战机甲板改装",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0012行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00012行"
     },
     {
         "key": "hull_mods.csv#converted_fighterbay$sModDesc",
         "original": "Monthly maintenance cost reduced by %s per fighter bay.",
         "translation": "每个战机甲板每月维护费用降低{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0012行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00012行"
     },
     {
         "key": "hull_mods.csv#converted_fighterbay$short",
         "original": "Converts built-in fighter bays into improvised cargo holds.",
         "translation": "将内置的战机甲板改为临时货舱。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0012行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00012行"
     },
     {
         "key": "hull_mods.csv#converted_fighterbay$uiTags",
         "original": "Fighters, Logistics, Requires Dock",
         "translation": "战机, 后勤, 需要船坞",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0012行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00012行"
     },
     {
         "key": "hull_mods.csv#converted_hangar$desc",
         "original": "<Tooltip created in script>",
         "translation": "<Tooltip created in script>",
         "stage": -1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0011行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00011行"
     },
     {
         "key": "hull_mods.csv#converted_hangar$name",
         "original": "Converted Hangar",
         "translation": "机库改装",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0011行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00011行"
     },
     {
         "key": "hull_mods.csv#converted_hangar$sModDesc",
         "original": "Increases the rate at which the fighter replacement rate recovers by %s for cruisers, and by %s for capital ships. No added effect for destroyers.",
         "translation": "提高战机整备率的恢复速度，巡洋舰提高{%s}，主力舰提高{%s}。对驱逐舰无效。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0011行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00011行"
     },
     {
         "key": "hull_mods.csv#converted_hangar$short",
         "original": "Improvised fighter bay for non-carriers.",
         "translation": "给非航母舰船提供临时战机甲板。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0011行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00011行"
     },
     {
         "key": "hull_mods.csv#converted_hangar$uiTags",
         "original": "Fighters",
         "translation": "战机",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0011行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00011行"
     },
     {
         "key": "hull_mods.csv#damaged_deck$desc",
         "original": "The flight decks on this ship have taken major damage and seriously interfere with normal operation. Time to launch replacement fighters is increased by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "该舰的飞行甲板受到重创，严重干扰了战机联队的正常运作。提高{%s}战机联队重返战场所需要的时间。\n\n但部署所需补给下降{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0141行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00141行"
     },
     {
         "key": "hull_mods.csv#damaged_deck$name",
         "original": "Damaged Flight Deck",
         "translation": "受损的飞行甲板",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0141行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00141行"
     },
     {
         "key": "hull_mods.csv#damaged_mounts$desc",
         "original": "Reduces weapon turn rate by %s and increases recoil by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "降低武器转向速度{%s}，并提高射击时的后坐力{%s}。\n\n但部署所需补给下降{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0147行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00147行"
     },
     {
         "key": "hull_mods.csv#damaged_mounts$name",
         "original": "Damaged Weapon Mounts",
         "translation": "武器位损坏",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0147行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00147行"
     },
     {
         "key": "hull_mods.csv#damaged_mounts$short",
         "original": "Reduces weapon turn rate and increases recoil.",
         "translation": "降低武器转向速度且提高后坐力。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0147行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00147行"
     },
     {
         "key": "hull_mods.csv#dedicated_targeting_core$desc",
         "original": "Increases the range of ballistic and energy weapons by %s/%s for cruisers/capital ships.\n\nCan not be installed on a frigate or a destroyer, and can not work in conjunction with Integrated Targeting Unit.\n\nMost combat ships install either an Integrated Targeting Unit or a Dedicated Targeting Core, with the exception of more specialized variants.",
         "translation": "提高实弹和能量武器射程，巡洋舰提高{%s}，主力舰提高{%s}。\n\n不能安装在护卫和驱逐上，不兼容于目标定位系统。\n\n除了一些特化的装配，绝大多数战斗舰船都会选择安装目标定位系统或专注型目标锁定核心。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0013行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00013行"
     },
     {
         "key": "hull_mods.csv#dedicated_targeting_core$name",
         "original": "Dedicated Targeting Core",
         "translation": "专注型目标锁定核心",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0013行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00013行"
     },
     {
         "key": "hull_mods.csv#dedicated_targeting_core$sModDesc",
         "original": "Increases the range bonus to %s for cruisers and %s for capital ships.",
         "translation": "巡洋舰射程增益提高至{%s}，主力舰射程增益提高至{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0013行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00013行"
     },
     {
         "key": "hull_mods.csv#dedicated_targeting_core$short",
         "original": "Increases weapon range, more so for larger ships.",
         "translation": "提高实弹和能量武器的射程。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0013行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00013行"
     },
     {
         "key": "hull_mods.csv#dedicated_targeting_core$uiTags",
         "original": "Weapons",
         "translation": "武器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0013行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00013行"
     },
     {
         "key": "hull_mods.csv#defective_manufactory$desc",
         "original": "The manufactory that produces fighter chassis is unreliable, and most components have minor defects. Fighter speed reduced by %s, and damage taken increased by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "受损的制造车间只能产出劣质的战机底盘，且大量内部构件都具有轻微缺陷，导致战机航速降低{%s}且所受伤害提高{%s}。\n\n但部署所需补给下降 %s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0140行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00140行"
     },
     {
         "key": "hull_mods.csv#defective_manufactory$name",
         "original": "Defective Manufactory",
         "translation": "受损的制造工厂",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0140行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00140行"
     },
     {
         "key": "hull_mods.csv#defensive_targeting_array$desc",
         "original": "Standard fighter communication links are re-purposed to provide short-range targeting data.\n\nIncreases fighter damage to missiles and other fighters by %s, but makes the fighters unable to leave the vicinity of their ship.",
         "translation": "修改标准战斗机通讯链路，转而为战机提供短程目标定位数据。\n\n增加战机对导弹和敌机造成的伤害 %s}，但致使战机无法远离战舰周边区域。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0014行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00014行"
     },
     {
         "key": "hull_mods.csv#defensive_targeting_array$name",
         "original": "Defensive Targeting Array",
         "translation": "护航定位阵列",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0014行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00014行"
     },
     {
         "key": "hull_mods.csv#defensive_targeting_array$sModDesc",
         "original": "Extends range of ballistic and energy weapons of the ship's fighters by %s units.",
         "translation": "该舰战机的实弹和能量武器射程提高{%s}单位。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0014行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00014行"
     },
     {
         "key": "hull_mods.csv#defensive_targeting_array$short",
         "original": "Increases fighter PD damage, reduces fighter roam range to zero.",
         "translation": "增加战机针对导弹与其他战机的伤害，将战机的出击范围降至零。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0014行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00014行"
     },
     {
         "key": "hull_mods.csv#defensive_targeting_array$uiTags",
         "original": "Fighters",
         "translation": "战机",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0014行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00014行"
     },
     {
         "key": "hull_mods.csv#degraded_drive_field$desc",
         "original": "Whether due to battle damage, manufacturing defects, or cycles of poor maintenance, this ship's drive field is suffering from permanently degraded performance. \n\nMaximum burn level decreased by %s. Sensor profile increased by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "由于受到了战斗损伤，或是有生产缺陷，亦或是年久失修，该舰的驱动力场性能已经永久性降低。\n\n最大宇宙航速下降{%s}，传感器截面上升{%s}。\n\n但部署所需补给下降{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0134行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00134行"
     },
     {
         "key": "hull_mods.csv#degraded_drive_field$name",
         "original": "Degraded Drive Field",
         "translation": "驱动力场故障",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0134行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00134行"
     },
     {
         "key": "hull_mods.csv#degraded_engines$desc",
         "original": "Whether due to battle damage, manufacturing defects, or cycles of poor maintenance, this ship's engines are suffering from permanently degraded combat performance. \n\nTop speed and maneuverability in combat reduced by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "由于受到了战斗损伤，或是有生产缺陷，亦或是年久失修，该舰引擎的战斗表现已经大不如前。\n\n战斗中最大航速与机动性均降低{%s}。\n\n但部署所需补给下降{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0133行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00133行"
     },
     {
         "key": "hull_mods.csv#degraded_engines$name",
         "original": "Degraded Engines",
         "translation": "老化引擎",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0133行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00133行"
     },
     {
         "key": "hull_mods.csv#degraded_life_support$desc",
         "original": "Decreases maximum crew capacity by %s, and maximum combat readiness by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "降低最大载员数量{%s}，并降低{%s}战备值 (CR) 上限。\n\n但部署所需补给下降{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0148行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00148行"
     },
     {
         "key": "hull_mods.csv#degraded_life_support$name",
         "original": "Degraded Life Support",
         "translation": "维生系统故障",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0148行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00148行"
     },
     {
         "key": "hull_mods.csv#degraded_life_support$short",
         "original": "Decreases maximum crew capacity and combat readiness.",
         "translation": "降低最大载员数，并降低战备值 (CR) 上限。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0148行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00148行"
     },
     {
         "key": "hull_mods.csv#degraded_shields$desc",
         "original": "Increases the amount of damage taken by shields by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "提高护盾所受伤害{%s}。\n\n但部署所需补给下降{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0149行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00149行"
     },
     {
         "key": "hull_mods.csv#degraded_shields$name",
         "original": "Degraded Shields",
         "translation": "护盾发生器老化",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0149行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00149行"
     },
     {
         "key": "hull_mods.csv#degraded_shields$short",
         "original": "Increases damage taken by shields.",
         "translation": "提高护盾所受伤害。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0149行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00149行"
     },
     {
         "key": "hull_mods.csv#delicate$desc",
         "original": "The ship systems require excessive maintenance and do not stand up well under the rigours of prolonged engagements.\n\nIncreases the rate of in-combat CR decay after peak performance time runs out by %s.",
         "translation": "舰载系统需要巨量维护，且无法长期在战斗下维持良好运转。\n\n当峰值时间耗尽后，战备值 (CR) 衰减的速率提高{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0089行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00089行"
     },
     {
         "key": "hull_mods.csv#delicate$name",
         "original": "Delicate Machinery",
         "translation": "精密机械",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0089行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00089行"
     },
     {
         "key": "hull_mods.csv#delicate$short",
         "original": "Increases CR decay rate after peak time runs out.",
         "translation": "提高峰值时间耗尽后的战备值 (CR) 衰减速率。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0089行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00089行"
     },
     {
         "key": "hull_mods.csv#design_compromises$desc",
         "original": "The ship's performance suffers from competing design priorities, with multiple bleeding-edge projects integrated too late in the design cycle.\n\nThe ship's flux dissipation and capacity, even the nominal base values, are reduced by %s.\n\nThe range of ballistic weapons is reduced by %s, the rate of fire of missile weapons is reduced by %s, and the flux generation of energy weapons is increased by %s.\n\nOn the plus side, extra nanoforge capacity can be brought online more easily, allowing the installation of a %s despite the ship already having a fighter bay, increasing the number of operational fighter bays to %s.",
         "translation": "这艘船的性能受限于相互矛盾的设计指标，多个尖端项目在设计周期后期才仓促整合，直接影响整体性能。\n\n舰船的幅能耗散效率与幅能容量因此下降{%s}。\n\n实弹武器射程缩短{%s}，导弹武器射速降低{%s}，能量武器的幅能输出增加{%s}。\n\n不过也有可取之处：配备了更多的纳米锻炉产能，即便舰船本身已配备一个战机甲板，仍能额外加装{%s}个，让甲板总数达到{%s}个。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0081行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00081行"
     },
     {
         "key": "hull_mods.csv#design_compromises$name",
         "original": "Design Compromises",
         "translation": "权衡设计",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0081行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00081行"
     },
     {
         "key": "hull_mods.csv#design_compromises$short",
         "original": "Reduces missile and ballistic weapon range, and flux dissipation / capacity.",
         "translation": "减少导弹与实弹武器射程，并降低幅能耗散效率 / 幅能容量。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0081行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00081行"
     },
     {
         "key": "hull_mods.csv#destroyed_mounts$desc",
         "original": "Some of the original weapon mounts on this ship have been damaged beyond repair and can no longer be used.",
         "translation": "该舰的部分武器位已经遭到了无法修复的严重损伤，无法继续使用。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0151行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00151行"
     },
     {
         "key": "hull_mods.csv#destroyed_mounts$name",
         "original": "Destroyed Weapon Mounts",
         "translation": "武器位损毁",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0151行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00151行"
     },
     {
         "key": "hull_mods.csv#distributed_fire_control$desc",
         "original": "Much of the damage that takes weapons offline is to external control runs and power conduits. This ship's weapons are engineered to operate more independently, reducing their exposure to damage by %s and reducing the EMP damage taken by the ship overall by %s.",
         "translation": "大部分导致武器系统离线的伤害都发生在外部控制线路和供电线路上。这艘船的武器系统设计布局具备更强的独立运作能力，降低{%s}武器系统所受伤害，并降低{%s}全船受到的 EMP 损害。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0099行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00099行"
     },
     {
         "key": "hull_mods.csv#distributed_fire_control$name",
         "original": "Distributed Fire Control",
         "translation": "分布式火控系统",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0099行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00099行"
     },
     {
         "key": "hull_mods.csv#distributed_fire_control$short",
         "original": "Increases weapon durability and reduces EMP damage taken.",
         "translation": "增加武器耐久度并降低受到的 EMP 损害。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0099行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00099行"
     },
     {
         "key": "hull_mods.csv#do_not_back_off$desc",
         "original": "Sets DO_NOT_BACK_OFF AIFlag",
         "translation": "设置 DO_NOT_BACK_OFF AI 行为",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0111行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00111行"
     },
     {
         "key": "hull_mods.csv#do_not_back_off$name",
         "original": "Do Not Back Off",
         "translation": "取消后退",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0111行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00111行"
     },
     {
         "key": "hull_mods.csv#do_not_fire_through$desc",
         "original": "Weapons on other modules of a station will avoid firing through this module, even though the shots would go over it and not hit.",
         "translation": "其他模块上的武器会避免朝着该模块进行射击，即使炮火均会穿过本模块而不命中。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0109行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00109行"
     },
     {
         "key": "hull_mods.csv#do_not_fire_through$name",
         "original": "Do Not Fire Through",
         "translation": "视为障碍",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0109行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00109行"
     },
     {
         "key": "hull_mods.csv#drive_field_stabilizer$desc",
         "original": "Stabilizes the fleet's drive bubble, increasing the maximum burn of the fleet by %s. The effect of multiple stabilizers is cumulative.\n\nIncreases the ship's sensor profile by %s.",
         "translation": "稳定舰队航行时的驱动泡，来提高{%s}的舰队最高航速。多个稳定器的效果可以累加。\n\n但提高{%s}传感器截面。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0086行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00086行"
     },
     {
         "key": "hull_mods.csv#drive_field_stabilizer$name",
         "original": "Drive Field Stabilizer",
         "translation": "驱动力场稳定器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0086行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00086行"
     },
     {
         "key": "hull_mods.csv#drive_field_stabilizer$short",
         "original": "Reduces fleetwide fuel use.",
         "translation": "降低整支舰队的燃料消耗。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0086行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00086行"
     },
     {
         "key": "hull_mods.csv#dweller_hullmod$desc",
         "original": "Adds Shrouded Dweller visuals and any custom mechanics. Not visible to the player.",
         "translation": "添加 渊幕住民 视觉特效及所有自定义机制。对玩家隐藏。",
         "stage": 2,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0120行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00120行"
     },
     {
         "key": "hull_mods.csv#dweller_hullmod$name",
         "original": "Dweller Hullmod",
         "translation": "渊幕住民舰船插件",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0120行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00120行"
     },
     {
         "key": "hull_mods.csv#eccm$desc",
         "original": "Reduces the chance for missiles launched by the ship to be affected by electronic counter-measures and flares by %s.\n\nA CPU core adjunct in each missile increases missile top speed by %s and missile maneuverability by %s, as well as significantly improving the guidance algorithm.\n\nAlso reduces the weapon range reduction due to enemy ECM by %s.",
         "translation": "降低{%s}导弹被电子反制或热诱弹拦截的概率。\n\n为每枚导弹附加一个 CPU 辅核，能提高导弹{%s}的飞行速度以及{%s}的机动性，同时也显著改善了制导算法，即追踪能力。\n\n降低{%s}因电子战失利所造成的武器射程降低。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0015行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00015行"
     },
     {
         "key": "hull_mods.csv#eccm$name",
         "original": "ECCM Package",
         "translation": "电子反对抗组件",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0015行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00015行"
     },
     {
         "key": "hull_mods.csv#eccm$sModDesc",
         "original": "Fully negates the weapon range reduction, and makes the ship's missiles always ignore flares.",
         "translation": "该舰完全豁免敌方电子战强度导致的武器射程降低效果，并使该舰的导弹始终无视热诱弹的干扰。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0015行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00015行"
     },
     {
         "key": "hull_mods.csv#eccm$short",
         "original": "Improves missile speed and guidance, reduces effect of enemy Electronic Warfare.",
         "translation": "提高导弹速度与追踪能力，并抵抗敌方电子战的效果。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0015行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00015行"
     },
     {
         "key": "hull_mods.csv#eccm$uiTags",
         "original": "Weapons",
         "translation": "武器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0015行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00015行"
     },
     {
         "key": "hull_mods.csv#ecm$desc",
         "original": "When deployed in combat, grants %s/%s/%s/%s ECM rating, depending on this ship's hull size.",
         "translation": "当部署于战斗中时，根据船体级别，提高{%s}/{%s}/{%s}/{%s}电子战强度。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0016行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00016行"
     },
     {
         "key": "hull_mods.csv#ecm$name",
         "original": "ECM Package",
         "translation": "电子对抗组件",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0016行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00016行"
     },
     {
         "key": "hull_mods.csv#ecm$short",
         "original": "Increases ship's ECM rating.",
         "translation": "提高舰船的电子战强度。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0016行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00016行"
     },
     {
         "key": "hull_mods.csv#ecm$uiTags",
         "original": "Weapons, Support",
         "translation": "武器, 支援",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0016行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00016行"
     },
     {
         "key": "hull_mods.csv#efficiency_overhaul$desc",
         "original": "Reduces supply use for maintenance, fuel use, and minimum crew required by %s.\n\nIncreases the combat readiness recovery and repair rates by %s. The per-day supply consumption for CR recovery is increased to account for the increased recovery rate, but the total supply cost remains the same.",
         "translation": "降低{%s}维修消耗的补给、燃料的使用量以及最低船员需求。\n\n提高{%s}战备恢复和修理速率。但随着效率的提高，每日补给消耗量也会提高，但总补给消耗量不变。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0057行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00057行"
     },
     {
         "key": "hull_mods.csv#efficiency_overhaul$name",
         "original": "Efficiency Overhaul",
         "translation": "高效检修",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0057行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00057行"
     },
     {
         "key": "hull_mods.csv#efficiency_overhaul$sModDesc",
         "original": "Reduces maintenance cost, fuel use, and minimum crew requirement by a further %s.",
         "translation": "维护成本、燃料消耗、最低船员需求均额外降低{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0057行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00057行"
     },
     {
         "key": "hull_mods.csv#efficiency_overhaul$short",
         "original": "Reduces ongoing costs and enables more deployments.",
         "translation": "降低维护成本，让舰船能更频繁地被部署于战斗中。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0057行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00057行"
     },
     {
         "key": "hull_mods.csv#efficiency_overhaul$uiTags",
         "original": "Logistics, Requires Dock",
         "translation": "后勤, 需要船坞",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0057行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00057行"
     },
     {
         "key": "hull_mods.csv#erratic_injector$desc",
         "original": "Increases fuel use by %s and decreases the zero-flux boost by %s su/second.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "燃料消耗量提高{%s}，且降低{%s}点零幅能加速所提高的航速。\n\n但部署所需补给下降{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0145行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00145行"
     },
     {
         "key": "hull_mods.csv#erratic_injector$name",
         "original": "Erratic Fuel Injector",
         "translation": "不稳定推进器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0145行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00145行"
     },
     {
         "key": "hull_mods.csv#erratic_injector$short",
         "original": "Increases fuel use and decreases the zero-flux boost.",
         "translation": "提高燃料消耗，并降低零幅能加速增益。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0145行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00145行"
     },
     {
         "key": "hull_mods.csv#escort_package$desc",
         "original": "When this ship is within approximately %s su of a larger friendly vessel, increases this ship's maneuverability by %s, and top speed by %s. Also increases ballistic and energy weapon range by %s.\n\nThese bonuses are %s for destroyers when the nearby friendly is a capital ship.",
         "translation": "当附近{%s}单位距离内存在更大的友方舰船时，提高{%s}机动性，并提高{%s}最高航速，还将提高实弹武器和能量武器{%s}射程。\n\n当自身为驱逐舰且附近存在友方主力舰时，上述增益将{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0017行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00017行"
     },
     {
         "key": "hull_mods.csv#escort_package$name",
         "original": "Escort Package",
         "translation": "护航套件",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0017行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00017行"
     },
     {
         "key": "hull_mods.csv#escort_package$sModDesc",
         "original": "Destroyers: reduces the amount of damage taken by shields by %s. No added effect for cruisers.",
         "translation": "当自身为驱逐舰时，额外降低护盾受到的伤害{%s}。对巡洋舰无额外效果。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0017行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00017行"
     },
     {
         "key": "hull_mods.csv#escort_package$short",
         "original": "Increases maneuverability, top speed, and weapon range when near larger friendly ship.",
         "translation": "靠近更大的友方舰船时，提高机动性、最高航速、以及武器的射程。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0017行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00017行"
     },
     {
         "key": "hull_mods.csv#escort_package$uiTags",
         "original": "Special, Weapons, Engines",
         "translation": "特殊, 武器, 引擎",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0017行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00017行"
     },
     {
         "key": "hull_mods.csv#ex_phase_coils$desc",
         "original": "Reduces phase cloak cooldown by %s.",
         "translation": "降低{%s}相位线圈的冷却时间。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0096行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00096行"
     },
     {
         "key": "hull_mods.csv#ex_phase_coils$name",
         "original": "Experimental Phase Coils",
         "translation": "实验性相位线圈",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0096行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00096行"
     },
     {
         "key": "hull_mods.csv#ex_phase_coils$short",
         "original": "Greatly reduces phase cloak cooldown.",
         "translation": "极大地降低相位线圈的冷却时间。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0096行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00096行"
     },
     {
         "key": "hull_mods.csv#expanded_cargo_holds$desc",
         "original": "Increases maximum cargo capacity by %s/%s/%s/%s, depending on hull size, or by %s, whichever is higher.\n\nFor civilian-grade hulls, also increases maintenance supply use by %s.",
         "translation": "根据船体级别，提高{%s}/{%s}/{%s}/{%s}或至少{%s}单位载货量。\n\n而对于民用舰船，还会提高{%s}维护时所消耗的补给量。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0058行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00058行"
     },
     {
         "key": "hull_mods.csv#expanded_cargo_holds$name",
         "original": "Expanded Cargo Holds",
         "translation": "货舱扩容",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0058行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00058行"
     },
     {
         "key": "hull_mods.csv#expanded_cargo_holds$sModDesc",
         "original": "Doubles the cargo capacity increase and, for civilian hulls, negates the maintenance cost increase.",
         "translation": "载货量增加值翻倍，抵消民用舰船所增加的维护成本。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0058行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00058行"
     },
     {
         "key": "hull_mods.csv#expanded_cargo_holds$short",
         "original": "Increases cargo capacity.",
         "translation": "提高舰船的载货量。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0058行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00058行"
     },
     {
         "key": "hull_mods.csv#expanded_cargo_holds$uiTags",
         "original": "Logistics, Requires Dock",
         "translation": "后勤, 需要船坞",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0058行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00058行"
     },
     {
         "key": "hull_mods.csv#expanded_deck_crew$desc",
         "original": "Reduces the rate at which the fighter replacement rate decreases due to fighter losses by %s, and increases the rate at which it recovers by %s.\n\nIncreases the crew required by %s per fighter bay.",
         "translation": "降低{%s}战机损失时整备下降速率，提高{%s}整备恢复速率。\n\n每个战机甲板都会让该舰的最低船员需求提高{%s}名。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0018行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00018行"
     },
     {
         "key": "hull_mods.csv#expanded_deck_crew$name",
         "original": "Expanded Deck Crew",
         "translation": "扩编飞行甲板人员",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0018行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00018行"
     },
     {
         "key": "hull_mods.csv#expanded_deck_crew$short",
         "original": "Improves fighter replacement rate, increases crew requirements.",
         "translation": "提高战机整备速度，但需要更多的船员来维持。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0018行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00018行"
     },
     {
         "key": "hull_mods.csv#expanded_deck_crew$uiTags",
         "original": "Fighters",
         "translation": "战机",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0018行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00018行"
     },
     {
         "key": "hull_mods.csv#extendedshieldemitter$desc",
         "original": "Increases the shield's coverage by %s degrees.",
         "translation": "提高护盾覆盖角度{%s}度。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0021行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00021行"
     },
     {
         "key": "hull_mods.csv#extendedshieldemitter$name",
         "original": "Extended Shields",
         "translation": "扩展护盾",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0021行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00021行"
     },
     {
         "key": "hull_mods.csv#extendedshieldemitter$sModDesc",
         "original": "Increases the shield's coverage by an additional %s degrees.",
         "translation": "护盾覆盖角度额外提高{%s}度。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0021行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00021行"
     },
     {
         "key": "hull_mods.csv#extendedshieldemitter$short",
         "original": "Increases maximum shield arc.",
         "translation": "提高护盾的最大展开角度。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0021行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00021行"
     },
     {
         "key": "hull_mods.csv#extendedshieldemitter$uiTags",
         "original": "Shields",
         "translation": "护盾",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0021行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00021行"
     },
     {
         "key": "hull_mods.csv#faulty_auto$desc",
         "original": "Increases minimum crew required by %s and decreases maximum combat readiness by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "提高最低所需船员数量{%s}，并降低{%s}战备值 (CR) 上限。\n\n但部署所需补给下降{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0146行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00146行"
     },
     {
         "key": "hull_mods.csv#faulty_auto$name",
         "original": "Faulty Automated Systems",
         "translation": "自动化系统损毁",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0146行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00146行"
     },
     {
         "key": "hull_mods.csv#faulty_auto$short",
         "original": "Increases minimum crew required, decreases maximum combat readiness.",
         "translation": "提高最低船员需求，并降低战备值 (CR) 上限。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0146行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00146行"
     },
     {
         "key": "hull_mods.csv#faulty_grid$desc",
         "original": "Whether due to battle damage, manufacturing defects, or cycles of poor maintenance, this ship's power grid will never be capable of achieving peak performance.\n\nFlux capacity reduced by %s. Flux dissipation rate reduced by %s. Sensor profile increased by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "由于受到了战斗损伤，或是有生产缺陷，亦或是年久失修，该舰电网的运行效率无法恢复到巅峰水准。\n\n降低{%s}幅能容量与{%s}耗散速率。传感器截面上升{%s}。\n\n但部署所需补给下降{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0135行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00135行"
     },
     {
         "key": "hull_mods.csv#faulty_grid$name",
         "original": "Faulty Power Grid",
         "translation": "缺损电网",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0135行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00135行"
     },
     {
         "key": "hull_mods.csv#fluxbreakers$desc",
         "original": "Decreases the amount of EMP damage taken from weapons such as Ion Cannons by %s. Also increases the ship's flux dissipation rate while venting by %s.",
         "translation": "降低{%s}武器、引擎受到的 EMP 损害。并提高{%s}主动排幅速率。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0044行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00044行"
     },
     {
         "key": "hull_mods.csv#fluxbreakers$name",
         "original": "Resistant Flux Conduits",
         "translation": "幅散管道扩容",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0044行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00044行"
     },
     {
         "key": "hull_mods.csv#fluxbreakers$sModDesc",
         "original": "Increases the flux dissipation rate while venting by a further %s.",
         "translation": "额外提高{%s}的主动排幅速率。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0044行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00044行"
     },
     {
         "key": "hull_mods.csv#fluxbreakers$short",
         "original": "Reduces EMP damage taken, improves venting speed.",
         "translation": "降低受到的 EMP 损害，加快主动排幅速率。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0044行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00044行"
     },
     {
         "key": "hull_mods.csv#fluxbreakers$uiTags",
         "original": "Special, Defenses",
         "translation": "特殊, 防御",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0044行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00044行"
     },
     {
         "key": "hull_mods.csv#fluxcoil$desc",
         "original": "Increases the ship's flux capacity by %s/%s/%s/%s, depending on hull size. Not as efficient as flux capacitors - most useful when added to a design that already carries the maximum possible number of capacitors.",
         "translation": "根据船体级别，提高{%s}/{%s}/{%s}/{%s}幅能容量。但不如直接提高幅能寄存器有效，只有前者加满后才有使用价值。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0022行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00022行"
     },
     {
         "key": "hull_mods.csv#fluxcoil$name",
         "original": "Flux Coil Adjunct",
         "translation": "附加幅能线圈",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0022行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00022行"
     },
     {
         "key": "hull_mods.csv#fluxcoil$sModDesc",
         "original": "Increases flux capacity by a further %s/%s/%s/%s, making the coil as efficient as adding capacitors.",
         "translation": "根据船体级别，额外提高{%s}/{%s}/{%s}/{%s}幅能容量，使幅能线圈和增加幅能寄存器一样有效。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0022行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00022行"
     },
     {
         "key": "hull_mods.csv#fluxcoil$short",
         "original": "Increases flux capacity.",
         "translation": "提高幅能容量。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0022行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00022行"
     },
     {
         "key": "hull_mods.csv#fluxcoil$uiTags",
         "original": "Special",
         "translation": "特殊",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0022行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00022行"
     },
     {
         "key": "hull_mods.csv#fluxdistributor$desc",
         "original": "Increases the ship's flux dissipation by %s/%s/%s/%s, depending on hull size. Not as efficient as flux vents - most useful when added to a design that already carries the maximum possible number of vents.",
         "translation": "根据船体级别，提高{%s}/{%s}/{%s}/{%s}幅能耗散速率，但不如直接提高耗散通道有效，只有前者加满后才有使用价值。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0023行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00023行"
     },
     {
         "key": "hull_mods.csv#fluxdistributor$name",
         "original": "Flux Distributor",
         "translation": "幅能配送器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0023行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00023行"
     },
     {
         "key": "hull_mods.csv#fluxdistributor$sModDesc",
         "original": "Increases flux dissipation by a further %s/%s/%s/%s, making the distributor as efficient as adding vents.",
         "translation": "根据船体级别，额外提高{%s}/{%s}/{%s}/{%s}幅能耗散，使幅能配送器和增加耗散通道一样有效。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0023行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00023行"
     },
     {
         "key": "hull_mods.csv#fluxdistributor$short",
         "original": "Increases flux dissipation.",
         "translation": "提高幅能耗散。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0023行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00023行"
     },
     {
         "key": "hull_mods.csv#fluxdistributor$uiTags",
         "original": "Special",
         "translation": "特殊",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0023行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00023行"
     },
     {
         "key": "hull_mods.csv#fluxshunt$desc",
         "original": "Allows the ship to dissipate hard flux at %s of the normal rate while shields are on.",
         "translation": "允许舰船以{%s}的正常耗散速率在护盾开启时耗散硬幅能。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0077行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00077行"
     },
     {
         "key": "hull_mods.csv#fluxshunt$name",
         "original": "Flux Shunt",
         "translation": "磁通分流",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0077行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00077行"
     },
     {
         "key": "hull_mods.csv#fluxshunt$short",
         "original": "Allows dissipation of hard flux while shields are up.",
         "translation": "允许舰船在展开护盾时耗散硬幅能。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0077行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00077行"
     },
     {
         "key": "hull_mods.csv#fourteenth$desc",
         "original": "This ship is a survivor of the original 14th Domain Battlegroup which founded the Hegemony. It is a prime specimen of the Domain Navy's \"decisive battle\" doctrine, particularly exhibited by a series of radical structural modifications (performed with pre-Collapse industrial methods) which allow the mounting of heavier armor plating by a flat increase of %s standard units, with only a %s reduction in speed and maneuverability. Exceptionally well-tuned energy systems increase flux throughput and capacity by %s over standard examples of this hull.",
         "translation": "霸主 的前身 (人之领 第十四战斗群) 所配备的战舰是现如今研究 人之领 海军 \"决战\" 教条的原始样本。该舰采用大崩塌前的工业技术进行了一系列激进化的结构改装，目的是安装更加厚重的装甲板。提高{%s}点装甲值，降低{%s}的最高航速与机动性。而调整到极佳状态下的能源系统让该舰的幅能耗散和幅能容量相较于标准实例提高{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0126行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00126行"
     },
     {
         "key": "hull_mods.csv#fourteenth$name",
         "original": "Fourteenth Battlegroup",
         "translation": "第十四战斗群",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0126行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00126行"
     },
     {
         "key": "hull_mods.csv#fragile_subsystems$desc",
         "original": "A widespread loss of redundant components reduces peak operating time by %s, and increases the rate at which combat readiness degrades by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "过多的组件损失导致峰值时间降低{%s}，且战备状态的衰减速率提高{%s}。\n\n但部署所需补给下降{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0142行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00142行"
     },
     {
         "key": "hull_mods.csv#fragile_subsystems$name",
         "original": "Unreliable Subsystems",
         "translation": "不可靠子系统",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0142行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00142行"
     },
     {
         "key": "hull_mods.csv#fragment_coordinator$desc",
         "original": "Increases the maximum number of fragments in the ship's fragment swarm by %s.",
         "translation": "将舰船碎片集群的最大数量提升{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0117行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00117行"
     },
     {
         "key": "hull_mods.csv#fragment_coordinator$name",
         "original": "Fragment Coordinator",
         "translation": "碎片协调器",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0117行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00117行"
     },
     {
         "key": "hull_mods.csv#fragment_coordinator$sModDesc",
         "original": "Increases the size of the fragment swarm by a further %s.",
         "translation": "将舰船碎片集群的最大数量进一步提升{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0117行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00117行"
     },
     {
         "key": "hull_mods.csv#fragment_coordinator$short",
         "original": "Increases the size of the fragment swarm around the ship.",
         "translation": "提升船碎片集群的规模。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0117行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00117行"
     },
     {
         "key": "hull_mods.csv#fragment_coordinator$uiTags",
         "original": "Weapons, Special",
         "translation": "武器, 特殊",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0117行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00117行"
     },
     {
         "key": "hull_mods.csv#fragment_swarm$desc",
         "original": "A swarm of Threat fragments roils around the ship, providing a regenerating supply of fragments for fragment-based weapons.\n\nThe base number of fragments is %s/%s/%s/%s, and replacement fragments are launched %s/%s/%s/%s times a second, depending on hull size.\n\nThis hullmod is required for fragment weapons to function, if the hullmod is not present or there are not enough fragments in the swarm, fragment weapons will be disabled.",
         "translation": "一群 威胁 碎片在舰船周围涌动，为碎片武器提供补给。\n\n碎片基准数量为{%s}/{%s}/{%s}/{%s}，碎片补充频率为每秒{%s}/{%s}/{%s}/{%s}次，具体数值取决于船体级别。\n\n此舰船插件是碎片武器正常运作的必要条件；若未安装该插件，或碎片集群中碎片数量不足，将无法启用碎片武器。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0115行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00115行"
     },
     {
         "key": "hull_mods.csv#fragment_swarm$name",
         "original": "Fragment Swarm",
         "translation": "碎片集群",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0115行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00115行"
     },
     {
         "key": "hull_mods.csv#fragment_swarm$sModDesc",
         "original": "Reduces maximum combat readiness by %s and increases the maintenance cost by %s.",
         "translation": "战备值 (CR) 上限降低{%s}，维护成本提高{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0115行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00115行"
     },
     {
         "key": "hull_mods.csv#fragment_swarm$short",
         "original": "A swarm of Threat fragments roils around the ship.",
         "translation": "一群 威胁 碎片在舰船周围涌动。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0115行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00115行"
     },
     {
         "key": "hull_mods.csv#fragment_swarm$uiTags",
         "original": "Weapons, Special",
         "translation": "武器, 特殊",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0115行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00115行"
     },
     {
         "key": "hull_mods.csv#frontemitter$desc",
         "original": "Locks the ship's omni-directional shield emitter to a front-facing position and extends its arc by %s. As with all frontal emitters, the shield will also deploy twice as quickly.",
         "translation": "将全角护盾发生器锁定至正前方并额外获得 %s 的护盾角度。\n\n定向护盾的展开速度是全角护盾的两倍，这也适用于本插件转化而来的定向护盾。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0038行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00038行"
     },
     {
         "key": "hull_mods.csv#frontemitter$name",
         "original": "Shield Conversion - Front",
         "translation": "固化护盾转化器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0038行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00038行"
     },
     {
         "key": "hull_mods.csv#frontemitter$sModDesc",
         "original": "Reduces the amount of damage taken by shields by %s.",
         "translation": "降低{%s}护盾所受伤害。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0038行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00038行"
     },
     {
         "key": "hull_mods.csv#frontemitter$short",
         "original": "Converts omni shield to front, extends arc.",
         "translation": "将全盾转换为前盾，并增大护盾面积。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0038行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00038行"
     },
     {
         "key": "hull_mods.csv#frontemitter$uiTags",
         "original": "Shields",
         "translation": "护盾",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0038行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00038行"
     },
     {
         "key": "hull_mods.csv#frontshield$desc",
         "original": "Installs a makeshift, inefficient shield generator on the ship. The shield emitter is locked in a forward-facing position and has a %s degree arc.\n\nThe shield generator draws much of its power from engines and reduces the ship's top speed by %s.",
         "translation": "为舰船安装一部临时低效的护盾发生器。护盾为前盾且展开角度为{%s}度。\n\n该发生器会从引擎处抽取大量能源，而导致最高航速下降{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0026行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00026行"
     },
     {
         "key": "hull_mods.csv#frontshield$name",
         "original": "Makeshift Shield Generator",
         "translation": "临时护盾发生器",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0026行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00026行"
     },
     {
         "key": "hull_mods.csv#frontshield$short",
         "original": "Installs basic shields on shieldless ship. Reduces top speed.",
         "translation": "为无护盾舰船安装基础护盾。降低最高航速。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0026行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00026行"
     },
     {
         "key": "hull_mods.csv#frontshield$uiTags",
         "original": "Shields",
         "translation": "护盾",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0026行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00026行"
     },
     {
         "key": "hull_mods.csv#glitched_sensors$desc",
         "original": "The ship's sensor array is damaged past any repair short of a complete hull overhaul. Weapon range in combat reduced by %s. Sensor strength reduced by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "该舰的传感器阵列遭受了严重的损伤，需要彻底翻修舰体才能修复。武器射程降低{%s}，探测范围降低{%s}。\n\n但部署所需补给下降{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0138行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00138行"
     },
     {
         "key": "hull_mods.csv#glitched_sensors$name",
         "original": "Glitched Sensor Array",
         "translation": "传感器阵列失灵",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0138行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00138行"
     },
     {
         "key": "hull_mods.csv#ground_support$desc",
         "original": "Close support weapons and counter-measures for ground defenses. Increases the effective strength of planetary raids by %s, up to the total number of marines in the fleet.",
         "translation": "针对地面防御工事配备了密接支援武器和专用反制措施。提高{%s}突袭殖民地的有效强度，该加成不会超过携带陆战队员的总人数。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0087行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00087行"
     },
     {
         "key": "hull_mods.csv#ground_support$name",
         "original": "Ground Support Package",
         "translation": "地面支援",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0087行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00087行"
     },
     {
         "key": "hull_mods.csv#ground_support$short",
         "original": "Improves effectiveness of raids.",
         "translation": "提高突袭的效率。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0087行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00087行"
     },
     {
         "key": "hull_mods.csv#hardened_subsystems$desc",
         "original": "Increases peak operating time for ships that suffer degraded performance from extended deployment by %s.\n\nAlso reduces the rate at which combat readiness degrades by %s.",
         "translation": "提高{%s}峰值时间，防止舰船性能过早因长期部署而下降。\n\n同时还将战备值 (CR) 在战斗中衰减的速度降低{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0029行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00029行"
     },
     {
         "key": "hull_mods.csv#hardened_subsystems$name",
         "original": "Hardened Subsystems",
         "translation": "硬化子系统",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0029行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00029行"
     },
     {
         "key": "hull_mods.csv#hardened_subsystems$short",
         "original": "Increases peak time, CR degrades more slowly.",
         "translation": "提高峰值时间，且降低战备值 (CR) 的衰减速率。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0029行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00029行"
     },
     {
         "key": "hull_mods.csv#hardened_subsystems$uiTags",
         "original": "Special",
         "translation": "特殊",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0029行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00029行"
     },
     {
         "key": "hull_mods.csv#hardenedshieldemitter$desc",
         "original": "Reduces the amount of damage taken by shields by %s. Also reduces the chance that shields will be pierced by EMP arcs from weapons like the Ion Beam.",
         "translation": "降低{%s}护盾所受伤害，并降低护盾被 EMP 电弧击穿的概率。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0028行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00028行"
     },
     {
         "key": "hull_mods.csv#hardenedshieldemitter$name",
         "original": "Hardened Shields",
         "translation": "强化护盾",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0028行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00028行"
     },
     {
         "key": "hull_mods.csv#hardenedshieldemitter$short",
         "original": "Reduces damage taken by shields.",
         "translation": "降低护盾所受伤害。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0028行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00028行"
     },
     {
         "key": "hull_mods.csv#hardenedshieldemitter$uiTags",
         "original": "Shields",
         "translation": "护盾",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0028行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00028行"
     },
     {
         "key": "hull_mods.csv#hbi$desc",
         "original": "Reduces the ordnance point cost of large ballistic weapons by %s.",
         "translation": "降低{%s}点所有大型实弹武器所需的装配点。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0090行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00090行"
     },
     {
         "key": "hull_mods.csv#hbi$name",
         "original": "Heavy Ballistics Integration",
         "translation": "重弹集成",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0090行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00090行"
     },
     {
         "key": "hull_mods.csv#hbi$short",
         "original": "Reduces ordnance point cost of large ballistic weapons.",
         "translation": "降低大型实弹武器所需装配点。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0090行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00090行"
     },
     {
         "key": "hull_mods.csv#heavyarmor$desc",
         "original": "Increases the ship's armor by %s/%s/%s/%s points, depending on hull size.",
         "translation": "根据船体级别，提高{%s}/{%s}/{%s}/{%s}装甲。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0030行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00030行"
     },
     {
         "key": "hull_mods.csv#heavyarmor$name",
         "original": "Heavy Armor",
         "translation": "重型装甲",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0030行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00030行"
     },
     {
         "key": "hull_mods.csv#heavyarmor$sModDesc",
         "original": "Reduces the ship's maneuverability by %s.",
         "translation": "降低舰船{%s}的机动性。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0030行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00030行"
     },
     {
         "key": "hull_mods.csv#heavyarmor$short",
         "original": "Increases armor.",
         "translation": "提高装甲值。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0030行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00030行"
     },
     {
         "key": "hull_mods.csv#heavyarmor$uiTags",
         "original": "Defenses",
         "translation": "防御",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0030行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00030行"
     },
     {
         "key": "hull_mods.csv#heg_militarized$desc",
         "original": "This ship is - or was - on the Hegemony auxiliary list. Uparmour kits applied at Hegemony Naval yards resulting in no loss of performance for a %s/%s/%s/%s increase in armor strength, depending on hull size. Core power systems have been upgraded to military standards resulting in a %s improvement in overall handling, %s increase in flux capacity, a %s increase in flux dissipation, and an increase of maximum burn level by %s.",
         "translation": "该舰目前或曾经被划归于霸主辅助舰队列。在霸主海军船坞中安装的追加装甲套件能在不造成性能损失的前提下根据船体级别提高其{%s}/{%s}/{%s}/{%s}装甲。同时其核心动力系统被升级至军规，使该舰的整体机动性提高{%s}，幅能容量提高{%s}，幅能耗散提高{%s}，最大宇宙航速提高{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0127行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00127行"
     },
     {
         "key": "hull_mods.csv#heg_militarized$name",
         "original": "Militarized Hegemony Auxiliary",
         "translation": "霸主军事配件",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0127行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00127行"
     },
     {
         "key": "hull_mods.csv#high_frequency_attractor$desc",
         "original": "An experimental modification allowing high-frequency motes to be warped in by the rift core on board the ship.",
         "translation": "一种实验性改造，使得该舰所搭载的裂隙核心可以裹挟能量读数更高的光尘。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0097行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00097行"
     },
     {
         "key": "hull_mods.csv#high_frequency_attractor$name",
         "original": "High Volition Attractor",
         "translation": "感灵吸引场",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0097行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00097行"
     },
     {
         "key": "hull_mods.csv#high_frequency_attractor$short",
         "original": "Launches more powerful high-frequency motes.",
         "translation": "发射更强力的光尘。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0097行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00097行"
     },
     {
         "key": "hull_mods.csv#high_maintenance$desc",
         "original": "Increases the monthly maintenance supply cost by %s.",
         "translation": "提高{%s}的每月维护所需补给。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0079行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00079行"
     },
     {
         "key": "hull_mods.csv#high_maintenance$name",
         "original": "High Maintenance",
         "translation": "高维护需求",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0079行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00079行"
     },
     {
         "key": "hull_mods.csv#high_maintenance$short",
         "original": "Increases maintenance cost.",
         "translation": "提高维护成本。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0079行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00079行"
     },
     {
         "key": "hull_mods.csv#high_scatter_amp$desc",
         "original": "<tooltip created in the script due to sections>",
         "translation": "降低光束武器的射程，并且使它们在对护盾造成伤害时产生硬幅能。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0031行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00031行"
     },
     {
         "key": "hull_mods.csv#high_scatter_amp$name",
         "original": "High Scatter Amplifier",
         "translation": "高散射增幅器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0031行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00031行"
     },
     {
         "key": "hull_mods.csv#high_scatter_amp$sModDesc",
         "original": "Increases beam weapon damage by an additional %s.",
         "translation": "光束武器伤害额外提高{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0031行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00031行"
     },
     {
         "key": "hull_mods.csv#high_scatter_amp$short",
         "original": "Reduces beam range; beams deal more damage and apply hard flux to shields.",
         "translation": "提高光束武器的伤害，还可对护盾造成硬幅能伤害，但降低其基础射程。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0031行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00031行"
     },
     {
         "key": "hull_mods.csv#high_scatter_amp$uiTags",
         "original": "Weapons",
         "translation": "武器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0031行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00031行"
     },
     {
         "key": "hull_mods.csv#hiressensors$desc",
         "original": "<Tooltip created in script>",
         "translation": "<Tooltip created in script>",
         "stage": -1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0059行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00059行"
     },
     {
         "key": "hull_mods.csv#hiressensors$name",
         "original": "High Resolution Sensors",
         "translation": "高精度传感器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0059行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00059行"
     },
     {
         "key": "hull_mods.csv#hiressensors$sModDesc",
         "original": "Increases the ship's in-combat vision range by %s/%s/%s/%s, based on hull size.",
         "translation": "根据船体级别，战斗视野范围提高{%s}/{%s}/{%s}/{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0059行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00059行"
     },
     {
         "key": "hull_mods.csv#hiressensors$short",
         "original": "Increases fleet's sensor range.",
         "translation": "提高舰队探测范围。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0059行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00059行"
     },
     {
         "key": "hull_mods.csv#hiressensors$uiTags",
         "original": "Logistics, Requires Dock",
         "translation": "后勤, 需要船坞",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0059行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00059行"
     },
     {
         "key": "hull_mods.csv#ill_advised$desc",
         "original": "This hull's systems have been drastically modified from spec, likely without certified engineering oversight. Its systems appear to work correctly under routine conditions, but have a significant chance of critical malfunction when stressed.",
         "translation": "该舰所搭载的系统已经经过了大刀阔斧的修改，且过程中并未受到合规的工程监督。系统看上去能在一般条件下正常工作，但在面对战斗压力时，关键部位发生故障概率将非常高。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0152行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00152行"
     },
     {
         "key": "hull_mods.csv#ill_advised$name",
         "original": "Ill-Advised Modifications",
         "translation": "不明智改装",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0152行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00152行"
     },
     {
         "key": "hull_mods.csv#increased_maintenance$desc",
         "original": "Increases the monthly maintenance supply cost by %s. Increases minimum crew required by %s. Decreases maximum combat readiness by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "每月维护消耗的补给提高{%s}，最低所需船员提高{%s}，并降低{%s}战备值 (CR) 上限。\n\n但部署所需补给下降{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0144行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00144行"
     },
     {
         "key": "hull_mods.csv#increased_maintenance$name",
         "original": "Increased Maintenance",
         "translation": "过度维护",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0144行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00144行"
     },
     {
         "key": "hull_mods.csv#increased_maintenance$short",
         "original": "Increases maintenance cost and crew requirements, decreases maximum combat readiness.",
         "translation": "提高维护成本与最低船员要求，并降低战备值 (CR) 上限。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0144行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00144行"
     },
     {
         "key": "hull_mods.csv#insulatedengine$desc",
         "original": "Increases the durability of the ship's engines by %s, and the ship's hull integrity by %s.\n\nThe ship's sensor profile is also reduced by %s.",
         "translation": "提高{%s}舰船引擎的耐久，并提高{%s}的船体结构值。\n\n同时降低该舰{%s}的传感器截面。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0060行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00060行"
     },
     {
         "key": "hull_mods.csv#insulatedengine$name",
         "original": "Insulated Engine Assembly",
         "translation": "引擎隔离性装配",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0060行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00060行"
     },
     {
         "key": "hull_mods.csv#insulatedengine$sModDesc",
         "original": "Increases engine durability by a further %s, and Increases the sensor profile reduction to %s.",
         "translation": "额外提高{%s}舰船引擎的耐久，将传感截面降低{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0060行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00060行"
     },
     {
         "key": "hull_mods.csv#insulatedengine$short",
         "original": "Makes engines harder to disable, lowers sensor profile.",
         "translation": "令引擎更不易失效，且降低该舰的传感器截面。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0060行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00060行"
     },
     {
         "key": "hull_mods.csv#insulatedengine$uiTags",
         "original": "Engines, Logistics, Defenses, Requires Dock",
         "translation": "引擎, 后勤, 防御, 需要船坞",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0060行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00060行"
     },
     {
         "key": "hull_mods.csv#magazines$desc",
         "original": "Increases the ammo capacity or the number of charges for ballistic and energy weapons by %s.",
         "translation": "提高实弹武器和能量武器{%s}的备弹量。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0019行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00019行"
     },
     {
         "key": "hull_mods.csv#magazines$name",
         "original": "Expanded Magazines",
         "translation": "扩展弹仓",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0019行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00019行"
     },
     {
         "key": "hull_mods.csv#magazines$sModDesc",
         "original": "Increases the ammo/charge regeneration rate for ballistic and energy weapons by %s.",
         "translation": "提高{%s}的实弹和能量武器备弹回复速率。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0019行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00019行"
     },
     {
         "key": "hull_mods.csv#magazines$short",
         "original": "Increases ammo/charges for ballistic and energy weapons.",
         "translation": "提高实弹/能量武器的备弹量。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0019行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00019行"
     },
     {
         "key": "hull_mods.csv#magazines$uiTags",
         "original": "Weapons",
         "translation": "武器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0019行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00019行"
     },
     {
         "key": "hull_mods.csv#malfunctioning_comms$desc",
         "original": "The comm system has suffered serious damage, making punching through battlefield jamming even more of a challenge. Fighter engagement range reduced by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "该舰的通讯系统遭到严重破坏，难以在复杂战况下保持通讯信号的稳定性。战机联队的最大交战距离降低{%s}。\n\n但部署所需补给下降{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0139行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00139行"
     },
     {
         "key": "hull_mods.csv#malfunctioning_comms$name",
         "original": "Malfunctioning Comms",
         "translation": "通讯系统故障",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0139行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00139行"
     },
     {
         "key": "hull_mods.csv#militarized_subsystems$desc",
         "original": "Removes the penalties from a civilian-grade hull, and increases maximum burn level by %s.\n\nIncreases minimum crew required by %s.",
         "translation": "移除民用级船体的惩罚，并提高{%s}最大宇宙航速。\n\n提高{%s}最低船员需求。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0061行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00061行"
     },
     {
         "key": "hull_mods.csv#militarized_subsystems$name",
         "original": "Militarized Subsystems",
         "translation": "军事化子系统",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0061行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00061行"
     },
     {
         "key": "hull_mods.csv#militarized_subsystems$sModDesc",
         "original": "Negates the increased crew requirements.",
         "translation": "取消本插件导致的额外船员需求。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0061行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00061行"
     },
     {
         "key": "hull_mods.csv#militarized_subsystems$short",
         "original": "Removes sensor penalties, increases maximum burn level, increases crew required.",
         "translation": "消除传感器惩罚、提高最大宇宙航速、并增加所需船员数量。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0061行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00061行"
     },
     {
         "key": "hull_mods.csv#militarized_subsystems$uiTags",
         "original": "Special, Logistics, Requires Dock",
         "translation": "特殊, 后勤, 需要船坞",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0061行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00061行"
     },
     {
         "key": "hull_mods.csv#missile_autoloader$desc",
         "original": "<tooltip created in the script due to sections/other complexity>",
         "translation": "<tooltip created in the script due to sections/other complexity>",
         "stage": -1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0027行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00027行"
     },
     {
         "key": "hull_mods.csv#missile_autoloader$name",
         "original": "Missile Autoloader",
         "translation": "导弹自动装填器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0027行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00027行"
     },
     {
         "key": "hull_mods.csv#missile_autoloader$sModDesc",
         "original": "Increases the post-reload cooldown to %s seconds.",
         "translation": "重新装填之后武器的额外冷却时间上升至{%s}秒。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0027行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00027行"
     },
     {
         "key": "hull_mods.csv#missile_autoloader$short",
         "original": "Reloads missile weapons in small missile mounts",
         "translation": "为安装在小型导弹武器位上的导弹武器补充弹药。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0027行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00027行"
     },
     {
         "key": "hull_mods.csv#missile_autoloader$uiTags",
         "original": "Weapons",
         "translation": "武器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0027行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00027行"
     },
     {
         "key": "hull_mods.csv#missile_reload$desc",
         "original": "An autoforge inside the ship periodically fully reloads the magazines of all missile weapons.",
         "translation": "内置的导弹工厂会定期补满所有导弹武器。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0073行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00073行"
     },
     {
         "key": "hull_mods.csv#missile_reload$name",
         "original": "Missile Autoforge",
         "translation": "导弹自动工厂",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0073行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00073行"
     },
     {
         "key": "hull_mods.csv#missile_reload$short",
         "original": "Periodically reloads all missile weapons.",
         "translation": "内置的导弹工厂会定期补满所有导弹武器。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0073行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00073行"
     },
     {
         "key": "hull_mods.csv#missleracks$desc",
         "original": "Increases the ammo capacity of missile weapons by %s.",
         "translation": "提高导弹武器{%s}备弹量。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0020行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00020行"
     },
     {
         "key": "hull_mods.csv#missleracks$name",
         "original": "Expanded Missile Racks",
         "translation": "扩展发射架",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0020行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00020行"
     },
     {
         "key": "hull_mods.csv#missleracks$sModDesc",
         "original": "Reduces the rate of fire of missile weapons by %s.",
         "translation": "降低导弹武器{%s}的射速。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0020行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00020行"
     },
     {
         "key": "hull_mods.csv#missleracks$short",
         "original": "Increases missile weapon ammo.",
         "translation": "提高导弹武器的备弹量。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0020行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00020行"
     },
     {
         "key": "hull_mods.csv#missleracks$uiTags",
         "original": "Weapons",
         "translation": "武器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0020行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00020行"
     },
     {
         "key": "hull_mods.csv#nav_relay$desc",
         "original": "When deployed in combat, increases nav rating of your fleet by %s/%s/%s/%s, depending on this ship's hull size.\n\nThe total nav rating of your fleet increases the top speed of your deployed ships.",
         "translation": "当部署于战斗中时，根据船体级别，提高{%s}/{%s}/{%s}/{%s}导航效率。\n\n导航效率会提高你所部署舰船的最高航速。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0035行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00035行"
     },
     {
         "key": "hull_mods.csv#nav_relay$name",
         "original": "Nav Relay",
         "translation": "导航中继器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0035行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00035行"
     },
     {
         "key": "hull_mods.csv#nav_relay$short",
         "original": "Increases top speed of deployed ships.",
         "translation": "提高已部署的舰船在战斗时的最高航速。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0035行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00035行"
     },
     {
         "key": "hull_mods.csv#nav_relay$uiTags",
         "original": "Engines, Support",
         "translation": "引擎, 支援",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0035行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00035行"
     },
     {
         "key": "hull_mods.csv#neural_integrator$desc",
         "original": "An augmented version of Neural Interface that works with automated ships by enabling direct control of all of the ship's systems via the link and allowing both ships to %s at the same time. As with \"transfer command\", some skill effects - such as those increasing ammo capacity, or combat readiness - do not apply to the other ship.\n\nAlso enables rapid switching between the linked ships without using a shuttle pod. The transfer is instant if the combined deployment points of the ships are %s or less. The destination ship must not be under the command of an officer or an AI core.\n\nThe complexity of the modifications increases the ship's deployment points and supply cost to recover from deployment by %s.",
         "translation": "用于自主无人舰的增强版神经接口，通过链接直接控制舰船的所有系统，可以与你的旗舰连接起来，使它们均可{%s}。但诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果将不在另一艘舰船上起作用。\n\n允许在连接舰船之间快速切换，且无需通过穿梭机转移。如果二者的总部署成本小于或等于{%s}，则切换将瞬间完成。切换目标舰船不能由副官或 AI 核心操控。\n\n复杂的改装将提高{%s}舰船部署点与战后恢复所需的补给。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0037行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00037行"
     },
     {
         "key": "hull_mods.csv#neural_integrator$name",
         "original": "Neural Integrator",
         "translation": "神经集成器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0037行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00037行"
     },
     {
         "key": "hull_mods.csv#neural_integrator$sModDesc",
         "original": "Transfers from the ship are always instant, regardless of the deployment point total.",
         "translation": "无论部署点数总计多少，舰船切换总是瞬间完成。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0037行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00037行"
     },
     {
         "key": "hull_mods.csv#neural_integrator$short",
         "original": "Specialized Neural Interface for automated ships.",
         "translation": "自动化舰船专用的神经接口。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0037行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00037行"
     },
     {
         "key": "hull_mods.csv#neural_integrator$uiTags",
         "original": "Special",
         "translation": "特殊",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0037行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00037行"
     },
     {
         "key": "hull_mods.csv#neural_interface$desc",
         "original": "Links the flagship with another ship, allowing both ships to %s at the same time. As with \"transfer command\", some skill effects - such as those increasing ammo capacity, or combat readiness - do not apply to the other ship.\n\nAlso enables rapid switching between the linked ships without using a shuttle pod. The transfer is instant if the combined deployment points of the ships are %s or less. The destination ship must not be under the command of an officer or an AI core.",
         "translation": "将旗舰与其他舰船连接起来，使它们均可{%s}。但诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果将不在另一艘舰船上起作用。\n\n允许在连接舰船之间快速切换，且无需通过穿梭机转移。如果二者的总部署成本小于或等于{%s}，则切换将瞬间完成。切换目标舰船不能由副官或 AI 核心操控。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0036行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00036行"
     },
     {
         "key": "hull_mods.csv#neural_interface$name",
         "original": "Neural Interface",
         "translation": "神经接口",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0036行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00036行"
     },
     {
         "key": "hull_mods.csv#neural_interface$sModDesc",
         "original": "Transfers from the ship are always instant, regardless of the deployment point total.",
         "translation": "无论部署点数总计多少，舰船切换总是瞬间完成。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0036行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00036行"
     },
     {
         "key": "hull_mods.csv#neural_interface$short",
         "original": "Allows rapid switching between ships, resets system cooldown and adds a charge.",
         "translation": "允许在舰船之间快速切换，并重置战术系统的冷却时间或恢复一次充能。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0036行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00036行"
     },
     {
         "key": "hull_mods.csv#neural_interface$uiTags",
         "original": "Special",
         "translation": "特殊",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0036行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00036行"
     },
     {
         "key": "hull_mods.csv#never_detaches$desc",
         "original": "Never detaches from parent structure when destroyed.",
         "translation": "当被破坏时，不会从主体上分离。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0107行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00107行"
     },
     {
         "key": "hull_mods.csv#never_detaches$name",
         "original": "Never Detaches",
         "translation": "永不分离",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0107行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00107行"
     },
     {
         "key": "hull_mods.csv#no_weapon_flux$desc",
         "original": "Weapon fire costs no flux. Used on fighters for fine-grained control of effective shield hitpoints.",
         "translation": "武器开火时将不产生幅能。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0108行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00108行"
     },
     {
         "key": "hull_mods.csv#no_weapon_flux$name",
         "original": "No Weapon Flux",
         "translation": "零幅能武器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0108行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00108行"
     },
     {
         "key": "hull_mods.csv#operations_center$desc",
         "original": "Increases the command point recovery rate by %s when installed on the flagship.",
         "translation": "当安装在旗舰上时，将会提高{%s}指挥点恢复速率。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0040行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00040行"
     },
     {
         "key": "hull_mods.csv#operations_center$name",
         "original": "Operations Center",
         "translation": "作战中心",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0040行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00040行"
     },
     {
         "key": "hull_mods.csv#operations_center$short",
         "original": "Increases command point recovery rate when on flagship.",
         "translation": "如果安装在旗舰则提高指挥点恢复速率。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0040行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00040行"
     },
     {
         "key": "hull_mods.csv#operations_center$uiTags",
         "original": "Special",
         "translation": "特殊",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0040行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00040行"
     },
     {
         "key": "hull_mods.csv#phase_anchor$desc",
         "original": "Reduces the phase cloak's activation cost to %s. Increases the soft flux dissipation and weapon recharge rate by %s while phased.\n\nWhen suffering critical damage that would otherwise destroy or disable the ship, able to initiate an emergency dive deep into p-space. The ship counts as retreated and will emerge into normal space when combat is over, suffering an additional penalty to combat readiness equal to %s its deployment cost. The ship must have enough combat readiness to cover this cost to initiate the dive.\n\nDue to the immense distortions in p-space caused by such a maneuver, only one ship per battle - regardless of which side it's on - is able to perform it.",
         "translation": "将相位线圈的激活幅能降至{%s}。并且在相位隐形时，将软幅能耗散速率与武器冷却速率与备弹量恢复速率提高至{%s}。\n\n当该舰即将被摧毁或停机时，将自动消耗部署成本{%s}的战备值 (CR)，然后紧急下潜至相位空间深处，视为从战斗中撤退。不过，该舰必须拥有足以用于消耗的战备值 (CR)，才能启用这种紧急下潜。\n\n因该行动会对相位空间造成严重扭曲，所以每场战斗 (无论敌友) 仅能进行一次这样的操作。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0041行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00041行"
     },
     {
         "key": "hull_mods.csv#phase_anchor$name",
         "original": "Phase Anchor",
         "translation": "相位锚点",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0041行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00041行"
     },
     {
         "key": "hull_mods.csv#phase_anchor$short",
         "original": "Increases flux dissipation and weapon recharge while phased, emergency dive maneuver.",
         "translation": "提高相位隐形时的软幅能耗散速率与武器充能速率，还能紧急下潜来规避致命伤害。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0041行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00041行"
     },
     {
         "key": "hull_mods.csv#phase_anchor$uiTags",
         "original": "Phase",
         "translation": "相位",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0041行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00041行"
     },
     {
         "key": "hull_mods.csv#phasefield$desc",
         "original": "The ship is able to run a low-grade phase field for extended periods of time, reducing its effective sensor profile by %s.",
         "translation": "能长时间激活低水平相位场，使传感器截面降低{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0076行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00076行"
     },
     {
         "key": "hull_mods.csv#phasefield$name",
         "original": "Phase Field",
         "translation": "相位力场",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0076行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00076行"
     },
     {
         "key": "hull_mods.csv#phasefield$short",
         "original": "Reduces fleetwide sensor profile.",
         "translation": "降低舰队的传感器截面。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0076行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00076行"
     },
     {
         "key": "hull_mods.csv#pointdefenseai$desc",
         "original": "Gives all point-defense weapons the ability to identify - and ignore - decoy flares. In addition, all point-defense weapons get the best possible target leading, regardless of combat readiness, and all damage to missiles is increased by %s. ",
         "translation": "给予所有点防御武器识别并忽略诱饵弹的能力。此外，无论战备处于何种水平，所有点防御武器均可保持最佳精准度。所有舰载武器对导弹造成的伤害提高{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0032行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00032行"
     },
     {
         "key": "hull_mods.csv#pointdefenseai$name",
         "original": "Integrated Point Defense AI",
         "translation": "整合点防御 AI",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0032行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00032行"
     },
     {
         "key": "hull_mods.csv#pointdefenseai$sModDesc",
         "original": "All small non-missile, non-strike weapons are classified as \"point-defense\", automatically target missiles, and are affected by point-defense stat modifiers.",
         "translation": "所有小型非导弹且非打击型武器都将获得 \"点防御\" 武器特性，将自动向导弹开火，并受到点防御武器属性修正的影响。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0032行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00032行"
     },
     {
         "key": "hull_mods.csv#pointdefenseai$short",
         "original": "PD ignores decoy flares, improved target leading, more damage to missiles.",
         "translation": "点防御武器忽视热诱弹干扰，提高自动瞄准精度，对导弹造成更多伤害。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0032行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00032行"
     },
     {
         "key": "hull_mods.csv#pointdefenseai$uiTags",
         "original": "Weapons, Defenses",
         "translation": "武器, 防御",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0032行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00032行"
     },
     {
         "key": "hull_mods.csv#recovery_shuttles$desc",
         "original": "Reduces the casualties suffered by fighter pilots by %s.",
         "translation": "降低战机联队{%s}的人员战损。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0042行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00042行"
     },
     {
         "key": "hull_mods.csv#recovery_shuttles$name",
         "original": "Recovery Shuttles",
         "translation": "救援穿梭舱",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0042行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00042行"
     },
     {
         "key": "hull_mods.csv#recovery_shuttles$sModDesc",
         "original": "Increases the fighter pilot casualty reduction to %s.",
         "translation": "将减免战机飞行员伤亡的效果提高至{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0042行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00042行"
     },
     {
         "key": "hull_mods.csv#recovery_shuttles$short",
         "original": "Reduces fighter pilot casualties.",
         "translation": "降低因战机损失而导致的人员伤亡。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0042行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00042行"
     },
     {
         "key": "hull_mods.csv#recovery_shuttles$uiTags",
         "original": "Fighters",
         "translation": "战机",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0042行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00042行"
     },
     {
         "key": "hull_mods.csv#reduced_explosion$desc",
         "original": "Reduced explosion radius and damage.",
         "translation": "降低自爆时的爆炸半径与伤害。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0105行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00105行"
     },
     {
         "key": "hull_mods.csv#reduced_explosion$name",
         "original": "Reduced Explosion",
         "translation": "爆炸减免",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0105行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00105行"
     },
     {
         "key": "hull_mods.csv#reinforcedhull$desc",
         "original": "Increases the ship's hull integrity by %s. If disabled, the ship will not break apart and is almost always recoverable after the battle.",
         "translation": "提高舰船{%s}的船体结构值。且当该舰停机时，不会四分五裂且几乎总是可在战后修复。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0043行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00043行"
     },
     {
         "key": "hull_mods.csv#reinforcedhull$name",
         "original": "Reinforced Bulkheads",
         "translation": "强化舱壁",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0043行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00043行"
     },
     {
         "key": "hull_mods.csv#reinforcedhull$short",
         "original": "Increases hull integrity; ship almost always recoverable if lost.",
         "translation": "提高船体结构值，避免该舰船在停机时碎裂，且几乎总是可在战后被打捞并修复。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0043行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00043行"
     },
     {
         "key": "hull_mods.csv#reinforcedhull$uiTags",
         "original": "Defenses",
         "translation": "防御",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0043行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00043行"
     },
     {
         "key": "hull_mods.csv#repair_gantry$desc",
         "original": "Increases the resources gained from salvaging abandoned stations, derelicts, floating hulks, and other such by %s/%s/%s/%s, depending on hull size. Only affects the recovery of common resources such as fuel and supplies, and not rare items like blueprints. In addition, %s of the bonus applies to post-battle salvage.",
         "translation": "根据船体级别，提高{%s}/{%s}/{%s}/{%s}从废弃空间站、遗弃物、舰船残骸等打捞到的资源。只影响普通资源的回收，如燃料与补给，而蓝图等稀有物资将不受影响。此外，该效果在战后结算时仅有{%s}效率。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0075行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00075行"
     },
     {
         "key": "hull_mods.csv#repair_gantry$name",
         "original": "Salvage Gantry",
         "translation": "打捞起重机",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0075行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00075行"
     },
     {
         "key": "hull_mods.csv#repair_gantry$short",
         "original": "Increases resources gained from salvage.",
         "translation": "提高打捞收益。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0075行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00075行"
     },
     {
         "key": "hull_mods.csv#rugged$desc",
         "original": "Reduces most negative effects of d-mods by %s. If disabled or destroyed in combat, the ship has a %s chance to avoid new d-mods, and is almost always recoverable after the battle.\n\nIn addition, the supply cost to recover from deployment - and to effect repairs if the ship is disabled - is reduced by %s.",
         "translation": "将大多数 D-插件 的负面影响降低{%s}。如果在战斗中停机或被摧毁，则该舰有{%s}的几率避免新 D-插件 的产生，且几乎总是可在战后被打捞并修复。\n\n此外，该舰用于恢复部署战备损耗以及停机修复所需的补给降低{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0092行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00092行"
     },
     {
         "key": "hull_mods.csv#rugged$name",
         "original": "Rugged Construction",
         "translation": "坚固结构",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0092行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00092行"
     },
     {
         "key": "hull_mods.csv#rugged$short",
         "original": "Reduces impact of d-mods; ship almost always recoverable if lost.",
         "translation": "降低 D-插件 的影响，且几乎总是可在战后被打捞并修复。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0092行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00092行"
     },
     {
         "key": "hull_mods.csv#safetyoverrides$desc",
         "original": "Disabling safety protocols increases the ship's top speed in combat by %s/%s/%s (depending on ship size, with a corresponding increase in acceleration) and allows the zero-flux engine boost to take effect regardless of flux level. The flux dissipation rate, including that of additional vents, is increased by a factor of %s.\n\nReduces the peak performance time by a factor of %s, prevents the use of active venting, and drastically reduces weapon ranges past %s units.\n\nCan not be installed on civilian or capital ships.",
         "translation": "禁用舰船的安全协议，根据船体级别提高{%s}/{%s}/{%s}/{%s}舰船战斗中的最高航速，也会对应提高加速度。零幅能加速在任何幅能水平下都能生效。幅能耗散将直接提高至{%s}倍 (其他改装的影响也会因此倍增)。\n\n峰值时间降低为原来的{%s}分之一，禁用主动排幅，且所有武器射程超过{%s}单位的部分将极大衰减。\n\n无法安装在民用舰或者主力舰上。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0045行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00045行"
     },
     {
         "key": "hull_mods.csv#safetyoverrides$name",
         "original": "Safety Overrides",
         "translation": "安全协议超驰",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0045行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00045行"
     },
     {
         "key": "hull_mods.csv#safetyoverrides$short",
         "original": "Drastic improvement in performance, much lower peak time.",
         "translation": "极大地提高舰船性能，但大幅降低峰值时间。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0045行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00045行"
     },
     {
         "key": "hull_mods.csv#safetyoverrides$uiTags",
         "original": "Special, Engines",
         "translation": "特殊, 引擎",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0045行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00045行"
     },
     {
         "key": "hull_mods.csv#secondary_fabricator$desc",
         "original": "Increases the rate at which replacement fragments are launched by %s.",
         "translation": "碎片整备速度提高{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0116行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00116行"
     },
     {
         "key": "hull_mods.csv#secondary_fabricator$name",
         "original": "Secondary Fabricator",
         "translation": "加装仿织器",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0116行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00116行"
     },
     {
         "key": "hull_mods.csv#secondary_fabricator$sModDesc",
         "original": "Increases the fragment replacement rate by a further %s.",
         "translation": "碎片整备速度率进一步提高{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0116行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00116行"
     },
     {
         "key": "hull_mods.csv#secondary_fabricator$short",
         "original": "Increases the fragment replacement rate.",
         "translation": "提高碎片整备速度",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0116行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00116行"
     },
     {
         "key": "hull_mods.csv#secondary_fabricator$uiTags",
         "original": "Weapons, Special",
         "translation": "武器, 特殊",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0116行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00116行"
     },
     {
         "key": "hull_mods.csv#shard_spawner$desc",
         "original": "Spawns shard ships when ship is disabled/destroyed.",
         "translation": "该舰被摧毁或停机时生成欧米伽子机碎片。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0110行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00110行"
     },
     {
         "key": "hull_mods.csv#shard_spawner$name",
         "original": "Shard Spawner",
         "translation": "生成碎片",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0110行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00110行"
     },
     {
         "key": "hull_mods.csv#shared_flux_sink$desc",
         "original": "Handles %s of the flux dissipation of all attached modules. If modules are lost during battle, the extra flux dissipation is redistributed among the remaining modules. Up to %s of this extra dissipation applies to hard flux.",
         "translation": "根据当前存活模块的数量，最高提高{%s}的幅能耗散。如果模块在战斗中遭到破坏，幅能耗散增益将在剩余模块间重新分配。而{%s}耗散增益将适用于硬幅能耗散。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0067行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00067行"
     },
     {
         "key": "hull_mods.csv#shared_flux_sink$name",
         "original": "Shared Flux Sink",
         "translation": "共享幅散管道",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0067行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00067行"
     },
     {
         "key": "hull_mods.csv#shared_flux_sink$short",
         "original": "Flux/hard flux dissipation bonus as modules are lost.",
         "translation": "模块损失后提高其他模块幅能与硬幅能的耗散效率。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0067行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00067行"
     },
     {
         "key": "hull_mods.csv#shield_always_on$name",
         "original": "Shield Always On",
         "translation": "保持开盾",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0072行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00072行"
     },
     {
         "key": "hull_mods.csv#shield_always_on$short",
         "original": "Forces shield to stay on. Hidden, doesn't need description or icon.",
         "translation": "强制开启护盾。隐藏效果，不需要描述或图标。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0072行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00072行"
     },
     {
         "key": "hull_mods.csv#shield_shunt$desc",
         "original": "Removes the ship's shields. The external emitter nodes are replaced with reinforced plating, increasing the ship's armor by %s.",
         "translation": "移除护盾。使用强化装甲板取代外部发生器节点，提高{%s}的舰船装甲。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0025行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00025行"
     },
     {
         "key": "hull_mods.csv#shield_shunt$name",
         "original": "Shield Shunt",
         "translation": "护盾分流",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0025行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00025行"
     },
     {
         "key": "hull_mods.csv#shield_shunt$sModDesc",
         "original": "Increases the ship's armor by an additional %s.",
         "translation": "额外提高{%s}舰船装甲。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0025行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00025行"
     },
     {
         "key": "hull_mods.csv#shield_shunt$short",
         "original": "Removes shields, increases armor.",
         "translation": "移除护盾，强化装甲。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0025行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00025行"
     },
     {
         "key": "hull_mods.csv#shield_shunt$uiTags",
         "original": "Special, Shields",
         "translation": "特殊, 护盾",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0025行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00025行"
     },
     {
         "key": "hull_mods.csv#shielded_holds$desc",
         "original": "Commonly found on ships that can't always rely on shields to protect their cargo from cosmic radiation. Only a few tweaks are needed to have the shielding confound long-range cargo scans, reducing the probability of contraband being detected.",
         "translation": "原本是保护无护盾货舰免受天体辐射的影响，但经过简单调整就可用于干扰远距离货舱扫描，降低违禁物品被发现的概率。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0074行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00074行"
     },
     {
         "key": "hull_mods.csv#shielded_holds$name",
         "original": "Shielded Cargo Holds",
         "translation": "屏蔽货舱",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0074行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00074行"
     },
     {
         "key": "hull_mods.csv#shielded_holds$short",
         "original": "Improves chance to avoid detection of contraband.",
         "translation": "降低被检查到违禁品的风险。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0074行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00074行"
     },
     {
         "key": "hull_mods.csv#shrouded_lens$desc",
         "original": "<created by script>",
         "translation": "<created by script>",
         "stage": -1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0123行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00123行"
     },
     {
         "key": "hull_mods.csv#shrouded_lens$name",
         "original": "Shrouded Lens",
         "translation": "渊幕瞳晶",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0123行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00123行"
     },
     {
         "key": "hull_mods.csv#shrouded_lens$short",
         "original": "The Lens automatically focuses on nearby targets, dealing damage in an area.",
         "translation": "这些瞳晶会自动聚焦于附近目标，并对目标区域造成伤害。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0123行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00123行"
     },
     {
         "key": "hull_mods.csv#shrouded_lens$uiTags",
         "original": "Special",
         "translation": "特殊",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0123行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00123行"
     },
     {
         "key": "hull_mods.csv#shrouded_mantle$desc",
         "original": "The ship will attempt to recoil (hopefully) away from danger when taking substantial hull damage.\n\nCrew casualties in combat are increased by %s.",
         "translation": "舰船在受到严重船体损伤时，会尝试向后撤退以远离危险。\n\n战斗中的船员伤亡增加{%s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0121行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00121行"
     },
     {
         "key": "hull_mods.csv#shrouded_mantle$name",
         "original": "Shrouded Mantle",
         "translation": "渊幕套膜",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0121行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00121行"
     },
     {
         "key": "hull_mods.csv#shrouded_mantle$sModDesc",
         "original": "The ship benefits from %s of the healing provided by Hungering Rift.",
         "translation": "饥渴裂隙 为该舰船提供{%s}的治疗量。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0121行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00121行"
     },
     {
         "key": "hull_mods.csv#shrouded_mantle$short",
         "original": "The ship recoils away from damage.",
         "translation": "舰船会在受到伤害时向后撤退。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0121行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00121行"
     },
     {
         "key": "hull_mods.csv#shrouded_mantle$uiTags",
         "original": "Special",
         "translation": "特殊",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0121行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00121行"
     },
     {
         "key": "hull_mods.csv#shrouded_thunderhead$desc",
         "original": "<created by script>",
         "translation": "<created by script>",
         "stage": -1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0122行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00122行"
     },
     {
         "key": "hull_mods.csv#shrouded_thunderhead$name",
         "original": "Shrouded Thunderhead",
         "translation": "渊幕云砧",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0122行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00122行"
     },
     {
         "key": "hull_mods.csv#shrouded_thunderhead$short",
         "original": "The ship fires Rift Lightning bolts at recent targets of its weapons.",
         "translation": "该舰船会向其武器最近攻击过的目标发射 裂隙闪电。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0122行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00122行"
     },
     {
         "key": "hull_mods.csv#shrouded_thunderhead$uiTags",
         "original": "Weapons, Special",
         "translation": "武器, 特殊",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0122行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00122行"
     },
     {
         "key": "hull_mods.csv#solar_shielding$desc",
         "original": "Originally developed by Diktat engineers after spending cycles dealing with the unique conditions of the inner Askonia system. Decreases the effect operating in a solar corona has on combat readiness by %s; also has the same effect against storms in deep hyperspace.\n\nIn combat, reduces energy damage taken by %s.",
         "translation": "最早由辛达的工程师为应对 Askonia 星系核心区的独特环境而研发。降低 %s 日冕对战备值 (CR) 的影响，对超空间内的风暴也有同样的作用。\n\n战斗中降低 %s 舰船所受到的能量伤害。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0062行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00062行"
     },
     {
         "key": "hull_mods.csv#solar_shielding$name",
         "original": "Solar Shielding",
         "translation": "恒星防护层",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0062行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00062行"
     },
     {
         "key": "hull_mods.csv#solar_shielding$sModDesc",
         "original": "Increases the protection from solar coronae and similar hazards to %s.",
         "translation": "对日冕和类似危害的防护提高至 %s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0062行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00062行"
     },
     {
         "key": "hull_mods.csv#solar_shielding$short",
         "original": "Reduces effect of being in corona and energy damage taken.",
         "translation": "降低星冕影响与所受能量武器的伤害。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0062行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00062行"
     },
     {
         "key": "hull_mods.csv#solar_shielding$uiTags",
         "original": "Defenses, Logistics, Requires Dock",
         "translation": "防御, 后勤, 需要船坞",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0062行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00062行"
     },
     {
         "key": "hull_mods.csv#stabilizedshieldemitter$desc",
         "original": "Reduces the amount of soft flux raised shields generate per second by %s. Does not affect the hard flux generated as a result of shields taking damage.",
         "translation": "降低 %s 维持护盾所需的软幅能。不会影响护盾受到伤害所产生的硬幅能。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0047行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00047行"
     },
     {
         "key": "hull_mods.csv#stabilizedshieldemitter$name",
         "original": "Stabilized Shields",
         "translation": "稳定护盾",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0047行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00047行"
     },
     {
         "key": "hull_mods.csv#stabilizedshieldemitter$sModDesc",
         "original": "Converts %s of the hard flux damage taken by shields to soft flux.",
         "translation": "将护盾承受的 %s 硬幅能伤害转化为软幅能。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0047行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00047行"
     },
     {
         "key": "hull_mods.csv#stabilizedshieldemitter$short",
         "original": "Reduces flux upkeep for shields.",
         "translation": "降低护盾维持幅能。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0047行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00047行"
     },
     {
         "key": "hull_mods.csv#stabilizedshieldemitter$uiTags",
         "original": "Shields",
         "translation": "护盾",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0047行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00047行"
     },
     {
         "key": "hull_mods.csv#stealth_minefield$desc",
         "original": "Mines attack enemy ships during battle.",
         "translation": "战场周遭会布置大量感应空雷，并破坏靠近的敌舰。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0068行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00068行"
     },
     {
         "key": "hull_mods.csv#stealth_minefield$name",
         "original": "Stealth Minefield",
         "translation": "感应雷区",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0068行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00068行"
     },
     {
         "key": "hull_mods.csv#stealth_minefield$short",
         "original": "Mines attack enemy ships during battle.",
         "translation": "战场周遭会布置大量感应空雷，并破坏靠近的敌舰。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0068行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00068行"
     },
     {
         "key": "hull_mods.csv#stealth_minefield_lt$desc",
         "original": "Mines attack enemy ships during battle.",
         "translation": "战场周遭会布置大量感应空雷，并破坏靠近的敌舰。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0069行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00069行"
     },
     {
         "key": "hull_mods.csv#stealth_minefield_lt$name",
         "original": "Stealth Minefield - Low Tech",
         "translation": "感应雷区",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0069行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00069行"
     },
     {
         "key": "hull_mods.csv#stealth_minefield_lt$short",
         "original": "Mines attack enemy ships during battle.",
         "translation": "战场周遭会布置大量感应空雷，并破坏靠近的敌舰。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0069行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00069行"
     },
     {
         "key": "hull_mods.csv#supercomputer$desc",
         "original": "Extends the range of ballistic and energy weapons by %s. The range of point-defense weapons is only extended by %s.\n\nAlso increases target-leading accuracy and greatly increases in-combat sensor range.",
         "translation": "提高 %s 实弹与能量武器射程，但点防类武器仅提高 %s}。\n\n同时也提高了瞄准精度，并大幅度提高战斗内的探测范围。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0095行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00095行"
     },
     {
         "key": "hull_mods.csv#supercomputer$name",
         "original": "Targeting Supercomputer",
         "translation": "目标定位巨型机",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0095行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00095行"
     },
     {
         "key": "hull_mods.csv#supercomputer$short",
         "original": "Greatly extends non-missile weapon range.",
         "translation": "极大地提高非导弹武器的射程。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0095行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00095行"
     },
     {
         "key": "hull_mods.csv#surveying_equipment$desc",
         "original": "Reduces the heavy machinery and supplies required to perform surveys by %s/%s/%s/%s depending on hull size, down to a minimum of %s for each.",
         "translation": "根据船体级别，降低 %s/%s/%s/%s 勘探星球时所需的重型机械和补给。所消耗资源的数量最低可降至 %s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0063行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00063行"
     },
     {
         "key": "hull_mods.csv#surveying_equipment$name",
         "original": "Surveying Equipment",
         "translation": "勘探设备",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0063行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00063行"
     },
     {
         "key": "hull_mods.csv#surveying_equipment$sModDesc",
         "original": "Increases the survey cost reduction by %s.",
         "translation": "进一步降低 %s 的勘探资源花费。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0063行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00063行"
     },
     {
         "key": "hull_mods.csv#surveying_equipment$short",
         "original": "Reduces resource requirements for surveying.",
         "translation": "降低勘探时所需的资源。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0063行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00063行"
     },
     {
         "key": "hull_mods.csv#surveying_equipment$uiTags",
         "original": "Logistics, Requires Dock",
         "translation": "后勤, 需要船坞",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0063行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00063行"
     },
     {
         "key": "hull_mods.csv#targetingunit$desc",
         "original": "Extends the range of ballistic and energy weapons by %s/%s/%s/%s, depending on hull size. Can not work in conjunction with Dedicated Targeting Core.\n\nMost combat ships install either an Integrated Targeting Unit or a Dedicated Targeting Core, with the exception of more specialized variants.",
         "translation": "根据船体级别，提高实弹和能量武器 %s/%s/%s/%s 射程。不兼容于专注型目标锁定核心。\n\n除了一些特化的装配，绝大多数战斗舰船都会选择安装 目标定位系统 或 专注型目标锁定核心。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0034行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00034行"
     },
     {
         "key": "hull_mods.csv#targetingunit$name",
         "original": "Integrated Targeting Unit",
         "translation": "目标定位系统",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0034行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00034行"
     },
     {
         "key": "hull_mods.csv#targetingunit$short",
         "original": "Increases weapon range, more so for larger ships.",
         "translation": "提高武器射程，越大的舰船收益越大。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0034行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00034行"
     },
     {
         "key": "hull_mods.csv#targetingunit$uiTags",
         "original": "Weapons",
         "translation": "武器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0034行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00034行"
     },
     {
         "key": "hull_mods.csv#terminator_core$desc",
         "original": "Gives all point-defense weapons the ability to identify - and ignore - decoy flares. In addition, all weapons get the best possible target leading, regardless of combat readiness, all damage to missiles and fighters is increased by %s, and beam weapon range is increased by %s units.",
         "translation": "终结者无人机的专属插件。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0066行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00066行"
     },
     {
         "key": "hull_mods.csv#terminator_core$name",
         "original": "Terminator Core",
         "translation": "终结者核心",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0066行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00066行"
     },
     {
         "key": "hull_mods.csv#terminator_core$uiTags",
         "original": "Weapons",
         "translation": "武器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0066行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00066行"
     },
     {
         "key": "hull_mods.csv#threat_hullmod$desc",
         "original": "Hidden hullmod for managing the special properties of Threat ships. Description created in script.",
         "translation": "用于管理 威胁 舰船特殊属性的隐藏式船体插件。描述信息通过脚本生成。",
         "stage": 2,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0114行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00114行"
     },
     {
         "key": "hull_mods.csv#threat_hullmod$name",
         "original": "Threat Hull",
         "translation": "威胁船体",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0114行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00114行"
     },
     {
         "key": "hull_mods.csv#tow_cable$desc",
         "original": "Improves the maximum burn level of the slowest ship in the fleet by 1. Multiple tugs can not be used to speed up the same ship by more than 1.\n\nCan not be used in combat.",
         "translation": "使舰队中最慢舰船的宇宙航行速度提高 1 点。多个拖船不能提高同一艘船的航速。\n\n战斗中无效。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0085行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00085行"
     },
     {
         "key": "hull_mods.csv#tow_cable$name",
         "original": "Monofilament Tow Cable",
         "translation": "牵引线缆",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0085行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00085行"
     },
     {
         "key": "hull_mods.csv#tow_cable$short",
         "original": "Increases burn level of another ship.",
         "translation": "提高另一舰船的最大宇宙航速。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0085行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00085行"
     },
     {
         "key": "hull_mods.csv#turretgyros$desc",
         "original": "Increases the turn rate of all turrets by %s.",
         "translation": "提高所有炮塔 %s 的转向速度。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0004行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00004行"
     },
     {
         "key": "hull_mods.csv#turretgyros$name",
         "original": "Advanced Turret Gyros",
         "translation": "高级炮塔陀螺仪",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0004行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00004行"
     },
     {
         "key": "hull_mods.csv#turretgyros$sModDesc",
         "original": "Increases damage to missiles and fighters by %s. Increases damage to smaller ships by %s per size class of difference.",
         "translation": "提高 %s 对导弹和战机的伤害。提高对更小级别舰船造成的伤害，船级每相差一级，伤害就提高 %s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0004行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00004行"
     },
     {
         "key": "hull_mods.csv#turretgyros$short",
         "original": "Increases turret turn rate.",
         "translation": "提高炮塔的转向速度。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0004行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00004行"
     },
     {
         "key": "hull_mods.csv#turretgyros$uiTags",
         "original": "Weapons",
         "translation": "武器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0004行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00004行"
     },
     {
         "key": "hull_mods.csv#unstable_coils$desc",
         "original": "The phase coils on this ship are impossible to calibrate properly due to subtle flaws. Reduces the phase-time bonus by %s, reduces the peak performance time by %s, and increases the rate at which combat readiness degrades by %s.\n\nSupply cost to recover from deployment reduced by %s.",
         "translation": "一些微妙的缺陷导致该舰的相位线圈无法精细校正，降低 %s 相位时间增益，降低 %s 秒峰值时间，并且提高 %s 战备损耗率。\n\n但部署所需补给下降 %s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0136行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00136行"
     },
     {
         "key": "hull_mods.csv#unstable_coils$name",
         "original": "Phase Coil Instability",
         "translation": "不稳定相位线圈",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0136行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00136行"
     },
     {
         "key": "hull_mods.csv#unstable_injector$desc",
         "original": "Increases the ship's top speed in combat by %s/%s/%s/%s su/second, depending on hull size.\n\nInterferes with weapons targeting and other vulnerable systems, reducing non-missile weapon range by %s and increasing the fighter replacement time by %s.",
         "translation": "根据船体级别，提高 %s/%s/%s/%s 的最高航速。\n\n但干扰了武器定位与机库系统，而导致非导弹类武器射程降低 %s}，且战机整备时间提高 %s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0049行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00049行"
     },
     {
         "key": "hull_mods.csv#unstable_injector$name",
         "original": "Unstable Injector",
         "translation": "不稳定喷射器",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0049行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00049行"
     },
     {
         "key": "hull_mods.csv#unstable_injector$short",
         "original": "Increases speed, reduces weapon range.",
         "translation": "提高航速，降低武器射程。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0049行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00049行"
     },
     {
         "key": "hull_mods.csv#unstable_injector$uiTags",
         "original": "Engines",
         "translation": "引擎",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0049行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00049行"
     },
     {
         "key": "hull_mods.csv#vast_hangar$desc",
         "original": "The ship has a huge hangar and a commensurate small fleet of support craft.\n\nThe number of fighter bays added by Converted Hangar is increased by %s, and its performance matches that of a dedicated fighter bay - all of the penalties and modifiers, including those to the ship's deployment cost, are negated.",
         "translation": "该舰拥有足以支援一个小型舰队的巨型机库。\n\n若安装 改装机库，则额外再提供 %s 个战机甲板，并抵消其包括整备时间、舰船部署点在内的全部负面副作用。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0091行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00091行"
     },
     {
         "key": "hull_mods.csv#vast_hangar$name",
         "original": "Vast Hangar",
         "translation": "巨型机库",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0091行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00091行"
     },
     {
         "key": "hull_mods.csv#vast_hangar$short",
         "original": "Increases the effect of Converted Hangar and removes its penalties.",
         "translation": "增强 改装机库 的效果并移除所有惩罚。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0091行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00091行"
     },
     {
         "key": "hull_mods.csv#vastbulk$desc",
         "original": "The main body of this structure is vast and is, for practical purposes, capable of absorbing any amount of damage from conventional weapons without being destroyed.",
         "translation": "其巨大的主体结构几乎可以承受所有常规伤害而不被摧毁。",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0102行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00102行"
     },
     {
         "key": "hull_mods.csv#vastbulk$name",
         "original": "Vast Bulk",
         "translation": "庞然大物",
         "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第0102行"
+        "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00102行"
     }
 ]
