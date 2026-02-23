@@ -74,7 +74,7 @@ public class Galatia {
 		ancyra.applySpecChanges();
 		ancyra.setCustomDescriptionId("planet_ancyra");
 
-		SectorEntityToken ancyraStation = system.addCustomEntity("ancyra_station", "Ancyra Orbital Facility", "station_side00", Factions.HEGEMONY);
+		SectorEntityToken ancyraStation = system.addCustomEntity("ancyra_station", "Ancyra 轨道工厂", "station_side00", Factions.HEGEMONY);
 		ancyraStation.setCircularOrbitPointingDown(ancyra, 300, 350, 30);
 		ancyraStation.setInteractionImage("illustrations", "orbital");
 		ancyraStation.setCustomDescriptionId("station_ancyra");
@@ -142,7 +142,7 @@ public class Galatia {
 		
 		SectorEntityToken pontus = system.addPlanet("pontus", star, "Pontus", "gas_giant", 200, 300, 6200, 400);
 		
-			SectorEntityToken galatiaAcademy = system.addCustomEntity("station_galatia_academy", "Galatia Academy Station", "station_galatia", Factions.INDEPENDENT);
+			SectorEntityToken galatiaAcademy = system.addCustomEntity("station_galatia_academy", "Galatia 学院 空间站", "station_galatia", Factions.INDEPENDENT);
 			galatiaAcademy.setCircularOrbitPointingDown(pontus, 30, 434, 55);
 			galatiaAcademy.setInteractionImage("illustrations", "galatia_academy");
 			galatiaAcademy.setCustomDescriptionId("station_galatia_academy");
@@ -183,7 +183,7 @@ public class Galatia {
 		addDerelict(system, tetra, "condor_Support", ShipCondition.BATTERED, 500f, false);
 		addDerelict(system, tetra, "dram_Light", ShipCondition.BATTERED, 525f, true);
 		
-		SectorEntityToken derinkuyuStation = system.addCustomEntity("derinkuyu_station", "Derinkuyu Mining Station", "station_mining00", Factions.PIRATES);
+		SectorEntityToken derinkuyuStation = system.addCustomEntity("derinkuyu_station", "Derinkuyu 采矿空间站", "station_mining00", Factions.PIRATES);
 		derinkuyuStation.setCircularOrbitWithSpin(star, 135, beltOrbitRadius - 100f, 300f, 3f, 5f);
 		//derinkuyuStation.setCircularOrbitPointingDown(galatia1, 300, 350, 30);
 		derinkuyuStation.setInteractionImage("illustrations", "orbital");
@@ -222,7 +222,7 @@ public class Galatia {
 		
 		// Galatia Gate
 		SectorEntityToken gate = system.addCustomEntity("galatia_gate", // unique id
-				 "Galatia Gate", // name - if null, defaultName from custom_entities.json will be used
+				 "Galatia 之门", // name - if null, defaultName from custom_entities.json will be used
 				 Entities.INACTIVE_GATE, // type of object, defined in custom_entities.json
 				 null); // faction
 		gate.setCircularOrbit(star, 120, 4200, 400);
@@ -256,7 +256,7 @@ public class Galatia {
 		
 
 		
-		JumpPointAPI inner = Global.getFactory().createJumpPoint("galatia_jump_point_alpha", "Inner System Jump-point");
+		JumpPointAPI inner = Global.getFactory().createJumpPoint("galatia_jump_point_alpha", "Galatia 星系内部跳跃点");
 		//OrbitAPI orbit = Global.getFactory().createCircularOrbit(star, 0, 5200, 400);
 		OrbitAPI orbit = Global.getFactory().createCircularOrbit(star, 
 										pontus.getCircularOrbitAngle() + 180f,
@@ -267,7 +267,7 @@ public class Galatia {
 		inner.setStandardWormholeToHyperspaceVisual();
 		system.addEntity(inner);
 		
-		JumpPointAPI fringe = Global.getFactory().createJumpPoint("galatia_jump_point_fringe", "Fringe Jump-point");
+		JumpPointAPI fringe = Global.getFactory().createJumpPoint("galatia_jump_point_fringe", "Galatia 星系边缘跳跃点");
 		orbit = Global.getFactory().createCircularOrbit(star, 160, 11200, 600);
 		fringe.setOrbit(orbit);
 		fringe.setStandardWormholeToHyperspaceVisual();

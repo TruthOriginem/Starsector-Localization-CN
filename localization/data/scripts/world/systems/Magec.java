@@ -98,7 +98,7 @@ public class Magec {
 		system.addCorona(magec3, 150, 3f, 0.05f, 1f); // it's a very docile star.
 		
 		SectorEntityToken achaman_buoy = system.addCustomEntity("achaman_relay", // unique id
-				 "Achaman Relay", // name - if null, defaultName from custom_entities.json will be used
+				 "Achaman 通讯中继站", // name - if null, defaultName from custom_entities.json will be used
 				 "nav_buoy", // type of object, defined in custom_entities.json
 				 "tritachyon"); // faction
 		

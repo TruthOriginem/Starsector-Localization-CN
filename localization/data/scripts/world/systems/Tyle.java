@@ -63,7 +63,7 @@ public class Tyle {
 		// An asteroid field
 		system.addRingBand(tyle_star, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 4300, 220f, null, null);
 		system.addRingBand(tyle_star, "misc", "rings_asteroids0", 256f, 1, Color.white, 256f, 4400, 226f, null, null);
-		system.addAsteroidBelt(tyle_star, 60, 4350, 170, 200, 250, Terrain.ASTEROID_BELT, "Tyle's Archipelago");
+		system.addAsteroidBelt(tyle_star, 60, 4350, 170, 200, 250, Terrain.ASTEROID_BELT, "Tyle's 小行星带");
 		
 		PlanetAPI tyle_c = system.addPlanet("zuni", tyle_star, "Zuni", "barren", 90, 60, 4800, 260);
 		
@@ -76,7 +76,7 @@ public class Tyle {
 					40, // max asteroid count
 					4f, // min asteroid radius 
 					16f, // max asteroid radius
-					"The Wuya")); // null for default name
+					"Wuya 小行星团")); // null for default name
 		
 		tyle_field1.setCircularOrbit(tyle_star, 90 + 60, 4800, 260);
 		
@@ -89,7 +89,7 @@ public class Tyle {
 			gate.setCircularOrbit(system.getEntityById("tyle"), 90+62, 4800, 260);*/
 		
 		// Wuya Jump
-		JumpPointAPI jumpPoint1 = Global.getFactory().createJumpPoint("wuya_jump", "Wuya Jump");
+		JumpPointAPI jumpPoint1 = Global.getFactory().createJumpPoint("wuya_jump", "Wuya 跳跃点");
 		jumpPoint1.setCircularOrbit( system.getEntityById("tyle"), 90-60, 4800, 260);
 		jumpPoint1.setRelatedPlanet(tyle_c);
 		system.addEntity(jumpPoint1);
@@ -103,7 +103,7 @@ public class Tyle {
 			//pirateStation.setInteractionImage("illustrations", "pirate_station");
 			
 			// Canaria Relay
-			SectorEntityToken canaria_relay = system.addCustomEntity("canaria_relay", "Canaria Relay", "comm_relay", "persean");
+			SectorEntityToken canaria_relay = system.addCustomEntity("canaria_relay", "Canaria 通讯中继站", "comm_relay", "persean");
 			canaria_relay.setCircularOrbitPointingDown( system.getEntityById("canaria"), 180, 700, 34);
 		
 		SectorEntityToken tyle_field2 = system.addTerrain(Terrain.ASTEROID_FIELD,
@@ -114,7 +114,7 @@ public class Tyle {
 					60, // max asteroid count
 					4f, // min asteroid radius 
 					20f, // max asteroid radius
-					"Sargossa")); // null for default name
+					"Sargossa 小行星团")); // null for default name
 		
 		tyle_field2.setCircularOrbit(tyle_star, 180 - 60, 9000, 750);
 		

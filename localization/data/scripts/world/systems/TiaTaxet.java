@@ -78,7 +78,7 @@ public class TiaTaxet {
 		// An asteroid belts
 		system.addRingBand(tia_star, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 3550, 220f, null, null);
 		system.addRingBand(tia_star, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 3650, 226f, null, null);
-		system.addAsteroidBelt(tia_star, 150, 3600, 170, 200, 250, Terrain.ASTEROID_BELT, "Lagua's Torus");
+		system.addAsteroidBelt(tia_star, 150, 3600, 170, 200, 250, Terrain.ASTEROID_BELT, "拉古亚环带");
 		
 		// Arbitrary Asteroid field 
 		SectorEntityToken tia_field1 = system.addTerrain(Terrain.ASTEROID_FIELD,
@@ -89,13 +89,13 @@ public class TiaTaxet {
 					40, // max asteroid count
 					4f, // min asteroid radius 
 					16f, // max asteroid radius
-					"Tia-Ta'xet Asteroid Cluster")); // null for default name
+					"Tia-Ta'xet 小行星团")); // null for default name
 		
 		tia_field1.setCircularOrbit(tia_star, 180, 4500, 250);
 		
 		
 		// Abandoned shipyard /research station
-			SectorEntityToken abandoned_station1 = system.addCustomEntity("abandoned_spacedock", "Abandoned Research Station", "station_side00", "neutral");
+			SectorEntityToken abandoned_station1 = system.addCustomEntity("abandoned_spacedock", "废弃的研究空间站", "station_side00", "neutral");
 			abandoned_station1.setInteractionImage("illustrations", "space_wreckage");
 			abandoned_station1.setCircularOrbitPointingDown(system.getEntityById("tia"), 180, 4450, 250);
 			abandoned_station1.setCustomDescriptionId("station_tiataxet_spacedock");
@@ -173,7 +173,7 @@ public class TiaTaxet {
 		
 		
 		// Tia-Ta'xet Jumppoint
-		JumpPointAPI jumpPoint2 = Global.getFactory().createJumpPoint("tia-taxet_jump", "Tia-Ta'xet Jump-point");
+		JumpPointAPI jumpPoint2 = Global.getFactory().createJumpPoint("tia-taxet_jump", "Tia-Ta'xet 跳跃点");
 		jumpPoint2.setCircularOrbit( system.getEntityById("tia"), 270+60, 11500, 800);
 		jumpPoint2.setRelatedPlanet(tia2);
 		system.addEntity(jumpPoint2);

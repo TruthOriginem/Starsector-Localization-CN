@@ -46,7 +46,7 @@ public class Valhalla {
 		
 		/* The Valkyries asteroid belt - some notable large ones? */ 
 		system.addRingBand(star, "misc", "rings_asteroids0", 256f, 1, Color.white, 256f, 3100, 190f, null, null);
-		system.addAsteroidBelt(star, 100, 3150, 256, 150, 250, Terrain.ASTEROID_BELT, "The Valkyries");
+		system.addAsteroidBelt(star, 100, 3150, 256, 150, 250, Terrain.ASTEROID_BELT, "女武神陨石带");
 		
 			// Valkyrie jump
 			JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("valkyrie_jump", "Valkyrie 跳跃点");
