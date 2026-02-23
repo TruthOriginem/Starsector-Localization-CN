@@ -16,7 +16,6 @@ from para_tranz.utils.config import (
     EXPORTED_STRING_CONTEXT_PREFIX_PREFIX,
     IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS,
     REMOVE_TRANSLATION_WHEN_ORIGINAL_IS_EMPTY,
-    RULES_CSV_SCRIPT_COPY_ORIGINAL_WHEN_NO_QUOTES,
 )
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, CsvMapItem
 from para_tranz.utils.util import (
@@ -80,15 +79,6 @@ class CsvFile(DataFile):
                 if row_id in self.translation_id_data:
                     translation = self.translation_id_data[row_id][col]
                     stage = 1
-                # 特殊规则：如果rules.csv里的script列中不包含'"'（双引号），则视为已翻译
-                if (
-                    (self.path.name == 'rules.csv')
-                    and (col == 'script')
-                    and ('"' not in original)
-                ):
-                    stage = 1
-                    if RULES_CSV_SCRIPT_COPY_ORIGINAL_WHEN_NO_QUOTES:
-                        translation = original
                 # 如果原文不包含英文，则设定为已翻译
                 elif not contains_english(original):
                     stage = 1
@@ -196,13 +186,16 @@ class CsvFile(DataFile):
                         original_row['text'] + '\n' + original_row.get('options', '')
                     )
                     translated_combined = (
-                        translated_row['text'] + '\n' + translated_row.get('options', '')
+                        translated_row['text']
+                        + '\n'
+                        + translated_row.get('options', '')
                     )
 
                     missing_highlights_original = {
                         highlight
                         for highlight in highlights
-                        if highlight.startswith('$') and highlight not in original_combined
+                        if highlight.startswith('$')
+                        and highlight not in original_combined
                     }
                     missing_highlights = {
                         highlight
@@ -318,7 +311,9 @@ class CsvFile(DataFile):
         id_data = {}
         with open(path, 'r', errors='surrogateescape', encoding='utf-8') as csv_file:
             # 替换不可识别的字符，并将原文中的 \n 转换为 ^n，以与csv中的直接换行进行区分
-            csv_lines = [replace_weird_chars(line).replace('\\n', '^n') for line in csv_file]
+            csv_lines = [
+                replace_weird_chars(line).replace('\\n', '^n') for line in csv_file
+            ]
             rows: List[Dict[str, str]] = list(DictReader(csv_lines))
             columns = list(rows[0].keys())
             for i, row in enumerate(rows):
@@ -374,7 +369,9 @@ class CsvFile(DataFile):
         """
         cls.logger.info('开始读取游戏csv数据')
         files = [
-            cls(**asdict(item)) for item in PARA_TRANZ_MAP if isinstance(item, CsvMapItem)
+            cls(**asdict(item))
+            for item in PARA_TRANZ_MAP
+            if isinstance(item, CsvMapItem)
         ]
         cls.logger.info('游戏csv数据读取完成')
         return files
