@@ -10,9 +10,8 @@ from para_tranz.utils.mapping_generation import (
     generate_class_file_mapping_by_path,
     generate_class_mapping_diff_string,
 )
-from para_tranz.utils.util import BG_YELLOW, GREEN, RED, colorize
 from para_tranz.utils.search import search_for_string_in_jar_files
-from para_tranz.utils.util import make_logger
+from para_tranz.utils.util import BG_YELLOW, GREEN, RED, colorize, make_logger
 
 logger = make_logger('ParaTranzScript')
 

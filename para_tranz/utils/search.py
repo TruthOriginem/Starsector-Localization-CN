@@ -15,7 +15,9 @@ def _get_loaded_jar_files() -> List[JavaJarFile]:
     global _jar_files_cache
     if _jar_files_cache is None:
         logger.info('首次加载，正在解析所有 jar 文件中的 class，耗时较长请耐心等待...')
-        jar_file_items = [item for item in PARA_TRANZ_MAP.items if isinstance(item, JarMapItem)]
+        jar_file_items = [
+            item for item in PARA_TRANZ_MAP.items if isinstance(item, JarMapItem)
+        ]
         _jar_files_cache = [
             JavaJarFile(**asdict(item), no_auto_load=True) for item in jar_file_items
         ]
@@ -49,7 +51,7 @@ class StringSearchResult:
             string = colorize(string, RED)
         elif self.is_in_mapping:
             string = colorize(string, GREEN)
-        return f'<{self.jar_name}:{self.class_path}>\n\t"{string}"'
+        return f'{self.jar_name}:{self.class_path}\n\t"{string}"'
 
 
 def search_for_string_in_jar_files(pattern: str) -> List[StringSearchResult]:
