@@ -7,6 +7,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/StarfarerLauncher.class 的第0250个常量\n原始数据：\"Java 7 is the only supported version of Java. Trying to use version: [\"\n译文数据：\"Java 7 是本游戏应当使用的 Java 版本。但当前使用的版本: [\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/StarfarerLauncher.class#\"Maximum anti-aliasing samples: \"",
+        "original": "Maximum anti-aliasing samples: ",
+        "translation": "Maximum anti-aliasing samples: ",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/StarfarerLauncher.class 的第0310个常量\n原始数据：\"Maximum anti-aliasing samples: \"\n译文数据：\"Maximum anti-aliasing samples: \"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/StarfarerLauncher.class#\"See allowAnyJavaVersion in settings.json if you really want to do this, \"",
         "original": "See allowAnyJavaVersion in settings.json if you really want to do this, ",
         "translation": "如果您需要强行打开游戏，参见 settings.json 中的 allowAnyJavaVersion，",
@@ -299,6 +306,13 @@
         "translation": " 9月",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/CampaignClock.class 的第0151个常量\n原始数据：\"September\"\n译文数据：\" 9月\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/CampaignEngine$2.class#\"Going through jump-point\"",
+        "original": "Going through jump-point",
+        "translation": "Going through jump-point",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/CampaignEngine$2.class 的第0219个常量\n原始数据：\"Going through jump-point\"\n译文数据：\"Going through jump-point\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/CampaignEngine.class#\"Hyperspace\"",
@@ -2415,6 +2429,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/command/FighterBlueprintBrowser.class 的第0189个常量\n原始数据：\"Fighter name. Mouse over the icon for a detailed tooltip with its stats.\"\n译文数据：\"战机的名称。通过将鼠标滑至船体图标处，即可查看该舰的详细介绍与能力数据。\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/command/FighterBlueprintBrowser.class#\"Fighter type - bomber, interceptor, heavy fighter, etc.\"",
+        "original": "Fighter type - bomber, interceptor, heavy fighter, etc.",
+        "translation": "战机类型 - 轰炸机，截击机，重型战斗机等。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/command/FighterBlueprintBrowser.class 的第0195个常量\n原始数据：\"Fighter type - bomber, interceptor, heavy fighter, etc.\"\n译文数据：\"Fighter type - bomber, interceptor, heavy fighter, etc.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/command/FighterBlueprintBrowser.class#\"Fighter\"",
         "original": "Fighter",
         "translation": "战斗机",
@@ -3099,6 +3120,13 @@
         "translation": "鼠标滑至该项目的图标处即可观察详细信息。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/command/L$1.class 的第0078个常量\n原始数据：\"Mouse over icon for detail about the item.\"\n译文数据：\"鼠标滑至该项目的图标处即可观察详细信息。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/command/L$1.class#\"Production cost does not include outfitting the ship with weapons and fighters - the cost for those is charged separately ~\"@f2884629",
+        "original": "Production cost does not include outfitting the ship with weapons and fighters - the cost for those is charged separately when the ships are delivered, and does not count against the monthly production capacity.",
+        "translation": "生产成本不包括为舰船配备的武器与战机，而该费用将在舰船交付时单独收取，且不计入生产能力当中。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/command/L$1.class 的第0039个常量\n原始数据：\"Production cost does not include outfitting the ship with weapons and fighters - the cost for those is charged separately when the ships are delivered, and does not count against the monthly production capacity.\"\n译文数据：\"Production cost does not include outfitting the ship with weapons and fighters - the cost for those is charged separately when the ships are delivered, and does not count against the monthly production capacity.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/command/L$1.class#\"Production cost includes outfitting the ship with weapons and fighters. Uses the best ship production quality from your colonies, and assumes a maximum \"ship quality\" doctrine setting.\"",
@@ -4291,6 +4319,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/command/ShipBlueprintBrowser.class 的第0202个常量\n原始数据：\"Ship hull blueprint\"\n译文数据：\"船体蓝图\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/command/ShipBlueprintBrowser.class#\"Ship type - warship, carrier, phase ship, or civilian.\"",
+        "original": "Ship type - warship, carrier, phase ship, or civilian.",
+        "translation": "舰船类型，如战舰、航母、相位舰或民用舰。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/command/ShipBlueprintBrowser.class 的第0234个常量\n原始数据：\"Ship type - warship, carrier, phase ship, or civilian.\"\n译文数据：\"Ship type - warship, carrier, phase ship, or civilian.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/command/ShipBlueprintBrowser.class#\"Size\"",
         "original": "Size",
         "translation": "规模",
@@ -4464,6 +4499,13 @@
         "translation": "武器规模。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/command/WeaponBlueprintBrowser.class 的第0232个常量\n原始数据：\"Weapon size.\"\n译文数据：\"武器规模。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/command/WeaponBlueprintBrowser.class#\"Weapon type - ballistic, energy, or missile.\"",
+        "original": "Weapon type - ballistic, energy, or missile.",
+        "translation": "武器类型 - 实弹，能量或导弹。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/command/WeaponBlueprintBrowser.class 的第0234个常量\n原始数据：\"Weapon type - ballistic, energy, or missile.\"\n译文数据：\"Weapon type - ballistic, energy, or missile.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/command/WeaponBlueprintBrowser.class#\"weapon blueprints\"",
@@ -4975,6 +5017,111 @@
         "translation": "类型：",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/comms/oo0O.class 的第0301个常量\n原始数据：\"Type:\"\n译文数据：\"类型：\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class#\"    - %s base reward per frigate\"",
+        "original": "    - %s base reward per frigate",
+        "translation": "    - %s base reward per frigate",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class 的第0301个常量\n原始数据：\"    - %s base reward per frigate\"\n译文数据：\"    - %s base reward per frigate\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class#\"    - %s days ago\"",
+        "original": "    - %s days ago",
+        "translation": "    - %s days ago",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class 的第0219个常量\n原始数据：\"    - %s days ago\"\n译文数据：\"    - %s days ago\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class#\"    - %s days once accepted\"",
+        "original": "    - %s days once accepted",
+        "translation": "    - %s days once accepted",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class 的第0317个常量\n原始数据：\"    - %s days once accepted\"\n译文数据：\"    - %s days once accepted\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class#\"    - %s days remaining\"",
+        "original": "    - %s days remaining",
+        "translation": "    - %s days remaining",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class 的第0305个常量\n原始数据：\"    - %s days remaining\"\n译文数据：\"    - %s days remaining\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class#\"    - %s reward\"",
+        "original": "    - %s reward",
+        "translation": "    - %s reward",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class 的第0311个常量\n原始数据：\"    - %s reward\"\n译文数据：\"    - %s reward\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class#\"    - %s reward, %s days remaining\"",
+        "original": "    - %s reward, %s days remaining",
+        "translation": "    - %s reward, %s days remaining",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class 的第0258个常量\n原始数据：\"    - %s reward, %s days remaining\"\n译文数据：\"    - %s reward, %s days remaining\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class#\"    - No effect on pirate activity\"",
+        "original": "    - No effect on pirate activity",
+        "translation": "    - No effect on pirate activity",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class 的第0279个常量\n原始数据：\"    - No effect on pirate activity\"\n译文数据：\"    - No effect on pirate activity\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class#\"    - No effect on ship quality\"",
+        "original": "    - No effect on ship quality",
+        "translation": "    - No effect on ship quality",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class 的第0277个常量\n原始数据：\"    - No effect on ship quality\"\n译文数据：\"    - No effect on ship quality\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class#\"    - No effect on stability\"",
+        "original": "    - No effect on stability",
+        "translation": "    - No effect on stability",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class 的第0275个常量\n原始数据：\"    - No effect on stability\"\n译文数据：\"    - No effect on stability\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class#\"    - Offered by \"",
+        "original": "    - Offered by ",
+        "translation": "    - Offered by ",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class 的第0230个常量\n原始数据：\"    - Offered by \"\n译文数据：\"    - Offered by \"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class#\"    - Scan derelict to complete mission\"",
+        "original": "    - Scan derelict to complete mission",
+        "translation": "    - Scan derelict to complete mission",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class 的第0315个常量\n原始数据：\"    - Scan derelict to complete mission\"\n译文数据：\"    - Scan derelict to complete mission\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class#\"Analyze Derelict - Archibald's Star\"",
+        "original": "Analyze Derelict - Archibald's Star",
+        "translation": "Analyze Derelict - Archibald's Star",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class 的第0309个常量\n原始数据：\"Analyze Derelict - Archibald's Star\"\n译文数据：\"Analyze Derelict - Archibald's Star\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class#\"Personal Bounty - Lara Ingvald\"",
+        "original": "Personal Bounty - Lara Ingvald",
+        "translation": "Personal Bounty - Lara Ingvald",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class 的第0226个常量\n原始数据：\"Personal Bounty - Lara Ingvald\"\n译文数据：\"Personal Bounty - Lara Ingvald\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class#\"Sector Decay - Minimal\"",
+        "original": "Sector Decay - Minimal",
+        "translation": "Sector Decay - Minimal",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class 的第0267个常量\n原始数据：\"Sector Decay - Minimal\"\n译文数据：\"Sector Decay - Minimal\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class#\"System Bounty - Corvus\"",
+        "original": "System Bounty - Corvus",
+        "translation": "System Bounty - Corvus",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class 的第0299个常量\n原始数据：\"System Bounty - Corvus\"\n译文数据：\"System Bounty - Corvus\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/EventsPanel.class#\"No items matching all selected tags\"",
@@ -7133,6 +7280,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/ui/J$o$1.class 的第0085个常量\n原始数据：\"The current transaction will reduce the availability of %s by %s.\"\n译文数据：\"当前贸易行为将使 %s 的流通性降低 %s.\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/J$o$1.class#\"The impact depends on the current availability level - i.e. if the availability is high, it will take more units bought or~\"@ed6008cb",
+        "original": "The impact depends on the current availability level - i.e. if the availability is high, it will take more units bought or sold to influence it - and will be adjusted if commodity availability changes.",
+        "translation": "影响取决于目前的流通性水平 - 即如果流通性较高，则需要买卖更多单位才能影响到它 - 如果该商品的流通性发生变化，将随之进行调整。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/ui/J$o$1.class 的第0041个常量\n原始数据：\"The impact depends on the current availability level - i.e. if the availability is high, it will take more units bought or sold to influence it - and will be adjusted if commodity availability changes.\"\n译文数据：\"The impact depends on the current availability level - i.e. if the availability is high, it will take more units bought or sold to influence it - and will be adjusted if commodity availability changes.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/J$o.class#\"                       Unit price\"",
         "original": "                       Unit price",
         "translation": " 单价",
@@ -8225,6 +8379,34 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityDetailDialog$4.class 的第0028个常量\n原始数据：\"Shows units of the commodity that might be used to satisfy demand. Markets prefer a supplier that can satisfy more of their demand.\"\n译文数据：\"显示满足需求所需的货物供应量。市场更倾向于选择供货量接近它们需求量的供货者。\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityDetailDialog.class#\" - Commodities\"",
+        "original": " - Commodities",
+        "translation": "- 商品",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityDetailDialog.class 的第0687个常量\n原始数据：\" - Commodities\"\n译文数据：\" - Commodities\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityDetailDialog.class#\" - competition for exporting \"",
+        "original": " - competition for exporting ",
+        "translation": " - 出口竞争力，将 ",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityDetailDialog.class 的第0917个常量\n原始数据：\" - competition for exporting \"\n译文数据：\" - competition for exporting \"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityDetailDialog.class#\" - current and alternate sources of \"",
+        "original": " - current and alternate sources of ",
+        "translation": " - 当前及候选的供应者，提供 ",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityDetailDialog.class 的第0824个常量\n原始数据：\" - current and alternate sources of \"\n译文数据：\" - current and alternate sources of \"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityDetailDialog.class#\" - current and possible \"",
+        "original": " - current and possible ",
+        "translation": " - 当前及其他可能的",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityDetailDialog.class 的第0851个常量\n原始数据：\" - current and possible \"\n译文数据：\" - current and possible \"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityDetailDialog.class#\" at \"",
         "original": " at ",
         "translation": " 去 ",
@@ -8475,6 +8657,13 @@
         "translation": "该项出口产生的月收益。当前出口收益为黄色，潜在出口收益为浅黄，非自由港的潜在走私收益则为红色。\n\n对同势力市场的出口不产生收益。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityDetailDialog.class 的第1060个常量\n原始数据：\"Monthly income from this export. Current exports in yellow, potential exports in dim yellow. Potential smuggling profits shown in red when market is not a free port.\n\nExports to markets of the same faction do not generate income.\"\n译文数据：\"该项出口产生的月收益。当前出口收益为黄色，潜在出口收益为浅黄，非自由港的潜在走私收益则为红色。\n\n对同势力市场的出口不产生收益。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityDetailDialog.class#\"No income - not an export.\"",
+        "original": "No income - not an export.",
+        "translation": "不出口，没有收入。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityDetailDialog.class 的第1079个常量\n原始数据：\"No income - not an export.\"\n译文数据：\"No income - not an export.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityDetailDialog.class#\"No potential exports where \"",
@@ -8883,6 +9072,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityTooltipFactory$1.class 的第0201个常量\n原始数据：\"Click to view global market info\"\n译文数据：\"点击查看星域市场信息\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityTooltipFactory$1.class#\"Deficit - in demand, but not available. Higher prices.\"",
+        "original": "Deficit - in demand, but not available. Higher prices.",
+        "translation": "短缺，有需求但无法获取。价格升高。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityTooltipFactory$1.class 的第0289个常量\n原始数据：\"Deficit - in demand, but not available. Higher prices.\"\n译文数据：\"Deficit - in demand, but not available. Higher prices.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityTooltipFactory$1.class#\"Demand met through imports from outside the faction.\"",
         "original": "Demand met through imports from outside the faction.",
         "translation": "可通过势力之外的进口量来满足需求。",
@@ -8902,6 +9098,13 @@
         "translation": "可通过当地生产来满足需求。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityTooltipFactory$1.class 的第0248个常量\n原始数据：\"Demand met through local production.\"\n译文数据：\"可通过当地生产来满足需求。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityTooltipFactory$1.class#\"Excess - available, but not in demand or exported. Lower prices.\"",
+        "original": "Excess - available, but not in demand or exported. Lower prices.",
+        "translation": "过剩，可自由获取但缺乏需求和出口。价格降低。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityTooltipFactory$1.class 的第0284个常量\n原始数据：\"Excess - available, but not in demand or exported. Lower prices.\"\n译文数据：\"Excess - available, but not in demand or exported. Lower prices.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityTooltipFactory$1.class#\"Exports are reduced by %s due to insufficient accessibility.\"",
@@ -10057,6 +10260,13 @@
         "translation": "列表中的市场与该殖民地开展贸易的便利程度。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/NearbyMarketDialog$1.class 的第0029个常量\n原始数据：\"How easy it is for the listed market to trade with this colony.\"\n译文数据：\"列表中的市场与该殖民地开展贸易的便利程度。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/NearbyMarketDialog.class#\" - Commodities\"",
+        "original": " - Commodities",
+        "translation": "- 商品",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/NearbyMarketDialog.class 的第0575个常量\n原始数据：\" - Commodities\"\n译文数据：\" - Commodities\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/NearbyMarketDialog.class#\"Accessibility\"",
@@ -11282,6 +11492,13 @@
         "translation": "\n\n同势力内的航运能力更高",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/cdd/CommodityDetailDialogV2.class 的第0974个常量\n原始数据：\"\n\nIn-faction shipping limits are higher.\"\n译文数据：\"\n\n同势力内的航运能力更高\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/cdd/CommodityDetailDialogV2.class#\" - Commodities\"",
+        "original": " - Commodities",
+        "translation": "- 商品",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/cdd/CommodityDetailDialogV2.class 的第0670个常量\n原始数据：\" - Commodities\"\n译文数据：\" - Commodities\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/cdd/CommodityDetailDialogV2.class#\" control, to another \"",
@@ -15029,6 +15246,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/combat/B.class 的第0072个常量\n原始数据：\"Standard\"\n译文数据：\"标准\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/combat/CombatEngine.class#\"Advancing fast-time ships\"",
+        "original": "Advancing fast-time ships",
+        "translation": "Advancing fast-time ships",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/combat/CombatEngine.class 的第1516个常量\n原始数据：\"Advancing fast-time ships\"\n译文数据：\"Advancing fast-time ships\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/combat/CombatFleetManager.class#\"Captured\"",
         "original": "Captured",
         "translation": "捕获",
@@ -16546,6 +16770,13 @@
         "translation": "速度：%s 光年/天",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/A/I.class 的第0151个常量\n原始数据：\"speed: %s ly/day\"\n译文数据：\"速度：%s 光年/天\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/coreui/A/J.class#\" - Yours\"",
+        "original": " - Yours",
+        "translation": " - 你的",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/A/J.class 的第0628个常量\n原始数据：\" - Yours\"\n译文数据：\" - Yours\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/A/J.class#\"Nebula\"",
@@ -18823,6 +19054,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/ooo0$6.class 的第0063个常量\n原始数据：\" ago. \"\n译文数据：\"前\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/coreui/ooo0$6.class#\"The minimum contract duration - before the mercenary may try to leave - \"",
+        "original": "The minimum contract duration - before the mercenary may try to leave - ",
+        "translation": "与你签订了一份期限合同。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/ooo0$6.class 的第0065个常量\n原始数据：\"The minimum contract duration - before the mercenary may try to leave - \"\n译文数据：\"The minimum contract duration - before the mercenary may try to leave - \"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/ooo0$6.class#\"Their pay is higher than that of a normal officer, but they do not count against the normal officer limit.\"",
         "original": "Their pay is higher than that of a normal officer, but they do not count against the normal officer limit.",
         "translation": "尽管他们的工资普遍高于普通军官，但不计入普通军官的雇佣上限。",
@@ -18865,6 +19103,20 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/ooo0$6.class 的第0069个常量\n原始数据：\"they may try to leaver earlier.\"\n译文数据：\"如果月底你无法按约支付佣金，那么他们会尝试提前离开。\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/coreui/ooo0$8.class#\"    - Doubles the rate of their experience gain\"",
+        "original": "    - Doubles the rate of their experience gain",
+        "translation": "- 使他们获取经验的效率翻倍",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/ooo0$8.class 的第0161个常量\n原始数据：\"    - Doubles the rate of their experience gain\"\n译文数据：\"    - Doubles the rate of their experience gain\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/coreui/ooo0$8.class#\"    - Increases the range of skills available to choose from\"",
+        "original": "    - Increases the range of skills available to choose from",
+        "translation": "- 增加候选技能数量",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/ooo0$8.class 的第0163个常量\n原始数据：\"    - Increases the range of skills available to choose from\"\n译文数据：\"    - Increases the range of skills available to choose from\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/ooo0$8.class#\" (\"",
         "original": " (",
         "translation": " (",
@@ -18905,6 +19157,20 @@
         "translation": "你的影响也会使他们在战斗中表现得更加谨慎或激进。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/ooo0$8.class 的第0165个常量\n原始数据：\"Your influence can also cause them to be more cautious or aggressive in battle.\"\n译文数据：\"你的影响也会使他们在战斗中表现得更加谨慎或激进。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/coreui/ooo0$9.class#\"    - Can not be removed by any means short of scuttling the ship\"",
+        "original": "    - Can not be removed by any means short of scuttling the ship",
+        "translation": "    - 除了主动放弃舰船之外无法将其移除",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/ooo0$9.class 的第0116个常量\n原始数据：\"    - Can not be removed by any means short of scuttling the ship\"\n译文数据：\"    - Can not be removed by any means short of scuttling the ship\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/coreui/ooo0$9.class#\"    - Increases the AI core's level by %s and grants an additional skill\"",
+        "original": "    - Increases the AI core's level by %s and grants an additional skill",
+        "translation": "    - 将 AI核心 的等级提高 %s 并获得一项额外技能",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/ooo0$9.class 的第0107个常量\n原始数据：\"    - Increases the AI core's level by %s and grants an additional skill\"\n译文数据：\"    - Increases the AI core's level by %s and grants an additional skill\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/ooo0$9.class#\" (\"",
@@ -19264,6 +19530,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/D.class 的第0096个常量\n原始数据：\"Credits: \"\n译文数据：\"星币：\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/FighterPickerDialog.class#\" - currently installed\"",
+        "original": " - currently installed",
+        "translation": " - 当前安装",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/FighterPickerDialog.class 的第0842个常量\n原始数据：\" - currently installed\"\n译文数据：\" - currently installed\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/FighterPickerDialog.class#\"Bombers\"",
         "original": "Bombers",
         "translation": "轰炸机",
@@ -19283,6 +19556,13 @@
         "translation": "合法购买",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/FighterPickerDialog.class 的第0380个常量\n原始数据：\"Buy Legal\"\n译文数据：\"合法购买\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/FighterPickerDialog.class#\"Currently installed - hold Ctrl to compare\"",
+        "original": "Currently installed - hold Ctrl to compare",
+        "translation": "当前安装 - 按住 Ctrl 键进行对比",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/FighterPickerDialog.class 的第0516个常量\n原始数据：\"Currently installed - hold Ctrl to compare\"\n译文数据：\"Currently installed - hold Ctrl to compare\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/FighterPickerDialog.class#\"Fighters\"",
@@ -20384,6 +20664,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/WeaponGroupDialog.class 的第0242个常量\n原始数据：\"weapons of the same type\"\n译文数据：\"至同一分组\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/WeaponPickerDialog.class#\" - currently mounted\"",
+        "original": " - currently mounted",
+        "translation": " - 当前安装",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/WeaponPickerDialog.class 的第0883个常量\n原始数据：\" - currently mounted\"\n译文数据：\" - currently mounted\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/WeaponPickerDialog.class#\"Ballistic\"",
         "original": "Ballistic",
         "translation": "实弹",
@@ -20403,6 +20690,13 @@
         "translation": "合法购买",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/WeaponPickerDialog.class 的第0419个常量\n原始数据：\"Buy Legal\"\n译文数据：\"合法购买\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/WeaponPickerDialog.class#\"Currently mounted - hold Ctrl to compare\"",
+        "original": "Currently mounted - hold Ctrl to compare",
+        "translation": "当前安装 - 按住 Ctrl 键进行对比",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/WeaponPickerDialog.class 的第0568个常量\n原始数据：\"Currently mounted - hold Ctrl to compare\"\n译文数据：\"Currently mounted - hold Ctrl to compare\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/WeaponPickerDialog.class#\"Energy\"",
@@ -21308,6 +21602,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/ooOO$8.class 的第0031个常量\n原始数据：\"Each hit reduces the amount of armor that remains in the affected area, making each successive hit more and more powerful.\"\n译文数据：\"每次攻击都会降低受影响区域的装甲强度，如果同区域承受多次伤害，其对船体结构造成的损伤也将越来越大。\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/ooOO$8.class#\"The \"hit strength\" of beam weapons - which do not score separate hits, but deal damage continuously - is based on their damage/second.\"",
+        "original": "The \"hit strength\" of beam weapons - which do not score separate hits, but deal damage continuously - is based on their damage/second.",
+        "translation": "光束武器无需连续攻击就可持续造成伤害，其穿甲力取决于 伤害/秒。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/ooOO$8.class 的第0036个常量\n原始数据：\"The \"hit strength\" of beam weapons - which do not score separate hits, but deal damage continuously - is based on their damage/second.\"\n译文数据：\"The \"hit strength\" of beam weapons - which do not score separate hits, but deal damage continuously - is based on their damage/second.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/ooOO$8.class#\"The effective armor value can not go below %s of its original value, even if it's stripped away entirely, and damage reduction from armor can not exceed %s.\"",
         "original": "The effective armor value can not go below %s of its original value, even if it's stripped away entirely, and damage reduction from armor can not exceed %s.",
         "translation": "即使装甲完全破坏，伤害减免也不会低于初始值的 %s}，除此之外还不会超过 %s}。",
@@ -21525,6 +21826,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/wgd2/O0OO.class 的第0034个常量\n原始数据：\"    Weapon group \"\n译文数据：\"    武器组 \"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/wgd2/O0OO.class#\" - empty\"",
+        "original": " - empty",
+        "translation": " - 空",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/wgd2/O0OO.class 的第0234个常量\n原始数据：\" - empty\"\n译文数据：\" - empty\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/wgd2/O0OO.class#\" flux / second\"",
         "original": " flux / second",
         "translation": " 最低幅能输出 / 秒",
@@ -21609,6 +21917,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/wgd2/WeaponGroupDialogV2$3.class 的第0042个常量\n原始数据：\"Linked\"\n译文数据：\"同步射击\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/wgd2/WeaponGroupDialogV2$3.class#\"The %s fire mode is useful for missiles or other weapons where fine-grained control over the volume of fire - or of which weapons fire - is needed.\"",
+        "original": "The %s fire mode is useful for missiles or other weapons where fine-grained control over the volume of fire - or of which weapons fire - is needed.",
+        "translation": "%s 模式对于导弹或其他需要精细控制火力的武器来说非常有用。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/wgd2/WeaponGroupDialogV2$3.class 的第0051个常量\n原始数据：\"The %s fire mode is useful for missiles or other weapons where fine-grained control over the volume of fire - or of which weapons fire - is needed.\"\n译文数据：\"The %s fire mode is useful for missiles or other weapons where fine-grained control over the volume of fire - or of which weapons fire - is needed.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/wgd2/WeaponGroupDialogV2$3.class#\"alternating\"",
         "original": "alternating",
         "translation": "交替射击",
@@ -21691,6 +22006,13 @@
         "translation": "幅能耗散 (秒) ",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/wgd2/WeaponGroupDialogV2.class 的第0570个常量\n原始数据：\"Flux dissipation / sec\"\n译文数据：\"幅能耗散 (秒) \"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/wgd2/WeaponGroupDialogV2.class#\"Flux per second generated by the sustained firing of this group. Some weapons are capable of higher burst fire - due to am~\"@03f64059",
+        "original": "Flux per second generated by the sustained firing of this group. Some weapons are capable of higher burst fire - due to ammo, charges, and similar mechanics; this value does not reflect the resultant higher initial flux generation.",
+        "translation": "一组武器持续开火时每秒产生的幅能。因有些武器具备更高的爆发力，所以这一数值并不能反映前者开始所额外产生的幅能。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/coreui/refit/wgd2/WeaponGroupDialogV2.class 的第0438个常量\n原始数据：\"Flux per second generated by the sustained firing of this group. Some weapons are capable of higher burst fire - due to ammo, charges, and similar mechanics; this value does not reflect the resultant higher initial flux generation.\"\n译文数据：\"Flux per second generated by the sustained firing of this group. Some weapons are capable of higher burst fire - due to ammo, charges, and similar mechanics; this value does not reflect the resultant higher initial flux generation.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/wgd2/WeaponGroupDialogV2.class#\"Flux\"",
@@ -22335,6 +22657,20 @@
         "translation": "使用推荐设置",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/launcher/opengl/ooOO.class 的第0433个常量\n原始数据：\"Use recommended settings\"\n译文数据：\"使用推荐设置\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/launcher/opengl/ooOO.class#\"Warning - memory is set too low for the enabled set of mods, the game will still run but may encounter problems\"",
+        "original": "Warning - memory is set too low for the enabled set of mods, the game will still run but may encounter problems",
+        "translation": "警告 - 内存分配过低，尽管游戏可以运行，但可能随时遇到问题",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/launcher/opengl/ooOO.class 的第0473个常量\n原始数据：\"Warning - memory is set too low for the enabled set of mods, the game will still run but may encounter problems\"\n译文数据：\"Warning - memory is set too low for the enabled set of mods, the game will still run but may encounter problems\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/launcher/opengl/ooOO.class#\"Warning - memory settings will not apply because the JVM will not be restarted on launch due to settings.json configuration\"",
+        "original": "Warning - memory settings will not apply because the JVM will not be restarted on launch due to settings.json configuration",
+        "translation": "警告 - 内存分配并未正确应用，因为 JVM 将不会因为 settings.json 的配置而在启动时重新启动",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/launcher/opengl/ooOO.class 的第0506个常量\n原始数据：\"Warning - memory settings will not apply because the JVM will not be restarted on launch due to settings.json configuration\"\n译文数据：\"Warning - memory settings will not apply because the JVM will not be restarted on launch due to settings.json configuration\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/launcher/opengl/ooOO.class#\"is recommended when using UI scaling other than 100%, 200%, or 300%.\n\nOtherwise, certain fonts and other UI elements \"",
@@ -22986,6 +23322,34 @@
         "translation": "    Zeke \"MesoTroniK\" W. (QA & testing)\n    Mathieu Dugon (QA & testing)",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/title/A/oOOO.class 的第0166个常量\n原始数据：\"    Zeke \"MesoTroniK\" W. (QA & testing)\n    Mathieu Dugon (QA & testing)\"\n译文数据：\"    Zeke \"MesoTroniK\" W. (QA & testing)\n    Mathieu Dugon (QA & testing)\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/title/A/oOOO.class#\" - art, game design, writing, coding\"",
+        "original": " - art, game design, writing, coding",
+        "translation": " - 艺术、游戏设计、写作、编程",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/title/A/oOOO.class 的第0104个常量\n原始数据：\" - art, game design, writing, coding\"\n译文数据：\" - art, game design, writing, coding\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/title/A/oOOO.class#\" - dev & game design lead\"",
+        "original": " - dev & game design lead",
+        "translation": " - 开发 & 游戏设计主管",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/title/A/oOOO.class 的第0125个常量\n原始数据：\" - dev & game design lead\"\n译文数据：\" - dev & game design lead\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/title/A/oOOO.class#\" - music, sound design\"",
+        "original": " - music, sound design",
+        "translation": " - 音乐、音频设计",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/title/A/oOOO.class 的第0133个常量\n原始数据：\" - music, sound design\"\n译文数据：\" - music, sound design\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/title/A/oOOO.class#\" - writing, game design, coding\"",
+        "original": " - writing, game design, coding",
+        "translation": " - 写作、游戏设计、编程",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/title/A/oOOO.class 的第0140个常量\n原始数据：\" - writing, game design, coding\"\n译文数据：\" - writing, game design, coding\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/title/A/oOOO.class#\"Alex Mosolov\"",
@@ -24710,11 +25074,25 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class 的第0299个常量\n原始数据：\"Assault Chainguns|1\"\n译文数据：\"突击链炮|1\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class#\"Be careful - when a ship is disabled, the explosion deals damage to all nearby ships, except for fighters.\"",
+        "original": "Be careful - when a ship is disabled, the explosion deals damage to all nearby ships, except for fighters.",
+        "translation": "小心 - 当舰船停机，爆炸将对附近所有的舰船造成伤害，战机不受爆炸影响。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class 的第0322个常量\n原始数据：\"Be careful - when a ship is disabled, the explosion deals damage to all nearby ships, except for fighters.\"\n译文数据：\"Be careful - when a ship is disabled, the explosion deals damage to all nearby ships, except for fighters.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class#\"Congratulations! You've completed the advanced combat tutorial.\n\nIt's probably a good idea to complete the fleet command tutorial next.\"",
         "original": "Congratulations! You've completed the advanced combat tutorial.\n\nIt's probably a good idea to complete the fleet command tutorial next.",
         "translation": "恭喜！您已经完成了高级战斗教程。\n\n接下来完成舰队指挥教程将是个好主意。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class 的第0407个常量\n原始数据：\"Congratulations! You've completed the advanced combat tutorial.\n\nIt's probably a good idea to complete the fleet command tutorial next.\"\n译文数据：\"恭喜！您已经完成了高级战斗教程。\n\n接下来完成舰队指挥教程将是个好主意。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class#\"EMP damage does not affect shields, armor, or hull - but it can quickly disable enemy weapons and engines.\"",
+        "original": "EMP damage does not affect shields, armor, or hull - but it can quickly disable enemy weapons and engines.",
+        "translation": "EMP 效果不会对护盾、装甲、结构造成直接伤害 - 但它能迅速瘫痪敌舰武器和引擎。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class 的第0344个常量\n原始数据：\"EMP damage does not affect shields, armor, or hull - but it can quickly disable enemy weapons and engines.\"\n译文数据：\"EMP damage does not affect shields, armor, or hull - but it can quickly disable enemy weapons and engines.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class#\"EMP\"",
@@ -24766,6 +25144,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class 的第0263个常量\n原始数据：\"Fire enough Sabots at the enemy ship to overload its shields.\"\n译文数据：\"按 2 键切换武器并发射足够数量的赛博 SRM 使敌舰的护盾过载。\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class#\"Fragmentation damage deals only 25% to armor and shields, but usually costs little flux and has a high base DPS value, mak~\"@ad835e31",
+        "original": "Fragmentation damage deals only 25% to armor and shields, but usually costs little flux and has a high base DPS value, making it effective vs exposed hull, or lightly armored, unshielded targets - like missiles and fighters.",
+        "translation": "破片伤害 只对装甲和护盾造成 25% 的伤害，但幅能产出很少且基础伤害很高，因此能有效对抗没有装甲保护的结构、轻型装甲，没有护盾的目标 - 如导弹和战机。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class 的第0332个常量\n原始数据：\"Fragmentation damage deals only 25% to armor and shields, but usually costs little flux and has a high base DPS value, making it effective vs exposed hull, or lightly armored, unshielded targets - like missiles and fighters.\"\n译文数据：\"Fragmentation damage deals only 25% to armor and shields, but usually costs little flux and has a high base DPS value, making it effective vs exposed hull, or lightly armored, unshielded targets - like missiles and fighters.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class#\"Fragmentation\"",
         "original": "Fragmentation",
         "translation": "破片伤害",
@@ -24801,6 +25186,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class 的第0295个常量\n原始数据：\"High explosive\"\n译文数据：\"高爆伤害\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class#\"Let's take another look at shields. Turn on your shields and sit tight for a moment - you'll be attacked with beam weapons.\"",
+        "original": "Let's take another look at shields. Turn on your shields and sit tight for a moment - you'll be attacked with beam weapons.",
+        "translation": "让我们看看另一种情况，现在打开护盾稍等片刻 - 您将受到光束武器的攻击。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class 的第0361个常量\n原始数据：\"Let's take another look at shields. Turn on your shields and sit tight for a moment - you'll be attacked with beam weapons.\"\n译文数据：\"Let's take another look at shields. Turn on your shields and sit tight for a moment - you'll be attacked with beam weapons.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class#\"Make sure you're far enough away to avoid damage. About a ship's length should be enough.\"",
         "original": "Make sure you're far enough away to avoid damage. About a ship's length should be enough.",
         "translation": "确定您离得足够远来规避伤害，大概保持空出一艘船的距离。",
@@ -24813,6 +25205,20 @@
         "translation": "不造成 EMP 损害的武器也能使引擎和武器失效，但 EMP 能绕过装甲更快完成任务。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class 的第0358个常量\n原始数据：\"Non-EMP weapons can also disable engines and weapons, but EMP weapons bypass armor and get the job done faster.\"\n译文数据：\"不造成 EMP 损害的武器也能使引擎和武器失效，但 EMP 能绕过装甲更快完成任务。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class#\"Ships receive an engine boost - a bonus to top speed and maneuverability - when their flux level and flux generation are at zero.\"",
+        "original": "Ships receive an engine boost - a bonus to top speed and maneuverability - when their flux level and flux generation are at zero.",
+        "translation": "当舰船幅能水平保持为零，且不产出任何幅能时，将受到 零幅能加速 的增益 - 这影响最高航速与机动性。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class 的第0383个常量\n原始数据：\"Ships receive an engine boost - a bonus to top speed and maneuverability - when their flux level and flux generation are at zero.\"\n译文数据：\"Ships receive an engine boost - a bonus to top speed and maneuverability - when their flux level and flux generation are at zero.\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class#\"Since the enemy ship has its shields up, let's start off by firing some Sabot missiles at it - they are extremely effective at bringing down shields.\"",
+        "original": "Since the enemy ship has its shields up, let's start off by firing some Sabot missiles at it - they are extremely effective at bringing down shields.",
+        "translation": "因敌舰开启了护盾，所以发射些赛博 SRM 导弹 - 它们对护盾非常有效。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class 的第0261个常量\n原始数据：\"Since the enemy ship has its shields up, let's start off by firing some Sabot missiles at it - they are extremely effective at bringing down shields.\"\n译文数据：\"Since the enemy ship has its shields up, let's start off by firing some Sabot missiles at it - they are extremely effective at bringing down shields.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class#\"Some weapons also deal EMP damage in addition to their normal damage type.\"",
@@ -24829,6 +25235,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class 的第0297个常量\n原始数据：\"Switch to your Assault Chainguns and punch through the armor. To break through faster, focus your fire on one spot.\"\n译文数据：\"切换至 突击链炮 来打穿装甲，为了能更快地打破装甲，请将火力集中在一点之上。\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class#\"That ship is now a sitting duck - it won't be able to maneuver at all until the engines are back online.\"",
+        "original": "That ship is now a sitting duck - it won't be able to maneuver at all until the engines are back online.",
+        "translation": "敌舰现在无法动弹了 - 它将无法移动，直到它的引擎重新恢复工作。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class 的第0356个常量\n原始数据：\"That ship is now a sitting duck - it won't be able to maneuver at all until the engines are back online.\"\n译文数据：\"That ship is now a sitting duck - it won't be able to maneuver at all until the engines are back online.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class#\"The engine boost is particularly important for larger ships, which have a much lower top speed without it.\"",
         "original": "The engine boost is particularly important for larger ships, which have a much lower top speed without it.",
         "translation": "该增益对大型舰船尤为重要，因为在没有加成的时候其航行速度往往极为缓慢。",
@@ -24843,6 +25256,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class 的第0376个常量\n原始数据：\"This is because beam weapons generate soft flux when hitting shields.\"\n译文数据：\"这是因为光束武器只会对护盾输出软幅能。\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class#\"This may make them seem weak - but remember that this flux still needs to be dissipated, leaving that much less flux dissi~\"@16ffdeb9",
+        "original": "This may make them seem weak - but remember that this flux still needs to be dissipated, leaving that much less flux dissipation to power weapons. Beam weapons are also very efficient and need little flux to fire.",
+        "translation": "尽管这让它们看起来不怎么强大 - 但要记得软幅能也是需要耗散的，因此从某种意义上来说，这会间接削弱开盾时幅能耗散的速率，所以只产生少量幅能的光束武器仍然十分高效。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class 的第0380个常量\n原始数据：\"This may make them seem weak - but remember that this flux still needs to be dissipated, leaving that much less flux dissipation to power weapons. Beam weapons are also very efficient and need little flux to fire.\"\n译文数据：\"This may make them seem weak - but remember that this flux still needs to be dissipated, leaving that much less flux dissipation to power weapons. Beam weapons are also very efficient and need little flux to fire.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class#\"To maintain the engine boost for a ship with autofiring weapons, you can press %s to hold fire.\n\nCarriers will also need to press %s to pull back their fighters.\"",
         "original": "To maintain the engine boost for a ship with autofiring weapons, you can press %s to hold fire.\n\nCarriers will also need to press %s to pull back their fighters.",
         "translation": "为了让一艘开启了自动开火的舰船维持 零幅能加速 增益，您可以按 %s 全舰停火。\n\n航母则还需要按 %s 让其战机回归到整备状态。",
@@ -24855,6 +25275,13 @@
         "translation": "让您的舰船穿过您面前的星云，请关注关闭护盾时您的舰船移动地更快。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class 的第0389个常量\n原始数据：\"Travel through the nebula in front of your ship, noting how your ship moves faster when the shields are down.\"\n译文数据：\"让您的舰船穿过您面前的星云，请关注关闭护盾时您的舰船移动地更快。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class#\"Turning shields on - even without taking any damage - is enough to cancel the bonus.\"",
+        "original": "Turning shields on - even without taking any damage - is enough to cancel the bonus.",
+        "translation": "要注意，当打开护盾时 - 即便没受到任何伤害 - 其产生的幅能也足以取消加成。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class 的第0387个常量\n原始数据：\"Turning shields on - even without taking any damage - is enough to cancel the bonus.\"\n译文数据：\"Turning shields on - even without taking any damage - is enough to cancel the bonus.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class#\"Use the Accelerated Ammo Feeder to deal damage faster. Press %s to activate it, and fire away.\n\nIf your flux maxes out from firing, just wait a bit so it can dissipate.\"",
@@ -24883,6 +25310,13 @@
         "translation": "您的离子炮可以造成大量的 EMP 损害 (和一点点其他的伤害)。切换到离子炮攻击 执法者-级 来瘫痪它的武器。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class 的第0346个常量\n原始数据：\"Your Ion Cannons deal lots of EMP damage (and little else). Switch to the Ion Cannons and disable some of the weapons on the Enforcer.\"\n译文数据：\"您的离子炮可以造成大量的 EMP 损害 (和一点点其他的伤害)。切换到离子炮攻击 执法者-级 来瘫痪它的武器。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class#\"Your flagship is still the same Hammerhead, but the point defense lasers have been swapped out for Ion Cannons - more on those later.\"",
+        "original": "Your flagship is still the same Hammerhead, but the point defense lasers have been swapped out for Ion Cannons - more on those later.",
+        "translation": "您的旗舰仍是艘 锤头-级，但 PD 激光替换成离子炮 - 这将在之后将会被详细说明。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class 的第0247个常量\n原始数据：\"Your flagship is still the same Hammerhead, but the point defense lasers have been swapped out for Ion Cannons - more on those later.\"\n译文数据：\"Your flagship is still the same Hammerhead, but the point defense lasers have been swapped out for Ion Cannons - more on those later.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/OoOO.class#\"damage type|Kinetic\"",
@@ -24974,6 +25408,13 @@
         "translation": "这并不难。\n\n您可以将任何武器组设置为自动开火，但当同时开火的武器过多时，必须注意您的辐能会不断累积。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/combat/H.class 的第0102个常量\n原始数据：\"That was easy enough.\n\nYou can set any group you like on autofire, but with too many weapons firing at once, you'll have to watch out for your flux building up.\"\n译文数据：\"这并不难。\n\n您可以将任何武器组设置为自动开火，但当同时开火的武器过多时，必须注意您的辐能会不断累积。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/combat/H.class#\"The fighters may try to run after you destroy a couple - don't let them get away!\"",
+        "original": "The fighters may try to run after you destroy a couple - don't let them get away!",
+        "translation": "你摧毁战机联队的一些战机后，剩余的战机可能会逃跑 - 别让他们跑了！",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/combat/H.class 的第0150个常量\n原始数据：\"The fighters may try to run after you destroy a couple - don't let them get away!\"\n译文数据：\"The fighters may try to run after you destroy a couple - don't let them get away!\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/combat/I.class#\"Move your ship away from this billboard! Use WASD to pilot.\"",
@@ -25137,6 +25578,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0457个常量\n原始数据：\"%s to turn on your shields again and let the enemy keep firing at you.\"\n译文数据：\"%s 再次打开您的护盾，让敌人不断向您射击。\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"(By the way - you can pause and unpause the game at any time by pressing \"",
+        "original": "(By the way - you can pause and unpause the game at any time by pressing ",
+        "translation": "(By the way - you can pause and unpause the game at any time by pressing ",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0306个常量\n原始数据：\"(By the way - you can pause and unpause the game at any time by pressing \"\n译文数据：\"(By the way - you can pause and unpause the game at any time by pressing \"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"(So, even if you're not taking any damage on the shields, keeping them off will let you put out more firepower.)\"",
         "original": "(So, even if you're not taking any damage on the shields, keeping them off will let you put out more firepower.)",
         "translation": " (所以，在您未受到过多威胁时，保持护盾的关闭可以让您节省幅能，释放出更强大的火力。) ",
@@ -25151,11 +25599,25 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0315个常量\n原始数据：\".)\"\n译文数据：\" 来在任何时候暂停游戏。) \"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"As you can see, it's not good - when flux maxes out from shield hits, your ship overloads.\"",
+        "original": "As you can see, it's not good - when flux maxes out from shield hits, your ship overloads.",
+        "translation": "As you can see, it's not good - when flux maxes out from shield hits, your ship overloads.",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0465个常量\n原始数据：\"As you can see, it's not good - when flux maxes out from shield hits, your ship overloads.\"\n译文数据：\"As you can see, it's not good - when flux maxes out from shield hits, your ship overloads.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"Congratulations! You've completed the basic combat tutorial.\"",
         "original": "Congratulations! You've completed the basic combat tutorial.",
         "translation": "恭喜！您已经完成了基本的战斗教程。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0543个常量\n原始数据：\"Congratulations! You've completed the basic combat tutorial.\"\n译文数据：\"恭喜！您已经完成了基本的战斗教程。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"Each ship also has a special system - an active ability it can perform. For the Hammerhead, it's an Accelerated Ammo Feeder that greatly increases the rate of fire for ballistic weapons.\"",
+        "original": "Each ship also has a special system - an active ability it can perform. For the Hammerhead, it's an Accelerated Ammo Feeder that greatly increases the rate of fire for ballistic weapons.",
+        "translation": "Each ship also has a special system - an active ability it can perform. For the Hammerhead, it's an Accelerated Ammo Feeder that greatly increases the rate of fire for ballistic weapons.",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0528个常量\n原始数据：\"Each ship also has a special system - an active ability it can perform. For the Hammerhead, it's an Accelerated Ammo Feeder that greatly increases the rate of fire for ballistic weapons.\"\n译文数据：\"Each ship also has a special system - an active ability it can perform. For the Hammerhead, it's an Accelerated Ammo Feeder that greatly increases the rate of fire for ballistic weapons.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"Fire your Assault Chainguns (group 1) for a bit and watch how they build up flux, then continue when you're ready.\"",
@@ -25177,6 +25639,13 @@
         "translation": "武器开火时产生的幅能是 '软' 幅能，而它能在护盾开启时耗散。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0446个常量\n原始数据：\"Flux gained from firing weapons is called soft flux, and can dissipate while the shields are up.\"\n译文数据：\"武器开火时产生的幅能是 '软' 幅能，而它能在护盾开启时耗散。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"Flux gained when shields absorb damage is called hard flux and only dissipates while the shields are off - so, you can't keep shields up indefinitely while taking damage.\"",
+        "original": "Flux gained when shields absorb damage is called hard flux and only dissipates while the shields are off - so, you can't keep shields up indefinitely while taking damage.",
+        "translation": "Flux gained when shields absorb damage is called hard flux and only dissipates while the shields are off - so, you can't keep shields up indefinitely while taking damage.",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0442个常量\n原始数据：\"Flux gained when shields absorb damage is called hard flux and only dissipates while the shields are off - so, you can't keep shields up indefinitely while taking damage.\"\n译文数据：\"Flux gained when shields absorb damage is called hard flux and only dissipates while the shields are off - so, you can't keep shields up indefinitely while taking damage.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"Fortunately, you can set any weapon group on autofire, making the weapons identify and attack targets on their own.\"",
@@ -25214,6 +25683,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0395个常量\n原始数据：\"Hover over the enemy ship and press %s to target it.\"\n译文数据：\"将光标停留在敌舰上并按 %s 就可以锁定它。\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"It'd be nice to shoot these down - we've got some point-defense lasers just for that. But, it's almost impossible to manually target all the incoming missiles.\"",
+        "original": "It'd be nice to shoot these down - we've got some point-defense lasers just for that. But, it's almost impossible to manually target all the incoming missiles.",
+        "translation": "It'd be nice to shoot these down - we've got some point-defense lasers just for that. But, it's almost impossible to manually target all the incoming missiles.",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0510个常量\n原始数据：\"It'd be nice to shoot these down - we've got some point-defense lasers just for that. But, it's almost impossible to manually target all the incoming missiles.\"\n译文数据：\"It'd be nice to shoot these down - we've got some point-defense lasers just for that. But, it's almost impossible to manually target all the incoming missiles.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"Just sit tight and let them get a few volleys off.\"",
         "original": "Just sit tight and let them get a few volleys off.",
         "translation": "您大可以坐下来喝杯茶等它们几轮齐射完毕。",
@@ -25221,11 +25697,25 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0505个常量\n原始数据：\"Just sit tight and let them get a few volleys off.\"\n译文数据：\"您大可以坐下来喝杯茶等它们几轮齐射完毕。\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"Let's try strafing - hold down %s and press %s or %s to circle around the enemy ship. You'll also need to use %s and %s to manage the distance.\n\nContinue when you feel comfortable with it.\"",
+        "original": "Let's try strafing - hold down %s and press %s or %s to circle around the enemy ship. You'll also need to use %s and %s to manage the distance.\n\nContinue when you feel comfortable with it.",
+        "translation": "Let's try strafing - hold down %s and press %s or %s to circle around the enemy ship. You'll also need to use %s and %s to manage the distance.\n\nContinue when you feel comfortable with it.",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0369个常量\n原始数据：\"Let's try strafing - hold down %s and press %s or %s to circle around the enemy ship. You'll also need to use %s and %s to manage the distance.\n\nContinue when you feel comfortable with it.\"\n译文数据：\"Let's try strafing - hold down %s and press %s or %s to circle around the enemy ship. You'll also need to use %s and %s to manage the distance.\n\nContinue when you feel comfortable with it.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"Moving the mouse around pans your view. You can also use the mouse wheel to zoom in and out.\"",
         "original": "Moving the mouse around pans your view. You can also use the mouse wheel to zoom in and out.",
         "translation": "以鼠标左右移动改变视野位置，滚轮缩放视野。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0347个常量\n原始数据：\"Moving the mouse around pans your view. You can also use the mouse wheel to zoom in and out.\"\n译文数据：\"以鼠标左右移动改变视野位置，滚轮缩放视野。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"Note how the lasers switch to attacking the missiles as soon as they're launched - point defense weapons will prioritize targeting missiles.\"",
+        "original": "Note how the lasers switch to attacking the missiles as soon as they're launched - point defense weapons will prioritize targeting missiles.",
+        "translation": "Note how the lasers switch to attacking the missiles as soon as they're launched - point defense weapons will prioritize targeting missiles.",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0523个常量\n原始数据：\"Note how the lasers switch to attacking the missiles as soon as they're launched - point defense weapons will prioritize targeting missiles.\"\n译文数据：\"Note how the lasers switch to attacking the missiles as soon as they're launched - point defense weapons will prioritize targeting missiles.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"Now that the ship is no longer overloaded, flux is back to dissipating at a normal rate.\"",
@@ -25263,6 +25753,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0536个常量\n原始数据：\"Press %s to activate the Accelerated Ammo Feeder and fire the Assault Chainguns (group 1) to see its effect.\"\n译文数据：\"您可以按 %s 激活加速填弹器，并用突击链炮开火看看它的效果吧。\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"Press %s to enable autofire for the point-defense lasers in group 3. Make sure you have a different group selected - selecting an autofiring group will result in a manual override of its controls.\"",
+        "original": "Press %s to enable autofire for the point-defense lasers in group 3. Make sure you have a different group selected - selecting an autofiring group will result in a manual override of its controls.",
+        "translation": "Press %s to enable autofire for the point-defense lasers in group 3. Make sure you have a different group selected - selecting an autofiring group will result in a manual override of its controls.",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0516个常量\n原始数据：\"Press %s to enable autofire for the point-defense lasers in group 3. Make sure you have a different group selected - selecting an autofiring group will result in a manual override of its controls.\"\n译文数据：\"Press %s to enable autofire for the point-defense lasers in group 3. Make sure you have a different group selected - selecting an autofiring group will result in a manual override of its controls.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"Press %s to vent flux.\"",
         "original": "Press %s to vent flux.",
         "translation": "那么现在按 %s 键来主动排幅。",
@@ -25289,6 +25786,13 @@
         "translation": "舰船也可以直接横向平移。\n\n这项操作在您希望移动的同时保持前向武器指向目标时非常有用。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0363个常量\n原始数据：\"Ships can also strafe sideways.\n\nThis is particularly useful if you want to move while keeping your front-facing weapons pointed at your target.\"\n译文数据：\"舰船也可以直接横向平移。\n\n这项操作在您希望移动的同时保持前向武器指向目标时非常有用。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"Some ship systems have limited uses, some generate flux, some have a cooldown - and some use a combination of those.\"",
+        "original": "Some ship systems have limited uses, some generate flux, some have a cooldown - and some use a combination of those.",
+        "translation": "Some ship systems have limited uses, some generate flux, some have a cooldown - and some use a combination of those.",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0532个常量\n原始数据：\"Some ship systems have limited uses, some generate flux, some have a cooldown - and some use a combination of those.\"\n译文数据：\"Some ship systems have limited uses, some generate flux, some have a cooldown - and some use a combination of those.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"The Accelerated Ammo Feeder must cool down before it can be used again.\"",
@@ -25331,6 +25835,13 @@
         "translation": "幅能条上的凸出方格代表了您当前的硬幅能水平。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0450个常量\n原始数据：\"The notch on the flux bar indicates your hard flux level.\"\n译文数据：\"幅能条上的凸出方格代表了您当前的硬幅能水平。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"There's now an enemy ship - an Enforcer-class destroyer - at your 12 o'clock. Its weapon and maneuvering systems are disabled.\"",
+        "original": "There's now an enemy ship - an Enforcer-class destroyer - at your 12 o'clock. Its weapon and maneuvering systems are disabled.",
+        "translation": "There's now an enemy ship - an Enforcer-class destroyer - at your 12 o'clock. Its weapon and maneuvering systems are disabled.",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0367个常量\n原始数据：\"There's now an enemy ship - an Enforcer-class destroyer - at your 12 o'clock. Its weapon and maneuvering systems are disabled.\"\n译文数据：\"There's now an enemy ship - an Enforcer-class destroyer - at your 12 o'clock. Its weapon and maneuvering systems are disabled.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"They're going to start launching missiles at you. Fortunately, these missiles aren't very effective vs well-armored ships.\"",
@@ -25380,6 +25891,20 @@
         "translation": "您也可以主动排幅，以正常两倍的耗散速率来迅速排放幅能。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0476个常量\n原始数据：\"You can also vent flux to dissipate it at double the normal rate.\"\n译文数据：\"您也可以主动排幅，以正常两倍的耗散速率来迅速排放幅能。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"You can press %s again to clear the target.\n\nNow, onto defenses - most ships use shields to defend against incoming damage.\"",
+        "original": "You can press %s again to clear the target.\n\nNow, onto defenses - most ships use shields to defend against incoming damage.",
+        "translation": "You can press %s again to clear the target.\n\nNow, onto defenses - most ships use shields to defend against incoming damage.",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0402个常量\n原始数据：\"You can press %s again to clear the target.\n\nNow, onto defenses - most ships use shields to defend against incoming damage.\"\n译文数据：\"You can press %s again to clear the target.\n\nNow, onto defenses - most ships use shields to defend against incoming damage.\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"Your flagship for this tutorial is a Hammerhead class destroyer. First things first - let's learn how to get it moving.\"",
+        "original": "Your flagship for this tutorial is a Hammerhead class destroyer. First things first - let's learn how to get it moving.",
+        "translation": "Your flagship for this tutorial is a Hammerhead class destroyer. First things first - let's learn how to get it moving.",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/super.class 的第0302个常量\n原始数据：\"Your flagship for this tutorial is a Hammerhead class destroyer. First things first - let's learn how to get it moving.\"\n译文数据：\"Your flagship for this tutorial is a Hammerhead class destroyer. First things first - let's learn how to get it moving.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"Your ship will turn towards your mouse pointer while you strafe, so keep the cursor on top of the target.\"",
@@ -25550,6 +26075,20 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/void.class 的第0397个常量\n原始数据：\"... and select \"Eliminate\" from the list of available assignments.\"\n译文数据：\"...现在请在列表中点击 \"消灭\" 按钮。\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/void.class#\"A nearby frigate is automatically assigned to the task - that's what the arrow on the map indicates.\"",
+        "original": "A nearby frigate is automatically assigned to the task - that's what the arrow on the map indicates.",
+        "translation": "这时该任务将自动分配给附近的护卫舰 - 这将在地图上以醒目的箭头来标识。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/void.class 的第0275个常量\n原始数据：\"A nearby frigate is automatically assigned to the task - that's what the arrow on the map indicates.\"\n译文数据：\"A nearby frigate is automatically assigned to the task - that's what the arrow on the map indicates.\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/void.class#\"An assignment appropriate to your selection, and what you right-clicked on, was created - in this case, another \"Capture\".~\"@0ed443f4",
+        "original": "An assignment appropriate to your selection, and what you right-clicked on, was created - in this case, another \"Capture\". You can also assign specific ships to existing assignments by selecting them and right-clicking on the assignment.",
+        "translation": "您可以根据右键所点击的目标来分配不同命令。在本例中，分配 \"占领\" 命令。您也可以指定特定的船舰选择执行命令。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/void.class 的第0311个常量\n原始数据：\"An assignment appropriate to your selection, and what you right-clicked on, was created - in this case, another \"Capture\". You can also assign specific ships to existing assignments by selecting them and right-clicking on the assignment.\"\n译文数据：\"An assignment appropriate to your selection, and what you right-clicked on, was created - in this case, another \"Capture\". You can also assign specific ships to existing assignments by selecting them and right-clicking on the assignment.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/void.class#\"At the start of a battle, you have to decide what ships to deploy. Recovering after a deployment costs supplies, so you usually don't want to just deploy everything.\"",
         "original": "At the start of a battle, you have to decide what ships to deploy. Recovering after a deployment costs supplies, so you usually don't want to just deploy everything.",
         "translation": "在一场战役开始前，您必须先决定要部署哪些舰船上场。由于在实战中每部署一艘会消耗相应补给，请谨慎选择。",
@@ -25604,6 +26143,13 @@
         "translation": "敌方舰船进入视野！\n\n让我们指派几个命令，使这场战斗对我方而言更为顺畅有利。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/void.class 的第0373个常量\n原始数据：\"Enemy ships in sight!\n\nLet's give a couple of orders to make the battle go smoothly for your side.\"\n译文数据：\"敌方舰船进入视野！\n\n让我们指派几个命令，使这场战斗对我方而言更为顺畅有利。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/void.class#\"Go ahead, try it out - press the \"Show Video Feed\" button.\"",
+        "original": "Go ahead, try it out - press the \"Show Video Feed\" button.",
+        "translation": "来，试一试 - 按下 \"接通视频信号\" 按钮。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/void.class 的第0325个常量\n原始数据：\"Go ahead, try it out - press the \"Show Video Feed\" button.\"\n译文数据：\"Go ahead, try it out - press the \"Show Video Feed\" button.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/void.class#\"Good. Now, let's create some assignments for our ships to carry out.\"",
@@ -25716,6 +26262,20 @@
         "translation": "占领它们将获得适当奖励，因此请尽量将其牢牢掌控，且不要让敌方占领过多。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/void.class 的第0247个常量\n原始数据：\"The bonuses these provide are modest, but they add up, especially given that if you don't hold them, the enemy will.\"\n译文数据：\"占领它们将获得适当奖励，因此请尽量将其牢牢掌控，且不要让敌方占领过多。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/void.class#\"The enemy cruiser is tough, but relatively harmless - we'd like our ships to focus on the more dangerous enemy first.\"",
+        "original": "The enemy cruiser is tough, but relatively harmless - we'd like our ships to focus on the more dangerous enemy first.",
+        "translation": "尽管敌方拥有一艘巡洋舰，但威胁不大 - 我希望您能关注到更危险的敌人。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/void.class 的第0375个常量\n原始数据：\"The enemy cruiser is tough, but relatively harmless - we'd like our ships to focus on the more dangerous enemy first.\"\n译文数据：\"The enemy cruiser is tough, but relatively harmless - we'd like our ships to focus on the more dangerous enemy first.\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/void.class#\"The first thing we want to do is capture some objectives - locations especially suited for the deployment of nav buoys, sensor arrays, or comm relays.\"",
+        "original": "The first thing we want to do is capture some objectives - locations especially suited for the deployment of nav buoys, sensor arrays, or comm relays.",
+        "translation": "我们现在要做的第一件事就是找到一些目标的位置，比如导航浮标、传感干扰器或通讯中继站。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/void.class 的第0245个常量\n原始数据：\"The first thing we want to do is capture some objectives - locations especially suited for the deployment of nav buoys, sensor arrays, or comm relays.\"\n译文数据：\"The first thing we want to do is capture some objectives - locations especially suited for the deployment of nav buoys, sensor arrays, or comm relays.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/void.class#\"The tutorial will resume once both objectives are captured.\"",
@@ -25837,6 +26397,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/OO0O.class 的第0263个常量\n原始数据：\"[%f,%f: %fx%f]\"\n译文数据：\"[%f,%f: %fx%f]\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/ui/W.class#\"Attempt to release focus by non-owner\"",
+        "original": "Attempt to release focus by non-owner",
+        "translation": "Attempt to release focus by non-owner",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/W.class 的第0067个常量\n原始数据：\"Attempt to release focus by non-owner\"\n译文数据：\"Attempt to release focus by non-owner\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/ui/d$1.class#\" points: \"",
         "original": " points: ",
         "translation": "点：",
@@ -25907,6 +26474,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/impl/CargoTooltipFactory$2.class 的第0347个常量\n原始数据：\"A limited production chip that allows a carrier's nanoforges to produce fighters, replacement parts, and related ordnance.\"\n译文数据：\"该有限生产芯片可在航母内的纳米锻炉中生产战机，替换部件与弹药。\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/ui/impl/CargoTooltipFactory$2.class#\"Fighters that return to a carrier - for example, after a bombing run - are relaunched quickly and do not require the full replacement time.\"",
+        "original": "Fighters that return to a carrier - for example, after a bombing run - are relaunched quickly and do not require the full replacement time.",
+        "translation": "由于返航 (例如进行一轮轰炸后) 的战机只需修理与补充弹药，所以无需消耗完整战机更换时间就可重返战场。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/impl/CargoTooltipFactory$2.class 的第0516个常量\n原始数据：\"Fighters that return to a carrier - for example, after a bombing run - are relaunched quickly and do not require the full replacement time.\"\n译文数据：\"Fighters that return to a carrier - for example, after a bombing run - are relaunched quickly and do not require the full replacement time.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/ui/impl/CargoTooltipFactory$2.class#\"Press %s for more info\"",
         "original": "Press %s for more info",
         "translation": "按 %s 展开查看更多信息",
@@ -25933,6 +26507,13 @@
         "translation": "当战机联队的残存机数低于最大值时，航母的战机整备率将缓缓下降，反之则逐渐上升。当战机被命令集结时，战机整备率的下降也将被延缓。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/impl/CargoTooltipFactory$2.class 的第0514个常量\n原始数据：\"The replacement rate gradually goes down while the carrier's fighter wings are on average not at full strength, and is slowly regained otherwise. It goes down more slowly while fighters are ordered to regroup.\"\n译文数据：\"当战机联队的残存机数低于最大值时，航母的战机整备率将缓缓下降，反之则逐渐上升。当战机被命令集结时，战机整备率的下降也将被延缓。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/ui/impl/CargoTooltipFactory$2.class#\"This wing is built into the hull - it can not be removed and does not cost any ordnance points.\"",
+        "original": "This wing is built into the hull - it can not be removed and does not cost any ordnance points.",
+        "translation": "该战机 LPC 被内置于船体当中，无法移除且无需装配点。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/impl/CargoTooltipFactory$2.class 的第0361个常量\n原始数据：\"This wing is built into the hull - it can not be removed and does not cost any ordnance points.\"\n译文数据：\"This wing is built into the hull - it can not be removed and does not cost any ordnance points.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/ui/impl/CargoTooltipFactory$2.class#\"You own a total of %s \"",
@@ -27069,6 +27650,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/impl/JumpPointTooltipFactory$1.class 的第0375个常量\n原始数据：\" (military)\"\n译文数据：\" (军方) \"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/ui/impl/JumpPointTooltipFactory$1.class#\" - jump point\"",
+        "original": " - jump point",
+        "translation": " - 跳跃点",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/impl/JumpPointTooltipFactory$1.class 的第0446个常量\n原始数据：\" - jump point\"\n译文数据：\" - jump point\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/ui/impl/JumpPointTooltipFactory$1.class#\" world\"",
         "original": " world",
         "translation": " 行星",
@@ -27685,6 +28273,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/impl/LogisticsTooltipFactory$7.class 的第0244个常量\n原始数据：\"The following ships require the most crew:\"\n译文数据：\"下列舰船需要大部分的船员量：\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/ui/impl/LogisticsTooltipFactory$7.class#\"The total personnel capacity of your fleet is %s. There are %s crew and %s marine(s) - requiring %s capacity. Maintaining the excess capacity is costing %s supplies per day.\"",
+        "original": "The total personnel capacity of your fleet is %s. There are %s crew and %s marine(s) - requiring %s capacity. Maintaining the excess capacity is costing %s supplies per day.",
+        "translation": "你的舰队总人员载量为 %s}。当前有 %s 名船员和 %s 名陆战队，总计需要 %s 的人员载量。超限的人员承载需要每天消耗 %s 的补给进行维持。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/impl/LogisticsTooltipFactory$7.class 的第0172个常量\n原始数据：\"The total personnel capacity of your fleet is %s. There are %s crew and %s marine(s) - requiring %s capacity. Maintaining the excess capacity is costing %s supplies per day.\"\n译文数据：\"The total personnel capacity of your fleet is %s. There are %s crew and %s marine(s) - requiring %s capacity. Maintaining the excess capacity is costing %s supplies per day.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/ui/impl/LogisticsTooltipFactory$7.class#\"The total personnel capacity of your fleet is %s. There are %s crew and %s marine(s) using %s of the capacity.\"",
         "original": "The total personnel capacity of your fleet is %s. There are %s crew and %s marine(s) using %s of the capacity.",
         "translation": "你的舰队最大载员为 %s 单位。当前有 %s 名船员和 %s 名陆战队，总计使用了 %s 单位的载员量。",
@@ -27809,6 +28404,13 @@
         "translation": "最近影响战备值 (CR) 的事件：",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/impl/N$1.class 的第0477个常量\n原始数据：\"Recent events affecting CR:\"\n译文数据：\"最近影响战备值 (CR) 的事件：\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/ui/impl/N$1.class#\"Repairs suspended - CR holding at its current value.\"",
+        "original": "Repairs suspended - CR holding at its current value.",
+        "translation": "维修暂停 - 战备值 (CR) 会保持在当前值。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/impl/N$1.class 的第0465个常量\n原始数据：\"Repairs suspended - CR holding at its current value.\"\n译文数据：\"Repairs suspended - CR holding at its current value.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/ui/impl/N$1.class#\"Run Simulation\"",
@@ -30079,6 +30681,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/impl/private$1.class 的第0211个常量\n原始数据：\"Hull integrity: %s. Armor: %s.\"\n译文数据：\"船体结构值：%s. 装甲完整性：%s.\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/ui/impl/private$1.class#\"No repairs - out of supplies.\"",
+        "original": "No repairs - out of supplies.",
+        "translation": "无法维修 - 缺乏补给。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/impl/private$1.class 的第0258个常量\n原始数据：\"No repairs - out of supplies.\"\n译文数据：\"No repairs - out of supplies.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/ui/impl/private$1.class#\"Repairs on this %s are currently suspended.\"",
         "original": "Repairs on this %s are currently suspended.",
         "translation": "修理 %s 目前暂停。",
@@ -30275,6 +30884,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/newui/FleetMemberRecoveryDialog$7.class 的第0065个常量\n原始数据：\"Some of the bonus experience is granted immediately, while the remainder is gained on reaching the maximum level.\"\n译文数据：\"其中一些 额外经验 可立刻获得，而其余的需达到最高等级后才可获得。\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/ui/newui/FleetMemberRecoveryDialog$7.class#\"The amount of bonus experience depends on the deployment recovery cost of the ship - less expensive ships grant more bonus~\"@223b8209",
+        "original": "The amount of bonus experience depends on the deployment recovery cost of the ship - less expensive ships grant more bonus experience. Recovering ships that were already in your fleet always grants full bonus experience.",
+        "translation": "额外经验 获取量取决于舰船的部署成本。成本越低，获得的 额外经验 就越高。不过恢复己方舰船将总是获得全额 额外经验。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/newui/FleetMemberRecoveryDialog$7.class 的第0070个常量\n原始数据：\"The amount of bonus experience depends on the deployment recovery cost of the ship - less expensive ships grant more bonus experience. Recovering ships that were already in your fleet always grants full bonus experience.\"\n译文数据：\"The amount of bonus experience depends on the deployment recovery cost of the ship - less expensive ships grant more bonus experience. Recovering ships that were already in your fleet always grants full bonus experience.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/ui/newui/FleetMemberRecoveryDialog$7.class#\"for the use of one \"",
         "original": "for the use of one ",
         "translation": "弥补你曾花费的 ",
@@ -30343,6 +30959,13 @@
         "translation": "取消",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/newui/FleetMemberRecoveryDialog.class 的第0163个常量\n原始数据：\"Cancel\"\n译文数据：\"取消\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/ui/newui/FleetMemberRecoveryDialog.class#\"Difficult recovery - requires \"",
+        "original": "Difficult recovery - requires ",
+        "translation": "强制恢复 - 需要 ",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/newui/FleetMemberRecoveryDialog.class 的第0677个常量\n原始数据：\"Difficult recovery - requires \"\n译文数据：\"Difficult recovery - requires \"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/ui/newui/FleetMemberRecoveryDialog.class#\"Difficult recovery\"",

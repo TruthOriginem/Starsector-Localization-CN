@@ -6,6 +6,7 @@ sys.path.append(dirname(dirname(abspath(__file__))))
 
 from para_tranz.csv_loader.csv_file import CsvFile
 from para_tranz.jar_loader.jar_file import JavaJarFile
+from para_tranz.utils.mapping import PARA_TRANZ_MAP
 from para_tranz.utils.mapping_generation import (
     generate_class_file_mapping_by_path,
     generate_class_mapping_diff_string,
@@ -80,6 +81,12 @@ def gen_mapping_by_class_path(class_path: str | None = None) -> None:
     logger.info('类文件映射项生成完成')
 
 
+def dedup_and_sort_map() -> None:
+    merged = PARA_TRANZ_MAP.dedup_and_sort()
+    PARA_TRANZ_MAP.save()
+    logger.info(f'map 去重排序完成，合并了 {merged} 个重复类条目')
+
+
 def search_string_in_jar_files(pattern: str | None = None) -> None:
     if pattern is None:
         pattern = input('请输入要查找的字符串：')
@@ -113,6 +120,7 @@ def mian() -> None:
             '4 - 对指定类文件，生成包含所有string的类文件映射项(用于添加新类到para_tranz_map.json)'
         )
         print('5 - 在所有jar文件中查找指定原文字符串')
+        print('6 - 对 para_tranz_map.json 进行去重和排序')
         option = input('请输入选项数字：')
 
     non_interactive = len(sys.argv) > 1
@@ -140,6 +148,9 @@ def mian() -> None:
             else:
                 while True:
                     search_string_in_jar_files()
+            break
+        elif option == '6':
+            dedup_and_sort_map()
             break
         else:
             if non_interactive:

@@ -137,6 +137,25 @@ class ParaTranzMap:
         with open(MAP_PATH, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2, cls=SetEncoder)
 
+    def dedup_and_sort(self) -> int:
+        """对所有 jar 条目的类文件列表去重（合并同路径条目）并按路径排序。
+        include_strings/exclude_strings 为 set，已自动去重；保存时 SetEncoder 会排序。
+        返回合并掉的重复类条目数量。"""
+        merged = 0
+        for item in self.items:
+            if not isinstance(item, JarMapItem):
+                continue
+            seen: dict[str, ClassFileMapItem] = {}
+            for cls in item.class_files:
+                if cls.path in seen:
+                    seen[cls.path].include_strings |= cls.include_strings
+                    seen[cls.path].exclude_strings |= cls.exclude_strings
+                    merged += 1
+                else:
+                    seen[cls.path] = cls
+            item.class_files = sorted(seen.values(), key=lambda c: c.path)
+        return merged
+
 
 PARA_TRANZ_MAP = ParaTranzMap()
 PARA_TRANZ_MAP.load()
