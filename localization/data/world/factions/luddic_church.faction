@@ -6,8 +6,8 @@
 	"darkUIColor":[32,85,0,175],
 	"gridUIColor":[95,255,0,75],
 	
-	#"displayName":"Church of Galactic Redemption",
-	#"displayNameWithArticle":"the Church of Galactic Redemption",
+	#"displayName":"银河救赎教会",
+	#"displayNameWithArticle":"银河救赎教会",
 	"displayName":"卢德教会",
 	"displayNameWithArticle":"卢德教会",
 	"displayNameLong":"银河救赎教会",
@@ -302,16 +302,16 @@
 	},
 	"ranks":{
 		"ranks":{
-			"spaceCommander":{"name":"Deacon-Captain"},
+			"spaceCommander":{"name":"执事-船长"},
 		},
 		"posts":{
-			"patrolCommander":{"name":"Deacon-Captain"},
-			"fleetCommander":{"name":"Curate-Commander"},
-			"baseCommander":{"name":"Bishop-Governor"},
-			"administrator":{"name":"Sub-presbyter Orbis"},
-			"genericMilitary":{"name":"Knight-Commander"},
-			"portmaster":{"name":"Portwatcher"},
-			"quartermaster":{"name":"Purser"},
+			"patrolCommander":{"name":"执事-船长"},
+			"fleetCommander":{"name":"祭司-指挥官"},
+			"baseCommander":{"name":"主教-总督"},
+			"administrator":{"name":"从阶行星教督"},
+			"genericMilitary":{"name":"骑士-指挥官"},
+			"portmaster":{"name":"卫港者"},
+			"quartermaster":{"name":"事务长"},
 		},
 	},
 	"voices":{
@@ -353,23 +353,23 @@
 		},
 	},
 	"fleetTypeNames":{
-		"trade":"Faithful Convoy",
-		"smallTrader":"Faithful Trader",
-		"tradeLiner":"Pilgrimage",
+		"trade":"传信旅人",
+		"smallTrader":"传信商队",
+		"tradeLiner":"朝圣者",
 		
-		"patrolSmall":"Watchers",
-		"patrolMedium":"Righteous Flotilla",
-		"patrolLarge":"Holy Armada",
+		"patrolSmall":"守护者",
+		"patrolMedium":"正义舰队",
+		"patrolLarge":"神圣无敌舰队",
 		
-		"inspectionFleet":"Hallowed Arbiter",
+		"inspectionFleet":"神佑仲裁者",
 		
-		#"mercScout":"Seeker",
-		#"mercBountyHunter":"Judgment-bringer",
-		#"mercPrivateer":"Abjudicator",
-		#"mercPatrol":"Crusading Fleet",
-		#"mercArmada":"Crusading Armada",
+		#"mercScout":"探求者",
+		#"mercBountyHunter":"审判者",
+		#"mercPrivateer":"裁决者",
+		#"mercPatrol":"十字军舰队",
+		#"mercArmada":"十字军无敌舰队",
 		
-		"taskForce":"Blessed Mission",
+		"taskForce":"受祝之事",
 	},
 	
 	

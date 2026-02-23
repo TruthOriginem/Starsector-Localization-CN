@@ -294,17 +294,17 @@
 	},
 	"ranks":{
 		"ranks":{
-			"spaceAdmiral":{"name":"Senior Operation Manager"},
-			"spaceCommander":{"name":"Operation Manager"},
-			
-			"factionLeader":{"name":"CEO"},
+			"spaceAdmiral":{"name":"高级营运经理"},
+			"spaceCommander":{"name":"运营经理"},
+
+			"factionLeader":{"name":"首席执行官"},
 		},
 		"posts":{
-			"factionLeader":{"name":"CEO"},
-			"patrolCommander":{"name":"Patrol Director"},
-			"fleetCommander":{"name":"Fleet Director"},
-			"baseCommander":{"name":"Base Director"},
-			"intelligenceDirector":{"name":"Director of Special Acquisitions"},
+			"factionLeader":{"name":"首席执行官"},
+			"patrolCommander":{"name":"巡逻主管"},
+			"fleetCommander":{"name":"舰队主管"},
+			"baseCommander":{"name":"基地主管"},
+			"intelligenceDirector":{"name":"特殊收购总监"},
 		},
 	},
 	"voices":{
@@ -340,25 +340,25 @@
 		},
 	},	
 	"fleetTypeNames":{
-		"trade":"Corporate Trader",
-		"tradeLiner":"TriWay Spaceline Flight",
-		"tradeSmuggler":"Expedited Trader",
-		"smallTrader":"Distribution Convoy",
+		"trade":"企业商队",
+		"tradeLiner":"速子空间旅游舰队",
+		"tradeSmuggler":"运输舰队",
+		"smallTrader":"配送舰队",
 		
-		"patrolSmall":"Security Patrol",
-		"patrolMedium":"Security Flotilla",
-		"patrolLarge":"Capital Assurance Fleet",
+		"patrolSmall":"安全巡逻队",
+		"patrolMedium":"安全护卫队",
+		"patrolLarge":"商业保障舰队",
 		
-		"inspectionFleet":"QA Inspector",
-		"taskForce":"Special Affairs Fleet",
+		"inspectionFleet":"QA 巡视员",
+		"taskForce":"特别事务行动小组",
 		
-		"foodReliefFleet":"Relief Convoy",
+		"foodReliefFleet":"救援舰队",
 		
-		#"mercScout":"Contract Scout",
-		"mercBountyHunter":"Retrieval Contractor",
-		"mercPrivateer":"Security Contractor",
-		#"mercPatrol":"Contracted Patrol",
-		#"mercArmada":"Contracted Armada",
+		#"mercScout":"外包侦察队",
+		"mercBountyHunter":"回收承包商",
+		"mercPrivateer":"安保承包商",
+		#"mercPatrol":"受雇巡逻队",
+		#"mercArmada":"受雇无敌舰队",
 	}
 },
 

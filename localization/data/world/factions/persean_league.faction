@@ -336,33 +336,33 @@
 	},
 	"ranks":{
 		"ranks":{
-			"spaceCommander":{"name":"Navarch"},
-			"spaceAdmiral":{"name":"Prime Navarch"},
-			"houseLeader":{"name":"Gens Parriarch"},
-			"houseLeaderMale":{"name":"Gens Patriarch"},
-			"houseLeaderFemale":{"name":"Gens Matriarch"},
+			"spaceCommander":{"name":"海军都统"},
+			"spaceAdmiral":{"name":"大海军都统"},
+			"houseLeader":{"name":"宗主"},
+			"houseLeaderMale":{"name":"宗主"},
+			"houseLeaderFemale":{"name":"宗主夫人"},
 		},
 		"posts":{
-			"patrolCommander":{"name":"Demi-Navarch"},
-			"fleetCommander":{"name":"Navarch"},
-			"baseCommander":{"name":"Archon"},
-			#"administrator":{"name":"Demarchon"}, # might confuse players
-			"factionLeader":{"name":"Prime Demarchon"},
+			"patrolCommander":{"name":"下级海军都统"},
+			"fleetCommander":{"name":"海军都统"},
+			"baseCommander":{"name":"执政官"},
+			#"administrator":{"name":"统领"}, # might confuse players
+			"factionLeader":{"name":"大统领"},
 		},
 	},
 	"fleetTypeNames":{
-		"trade":"Mercantile Convoy",
-		"tradeLiner":"Liner Convoy",
-		"tradeSmuggler":"Smuggler",
-		"smallTrader":"Trader",
+		"trade":"贸易舰队",
+		"tradeLiner":"客运舰队",
+		"tradeSmuggler":"走私者",
+		"smallTrader":"商队",
 		
-		"patrolSmall":"Fast Picket",
-		"patrolMedium":"Patrol",
-		"patrolLarge":"Detachment",
+		"patrolSmall":"纠察队",
+		"patrolMedium":"巡逻队",
+		"patrolLarge":"特遣队",
 		
-		"inspectionFleet":"Inspection Fleet",
-		"taskForce":"Task Force",
+		"inspectionFleet":"视察舰队",
+		"taskForce":"特遣队",
 		
-		"foodReliefFleet":"Relief Convoy",
+		"foodReliefFleet":"救援舰队",
 	},
 },
