@@ -3094,13 +3094,6 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/CoreScript.class 的第1605个常量\n原始数据：\"Weapons & fighter LPCs for produced ships\"\n译文数据：\"用于生产舰船上的武器与战机 LPC\"\n\n"
     },
     {
-        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/CoreScript.class#\"cargo\"",
-        "original": "cargo",
-        "translation": "仓管费",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/CoreScript.class 的第0429个常量\n原始数据：\"cargo\"\n译文数据：\"仓管费\"\n\n"
-    },
-    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/ExplosionEntityPlugin.class#\"Damaged by explosion\"",
         "original": "Damaged by explosion",
         "translation": "爆炸受损",
@@ -3649,9 +3642,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FleetInteractionDialogPluginImpl.class#\"Pick through the wreckage\"",
         "original": "Pick through the wreckage",
-        "translation": "通过对残骸进行打捞",
+        "translation": "对残骸进行打捞",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FleetInteractionDialogPluginImpl.class 的第1991个常量\n原始数据：\"Pick through the wreckage\"\n译文数据：\"通过对残骸进行打捞\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FleetInteractionDialogPluginImpl.class 的第1991个常量\n原始数据：\"Pick through the wreckage\"\n译文数据：\"对残骸进行打捞\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FleetInteractionDialogPluginImpl.class#\"Proceed\"",
@@ -4410,6 +4403,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/MonthlyReportNodeTooltipCreator.class 的第0255个常量\n原始数据：\"Upkeep and income from industries and structures located at the outpost or colony.\"\n译文数据：\"来自前哨站或殖民地的工业设施与其他设施的维护和收益。\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/MonthlyReportNodeTooltipCreator.class#\"Weapons and fighter LPCs installed on produced ships.\"",
+        "original": "Weapons and fighter LPCs installed on produced ships.",
+        "translation": "Weapons and fighter LPCs installed on produced ships.",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/MonthlyReportNodeTooltipCreator.class 的第0112个常量\n原始数据：\"Weapons and fighter LPCs installed on produced ships.\"\n译文数据：\"Weapons and fighter LPCs installed on produced ships.\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/MonthlyReportNodeTooltipCreator.class#\"unit\"",
         "original": "unit",
         "translation": "单位",
@@ -4662,6 +4662,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/PlanetInteractionDialogPluginImpl.class 的第0470个常量\n原始数据：\"Resources required (available)\"\n译文数据：\"所需资源 (可用) \"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/PlanetInteractionDialogPluginImpl.class#\"The \"",
+        "original": "The ",
+        "translation": "The ",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/PlanetInteractionDialogPluginImpl.class 的第0345个常量\n原始数据：\"The \"\n译文数据：\"The \"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/PlanetInteractionDialogPluginImpl.class#\"The procedure requires spreading prodigious amounts of antimatter \"",
         "original": "The procedure requires spreading prodigious amounts of antimatter ",
         "translation": "该过程需要喷洒非常大量的反物质到",
@@ -4695,6 +4702,13 @@
         "translation": "你的传感器技官不再从吸积盘内侧检测到异常的能量形式，只有噪音，像宇宙背景辐射一样无意义的噪音。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/PlanetInteractionDialogPluginImpl.class 的第0341个常量\n原始数据：\"Your sensors officer detects no more unusual energy patterns from the inner rim of the accretion disc, just noise, as mindless as the background radiation of the cosmos itself.\"\n译文数据：\"你的传感器技官不再从吸积盘内侧检测到异常的能量形式，只有噪音，像宇宙背景辐射一样无意义的噪音。\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/PlanetInteractionDialogPluginImpl.class#\"Your sensors officer hesitates, then calls for your attention. \"Captain, there's a... pattern. From the black hole. Or, ra~\"@6999282c",
+        "original": "Your sensors officer hesitates, then calls for your attention. \"Captain, there's a... pattern. From the black hole. Or, rather,\" they pause, looking almost embarrassed. \"-The energy radiated by the accretion disc.\n\nThey pull a collated sensor output map into the primary holo. \"It's almost a signal. See, if we chart these fluctuations in energy output over time...\n\nYou see it now, an orderly series. Not quite a sequence of prime numbers, unless you jig the math. Statistically this is nearly impossible. Possible explanations are as unlikely: a series of planets - large moons? - with specific mass-ratio relationships, all pulled into the accretion disc at just such an angle, like an intentional message... or orderly annihilation of a constructed planetary system at a scale beyond the wildest dreams of the most bloody-minded war-planners of the Domain.\n\nIt can't be known. The pattern disappears as quickly as it arose.",
+        "translation": "Your sensors officer hesitates, then calls for your attention. \"Captain, there's a... pattern. From the black hole. Or, rather,\" they pause, looking almost embarrassed. \"-The energy radiated by the accretion disc.\n\nThey pull a collated sensor output map into the primary holo. \"It's almost a signal. See, if we chart these fluctuations in energy output over time...\n\nYou see it now, an orderly series. Not quite a sequence of prime numbers, unless you jig the math. Statistically this is nearly impossible. Possible explanations are as unlikely: a series of planets - large moons? - with specific mass-ratio relationships, all pulled into the accretion disc at just such an angle, like an intentional message... or orderly annihilation of a constructed planetary system at a scale beyond the wildest dreams of the most bloody-minded war-planners of the Domain.\n\nIt can't be known. The pattern disappears as quickly as it arose.",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/PlanetInteractionDialogPluginImpl.class 的第0321个常量\n原始数据：\"Your sensors officer hesitates, then calls for your attention. \"Captain, there's a... pattern. From the black hole. Or, rather,\" they pause, looking almost embarrassed. \"-The energy radiated by the accretion disc.\n\nThey pull a collated sensor output map into the primary holo. \"It's almost a signal. See, if we chart these fluctuations in energy output over time...\n\nYou see it now, an orderly series. Not quite a sequence of prime numbers, unless you jig the math. Statistically this is nearly impossible. Possible explanations are as unlikely: a series of planets - large moons? - with specific mass-ratio relationships, all pulled into the accretion disc at just such an angle, like an intentional message... or orderly annihilation of a constructed planetary system at a scale beyond the wildest dreams of the most bloody-minded war-planners of the Domain.\n\nIt can't be known. The pattern disappears as quickly as it arose.\"\n译文数据：\"Your sensors officer hesitates, then calls for your attention. \"Captain, there's a... pattern. From the black hole. Or, rather,\" they pause, looking almost embarrassed. \"-The energy radiated by the accretion disc.\n\nThey pull a collated sensor output map into the primary holo. \"It's almost a signal. See, if we chart these fluctuations in energy output over time...\n\nYou see it now, an orderly series. Not quite a sequence of prime numbers, unless you jig the math. Statistically this is nearly impossible. Possible explanations are as unlikely: a series of planets - large moons? - with specific mass-ratio relationships, all pulled into the accretion disc at just such an angle, like an intentional message... or orderly annihilation of a constructed planetary system at a scale beyond the wildest dreams of the most bloody-minded war-planners of the Domain.\n\nIt can't be known. The pattern disappears as quickly as it arose.\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/PlanetInteractionDialogPluginImpl.class#\"according to calculations far beyond the ability of anything on the right side of the \"",
@@ -5472,6 +5486,13 @@
         "translation": "横轴跳跃",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/FractureJumpAbility.class 的第0283个常量\n原始数据：\"Transverse jump\"\n译文数据：\"横轴跳跃\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/FractureJumpAbility.class#\"may suffer damage\"",
+        "original": "may suffer damage",
+        "translation": "may suffer damage",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/FractureJumpAbility.class 的第0510个常量\n原始数据：\"may suffer damage\"\n译文数据：\"may suffer damage\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/FractureJumpAbility.class#\"of all ships by %s of a combat deployment. \"",
@@ -9254,6 +9275,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/enc/OutsideSystemRemnantEPEC.class 的第0221个常量\n原始数据：\"returning to \"\n译文数据：\"正在返回 \"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/enc/OutsideSystemRemnantEPEC.class#\"uploading encrypted data\"",
+        "original": "uploading encrypted data",
+        "translation": "uploading encrypted data",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/enc/OutsideSystemRemnantEPEC.class 的第0241个常量\n原始数据：\"uploading encrypted data\"\n译文数据：\"uploading encrypted data\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/enc/SlipstreamLuddicPathEPEC.class#\"laying in wait\"",
         "original": "laying in wait",
         "translation": "埋伏中",
@@ -10017,6 +10045,20 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/events/nearby/DistressCallNormalAssignmentAI.class 的第0168个常量\n原始数据：\"approaching your fleet\"\n译文数据：\"接近你的舰队\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/events/nearby/DistressCallPirateAmbushAssignmentAI.class#\"laying in wait\"",
+        "original": "laying in wait",
+        "translation": "laying in wait",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/events/nearby/DistressCallPirateAmbushAssignmentAI.class 的第0050个常量\n原始数据：\"laying in wait\"\n译文数据：\"laying in wait\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/events/nearby/DistressCallPirateAmbushTrapAssignmentAI.class#\"laying in wait\"",
+        "original": "laying in wait",
+        "translation": "laying in wait",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/events/nearby/DistressCallPirateAmbushTrapAssignmentAI.class 的第0101个常量\n原始数据：\"laying in wait\"\n译文数据：\"laying in wait\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/fleets/CustomFleets.class#\"Custom Fleet Name\"",
         "original": "Custom Fleet Name",
         "translation": "自定义舰队名称",
@@ -10640,6 +10682,20 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/ghosts/GBIRemoraDrain.class 的第0179个常量\n原始数据：\"Drive field drain!\"\n译文数据：\"驱动力场失效！\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/ghosts/types/EncounterTricksterGhost.class#\"investigating anomalous readings\"",
+        "original": "investigating anomalous readings",
+        "translation": "investigating anomalous readings",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/ghosts/types/EncounterTricksterGhost.class 的第0090个常量\n原始数据：\"investigating anomalous readings\"\n译文数据：\"investigating anomalous readings\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/ghosts/types/EncounterTricksterGhost.class#\"investigating sensor ghost\"",
+        "original": "investigating sensor ghost",
+        "translation": "investigating sensor ghost",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/ghosts/types/EncounterTricksterGhost.class 的第0135个常量\n原始数据：\"investigating sensor ghost\"\n译文数据：\"investigating sensor ghost\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/graid/AICoreGroundRaidObjectivePluginImpl.class#\"Base value: %s per unit\"",
         "original": "Base value: %s per unit",
         "translation": "基础价值：%s 每单位",
@@ -10750,6 +10806,13 @@
         "translation": " 运行的太阳能电池阵列。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/graid/SolarArrayGroundRaidObjectivePluginImpl.class 的第0098个常量\n原始数据：\". While much of the superstructure \"\n译文数据：\" 运行的太阳能电池阵列。\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/graid/SolarArrayGroundRaidObjectivePluginImpl.class#\"Destroy the \"",
+        "original": "Destroy the ",
+        "translation": "Destroy the ",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/graid/SolarArrayGroundRaidObjectivePluginImpl.class 的第0046个常量\n原始数据：\"Destroy the \"\n译文数据：\"Destroy the \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/graid/SolarArrayGroundRaidObjectivePluginImpl.class#\"Functionally destroy the solar array orbiting \"",
@@ -12684,6 +12747,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/SystemBountyIntel.class 的第0566个常量\n原始数据：\"%s base reward per frigate\"\n译文数据：\"每击败一艘敌方护卫舰将获得 %s\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/SystemBountyIntel.class#\"%s commercial concerns \"",
+        "original": "%s commercial concerns ",
+        "translation": "%s commercial concerns ",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/SystemBountyIntel.class 的第0652个常量\n原始数据：\"%s commercial concerns \"\n译文数据：\"%s commercial concerns \"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/SystemBountyIntel.class#\"%s received\"",
         "original": "%s received",
         "translation": "%s 已收到",
@@ -13179,6 +13249,13 @@
         "translation": "\"当然，这只是专门为那些来自 Kazeron 联合企业的富有混蛋而设计的，",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/CorruptPLClerkSuppliesBarEvent.class 的第0189个常量\n原始数据：\"for the rich bastards from one of those Kazeron combines. \"\n译文数据：\"\"当然，这只是专门为那些来自 Kazeron 联合企业的富有混蛋而设计的，\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/CorruptPLClerkSuppliesBarEvent.class#\"shall we say, exercise personal judgment.\"\n\n\"",
+        "original": "shall we say, exercise personal judgment.\"\n\n",
+        "translation": "shall we say, exercise personal judgment.\"\n\n",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/CorruptPLClerkSuppliesBarEvent.class 的第0183个常量\n原始数据：\"shall we say, exercise personal judgment.\"\n\n\"\n译文数据：\"shall we say, exercise personal judgment.\"\n\n\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/CorruptPLClerkSuppliesBarEve~#\"You leave the bar to find a message ping on your TriPad from the local port authority. It seems you've left %s of your sup~\"@48fe3d12",
@@ -13893,6 +13970,13 @@
         "translation": "不动声色地靠近这名安全部军官，看看他们在高兴什么",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DiktatLobsterBarEvent.class 的第0109个常量\n原始数据：\"Sidle up to the security officer and see what they're so pleased about\"\n译文数据：\"不动声色地靠近这名安全部军官，看看他们在高兴什么\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DiktatLobsterBarEvent.class#\"What this amounts to, you are told, is that the District 4 Gendarmerie's evidence locker - and maintenance bay, and severa~\"@63239306",
+        "original": "What this amounts to, you are told, is that the District 4 Gendarmerie's evidence locker - and maintenance bay, and several interrogation rooms - are filled with cases of cryo-stabilized Volturnian Lobster, nearly %s units in all. The officers eat like royalty, yes, but there's only so much one can take and the coolant cells won't last another week without replacement, so.\n\n",
+        "translation": "What this amounts to, you are told, is that the District 4 Gendarmerie's evidence locker - and maintenance bay, and several interrogation rooms - are filled with cases of cryo-stabilized Volturnian Lobster, nearly %s units in all. The officers eat like royalty, yes, but there's only so much one can take and the coolant cells won't last another week without replacement, so.\n\n",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DiktatLobsterBarEvent.class 的第0154个常量\n原始数据：\"What this amounts to, you are told, is that the District 4 Gendarmerie's evidence locker - and maintenance bay, and several interrogation rooms - are filled with cases of cryo-stabilized Volturnian Lobster, nearly %s units in all. The officers eat like royalty, yes, but there's only so much one can take and the coolant cells won't last another week without replacement, so.\n\n\"\n译文数据：\"What this amounts to, you are told, is that the District 4 Gendarmerie's evidence locker - and maintenance bay, and several interrogation rooms - are filled with cases of cryo-stabilized Volturnian Lobster, nearly %s units in all. The officers eat like royalty, yes, but there's only so much one can take and the coolant cells won't last another week without replacement, so.\n\n\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/DiktatLobsterBarEvent.class#\"You are told the story of tiresome property seizures from \"",
@@ -20293,6 +20377,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantHostileActivityFactor.class 的第0269个常量\n原始数据：\"Remnant attack\"\n译文数据：\"余辉袭击\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantHostileActivityFactor.class#\"Remnant\"",
+        "original": "Remnant",
+        "translation": "Remnant",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantHostileActivityFactor.class 的第0078个常量\n原始数据：\"Remnant\"\n译文数据：\"Remnant\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantHostileActivityFactor.class#\"The %s is destroyed\"",
         "original": "The %s is destroyed",
         "translation": "摧毁 %s",
@@ -25543,6 +25634,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/raid/RaidIntel.class 的第0976个常量\n原始数据：\" is likely to be successful\"\n译文数据：\" 行动可能成功\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/raid/RaidIntel.class#\" large fleet, or several smaller ones\"",
+        "original": " large fleet, or several smaller ones",
+        "translation": " large fleet, or several smaller ones",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/raid/RaidIntel.class 的第0532个常量\n原始数据：\" large fleet, or several smaller ones\"\n译文数据：\" large fleet, or several smaller ones\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/raid/RaidIntel.class#\" outcome is uncertain\"",
         "original": " outcome is uncertain",
         "translation": " 结果尚不明确",
@@ -27340,6 +27438,13 @@
         "translation": "去 Samarra 星系内的 Eventide.",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/SwordOfEventide.class 的第0329个常量\n原始数据：\"Go to Eventide in the Samarra system.\"\n译文数据：\"去 Samarra 星系内的 Eventide.\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/SwordOfEventide.class#\"Princess of Persea\"",
+        "original": "Princess of Persea",
+        "translation": "Princess of Persea",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/SwordOfEventide.class 的第0357个常量\n原始数据：\"Princess of Persea\"\n译文数据：\"Princess of Persea\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/TacticallyBombardColony.class#\" in the \"",
@@ -32590,6 +32695,20 @@
         "translation": "的舰船",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/HailPlayer.class 的第0028个常量\n原始数据：\"ship\"\n译文数据：\"的舰船\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/KantaCMD$KantaFavorTrigger.class#\"Courier\"",
+        "original": "Courier",
+        "translation": "Courier",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/KantaCMD$KantaFavorTrigger.class 的第0192个常量\n原始数据：\"Courier\"\n译文数据：\"Courier\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/KantaCMD$KantaFavorTrigger.class#\"Kanta's Protection lost\"",
+        "original": "Kanta's Protection lost",
+        "translation": "Kanta's Protection lost",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/KantaCMD$KantaFavorTrigger.class 的第0128个常量\n原始数据：\"Kanta's Protection lost\"\n译文数据：\"Kanta's Protection lost\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/KantaCMD$TakingBackTheNanoforgeChecker.class#\"Word of this is bound to get back to Kanta. You can't imagine she would react well to being made a fool of.\"",
@@ -41321,6 +41440,20 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialRespawnDialogPluginImpl.class 的第0117个常量\n原始数据：\"During the course of this tutorial, the only available option is to reload the last save.\"\n译文数据：\"在本教程中，唯一可用的选项是重新加载最后的保存。\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialRespawnDialogPluginImpl.class#\"Exit to main menu\"",
+        "original": "Exit to main menu",
+        "translation": "Exit to main menu",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialRespawnDialogPluginImpl.class 的第0133个常量\n原始数据：\"Exit to main menu\"\n译文数据：\"Exit to main menu\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialRespawnDialogPluginImpl.class#\"Load last save\"",
+        "original": "Load last save",
+        "translation": "Load last save",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialRespawnDialogPluginImpl.class 的第0124个常量\n原始数据：\"Load last save\"\n译文数据：\"Load last save\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialRespawnDialogPluginImpl.class#\"Normally, if this happens you and your remaining crew will spend some time \"behind the scenes\" assembling a smaller fleet of recovered ships.\"",
         "original": "Normally, if this happens you and your remaining crew will spend some time \"behind the scenes\" assembling a smaller fleet of recovered ships.",
         "translation": "一般，如果发生这种情况，你和你剩下的船员将花一些时间 \"在幕后\" 组装一个较小的船队回收舰船。",
@@ -42831,6 +42964,13 @@
         "translation": "% 产生的幅能降低",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/combat/CryofluxTransducerStats.class 的第0158个常量\n原始数据：\"% less flux generated\"\n译文数据：\"% 产生的幅能降低\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/DamperFieldOmegaStats.class#\"% faster repairs\"",
+        "original": "% faster repairs",
+        "translation": "% faster repairs",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/combat/DamperFieldOmegaStats.class 的第0186个常量\n原始数据：\"% faster repairs\"\n译文数据：\"% faster repairs\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/DamperFieldOmegaStats.class#\"% less damage taken\"",
@@ -44406,6 +44546,13 @@
         "translation": "舰船没有战机甲板",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/RecoveryShuttles.class 的第0123个常量\n原始数据：\"Ship does not have fighter bays\"\n译文数据：\"舰船没有战机甲板\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ShieldShunt.class#\"Incompatible with Makeshift Shield Generator\"",
+        "original": "Incompatible with Makeshift Shield Generator",
+        "translation": "Incompatible with Makeshift Shield Generator",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ShieldShunt.class 的第0123个常量\n原始数据：\"Incompatible with Makeshift Shield Generator\"\n译文数据：\"Incompatible with Makeshift Shield Generator\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ShieldShunt.class#\"Ship has no shields\"",

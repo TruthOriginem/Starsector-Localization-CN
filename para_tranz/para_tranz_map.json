@@ -617,6 +617,15 @@
         "exclude_strings": []
       },
       {
+        "path": "com/fs/starfarer/campaign/ai/CampaignFleetAI.class",
+        "include_strings": [
+          "Heading to resupply at ",
+          "Repaired at station",
+          "Unable to resupply, no resupply location set"
+        ],
+        "exclude_strings": []
+      },
+      {
         "path": "com/fs/starfarer/campaign/ai/TacticalModule.class",
         "include_strings": [
           "Executing search pattern",
@@ -1360,7 +1369,14 @@
           "Analyze Derelict - Archibald's Star",
           "Personal Bounty - Lara Ingvald",
           "Sector Decay - Minimal",
-          "System Bounty - Corvus"
+          "System Bounty - Corvus",
+          "Abandoning or not completing the mission after accepting it will result in a reputation penalty.",
+          "Are you sure you want to abandon this mission?",
+    "Are you sure?",
+    "Derelict Survey Ship Discovered",
+    "Report your findings to a Hegemony officer",          
+    "Something is Rotten in the Den",
+          "Speak with Kanta"
         ],
         "exclude_strings": []
       },
@@ -1621,7 +1637,9 @@
           "Saving stage 8",
           "Saving stage 9",
           "Saving to ",
-          "Stabilizing economy..."
+          "Stabilizing economy...",
+          "File deletion failed. Your current save may be corrupted.\n\nPlease try saving to an empty slot using the \"Save As\" option from the campaign menu - this should create a valid save file.",
+          "File rename failed. Your current save may be corrupted.\n\nPlease try saving to an empty slot using the \"Save As\" option from the campaign menu - this should create a valid save file."
         ],
         "exclude_strings": []
       },
@@ -2175,6 +2193,13 @@
         "exclude_strings": []
       },
       {
+        "path": "com/fs/starfarer/campaign/ui/intel/ooOO.class",
+        "include_strings": [
+          "Consumed"
+        ],
+        "exclude_strings": []
+      },
+      {
         "path": "com/fs/starfarer/campaign/ui/interface.class",
         "include_strings": [
           "Fleets"
@@ -2226,6 +2251,7 @@
           " - competition for exporting ",
           " - current and alternate sources of ",
           " - current and possible ",
+          "A market chooses a single source to get its supply of a commodity. Should that source go away or become less desirable, the next best source will be used. In order of importance, a market will prefer a supplier that:\n\n- can satisfy more of the demand\n- is local to the market\n- has higher accessibility from the market\n",  
           " at ",
           " being produced",
           " compares to other options. ",
@@ -8912,8 +8938,7 @@
           "New planet data: ",
           "Officer payroll",
           "Storage",
-          "Weapons & fighter LPCs for produced ships",
-          "cargo"
+          "Weapons & fighter LPCs for produced ships"
         ],
         "exclude_strings": []
       },
@@ -9167,6 +9192,7 @@
           "Total spent on hazard pay and related growth incentives at the colony during the previous month.",
           "Unpaid debt carried over from last month.",
           "Upkeep and income from industries and structures located at the outpost or colony.",
+          "Weapons and fighter LPCs installed on produced ships.",
           "unit",
           "units"
         ],
@@ -9233,11 +9259,13 @@
           "Preparations are made, and you give the go-ahead. A few tense minutes later, the chief engineer reports success. The resulting stable location won't last for millennia, like naturally-occurring ones - but it'll do for your purposes.",
           "Proceed with the operation",
           "Resources required (available)",
+          "The ",
           "The procedure requires spreading prodigious amounts of antimatter ",
           "This procedure can not performed in a star system that already has numerous stable locations.",
           "You do not have the necessary resources to carry out this procedure.",
           "Your officers respond promptly to the order, and move to the task with all alacrity. There is an edge to their call-and-response, however, as if they cannot help but acknowledge the deep sense of the gravity in this act.\n\"Package ready to drop, captain,\" your ops chief says. \"On your order.\"",
           "Your sensors officer detects no more unusual energy patterns from the inner rim of the accretion disc, just noise, as mindless as the background radiation of the cosmos itself.",
+          "Your sensors officer hesitates, then calls for your attention. \"Captain, there's a... pattern. From the black hole. Or, rather,\" they pause, looking almost embarrassed. \"-The energy radiated by the accretion disc.\n\nThey pull a collated sensor output map into the primary holo. \"It's almost a signal. See, if we chart these fluctuations in energy output over time...\n\nYou see it now, an orderly series. Not quite a sequence of prime numbers, unless you jig the math. Statistically this is nearly impossible. Possible explanations are as unlikely: a series of planets - large moons? - with specific mass-ratio relationships, all pulled into the accretion disc at just such an angle, like an intentional message... or orderly annihilation of a constructed planetary system at a scale beyond the wildest dreams of the most bloody-minded war-planners of the Domain.\n\nIt can't be known. The pattern disappears as quickly as it arose.",
           "according to calculations far beyond the ability of anything on the right side of the ",
           "black hole",
           "event horizon",
@@ -9445,6 +9473,7 @@
           "Some ships don't have enough combat readiness to safely initiate a transverse jump and may suffer damage if the ability is activated:",
           "Transverse Jump",
           "Transverse jump",
+          "may suffer damage",
           "of all ships by %s of a combat deployment. ",
           "year's",
           "years'"
@@ -10434,7 +10463,8 @@
       {
         "path": "com/fs/starfarer/api/impl/campaign/enc/OutsideSystemRemnantEPEC.class",
         "include_strings": [
-          "returning to "
+          "returning to ",
+          "uploading encrypted data"
         ],
         "exclude_strings": []
       },
@@ -10656,6 +10686,20 @@
         "exclude_strings": []
       },
       {
+        "path": "com/fs/starfarer/api/impl/campaign/events/nearby/DistressCallPirateAmbushAssignmentAI.class",
+        "include_strings": [
+          "laying in wait"
+        ],
+        "exclude_strings": []
+      },
+      {
+        "path": "com/fs/starfarer/api/impl/campaign/events/nearby/DistressCallPirateAmbushTrapAssignmentAI.class",
+        "include_strings": [
+          "laying in wait"
+        ],
+        "exclude_strings": []
+      },
+      {
         "path": "com/fs/starfarer/api/impl/campaign/fleets/CustomFleets.class",
         "include_strings": [
           "Custom Fleet Name",
@@ -10859,6 +10903,14 @@
         "exclude_strings": []
       },
       {
+        "path": "com/fs/starfarer/api/impl/campaign/ghosts/types/EncounterTricksterGhost.class",
+        "include_strings": [
+          "investigating anomalous readings",
+          "investigating sensor ghost"
+        ],
+        "exclude_strings": []
+      },
+      {
         "path": "com/fs/starfarer/api/impl/campaign/graid/AICoreGroundRaidObjectivePluginImpl.class",
         "include_strings": [
           "Base value: %s per unit"
@@ -10907,6 +10959,7 @@
         "path": "com/fs/starfarer/api/impl/campaign/graid/SolarArrayGroundRaidObjectivePluginImpl.class",
         "include_strings": [
           ". While much of the superstructure ",
+          "Destroy the ",
           "Functionally destroy the solar array orbiting ",
           "the current state-of-the-art in the Sector.",
           "would remain intact, repairing the damage inflicted would be far beyond "
@@ -11296,6 +11349,7 @@
           " not currently hostile to any major factions.",
           "%s authorities ",
           "%s base reward per frigate",
+          "%s commercial concerns ",
           "%s received",
           "%s share based on damage dealt",
           ".",
@@ -11392,7 +11446,8 @@
           "They can afford replacements on the open market, surely.\" ",
           "You leave the bar to find a message ping on your TriPad from the local port authority. It seems you've left %s of your supplies in cargo bay twelve, and the bay needs to be cleared out by the end of the next work-shift.",
           "You relent and sit with the port clerk who smiles and offers to buy you a drink. \"I'm familiar with your cargo manifest, of course, and thought you might be interested in an opportunity.\" ",
-          "for the rich bastards from one of those Kazeron combines. "
+          "for the rich bastards from one of those Kazeron combines. ",
+          "shall we say, exercise personal judgment.\"\n\n"
         ],
         "exclude_strings": []
       },
@@ -11523,6 +11578,7 @@
           "But they insist on carrying on, and on... not that I mind the perks of the job, of course.\"",
           "Decline the offer apologetically, citing a terrible shellfish allergy",
           "Sidle up to the security officer and see what they're so pleased about",
+          "What this amounts to, you are told, is that the District 4 Gendarmerie's evidence locker - and maintenance bay, and several interrogation rooms - are filled with cases of cryo-stabilized Volturnian Lobster, nearly %s units in all. The officers eat like royalty, yes, but there's only so much one can take and the coolant cells won't last another week without replacement, so.\n\n",
           "You are told the story of tiresome property seizures from ",
           "and the entire cargo can be transferred to your holds without the bother of tariffs.\n\n",
           "several patrons.\n\n",
@@ -13033,6 +13089,7 @@
           ".",
           "Defeating the attack fleet would only put off the problem, but destroying the Remnant Nexus will end the threat for good.",
           "Impending Remnant attack",
+          "Remnant",
           "Remnant Nexus",
           "Remnant attack",
           "Remnant attack averted",
@@ -14350,6 +14407,7 @@
           " is likely to be defeated in orbit",
           " is likely to be largely repelled by the ground defences",
           " is likely to be successful",
+          " large fleet, or several smaller ones",
           " outcome is uncertain",
           " space forces are %s ",
           " space forces are %s.",
@@ -14774,7 +14832,8 @@
         "path": "com/fs/starfarer/api/impl/campaign/missions/SwordOfEventide.class",
         "include_strings": [
           "Go to Eventide in the Samarra system",
-          "Go to Eventide in the Samarra system."
+          "Go to Eventide in the Samarra system.",
+          "Princess of Persea"
         ],
         "exclude_strings": []
       },
@@ -16047,6 +16106,14 @@
           "You're being hailed by the ",
           "fleet",
           "ship"
+        ],
+        "exclude_strings": []
+      },
+      {
+        "path": "com/fs/starfarer/api/impl/campaign/rulecmd/KantaCMD$KantaFavorTrigger.class",
+        "include_strings": [
+          "Courier",
+          "Kanta's Protection lost"
         ],
         "exclude_strings": []
       },
@@ -19364,6 +19431,8 @@
         "path": "com/fs/starfarer/api/impl/campaign/tutorial/TutorialRespawnDialogPluginImpl.class",
         "include_strings": [
           "During the course of this tutorial, the only available option is to reload the last save.",
+          "Exit to main menu",
+          "Load last save",
           "Normally, if this happens you and your remaining crew will spend some time \"behind the scenes\" assembling a smaller fleet of recovered ships.",
           "Your fleet has been defeated!"
         ],
@@ -19820,6 +19889,7 @@
       {
         "path": "com/fs/starfarer/api/impl/combat/DamperFieldOmegaStats.class",
         "include_strings": [
+          "% faster repairs",
           "% less damage taken",
           "% less flux generated"
         ],
@@ -20405,6 +20475,7 @@
       {
         "path": "com/fs/starfarer/api/impl/hullmods/ShieldShunt.class",
         "include_strings": [
+          "Incompatible with Makeshift Shield Generator",
           "Ship has no shields"
         ],
         "exclude_strings": []

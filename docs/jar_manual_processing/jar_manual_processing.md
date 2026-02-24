@@ -18,6 +18,7 @@
 | starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/intel/misc/TradeFleetDepartureIntel.class | `goods` |
 | starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/intel/misc/TradeFleetDepartureIntel.class | `materiel` |
 | starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/intel/misc/SalvorsTallyIntel.class | `orbital` |
+| starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/CoreScript.class | `ships`， `cargo`, `ships & cargo` |
 
 ## 代码逻辑修改
 
