@@ -10,7 +10,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 
 在战斗中该舰会积极迎击敌人并表现得如同战斗舰船一般。",提高船体结构值、装甲强度、以及幅能容量。,,graphics/hullmods/assault_package.png
 自动修复单元,autorepair,2,,,"engines, defensive, merc, standard",防御,7500,,,,3,6,9,15,data.hullmods.AutomatedRepairUnit,降低{%s}在战斗中修复受损武器及引擎的时间。,提高战斗中武器的维修速率。,将武器与引擎的修复时间降低至{%s}，且降低{%s}舰船过载持续时间。,graphics/hullmods/automated_repair_unit.png
-辅助推进器,auxiliarythrusters,1,,,"engines, merc, standard",引擎,5000,TRUE,,,4,8,12,20,data.hullmods.AuxiliaryThrusters,提高舰船{%s}机动性，如加速度/减速度/转向加速/转向角速度。,提高舰船的机动性。,"提高 ""零幅能加速"" 状态下的航速增益{%s}且将旋转速度增益{%s}。",graphics/hullmods/auxilliary_thrusters.png
+辅助推进器,auxiliarythrusters,1,,,"engines, merc, standard",引擎,5000,TRUE,,,4,8,12,20,data.hullmods.AuxiliaryThrusters,提高舰船{%s}机动性，如加速度/减速度/转向加速/转向角速度。,提高舰船的机动性。,"""零幅能加速"" 状态下的航速增益增加{%s}，且转向速度{%s}。",graphics/hullmods/auxilliary_thrusters.png
 弹道测距仪,ballistic_rangefinder,2,,,"offensive, merc, standard",武器,8000,,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.BallisticRangefinder,提高实弹槽位上中小型武器的射程。,提高实弹槽位上中小型武器的射程。,,graphics/hullmods/ballistic_rangefinder.png
 防爆气密门,blast_doors,0,,,"defensive, merc, standard",防御,2500,TRUE,,,4,8,12,20,data.hullmods.BlastDoors,"在各个要害部位加装坚固的密封门，提高{%s}船体结构值。
 
@@ -85,7 +85,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 救援穿梭舱,recovery_shuttles,1,,,"special, standard",战机,4000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.RecoveryShuttles,降低战机联队{%s}的人员战损。,降低因战机损失而导致的人员伤亡。,将减免战机飞行员伤亡的效果提高至{%s}。,graphics/hullmods/recovery_shuttles.png
 强化舱壁,reinforcedhull,0,,,"defensive, merc, standard",防御,2500,TRUE,,,5,10,15,30,data.hullmods.ReinforcedBulkheads,提高舰船{%s}的船体结构值。且当该舰停机时，不会四分五裂且几乎总是可在战后修复。,提高船体结构值，避免该舰船在停机时碎裂，且几乎总是可在战后被打捞并修复。,,graphics/hullmods/reinforced_bulkheads.png
 幅散管道扩容,fluxbreakers,2,,,"defensive, merc, standard","特殊, 防御",7000,,,,3,6,9,15,data.hullmods.FluxBreakers,降低{%s}武器、引擎受到的 EMP 损害。并提高{%s}主动排幅速率。,降低受到的 EMP 损害，加快主动排幅速率。,额外提高{%s}的主动排幅速率。,graphics/hullmods/resistant_flux_conduits.png
-安全协议超驰,safetyoverrides,0,,,"special, engines, offensive, merc, no_build_in, standard","特殊, 引擎",2500,TRUE,,,15,30,45,70,data.hullmods.SafetyOverrides,"禁用舰船的安全协议，根据船体级别提高{%s}/{%s}/{%s}/{%s}舰船战斗中的最高航速，也会对应提高加速度。零幅能加速在任何幅能水平下都能生效。幅能耗散将直接提高至{%s}倍 (其他改装的影响也会因此倍增)。
+安全协议超驰,safetyoverrides,0,,,"special, engines, offensive, merc, no_build_in, standard","特殊, 引擎",2500,TRUE,,,15,30,45,70,data.hullmods.SafetyOverrides,"禁用舰船的安全协议，根据船体级别提高{%s}/{%s}/{%s}舰船战斗中的最高航速，也会对应提高加速度。零幅能加速在任何幅能水平下都能生效。幅能耗散将直接提高至{%s}倍 (其他改装的影响也会因此倍增)。
 
 峰值时间降低为原来的{%s}分之一，禁用主动排幅，且所有武器射程超过{%s}单位的部分将极大衰减。
 

@@ -478,7 +478,7 @@
     {
         "key": "hull_mods.csv#auxiliarythrusters$sModDesc",
         "original": "Increases the 0-flux speed boost by %s, and %s the 0-flux turn rate bonus.",
-        "translation": "提高 \"零幅能加速\" 状态下的航速增益{%s}且将旋转速度增益{%s}。",
+        "translation": "\"零幅能加速\" 状态下的航速增益增加{%s}，且转向速度{%s}。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00008行"
     },
@@ -514,7 +514,7 @@
         "key": "hull_mods.csv#ballistic_rangefinder$desc",
         "original": "<tooltip created in the script due to lots of highlighting>",
         "translation": "提高实弹槽位上中小型武器的射程。",
-        "stage": 1,
+        "stage": -1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00009行"
     },
     {
@@ -1935,7 +1935,7 @@
         "key": "hull_mods.csv#high_scatter_amp$desc",
         "original": "<tooltip created in the script due to sections>",
         "translation": "降低光束武器的射程，并且使它们在对护盾造成伤害时产生硬幅能。",
-        "stage": 1,
+        "stage": -1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00031行"
     },
     {
@@ -2606,7 +2606,7 @@
     {
         "key": "hull_mods.csv#safetyoverrides$desc",
         "original": "Disabling safety protocols increases the ship's top speed in combat by %s/%s/%s (depending on ship size, with a corresponding increase in acceleration) and allows the zero-flux engine boost to take effect regardless of flux level. The flux dissipation rate, including that of additional vents, is increased by a factor of %s.\n\nReduces the peak performance time by a factor of %s, prevents the use of active venting, and drastically reduces weapon ranges past %s units.\n\nCan not be installed on civilian or capital ships.",
-        "translation": "禁用舰船的安全协议，根据船体级别提高{%s}/{%s}/{%s}/{%s}舰船战斗中的最高航速，也会对应提高加速度。零幅能加速在任何幅能水平下都能生效。幅能耗散将直接提高至{%s}倍 (其他改装的影响也会因此倍增)。\n\n峰值时间降低为原来的{%s}分之一，禁用主动排幅，且所有武器射程超过{%s}单位的部分将极大衰减。\n\n无法安装在民用舰或者主力舰上。",
+        "translation": "禁用舰船的安全协议，根据船体级别提高{%s}/{%s}/{%s}舰船战斗中的最高航速，也会对应提高加速度。零幅能加速在任何幅能水平下都能生效。幅能耗散将直接提高至{%s}倍 (其他改装的影响也会因此倍增)。\n\n峰值时间降低为原来的{%s}分之一，禁用主动排幅，且所有武器射程超过{%s}单位的部分将极大衰减。\n\n无法安装在民用舰或者主力舰上。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00045行"
     },
