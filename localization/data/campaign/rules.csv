@@ -2864,7 +2864,7 @@ ngcWayfarerStart,AddNewGameChoices,,"SetTooltip ngcWayfarer ""远行者-级 是�
 ngcExplorerStart,AddNewGameChoices,,"SetTooltip ngcExplorer ""一支能够在星域的偏远星系开展打捞作业的舰队，并能抵御在偏远地区遇到的大多数威胁。\n\n包括一艘油轮以增加燃料容量和探索范围。舰队具有较大的货物容量，以便将打捞物运回核心世界。""",,2:ngcExplorer:一名探险者，驾驶一艘 至高点-级 巡洋舰，还带领着一支打捞探险舰队 (轻松开局),
 ngcMercStart,AddNewGameChoices,,"SetTooltip ngcMerc ""一支规模虽小但战力强大的特遣舰队，配置主要针对开展赏金猎杀任务。\n\n包含一艘小型油轮，在一定程度上扩大了行动范围。""",,3:ngcMerc:一名雇佣兵，驾驶一艘 锤头-级 驱逐舰，还带领着一支作战小队 (轻松开局),
 ngcRandomStart,AddNewGameChoices,,"SetTooltip ngcRandom ""舰队组成随机，总体上比前面的 \""轻松开局\"" 略弱，但也算是一种简单开局。""",,4:ngcRandom:一名自由职业者，接手你能找到的任何工作 (随机开局),
-ngcSpacerStart,AddNewGameChoices,CheckSetting enableSpacerStart,"SetTooltip ngcSpacer ""一架非战斗用的穿梭机，仅携带着非常有限的资源，还有一笔必须偿还的债务。非常困难的开局，只打算作为献给见多识广的星际远行者的挑战。""",,"5:ngcSpacer:""一位宇宙民，一架破穿梭机，以及一笔终身债务。"" (困难开局)",
+ngcSpacerStart,AddNewGameChoices,CheckSetting enableSpacerStart,"SetTooltip ngcSpacer ""一架非战斗用的穿梭机，仅携带着非常有限的资源，还有一笔必须偿还的债务。非常困难的开局，只打算作为献给见多识广的星际远行者的挑战。""",,"5:ngcSpacer:""一个太空佬，一架破穿梭机，以及一笔终身债务。"" (困难开局)",
 ,,,,,,
 #ngcDisableSpacerOption,NGCDisableSpacerOption,!NGCCanSkipTutorial,"SetEnabled ngcSpacer false
 SetTooltip ngcSpacer ""Need to start at least one game with the tutorial in order to be able to select this starting option.""",,,
@@ -3291,7 +3291,7 @@ $personName 看了看你，眼中带着一丝不满。
 ome_greetingMercPlayerWasJerkReject,PickGreeting,"$ome_hireable
 $isMercenary
 $player.wasJerkToMerc
-$level >= 6",ShowPersonVisual,"你提交了连接请求。待机信号持续了很久，你正准备让通讯军官检查他的设备时，通讯接通了。
+$level >= 6",ShowPersonVisual,"你提交了连接请求。待机信号持续了很久，你正准备让通讯军官检查设备时，通讯接通了。
 
 $personName 带着几乎毫不掩饰的敌意看了你一眼。
 
@@ -3309,7 +3309,7 @@ $personName 看向你，装作一副惊讶的样子。""很抱歉耽误了您宝
 
 你开始感觉到一种讽刺的气氛，而这时$heOrShe继续说了下去：""... 因为现在我可以和大伙炫耀，我终于有机会对你讲 —— 吸他妈的真空去吧！""
 
-$personName 做出一个粗鲁的手势并强行切断了通讯。屏幕清空了，你的通讯军官看着控制台，宛如石化了一般。",ome_convEnd2:继续,
+$personName 做出一个粗鲁的手势并强行切断了通讯。你的通讯军官朝着控制台板着脸，把屏幕清空了。",ome_convEnd2:继续,
 ome_greetingAdmin,PickGreeting,"$ome_hireable score:100
 $ome_isAdmin","ShowPersonVisual
 FireAll PopulateOptionsHire","经过短暂的等待，你的连接请求被接受了。
@@ -3766,17 +3766,17 @@ FireAll PopulateSalvageOptions1",,,
 sal_defaultDetails,ShowSalvageEntityDetails,,"ShowDefaultVisual
 PrintDescription 1",,,
 sal_probeDetails,ShowSalvageEntityDetails,$customType == derelict_probe,"ShowDefaultVisual
-FireBest DerelictPrintExtraInfo",探测器的外壳不止被微撞击弄得坑坑洼洼，还出现了遭受骇人的辐射灼烧所留下的典型虹色幻彩。尽管这个探测器的制造时间也许可以追溯到千年以前，但一些系统应该还在工作。,,
+FireBest DerelictPrintExtraInfo",探测器的外壳不止被微撞击弄得坑坑洼洼，还出现了遭受骇人的辐射灼烧所留下的典型虹色幻彩。尽管这个探测器的制造时间也许可以追溯到千年以前，但其上的一些系统似乎仍依照设计持续运行着。,,
 sal_surveyShipDetails,ShowSalvageEntityDetails,$customType == derelict_survey_ship,"ShowDefaultVisual
-FireBest DerelictPrintExtraInfo",这艘古老的人之领时代自动化勘探船一直暴露在带电粒子和高速星际尘埃的冲击下，饱受蹂躏了几个世纪。但船上的一些系统似乎仍依照设计运行着。,,
+FireBest DerelictPrintExtraInfo",这艘古老的人之领时代自动化勘探舰一直暴露在带电粒子和高速星际尘埃的冲击下，饱受蹂躏了几个世纪。但其上的一些系统似乎仍依照设计持续运行着。,,
 sal_mothershipDetails,ShowSalvageEntityDetails,$customType == derelict_mothership,"ShowDefaultVisual
-FireBest DerelictPrintExtraInfo",这艘巨大的自动化勘探母舰为人之领服务了几个世纪的岁月，遭受了数不尽的灼烧和撞击，最终成为了被人遗忘的漂流废船。不过传感器指出，这艘船上的一些系统仍依照设计运行着。,,
-sal_limboMiningStation,ShowSalvageEntityDetails,$limboMiningStation,ShowDefaultVisual,"面前的物体看上去大致符合 人之领 时代的采矿空间站设计，但是完全没有任何为了人类居住所作的准备。没有居民环，没有维生系统，没有 穿梭机 降落台。
+FireBest DerelictPrintExtraInfo",这艘巨大的自动化勘探母舰为 人之领 服务了几个世纪的岁月，遭受了数不尽的灼烧和撞击，最终成为了被人遗忘的漂流废船。不过传感器指出，其上的一些系统似乎仍依照设计持续运行着。,,
+sal_limboMiningStation,ShowSalvageEntityDetails,$limboMiningStation,ShowDefaultVisual,"面前的物体看上去大致符合 人之领 时代的采矿空间站设计，但是完全没有任何为了人类居住所作的准备。没有居民环，没有维生系统，也没有穿梭机降落台。
 
 取而代之的是环状桁架上四散的无人钻机。矿石接收仓隐藏在黑暗之中；一系列零重力制造厂点缀着中央尖塔，凌驾于漆黑一片的库房和机库之上。
 
-虽然外部漆黑一片，传感器报告显示一系列微弱的能量反应和轻微的粒子波动，表明密集的稀有元素聚集于此。",,
-sal_derelictDefConstructionInfo,DerelictPrintExtraInfo,$global.defeatedDerelictStr >= 50,,传感器回馈显示在残骸附近存在异常的短半衰期带电粒子。残骸的内部结构密度分布也与你之前遇到过人之领时代探索船的推断模式不符，似乎其内部质量遭到了移除或被特意重新分配过。,,
+虽然外部漆黑一片，传感器报告显示出一系列微弱的能量反应和轻微的粒子波动，表明此处聚集着密集的稀有元素。",,
+sal_derelictDefConstructionInfo,DerelictPrintExtraInfo,$global.defeatedDerelictStr >= 50,,传感器反馈显示在残骸附近存在异常的短半衰期带电粒子。残骸的内部结构密度分布也与你之前遇到过 人之领 时代勘探船的推断模式不符，似乎其内部质量遭到了移除或被特意重新分配过。,,
 sal_wreckDetails,ShowSalvageEntityDetails,$customType == wreck,"ShowDefaultVisual
 PrintWreckDescription",,,
 sal_wreckDetailsFromGhost,ShowSalvageEntityDetails,"$customType == wreck
@@ -3784,7 +3784,7 @@ $fromGhost score:100","unset $fromGhost
 ShowDefaultVisual
 PrintWreckDescription
 AddText ""你的舰桥传来一些骚动。战术军官重新向传感器技官质问了那艘遗弃船的情况，\""我们之前一直都没发现这船已经自己动了几小时吗？\""""
-AddText ""传感器技官迟迟才传来回应，并非常谨慎地做出答复。\""抱歉，在超空间获取的读数从本质上就蕴含了不准确性。而我们的欧几里德转显框架也只是...尽可能好地采用专业系统对它们进行了模拟。\"" 传感器技官对着正在显示的读数摆手比划到。\""那一定只是个噪点。\"" 边说边点头，还刻意避开与战术军官的目光。\""就是个超空间噪点，就是那样。\""""",,,
+AddText ""传感器技官迟迟才传来回应，并非常谨慎地做出答复。\""抱歉，在超空间获取的读数从本质上就蕴含了不准确性。而我们的欧几里德转显框架也只是...尽可能好地采用专业系统对它们进行了模拟。\"" 传感器技官对着正在显示的读数摆手比划到，\""那一定只是个噪点。\"" 技官边说边点头，还刻意避开与战术军官的目光。\""就是个超空间噪点，就是那样。\""""",,,
 ,,,,,,
 # Explore/Leave options and actions,,,,,,
 sal_defaultLeave1,PopulateSalvageOptions1,,SetShortcut defaultLeave ESCAPE,,100:defaultLeave:$salvageLeaveText,
@@ -3795,17 +3795,17 @@ $hasDefenders",FireBest TriggerAutomatedDefenses,,,
 sal_noDefenders,DialogOptionSelected,$option == salExplore,FireBest CheckSalvageSpecial,,,
 ,,,,,,
 # Descriptions of automated defenders,,,,,,
-sal_printDefaultDefenders,TriggerAutomatedDefenses,,SalvageDefenderInteraction,在你的$shipOrFleet接近时，$shortName 附近出现了新的能量反应。,,
-sal_printDebrisDefenders,TriggerAutomatedDefenses,$customType == debris_field_shared,SalvageDefenderInteraction,在你的$shipOrFleet接近时，一块大型残骸附近出现了新的能量反应。,,
-sal_triggerProbeDefenders,TriggerAutomatedDefenses,$customType == derelict_probe,SalvageDefenderInteraction,在你的$shipOrFleet接近时，探测器的货舱内上线了数个新的能量反应。,,
-sal_triggerSurveyShipDefenders,TriggerAutomatedDefenses,$customType == derelict_survey_ship,SalvageDefenderInteraction,在你的$shipOrFleet接近时，多个能量反应出现在了外壳破损的勘探船体内外各处。,,
+sal_printDefaultDefenders,TriggerAutomatedDefenses,,SalvageDefenderInteraction,当你的$shipOrFleet靠近时，$shortName 附近出现了新的能量信号。,,
+sal_printDebrisDefenders,TriggerAutomatedDefenses,$customType == debris_field_shared,SalvageDefenderInteraction,当你的$shipOrFleet靠近时，一块大型残骸附近出现了新的能量信号。,,
+sal_triggerProbeDefenders,TriggerAutomatedDefenses,$customType == derelict_probe,SalvageDefenderInteraction,当你的$shipOrFleet靠近时，探测器的货舱内出现了数个新的能量信号。,,
+sal_triggerSurveyShipDefenders,TriggerAutomatedDefenses,$customType == derelict_survey_ship,SalvageDefenderInteraction,当你的$shipOrFleet靠近时，勘测舰剥落的船体各处及内部出现了多个新的能量信号。,,
 sal_triggerMothershipDefendersBoth,TriggerAutomatedDefenses,"$customType == derelict_mothership
 $hasStation
-$hasNonStation",SalvageDefenderInteraction,在你的$shipOrFleet接近时，从母舰巨大船体上多个位于阴暗中的工作舱内检测到了许多强烈的能量信号正在上线。你的传感器还探测到母舰上的数个武器装置正在启动。,,
+$hasNonStation",SalvageDefenderInteraction,当你的$shipOrFleet靠近时，母舰庞大舰体内部那些昏暗的工作舱中出现了大量强劲的能量信号。你的传感器技官还发现母舰本体上的数个武器装置正在启动供能。,,
 sal_triggerMothershipDefendersOnlyDrones,TriggerAutomatedDefenses,"$customType == derelict_mothership
-$hasNonStation",SalvageDefenderInteraction,在你的$shipOrFleet接近时，从母舰巨大船体上多个位于阴暗中的工作舱内检测到了许多强烈的能量信号正在上线。,,
+$hasNonStation",SalvageDefenderInteraction,当你的$shipOrFleet靠近时，母舰庞大舰体内部那些昏暗的工作舱中出现了大量强劲的能量信号。,,
 sal_triggerMothershipDefendersOnlyItself,TriggerAutomatedDefenses,"$customType == derelict_mothership
-$hasStation",SalvageDefenderInteraction,在你的$shipOrFleet接近时，你的传感器检测到位于母舰巨大舰体上数个阴暗裂口内的武器装置正在启动。,,
+$hasStation",SalvageDefenderInteraction,当你的$shipOrFleet靠近时，你的传感器技官发现母舰庞大舰体上的那些阴暗裂缝中有数个武器装置正在启动供能。,,
 ,,,,,,
 "# Checking whether salvage results in a ""special"" find. This is where SalvageDefenderInteraction returns to.",,,,,,
 sal_continuePostDefenders,BeatDefendersContinue,,,你的$shipOrFleet成功抵近了 $nameInText，没有发生其他异常事件。,0:salBeatDefendersContinue:继续,
@@ -3882,7 +3882,7 @@ unset $trapped",,,
 pods_breakOption2,DialogOptionSelected,"$option == podsBreak
 $trapped",CargoPods destroy,不幸的是，只有给出正确的授权码才能避免货物仓的自爆装置启动，因此仓内的货物被全部炸毁了。,100:defaultLeave:离开,
 pods_stabilizeSel,DialogOptionSelected,$option == podsStabilize,"CargoPods computeStabilizeData
-AddText ""稳定化将使货物仓在一个可预测的轨道上继续运行 $stabilizeDays 天。稳定化之后添加或移除任何货物将破坏轨道的稳定性。""
+AddText ""稳定化措施将使货物仓在一个可预测的轨道上继续运行 $stabilizeDays 天。在此后添加或移除任何货物都将破坏轨道的稳定性。""
 SetTextHighlights $stabilizeDays ""将破坏轨道的稳定性""
 ShowResCost supplies $stabilizeSupplies true
 FireBest CargoPodsDisableProceedIfNeeded",,"0:podsStabConfirm:继续
@@ -3905,13 +3905,13 @@ lppHookStart,DialogOptionSelected,"$option == lpp_hookStart
 !$global.lpp_didHookStart
 !$global.lpp_inProgress
 !$global.lpp_missionCompleted","$global.lpp_didHookStart = true
-FireAll LPPHookResponses","你注意到一个年轻的见习修士在看着你。当你对上那人的目光时，对方的笑容变得灿烂起来，像是发现了目标一般。对方往这边走来，似乎是想改变一个舰长的信仰。
+FireAll LPPHookResponses","你注意到一个年轻的见习修士在看着你。当你对上那人的目光时，对方的笑容变得灿烂起来，像是发现了目标一般。修士往这边走来，似乎是想改变一位太空舰长的信仰。
 
-这些热情的传教士是太空港里常见的折磨怪，所以你其实已有准备。当对方深吸一口气就要说话时，你抓住主动权说 ——",,
+这些热情的传教士是太空港里常见的折磨怪，所以你其实早有准备。当对方深吸一口气就要说话时，你抓住主动权说道 ——",,
 lppHookStartAgain,DialogOptionSelected,"$option == lpp_hookStart
 $global.lpp_didHookStart
 !$global.lpp_inProgress
-!$global.lpp_missionCompleted",,"在避开对方目光的前提下，你注意到了一个年轻的传教者试图与偶尔出现的顽固太空人交流。如果想和对方聊聊，你只需要给出一个最微妙的手势，对方就会用卢德的赞美诗填满你的耳朵。
+!$global.lpp_missionCompleted",,"在避开对方目光的前提下，你注意到了一个年轻的传教者试图与偶尔出现的顽固宇宙民交流。如果想和对方聊聊，你只需要给出一个最微妙的手势，对方就会用卢德的赞美诗填满你的耳朵。
 
 在他后方，一个穿着华丽长袍但姿态谦卑的身影潜伏在烛光照亮的壁龛边。你猜那应该是圣地的住持祭司。","lpp_hookStart2:为什么不呢？把目光投向那年轻的传教士。
 lpp_hookLeaveA:继续走",
@@ -3929,15 +3929,15 @@ $id == beholder_station
 $global.lpp_missionCompleted",FireAll BeholderShrineMainOptions,,,
 lppHookStartAgain2,DialogOptionSelected,$option == lpp_hookStart2,FireAll LPPHookResponses,"当你对上那人的目光时，对方的笑容变得灿烂起来，像是发现了目标一般。对方往这边走来，带着为你背诵未删节版 [卢德圣典] 的渴望。
 
-当对方深吸一口气就要说话时，你抓住主动权说 ——",,
+当对方深吸一口气就要说话时，你抓住主动权说道 ——",,
 lppHookResponsePolite,LPPHookResponses,,,,"lpp_hookPolite:""谢谢，但我已经对你们的宗教很熟悉了。""",# polite
 lppHookResponseLearn,LPPHookResponses,,,,"lpp_hookLearn:""我很乐意再深入了解一下你们的信仰。""",# tentative
-lppHookResponseYesAnd,LPPHookResponses,,,,"lpp_hookYesAnd:""我深感自己已被那道所吸引。""",# all in
+lppHookResponseYesAnd,LPPHookResponses,,,,"lpp_hookYesAnd:""我感到自己已经被圣道所吸引。""",# all in
 lppHookResponseTroll,LPPHookResponses,,,,"lpp_hookTroll:""我是赋予 AI 人权提议的坚定支持者。""",# troll
 lppHookResponseNope,LPPHookResponses,,,,"lpp_hookNope:""不感兴趣，再见。"" ",# nope
 lppHookNope,DialogOptionSelected,$option == lpp_hookNope,"EndConversation DO_NOT_FIRE
 $option = shrineDoLeave 0
-FireBest DialogOptionSelected","对方立马闭嘴了，开始转化攻击模式以应对你的破坏性佯攻，然后再次开口。
+FireBest DialogOptionSelected","修士立马闭嘴了，开始转化攻击模式以应对你的破坏性佯攻，然后再次开口。
 
 ""如果 ——"" 对方开始说话，但你已经转身离开了。
 ",,
@@ -3945,7 +3945,7 @@ lppHookPolite,DialogOptionSelected,$option == lpp_hookPolite,,"你礼貌性的�
 
 ""这么说，你已经得知好消息了。"" 见习修士满面热情，""你在卢德的眼中已存真福。你认为自己是虔诚的信徒吗？还是精神上的渴望把你带到了这圣地来？""","lpp_hookLearn1:""我很好奇圣地长什么样。""
 lpp_hookLearn:""我...也许有些唯心方面的问题。""
-lpp_hookWalkAlready:""你误解了我的话语，我早已踏上了那条道。""
+lpp_hookWalkAlready:""你误解了我的话语，我早已踏上了圣道。""
 lpp_hookAntiTech1:""不。一个憎恨科技的宗教有什么好的？""
 lpp_hookNope:""抱歉，但我是个忙人，非常忙。再见。""",
 lppHookWalkAlready,DialogOptionSelected,$option == lpp_hookWalkAlready,,"""哦！请原谅我的冒昧，$playerBrotherOrSister。我...我可以和你一同祈祷吗？祝愿我们在神圣的虚空中一路平安。""
@@ -3987,12 +3987,12 @@ lpp_hookPretendPrayer:假装和见习修士一起祈祷
 lpp_hookLeaveB:径直离开",
 lppHookTroll,DialogOptionSelected,$option == lpp_hookTroll,"$saidCynical = true 0
 FireAll LPPHookAttitudeAdjustment
-$player.ethosSarcastic++","这让见习修士呆滞了一会，眼光中透露着惊恐，仿佛在听到你亵渎的话语后自己的信仰也会受到玷污。你注意到对方的手无意识地在忏悔。
+$player.ethosSarcastic++","这让见习修士呆滞了一会，眼光中透露着惊恐，仿佛在听到你亵渎的话语后自己的信仰也会受到玷污。你注意到对方的手无意识地在做出忏悔的手势。
 
-""啊，那不 —— 请原谅我，我的意思是，'无知者也可享有福音'，卢德是这么说的，'他们也被允许引入正义之道。'我相信这一点，真...真的。""见习修士结结巴巴地说。
+""啊，那不 —— 请原谅我，我的意思是，'无知者也可享有福音'，卢德是这么说的，'他们也被允许引入正义之道。' 而我相信这一点，真...真的。"" 见习修士结结巴巴地说。
 
 这时你注意到那个见习修士后方烛光照亮的壁龛里骚动起来。",lpp_hookCurateStart:继续,
-lppHookAntiTech1,DialogOptionSelected,$option == lpp_hookAntiTech1,,"见习修士听到你的话后似乎眼前一亮。""常人认为卢德教义反科技，这实际上是一种误解，毕竟...""话说到一半，对方注意到了你面如死灰的表情，仿佛已经忍耐经文到了极限。
+lppHookAntiTech1,DialogOptionSelected,$option == lpp_hookAntiTech1,,"见习修士听到你的话后似乎眼前一亮。""常人认为卢德教义反科技，这实际上是一种误解，毕竟..."" 话说到一半，对方注意到了你面如死灰的表情，仿佛已经忍耐经文到了极限。
 
 ""嗯嗯。换句话说，我们认为先进技术的问题不一定是内在的。好吧，的确有些技术本身就令人憎恶 —— 行星杀手、心灵接口、愚蠢的永生。总之，工业的六宗罪是因为人们的精神被无道德底线的技术侵蚀所导致的。""",lpp_hookAntiTech2:继续,
 lppHookAntiTech2,DialogOptionSelected,$option == lpp_hookAntiTech2,$do_contrition = true 0,"说到点子上后，对方笃定地点着头。""你是开飞船的，对吧？这样的职业很好，很值得从事。可以做慈善，让家庭和睦，还能帮助有需要的人...""
@@ -4034,8 +4034,8 @@ lppHookCurateResponse1,LPPHookCurateIntroResponses,,,,"lpp_hookCurateThanks:""�
 lppHookCurateResponse2,LPPHookCurateIntroResponses,,,,"lpp_hookCurateCalled:""你说 '受召' 是什么意思？""",
 #lppHookCurateResponse3,LPPHookCurateIntroResponses,,,,"lpp_hookCurateWhyMe:""Why me?""",# redundant
 lppHookCurateResponse4,LPPHookCurateIntroResponses,$player.luddicAttitudeFaithful > 0,,,"lpp_hookCurateBlessing:""祝福你，祭司。""",
-lppHookCurateResponse5,LPPHookCurateIntroResponses,$player.luddicAttitudeCynical > 0,,,"lpp_hookCurateUseLine:""我猜你见谁都说这话。""",
-lppHookCurateResponse6,LPPHookCurateIntroResponses,,,,"lpp_hookCurateAdult:""很庆幸终于能和一位成年人交谈。""",
+lppHookCurateResponse5,LPPHookCurateIntroResponses,$player.luddicAttitudeCynical > 0,,,"lpp_hookCurateUseLine:""我敢打赌你跟谁都这么说。""",
+lppHookCurateResponse6,LPPHookCurateIntroResponses,,,,"lpp_hookCurateAdult:""很庆幸终于能和一位成年人交谈了。""",
 #lppHookCurateResponse7,LPPHookCurateIntroResponses,,,,lpp_hookCurateNope:Make an excuse and leave,"# too bad, you're in now."
 lppHookCurateNope,DialogOptionSelected,$option == lpp_hookCurateNope,"EndConversation DO_NOT_FIRE
 $option = shrineDoLeave 0
@@ -4043,14 +4043,14 @@ FireBest DialogOptionSelected","""我们欢迎你拜访此地。"" 祭司在你�
 lppHookCurateThanks1,DialogOptionSelected,$option == lpp_hookCurateThanks1,"$option = lpp_hookCurateSegue 0
 FireBest DialogOptionSelected","祭司笑了。""不管是不是为了信仰而来，圣地都欢迎你的参观。""",,
 lppHookCurateThanks,DialogOptionSelected,$option == lpp_hookCurateThanks,"$option = lpp_hookCurateSegue 0
-FireBest DialogOptionSelected","""也许你对这里感兴趣无关信仰？"" 祭司微微一笑，""无论是否拥有信仰，这都欢迎你。""",,
+FireBest DialogOptionSelected","""也许你对这里的兴趣无关信仰？"" 祭司微微一笑，""无论是否拥有信仰，这儿都欢迎你。""",,
 lppHookCurateAdult,DialogOptionSelected,$option == lpp_hookCurateAdult,"$player.ethosSarcastic++
 $option = lpp_hookCurateSegue 0
 FireBest DialogOptionSelected","""请原谅修士的莽撞。"" 祭司苦笑着说，""我们都是从那个时候过来的。""",,
 lppHookCurateBlessing,DialogOptionSelected,$option == lpp_hookCurateBlessing,"$option = lpp_hookCurateSegue 0
 FireBest DialogOptionSelected","祭司微微一笑。""你的言辞让人感觉你已拥抱信仰。但正如卢德所说，'话语的真理是由说话者的立场所揭示的。'""",,
 lppHookCurateUseLine,DialogOptionSelected,$option == lpp_hookCurateUseLine,"$option = lpp_hookCurateSegue 0
-FireBest DialogOptionSelected","""你猜对了。"" 祭司微微一笑，""没错，我的确如此。你的灵魂筑起了一道厌世之墙与信仰隔离，却依然翻上墙顶接受我的引导。""",,
+FireBest DialogOptionSelected","""是的。"" 祭司微微一笑，""没错，我的确如此。你的灵魂筑起了一道厌世之墙与信仰隔离，却依然翻上墙顶接受我的引导。""",,
 lppHookCurateCalled,DialogOptionSelected,$option == lpp_hookCurateCalled,"$option = lpp_hookCurateSegue 0
 FireBest DialogOptionSelected",祭司微微一笑。$heOrShe是否在那虔诚下隐藏着别的东西呢？,,
 #lppHookCurateWhyMe,DialogOptionSelected,$option == lpp_hookCurateWhyMe,"$option = lpp_hookCurateSegue 0
@@ -4059,7 +4059,7 @@ lppHookCurateSegue,DialogOptionSelected,$option == lpp_hookCurateSegue,FireAll P
 
 对方停顿了一下，随即继续道，""当然我也会为并非朝圣者的人服务。"" $HeOrShe满面期待地看着你，$hisOrHer的沉默则是对你的询问 —— 你是不是朝圣者呢？",,
 lppHookCurateResponseB1,PPHookCurateResponses,,,,"lpp_hookCurateInfoDump:""和我介绍一下这地方吧。""",
-lppHookCurateResponseB5,PPHookCurateResponses,,,,"lpp_hookCurateNotPilgrim:""我只是到这来看看。""",
+lppHookCurateResponseB5,PPHookCurateResponses,,,,"lpp_hookCurateNotPilgrim:""我只是到这来参观。""",
 lppHookCurateResponseB2,PPHookCurateResponses,,,,"lpp_hookCurateStartPilgrimage:""我愿意把自己当成朝圣者。""",# [show interest]
 lppHookCurateResponseB3,PPHookCurateResponses,,,,"lpp_hookCurateHowKnow:""你怎么知道我不是朝圣者的？""",
 lppHookCurateResponseB4,PPHookCurateResponses,,,,"lpp_hookCurateSecular:""谢谢，但我对这里只有些世俗的兴趣。""",
@@ -4157,7 +4157,7 @@ lpp_hookCurateSeeyaCynical:""现在我知道该避开哪些地方了，再会。
 lpp_hookCurateSeeyaPather:""双子恶魔们也无法令我误入歧途。""",
 lppHookCurateCotton,LPPHookCurateCottonCheck,!$player.metBrotherCotton,RemoveOption lpp_hookCurateCottonAsk,,,
 lppHookCurateSeeyaAgnostic,DialogOptionSelected,$option == lpp_hookCurateSeeyaAgnostic,"$option = lpp_hookCurateSeeya 0
-FireBest DialogOptionSelected",$PersonPost $personName 向你点头致意，而你迈步走向那个属于自己的道路。,,
+FireBest DialogOptionSelected",$PersonPost $personName 向你点头致意，而你也迈步走向了那条属于自己的道路。,,
 lppHookCurateSeeyaFaithful,DialogOptionSelected,$option == lpp_hookCurateSeeyaFaithful,"$option = lpp_hookCurateSeeya 0
 FireBest DialogOptionSelected",$PersonPost $personName 在你踏上朝圣者之路时为你祈福。,,
 lppHookCurateSeeyaCynical,DialogOptionSelected,$option == lpp_hookCurateSeeyaCynical,"$option = lpp_hookCurateSeeya 0
@@ -4168,9 +4168,9 @@ lppHookCurateCottonAsk,DialogOptionSelected,$option == lpp_hookCurateCottonAsk,$
 
 $HeOrShe吐出了一口气。""我很久没听过这个名字了。""
 
-你还没来得及说什么，祭司就继续说了下去。""没什么大问题。我确实在照顾着这个圣地和在这暂住的信徒们，但我不是隐士。我当然听说过 Cotton。甚至见过他一次。那时我向骑士们做了相关报告，不过我与此人的交集仅此而已。""
+你还没来得及说什么，祭司就继续说了下去。""没什么大问题。我确实在照顾着这个圣地和在这暂住的信徒们，但我不是隐士。我当然听说过 Cotton，甚至见过他一次。那时我向骑士们做了相关报告，不过我与此人的交集仅此而已。""
 
-""虽然有些犹豫，但我必须得问你。你为何向我打听他？""","lpp_hookCurateCottonLooking:""我在找他。""
+""虽然有些犹豫，但我必须得问你：你为何向我打听他？""","lpp_hookCurateCottonLooking:""我在找他。""
 lpp_hookCurateCottonJoin:""我想加入他。""
 lpp_hookCurateCottonKill:""我要干掉他。""
 lpp_hookCurateCottonWontSay:""我打算保密。""",
@@ -4178,16 +4178,16 @@ lppHookCurateCottonLooking,DialogOptionSelected,$option == lpp_hookCurateCottonL
 lpp_hookCurateCottonJoin:""我想加入他。""
 lpp_hookCurateCottonKill:""我要干掉他。""
 lpp_hookCurateCottonWontSay:""我打算保密。""",
-lppHookCurateCottonWontSay,DialogOptionSelected,$option == lpp_hookCurateCottonWontSay,,"""好吧，无论你意欲何方，我都劝你最好能踏上一条远离 Cotton '修士' 的径途。"" 祭司断然地说。
+lppHookCurateCottonWontSay,DialogOptionSelected,$option == lpp_hookCurateCottonWontSay,,"""好吧，无论你意欲何方，我都劝你最好能踏上一条远离 Cotton '修士' 的道路。"" 祭司断然地说。
 
 祭司轻振$hisOrHer的长袍。""如果我的回答让你满意了的话，"" $heOrShe说，""我得去照顾其他朝圣者了。""",lpp_hookCurateSeeya:向对方道别后离开,
 lppHookCurateCottonTalk,DialogOptionSelected,$option == lpp_hookCurateCottonTalk,,"祭司看起来很疲惫，但还是思考了一下你的回应。
 
 ""他会告诉你一些你还不相信的事吗？"" $HeOrShe叹了口气并坐到了长凳上，""不必回答，我只希望你不要这样做。""
 
-""人们来到这圣地来寻求答案。但我发现大多数来到这里的人已经有了他们所寻求的答案：他们寻求的是让他们接受已经知道的东西的许可。""",lpp_hookCurateCottonTalk2:继续,
+""人们来到这圣地寻求答案。但我发现，大多数来到这里的人，心中其实早已有了他们寻求的答案；他们真正寻求的，是获得许可，去接受那些他们已经知道的事情。""",lpp_hookCurateCottonTalk2:继续,
 lppHookCurateCottonTalk2,DialogOptionSelected,$option == lpp_hookCurateCottonTalk2,$player.declaredWillTalkToCotton = true,"祭司站了起来，轻振$hisOrHer的长袍。""如果我的回答让你满意了的话，"" 祭司避开了你的目光，""我得去照顾其他朝圣者了。""",lpp_hookCurateSeeya:向对方道别后离开,
-lppHookCurateCottonJoin,DialogOptionSelected,$option == lpp_hookCurateCottonJoin,$player.luddicAttitudePather++,"""我劝你不要踏上那条道。"" 祭司断然地说。
+lppHookCurateCottonJoin,DialogOptionSelected,$option == lpp_hookCurateCottonJoin,$player.luddicAttitudePather++,"""我奉劝你不要踏上那条道路。"" 祭司断然地说。
 
 祭司轻振$hisOrHer的长袍。""如果我的回答让你满意了的话，"" $heOrShe避开了你的目光，""我得去照顾其他朝圣者了。""",lpp_hookCurateSeeya:向对方道别后离开,
 lppHookCurateCottonKill,DialogOptionSelected,$option == lpp_hookCurateCottonKill,$player.declaredWillKillCotton = true,"祭司叹了口气，揉了揉$hisOrHer的眼睛，仿佛正在忍受剧烈的头痛，然后开口道：
@@ -4195,7 +4195,7 @@ lppHookCurateCottonKill,DialogOptionSelected,$option == lpp_hookCurateCottonKill
 ""我并不知道这条道路是否通向你所追求的最终结局。""","lpp_hookCurateCottonKill2a:""为什么这么说？""
 lpp_hookCurateCottonKill2b:""不管用舷炮还是佩枪，我都会确保那是我想要的结局。""
 ",
-lppHookCurateCottonKill2a,DialogOptionSelected,$option == lpp_hookCurateCottonKill2a,,"""他不是第一个这种人，也不会是最后一个，更不是唯一的一个。"" $heOrShe痛苦地说道。
+lppHookCurateCottonKill2a,DialogOptionSelected,$option == lpp_hookCurateCottonKill2a,,"""他不是第一个选择如此的人，也不会是最后一个，更不是唯一的一个。"" $heOrShe痛苦地说道。
 
 ""如果这让你满意的话，"" 祭司没有和你对视，""我现在要去见其他的朝圣者了。""",lpp_hookCurateSeeya:向对方道别后离开,
 lppHookCurateCottonKill2b,DialogOptionSelected,$option == lpp_hookCurateCottonKill2b,,"""就照你的意思来吧。"" 祭司勉为其难地同意了，但没有对上你的目光。
@@ -4238,16 +4238,16 @@ lppBeholderShrineLeave1,DialogOptionSelected,$option == beholderShrineLeave1,"$o
 FireBest DialogOptionSelected",你走出密室，思考着你所看到，或许还有感觉到的。,,
 lppBeholderShrineRealLeave,DialogOptionSelected,$option == lpp_beholderShrineRealLeave,DismissDialog,,,
 lppBeholderShrineOfferingAlreadyMade,DialogOptionSelected,"$option == beholderShrineMakeOffering
-$offeringMade score:100",,你最近已经做过捐赠了，如果还这么做的话将被认为是个傲慢不得体的家伙。,,
+$offeringMade score:100",,你最近已经做过捐赠了，过多的捐赠会被视作为傲慢的举动。,,
 lppBeholderShrineOfferingEnough,DialogOptionSelected,"$option == beholderShrineMakeOffering
 $player.supplies >= 10","SetTextHighlightColors buttonShortcut
 SetTextHighlights 10",你询问助理祭司是否可以为这片圣迹的维护提供捐助。助理祭司带着热情的微笑解释说，10 单位的补给便可大大助于教会履行其神圣的职责。,"0:beholderShrineGiveOffering:捐赠 10 单位的补给
-1:beholderShrineCancelOffering:再考虑下",
+1:beholderShrineCancelOffering:还是算了",
 lppBeholderShrineOfferingNotEnough,DialogOptionSelected,"$option == beholderShrineMakeOffering
 $player.supplies < 10","SetTextHighlightColors buttonShortcut
-SetTextHighlights 10","你询问助理祭司是否可以为这片圣迹的维护提供捐助。准助理牧师带着热情的微笑解释说，10 单位的补给便可大大助于教会履行其神圣的职责。不幸的是，你手头没有足够的物资。
+SetTextHighlights 10","你询问助理祭司是否可以为这片圣迹的维护提供捐助。10 单位的补给便可大大助于教会履行其神圣的职责。不幸的是，你手头没有足够的补给。
 
-助理祭司回以你一个黯淡的微笑，""你的好意我心领了。也许你需要一份我们每班提供的布施餐？""",,
+助理祭司向你回以一个黯然的微笑，""你的好意我心领了。也许你可能会需要一份我们每天提供的布施餐？""",,
 lppBeholderShrineGiveOffering,DialogOptionSelected,$option == beholderShrineGiveOffering,"AddText""一位助理祭司接受了你的捐赠，为你祈祷并表示感谢。""
 AddRemoveCommodity supplies -10 true
 AdjustRep luddic_church SHRINE_OFFERING
@@ -4371,7 +4371,7 @@ FireAll PopulateOptions","你下令飞行员继续返航，而非跟着非常规
 在返回你$shipOrFleet的途中，没有交通管制或别种形式的后续通信向你传达反对意见。",,
 lppEnding1,DialogOptionSelected,$option == lpp_ending1,ShowImageVisual gilead,"在着陆场上，一位庄严的卢德骑士正等着你的到来。一名新晋骑士站在他身后几步远的地方，试图模仿前辈的从容镇静。
 
-""$PlayerName 舰长，"" 骑士说，""请允许我代表银河救赎教会表示欢迎。同时，我谨代表 Jaspis 宗师大人向你发来会面和共进茶点的邀请。""
+""$PlayerName 舰长，"" 骑士说，""请允许我代表 银河救赎教会 表示欢迎。同时，我谨代表 Jaspis 宗师大人向你发来会面和共进茶点的邀请。""
 
 骑士站到一旁，用戴着臂铠的手邀请你向行政建筑群进发。","lpp_ending2:和骑士一起出发
 lpp_endingKnightWhat:""这是为了什么？""
@@ -4424,7 +4424,7 @@ FireAll LPPShrineVisitXP","转眼间，圣地就不在你眼前了。
 lppGileadShrineEarlyLeave,DialogOptionSelected,$option == lpp_gileadShrineEarlyLeave,"ShowDefaultVisual
 FireAll PopulateOptions","吸入最后一口充满了绿色植物气息的空气后，你返回了穿梭机上。
 
-搭乘穿梭机返航的过程平稳顺利。",,
+搭乘穿梭机返航的过程一切顺利。",,
 lppGileadShrineStartHubTextA0,LPPGileadShrineStartHubA,$market.lpp_finishPilgrimage score:1000,,"一位面无表情的圣务侍在停机坪上接待了你的穿梭机，迅速瞥了一眼手持数据平板，又飞快地把它塞回宽松的长袍里，然后邀请你跟上他们。
 
 ""我很荣幸，$PlayerName 舰长..."" 圣务侍说道，""能够邀请您在今天为您的朝圣者之路画上句号。""","lpp_gileadPilgrimageEnd1:继续。
@@ -4445,13 +4445,13 @@ lppGileadShrineLeaveEndPather,LPPMoraleWrapUp,$player.luddicAttitudePather >= 3,
 
 站在这座骄傲的大教堂里，人们很容易忘记卢德手中也曾执重锤，并有勇气在面对邪恶时毫不犹豫地将其挥出。",,
 lppGileadShrineLeaveEndFaithful,LPPMoraleWrapUp,$player.luddicAttitudeFaithful >= 3,FireAll LPPMissionWrapUp,你的周围流淌着信仰和仪式的河流。与你同行的朝圣者已经选好所追求的目标，那便是卢德的旨意。在英仙座星区的艰难生活中、在朝圣路上的同甘共苦中，他们寻找到了在 大崩塌 留下的空洞中所缺失的和平和真义。,,
-lppGileadShrineLeaveEndCynical,LPPMoraleWrapUp,$player.luddicAttitudeCynical >= 3,FireAll LPPMissionWrapUp,"在你周围，人们进行着朝圣和仪式相关的各种活动，为他们的先知卢德表演着具有重大意义的仪式。很难想象这一切都是建立在被一个煽动者故意歪曲的话语之上。让人很难想象卢德会怎么看待这一切。
+lppGileadShrineLeaveEndCynical,LPPMoraleWrapUp,$player.luddicAttitudeCynical >= 3,FireAll LPPMissionWrapUp,"在你周围，人们进行着朝圣和仪式相关的各种活动，为他们的先知卢德表演着具有重大意义的仪式。很难相信这一切都是建立在被一个煽动者故意歪曲的话语之上，这让人很难想象卢德会怎么看待这一切。
 
 至于教会，他们自然装作理解卢德，并借此而繁荣壮大。",,
 lppGileadShrineLeaveEndAtheistic,LPPMoraleWrapUp,$player.luddicAttitudeAtheistic >= 3,FireAll LPPMissionWrapUp,"你的周围流淌着朝圣者的人流。他们为自己跟随先知卢德的脚步的旅程找到了意义。令人难以置信的是，那个设法利用了环境、以巨大的感召力在一瞬间弯曲了历史走向的人，他留下的话语究竟都形成了什么。
 
 那么，那位 —— 当然 —— 早已死去的卢德又会怎么看待这一切呢？",,
-lppGileadShrineLeaveEndSecular,LPPMoraleWrapUp,,FireAll LPPMissionWrapUp,"你的周围流淌着朝圣者的人流。他们为自己跟随先知卢德的脚步、在各个圣地间穿梭的旅程找到了意义。令人难以置信的是，那个被环境祝福，或者说被环境诅咒的、在人之领面前，在大崩塌的背景下弯曲了历史走向的人，他留下的话语究竟都形成了什么。
+lppGileadShrineLeaveEndSecular,LPPMoraleWrapUp,,FireAll LPPMissionWrapUp,"你的周围流淌着朝圣者的人流。他们为自己跟随先知卢德的脚步、在各个圣地间穿梭的旅程找到了意义。令人难以置信的是，那个被环境祝福，或者说被环境诅咒的、在 人之领 面前，在 大崩塌 的背景下弯曲了历史走向的人，他留下的话语究竟都形成了什么。
 
 看看这人群，尖拱门和远方的树木 —— 卢德会怎么看待这一切？",,#secular default
 lppGileadShrineLeave0,LPPMissionWrapUp,,"$global.lpp_completed = true
@@ -4462,15 +4462,15 @@ lppGileadShrineLeave1,DialogOptionSelected,$option == lpp_gileadShrineLeave1,"Sh
 $option = lpp_hookStart 0
 FireBest DialogOptionSelected",你回到了运输中心被阴影遮蔽的大厅里。,,
 lppGileadShrineLeaveDoEnding,DialogOptionSelected,"$option == lpp_gileadShrineLeave1
-$market.lpp_finishPilgrimage",,"你进入了交通枢纽那昏暗的厅堂，接着走向自己的 穿梭机 所在的停机坪。
+$market.lpp_finishPilgrimage",,"你进入了交通枢纽那昏暗的厅堂，接着走向自己的穿梭机所在的停机坪。
 
 圣地侍从们中的一位主动迎上了你，他迅速瞥了一眼手持数据平板，又飞快地把它塞回宽松的长袍里，然后邀请你跟上他们。
 
-""我很荣幸，$PlayerName 舰长，"" 侍从说到，""能够邀请您在今天为您的朝圣者之路画上句号。""","lpp_gileadPilgrimageEnd1:继续。
+""我很荣幸，$PlayerName 舰长，"" 圣务侍说到，""能够邀请您在今天为您的朝圣者之路画上句号。""","lpp_gileadPilgrimageEnd1:继续。
 lpp_gileadPilgrimageEndHowKnow:""你怎么知道这个的？""",
 ,,,,,,
 # LPP end sequence - meeting Jaspis,,,,,,
-lppEnding1KnightInsist,DialogOptionSelected,$option == lpp_endingKnightInsist,RemoveOption lpp_endingKnightInsist,骑士只是简单颌首，默认了你对 大祭司 的描述。你觉得他们对此很谨慎。,,
+lppEnding1KnightInsist,DialogOptionSelected,$option == lpp_endingKnightInsist,RemoveOption lpp_endingKnightInsist,骑士只是简单颌首，默认了你对大祭司的描述。你觉得他们对此很谨慎。,,
 lppEnding1KnightWhat,DialogOptionSelected,$option == lpp_endingKnightWhat,RemoveOption lpp_endingKnightWhat,"""我不知道。我仅仅是代表宗师大人向您问好。"" 骑士说到，思考了一下又开始补充，""您并没有被指控为异端，或是犯下有违教规的罪行。确保您的安全是我的职责。""",,
 lppEnding1KnightAllowed,DialogOptionSelected,$option == lpp_endingKnightAllowed,"$option = lpp_endingKnightDecline 0
 FireBest DialogOptionSelected",,,
@@ -4478,7 +4478,7 @@ lppEnding1KnightDecline,DialogOptionSelected,$option == lpp_endingKnightDecline,
 
 在这种庄重的氛围下，骑士恳求你不要让他们因你的抗命而陷入尴尬的境地。
 
-你回想了一下教会的等级制度：教宗密会是教会的最高权力机关。他们有权举行会议或派出代表来裁决教会的事务，此外还能解读卢德的教义、提拔某人、制定圣典或是将某人逐出教会。如果说教会有统治者的话，那这位大祭司一定是其中之一。","lpp_ending2:""我改变主意了，带路。""
+你回想了一下教会的等级制度：教宗密会是教会的最高权力机关。他们有权举行会议或派出代表来裁决教会的事务，此外还能解读卢德的教义、提拔某人、制定圣典或是将某人逐出教会。如果说教会有统治者的话，那这位大祭司一定是其中之一。","lpp_ending2:""我改变主意了，带路吧。""
 lpp_startEndingAbort2:返回穿梭机",
 lppEndingAbort2,DialogOptionSelected,$option == lpp_startEndingAbort2,"$global.lpp_playerRejectedFirstJaspisMeeting = true
 unset $global.lpp_playerRejectedJaspisRoute
@@ -4495,10 +4495,10 @@ lpp_ending2askWhy:""为什么你们这样对待我？""",
 lppEnding2AskPilgrim,DialogOptionSelected,$option == lpp_ending2askPilgrim,RemoveOption lpp_ending2askPilgrim,"骑士转身看向你，单肩披风随之扬起，露出了下面还稳妥地挂在身上的武器。他的表情在说你的问题真蠢，但是回答的语气却带着一种强硬的中立。
 
 ""不，舰长。宗师大人特别指明要和你会面。""",,
-lppEnding2AskWhy,DialogOptionSelected,$option == lpp_ending2askWhy,RemoveOption lpp_ending2askWhy,"""我不知道，也不能说，舰长。""骑士目不斜视，干脆地说。",,
+lppEnding2AskWhy,DialogOptionSelected,$option == lpp_ending2askWhy,RemoveOption lpp_ending2askWhy,"""我不知道，也不能说，舰长。"" 骑士目不斜视，干脆地说。",,
 lppEnding3,DialogOptionSelected,$option == lpp_ending3,,"你穿过了铺满树叶与动物图案的门和大厅。这些图案似乎来自于古地球：一只小鹿，一头鲸鱼；鹰和龙在布满常春藤、橡树和棕榈叶的蓝天上盘旋。
 
-咋一看，大祭司的办公室显得相对朴素。但随着你仔细观察，却发现了手工雕刻的木质镶条，其上刻满了动植物还有人的图案。这房间的位置刚好能俯瞰私人空中花园；一缕阳光照亮了园中的花海，喷泉的水珠也在阳光中闪动。",lpp_ending4:继续,
+乍一看，大祭司的办公室显得相对朴素。但随着你仔细观察，却发现了手工雕刻的木质镶条，其上刻满了动植物还有人的图案。这房间的位置刚好能俯瞰私人空中花园；一缕阳光照亮了园中的花海，喷泉的水珠也在阳光中闪动。",lpp_ending4:继续,
 lppEnding4,DialogOptionSelected,$option == lpp_ending4,"BeginConversation jaspis
 $player.metJaspis = true","""阁下，"" 骑士声如洪钟，向里面的人鞠躬致意。
 
@@ -4511,8 +4511,8 @@ lpp_ending4NotTea:""茶就算了。""",
 lppEnding4b,DialogOptionSelected,$option == lpp_ending4NotTea,$waterThen = true 0,"""想喝点水的话，请自便。"" 她张手示意角落里的一个陶罐，目光凝视着你身侧的某个地方。","lpp_ending4water:""白水就好。""
 lpp_ending4ToPoint:""你想要见我，所以我来了。让我们开门见山吧。""",
 lppEnding4c,DialogOptionSelected,$option == lpp_ending4ToPoint,"$playerWasJerk = true 0
-AdjustRepPerson jaspis SUSPICIOUS -1","""这不过是为了表达欢迎之意。"" 她的言语像是在安抚一个孩童，却又隐含几分尖刻，""不愿意喝茶或喝水是无妨，但还请接受他人的好意，就当是看在 卢德 的份上。""","lpp_lpp_ending4makeTea:""... 茶就好。""
-lpp_ending4Speak:""我不觉得一位 大祭司 会这样子说话。""
+AdjustRepPerson jaspis SUSPICIOUS -1","""这不过是为了表达欢迎之意。"" 她的言语像是在安抚一个孩童，却又隐含几分尖刻，""不愿意喝茶或喝水是无妨，但还请接受他人的好意，就当是看在卢德的份上。""","lpp_lpp_ending4makeTea:""... 茶就好。""
+lpp_ending4Speak:""我不觉得一位大祭司会这样子说话。""
 lpp_ending4Policy:""不欠任何人任何事是我的个人信条。""",
 lppEnding4d,DialogOptionSelected,$option == lpp_ending4Speak,"$option = lpp_ending4makeTea 0
 FireBest DialogOptionSelected","她讥讽道：""哦？我之前问候你的时候，你毫无疑问是犯蠢了，结果现在反倒是由你来主持教会事务？这下就连我都能一眼看出，你到底是怎么给世间留下这种印象的了。"" ",,
@@ -4520,7 +4520,7 @@ lppEnding4e,DialogOptionSelected,$option == lpp_ending4Policy,"$player.luddicAtt
 $option = lpp_ending4makeTea 0
 FireBest DialogOptionSelected","""传闻你幽默风趣，巧舌如簧，那你也一定能把庆祝和谈判的氛围炒热吧。就算是现在我也在考虑，到底有没有必要展现出一丁点殷勤好客的意思。""",,
 lppEnding4makeTea,DialogOptionSelected,$option == lpp_ending4makeTea,"$option = lpp_ending5blind 0
-FireBest DialogOptionSelected","她握住水壶的握把，""不论你愿不愿意喝，我都会把茶倒好，""她边说边动手倒满了茶壶，双眼全程都未曾聚焦。
+FireBest DialogOptionSelected","她握住水壶的握把，""不论你愿不愿意喝，我都会把茶倒好，"" 她边说边动手倒满了茶壶，双眼全程都未曾聚焦。
 
 你意识到，她已目盲。",,
 lppEnding4water,DialogOptionSelected,$option == lpp_ending4water,"$playerWantedWater = true 0
@@ -4534,7 +4534,7 @@ FireBest DialogOptionSelected","她握住装了开水的水壶的握把，不看
 你意识到，她已目盲。",,
 lppEnding5blind,DialogOptionSelected,$option == lpp_ending5blind,FireAll LPPEnding5blindOptions,,,
 lppEnding5blindOpt1,LPPEnding5blindOptions,,,,"lpp_ending6:""为什么邀请我来？"" ",
-lppEnding5blindOpt2,LPPEnding5blindOptions,,,,"lpp_ending5blindAsk:""你双眼看不见。""",
+lppEnding5blindOpt2,LPPEnding5blindOptions,,,,"lpp_ending5blindAsk:""你失明了。""",
 lppEnding5blindOpt3,LPPEnding5blindOptions,$waterThen,,,lpp_endingDrinkWater:喝点水。,
 lppEnding5blindOpt4,LPPEnding5blindOptions,,,,lpp_ending7:泡茶。,
 lppEnding5blindAsk,DialogOptionSelected,$option == lpp_ending5blindAsk,"AdjustRepPerson jaspis SUSPICIOUS -1
@@ -4546,21 +4546,21 @@ lppEnding5waterCheck1a,LPPEndingWaterCheck1,$playerWantedWater,,"""如果你想�
 lppEnding5waterCheck1b,LPPEndingWaterCheck1,!$playerWantedWater,,"""让我们等茶泡好吧，孩子。""",,
 lpp5Ending5drinkWater,DialogOptionSelected,$option == lpp_endingDrinkWater,RemoveOption lpp_endingDrinkWater,"你自己倒了点水，喝了一口，凉的，但是很好喝。
 
-它和你的星舰上的水有本质上的不同，似乎是从彗星上的并提纯而来，并且加入了某些标准添加剂。",,
+它和你的星舰上的水有本质上的不同，似乎是从彗星上的冰提纯而来，并且加入了某些标准添加剂。",,
 lppEnding6,DialogOptionSelected,$option == lpp_ending6,"$option = lpp_ending7 0
 FireBest DialogOptionSelected",她淡淡一笑。,,
 lppEnding7,DialogOptionSelected,$option == lpp_ending7,FireBest LPPJaspisSpeech,,,
-lppEnding7faithful,LPPJaspisSpeech,$player.luddicAttitudeFaithful >= 2 score:2,,"""你曾朝拜了卢德的圣地，你与教会的关系亲和稳定，你对忠实的信徒充满怜悯。""她拿起了一个茶杯，漫不经心的敲了敲。
+lppEnding7faithful,LPPJaspisSpeech,$player.luddicAttitudeFaithful >= 2 score:2,,"""你曾朝拜了卢德的圣地，你与教会的关系亲和稳定，你对忠实的信徒充满怜悯。"" 她拿起了一个茶杯，漫不经心地敲了敲。
 
-""我右手执锤，左手为你敞开。"" 她引用着卢德圣书，""身似钢铁，心若琉璃。""",lpp_ending8:继续,
+""'我右手执锤，左手为你敞开。'"" 她引用着卢德圣书，""锤与心，应同在。""",lpp_ending8:继续,
 lppEnding7secular,LPPJaspisSpeech,"#$player.luddicAttitudeAgnostic
-#$player.luddicAttitudeAtheistic",,"""你曾朝拜了卢德的圣地，这是信徒们都渴望做出的贡献。然而你隐忍着痛苦，与教会保持距离，将一切视为俗物。""她拿起了一个茶杯，漫不经心的敲了敲。
+#$player.luddicAttitudeAtheistic",,"""你曾朝拜了卢德的圣地，这是信徒们都渴望做出的贡献。然而你隐忍着痛苦，与教会保持距离，将一切视为俗物。"" 她拿起了一个茶杯，漫不经心地敲了敲。
 
 ""我来接待你并不是为了做出告诫或者劝你改宗。如果你的灵魂深陷于焦灼的斗争中，亦或是它无法听到创生的歌谣，那就由你自己去祈祷和冥想吧。""",lpp_ending8:继续,# guess it's default!
-lppEnding7jerk,LPPJaspisSpeech,$player.luddicAttitudeCynical >= 2 score: 3,,"""你曾朝拜了卢德的圣地，却始终躲闪着我们、对教会冷面相待，带着虚伪的幽默抛出刻薄的言语。如果这般高贵的姿态不是遭受多年折磨所致，那或许你已经完全丧失了礼节感和亲和力。"" 她拿起了一个茶杯，漫不经心的敲了敲。
+lppEnding7jerk,LPPJaspisSpeech,$player.luddicAttitudeCynical >= 2 score: 3,,"""你曾朝拜了卢德的圣地，却始终躲闪着我们、对教会冷面相待，带着虚伪的幽默抛出刻薄的言语。如果这般高贵的姿态不是遭受多年折磨所致，那或许你已经完全丧失了礼节感和亲和力。"" 她拿起了一个茶杯，漫不经心地敲了敲。
 
 ""有个问题在我的脑海里挥之不去：被缺失方向的激情所误导的生活，这便是你的所爱吗？""",lpp_ending8:继续,
-lppEnding7pather,LPPJaspisSpeech,$player.luddicAttitudePather >= 2 score:3,,"""信徒们都很欣赏你的战斗热情，问题在于，你常常过快地怒而挥锤了，要知道，正义之道通常是由内心谦卑地将你引上的。""
+lppEnding7pather,LPPJaspisSpeech,$player.luddicAttitudePather >= 2 score:3,,"""信徒们都很欣赏你的战斗热情，问题在于，你常常过快地挥舞起暴怒的重锤了，要知道，正义之道通常是由内心谦卑地将你引上的。""
 
 她拿起了一个茶杯，漫不经心地敲了敲。
 
@@ -4603,26 +4603,26 @@ FireAll LPPEndingJaspisHub","""我很好奇，你到底是在侮辱我还是赞�
 ""或者，确切来讲，她是派别人替她去敲这扇门。"" 大祭司轻蔑地挥了挥手，""我觉得你为她干的活并不符合你的性格。如果我回应了你这口是心非的恭维，那你为 Baird 所做的一切便能印证我的想法""",,
 lppJaspisWhatDo,DialogOptionSelected,$option == lpp_jaspisWhatDo,"$askedJaspis++ 0
 $askedWhatDo = true 0
-FireAll LPPEndingJaspisHub","""不我手下的 '重锤' 是..."" 她朝你颌首致意，""一个比你谦逊得多的人。但他在任务中需要帮助，你或许要为此提供协助。""
+FireAll LPPEndingJaspisHub","""不。我手下的 '重锤' 是..."" 她朝你颌首致意，""一个比你谦逊得多的人。但他在任务中需要帮助，你或许要为此提供协助。""
 
-她啜饮了几口茶，道：""请你一定要理解，我所说的协助，并不完全是指掀起战火。只要辅以技巧，智慧与虔诚，即便是 '重锤' 出击也可以做到无声无息。""",,
+她啜饮了几口茶，继续道：""请你一定要理解，我所说的协助，并不完全是指掀起战火。只要辅以技巧，智慧与虔诚，即便是重锤出击也可以做到无声无息。""",,
 lppJaspisWhatGoal,DialogOptionSelected,$option == lpp_jaspisWhatGoal,"$askedJaspis++ 0
 $askedWhatGoal = true 0
 FireAll LPPEndingJaspisHub","""伟大的信仰举目皆敌，教会面临着内忧外患。"" 她缓缓说道，""有些人知道自己作恶多端；还有些一无所觉。他们都将得到惩戒。""
 
-""我必如 卢德 所教的那般，行善积德，尽心竭力。在这善举中，我得以履行这份职责。为了那崇高的旨意，我将献身于 卢德 为我们传下的神谕。""",,
+""我必如卢德所教的那般，行善积德，尽心竭力。在这善举中，我得以履行这份职责。为了那崇高的旨意，我将献身于 卢德 为我们传下的神谕。""",,
 lppJaspisJobOffer,DialogOptionSelected,$option == lpp_jaspisJobOffer,"$askedJaspis++ 0
 $askedJobOffer = true 0
 FireAll LPPEndingJaspisHub","她悠闲地喝了一会茶。
 
-""你当然会得到报酬。教会的财力并不如 速子 那帮掠夺者那样雄厚，但如果能将钱财用于正道之上，倒是不妨为此一掷千金。""
+""你当然会得到报酬。教会的财力并不如 速子科技 的那帮掠夺者那样雄厚，但如果能将钱财用于正道之上，倒是不妨为此一掷千金。""
 
 ""如此行事则是为了卢德的圣者，"" 她微微地笑了笑，""并不是为了你我。""",,
 lppJaspisBlessedService,DialogOptionSelected,$option == lpp_jaspisBlessedService,"$askedJaspis++ 0
 $askedBlessedService = true 0
 FireAll LPPEndingJaspisHub","""教会..."" 她说到，""...有可能奖励这种狂热。""
 
-苦笑浮现在她的脸上，""人难道会把信仰寄托在一个由职务，规则，信件和上下尊卑所构成的机器上吗？我真心祈祷，我等万万不可以 卢德 之名恣意妄为。""
+苦笑浮现在她的脸上，""人难道会把信仰寄托在一个由职务，规则，信件和上下尊卑所构成的机器上吗？我真心祈祷，我等万万不可以卢德之名恣意妄为。""
 
 ""无需担忧。"" 她往后靠了靠，""我年岁已高，即便口出妄言，也不会像新人那般遭受绝罚。""",,
 lppJaspisHammerFall,DialogOptionSelected,$option == lpp_jaspisHammerFall,"$askedJaspis++ 0
@@ -4634,20 +4634,20 @@ FireAll LPPEndingJaspisHub","""我完全理解，你为了神圣的正义而显�
 ""我会为你的血泪提供宣泄的途径，否则这些痛苦所带来的力量将会毫无意义地浪费掉。""",,
 lppJaspisHammerFallBook,DialogOptionSelected,"$option == lpp_jaspisHammerFall
 $player.leftCottonBookInGilead","$askedJaspis++ 0
-$askedHammerFall = true 0","大祭司把手伸到桌子下，拿出一本书并将其放到了不甚平整的桌面上。那是 Cotton 修士送给你的卢德圣书; 之前你把它当作祭品留在了圣地的那堆小饰品之中。
+$askedHammerFall = true 0","大祭司把手伸到桌子下，拿出一本书并将其放到了不甚平整的桌面上。那是 Cotton 修士送给你的卢德圣书；之前你把它当作祭品留在了圣地的那堆小饰品之中。
 
 而现在她拿到了这本书，并且她知道这书是你放在那里的，这说明了教会的能耐以及教会对你的关注。
 
 ""舰长，我完全明白，你希望在无尽的怒火中施展神圣的审判。"" 她那失明的双目似乎一直在盯着你。""至少，你和一个有这种想法的人交流过。""",lpp_jaspisHammerFall2:继续,
 lppJaspisHammerFallBook2,DialogOptionSelected,$option == lpp_jaspisHammerFall2,"$player.jaspisCottonBook = true
 $askedJaspis++ 0
-FireAll LPPEndingJaspisHub","她转向旁边的一个小架子，打开了一个木盒子，取出了一个精致的枯叶。
+FireAll LPPEndingJaspisHub","她转向旁边的一个小架子，打开了一枚木盒子，取出了一片精致的枯叶。
 
 ""你知道卢德关于 Kudzu 的寓言吗？"" 她小心翼翼的打开 Cotton 修士的书，把那叶子放进去，又轻轻合上，将书推到你面前。
 
-她凑到你耳边，尖酸地低语道，""把这本书带给他，我们稍后再谈。""",,
+她凑到你耳边，尖刻地低语道，""把这本书带给他，我们后面再谈。""",,
 lppJaspisWrapUp1,DialogOptionSelected,$option == lpp_jaspisWrapUp1,"#$option = lpp_jaspisWrapUp2 0
-#FireBest DialogOptionSelected","大祭司虔诚的双手合十，与祈祷的姿势并无不同。
+#FireBest DialogOptionSelected","大祭司虔诚地双手合十，与祈祷的姿势并无不同。
 
 ""舰长，请允许我直接告诉你这件事。""",lpp_jaspisWrapUp2:继续,
 lppJaspisWrapUp2a,DialogOptionSelected,"!$askedWhatDo
@@ -4655,7 +4655,7 @@ $option == lpp_jaspisWrapUp2","$askedWhatDo = true 0
 $option = lpp_jaspisWrapUp2 0
 FireBest DialogOptionSelected","""我手下的 '重锤' 是..."" 她朝你颌首致意，似乎正确认着什么，""一个比你谦逊得多的人。但他在任务中需要帮助，你或许要为此提供协助。""",,
 lppJaspisWrapUp2b,DialogOptionSelected,"$askedWhatDo
-$option == lpp_jaspisWrapUp2",,"""我的特工是卢德骑士团的见习修士。他被派到这里来工作是为了取得骑士爵位。在他潜入臭名昭著的卢德左径的一个异端武装成员基地后，我已经有一段时间没有收到他的讯息了。""
+$option == lpp_jaspisWrapUp2",,"""我的特工是卢德骑士团的见习修士。他被派到这里来工作是为了取得骑士爵位。在他潜入臭名昭著的 卢德左径 的一个异端武装成员基地后，我已经有一段时间没有收到他的讯息了。""
 
 她那通常介于自信和讥讽之间的音色，在话语的结尾几乎跑偏了。","lpp_jaspisWrapUp3:继续
 lpp_jaspisWrapUp3care:""他对你来说很重要。""",
@@ -4665,16 +4665,16 @@ lppJaspisWrapUp3,DialogOptionSelected,$option == lpp_jaspisWrapUp3,,"""如果你
 
 ""现在不必回答。请先为此事做出祷告，又或许你会把这称为 '琢磨一下'。""
 
-她看向了那本你进来前她在看的书。""愿上天赐予你受到祝福之路，我则希望它能让你给出肯定的答复。""","lpp_jaspisWrapUp4a:""我会再想想的。""
+她重新打开了你进来时她正在读的那本书。""愿上天赐予你受到祝福之路，我则希望它能让你给出肯定的答复。""","lpp_jaspisWrapUp4a:""我会再想想的。""
 lpp_jaspisWrapUp4b:""我已经决定好了。""
 lpp_jaspisWrapUp4c:""别指望我替教会跑腿。""",
-lppJaspisWrapUp4a,DialogOptionSelected,$option == lpp_jaspisWrapUp4a,,她轻哼一声表示了解，将注意力转到了别处，用一只手打开书，另一只手则放到了那书页上。,lpp_jaspisWrapUp5:离开,
+lppJaspisWrapUp4a,DialogOptionSelected,$option == lpp_jaspisWrapUp4a,,她轻哼一声表示了解，随即将注意力转到了别处，用一只手打开书，另一只手则放到了那书页上。,lpp_jaspisWrapUp5:离开,
 lppJaspisWrapUp4b,DialogOptionSelected,$option == lpp_jaspisWrapUp4b,,"""这么快？"" 她说，""你不需要用装腔作势的热情来打动我。我认为，重大的决定应该用足够的时间去思考。""
 
 ""现在请让我清净一会。"" 她边说边用一只手打开书，把另一只手放到了那书页上。",lpp_jaspisWrapUp5:离开,
 lppJaspisWrapUp4c,DialogOptionSelected,$option == lpp_jaspisWrapUp4c,,"""舰长，你最好内敛一些。""
 
-她用一只手打开书，另一只手则放到了那书页上，说道：""然后让自己的态度通过冥想传达。""
+她用一只手打开书，另一只手则放到了那书页上，""然后让自己的态度通过冥想传达。"" 她说道。
 
 过了一会她又补充道：""除非你热衷于通过自我鞭笞的方式表达热情，我对此不做评判。""",lpp_jaspisWrapUp5:离开,
 lppJaspisWrapUp5,DialogOptionSelected,$option == lpp_jaspisWrapUp5,"EndConversation DO_NOT_FIRE
@@ -4687,7 +4687,7 @@ AddTextSmall ""获得了 Sophronia Jaspis 的通讯 ID"" highlight","你起身�
 
 穿着长袍、说话轻声细语的圣务侍摸出了个和她自己的形象很不搭调的数据平板，将大祭司的通讯 ID 调给了你 —— 至少是她办公室的 —— 然后让面无表情的 Ailanthus 骑士将你护送回穿梭机处。
 
-你返航的过程平安顺利。",,
+返回轨道的过程一切顺利。",,
 ,,,,,,
 # Volturn shrine,,,,,,
 lppVolturnShrineOption,PopulateOptions,"$market.id == volturn
@@ -4735,43 +4735,43 @@ $market.didShrineIntro",ShowDefaultVisual,"一名狡诈的官员在停机坪上�
 ""立正！"" 这名官员来接见你时，对着征召兵们大声喊道。",lpp_volturnVisitDidBribe2:继续,
 lppVolturnVisitDidBribe2,DialogOptionSelected,$option == lpp_volturnVisitDidBribe2,,"当你忍受着阿谀奉承的时候，你注意到征召兵的装备和你第一次来访时一样破旧且保养不善。然而，这名官员却穿着一套时髦的崭新装束，和 狮心守卫 的制服有点相似，却又不至于像到招致官方申诉的地步。
 
-通过检查点之后，你迈步走进了 圣地 接待大厅那沉重的门扉。这里空空如也，反倒比之前的人群要舒心得多。",lpp_volturnShrineRevisit1:继续,
+通过检查点之后，你迈步走进了圣地接待大厅那沉重的门扉。这里空空如也，反倒比之前的人群要舒心得多。",lpp_volturnShrineRevisit1:继续,
 lppVolturnVisitUsedCommission,DialogOptionSelected,"$option == lpp_volturnVisitStart2
 $faction.id == sindrian_diktat
 $market.usedCommissionOnShrineOfficial
-$market.didShrineIntro",ShowDefaultVisual,"一名狡诈的官员在停机坪上看见了你的 穿梭机。在他身后，你看到贴着 辛达强权 徽标的临时武器阵地和护盾模块。面色苍白的征召兵穿着破烂不堪的护甲，一边吸着麻醉烟，一边警惕地盯着你。
+$market.didShrineIntro",ShowDefaultVisual,"一名狡诈的官员在停机坪上看见了你的穿梭机。在他身后，你看到贴着 辛达强权 徽标的临时武器阵地和护盾模块。面色苍白的征召兵穿着破烂不堪的护甲，一边吸着麻醉烟，一边警惕地盯着你。
 
-""立正！"" 这名官员来接见你时，对着征召兵们大声喊道，""这位是 最高元首 麾下的太空辅助军！""
+""立正！"" 这名官员来接见你时，对着征召兵们大声喊道，""这位是最高元首麾下的太空辅助军！""
 
-你忍耐着他的阿谀奉承，随他通过了检查站，来到了通往 圣地 的沉重门扉。",lpp_volturnShrineRevisit1:继续,
+你忍耐着他的阿谀奉承，随他通过了检查站，来到了通往圣地的沉重门扉。",lpp_volturnShrineRevisit1:继续,
 lppVolturnRevisitLied,DialogOptionSelected,"$option == lpp_volturnVisitStart2
 $faction.id == sindrian_diktat
 $market.didShrineIntro
-$market.liedShrineOfficial",ShowDefaultVisual,"一名狡诈的官员在停机坪上看见了你的 穿梭机。在他身后，你看到贴着 辛达强权 徽标的临时武器阵地和护盾模块。面色苍白的征召兵穿着破烂不堪的护甲，一边吸着麻醉烟，一边警惕地盯着你。
+$market.liedShrineOfficial",ShowDefaultVisual,"一名狡诈的官员在停机坪上看见了你的穿梭机。在他身后，你看到贴着 辛达强权 徽标的临时武器阵地和护盾模块。面色苍白的征召兵穿着破烂不堪的护甲，一边吸着麻醉烟，一边警惕地盯着你。
 
 ""立正！"" 这名官员来接见你时，对着征召兵们大声喊道。接着他对你悄声耳语，距离近的有些过头：""我刚刚还没说，如果您需要任何东西，任何！来铲除这些卢德恐怖分子..."" 他没再继续说下去，只是期望从你眼中看到一丝认可。
 
-你忍耐着他的阿谀奉承，随他通过了检查站，来到了通往 圣地 的沉重门扉。",lpp_volturnShrineRevisit1:继续,
+你忍耐着他的阿谀奉承，随他通过了检查站，来到了通往圣地的沉重门扉。",lpp_volturnShrineRevisit1:继续,
 lppVolturnFirstVisit2Diktat,DialogOptionSelected,"$option == lpp_volturnVisitStart2
 !$market.didShrineIntro","ShowDefaultVisual
 ShrineCMD addIntel
-FireAll LPPVolturnOfficialConvo","一名狡诈的官员在停机坪上看见了你的 穿梭机。在他身后，你看到贴着 辛达强权 徽标的临时武器阵地和护盾模块。面色苍白的征召兵穿着破烂不堪的护甲，一边吸着麻醉烟，一边警惕地盯着你。
+FireAll LPPVolturnOfficialConvo","一名狡诈的官员在停机坪上看见了你的穿梭机。在他身后，你看到贴着 辛达强权 徽标的临时武器阵地和护盾模块。面色苍白的征召兵穿着破烂不堪的护甲，一边吸着麻醉烟，一边警惕地盯着你。
 
 这名官员挤出一个像传真画面那样缺乏真实感的笑容，上下打量着你。
 
-""啊，你是个朝圣者？"" 他的话听起来没有什么说服力，""恐怕 圣地 今天，以及明天，都不会开张。这是出于安全考虑，毕竟局势一直...不太稳定。""",,
+""啊，你是个朝圣者？"" 他的话听起来没有什么说服力，""恐怕圣地今天，以及明天，都不会开张。这是出于安全考虑，毕竟局势一直...不太稳定。""",,
 lppVolturnOfficialResponseVisit,LPPVolturnOfficialConvo,!$saidVisit,,,"lpp_volturnOfficialVisit:""我希望拜访此处圣地。""",
 lppVolturnOfficialResponseDevout,LPPVolturnOfficialConvo,!$saidDevout,,,"lpp_volturnOfficialDevout1:""我一定要去圣地朝拜。我十分虔诚。""",
-lppVolturnOfficialResponseBribe,LPPVolturnOfficialConvo,,,,"lpp_volturnOfficialBribe1:""或许为本地安全机构捐赠一笔会有所帮助？""",
+lppVolturnOfficialResponseBribe,LPPVolturnOfficialConvo,,,,"lpp_volturnOfficialBribe1:""或许为本地安全机构进行一笔捐赠会有所帮助？""",
 lppVolturnOfficialResponseCommission,LPPVolturnOfficialConvo,$player.fcm_faction == sindrian_diktat,,,lpp_volturnOfficialCommission1:解释说你和 辛达强权 之间有雇佣协议,
-lppVolturnOfficialResponseLie,LPPVolturnOfficialConvo,$player.fcm_faction != sindrian_diktat,"SetStoryOption lpp_volturnOfficialLie1 general ""告诉 Volturn 官方，你正在执行 最高元首 的秘密任务，以进入 卢德圣地""",,lpp_volturnOfficialLie1:解释说你正在执行 最高元首 的秘密任务 (说谎),
+lppVolturnOfficialResponseLie,LPPVolturnOfficialConvo,$player.fcm_faction != sindrian_diktat,"SetStoryOption lpp_volturnOfficialLie1 general ""告诉 Volturn 官方，你正在执行最高元首的秘密任务，以进入 卢德圣地""",,lpp_volturnOfficialLie1:解释说你正在执行最高元首的秘密任务 (说谎),
 lppVolturnOfficialResponseLeave,LPPVolturnOfficialConvo,,,,lpp_volturnOfficialEarlyLeave:离开,
 lppVolturnOfficialEarlyLeave,DialogOptionSelected,$option == lpp_volturnOfficialEarlyLeave,"ShowDefaultVisual
-FireAll PopulateOptions","你回到了你的 穿梭机，最后一次呼吸这里的海风。在这些平台上，腐烂的污秽已经开始结垢，恶臭残留在你的鼻腔之中。
+FireAll PopulateOptions","你回到了你的穿梭机，最后一次呼吸这里的海风。在这些平台上，腐烂的污秽已经开始结垢，恶臭残留在你的鼻腔之中。
 
-你乘坐 穿梭机 回去的航程中无事发生。",,
+搭乘穿梭机返航的过程一切顺利。",,
 lppVolturnOfficialVisit,DialogOptionSelected,$option == lpp_volturnOfficialVisit,"$saidVisit = true 1
-FireAll LPPVolturnOfficialConvo","""我明白了，""这名官员双臂交叉地说到，""我很苦恼地告知您，想要参观是...完全不可能的。""
+FireAll LPPVolturnOfficialConvo","""我明白了，"" 这名官员抱着手臂说到，""我很苦恼地告知您，想要参观是...完全不可能的。""
 
 你思索了一番 —— 他听起来并没有特别苦恼，看起来也完全可以让你直接通过。",,
 lppVolturnOfficialDevout1,DialogOptionSelected,$option == lpp_volturnOfficialDevout1,$saidDevout = true 1,"""嗯，"" 这名军官搓了搓手，""你对这个古雅教派的虔诚毋庸置疑。只不过，呃，最高元首 必须...确认一下，他帝国中越来越多的...卢德成员的忠诚，然后才能允许他们回到这里。""
@@ -4781,44 +4781,44 @@ lpp_volturnOfficialDevout1respect:""要是这些人尊重法律和秩序就好�
 lpp_volturnOfficialDevout1collective1:""所以，这是集体惩罚。""
 lpp_volturnOfficialDevout1agree:""确有此理。""",
 lppVolturnOfficialDevout1respect,DialogOptionSelected,$option == lpp_volturnOfficialDevout1respect,"$option = lpp_volturnOfficialDevout1collective 0
-FireBest DialogOptionSelected","""的确，"" 官员一边说着，一边摇头，不像是心怀悲伤的样子。",,
+FireBest DialogOptionSelected","""的确，"" 官员一边说着，一边摇头，但不像是心怀悲伤的样子。",,
 lppVolturnOfficialDevout1collective0,DialogOptionSelected,$option == lpp_volturnOfficialDevout1collective1,"$option = lpp_volturnOfficialDevout1collective 0
 FireBest DialogOptionSelected","""正是如此！""官员一边说着，一边对你点头表示赞同。",,
 lppVolturnOfficialDevout1agree,DialogOptionSelected,$option == lpp_volturnOfficialDevout1agree,"$option = lpp_volturnOfficialDevout1collective 0
 FireBest DialogOptionSelected","""当然没错！"" 官员说着点了点头。",,
 lppVolturnOfficialDevout1disagree,DialogOptionSelected,$option == lpp_volturnOfficialDevout1disagree,"$option = lpp_volturnOfficialDevout1collective 0
 FireBest DialogOptionSelected","""也许事情看起来是那样，"" 官员说到，像在考察你是否有破坏意图，""但这是最好的办法。""",,
-lppVolturnOfficialDevout1collective,DialogOptionSelected,$option == lpp_volturnOfficialDevout1collective,FireAll LPPVolturnOfficialConvo,"""全社会必须学习，共同学习贯彻 最高元首 的伟大愿景。一旦他们做到了，就可高枕无忧，因为他光荣的计划将会推进下去 —— 直至造福万民！""",,
+lppVolturnOfficialDevout1collective,DialogOptionSelected,$option == lpp_volturnOfficialDevout1collective,FireAll LPPVolturnOfficialConvo,"""全社会必须学习，共同学习贯彻最高元首的伟大愿景。一旦他们做到了，就可高枕无忧，因为他光荣的计划将会推进下去 —— 直至造福万民！""",,
 lppVolturnOfficialLie1,DialogOptionSelected,$option == lpp_volturnOfficialLie1,,"你靠上前去，神情越发坚毅。这名官员虽然有些困惑，但还是好奇地遵照你暗示靠了过来。
 
 你要他以自己的性命发誓，告诉你他是否真正追随 Philip Andrada 上将，最高元首，辛达瑞亚之狮；那位肃清星域中的堕落，并以骄傲的新英仙人民取而代之的伟大领袖。
 
-""是 - 是的，当然了。""他颤抖着说到。
+""是...是的，当然了。""他颤抖着说到。
 
 那他就必须让你 —— 一名 狮心守卫 的秘密探员 —— 履行自己的使命。
 
 ""我必须...必须请示一下..."" 他开始胡乱摸索他的数据平板。","lpp_volturnOfficialLie1b:""那可就大错特错了。""",
 lppVolturnOfficialLie1b,DialogOptionSelected,$option == lpp_volturnOfficialLie1b,,"维持着四目相接的状态，你伸出一只手稳稳地按住了他的数据平板。
 
-""这会惊动那些叛徒，毕竟他们可是渗透进了..."" 你冲着他的脚啐了一口，""...所谓的本地安保。我本该把你直接枪毙。""",lpp_volturnOfficialLie1c:松开你的随身武器,
+""那只会让已经渗透进来的叛徒知道..."" 你冲着他的脚啐了一口，""...你们这些所谓的本地安保都是什么货色。我早应该把你枪毙了。""",lpp_volturnOfficialLie1c:松开你的随身武器,
 lppVolturnOfficialLie1c,DialogOptionSelected,$option == lpp_volturnOfficialLie1c,,"""我是忠诚的，我是忠诚的！"" 他大喊着，冷汗从脸上滑落，""我发誓！""
 
 他几乎是呜咽着把自己的反应压了下去，然后用小声询问道：""这是否...是一次考验？敢问是哪位派您来...""","lpp_volturnOfficialLie2:""是上级的意思，最上级。头等要务。你需要知道的就这么多。""",
 lppVolturnOfficialLie2,DialogOptionSelected,$option == lpp_volturnOfficialLie2,"$market.liedShrineOfficial = true
-$global.lpp_liedToVolturnShrineOfficial = true","官员脸色一变，悄声道：""最高元 - ""
+$global.lpp_liedToVolturnShrineOfficial = true","官员脸色一变，悄声道：""最高元...""
 
 你竖起一根手指，打断了他的话。
 
 他兴奋地点头，汗如雨下，盲目的忠诚充斥了他的双眼。
 
-""是！明白！您需要通行权限...但当然了，要处理 卢德 问题，那些恐怖分子和 - 我就知道，我就知道阁下必有计划！我绝不会泄露分毫，请您相信我！""",lpp_volturnOfficialLie3:继续,
+""是！明白！您需要通行权限...但当然了，要处理卢德信徒问题，那些恐怖分子和...我就知道，我就知道阁下必有计划！我绝不会泄露分毫，请您相信我！""",lpp_volturnOfficialLie3:继续,
 lppVolturnOfficialLie3,DialogOptionSelected,$option == lpp_volturnOfficialLie3,"$option = lpp_volturnShrineFirstVisit1
 FireBest DialogOptionSelected","官员点了点头，理顺他的制服，然后转身面朝征召兵们。""立正！"" 他大喊道，引发了一系列慌乱的举动 —— 他们迅速丢下麻醉烟，然后抬起枪。
 
 他之后得意地迈向圣地入口，脚跟咯吱一声停顿，而后旋转。所有这些动作都是按阅兵级别执行的。",,
 lppVolturnOfficialCommission1,DialogOptionSelected,$option == lpp_volturnOfficialCommission1,$market.usedCommissionOnShrineOfficial = true,"这位官员拿出一个数据平板，他反复抬头在你和数据平板之间来回比较。
 
-""我，我衷心向您道歉，$playerSirOrMadam，""军官结结巴巴地说到，""我早该得知并且提前做好准备的，""他左顾右盼，最后盯在了征召兵的身上。",lpp_volturnOfficialCommission2:继续,
+""我，我衷心向您道歉，$playerSirOrMadam，"" 军官结巴道，""我早该得知并且提前做好准备的，""他左顾右盼，最后盯在了征召兵的身上。",lpp_volturnOfficialCommission2:继续,
 lppVolturnOfficialCommission2,DialogOptionSelected,$option == lpp_volturnOfficialCommission2,"$option = lpp_volturnShrineFirstVisit1
 FireBest DialogOptionSelected","""立正！""他大喊到，引发了一系列慌乱的举动 —— 丢下麻醉烟，然后抬起枪，再接着是敬礼。
 
@@ -4838,13 +4838,13 @@ lpp_volturnOfficialBribe2offer2k:""我能出 2,000，再多也没有了。""
 lpp_volturnOfficialBribe2naw:""你给孩子们吃什么伙食啊，Volturn 蓝龙虾吗？""",
 lppVolturnOfficialBribe2offer5k,DialogOptionSelected,$option == lpp_volturnOfficialBribe2offer5k,AddCredits -5000,"""成交。"" 官员一边说着一边挤出了满脸的淫笑，拿出他的数据平板来让你付款。",lpp_volturnOfficialBribe3:确认行贿,
 lppVolturnOfficialBribe2offer2k,DialogOptionSelected,$option == lpp_volturnOfficialBribe2offer2k,AddCredits -2000,"""成交。"" 官员一边说着一边挤出了满脸的淫笑，拿出他的数据平板来让你付款。",lpp_volturnOfficialBribe3:确认行贿,
-lppVolturnOfficialBribe2naw,DialogOptionSelected,$option == lpp_volturnOfficialBribe2naw,FireAll LPPVolturnOfficialConvo,"他把数据平板塞回外套，冷冰冰地说道：""回应这些...议...议论，简直是侮辱我的尊严。""",,
+lppVolturnOfficialBribe2naw,DialogOptionSelected,$option == lpp_volturnOfficialBribe2naw,FireAll LPPVolturnOfficialConvo,"他把数据平板塞回外套，""回应这些...议...议论，简直是侮辱我的尊严。"" 他冷冰冰地说道。",,
 lppVolturnOfficialBribe3,DialogOptionSelected,$option == lpp_volturnOfficialBribe3,"$market.bribedShrineOfficial = true
 $option = lpp_volturnShrineFirstVisit1
 FireBest DialogOptionSelected","收到贿赂之后，官员点了点头，一边带你通过安检一边美言于你。
 
 ""立正！"" 他大喊道，引发了一系列慌乱的举动 —— 征召兵们迅速丢下麻醉烟，然后抬起枪。",,
-lppVolturnShrineFirstVisit1,DialogOptionSelected,$option == lpp_volturnShrineFirstVisit1,$justVisitedShrine = true 0,满意的军官挥了挥手，身后立刻传来了重型马达的轰鸣声；随之，圣地的大门开了一条小缝 —— 只够你一人入内。,lpp_volturnShrineFirstVisit2:迈过这些门,
+lppVolturnShrineFirstVisit1,DialogOptionSelected,$option == lpp_volturnShrineFirstVisit1,$justVisitedShrine = true 0,军官满意地挥了挥手，身后立刻传来了重型马达的轰鸣声；圣地的随即大门开了一条小缝 —— 只够你一人入内。,lpp_volturnShrineFirstVisit2:迈过这些门,
 lppVolturnShrineFirstVisit2,DialogOptionSelected,$option == lpp_volturnShrineFirstVisit2,"ShowImageVisual volturn_shrine_fake
 ShrineCMD playMusic
 $market.didShrineIntro = true","接待大厅一片漆黑，一个朝圣者的影子都没有。抬头望去，手制的横幅无力地悬挂在上面，靓丽的颜色在昏暗中显得黯淡无光。环视内部，大厅中的桌椅全都空着。
@@ -4856,31 +4856,31 @@ lpp_volturnShrineFirstVisit3d:""茶这么热，你不可能是真的睡着了。
 lppVolturnShrineFirstVisit3a,DialogOptionSelected,$option == lpp_volturnShrineFirstVisit3a,"BeginConversation standfast False False
 SetPersonHidden standfast false
 $player.metStandfast = true
-FireAll LPPVolturnCurateResponses1","当你走进房间正打算叫醒她的时候，她睁开了双眼，从手织的斗篷下撤回了瞄准你的手枪，并把它收回枪套。
+FireAll LPPVolturnCurateResponses1","当你走进房间正打算叫醒她的时候，她睁开了双眼，从手织的斗篷下抽出手枪，并把它收回了枪套。
 
-""你悄然靠近我这样一位老女士，却表现地如此礼貌。我不能开枪射击你。"" 她边说边打量着你的制服。",,
+""明明是在悄悄靠近我这老太婆，却又表现得这么礼貌，真让我一时不好开枪。"" 她一边说着，一边打量着你的制服。",,
 lppVolturnShrineFirstVisit3b,DialogOptionSelected,$option == lpp_volturnShrineFirstVisit3b,"BeginConversation standfast False False
 SetPersonHidden standfast false
 $player.metStandfast = true
-FireAll LPPVolturnCurateResponses1","话音刚落，她睁开双眼 —— 冷静异常，看来她根本没睡。然后，她从手制斗篷里撤出一把手枪，把它插回了枪套。
+FireAll LPPVolturnCurateResponses1","察觉到你的突然来访，妇人叹了口气，一边睁开了眼睛 —— 她冷静异常，看来根本没睡。然后，她从手织的斗篷下抽出手枪，并把它插回了枪套。
 
-""既然我没在打盹，我自然也不会因为你打扰我打盹而开枪射击了，不是吗？"" 她说道。",,
+""我会枪毙那些打扰我小憩的家伙，"" 她说道，""只是这次我没在打盹，自然也不好朝你开枪，不是吗？""",,
 lppVolturnShrineFirstVisit3c,DialogOptionSelected,$option == lpp_volturnShrineFirstVisit3c,"BeginConversation standfast False False
 SetPersonHidden standfast false
 $player.metStandfast = true
-FireAll LPPVolturnCurateResponses1","你走到桌前，倒了杯茶。她睁开双眼，从手制斗篷下面撤出一把手枪 —— 
+FireAll LPPVolturnCurateResponses1","正当你走到桌前并倒了杯茶时，她睁开双眼，从手织的斗篷下面抽出手枪 ——
 
-然后，她把枪收进了枪套。
+然后，她把枪插回了枪套。
 
- ""你喝茶这么急，我都不忍心开枪了。没事，请自便吧。"" ",,
+""我可不至于因为你自作主张倒了杯茶就给你来上一枪。没事了，请自便吧。"" ",,
 lppVolturnShrineFirstVisit3d,DialogOptionSelected,$option == lpp_volturnShrineFirstVisit3d,"BeginConversation standfast False False
 SetPersonHidden standfast false
 $player.metStandfast = true
-FireAll LPPVolturnCurateResponses1","她一边微笑，一边从手制斗篷下面抽出手枪；同时，她睁开双眼，之后才顺手把手枪收进了枪套。
+FireAll LPPVolturnCurateResponses1","妇人微微一笑，一边从手织的斗篷下抽出手枪，她睁开眼，然后把枪插回了枪套。
 
- ""很会观察嘛。如果你也是 辛达强权 的打手，那你至少比起常见的那种级别高些。既然如此，你来这是要做什么？"" ",,
+""还挺敏锐。如果你也是辛达的打手，那你至少比起常见的那种级别高些。有何贵干？"" ",,
 lppVolturnCurateResponses0,DialogOptionSelected,$option == lpp_volturnCurateResponses,FireAll LPPVolturnCurateResponses1,,,
-lppVolturnCurateResponses1a,LPPVolturnCurateResponses1,!$saidArmed,,,"lpp_volturnCurateAskArmed:""作为一个牧师，你看起来似乎武装的太过严实了。""",
+lppVolturnCurateResponses1a,LPPVolturnCurateResponses1,!$saidArmed,,,"lpp_volturnCurateAskArmed:""作为一个祭司，你看起来似乎武装的太过严实了。""",
 lppVolturnCurateResponses1b,LPPVolturnCurateResponses1,"$saidArmed
 !$global.lpp_askedVolturnCurateAboutInsurgency
 $player.fcm_faction != sindrian_diktat",,,"lpp_volturnCurateAskInsurgency:""我说，你也是 Volturn 叛乱的一份子吗？""",
@@ -4892,68 +4892,68 @@ lppVolturnCurateResponses1d,LPPVolturnCurateResponses1,!$drankTea,,,lpp_volturnC
 lppVolturnCurateResponses1e,LPPVolturnCurateResponses1,,,,"lpp_volturnCurateAskSeeShrine:""我是来参观圣地的。""",
 lppVolturnCurateResponses1f,LPPVolturnCurateResponses1,,,,"lpp_volturnCurateAskPilgrim:""我是一位朝圣者，前来拜谒圣地。""",
 lppVolturnCurateResponses1g,LPPVolturnCurateResponses1,"!$madeArrestThreat
-$player.fcm_faction == sindrian_diktat",,,"lpp_volturnCurateSDReport:""竟敢这样威胁 辛达强权 的现役军官？我可是能举报你的。""",
+$player.fcm_faction == sindrian_diktat",,,"lpp_volturnCurateSDReport:""对于你威胁 辛达强权 委任军官的行径，我可是能进行举报的。""",
 lppVolturnCurateAskArmed,DialogOptionSelected,$option == lpp_volturnCurateAskArmed,"$saidArmed = true 0
-FireAll LPPVolturnCurateResponses1","""也就一把手枪而已。"" 她说，""这可不算啥 '严实' 的武装。""",,
+FireAll LPPVolturnCurateResponses1","""也就一把手枪而已。"" 她说，""这可不算什么 '严实' 的武装。""",,
 lppVolturnCurateSDReport,DialogOptionSelected,$option == lpp_volturnCurateSDReport,"$madeArrestThreat = true 0
-FireAll LPPVolturnCurateResponses1","""你可以的，"" 在你的凝视中，她承认了，""不管你做或者不做，我反正已经老得没法以身涉险了。""
+FireAll LPPVolturnCurateResponses1","""那就请便，"" 她附和道，一边迎上你的目光，""报不报随你，我都这把年纪了，可没精力跟你玩什么含沙射影的把戏。""
 
-她总算开始饮她的茶了：""刚才我就该接着打盹的。""",,
+自你闯入以来，她首次啄了一口茶，一边继续道：""刚才我就该接着打盹的。""",,
 lppVolturnCurateAskInsurgencySD,DialogOptionSelected,$option == lpp_volturnCurateAskInsurgencySD,"$global.lpp_askedVolturnCurateAboutInsurgency = true
-FireAll LPPVolturnCurateResponses1","她目不转睛地看了你很久。
+FireAll LPPVolturnCurateResponses1","她目不转睛地盯了你许久。
 
-""请容我拒绝，长官。我的武装仅用于保卫 圣地 不受劫匪和恐怖分子的侵害。您知道时局如何，最高元首 的权威...已经捉襟见肘。""
+""不，长官。我携带的武器仅用于保卫圣地不受劫匪和恐怖分子的侵害。您知道时局如何，最高元首 的权威...已经捉襟见肘了。""
 
-你从她眼神中看到的远不止一丝腹诽，但她知道何时该闭口不谈。",,
-lppVolturnCurateAskInsurgency,DialogOptionSelected,$option == lpp_volturnCurateAskInsurgency,,"她目不转睛地看了你很久。
+你从她眼神中看到的远不止一丝腹诽，但她很清楚何时该缄口不言。",,
+lppVolturnCurateAskInsurgency,DialogOptionSelected,$option == lpp_volturnCurateAskInsurgency,,"她目不转睛地盯了你许久。
 
-""许久之前，在...许多大事发生之前，命定之人 卢德 曾被 人之领 官方追捕。他们的摄像头和监听器无处不在，但这些小恶魔没能找到藏身于好友和同道之中的命定之人。
+""很久之前，在...许多事情之前，命定之人卢德曾被 人之领 官方追捕。他们的摄像头和监听器无处不在，但这些小恶魔却没能找到藏身于好友和同道之中的那位命定之人。
 
-""而你可知为何？""",lpp_volturnCurateAskInsurgency2:继续,
+""你知道为什么吗？""",lpp_volturnCurateAskInsurgency2:继续,
 lppVolturnCurateAskInsurgency2,DialogOptionSelected,$option == lpp_volturnCurateAskInsurgency2,"$global.lpp_askedVolturnCurateAboutInsurgency = true
-FireAll LPPVolturnCurateResponses1","""OPSEC，"" 她说着，踢了下桌脚，把茶具震得乱响，""的确，卢德 最终遭到了背叛，但你又能奈何？天下没有不散的宴席云云。""
+FireAll LPPVolturnCurateResponses1","""OPSEC，"" 她说着，一边踢了下桌脚，把茶具震得乱响，""的确，卢德最终遭到了背叛，但你又能怎么办呢？正如天下没有不散的宴席。""
 
-她长叹一声，俯首听命道：""不，长官，我从未听说过这次叛乱。听起来，状况很糟。""",,
+长叹一声后，她换上一副充满俯首听命的语气继续道：""不，长官，我从未听说过这次叛乱。这听起来糟透了。""",,
 lppVolturnCurateAskBlessing,DialogOptionSelected,$option == lpp_volturnCurateAskBlessing,"$global.lpp_receivedVolturnCurateBlessing = true
 $didBlessOption = true 0
-FireAll LPPVolturnCurateResponses1","她眉头一挑：""如你所愿，我可以安排一次祝福。""
+FireAll LPPVolturnCurateResponses1","她眉头一挑：""如果你想要，我可以安排一场祝福。""
 
-她把两根手指浸入茶水，然后将液滴洒向你。""我身前的朝圣者有福了，愿他在 卢德 之道上寻得恩典，愿他在困苦中得见上天的慈悲；若非如此，便叫他向创造群星的主垂首，虔诚祈祷，祈求宽恕，祈求指引。""
+她把两根手指浸入茶水，然后将液滴洒向你。""愿我面前的这位朝圣者蒙福，愿他在卢德之道上寻得恩典。愿他在困苦中得见上天的慈悲，如若不然，愿他谦卑俯首，向那创造群星的造物主祈祷，祈求宽恕他的罪愆，指引他的前路。""
 
-""行了，"" 她的手落在桌子上，""你已得祝福。""","lpp_volturnCurateResponses:""我想，我该说声谢谢。""",
+""行了，"" 她把手往桌上一放，""你被祝福过了。""","lpp_volturnCurateResponses:""我想，我该说声谢谢。""",
 lppVolturnCurateAskBlessingSD,DialogOptionSelected,"$option == lpp_volturnCurateAskBlessing
 $player.fcm_faction == sindrian_diktat","$didBlessOption = true 0
-FireAll LPPVolturnCurateResponses1","""我觉得我倒是可以给你安排一次祝福。""她缓缓说到。
+FireAll LPPVolturnCurateResponses1","""我觉得我倒是可以给你安排一次祝福。"" 她缓缓说到。
 
-""但 圣地 如今山门紧闭，而你却对此充耳不闻？这未免..."" 她假装酝酿话语，""不太虔诚。""
+""但圣地关闭了，你没听说吗？这未免..."" 她假装在斟酌用词，""不太虔诚。""
 
-这女人耸了耸肩，两手一摊。",,
+那妇人摊开双手，耸了耸肩。",,
 lppVolturnCurateDrinkTea,DialogOptionSelected,$option == lpp_volturnCurateDrinkTea,"$drankTea = true 0
 FireAll LPPVolturnCurateResponses1","这茶鲜甜可口，茶味不浓，海味更重。
 
-""本地特产，难登大雅之堂。""这女人说到，""这里被占领之后就很难入手 Tartessian 棕茶了。""",,
-lppVolturnCurateAskSeeShrine,DialogOptionSelected,$option == lpp_volturnCurateAskSeeShrine,$player.luddicAttitudeAgnostic++,"""那么，""她说，""我就带你去吧。""
+""一种普通的本地品种罢了，"" 那妇人说到，""自从这里被占领之后，就很难弄到 Tartessus 产的棕茶。""",,
+lppVolturnCurateAskSeeShrine,DialogOptionSelected,$option == lpp_volturnCurateAskSeeShrine,$player.luddicAttitudeAgnostic++,"""那么，"" 她说道，""我就带你去吧。""
 
-"" Simon ？"" 她对你身后的某个人说到，""你也可以放下枪了。""
+""Simon？"" 她对你身后的某个人说到，""你也可以放下枪了。""
 
-你转身一瞧，发现 Simon 照做了，还向你微微致以歉意的半礼。祭司微笑着，张开双手为你展示通往内部圣地的道路。",lpp_volturnShrineFirstVisit4:继续,
-lppVolturnCurateAskPilgrim,DialogOptionSelected,$option == lpp_volturnCurateAskPilgrim,$player.luddicAttitudeFaithful++,"""那么..."" 她说，""我就带你去吧。""
+你转身看去，发现 Simon 照做了，还向你微微致以歉意的半礼。祭司微笑着，张开双手为你展示通往内部圣地的道路。",lpp_volturnShrineFirstVisit4:继续,
+lppVolturnCurateAskPilgrim,DialogOptionSelected,$option == lpp_volturnCurateAskPilgrim,$player.luddicAttitudeFaithful++,"""那么，"" 她说道，""我就带你去吧。""
 
 ""Simon？"" 她对你身后的某个人说到，""你也可以收起武器了。""
 
-你转身一瞧，发现 Simon 照做了，还向你微微致以歉意的半礼。祭司微笑着，张开双手为你展示通往内部圣地的道路。",lpp_volturnShrineFirstVisit4:继续,
+你转身看去，发现 Simon 照做了，还向你微微致以歉意的半礼。祭司微笑着，张开双手为你展示通往内部圣地的道路。",lpp_volturnShrineFirstVisit4:继续,
 lppVolturnCurateAskPilgrimSD,DialogOptionSelected,"$option == lpp_volturnCurateAskPilgrim
 $player.fcm_faction == sindrian_diktat","$option = lpp_volturnCurateAskSeeShrine 0
 FireBest DialogOptionSelected","""朝圣者？你？"" 她看起来很迷惑。",lpp_volturnShrineFirstVisit4:继续,
 lppVolturnCurateAskSeeShrineSD,DialogOptionSelected,"$option == lpp_volturnCurateAskSeeShrine
-$player.fcm_faction == sindrian_diktat",,"""我的理解是这样的。"" 她说，""你那位 最高元首 的想法，和银河救赎教会的戒律 —— 尤其是 卢德 的教诲 —— 大相径庭。""","lpp_volturnCurateSeeShrineSDjustDoIt:""你只管带我去圣地。""
+$player.fcm_faction == sindrian_diktat",,"""据我所知，"" 她说道，""你那位最高元首的见解，和 银河救赎教会 的戒律 —— 尤其是卢德的教诲 —— 大相径庭。""","lpp_volturnCurateSeeShrineSDjustDoIt:""你只管带我去圣地。""
 lpp_volturnCurateSeeShrineSDlearn:""也有共通之处，比如对家庭和传统的重视。""
 lpp_volturnCurateSeeShrineSDlecture:""我来这里不是为了听神学演说。""",
 lppVolturnCurateSeeShrineSDlecture,DialogOptionSelected,$option == lpp_volturnCurateSeeShrineSDlecture,"$option = lpp_volturnCurateSeeShrineSDjustDoIt 0
-FireBest DialogOptionSelected","""当然不了。"" 她说，""这不是我份内之事。""",,
+FireBest DialogOptionSelected","""当然不是了。"" 她说，""而且那也不是我的职责。""",,
 lppVolturnCurateSeeShrineSDlearn,DialogOptionSelected,$option == lpp_volturnCurateSeeShrineSDlearn,"$option = lpp_volturnCurateSeeShrineSDjustDoIt 0
-FireBest DialogOptionSelected","""有意思，"" 她随口敷衍，""参观完 圣地 之后，你可得多跟我说说。""",,
-lppVolturnCurateSeeShrineSDjustDoIt,DialogOptionSelected,$option == lpp_volturnCurateSeeShrineSDjustDoIt,AdjustRepPerson standfast SUSPICIOUS -10,祭司一副似笑非笑的表情，张手为你展示了通往内部 圣地 的道路。,lpp_volturnShrineFirstVisit4:继续,
+FireBest DialogOptionSelected","""有意思，"" 她敷衍道，""参观完圣地之后，你可得多跟我说说。""",,
+lppVolturnCurateSeeShrineSDjustDoIt,DialogOptionSelected,$option == lpp_volturnCurateSeeShrineSDjustDoIt,AdjustRepPerson standfast SUSPICIOUS -10,祭司用微笑掩盖了心中的情绪，随即摊开双手，为你指出了通往内部圣地的道路。,lpp_volturnShrineFirstVisit4:继续,
 lppVolturnShrineFirstVisit4SD,DialogOptionSelected,"$option == lpp_volturnShrineFirstVisit4
 $player.fcm_faction == sindrian_diktat","HideFirstPerson
 ShowImageVisual volturn_shrine_fake
@@ -4961,7 +4961,7 @@ FireAll LPPVolturnCurateResponses2SD","祭司带你来到门厅后面，拉开�
 
 或许，这里是代表谦卑的圣地？
 
-那是一个小物件，安置在里屋的后方。一排排蜡烛环绕着中心的木雕，其上镌刻着 卢德 的艰苦历程。烛火早已尽数熄灭，但透过那蒙尘的舷窗，一缕幽光依旧笼罩着这个地方。
+那是一个小物件，安置在里屋的后方。一排排蜡烛环绕着中心的木雕，其上镌刻着卢德的艰苦历程。烛火早已尽数熄灭，但透过那蒙尘的舷窗，一缕幽光依旧笼罩着这个地方。
 
 ""如你所见，这里算是无人问津了。"" 祭司说到。",,
 lppVolturnCurateResponses2SDa,LPPVolturnCurateResponses2SD,!$didHumble ,,,"lpp_volturnCurateSDdisappointing:""这可有点令人失望了。""",
@@ -4970,7 +4970,7 @@ lppVolturnCurateResponses2SDb,LPPVolturnCurateResponses2SD,"!$didCriticism
 $didHumble ",,,"lpp_volturnCurateSDcriticism:""我感觉你话里有刺。""",
 lppVolturnCurateResponses2SDc,LPPVolturnCurateResponses2SD,"$didAcceptSass
 !$didStubborn",,,"lpp_volturnCurateSDstubborn:""你为何如此顽固不化？我这是在帮你。""",
-lppVolturnCurateResponses2SDd,LPPVolturnCurateResponses2SD,!$didAcceptSass,,,"lpp_volturnCurateSDaccepted:""如果你接纳了 最高元首，事情就不至于此。""",
+lppVolturnCurateResponses2SDd,LPPVolturnCurateResponses2SD,!$didAcceptSass,,,"lpp_volturnCurateSDaccepted:""如果你接纳了最高元首，事情就不至于此了。""",
 lppVolturnCurateResponses2SDd2,LPPVolturnCurateResponses2SD,"!$didChurch
 $didCriticism",,,"lpp_volturnCurateSDchurch:""如果教会已经抛弃了你，那又何苦再坚持下去？",
 lppVolturnCurateResponses2SDe,LPPVolturnCurateResponses2SD,"!$didCompromise
@@ -4982,7 +4982,7 @@ FireBest DialogOptionSelected",,,
 lppVolturnCurateSDhumble,DialogOptionSelected,$option == lpp_volturnCurateSDhumble,"$didHumble = true 0
 FireAll LPPVolturnCurateResponses2SD","她环顾四周，一切宛如初见。""的确如此，不是吗。""
 
-""但这样才是恰到好处，可以警醒我们，认清自己的处境。""",,
+""但这样才是恰到好处，可以警醒我们，认清自己在这颗星球上的处境。""",,
 lppVolturnCurateSDcriticism,DialogOptionSelected,$option == lpp_volturnCurateSDcriticism,"$didCriticism = true 0
 FireAll LPPVolturnCurateResponses2SD","""哦？"" 她对你扬了扬眉毛。""对，是的，谎言是种罪恶，而救赎必须从某处开启。""
 
@@ -4990,21 +4990,21 @@ FireAll LPPVolturnCurateResponses2SD","""哦？"" 她对你扬了扬眉毛。""�
 
 ""但是，只要他们不触碰我们的圣地，教会就愿意坐视不管。""",,
 lppVolturnCurateSDcriticism2,DialogOptionSelected,$option == lpp_volturnCurateSDchurch,"$didChurch = true 0
-FireAll LPPVolturnCurateResponses2SD"," ""教会不是我的信仰。"" 她言辞激烈，""如果他们愿意，他们可以因此取消我的教会资格，把我逐出教会，但这不会改变任何事情。"" ",,
+FireAll LPPVolturnCurateResponses2SD","""教会不是我的信仰。"" 她言辞激烈，""如果他们愿意，他们可以因此取消我的教会资格，把我逐出教会，但这不会改变任何事情。"" ",,
 lppVolturnCurateSDcompromise,DialogOptionSelected,$option == lpp_volturnCurateSDcompromise,"$didCompromise = true 0
-FireAll LPPVolturnCurateResponses2SD"," ""这些。"" 她指向她周围破败的圣地，""这就是妥协。都是你的首长的作品。""
+FireAll LPPVolturnCurateResponses2SD","""这些。"" 她指向她周围破败的圣地，""这就是妥协。都是你的首长的作品。""
 
- ""更进一步，我们就完全背离了卢德的教诲。所以我决意在此停留。"" ",,
+""更进一步，我们就完全背离了卢德的教诲。所以我决意在此停留。"" ",,
 lppVolturnCurateSDaccepted,DialogOptionSelected,$option == lpp_volturnCurateSDaccepted,"$didAcceptSass = true 0
-FireAll LPPVolturnCurateResponses2SD"," ""我这有个建议。"" 她满脸堆着假笑，""我们可以把 Andrada 的全息肖像放在...这里。"" 她冲着圣地中央挥了挥手，""这么一摆，他那肖像可就有点用了，能让我们我们祈祷更专注了呢。"" ",,
+FireAll LPPVolturnCurateResponses2SD","""我这有个建议。"" 她装出欢快的语气，""我们可以把 Andrada 的全息肖像放在...这里。"" 她冲着圣地中央挥了挥手，""这么一摆，他那肖像可就有点用了，能让我们我们祈祷更专注了呢。"" ",,
 lppVolturnCurateSDstubborn,DialogOptionSelected,$option == lpp_volturnCurateSDstubborn,"$didStubborn = true 0
 $player.heardRumorsAboutCruor = true
-FireAll LPPVolturnCurateResponses2SD"," ""如果我可以让那些被派往 Cruor 的人遭受同样的问题，我会考虑你的立场。"" 
+FireAll LPPVolturnCurateResponses2SD","""只有当我能把同样的问题抛向我那些被送去 Cruor 的教众时，我才会考虑你的立场，"" 她说道。
 
- ""但直到你把他们还给我之前，"" 她的眼里闪着泪光，""我会只做我该做的。"" ",,
-lppVolturnCurateSDstubborn2,DialogOptionSelected,$option == lpp_volturnCurateSDstubborn2,$global.lpp_willTalkToSomeoneOnCruor = true," ""你...你做了这些，"" 祭祀看向别处，颤抖着说。
+""但直到你把他们还给我之前，"" 她的眼里闪着泪光，""我只会一如既往。"" ",,
+lppVolturnCurateSDstubborn2,DialogOptionSelected,$option == lpp_volturnCurateSDstubborn2,$global.lpp_willTalkToSomeoneOnCruor = true,"""而你...那样做了，"" 祭祀看向别处，颤抖着说。
 
- ""现在请你走吧。"" ",lpp_volturnShrineFirstLeave1:离开,
+""现在请你离开吧。"" ",lpp_volturnShrineFirstLeave1:离开,
 lppVolturnShrineFirstVisit4,DialogOptionSelected,$option == lpp_volturnShrineFirstVisit4,"HideFirstPerson
 ShowImageVisual volturn_shrine
 FireAll LPPVolturnCurateResponses2","不到一小时，你已深入海底，抵达 Voltrun 的卢德 圣地。那是一个潮湿的探测舱室，位于改良型钻井的末端，嘎吱作响，令人不安，如同刺入 Volturn 深处的长喙。
@@ -5026,56 +5026,56 @@ lppVolturnCurateResponses2fb,LPPVolturnCurateResponses2,"$litCandle
 !$notJustCandle",,,"lpp_volturnCurateIsJustCandle:""这只是一根蜡烛。""",
 lppVolturnCurateResponses2g,LPPVolturnCurateResponses2,!$lookedWindow,,,lpp_volturnCurateWindow:向窗外望去,
 lppVolturnCurateResponses2i,LPPVolturnCurateResponses2,$canLeave,,,lpp_volturnShrineFirstLeave1:离开圣地,
-lppVolturnCurateTroubling,DialogOptionSelected,$option == lpp_volturnCurateTroubling,,"祭司皱眉，""这些军火，有什么让你不安的？""","lpp_volturnCurateTroubleViolent:""军火象征暴力，你们 卢德教会 不是崇尚和平吗？""
+lppVolturnCurateTroubling,DialogOptionSelected,$option == lpp_volturnCurateTroubling,,"祭司皱起眉头，""这些军火有什么让你不安的？""","lpp_volturnCurateTroubleViolent:""军火象征暴力，你们 卢德教会 不是崇尚和平吗？""
 lpp_volturnCurateTroubleShrine:""这里可是圣地啊，这种神圣的地方难道可以拿来放军火吗？""
 lpp_volturnCurateTroubleHeavier:""都没几件重武器，你们要怎么对付防御精良的敌人呢？""",
 lppVolturnCurateTroublingViolent,DialogOptionSelected,$option == lpp_volturnCurateTroubleViolent,"$option = lpp_volturnCurateTroubleShrine 0
 FireBest DialogOptionSelected",,,
 lppVolturnCurateLuddicPath,DialogOptionSelected,$option == lpp_volturnCurateAreYouPath,"$askedIfPath = true 0
-FireAll LPPVolturnCurateResponses2"," ""不，我才不是。"" 她一边回答一边盯着你，眼神里满是厌恶。""我可是 银河救赎教会 的正牌祭司，我干的事，和他们那帮人可不一样。我希望，我真诚地希望，你能看出个中差别。""
+FireAll LPPVolturnCurateResponses2"," ""不，我才不是。"" 她一边回答一边盯着你，眼神里满是厌恶。""我可是 银河救赎教会 的一名祭司，我的所作所为和他们那帮人可不一样。我希望，我真诚地希望，你能看出其中的差别。""
 
-她眼神一转，又看向满地军火，""我承认，我们也...接触过他们。与他们接触的每一天，都是对信仰的一次考验。但愿我们不会偏离卢德之意太远。""",,
+她眼神一转，又看向了军火，""我承认，我们也...接触过他们。与他们接触的每一天，都是对信仰的一次考验。但愿我们不会偏离卢德之道太远。""",,
 lppVolturnCurateTroublingShrine,DialogOptionSelected,$option == lpp_volturnCurateTroubleShrine,"$commentedOnWeapons = true 0
 $canLeave = true 0
 $player.heardRumorsAboutCruor = true
-FireAll LPPVolturnCurateResponses2","""卢德圣书中的确有这样的训诫 —— '和平缔造者当受恩典'，可是，"" 祭司看向你，眼神冷酷，""缔造和平，终归不能仅靠和平本身。""
+FireAll LPPVolturnCurateResponses2","""卢德圣书中的确有这样的训诫 —— '缔造和平者当受蒙福'，可是，"" 祭司看向你，眼神冷酷，""和平终究不会自己实现。""
 
-""卢德并不好战，但祂知晓何时该战。祂以自我牺牲作战，祂以壮烈殉道作战，难道说，祂没有带来胜利吗？""
+""卢德并不好战，但卢德知晓何时该战。通过自我牺牲，通过壮烈殉道作战，难道说，卢德没有带来胜利吗？""
 
-祭司挥了挥手，神情愈发轻蔑：""在你看来，我刚刚那一番话，可能是只是虚浮之辞；然而，我眼里，这番话的含义可就平实得多了 —— 我可不想再看到，我的教众再被丢进 Cruor 的矿坑里，被献祭给劣等魔鬼路西法了。""",,
+祭司挥了挥手，神情愈发轻蔑：""在你看来，我刚刚那一番话，可能是只是虚浮之辞；然而，我眼里，这番话的含义可就直白得多了 —— 我可不想再看到我的教众被丢进 Cruor 的矿坑里，沦为劣等魔鬼路西法的祭品。""",,
 lppVolturnCurateTroublingHeavier,DialogOptionSelected,$option == lpp_volturnCurateTroubleHeavier,"$commentedOnWeapons = true 0
 $confirmedInsurgent = true 0
 AdjustRepPerson standfast FRIENDLY 1
-FireAll LPPVolturnCurateResponses2","祭司脸上绽开一缕微笑，她原本就满是皱纹的脸上，登时又添了更多褶皱：""咱俩，可真是心有灵犀。""",,
+FireAll LPPVolturnCurateResponses2","祭司微笑着，苍老的脸上登时又添了更多皱纹。""我们可真是心有灵犀。""",,
 lppVolturnCurateConfirmed,DialogOptionSelected,$option == lpp_volturnCurateConfirmed,"$confirmedInsurgent = true 0
-FireAll LPPVolturnCurateResponses2","""听你这么一说，我反倒要变成你的信众了。"" 祭司笑了，说道，""好啊。""",,
+FireAll LPPVolturnCurateResponses2","""听你这么一说，我反倒要变成你的信众了。"" 祭司笑着说，""好啊。""",,
 lppVolturnCurateChurchThink,DialogOptionSelected,$option == lpp_volturnCurateChurchThink,"$churchThink = true 0
 $canLeave = true 0
-FireAll LPPVolturnCurateResponses2","""教会 内部并不齐心，这是一个由议会整合起来的组织，""她说。""有些用热情支持我的事业，而还有些人只满足于祈祷。""
+FireAll LPPVolturnCurateResponses2","""教会并非铁板一块，而是众多个体在议会中凝聚而成的整体，"" 她说道，""有些人热忱地支持我们在此地的事业，而有些人则仅仅满足于祈祷。""
 
-黯淡的神色攀上她的面庞，""无论如何，我，祈祷 教会 的统一意志不会放弃见证我们的痛苦。据说，卢德哭泣时从不移开双眼；我们教会的神父与教母们也会如此。""",,
+黯淡的神色攀上她的面庞，""尽管如此，我仍然祈愿教会那团结的容颜，莫要对我们正在遭受的苦难视而不见。据说卢德落泪的双眼也不曾放弃见证；愿我们教会的神父与教母们亦能如此。""",,
 lppVolturnCurateLightTheCandle,DialogOptionSelected,$option == lpp_volturnCurateCandle,"$litCandle = true 0
 $canLeave = true 0
-FireAll LPPVolturnCurateResponses2"," ""就这样，火炬受到了传承。"" 祭祀说道，""火焰之光，信仰之光。"" 
+FireAll LPPVolturnCurateResponses2","""就这样，火炬受到了传承。"" 祭司说道，""火焰之光，信仰之光。"" 
 
 她看向你，露出了狡黠的神色，""又或许只是一支小小的蜡烛。"" ",,
 lppVolturnCurateNotJustCandle,DialogOptionSelected,$option == lpp_volturnCurateNotJustCandle,"$notJustCandle = true 0
 $player.luddicAttitudeFaithful++
 AdjustRepPerson standfast FRIENDLY 5
-FireAll LPPVolturnCurateResponses2"," ""圣灵就活在这些文字之中。"" 
+FireAll LPPVolturnCurateResponses2","""圣灵就活在这些文字之中。""
 
-她凝视着你面前的蜡烛，这凝视充满了悲伤，你想。",,
+她凝视着你面前的蜡烛，你感到她的眼神中充满了悲伤。",,
 lppVolturnCurateIsJustCandle,DialogOptionSelected,$option == lpp_volturnCurateIsJustCandle,"$notJustCandle = true 0
 $player.luddicAttitudeAtheistic++
 $player.luddicAttitudeCynical++
-FireAll LPPVolturnCurateResponses2","这一次，她没有回答。
+FireAll LPPVolturnCurateResponses2","这一次，她并没有做出回应。
 
-她凝视着你面前的蜡烛，这凝视充满了悲伤，你想。",,
+她凝视着你面前的蜡烛，你感到她的眼神中充满了悲伤。",,
 lppVolturnShrineWindow,DialogOptionSelected,$option == lpp_volturnCurateWindow,"$lookedWindow = true 0
 $canLeave = true 0
-FireAll LPPVolturnCurateResponses2","蓝黑色的海洋之上光影斑驳，如同穹顶之上的璀璨星光，闪耀的光芒穿过重重阻碍，直至破碎的凶险深渊。此形此景几乎是令人如坐针毡般的离经叛道，违背了熟悉的循规蹈矩。点点微尘在其中忽隐忽现，往返穿梭。
+FireAll LPPVolturnCurateResponses2","蓝黑色的海洋之上光影斑驳，如同穹顶之上的璀璨星辰，闪耀的光芒穿过重重阻碍，直至破碎的凶险深渊。此形此景几乎是令人如坐针毡般的离经叛道，违背了熟悉的循规蹈矩。点点微尘在其中忽隐忽现，往返穿梭。
 
- ""即使在这里，在难以想象的高压之下，生命仍然蓬勃绽放。"" 祭祀神色虔诚，""让我们心怀感激，让我们感激上天赐予我们的智慧。"" 她轻轻敲打着压力外壳，后者回应以低沉的回响，""你看，我们并不抵触所有科技。""",,
+""即使在这里，在难以想象的高压之下，生命仍然能蓬勃绽放。"" 祭司说道，""让我们也心怀感激吧，感激上天赐予我们的智慧。"" 她轻轻敲打着压力外壳，后者回应以低沉的回响，""看到了吗？我们也并不抵触所有科技。""",,
 lppVolturnShrineFirstLeave1,DialogOptionSelected,$option == lpp_volturnShrineFirstLeave1,"EndConversation DO_NOT_FIRE
 ShrineCMD setVisited
 FireAll LPPShrineVisitXP",,shrineDoLeave:继续,
@@ -5085,7 +5085,7 @@ $global.lpp_missionCompleted",ShowLargePlanet,"Your shuttle follows the instruct
 The shuttle slows to final approach speed near the destination coordinates, a bank of thick fog illuminated by Askonia's primary. What at first looks like an ethereal castle is revealed by proximity to be a dismal, jostling accretion of barges and ships surrounding the retired extraction rig which houses the shrine.",lpp_volturnVisitStart2:Continue,
 lppVolturnShrineRevisit2,DialogOptionSelected,$option == lpp_volturnShrineRevisit1,$justVisitedShrine = true 0,"在回音袅袅的接待大厅之中，神龛祭司 Standfast 备好茶水接待了你，然后护送你前往内部的 圣地。
 
-尽管这不合常理，你还是进入了 圣地。它安置在一个潮湿的探测舱室，位于改良型钻井的末端，嘎吱作响。塞满武器弹药的板条箱和架子高高堆起，朝圣者和义军摩肩接踵。他们安静地交谈和祈祷着，未经清洗的身躯散发着汗水和烟熏的气息。
+尽管这不合常理，你还是进入了圣地。它安置在一个潮湿的探测舱室，位于改良型钻井的末端，嘎吱作响。塞满武器弹药的板条箱和架子高高堆起，朝圣者和义军摩肩接踵。他们安静地交谈和祈祷着，未经清洗的身躯散发着汗水和烟熏的气息。
 
 那圆形的金刚石观察窗，将海洋深处那粉碎性的重压阻隔在外，其下的空地上布置着圣地的核心。一些蜡烛在它们那一排排熄灭的同道之中挣扎着，闪烁出恰到好处的微光。一如既往，用已燃的烛火点亮了另一支，也给你一支让你跟上。","lpp_volturnShrineRevisitCandle:点亮一支蜡烛
 shrineDoLeave:离开",
@@ -5121,7 +5121,7 @@ lppKillaVisitStart,DialogOptionSelected,$option == lpp_killaVisitStart,ShowLarge
 
 战术系统记录了微弱的瞄准雷达脉冲信号，识别特征表明其来自于简陋的手持式系统，不足以对你的反制措施造成威胁。
 
-着陆点偏离了所有显眼的废墟和地标，这里只有的破败景象中只有摇摇欲坠的临时居所和冰冷残破的交通工具。",lpp_killaVisitStart2:继续,
+着陆点偏离了所有显眼的废墟和地标，这里的破败景象中只有摇摇欲坠的临时居所和冰冷残破的交通工具。",lpp_killaVisitStart2:继续,
 lppKillaVisitStart2,DialogOptionSelected,$option == lpp_killaVisitStart2,,"你的穿梭机靠在停机坪上，缓缓进入了微重力环境。
 
 残骸和碎片并没有轨道上看起来的那么混乱。一片灰尘印下的足迹，通往一个埋在远方峭壁中的气闸。
@@ -5129,7 +5129,7 @@ lppKillaVisitStart2,DialogOptionSelected,$option == lpp_killaVisitStart2,,"你�
 看起来，惨遭战火蹂躏后的这些年里，某些人一直在使用这个站点。","lpp_killaVisitStartFollow:跟上足迹
 lpp_killaVisitStartScan:请求对该区域进行主动扫描
 lpp_killaVisitStart2Leave:离开",
-lppKillaVisitStart2Scan,DialogOptionSelected,$option == lpp_killaVisitStartScan,,趁着你在停机坪上等待的时候，你的传感器技师从你的$shipOrFleet上发起了主动扫描。当高能波束群中的一道扫过你的位置时，你的数据平板微微闪烁了一下。,lpp_killaVisitStart2Scan2:继续,
+lppKillaVisitStart2Scan,DialogOptionSelected,$option == lpp_killaVisitStartScan,,趁着你在停机坪上等待的时候，你的传感器技官从你的$shipOrFleet上发起了主动扫描。当高能波束群中的一道扫过你的位置时，你的数据平板微微闪烁了一下。,lpp_killaVisitStart2Scan2:继续,
 lppKillaVisitStart2Scan2,DialogOptionSelected,$option == lpp_killaVisitStart2Scan2,,"扫描结果出来时，你的数据平板也随之响应。
 
 结果显示，地表之下存在密度较低的空间，与人工建筑的密度模型高度吻合。洞穴，掩体，隧道，铁和非铁的金属，再加上一点电磁波活动和放射性特征。这份报告读起来中规中矩，和 英仙座星域 那些七零八落，一片狼藉的人类文明废墟大差不差。
@@ -5140,13 +5140,13 @@ lppKillaVisitStart2Leave,DialogOptionSelected,$option == lpp_killaVisitStart2Lea
 PrintDescription 3
 FireAll PopulateKillaOptions",你的穿梭机返回了你在轨道上的$shipOrFleet。,,
 lppKillaVisitStart2Follow,DialogOptionSelected,$option == lpp_killaVisitStartFollow,"HideVisual
-ShrineCMD playMusic",你沿着前人走过的路来到气闸前。你拉开依然健在的手动操纵装置，露出一个十分宽阔的漆黑洞口。,lpp_killaOssuary1:走进去,
-lppKillaOssuary1,DialogOptionSelected,$option == lpp_killaOssuary1,,"室内空气稀薄，可以说是没有。幽灵似的尘埃，如面纱般在圣地的静电场中飘摇，克服了这个世界的低重力，在几近真空的环境中悬浮着。
+ShrineCMD playMusic",你沿着前人走过的路来到气闸前，拉开依然健在的手动操纵装置，露出一个十分宽阔的漆黑洞口。,lpp_killaOssuary1:走进去,
+lppKillaOssuary1,DialogOptionSelected,$option == lpp_killaOssuary1,,"室内空气稀薄，可以说是没有。幽灵似的尘埃，如同面纱一般在圣地的静电场中飘摇，电场的强度足以克服这颗星球微弱的引力，使尘埃悬浮在近乎真空的环境中。
 
 你激活了简陋的中继器，一位不知名的卢德神父所朗诵的导言开始广播：
 
 ""铸剑为犁，逝者安息。我等虔诚祷告，谨遵卢德神启...""",lpp_killaOssuary2:环顾四周,
-lppKillaOssuary2,DialogOptionSelected,$option == lpp_killaOssuary2,ShowImageVisual killa_shrine,"藏骨堂由深埋地下的船体改造而来，与错落有致的建筑粗略地焊成一体。这里找不到任何平整的表面，而那些面目全非，破碎不堪的符号和字迹，已然遮盖了被人遗忘的舱室功能 —— ""船员宿舍""，""连接点""，""循环前清洁站""等等。
+lppKillaOssuary2,DialogOptionSelected,$option == lpp_killaOssuary2,ShowImageVisual killa_shrine,"藏骨堂由深埋地下的船体改造而来，与错落有致的建筑粗略地焊成一体。这里找不到任何平整的表面，而那些面目全非，破碎不堪的符号和字迹，已然遮盖了被人遗忘的舱室功能 —— ""船员宿舍""，""连接点""，""循环前清洁站"" 等等。
 
 在一片幽暗中，你渐渐辨认出空洞的眼窝，肋骨架，以及数之不尽的股骨和脊椎，它们一团团簇拥在壁龛里，在墙角里，在拆掉舱门的储物间里。
 
@@ -5162,25 +5162,25 @@ lppKillaOssuary4,DialogOptionSelected,$option == lpp_killaOssuary4,,"你本能�
 
 ""这里几乎没有访客。"" 这声音与广播里的祷告声相同，漫长岁月中的缄默，使这嗓音变得沙哑。
 
-所以，这就是当地传闻中的神龛祭司了。","lpp_killaOssuarySeeShrine:""我是来参观 圣地 的。""
-lpp_killaOssuaryWalkPilgrim:""我踏上了 朝圣者之路。""
+所以，这就是当地传闻中的神龛祭司了。","lpp_killaOssuarySeeShrine:""我是来参观圣地的。""
+lpp_killaOssuaryWalkPilgrim:""我踏上了朝圣者之路。""
 lpp_killaOssuaryThousands:""这里恐怕有成千上万的死者。""
 lpp_killaOssuarySpooky:""这诡异的展览是怎么回事？""",
 lppKillaOssuarySeeShrine,DialogOptionSelected,$option == lpp_killaOssuarySeeShrine,$saidShrine = true 0,"""你正处于它之中，处于这片神圣之地上。"" 神龛祭司展开双臂，""见证这战争怒火的恶报。""
 
-他转身走去，似乎指望你跟上他。",lpp_killaOssuaryBridge:跟上,
+他转身走去，似乎期待着你跟上他。",lpp_killaOssuaryBridge:跟上,
 lppKillaOssuarySpooky,DialogOptionSelected,$option == lpp_killaOssuarySpooky,"$saidSpooky = true 0
 $player.ethosSarcastic++","在那幽暗的防护服头盔之下，空洞的双眼审视了你很长一段时间。而这位穿着破旧防护服的 祭司，如果说真能从他身上看出些什么，那便只有疲惫。
 
 他转身走去，似乎期待着你跟上他。",lpp_killaOssuaryBridge:跟上,
-lppKillaOssuaryWalkPilgrim,DialogOptionSelected,$option == lpp_killaOssuaryWalkPilgrim,$saidWalk = true 0,"祭司 清了清嗓子，确认通讯畅通。你瞥见一双悲伤而黯淡的眼睛。""那么，你便和我走吧。请随我来，前途未明，自当携手并肩。""
+lppKillaOssuaryWalkPilgrim,DialogOptionSelected,$option == lpp_killaOssuaryWalkPilgrim,$saidWalk = true 0,"祭司清了清嗓子，确认通讯畅通。你瞥见一双悲伤而黯淡的眼睛。""那么，你便和我走吧。请随我来，前途未明，自当携手并肩。""
 
 他转身走去，似乎期待着你跟上他。",lpp_killaOssuaryBridge:跟上,
 lppKillaOssuaryThousands,DialogOptionSelected,$option == lpp_killaOssuaryThousands,$saidThousands = true 0,"祭司那空洞的双眼微眯着，一时间纹丝不动。""不，"" 他的声音化为电波，穿破了星际介质，染上一丝温暖的味道，""死者是数之不尽的。"" 言罢，他的身形也随之颓落。
 
 然后，随着一声低语，他转身走去，似乎期待着你跟上他。",lpp_killaOssuaryBridge:跟上,
 lppKillaOssuaryBridge,DialogOptionSelected,$option == lpp_killaOssuaryBridge,"$option = lpp_killaOssuaryBridge2 0
-FireBest DialogOptionSelected",随着脚步逐渐深入，在那些房间和船体之中，你见证了谨慎而巧妙地堆叠起来的死者，遗骸和颅骨，如艺术品般陈列着。通过真空防护服上那些激活的指示灯，你时不时可以瞥见三三两两的朝圣者。祭司没有打搅他们的深思。,,
+FireBest DialogOptionSelected",随着脚步逐渐深入，在那些房间和船体之中，你目睹了逝者的长廊，遗骸与头颅被精心而富有艺术感地堆积起来。通过真空防护服上那些激活的指示灯，你时不时可以瞥见三三两两的朝圣者。祭司没有打搅他们的深思。,,
 lppKillaOssuarySeeShrine2,DialogOptionSelected,"$option == lpp_killaOssuaryBridge2
 $saidShrine == true",,"""他们已被遗忘，"" 祭司说到，他的目光掠过这些遗骨，像是以某种方式在盘点着，""但我不会忘记。每一位造访此地的人，都会助我铭记 —— 这些逝者永垂不朽。""
 
@@ -5195,9 +5195,9 @@ $player.luddicAttitudeAgnostic++",,,
 lppKillaOssuarySpooky2,DialogOptionSelected,"$option == lpp_killaOssuaryBridge2
 $saidSpooky == true",$player.luddicAttitudeCynical++,"神龛祭司在一个底座面前停下，底座上立着一束脊椎，顶端缀有颅骨的碎片，你甚至还能看见上面闪闪发亮的颅骨植入物。祭司小心翼翼地举起一块碎片，其后牵着一根金线。
 
-""人终有一死。不论是军阀，至高霸主，CEO，太空民；又或者是先知，窃贼，挚友。""
+""人终有一死。不论是军阀，至高霸主，CEO，宇宙民。每位先知，每位窃贼，每位朋友。""
 
-他的目光倏忽间刺向了你，""哪怕是你 ，身为远行星者，身为自由舰长的你。人，终有一死。""","lpp_killaDeathComesA:""咱们拭目以待。""
+他的目光倏忽间刺向了你，""哪怕是你 ，身为远行者，身为自由舰长的你，也终有一死。""","lpp_killaDeathComesA:""咱们拭目以待。""
 lpp_killaDeathComesB:""这份命运不属于我。""
 lpp_killaDeathComesC:""你在威胁我吗？""",
 lppKillaDeathComesA,DialogOptionSelected,$option == lpp_killaDeathComesA,"$option = lpp_killaOssuaryOutSad 0
@@ -5214,7 +5214,7 @@ $saidWalk == true",$player.luddicAttitudeFaithful++,"""他们已被遗忘，"" �
 
 祭司的防护服头盔冲你点头，""而现在，你也会铭记。""
 
-""如此，他们将永垂不朽。你可明白？""","lpp_killaWillRememberA:""所见略同。""
+""如此，他们将永垂不朽。你可明白？""","lpp_killaWillRememberA:""我明白。""
 lpp_killaWillRememberB:""我不理解。""
 lpp_killaWillRememberC:""他们绝不会被忘却。""
 lpp_killaHelpAvenge:""我将为他们报仇雪恨。""",
@@ -5230,7 +5230,7 @@ $player.luddicAttitudeFaithful++",,,
 lppKillaOssuaryThousands2,DialogOptionSelected,"$option == lpp_killaOssuaryBridge2
 $saidThousands == true",,"他停下来，你感受到如同锋刃一般的目光向你投来。""尸体，我们可以数清尸体。皆是尘埃与白骨。""
 
-""但永远无法衡量死亡。他们的爱，他们的生命。没有数字能够记住那一切。""他顿了顿。""你明白吗？""","lpp_killaNoNumberA:""所见略同。""
+""但永远无法衡量死亡。他们的爱，他们的生命。没有数字能够记住那一切。"" 他顿了顿，""你可明白？""","lpp_killaNoNumberA:""我明白。""
 lpp_killaNoNumberB:""我不理解。""
 lpp_killaNoNumberC:""人的一生无可量化。""",
 lppKillaOssuaryThousands2A,DialogOptionSelected,$option == lpp_killaNoNumberA,"$player.luddicAttitudeSecular++
@@ -5246,17 +5246,17 @@ lppKillaOssuaryHelpAvenge,DialogOptionSelected,$option == lpp_killaHelpAvenge,"$
 $option = lpp_killaOssuaryOutSad 0
 FireBest DialogOptionSelected",,,
 lppKillaOssuaryOutHappy,DialogOptionSelected,$option == lpp_killaOssuaryOutHappy,"$option = lpp_killaOssuaryOutDone 0
-FireBest DialogOptionSelected","""是的，""祭司说道，他伸出一只手拍了拍你的肩膀，""是的，""他重复着，你能感受到他的声音中的笑意。
+FireBest DialogOptionSelected","""是的，"" 祭司说道，他伸出一只手拍了拍你的肩膀，""是的，"" 他重复着，你能感受到他的声音中的笑意。
 
-随后，他一言不发的消失在了某个昏暗的小道里。",,
+随后，他无声地隐入了某个昏暗的小道。",,
 lppKillaOssuaryOutMiddling,DialogOptionSelected,$option == lpp_killaOssuaryOutMiddling,"$option = lpp_killaOssuaryOutDone 0
-FireBest DialogOptionSelected","祭司思索片刻便有了结论。""你会的，""他说，并伸手拍了拍你的肩膀。""你会的，""他重复道，你可以感受到他声音中的笑意。
+FireBest DialogOptionSelected","祭司思索片刻便有了结论。""你会的，"" 他说，并伸手拍了拍你的肩膀。""你会的，"" 他重复道，你可以感受到他声音中的笑意。
 
-随后，他不发一言，隐入了某个昏暗的小道。",,
+随后，他无声地隐入了某个昏暗的小道。",,
 lppKillaOssuaryOutSad,DialogOptionSelected,$option == lpp_killaOssuaryOutSad,"$option = lpp_killaOssuaryOutDone 0
-FireBest DialogOptionSelected","祭司只是看着你，你好像看到他摇了摇头。最终，他开口道：""请三思，""。
+FireBest DialogOptionSelected","祭司只是看着你，你好像看到他摇了摇头""请三思，"" 他最终开口道。
 
-说完，他便消失在了某个昏暗的小道里。",,
+说完，他便无声地隐入了某个昏暗的小道。",,
 lppKillaOssuaryOutDone,DialogOptionSelected,$option == lpp_killaOssuaryOutDone,,你被留在了茫茫死者之中。这幽幽曲径间的静电荷经久不散，每当它们产生一丝微不可查的涨落，空中悬浮的灰烬便如水网般流转不息。,"lpp_killaShrineStayAWhile:稍作等待
 lpp_killaShrineFirstLeaveStart:返回穿梭机",
 lppKillaOssuaryWait,DialogOptionSelected,$option == lpp_killaShrineStayAWhile,,"你在 Killa 的藏骨堂稍作停留。
@@ -5265,7 +5265,7 @@ lppKillaOssuaryWait,DialogOptionSelected,$option == lpp_killaShrineStayAWhile,,"
 
 尘埃之流缓缓搏动，有如庞然大物吞吐的气息。",lpp_killaShrineFirstLeaveStart:返回你的穿梭机,
 lppKillaShrineVisitAgain1,DialogOptionSelected,$option == lpp_killaShrineVisitAgain1,"ShrineCMD playMusic
-ShowImageVisual killa_shrine","尘埃如面纱般在圣地的静电场中飘摇，克服了这个世界的低重力，在几近真空的环境中悬浮着。
+ShowImageVisual killa_shrine","尘埃如面纱一般在圣地的静电场中飘摇，电场的强度足以克服这颗星球微弱的引力，使尘埃悬浮在近乎真空的环境中。
 
 你激活了简陋的中继器，一位不知名的卢德神父所朗诵的导言开始广播：
 
@@ -5283,14 +5283,14 @@ lppKillaShrineLeaveStart,DialogOptionSelected,$option == lpp_killaShrineFirstLea
 ShowLargePlanet
 ShrineCMD setVisited
 FireBest LPPShrineVisitXP
-SetShortcut lpp_killaShrineLeaveEnd ""ESCAPE""","你让这些逝者留在坟墓之中，深埋在这寂若死灰的 卫星 那破碎的地壳之下。
+SetShortcut lpp_killaShrineLeaveEnd ""ESCAPE""","你让这些逝者留在坟墓之中，深埋在这寂若死灰的卫星那破碎的地壳之下。
 
-你乘坐 穿梭机 回去的航程中无事发生。",lpp_killaShrineLeaveEnd:离开,
+搭乘穿梭机返航的过程一切顺利。",lpp_killaShrineLeaveEnd:离开,
 lppKillaShrineLeave2,DialogOptionSelected,$option == lpp_killaShrineLeaveStart,"ShrineCMD resumeMusic
 ShowLargePlanet
-SetShortcut lpp_killaShrineLeaveEnd ""ESCAPE""","你让这些逝者留在坟墓之中，深埋在这寂若死灰的 卫星 那破碎的地壳之下。
+SetShortcut lpp_killaShrineLeaveEnd ""ESCAPE""","你让这些逝者留在坟墓之中，深埋在这寂若死灰的卫星那破碎的地壳之下。
 
-你乘坐 穿梭机 回去的航程中无事发生。",lpp_killaShrineLeaveEnd:离开,
+搭乘穿梭机返航的过程一切顺利。",lpp_killaShrineLeaveEnd:离开,
 lppKillaShrineLeaveEnd,DialogOptionSelected,$option == lpp_killaShrineLeaveEnd,DismissDialog,,,
 ,,,,,,
 # Jangala shrine,,,,,,
@@ -5300,7 +5300,7 @@ $menuState == main
 #$tag:station
 $global.isDevMode",SetOptionColor lpp_jangalaProtestDevStart gray,,180:lpp_jangalaProtestDevStart:DEV 测试 卢德教徒 抗议,
 lppJangalaShrineProtestDev,DialogOptionSelected,$option == lpp_jangalaProtestDevStart,"
-ShowImageVisual protest","港区陷入了一片混乱，一群身着卢德绿袍的抗议者在主要出入口形成了人墙。周遭堵满了想要进入商业街或返回舰船的宇航员、军官与船员，他们现在怒气冲天。
+ShowImageVisual protest","港区陷入了一片混乱，一群身着卢德绿袍的抗议者在主要出入口形成了人墙。周遭堵满了想要进入商业街或返回舰船的宇宙民、军官与船员，他们现在怒气冲天。
 
 一支地方安全部的小分队勉强把喧闹的人群隔开。",pp_JangalaShrineProtestStart:继续,
 lppJangalaShrineProtest,DialogOptionSelected,"$option == marketVisitBar
@@ -5310,28 +5310,28 @@ $global.daysSinceStart > 100
 $player.transponderOn
 !$justVisitedShrine
 RollProbability 0.4 score:10","
-ShowImageVisual protest","港区陷入了一片混乱，一群身着卢德绿袍的抗议者在主要出入口形成了人墙。周遭堵满了想要进入商业街或返回舰船的太空佬，这些军官与船员现在怒气冲天。
+ShowImageVisual protest","港区陷入了一片混乱，一群身着卢德绿袍的抗议者在主要出入口形成了人墙。周遭堵满了想要进入商业街或返回舰船的宇宙民、军官与船员，他们现在怒气冲天。
 
 一支地方安全部的小分队勉强把喧闹的人群隔开。",pp_JangalaShrineProtestStart:继续,
 lppJangalaShrineProtestStart,DialogOptionSelected,$option == pp_JangalaShrineProtestStart,"BeginConversation POST:supplyOfficer
 $option = pp_JangalaShrineProtestStart2
 FireBest DialogOptionSelected",,,
 lppJangalaShrineProtestStart2,DialogOptionSelected,$option == pp_JangalaShrineProtestStart2,"$global.lpp_didJangalaProtest = true
-FireAll PPJangalaProtestResponses","你认出了那个霸主 $post ，$name ，正通过一个小型通讯器下达着命令。$HeOrShe注意到了你，并向你点头示意。
+FireAll PPJangalaProtestResponses","你认出了那个霸主 $post，$name 正通过一个小型通讯器下达着命令。$HeOrShe注意到了你，并向你点头示意。
 
 ""卢德教徒正在抗议轨道焚化。"" $HeOrShe解释说，""由于朝圣者的原因，这种事情每隔一周就会发生一次。他们都把这当成朝圣之路上的某种仪式了。"" 
 
 $HeOrShe了耸了耸半边肩膀，一副这事也不值得让$HeOrShe太上心的样子。随后$hisOrHer对着通讯器又说了一串战术术语。",,
 lppJangalaProtestRespInfo,PPJangalaProtestResponses,!$askedProtestInfo,,,"lpp_jangalaProtestInfo:""朝圣者？这附近有圣地吗？""",
-lppJangalaProtestRespHeg,PPJangalaProtestResponses,$player.fcm_faction == hegemony,,,lpp_jangalaProtestInfoHegCom:展示你与霸主的雇佣合约来通过,
-lppJangalaProtestRespChurch,PPJangalaProtestResponses,RepGTE luddic_church FRIENDLY,,,lpp_jangalaProtestChurch1:展示你与教会的关系来通过,
+lppJangalaProtestRespHeg,PPJangalaProtestResponses,$player.fcm_faction == hegemony,,,lpp_jangalaProtestInfoHegCom:利用你与霸主的雇佣关系来通过这里,
+lppJangalaProtestRespChurch,PPJangalaProtestResponses,RepGTE luddic_church FRIENDLY,,,lpp_jangalaProtestChurch1:利用你与教会的关系来通过这里,
 lppJangalaProtestRespWait,PPJangalaProtestResponses,,,,lpp_jangalaProtestWait:等待当局驱散抗议人群,
 lppJangalaProtestRespJoin,PPJangalaProtestResponses,# require some legitimacy here?,,,lpp_jangalaProtestJoin:加入抗议者，帮他们表明立场,
 lppJangalaProtestRespMarinesHelp,PPJangalaProtestResponses,"!$protestHelpRejected
 $player.marines > 11",,,lpp_jangalaProtestMarinesHelp:派遣你的陆战队辅助当局驱散抗议者,
 lppJangalaProtestRespMarines,PPJangalaProtestResponses,$player.marines > 11,,,lpp_jangalaProtestMarines:派遣你的陆战队强行开路,
 lppJangalaProtestWait,DialogOptionSelected,$option == lpp_jangalaProtestWait,"EndConversation DO_NOT_FIRE
-ShowImageVisual protest","你冷眼旁观。聚集的人越来越多，也越来越没有耐心 —— 一小部分人发出嘲笑和叫喊，有些太空船员开始朝人群丢垃圾。卢德信众们手拉着手，吟唱祷文，呼吁停止使用轨道射线焚烧地表植被。从打斗中可以看出，除了公开的抗议者，还有许多人支持这项运动。
+ShowImageVisual protest","你冷眼旁观。聚集的人越来越多，也越来越没有耐心 —— 一小部分人发出嘲笑和叫喊，有些宇宙民开始朝人群丢垃圾。卢德教徒们手拉着手，吟唱祷文，呼吁停止使用轨道射线焚烧地表植被。从打斗中可以看出，除了公开的抗议者，还有许多人支持这项运动。
 
 当局势接近失控时，人们突然转头看向一个方向，你发现一支装备轻武器的秘密部队正从方队改为楔形队列。治安无人机在人群头顶上嗡嗡作响，瞄准激光和 ID 扫描仪不停闪烁着。",lpp_jangalaProtestWait2:等待,
 lppJangalaProtestWait2,DialogOptionSelected,$option == lpp_jangalaProtestWait2,,"军队的稳步推进冲散了抗议者的队列，他们挥舞着手中的电击棒，让所有尖叫和呼喊都归于虚无，透过镇爆气体，你可以模糊的辨认出无人机正在释放抑制泡沫来压制挣扎的人。卢德信徒的拳头，标语牌，甚至是铁锤，在装备动力装甲的宪兵面前显得苍白无力。
@@ -5340,12 +5340,12 @@ lppJangalaProtestWait2,DialogOptionSelected,$option == lpp_jangalaProtestWait2,,
 
 当你大步走向主港区时，你转过身来，发现脚上沾满了抗议者的鲜血，在身后留下一排逐渐模糊的血脚印。你用鞋跟在甲板上猛蹭了两下，摆脱了这点不适。",lpp_jangalaProtestEndGeneric:继续,
 lppJangalaProtestMarinesHelp,DialogOptionSelected,$option == lpp_jangalaProtestMarinesHelp,"$protestHelpRejected = true 0
-FireAll PPJangalaProtestResponses","$faction $rank摇了摇 $hisOrHer的头。""感谢你的爱国情怀，公民，但我们会处理这件事，这事一定要谨慎，"" $heOrShe恼怒地说，""这件事...非常有政治意义。""",,
+FireAll PPJangalaProtestResponses","$faction $rank摇了摇$hisOrHer的头。""感谢你的爱国情怀，公民，但我们会处理这件事，这事一定要谨慎，"" $heOrShe恼怒地说，""这件事...非常有政治影响。""",,
 lppJangalaProtestMarinesHelpHegDT,DialogOptionSelected,"$option == lpp_jangalaProtestMarinesHelp
 $player.fcm_faction == hegemony
 !$didDoubleTake","$didDoubleTake = true 0
 $option = lpp_jangalaProtestMarinesHelp 0
-FireBest DialogOptionSelected","突然 $rank 愣了一下，然后露出了吃惊的表情。"" $playerName？那是你，对不对？现役辅助军，对吧？当你进入轨道站的时候，触发了一个警报。""",,
+FireBest DialogOptionSelected","突然，$rank 愣了一下，然后露出了吃惊的表情。""$playerName？那是你，对不对？现役辅助军，对吧？当你进入轨道站的时候，触发了一个警报。""",,
 lppJangalaProtestMarinesHelpHeg,DialogOptionSelected,"$option == lpp_jangalaProtestMarinesHelp
 $player.fcm_faction == hegemony",,"$HeOrShe想了一小会，然后看向了一个小数据平板。
 
@@ -5370,10 +5370,10 @@ $HeOrShe摇了摇头。""反正我的亲身体验就是这样的。可能这帮�
 lppJangalaProtestInfoHegComDT1,PPJangalaProtestInfoAsked,"$player.fcm_faction == hegemony
 !$didDoubleTake","$didDoubleTake = true 0
 $option = lpp_jangalaProtestInfoHegCom 0
-FireBest DialogOptionSelected","突然 $rank 愣了一下，然后露出了吃惊的表情。"" $playerName？那是你，对不对？现役辅助军，对吧？当你进入轨道站的时候，触发了一个警报。""",,
+FireBest DialogOptionSelected","突然，$rank 愣了一下，然后露出了吃惊的表情。""$playerName？那是你，对不对？现役辅助军，对吧？当你进入轨道站的时候，触发了一个警报。""",,
 lppJangalaProtestInfoHegComDT2,PPJangalaProtestInfoAsked,$player.fcm_faction == hegemony,"$option = lpp_jangalaProtestInfoHegCom 0
 FireBest DialogOptionSelected",,,
-lppJangalaProtestInfoHegCom,DialogOptionSelected,$option == lpp_jangalaProtestInfoHegCom,,"""听着，我对此感到十分抱歉。"" $heOrShe表示抗议，""这么和你说吧，我可以把你和你的人送到安全通道，这样你就不必在马戏场等着了。""","lpp_jangalaProtestInfoHegCom2:接受
+lppJangalaProtestInfoHegCom,DialogOptionSelected,$option == lpp_jangalaProtestInfoHegCom,,"""听着，我对此感到十分抱歉。"" $heOrShe表示抗议，""这么和你说吧，我可以把你和你的人送到安全通道，这样你就不必在这马戏场里等着了。""","lpp_jangalaProtestInfoHegCom2:接受
 lpp_jangalaProtestInfoHegComWait:""谢了，但是我会在这等着。""",
 lppJangalaProtestInfoHegComNo,PPJangalaProtestInfoAsked,,FireAll PPJangalaProtestResponses,,,
 lppJangalaProtestInfoHegComWait,DialogOptionSelected,$option == lpp_jangalaProtestInfoHegComWait,"EndConversation DO_NOT_FIRE
@@ -5385,12 +5385,12 @@ ShowDefaultVisual","你冷静地走向卢德抗议者们，请求与他们的组
 
 他们热情地担保你为 ""教会真正的朋友""，并且设法说服抗议者们，为你和你的登陆小队让出一条道路。
 
-在你走过那些被你的特殊待遇惹恼的商人和太空民，去往商业街的时候，你开始听到 霸主 宪兵那音量放大的驱散命令。",lpp_jangalaProtestEndGeneric:继续,
+在你走过那些被你的特殊待遇惹恼的商人和宇宙民，去往商业街的时候，你开始听到 霸主 宪兵那音量放大的驱散命令。",lpp_jangalaProtestEndGeneric:继续,
 lppJangalaProtestJoin,DialogOptionSelected,$option == lpp_jangalaProtestJoin,"AdjustRep hegemony SUSPICIOUS -1
-$player.ethosOrder--","你迈步向前，宣称你也希望加入抗议。起初，卢德信众并不相信，但随着你转身面对困惑的 地方安全部 守卫，并开始颂唱卢德祷文，人群中爆发出一阵小小的欢呼。
+$player.ethosOrder--","你迈步向前，宣称你也希望加入抗议。起初，卢德信众并不相信，但随着你转身面对困惑的地方安全部守卫，并开始颂唱卢德祷文，人群中爆发出一阵小小的欢呼。
 
 你看到 $PersonRank $personLastName 难以置信地摇着头。",lpp_jangalaProtestJoin2:继续,
-lppJangalaProtestJoin2,DialogOptionSelected,$option == lpp_jangalaProtestJoin2,,不久之后，你和你的抗议者同伴们相互打量着身上的淤青和切口。面对这样异乎寻常的情景，你的保镖做出了绝佳的反应，设法将你从宪兵们最毒辣的殴打，镇静气体，以及拘束泡沫中保了下来。不过你还是挨了几下，向这些卢德朝圣者证明了自己。趁此机会，你解释道 -,"lpp_jangalaProtestJoinSupport:尽管身为一名无信者，你还是支持他们的权利
+lppJangalaProtestJoin2,DialogOptionSelected,$option == lpp_jangalaProtestJoin2,,不久之后，你和你的抗议者同伴们相互打量着身上的淤青和切口。面对这样异乎寻常的情景，你的保镖做出了绝佳的反应，设法将你从宪兵们最毒辣的殴打，镇静气体，以及拘束泡沫中保了下来。不过你还是挨了几下，向这些卢德朝圣者证明了自己。趁此机会，你解释道 ——,"lpp_jangalaProtestJoinSupport:尽管身为一名无信者，你还是支持他们的权利
 lpp_jangalaProtestJoinFaith:共患难的经历令你们离卢德更近了
 lpp_jangalaProtestJoinPather:终有一日，要十倍地将这顿毒打奉还给那些异端
 lpp_jangalaProtestJoinWeird:你只是想尝尝战败的滋味
@@ -5400,7 +5400,7 @@ $player.joinedJangalaProtest = true
 AdjustRep luddic_church FRIENDLY 1
 ShrineCMD addIntel","朝圣者们欢迎你的到来，认为你是一位可敬的外乡人。他们承诺，如果你来拜访他们的家宅和会众，那你一定会得到殷勤接待。
 
-他们告诉你 Jangala 圣地 的事，并讲述着暴露在剧毒异种生命下的体验 —— 他们声称，这种痛苦甚至远胜于地方安全部最酷烈的暴行。
+他们告诉你 Jangala 圣地的事，并讲述着暴露在剧毒异种生命下的体验 —— 他们声称，这种痛苦甚至远胜于地方安全部最酷烈的暴行。
 
 通信板呼叫了你的名字。",lpp_jangalaProtestWrapup1:继续,
 lppJangalaProtestJoinFaith,DialogOptionSelected,$option == lpp_jangalaProtestJoinFaith,"AdjustRep luddic_church FRIENDLY 2
@@ -5408,15 +5408,15 @@ ShrineCMD addIntel
 $player.joinedJangalaProtest = true
 $player.luddicAttitudeFaithful++","朝圣者们像欢迎同道那样欢迎你。他们承诺，如果你来拜访他们的家宅和会众，那你一定会得到殷勤接待，并且保证给你在他们会众服务站的前排留一个座位，以便欢迎那些归来的朝圣者。
 
-他们告诉你 Jangala 圣地 的事，并讲述着暴露在剧毒异种生命下的体验 —— 他们声称，这种痛苦甚至远胜于地方安全部最酷烈的暴行。
+他们告诉你 Jangala 圣地的事，并讲述着暴露在剧毒异种生命下的体验 —— 他们声称，这种痛苦甚至远胜于地方安全部最酷烈的暴行。
 
 通信板呼叫了你的名字。",lpp_jangalaProtestWrapup1:继续,
 lppJangalaProtestJoinPather,DialogOptionSelected,$option == lpp_jangalaProtestJoinPather,"$player.luddicAttitudePather++
 AdjustRep luddic_path FRIENDLY 2
 $player.joinedJangalaProtest = true
-ShrineCMD addIntel","大多数抗议者被你的花言巧语吓到，紧张的瞥了一眼不可视的监视装置，抽身离开了属于你的牢房角落。尽管几个年轻的朝圣者和一位老者 —— 他身上的伤痕记述着他的奉献 —— 留在你身旁，目光盯着其他人，大声批判着。
+ShrineCMD addIntel","大多数抗议者被你的激进言论吓到，紧张的瞥了一眼不可视的监视装置，抽身离开了属于你的牢房角落。尽管几个年轻的朝圣者和一位老者 —— 他身上的伤痕记述着他的奉献 —— 留在你身旁，目光盯着其他人，大声批判着。
 
-""我们听说过你，$playerBrotherOrSister，朝圣之路的终点已经近在咫尺。"" 他轻声耳语，对你讲述着 Jangala 圣地 的事，讲述着暴露在异种生命中对肉身所造成的折辱 —— 远远超过地方安全部的任何打压手段。
+""我们听说过你，$playerBrotherOrSister，朝圣之路的终点已经近在咫尺。"" 他轻声耳语，对你讲述着 Jangala 圣地的事，讲述着暴露在异种生命中对肉身所造成的折辱 —— 远远超过地方安全部的任何打压手段。
 
 通信板呼叫了你的名字。",lpp_jangalaProtestWrapup1:继续,
 lppJangalaProtestJoinWeird,DialogOptionSelected,$option == lpp_jangalaProtestJoinWeird,"$player.luddicAttitudeCynical++
@@ -5435,7 +5435,7 @@ lppJangalaProtestWrapup3,DialogOptionSelected,$option == lpp_jangalaProtestWrapu
 ShowDefaultVisual
 FireAll PopulateOptions","你被推到市政安全审核中心外面的广场上，明亮的光芒使你不由得眯起眼睛。
 
-你的尊严很大程度的保留了，你保护好自己的随身武器 (弹匣已没收)，快速检查了自己的私人数据平板，然后对你的二副点了点头 —— 他带着两杯热饮，一直耐心地等着你。",,
+你的尊严被很大程度的保留了，你保护好自己的随身武器 (弹匣已没收)，快速检查了自己的私人数据平板，然后对你的二副点了点头 —— 他带着两杯热饮，一直耐心地等着你。",,
 lppJangalaProtestMarines,DialogOptionSelected,$option == lpp_jangalaProtestMarines,,"你从自己的陆战队里要来一支小队，坐着穿梭机从你的$shipOrFleet高速赶来。鉴于港口规定，没有携带武器弹药。
 
 这些陆战队员身着全套动力装甲，在你身前组成一支先锋，仅仅是简单地朝着抗议的卢德信众展开行军，没有其他多余的举动。",lpp_jangalaProtestMarines2:继续,
@@ -5449,7 +5449,7 @@ AdjustRep luddic_church SUSPICIOUS -6
 AdjustRep luddic_path VENGEFUL -10
 AdjustRepActivePerson VENGEFUL -10
 EndConversation DO_NOT_FIRE
-ShowDefaultVisual","""我真应该逮捕你！"" $heOrShe怒吼着赶到你的面前，无视了你那些全副武装的陆战队员 —— 他们也不敢在霸主的地盘上对军官撒野，""你愚蠢的行为会被拍进全息图里，而这会为他们带来几百名左径分子，"" $heOrShe咬牙切齿地说。
+ShowDefaultVisual","""我真应该逮捕你！"" $heOrShe怒吼着赶到你的面前，无视了你那些全副武装的陆战队员 —— 他们也不敢在 霸主 的地盘上对军官撒野，""你愚蠢的行为会被拍进全息图里，而这会带来几百名左径分子，"" $heOrShe咬牙切齿地说。
 
 ""在我集结真正的军队之前，让你的暴徒滚出我的视线。""",lpp_jangalaProtestMarines4:继续,
 lppJangalaProtestMarines4,DialogOptionSelected,$option == lpp_jangalaProtestMarines4,FireAll PopulateOptions,当你走进商业街时，你看到船员和当地居民对着什么东西指手画脚。一些人还拿着数据平板和有记录功能的全息影像设备。,,
@@ -5499,14 +5499,14 @@ lppJangalaFirstVisit2b,DialogOptionSelected,$option == lpp_JangalaFirstVisit2b,,
 
 有报道称，一些人的运气不佳，缺乏应急计划，再加上在真正恶劣的天气下的载具故障，导致他们长期暴露在 Jangala 生物圈达数天、数周，有一例甚至超过一个标准月。由此产生的生长和感染似乎导致了异常折磨的死亡。","lpp_JangalaFirstVisit3:够了，关掉它
 lpp_JangalaFirstVisit2c:浏览图片",
-lppJangalaFirstVisit2c,DialogOptionSelected,$option == lpp_JangalaFirstVisit2c,,"-至少，从公共信息网上的全息图来看，这确实很可怕。
+lppJangalaFirstVisit2c,DialogOptionSelected,$option == lpp_JangalaFirstVisit2c,,"—— 至少，从公共信息网上的全息图来看，这确实很可怕。
 
 你心里突然泛起一丝愤世嫉俗的想法，在想当局是否在故意放任这些图片的传播，就是为了促使人们遵守安全规定。",lpp_JangalaFirstVisit3:继续,
-lppJangalaFirstVisit3,DialogOptionSelected,$option == lpp_JangalaFirstVisit3,,"你的穿梭机刚降落在着陆点，Jangala 上的植物就重新生长在自己的灰烬上，夺回了它的领地。
+lppJangalaFirstVisit3,DialogOptionSelected,$option == lpp_JangalaFirstVisit3,,"你的穿梭机刚降落在着陆点，Jangala 上的植物就重新开始在自己的灰烬上生长，夺回了属于它们的领地。
 
-当人行通道需要一段时间对裸露的表面进行自清洁循环时，你可以注射标准剂量的抗异种药物，并重新检查呼吸面罩的质量。尽管这里的空气感觉也没什么不同。
+人行通道需要一段时间对裸露的表面进行自清洁循环，你趁此时注射了标准剂量的抗异种药物，并重新检查呼吸面罩的质量。尽管这里的空气感觉也没什么不同。
 
-也许更暖和、更潮湿一点。",lpp_JangalaEnter1:进入圣地,
+也许也就是更暖和、更潮湿一点。",lpp_JangalaEnter1:进入圣地,
 lppJangalaShrineDesc1,DialogOptionSelected,$option == lpp_JangalaEnter1,ShowImageVisual luddic_shrine,"接待休息室里挤满了在此聚会的卢德朝圣者。他们身着传统的手工服装，由助理祭司带领进行仪式性的净手。向上看一眼，你就会发现这里真正的清洁设施：淹没在复杂管道中的一组空气净化装置。
 
 舞动着的叶片几乎堵死了窗户，只有些许昏暗的光线照射进来。这些富有生机的植物似乎在抽搐着，液体从囊状器官和小管的裂缝中渗出，留下一条条涓涓细流划过剥落的外壳。在植物的躁动和卢德工艺的魅力之间，与你习惯的，那些被精心调控的环境相比，这个地方明显令人担忧。",lpp_jangalaShrineDesc2:继续,
@@ -5532,7 +5532,7 @@ lpp_jangalaattendantVisit:""我想要参拜圣地。""",
 lppJangalaShrineTerrible,DialogOptionSelected,$option == lpp_jangalaShrineTerrible,"$option = lpp_jangalaShrineDifficult 0
 FireBest DialogOptionSelected
 $player.luddicAttitudeCynical++",,,
-lppJangalaAttendantFoolish,DialogOptionSelected,$option == lpp_jangalaattendantFoolish,$wasAnnoying = true 1,"""也许吧。"" 圣务侍冷静了一点，""正如卢德所言，'真心全意地坚守信仰往往会招致流言蜚语的恶意中伤。'""
+lppJangalaAttendantFoolish,DialogOptionSelected,$option == lpp_jangalaattendantFoolish,$wasAnnoying = true 1,"""也许吧。"" 圣务侍冷静了一点，""正如卢德所言，'真心全意地坚守信仰，往往会招致流言蜚语的恶意中伤。'""
 
 ""你知道卢德接下来说了什么吗？"" 他反问道，""'让信仰成为你的铠甲；让虔诚化作无数城墙，为你构成堡垒，如此一来，我们的灵魂就能永远合为一体。'""
 
@@ -5580,7 +5580,7 @@ lppJangalaShrineVisitAgain,DialogOptionSelected,$option == lpp_jangalaShrineVisi
 在远处，你看到了那座雕像花园。这些造像身上缀满了液疱，缠满了卷须，萌发出了异种生命的子实体。只穿着浅色长袍的朝圣者夹杂其中，疯长的植物轻易淹没了他们。在他们脚下，那被苔藓和菌丝或类似外星生物组成的被子覆盖着的是人骨，还是倒下的树枝和杂乱的岩石？是绝境中狂热信徒的最后愿望，又或者仅仅是你的想象？
 
 在你停留的几分钟里，绿色在不知不觉中汹涌澎湃，吞噬一切，凶猛地繁衍，这是一种在地球或外星世界中都可能诞生的生命循环。",lpp_jangalaShrineLeave:回到接待大厅,
-lppJangalaVisitOutside2,DialogOptionSelected,$option == lpp_jangalaattendantVisitOutside2,ShowImageVisual jangala_shrine,"湿热的空气从直通外界环境的气闸里喷涌而出，如同高G力缓冲泡沫那样猛烈冲击你的身体。你独自迈步而出，正如仪式要求的那般。
+lppJangalaVisitOutside2,DialogOptionSelected,$option == lpp_jangalaattendantVisitOutside2,ShowImageVisual jangala_shrine,"湿热的空气从直通外界环境的气闸里喷涌而出，如同高 G 力缓冲泡沫那样猛烈冲击你的身体。你独自迈步而出，正如仪式要求的那般。
 
 圣地的殿堂上挂满了蛛网，植物的根茎上长出五彩斑斓的球团，在勉强能算是阳光的事物之下闪闪发亮。那些尘埃，微虫，又或者是孢子的东西，四处漂浮着，顶着沉重而慵懒的空气打起旋来。","lpp_jangalaOutsideMaskOff:摘下面罩，秉持信仰。
 lpp_jangalaOutsideMaskOn:戴好面罩，你又不是傻子。",
@@ -5616,7 +5616,7 @@ lppJangalaOutsideMaskOn3,DialogOptionSelected,$option == lpp_jangalaOutsideMaskO
 $player.jangalaWentMaskOn = true",在你逗留的这段时间里，这些绿植微不可查地翻搅着，吞噬万物，凶蛮不死。生命的轮回既可以生于地球，也可以生于一个异星世界。,lpp_jangalaShrineExtLeave:回到建筑群内部,
 lppJangalaShrineExteriorLeave,DialogOptionSelected,$option == lpp_jangalaShrineExtLeave,"ShowImageVisual luddic_shrine
 FireBest LPPJangalaOutsideReturnComment",你在一间整洁但略有污渍的洁净室里接受了例行去污。穿过气味奇怪的沐浴、照过一轮的激光、又服用了另一轮抗异种感染药物之后，你拿回了你的衣服。所有东西都被强力烘干过，还带着点消毒液的味道。,lpp_jangalaShrineLeave:继续,
-lppJangalaShrineExteriorLeaveB,LPPJangalaOutsideReturnComment,$maskOff,,呼吸仍然感觉很奇怪。你不得不仔细进行每一次呼吸，用空气填满你的肺，然后排空它们。,,
+lppJangalaShrineExteriorLeaveB,LPPJangalaOutsideReturnComment,$maskOff,,呼吸的感觉仍然很奇怪。你不得不仔细进行每一次呼吸，用空气填满你的肺，然后排空它们。,,
 lppJangalaShrineVisitAgainOutside,DialogOptionSelected,$option == lpp_jangalaShrineVisitAgainOutside,ShowImageVisual jangala_shrine,"空气刺痛着你，带来温暖又潮湿的感觉，就像高重力缓冲泡沫一样。你沿着小路走了出去，这条路几乎被植物淹没了。你顺着路继续前行，树叶和触须拂过你的身体。
 
 你发现了一座雕像花园，这些造像身上缀满了液疱，缠满了卷须，萌发出了异种生命的子实体。穿着浅色长袍的朝圣者夹杂其中，疯长的植物轻易淹没了他们。形成这一切花费了多少时间？是几个小时，还是数天？
@@ -5641,7 +5641,7 @@ lppHesperusShrineOptionRevisit,PopulateOptions,"$market.id == hesperus
 $market.tag:luddic_shrine
 $menuState == main
 $player.transponderOn
-$global.lpp_visitedShrineHesperus",FireBest lppHesperusShrineOptionCheck,,3:lpp_hesperusVisitStart:搭乘一架穿梭机访问卢德的圣地,
+$global.lpp_visitedShrineHesperus",FireBest lppHesperusShrineOptionCheck,,3:lpp_hesperusVisitStart:乘坐穿梭机前去拜访卢德圣地,
 lppHesperusShrineOptionCheck,lppHesperusShrineOptionCheck,"$faction.isHostile
 $market.ind:heavybatteries","SetEnabled lpp_hesperusVisitStart false
 SetTooltip lpp_hesperusVisitStart ""你已被卢德骑士团列为不受欢迎者。Hesperus 的重型炮台正锁定你的$shipOrFleet，谢绝随意造访。""",,,
@@ -9035,7 +9035,7 @@ $global.lke_completed = true
 Call $global.lke_ref updateStage
 EndConversation NO_CONTINUE","说话轻声细语的秘书 Degory 从她的袍子里拿出了一个和她的形象完全不搭调的数据平板，把 大祭司 给你的报酬转入了你的账户。然后她叫来了冷着脸的骑士 Ailanthus，由他送你去正在等你的穿梭机。
 
-回轨道的路上没发生什么值得一提事。",,
+返回轨道的过程一切顺利。",,
 ,,,,,,
 # LKE generic Jaspis talk during mission,,,,,,
 lkeJaspisGreeting,PickGreeting,"$id == jaspis score:1000
@@ -27062,7 +27062,7 @@ FireAll MOTRcrewCheck","你在一轮称为 '近地投送' ，就是喝掉一杯�
 
 佣兵们肯定都喝醉了，但还是清醒到谈论他们被地方当局追查的细节。
 
-趁着几个雇佣兵起身去点一轮 ""轨道轰炸"" 的工夫，他们的领队把你拉到一边，给了一个提议：""我们有 $motr_numberOfMarines 人整装待发，都是经验丰富的好手，不管是真空还是地面，一个还是五个重力加速度都能出动。他对你的怀疑的样子笑了下， ""好吧最多只能是三个，如果有奖金而且只是简短行动的话，四个重力加速度也行"" 一只有疤痕的手挥过， ""这些细枝末节就不谈了！""
+趁着几个雇佣兵起身去点一轮 ""轨道轰炸"" 的工夫，他们的领队把你拉到一边，给了一个提议：""我们有 $motr_numberOfMarines 人整装待发，都是经验丰富的好手，不管是真空还是地面，一个还是五个 G 都能出动。他对你的怀疑的样子笑了下， ""好吧最多只能是三个，如果有奖金而且只是简短行动的话，四个 G 也行"" 一只有疤痕的手挥过， ""这些细枝末节就不谈了！""
 
 ""重要的是我们的合同只要 $motr_priceText 星币。简直是在做慈善，对吧？给我们找点活干，或者在别的地方把合同再转让掉，只要能让我们摆脱这个困境就行，其他的我都不在乎。你怎么说？""","motr_accept:买下雇佣军的合同，然后偷偷溜出 $entity.name
 motr_declineDrink:拒绝这个提议，但留下来与佣兵们来轮 ""轨道轰炸"" 缓和气氛
@@ -27072,7 +27072,7 @@ SetTooltip motr_accept ""需要至少 $motr_numberOfMarines 的空置船员宿�
 MOTRaccept,DialogOptionSelected,$option == motr_accept,"$option = contact_acceptBar 0
 FireBest DialogOptionSelected","佣兵所提供的某种精巧装置骗过了港口当局的自动扫描仪，使其认定两个特定货柜内仅仅只是装有半满的微弱放射性硅酸盐砾石。
 
-你的后勤官顺利将它们秘密装载至你的$shipOrFleet上，没有引起任何注意。",,
+你的后勤官顺利将他们秘密装载至你的$shipOrFleet上，没有引起任何注意。",,
 MOTRplayerColonyAccept,DialogOptionSelected,$option == motr_playerColonyAccept,"$option = contact_acceptBar 0
 FireBest DialogOptionSelected",仅仅一句话，就让港口当局的所有异议烟消云散。这些因彻夜豪饮而更显颓态的佣兵，在你的后勤官安排下于次日清晨登上了你的$shipOrFleet。,,
 MOTRpostAccept,ContactPostAccept,$missionId == motr,"RemoveCommodity credits $motr_price
@@ -29407,19 +29407,19 @@ kdLandingDeniedOther,DialogOptionSelected,$option == kd_landingDeniedOtherOption
 FireBest MarketPostDock",你走开了几步并参观起了港区，好像本来就没想和 Kanta 谈话一样。那个海盗也没说什么。,,
 devKDlandingVisitOverride,KDStationKingOptions,$global.isDevMode,SetOptionColor devkd_landing1first gray,,20:devkd_landing1first:DEV 设为初次来访,
 devKDlandingFirstTime,DialogOptionSelected,$option == devkd_landing1first,"EndConversation DO_NOT_FIRE
-ShowDefaultVisual","你把四名警卫和驾驶员留在穿梭机上。又有两名警卫跟着你，派来引见的瘦高个海盗上尉点头表示这是正确的。
+ShowDefaultVisual","你把四名警卫和驾驶员留在穿梭机上。又有两名警卫跟着你，派来引见的瘦高个海盗上尉点头表示没错。
 
-你被带领穿过通向空间站中心的主通道。你很快就适应了这里杂乱无章的人工重力场，你怀疑这是故意所为，因为各种各样、各个年龄的海盗都在看着你寻找弱点，低声说着粗鄙之语，或是推搡着争夺声望。",kd_kantaFirstIntro1:继续走,
+你被带领穿过通向空间站中心的主通道。你很快就适应了这里杂乱无章的人工重力场，你怀疑这是故意所为。与此同时，各种各样、各个年龄的海盗在盯着你寻找着破绽，或是低声说着粗话，或是推搡着争抢风头。",kd_kantaFirstIntro1:继续走,
 "# meet Kanta, first time",,,,,,
 kdLandingFirstTime,DialogOptionSelected,"$option == kd_landing1
 !$global.didKantasDenIntro","EndConversation DO_NOT_FIRE
-ShowDefaultVisual","你把四名警卫和驾驶员留在穿梭机上。又有两名警卫跟着你，派来引见的海盗上尉点头表示这是正确的。
+ShowDefaultVisual","你把四名警卫和驾驶员留在穿梭机上。又有两名警卫跟着你，派来引见的海盗上尉点头表示没错。
 
-你被带领穿过通向空间站中心的主通道。你很快就适应了这里杂乱无章的人工重力场，你怀疑这是故意所为，因为各种各样、各个年龄的海盗都在看着你寻找弱点，低声说着粗鄙之语，或是推搡着争夺声望。",kd_kantaFirstIntro1:继续走,
-kdKantaFirstIntro1,DialogOptionSelected,$option == kd_kantaFirstIntro1,,你甚至能从他们的脸上以及他们穿的无政府主义制服看出他们的关系 —— 这是个家族式的组织。他们佩戴着奖章，穿着饰有黄金和宝石的战斗装甲，还有偷来的高端真空服 —— 重新漆上了杂牌颜色，还戴着粗鲁打结的速子科技领巾，都是些炫耀的奢侈穿着。他们将自己的财富穿在外表上，越花哨越好。,kd_kantaFirstIntro2:继续,
-kdKantaFirstIntro2,DialogOptionSelected,$option == kd_kantaFirstIntro2,,"穿过挂着深红色骷髅横幅的斑驳防爆门，一个大隔间打开了。这里的空气中弥漫着挥之不去的能量武器释放的刺激性气味，几乎能掩盖这里腐肉的臭味。
+你被带领穿过通向空间站中心的主通道。你很快就适应了这里杂乱无章的人工重力场，你怀疑这是故意所为。与此同时，各种各样、各个年龄的海盗都在盯着你寻找弱点，或是低声说着粗话，或是推搡着争抢风头。",kd_kantaFirstIntro1:继续走,
+kdKantaFirstIntro1,DialogOptionSelected,$option == kd_kantaFirstIntro1,,你几乎能从他们的脸上看出亲缘关系——这是个家族买卖——他们身上都是毫无章法的制服也说明了这一点。他们佩戴着奖章，穿着饰有黄金和宝石的战斗装甲，还有偷来的高端真空服 —— 重新漆上了杂牌颜色，还戴着粗鲁打结的速子科技领巾，都是些炫耀的奢侈穿着。他们将自己的财富穿在外表上，越花哨越好。 ,kd_kantaFirstIntro2:继续,
+kdKantaFirstIntro2,DialogOptionSelected,$option == kd_kantaFirstIntro2,,"穿过挂着深红色骷髅横幅的斑驳防爆门，一个大隔间打开了。能量武器开火后留下的刺鼻气味弥漫在空气中，但还是盖不住这里的腐肉臭味。
 
-你被带到一个只能被称为王座的地方前，不雅的血红色背光灯以最大功率从其后方照着。很多海军军官的军帽、奖章和徽章被刺穿在由战利品武器熔成的花簇上。你能认出其中有英仙座星域各个势力的装备。",kd_kantaFirstIntro3:继续,
+你被带到一个只能被称为王座的地方前，不雅的血红色背光灯以最大功率从其后方投射出来。很多海军军官的军帽、奖章和徽章被穿刺在由战利品武器熔成的花簇上。你认出英仙座星域每个势力的装备都在其中。",kd_kantaFirstIntro3:继续,
 kdKantaFirstIntro3,DialogOptionSelected,$option == kd_kantaFirstIntro3,"BeginConversation kanta false true
 $player.metKanta = true","在其上是发出嘶嘶声和嗡嗡声的军阀 Jorien Kanta，她现在比起人类更像一台机器。她的脸就是个面具。你能看到的皮肤就像是老航行家的红色疤痕一样坚硬。
 
@@ -29437,7 +29437,7 @@ kdKantaFirstIntro4kneel,DialogOptionSelected,$option == kd_kantaIntro4kneel,,"�
 医生做出了面无血色的扭曲表情。",kd_kantaIntro5:继续,
 kdKantaFirstIntro4stand,DialogOptionSelected,$option == kd_kantaIntro4stand,AdjustRepActivePerson COOPERATIVE 5,"如果损坏的大气清洁器能够发笑，那么 Kanta 发出的噪音大概与它很相近。
 
-""一个站立者！""她喊道。你注意到她的守卫神情自若。""我们喜欢你。一个霸主佬只会跪在污泥之中，因为他们只知道顺从和卑躬屈膝。而你像一个航行家一样站着。""
+""一个站立者！""她喊道。你注意到她的守卫神情自若。""我们喜欢你。一个霸主废物只会跪在污泥之中，因为他们只知道顺从和卑躬屈膝。而你像一个航行家一样站着。""
 
 她将脑袋对着你。""Kanta 会聆听你的话语。""",kd_kantaIntro5:继续,
 kdKantaFirstIntro5,DialogOptionSelected,$option == kd_kantaIntro5,"FireBest KDKantaRouteTo
@@ -29451,9 +29451,9 @@ EndConversation DO_NOT_FIRE","两名警卫跟着你前往空间站，其余的�
 
 他们将自己的财富穿在外表上，越花哨越好。",kd_kantaRevisit2:继续走,
 kdLandingRevisit2,DialogOptionSelected,$option == kd_kantaRevisit2,"BeginConversation kanta false true
-ShowSecondPerson cydonia","穿过挂着深红色骷髅横幅的斑驳防爆门，一个大隔间打开了。这里的空气中弥漫着挥之不去的能量武器释放的刺激性气味，几乎能掩盖这里腐肉的臭味。
+ShowSecondPerson cydonia","穿过挂着深红色骷髅横幅的斑驳防爆门，一个大隔间打开了。这能量武器开火后留下的刺鼻气味弥漫在空气中，但还是盖不住这里的腐肉臭味。
 
-你被带到了 Kanta 的王座前，不雅的血红色背光灯从其后方照着。很多海军军官的军帽、奖章和徽章被刺穿在由战利品武器熔成的花簇上。你能认出其中有英仙座星域各个势力的装备。在其上是发出嘶嘶声和嗡嗡声的军阀 Jorien Kanta，她现在比起人类更像一台机器。她的脸就是个面具。你能看到的皮肤就像是老航行家的红色疤痕一样坚硬。
+你被带到了 Kanta 的王座前，不雅的血红色背光灯从其后方投射出来。很多海军军官的军帽、奖章和徽章被刺穿在由战利品武器熔成的花簇上。你认出英仙座星域每个势力的装备都在其中。在其上是发出嘶嘶声和嗡嗡声的军阀 Jorien Kanta，她现在比起人类更像一台机器。她的脸就是个面具。你能看到的皮肤就像是老航行家的红色疤痕一样坚硬。
 
 那个大概是医生的家伙，Cydonia，就在她的王座下伏着。他上前一步，""觐见！"" 他尖声叫道，""鲜血征讨的女皇，军阀 Kanta 的王室，开庭了！""",kd_kantaRevisit3:继续,
 kdLandingRevisit3,DialogOptionSelected,$option == kd_kantaRevisit3,FireBest KDKantaRouteTo,,,
@@ -34745,14 +34745,14 @@ kpFavorSel,DialogOptionSelected,$option == kpGiftFavor,KantaCMD oweKantaAFavor,"
 kpGiftsLeave,KPFindGifts,,,,"1001:kpLeave:""我先退下了，我会考虑何种礼物配得上海盗女王。""",
 kpGiftsLeaveSel,DialogOptionSelected,$option == kpLeave,,"你从王座大厅的中心后退了一步，你在聚光灯下的时间差不多到头了。
 
-Kanta 的金属身体在王座上发出嘶嘶声，她如地雷般耐心。Cydonia 快步走向另一个负责看管有待 Kanta 处置的犯人以及有求之人的海盗头目，与之交谈。",kpLeave2:离开,
+Kanta 的金属身体在王座上发出嘶嘶声，她如地雷般耐心。Cydonia 快步走向另一个海盗头目与之交谈，此人负责看管有待 Kanta 处置的犯人和有求之人。",kpLeave2:离开,
 kpGiftsLeave2Sel,DialogOptionSelected,$option == kpLeave2,"unset $market.kpAudience
 EndConversation DO_NOT_FIRE
 ShowDefaultVisual
 FireAll PopulateOptions","你离开时，整个王庭处于骚动之中，你身后皆是各类针对你和针对海盗彼此的呼声，嘲笑以及指责。
 
 Kanta 之巢 通道里的其他海盗在你路过时无一不对你虎视眈眈、念念有词，等待着给你秘密放血的时刻来临。",,
-kpGiftsLeaveGotProtSel,DialogOptionSelected,$option == kpLeaveProt,KantaCMD gainProtection,"你从王座大厅的中央后退一步。Kanta 的金属身体在王座上发出嘶嘶声，她的脾气像地雷一样随时可能爆炸。Cydonia 快步走向另一个负责看管有待 Kanta 处置的犯人以及有求之人的海盗头目，与之交谈。
+kpGiftsLeaveGotProtSel,DialogOptionSelected,$option == kpLeaveProt,KantaCMD gainProtection,"你从王座大厅的中央后退一步。Kanta 的金属身体在王座上发出嘶嘶声，她的脾气像地雷一样随时可能爆炸。Cydonia 快步走向另一个海盗头目与之交谈，此人负责看管有待 Kanta 处置的犯人和有求之人。
 
 海盗们欢呼声和吼叫声不断，他们纷乱的装扮以及极端的生化改造无一不让 Kanta 的王庭看上去更像一个混乱魔窟。",kpLeaveProt2:离开,
 kpGiftsLeaveGotProt2Sel,DialogOptionSelected,$option == kpLeaveProt2,"unset $market.kpAudience
@@ -38649,7 +38649,7 @@ HistorianBackstoryBlurb14,HistorianBackstoryBlurb,!WasHistorianBlurbShown histor
 ""举个例子，在略过 核心世界 边缘的贸易路线上，'消失' 的食物和补给数量惊人。统计抽样表明，英仙座星域 的所有经济活动中，有相当一部分是 '未登记的'，而这些未记录的经济活动中，又有很大一部分直接流向了那些被称为 '海盗' 的人以及所谓的 '蛮荒人' 人口... 更不用说核心世界内部那些未登记的人口了。""
 
 这位历史学家凑近了些，""英仙座星域 的官方人口普查数据与事实可能相差一个数量级。这简直太惊人了。"" $HeOrShe微笑着摇了摇头。",,
-HistorianBackstoryBlurb15,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb15,SetHistorianBlurbShownAfterDelay historyBlurb15,"""啊，就像我刚才跟那边那些年轻人说的，"" 历史学家朝着一群尽量避免眼神接触的人挥了挥$hisOrHer的手，""在经历了 '冷寂远航' 的艰难试炼后，第十四战斗群艰难跋涉，勉强穿越了英仙座星域边界，发现整个星域都处于军阀 Leonis 的统治之下。第十四战斗群的指挥官们推翻了那残酷的统治，被人们誉为解放者，为海军上将 Kali Molina 在星历 49 年的 Eventide 敕令 中宣称对英仙座星域所有 人之领 殖民地的主权奠定了基础。""
+HistorianBackstoryBlurb15,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb15,SetHistorianBlurbShownAfterDelay historyBlurb15,"""啊，就像我刚才跟那边那些年轻人说的，"" 历史学家朝着一群尽量避免眼神接触的人挥了挥$hisOrHer的手，""在经历了 '冷寂远航' 的艰难试炼后，第十四战斗群艰难跋涉，勉强穿越了英仙座星域边界，发现整个星域都处于军阀 Leonis 的统治之下。第十四战斗群的指挥官们推翻了那残酷的统治，被人们誉为解放者，为海军上将 Kali Molina 在星历 49 年的 Eventide 敕令 中宣示对英仙座星域所有 人之领 殖民地拥有主权奠定了基础。""
 
 ""当时未受玷污的 霸主 充斥着 人之领 时代的痕迹，没有真正认识到最高霸主所掌握的政治资本。人们期待着星门重新激活，因此短期内星门即可恢复的思潮占据了上风。确实，"" $heOrShe露出了一种悲伤而理解的表情，""他们怎么可能知道星门的失效会持续这么久，甚至可能永远持续下去呢？""",,
 HistorianBackstoryBlurb16,HistorianBackstoryBlurb,!WasHistorianBlurbShown historyBlurb16,SetHistorianBlurbShownAfterDelay historyBlurb16,"""无论卢德是什么人，都绝非是一个无知的煽动者。而且，"" $heOrShe压低了$hisOrHer的声音，""不在少数的世俗学者持有这样一个观点，尽管他们从不声张，守口如瓶，但我认同这个理论 —— 卢德并非一个人，而是许多人。我认为，当前圣枢机议廷的构成形式，正是源自历史的上卢德领导网络，在大崩塌后的早期被制度化了。""

@@ -1366,17 +1366,17 @@
           "    - No effect on stability",
           "    - Offered by ",
           "    - Scan derelict to complete mission",
-          "Analyze Derelict - Archibald's Star",
-          "Personal Bounty - Lara Ingvald",
-          "Sector Decay - Minimal",
-          "System Bounty - Corvus",
           "Abandoning or not completing the mission after accepting it will result in a reputation penalty.",
+          "Analyze Derelict - Archibald's Star",
           "Are you sure you want to abandon this mission?",
-    "Are you sure?",
-    "Derelict Survey Ship Discovered",
-    "Report your findings to a Hegemony officer",          
-    "Something is Rotten in the Den",
-          "Speak with Kanta"
+          "Are you sure?",
+          "Derelict Survey Ship Discovered",
+          "Personal Bounty - Lara Ingvald",
+          "Report your findings to a Hegemony officer",
+          "Sector Decay - Minimal",
+          "Something is Rotten in the Den",
+          "Speak with Kanta",
+          "System Bounty - Corvus"
         ],
         "exclude_strings": []
       },
@@ -1566,6 +1566,8 @@
           "Error loading",
           "Error saving game",
           "Error saving game. See starsector.log for details.\n\nError message: [",
+          "File deletion failed. Your current save may be corrupted.\n\nPlease try saving to an empty slot using the \"Save As\" option from the campaign menu - this should create a valid save file.",
+          "File rename failed. Your current save may be corrupted.\n\nPlease try saving to an empty slot using the \"Save As\" option from the campaign menu - this should create a valid save file.",
           "Finished loading",
           "Finished saving",
           "Finished!",
@@ -1637,9 +1639,7 @@
           "Saving stage 8",
           "Saving stage 9",
           "Saving to ",
-          "Stabilizing economy...",
-          "File deletion failed. Your current save may be corrupted.\n\nPlease try saving to an empty slot using the \"Save As\" option from the campaign menu - this should create a valid save file.",
-          "File rename failed. Your current save may be corrupted.\n\nPlease try saving to an empty slot using the \"Save As\" option from the campaign menu - this should create a valid save file."
+          "Stabilizing economy..."
         ],
         "exclude_strings": []
       },
@@ -2251,7 +2251,6 @@
           " - competition for exporting ",
           " - current and alternate sources of ",
           " - current and possible ",
-          "A market chooses a single source to get its supply of a commodity. Should that source go away or become less desirable, the next best source will be used. In order of importance, a market will prefer a supplier that:\n\n- can satisfy more of the demand\n- is local to the market\n- has higher accessibility from the market\n",  
           " at ",
           " being produced",
           " compares to other options. ",
@@ -2274,6 +2273,7 @@
           ", which could be exported if ",
           ".",
           ". ",
+          "A market chooses a single source to get its supply of a commodity. Should that source go away or become less desirable, the next best source will be used. In order of importance, a market will prefer a supplier that:\n\n- can satisfy more of the demand\n- is local to the market\n- has higher accessibility from the market\n",
           "Accessibility",
           "Alternate suppliers",
           "Competing exporters",
@@ -6617,6 +6617,7 @@
       {
         "path": "com/fs/starfarer/tutorial/combat/ooOO.class",
         "include_strings": [
+          "Excellent! Time for some live-fire training exercises.\n\nThis next frigate will fight back - use what you've learned to defeat it. Its engines are crippled, so don't worry about it running away.\n\nPress the right mouse button to turn your shields on and off - you might need them!",
           "Great work!"
         ],
         "exclude_strings": []
@@ -6624,20 +6625,25 @@
       {
         "path": "com/fs/starfarer/tutorial/oOOO/B.class",
         "include_strings": [
-          "Excellent, your forces are in position! Now, let's order a strike on the unsuspecting enemy cruiser. <highlight>Click on it and select \"Strike\" from the context menu.</highlight>\n\nAfter that's done, you can either watch the bombers carry out their strike (\"Show Video Feed\" from their context menu) or get into the battle yourself.\n\nEither way, make sure the enemy cruiser is destroyed."
+          "Excellent, your forces are in position! Now, let's order a strike on the unsuspecting enemy cruiser. <highlight>Click on it and select \"Strike\" from the context menu.</highlight>\n\nAfter that's done, you can either watch the bombers carry out their strike (\"Show Video Feed\" from their context menu) or get into the battle yourself.\n\nEither way, make sure the enemy cruiser is destroyed.",
+          "Smart work, the enemy cruiser is disabled!\n\nThe Dagger torpedo bombers are out of ammo, and will return to the nearest carrier (that'd be the Gemini) to refit. The blue arrows on the map indicate their destination.\n\nAfter repairs, the bombers will take off fully rearmed and at full wing strength - keeping a carrier around is critical to getting the most out of your fighter craft."
         ],
         "exclude_strings": []
       },
       {
         "path": "com/fs/starfarer/tutorial/oOOO/C.class",
         "include_strings": [
-          "But what about the interceptors? They're not much use against a cruiser, so let's just get them off the battlefield.\n\n<highlight>Click on the interceptors and select \"Retreat\", under \"Direct Orders\".</highlight>\n\nThis costs a command point, and the order can be rescinded (\"Rescind Orders\" in the context menu)."
+          "But what about the interceptors? They're not much use against a cruiser, so let's just get them off the battlefield.\n\n<highlight>Click on the interceptors and select \"Retreat\", under \"Direct Orders\".</highlight>\n\nThis costs a command point, and the order can be rescinded (\"Rescind Orders\" in the context menu).",
+          "Good, the bombers are on their way.\n\nIn the meantime, the interceptors have decided to attack the cruiser on their own, and the Gemini is moving up to do so as well. We don't want that - the Gemini is a freighter/carrier, and no match for a cruiser in direct combat, and neither are the interceptors.\n\n<highlight>Left click behind your lines to make another waypoint, and select \"Rally Carrier Group\" to keep the Gemini there and out of trouble.</highlight>",
+          "Great work. Notice how the sensor array lifts the fog of war in a large radius - and it turns out there's an enemy cruiser lurking nearby!\n\nLet's take a closer look.",
+          "Let's set up to give it a warm welcome. First, organize a strike force midway up the map - a couple of grid squares to the left of the Sensor Array we just captured is good.\n\n<highlight>Left click on the desired spot to create a waypoint, and then select \"Rally Strike Force\" from the context menu.</highlight> The Dagger torpedo bombers, being the only strike craft in your fleet, will go there."
         ],
         "exclude_strings": []
       },
       {
         "path": "com/fs/starfarer/tutorial/oOOO/F.class",
         "include_strings": [
+          "Good! You'll need additional fleet points to deploy the rest of your fleet, and you can get them by capturing objectives.\n\n<highlight>There's a Comm Relay nearby - these give more fleet points than other objectives. Order its capture by clicking on the objective and then selecting \"Capture\" from the context menu.</highlight>\n\nCreating an assignment costs a command point, and you can't give any more orders once command points run out.",
           "You can press %s to open and close the map, and %s to pause and unpause. To pan your view, right-click on an empty spot on the map and drag.\n\nYou can also see what your ships are doing by clicking on them and then selecting \"Show Video Feed\" from the context menu.\n\n<highlight>With the map open, select your interceptor wing and click \"Show Video Feed\" to follow along as it captures the Comm Relay.</highlight>"
         ],
         "exclude_strings": []
@@ -6646,6 +6652,14 @@
         "path": "com/fs/starfarer/tutorial/oOOO/G.class",
         "include_strings": [
           "Welcome to the fleet command tutorial.\n\nAt the start of a battle, you will want to deploy some of your ships. To do so, click on ship icons to mark them for deployment and then press the \"Deploy\" button.\n\nDeploying ships requires fleet points. Right now, you only have a few points, so go ahead and <highlight>deploy just the Wasp interceptor wing after dismissing this dialog.</highlight>"
+        ],
+        "exclude_strings": []
+      },
+      {
+        "path": "com/fs/starfarer/tutorial/oOOO/O0OO.class",
+        "include_strings": [
+          "Now that you've got more ships on the field, let's go take another objective. <highlight>There's a Sensor Array nearby - switch back to the map by pressing %s and order its capture. Remember to unpause the game afterwards by pressing %s, as switching to the map automatically pauses it.</highlight>\n\nNote that as Fleet Commander, you're giving the assignment to your whole fleet and not to a specific ship. Your subordinates will work out the details of which ships get which assignments.",
+          "sensor_array"
         ],
         "exclude_strings": []
       },
@@ -6769,6 +6783,7 @@
           ") and wait for your ships to secure the objectives.",
           ", but don't do this yet.)",
           ".",
+          "Excellent. Some enemies are arriving in the battlespace - you should encounter them shortly!\n\nThe tutorial will resume once both enemy ships are in sight.",  
           "... and press the \"Transfer Command\" button, then wait for the shuttle pod to take you to the new flagship.",
           "... and right-click on the Comm Relay.",
           "... and select \"Avoid\" from the list of available assignments.",
@@ -7289,6 +7304,7 @@
         "path": "com/fs/starfarer/ui/impl/N$1.class",
         "include_strings": [
           " day ago",
+          "Refitting a ship will temporarily decrease its CR based on the number of ordnance points changed. The new CR value - should the refit be carried out - is indicated by the dimmed portion of the CR bar. \n\nUsing unspent ordnance points will not bring CR down into malfunction range, and refitting at a port will not reduce CR at all.\n",
           " days ago",
           "CR is holding at below the maximum value, due to the crew being under strength.",
           "Combat Readiness",

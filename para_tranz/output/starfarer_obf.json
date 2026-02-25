@@ -25620,6 +25620,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/combat/new.class 的第0187个常量\n原始数据：\"Press 2 to switch to the Sabot missiles and keep firing until the enemy shields are down.\"\n译文数据：\"按下 2 键切换赛博 SRM，持续发射直到敌人的护盾被打破为止。\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/combat/ooOO.class#\"Excellent! Time for some live-fire training exercises.\n\nThis next frigate will fight back - use what you've learned to def~\"@3916d8ac",
+        "original": "Excellent! Time for some live-fire training exercises.\n\nThis next frigate will fight back - use what you've learned to defeat it. Its engines are crippled, so don't worry about it running away.\n\nPress the right mouse button to turn your shields on and off - you might need them!",
+        "translation": "Excellent! Time for some live-fire training exercises.\n\nThis next frigate will fight back - use what you've learned to defeat it. Its engines are crippled, so don't worry about it running away.\n\nPress the right mouse button to turn your shields on and off - you might need them!",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/combat/ooOO.class 的第0050个常量\n原始数据：\"Excellent! Time for some live-fire training exercises.\n\nThis next frigate will fight back - use what you've learned to defeat it. Its engines are crippled, so don't worry about it running away.\n\nPress the right mouse button to turn your shields on and off - you might need them!\"\n译文数据：\"Excellent! Time for some live-fire training exercises.\n\nThis next frigate will fight back - use what you've learned to defeat it. Its engines are crippled, so don't worry about it running away.\n\nPress the right mouse button to turn your shields on and off - you might need them!\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/combat/ooOO.class#\"Great work!\"",
         "original": "Great work!",
         "translation": "非常好！",
@@ -25634,11 +25641,46 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/oOOO/B.class 的第0084个常量\n原始数据：\"Excellent, your forces are in position! Now, let's order a strike on the unsuspecting enemy cruiser. <highlight>Click on it and select \"Strike\" from the context menu.</highlight>\n\nAfter that's done, you can either watch the bombers carry out their strike (\"Show Video Feed\" from their context menu) or get into the battle yourself.\n\nEither way, make sure the enemy cruiser is destroyed.\"\n译文数据：\"干得漂亮，您的舰队已各就各位！现在，让我们打击那艘毫无防备的敌方巡洋舰。<highlight>点击它并在命令列表中选择 \"战机攻击\"。</highlight>\n在指派命令之后，您可以欣赏轰炸机的攻击过程 (可以在命令列表中选择 \"接通视频信号\") 或亲自加入战斗。\n\n无论如何，将敌方巡洋舰彻底摧毁。\"\n\n"
     },
     {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/oOOO/B.class#\"Smart work, the enemy cruiser is disabled!\n\nThe Dagger torpedo bombers are out of ammo, and will return to the nearest car~\"@3091168c",
+        "original": "Smart work, the enemy cruiser is disabled!\n\nThe Dagger torpedo bombers are out of ammo, and will return to the nearest carrier (that'd be the Gemini) to refit. The blue arrows on the map indicate their destination.\n\nAfter repairs, the bombers will take off fully rearmed and at full wing strength - keeping a carrier around is critical to getting the most out of your fighter craft.",
+        "translation": "Smart work, the enemy cruiser is disabled!\n\nThe Dagger torpedo bombers are out of ammo, and will return to the nearest carrier (that'd be the Gemini) to refit. The blue arrows on the map indicate their destination.\n\nAfter repairs, the bombers will take off fully rearmed and at full wing strength - keeping a carrier around is critical to getting the most out of your fighter craft.",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/oOOO/B.class 的第0065个常量\n原始数据：\"Smart work, the enemy cruiser is disabled!\n\nThe Dagger torpedo bombers are out of ammo, and will return to the nearest carrier (that'd be the Gemini) to refit. The blue arrows on the map indicate their destination.\n\nAfter repairs, the bombers will take off fully rearmed and at full wing strength - keeping a carrier around is critical to getting the most out of your fighter craft.\"\n译文数据：\"Smart work, the enemy cruiser is disabled!\n\nThe Dagger torpedo bombers are out of ammo, and will return to the nearest carrier (that'd be the Gemini) to refit. The blue arrows on the map indicate their destination.\n\nAfter repairs, the bombers will take off fully rearmed and at full wing strength - keeping a carrier around is critical to getting the most out of your fighter craft.\"\n\n"
+    },
+    {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/oOOO/C.class#\"But what about the interceptors? They're not much use against a cruiser, so let's just get them off the battlefield.\n\n<hig~\"@555fdab7",
         "original": "But what about the interceptors? They're not much use against a cruiser, so let's just get them off the battlefield.\n\n<highlight>Click on the interceptors and select \"Retreat\", under \"Direct Orders\".</highlight>\n\nThis costs a command point, and the order can be rescinded (\"Rescind Orders\" in the context menu).",
         "translation": "但至于那些拦截机？它们难以对抗这艘巡洋舰，所以让我们先将其撤下。\n\n<highlight>点击拦截机并指派 \"撤退\" 指令，它在 \"直接撤退\" 指令的下方。</highlight>\n这将花费一个指挥点，而此指令可以后续取消 (命令列表中的 \"取消\")。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/oOOO/C.class 的第0089个常量\n原始数据：\"But what about the interceptors? They're not much use against a cruiser, so let's just get them off the battlefield.\n\n<highlight>Click on the interceptors and select \"Retreat\", under \"Direct Orders\".</highlight>\n\nThis costs a command point, and the order can be rescinded (\"Rescind Orders\" in the context menu).\"\n译文数据：\"但至于那些拦截机？它们难以对抗这艘巡洋舰，所以让我们先将其撤下。\n\n<highlight>点击拦截机并指派 \"撤退\" 指令，它在 \"直接撤退\" 指令的下方。</highlight>\n这将花费一个指挥点，而此指令可以后续取消 (命令列表中的 \"取消\")。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/oOOO/C.class#\"Good, the bombers are on their way.\n\nIn the meantime, the interceptors have decided to attack the cruiser on their own, an~\"@b4ae4306",
+        "original": "Good, the bombers are on their way.\n\nIn the meantime, the interceptors have decided to attack the cruiser on their own, and the Gemini is moving up to do so as well. We don't want that - the Gemini is a freighter/carrier, and no match for a cruiser in direct combat, and neither are the interceptors.\n\n<highlight>Left click behind your lines to make another waypoint, and select \"Rally Carrier Group\" to keep the Gemini there and out of trouble.</highlight>",
+        "translation": "Good, the bombers are on their way.\n\nIn the meantime, the interceptors have decided to attack the cruiser on their own, and the Gemini is moving up to do so as well. We don't want that - the Gemini is a freighter/carrier, and no match for a cruiser in direct combat, and neither are the interceptors.\n\n<highlight>Left click behind your lines to make another waypoint, and select \"Rally Carrier Group\" to keep the Gemini there and out of trouble.</highlight>",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/oOOO/C.class 的第0087个常量\n原始数据：\"Good, the bombers are on their way.\n\nIn the meantime, the interceptors have decided to attack the cruiser on their own, and the Gemini is moving up to do so as well. We don't want that - the Gemini is a freighter/carrier, and no match for a cruiser in direct combat, and neither are the interceptors.\n\n<highlight>Left click behind your lines to make another waypoint, and select \"Rally Carrier Group\" to keep the Gemini there and out of trouble.</highlight>\"\n译文数据：\"Good, the bombers are on their way.\n\nIn the meantime, the interceptors have decided to attack the cruiser on their own, and the Gemini is moving up to do so as well. We don't want that - the Gemini is a freighter/carrier, and no match for a cruiser in direct combat, and neither are the interceptors.\n\n<highlight>Left click behind your lines to make another waypoint, and select \"Rally Carrier Group\" to keep the Gemini there and out of trouble.</highlight>\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/oOOO/C.class#\"Great work. Notice how the sensor array lifts the fog of war in a large radius - and it turns out there's an enemy cruiser lurking nearby!\n\nLet's take a closer look.\"",
+        "original": "Great work. Notice how the sensor array lifts the fog of war in a large radius - and it turns out there's an enemy cruiser lurking nearby!\n\nLet's take a closer look.",
+        "translation": "Great work. Notice how the sensor array lifts the fog of war in a large radius - and it turns out there's an enemy cruiser lurking nearby!\n\nLet's take a closer look.",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/oOOO/C.class 的第0224个常量\n原始数据：\"Great work. Notice how the sensor array lifts the fog of war in a large radius - and it turns out there's an enemy cruiser lurking nearby!\n\nLet's take a closer look.\"\n译文数据：\"Great work. Notice how the sensor array lifts the fog of war in a large radius - and it turns out there's an enemy cruiser lurking nearby!\n\nLet's take a closer look.\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/oOOO/C.class#\"Let's set up to give it a warm welcome. First, organize a strike force midway up the map - a couple of grid squares to the~\"@6220c963",
+        "original": "Let's set up to give it a warm welcome. First, organize a strike force midway up the map - a couple of grid squares to the left of the Sensor Array we just captured is good.\n\n<highlight>Left click on the desired spot to create a waypoint, and then select \"Rally Strike Force\" from the context menu.</highlight> The Dagger torpedo bombers, being the only strike craft in your fleet, will go there.",
+        "translation": "Let's set up to give it a warm welcome. First, organize a strike force midway up the map - a couple of grid squares to the left of the Sensor Array we just captured is good.\n\n<highlight>Left click on the desired spot to create a waypoint, and then select \"Rally Strike Force\" from the context menu.</highlight> The Dagger torpedo bombers, being the only strike craft in your fleet, will go there.",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/oOOO/C.class 的第0063个常量\n原始数据：\"Let's set up to give it a warm welcome. First, organize a strike force midway up the map - a couple of grid squares to the left of the Sensor Array we just captured is good.\n\n<highlight>Left click on the desired spot to create a waypoint, and then select \"Rally Strike Force\" from the context menu.</highlight> The Dagger torpedo bombers, being the only strike craft in your fleet, will go there.\"\n译文数据：\"Let's set up to give it a warm welcome. First, organize a strike force midway up the map - a couple of grid squares to the left of the Sensor Array we just captured is good.\n\n<highlight>Left click on the desired spot to create a waypoint, and then select \"Rally Strike Force\" from the context menu.</highlight> The Dagger torpedo bombers, being the only strike craft in your fleet, will go there.\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/oOOO/F.class#\"Good! You'll need additional fleet points to deploy the rest of your fleet, and you can get them by capturing objectives.\n~\"@2fa06e3f",
+        "original": "Good! You'll need additional fleet points to deploy the rest of your fleet, and you can get them by capturing objectives.\n\n<highlight>There's a Comm Relay nearby - these give more fleet points than other objectives. Order its capture by clicking on the objective and then selecting \"Capture\" from the context menu.</highlight>\n\nCreating an assignment costs a command point, and you can't give any more orders once command points run out.",
+        "translation": "Good! You'll need additional fleet points to deploy the rest of your fleet, and you can get them by capturing objectives.\n\n<highlight>There's a Comm Relay nearby - these give more fleet points than other objectives. Order its capture by clicking on the objective and then selecting \"Capture\" from the context menu.</highlight>\n\nCreating an assignment costs a command point, and you can't give any more orders once command points run out.",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/oOOO/F.class 的第0080个常量\n原始数据：\"Good! You'll need additional fleet points to deploy the rest of your fleet, and you can get them by capturing objectives.\n\n<highlight>There's a Comm Relay nearby - these give more fleet points than other objectives. Order its capture by clicking on the objective and then selecting \"Capture\" from the context menu.</highlight>\n\nCreating an assignment costs a command point, and you can't give any more orders once command points run out.\"\n译文数据：\"Good! You'll need additional fleet points to deploy the rest of your fleet, and you can get them by capturing objectives.\n\n<highlight>There's a Comm Relay nearby - these give more fleet points than other objectives. Order its capture by clicking on the objective and then selecting \"Capture\" from the context menu.</highlight>\n\nCreating an assignment costs a command point, and you can't give any more orders once command points run out.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/oOOO/F.class#\"You can press %s to open and close the map, and %s to pause and unpause. To pan your view, right-click on an empty spot on~\"@bdaf3822",
@@ -25653,6 +25695,20 @@
         "translation": "欢迎来到舰队指挥教程。\n\n在战斗开始时，您将希望部署您的部分舰船。为了部署舰船，点击标志着舰船的图标以选中舰船，然后按 \"部署\" 按钮。\n\n部署舰船需要部署点。就目前而言，您只有少量部署点，所以先<highlight>在关闭此对话框后仅部署黄蜂拦截机。</highlight>",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/oOOO/G.class 的第0078个常量\n原始数据：\"Welcome to the fleet command tutorial.\n\nAt the start of a battle, you will want to deploy some of your ships. To do so, click on ship icons to mark them for deployment and then press the \"Deploy\" button.\n\nDeploying ships requires fleet points. Right now, you only have a few points, so go ahead and <highlight>deploy just the Wasp interceptor wing after dismissing this dialog.</highlight>\"\n译文数据：\"欢迎来到舰队指挥教程。\n\n在战斗开始时，您将希望部署您的部分舰船。为了部署舰船，点击标志着舰船的图标以选中舰船，然后按 \"部署\" 按钮。\n\n部署舰船需要部署点。就目前而言，您只有少量部署点，所以先<highlight>在关闭此对话框后仅部署黄蜂拦截机。</highlight>\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/oOOO/O0OO.class#\"Now that you've got more ships on the field, let's go take another objective. <highlight>There's a Sensor Array nearby - s~\"@3cf6db5c",
+        "original": "Now that you've got more ships on the field, let's go take another objective. <highlight>There's a Sensor Array nearby - switch back to the map by pressing %s and order its capture. Remember to unpause the game afterwards by pressing %s, as switching to the map automatically pauses it.</highlight>\n\nNote that as Fleet Commander, you're giving the assignment to your whole fleet and not to a specific ship. Your subordinates will work out the details of which ships get which assignments.",
+        "translation": "Now that you've got more ships on the field, let's go take another objective. <highlight>There's a Sensor Array nearby - switch back to the map by pressing %s and order its capture. Remember to unpause the game afterwards by pressing %s, as switching to the map automatically pauses it.</highlight>\n\nNote that as Fleet Commander, you're giving the assignment to your whole fleet and not to a specific ship. Your subordinates will work out the details of which ships get which assignments.",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/oOOO/O0OO.class 的第0066个常量\n原始数据：\"Now that you've got more ships on the field, let's go take another objective. <highlight>There's a Sensor Array nearby - switch back to the map by pressing %s and order its capture. Remember to unpause the game afterwards by pressing %s, as switching to the map automatically pauses it.</highlight>\n\nNote that as Fleet Commander, you're giving the assignment to your whole fleet and not to a specific ship. Your subordinates will work out the details of which ships get which assignments.\"\n译文数据：\"Now that you've got more ships on the field, let's go take another objective. <highlight>There's a Sensor Array nearby - switch back to the map by pressing %s and order its capture. Remember to unpause the game afterwards by pressing %s, as switching to the map automatically pauses it.</highlight>\n\nNote that as Fleet Commander, you're giving the assignment to your whole fleet and not to a specific ship. Your subordinates will work out the details of which ships get which assignments.\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/oOOO/O0OO.class#\"sensor_array\"",
+        "original": "sensor_array",
+        "translation": "sensor_array",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/oOOO/O0OO.class 的第0020个常量\n原始数据：\"sensor_array\"\n译文数据：\"sensor_array\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/oOOO/o0OO.class#\"Well done! Now you've got more fleet points to play with (and an extra couple of command points from that Comm Relay, too)~\"@7c3d8fca",
@@ -26283,6 +26339,13 @@
         "translation": "敌方舰船进入视野！\n\n让我们指派几个命令，使这场战斗对我方而言更为顺畅有利。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/void.class 的第0373个常量\n原始数据：\"Enemy ships in sight!\n\nLet's give a couple of orders to make the battle go smoothly for your side.\"\n译文数据：\"敌方舰船进入视野！\n\n让我们指派几个命令，使这场战斗对我方而言更为顺畅有利。\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/void.class#\"Excellent. Some enemies are arriving in the battlespace - you should encounter them shortly!\n\nThe tutorial will resume once both enemy ships are in sight.\"",
+        "original": "Excellent. Some enemies are arriving in the battlespace - you should encounter them shortly!\n\nThe tutorial will resume once both enemy ships are in sight.",
+        "translation": "Excellent. Some enemies are arriving in the battlespace - you should encounter them shortly!\n\nThe tutorial will resume once both enemy ships are in sight.",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/tutorial/void.class 的第0360个常量\n原始数据：\"Excellent. Some enemies are arriving in the battlespace - you should encounter them shortly!\n\nThe tutorial will resume once both enemy ships are in sight.\"\n译文数据：\"Excellent. Some enemies are arriving in the battlespace - you should encounter them shortly!\n\nThe tutorial will resume once both enemy ships are in sight.\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/void.class#\"Go ahead, try it out - press the \"Show Video Feed\" button.\"",
@@ -28537,6 +28600,13 @@
         "translation": "最近影响战备值 (CR) 的事件：",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/impl/N$1.class 的第0477个常量\n原始数据：\"Recent events affecting CR:\"\n译文数据：\"最近影响战备值 (CR) 的事件：\"\n\n"
+    },
+    {
+        "key": "starfarer_obf.jar:com/fs/starfarer/ui/impl/N$1.class#\"Refitting a ship will temporarily decrease its CR based on the number of ordnance points changed. The new CR value - shoul~\"@79a1cf56",
+        "original": "Refitting a ship will temporarily decrease its CR based on the number of ordnance points changed. The new CR value - should the refit be carried out - is indicated by the dimmed portion of the CR bar. \n\nUsing unspent ordnance points will not bring CR down into malfunction range, and refitting at a port will not reduce CR at all.\n",
+        "translation": "Refitting a ship will temporarily decrease its CR based on the number of ordnance points changed. The new CR value - should the refit be carried out - is indicated by the dimmed portion of the CR bar. \n\nUsing unspent ordnance points will not bring CR down into malfunction range, and refitting at a port will not reduce CR at all.\n",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer_obf.jar:com/fs/starfarer/ui/impl/N$1.class 的第0244个常量\n原始数据：\"Refitting a ship will temporarily decrease its CR based on the number of ordnance points changed. The new CR value - should the refit be carried out - is indicated by the dimmed portion of the CR bar. \n\nUsing unspent ordnance points will not bring CR down into malfunction range, and refitting at a port will not reduce CR at all.\n\"\n译文数据：\"Refitting a ship will temporarily decrease its CR based on the number of ordnance points changed. The new CR value - should the refit be carried out - is indicated by the dimmed portion of the CR bar. \n\nUsing unspent ordnance points will not bring CR down into malfunction range, and refitting at a port will not reduce CR at all.\n\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/ui/impl/N$1.class#\"Repairs suspended - CR holding at its current value.\"",
