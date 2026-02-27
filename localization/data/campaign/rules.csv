@@ -368,7 +368,7 @@ shroudedSubstrateOptSelF,DialogOptionSelected,$option == shroudedSubstrate_optSe
 Highlight $player.shroudedSubstrateAvailable
 FireBest CheckPlayerHasNoSubstrate","""$playerSirOrMadam。"" 他们再一次异口同声说道。
 
-可用的渊幕基质：$player.shroudedSubstrateAvailable 单位。","substrate_selectWeapons:选择待组装的武器
+可用的渊幕基质：{$player.shroudedSubstrateAvailable 单位。","substrate_selectWeapons:选择待组装的武器
 defaultLeave:离开",
 ,,,,,,
 shroudedSubstrateWasAnalyzed,ShroudedSubstrateRightClick,$player.canMakeDwellerWeapons,"ShowImageVisual shrouded_weapon_assembly
@@ -377,13 +377,13 @@ FireBest CheckPlayerHasNoSubstrate","你与你的技术官和工程部长在一�
 
 他们注意到了你，并异口同声地说道：""$playerSirOrMadam。""
 
-可用的渊幕基质：$player.shroudedSubstrateAvailable 单位。","substrate_selectWeapons:选择待组装的武器
+可用的渊幕基质：{$player.shroudedSubstrateAvailable 单位。","substrate_selectWeapons:选择待组装的武器
 defaultLeave:离开",
 substrate_selectWeaponsSel,DialogOptionSelected,$option == substrate_selectWeapons,DwellerCMD showWeaponPicker,,,
 SubstrateWeaponsPicked,SubstrateWeaponsPicked,,"Highlight $player.shroudedSubstrateAvailable
 FireBest CheckPlayerHasNoSubstrate","你的技术官与总工程师仔细研究着设计图，并就实施细节展开争论。你欣慰地注意到，他们的分歧建立在专业互敬的基础之上。
 
-可用的渊幕基质：$player.shroudedSubstrateAvailable 单位。","substrate_selectWeapons:选择待组装的武器
+可用的渊幕基质：{$player.shroudedSubstrateAvailable 单位。","substrate_selectWeapons:选择待组装的武器
 defaultLeave:离开",
 CheckPlayerHasNoSubstrate,CheckPlayerHasNoSubstrate,$player.shroudedSubstrateAvailable <= 0,"SetEnabled substrate_selectWeapons false
 SetTooltip substrate_selectWeapons ""没有可用的渊幕基质。""",,,
@@ -3657,7 +3657,7 @@ SetShortcut cutCommLink ""ESCAPE""","""我很高兴能遇到一个能理解这�
 
 如果有良好的资助，比如说再有一笔 $ise_bribeAmountDGS 星币的款项，就能确保这项调查能够迅速获得一个令人满意的结论。""","0:ise_offerBribeAmount:提供一笔 $ise_bribeAmountDGS 星币的 ""捐助""
 1:cutCommLink:切断通讯链接",
-ise_offerBribeSelNotEnough,DialogOptionSelected,$option == ise_offerBribe,"SetTextHighlights $ise_bribeAmountDGSSetShortcut cutCommLink ""ESCAPE""","""我非常理解你对事态的关切，但听上去你似乎还没做好协助我解决这个误会的准备。这还需要大概，嗯，$ise_bribeAmountDGS 星币左右？才能促成一次合理的调查。""
+ise_offerBribeSelNotEnough,DialogOptionSelected,$option == ise_offerBribe,"SetTextHighlights $ise_bribeAmountDGSSetShortcut cutCommLink ""ESCAPE""","""我非常理解你对事态的关切，但听上去你似乎还没做好协助我解决这个误会的准备。这还需要大概，嗯，{$ise_bribeAmountDGS 星币左右？才能促成一次合理的调查。""
 
 ""然后现在我还有一堆关于你的精彩报告要读，所以下次你认真决定要做这件事的时候再来找我。""",0:cutCommLink:切断通讯链接,
 ise_offerBribeAmountSel,DialogOptionSelected,$option == ise_offerBribeAmount,"AddText ""失去了 $ise_bribeAmountDGS 星币"" textEnemyColor
@@ -14154,11 +14154,11 @@ CallEvent $ttli_eventRef applyExtendLoanRepLoss",,0:ttli_continue:继续,
 ttli_extendLoanText,TTLIExtendLoanText,,"SetTextHighlightColors hColor hColor
 SetTextHighlights $ttli_extensionDays $ttli_repaymentAmount","$HeOrShe皱了皱眉头，挤出个还算像人类的失望表情。""我很遗憾听到这个消息，不过..."" $HeOrShe忽然又把笑容挂到了脸上，""但我们可以对此特别宽限一次。""
 
-你的还款期限被准许延后 $ttli_extensionDays 天，但需偿还的欠款也被增加到了 $ttli_repaymentAmount。速子 ""投资者"" 在切断通讯前还郑重地建议你把握好这次机会，以免其采取某些措施 ""来强调我是有多么看重我们之间的商业伙伴关系。""
+你的还款期限被准许延后 $ttli_extensionDays 天，但需偿还的欠款也被增加到了 $ttli_repaymentAmount}。速子 ""投资者"" 在切断通讯前还郑重地建议你把握好这次机会，以免其采取某些措施 ""来强调我是有多么看重我们之间的商业伙伴关系。""
 
 看来今后得多多提防了。",,
 ttli_extendLoanTextMajor,TTLIExtendLoanText,$ttli_isMajorLoan,"SetTextHighlightColors hColor hColor
-SetTextHighlights $ttli_extensionDays $ttli_repaymentAmount","$HeOrShe完美地皱起了眉头，并将目光移向一旁，仿佛在自语般地说到：""难道是积极性不够？这问题我们该怎么解决？"" 随后投资者继续和你交谈，说$heOrShe已经预料到了这种情况，并宽宏大量地将你的还款期限延长 $ttli_extensionDays 天，不过欠款金额被提高到 $ttli_repaymentAmount。在关闭链接前，$heOrShe忽然带着古怪的微笑低声说道：""顺便一提，额外的激励措施已经安排上了。""
+SetTextHighlights $ttli_extensionDays $ttli_repaymentAmount","$HeOrShe完美地皱起了眉头，并将目光移向一旁，仿佛在自语般地说到：""难道是积极性不够？这问题我们该怎么解决？"" 随后投资者继续和你交谈，说$heOrShe已经预料到了这种情况，并宽宏大量地将你的还款期限延长 $ttli_extensionDays 天，不过欠款金额被提高到 $ttli_repaymentAmount}。在关闭链接前，$heOrShe忽然带着古怪的微笑低声说道：""顺便一提，额外的激励措施已经安排上了。""
 
 你觉得自己今后得多提防着些了。",,
 ttli_notPaying,DialogOptionSelected,$option == ttli_notPaying,"FireBest TTLINotPayingText
@@ -14341,7 +14341,7 @@ psi_pilotBarter,DialogOptionSelected,$option == psi_barter,"SetTextHighlights $p
 FireBest PSIDisablePayOptionIfNeeded
 SetShortcut cutCommLink ""ESCAPE""","你开始向$heOrShe杀价，指出红色行星那边已经有敌对势力守着 —— 至少据说如此，还有$heOrShe应该已经把这情报卖给过其他人了。""没错，没错..."" $heOrShe接口到，""但我可很了解你们这些太空舰长是什么人，你们就是喜欢这种神秘的东西，不是吗？你和我都懂，你瞒不住这种兴趣的。""
 
-最终飞行员拿那份情报对你开价 $psi_credits。","0:psi_pay:支付 $psi_credits 来获取神秘红色行星的具体位置
+最终飞行员拿那份情报对你开价 $psi_credits}。","0:psi_pay:支付 $psi_credits 来获取神秘红色行星的具体位置
 1:cutCommLink:拒绝其开价",
 psi_disableIfCanNotPay,PSIDisablePayOptionIfNeeded,!CallEvent $psi_eventRef canPay,"SetEnabled psi_pay false
 SetTextHighlightColors bad
@@ -14951,7 +14951,8 @@ bairdIntro6,DialogOptionSelected,$option == bairdIntroC5,,"""重要的是，当�
 她面向一旁。""然后，几乎马上就判刑了。""
 
 ""他是个傻瓜，而且太信任别人了，"" Baird 轻蔑地说。""我们失去了优秀的人和优秀的研究资料。科学的突破是需要理论的发展和，成果，即使是负面的成果。""",bairdIntroC6:继续,
-bairdIntro7,DialogOptionSelected,$option == bairdIntroC6,"Highlight ""Kallichore 的秘密档案"" ""Scylla Coureuse""","""我需要你找回 Kallichore 的秘密档案}。我们需要他那次实验的数据，以及所有导致那次实验的其他前置数据。霸主肯定会把这些资料留在手上。他们保存一切。作为证据，你懂的。""
+bairdIntro7,DialogOptionSelected,$option == bairdIntroC6,"Highlight ""Kallichore 的秘密档案""
+Highlight ""Scylla Coureuse""","""我需要你找回 Kallichore 的秘密档案}。我们需要他那次实验的数据，以及所有导致那次实验的其他前置数据。霸主肯定会把这些资料留在手上。他们保存一切。作为证据，你懂的。""
 
 ""此外我们还需要 Scylla Coureuse 院士。她是一位超空间物理学研究员，跳跃点实验背后理论小组的基石。霸主 向来目光短浅，在一开始只逮捕了项目负责人。他们想不到，当时测试的基础理论主要是由一位...不适合担任领导的院士撰写的""
 
@@ -17009,7 +17010,7 @@ gaFCKapteynBossBribeStart,DialogOptionSelected,"$option == gaFC_kapteynBossBribe
 Call $global.gaFC_ref updateData","Highlight $gaFC_kapteynBribeCost 
 DoCanAffordCheck $gaFC_kapteynBribeCost gaFC_kapteynBossOfferBribe false","海盗头子稍微往前倾了倾身子。""你成功地吸引了我的注意力，明事理的舰长。""
 
-""如果你能支付...嗯，$gaFC_kapteynBribeCost 星币，我就可以帮你 —— 并且十分愿意这么做。""","gaFC_kapteynBossBribe:同意付款
+""如果你能支付...嗯，{$gaFC_kapteynBribeCost 星币，我就可以帮你 —— 并且十分愿意这么做。""","gaFC_kapteynBossBribe:同意付款
 gaFC_kapteynBossBother1:""我们还是再来谈谈这个 Scylla Coureuse 吧。""",
 gaFCKapteynBossKantaAppeal,DialogOptionSelected,$option == gaFC_kapteynBossKantaAppeal,"AdjustRepActivePerson INHOSPITABLE -1
 $wasAnnoying = true","""不，她没有，滚。""
@@ -17117,7 +17118,7 @@ $option = backToBar 0
 FireBest DialogOptionSelected","$gaFC_KBAHeOrShe行了个颇具讽刺意味的礼，说：""随时可以再来拜访我，舰长。想要再做点生意的话，记得我随时恭候。"" $gaFC_KBAHeOrShe转过身去，继续啜饮着$gaFC_KBAhisOrHer的饮料。",,
 gaFCAskAroundKapteynBarMore,DialogOptionSelected,"$option == gaFC_kapteynBarMore
 Call $global.gaFC_ref updateData","Highlight $gaFC_kapteynBarBribeCost 
-DoCanAffordCheck $gaFC_kapteynBarBribeCost gaFC_kapteynBarOfferBribe false","$gaFC_KBAHeOrShe叹了一口气。""也许吧。听着，这是一笔交易，这是...如果你想从我这得到更多情报，那就给我更多报酬，$gaFC_kapteynBarBribeCost 星币。""
+DoCanAffordCheck $gaFC_kapteynBarBribeCost gaFC_kapteynBarOfferBribe false","$gaFC_KBAHeOrShe叹了一口气。""也许吧。听着，这是一笔交易，这是...如果你想从我这得到更多情报，那就给我更多报酬，{$gaFC_kapteynBarBribeCost 星币。""
 
 $gaFC_KBAHeOrShe点击了一下$gaFC_KBAhisOrHer的数据平板，并将它转向你，让你确认汇款细节。","gaFC_kapteynBarOfferBribe:付款
 gaFC_kapteynBarDone:""我会自己搞定这事的，请慢用吧。""",
@@ -17158,7 +17159,9 @@ gaFCLaicailleNavarchBother,PopulateOptions,"$postId == portmaster
 $market.id == laicaille_habitat
 $global.gaFC_searchIsirah
 !$askedAboutScylla",,,"gaFC_laicailleNavarchBother2:""我正在找 Scylla Coureuse。""",
-gaFCLaicailleNavarchBother2,DialogOptionSelected,$option == gaFC_laicailleNavarchBother2,$askedAboutScylla = true,"""唔，最近还没有这个名字的船出现在这附近过。"" $heOrShe轻敲着桌上的控制台，""确实没有，恐怕我不能帮你找到你丢失的船了，舰长。""","gaFC_laicailleNavarchBother3:""不，我可没在找一艘船。那是个人的名字。""
+gaFCLaicailleNavarchBother2,DialogOptionSelected,$option == gaFC_laicailleNavarchBother2,$askedAboutScylla = true,"""唔，最近还没有这个名字的船出现在这附近过。"" $heOrShe轻敲着桌上的控制台。
+
+""确实没有，恐怕我不能帮你找到你丢失的船了，舰长。""","gaFC_laicailleNavarchBother3:""不，我可没在找一艘船。那是个人的名字。""
 cutCommLink:""呃，多谢帮忙。""",
 gaFCLaicailleNavarchBother3,DialogOptionSelected,$option == gaFC_laicailleNavarchBother3,,"$HeOrShe抬头看着你。""啊，当然。如果是想找人的话，我想查询空间站的公共通讯目录会是个不错的主意。再见，公民。保持警惕！""
 
@@ -17379,7 +17382,9 @@ $global.gaFC_isirahClues >= 2
 $askedAboutCoureuse",,"""又是这事。""执政官的眼睛瞟向一边，然后又看向了你。
 
 ""我告诉过你了，有个叫公共通讯目录的东西可以帮到你，这事超出我的职权范围了。""","gaFC_archonConfront:""并且我有证据。""",
-gaFCArchonAskGalatia,DialogOptionSelected,$option == gaFC_archonAskGalatia,$askedGalatiaIncident = true 0,"""嗯，我知道。那是 Galatia 星系最近发生的事，对吧？学院的所作所为很危险，虽然他们应该受到谴责，但 霸主 也管得太宽了。英仙座联盟 已经就此向国际争端委员会提出了控诉，你听说了吗？我们并不期望能取得什么成效，可是总有人得说些什么。""
+gaFCArchonAskGalatia,DialogOptionSelected,$option == gaFC_archonAskGalatia,$askedGalatiaIncident = true 0,"""嗯，我知道。那是 Galatia 星系最近发生的事，对吧？学院的所作所为很危险，虽然他们应该受到谴责，但 霸主 也管得太宽了。
+
+英仙座联盟 已经就此向国际争端委员会提出了控诉，你听说了吗？我们并不期望能取得什么成效，可是总有人得说些什么。""
 
 执政官打量了你一会儿：""你问这个干什么？""","gaFC_archonAskCoureuse:""我在找 Scylla Coureuse，她与此事有关。""
 gaFC_archonAskGalatia2:""你觉得那样的事情会在这里发生吗？""
@@ -17551,7 +17556,9 @@ gaFCLaicailleVisit5,DialogOptionSelected,$option == gaFC_laicailleVisit5,FireBes
 
 ""这位到处打听别人的事的 $playerName 舰长。""执政官向你点点头，""该你说话了。""",,
 gaFCLaicailleVisit5Alamang,GAFCAlamangCheck2,$global.gaFC_gotAlamangForScylla,,"Coureuse 注意到了你腋下的磷虾酱包，""那是...蓝调酒吧的 Sub-Kay？你从哪 —— 怎么 —— ""","gaFC_laicailleVisit5Alamang2:""一份来自 Elissa 的礼物。""",
-gaFCLaicailleVisit5Alamang2,DialogOptionSelected,$option == gaFC_laicailleVisit5Alamang2,AdjustRepPerson coureuse COOPERATIVE 3,"Coureuse 露出了由衷的喜悦微笑。""当然！我们总是说它有多难闻，实际上对我们来说没有比它更好吃的东西了。""她接过了磷虾酱包，抚摸着它的塑料包装，沉浸在一些记忆中。接着她回过神来：""哦，对不起，只是...昔日时光罢了。""她把那东西放到了工作台上，""请解释一下吧，你为什么来这里？""","gaFC_laicailleVisit6:""我有一则给你的信息。""",
+gaFCLaicailleVisit5Alamang2,DialogOptionSelected,$option == gaFC_laicailleVisit5Alamang2,AdjustRepPerson coureuse COOPERATIVE 3,"Coureuse 露出了由衷的喜悦微笑。
+
+""当然！我们总是说它有多难闻，实际上对我们来说没有比它更好吃的东西了。""她接过了磷虾酱包，抚摸着它的塑料包装，沉浸在一些记忆中。接着她回过神来：""哦，对不起，只是...昔日时光罢了。""她把那东西放到了工作台上，""请解释一下吧，你为什么来这里？""","gaFC_laicailleVisit6:""我有一则给你的信息。""",
 gaFCLaicailleVisit5AlamangNo,GAFCAlamangCheck2,!$global.gaFC_gotAlamangForScylla,,,"gaFC_laicailleVisit6:""我有一则给你的信息。""",
 gaFCLaicailleVisit6,DialogOptionSelected,$option == gaFC_laicailleVisit6,,"$personLastName 执政官向你递了个眼神，似乎是在询问$heOrShe还呆在这是不是有些不太合适 —— 答案显然是肯定的。""我还是让你们两位单独谈谈吧。公民 Coureuse，我现在正式告知你，你目前受到 Laicaille 执行委员会的直接保护。我们将确保你在这个空间站的安全，并且..."" $heOrShe回头看了一眼 联盟 特工，""遵照 英仙座联盟 宪章，确保你享有行动自由。""
 
@@ -18163,7 +18170,7 @@ gaPZ_calHamatsu3,DialogOptionSelected,$option == gaPZ_calHamatsu3,,"""我会告�
 ""现在情况好多了，至少有人可以帮我了。找到 Hamatsu 号，然后把它带回来给我。""她闭上了眼睛，看起来很痛苦，""希望它完好无损，毕竟我在那艘老旧的太空垃圾里留下了很多回忆。""
 
 ""让我们开始吧。Hamatsu 号的舰长在完成舰船改装离开空间站之前，向我发送了一份加密的航行计划。""她敲了敲桌上的控制台。",gaPZ_calHamatsu4:继续,
-gaPZ_calHamatsu4,DialogOptionSelected,$option == gaPZ_calHamatsu4,Highlight $gaPZ_relaySystem,"一份超空间导航数据出现了：""Hybrasil 星系在这里，Hamatsu 号已经加满了燃料，计划前往 $gaPZ_relaySystem。我不知道他们是否去了那里，因为那是边缘星区，没有通讯网络覆盖。他们可能中途改变了路线。那个脑袋像被辐射烤坏了的 速子 工程师对她的意图守口如瓶，但我们的合同确保了舰长必须按照她的命令，随时进行航行计划的变更。""
+gaPZ_calHamatsu4,DialogOptionSelected,$option == gaPZ_calHamatsu4,Highlight $gaPZ_relaySystem,"一份超空间导航数据出现了：""Hybrasil 星系在这里，Hamatsu 号已经加满了燃料，计划前往 $gaPZ_relaySystem}。我不知道他们是否去了那里，因为那是边缘星区，没有通讯网络覆盖。他们可能中途改变了路线。那个脑袋像被辐射烤坏了的 速子 工程师对她的意图守口如瓶，但我们的合同确保了舰长必须按照她的命令，随时进行航行计划的变更。""
 
 Ibrahim 将显示出的地图移走，取而代之的是 Hamatsu 号的示意图，驱动场感应器上做出的改动已经被高亮标记了出来。""这些就是她所做的改装。帮我找回 Hamatsu 号，舰长，拜托了...""
 
@@ -22776,7 +22783,7 @@ Call $global.gaOp_ref showMap ""目的地：$gaOp_planetName ""","Sebestyen 迅�
 
 ""是的，所以 $gaOp_planetName 是在 $gaOp_systemName 星系内，大约 $gaOp_dist 光年开外。""院士停顿了一会，思考这到底有多远。
 
-""嗯。好的，你只需要把大概五六个研究员送到那。预算提供了...噢，$gaOp_reward 星币作为报酬，你觉得如何？""","aseb_accept:接受
+""嗯。好的，你只需要把大概五六个研究员送到那。预算提供了...噢，{$gaOp_reward 星币作为报酬，你觉得如何？""","aseb_accept:接受
 aseb_decline:拒绝",
 # planet interactions,,,,,,
 gaOpPlanetInteraction,OpenInteractionDialog,"$gaOp_targetPlanet score:1000
@@ -22895,9 +22902,9 @@ gaOp_negConvince:说服 AI 投降
 gaOp_backToMenu:关闭通讯并考虑其他选项",
 gaOpCanAccept,GAOpCanAffordAccept,"$player.fuel >= $gaOp_fuel
 $player.supplies >= $gaOp_supplies
-$player.machinery >= $gaOp_machinery",Highlight $player.fuel $player.supplies $player.machinery,你有 $player.fuel 单位燃料，$player.supplies 单位补给和 $player.machinery 单位重型机械。,,
+$player.machinery >= $gaOp_machinery",Highlight $player.fuel $player.supplies $player.machinery,你有 $player.fuel 单位燃料，{$player.supplies 单位补给和 $player.machinery 单位重型机械。,,
 gaOpCanNotAccept,GAOpCanAffordAccept,,"Highlight $player.fuel $player.supplies $player.machinery
-SetEnabled gaOp_negAccept false",你只有 $player.fuel 单位燃料，$player.supplies 单位补给和 $player.machinery 单位重型机械。不足以满足 AI 核心的要求。,,
+SetEnabled gaOp_negAccept false",你只有 $player.fuel 单位燃料，{$player.supplies 单位补给和 $player.machinery 单位重型机械。不足以满足 AI 核心的要求。,,
 gaOpPlanetRogueAINegAccept,DialogOptionSelected,$option == gaOp_negAccept,,"你通知 AI，你接受这些条款并会派遣两架穿梭机。一架用于运输人质，一架用于运送清单上的物品。
 
 谢谢你，$player.name [无法表达]，它回答道。
@@ -23078,7 +23085,7 @@ FireBest GABACheckHostilesNearby","左径分子 $personLastName 大吃一惊，"
 
 $HeOrShe停顿了一下并握紧了拳头。""我明白。我们都与造物主有精神上的联系，虽然需要借助某些工具 ——"" $HeOrShe再次打断了$himOrHerself，""某些工具，我尊重你以真诚地进行交易。""
 
-$HeOrShe叹了口气。""要信守承诺。那么，按照约定，$gaBA_costNormal 星币？""","gaBA_acceptPather:接受并支付原始价格 $gaBA_costNormal 星币
+$HeOrShe叹了口气。""要信守承诺。那么，按照约定，{$gaBA_costNormal 星币？""","gaBA_acceptPather:接受并支付原始价格 $gaBA_costNormal 星币
 cutCommLinkNoText:拒绝并切断了通讯
 gaBA_preRaid:拒绝，但是追踪通讯信号并派出陆战队劫掠
 gaBA_threatenPather:""或者我追踪你的信号然后在轨道上把你烧成玻璃。"" (威胁)",
@@ -23090,7 +23097,7 @@ DoCanAffordCheck $gaBA_cost gaBA_acceptPather2 false","对于你的威胁，左�
 
 $HeOrShe抬起头说，""这是降罚，为我的傲慢，也为了我的骄傲。造物主啊，这是我自作自受。""
 
-""舰长，我们赶快做决定吧。如果我收不到你为此急需之物的付款，无异于我已死去。$gaBA_costVeryLow 星币，不能再低了。""","gaBA_acceptPather2:接受并支付最低的价格 $gaBA_costVeryLow 星币
+""舰长，我们赶快做决定吧。如果我收不到你为此急需之物的付款，无异于我已死去。{$gaBA_costVeryLow 星币，不能再低了。""","gaBA_acceptPather2:接受并支付最低的价格 $gaBA_costVeryLow 星币
 cutCommLinkNoText:拒绝并切断了通讯
 gaBA_preRaid:拒绝，但是追踪通讯信号并派出陆战队劫掠",
 gaBAPatherAccept2,DialogOptionSelected,$option == gaBA_acceptPather2,"RemoveCommodity credits $gaBA_cost
@@ -23141,7 +23148,7 @@ $entity.raidGoBackTrigger = GABAPirateMainOptions 0
 $entity.raidContinueTrigger = GABARaidFinishedContinuePirate 0
 $entity.raidRestrictToTrigger = GABARaidFinishedPirate 0
 AddRaidObjective genericIcon ""从 $gaBA_contactName 那回收 $gaBA_item"" MINIMAL 2000 GABARaidFinishedPirate true
-FireBest GABACheckHostilesNearbyPirate","""是的，我有你要的货，仅仅，啊哈，$gaBA_costHigh 星币为小发现者一点报酬，我就能给把它交由你保管。""","gaBA_acceptPirate:接受并支付 $gaBA_costHigh 星币
+FireBest GABACheckHostilesNearbyPirate","""是的，我有你要的货，仅仅，啊哈，{$gaBA_costHigh 星币为小发现者一点报酬，我就能给把它交由你保管。""","gaBA_acceptPirate:接受并支付 $gaBA_costHigh 星币
 gaBA_confrontPirate:""我觉得不成。"" (对峙)
 gaBA_bluffPirate:协商一个更低的价格
 gaBA_preRaidPirate:拖着$himOrHer继续说话，派陆战队去抢
@@ -23172,7 +23179,7 @@ DoCanAffordCheck $gaBA_cost gaBA_acceptPirate false
 FireBest GABACheckCanThreatenPirate
 FireBest GABACheckHostilesNearbyPirate","海盗 $personLastName 大吃一惊。""为什么啊舰长，也许你对这里的运作方式感觉很陌生，我们都有属于自己的一条路子 —— 你的路子呢？"" $HeOrShe把$HeOrShe的手指放在下巴上，假装沉思，""一个不苟言笑、直入主题的人，来处理这次的交易。我想这个星域也会在不远的将来恢复正常。""
 
-$HeOrShe递了个嘲笑的眼神，并叹了口气。""就这一次，也许。$gaBA_costNormal 星币拿下。我欣赏你的理想主义。""
+$HeOrShe递了个嘲笑的眼神，并叹了口气。""就这一次，也许。{$gaBA_costNormal 星币拿下。我欣赏你的理想主义。""
 
 你怀疑$HeOrShe其实并不欣赏。在你做出反应之前，$HeOrShe拍了拍$HeOrShe手，再次对你说。""接受我的新提议吧，舰长。否则我们都会失望而归。""","gaBA_acceptPirate:接受支付原始价格 $gaBA_costNormal 星币
 cutCommLinkNoText:拒绝并切断通讯链接
@@ -23184,7 +23191,7 @@ gaBAPirateThreaten,DialogOptionSelected,$option == gaBA_threatenPirate,"Highligh
 $gaBA_cost = $gaBA_costVeryLow 0
 DoCanAffordCheck $gaBA_cost gaBA_acceptPirate2 false","海盗的表情定格在那个有点勉强的微笑上，$HeOrShe瞥了屏幕外的某人，并微微摇了摇头。
 
-""噢，你真的太好了，舰长！你说的没错。"" $HeOrShe说到，冒出冷汗，""你把这样的业务带到了星域共同体卑微的另一端，我欣赏这点。赎金？走个过场而已 —— 你懂的，我不能简单地把包裹送走，否则我的其他客户会怎样想！我只要求象征性的一点，来维持我的形象。$gaBA_costVeryLow 星币可以向所有人证明你不需要施舍，然后你就可以上路了。反正我需要在我的仓库里面腾出一些空间。""","gaBA_acceptPirate2:接受并支付最低的价格 $gaBA_costVeryLow 星币
+""噢，你真的太好了，舰长！你说的没错。"" $HeOrShe说到，冒出冷汗，""你把这样的业务带到了星域共同体卑微的另一端，我欣赏这点。赎金？走个过场而已 —— 你懂的，我不能简单地把包裹送走，否则我的其他客户会怎样想！我只要求象征性的一点，来维持我的形象。{$gaBA_costVeryLow 星币可以向所有人证明你不需要施舍，然后你就可以上路了。反正我需要在我的仓库里面腾出一些空间。""","gaBA_acceptPirate2:接受并支付最低的价格 $gaBA_costVeryLow 星币
 cutCommLinkNoText:拒绝并切断通讯
 gaBA_preRaidPirate:拒绝，接着追踪通讯信号并派出陆战队劫掠",
 gaBAPirateAccept2,DialogOptionSelected,$option == gaBA_acceptPirate2,"AdjustRep $personFaction.id VENGEFUL -3
@@ -23479,7 +23486,7 @@ $entity.raidGoBackTrigger = GARRPirateMainOptions 0
 $entity.raidContinueTrigger = GARRRaidFinishedContinuePirate 0
 $entity.raidRestrictToTrigger = GARRRaidFinishedPirate 0
 AddRaidObjective genericIcon ""从 $gaRR_contactName 手里营救被绑架的学者"" MINIMAL 2000 GARRRaidFinishedPirate true
-FireBest GARRCheckHostilesNearbyPirate","海盗拍了拍手，对你露出七鳃鳗般渴望的笑容。""你把我的钱带来了，对吧？$gaRR_costHigh 星币，打我通讯 ID 上，然后你就可以把您的大科学家接走了。""","gaRR_acceptPirate:接受坐地起价，支付 $gaRR_costHigh 星币
+FireBest GARRCheckHostilesNearbyPirate","海盗拍了拍手，对你露出七鳃鳗般渴望的笑容。""你把我的钱带来了，对吧？{$gaRR_costHigh 星币，打我通讯 ID 上，然后你就可以把您的大科学家接走了。""","gaRR_acceptPirate:接受坐地起价，支付 $gaRR_costHigh 星币
 gaRR_confrontPirate:""当初可不是这样谈的。"" (对抗)
 gaRR_bluffPirate:协商一个更低的价格
 gaRR_preRaidPirate:趁着$himOrHer说话，派陆战队去抢人
@@ -23512,7 +23519,7 @@ FireBest GARRCheckHostilesNearbyPirate","海盗 $personLastName 向后退了半�
 
 ""看得出来，你迟早得因此惹上麻烦。我没空教你这里的行事准则，并且要是你以后还是这种作风的话..."" $heOrShe望着你，冷笑道，""那你估计还得被痛苦地教育个挺长时间的。""
 
-""算了，我认了。$gaRR_costNormal 星币就行，我无所谓了。赶紧把这个叽喳怪叫的秃头领走吧，我可谢谢您了。""","gaRR_acceptPirate:同意并支付 $gaRR_costNormal 星币的赎金
+""算了，我认了。{$gaRR_costNormal 星币就行，我无所谓了。赶紧把这个叽喳怪叫的秃头领走吧，我可谢谢您了。""","gaRR_acceptPirate:同意并支付 $gaRR_costNormal 星币的赎金
 cutCommLinkNoText:拒绝并切断通讯链接
 gaRR_preRaidPirate:拒绝，但追踪信号的来源以便陆战队发起突击
 gaRR_threatenPirate:""再低点，不然我就追踪你的通讯信号让你人间蒸发。"" (威胁)",
@@ -23768,7 +23775,8 @@ gaIntro2returnElek1,DialogOptionSelected,$option == gaIntro2_returnElek1,"BeginC
 $player.metElek = true","""这里是 Elek 院士，有什么能帮到你的吗。舰... 长？""
 
 院士以一个假定的头衔用作对你的称呼，那语气就好像他在喝茶时你没给他送饼干一样。你确定你的通讯军官在联络他时提到了你的名字。","gaIntro2_returnElek2a:""我回收了数据核心，院长承诺过提供报酬。""
-gaIntro2_returnElek2b:""我的名字是 $playerName，我为院长承诺的归还数据核心能得到的报酬而来。""",
+gaIntro2_returnElek2b:""我的名字是 $playerName，我为院长承诺的归还数据核心能得到的报酬而来。""
+",
 gaIntro2returnElek2a,DialogOptionSelected,$option == gaIntro2_returnElek2a,"$option = gaIntro2_returnElek2b 0
 FireBest DialogOptionSelected",,,
 gaIntro2returnElek2b,DialogOptionSelected,$option == gaIntro2_returnElek2b,,"""哦，那些玩意中的一个。当然可以，你的助理直接这么说就好。""这位院士停顿了一下，""但如果是这样的话，给你提供报酬的该是 Kallichore 院长，不是吗？可他不再是院长了。""
@@ -23826,7 +23834,8 @@ gaIntro2returnSeb1,DialogOptionSelected,$option == gaIntro2_returnSeb1,,"""舰�
 ""这个，哦，数据核心。那个项目属于...行星学的 Elek 院士。""
 
 Sebestyen 绝对不会直接批评任何人，但当提到这个 'Elek' 时，你发现 Sebestyen 的语气中夹杂着不寻常的情绪下降。不是说他不友善，只是...没那么友善了。","gaIntro2_returnSeb2:""我还能拿到报酬吗？""
-gaIntro2_returnSeb3:"" Elek 院士有什么问题吗？""",
+gaIntro2_returnSeb3:"" Elek 院士有什么问题吗？""
+",
 gaIntro2returnSeb2,DialogOptionSelected,$option == gaIntro2_returnSeb2,AddCredits $gaIntro2_credits,"""哦，是的，当然，"" Sebestyen 说。""在这个项目的预算中，有一个单独的 '数据回收奖励账户' 用以提供款项。所以不管现任院长是谁，都是有报酬的。我只需要发送这个表格，然后 —— ""他敲击了一下他桌面上的面板。
 
 ""好了。奖金现在应该已经打到你的账户里了。不错，舰长！""",contact_pickAnotherGreeting:继续,
@@ -23840,15 +23849,14 @@ gaIntro2returnSeb4,DialogOptionSelected,$option == gaIntro2_returnSeb4,$player.h
 Sebestyn 开始从他内心的阴暗角落寻找词语以进行描述，然后继续道，""行为举止令人不快。""","gaIntro2_returnSeb5:""令人不快？仅此而已吗？""",
 gaIntro2returnSeb5,DialogOptionSelected,$option == gaIntro2_returnSeb5,,"""我的意思是。"" Sebestyen 看起来陷入了困境。""是吗？当然，那些，呃，有这种想法的人根本不认为这可以容忍，这使相关部门之间的协调工作变得更复杂了。""","gaIntro2_returnSeb6:""对 Elek 让你的工作变得麻烦这一点我深表歉意。""
 gaIntro2_returnSeb7:""你有多讨厌 Elek？""
-gaIntro2_returnSeb2:""那么报酬如何呢？""
-",
+gaIntro2_returnSeb2:""那么报酬如何呢？""",
 gaIntro2returnSeb6,DialogOptionSelected,$option == gaIntro2_returnSeb6,,"""舰长，请别这样。""他说，""你无需道歉。我的工作是进行联络并协调人事关系，Baird 院长选我的原因是我...我很擅长这个！""
 
 Sebestyen 似乎对他自己给出的自我评价感到有点惊讶，接着他坚定了自己的信念，继续说道，""我能应付 Elek，别担心。这毕竟，""他下巴紧绷，""是我的工作。""","gaIntro2_returnSeb2:""那么报酬如何呢？""",
 gaIntro2returnSeb7,DialogOptionSelected,$option == gaIntro2_returnSeb7,"AddCredits $gaIntro2_credits
 SetTextHighlights $gaIntro2_credits
 $option = contact_pickAnotherGreeting 0
-FireBest DialogOptionSelected","""呃。"" Sebestyen 尴尬得脸红起来。""我当然不会，呃，我不会用这么强烈的词来形容...让我们谈谈恢复数据核心的奖励怎么样？$gaIntro2_credits 星币，对吧？""
+FireBest DialogOptionSelected","""呃。"" Sebestyen 尴尬得脸红起来。""我当然不会，呃，我不会用这么强烈的词来形容...让我们谈谈恢复数据核心的奖励怎么样？{$gaIntro2_credits 星币，对吧？""
 
 他开始拼命敲击他的显示屏。","# > ""要我帮你干掉他吗？""",
 ,,,,,,
@@ -24917,7 +24925,7 @@ cheapComTextRemoteBar,CheapComOfferText,"$cheapCom_variation == REMOTE score:10
 $cheapCom_barEvent","SetTextHighlights $cheapCom_quantity $cheapCom_marketName $cheapCom_dist $cheapCom_pricePerUnit $cheapCom_totalPrice
 Call $cheapCom_ref showMap ""目的地：$cheapCom_marketName ""","$HeOrShe抬头看着你，""你...是个商人吗？跑商的那种？"" 你含糊不清地说了些有的没的话来应付$HeOrShe。""哦，那太完美了。"" $HeOrShe说道。
 
-""在 $cheapCom_marketName，我们有 $cheapCom_quantity 单位的 $cheapCom_commodityName 滞销，急需脱手，但距离这儿有 $cheapCom_dist 光年。如果你能帮我处理掉这些库存，我保证以 $cheapCom_pricePerUnit 星币每单位的价格卖给你，合计 $cheapCom_totalPrice 星币。这可是个好机会啊，我亲爱的舰长同志。""
+""在 $cheapCom_marketName}，我们有 $cheapCom_quantity 单位的 $cheapCom_commodityName 滞销，急需脱手，但距离这儿有 $cheapCom_dist 光年。如果你能帮我处理掉这些库存，我保证以 $cheapCom_pricePerUnit 星币每单位的价格卖给你，合计 $cheapCom_totalPrice 星币。这可是个好机会啊，我亲爱的舰长同志。""
 
 $HeOrShe给你展示了$HeOrShe的 TriPad，上面显示了一个通讯目录 ID，说道：""这是我的合作伙伴，如果有兴趣的话，你可以找 $cheapCom_personPost $cheapCom_personName 谈谈以便签订合同。""",,
 cheapComPostAccept,ContactPostAccept,"$missionId == cheapCom
@@ -25240,7 +25248,7 @@ DoCanAffordCheck 0 cpc_pickPlayerBP false","当你接近时，另一个人摇了
 
 $personRank 朝着对方的背影翻了个白眼，然后示意你就坐。""看起来你对我们的生产空余有兴趣，舰长。"" $heOrShe开门见山。
 
-""推销东西有损我的尊严，所以我就直接开条件好了。价值为至多 $cpc_maxCapacity 星币的军用纳米锻炉产能，收费为基础成本的 $cpc_costPercent，产品交付会在 $cpc_days 天内完成。你买下使用权后，可以自己提供蓝图，也能以我的名义下单，用我的蓝图。二选一。""","cpc_pickPlayerBP:从你自己的蓝图中做出选择
+""推销东西有损我的尊严，所以我就直接开条件好了。价值为至多 $cpc_maxCapacity 星币的军用纳米锻炉产能，收费为基础成本的 $cpc_costPercent}，产品交付会在 $cpc_days 天内完成。你买下使用权后，可以自己提供蓝图，也能以我的名义下单，用我的蓝图。二选一。""","cpc_pickPlayerBP:从你自己的蓝图中做出选择
 cpc_pickContactBP:看看他们有什么蓝图
 contact_declineBarNoContinue:拒绝",
 cpcOfferTextContact4,DialogOptionSelected,"$option == cpc_start
@@ -25257,7 +25265,7 @@ DoCanAffordCheck 0 cpc_pickPlayerBP false","当你走近时，保镖们的目光
 
 ""你一定知道我是谁，我也知道你为什么会过来。"" $heOrShe说，""让我们像朋友一样谈谈吧。""军火商靠了过来，同时用私人力场笼罩了隔间，大幅降低了外界声音的传入。由于空气流动变缓，时髦毒品棒上释放的烟雾开始逐步填充私人力场。
 
-""我可以提供价值为至多 $cpc_maxCapacity 星币的舰船和 武器生产需求，所需金额为基础成本的 $cpc_costPercent，同时我保证交货会在 $cpc_days 天内完成。""
+""我可以提供价值为至多 $cpc_maxCapacity 星币的舰船和 武器生产需求，所需金额为基础成本的 $cpc_costPercent}，同时我保证交货会在 $cpc_days 天内完成。""
 
 $HeOrShe把一个看上去就久经沙场的 TriPad 沿桌子滑了过来，""先看看也无妨。""","cpc_pickContactBP:看看 TriPad 里有什么
 contact_declineBarNoContinue:拒绝",
@@ -25297,7 +25305,7 @@ cpcOfferTextBarCoilGun4,DialogOptionSelected,$option == cpcOffer_coilGun4,"$miss
 SetTextHighlights $cpc_maxCapacity $cpc_costPercent $cpc_days
 DoCanAffordCheck 0 cpc_pickPlayerBP false","军火商按了个指令，然后一个 私人力场 就把酒吧的其余部分变得模糊了起来，也遮掩了细语声。
 
-""好吧。我能提供不超过 $cpc_maxCapacity 星币的定制稀有舰船和武器，价格定在非常合理的成本价的 $cpc_costPercent。我可以保证在 $cpc_days 天以内送达产品，绝对隐秘。"" $HeOrShe对着你冷冷一瞥。""我对技术细节的要求也很苛刻。""
+""好吧。我能提供不超过 $cpc_maxCapacity 星币的定制稀有舰船和武器，价格定在非常合理的成本价的 $cpc_costPercent}。我可以保证在 $cpc_days 天以内送达产品，绝对隐秘。"" $HeOrShe对着你冷冷一瞥。""我对技术细节的要求也很苛刻。""
 
 $HeOrShe又叹了口气，身体放松下了一些，然后把破旧不堪的数据平板滑了过来。""看看你喜欢什么吧。""","cpc_pickContactBP:看看 TriPad
 contact_declineBarNoContinue:拒绝",
@@ -25402,7 +25410,7 @@ Call $ssat_ref showMap ""目标：$ssat_marketName ""","虽然只是穿着没什
 
 $HeOrShe把提神烟的烟灰弹到了桌面上，用夹着烟的手对你做了个请坐的手势，任由烟雾在空中画了条弧线。
 
-""我需要监视 $ssat_systemName 的 $ssat_marketName。消息说你废话不多做事利索。"" $heOrShe飞了一口提神烟。""我可不能在轨道那块儿被抓。毕竟之前在那儿留了点案底。""你看到金牙闪耀，才注意到$hisOrHer应该是笑了一下。
+""我需要监视 $ssat_systemName 的 $ssat_marketName}。消息说你废话不多做事利索。"" $heOrShe飞了一口提神烟。""我可不能在轨道那块儿被抓。毕竟之前在那儿留了点案底。""你看到金牙闪耀，才注意到$hisOrHer应该是笑了一下。
 
 ""放心，我会提供间谍卫星的。你只要负责把卫星弄到轨道上就好，记得别让条子跟着你。这就跟抢个卢德朝圣者一样简单，不是吗？一笔就能赚 $ssat_reward 星币。搞不？""","contact_acceptBar:搞起
 contact_declineBarNoContinue:不了",
@@ -25672,7 +25680,7 @@ CBPirateAristo,CBPirateOfferDesc,$voice == aristo,Highlight $bcb_dist $bcb_rewar
 
 ""这应该是某种海盗。"" $PersonName 让$hisOrHer的眼睛投射出一种要生啖其肉的目光，"" $bcb_TargetHeOrShe从我这里偷了东西，这完全不可接受。"" $HeOrShe向后靠了靠，一副无所谓的样子：""当然，丢了点星币无关紧要。重要的是这种抢劫行为传递的信息。我们不能让海盗从合法拥有者那里偷走辛苦挣来的财富。""
 
-""目标藏在 $bcb_systemName 中，那离这里 $bcb_dist 光年远。搞定目标后我会给你 $bcb_reward 星币，时限是 $bcb_days。我们达成共识没？""",,
+""目标藏在 $bcb_systemName 中，那离这里 $bcb_dist 光年远。搞定目标后我会给你 $bcb_reward 星币，时限是 $bcb_days}。我们达成共识没？""",,
 CBPather1,CBPatherOfferDesc,,Highlight $bcb_dist $bcb_reward $bcb_days,"""啊，这有份工作，"" $heOrShe拿出一份案件档案。""卢德左径分子。司空见惯地跟几起爆炸案和海盗活动什么的有关。$bcb_TargetHeOrShe藏在 $bcb_systemName 星系，去那一趟要 $bcb_dist 光年。""
 
 ""本地一些有头有脸的大人物也搅合了进来，所以这份工作的报酬给到了 $bcb_reward 星币。你有 $bcb_days 天来搞定$bcb_targetHimOrHer。感兴趣吗？""",,
@@ -25732,7 +25740,7 @@ CBRemnantStation3,CBRemnantStationOfferDesc,$personFaction.id == luddic_path,Hig
 ""自伟大的 AI 圣战以来，如此腐败的堡垒一直矗立在那里，这在上天的眼中是一种亵渎。霸主隐藏它们的存在的原因我们不得而知，但是，"" $personName $rank 带着更大的热情说道，""这正是我们从神圣真空中清除这些机器恶魔的正义之路。""
 
 ""要是我能带领一支舰队去完成这项任务就好了 —— 唉，左径战舰已经为数不多了，而要集结兵力去攻下这样一个目标会带来...不必要的关注。所以，我们舍弃了我们的荣耀，给你 $bcb_reward 星币来完成这个神圣的任务 —— 在 $bcb_days 天之内，只因善者停歇之时，邪恶蠢蠢欲动。你愿意接受吗？""",,
-CBEnemyStation,CBEnemyStationOfferDesc,,Highlight $bcb_reward $bcb_dist $bcb_days,"""我们需要拿下一个敌方空间站。"" $heOrShe用手指轻敲了几下$hisOrHer的数据平板，看着你，""这是一项艰巨的任务。"" $heOrShe平静地说，""但也会有相应的报酬，$bcb_reward 星币。""
+CBEnemyStation,CBEnemyStationOfferDesc,,Highlight $bcb_reward $bcb_dist $bcb_days,"""我们需要拿下一个敌方空间站。"" $heOrShe用手指轻敲了几下$hisOrHer的数据平板，看着你，""这是一项艰巨的任务。"" $heOrShe平静地说，""但也会有相应的报酬，{$bcb_reward 星币。""
 
 $personName $Rank 向你展示了位于 $bcb_systemName 中的 $bcb_fleetName。""位于 $bcb_dist 光年外，我们希望任务能在 $bcb_days 内完成，这样我们的...其他工作可以继续进行。你不必担心那些事，只要专注于这项任务，就能得到报酬。你觉得你能行吗？""",,
 ,,,,,,
@@ -26788,7 +26796,7 @@ Call $locrlf_ref showMap ""Target: $locrlf_marketName""","""哦！"" $locrlf_HeO
 
 $locrlf_HeOrShe压低声音，""当然，这是个棘手的问题。大祭司希望找到这群迷失的异端，而且，出于某种原因，大祭司不希望 骑士团审判官 出手。"" $locrlf_HeOrShe叹了口气，""当然，教会 的行动也轮不到我去猜。""
 
-""不管怎样，异端们买了一艘运输船，一头扎进了边缘地带。最后看到他们的是某个拾荒者，拾荒者向...好吧，反正是一个信徒报告了此事。现在，如果你找到他们，并带给我关于他们遭遇的确凿证据，我会给你教会提供的 $locrlf_rewardAmount 星币。""","locrlf_offerBarCynicalRewardAsk:""教会 批给你的钱不止$locrlf_rewardAmount星币，对吧？""
+""不管怎样，异端们买了一艘运输船，一头扎进了边缘地带。最后看到他们的是某个拾荒者，拾荒者向...好吧，反正是一个信徒报告了此事。现在，如果你找到他们，并带给我关于他们遭遇的确凿证据，我会给你教会提供的 $locrlf_rewardAmount 星币。""","locrlf_offerBarCynicalRewardAsk:""教会 批给你的钱不止 $locrlf_rewardAmount 星币，对吧？""
 locrlf_offerBarAcceptFirst:接受
 contact_declineBar:拒绝",
 locrlfOfferTextBarAgainB,DialogOptionSelected,"$option == locrlf_startBar
@@ -26813,7 +26821,7 @@ Call $locrlf_ref showMap ""Target: $locrlf_systemName""","""这帮异端花了�
 
 $locrlf_HeOrShe掏出$locrlf_hisOrHer的廉价数据平板。
 
-""你能帮我找到他们不？就当是为了教会？弄明白他们最后怎么样了，把消息带给我，然后我会转告给 大祭司 。我手头有批给这次行动的资金，$locrlf_rewardAmount 星币。只要你给我带来这帮异端下场的确凿证据，这笔钱就是你的。"" ","locrlf_offerBarCynicalRewardAsk:""教会 批给你的钱不止$locrlf_rewardAmount星币，对吧？""
+""你能帮我找到他们不？就当是为了教会？弄明白他们最后怎么样了，把消息带给我，然后我会转告给 大祭司 。我手头有批给这次行动的资金，{$locrlf_rewardAmount 星币。只要你给我带来这帮异端下场的确凿证据，这笔钱就是你的。"" ","locrlf_offerBarCynicalRewardAsk:""教会 批给你的钱不止 $locrlf_rewardAmount 星币，对吧？""
 locrlf_offerBarAcceptFirst:接受
 contact_declineBar:拒绝",
 locrlfOfferTextBarRemoveCynical,LOCRLFOfferTextBarRemoveCynical,$player.luddicAttitudeCynical < 1,RemoveOption locrlf_offerBarCynicalRewardAsk,,,
@@ -26842,7 +26850,7 @@ Call $locrlf_ref showMap ""Target: $locrlf_systemName""","""这帮伪信徒，�
 
 ""你能找到他们吗？就当是为了教会？""
 
- ""弄明白他们最后怎么样了，把消息带给我，然后我会转告给 大祭司。我手头有批给这次行动的资金，$locrlf_rewardAmount 星币 。只要你带来这帮异端的消息，这笔钱就是你的了。""","locrlf_offerCynicalRewardAsk:""教会 批给你的钱不止$locrlf_rewardAmount星币，对吧？""
+ ""弄明白他们最后怎么样了，把消息带给我，然后我会转告给 大祭司。我手头有批给这次行动的资金，{$locrlf_rewardAmount 星币 。只要你带来这帮异端的消息，这笔钱就是你的了。""","locrlf_offerCynicalRewardAsk:""教会 批给你的钱不止 $locrlf_rewardAmount 星币，对吧？""
 locrlf_offerAcceptFirstContact:接受
 contact_decline:拒绝",
 locrlfOfferTextRemoveCynical,LOCRLFOfferTextRemoveCynical,$player.luddicAttitudeCynical < 1,RemoveOption locrlf_offerCynicalRewardAsk,,,
@@ -26934,7 +26942,7 @@ lptOfferTextBarRich,DialogOptionSelected,$option == lpt_startBarRich,"$missionId
 SetTextHighlights $lpt_entityName $lpt_reward $lpt_dist 
 Call $lpt_ref showMap ""目的地: $lpt_entityName""","你靠近了朝圣者，$lpt_hisOrHer微笑着合起了双手。从$lpt_hisOrHer自信的气质和优质的服饰来看，显然$lpt_hisOrHer来自一个不怎么对 卢德 的苦行僧名气看得上眼的富裕家族。
 
-""祝您有好的一天。舰长，我猜？"" $lpt_hisOrHer说道，""我想为我和我的队伍安排一趟去 $lpt_systemName 的 $lpt_entityName 圣地的旅途。当然，我会付钱，$lpt_reward 星币值得你走 $lpt_dist 光年吗？""","contact_acceptBar:接受
+""祝您有好的一天。舰长，我猜？"" $lpt_hisOrHer说道，""我想为我和我的队伍安排一趟去 $lpt_systemName 的 $lpt_entityName 圣地的旅途。当然，我会付钱，{$lpt_reward 星币值得你走 $lpt_dist 光年吗？""","contact_acceptBar:接受
 contact_declineBarNoContinue:拒绝",
 lptOfferTextBarPoor,DialogOptionSelected,$option == lpt_startBarPoor,"$missionId = lpt
 SetTextHighlights $lpt_entityName
@@ -27018,7 +27026,7 @@ Call $avipt_ref showMap ""目的地：$avipt_marketName""","你摆出一副严�
 
 这招似乎很管用。
 
-此人 —— 据其自述，家境殷实，身份显赫且人脉广阔 —— 已预先支付了 $avipt_reward 星币，要求在 $avipt_timelimit 天内获得优先运输服务，以前往 $avipt_marketName；但那艘舰船出于你不知道的理由，昨晚已经偷偷离港了。在他看来，这是 ""一桩骇人听闻的丑闻""，""玷污了本就声名狼藉的全体太空舰长的声誉""。
+此人 —— 据其自述，家境殷实，身份显赫且人脉广阔 —— 已预先支付了 $avipt_reward 星币，要求在 $avipt_timelimit 天内获得优先运输服务，以前往 $avipt_marketName}；但那艘舰船出于你不知道的理由，昨晚已经偷偷离港了。在他看来，这是 ""一桩骇人听闻的丑闻""，""玷污了本就声名狼藉的全体太空舰长的声誉""。
 
 听完这段糟糕的经历，你点了点头，脸上露出了恰到好处的凝重神情。","avipt_textBarAccept:提出以相同费用为 VIP 提供运输服务
 avipt_textBarDecline:尝试结束对话
@@ -27157,7 +27165,7 @@ rdsmOfferTextContact,DialogOptionSelected,$option == rdsm_start,"$missionId = rd
 SetTextHighlights $rdsm_planetName $rdsm_systemName $rdsm_dist $rdsm_reward
 Call $global.rdsm_ref showMap ""目标: $rdsm_planetName""","""我们的合作一直很高效，"" $heOrShe说，""我相信你能完成这个简单的任务。""
 
-$HeOrShe滑动数据平板，召唤出一张星图。""在距离这里 $rdsm_dist 光年处，$rdsm_systemName 中的 $rdsm_planetName 上，有一座废弃的 $rdsm_target。它曾属于 $rdsm_megacorpName 集团，但那已经是 200 星历年以前的事情了。""
+$HeOrShe滑动数据平板，召唤出一张星图。""在距离这里 $rdsm_dist 光年处，{$rdsm_systemName 中的 $rdsm_planetName 上，有一座废弃的 $rdsm_target。它曾属于 $rdsm_megacorpName 集团，但那已经是 200 星历年以前的事情了。""
 
 ""我会给你提供一个数据核心和一份关于 $rdsm_target 的准确示意图。找到我需要的数据核心，用我给你的数据核心替换原有那个。做的自然点，让它看起来就像大崩塌以来一直未被触碰过。""
 
@@ -27169,7 +27177,7 @@ $option == rdsm_start","$missionId = rdsm
 SetTextHighlights $rdsm_planetName $rdsm_systemName $rdsm_dist $rdsm_reward
 Call $global.rdsm_ref showMap ""目标: $rdsm_planetName""","""我们的合作一直很高效，"" $heOrShe说，""我相信你能完成这个简单的任务。""
 
-$HeOrShe滑动数据平板，召唤出一张星图。""在距离这里 $rdsm_dist 光年处，$rdsm_systemName 中的 $rdsm_planetName 上，有一座废弃的 $rdsm_target。它曾属于 $rdsm_megacorpName 集团，但那已经是 200 星历年以前的事情了。""
+$HeOrShe滑动数据平板，召唤出一张星图。""在距离这里 $rdsm_dist 光年处，{$rdsm_systemName 中的 $rdsm_planetName 上，有一座废弃的 $rdsm_target。它曾属于 $rdsm_megacorpName 集团，但那已经是 200 星历年以前的事情了。""
 
 ""我会给你提供一个数据核心和一份关于 $rdsm_target 的准确示意图。找到我需要的数据核心，用我给你的数据核心替换原有那个。做的自然点，让它看起来就像大崩塌以来一直未被触碰过。""
 
@@ -27555,7 +27563,7 @@ Call $tabo_ref showMap ""目标：$tabo_marketName ""","""$playerName 舰长，"
 
 $HeOrShe抿了一口水晶杯里的无色液体，然后点了几下$hisOrHer的数据平板，私人力场隔绝了声音，领域外的景象也变得模糊了起来。
 
-""我需要一支精锐但不在编制内的舰队，以对 $tabo_dist 光年外的 $tabo_marketName 进行战术轰炸。如果你能按照相关指示执行任务，$tabo_reward 星币将会汇到你的账户内。""
+""我需要一支精锐但不在编制内的舰队，以对 $tabo_dist 光年外的 $tabo_marketName 进行战术轰炸。如果你能按照相关指示执行任务，{$tabo_reward 星币将会汇到你的账户内。""
 
 一只手拿着杯子，$faction $rank 又操作了几下数据平板，然后将它滑向了你。屏幕上显示着驻军人数，布防状况之类详细的情报。你查看了报告后估计你需要大约 $tabo_fuel 燃料来进行轰炸。$rank 注视着你，当你抬头时，对方扬起眉毛。""接这任务吗？""","contact_acceptBar:接受
 contact_declineBarNoContinue:拒绝",
@@ -27671,14 +27679,14 @@ SetTextHighlightColors h h h h $jabr_factionColor
 Highlight $jabr_marketName $jabr_dist $jabr_reward $jabr_marines $jabr_marketFaction
 Call $jabr_ref showMap ""目标：$jabr_marketName ""","当你走近时，这个$jabr_manOrWoman一言不发地打量着你。片刻之后，$jabr_heOrShe似乎觉得你够格了，把一个廉价的数据平板从桌子那边滑了过来。上面显示着一份个人资料和一个安全设施的结构图。
 
-$jabr_heOrShe轻声说明到：""我需要一次解救行动，任务对象正被...呃...非法监禁在 $jabr_dist 光年之外的 $jabr_marketName。我的赞助人可以为此提供 $jabr_reward 星币。"" $jabr_manOrWoman等待你的答复，依稀可见得眼睛反射着犹如星宿般的光芒。
+$jabr_heOrShe轻声说明到：""我需要一次解救行动，任务对象正被...呃...非法监禁在 $jabr_dist 光年之外的 $jabr_marketName}。我的赞助人可以为此提供 $jabr_reward 星币。"" $jabr_manOrWoman等待你的答复，依稀可见得眼睛反射着犹如星宿般的光芒。
 
 你扫视了资料，他们调查得很彻底。你估计大约需要 $jabr_marines 名陆战队员才能完成这次任务。袭击 $jabr_marketFactionArticle $jabr_marketFaction 的监狱设施可能会对你的声望造成影响。你可以采取一些措施来避免暴露身份，但这些手段无法完全摆脱官方的怀疑。","contact_acceptBar:接受
 contact_declineBarNoContinue:拒绝",
 jabrOfferTextContact1,DialogOptionSelected,$option == jabr_start,"$missionId = jabr
 SetTextHighlightColors h $jabr_factionColor h
 Highlight $jabr_dist $jabr_marketFaction $jabr_reward $jabr_marines
-Call $jabr_ref showMap ""目标：$jabr_marketName ""","""任务是从 $jabr_dist 光年外的 $jabr_marketName 上解救目标。最好能不留痕迹，但这种情况有时我们也没法掌控。尽量不要太得罪了 $jabr_marketFaction，否则就可能引起不必要的关注。任务目标获释后，$jabr_reward 星币会被打进你的账户。""
+Call $jabr_ref showMap ""目标：$jabr_marketName ""","""任务是从 $jabr_dist 光年外的 $jabr_marketName 上解救目标。最好能不留痕迹，但这种情况有时我们也没法掌控。尽量不要太得罪了 $jabr_marketFaction}，否则就可能引起不必要的关注。任务目标获释后，{$jabr_reward 星币会被打进你的账户。""
 
 ""我怀疑他们正在为应对突袭做准备，所以我想办法搞到了这个。"" $HeOrShe按了按 TriPad，你的数据平板上收到了驻军部署以及反渗透措施的详细报告。快速浏览之后你觉得需要 $jabr_marines 名陆战队员才能完成这次任务。","contact_accept:接受
 contact_decline:拒绝",
@@ -27777,7 +27785,7 @@ sitmOfferTextContact1,DialogOptionSelected,$option == sitm_start,"$missionId = s
 Highlight $sitm_price
 DoCanAffordCheck $sitm_price contact_accept false","$HeOrShe思考了一会儿，然后冷冷地说，""有件事我得告诉你，这种线人，他们不是完全可靠的。不要误解我的意思，我对所提供的信息的有效性很有信心 —— 我想说的是他们可能会把相同的数据卖给多个利益相关方。所以如果你要接受，你得准备好和其他寻宝者打交道。""
 
-""目标所在位置的价格是 $sitm_price，十分合理。你觉得呢？""","contact_accept:接受
+""目标所在位置的价格是 $sitm_price}，十分合理。你觉得呢？""","contact_accept:接受
 contact_decline:拒绝",
 sitmOfferTextContact1_villain,DialogOptionSelected,"$option == sitm_start
 $voice == villain","$missionId = sitm
@@ -27898,7 +27906,7 @@ Highlight $fwt_thingDesc
 SetStoryOption fwt_bluffPirate general ""对海盗虚张声势来得到 $entity.fwt_thing ""
 $fwt_piratePayment = 10,000 0","显示器投影着大量的全息噪点，等到它变清晰后，你看到了一个趾高气昂的海盗舰长。
 
-""啊，看看你带领的$shipOrFleet，非常漂亮，不是吗？一个信使告诉我现在你手上有 $fwt_thingDesc，很快我就会成为持有 $fwt_itOrThem 的人了。你明白我的意思吗，舰长？如果你的$shipOrFleet遭遇了不幸，那就太令人惋惜了。""
+""啊，看看你带领的$shipOrFleet，非常漂亮，不是吗？一个信使告诉我现在你手上有 $fwt_thingDesc}，很快我就会成为持有 $fwt_itOrThem 的人了。你明白我的意思吗，舰长？如果你的$shipOrFleet遭遇了不幸，那就太令人惋惜了。""
 
 $HeOrShe装模作样地深思熟虑起来：""现在我就在这里等着。你是会做出明智的决定，友好地把 $fwt_itOrThem 交给我呢？还是等我把你的$shipOrFleet炸出轨道后，在真空中挣扎呢？好好想想吧。""","cutCommLink:拒绝，关闭通讯，并开始给武器充能
 fwt_bluffPirate:对其进行恐吓
@@ -28112,14 +28120,11 @@ $entity.fwt_payment > 0
 FireBest FWBAddStoryOption
 Highlight $entity.fwt_payment","确认属实 // 发现 : 速子科技资产应答器，来自 [目标_舰队] //
 
-""...速子资产保全协议能确保每一位投资人在知晓公司财产的安全均由速子科技认证的设施和/或签约物流所保障时都能高枕无忧-"" //
-进程中断
+""...速子资产保全协议能确保每一位投资人在知晓公司财产的安全均由速子科技认证的设施和/或签约物流所保障时都能高枕无忧-"" // 进程中断
 
 查询 / 查询 : 告知 : [目标_舰队] 正在 [持有/拥有/控制] $fwt_thingDesc
 
-提案
-贸易协定.新建 打开 * 提议出价 : $fwt_payment 星币转账到 [目标_舰队] 条件为 [持有权/拥有权/控制权] 移交本实体 // 倒计时 初始化 : 1分钟。
-沉默 / 未_核实 / 接受
+提案 贸易协定.新建 打开 * 提议出价 : $fwt_payment 星币转账到 [目标_舰队] 条件为 [持有权/拥有权/控制权] 移交本实体 // 倒计时 初始化 : 1分钟。沉默 / 未_核实 / 接受
 提案 条件结束
 
 进程中断 : 伦理程式 (测试版 v42 紫罗兰) 程序覆写 // 行为支配 : 设置 非侵略性 返回值为 是 ...","cutCommLink:拒绝，并关闭通讯
@@ -33105,7 +33110,9 @@ sdtuCadenGreeting,SDTUCadenGreeting,,,"""独立舰队舰长！""他站着吼道�
 
 ""这是致命的错误，但很快便会被更正。""",sdtu_cadenTalk1:继续,
 sdtuCadenGreetingSD,SDTUCadenGreeting,$player.fcm_faction == sindrian_diktat,,"""你！一个宣誓效忠于辛达强权辅助军的舰长！""他站着吼到。""你的行为真是不可理喻！竟敢阻挠最高元首的意志？""他低头看下通讯器，摆出了一个明显排练过的姿势以体现他的权威和威吓力，随后以低沉嘶哑的声音开口了。""这是致命的错误，但很快便会被更正。""",sdtu_cadenTalk1:继续,
-sdtuCadenGreetingHeg,SDTUCadenGreeting,$player.fcm_faction == hegemony,,"""听好了，外来的恐怖分子及煽动者！""他站着吼道。""我就知道虚伪腐败的霸主会耍这种下作的手段！""他低头看下通讯器，摆出了一个明显排练过的姿势以体现他的权威和威吓力，随后以低沉嘶哑的声音开口了。""这是致命的错误，但很快便会被更正。""",sdtu_cadenTalk1:继续,
+sdtuCadenGreetingHeg,SDTUCadenGreeting,$player.fcm_faction == hegemony,,"""听好了，外来的恐怖分子及煽动者！""他站着吼道。""我就知道虚伪腐败的霸主会耍这种下作的手段！""
+
+他低头看下通讯器，摆出了一个明显排练过的姿势以体现他的权威和威吓力，随后以低沉嘶哑的声音开口了。""这是致命的错误，但很快便会被更正。""",sdtu_cadenTalk1:继续,
 sdtuCadenTalk1,DialogOptionSelected,$option == sdtu_cadenTalk1,FireAll SDTUCadenAgentOptions,"他转过身，彷佛你根本不配与他正面交谈。""你抓捕了归属于我辖下的人员。立刻将其归还，我或许还能考虑在宣布对你的处分时开恩。""",,
 sdtuCadenAgentC,SDTUCadenAgentOptions,,,,"sdtu_cadenAgentMacario1:""Macario 发现你的特工是个叛徒。我有证据。""",
 sdtuCadenAgentA,SDTUCadenAgentOptions,$player.fcm_faction == sindrian_diktat,,,"sdtu_cadenAgentLoyal1:""我对最高元首一片忠心。我能证明！""",
@@ -33623,8 +33630,7 @@ sdtuMercReact1onMyWay,DialogOptionSelected,$option == sdtu_mercReact1onMyWay,"Ma
 $entity.ignorePlayerCommRequests = true","""航行无阻... 越远越好。"" $heOrShe说到。",cutCommLink:切断通讯链接,
 sdtuMercReact1debris,DialogOptionSelected,$option == sdtu_mercReact1debris,,"""你不能，""雇佣兵眼睛一眨不眨地说。
 
-""我现在要告诉你，我的任务是使用致命武力确保残骸不被触碰。""
-","sdtu_mercReact1onMyWay:""那么我马上就离开。""
+""我现在要告诉你，我的任务是使用致命武力确保残骸不被触碰。""","sdtu_mercReact1onMyWay:""那么我马上就离开。""
 sdtu_mercUseForce:""那就用武力来阻止我。""",
 sdtuMercReactWeaker,DialogOptionSelected,"$option == sdtu_mercUseForce
 $entity.relativeStrength < 0","MakeOtherFleetGoAway true
@@ -33852,7 +33858,8 @@ anhCantinaFeelings1,DialogOptionSelected,$option == anh_cantinaAskFeelings1,"$op
 FireBest DialogOptionSelected",,,
 anhCantinaFeelings2,DialogOptionSelected,$option == anh_cantinaAskFeelings2,FireAll anhCantinaAskHubOptions,老者没有说话，嘴角挂着一抹笑意。孩子在你和老人之间来回看了看，等待接下来会发生什么。,,
 anhCantinaRobot,DialogOptionSelected,$option == anh_cantinaRobot,$askedRobot = true 1,"""你不用担心这些小东西们。"" 老人说道。","anh_cantinaRobot1:""我也不必担心它。""
-anh_cantinaRobot2:""可是，我确实需要知道那玩意是否安全。""",
+anh_cantinaRobot2:""可是，我确实需要知道那玩意是否安全。""
+",
 anhCantinaRobot1,DialogOptionSelected,$option == anh_cantinaRobot1,FireAll anhCantinaAskHubOptions,老人满意地点点头。,,
 anhCantinaRobot2,DialogOptionSelected,$option == anh_cantinaRobot2,,"那小伙子终于说得出话来了。""它当然安全！这是我们从一些拾荒者处买来的，我亲自把它拆解用重新组装了一遍。"" 
 
@@ -37027,9 +37034,10 @@ pk_hackStoryStartB:""我是 $playerName。你是谁？""
 pk_hackStoryStartC:""我是 Artemisia Sun，速子科技公司的首席执行官。""
 pk_hackStoryStartD:""这是欧米伽在呼叫。我有指令要传达给你。""",
 PKHackStoryStartA,DialogOptionSelected,$option == pk_hackStoryStartA,,"
-有的
+  有的
 
-你好，$playerName",pk_hackStoryStart2:继续,
+  你好，$playerName
+",pk_hackStoryStart2:继续,
 PKHackStoryStartB,DialogOptionSelected,$option == pk_hackStoryStartB,$toldName = true 0,"
    你好，$playerName
 ",pk_hackStoryStart2:继续,
@@ -37037,9 +37045,10 @@ PKHackStoryStartC,DialogOptionSelected,$option == pk_hackStoryStartC,"$option = 
 FireBest DialogOptionSelected",,,
 PKHackStoryStartD,DialogOptionSelected,$option == pk_hackStoryStartD,"$player.ethosLiar++
 $wasCalledLiar = true 0","
-非也，妄语者
+  非也，妄语者
 
-你是 $playerName",pk_hackStoryStart2:继续,
+  你是 $playerName
+",pk_hackStoryStart2:继续,
 PKHackStoryStart2,DialogOptionSelected,$option == pk_hackStoryStart2,FireAll PKHackStoryOptions,"你没法描述自己到底是怎么听见这些话的。它们仿佛并非由声音传递。你的上级军官们都不由得从空空如也的全息显示台后退了一步，瞪大了双眼，震惊得说不出话来。
 
 你的通讯军官和你交换了一个眼色，对，也听到了；不，也不知道那是什么。通讯军官将视线从空白的全息显示屏上移开并开始用数据平板遥测缓冲区数据。",,

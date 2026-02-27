@@ -11,7 +11,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 在战斗中该舰会积极迎击敌人并表现得如同战斗舰船一般。",提高船体结构值、装甲强度、以及幅能容量。,,graphics/hullmods/assault_package.png
 自动修复单元,autorepair,2,,,"engines, defensive, merc, standard",防御,7500,,,,3,6,9,15,data.hullmods.AutomatedRepairUnit,降低{%s}在战斗中修复受损武器及引擎的时间。,提高战斗中武器的维修速率。,将武器与引擎的修复时间降低至{%s}，且降低{%s}舰船过载持续时间。,graphics/hullmods/automated_repair_unit.png
 辅助推进器,auxiliarythrusters,1,,,"engines, merc, standard",引擎,5000,TRUE,,,4,8,12,20,data.hullmods.AuxiliaryThrusters,提高舰船{%s}机动性，如加速度/减速度/转向加速/转向角速度。,提高舰船的机动性。,"""零幅能加速"" 状态下的航速增益提高{%s}，且转向速度{%s}。",graphics/hullmods/auxilliary_thrusters.png
-弹道测距仪,ballistic_rangefinder,2,,,"offensive, merc, standard",武器,8000,,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.BallisticRangefinder,提高实弹槽位上中小型武器的射程。,提高实弹槽位上中小型武器的射程。,,graphics/hullmods/ballistic_rangefinder.png
+弹道测距仪,ballistic_rangefinder,2,,,"offensive, merc, standard",武器,8000,,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.BallisticRangefinder,<tooltip created in the script due to lots of highlighting>,提高实弹槽位上中小型武器的射程。,,graphics/hullmods/ballistic_rangefinder.png
 防爆气密门,blast_doors,0,,,"defensive, merc, standard",防御,2500,TRUE,,,4,8,12,20,data.hullmods.BlastDoors,"在各个要害部位加装坚固的密封门，提高{%s}船体结构值。
 
 降低 %s 战斗中因船体结构受损而造成的船员伤亡。",提高舰船结构值，降低船员伤亡。,将减免船员伤亡的效果提高至{%s}。,graphics/hullmods/blast_doors.png
@@ -53,7 +53,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 
 同时还将战备值 (CR) 在战斗中衰减的速度降低{%s}。",提高峰值时间，且降低战备值 (CR) 的衰减速率。,,graphics/hullmods/hardened_subsystems.png
 重型装甲,heavyarmor,0,,,"defensive, merc, standard",防御,2500,,,,8,15,20,40,data.hullmods.HeavyArmor,根据船体级别，提高{%s}/{%s}/{%s}/{%s}装甲。,提高装甲值。,降低舰船{%s}的机动性。,graphics/hullmods/heavy_armor.png
-高散射增幅器,high_scatter_amp,3,,,"offensive, merc, standard",武器,5000,,,,4,8,12,20,com.fs.starfarer.api.impl.hullmods.HighScatterAmp,降低光束武器的射程，并且使它们在对护盾造成伤害时产生硬幅能。,提高光束武器的伤害，还可对护盾造成硬幅能伤害，但降低其基础射程。,光束武器伤害额外提高{%s}。,graphics/hullmods/high_scatter_amp.png
+高散射增幅器,high_scatter_amp,3,,,"offensive, merc, standard",武器,5000,,,,4,8,12,20,com.fs.starfarer.api.impl.hullmods.HighScatterAmp,<tooltip created in the script due to sections>,提高光束武器的伤害，还可对护盾造成硬幅能伤害，但降低其基础射程。,光束武器伤害额外提高{%s}。,graphics/hullmods/high_scatter_amp.png
 整合点防御 AI,pointdefenseai,3,,,"defensive, merc, standard","武器, 防御",10000,,,,3,6,9,15,data.hullmods.IntegratedPointDefenseAI,给予所有点防御武器识别并忽略诱饵弹的能力。此外，无论战备处于何种水平，所有点防御武器均可保持最佳精准度。所有舰载武器对导弹造成的伤害提高{%s}。,点防御武器忽视热诱弹干扰，提高自动瞄准精度，对导弹造成更多伤害。,"所有小型非导弹且非打击型武器都将获得 ""点防御"" 武器特性，将自动向导弹开火，并受到点防御武器属性修正的影响。",graphics/hullmods/integrated_point_defense_ai.png
 #Point Defense Integration,pdintegration,3,,,"defensive, merc","Weapons, Defenses",10000,,,,12,15,18,24,com.fs.starfarer.api.impl.hullmods.PDIntegration,"Reduces the ordnance point cost of small point-defense weapons by %s. The cost reduction only affects weapons that have PD capability as a feature of the weapon itself, and not when it's gained through other means such as from a hullmod.
 

@@ -134,7 +134,7 @@ class CsvFile(DataFile):
                         self.translation_id_data[row_id][column] = s.translation
                 elif contains_chinese(self.translation_id_data[row_id][column]):
                     self.logger.warning(
-                        f'文件 {self.path} 中 {self.id_column_name}="{row_id}" 的行已被翻译，'
+                        f'key="{self.generate_string_key(row_id, column)}" 已被翻译，'
                         f'但更新的译文数据未翻译该词条，保持原始翻译不变'
                     )
             else:
