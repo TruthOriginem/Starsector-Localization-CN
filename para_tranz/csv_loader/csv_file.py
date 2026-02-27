@@ -166,7 +166,7 @@ class CsvFile(DataFile):
                         self.logger.warning(
                             f'key="{self.generate_string_key(row_id, col)}" 的词条中译文数据缺失了原文中的token {missing_tokens}，请检查'
                         )
-                    if translated_value and (
+                    if col in ('options', 'script') and translated_value and (
                         original_value.count('\n') != translated_value.count('\n')
                     ):
                         self.logger.warning(
