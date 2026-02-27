@@ -121,7 +121,7 @@
     {
         "key": "hull_mods.csv#advanced_ground_support$desc",
         "original": "Close support weapons and counter-measures for ground defenses. Increases the effective strength of planetary raids by %s, up to the total number of marines in the fleet.",
-        "translation": "配备近距离支援武器与地面防御对策。提高{%s}突袭殖民地的有效强度，该加成不会超过携带陆战队员的总人数。",
+        "translation": "针对地面防御工事配备了密接支援武器和专用反制措施。提高{%s}劫掠殖民地的有效强度，该加成不会超过携带陆战队员的总人数。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00088行"
     },
@@ -135,8 +135,8 @@
     {
         "key": "hull_mods.csv#advanced_ground_support$short",
         "original": "Improves effectiveness of raids.",
-        "translation": "提高突袭的效率。",
-        "stage": 5,
+        "translation": "提高劫掠的效率。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00088行"
     },
     {
@@ -625,7 +625,7 @@
     {
         "key": "hull_mods.csv#civgrade$name",
         "original": "Civilian-grade Hull",
-        "translation": "民用级舰体",
+        "translation": "民用级船体",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00078行"
     },
@@ -1745,7 +1745,7 @@
     {
         "key": "hull_mods.csv#ground_support$desc",
         "original": "Close support weapons and counter-measures for ground defenses. Increases the effective strength of planetary raids by %s, up to the total number of marines in the fleet.",
-        "translation": "针对地面防御工事配备了密接支援武器和专用反制措施。提高{%s}突袭殖民地的有效强度，该加成不会超过携带陆战队员的总人数。",
+        "translation": "针对地面防御工事配备了密接支援武器和专用反制措施。提高{%s}劫掠殖民地的有效强度，该加成不会超过携带陆战队员的总人数。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00087行"
     },
@@ -1759,8 +1759,8 @@
     {
         "key": "hull_mods.csv#ground_support$short",
         "original": "Improves effectiveness of raids.",
-        "translation": "提高突袭的效率。",
-        "stage": 5,
+        "translation": "提高劫掠的效率。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00087行"
     },
     {

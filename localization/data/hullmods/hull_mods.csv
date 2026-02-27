@@ -140,7 +140,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 打捞起重机,repair_gantry,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.campaign.RepairGantry,根据船体级别，提高{%s}/{%s}/{%s}/{%s}从废弃空间站、遗弃物、舰船残骸等打捞到的资源。只影响普通资源的回收，如燃料与补给，而蓝图等稀有物资将不受影响。此外，该效果在战后结算时仅有{%s}效率。,提高打捞收益。,,graphics/hullmods/repair_gantry.png
 相位力场,phasefield,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PhaseField,能长时间激活低水平相位场，使传感器截面降低{%s}。,降低舰队的传感器截面。,,graphics/hullmods/phase_field.png
 磁通分流,fluxshunt,,,,,,,,TRUE,,0,0,0,0,data.hullmods.FluxShunt,允许舰船以{%s}的正常耗散速率在护盾开启时耗散硬幅能。,允许舰船在展开护盾时耗散硬幅能。,,graphics/hullmods/flux_shunt.png
-民用级舰体,civgrade,,,,,,,,TRUE,,0,0,0,0,data.hullmods.CivGrade,提高{%s}传感器截面，降低{%s}传感器探测强度。,提高传感器截面，降低传感器探测强度。,,graphics/hullmods/civilian_grade.png
+民用级船体,civgrade,,,,,,,,TRUE,,0,0,0,0,data.hullmods.CivGrade,提高{%s}传感器截面，降低{%s}传感器探测强度。,提高传感器截面，降低传感器探测强度。,,graphics/hullmods/civilian_grade.png
 高维护需求,high_maintenance,,,,,,,,TRUE,,0,0,0,0,data.hullmods.HighMaintenance,提高{%s}的每月维护所需补给。,提高维护成本。,,graphics/hullmods/high_maintenance.png
 能量弹体同调器,coherer,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.EnergyBoltCoherer,<tooltip created in the script>,提高非光束能量武器的基础射程。,,graphics/hullmods/coherer.png
 权衡设计,design_compromises,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DesignCompromises,"这艘船的性能受限于相互矛盾的设计指标，多个尖端项目在设计周期后期才仓促整合，直接影响整体性能。
@@ -159,8 +159,8 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 驱动力场稳定器,drive_field_stabilizer,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DriveFieldStabilizer,"稳定舰队航行时的驱动泡，来提高{%s}的舰队最高航速。多个稳定器的效果可以累加。
 
 但提高{%s}传感器截面。",降低整支舰队的燃料消耗。,,graphics/hullmods/augmented_drive_field.png
-地面支援,ground_support,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.GroundSupport,针对地面防御工事配备了密接支援武器和专用反制措施。提高{%s}突袭殖民地的有效强度，该加成不会超过携带陆战队员的总人数。,提高突袭的效率。,,graphics/hullmods/ground_support.png
-进阶地面支援,advanced_ground_support,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.AdvancedGroundSupport,配备近距离支援武器与地面防御对策。提高{%s}突袭殖民地的有效强度，该加成不会超过携带陆战队员的总人数。,提高突袭的效率。,,graphics/hullmods/ground_support_adv.png
+地面支援,ground_support,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.GroundSupport,针对地面防御工事配备了密接支援武器和专用反制措施。提高{%s}劫掠殖民地的有效强度，该加成不会超过携带陆战队员的总人数。,提高劫掠的效率。,,graphics/hullmods/ground_support.png
+进阶地面支援,advanced_ground_support,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.AdvancedGroundSupport,针对地面防御工事配备了密接支援武器和专用反制措施。提高{%s}劫掠殖民地的有效强度，该加成不会超过携带陆战队员的总人数。,提高劫掠的效率。,,graphics/hullmods/ground_support_adv.png
 精密机械,delicate,,,,,,,,TRUE,,0,0,0,0,data.hullmods.DelicateMachinery,"舰载系统需要巨量维护，且无法长期在战斗下维持良好运转。
 
 当峰值时间耗尽后，战备值 (CR) 衰减的速率提高{%s}。",提高峰值时间耗尽后的战备值 (CR) 衰减速率。,,graphics/hullmods/delicate_machinery.png
