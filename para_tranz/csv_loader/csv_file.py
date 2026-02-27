@@ -154,70 +154,67 @@ class CsvFile(DataFile):
                     raise ValueError(
                         f'key="{self.generate_string_key(row_id, col)}" 的词条中译文数据包含中文引号，请移除后再保存'
                     )
-            # 针对 rules.csv 的特殊检查
-            if self.path.name == 'rules.csv':
-                # TODO: 此部分需要重构，以支持同时检测高亮文本在 text 和 option 中的覆盖情况
-                # 如果译文不为空
-                if translated_row['text']:
-                    # 检查译文是否包含原文里的每一个格式为 $var 的变量名
-                    for col, translated_value in translated_row.items():
-                        original_value = original_row[col]
-                        missing_tokens = rules_csv_find_missing_csv_tokens(
-                            original_value, translated_value
+            # 针对 rules.csv 的特殊检查（译文不为空时）
+            if self.path.name == 'rules.csv' and translated_row['text']:
+                # 逐列检查：$var token 完整性 和 原译文行数一致性
+                for col, translated_value in translated_row.items():
+                    original_value = original_row[col]
+                    missing_tokens = rules_csv_find_missing_csv_tokens(
+                        original_value, translated_value
+                    )
+                    if missing_tokens:
+                        self.logger.warning(
+                            f'key="{self.generate_string_key(row_id, col)}" 的词条中译文数据缺失了原文中的token {missing_tokens}，请检查'
                         )
-                        if missing_tokens:
-                            self.logger.warning(
-                                f'key="{self.generate_string_key(row_id, col)}" 的词条中译文数据缺失了原文中的token {missing_tokens}，请检查'
-                            )
-                        # 检查原文与译文行数是否一致
-                        if translated_value and (
-                            original_value.count('\n') != translated_value.count('\n')
-                        ):
-                            self.logger.warning(
-                                f'key="{self.generate_string_key(row_id, col)}" 的词条中原文行数'
-                                f'({original_value.count(chr(10)) + 1})与译文行数'
-                                f'({translated_value.count(chr(10)) + 1})不一致，请检查'
-                            )
-                    # 检查译文中的高亮目标是否存在，且被空格包围
-                    # SetTextHighlights 的目标可以出现在 text 或 options 任意一列中
-                    script = translated_row['script']
-                    highlights = rules_csv_extract_highlight_targets_from_script(script)
+                    if translated_value and (
+                        original_value.count('\n') != translated_value.count('\n')
+                    ):
+                        self.logger.warning(
+                            f'key="{self.generate_string_key(row_id, col)}" 的词条中原文行数'
+                            f'({original_value.count(chr(10)) + 1})与译文行数'
+                            f'({translated_value.count(chr(10)) + 1})不一致，请检查'
+                        )
+
+                # 高亮目标检查：存在性 + 包围字符合法性
+                # SetTextHighlights 的目标可以出现在 text 或 options 任意一列中
+                script = translated_row['script']
+                highlights = rules_csv_extract_highlight_targets_from_script(script)
+                if highlights:
+                    # $token 形式的高亮在原文中也不存在，说明是运行时变量，跳过静态检查
                     original_combined = (
                         original_row['text'] + '\n' + original_row.get('options', '')
                     )
-                    translated_combined = (
-                        translated_row['text']
-                        + '\n'
-                        + translated_row.get('options', '')
-                    )
-
-                    missing_highlights_original = {
-                        highlight
-                        for highlight in highlights
-                        if highlight.startswith('$')
-                        and highlight not in original_combined
+                    runtime_highlights = {
+                        h for h in highlights
+                        if h.startswith('$') and h not in original_combined
                     }
+                    checkable_highlights = highlights - runtime_highlights
+
+                    # 检查可验证的高亮目标是否出现在译文的 text 或 options 中
+                    translated_combined = (
+                        translated_row['text'] + '\n' + translated_row.get('options', '')
+                    )
                     missing_highlights = {
-                        highlight
-                        for highlight in highlights
-                        if highlight not in translated_combined
-                    } - missing_highlights_original
+                        h for h in checkable_highlights if h not in translated_combined
+                    }
                     if missing_highlights:
                         self.logger.warning(
                             f'key="{self.generate_string_key(row_id, "text")}" / "{self.generate_string_key(row_id, "options")}" 的译文数据中缺失了高亮命令目标 {missing_highlights}，请检查译文数据或script列内容(key="{self.generate_string_key(row_id, "script")}")'
                         )
 
-                    not_surrounded_highlights = (
-                        rules_csv_find_text_highlight_targets_adjacent_to_non_space(
-                            translated_combined, highlights
+                    # 检查各列中的高亮目标是否被合法字符包围
+                    for col, col_value in [
+                        ('text', translated_row['text']),
+                        ('options', translated_row.get('options', '')),
+                    ]:
+                        highlights_in_col = {h for h in checkable_highlights if h in col_value}
+                        not_surrounded = rules_csv_find_text_highlight_targets_adjacent_to_non_space(
+                            col_value, highlights_in_col
                         )
-                        - missing_highlights
-                        - missing_highlights_original
-                    )
-                    if not_surrounded_highlights:
-                        self.logger.warning(
-                            f'key="{self.generate_string_key(row_id, "text")}" / "{self.generate_string_key(row_id, "options")}" 的译文数据中高亮命令目标 {not_surrounded_highlights} 左右存在非英文标点和空格的字符，请检查'
-                        )
+                        if not_surrounded:
+                            self.logger.warning(
+                                f'key="{self.generate_string_key(row_id, col)}" 的译文数据中高亮命令目标 {not_surrounded} 左右存在非英文标点和空格的字符，请检查'
+                            )
         self.logger.info(
             f'校验 {relative_path(self.translation_path)} 中的译文数据完成'
         )

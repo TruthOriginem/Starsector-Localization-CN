@@ -73,48 +73,32 @@ def rules_csv_extract_highlight_targets_from_script(script: str) -> Set[str]:
     highlight_command_params = re.findall(REGEX_HIGHLIGHT_TARGET, script)
     highlights = set()
     for command, param in highlight_command_params:
-        for s in parse_only_quoted_strings(param):
+        for s in parse_highlight_params(param):
             # 去除尾部的英文标点（这些标点是句子的一部分，不属于高亮目标本身）
             highlights.add(s.rstrip('.,;:!?'))
     return highlights
 
 
-def parse_only_quoted_strings(input_text: str) -> List[str]:
+_REGEX_HIGHLIGHT_PARAM = re.compile(r'"((?:[^"\\]|\\.)*)"|\$[a-zA-Z0-9][a-zA-Z0-9_.]+[a-zA-Z0-9]')
+
+
+def parse_highlight_params(input_text: str) -> List[str]:
     """
-    Parses a string and extracts only the quoted parts as a list of strings.
+    从 Highlight / SetTextHighlights 命令的参数中提取高亮目标。
+    支持带引号的字符串（如 "word"）和 $token 形式的变量。
 
     Args:
-        input_text (str): The input string containing quoted and unquoted text.
+        input_text (str): 命令参数部分
 
     Returns:
-        list: A list of quoted strings.
+        List[str]: 提取到的高亮目标列表
     """
     result = []
-    current = []
-    in_quotes = False
-    escape = False
-
-    for char in input_text:
-        if escape:
-            # Add the escaped character to the current string
-            current.append(char)
-            escape = False
-        elif char == '\\':
-            # Mark the next character as escaped
-            escape = True
-        elif char == '"':
-            if in_quotes:
-                # End of quoted string
-                result.append(''.join(current))
-                current = []
-                in_quotes = False
-            else:
-                # Start of a new quoted string
-                in_quotes = True
-        elif in_quotes:
-            # Append characters within quotes
-            current.append(char)
-
+    for m in _REGEX_HIGHLIGHT_PARAM.finditer(input_text):
+        if m.group(1) is not None:
+            result.append(m.group(1).replace('\\"', '"'))
+        else:
+            result.append(m.group(0))
     return result
 
 
