@@ -11,7 +11,7 @@ from para_tranz.csv_loader.csv_util import (
     rules_csv_find_missing_csv_tokens,
     rules_csv_find_text_highlight_targets_adjacent_to_non_space,
 )
-from para_tranz.utils.config import (
+from para_tranz.config import (
     EXPORTED_STRING_CONTEXT_PREFIX,
     EXPORTED_STRING_CONTEXT_PREFIX_PREFIX,
     IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS,

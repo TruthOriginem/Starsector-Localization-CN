@@ -3,7 +3,7 @@ import json
 from dataclasses import dataclass
 from typing import Iterator, List, Optional, Set, Tuple, Union
 
-from para_tranz.utils.config import MAP_PATH
+from para_tranz.config import MAP_PATH
 from para_tranz.utils.util import SetEncoder, make_logger
 
 logger = make_logger('MappingLoader')

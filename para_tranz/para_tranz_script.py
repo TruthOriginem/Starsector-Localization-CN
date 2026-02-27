@@ -6,20 +6,20 @@ sys.path.append(dirname(dirname(abspath(__file__))))
 
 from para_tranz.csv_loader.csv_file import CsvFile
 from para_tranz.jar_loader.jar_file import JavaJarFile
+from para_tranz.config import ENABLED_LOADERS
 from para_tranz.utils.mapping import PARA_TRANZ_MAP
 from para_tranz.utils.mapping_generation import (
     generate_class_file_mapping_by_path,
     print_class_mapping_result,
 )
+from para_tranz.utils.paratranz_api import download_paratranz_export
 from para_tranz.utils.search import print_search_results, search_for_string_in_jar_files
 from para_tranz.utils.util import make_logger
 
 logger = make_logger('ParaTranzScript')
 
-# 选择要处理的文件类型
-# loaders = [JavaJarFile]
-# loaders = [CsvFile]
-loaders = [JavaJarFile, CsvFile]
+_LOADER_MAP = {'jar': JavaJarFile, 'csv': CsvFile}
+loaders = [_LOADER_MAP[name] for name in ENABLED_LOADERS if name in _LOADER_MAP]
 
 
 def game_to_paratranz() -> None:
@@ -42,6 +42,13 @@ def paratranz_to_game_new_version() -> None:
         for file in Loader.load_files_from_config():
             file.update_from_json(version_migration=True)
             file.save_file()
+
+
+def download_and_import_from_paratranz() -> None:
+    success = download_paratranz_export()
+    if success:
+        paratranz_to_game()
+        game_to_paratranz()
 
 
 def gen_mapping_by_class_path(class_path: str | None = None) -> None:
@@ -84,13 +91,13 @@ def mian() -> None:
         print('请选择您要进行的操作：')
         print('1 - 从原始(original)和汉化(localization)文件导出 ParaTranz 词条')
         print('2 - 将 ParaTranz 词条写回汉化(localization)文件')
-        # TODO: jar版本迁移还没写好
-        # print('3 - 将 ParaTranz 词条写回新版本游戏的汉化(localization)文件（版本迁移时使用，主要针对jar文件）')
+        print('3 - 从 ParaTranz 平台下载最新导出并写回汉化文件（需要在 .env 中配置 API Key）')
         print(
             '4 - 对指定类文件，生成包含所有string的类文件映射项(用于添加新类到para_tranz_map.json)'
         )
         print('5 - 在所有jar文件中查找指定原文字符串')
         print('6 - 对 para_tranz_map.json 进行格式化（去重、排序）')
+        # 7 - jar版本迁移（未实现）
         option = input('请输入选项数字：')
 
     non_interactive = len(sys.argv) > 1
@@ -102,9 +109,9 @@ def mian() -> None:
         elif option == '2':
             paratranz_to_game()
             break
-        # elif option == '3':
-        #     paratranz_to_game_new_version()
-        #     break
+        elif option == '3':
+            download_and_import_from_paratranz()
+            break
         elif option == '4':
             if non_interactive:
                 gen_mapping_by_class_path(arg2)

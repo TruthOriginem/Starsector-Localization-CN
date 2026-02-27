@@ -9,7 +9,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set, Union
 
-from para_tranz.utils.config import (
+from para_tranz.config import (
     LOG_LEVEL,
     ORIGINAL_PATH,
     OVERRIDE_STRING_STATUS,

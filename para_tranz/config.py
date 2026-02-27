@@ -1,16 +1,31 @@
 import logging
+import os
 from pathlib import Path
+
+# 从项目根目录的 .env 文件中加载环境变量（可选）
+_env_path = Path(__file__).parent.parent / '.env'
+if _env_path.exists():
+    with open(_env_path, encoding='utf-8') as _f:
+        for _line in _f:
+            _line = _line.strip()
+            if _line and not _line.startswith('#') and '=' in _line:
+                _key, _, _value = _line.partition('=')
+                os.environ.setdefault(_key.strip(), _value.strip())
 
 # [日志输出]
 LOG_LEVEL = logging.INFO
 
 # [路径配置]
 # 设置游戏原文，译文和Paratranz数据文件路径
-PROJECT_DIRECTORY = Path(__file__).parent.parent.parent
+PROJECT_DIRECTORY = Path(__file__).parent.parent
 ORIGINAL_PATH = PROJECT_DIRECTORY / 'original'
 TRANSLATION_PATH = PROJECT_DIRECTORY / 'localization'
 PARA_TRANZ_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'output'
 MAP_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'para_tranz_map.json'
+
+# [处理的文件类型]
+# 可选：'jar'、'csv'，或两者都包含
+ENABLED_LOADERS = ['jar', 'csv']
 
 # [通用配置]
 # 在导出字符串时是否覆盖已导出字符串的翻译stage状态
@@ -36,3 +51,8 @@ UPDATE_STRING_ALLOW_EMPTY_TRANSLATION = True
 # [csv_loader 配置]
 # 在将译文写回csv文件时，是否删除原文为空的译文
 REMOVE_TRANSLATION_WHEN_ORIGINAL_IS_EMPTY = True
+
+# [ParaTranz 平台配置]
+# 从 .env 文件中读取，详见 .env.example
+PARATRANZ_PROJECT_ID: int = int(os.environ.get('PARATRANZ_PROJECT_ID', 0))
+PARATRANZ_API_KEY: str = os.environ.get('PARATRANZ_API_KEY', '')

@@ -4,7 +4,7 @@ from collections import defaultdict
 from dataclasses import asdict
 
 from para_tranz.jar_loader.jar_file import JavaJarFile
-from para_tranz.utils.config import PARA_TRANZ_PATH, PROJECT_DIRECTORY
+from para_tranz.config import PARA_TRANZ_PATH, PROJECT_DIRECTORY
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, JarMapItem
 from para_tranz.utils.util import contains_chinese, make_logger
 
