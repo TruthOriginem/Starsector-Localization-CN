@@ -129,3 +129,26 @@ def generate_class_file_mapping_by_path(
     }
 
     return jar_item, generated_class_map_item, existing_class_item, extra_ref_strings
+
+
+def print_class_mapping_result(
+    result: Optional[Tuple[Optional[JarMapItem], ClassFileMapItem, Optional[ClassFileMapItem], Set[str]]]
+) -> None:
+    """打印 generate_class_file_mapping_by_path 的结果"""
+    if not result:
+        return
+    jar_item, class_item, existing_class_item, extra_ref_strings = result
+    print('所属jar文件：', jar_item.path if jar_item else '未知')
+    print('以下是生成的类文件映射项：')
+    print(class_item.as_json())
+    if existing_class_item:
+        print(
+            f'以下是与当前存在的映射项的对比'
+            f'（{colorize("绿色", GREEN)}=已包含  '
+            f'{colorize("红色", RED)}=已排除  '
+            f'无色=未包含  '
+            f'{colorize("黄色背景", BG_YELLOW)}=同时被非string属性引用，无法自动写回）：'
+        )
+        print(generate_class_mapping_diff_string(existing_class_item, class_item, extra_ref_strings))
+    else:
+        print('此类未包含在当前映射表中')

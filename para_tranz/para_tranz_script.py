@@ -9,10 +9,10 @@ from para_tranz.jar_loader.jar_file import JavaJarFile
 from para_tranz.utils.mapping import PARA_TRANZ_MAP
 from para_tranz.utils.mapping_generation import (
     generate_class_file_mapping_by_path,
-    generate_class_mapping_diff_string,
+    print_class_mapping_result,
 )
-from para_tranz.utils.search import search_for_string_in_jar_files
-from para_tranz.utils.util import BG_YELLOW, GREEN, RED, colorize, make_logger
+from para_tranz.utils.search import print_search_results, search_for_string_in_jar_files
+from para_tranz.utils.util import make_logger
 
 logger = make_logger('ParaTranzScript')
 
@@ -54,37 +54,14 @@ def gen_mapping_by_class_path(class_path: str | None = None) -> None:
     else:
         print(f'类文件路径：{class_path}')
     result = generate_class_file_mapping_by_path(class_path)
-
-    if result:
-        jar_item, class_item, existing_class_item, extra_ref_strings = result
-        print('所属jar文件：', jar_item.path if jar_item else '未知')
-        print('以下是生成的类文件映射项：')
-        print(class_item.as_json())
-
-        # 如果在 para_tranz_map.json 中找到了已有的类文件映射项，那么就可以生成对比信息
-        if existing_class_item:
-            print(
-                f'以下是与当前存在的映射项的对比'
-                f'（{colorize("绿色", GREEN)}=已包含  '
-                f'{colorize("红色", RED)}=已排除  '
-                f'无色=未包含  '
-                f'{colorize("黄色背景", BG_YELLOW)}=同时被非string属性引用，无法自动写回）：'
-            )
-            print(
-                generate_class_mapping_diff_string(
-                    existing_class_item, class_item, extra_ref_strings
-                )
-            )
-        else:
-            print('此类未包含在当前映射表中')
-
+    print_class_mapping_result(result)
     logger.info('类文件映射项生成完成')
 
 
-def dedup_and_sort_map() -> None:
-    merged = PARA_TRANZ_MAP.dedup_and_sort()
+def format_map() -> None:
+    merged = PARA_TRANZ_MAP.format()
     PARA_TRANZ_MAP.save()
-    logger.info(f'map 去重排序完成，合并了 {merged} 个重复类条目')
+    logger.info(f'map 格式化完成，合并了 {merged} 个重复类条目')
 
 
 def search_string_in_jar_files(pattern: str | None = None) -> None:
@@ -92,15 +69,8 @@ def search_string_in_jar_files(pattern: str | None = None) -> None:
         pattern = input('请输入要查找的字符串：')
     else:
         print(f'查找字符串：{pattern}')
-    result = search_for_string_in_jar_files(pattern.strip())
-
-    if not result:
-        print('未找到任何结果')
-        return
-    else:
-        for r in result:
-            print(r)
-
+    results = search_for_string_in_jar_files(pattern.strip())
+    print_search_results(results)
     logger.info('字符串查找完成')
 
 
@@ -120,7 +90,7 @@ def mian() -> None:
             '4 - 对指定类文件，生成包含所有string的类文件映射项(用于添加新类到para_tranz_map.json)'
         )
         print('5 - 在所有jar文件中查找指定原文字符串')
-        print('6 - 对 para_tranz_map.json 进行去重和排序')
+        print('6 - 对 para_tranz_map.json 进行格式化（去重、排序）')
         option = input('请输入选项数字：')
 
     non_interactive = len(sys.argv) > 1
@@ -150,7 +120,7 @@ def mian() -> None:
                     search_string_in_jar_files()
             break
         elif option == '6':
-            dedup_and_sort_map()
+            format_map()
             break
         else:
             if non_interactive:
