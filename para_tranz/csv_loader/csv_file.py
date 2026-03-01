@@ -78,7 +78,8 @@ class CsvFile(DataFile):
                 # 如果已翻译，则使用译文覆盖
                 if row_id in self.translation_id_data:
                     translation = self.translation_id_data[row_id][col]
-                    stage = 1
+                    if contains_chinese(translation) or not contains_english(original):
+                        stage = 1
                 # 如果原文不包含英文，则设定为已翻译
                 elif not contains_english(original):
                     stage = 1
