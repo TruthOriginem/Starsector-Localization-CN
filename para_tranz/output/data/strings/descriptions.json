@@ -275,8 +275,8 @@
     {
         "key": "descriptions.csv#('arid', 'PLANET')$text1",
         "original": "An inhospitable, dry world that has a much smaller percentage of water in its atmosphere than the terran standard. Nonetheless, an atmosphere and magnetic field protect the surface from stellar radiation permitting a small biosphere to slowly eke out an existence here.",
-        "translation": "不宜居住的干旱世界，大气中的含水量远低于类地行星标准。尽管如此，适宜的大气和磁场使其地表免受星际辐射的影响，使一个小型生物圈在能灭绝的边缘上苟延残喘。",
-        "stage": 5,
+        "translation": "一颗不宜居住的干旱星球，大气中的含水量远低于类地行星标准。尽管如此，适宜的大气和磁场使其地表免受星际辐射的影响，使一个小型生物圈在能灭绝的边缘上苟延残喘。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00246行"
     },
     {
@@ -492,7 +492,7 @@
     {
         "key": "descriptions.csv#('barren-bombarded', 'PLANET')$text1",
         "original": "A lifeless rocky world, the battered surface tells an aeons-long story of intermittent meteor bombardment. What atmosphere there is clings to the scarred crust in near-vacuum. There is no significant magnetic field or tectonic activity. Deep regolith prevails, crossed by lava channels and spotted by ancient lava seas formed by especially large impacts.",
-        "translation": "没有生命迹象的岩质星球，满目疮痍的地表是它受陨石洗礼亿万年的见证。其紧贴着地表的大气稀薄得如同无物，因为没有显著的地磁场或地质运动。熔岩将布满深风化层的大地切开，并汇聚到远古留下的巨大陨石坑里，形成规模宏大的岩浆海洋。",
+        "translation": "一颗没有生命迹象的岩质星球，满目疮痍的地表是它受陨石洗礼亿万年的见证。其紧贴着地表的大气稀薄得如同无物，因为没有显著的地磁场或地质运动。熔岩将布满深风化层的大地切开，并汇聚到远古留下的巨大陨石坑里，形成规模宏大的岩浆海洋。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00332行"
     },
@@ -506,8 +506,8 @@
     {
         "key": "descriptions.csv#('barren-desert', 'PLANET')$text1",
         "original": "A deathly dry world, the surface exhibits the warm hue of oxidized iron compounds. A thin atmosphere prevails on worlds of this class, the predominant carbon dioxide stirred occasionally into planet-wide dust storms. Icecaps of atmospheric CO2 may form and sublime with the turn of the seasons.",
-        "translation": "表面呈现出氧化铁般暖色调的死亡世界。其大气层非常稀薄，主要蕴含的二氧化碳偶尔会搅动成席卷整颗行星的大型沙尘暴。这些大气中的二氧化碳还会将随着季节温度变化而凝成冰盖或直接升华。",
-        "stage": 5,
+        "translation": "一颗死寂的干旱星球，表面呈现出氧化铁化合物带来的暖色调。其大气层非常稀薄，主要蕴含的二氧化碳偶尔会搅动成席卷整颗行星的大型沙尘暴。这些大气中的二氧化碳还会随着季节温度变化而凝成冰盖或直接升华。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00245行"
     },
     {
@@ -2389,7 +2389,7 @@
     {
         "key": "descriptions.csv#('gate_hauler1', 'GALLERY')$text2",
         "original": "A Leviathan from out of time, familiar at once from its depictions in the post-Domain Persean Sector. The magisterial force hushes and humbles officers and crew. It makes them reverent, as if they found themselves before the corpse of a thunderous, cruel god who once ruled the skies.\n\nTo awaken it, to touch the divine, must fall somewhere between sacrilege and sanctification.",
-        "translation": "一头来自过去的巨兽，其模样与后 人之领 时代 英仙座星域 文献中的描绘如出一辙。它身上那股威严磅礴的力量，使军官和船员们顷刻间变得肃穆，谦卑，虔诚，仿佛他们站在一位曾经统治天空的雷厉神明的残像之前。\n\n想要去唤醒祂，一窥那种神性，就必须投身于那亵渎与神圣的模糊界限。 ",
+        "translation": "一头来自过去的巨兽，其模样与后 人之领 时代 英仙座星域 文献中的描绘如出一辙。它身上那股威严磅礴的力量，使军官和船员们顷刻间变得肃穆，谦卑，虔诚，仿佛他们站在一位曾经统治天空的雷厉神明的残像之前。\n\n想要去唤醒它，一窥那种神性，就必须投身于那亵渎与神圣的模糊界限。 ",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00683行"
     },
@@ -2830,7 +2830,7 @@
     {
         "key": "descriptions.csv#('hil', 'WEAPON')$text1",
         "original": "A long-range, high damage beam weapon, often mounted on support ships, or ships that need anti-armor capability on a budget.\n\nThe High Intensity Laser is a powerhouse weapon that has an energy rating well beyond the giga-watt range. To produce such power for an extended period of time, the design relies on a built-in fusion power core. This core still requires an external actuator, a role filled by a ship's reactor when firing commences. \n\nThree meticulously calibrated lens assemblies guide photons within the ignition unit, requiring seconds to build up the energy necessary to maintain a coherent beam. The gain medium is a two-staged gas-solid which is q-switched and provides a potent particle stream that can obliterate unsuspecting targets in seconds.\n\nThe extreme range at which targets can be tracked and destroyed makes the HIL excel in safely providing close support to friendly ships that are engaged in a melee. It is a favored weapon of captains that can manage the flux cost associated with operating it.",
-        "translation": "这种射程远伤害高的激光武器，常被安装在那些需要高效反装甲武器的舰船或者火力支援舰上。\n\n高强度激光是一种威力巨大的能量武器，拥有一个能量密度超过千兆瓦级的能量源。为了长时间提供如此巨大的能量，而设计了一个内置的聚变能源核心。尽管如此，该核心依旧需要一套外部的控制系统与在开始攻击时从舰船反应堆提供额外能量的管线。\n\n三组高精度透镜将光子聚焦到点火单元上，并在数秒内充入能量以形成相干光束。高强度激光的增益介质是二阶气-固态物质，它们能形成 Q开关，并产生使目标在数秒内消失的强大粒子流。\n\n由于极远的锁定距离与射程，使高强度激光能在确保安全的前提下为正在近身鏖战的友军舰船提供密接支援。而那些有能力在使用它的同时控制好幅能的舰长们则很喜爱这个玩意。",
+        "translation": "这种射程远伤害高的激光武器，常被安装在那些需要高效反装甲武器的舰船或者火力支援舰上。\n\n高强度激光是一种威力巨大的能量武器，拥有一个能量密度超过千兆瓦级的能量源。为了长时间提供如此巨大的能量，该武器依赖于内置的聚变能源核心。尽管如此，该核心依旧需要一套外部的控制系统与在开始攻击时从舰船反应堆提供额外能量的管线。\n\n三组高精度透镜将光子聚焦到点火单元上，并在数秒内充入能量以形成相干光束。高强度激光的增益介质是二阶气-固态物质，它们能形成 Q开关，并产生使目标在数秒内消失的强大粒子流。\n\n由于极远的锁定距离与射程，使高强度激光能在确保安全的前提下为正在近身鏖战的友军舰船提供密接支援。而那些有能力在使用它的同时控制好幅能的舰长们则很喜爱这个玩意。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00074行"
     },
@@ -2998,7 +2998,7 @@
     {
         "key": "descriptions.csv#('inactive_gate', 'CUSTOM')$text1",
         "original": "A silent ring of adamantine material, derelict of a former age.",
-        "translation": "一座由坚固材料所制成，并沉寂已久的环状星门，是来自上个世代的遗迹。",
+        "translation": "一座沉寂已久的环状结构，由坚固的材料制成，是来自上个时代的遗迹。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00411行"
     },
@@ -3579,8 +3579,8 @@
     {
         "key": "descriptions.csv#('mairaath_station2', 'CUSTOM')$text3",
         "original": "The damage wrought on this station is obvious from afar, and only more appalling close-in. A brief radiation scan gives alarmingly hot readings, but the refugees, desperates, and bandits who call this station home seem to have more timely concerns.",
-        "translation": "这座空间站所遭受的损坏即使在远处也清晰可见，靠近后所见的景观则更令人震撼。扫描显示其仍散发着强烈辐射，但居住于此的难民、疯子与强盗们往往有更多其它近忧要去担心。",
-        "stage": 5,
+        "translation": "这座空间站受损的惨状在远处就清晰可见，而靠近后只会发现实际情况更加引人入胜。扫描显示其仍散发着强烈辐射，但居住于此的难民、疯子与强盗们似乎有更多其它近忧要去担心。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00481行"
     },
     {

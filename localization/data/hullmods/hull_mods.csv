@@ -149,7 +149,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 
 实弹武器射程缩短{%s}，导弹武器射速降低{%s}，能量武器的幅能输出增加{%s}。
 
-不过也有可取之处：配备了更多的纳米锻炉产能，即便舰船本身已配备一个战机甲板，仍能额外加装{%s}个，让甲板总数达到{%s}个。",减少导弹与实弹武器射程，并降低幅能耗散效率 / 幅能容量。,,graphics/hullmods/design_compromises.png
+不过也有可取之处：配备了更多的纳米锻炉产能，即便舰船本身已配备一个战机甲板，仍能额外加装{%s}船插，从而使甲板总数达到{%s}个。",减少导弹与实弹武器射程，并降低幅能耗散效率 / 幅能容量。,,graphics/hullmods/design_compromises.png
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
@@ -193,7 +193,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 
 提高{%s}战斗中因船体结构受损而造成的船员伤亡。降低{%s}舰船基础幅能耗散，降低{%s}在战斗中修复受损武器及引擎的速率。",降低舰船性能。,,graphics/hullmods/special_modifications.png
 庞然大物,vastbulk,,,,,,,,TRUE,,0,0,0,0,data.hullmods.VastBulk,其巨大的主体结构几乎可以承受所有常规伤害而不被摧毁。,,,graphics/hullmods/vast_bulk.png
-绕轴旋转,axialrotation,,,,,,,,TRUE,,0,0,0,0,data.hullmods.AxialRotation,这个结构一直绕着它的中心轴旋转。,,,graphics/hullmods/axial_rotation.png
+绕轴旋转,axialrotation,,,,,,,,TRUE,,0,0,0,0,data.hullmods.AxialRotation,该结构一直绕着其中心轴旋转。,,,graphics/hullmods/axial_rotation.png
 固定旋转,anchorrotation,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.AnchorRotation,该结构围绕着固定锚点进行旋转，仅适用于空间站模块。,,,graphics/hullmods/axial_rotation.png
 爆炸减免,reduced_explosion,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.ReducedExplosion,降低自爆时的爆炸半径与伤害。,,,graphics/hullmods/reduced_explosion.png
 总是分离,always_detaches,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.AlwaysDetaches,当被破坏时，总是会从主体上分离。,,,graphics/hullmods/detach_always.png

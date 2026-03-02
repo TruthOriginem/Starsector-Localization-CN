@@ -499,8 +499,8 @@
     {
         "key": "hull_mods.csv#axialrotation$desc",
         "original": "This structure constantly rotates around its axis.",
-        "translation": "这个结构一直绕着它的中心轴旋转。",
-        "stage": 5,
+        "translation": "该结构一直绕着其中心轴旋转。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00103行"
     },
     {
@@ -1017,7 +1017,7 @@
     {
         "key": "hull_mods.csv#design_compromises$desc",
         "original": "The ship's performance suffers from competing design priorities, with multiple bleeding-edge projects integrated too late in the design cycle.\n\nThe ship's flux dissipation and capacity, even the nominal base values, are reduced by %s.\n\nThe range of ballistic weapons is reduced by %s, the rate of fire of missile weapons is reduced by %s, and the flux generation of energy weapons is increased by %s.\n\nOn the plus side, extra nanoforge capacity can be brought online more easily, allowing the installation of a %s despite the ship already having a fighter bay, increasing the number of operational fighter bays to %s.",
-        "translation": "这艘船的性能受限于相互矛盾的设计指标，多个尖端项目在设计周期后期才仓促整合，直接影响整体性能。\n\n舰船的幅能耗散效率与幅能容量因此下降{%s}。\n\n实弹武器射程缩短{%s}，导弹武器射速降低{%s}，能量武器的幅能输出增加{%s}。\n\n不过也有可取之处：配备了更多的纳米锻炉产能，即便舰船本身已配备一个战机甲板，仍能额外加装{%s}个，让甲板总数达到{%s}个。",
+        "translation": "这艘船的性能受限于相互矛盾的设计指标，多个尖端项目在设计周期后期才仓促整合，直接影响整体性能。\n\n舰船的幅能耗散效率与幅能容量因此下降{%s}。\n\n实弹武器射程缩短{%s}，导弹武器射速降低{%s}，能量武器的幅能输出增加{%s}。\n\n不过也有可取之处：配备了更多的纳米锻炉产能，即便舰船本身已配备一个战机甲板，仍能额外加装{%s}船插，从而使甲板总数达到{%s}个。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00081行"
     },
