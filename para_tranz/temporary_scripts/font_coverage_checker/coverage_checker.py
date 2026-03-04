@@ -6,7 +6,7 @@ from typing import Set
 
 from para_tranz.csv_loader.csv_file import CsvFile
 from para_tranz.jar_loader.jar_file import JavaJarFile
-from para_tranz.utils.config import PROJECT_DIRECTORY
+from para_tranz.config import PROJECT_DIRECTORY
 from para_tranz.utils.util import make_logger
 
 sys.path.append(dirname(dirname(dirname(dirname(abspath(__file__))))))

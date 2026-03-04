@@ -3,7 +3,7 @@ from pathlib import Path, PurePosixPath
 from typing import Dict, List, Optional, Set, Tuple
 
 from para_tranz.jar_loader.constant_table import ConstantTable, Utf8Constant
-from para_tranz.utils.config import (
+from para_tranz.config import (
     EXPORTED_STRING_CONTEXT_PREFIX,
     EXPORTED_STRING_CONTEXT_PREFIX_PREFIX,
     IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS,

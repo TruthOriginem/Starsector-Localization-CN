@@ -79,7 +79,7 @@ name,id,tier,rarity,base value,range,damage/second,damage/shot,emp,impact,turn r
 PD 激光炮,pdlaser,1,,200,500,75,,,0,100,3,,,,ENERGY,,40,0,0.25,,,,,,,2400,,,,,,,PD,"pd7, beam7, SR, hightech_bp, midline_bp, merc, ind",,,,点防御,,,,,,,,,,17
 战术激光炮,taclaser,1,,200,1000,75,,,0,20,4,,,,ENERGY,,60,0.1,0.1,,,,,,,2400,,,,,,,,"beam9, LR, hightech_bp, midline_bp, merc, ind",,,,通用,,,,,,,,,,18
 离子炮,ioncannon,2,,500,500,,25,400,0,40,6,,,,ENERGY,30,,0.5,0,,,,,,,,1000,,,,,,,"energy8, hightech_bp, merc, ind",,,,瘫痪,,,,,命中船体或装甲时，有{%s}的概率产生打击武器与引擎的电弧，造成该武器命中目标时等值的额外伤害。,25%,,,,19
-"离子炮 (高延迟, 战机型)",ioncannon_fighter,2,,500,500,,25,400,0,40,6,,,,ENERGY,30,,0.5,0.5,,,,,,,,1000,,,,,,SYSTEM,"energy8, show_in_codex",,,,瘫痪 (战机型),,,,,命中船体或装甲时，有{%s}的概率产生打击武器与引擎的电弧，造成该武器命中目标时等值的额外伤害。,,,,,19.1
+"离子炮 (高延迟, 战机型)",ioncannon_fighter,2,,500,500,,25,400,0,40,6,,,,ENERGY,30,,0.5,0.5,,,,,,,,1000,,,,,,SYSTEM,"energy8, show_in_codex",,,,瘫痪 (战机型),,,,,命中船体或装甲时，有 %s 的概率产生打击武器与引擎的电弧，造成该武器命中目标时等值的额外伤害。,,,,,19.1
 IR 脉冲激光炮,irpulse,1,,250,500,,50,,0,50,5,,,,ENERGY,40,,0.333333,0,,,,,,,,1000,,,,,,,"energy8, hightech_bp, merc, ind",,,,通用,,,,,,,,,,19.25
 "IR 脉冲激光炮 (高延迟, 战机型)",irpulse_fighter,1,,250,500,,50,,0,50,5,,,,ENERGY,50,,0.333333,0.333333,,,,,,,,1000,,,,,,SYSTEM,"energy8, show_in_codex",,,,通用 (战机型),,,,,,,,,,19.3
 LR PD 激光炮,lrpdlaser,2,,400,800,50,,,0,100,4,,,,ENERGY,,30,0,0.25,,,,,,,3600,,,,,,,PD,"pd7, beam5, hightech_bp, midline_bp, merc, ind",,,,点防御,,,,,,,,,,19.5

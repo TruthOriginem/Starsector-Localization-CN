@@ -95,3 +95,12 @@ def search_for_string_in_jar_files(pattern: str) -> List[StringSearchResult]:
 
     logger.info(f'查找到 {len(results)} 个结果')
     return list(sorted(results, key=lambda x: (x.jar_name, x.class_path, x.string)))
+
+
+def print_search_results(results: List[StringSearchResult]) -> None:
+    """打印 search_for_string_in_jar_files 的结果"""
+    if not results:
+        print('未找到任何结果')
+    else:
+        for r in results:
+            print(r)

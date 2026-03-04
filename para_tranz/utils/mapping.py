@@ -3,7 +3,7 @@ import json
 from dataclasses import dataclass
 from typing import Iterator, List, Optional, Set, Tuple, Union
 
-from para_tranz.utils.config import MAP_PATH
+from para_tranz.config import MAP_PATH
 from para_tranz.utils.util import SetEncoder, make_logger
 
 logger = make_logger('MappingLoader')
@@ -137,7 +137,7 @@ class ParaTranzMap:
         with open(MAP_PATH, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2, cls=SetEncoder)
 
-    def dedup_and_sort(self) -> int:
+    def format(self) -> int:
         """对所有 jar 条目的类文件列表去重（合并同路径条目）并按路径排序。
         include_strings/exclude_strings 为 set，已自动去重；保存时 SetEncoder 会排序。
         返回合并掉的重复类条目数量。"""

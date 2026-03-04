@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import List, Optional, Set, Union
 
 from para_tranz.jar_loader.class_file import JavaClassFile
-from para_tranz.utils.config import (
+from para_tranz.config import (
     EXPORTED_STRING_CONTEXT_PREFIX_PREFIX,
     IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS,
     ORIGINAL_PATH,

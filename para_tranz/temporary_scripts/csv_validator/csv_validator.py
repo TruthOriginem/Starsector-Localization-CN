@@ -7,7 +7,7 @@ from typing import List, Union
 
 sys.path.append(dirname(dirname(dirname(dirname(abspath(__file__))))))
 
-from para_tranz.utils.config import TRANSLATION_PATH
+from para_tranz.config import TRANSLATION_PATH
 
 
 def validate_csv(file_path):

@@ -3,7 +3,7 @@ import re
 from pathlib import Path
 from typing import List, Tuple
 
-from para_tranz.utils.config import PARA_TRANZ_PATH
+from para_tranz.config import PARA_TRANZ_PATH
 from para_tranz.utils.util import DataFile, String, make_logger
 
 logger = make_logger('StringFormatter')

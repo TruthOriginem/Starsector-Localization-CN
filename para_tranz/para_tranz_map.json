@@ -110,7 +110,8 @@
     "text_column_names": [
       "name",
       "designation",
-      "tech/manufacturer"
+      "tech/manufacturer",
+      "logistics n/a reason"
     ]
   },
   {
@@ -6783,7 +6784,6 @@
           ") and wait for your ships to secure the objectives.",
           ", but don't do this yet.)",
           ".",
-          "Excellent. Some enemies are arriving in the battlespace - you should encounter them shortly!\n\nThe tutorial will resume once both enemy ships are in sight.",  
           "... and press the \"Transfer Command\" button, then wait for the shuttle pod to take you to the new flagship.",
           "... and right-click on the Comm Relay.",
           "... and select \"Avoid\" from the list of available assignments.",
@@ -6799,6 +6799,7 @@
           "ESCAPE",
           "Eliminate",
           "Enemy ships in sight!\n\nLet's give a couple of orders to make the battle go smoothly for your side.",
+          "Excellent. Some enemies are arriving in the battlespace - you should encounter them shortly!\n\nThe tutorial will resume once both enemy ships are in sight.",
           "Go ahead, try it out - press the \"Show Video Feed\" button.",
           "Good. Now, let's create some assignments for our ships to carry out.",
           "Good. Now, let's order our ships to focus on the enemy destroyer.",
@@ -7304,7 +7305,6 @@
         "path": "com/fs/starfarer/ui/impl/N$1.class",
         "include_strings": [
           " day ago",
-          "Refitting a ship will temporarily decrease its CR based on the number of ordnance points changed. The new CR value - should the refit be carried out - is indicated by the dimmed portion of the CR bar. \n\nUsing unspent ordnance points will not bring CR down into malfunction range, and refitting at a port will not reduce CR at all.\n",
           " days ago",
           "CR is holding at below the maximum value, due to the crew being under strength.",
           "Combat Readiness",
@@ -7314,6 +7314,7 @@
           "It is recovering %s CR per day.",
           "None",
           "Recent events affecting CR:",
+          "Refitting a ship will temporarily decrease its CR based on the number of ordnance points changed. The new CR value - should the refit be carried out - is indicated by the dimmed portion of the CR bar. \n\nUsing unspent ordnance points will not bring CR down into malfunction range, and refitting at a port will not reduce CR at all.\n",
           "Repairs suspended - CR holding at its current value.",
           "Run Simulation",
           "The current CR is %s.",
@@ -15227,6 +15228,7 @@
           "You've recovered the data archive of the Academy's previous Provost, Tomas Kallichore, which contains the results of failed gate activation experiments.",
           "can be leveraged to compel his cooperation.",
           "on ",
+          "on the ",
           "standing off with Port Tse Station",
           "storage unit.",
           "will prove irresistible."
@@ -16266,6 +16268,15 @@
         "include_strings": [
           "Continue",
           "You contact the relevant parties and drop off the cargo at the agreed-upon dockside locations."
+        ],
+        "exclude_strings": []
+      },
+      {
+        "path": "com/fs/starfarer/api/impl/campaign/rulecmd/missions/GateCMD$1.class",
+        "include_strings": [
+          "    Fuel available:",
+          "    Fuel required:",
+          " - "
         ],
         "exclude_strings": []
       },
@@ -19777,7 +19788,8 @@
           "UNKNOWN ENTRY",
           "Universal",
           "Warships",
-          "Weapons"
+          "Weapons",
+          "_Energy"
         ],
         "exclude_strings": []
       },

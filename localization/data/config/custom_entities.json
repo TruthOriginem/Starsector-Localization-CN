@@ -162,10 +162,10 @@
 		"renderCircleIndicatorSelectionFlash":true,
 	},
 	"generic_probe":{
-		"defaultName":"探针", # used if name=null in addCustomEntity()
-		"nameInText":"探针",
-		"shortName":"探针",
-		"aOrAn":"一处",
+		"defaultName":"探测器", # used if name=null in addCustomEntity()
+		"nameInText":"探测器",
+		"shortName":"探测器",
+		"aOrAn":"一颗",
 		"isOrAre":"可能",
 		"detectionRange":2000, # must be >0 for discoverable/discoveryXP to be used
 		"discoverable":true,
@@ -223,10 +223,10 @@
 	},
 		
 	"generic_probe_active":{
-		"defaultName":"探针", # used if name=null in addCustomEntity()
-		"nameInText":"探针",
-		"shortName":"探针",
-		"aOrAn":"一处",
+		"defaultName":"探测器", # used if name=null in addCustomEntity()
+		"nameInText":"探测器",
+		"shortName":"探测器",
+		"aOrAn":"一颗",
 		"isOrAre":"可能",
 		#"detectionRange":2000, # must be >0 for discoverable/discoveryXP to be used
 		#"discoverable":true,

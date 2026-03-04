@@ -121,7 +121,7 @@
     {
         "key": "hull_mods.csv#advanced_ground_support$desc",
         "original": "Close support weapons and counter-measures for ground defenses. Increases the effective strength of planetary raids by %s, up to the total number of marines in the fleet.",
-        "translation": "配备近距离支援武器与地面防御对策。提高{%s}突袭殖民地的有效强度，该加成不会超过携带陆战队员的总人数。",
+        "translation": "针对地面防御工事配备了密接支援武器和专用反制措施。提高{%s}劫掠殖民地的有效强度，该加成不会超过携带陆战队员的总人数。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00088行"
     },
@@ -135,8 +135,8 @@
     {
         "key": "hull_mods.csv#advanced_ground_support$short",
         "original": "Improves effectiveness of raids.",
-        "translation": "提高突袭的效率。",
-        "stage": 5,
+        "translation": "提高劫掠的效率。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00088行"
     },
     {
@@ -499,8 +499,8 @@
     {
         "key": "hull_mods.csv#axialrotation$desc",
         "original": "This structure constantly rotates around its axis.",
-        "translation": "这个结构一直绕着它的中心轴旋转。",
-        "stage": 5,
+        "translation": "该结构一直绕着其中心轴旋转。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00103行"
     },
     {
@@ -513,8 +513,8 @@
     {
         "key": "hull_mods.csv#ballistic_rangefinder$desc",
         "original": "<tooltip created in the script due to lots of highlighting>",
-        "translation": "提高实弹槽位上中小型武器的射程。",
-        "stage": -1,
+        "translation": "<tooltip created in the script due to lots of highlighting>",
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00009行"
     },
     {
@@ -625,7 +625,7 @@
     {
         "key": "hull_mods.csv#civgrade$name",
         "original": "Civilian-grade Hull",
-        "translation": "民用级舰体",
+        "translation": "民用级船体",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00078行"
     },
@@ -640,7 +640,7 @@
         "key": "hull_mods.csv#coherer$desc",
         "original": "<tooltip created in the script>",
         "translation": "<tooltip created in the script>",
-        "stage": -1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00080行"
     },
     {
@@ -773,7 +773,7 @@
         "key": "hull_mods.csv#converted_hangar$desc",
         "original": "<Tooltip created in script>",
         "translation": "<Tooltip created in script>",
-        "stage": -1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00011行"
     },
     {
@@ -1017,7 +1017,7 @@
     {
         "key": "hull_mods.csv#design_compromises$desc",
         "original": "The ship's performance suffers from competing design priorities, with multiple bleeding-edge projects integrated too late in the design cycle.\n\nThe ship's flux dissipation and capacity, even the nominal base values, are reduced by %s.\n\nThe range of ballistic weapons is reduced by %s, the rate of fire of missile weapons is reduced by %s, and the flux generation of energy weapons is increased by %s.\n\nOn the plus side, extra nanoforge capacity can be brought online more easily, allowing the installation of a %s despite the ship already having a fighter bay, increasing the number of operational fighter bays to %s.",
-        "translation": "这艘船的性能受限于相互矛盾的设计指标，多个尖端项目在设计周期后期才仓促整合，直接影响整体性能。\n\n舰船的幅能耗散效率与幅能容量因此下降{%s}。\n\n实弹武器射程缩短{%s}，导弹武器射速降低{%s}，能量武器的幅能输出增加{%s}。\n\n不过也有可取之处：配备了更多的纳米锻炉产能，即便舰船本身已配备一个战机甲板，仍能额外加装{%s}个，让甲板总数达到{%s}个。",
+        "translation": "这艘船的性能受限于相互矛盾的设计指标，多个尖端项目在设计周期后期才仓促整合，直接影响整体性能。\n\n舰船的幅能耗散效率与幅能容量因此下降{%s}。\n\n实弹武器射程缩短{%s}，导弹武器射速降低{%s}，能量武器的幅能输出增加{%s}。\n\n不过也有可取之处：配备了更多的纳米锻炉产能，即便舰船本身已配备一个战机甲板，仍能额外加装{%s}船插，从而使甲板总数达到{%s}个。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00081行"
     },
@@ -1745,7 +1745,7 @@
     {
         "key": "hull_mods.csv#ground_support$desc",
         "original": "Close support weapons and counter-measures for ground defenses. Increases the effective strength of planetary raids by %s, up to the total number of marines in the fleet.",
-        "translation": "针对地面防御工事配备了密接支援武器和专用反制措施。提高{%s}突袭殖民地的有效强度，该加成不会超过携带陆战队员的总人数。",
+        "translation": "针对地面防御工事配备了密接支援武器和专用反制措施。提高{%s}劫掠殖民地的有效强度，该加成不会超过携带陆战队员的总人数。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00087行"
     },
@@ -1759,8 +1759,8 @@
     {
         "key": "hull_mods.csv#ground_support$short",
         "original": "Improves effectiveness of raids.",
-        "translation": "提高突袭的效率。",
-        "stage": 5,
+        "translation": "提高劫掠的效率。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00087行"
     },
     {
@@ -1934,8 +1934,8 @@
     {
         "key": "hull_mods.csv#high_scatter_amp$desc",
         "original": "<tooltip created in the script due to sections>",
-        "translation": "降低光束武器的射程，并且使它们在对护盾造成伤害时产生硬幅能。",
-        "stage": -1,
+        "translation": "<tooltip created in the script due to sections>",
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00031行"
     },
     {
@@ -1970,7 +1970,7 @@
         "key": "hull_mods.csv#hiressensors$desc",
         "original": "<Tooltip created in script>",
         "translation": "<Tooltip created in script>",
-        "stage": -1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00059行"
     },
     {
@@ -2159,7 +2159,7 @@
         "key": "hull_mods.csv#missile_autoloader$desc",
         "original": "<tooltip created in the script due to sections/other complexity>",
         "translation": "<tooltip created in the script due to sections/other complexity>",
-        "stage": -1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00027行"
     },
     {
@@ -2775,7 +2775,7 @@
         "key": "hull_mods.csv#shrouded_lens$desc",
         "original": "<created by script>",
         "translation": "<created by script>",
-        "stage": -1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00123行"
     },
     {
@@ -2838,7 +2838,7 @@
         "key": "hull_mods.csv#shrouded_thunderhead$desc",
         "original": "<created by script>",
         "translation": "<created by script>",
-        "stage": -1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nhull_mods.csv第00122行"
     },
     {
