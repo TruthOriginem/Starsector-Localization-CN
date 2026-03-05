@@ -106,6 +106,7 @@ class String:
 
 class DataFile:
     logger = make_logger('util.py - DataFile')
+    export_empty_strings = False  # jar子类覆盖为True以允许导出空原文词条
 
     def __init__(
         self,
@@ -133,8 +134,8 @@ class DataFile:
 
     def save_json(self, ensure_ascii: bool = False, indent: int = 4) -> None:
         strings = [
-            s for s in self.get_strings() if s.original
-        ]  # 只导出原文不为空的词条
+            s for s in self.get_strings() if s.original or self.export_empty_strings
+        ]  # jar文件导出空原文词条，csv文件不导出
 
         # 如果Paratranz json文件已存在，则从中同步任何词条的状态（包括未翻译的）
         if not OVERRIDE_STRING_STATUS and self.para_tranz_path.exists():

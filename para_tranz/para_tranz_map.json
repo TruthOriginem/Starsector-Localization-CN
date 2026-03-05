@@ -1666,6 +1666,7 @@
       {
         "path": "com/fs/starfarer/campaign/save/LoadGameDialog$o.class",
         "include_strings": [
+          "",
           "   <<< CURRENT SLOT",
           " ago",
           ", ",
@@ -1674,11 +1675,9 @@
           "<<< CURRENT SLOT",
           "AUTO",
           "Cycle ",
-          "Day ",
           "EEE, MMM d, yyyy, hh:mm a",
           "Incompatible with enabled mods",
           "Mod compatibility warning",
-          "Month ",
           "day",
           "days",
           "hour",
@@ -6659,8 +6658,7 @@
       {
         "path": "com/fs/starfarer/tutorial/oOOO/O0OO.class",
         "include_strings": [
-          "Now that you've got more ships on the field, let's go take another objective. <highlight>There's a Sensor Array nearby - switch back to the map by pressing %s and order its capture. Remember to unpause the game afterwards by pressing %s, as switching to the map automatically pauses it.</highlight>\n\nNote that as Fleet Commander, you're giving the assignment to your whole fleet and not to a specific ship. Your subordinates will work out the details of which ships get which assignments.",
-          "sensor_array"
+          "Now that you've got more ships on the field, let's go take another objective. <highlight>There's a Sensor Array nearby - switch back to the map by pressing %s and order its capture. Remember to unpause the game afterwards by pressing %s, as switching to the map automatically pauses it.</highlight>\n\nNote that as Fleet Commander, you're giving the assignment to your whole fleet and not to a specific ship. Your subordinates will work out the details of which ships get which assignments."
         ],
         "exclude_strings": []
       },
@@ -8194,6 +8192,16 @@
     "type": "jar",
     "path": "starfarer.api.jar",
     "class_files": [
+      {
+  "path": "com/fs/starfarer/api/impl/PlayerFleetPersonnelTracker$PersonnelRank.class",
+  "include_strings": [
+    "Elite",
+    "Experienced",
+    "Regular",
+    "Veteran"
+  ],
+  "exclude_strings": []
+},
       {
         "path": "com/fs/starfarer/api/campaign/FleetAssignment.class",
         "include_strings": [

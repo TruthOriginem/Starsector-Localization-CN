@@ -22,6 +22,7 @@ class JavaJarFile(DataFile):
     """
 
     logger = make_logger('JavaJarFile')
+    export_empty_strings = True
 
     def __init__(
         self,
