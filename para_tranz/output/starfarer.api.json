@@ -3038,6 +3038,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/CoreScript.class 的第1594个常量\n原始数据：\"Custom production orders\"\n译文数据：\"定制生产订单\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/CoreScript.class#\"Exports\"",
+        "original": "Exports",
+        "translation": "Exports",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/CoreScript.class 的第1902个常量\n原始数据：\"Exports\"\n译文数据：\"Exports\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/CoreScript.class#\"Fleet\"",
         "original": "Fleet",
         "translation": "舰队",
@@ -3143,11 +3150,25 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class 的第0079个常量\n原始数据：\"A mix of %s and %s officers and ship commanders.\"\n译文数据：\"混杂着 激进 ,鲁莽 的军官与舰长。\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class#\"Aggressive\"",
+        "original": "Aggressive",
+        "translation": "Aggressive",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class 的第0077个常量\n原始数据：\"Aggressive\"\n译文数据：\"Aggressive\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class#\"Cautious\"",
         "original": "Cautious",
         "translation": "谨慎",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class 的第0065个常量\n原始数据：\"Cautious\"\n译文数据：\"谨慎\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class#\"Reckless\"",
+        "original": "Reckless",
+        "translation": "Reckless",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class 的第0081个常量\n原始数据：\"Reckless\"\n译文数据：\"Reckless\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class#\"Steady\"",
@@ -19313,6 +19334,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HegemonyHostileActivityFactor.class 的第0336个常量\n原始数据：\"Upcoming Hegemony AI inspection targeting %s\"\n译文数据：\"下一个霸主 AI 审查目标是 %s\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HegemonyHostileActivityFactor.class#\"crisis\"",
+        "original": "crisis",
+        "translation": "crisis",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HegemonyHostileActivityFactor.class 的第0414个常量\n原始数据：\"crisis\"\n译文数据：\"crisis\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HegemonyHostileActivityFactor.class#\"escalate the conflict\"",
         "original": "escalate the conflict",
         "translation": "发起更大的冲突",
@@ -19670,6 +19698,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchHostileActivityFactor.class 的第0430个常量\n原始数据：\"You make an agreement with the Church\"\n译文数据：\"你于卢德教会达成相关协议\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchHostileActivityFactor.class#\"crisis\"",
+        "original": "crisis",
+        "translation": "crisis",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchHostileActivityFactor.class 的第0424个常量\n原始数据：\"crisis\"\n译文数据：\"crisis\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchHostileActivityFactor.class#\"increased immigration, stability, and productivity\"",
         "original": "increased immigration, stability, and productivity",
         "translation": "移民增加、稳定性与设施生产力提高",
@@ -19955,6 +19990,13 @@
         "translation": "前往 %s 并就加入联盟事宜达成协议",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PerseanLeagueHostileActivityFactor.class 的第0316个常量\n原始数据：\"You go to %s and make an agreement about joining the League\"\n译文数据：\"前往 %s 并就加入联盟事宜达成协议\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PerseanLeagueHostileActivityFactor.class#\"crisis\"",
+        "original": "crisis",
+        "translation": "crisis",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PerseanLeagueHostileActivityFactor.class 的第0310个常量\n原始数据：\"crisis\"\n译文数据：\"crisis\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PerseanLeagueHostileActivityFactor.class#\"increased accessibility\"",
@@ -20398,6 +20440,13 @@
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantHostileActivityFactor.class 的第0236个常量\n原始数据：\"The %s is destroyed\"\n译文数据：\"摧毁 %s\"\n\n"
     },
     {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantHostileActivityFactor.class#\"crisis\"",
+        "original": "crisis",
+        "translation": "crisis",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantHostileActivityFactor.class 的第0230个常量\n原始数据：\"crisis\"\n译文数据：\"crisis\"\n\n"
+    },
+    {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantHostileActivityFactor.class#\"end the threat\"",
         "original": "end the threat",
         "translation": "解决",
@@ -20613,6 +20662,13 @@
         "translation": "你获知的情报表明，辛达强权正计划于你的某个具有燃料生产设施的殖民地实施一次 饱和轰炸。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/SindrianDiktatHostileActivityFactor.class 的第0316个常量\n原始数据：\"You've received intel that the Sindrian Diktat is planning an attack to saturation-bombard your fuel production facilities.\"\n译文数据：\"你获知的情报表明，辛达强权正计划于你的某个具有燃料生产设施的殖民地实施一次 饱和轰炸。\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/SindrianDiktatHostileActivityFactor.class#\"crisis\"",
+        "original": "crisis",
+        "translation": "crisis",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/SindrianDiktatHostileActivityFactor.class 的第0352个常量\n原始数据：\"crisis\"\n译文数据：\"crisis\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/SindrianDiktatHostileActivityFactor.class#\"export fuel\"",
@@ -20921,6 +20977,13 @@
         "translation": "放弃其反竞争行为",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/TriTachyonHostileActivityFactor.class 的第0457个常量\n原始数据：\"abandon its anti-competitive efforts\"\n译文数据：\"放弃其反竞争行为\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/TriTachyonHostileActivityFactor.class#\"crisis\"",
+        "original": "crisis",
+        "translation": "crisis",
+        "stage": 0,
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/TriTachyonHostileActivityFactor.class 的第0459个常量\n原始数据：\"crisis\"\n译文数据：\"crisis\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/TriTachyonHostileActivityFactor.class#\"raid and disrupt your industrial base\"",

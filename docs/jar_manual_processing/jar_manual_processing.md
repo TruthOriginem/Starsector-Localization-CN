@@ -65,3 +65,10 @@
 
 > 解决方法：提高了战役地图的日期显示宽度，为日期最后显示加上了“日”字
 > 日期显示再加大到50px 50px 150px。当日进度条加长到100px
+
+### 10. 存档列表页存档保存日期未按中文格式化
+相关文件：``starfarer_obf.jar:com/fs/starfarer/campaign/save/LoadGameDialog$o.class`
+
+![save_date_locale.png](save_date_locale.png)
+
+> 解决方法：修改了存档列表页的日期格式化为CHINESE

@@ -8192,16 +8192,6 @@
     "path": "starfarer.api.jar",
     "class_files": [
       {
-  "path": "com/fs/starfarer/api/impl/PlayerFleetPersonnelTracker$PersonnelRank.class",
-  "include_strings": [
-    "Elite",
-    "Experienced",
-    "Regular",
-    "Veteran"
-  ],
-  "exclude_strings": []
-},
-      {
         "path": "com/fs/starfarer/api/campaign/FleetAssignment.class",
         "include_strings": [
           "Attacking",
@@ -8681,6 +8671,16 @@
         "exclude_strings": []
       },
       {
+        "path": "com/fs/starfarer/api/impl/PlayerFleetPersonnelTracker$PersonnelRank.class",
+        "include_strings": [
+          "Elite",
+          "Experienced",
+          "Regular",
+          "Veteran"
+        ],
+        "exclude_strings": []
+      },
+      {
         "path": "com/fs/starfarer/api/impl/PlayerFleetPersonnelTracker.class",
         "include_strings": [
           " marines",
@@ -8952,6 +8952,7 @@
           "Colonies",
           "Crew payroll",
           "Custom production orders",
+          "Exports",
           "Fleet",
           "Hazard pay",
           "Heavy Industry - Custom Production",
@@ -8979,7 +8980,9 @@
         "include_strings": [
           "%s officers and ship commanders.",
           "A mix of %s and %s officers and ship commanders.",
+          "Aggressive",
           "Cautious",
+          "Reckless",
           "Steady"
         ],
         "exclude_strings": []
@@ -12791,6 +12794,7 @@
           "The %s has no functional military bases",
           "Upcoming Hegemony AI inspection targeting %s",
           "You've received intel that the Hegemony is planning an AI inspection targeting %s. If the inspection arrives at your colony, your options would include open hostilities with the Hegemony, or the loss of at least some of your AI cores.",
+          "crisis",
           "escalate the conflict",
           "loss of at least some of your AI cores",
           "open hostilities",
@@ -12927,6 +12931,7 @@
           "Luddic forces",
           "You make an agreement with the Church",
           "You've received intel that the Knights of Ludd, under the aegis of the Luddic Church, are planning an operation to take over one of your colonies that has a Luddic Majority population.",
+          "crisis",
           "increased immigration, stability, and productivity",
           "take over one of your colonies"
         ],
@@ -13010,6 +13015,7 @@
           "Persean League blockade averted",
           "You go to %s and make an agreement about joining the League",
           "You've received intel that the Persean League is planning a lengthy blockade of one of your systems. Colonies in that system will suffer a major accessibility penalty for as long as the blockade lasts.",
+          "crisis",
           "increased accessibility",
           "major accessibility penalty"
         ],
@@ -13119,6 +13125,7 @@
           "Remnant attack averted",
           "The %s is destroyed",
           "There are signs of activity at a Remnant Nexus in your system. Intel evaluates a high probability of an attack fleet being assembled to saturation-bombard ",
+          "crisis",
           "end the threat",
           "remnant forces",
           "saturation-bombard"
@@ -13173,6 +13180,7 @@
           "Sindrian Diktat attack averted",
           "You go to %s and make an agreement with the Diktat",
           "You've received intel that the Sindrian Diktat is planning an attack to saturation-bombard your fuel production facilities.",
+          "crisis",
           "export fuel",
           "improved",
           "saturation-bombard"
@@ -13279,6 +13287,7 @@
           "You've dealt with the mercenary attack sent against you, and this has considerably cooled the enthusiasm for continued aggression. Commerce-raiding continues, but the event progress value is reduced by %s, and no further large-scale attacks are likely to be mounted.",
           "You've received intel that the Tri-Tachyon Corporation is allocating funds to hire and equip a mercenary company to raid and disrupt your industrial base.",
           "abandon its anti-competitive efforts",
+          "crisis",
           "raid and disrupt your industrial base"
         ],
         "exclude_strings": []
