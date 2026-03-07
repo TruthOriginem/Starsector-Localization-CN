@@ -37,8 +37,8 @@
     {
         "key": "descriptions.csv#('abandoned_station2', 'GALLERY')$text4",
         "original": "- Encela 'Boomer' Blackborn, spacer",
-        "translation": "- Encela 'Boomer' Blackborn, spacer",
-        "stage": 0,
+        "translation": "- Encela 'Boomer' Blackborn，太空佬",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00633行"
     },
     {
@@ -128,8 +128,8 @@
     {
         "key": "descriptions.csv#('acausaldisruptor', 'SHIP_SYSTEM')$text5",
         "original": "The overload lasts for {{1}} second.",
-        "translation": "The overload lasts for {{1}} second.",
-        "stage": 0,
+        "translation": "过载持续 {{1}} 秒。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00278行"
     },
     {
@@ -226,8 +226,8 @@
     {
         "key": "descriptions.csv#('ammofeed', 'SHIP_SYSTEM')$text5",
         "original": "Increases ballistic weapon rate of fire by {{100%}}, and reduces the flux generation of ballistic weapons by {{50%}}.",
-        "translation": "Increases ballistic weapon rate of fire by {{100%}}, and reduces the flux generation of ballistic weapons by {{50%}}.",
-        "stage": 0,
+        "translation": "提升 {{100%}} 的实弹武器射速，并降低实弹武器 {{50%}} 的幅能产生。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00307行"
     },
     {
@@ -737,22 +737,22 @@
     {
         "key": "descriptions.csv#('canister_flak', 'SHIP_SYSTEM')$text3",
         "original": "Fires a large number of flak canisters with variable-timed proximity fuses all around the ship. Each canister deals 200 High Explosive damage in an area and is targeted to avoid friendly fire.",
-        "translation": "在舰体周围发射大量拥有近炸引信的高射炮弹。每枚炮弹会在小范围内造成 200 的高爆伤害。不会伤害友军。",
-        "stage": 5,
+        "translation": "在舰体周围发射大量拥有近炸引信的高射炮弹。每枚炮弹会在小范围内造成 200 点高爆}伤害。不会伤害友军。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00299行"
     },
     {
         "key": "descriptions.csv#('canister_flak', 'SHIP_SYSTEM')$text4",
         "original": "200 High Explosive",
-        "translation": "200 High Explosive",
-        "stage": 0,
+        "translation": "200 点高爆",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00299行"
     },
     {
         "key": "descriptions.csv#('canister_flak', 'SHIP_SYSTEM')$text5",
         "original": "Each canister deals {{200 High Explosive}} damage in an area and is targeted to avoid friendly fire.",
-        "translation": "Each canister deals {{200 High Explosive}} damage in an area and is targeted to avoid friendly fire.",
-        "stage": 0,
+        "translation": "每个罐式高射炮弹在范围内造成 {{200 点高爆}} 伤害，且会不会误伤友军。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00299行"
     },
     {
@@ -786,8 +786,8 @@
     {
         "key": "descriptions.csv#('cargo_loading', 'GALLERY')$text4",
         "original": "- patron, anonymous, overheard at 'The Fusion Torch'",
-        "translation": "- patron, anonymous, overheard at 'The Fusion Torch'",
-        "stage": 0,
+        "translation": "- 赞助人，匿名，于 \"聚变火炬\" 酒馆偶然听闻",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00621行"
     },
     {
@@ -989,8 +989,8 @@
     {
         "key": "descriptions.csv#('combat_burn', 'SHIP_SYSTEM')$text5",
         "original": "The ship's top speed is increased by {{100}}.",
-        "translation": "The ship's top speed is increased by {{100}}.",
-        "stage": 0,
+        "translation": "舰船的最高航速提升了 {{100}}。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00287行"
     },
     {
@@ -1059,8 +1059,8 @@
     {
         "key": "descriptions.csv#('construction_swarm', 'SHIP_SYSTEM')$text5",
         "original": "Reduces the ship's combat readiness based on the size and type of unit the swarm will build. The newly constructed units use up deployment points as normal.",
-        "translation": "Reduces the ship's combat readiness based on the size and type of unit the swarm will build. The newly constructed units use up deployment points as normal.",
-        "stage": 0,
+        "translation": "根据将要建造的集群单元尺寸与类型，降低该舰船的战备值。新制造的单位也会消耗部署点数。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00319行"
     },
     {
@@ -1227,8 +1227,8 @@
     {
         "key": "descriptions.csv#('cryosleeper_interior', 'GALLERY')$text4",
         "original": "- the Historian",
-        "translation": "- the Historian",
-        "stage": 0,
+        "translation": "- 历史学家",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00707行"
     },
     {
@@ -1276,8 +1276,8 @@
     {
         "key": "descriptions.csv#('damper', 'SHIP_SYSTEM')$text5",
         "original": "Reduces all damage taken by {{67%}} for frigates and destroyers, and by {{50%}} for larger ships.",
-        "translation": "Reduces all damage taken by {{67%}} for frigates and destroyers, and by {{50%}} for larger ships.",
-        "stage": 0,
+        "translation": "为护卫舰与驱逐舰减免 {{67%}} 所受伤害，为更大规模的舰船减免 {{50%}} 伤害。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00280行"
     },
     {
@@ -1353,8 +1353,8 @@
     {
         "key": "descriptions.csv#('dead_zero_g', 'GALLERY')$text4",
         "original": "- Bora Sidereal, salvor",
-        "translation": "- Bora Sidereal, salvor",
-        "stage": 0,
+        "translation": "- Bora Sidereal，打捞者",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00697行"
     },
     {
@@ -1591,8 +1591,8 @@
     {
         "key": "descriptions.csv#('displacer', 'SHIP_SYSTEM')$text5",
         "original": "The ship is teleported {{300}} units.",
-        "translation": "The ship is teleported {{300}} units.",
-        "stage": 0,
+        "translation": "舰船将被传送 {{300}} 单位距离。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00301行"
     },
     {
@@ -1619,8 +1619,8 @@
     {
         "key": "descriptions.csv#('displacer_degraded', 'SHIP_SYSTEM')$text5",
         "original": "The ship is teleported {{300}} units.",
-        "translation": "The ship is teleported {{300}} units.",
-        "stage": 0,
+        "translation": "舰船将被传送 {{300}} 单位距离。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00302行"
     },
     {
@@ -1640,22 +1640,22 @@
     {
         "key": "descriptions.csv#('displacer_threat', 'SHIP_SYSTEM')$text3",
         "original": "Teleports the ship a short distance in the direction it's traveling. The system is only charged when the ship is hit by an Energy Lash.",
-        "translation": "向行驶方向瞬移。该系统仅在舰船被 能量鞭笞 命中时才会充能。",
+        "translation": "向行驶方向瞬移。该系统仅在舰船被 能量之鞭 命中时才会充能。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00315行"
     },
     {
         "key": "descriptions.csv#('displacer_threat', 'SHIP_SYSTEM')$text4",
         "original": "Energy Lash",
-        "translation": "Energy Lash",
-        "stage": 0,
+        "translation": "能量之鞭",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00315行"
     },
     {
         "key": "descriptions.csv#('displacer_threat', 'SHIP_SYSTEM')$text5",
         "original": "The ship is teleported {{300}} units. The system is {{lash-activated}} and only gains charges when the ship is hit by an Energy Lash.",
-        "translation": "The ship is teleported {{300}} units. The system is {{lash-activated}} and only gains charges when the ship is hit by an Energy Lash.",
-        "stage": 0,
+        "translation": "该舰船将被传送 {{300}} 单位距离。该系统为 {{鞭击激活}}，仅在舰船被能量之鞭命中时获得充能。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00315行"
     },
     {
@@ -1857,8 +1857,8 @@
     {
         "key": "descriptions.csv#('drone_strike', 'SHIP_SYSTEM')$text4",
         "original": "1200 Energy | 600 EMP | 600",
-        "translation": "1200 Energy | 600 EMP | 600",
-        "stage": 0,
+        "translation": "1200 能量伤害 | 600 EMP 损害 | 600",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00295行"
     },
     {
@@ -2116,15 +2116,15 @@
     {
         "key": "descriptions.csv#('extraction_protocol', 'SHIP_SYSTEM')$text3",
         "original": "Increases the ship's top speed and forces it to back off while firing all available weapons. The ship will vent at the end of the maneuver, and all of its ammo and charge using weapons, including missiles, will be reloaded. The system is only activated when the ship is hit by an Energy Lash.",
-        "translation": "提升舰船的最高航速，强制舰船后退，同时发射所有可用武器。机动结束时，舰船将主动排幅，所有拥有备弹量及充能的武器 (包括导弹) 完成装填。该系统仅在舰船被 能量鞭笞 命中时才会激活。",
+        "translation": "提升舰船的最高航速，强制舰船后退，同时发射所有可用武器。机动结束时，舰船将主动排幅，所有拥有备弹量及充能的武器 (包括导弹) 完成装填。该系统仅在舰船被 能量之鞭 命中时才会激活。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00317行"
     },
     {
         "key": "descriptions.csv#('extraction_protocol', 'SHIP_SYSTEM')$text4",
         "original": "Energy Lash",
-        "translation": "Energy Lash",
-        "stage": 0,
+        "translation": "能量之鞭",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00317行"
     },
     {
@@ -2424,15 +2424,15 @@
     {
         "key": "descriptions.csv#('fragment_volley', 'SHIP_SYSTEM')$text3",
         "original": "Extends the range of non-PD fragment weapons and rapidly fires them. The system is only activated when the ship is hit by an Energy Lash, and has a long cooldown.",
-        "translation": "提高非 PD 类 碎片武器 的射程与射速。该系统仅在舰船被 能量鞭笞 命中时才会激活，且冷却时间较长。",
+        "translation": "提高非 PD 类 碎片武器 的射程与射速。该系统仅在舰船被 能量之鞭 命中时才会激活，且冷却时间较长。",
         "stage": 2,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00318行"
     },
     {
         "key": "descriptions.csv#('fragment_volley', 'SHIP_SYSTEM')$text4",
         "original": "Energy Lash",
-        "translation": "Energy Lash",
-        "stage": 0,
+        "translation": "能量之鞭",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00318行"
     },
     {
@@ -3222,15 +3222,15 @@
     {
         "key": "descriptions.csv#('incursion_mode', 'SHIP_SYSTEM')$text3",
         "original": "Increases the ship's top speed, flux dissipation, and charge regeneration rate, as well as overall aggressiveness. The system is only activated when the ship is hit by an Energy Lash.",
-        "translation": "提升舰船的最高航速、幅能耗散与备弹回复速率，增强战斗积极性。该系统仅在舰船被 能量鞭笞 命中时才会激活。",
+        "translation": "提升舰船的最高航速、幅能耗散与备弹回复速率，增强战斗积极性。该系统仅在舰船被 能量之鞭 命中时才会激活。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00316行"
     },
     {
         "key": "descriptions.csv#('incursion_mode', 'SHIP_SYSTEM')$text4",
         "original": "Energy Lash",
-        "translation": "Energy Lash",
-        "stage": 0,
+        "translation": "能量之鞭",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00316行"
     },
     {
