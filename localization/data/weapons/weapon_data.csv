@@ -114,7 +114,7 @@ IR 自动长矛,irautolance,1,,1200,1000,500,,,0,50,8,40,2,10,FRAGMENTATION,,150
 裂隙射线布雷器,riftbeam_minelayer,0,,,,,200,,25,,,,,,ENERGY,0,,,,1,,,,,,,0,0,20,1000,,,SYSTEM,,,未知,,,,,,,,,,,,38.5
 低温喷射器,cryoflux,3,,100000,400,,100,,3,60,15,90,6,30,ENERGY,50,,,0.05,2,0.05,0,0,0,0,,500,,,,,,,"energy15, SR, omega, restricted, codex_unlockable",,未知,,通用,,,,,,,,,,
 低温冲击波,cryoblaster,3,,100000,600,,1400,,50,20,16,,,,FRAGMENTATION,500,,0,1,,,0,0,0,0,,750,,,,,,,"energy15, omega, restricted, codex_unlockable",,未知,,通用,,,,,,,,,,22.25
-裂解炮,disintegrator,3,,100000,900,,100,,25,20,14,,,,HIGH_EXPLOSIVE,200,,0,2,3,0.2,4,4,,,,700,,,,,,,"he18, omega, restricted, codex_unlockable",,未知,,反装甲,,,,特定模式散布,每一发炮弹都会对装甲造成{%s}点额外伤害，该伤害会在{%s}秒内逐渐生效，并无视装甲减伤。,1000 | 10,,,,22.25
+裂解炮,disintegrator,3,,100000,900,,100,,25,20,14,,,,HIGH_EXPLOSIVE,200,,0,2,3,0.2,4,4,,,,700,,,,,,,"he18, omega, restricted, codex_unlockable",,未知,,反装甲,,,,特定模式散布,每一发炮弹都会对装甲造成{%s}额外伤害，该伤害会在{%s}秒内逐渐生效，并无视装甲减伤。,1000 | 10,,,,22.25
 裂隙洪流发射极,riftcascade,3,,200000,1000,1000,,,0,7,30,,,,ENERGY,,3000,0.5,1,1,4,,,,,10000,,,,,,,,"energy22, beam17, LR, omega, restricted, codex_unlockable",,未知,,通用,,,,,在命中时产生时空裂隙。开火距离越近，产生裂隙越多。每个裂隙对附近目标造成{%s}至{%s}的能量伤害。,750 | 1250,,,,29.1
 裂隙洪流发射极布雷器,riftcascade_minelayer,0,,,,,1000,,25,,,,,,ENERGY,0,,,,1,,,,,,,0,0,20,1000,,,SYSTEM,,,未知,,,,,,,,,,,,38.5
 不稳定粒子投射器,vpdriver,3,,200000,1000,,150,,10,20,30,30,3,15,KINETIC,100,,0.05,0.05,1,,0,10,1,10,,1000,,,,,,,"kinetic20, omega, restricted, codex_unlockable",,未知,,反护盾,,,,,投射物会失去凝聚力并分散，其中{%s}弹体能达到射程的一半，{%s}能达到最大射程。,100% | 50%,,,,25
@@ -143,7 +143,7 @@ IR 自动长矛,irautolance,1,,1200,1000,500,,,0,50,8,40,2,10,FRAGMENTATION,,150
 饥渴裂隙,assaying_rift,3,,10000,2000,,600,,,180,18,,,,ENERGY,600,,0,2,1,,0,0,0,0,,200,400,14,800,,,DO_NOT_AIM,"monster, dweller, restricted, codex_unlockable, pd10, missile10, no_drop, substrate_2",,渊幕住民,,通用,较慢,优秀,,,当命中船体或装甲时，随机为具象化在战场上的一只 渊幕栖兽 治疗{%s}点生命值。,1000,受到一种难以理解的时空固有特性影响，战场上的武器无法同时产生超过{%s}个裂隙。这个限制不会影响 渊幕住民 设计。,10,,20.5
 裂隙闪电,rift_lightning,3,,15000,600,,500,1000,0,50,20,,,,ENERGY,500,,0,2,,,,,,,,1000000,,,,,,"PD,PD_ALSO","monster, dweller, restricted, codex_unlockable, pd15, energy19, no_drop, substrate_3",,渊幕住民,,通用,,,,完美,向目标发射一道 EMP 电弧，并开启一道裂隙，在裂隙附近的一片区域内造成伤害。电弧是否命中取决于武器的精确瞄准方向，可以穿过友方舰船。,,,,,20.75
 裂隙闪电布雷器,rift_lightning_minelayer,0,,,,,500,1000,0,,,,,,ENERGY,0,,,,1,,,,,,,0,0,20,1000,,,SYSTEM,"restricted, no_drop",,渊幕住民,,,,,,,,,,,,21
-深渊耀光,abyssal_glare,3,,25000,800,500,,1000,0,7,30,,,,ENERGY,,500,0.1,0.1,,,,,,,6000,,,,,,,,"monster, dweller, restricted, codex_unlockable, beam21, no_drop, substrate_5",,渊幕住民,,通用,,,,,命中时会造成爆炸，对目标和命中点附近的其它目标造成{%s}点{%s}伤害。,100 | 能量,,,,22
+深渊耀光,abyssal_glare,3,,25000,800,500,,1000,0,7,30,,,,ENERGY,,500,0.1,0.1,,,,,,,6000,,,,,,,,"monster, dweller, restricted, codex_unlockable, beam21, no_drop, substrate_5",,渊幕住民,,通用,,,,,命中时会造成爆炸，对目标和命中点附近的其它目标造成{%s}{%s}伤害。,100 | 能量,,,,22
 恶性放射流,inimical_emanation,3,,5000,500,,100,500,0,120,10,,,,ENERGY,175,,0,1,1,,,,,,,10000,,,,,25,PD,"monster, dweller, restricted, codex_unlockable, pd14, no_drop, substrate_1",,渊幕住民,,压制 / 点防御,,,,完美,开火时向武器指向处最近的目标施放一道射线，且可以命中相位中的舰船。必定会命中目标的武器或引擎。命中船体或装甲时，使其武器和引擎的修复所需时长提高为{%s}，此效果持续{%s}秒，不可叠加。,双倍 | 5,,,,22.1
 涡动核心,vortex_launcher,0,,100000,3000,,0,0,0,0,50,2,0.1,,FRAGMENTATION,0,,0,3,,,0,0,0,0,,1,1,0.1,1,,,"DO_NOT_AIM, NO_MANUAL_FIRE","monster, dweller, restricted, codex_unlockable, no_drop, no_standard_data",,渊幕住民,,特殊,,,,,发射一个{%s}，涡流将跟踪附近的目标并发生爆炸，在一片区域内造成{%s}点{%s}伤害。,渊幕涡流 | 2000 | 能量,,,,22.2
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

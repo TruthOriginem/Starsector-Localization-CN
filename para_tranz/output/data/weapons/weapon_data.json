@@ -2,7 +2,7 @@
     {
         "key": "weapon_data.csv#abyssal_glare$customPrimary",
         "original": "Produces explosions that deal up to 100 points of energy damage to all nearby targets, including the one being hit by the beam.",
-        "translation": "命中时会造成爆炸，对目标和命中点附近的其它目标造成{%s}点{%s}伤害。",
+        "translation": "命中时会造成爆炸，对目标和命中点附近的其它目标造成{%s}{%s}伤害。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00143行"
     },
@@ -17,7 +17,7 @@
         "key": "weapon_data.csv#abyssal_glare$name",
         "original": "Abyssal Glare",
         "translation": "深渊耀光",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00143行"
     },
     {
@@ -213,7 +213,7 @@
         "key": "weapon_data.csv#assaying_rift$name",
         "original": "Hungering Rift",
         "translation": "饥渴裂隙",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00140行"
     },
     {
@@ -584,7 +584,7 @@
         "key": "weapon_data.csv#devouring_swarm$name",
         "original": "Defabrication Swarm",
         "translation": "织解集群",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00129行"
     },
     {
@@ -625,7 +625,7 @@
     {
         "key": "weapon_data.csv#disintegrator$customPrimary",
         "original": "Each shot deals an additional 1000 damage to armor over 10 seconds. This damage is not reduced by armor.",
-        "translation": "每一发炮弹都会对装甲造成{%s}点额外伤害，该伤害会在{%s}秒内逐渐生效，并无视装甲减伤。",
+        "translation": "每一发炮弹都会对装甲造成{%s}额外伤害，该伤害会在{%s}秒内逐渐生效，并无视装甲减伤。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00114行"
     },
@@ -1599,7 +1599,7 @@
         "key": "weapon_data.csv#inimical_emanation$name",
         "original": "Inimical Emanation",
         "translation": "恶性放射流",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00144行"
     },
     {
@@ -1809,7 +1809,7 @@
         "key": "weapon_data.csv#kinetic_fragments$name",
         "original": "Kinetic Fragments",
         "translation": "动能碎片",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00127行"
     },
     {
@@ -1858,7 +1858,7 @@
         "key": "weapon_data.csv#kineticblaster$tech/manufacturer",
         "original": "Lion's Guard",
         "translation": "狮心卫队",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00092行"
     },
     {
@@ -2194,7 +2194,7 @@
         "key": "weapon_data.csv#neoferric_quadcoil$name",
         "original": "Neoferric Quadcoil",
         "translation": "新铁四联装线圈炮",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00134行"
     },
     {
@@ -2243,7 +2243,7 @@
         "key": "weapon_data.csv#neutron_torpedo$trackingStr",
         "original": "Limited",
         "translation": "有限",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00131行"
     },
     {
@@ -2495,7 +2495,7 @@
         "key": "weapon_data.csv#pseudoparticle_jet$name",
         "original": "Pseudoparticle Jet",
         "translation": "伪粒子射流",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00139行"
     },
     {
@@ -2537,14 +2537,14 @@
         "key": "weapon_data.csv#pusherplate_lt_small$name",
         "original": "Pusher Plate (Low Tech, Small)",
         "translation": "推进板 (主宰纪元，小)",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00170行"
     },
     {
         "key": "weapon_data.csv#pusherplate_nova$name",
         "original": "Pusher Plate (Remnant, Nova)",
         "translation": "推进板 (余辉，新星)",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00171行"
     },
     {
@@ -2677,7 +2677,7 @@
         "key": "weapon_data.csv#rift_lightning$name",
         "original": "Rift Lightning",
         "translation": "裂隙闪电",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00141行"
     },
     {
@@ -3090,7 +3090,7 @@
         "key": "weapon_data.csv#seeker_fragment$name",
         "original": "Seeker Fragment",
         "translation": "追踪碎片",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00126行"
     },
     {
@@ -3244,7 +3244,7 @@
         "key": "weapon_data.csv#swarm_launcher$name",
         "original": "Swarm Launcher",
         "translation": "集群发射器",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00125行"
     },
     {
@@ -3517,14 +3517,14 @@
         "key": "weapon_data.csv#voidblaster$customPrimary",
         "original": "Deals %s damage to shields, despite not being a beam weapon.",
         "translation": "即使该武器不是光束武器，也只能对护盾造成{%s}伤害。",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00136行"
     },
     {
         "key": "weapon_data.csv#voidblaster$customPrimaryHL",
         "original": "soft flux",
         "translation": "软幅能",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00136行"
     },
     {
@@ -3559,7 +3559,7 @@
         "key": "weapon_data.csv#voltaic_cannon$name",
         "original": "Voltaic Cannon",
         "translation": "伏打加农炮",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00135行"
     },
     {
@@ -3601,7 +3601,7 @@
         "key": "weapon_data.csv#voltaic_discharge$name",
         "original": "Voltaic Discharge",
         "translation": "伏打放电器",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00130行"
     },
     {
@@ -3636,7 +3636,7 @@
         "key": "weapon_data.csv#vortex_launcher$name",
         "original": "Churning Locus",
         "translation": "涡动核心",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00145行"
     },
     {
