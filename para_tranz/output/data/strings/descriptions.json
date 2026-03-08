@@ -688,8 +688,8 @@
     {
         "key": "descriptions.csv#('burndrive', 'SHIP_SYSTEM')$text5",
         "original": "The ship's top speed is increased by {{200}}.",
-        "translation": "The ship's top speed is increased by {{200}}.",
-        "stage": 0,
+        "translation": "舰船的最高航速提高 {{200}}}。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00286行"
     },
     {
@@ -737,21 +737,21 @@
     {
         "key": "descriptions.csv#('canister_flak', 'SHIP_SYSTEM')$text3",
         "original": "Fires a large number of flak canisters with variable-timed proximity fuses all around the ship. Each canister deals 200 High Explosive damage in an area and is targeted to avoid friendly fire.",
-        "translation": "在舰体周围发射大量拥有近炸引信的高射炮弹。每枚炮弹会在小范围内造成 200 点高爆}伤害。不会伤害友军。",
+        "translation": "在舰体周围发射大量拥有近炸引信的高射炮弹。每枚炮弹会在小范围内造成 200 高爆伤害。不会伤害友军。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00299行"
     },
     {
         "key": "descriptions.csv#('canister_flak', 'SHIP_SYSTEM')$text4",
         "original": "200 High Explosive",
-        "translation": "200 点高爆",
+        "translation": "200 高爆伤害",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00299行"
     },
     {
         "key": "descriptions.csv#('canister_flak', 'SHIP_SYSTEM')$text5",
         "original": "Each canister deals {{200 High Explosive}} damage in an area and is targeted to avoid friendly fire.",
-        "translation": "每个罐式高射炮弹在范围内造成 {{200 点高爆}} 伤害，且会不会误伤友军。",
+        "translation": "每个罐式高射炮弹在一片区域内造成 {{200 高爆伤害}}}，且不会误伤友军。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00299行"
     },
@@ -989,7 +989,7 @@
     {
         "key": "descriptions.csv#('combat_burn', 'SHIP_SYSTEM')$text5",
         "original": "The ship's top speed is increased by {{100}}.",
-        "translation": "舰船的最高航速提升了 {{100}}。",
+        "translation": "舰船的最高航速提高 {{100}}}。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00287行"
     },
@@ -1654,7 +1654,7 @@
     {
         "key": "descriptions.csv#('displacer_threat', 'SHIP_SYSTEM')$text5",
         "original": "The ship is teleported {{300}} units. The system is {{lash-activated}} and only gains charges when the ship is hit by an Energy Lash.",
-        "translation": "该舰船将被传送 {{300}} 单位距离。该系统为 {{鞭击激活}}，仅在舰船被能量之鞭命中时获得充能。",
+        "translation": "该舰船将被传送 {{300}} 单位距离。该系统为 {{鞭击激活}}}，仅在舰船被能量之鞭命中时获得充能。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00315行"
     },
@@ -1850,7 +1850,7 @@
     {
         "key": "descriptions.csv#('drone_strike', 'SHIP_SYSTEM')$text3",
         "original": "Supercharges one of the Terminator drones and sends it after a target. The drone deals 1200 Energy damage and 600 EMP damage on impact, and charging it generates 600 flux.",
-        "translation": "为一架部署在外的无人机充能，让它像导弹一样撞击目标。命中时将造成 1200 能量伤害 与 600 EMP 损害，激活时将产生 600 幅能。",
+        "translation": "为一架部署在外的无人机充能，让它像导弹一样撞击目标。命中时将造成 1200 能量伤害 和 600 EMP 损害，激活时将产生 600 幅能。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00295行"
     },
@@ -1864,8 +1864,8 @@
     {
         "key": "descriptions.csv#('drone_strike', 'SHIP_SYSTEM')$text5",
         "original": "Each drone deals {{1200 Energy}} damage and {{600 EMP}} damage on impact.",
-        "translation": "Each drone deals {{1200 Energy}} damage and {{600 EMP}} damage on impact.",
-        "stage": 0,
+        "translation": "无人机命中时将造成 {{1200 能量伤害}} 和 {{600 EMP 损害}}}。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00295行"
     },
     {
@@ -1955,8 +1955,8 @@
     {
         "key": "descriptions.csv#('emp', 'SHIP_SYSTEM')$text5",
         "original": "Deals {{100 Energy}} and {{500 EMP}} damage per arc. The arcs can hit targets within approximately {{500}} su of the ship.\n\nIn addition, most missiles will have their guidance systems knocked out even if they are not destroyed outright.",
-        "translation": "Deals {{100 Energy}} and {{500 EMP}} damage per arc. The arcs can hit targets within approximately {{500}} su of the ship.\n\nIn addition, most missiles will have their guidance systems knocked out even if they are not destroyed outright.",
-        "stage": 0,
+        "translation": "每道电弧造成 {{100 能量伤害}} 和 {{500 EMP 损害}}}。电弧可命中舰船周围约 {{500}} 单位距离范围内的目标。\n\n此外，电弧即便未能彻底摧毁导弹，也往往能无效化其制导系统。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00308行"
     },
     {
@@ -1983,8 +1983,8 @@
     {
         "key": "descriptions.csv#('energy_lash', 'SHIP_SYSTEM')$text5",
         "original": "Deals {{1500 EMP}} damage per arc to enemy ships. The system can hit targets within approximately {{1500}} su of the ship.\n\nOnly affects friendly ships if they have a {{lash-activated}} ship system.",
-        "translation": "Deals {{1500 EMP}} damage per arc to enemy ships. The system can hit targets within approximately {{1500}} su of the ship.\n\nOnly affects friendly ships if they have a {{lash-activated}} ship system.",
-        "stage": 0,
+        "translation": "每道电弧对敌方舰船造成 {{1500 EMP 损害}}}。该战术系统可命中舰船周围约 {{1500}} 单位距离范围内的目标。\n\n如果友方舰船搭载了 {{鞭击激活}} 战术系统，则可借此对其产生特殊影响。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00314行"
     },
     {
@@ -2032,8 +2032,8 @@
     {
         "key": "descriptions.csv#('entropyamplifier', 'SHIP_SYSTEM')$text5",
         "original": "The target ship takes {{50%}} more damage from all sources.",
-        "translation": "The target ship takes {{50%}} more damage from all sources.",
-        "stage": 0,
+        "translation": "目标舰船受到的伤害提高 {{50%}}}。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00273行"
     },
     {
@@ -2130,8 +2130,8 @@
     {
         "key": "descriptions.csv#('extraction_protocol', 'SHIP_SYSTEM')$text5",
         "original": "Top speed is increased by {{100}} su. The system is {{lash-activated}} and only comes online when the ship is hit by an Energy Lash.",
-        "translation": "Top speed is increased by {{100}} su. The system is {{lash-activated}} and only comes online when the ship is hit by an Energy Lash.",
-        "stage": 0,
+        "translation": "最高航速提高 {{100}}}。该系统为 {{鞭击激活}}}，仅在舰船被能量之鞭命中时启动。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00317行"
     },
     {
@@ -2340,8 +2340,8 @@
     {
         "key": "descriptions.csv#('forgevats', 'SHIP_SYSTEM')$text5",
         "original": "The amount of missiles reloaded is equal to the base ammo capacity of each weapon, before any modifiers from skills or hullmods.",
-        "translation": "The amount of missiles reloaded is equal to the base ammo capacity of each weapon, before any modifiers from skills or hullmods.",
-        "stage": 0,
+        "translation": "装填的导弹数量等于各导弹武器的基础备弹量，不计入技能或舰船插件带来的任何修正。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00452行"
     },
     {
@@ -2368,8 +2368,8 @@
     {
         "key": "descriptions.csv#('forgevats_station', 'SHIP_SYSTEM')$text5",
         "original": "The amount of missiles reloaded is equal to the base ammo capacity of each weapon, before any modifiers from skills or hullmods.",
-        "translation": "The amount of missiles reloaded is equal to the base ammo capacity of each weapon, before any modifiers from skills or hullmods.",
-        "stage": 0,
+        "translation": "装填的导弹数量等于各导弹武器的基础备弹量，不计入技能或舰船插件带来的任何修正。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00453行"
     },
     {
@@ -2396,8 +2396,8 @@
     {
         "key": "descriptions.csv#('fortressshield', 'SHIP_SYSTEM')$text5",
         "original": "The ship's shields take {{90%}} reduced damage.",
-        "translation": "The ship's shields take {{90%}} reduced damage.",
-        "stage": 0,
+        "translation": "舰船护盾受到的伤害降低 {{90%}}}。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00293行"
     },
     {
@@ -2438,8 +2438,8 @@
     {
         "key": "descriptions.csv#('fragment_volley', 'SHIP_SYSTEM')$text5",
         "original": "Fragment missile range is increased by a factor of {{2}}. The system is {{lash-activated}} and only comes online when the ship is hit by an Energy Lash.",
-        "translation": "Fragment missile range is increased by a factor of {{2}}. The system is {{lash-activated}} and only comes online when the ship is hit by an Energy Lash.",
-        "stage": 0,
+        "translation": "碎片导弹的射程提高至原来的 {{2}} 倍。该系统为 {{鞭击激活}}}，仅在舰船被能量之鞭命中时启动。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00318行"
     },
     {
@@ -3026,8 +3026,8 @@
     {
         "key": "descriptions.csv#('highenergyfocus', 'SHIP_SYSTEM')$text5",
         "original": "The damage dealt by all energy weapons is increased by {{50%}}.",
-        "translation": "The damage dealt by all energy weapons is increased by {{50%}}.",
-        "stage": 0,
+        "translation": "所有能量武器造成的伤害提高 {{50%}}}。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00294行"
     },
     {
@@ -3208,7 +3208,7 @@
     {
         "key": "descriptions.csv#('incursion_mode', 'SHIP_SYSTEM')$text1",
         "original": "Increases the ship's top speed, flux dissipation, and charge regeneration rate, as well as overall aggressiveness.",
-        "translation": "提升舰船的最高航速、幅能耗散与备弹回复速率，增强战斗积极性。",
+        "translation": "提升舰船的最高航速、幅能耗散与备弹恢复速率，增强战斗积极性。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00316行"
     },
@@ -3222,7 +3222,7 @@
     {
         "key": "descriptions.csv#('incursion_mode', 'SHIP_SYSTEM')$text3",
         "original": "Increases the ship's top speed, flux dissipation, and charge regeneration rate, as well as overall aggressiveness. The system is only activated when the ship is hit by an Energy Lash.",
-        "translation": "提升舰船的最高航速、幅能耗散与备弹回复速率，增强战斗积极性。该系统仅在舰船被 能量之鞭 命中时才会激活。",
+        "translation": "提升舰船的最高航速、幅能耗散与备弹恢复速率，增强战斗积极性。该系统仅在舰船被 能量之鞭 命中时才会激活。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00316行"
     },
@@ -3236,8 +3236,8 @@
     {
         "key": "descriptions.csv#('incursion_mode', 'SHIP_SYSTEM')$text5",
         "original": "Top speed is increased by {{100}} su, flux dissipation is increased by a factor of {{3}}, and ballistic and energy weapons regenerate charges very rapidly. The system is {{lash-activated}} and only comes online when the ship is hit by an Energy Lash.",
-        "translation": "Top speed is increased by {{100}} su, flux dissipation is increased by a factor of {{3}}, and ballistic and energy weapons regenerate charges very rapidly. The system is {{lash-activated}} and only comes online when the ship is hit by an Energy Lash.",
-        "stage": 0,
+        "translation": "最高航速提高 {{100}}}，幅能耗散速率提高至原来的 {{3}} 倍，且极大幅度地提高实弹武器和能量武器的备弹量恢复速率。该系统为 {{鞭击激活}}}，仅在舰船被能量之鞭命中时启动。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00316行"
     },
     {
@@ -3579,8 +3579,8 @@
     {
         "key": "descriptions.csv#('lidararray', 'SHIP_SYSTEM')$text5",
         "original": "While the system is active, hardpoint weapons receive {{100%}} increased range and {{200%}} increased rate of fire. Recoil is reduced by {{75%}}, and projectile speed is increased by {{50%}}.\n\nWhile the system is in passive mode, the range of all non-missile weapons is increased by {{35%}}.",
-        "translation": "While the system is active, hardpoint weapons receive {{100%}} increased range and {{200%}} increased rate of fire. Recoil is reduced by {{75%}}, and projectile speed is increased by {{50%}}.\n\nWhile the system is in passive mode, the range of all non-missile weapons is increased by {{35%}}.",
-        "stage": 0,
+        "translation": "系统激活时，挂载点武器射程提高 {{100%}}}，武器射速提高 {{200%}}}；后坐力降低 {{75%}}}，弹体飞行速率提高 {{50%}}}。  \n\n系统未激活时，所有非导弹类武器射程提高 {{35%}}}。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00296行"
     },
     {
@@ -3838,8 +3838,8 @@
     {
         "key": "descriptions.csv#('maneuveringjets', 'SHIP_SYSTEM')$text5",
         "original": "The ship's top speed is increased by {{50}}.",
-        "translation": "The ship's top speed is increased by {{50}}.",
-        "stage": 0,
+        "translation": "舰船的最高航速提高 {{50}}}。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00288行"
     },
     {
@@ -3929,8 +3929,8 @@
     {
         "key": "descriptions.csv#('microburn', 'SHIP_SYSTEM')$text5",
         "original": "The ship's top speed is briefly increased to approximately {{600}} su/second.",
-        "translation": "The ship's top speed is briefly increased to approximately {{600}} su/second.",
-        "stage": 0,
+        "translation": "舰船的最高航速在短时间内提高至大约 {{600}}}。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00290行"
     },
     {
@@ -3985,22 +3985,22 @@
     {
         "key": "descriptions.csv#('mine_strike', 'SHIP_SYSTEM')$text3",
         "original": "Teleports a heavy proximity mine to the target area. Each mine deals 2000 High Explosive damage in an area. Can be used while phased.",
-        "translation": "传送一颗重型感应空雷到目标区域，可在相位隐形状态下使用。",
+        "translation": "传送一颗重型感应空雷到目标区域，在一片区域内造成 2000 高爆伤害。可在相位隐形状态下使用。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00275行"
     },
     {
         "key": "descriptions.csv#('mine_strike', 'SHIP_SYSTEM')$text4",
         "original": "2000 High Explosive",
-        "translation": "2000 High Explosive",
-        "stage": 0,
+        "translation": "2000 高爆伤害",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00275行"
     },
     {
         "key": "descriptions.csv#('mine_strike', 'SHIP_SYSTEM')$text5",
         "original": "Each mine deals {{2000 High Explosive}} damage in a large area, and can be deployed from a range of approximately {{1000}} su.",
-        "translation": "Each mine deals {{2000 High Explosive}} damage in a large area, and can be deployed from a range of approximately {{1000}} su.",
-        "stage": 0,
+        "translation": "每颗感应空雷在一片较大区域内造成 {{2000 高爆伤害}}}，最远传送距离约为 {{1000}} 单位距离。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00275行"
     },
     {
@@ -4020,22 +4020,22 @@
     {
         "key": "descriptions.csv#('mine_strike_station', 'SHIP_SYSTEM')$text3",
         "original": "Teleports a heavy proximity mine to the target area. Each mine deals 2000 High Explosive damage in an area.",
-        "translation": "传送一颗重型感应空雷到目标区域。每枚空雷会在一片区域内造成 2000 点高爆伤害。",
+        "translation": "传送一颗重型感应空雷到目标区域。每枚空雷会在一片区域内造成 2000 高爆伤害。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00276行"
     },
     {
         "key": "descriptions.csv#('mine_strike_station', 'SHIP_SYSTEM')$text4",
         "original": "2000 High Explosive",
-        "translation": "2000 High Explosive",
-        "stage": 0,
+        "translation": "2000 高爆伤害",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00276行"
     },
     {
         "key": "descriptions.csv#('mine_strike_station', 'SHIP_SYSTEM')$text5",
         "original": "Each mine deals {{2000 High Explosive}} damage in a large area, and can be deployed from a range of approximately {{3500}} su.",
-        "translation": "Each mine deals {{2000 High Explosive}} damage in a large area, and can be deployed from a range of approximately {{3500}} su.",
-        "stage": 0,
+        "translation": "每颗感应空雷在一片较大区域内造成 {{2000 高爆伤害}}}，最远传送距离约为 {{3500}} 单位距离。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00276行"
     },
     {
@@ -4678,8 +4678,8 @@
     {
         "key": "descriptions.csv#('phaseteleporter', 'SHIP_SYSTEM')$text5",
         "original": "The target location can be up to {{1500}} su away.",
-        "translation": "The target location can be up to {{1500}} su away.",
-        "stage": 0,
+        "translation": "传送目标位置距离最远可达 {{1500}} 单位距离。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00300行"
     },
     {
@@ -5700,8 +5700,8 @@
     {
         "key": "descriptions.csv#('plasmajets', 'SHIP_SYSTEM')$text5",
         "original": "The ship's top speed is increased by {{125}}. The ship also receives a significant boost to its turn and acceleration rates.",
-        "translation": "The ship's top speed is increased by {{125}}. The ship also receives a significant boost to its turn and acceleration rates.",
-        "stage": 0,
+        "translation": "舰船的最高航速提升 {{125}}}。同时，舰船的转向与加速速率也将获得显著提升。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00289行"
     },
     {
@@ -6638,15 +6638,15 @@
     {
         "key": "descriptions.csv#('shrouded_vortex', 'SHIP_SYSTEM')$text3",
         "original": "The vortex moves through n-space, following the curvature of local space-time, gradually destabilizing, and eventually exploding to deal 2000 Energy damage in a large area.",
-        "translation": "该涡流在正常空间中移动，沿局部时空曲率运行，并逐渐失稳。失稳时，涡流会发生爆炸，对大范围内的目标造成 2000 点能量伤害。",
+        "translation": "该涡流在正常空间中移动，沿局部时空曲率运行，并逐渐失稳。失稳时，涡流会发生爆炸，在一片较大区域内造成 2000 能量伤害。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00323行"
     },
     {
         "key": "descriptions.csv#('shrouded_vortex', 'SHIP_SYSTEM')$text4",
         "original": "2000 Energy",
-        "translation": "2000 Energy",
-        "stage": 0,
+        "translation": "2000 能量伤害",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00323行"
     },
     {
@@ -7499,8 +7499,8 @@
     {
         "key": "descriptions.csv#('targetingfeed', 'SHIP_SYSTEM')$text5",
         "original": "Fighter damage is increased by {{50%}}.",
-        "translation": "Fighter damage is increased by {{50%}}.",
-        "stage": 0,
+        "translation": "战机伤害提升 {{50%}}}。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00312行"
     },
     {
@@ -7569,8 +7569,8 @@
     {
         "key": "descriptions.csv#('temporalshell', 'SHIP_SYSTEM')$text5",
         "original": "Time passes at up to {{three}} times the normal rate on board the ship.",
-        "translation": "Time passes at up to {{three}} times the normal rate on board the ship.",
-        "stage": 0,
+        "translation": "舰船上的时间流逝速度最高可达正常情况的 {{3}} 倍。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00279行"
     },
     {
@@ -7856,8 +7856,8 @@
     {
         "key": "descriptions.csv#('vacuum_colony', 'GALLERY')$text4",
         "original": "- Academician Florian Proxima, Domain History department, Galatia Academy",
-        "translation": "- Academician Florian Proxima, Domain History department, Galatia Academy",
-        "stage": 0,
+        "translation": "- Galatia 学院 人之领历史系 院士 Florian Proxima",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\ndescriptions.csv第00623行"
     },
     {

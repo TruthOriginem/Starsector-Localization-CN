@@ -38110,9 +38110,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/MissileSpecialization$Level3A.class#\"+25% missile weapon ammo regeneration rate (only for missile weapons that regenerate ammo)\"",
         "original": "+25% missile weapon ammo regeneration rate (only for missile weapons that regenerate ammo)",
-        "translation": "+25% 导弹武器备弹量回复速率 (仅对能自行回复备弹量的武器生效)",
+        "translation": "+25% 导弹武器备弹量恢复速率 (仅对能自行恢复备弹量的武器生效)",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/MissileSpecialization$Level3A.class 的第0058个常量\n原始数据：\"+25% missile weapon ammo regeneration rate (only for missile weapons that regenerate ammo)\"\n译文数据：\"+25% 导弹武器备弹量回复速率 (仅对能自行回复备弹量的武器生效)\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/MissileSpecialization$Level3A.class 的第0058个常量\n原始数据：\"+25% missile weapon ammo regeneration rate (only for missile weapons that regenerate ammo)\"\n译文数据：\"+25% 导弹武器备弹量恢复速率 (仅对能自行恢复备弹量的武器生效)\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/MissileSpecialization$Level4.class#\"+10% damage dealt by missile weapons\"",
@@ -39104,9 +39104,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/SystemsExpertise$Level2.class#\"If the ship's system regenerates charges: +\"",
         "original": "If the ship's system regenerates charges: +",
-        "translation": "若舰船系统能回复充能：则 +",
+        "translation": "若舰船系统能恢复充能：则 +",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/SystemsExpertise$Level2.class 的第0062个常量\n原始数据：\"If the ship's system regenerates charges: +\"\n译文数据：\"若舰船系统能回复充能：则 +\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/SystemsExpertise$Level2.class 的第0062个常量\n原始数据：\"If the ship's system regenerates charges: +\"\n译文数据：\"若舰船系统能恢复充能：则 +\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/SystemsExpertise$Level3.class#\"% range\"",
@@ -43416,9 +43416,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/dweller/ShroudedLensHullmod.class#\"The \"lens\" (in the loosest sense of the word) focuses on nearby objects, seemingly at random. Deals %s damage and generates %s flux.\"",
         "original": "The \"lens\" (in the loosest sense of the word) focuses on nearby objects, seemingly at random. Deals %s damage and generates %s flux.",
-        "translation": "安装的 \"瞳晶\"(某种意义上算是) 会随机聚焦于附近的目标。造成 %s 点伤害，并产生 %s 点幅能。",
+        "translation": "安装的 \"瞳晶\"(某种意义上算是) 会随机聚焦于附近的目标。造成 %s 伤害，并产生 %s 幅能。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/combat/dweller/ShroudedLensHullmod.class 的第0497个常量\n原始数据：\"The \"lens\" (in the loosest sense of the word) focuses on nearby objects, seemingly at random. Deals %s damage and generates %s flux.\"\n译文数据：\"安装的 \"瞳晶\"(某种意义上算是) 会随机聚焦于附近的目标。造成 %s 点伤害，并产生 %s 点幅能。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/combat/dweller/ShroudedLensHullmod.class 的第0497个常量\n原始数据：\"The \"lens\" (in the loosest sense of the word) focuses on nearby objects, seemingly at random. Deals %s damage and generates %s flux.\"\n译文数据：\"安装的 \"瞳晶\"(某种意义上算是) 会随机聚焦于附近的目标。造成 %s 伤害，并产生 %s 幅能。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/dweller/ShroudedLensHullmod.class#\"The rate of fire depends on the size of the ship the hullmod is installed on. Can not be turned off during combat operatio~\"@8566aeb3",
@@ -43640,9 +43640,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/threat/IncursionModeSystemScript.class#\"rapid charge regen\"",
         "original": "rapid charge regen",
-        "translation": "加快备弹量的回复",
+        "translation": "加快备弹量的恢复",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/combat/threat/IncursionModeSystemScript.class 的第0204个常量\n原始数据：\"rapid charge regen\"\n译文数据：\"加快备弹量的回复\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/combat/threat/IncursionModeSystemScript.class 的第0204个常量\n原始数据：\"rapid charge regen\"\n译文数据：\"加快备弹量的恢复\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/threat/IncursionModeSystemScript.class#\"x\"",
@@ -44032,9 +44032,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Increases fighter refit time by %s, and the fighter replacement rate both decays and recovers %s more slowly. In addition,~\"@b6f2d152",
         "original": "Increases fighter refit time by %s, and the fighter replacement rate both decays and recovers %s more slowly. In addition, bombers returning to rearm (or fighters returning for repairs) take %s of their base refit time to relaunch, where normally it takes under a second. ",
-        "translation": "提高舰载机整备时间{%s}，同时 战机整备率 的回复和损耗都降低{%s}。此外，所有回舰重新装填的轰炸机和回舰维修的战斗机需要花费其基础整备时间的{%s}才能重新起飞，正常情况下这只需不到一秒。",
+        "translation": "提高舰载机整备时间{%s}，同时 战机整备率 的恢复和损耗都降低{%s}。此外，所有回舰重新装填的轰炸机和回舰维修的战斗机需要花费其基础整备时间的{%s}才能重新起飞，正常情况下这只需不到一秒。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0439个常量\n原始数据：\"Increases fighter refit time by %s, and the fighter replacement rate both decays and recovers %s more slowly. In addition, bombers returning to rearm (or fighters returning for repairs) take %s of their base refit time to relaunch, where normally it takes under a second. \"\n译文数据：\"提高舰载机整备时间{%s}，同时 战机整备率 的回复和损耗都降低{%s}。此外，所有回舰重新装填的轰炸机和回舰维修的战斗机需要花费其基础整备时间的{%s}才能重新起飞，正常情况下这只需不到一秒。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class 的第0439个常量\n原始数据：\"Increases fighter refit time by %s, and the fighter replacement rate both decays and recovers %s more slowly. In addition, bombers returning to rearm (or fighters returning for repairs) take %s of their base refit time to relaunch, where normally it takes under a second. \"\n译文数据：\"提高舰载机整备时间{%s}，同时 战机整备率 的恢复和损耗都降低{%s}。此外，所有回舰重新装填的轰炸机和回舰维修的战斗机需要花费其基础整备时间的{%s}才能重新起飞，正常情况下这只需不到一秒。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/ConvertedHangar.class#\"Increases the minimum crew by %s to account for pilots and flight crews. Increases the ship's deployment points and supply~\"@53bec8c5",
@@ -44473,9 +44473,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/NeuralInterface.class#\"After the transfer is complete, the target ship's system cooldown (if any) will be reset, and if the ship system uses char~\"@ddb16f91",
         "original": "After the transfer is complete, the target ship's system cooldown (if any) will be reset, and if the ship system uses charges, it will gain an additonal charge. This effect operates on a cooldown equal to %s the cooldown/charge regeneration time saved by it.",
-        "translation": "转换完毕后，目标舰船的战术系统冷却时间会被重置。如果战术系统有充能次数，则立刻回复一次。此效果的冷却时间取决于 该技能得以节约的冷却或充能时间的 %s}。",
+        "translation": "转换完毕后，目标舰船的战术系统冷却时间会被重置。如果战术系统有充能次数，则立刻恢复一次。此效果的冷却时间取决于 该技能得以节约的冷却或充能时间的 %s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/NeuralInterface.class 的第0238个常量\n原始数据：\"After the transfer is complete, the target ship's system cooldown (if any) will be reset, and if the ship system uses charges, it will gain an additonal charge. This effect operates on a cooldown equal to %s the cooldown/charge regeneration time saved by it.\"\n译文数据：\"转换完毕后，目标舰船的战术系统冷却时间会被重置。如果战术系统有充能次数，则立刻回复一次。此效果的冷却时间取决于 该技能得以节约的冷却或充能时间的 %s}。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n提取自 starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/NeuralInterface.class 的第0238个常量\n原始数据：\"After the transfer is complete, the target ship's system cooldown (if any) will be reset, and if the ship system uses charges, it will gain an additonal charge. This effect operates on a cooldown equal to %s the cooldown/charge regeneration time saved by it.\"\n译文数据：\"转换完毕后，目标舰船的战术系统冷却时间会被重置。如果战术系统有充能次数，则立刻恢复一次。此效果的冷却时间取决于 该技能得以节约的冷却或充能时间的 %s}。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/NeuralInterface.class#\"Can not be installed on automated ships, install Neural Integrator instead\"",

@@ -1794,7 +1794,7 @@
     {
         "key": "weapon_data.csv#kinetic_fragments$customPrimary",
         "original": "Requires the %s hullmod and uses %s fragments per shot. Secondary fragments deal %s kinetic damage per impact.",
-        "translation": "需要 %s 舰船插件，每次射击消耗{%s}碎片。次级碎片每次撞击造成{%s}点动能伤害。",
+        "translation": "需要 %s 舰船插件，每次射击消耗{%s}碎片。次级碎片每次撞击造成{%s}动能伤害。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00127行"
     },
@@ -2669,7 +2669,7 @@
     {
         "key": "weapon_data.csv#rift_lightning$customPrimary",
         "original": "Fires an EMP arc at the target and opens a rift that deals damage in an area around the point of impact. The arc may miss depending on exactly where the weapon is pointing, and can pass over friendly ships.",
-        "translation": "向目标发射一道 EMP 电弧，并开启一道裂隙 —— 该裂隙会对命中区域造成伤害。电弧是否命中取决于武器的精确瞄准方向，可以穿过友方舰船。",
+        "translation": "向目标发射一道 EMP 电弧，并开启一道裂隙，在裂隙附近的一片区域内造成伤害。电弧是否命中取决于武器的精确瞄准方向，可以穿过友方舰船。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00141行"
     },
@@ -3621,7 +3621,7 @@
     {
         "key": "weapon_data.csv#vortex_launcher$customPrimary",
         "original": "Launches a Shrouded Vortex, which will try to seek out and batter nearby targets and will eventually explode, dealing up to 2000 points of energy damage in an area.",
-        "translation": "发射一个{%s}，涡流将跟踪附近的目标并发生爆炸，对大范围内的目标造成{%s}点{%s}伤害。",
+        "translation": "发射一个{%s}，涡流将跟踪附近的目标并发生爆炸，在一片区域内造成{%s}点{%s}伤害。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\nweapon_data.csv第00145行"
     },
