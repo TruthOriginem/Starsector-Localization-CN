@@ -20,6 +20,7 @@
 | starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/intel/misc/SalvorsTallyIntel.class | `orbital` |
 | starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/CoreScript.class | `ships`， `cargo`, `ships & cargo` |
 | starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class | `aggressive`, `reckless` |
+| starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class | `Heavy`, `Light`, `Moderate`, `None`, `Minimal`, `Extreme` |
 
 ## 代码逻辑修改
 
