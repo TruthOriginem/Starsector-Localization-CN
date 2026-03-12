@@ -18,7 +18,6 @@ BRANCH_VARIANT: dict[str, str] = {
     'master': '(黑体版)',
     'font-simsong': '(宋体版)',
     'font-zongyi': '(综艺体版)',
-    'font-lantinghei-v2': '(新兰亭黑体版)',
 }
 
 
