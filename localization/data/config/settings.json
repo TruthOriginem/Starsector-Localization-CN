@@ -183,7 +183,7 @@
 	"drop_prob_mult_ai_core_station":1000, # the station always drops it
 	
 	# Shrouded Dweller substrate drops; can also do substrate_<hull_id> to override 
-	"substrate_FRIGATE":[0.0, 0.03];
+	"substrate_FRIGATE":[0.0, 0.03],
 	"substrate_DESTROYER":[0.05, 0.1],
 	"substrate_CRUISER":[0.5, 1.0],
 	"substrate_CAPITAL_SHIP":[2, 4],
@@ -691,12 +691,12 @@
 	
 	#"salvageOwnWeaponProb":0.5;
 	#"salvageOwnWingProb":0.5;
-	"salvageOwnWeaponProb":1;
-	"salvageOwnWingProb":1;
-	"salvageWeaponProb":0.25;
-	"salvageWingProb":0.25;
-	"salvageHullmodProb":0.02;
-	"salvageHullmodRequiredItemProb":0.05;
+	"salvageOwnWeaponProb":1,
+	"salvageOwnWingProb":1,
+	"salvageWeaponProb":0.25,
+	"salvageWingProb":0.25,
+	"salvageHullmodProb":0.02,
+	"salvageHullmodRequiredItemProb":0.05,
 	
 	"baseSurveyXP":20,
 	
@@ -806,7 +806,7 @@
 	"baseCombatShipsForMaxOfficerLevel":16, # halved when officer doctrine setting is maxed; not used for AI core using fleets
 	"officerAIMaxMercsMult":1, # maximum "over-the-limit" merc-type officers that can be added to an AI fleet, times doctrine officer setting
 	#"officerAIMercsStartingFP":100, # start adding more "merc" officers at this threshold; no longer used
-	"baseNumOfficers":8; # in a fleet w/o officer management skills
+	"baseNumOfficers":8, # in a fleet w/o officer management skills
 	
 	"crewSalary":10, # credits per crew per month
 	"marineSalary":20, # credits per marine per month
@@ -819,13 +819,13 @@
 	"baseRepairRateCruiser":8,
 	"baseRepairRateCapital":6,
 	
-	"suppliesPerMarinePerDay":0;
-	"suppliesPerCrewPerDay":0;
-	"suppliesPerCargoUnitOverCapacity":0.1;
-	"suppliesPerFuelUnitOverCapacity":0.1;
-	"suppliesPerPersonnelUnitOverCapacity":0.1;
-	"maxSuppliesPerDayForOverCapacity":50; # for each type of capacity, so, max 150 total
-	"supplyConsumptionMothballedMult":0;
+	"suppliesPerMarinePerDay":0,
+	"suppliesPerCrewPerDay":0,
+	"suppliesPerCargoUnitOverCapacity":0.1,
+	"suppliesPerFuelUnitOverCapacity":0.1,
+	"suppliesPerPersonnelUnitOverCapacity":0.1,
+	"maxSuppliesPerDayForOverCapacity":50, # for each type of capacity, so, max 150 total
+	"supplyConsumptionMothballedMult":0,
 	
 	"suppliesPerShipOverMaxInFleet":0.2, # this is actually a fraction for the total maintenance cost, this * (ships - maxShipsInFleet) 
 	
@@ -901,7 +901,7 @@
 	"noDeployCRPercent":0,
 	"noDeployCrewPercent":5,
 	
-	"emergencyRepairsMaxDPValue":80;
+	"emergencyRepairsMaxDPValue":80,
 	
 	# story point costs for things that cost more than one point
 	"historianSpecialItemBase":4, # doubles for each successive item 
