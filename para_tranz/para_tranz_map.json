@@ -269,7 +269,7 @@
       "$.displayNameLong",
       "$.displayNameLongWithArticle"
     ],
-    "combined_output": "data/world/factions_combined.json"
+    "combined_output": "data/world/factions/factions_combined.json"
   },
   {
     "type": "json",
@@ -279,7 +279,7 @@
       "$.tech",
       "$.descriptionPrefix"
     ],
-    "combined_output": "data/hulls/skins_combined.json"
+    "combined_output": "data/hulls/skins/skins_combined.json"
   },
   {
     "type": "json",
@@ -287,7 +287,7 @@
     "text_paths": [
       "$.effectGroups[*].name"
     ],
-    "combined_output": "data/characters/skills_combined.json"
+    "combined_output": "data/characters/skills/skills_combined.json"
   },
   {
     "type": "json",
@@ -295,7 +295,7 @@
     "text_paths": [
       "$.displayName"
     ],
-    "combined_output": "data/variants_combined.json"
+    "combined_output": "data/variants/variants_combined.json"
   },
   {
     "type": "jar",
