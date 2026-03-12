@@ -117,6 +117,48 @@
 - csv中含有id的列名是`id`，该id在文件中唯一，可以以此确定是哪一行
 - 需要翻译的列有`text`和`options`
 
+## 添加新 JSON/游戏数据文件
+
+脚本根据 `para_tranz_map.json` 中的配置提取 JSON 类文件（`.json`、`.faction`、`.skin`、`.skill`、`.variant` 等）的可翻译词条。配置格式如下：
+
+```json
+{
+    "type": "json",
+    "path": "data/config/battle_objectives.json",
+    "text_paths": [
+        "$.*.name"
+    ]
+}
+```
+
+- `type`：固定为 `"json"`
+- `path`：文件路径（相对于 `original/` 文件夹），支持 glob 通配符（如 `data/variants/**/*.variant`）
+- `text_paths`：路径表达式列表，指定文件中哪些字段需要翻译
+
+### `text_paths` 路径表达式语法
+
+| 表达式 | 含义 | 生成 key 示例 |
+|--------|------|--------------|
+| `$.fieldName` | 根级别字段，值为字符串 | `$.fieldName` |
+| `$.*.name` | 根对象下任意 key 的 `name` 字段 | `$.nav_buoy.name` |
+| `$.*.*` | 根对象下任意 key 的任意子字段（值为字符串） | `$.group.key` |
+| `$.*.*.title` | 3 层嵌套，第 3 层指定字段 | `$.codex.damage_kinetic.title` |
+| `$.key[*]` | `key` 字段下的数组，每个元素是字符串 | `$.tips[0]` |
+| `$.key[*].field` | `key` 字段下的数组，每个对象的指定字段 | `$.tips[0].tip` |
+| `$[*]` | 根数组，每个元素是字符串 | `$[0]` |
+| `$.key.$key` | 翻译 `key` 字段下对象的所有 **key 名称**（而非 value） | `$.designTypeColors["Low Tech"]` |
+
+规则：
+- `*` 匹配对象的任意 key；`[*]` 匹配数组的任意下标（从 0 开始）
+- `.$key` 后缀表示翻译 key 名称本身，写回时会调用 `Object.rename_key()` 重命名
+- key 中含特殊字符（如空格）时，生成的路径使用 `["key"]` 形式
+- 路径对应值不存在、不是字符串、为空字符串，或以 `$` 开头的模板变量（如 `$sender`）→ 静默跳过
+- 若该文件无可翻译词条，不会生成对应的 output 文件
+
+### 注意事项
+
+- 对同一 Object 的同一层级，**不要同时**配置 `.$key`（重命名 key）和值路径（如 `.*`），否则 key 重命名先执行后，值替换找不到原始 key 会静默失败
+
 ## 查找本次游戏更新后修改/添加的词条
 - 打开 [翻译界面](https://paratranz.cn/projects/3489/strings)。
 - 点击左上方搜索框右侧的漏斗状按钮，选择【高级筛选】

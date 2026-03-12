@@ -164,6 +164,11 @@
     ]
   },
   {
+    "type": "txt",
+    "path": "data/missions/*/mission_text.txt",
+    "combined_output": "data/missions/mission_text_combined.json"
+  },
+  {
     "type": "json",
     "path": "data/config/battle_objectives.json",
     "text_paths": [
@@ -252,7 +257,8 @@
     "path": "data/missions/*/descriptor.json",
     "text_paths": [
       "$.title"
-    ]
+    ],
+    "combined_output": "data/missions/mission_descriptor_combined.json"
   },
   {
     "type": "json",
@@ -262,7 +268,8 @@
       "$.displayNameWithArticle",
       "$.displayNameLong",
       "$.displayNameLongWithArticle"
-    ]
+    ],
+    "combined_output": "data/world/factions_combined.json"
   },
   {
     "type": "json",
@@ -271,21 +278,24 @@
       "$.hullName",
       "$.tech",
       "$.descriptionPrefix"
-    ]
+    ],
+    "combined_output": "data/hulls/skins_combined.json"
   },
   {
     "type": "json",
     "path": "data/characters/skills/*.skill",
     "text_paths": [
       "$.effectGroups[*].name"
-    ]
+    ],
+    "combined_output": "data/characters/skills_combined.json"
   },
   {
     "type": "json",
     "path": "data/variants/**/*.variant",
     "text_paths": [
       "$.displayName"
-    ]
+    ],
+    "combined_output": "data/variants_combined.json"
   },
   {
     "type": "jar",

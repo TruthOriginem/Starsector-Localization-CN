@@ -13,6 +13,7 @@ from para_tranz.config import (
     IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS,
     MAX_STRING_KEY_LENGTH,
     ORIGINAL_PATH,
+    PARA_TRANZ_PATH,
 )
 from para_tranz.json_loader.alexson.parser import AlexsonParser
 from para_tranz.json_loader.alexson.syntax_tree import Array, Object, Root
@@ -240,8 +241,9 @@ class JsonFile(DataFile):
         original_path: Optional[Path] = None,
         translation_path: Optional[Path] = None,
         type: str = 'json',
+        output_path: Optional[Path] = None,
     ):
-        super().__init__(path, type, original_path, translation_path)
+        super().__init__(path, type, original_path, translation_path, output_path)
         self.text_paths = text_paths
         self._original_root: Optional[Root] = None
         self._translation_root: Optional[Root] = None
@@ -249,8 +251,8 @@ class JsonFile(DataFile):
 
     @property
     def file_name(self) -> str:
-        """文件名，用于生成 ParaTranz key（如 battle_objectives.json）。"""
-        return self.path.name
+        """完整相对路径，用于生成 ParaTranz key（如 data/config/battle_objectives.json）。"""
+        return str(self.path).replace('\\', '/')
 
     def load_from_file(self) -> None:
         self._original_root = self._parse_file(self.original_path)
@@ -282,9 +284,9 @@ class JsonFile(DataFile):
         return key
 
     def _generate_context(self, json_path: str, is_key_rename: bool = False) -> str:
-        context = f'{EXPORTED_STRING_CONTEXT_PREFIX}{self.file_name}{json_path}'
+        context = f'{EXPORTED_STRING_CONTEXT_PREFIX}源文件：{self.path}\n数据路径：{self.file_name}{json_path}'
         if is_key_rename:
-            context += '\n（翻译 object key 名称）'
+            context += '\n（词条内容为json key值）'
         return context
 
     def _iter_strings(
@@ -416,6 +418,10 @@ class JsonFile(DataFile):
                             except KeyError as e:
                                 self.logger.warning(f'重命名 key 失败 {key}：{e}')
                     # old_key 不存在但 translation 已存在 → 已翻译，跳过
+                else:
+                    self.logger.warning(
+                        f'在 {self.path} 中没有找到词条 key={key} 对应的位置，未写入译文'
+                    )
             else:
                 parent_segs = exact_segs[:-1]
                 last_seg = exact_segs[-1]
@@ -426,12 +432,20 @@ class JsonFile(DataFile):
                         trans_parent.items
                     ):
                         trans_parent[last_seg] = AlexsonString(translation)
+                    else:
+                        self.logger.warning(
+                            f'在 {self.path} 中没有找到词条 key={key} 对应的位置，未写入译文'
+                        )
                 elif isinstance(last_seg, str):
                     if (
                         isinstance(trans_parent, Object)
                         and last_seg in trans_parent.dict
                     ):
                         trans_parent[last_seg] = AlexsonString(translation)
+                    else:
+                        self.logger.warning(
+                            f'在 {self.path} 中没有找到词条 key={key} 对应的位置，未写入译文'
+                        )
 
     def save_file(self) -> None:
         if self._translation_root is None:
@@ -454,6 +468,7 @@ class JsonFile(DataFile):
                 continue
 
             item_path = Path(item.path)
+            output_path = (PARA_TRANZ_PATH / item.combined_output) if item.combined_output else None
 
             # 支持 glob 模式（如 data/missions/*/descriptor.json）
             if '*' in item.path or '?' in item.path:
@@ -462,8 +477,8 @@ class JsonFile(DataFile):
                     cls.logger.warning(f'glob 模式未匹配到任何文件：{item.path}')
                 for actual_path in matched:
                     rel_path = actual_path.relative_to(ORIGINAL_PATH)
-                    files.append(cls(path=rel_path, text_paths=item.text_paths))
+                    files.append(cls(path=rel_path, text_paths=item.text_paths, output_path=output_path))
             else:
-                files.append(cls(path=item_path, text_paths=item.text_paths))
+                files.append(cls(path=item_path, text_paths=item.text_paths, output_path=output_path))
 
         return files

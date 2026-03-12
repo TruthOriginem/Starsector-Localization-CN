@@ -22,6 +22,8 @@ class ParaTranzMapItem:
             return JarMapItem.from_dict(d)
         elif d['type'] == 'json':
             return JsonMapItem(**d)
+        elif d['type'] == 'txt':
+            return TxtMapItem(**d)
         else:
             raise ValueError(f'Unknown type: {d["type"]}')
 
@@ -34,6 +36,12 @@ class ParaTranzMapItem:
 @dataclass
 class JsonMapItem(ParaTranzMapItem):
     text_paths: List[str]
+    combined_output: Optional[str] = None
+
+
+@dataclass
+class TxtMapItem(ParaTranzMapItem):
+    combined_output: Optional[str] = None
 
 
 @dataclass
@@ -140,7 +148,10 @@ class ParaTranzMap:
             self.items = [ParaTranzMapItem.from_dict(item) for item in json.load(f)]
 
     def save(self) -> None:
-        data = [dataclasses.asdict(item) for item in self.items]
+        def _drop_none(d: dict) -> dict:
+            return {k: v for k, v in d.items() if v is not None}
+
+        data = [_drop_none(dataclasses.asdict(item)) for item in self.items]
         with open(MAP_PATH, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2, cls=SetEncoder)
 
