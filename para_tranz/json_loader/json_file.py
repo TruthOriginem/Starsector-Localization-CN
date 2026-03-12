@@ -284,7 +284,7 @@ class JsonFile(DataFile):
         return key
 
     def _generate_context(self, json_path: str, is_key_rename: bool = False) -> str:
-        context = f'{EXPORTED_STRING_CONTEXT_PREFIX}源文件：{self.path}\n数据路径：{self.file_name}{json_path}'
+        context = f'{EXPORTED_STRING_CONTEXT_PREFIX}源文件：{self.path}\n数据路径：{json_path}'
         if is_key_rename:
             context += '\n（词条内容为json key值）'
         return context
