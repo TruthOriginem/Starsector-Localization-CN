@@ -20,6 +20,8 @@ class ParaTranzMapItem:
             return CsvMapItem(**d)
         elif d['type'] == 'jar':
             return JarMapItem.from_dict(d)
+        elif d['type'] == 'json':
+            return JsonMapItem(**d)
         else:
             raise ValueError(f'Unknown type: {d["type"]}')
 
@@ -27,6 +29,11 @@ class ParaTranzMapItem:
         return json.dumps(
             dataclasses.asdict(self), indent=2, cls=SetEncoder, ensure_ascii=False
         )
+
+
+@dataclass
+class JsonMapItem(ParaTranzMapItem):
+    text_paths: List[str]
 
 
 @dataclass

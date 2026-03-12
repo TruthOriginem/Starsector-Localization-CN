@@ -164,6 +164,130 @@
     ]
   },
   {
+    "type": "json",
+    "path": "data/config/battle_objectives.json",
+    "text_paths": [
+      "$.*.name"
+    ]
+  },
+  {
+    "type": "json",
+    "path": "data/config/contact_tag_data.json",
+    "text_paths": [
+      "$.*.name"
+    ]
+  },
+  {
+    "type": "json",
+    "path": "data/config/custom_entities.json",
+    "text_paths": [
+      "$.*.defaultName",
+      "$.*.nameInText",
+      "$.*.shortName",
+      "$.*.aOrAn",
+      "$.*.isOrAre"
+    ]
+  },
+  {
+    "type": "json",
+    "path": "data/config/planets.json",
+    "text_paths": [
+      "$.*.name"
+    ]
+  },
+  {
+    "type": "json",
+    "path": "data/config/settings.json",
+    "text_paths": [
+      "$.designTypeColors.$key"
+    ]
+  },
+  {
+    "type": "json",
+    "path": "data/config/tag_data.json",
+    "text_paths": [
+      "$.*.name"
+    ]
+  },
+  {
+    "type": "json",
+    "path": "data/strings/strings.json",
+    "text_paths": [
+      "$.*.*"
+    ]
+  },
+  {
+    "type": "json",
+    "path": "data/strings/tips.json",
+    "text_paths": [
+      "$.tips[*]",
+      "$.tips[*].tip"
+    ]
+  },
+  {
+    "type": "json",
+    "path": "data/strings/tooltips.json",
+    "text_paths": [
+      "$.*.*.title",
+      "$.*.*.body"
+    ]
+  },
+  {
+    "type": "json",
+    "path": "data/world/factions/default_fleet_type_names.json",
+    "text_paths": [
+      "$.*"
+    ]
+  },
+  {
+    "type": "json",
+    "path": "data/world/factions/default_ranks.json",
+    "text_paths": [
+      "$.ranks.*.name",
+      "$.posts.*.name"
+    ]
+  },
+  {
+    "type": "json",
+    "path": "data/missions/*/descriptor.json",
+    "text_paths": [
+      "$.title"
+    ]
+  },
+  {
+    "type": "json",
+    "path": "data/world/factions/*.faction",
+    "text_paths": [
+      "$.displayName",
+      "$.displayNameWithArticle",
+      "$.displayNameLong",
+      "$.displayNameLongWithArticle"
+    ]
+  },
+  {
+    "type": "json",
+    "path": "data/hulls/skins/*.skin",
+    "text_paths": [
+      "$.hullName",
+      "$.tech",
+      "$.descriptionPrefix"
+    ]
+  },
+  {
+    "type": "json",
+    "path": "data/characters/skills/*.skill",
+    "text_paths": [
+      "$.effectGroups[*].name"
+    ]
+  },
+  {
+    "type": "json",
+    "path": "data/variants/**/*.variant",
+    "text_paths": [
+      "$.displayName"
+    ]
+  },
+  {
     "type": "jar",
     "path": "starfarer_obf.jar",
     "class_files": [
@@ -11647,7 +11771,7 @@
           " and transmit the details ",
           " for the proposal",
           " has come \"to town\" to find distributors for their product. ",
-          " says with a wink, \"As pious folk, we need not bother with the Church\u2019s tariff.\",",
+          " says with a wink, \"As pious folk, we need not bother with the Church’s tariff.\",",
           " turns out to be the master of a farming commune ",
           " whose worn but well-tailored ",
           "'s got %s units of food that has to be moved as soon as possible and ",
@@ -11863,7 +11987,7 @@
         "include_strings": [
           " cries again and again, ",
           " glowing TriPad.",
-          " greasy TriPad. \"There\u2019s an enormous stock of ",
+          " greasy TriPad. \"There’s an enormous stock of ",
           " in academic uniform is bothering some of the ",
           " pitch through to the end.\n\n",
           " proposal and walk away",
@@ -11871,14 +11995,14 @@
           " turns out to be a scientist, maybe a \"scientist\", ",
           " voice drops to a whisper, ",
           " was a bit unhinged, after all - ",
-          "\"The data doesn\u2019t lie!\" ",
+          "\"The data doesn’t lie!\" ",
           "\"you retrieve for me the AI core hidden in the midst of the trove. ",
           "A disheveled ",
           "Accept and promise to ship the AI core to the given address in a specially shielded crate",
           "All I ask is,\" ",
           "Decline ",
           "Flag down the academic with the TriPad",
-          "That, I get to keep. I\u2019ll tell you exactly where to look if you agree to my terms.\"",
+          "That, I get to keep. I’ll tell you exactly where to look if you agree to my terms.\"",
           "Unfortunately, a closer analysis of the data brings to light several glaring inconsistencies. Looks like ",
           "You hear the scientist's offended, quavering voice at your back, \"The truth is out there! I won't be held back by small-minds like all of you!\" Most of the other patrons pretend extreme interest in their drinks, though at least one looses a mocking laugh.",
           "You set your face to a practiced stern-but-receptive look as ",
@@ -11886,7 +12010,7 @@
           "better-dressed spacers with ",
           "on ",
           "there's nothing here worth investigating.",
-          "though you can\u2019t make sense of the arcane tables scrolling ",
+          "though you can’t make sense of the arcane tables scrolling ",
           "unrecovered Domain-era technology in this system. No one else can see it! ",
           "you hear "
         ],
@@ -15794,7 +15918,7 @@
           "Accessibility",
           "Colony Growth - ",
           "Hazard pay",
-          "Hazard rating (\u00d7",
+          "Hazard rating (×",
           "Instability",
           "Larger non-hostile colony in same system",
           "No industries"
@@ -16020,7 +16144,7 @@
           "Gained ",
           "Gained ability: ",
           "Lost ",
-          "\u00d7"
+          "×"
         ],
         "exclude_strings": []
       },
@@ -16664,7 +16788,7 @@
         "include_strings": [
           " will improve by %s points.",
           "If you turn in the selected items, you will receive a %s bounty and your standing with ",
-          "\u00a2"
+          "¢"
         ],
         "exclude_strings": []
       },
@@ -16938,7 +17062,7 @@
           "*The total \"automated ship points\" are equal to the deployment points cost of all automated ships in the fleet, with a multiplier for installed AI cores - ",
           "Due to safety interlocks, ships with AI cores do not contribute to the deployment point distribution.",
           "do not contribute to the deployment point distribution",
-          "\u00d7"
+          "×"
         ],
         "exclude_strings": []
       },
@@ -17173,7 +17297,7 @@
           "+%s faster fighter replacement rate (maximum: %s)",
           "+%s ship top speed (maximum: %s)",
           "Effect increased by %s for ships with officers, including flagship",
-          "\u00d7"
+          "×"
         ],
         "exclude_strings": []
       },
@@ -17496,7 +17620,7 @@
       {
         "path": "com/fs/starfarer/api/impl/campaign/skills/DefensiveSystems$Level3B.class",
         "include_strings": [
-          "Phase cloak time acceleration increased from 3\u00d7 to 4\u00d7"
+          "Phase cloak time acceleration increased from 3× to 4×"
         ],
         "exclude_strings": []
       },
@@ -17738,7 +17862,7 @@
           "+%s target leading accuracy (maximum: %s)",
           "+%s top speed (maximum: %s)",
           "Effect increased by %s for ships with officers, including flagship",
-          "\u00d7"
+          "×"
         ],
         "exclude_strings": []
       },
@@ -20459,7 +20583,7 @@
           "Use the \"",
           "] to switch between ships.",
           "benefit from your combat skills",
-          "\u00d7"
+          "×"
         ],
         "exclude_strings": []
       },
@@ -20484,7 +20608,7 @@
           "Can only be installed on phase ships",
           "Incompatible with Adaptive Phase Coils",
           "zero",
-          "\u00d7"
+          "×"
         ],
         "exclude_strings": []
       },

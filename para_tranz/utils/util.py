@@ -157,6 +157,9 @@ class DataFile:
                         )
                         s.stage = para_s.stage
 
+        if not strings:
+            return
+
         self.write_json_strings(self.para_tranz_path, strings, ensure_ascii, indent)
 
         self.logger.info(

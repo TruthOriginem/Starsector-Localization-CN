@@ -4,9 +4,10 @@ from os.path import abspath, dirname
 # 将父级目录加入到环境变量中，以便从命令行中运行本脚本
 sys.path.append(dirname(dirname(abspath(__file__))))
 
+from para_tranz.config import ENABLED_LOADERS
 from para_tranz.csv_loader.csv_file import CsvFile
 from para_tranz.jar_loader.jar_file import JavaJarFile
-from para_tranz.config import ENABLED_LOADERS
+from para_tranz.json_loader.json_file import JsonFile
 from para_tranz.utils.mapping import PARA_TRANZ_MAP
 from para_tranz.utils.mapping_generation import (
     generate_class_file_mapping_by_path,
@@ -18,7 +19,7 @@ from para_tranz.utils.util import make_logger
 
 logger = make_logger('ParaTranzScript')
 
-_LOADER_MAP = {'jar': JavaJarFile, 'csv': CsvFile}
+_LOADER_MAP = {'jar': JavaJarFile, 'csv': CsvFile, 'json': JsonFile}
 loaders = [_LOADER_MAP[name] for name in ENABLED_LOADERS if name in _LOADER_MAP]
 
 
