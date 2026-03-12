@@ -214,7 +214,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 碎片协调器,fragment_coordinator,,,,"codex_unlockable, fragment, no_drop_salvage","武器, 特殊",15000,,,,3,6,9,15,com.fs.starfarer.api.impl.combat.threat.FragmentCoordinatorHullmod,将舰船碎片集群的最大数量提升{%s}。,提升船碎片集群的规模。,将舰船碎片集群的最大数量进一步提升{%s}。,graphics/hullmods/fragment_coordinator.png
 ,,,,,,,,,,,,,,,,,,,
 # shrouded dweller stuff,,,,,,,,,,,,,,,,,,,
-渊幕住民舰船插件,dweller_hullmod,,,,dweller,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.combat.dweller.DwellerHullmod,添加 渊幕住民 视觉特效及所有自定义机制。对玩家隐藏。,,,
+渊幕住民舰船插件,dweller_hullmod,,,,dweller,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.combat.dweller.DwellerHullmod,添加 渊幕栖兽 视觉特效及所有自定义机制。对玩家隐藏。,,,
 渊幕套膜,shrouded_mantle,,,,"codex_unlockable, shrouded, no_drop_salvage",特殊,,,,,3,6,9,15,com.fs.starfarer.api.impl.combat.dweller.ShroudedMantleHullmod,"舰船在受到严重船体损伤时，会尝试向后撤退以远离危险。
 
 战斗中的船员伤亡增加{%s}。",舰船会在受到伤害时向后撤退。,饥渴裂隙 为该舰船提供{%s}的治疗量。,graphics/hullmods/shrouded_mantle.png

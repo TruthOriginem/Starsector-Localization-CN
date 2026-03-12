@@ -74,3 +74,14 @@
 ![save_date_locale.png](save_date_locale.png)
 
 > 解决方法：修改了存档列表页的日期格式化为CHINESE
+
+### 11. 星球列表页部分列宽度不足
+相关文件：`starfarer_obf.jar:com/fs/starfarer/campaign/ui/intel/PlanetListV2.class`
+
+> 解决方法：调整了星球列表页的列宽
+
+改动前：
+Name 230+(浮动) Type 270+(浮动) Location 85 Pop. 60 SL 50 Class 65 Hazard 75 Dist 60
+
+改动后：
+名称230+(浮动) 类型270+(浮动) 位置85 人口60 稳定点75 等级60 危险度75 距离60
