@@ -87,7 +87,7 @@ class JavaJarFile(DataFile):
 
         return class_file
 
-    re_jar_class = re.compile(r'提取自 (.*\.jar):(.*\.class)')
+    re_jar_class = re.compile(r'文件：(.*\.jar)\n类：(.*\.class)')
     re_original_text = re.compile(r'原始数据：(\".*\")\n译文数据：', re.DOTALL)
 
     # TODO: 重构 String 类，添加子类 JarString，用于处理 jar 文件中的词条。将这个方法移动到 JarString 类中

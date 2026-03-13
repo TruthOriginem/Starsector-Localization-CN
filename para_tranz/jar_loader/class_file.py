@@ -244,7 +244,9 @@ class JavaClassFile:
                 # 因此在修改格式时必须一并修改 jar_file.py 中的 construct_string_key_from_context 方法
                 context += (
                     f'{EXPORTED_STRING_CONTEXT_PREFIX}'
-                    f'提取自 {self.jar_file.path}:{self.path} 的第{str(original_constant.constant_index).zfill(4)}个常量\n'
+                    f'文件：{self.jar_file.path}\n'
+                    f'类：{self.path}\n'
+                    f'常量号：{str(original_constant.constant_index).zfill(4)}\n'
                     f'原始数据："{original_constant.string}"\n'
                     f'译文数据："{translated_constant.string}"'
                 )
