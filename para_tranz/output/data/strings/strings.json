@@ -441,11 +441,39 @@
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.campaignHelp.chmWingPurchase_text"
     },
     {
+        "key": "data/strings/strings.json$.fleetInteractionDialog.battleDefeat",
+        "original": "$yourForcesWereOrYourSideWas defeated in the last engagement.",
+        "translation": "$yourForcesWereOrYourSideWas在上一次交火中被击败了。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.battleDefeat"
+    },
+    {
         "key": "data/strings/strings.json$.fleetInteractionDialog.battleFleetLost",
         "original": "All of your ships were destroyed in the last engagement.",
         "translation": "你的所有舰船都在上一次交战中被摧毁了。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.battleFleetLost"
+    },
+    {
+        "key": "data/strings/strings.json$.fleetInteractionDialog.battleTotalDefeat",
+        "original": "$yourForcesWereOrYourSideWas utterly defeated in the last engagement.",
+        "translation": "$yourForcesWereOrYourSideWas在上一次交火中被彻底击溃了。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.battleTotalDefeat"
+    },
+    {
+        "key": "data/strings/strings.json$.fleetInteractionDialog.battleTotalVictory",
+        "original": "$yourForcesWereOrYourSideWas able to gain a complete victory in the last engagement.",
+        "translation": "$yourForcesWereOrYourSideWas在上一次的交火中大获全胜。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.battleTotalVictory"
+    },
+    {
+        "key": "data/strings/strings.json$.fleetInteractionDialog.battleVictory",
+        "original": "$yourForcesWereOrYourSideWas victorious in the last engagement.",
+        "translation": "$yourForcesWereOrYourSideWas在上次一交火中获胜。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.battleVictory"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.boardingApproachDock",
@@ -763,11 +791,32 @@
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.engagementMutualDestruction"
     },
     {
+        "key": "data/strings/strings.json$.fleetInteractionDialog.escapeDefeat",
+        "original": "$yourForcesWereOrYourSideWas able to disengage from the enemy.",
+        "translation": "$yourForcesWereOrYourSideWas设法脱离了敌方的控制。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.escapeDefeat"
+    },
+    {
         "key": "data/strings/strings.json$.fleetInteractionDialog.escapeTotalDefeat",
         "original": "None of your side's ships managed to escape.",
         "translation": "你方的战舰没有任何一艘成功逃脱。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.escapeTotalDefeat"
+    },
+    {
+        "key": "data/strings/strings.json$.fleetInteractionDialog.escapeTotalVictory",
+        "original": "$yourForcesWereOrYourSideWas able to turn the tables on the pursuing enemy and crushed them utterly.",
+        "translation": "$yourForcesWereOrYourSideWas成功扭转了战局，彻底击溃了追击的敌军。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.escapeTotalVictory"
+    },
+    {
+        "key": "data/strings/strings.json$.fleetInteractionDialog.escapeVictory",
+        "original": "$yourForcesWereOrYourSideWas able to turn the tables on the pursuing enemy and hand them a defeat.",
+        "translation": "$yourForcesWereOrYourSideWas设法扭转了战局，将敌方击退。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.escapeVictory"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.finalOutcomeNoShipsLeft",
@@ -1153,6 +1202,13 @@
         "translation": "你方战力在盟友尚未结束战斗时就撤离了战斗区域。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.playerOutFirstPursuitWin"
+    },
+    {
+        "key": "data/strings/strings.json$.fleetInteractionDialog.playerRecovery",
+        "original": "$yourForcesWereOrYourSideWas able to recover some combat readiness as they control the battlespace and the engagement was limited.",
+        "translation": "由于成功控制了战区且交战规模有限，让$yourForcesWereOrYourSideWas恢复了一些战备值。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.playerRecovery"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.playerTooLargeToDisengage",

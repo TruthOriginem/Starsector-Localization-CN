@@ -129,12 +129,8 @@ def _parse_exact_path(json_path: str) -> List[Union[str, int]]:
 
 
 def _is_translatable_string(node) -> bool:
-    """判断节点是否为可翻译的字符串（非空、不以 $ 开头）。"""
-    return (
-        isinstance(node, AlexsonString)
-        and bool(node.value)
-        and not node.value.startswith('$')
-    )
+    """判断节点是否为可翻译的字符串（非空字符串）。"""
+    return isinstance(node, AlexsonString) and bool(node.value)
 
 
 def _traverse_path(
