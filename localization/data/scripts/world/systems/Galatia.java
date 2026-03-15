@@ -130,7 +130,7 @@ public class Galatia {
 		
 		// Ancyra Relay - L4 (ahead)
 		SectorEntityToken relay = system.addCustomEntity("ancyra_relay", // unique id
-				 "Ancyra Relay", // name - if null, defaultName from custom_entities.json will be used
+				 "Ancyra 通讯中继站", // name - if null, defaultName from custom_entities.json will be used
 				 Entities.COMM_RELAY, // type of object, defined in custom_entities.json
 				 Factions.HEGEMONY); // faction
 		relay.setCircularOrbitPointingDown(star, 
