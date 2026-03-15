@@ -66,12 +66,12 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 导航效率会提高你所部署舰船的最高航速。",提高已部署的舰船在战斗时的最高航速。,,graphics/hullmods/nav_relay.png
 神经接口,neural_interface,3,,,"special, no_drop, no_drop_salvage",特殊,10000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.NeuralInterface,"将旗舰与其他舰船连接起来，使它们均可{%s}。但诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果将不在另一艘舰船上起作用。
 
-允许在连接舰船之间快速切换，且无需通过穿梭机转移。如果二者的总部署成本小于或等于{%s}，则切换将瞬间完成。切换目标舰船不能由副官或 AI 核心操控。",允许在舰船之间快速切换，并重置战术系统的冷却时间或恢复一次充能。,无论部署点数总计多少，舰船切换总是瞬间完成。,graphics/hullmods/neural_interface.png
+允许在连接舰船之间快速切换，且无需通过穿梭机转移。如果二者的总部署成本小于或等于{%s}，则切换将瞬间完成。切换目标舰船不能由副官或 AI 核心操控。",允许在舰船之间快速切换，并重置战术系统的冷却时间或恢复一次充能。,无论部署点总计为多少，舰船切换总是瞬间完成。,graphics/hullmods/neural_interface.png
 神经集成器,neural_integrator,,,,"special, no_drop, no_drop_salvage",特殊,10000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.NeuralIntegrator,"用于自主无人舰的增强版神经接口，通过链接直接控制舰船的所有系统，可以与你的旗舰连接起来，使它们均可{%s}。但诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果将不在另一艘舰船上起作用。
 
 允许在连接舰船之间快速切换，且无需通过穿梭机转移。如果二者的总部署成本小于或等于{%s}，则切换将瞬间完成。切换目标舰船不能由副官或 AI 核心操控。
 
-复杂的改装将提高{%s}舰船部署点与战后恢复所需的补给。",自动化舰船专用的神经接口。,无论部署点数总计多少，舰船切换总是瞬间完成。,graphics/hullmods/neural_integrator.png
+复杂的改装将提高{%s}舰船部署点与战后恢复所需的补给。",自动化舰船专用的神经接口。,无论部署点总计为多少，舰船切换总是瞬间完成。,graphics/hullmods/neural_integrator.png
 固化护盾转化器,frontemitter,2,,,"shields, defensive, merc, standard",护盾,7000,,,,3,5,8,12,data.hullmods.FrontShieldEmitter,"将全角护盾发生器锁定至正前方并额外获得 %s 的护盾角度。
 
 定向护盾的展开速度是全角护盾的两倍，这也适用于本插件转化而来的定向护盾。",将全盾转换为前盾，并增大护盾面积。,降低{%s}护盾所受伤害。,graphics/hullmods/front_shield_emitter.png
@@ -168,7 +168,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 巨型机库,vast_hangar,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.VastHangar,"该舰拥有足以支援一个小型舰队的巨型机库。
 
 若安装 改装机库，则额外再提供 %s 个战机甲板，并抵消其包括整备时间、舰船部署点在内的全部负面副作用。",增强 改装机库 的效果并移除所有惩罚。,,graphics/hullmods/vast_hangar.png
-坚固结构,rugged,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.RuggedConstruction,"将大多数 D-插件 的负面影响降低{%s}。如果在战斗中停机或被摧毁，则该舰有{%s}的几率避免新 D-插件 的产生，且几乎总是可在战后被打捞并修复。
+坚固结构,rugged,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.RuggedConstruction,"将大多数 D-插件 的负面影响降低{%s}。如果在战斗中被停机或摧毁，则该舰有{%s}的几率避免新 D-插件 的产生，且几乎总是可在战后被打捞并修复。
 
 此外，该舰用于恢复部署战备损耗以及停机修复所需的补给降低{%s}。",降低 D-插件 的影响，且几乎总是可在战后被打捞并修复。,,graphics/hullmods/rugged_construction.png
 全自动舰船,automated,,,,codex_require_related,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.Automated,能全自动化运作，无需人类船员操作，亦无法搭载任何人类。,无需船员也无法搭载船员。,,graphics/hullmods/automated.png

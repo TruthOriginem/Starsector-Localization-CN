@@ -996,8 +996,8 @@
     {
         "key": "descriptions.csv#('comm_relay', 'CUSTOM')$text1",
         "original": "A Domain-era technology used primarily on the frontier, this is a hyperwave communications array which transmits and receives data between star systems at faster-than-light speeds. The rapidly pulsing hyperwaves suitable for FTL data transmission have been shown to damage DNA so these relays are always stationed away from habitats.",
-        "translation": "基于 人之领 技术建成的通信基站，该超波通信阵列能以超光速在星系间传输和接受数据。由于适合用于 FTL 信息传输的迅捷脉冲超波已被证实会破坏 DNA，因此它们一般都建立于远离栖息地的偏远位置。",
-        "stage": 5,
+        "translation": "一项主要用于边境的人之领时代技术，该超波通信阵列能以超光速在星系间传输和接受数据。由于适合用于 FTL 信息传输的快速脉冲超波已被证实会破坏 DNA，因此它们一般都建立于远离栖息地的偏远位置。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00325"
     },
     {
@@ -2550,7 +2550,7 @@
     {
         "key": "descriptions.csv#('galatia_academy', 'GALLERY')$text2",
         "original": "The Galatia Academy is the most prestigious university in the Persean Sector. The office of provost directs teaching and research and draws upon alumni to influence new generations of the brightest - or richest - students.",
-        "translation": "Galatia 学院是英仙座星域最负盛名的高等学府。院长统筹管理教学与科研工作，并借助校友的力量影响新一代学员 —— 不是顶尖人才便是身缠万贯。",
+        "translation": "Galatia 学院是英仙座星域最负盛名的高等学府。院长统筹管理教学与科研工作，并借助校友的力量影响新一代学员 —— 不是顶尖人才，便是身缠万贯。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00693"
     },
@@ -4433,14 +4433,14 @@
     {
         "key": "descriptions.csv#('orbital', 'GALLERY')$text1",
         "original": "Orbital Station",
-        "translation": "轨道站",
+        "translation": "轨道空间站",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00643"
     },
     {
         "key": "descriptions.csv#('orbital', 'GALLERY')$text2",
         "original": "Enormous orbital stations hosted shipyards, habitats, factories, and stockpiles of weapons and supplies.\n\nThese platforms allowed what remained of humanity to organize interstellar polities and project military and commercial power across the Persean Sector.",
-        "translation": "巨型轨道站内部设有造船厂、居住区、工厂，以及武器与补给仓库。\n\n依托这些空间站，人类幸存者得以建立星际政体，并在 英仙座星域 范围内投送商业与军事力量。",
+        "translation": "巨型轨道空间站内部设有造船厂、居住区、工厂，以及武器与补给仓库。\n\n依托这些空间站，人类幸存者得以建立星际政体，并在英仙座星域范围内投送商业与军事力量。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00643"
     },
@@ -4468,7 +4468,7 @@
     {
         "key": "descriptions.csv#('orbital_habitat_abandoned', 'CUSTOM')$text1",
         "original": "An abandoned orbital habitat. A cursory scan indicates that it has been cold and dead for tens of cycles at the very least, possibly hundreds. Closer inspection may yield salvage.",
-        "translation": "废弃的轨道居住站。粗略扫描后不难发现，它已经被遗弃了数十、甚至几百星历年。如果再仔细检查一番，应该能找到不少可供回收的物资。",
+        "translation": "一座废弃的轨道居住站。粗略扫描显示，它已冰冷死寂了至少数十个星历年，甚至可能长达几百年之久。如果仔细检查，应该能找到可供打捞的物资。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00191"
     },
@@ -4818,8 +4818,8 @@
     {
         "key": "descriptions.csv#('planet_ancyra', 'CUSTOM')$text3",
         "original": "The economy of Ancyra is dominated by Hegemony logistics. The light industry complex grew up on military contracts and now possesses the scale and legitimacy to make respectable inroads into the civilian commerce web of core Hegemony space.",
-        "translation": "Ancyra 的经济相当程度上由 霸主 后勤部主导。这个轻工业综合体在军事合同的基础上发展起来，现在兼具规模和合法性，得以在 霸主 核心空间的民用商业网络中取得可观的市场拓展。",
-        "stage": 5,
+        "translation": "Ancyra 的经济由霸主的后勤体系主导着。这个轻工业综合体在军事合同的基础上发展起来，如今兼具着相应规模和合法地位，从而在霸主核心疆域的民用商业网络中取得可观的市场拓展。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00542"
     },
     {
@@ -5315,7 +5315,7 @@
     {
         "key": "descriptions.csv#('planet_mairaath', 'CUSTOM')$text1",
         "original": "Mairaath was devastated by a coordinated Luddic Path operation in cycle 82 which turned its awesome orbital station-cities into weapons thrown against the fantastically terraformed surface. What remains is a charred and broken world, the carefully nurtured weather patterns of the great Mayasuran terraforming cabal transformed into nightmarish storms that circle the globe, forever stirring the ashes of a murdered world.",
-        "translation": "星历 82 年，Mairaath 在 卢德左径 发起的协同作战行动中沦为焦土。这些狂信徒将 Mairaath 精美绝伦的轨道城市太空站化作武器，砸向了它经过梦幻般精密的地貌改造后的地表。如今这里只剩下满目疮痍。曾被 Mayasura 地貌改造集团 精心调整过的气候模式，演变成了梦魇般的风暴席卷全球，永无止境地在这颗惨遭蹂躏的星球上搅动着它的骨灰。",
+        "translation": "星历 82 年，Mairaath 在 卢德左径 发起的协同作战行动中沦为焦土。这些狂信徒将 Mairaath 精美绝伦的轨道城市空间站化作武器，砸向了它经过梦幻般精密的地貌改造后的地表。如今这里只剩下满目疮痍。曾被 Mayasura 地貌改造集团 精心调整过的气候模式，演变成了梦魇般的风暴席卷全球，永无止境地在这颗惨遭蹂躏的星球上搅动着它的骨灰。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00465"
     },
@@ -6848,22 +6848,22 @@
     {
         "key": "descriptions.csv#('station1', 'SHIP')$text1",
         "original": "A low-tech model orbital station featuring heavy armor and moderate firepower. This platform hosts shipyards, habitats, factories, and large stockpiles of weapons and supplies allowing projection of military and industrial power throughout the local orbital volume.",
-        "translation": "遵循主宰纪元设计风格的轨道站，其特点是极为厚重的装甲与不俗的火力。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
-        "stage": 5,
+        "translation": "遵循主宰纪元设计风格的轨道空间站，其特点是极为厚重的装甲与不俗的火力。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00548"
     },
     {
         "key": "descriptions.csv#('station1_hightech', 'SHIP')$text1",
         "original": "A high-tech model orbital station featuring powerful rotating shields, a fighter complement, and moderate firepower. This platform hosts shipyards, habitats, factories, and large stockpiles of weapons and supplies allowing projection of military and industrial power throughout the local orbital volume.",
-        "translation": "遵循扩展纪元设计风格的轨道站，配备了可独立旋转的重型护盾模块、高效的机库平台与不俗火力。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
-        "stage": 5,
+        "translation": "遵循扩展纪元设计风格的轨道空间站，配备了可独立旋转的重型护盾模块、高效的机库平台与不俗火力。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00550"
     },
     {
         "key": "descriptions.csv#('station1_midline', 'SHIP')$text1",
         "original": "A midline-model orbital station featuring a heavy broadside and rapid axial rotation. This platform hosts shipyards, habitats, factories, and large stockpiles of weapons and supplies allowing projection of military and industrial power throughout the local orbital volume.",
-        "translation": "遵循核心纪元设计风格的轨道站，拥有极为强大的单侧火力，且绕轴旋转速度超常。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
-        "stage": 5,
+        "translation": "遵循核心纪元设计风格的轨道空间站，拥有极为强大的单侧火力，且绕轴旋转速度超常。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00549"
     },
     {
@@ -7030,7 +7030,7 @@
     {
         "key": "descriptions.csv#('station_derinkuyu', 'CUSTOM')$text1",
         "original": "Derinkuyu Station was built post-collapse on the superstructure of maintenance gantries intended for Atlas-class freighters. These were welded together and boosted out of Ancyra's orbit then stabilized in Galatian asteroid belt to serve as a base for mining operations. A recent lapse in public order involving the 'long walk' of the governing Hegemony colonel has seen control devolve to a loosely organized council of rogue miners.",
-        "translation": "Derinkuyu 采矿站 是在大崩塌后以专用于维修 阿特拉斯-级 货舰的巨型龙门架的上层结构为基础建成的。这些龙门架被焊接在一起后，机动脱离了 Ancyra 的轨道，在 Galatia 的小行星带上稳定下来，作为采矿作业的基地。近期，一场牵涉到主管部门 霸主 上校 \"出去散步\" 的治安风波，导致此地的控制权落入一个由脱管矿工组成的松散议会手中。",
+        "translation": "Derinkuyu 采矿空间站是在大崩塌后以专用于维修阿特拉斯-级货舰的巨型龙门架的上层结构为基础建成的。这些龙门架被焊接在一起后，机动脱离了 Ancyra 的轨道，在 Galatia 的小行星带上稳定下来，作为采矿作业的基地。近期，一场牵涉到主管部门霸主上校 \"出去散步\" 的治安风波，导致此地的控制权落入一个由脱管矿工组成的松散议会手中。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00544"
     },
@@ -7142,7 +7142,7 @@
     {
         "key": "descriptions.csv#('station_mining_remnant', 'CUSTOM')$text1",
         "original": "An abandoned mining station, once a source of wealth and industry to feed the worlds and works of humanity. A cursory scan indicates that it has been cold and dead for tens of cycles at the very least, possibly hundreds. Closer inspection may yield salvage.",
-        "translation": "一处废弃的采矿站，它曾经是财富与工业的源泉，维持了无数人的工作和生活。粗略扫描后发现，它已经被遗弃了数十、甚至几百星历年。如果仔细检查一番，应该能找到不少可供回收的物资。",
+        "translation": "一座废弃的采矿空间站，它曾经是财富与工业的源泉，供给着全人类那诸多世界与宏伟工程的有序运转。粗略扫描显示，它已冰冷死寂了至少数十个星历年，甚至可能长达几百年之久。如果仔细检查，应该能找到可供打捞的物资。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00186"
     },
@@ -7184,15 +7184,15 @@
     {
         "key": "descriptions.csv#('station_research_remnant', 'CUSTOM')$text1",
         "original": "An abandoned research station, built either to study some interesting local phenomenon or to study that which is best kept far, far away from inhabited worlds. A cursory scan indicates that it has been cold and dead for tens of cycles at the very least, possibly hundreds. Closer inspection may yield salvage.",
-        "translation": "废弃的研究站，其建造目的大概是为了研究当地的某些有趣现象，或用于远程观测那些不应靠近的非宜居星球。粗略扫描后不难发现，它已经被遗弃了数十、甚至几百星历年。如果仔细检查，应该能找到不少可供回收的物资。",
+        "translation": "一座废弃的研究空间站，其建造目的要么是为了研究当地的某些有趣现象，要么就是为了研究那些最好与有人居住星球远远隔离开的东西。粗略扫描显示，它已冰冷死寂了至少数十个星历年，甚至可能长达几百年之久。如果仔细检查，应该能找到可供打捞的物资。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00190"
     },
     {
         "key": "descriptions.csv#('station_telepylus', 'CUSTOM')$text1",
         "original": "A vast orbital station built around the core of an old Expansion-era Sporeship buried under a forest of modular hangars, industrial pods, and hab rings. This station was once the staging area for asteroid-tenders and mobile refineries trawling the outer system. It is now completely dead.",
-        "translation": "一个巨大的轨道站，以一艘古老的扩张时代 孢子母舰 为核心演变而来，外围覆盖着模块化机库、工业吊舱、居住环带。这个轨道站曾用作小行星驻地保障船以及移动式精炼平台在星区外围的集结地，如今只剩下一片死寂。",
-        "stage": 5,
+        "translation": "一个巨大的轨道空间站，围绕着一艘来自古老的扩张时代的孢子母舰建造而成，外围覆盖着模块化机库、工业吊舱、居住环带。这个轨道站曾用作小行星驻地保障船以及移动式精炼平台在星区外围的集结地，如今只剩下一片死寂。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00421"
     },
     {

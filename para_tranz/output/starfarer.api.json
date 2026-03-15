@@ -3530,9 +3530,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FleetInteractionDialogPluginImpl.class#\"Disengage\"",
         "original": "Disengage",
-        "translation": "脱离",
+        "translation": "脱离交战",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/FleetInteractionDialogPluginImpl.class\n常量号：2386\n原始数据：\"Disengage\"\n译文数据：\"脱离\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/FleetInteractionDialogPluginImpl.class\n常量号：2386\n原始数据：\"Disengage\"\n译文数据：\"脱离交战\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FleetInteractionDialogPluginImpl.class#\"Failed to join battle; shouldn't happen.\"",
@@ -3621,9 +3621,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FleetInteractionDialogPluginImpl.class#\"Move in to engage\"",
         "original": "Move in to engage",
-        "translation": "介入交战",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/FleetInteractionDialogPluginImpl.class\n常量号：2370\n原始数据：\"Move in to engage\"\n译文数据：\"介入交战\"\n\n"
+        "translation": "准备交战",
+        "stage": 5,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/FleetInteractionDialogPluginImpl.class\n常量号：2370\n原始数据：\"Move in to engage\"\n译文数据：\"准备交战\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FleetInteractionDialogPluginImpl.class#\"Never mind\"",
@@ -3684,9 +3684,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FleetInteractionDialogPluginImpl.class#\"Pick through the wreckage\"",
         "original": "Pick through the wreckage",
-        "translation": "在残骸中翻找",
+        "translation": "在残骸中挑选战利品",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/FleetInteractionDialogPluginImpl.class\n常量号：1991\n原始数据：\"Pick through the wreckage\"\n译文数据：\"在残骸中翻找\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/FleetInteractionDialogPluginImpl.class\n常量号：1991\n原始数据：\"Pick through the wreckage\"\n译文数据：\"在残骸中挑选战利品\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/FleetInteractionDialogPluginImpl.class#\"Proceed\"",
@@ -4979,9 +4979,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/StandardRespawnDialogPluginImpl.class#\"Normally, if this happens you and your remaining crew will spend some time \"behind the scenes\" assembling a smaller fleet of recovered ships.\"",
         "original": "Normally, if this happens you and your remaining crew will spend some time \"behind the scenes\" assembling a smaller fleet of recovered ships.",
-        "translation": "一般，如果发生这种情况，你和你剩下的船员将花一些时间 \"在幕后\" 组装一个较小的船队回收舰船。",
+        "translation": "通常来说，如果发生这种情况，你和你剩下的船员将花一些时间 \"在幕后\" 重组一个由回收舰船组成的小型舰队。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/StandardRespawnDialogPluginImpl.class\n常量号：0115\n原始数据：\"Normally, if this happens you and your remaining crew will spend some time \"behind the scenes\" assembling a smaller fleet of recovered ships.\"\n译文数据：\"一般，如果发生这种情况，你和你剩下的船员将花一些时间 \"在幕后\" 组装一个较小的船队回收舰船。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/StandardRespawnDialogPluginImpl.class\n常量号：0115\n原始数据：\"Normally, if this happens you and your remaining crew will spend some time \"behind the scenes\" assembling a smaller fleet of recovered ships.\"\n译文数据：\"通常来说，如果发生这种情况，你和你剩下的船员将花一些时间 \"在幕后\" 重组一个由回收舰船组成的小型舰队。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/StandardRespawnDialogPluginImpl.class#\"Your fleet has been defeated!\"",
@@ -6169,9 +6169,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/ScavengeAbility.class#\"Pick through a debris field looking for anything of value.\"",
         "original": "Pick through a debris field looking for anything of value.",
-        "translation": "翻找一片残骸区来寻找任何有价值的物品。",
+        "translation": "在一片残骸区之中挑选出任何有价值的物品。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/abilities/ScavengeAbility.class\n常量号：0315\n原始数据：\"Pick through a debris field looking for anything of value.\"\n译文数据：\"翻找一片残骸区来寻找任何有价值的物品。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/abilities/ScavengeAbility.class\n常量号：0315\n原始数据：\"Pick through a debris field looking for anything of value.\"\n译文数据：\"在一片残骸区之中挑选出任何有价值的物品。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/ScavengeAbility.class#\"Scavenging\"",
@@ -20792,9 +20792,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/StandardLuddicPathActivityCause2$1.class#\"Use of advanced technology and AI cores attracts the attention of Pathers.\"",
         "original": "Use of advanced technology and AI cores attracts the attention of Pathers.",
-        "translation": "使用 高端科技 和 AI 核心 会吸引 左径份子 的关注。",
+        "translation": "使用 高端科技 和 AI 核心 会吸引 左径分子 的关注。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/StandardLuddicPathActivityCause2$1.class\n常量号：0030\n原始数据：\"Use of advanced technology and AI cores attracts the attention of Pathers.\"\n译文数据：\"使用 高端科技 和 AI 核心 会吸引 左径份子 的关注。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/StandardLuddicPathActivityCause2$1.class\n常量号：0030\n原始数据：\"Use of advanced technology and AI cores attracts the attention of Pathers.\"\n译文数据：\"使用 高端科技 和 AI 核心 会吸引 左径分子 的关注。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/StandardLuddicPathActivityCause2$1.class#\"advanced technology\"",
@@ -31418,9 +31418,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/luddic/LuddicKnightErrant.class#\"Nile Virens runs the Luddic Path on Mazalot. If anyone knows where Bornanew is, it would be him or his organization. He mi~\"@dd0aff82",
         "original": "Nile Virens runs the Luddic Path on Mazalot. If anyone knows where Bornanew is, it would be him or his organization. He might be persuaded to help by force or diplomacy.",
-        "translation": "Nile Virens 指挥着 Mazalot 上的 左径份子。 如果有任何人知道 Bornanew 在哪里，那就是他或者他治下的组织了。要让他开口可以晓之以理或挟之以力。",
+        "translation": "Nile Virens 指挥着 Mazalot 上的 左径分子。 如果有任何人知道 Bornanew 在哪里，那就是他或者他治下的组织了。要让他开口可以晓之以理或挟之以力。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/luddic/LuddicKnightErrant.class\n常量号：0516\n原始数据：\"Nile Virens runs the Luddic Path on Mazalot. If anyone knows where Bornanew is, it would be him or his organization. He might be persuaded to help by force or diplomacy.\"\n译文数据：\"Nile Virens 指挥着 Mazalot 上的 左径份子。 如果有任何人知道 Bornanew 在哪里，那就是他或者他治下的组织了。要让他开口可以晓之以理或挟之以力。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/luddic/LuddicKnightErrant.class\n常量号：0516\n原始数据：\"Nile Virens runs the Luddic Path on Mazalot. If anyone knows where Bornanew is, it would be him or his organization. He might be persuaded to help by force or diplomacy.\"\n译文数据：\"Nile Virens 指挥着 Mazalot 上的 左径分子。 如果有任何人知道 Bornanew 在哪里，那就是他或者他治下的组织了。要让他开口可以晓之以理或挟之以力。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/luddic/LuddicKnightErrant.class#\"Raided Mazalot and caused a Luddic uprising\"",
@@ -32573,9 +32573,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/DwellerCMD.class#\"Move in to re-engage\"",
         "original": "Move in to re-engage",
-        "translation": "再次介入交战",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/DwellerCMD.class\n常量号：0480\n原始数据：\"Move in to re-engage\"\n译文数据：\"再次介入交战\"\n\n"
+        "translation": "准备再次交战",
+        "stage": 5,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/DwellerCMD.class\n常量号：0480\n原始数据：\"Move in to re-engage\"\n译文数据：\"准备再次交战\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/FleetDesc.class#\" (being loaded)\"",
@@ -33945,9 +33945,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD.class#\"Pick through the spoils\"",
         "original": "Pick through the spoils",
-        "translation": "在战利品中翻找",
+        "translation": "在劫掠成果中挑选战利品",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD.class\n常量号：1778\n原始数据：\"Pick through the spoils\"\n译文数据：\"在战利品中翻找\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD.class\n常量号：1778\n原始数据：\"Pick through the spoils\"\n译文数据：\"在劫掠成果中挑选战利品\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD.class#\"Prepare a saturation bombardment\"",
@@ -34729,9 +34729,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/SalvageEntity.class#\"The density of the debris field affects both the amount of resources and the number of rare items found.\"",
         "original": "The density of the debris field affects both the amount of resources and the number of rare items found.",
-        "translation": "残骸区的密度会影响能发现的资源和稀有物品的数量。",
+        "translation": "残骸区的密度会影响能发现的资源总量以及稀有物品的数量。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/salvage/SalvageEntity.class\n常量号：0890\n原始数据：\"The density of the debris field affects both the amount of resources and the number of rare items found.\"\n译文数据：\"残骸区的密度会影响能发现的资源和稀有物品的数量。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/salvage/SalvageEntity.class\n常量号：0890\n原始数据：\"The density of the debris field affects both the amount of resources and the number of rare items found.\"\n译文数据：\"残骸区的密度会影响能发现的资源总量以及稀有物品的数量。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/SalvageEntity.class#\"The field appears stable and will not drift apart any time soon.\"",
@@ -35520,9 +35520,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/ShipRecoverySpecial.class#\"<name unknown>\"",
         "original": "<name unknown>",
-        "translation": "<船名不详>",
-        "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/ShipRecoverySpecial.class\n常量号：0458\n原始数据：\"<name unknown>\"\n译文数据：\"<船名不详>\"\n\n"
+        "translation": "<name unknown>",
+        "stage": -1,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/ShipRecoverySpecial.class\n常量号：0458\n原始数据：\"<name unknown>\"\n译文数据：\"<name unknown>\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/special/ShipRecoverySpecial.class#\"A crack engineering team sent to the wreck reports successfully preparing it for recovery.\"",
@@ -36017,9 +36017,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/AutomatedShips$Level0.class#\"Due to safety interlocks, ships with AI cores do not contribute to the deployment point distribution.\"",
         "original": "Due to safety interlocks, ships with AI cores do not contribute to the deployment point distribution.",
-        "translation": "因安全连锁系统的限制，带有 AI 核心的舰船，其 部署点 不会受到任何效果的影响。",
+        "translation": "因安全联锁系统的限制，带有 AI 核心的舰船，其部署点不会受到任何效果的影响。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/AutomatedShips$Level0.class\n常量号：0059\n原始数据：\"Due to safety interlocks, ships with AI cores do not contribute to the deployment point distribution.\"\n译文数据：\"因安全连锁系统的限制，带有 AI 核心的舰船，其 部署点 不会受到任何效果的影响。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/AutomatedShips$Level0.class\n常量号：0059\n原始数据：\"Due to safety interlocks, ships with AI cores do not contribute to the deployment point distribution.\"\n译文数据：\"因安全联锁系统的限制，带有 AI 核心的舰船，其部署点不会受到任何效果的影响。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/AutomatedShips$Level0.class#\"do not contribute to the deployment point distribution\"",
@@ -40609,9 +40609,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/CampaignTutorialScript.class#\"- Move up into the debris field\"",
         "original": "- Move up into the debris field",
-        "translation": "- 移动至残骸区内",
+        "translation": "- 向上移动至残骸区内",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/CampaignTutorialScript.class\n常量号：0266\n原始数据：\"- Move up into the debris field\"\n译文数据：\"- 移动至残骸区内\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/CampaignTutorialScript.class\n常量号：0266\n原始数据：\"- Move up into the debris field\"\n译文数据：\"- 向上移动至残骸区内\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/CampaignTutorialScript.class#\"- Press %s to engage sustained burn\"",
@@ -40651,9 +40651,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/CampaignTutorialScript.class#\"- Press %s to quick-save, if you like\"",
         "original": "- Press %s to quick-save, if you like",
-        "translation": "- 按 %s 快速存档，如果您愿意的话",
+        "translation": "- 按 %s 快速存档，如果你愿意的话",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/CampaignTutorialScript.class\n常量号：0150\n原始数据：\"- Press %s to quick-save, if you like\"\n译文数据：\"- 按 %s 快速存档，如果您愿意的话\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/CampaignTutorialScript.class\n常量号：0150\n原始数据：\"- Press %s to quick-save, if you like\"\n译文数据：\"- 按 %s 快速存档，如果你愿意的话\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/CampaignTutorialScript.class#\"- Press %s to start scavenging\"",
@@ -40700,9 +40700,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/CampaignTutorialScript.class#\"Security Detachment\"",
         "original": "Security Detachment",
-        "translation": "安保分遣队",
+        "translation": "治安特遣队",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/CampaignTutorialScript.class\n常量号：0671\n原始数据：\"Security Detachment\"\n译文数据：\"安保分遣队\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/CampaignTutorialScript.class\n常量号：0671\n原始数据：\"Security Detachment\"\n译文数据：\"治安特遣队\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/GalatianAcademyStipend.class#\"A monthly stipend of %s from the Galatian Academy, for the aid you've recently rendered.\"",
@@ -40791,9 +40791,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialGoSlowDialogPluginImpl.class#\"The danger is low, however - especially since the belt is thin, and you're only going across it - so you could also get away with just going full speed.\"",
         "original": "The danger is low, however - especially since the belt is thin, and you're only going across it - so you could also get away with just going full speed.",
-        "translation": "尽管如此，风险很低 —— 尤其是这个小行星带比较稀薄，况且你仅仅是要横穿过去 —— 所以你也可能不受影响地全速通过。",
+        "translation": "尽管如此，风险很低 —— 尤其是这个小行星带比较稀薄，况且您仅仅是要横穿过去 —— 所以您也可能不受影响地全速通过。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialGoSlowDialogPluginImpl.class\n常量号：0151\n原始数据：\"The danger is low, however - especially since the belt is thin, and you're only going across it - so you could also get away with just going full speed.\"\n译文数据：\"尽管如此，风险很低 —— 尤其是这个小行星带比较稀薄，况且你仅仅是要横穿过去 —— 所以你也可能不受影响地全速通过。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialGoSlowDialogPluginImpl.class\n常量号：0151\n原始数据：\"The danger is low, however - especially since the belt is thin, and you're only going across it - so you could also get away with just going full speed.\"\n译文数据：\"尽管如此，风险很低 —— 尤其是这个小行星带比较稀薄，况且您仅仅是要横穿过去 —— 所以您也可能不受影响地全速通过。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialGoSlowDialogPluginImpl.class#\"You're coming up on an asteroid belt!\"",
@@ -40973,9 +40973,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialLevelUpDialogPluginImpl.class#\"Skill points are used to learn skills. Skills are arranged in four aptitudes - Combat, Leadership, Technology, and Industr~\"@a07c0182",
         "original": "Skill points are used to learn skills. Skills are arranged in four aptitudes - Combat, Leadership, Technology, and Industry. Each aptitude has a number of tiers, you advance to the higher tiers by picking skills from the lower ones.",
-        "translation": "技能点用来学习技能。技能被分为四大天赋 —— 战斗、领导、技术，以及工业。每个天赋都有数个等级，需要通过学习低级技能来解锁对应的高级技能。",
+        "translation": "技能点被用来学习技能。技能被分为四大天赋 —— 战斗、领导、技术，以及工业。每个天赋都有数个等级，需要通过学习低级技能来解锁对应的高级技能。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialLevelUpDialogPluginImpl.class\n常量号：0185\n原始数据：\"Skill points are used to learn skills. Skills are arranged in four aptitudes - Combat, Leadership, Technology, and Industry. Each aptitude has a number of tiers, you advance to the higher tiers by picking skills from the lower ones.\"\n译文数据：\"技能点用来学习技能。技能被分为四大天赋 —— 战斗、领导、技术，以及工业。每个天赋都有数个等级，需要通过学习低级技能来解锁对应的高级技能。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialLevelUpDialogPluginImpl.class\n常量号：0185\n原始数据：\"Skill points are used to learn skills. Skills are arranged in four aptitudes - Combat, Leadership, Technology, and Industry. Each aptitude has a number of tiers, you advance to the higher tiers by picking skills from the lower ones.\"\n译文数据：\"技能点被用来学习技能。技能被分为四大天赋 —— 战斗、领导、技术，以及工业。每个天赋都有数个等级，需要通过学习低级技能来解锁对应的高级技能。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialLevelUpDialogPluginImpl.class#\"Skills that affect your piloted ship - all Combat skills, and a few skills in other aptitudes - can be made \"elite\" at the cost of a \"",
@@ -40987,16 +40987,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialLevelUpDialogPluginImpl.class#\"The maximum level you can reach is %s.\"",
         "original": "The maximum level you can reach is %s.",
-        "translation": "你能达到的最高等级为 %s。",
+        "translation": "你能达到的最高等级为 %s}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialLevelUpDialogPluginImpl.class\n常量号：0206\n原始数据：\"The maximum level you can reach is %s.\"\n译文数据：\"你能达到的最高等级为 %s。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialLevelUpDialogPluginImpl.class\n常量号：0206\n原始数据：\"The maximum level you can reach is %s.\"\n译文数据：\"你能达到的最高等级为 %s}。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialLevelUpDialogPluginImpl.class#\"You also gain \"",
         "original": "You also gain ",
-        "translation": "当你获得经验时，也会一同获得",
+        "translation": "当你获得经验时，也会一同获得 ",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialLevelUpDialogPluginImpl.class\n常量号：0139\n原始数据：\"You also gain \"\n译文数据：\"当你获得经验时，也会一同获得\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialLevelUpDialogPluginImpl.class\n常量号：0139\n原始数据：\"You also gain \"\n译文数据：\"当你获得经验时，也会一同获得 \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialLevelUpDialogPluginImpl.class#\"You gain %s skill point with each level-up, and an additional point at the start of the campaign.\"",
@@ -41505,9 +41505,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialPirateApproachesDialogPlugin~#\"Even so, combat can be expensive, especially if there's no bounty on the enemy you fight. Deploying ships into battle redu~\"@fa2d3722",
         "original": "Even so, combat can be expensive, especially if there's no bounty on the enemy you fight. Deploying ships into battle reduces their combat readiness, and recovering CR consumes supplies. Battle damage can cost even more supplies to repair.",
-        "translation": "尽管如此，交战也可能会开销不菲，尤其是你所对抗的敌人未被悬赏时。在战斗中部署舰船将消耗这些舰船的战备值 (CR)，战后恢复 CR 需要花费补给。战斗中的损伤也需要花费更多补给才能维修。",
+        "translation": "尽管如此，交战也可能会开销不菲，尤其是在你所对抗的敌人没有赏金的情况下。在战斗中部署舰船将消耗这些舰船的战备值 (CR)，战后恢复 CR 需要花费补给。战斗中的损伤也需要花费更多补给才能维修。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialPirateApproachesDialogPluginImpl.class\n常量号：0152\n原始数据：\"Even so, combat can be expensive, especially if there's no bounty on the enemy you fight. Deploying ships into battle reduces their combat readiness, and recovering CR consumes supplies. Battle damage can cost even more supplies to repair.\"\n译文数据：\"尽管如此，交战也可能会开销不菲，尤其是你所对抗的敌人未被悬赏时。在战斗中部署舰船将消耗这些舰船的战备值 (CR)，战后恢复 CR 需要花费补给。战斗中的损伤也需要花费更多补给才能维修。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialPirateApproachesDialogPluginImpl.class\n常量号：0152\n原始数据：\"Even so, combat can be expensive, especially if there's no bounty on the enemy you fight. Deploying ships into battle reduces their combat readiness, and recovering CR consumes supplies. Battle damage can cost even more supplies to repair.\"\n译文数据：\"尽管如此，交战也可能会开销不菲，尤其是在你所对抗的敌人没有赏金的情况下。在战斗中部署舰船将消耗这些舰船的战备值 (CR)，战后恢复 CR 需要花费补给。战斗中的损伤也需要花费更多补给才能维修。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialRespawnDialogPluginImpl.class#\"During the course of this tutorial, the only available option is to reload the last save.\"",
@@ -41533,9 +41533,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialRespawnDialogPluginImpl.class#\"Normally, if this happens you and your remaining crew will spend some time \"behind the scenes\" assembling a smaller fleet of recovered ships.\"",
         "original": "Normally, if this happens you and your remaining crew will spend some time \"behind the scenes\" assembling a smaller fleet of recovered ships.",
-        "translation": "一般，如果发生这种情况，你和你剩下的船员将花一些时间 \"在幕后\" 组装一个较小的船队回收舰船。",
+        "translation": "通常来说，如果发生这种情况，你和你剩下的船员将花一些时间 \"在幕后\" 重组一个由回收舰船组成的小型舰队。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialRespawnDialogPluginImpl.class\n常量号：0115\n原始数据：\"Normally, if this happens you and your remaining crew will spend some time \"behind the scenes\" assembling a smaller fleet of recovered ships.\"\n译文数据：\"一般，如果发生这种情况，你和你剩下的船员将花一些时间 \"在幕后\" 组装一个较小的船队回收舰船。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialRespawnDialogPluginImpl.class\n常量号：0115\n原始数据：\"Normally, if this happens you and your remaining crew will spend some time \"behind the scenes\" assembling a smaller fleet of recovered ships.\"\n译文数据：\"通常来说，如果发生这种情况，你和你剩下的船员将花一些时间 \"在幕后\" 重组一个由回收舰船组成的小型舰队。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialRespawnDialogPluginImpl.class#\"Your fleet has been defeated!\"",
@@ -41547,9 +41547,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialSustainedBurnDialogPluginImpl.class#\" is pretty far away, and it'll take a while to get there at this rate.\"",
         "original": " is pretty far away, and it'll take a while to get there at this rate.",
-        "translation": " 距离较远，照当前速度，需要花费不少时间才能到达那里。",
+        "translation": " 距离很远，照当前速度，需要花费不少时间才能到达那里。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialSustainedBurnDialogPluginImpl.class\n常量号：0131\n原始数据：\" is pretty far away, and it'll take a while to get there at this rate.\"\n译文数据：\" 距离较远，照当前速度，需要花费不少时间才能到达那里。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialSustainedBurnDialogPluginImpl.class\n常量号：0131\n原始数据：\" is pretty far away, and it'll take a while to get there at this rate.\"\n译文数据：\" 距离很远，照当前速度，需要花费不少时间才能到达那里。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialSustainedBurnDialogPluginImpl.class#\" more quickly.\"",
@@ -41610,9 +41610,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class#\", which is controlled by the Hegemony - \"",
         "original": ", which is controlled by the Hegemony - ",
-        "translation": "，此处由 霸主 ",
+        "translation": "，此处由霸主 —— ",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class\n常量号：0133\n原始数据：\", which is controlled by the Hegemony - \"\n译文数据：\"，此处由 霸主 \"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class\n常量号：0133\n原始数据：\", which is controlled by the Hegemony - \"\n译文数据：\"，此处由霸主 —— \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class#\"Activate the %s before getting closer to \"",
@@ -41638,9 +41638,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class#\"Since turning it on and off has major consequences, it requires a double-tap to turn on or off - once to prime, and once more to confirm.\"",
         "original": "Since turning it on and off has major consequences, it requires a double-tap to turn on or off - once to prime, and once more to confirm.",
-        "translation": "由于打开和关闭均会产生严重的后果，因此应答器需要通过双击来打开或关闭 - 单击一次准备，并再次单击加以确认。",
+        "translation": "由于打开和关闭均会产生严重的后果，因此应答器需要通过双击来打开或关闭 —— 单击一次准备，并再次单击加以确认。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class\n常量号：0248\n原始数据：\"Since turning it on and off has major consequences, it requires a double-tap to turn on or off - once to prime, and once more to confirm.\"\n译文数据：\"由于打开和关闭均会产生严重的后果，因此应答器需要通过双击来打开或关闭 - 单击一次准备，并再次单击加以确认。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class\n常量号：0248\n原始数据：\"Since turning it on and off has major consequences, it requires a double-tap to turn on or off - once to prime, and once more to confirm.\"\n译文数据：\"由于打开和关闭均会产生严重的后果，因此应答器需要通过双击来打开或关闭 —— 单击一次准备，并再次单击加以确认。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class#\"Your fleet is getting closer to \"",
@@ -41659,16 +41659,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class#\"a major militaristic faction in the Sector.\"",
         "original": "a major militaristic faction in the Sector.",
-        "translation": " 一个本星域的主要军事势力所控制。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class\n常量号：0135\n原始数据：\"a major militaristic faction in the Sector.\"\n译文数据：\" 一个本星域的主要军事势力所控制。\"\n\n"
+        "translation": "一个本星域的主要军事势力所控制。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class\n常量号：0135\n原始数据：\"a major militaristic faction in the Sector.\"\n译文数据：\"一个本星域的主要军事势力所控制。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class#\"avoid unwanted attention from patrols and to receive docking clearance.\"",
         "original": "avoid unwanted attention from patrols and to receive docking clearance.",
-        "translation": "这可以避免受到巡逻舰队不必要的注意，并获取靠港许可。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class\n常量号：0233\n原始数据：\"avoid unwanted attention from patrols and to receive docking clearance.\"\n译文数据：\"这可以避免受到巡逻舰队不必要的注意，并获取靠港许可。\"\n\n"
+        "translation": "这可以避免受到巡逻队不必要的注意，并获取停靠许可。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class\n常量号：0233\n原始数据：\"avoid unwanted attention from patrols and to receive docking clearance.\"\n译文数据：\"这可以避免受到巡逻队不必要的注意，并获取停靠许可。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class#\"double-tap\"",
@@ -41680,23 +41680,23 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.~#\"Keeping your transponder on is a crippling disadvantage in hostile space, but as we're getting closer to port and we'd lik~\"@0167813b",
         "original": "Keeping your transponder on is a crippling disadvantage in hostile space, but as we're getting closer to port and we'd like to dock there, it's a good idea to turn it on.",
-        "translation": "在危险宙域中开启 应答器 是对你极其不利的做法，但是由于我们已经接近太空港并且想在该处停靠，因此最好还是将其打开。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class\n常量号：0167\n原始数据：\"Keeping your transponder on is a crippling disadvantage in hostile space, but as we're getting closer to port and we'd like to dock there, it's a good idea to turn it on.\"\n译文数据：\"在危险宙域中开启 应答器 是对你极其不利的做法，但是由于我们已经接近太空港并且想在该处停靠，因此最好还是将其打开。\"\n\n"
+        "translation": "在危险的宙域中开启应答器是对你极其不利的做法，但随着我们接近太空港并且要在该处停靠，最好还是将其打开。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class\n常量号：0167\n原始数据：\"Keeping your transponder on is a crippling disadvantage in hostile space, but as we're getting closer to port and we'd like to dock there, it's a good idea to turn it on.\"\n译文数据：\"在危险的宙域中开启应答器是对你极其不利的做法，但随着我们接近太空港并且要在该处停靠，最好还是将其打开。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.~#\"Turning on the transponder makes your fleet highly visible, and everyone seeing it will know who you are - unlike that pir~\"@cf4ea6f6",
         "original": "Turning on the transponder makes your fleet highly visible, and everyone seeing it will know who you are - unlike that pirate fleet you fought earlier, which had to be very close to positively identify.",
-        "translation": "开启 应答器 会让你的舰队极易被发现，并且任何看到你的人都会知道你的身份 —— 这和刚刚与你交锋过的海盗舰队不同，它需要你接近才能正确识别。",
+        "translation": "开启应答器会让你的舰队极易被发现，并且任何看到你的人都会知道你的身份 —— 不像刚刚与你交锋过的海盗舰队，它们必须靠得非常近才能明确识别。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class\n常量号：0162\n原始数据：\"Turning on the transponder makes your fleet highly visible, and everyone seeing it will know who you are - unlike that pirate fleet you fought earlier, which had to be very close to positively identify.\"\n译文数据：\"开启 应答器 会让你的舰队极易被发现，并且任何看到你的人都会知道你的身份 —— 这和刚刚与你交锋过的海盗舰队不同，它需要你接近才能正确识别。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class\n常量号：0162\n原始数据：\"Turning on the transponder makes your fleet highly visible, and everyone seeing it will know who you are - unlike that pirate fleet you fought earlier, which had to be very close to positively identify.\"\n译文数据：\"开启应答器会让你的舰队极易被发现，并且任何看到你的人都会知道你的身份 —— 不像刚刚与你交锋过的海盗舰队，它们必须靠得非常近才能明确识别。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.~#\"While in Hegemony space, a fleet is required by law to identify itself by keeping its transponder turned on. This is a vie~\"@bca71430",
         "original": "While in Hegemony space, a fleet is required by law to identify itself by keeping its transponder turned on. This is a view shared by most, though not all, major factions.",
-        "translation": "在 霸主 的空域，法律规定所有舰队都必须开启 应答器 来表明自身身份。大多数主要势力都有类似的规定，只有少数例外。",
-        "stage": 5,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class\n常量号：0146\n原始数据：\"While in Hegemony space, a fleet is required by law to identify itself by keeping its transponder turned on. This is a view shared by most, though not all, major factions.\"\n译文数据：\"在 霸主 的空域，法律规定所有舰队都必须开启 应答器 来表明自身身份。大多数主要势力都有类似的规定，只有少数例外。\"\n\n"
+        "translation": "在霸主的空域，法律规定所有舰队都必须开启应答器来表明自身身份。大多数主要势力都有类似的规定，尽管少数例外。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class\n常量号：0146\n原始数据：\"While in Hegemony space, a fleet is required by law to identify itself by keeping its transponder turned on. This is a view shared by most, though not all, major factions.\"\n译文数据：\"在霸主的空域，法律规定所有舰队都必须开启应答器来表明自身身份。大多数主要势力都有类似的规定，尽管少数例外。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialWelcomeDialogPluginImpl.class#\"Continue\"",
@@ -41743,9 +41743,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialWelcomeDialogPluginImpl.class#\"To get your fleet moving, click on empty space in the direction you want to move.\"",
         "original": "To get your fleet moving, click on empty space in the direction you want to move.",
-        "translation": "想要移动舰队，请点击您想要前往方向的空白区域。",
+        "translation": "想要让舰队开始移动，请点击您想要前往方向的空白区域。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialWelcomeDialogPluginImpl.class\n常量号：0226\n原始数据：\"To get your fleet moving, click on empty space in the direction you want to move.\"\n译文数据：\"想要移动舰队，请点击您想要前往方向的空白区域。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialWelcomeDialogPluginImpl.class\n常量号：0226\n原始数据：\"To get your fleet moving, click on empty space in the direction you want to move.\"\n译文数据：\"想要让舰队开始移动，请点击您想要前往方向的空白区域。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialWelcomeDialogPluginImpl.class#\"Welcome to the Persean Sector! Your fleet is in the middle of nowhere and critically low on supplies.\"",

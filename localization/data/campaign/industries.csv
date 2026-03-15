@@ -15,10 +15,10 @@ orbitalworks,轨道工业设施,60,150,,12,heavyindustry,,"heavyindustry, uses_b
 fuelprod,燃料生产,90,120,,10,,,"fuelprod, industry, industrial",,graphics/icons/industry/fuel_production.png,com.fs.starfarer.api.impl.campaign.econ.impl.FuelProduction,该设施生产着被誉为星际文明生命线的星舰燃料。因缺乏 人之领 先进的制造技术，燃料的生产不仅十分艰难，而且异常缓慢。,1800,HIGH
 #advfuelprod,Advanced Fuel Production,120,60,,5,fuelprod,,fuelprod,,graphics/icons/industry/advanced_fuel_production.png,com.fs.starfarer.api.impl.campaign.econ.impl.FuelProduction,"A massive Domain-tech facility produces starship fuel, the life-blood of interstellar civilization.",1900,
 commerce,贸易中心,90,90,,3,,,"industry, urban",,graphics/icons/industry/commerce.png,com.fs.starfarer.api.impl.campaign.econ.impl.TradeCenter,通过制定法规，提供资助和建设基础设施，来促进民间贸易的蓬勃发展。但也会大大降低当局对殖民地的掌控程度。,1950,MEDIUM
-station_base,轨道站,,,,,,,"station, parent_item, important, structure",station,graphics/icons/industry/station_category.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"一处能够为殖民地附近的友军舰队提供火力支援的空间站，它的存在将阻止任何轰炸行动的发生。
+station_base,轨道空间站,,,,,,,"station, parent_item, important, structure",station,graphics/icons/industry/station_category.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"一处能够为殖民地附近的友军舰队提供火力支援的空间站，它的存在将阻止任何轰炸行动的发生。
 
 尽管有数种不同的设计类型，但这通常仅影响其所采用的战术，而非整体战力。",2000,
-orbitalstation,轨道站 - 主宰纪元,50,90,,3,,battlestation,"station, sub_item, unraidable, structure","{
+orbitalstation,轨道空间站 - 主宰纪元,50,90,,3,,battlestation,"station, sub_item, unraidable, structure","{
 radius:55,
 variant:station1_Standard,
 fleetName:Orbital Station,
@@ -39,7 +39,7 @@ fleetName:Star Fortress
 }",graphics/icons/industry/star_fortress.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"全副武装的作战基地，在原有基础上增建了大量的外挂装甲，在配备 城齿-级 无人机的同时布置了感应雷区。
 
 它的存在将阻止任何轰炸行动的发生。",2030,
-orbitalstation_mid,轨道站 - 核心纪元,50,90,,3,,battlestation_mid,"station, sub_item, unraidable, structure","{
+orbitalstation_mid,轨道空间站 - 核心纪元,50,90,,3,,battlestation_mid,"station, sub_item, unraidable, structure","{
 radius:55,
 variant:station1_midline_Standard,
 fleetName:Orbital Station,
@@ -60,7 +60,7 @@ fleetName:Star Fortress
 }",graphics/icons/industry/star_fortress.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"全副武装的作战基地，在原有基础上增建了大量的外挂装甲，配备了 三角堡-级 无人机，可以部署感应雷区。
 
 它的存在将阻止任何轰炸行动的发生。",2060,
-orbitalstation_high,轨道站 - 扩展纪元,50,90,,3,,battlestation_high,"station, sub_item, unraidable, structure","{
+orbitalstation_high,轨道空间站 - 扩展纪元,50,90,,3,,battlestation_high,"station, sub_item, unraidable, structure","{
 radius:55,
 variant:station1_hightech_Standard,
 fleetName:Orbital Station,

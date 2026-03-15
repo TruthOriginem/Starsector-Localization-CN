@@ -443,7 +443,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.battleFleetLost",
         "original": "All of your ships were destroyed in the last engagement.",
-        "translation": "你所有的舰船都在上一次的交火中被击毁了。",
+        "translation": "你的所有舰船都在上一次交战中被摧毁了。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.battleFleetLost"
     },
@@ -583,7 +583,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.cleanDisengageOpportunity",
         "original": "After a tactical victory, your forces have an opportunity to cleanly disengage from the enemy.",
-        "translation": "在上次战术性胜利之后，你的部队获得了直接全身而退的机会。",
+        "translation": "在一次战术性胜利后，你方战力在敌人面前获得了一个直接脱离交战的机会。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.cleanDisengageOpportunity"
     },
@@ -618,35 +618,35 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.enemyCleanDisengage",
         "original": "The opposing fleet is able to disengage cleanly as your forces are unable to offer pursuit.",
-        "translation": "由于你的部队无法进行追击，对方舰队直接脱离了战斗。",
+        "translation": "由于你方战力不足以进行追击，对方舰队能够直接脱离交战。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.enemyCleanDisengage"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.enemyCleanDisengageSide",
         "original": "The opposing fleet is able to disengage cleanly as the forces on your side are unable to offer pursuit.",
-        "translation": "由于你的部队所在方进行追击，对方舰队直接脱离了战斗。",
+        "translation": "由于你所在方的战力不足以进行追击，对方舰队能够直接脱离交战。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.enemyCleanDisengageSide"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.enemyDecidesNotToPursue",
         "original": "The enemy ships make no move to pursue, allowing your forces to withdraw without further incident.",
-        "translation": "敌舰没有进行追击，使你的部队顺利撤离。",
+        "translation": "敌舰没有进行追击，使得你方战力得以顺利撤离，未再发生任何意外。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.enemyDecidesNotToPursue"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.enemyDisruptedPlayer",
         "original": "Despite being victorious in the last engagement, your forces have suffered sufficient losses to be unable to offer pursuit as the enemy disengages.",
-        "translation": "尽管你的部队取得了上一次交战的胜利，但损失惨重，因此你的部队在敌人脱离战斗时无法进行追击。",
+        "translation": "尽管取得了上一次交战的胜利，但你方战力损失惨重，因此无法在敌人脱离交战时进行追击。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.enemyDisruptedPlayer"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.enemyDisruptedPlayerSide",
         "original": "Despite being victorious in the last engagement, the forces on your side have suffered sufficient losses to be unable to offer pursuit as the enemy disengages.",
-        "translation": "尽管你的部队所在方取得了上一次交战的胜利，但损失惨重，因此你的部队所在方无法在敌人脱离战斗时执行追击任务。",
+        "translation": "尽管取得了上一次交战的胜利，但你所在方的战力损失惨重，因此无法在敌人脱离交战时进行追击。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.enemyDisruptedPlayerSide"
     },
@@ -660,28 +660,28 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.enemyPursuit",
         "original": "The enemy fleet pursues your forces.",
-        "translation": "敌方舰队追击你的部队。",
+        "translation": "敌方舰队追击你方战力。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.enemyPursuit"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.enemyRecovery",
         "original": "The enemy forces are able to recover some combat readiness as they control the battlespace and the engagement was limited.",
-        "translation": "由于成功控制了战区且交战规模有限，让敌军恢复了一些战备值。",
+        "translation": "由于战区尚处敌方控制下且交战规模有限，敌军战力的战备值得到了些许恢复。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.enemyRecovery"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.enemyShipBoardable",
         "original": "Your forces are preparing to begin salvage operations, when suddenly an enemy ship's systems come back online. A quick scan picks up $numLifeSigns lifesign(s) on board.",
-        "translation": "你的舰队正在愉快地收缴物资，一只敌舰控制系统突然恢复正常，快速扫描后发现了 $numLifeSigns 个生命信号。",
+        "translation": "你的舰队正在愉快地收缴物资，一艘敌舰的控制系统突然重新上线，快速扫描显示其上有 $numLifeSigns 个生命信号。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.enemyShipBoardable"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.enemyUnableToPursue",
         "original": "The enemy ships are unable to offer pursuit, allowing your forces to withdraw without further incident.",
-        "translation": "敌舰无法进行追击，使你的部队顺利撤离。",
+        "translation": "敌舰无法进行追击，使得你方战力得以顺利撤离，未再发生任何意外。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.enemyUnableToPursue"
     },
@@ -744,14 +744,14 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.engageMutual",
         "original": "The opposing fleet moves in to join battle.",
-        "translation": "对方舰队进场参战。",
+        "translation": "对方舰队准备参战。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.engageMutual"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.engagePursuit",
         "original": "The opposing fleet tries to disengage, but they won't be able to get away without a fight.",
-        "translation": "对方舰队试图脱离，但他们必须为突围而战。",
+        "translation": "对方舰队试图脱离交战，但他们必须为突围而战。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.engagePursuit"
     },
@@ -828,14 +828,14 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.initialAggressive",
         "original": "The $faction $fleetOrShip maneuvers to prevent you from disengaging easily.",
-        "translation": "$faction $fleetOrShip 进行了一轮机动动作，来防止你直接脱离战斗。",
+        "translation": "$faction $fleetOrShip 进行了一轮机动动作，来防止你轻易脱离交战。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.initialAggressive"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.initialAggressiveSide",
         "original": "The $enemyFactionAndTheirAllies maneuver to prevent you from disengaging easily.",
-        "translation": "$enemyFactionAndTheirAllies 进行了一轮机动动作，来防止你直接脱离战斗。",
+        "translation": "$enemyFactionAndTheirAllies 进行了一轮机动动作，来防止你轻易脱离交战。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.initialAggressiveSide"
     },
@@ -856,14 +856,14 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.initialDisengage",
         "original": "The $faction $fleetOrShip is attempting to disengage.",
-        "translation": "$faction $fleetOrShip 正尝试摆脱战斗接触。",
+        "translation": "$faction $fleetOrShip 正尝试脱离交战。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.initialDisengage"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.initialDisengageSide",
         "original": "The $enemyFactionAndTheirAllies are attempting to disengage.",
-        "translation": "$enemyFactionAndTheirAllies 正尝试摆脱战斗接触。",
+        "translation": "$enemyFactionAndTheirAllies 正尝试脱离交战。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.initialDisengageSide"
     },
@@ -884,14 +884,14 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.initialHoldVsStrongerEnemy",
         "original": "The $faction $fleetOrShip seems ready to fight despite being faced with superior forces, but isn't likely to press the issue.",
-        "translation": "面对你的优势兵力，$faction $fleetOrShip 依然摆出了准备战斗的架势，不过不太可能主动出击。",
+        "translation": "面对你的战力优势，$faction $fleetOrShip 依然摆出了准备战斗的架势，不过不太可能主动出击。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.initialHoldVsStrongerEnemy"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.initialHoldVsStrongerEnemySide",
         "original": "The $enemyFactionAndTheirAllies seem ready to fight despite being faced with superior forces, but aren't likely to press the issue.",
-        "translation": "面对你的优势兵力，$enemyFactionAndTheirAllies 依然摆出了准备战斗的架势，不过不太可能主动出击。",
+        "translation": "面对你的战力优势，$enemyFactionAndTheirAllies 依然摆出了准备战斗的架势，不过不太可能主动出击。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.initialHoldVsStrongerEnemySide"
     },
@@ -1080,7 +1080,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.ongoingBattleShareIFF",
         "original": "The $alliedFactionAndTheirAllies transmit their IFF codes, which allow you to join the battle on their side if you decide to do so.",
-        "translation": "$alliedFactionAndTheirAllies发送了它们的敌我识别编码，让你可以作为它们的援军来参与战斗。",
+        "translation": "$alliedFactionAndTheirAllies传输了它们的敌我识别编码，让你可以作为它们的援军来参与战斗。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.ongoingBattleShareIFF"
     },
@@ -1094,7 +1094,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.playerDisruptedEnemy",
         "original": "Despite retreating from the last engagement, your forces have disrupted the enemy, and can disengage without being pursued.",
-        "translation": "尽管从上次交战中撤退，但我方已打乱了敌人的阵脚，因此可以脱离战斗而不被追击。",
+        "translation": "尽管从上次交战中撤退，但你方战力成功打乱了敌人的阵脚，因此得以脱离交战而不被追击。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.playerDisruptedEnemy"
     },
@@ -1108,49 +1108,49 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.playerLetGo",
         "original": "Your ships make no move to pursue, allowing the enemy forces to withdraw without further incident.",
-        "translation": "你的战舰并没有进行追击，得以让敌方部队顺利撤出。",
+        "translation": "你的战舰没有进行追击，敌方战力得以顺利撤离。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.playerLetGo"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.playerOutFirstEngageLoss",
         "original": "Your forces retreat from the battlespace before all of your allies and have an opportunity to leave in relative safety.",
-        "translation": "你的舰队在战斗结束前就撤离了战场，并获得了一个能较为安全地脱离战斗的机会。",
+        "translation": "你方战力在盟友尚未结束战斗时就撤离了战斗区域，并获得了一个能较为安全地脱离交战的机会。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.playerOutFirstEngageLoss"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.playerOutFirstEngageWin",
         "original": "Your forces retreat from the battlespace before your allies, who are nonetheless able to win the engagement.",
-        "translation": "你的舰队在战斗结束前就撤离了战场。尽管如此，你的盟友仍旧击溃了敌军。",
+        "translation": "你方战力在盟友尚未结束战斗时就撤离了战斗区域，尽管如此，你的盟友仍成功赢得了这次交战。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.playerOutFirstEngageWin"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.playerOutFirstEscapeLoss",
         "original": "Your forces leave the battlespace before all of your allies, who are able to escape shortly thereafter.",
-        "translation": "你的舰队在战斗结束前就撤离了战场。你的盟友在你撤出不久后也成功摆脱了追击。",
+        "translation": "你方战力在盟友尚未结束战斗时就撤离了战斗区域，你的盟友随后不久也得以成功逃脱。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.playerOutFirstEscapeLoss"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.playerOutFirstEscapeWin",
         "original": "Your forces leave the battlespace before all of your allies, who are nonetheless able to rout the enemy forces.",
-        "translation": "你的舰队在战斗结束前就撤离了战场。尽管如此，你的盟友仍旧击溃了敌军。",
+        "translation": "你方战力在盟友尚未结束战斗时就撤离了战斗区域，尽管如此，你的盟友仍成功击溃了敌方战力。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.playerOutFirstEscapeWin"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.playerOutFirstPursuitLoss",
         "original": "Your forces retreat from the battlespace before your allies.",
-        "translation": "你的舰队在战斗结束前就撤离了战场。",
+        "translation": "你方战力在盟友尚未结束战斗时就撤离了战斗区域。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.playerOutFirstPursuitLoss"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.playerOutFirstPursuitWin",
         "original": "Your forces retreat from the battlespace before your allies.",
-        "translation": "你的舰队在战斗结束前就撤离了战场。",
+        "translation": "你方战力在盟友尚未结束战斗时就撤离了战斗区域。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.playerOutFirstPursuitWin"
     },
@@ -1185,28 +1185,28 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.postBattleAggressive",
         "original": "The $faction $fleetOrShip maneuvers for another engagement.",
-        "translation": "$faction $fleetOrShip 进行了一轮机动动作后，准备再次交战。",
+        "translation": "$faction $fleetOrShip 进行了一轮机动动作，准备再次交战。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.postBattleAggressive"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.postBattleAggressiveSide",
         "original": "The $enemyFactionAndTheirAllies maneuver for another engagement.",
-        "translation": "$enemyFactionAndTheirAllies 进行了一轮机动动作后，准备再次交战。",
+        "translation": "$enemyFactionAndTheirAllies 进行了一轮机动动作，准备再次交战。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.postBattleAggressiveSide"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.postBattleDisengage",
         "original": "The $faction $fleetOrShip maneuvers to disengage.",
-        "translation": "$faction $fleetOrShip 进行了一轮机动动作后，准备脱离战斗。",
+        "translation": "$faction $fleetOrShip 进行了一轮机动动作，来准备脱离交战。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.postBattleDisengage"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.postBattleDisengageSide",
         "original": "The $enemyFactionAndTheirAllies maneuver to disengage.",
-        "translation": "$enemyFactionAndTheirAllies 进行了一轮机动动作后，准备脱离战斗。",
+        "translation": "$enemyFactionAndTheirAllies 进行了一轮机动动作，来准备脱离交战。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.postBattleDisengageSide"
     },
@@ -1332,7 +1332,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.tooltipCleanDisengage",
         "original": "Ends the battle with no risk of being harried by the opposing fleet.\n\nAs the enemy remains in control of the battlespace, you won't be able to conduct any salvage operations.\n\nIf your fleet hasn't taken any hostile actions, disengaging will not do any damage to your standing with the opposing faction.",
-        "translation": "在没有被对方舰队骚扰风险的情况下结束战斗。\n\n由于敌方仍然控制着战区，你将无法进行任何打捞行动。\n\n如果你的舰队没有采取任何敌对行动，脱离接触不会给彼此的关系造成损害。",
+        "translation": "在不冒被对方舰队骚扰风险的情况下结束战斗。\n\n由于敌方仍然控制着战区，你将无法进行任何打捞作业。\n\n如果你的舰队没有采取任何敌对行动，脱离交战不会对你与对方势力的关系造成损害。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.tooltipCleanDisengage"
     },
@@ -1388,7 +1388,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.tooltipHarrassableDisengage",
         "original": "Ends the battle without any risk of pursuit. The opposing fleet may still harry your retreat.\n\nAs the enemy remains in control of the battlespace, you won't be able to conduct any salvage operations.\n\nIf your fleet hasn't taken any hostile actions, disengaging will not do any damage to your standing with the opposing faction.",
-        "translation": "在没有被对方舰队追击的风险的情况下结束战斗。对方舰队仍然可能会在你撤退时进行骚扰。\n\n由于敌方仍然控制着战区，你将无法进行任何打捞行动。\n\n如果你的舰队没有采取任何敌对行动，脱离接触不会对你在对方派系的关系造成损害。",
+        "translation": "在不冒被追击风险的情况下结束战斗。对方舰队仍然可能会在你撤退时进行骚扰。\n\n由于敌方仍然控制着战区，你将无法进行任何打捞作业。\n\n如果你的舰队没有采取任何敌对行动，脱离交战不会对你与对方势力的关系造成损害。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.tooltipHarrassableDisengage"
     },
