@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Set, Union
 
 from para_tranz.config import (
+    LOG_FILE_PATH,
     LOG_LEVEL,
     ORIGINAL_PATH,
     OVERRIDE_STRING_STATUS,
@@ -69,6 +70,22 @@ class CustomFormatter(logging.Formatter):
         return formatter.format(record)
 
 
+_file_handler_initialized = False
+
+
+def _init_file_handler() -> None:
+    global _file_handler_initialized
+    if _file_handler_initialized:
+        return
+    _file_handler_initialized = True
+
+    file_handler = logging.FileHandler(LOG_FILE_PATH, mode='w', encoding='utf-8')
+    file_handler.setLevel(logging.DEBUG)
+    file_handler.terminator = ''
+    file_handler.setFormatter(logging.Formatter('[%(name)s][%(levelname)s] %(message)s \n'))
+    logging.root.addHandler(file_handler)
+
+
 def make_logger(name: str) -> logging.Logger:
     # 设置日志输出
     logging.root.setLevel(logging.NOTSET)
@@ -82,6 +99,8 @@ def make_logger(name: str) -> logging.Logger:
 
     handle_out.setFormatter(formatter)
     logger.addHandler(handle_out)
+
+    _init_file_handler()
 
     return logger
 
