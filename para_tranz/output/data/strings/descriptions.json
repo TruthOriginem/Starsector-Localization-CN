@@ -4608,7 +4608,7 @@
     {
         "key": "descriptions.csv#('phantom', 'SHIP')$text1",
         "original": "An advanced troop transport employing phase stealth technology, this design was put to effective use by Tri-Tachyon black ops during the Second AI War. The Phantom should avoid ship-to-ship combat as integrated armor and weaponry are only rated effective versus light ground targets.\n\n\"The system patrols should have seen the Tachies coming, but didn't. ADA was tracking the bogey right up until it disappeared off the scope, leaving the ground guns spinning in circles trying to reacquire a target. We saw a shadow in the air, like dark wings falling on the compound. Don't remember much else. Suit rec says incoming fire already took the rest of the squad.\"\n- The Fall of Bunker 58",
-        "translation": "一种运用相位潜行科技的部队运输舰，该设计在第二次 AI 战争期间速子科技的各类黑色行动中产生了巨大的成果。其装甲与武器阵列皆为低强度的地面作战所设计，故 魅影-级 应当尽量避免参与任何舰队战。\n\n\"星系巡逻队本该注意到那群速子鬼佬的接近，但他们没有。自动数据采集设备持续追踪着那吓人的玩意，直到它唐突地消失在了传感器中。地面的火炮阵列空转着炮管，试图重新获取目标。我们看见了空中的阴影，如同黑色的羽翼一样笼罩着据点。其他的事情我已经不太记得了，侦察兵只提到敌方火力已击溃其他部队...\"\n—— 58 号碉堡的陷落",
+        "translation": "一种运用相位潜行科技的先进人员输送舰，该设计在第二次 AI 战争期间速子科技的各类黑色行动中产生了巨大的成果。其装甲与武器阵列皆为低强度的地面作战所设计，故 魅影-级 应当尽量避免参与任何舰队战。\n\n\"星系巡逻队本该注意到那群速子鬼佬的接近，但他们没有。自动数据采集设备持续追踪着那吓人的玩意，直到它唐突地消失在了传感器中。地面的火炮阵列空转着炮管，试图重新获取目标。我们看见了空中的阴影，如同黑色的羽翼一样笼罩着据点。其他的事情我已经不太记得了，侦察兵只提到敌方火力已击溃其他部队...\"\n—— 58 号碉堡的陷落",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00593"
     },
@@ -4811,14 +4811,14 @@
     {
         "key": "descriptions.csv#('planet_ancyra', 'CUSTOM')$text1",
         "original": "A dry and old world with a sluggish magnetic field partially stripped of volatiles by solar wind. There is evidence that Ancyra was once covered by shallow, warm seas: bleached dunes of salt, odd towers and ridges of uniquely crystallized silica, and a few briney aquifers tapped and exploited by human settlers.",
-        "translation": "一个干燥、古老且拥有微弱地磁场的世界，来自 Galatia 的太阳风已经刮走了此地地表的大部分挥发物。根据地表上那些盐化的沙丘、奇特的塔状结晶二氧化硅以及留有前殖民者开发痕迹的含水层，就足以证明，Ancyra 曾经很可能被温暖的浅海所覆盖。",
-        "stage": 5,
+        "translation": "一个干燥、古老的星球，其磁场微弱，太阳风已经刮走了此地地表的大部分挥发物。有证据表明，Ancyra 曾经很可能被温暖的浅海所覆盖：地表上盐化的沙丘、奇特的塔状结晶二氧化硅，还有一些充满盐分的含水层，被人类定居者开采利用着。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00542"
     },
     {
         "key": "descriptions.csv#('planet_ancyra', 'CUSTOM')$text3",
         "original": "The economy of Ancyra is dominated by Hegemony logistics. The light industry complex grew up on military contracts and now possesses the scale and legitimacy to make respectable inroads into the civilian commerce web of core Hegemony space.",
-        "translation": "Ancyra 的经济由霸主的后勤体系主导着。这个轻工业综合体在军事合同的基础上发展起来，如今兼具着相应规模和合法地位，从而在霸主核心疆域的民用商业网络中取得可观的市场拓展。",
+        "translation": "Ancyra 的经济由霸主的后勤体系主导着。这个轻工业综合体在军事合同的基础上发展起来，如今兼具着相应规模和合法地位，从而在霸主核心疆域的民用商业网络中取得了可观的市场拓展。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00542"
     },
@@ -7653,8 +7653,8 @@
     {
         "key": "descriptions.csv#('test_station', 'CUSTOM')$text1",
         "original": "An orbital station constructed as a custom campaign entity with a \"station\" tag.",
-        "translation": "一个带有空间站属性的物体。",
-        "stage": 5,
+        "translation": "一座轨道空间站，作为战役中的自定义实体而构建，带有 \"空间站\" 标签。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00331"
     },
     {
@@ -7863,7 +7863,7 @@
     {
         "key": "descriptions.csv#('valkyrie', 'SHIP')$text1",
         "original": "The Valkyrie is a standard destroyer-sized troop transport with enough room to carry two companies of marines. Tactically it is weak for its size, only able to defend itself at short ranges from missiles and fighters.\n\nAs an atmosphere-capable combat dropship with ground support weapon mounts designed to operate during re-entry and when grounded, the Valkyrie is often used to deploy heavy infantry support for tech raids on decivilized worlds. \n\nThe ability to deliver large amounts of troops directly to ground targets while providing fire support prompted Hegemony bureaucrats to designate the hull as \"restricted\" for sale to third parties. Naturally, news of the restriction made it to the general public cycles before it came into effect, launching ill-fated speculation in the future prices of this class. Thus, overproduction and the hull's limited options made the speculators' betting largely moot, the only net result is that now, due to oversupply, it is just as easy to obtain a Valkyrie ship as before news of the Hegemony ban ever became public.",
-        "translation": "女武神-级 是标准驱逐舰规模的人员运输舰，充足的内部空间足以搭载两个连的陆战队员。战斗力和同级船相比非常贫弱，只能勉强抵御近距离来袭的战机和导弹。\n\n作为具备大气层内作战能力的战斗运兵船，女武神-级 配备了多种地面支援武器，能在再入大气层和着陆时使用。通常被用于在文明丧失的世界上进行科技产物掠夺时部署重型步兵提供支援。\n\n鉴于该舰船能对地面目标直接投送大量部队并提供火力支援，霸主 的官僚们将该船型定为 \"一般保密船型\"，禁止出售给未授权的第三方。然而限售令在实际生效之前几年，消息就早被大众所知悉，掀起了一波注定走向失败的屯船待涨行为。由于生产过剩且船型功能有限，导致该船成品积压，这不但让投机者们全都亏得血本无归，还事与愿违地让现在获得一艘 女武神-级 和 霸主 的限制令实施之前一样简单。",
+        "translation": "女武神-级 是标准驱逐舰规模的人员输送舰，充足的内部空间足以搭载两个连的陆战队员。战斗力和同级船相比非常贫弱，只能勉强抵御近距离来袭的战机和导弹。\n\n作为具备大气层内作战能力的战斗运兵船，女武神-级 配备了多种地面支援武器，能在再入大气层和着陆时使用。通常被用于在文明丧失的世界上进行科技产物掠夺时部署重型步兵提供支援。\n\n鉴于该舰船能对地面目标直接投送大量部队并提供火力支援，霸主 的官僚们将该船型定为 \"一般保密船型\"，禁止出售给未授权的第三方。然而限售令在实际生效之前几年，消息就早被大众所知悉，掀起了一波注定走向失败的屯船待涨行为。由于生产过剩且船型功能有限，导致该船成品积压，这不但让投机者们全都亏得血本无归，还事与愿违地让现在获得一艘 女武神-级 和 霸主 的限制令实施之前一样简单。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00118"
     },

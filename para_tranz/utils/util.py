@@ -146,7 +146,7 @@ class DataFile:
 
         # 如果 Paratranz json 文件已存在：同步 stage，并保留其他文件的词条（合并输出场景）
         if self.para_tranz_path.exists():
-            self.logger.info(
+            self.logger.debug(
                 f'Paratranz 平台数据文件 {relative_path(self.para_tranz_path)} 已存在，从中读取已翻译词条的词条stage状态'
             )
             existing = self.read_json_strings(self.para_tranz_path)

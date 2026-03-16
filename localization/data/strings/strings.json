@@ -51,10 +51,10 @@
 		"initialKnowsTOffSide":"尽管你的$playerFleetOrShip关闭了应答器，仍有迹象表明对方知道你的身份。很可能是由于对方最近目击过你。",
 		"initialDoesntKnowSide":"看来对方并不清楚你的身份。这将降低采取敌对行动时，对彼此关系所造成的影响。",
 		
-		"battleDefeat":"$yourForcesWereOrYourSideWas在上一次交火中被击败了。",
-		"battleTotalDefeat":"$yourForcesWereOrYourSideWas在上一次交火中被彻底击溃了。",
-		"battleVictory":"$yourForcesWereOrYourSideWas在上次一交火中获胜。",
-		"battleTotalVictory":"$yourForcesWereOrYourSideWas在上一次的交火中大获全胜。",
+		"battleDefeat":"$yourForcesWereOrYourSideWas在上一次交战中被击败了。",
+		"battleTotalDefeat":"$yourForcesWereOrYourSideWas在上一次交战中被彻底击溃了。",
+		"battleVictory":"$yourForcesWereOrYourSideWas在上一次交战中获胜。",
+		"battleTotalVictory":"$yourForcesWereOrYourSideWas在上一次交战中大获全胜。",
 		"battleFleetLost":"你的所有舰船都在上一次交战中被摧毁了。",
 		
 		"friendlyFireRepLoss":"在刚才的交战中发生了严重的误伤友军事故。",
@@ -66,10 +66,10 @@
 		"pursuitDefeat":"敌军设法扭转了战局，将你的部队击退。",
 		"pursuitTotalDefeat":"出人意料的是，撤退中的敌军竟然扭转了战局，取得了压倒性的胜利。",
 		
-		"escapeDefeat":"$yourForcesWereOrYourSideWas设法脱离了敌方的控制。",
+		"escapeDefeat":"$yourForcesWereOrYourSideWas设法从敌人面前脱离了交战。",
 		"escapeTotalDefeat":"你方的战舰没有任何一艘成功逃脱。",
-		"escapeVictory":"$yourForcesWereOrYourSideWas设法扭转了战局，将敌方击退。",
-		"escapeTotalVictory":"$yourForcesWereOrYourSideWas成功扭转了战局，彻底击溃了追击的敌军。",
+		"escapeVictory":"$yourForcesWereOrYourSideWas设法扭转了战局，为对方送上了一场惨败。",
+		"escapeTotalVictory":"$yourForcesWereOrYourSideWas设法扭转了战局，彻底击溃了追击的敌人。",
 		
 		"engagementMutualDestruction":"大战之后，交战双方的全都化作了废铁。",
 		"mutualDestructionRepairs":"但至少你还没有失去一切。你接管了 $boardableShipName 的指挥，组织修理队集中精力恢复基本的推进系统和维生系统。经过数小时后，你的努力成功了，并因此得以重新上路。",
@@ -79,7 +79,7 @@
 		"enemyDecidesNotToPursue":"敌舰没有进行追击，使得你方战力得以顺利撤离，未再发生任何意外。",
 		"enemyPursuit":"敌方舰队追击你方战力。",
 		
-		"playerRecovery":"由于成功控制了战区且交战规模有限，让$yourForcesWereOrYourSideWas恢复了一些战备值。",
+		"playerRecovery":"由于成功控制了战斗区域且交战规模有限，$yourForcesWereOrYourSideWas设法恢复了一些战备值。",
 		"enemyRecovery":"由于战区尚处敌方控制下且交战规模有限，敌军战力的战备值得到了些许恢复。",
 		"bothRecovery":"由于双方在经过有限的混乱交战后都暂时解除了戒备状态，因此双方都恢复了一些战备值。",
 		
@@ -94,7 +94,7 @@
 		"playerDisruptedEnemy":"尽管从上次交战中撤退，但你方战力成功打乱了敌人的阵脚，因此得以脱离交战而不被追击。",
 		"enemyDisruptedPlayer":"尽管取得了上一次交战的胜利，但你方战力损失惨重，因此无法在敌人脱离交战时进行追击。",
 		"enemyDisruptedPlayerSide":"尽管取得了上一次交战的胜利，但你所在方的战力损失惨重，因此无法在敌人脱离交战时进行追击。",
-		"cleanDisengageOpportunity":"在一次战术性胜利后，你方战力在敌人面前获得了一个直接脱离交战的机会。",
+		"cleanDisengageOpportunity":"在一次战术性胜利后，你方战力从敌人面前获得了一个直接脱离交战的机会。",
 		
 		#"playerTooLargeToDisengage":"Your fleet is too large to be able to disengage effectively unless the opposing forces are already in disarray。",
 		#"playerTooLargeCanFightToDisengage":"Engaging the opponent and destroying，disabling，or forcing enough of their ships to retreat will allow your fleet to disengage without being pursued。",
