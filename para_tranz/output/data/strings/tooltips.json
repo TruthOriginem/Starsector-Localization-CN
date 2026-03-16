@@ -247,14 +247,14 @@
     {
         "key": "data/strings/tooltips.json$.fleetScreen.tooltipScuttle.body",
         "original": "Strip this %s of anything useful, gaining %d supplies, %d fuel, and %d heavy machinery.",
-        "translation": "凿沉 %s 以获取任何可用的东西，获得 %d 补给，%d 燃料，和 %d 重型机械。",
+        "translation": "拆卸 %s 上一切可用的东西，获得 %d 补给、{%d 燃料，和 %d 重型机械。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\tooltips.json\n数据路径：$.fleetScreen.tooltipScuttle.body"
     },
     {
         "key": "data/strings/tooltips.json$.fleetScreen.tooltipScuttle.title",
         "original": "Scuttle",
-        "translation": "自毁",
+        "translation": "凿沉",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\tooltips.json\n数据路径：$.fleetScreen.tooltipScuttle.title"
     },

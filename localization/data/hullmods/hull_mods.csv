@@ -67,7 +67,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 神经接口,neural_interface,3,,,"special, no_drop, no_drop_salvage",特殊,10000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.NeuralInterface,"将旗舰与其他舰船连接起来，使它们均可{%s}。但诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果将不在另一艘舰船上起作用。
 
 允许在连接舰船之间快速切换，且无需通过穿梭机转移。如果二者的总部署成本小于或等于{%s}，则切换将瞬间完成。切换目标舰船不能由副官或 AI 核心操控。",允许在舰船之间快速切换，并重置战术系统的冷却时间或恢复一次充能。,无论部署点总计为多少，舰船切换总是瞬间完成。,graphics/hullmods/neural_interface.png
-神经集成器,neural_integrator,,,,"special, no_drop, no_drop_salvage",特殊,10000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.NeuralIntegrator,"用于自主无人舰的增强版神经接口，通过链接直接控制舰船的所有系统，可以与你的旗舰连接起来，使它们均可{%s}。但诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果将不在另一艘舰船上起作用。
+神经集成器,neural_integrator,,,,"special, no_drop, no_drop_salvage",特殊,10000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.NeuralIntegrator,"用于自主无人舰的增强版神经接口，通过链接直接控制无人舰的所有系统，可以与你的旗舰连接起来，使它们均可{%s}。但诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果将不在另一艘舰船上起作用。
 
 允许在连接舰船之间快速切换，且无需通过穿梭机转移。如果二者的总部署成本小于或等于{%s}，则切换将瞬间完成。切换目标舰船不能由副官或 AI 核心操控。
 
@@ -137,7 +137,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 保持开盾,shield_always_on,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.ShieldAlwaysOn,,强制开启护盾。隐藏效果，不需要描述或图标。,,graphics/hullmods/hardened_shields.png
 导弹自动工厂,missile_reload,,,,codex_require_related,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PeriodicMissileReload,内置的导弹工厂会定期补满所有导弹武器。,内置的导弹工厂会定期补满所有导弹武器。,,graphics/hullmods/expanded_missile_racks.png
 屏蔽货舱,shielded_holds,2,,,,,,,TRUE,,0,0,0,0,data.hullmods.ShieldedCargoHolds,原本是保护无护盾货舰免受天体辐射的影响，但经过简单调整就可用于干扰远距离货舱扫描，降低违禁物品被发现的概率。,降低被检查到违禁品的风险。,,graphics/hullmods/shielded_cargo_hold.png
-打捞起重机,repair_gantry,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.campaign.RepairGantry,根据船体级别，提高{%s}/{%s}/{%s}/{%s}从废弃空间站、遗弃物、舰船残骸等打捞到的资源。只影响普通资源的回收，如燃料与补给，而蓝图等稀有物资将不受影响。此外，该效果在战后结算时仅有{%s}效率。,提高打捞收益。,,graphics/hullmods/repair_gantry.png
+打捞起重机,repair_gantry,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.campaign.RepairGantry,根据船体级别，提高{%s}/{%s}/{%s}/{%s}从废弃空间站、遗弃物、舰船残骸等打捞到的资源。只影响普通资源的回收，如燃料与补给，而蓝图等稀有物品将不受影响。此外，该效果在战后结算时仅有{%s}效率。,提高打捞收益。,,graphics/hullmods/repair_gantry.png
 相位力场,phasefield,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PhaseField,能长时间激活低水平相位场，使传感器截面降低{%s}。,降低舰队的传感器截面。,,graphics/hullmods/phase_field.png
 磁通分流,fluxshunt,,,,,,,,TRUE,,0,0,0,0,data.hullmods.FluxShunt,允许舰船以{%s}的正常耗散速率在护盾开启时耗散硬幅能。,允许舰船在展开护盾时耗散硬幅能。,,graphics/hullmods/flux_shunt.png
 民用级船体,civgrade,,,,,,,,TRUE,,0,0,0,0,data.hullmods.CivGrade,提高{%s}传感器截面，降低{%s}传感器探测强度。,提高传感器截面，降低传感器探测强度。,,graphics/hullmods/civilian_grade.png

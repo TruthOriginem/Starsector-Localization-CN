@@ -52,7 +52,7 @@
         "key": "descriptions.csv#('abandoned_station3', 'GALLERY')$text2",
         "original": "Most abandoned stations were plundered long ago. What remains are the stripped foundations of a fallen empire; twisted spars, cracked agrav plates, shattered machines, and seams thermal-cycled to ruin.\n\nA few smugglers and black-market traders use the long, quiet orbit of these stations for drop-points. A dozen corpses and cored shuttle are the not uncommon tell of a deal gone bad.",
         "translation": "大多数废弃空间站早已被掏得一干二净。这陨落帝国剩下的，不过是副空壳子：扭曲的支撑梁、破碎的反重力板、报废的机器，以及在反复的热循环中面目全非的焊缝。\n\n只有零星走私者和黑市商人会将轨道上这些沉浸在漫长寂静中的废弃空间站当作接头点。十几具尸体与被掏空的穿梭机，都是交易谈崩后的寻常景象。",
-        "stage": 2,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00634"
     },
     {
@@ -506,8 +506,8 @@
     {
         "key": "descriptions.csv#('barren', 'PLANET')$text1",
         "original": "Radiation from the nearby star ravages the surface of this world due to the lack of an atmospheric ozone layer. No significant geological activity. No indigenous life forms.",
-        "translation": "这个世界的大气中没有臭氧层的存在，其地表长期经受着临近恒星的辐射肆虐。没有显著的地质活动，也不存在任何复杂生命形式。",
-        "stage": 5,
+        "translation": "由于缺乏大气臭氧层，这颗星球的地表长期经受着临近恒星的辐射肆虐。没有显著的地质活动。不存在任何本土生命形式。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00238"
     },
     {
@@ -1081,7 +1081,7 @@
         "key": "descriptions.csv#('convulsive_lunge', 'SHIP_SYSTEM')$text1",
         "original": "The projection lunges through n-space, away from danger or towards prey.",
         "translation": "该 具象化身 疾速穿梭于正常空间，远离危险，抑或追逐猎物。",
-        "stage": 2,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00320"
     },
     {
@@ -1095,7 +1095,7 @@
         "key": "descriptions.csv#('convulsive_lunge', 'SHIP_SYSTEM')$text3",
         "original": "The projection lunges through n-space, away from danger or towards prey.",
         "translation": "该 具象化身 疾速穿梭于正常空间，远离危险，抑或追逐猎物。",
-        "stage": 2,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00320"
     },
     {
@@ -1451,7 +1451,7 @@
     {
         "key": "descriptions.csv#('derelict_probe', 'CUSTOM')$text1",
         "original": "An example of one of the countless thousands of robot probe ships sent out into the galaxy by the Domain to find new resources to exploit, planets to colonize, and explore the unknown. Some variants are produced by automated motherships. This specimen appears to be inactive; pitted by small impacts, its hull displays iridescence from fearsome radiation scarring. This probe's manufacture could well date to a thousand cycles ago.",
-        "translation": "人之领 发射的无人探测器，这些数量庞大且遍布星域的探测器主要用于寻找可利用的资源或可供殖民的星球，并探索未知星域。某些改装版由全自动化勘探母舰制造而成。这个探测器似乎已被停机，外壳不止被微撞击弄得坑坑洼洼，还出现了遭受骇人的辐射灼烧所留下的典型虹色幻彩，其制造时间也许可以追溯到千年以前。",
+        "translation": "这是人之领曾向银河系发射了成千上万艘的无人舰船探测器，它是其中之一的案例，主要用于寻找可利用的资源和可供殖民的星球，并探索未知星域。某些变体是由自动化勘探母舰制造而成的。这个样本似乎已处于休眠状态；而它的外壳不止被微撞击弄得坑坑洼洼，还出现了因遭受骇人的辐射灼烧所留下的虹彩。这艘探测器的制造时间也许可以追溯到千年以前。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00466"
     },
@@ -1465,14 +1465,14 @@
     {
         "key": "descriptions.csv#('derelict_ship', 'CUSTOM')$text1",
         "original": "This ship is adrift and powered down. Closer inspection may yield salvage or a recovery operation.",
-        "translation": "已停机并遭到遗弃的舰船。如果仔细检查，应该能发现些可供回收的物资，甚至可能将其恢复运行。",
-        "stage": 5,
+        "translation": "这艘舰船失去了动力，漫无目的地漂流着。如果仔细检查，应该能进行打捞或恢复作业。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00193"
     },
     {
         "key": "descriptions.csv#('derelict_surveyship', 'CUSTOM')$text1",
         "original": "An automated survey ship from a long-past wave of Domain exploration. Thousands of ships like this were sent in waves, some independent, others attached to (or manufactured by) similarly automated motherships following the first wave of robot probes. This apparently unresponsive hulk has been ravaged by centuries of exposure to charged particles and high velocity impacts from interstellar dust.",
-        "translation": "在 人之领 某一次大拓展热潮中被制造出来的勘探舰。成千上万艘类似的舰船被一波接一波地派出，其中一部分独立航行，而另一部分则步着无人探测器们的后尘随自动勘探母舰出航，抑或是由勘探母舰后续建造。这艘废船显然已经失去运行能力，被带电粒子与星际尘埃的高速冲击蹂躏了数个世纪。",
+        "translation": "在人之领某一次大拓展热潮中被制造出来的勘探舰。成千上万艘类似的舰船被一波接一波地派出，其中一部分独立航行，而另一部分则步着无人探测器们的后尘随自动化勘探母舰出航，抑或是由勘探母舰后续建造。这艘废船显然已经失去运行能力，被带电粒子与星际尘埃的高速冲击蹂躏了数个世纪。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00467"
     },
@@ -4468,7 +4468,7 @@
     {
         "key": "descriptions.csv#('orbital_habitat_abandoned', 'CUSTOM')$text1",
         "original": "An abandoned orbital habitat. A cursory scan indicates that it has been cold and dead for tens of cycles at the very least, possibly hundreds. Closer inspection may yield salvage.",
-        "translation": "一座废弃的轨道居住站。粗略扫描显示，它已冰冷死寂了至少数十个星历年，甚至可能长达几百年之久。如果仔细检查，应该能找到可供打捞的物资。",
+        "translation": "一座废弃的轨道居住站。粗略扫描表明，它已冰冷死寂了至少数十个星历年，甚至可能长达几百年之久。如果仔细检查，应该能进行打捞。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00191"
     },
@@ -4608,7 +4608,7 @@
     {
         "key": "descriptions.csv#('phantom', 'SHIP')$text1",
         "original": "An advanced troop transport employing phase stealth technology, this design was put to effective use by Tri-Tachyon black ops during the Second AI War. The Phantom should avoid ship-to-ship combat as integrated armor and weaponry are only rated effective versus light ground targets.\n\n\"The system patrols should have seen the Tachies coming, but didn't. ADA was tracking the bogey right up until it disappeared off the scope, leaving the ground guns spinning in circles trying to reacquire a target. We saw a shadow in the air, like dark wings falling on the compound. Don't remember much else. Suit rec says incoming fire already took the rest of the squad.\"\n- The Fall of Bunker 58",
-        "translation": "一种运用相位潜行科技的先进人员输送舰，该设计在第二次 AI 战争期间速子科技的各类黑色行动中产生了巨大的成果。其装甲与武器阵列皆为低强度的地面作战所设计，故 魅影-级 应当尽量避免参与任何舰队战。\n\n\"星系巡逻队本该注意到那群速子鬼佬的接近，但他们没有。自动数据采集设备持续追踪着那吓人的玩意，直到它唐突地消失在了传感器中。地面的火炮阵列空转着炮管，试图重新获取目标。我们看见了空中的阴影，如同黑色的羽翼一样笼罩着据点。其他的事情我已经不太记得了，侦察兵只提到敌方火力已击溃其他部队...\"\n—— 58 号碉堡的陷落",
+        "translation": "一种运用相位潜行科技的先进兵员输送舰，该设计在第二次 AI 战争期间速子科技的各类黑色行动中产生了巨大的成果。其装甲与武器阵列皆为低强度的地面作战所设计，故 魅影-级 应当尽量避免参与任何舰队战。\n\n\"星系巡逻队本该注意到那群速子鬼佬的接近，但他们没有。自动数据采集设备持续追踪着那吓人的玩意，直到它唐突地消失在了传感器中。地面的火炮阵列空转着炮管，试图重新获取目标。我们看见了空中的阴影，如同黑色的羽翼一样笼罩着据点。其他的事情我已经不太记得了，侦察兵只提到敌方火力已击溃其他部队...\"\n—— 58 号碉堡的陷落",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00593"
     },
@@ -6302,8 +6302,8 @@
     {
         "key": "descriptions.csv#('search_and_destroy', 'ACTION_TOOLTIP')$text2",
         "original": "Search & Destroy",
-        "translation": "搜索并歼灭",
-        "stage": 5,
+        "translation": "搜索并摧毁",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00217"
     },
     {
@@ -7142,7 +7142,7 @@
     {
         "key": "descriptions.csv#('station_mining_remnant', 'CUSTOM')$text1",
         "original": "An abandoned mining station, once a source of wealth and industry to feed the worlds and works of humanity. A cursory scan indicates that it has been cold and dead for tens of cycles at the very least, possibly hundreds. Closer inspection may yield salvage.",
-        "translation": "一座废弃的采矿空间站，它曾经是财富与工业的源泉，供给着全人类那诸多世界与宏伟工程的有序运转。粗略扫描显示，它已冰冷死寂了至少数十个星历年，甚至可能长达几百年之久。如果仔细检查，应该能找到可供打捞的物资。",
+        "translation": "一座废弃的采矿空间站，它曾经是财富与工业的源泉，供给着全人类那诸多世界与宏伟工程的有序运转。粗略扫描表明，它已冰冷死寂了至少数十个星历年，甚至可能长达几百年之久。如果仔细检查，应该能找到可供打捞的物资。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00186"
     },
@@ -7184,7 +7184,7 @@
     {
         "key": "descriptions.csv#('station_research_remnant', 'CUSTOM')$text1",
         "original": "An abandoned research station, built either to study some interesting local phenomenon or to study that which is best kept far, far away from inhabited worlds. A cursory scan indicates that it has been cold and dead for tens of cycles at the very least, possibly hundreds. Closer inspection may yield salvage.",
-        "translation": "一座废弃的研究空间站，其建造目的要么是为了研究当地的某些有趣现象，要么就是为了研究那些最好与有人居住星球远远隔离开的东西。粗略扫描显示，它已冰冷死寂了至少数十个星历年，甚至可能长达几百年之久。如果仔细检查，应该能找到可供打捞的物资。",
+        "translation": "一座废弃的研究空间站，其建造目的要么是为了研究当地的某些有趣现象，要么就是为了研究那些最好与有人居住星球远远隔离开的东西。粗略扫描表明，它已冰冷死寂了至少数十个星历年，甚至可能长达几百年之久。如果仔细检查，应该能找到可供打捞的物资。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00190"
     },
@@ -7863,7 +7863,7 @@
     {
         "key": "descriptions.csv#('valkyrie', 'SHIP')$text1",
         "original": "The Valkyrie is a standard destroyer-sized troop transport with enough room to carry two companies of marines. Tactically it is weak for its size, only able to defend itself at short ranges from missiles and fighters.\n\nAs an atmosphere-capable combat dropship with ground support weapon mounts designed to operate during re-entry and when grounded, the Valkyrie is often used to deploy heavy infantry support for tech raids on decivilized worlds. \n\nThe ability to deliver large amounts of troops directly to ground targets while providing fire support prompted Hegemony bureaucrats to designate the hull as \"restricted\" for sale to third parties. Naturally, news of the restriction made it to the general public cycles before it came into effect, launching ill-fated speculation in the future prices of this class. Thus, overproduction and the hull's limited options made the speculators' betting largely moot, the only net result is that now, due to oversupply, it is just as easy to obtain a Valkyrie ship as before news of the Hegemony ban ever became public.",
-        "translation": "女武神-级 是标准驱逐舰规模的人员输送舰，充足的内部空间足以搭载两个连的陆战队员。战斗力和同级船相比非常贫弱，只能勉强抵御近距离来袭的战机和导弹。\n\n作为具备大气层内作战能力的战斗运兵船，女武神-级 配备了多种地面支援武器，能在再入大气层和着陆时使用。通常被用于在文明丧失的世界上进行科技产物掠夺时部署重型步兵提供支援。\n\n鉴于该舰船能对地面目标直接投送大量部队并提供火力支援，霸主 的官僚们将该船型定为 \"一般保密船型\"，禁止出售给未授权的第三方。然而限售令在实际生效之前几年，消息就早被大众所知悉，掀起了一波注定走向失败的屯船待涨行为。由于生产过剩且船型功能有限，导致该船成品积压，这不但让投机者们全都亏得血本无归，还事与愿违地让现在获得一艘 女武神-级 和 霸主 的限制令实施之前一样简单。",
+        "translation": "女武神-级是标准驱逐舰规模的兵员输送舰，充足的内部空间足以搭载两个连的陆战队员。战斗力和同级船相比非常贫弱，只能勉强抵御近距离来袭的战机和导弹。\n\n作为具备大气层内作战能力的战斗运兵船，女武神-级 配备了多种地面支援武器，能在再入大气层和着陆时使用。通常被用于在文明丧失的世界上进行科技产物掠夺时部署重型步兵提供支援。\n\n鉴于该舰船能对地面目标直接投送大量部队并提供火力支援，霸主 的官僚们将该船型定为 \"一般保密船型\"，禁止出售给未授权的第三方。然而限售令在实际生效之前几年，消息就早被大众所知悉，掀起了一波注定走向失败的屯船待涨行为。由于生产过剩且船型功能有限，导致该船成品积压，这不但让投机者们全都亏得血本无归，还事与愿违地让现在获得一艘 女武神-级 和 霸主 的限制令实施之前一样简单。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00118"
     },

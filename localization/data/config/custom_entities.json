@@ -807,9 +807,9 @@
 	# procgen-related salvage things
 	
 	"derelict_probe":{
-		"defaultName":"人之领-探测器", # used if name=null in addCustomEntity()
-		"nameInText":"人之领-探测器",
-		"shortName":"探针",
+		"defaultName":"人之领时代探测器", # used if name=null in addCustomEntity()
+		"nameInText":"人之领时代探测器",
+		"shortName":"探测器",
 		"aOrAn":"一处",
 		"isOrAre":"可能",
 		"defaultRadius":35, # used if radius<0 in addCustomEntity()

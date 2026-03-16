@@ -149,7 +149,7 @@
     {
         "key": "data/strings/strings.json$.campaignHelp.chmLowSupplies_text",
         "original": "Your fleet is running low on supplies.\n\nIf it runs out of supplies, all repairs will stop and ships will start to lose combat readiness over time. After more than a couple of days without supplies, the fleet begins to run the risk of accidents that range from minor (such as the loss of some cargo) to critical (losing a ship).\n\nIt's recommended that you acquire more supplies as quickly as possible.\n\nTo reduce supply consumption, you can suspend any ongoing ship repairs. A last resort way to get more supplies is to scuttle one of your ships.\n\nThe commands to do so are available on the fleet screen.",
-        "translation": "补给不足。\n\n如果舰队补给耗尽，所有的维修都会停止，舰船也会随时间推移开始失去战备值 (CR)。在持续多日没有补给的情况下，舰队就会面临发生意外的风险，从轻微的{(如损失一些货物) 直至严重的 (损失一艘船)。\n\n建议你尽快获取更多的补给。\n\n为减少补给消耗，你可暂停任何正在进行的船只维修。获得补给品的最终方法是将你的一艘船进行自毁。\n\n你可以通过舰队面板暂停船只维修或自毁舰船。",
+        "translation": "补给不足。\n\n如果舰队补给耗尽，所有的维修都会停止，舰船也会随时间推移开始失去战备值。在持续多日没有补给的情况下，舰队就会面临发生意外的风险，从轻微 (如损失一些货物) 直至严重 (损失一艘船)。\n\n建议你尽快获取更多的补给。\n\n为减少补给消耗，你可暂停任何正在进行的舰船维修。若别无他法，你可以凿沉你的一艘船来获得更多补给。\n\n你可以通过舰队管理面板暂停船只维修或凿沉舰船。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.campaignHelp.chmLowSupplies_text"
     },
@@ -492,7 +492,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.boardingCasualtyReport",
         "original": "An after-action assessment indicates $boardingMarinesLost marine(s) lost during the fighting.",
-        "translation": "登陆行动报告：在登陆战中我方损失 $boardingMarinesLost 名陆战队。。",
+        "translation": "行动后评估报告表明，在登陆战中我方损失 $boardingMarinesLost 名陆战队。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.boardingCasualtyReport"
     },
@@ -604,7 +604,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.casualtyReport",
         "original": "Preliminary reports indicate $crewLost crew and $marinesLost marines were lost during the last engagement.",
-        "translation": "初步报告显示，在上一次交战中牺牲了 $crewLost 名船员和 $marinesLost 名陆战队员。",
+        "translation": "初步报告表明，在上一次交战中牺牲了 $crewLost 名船员和 $marinesLost 名陆战队员。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.casualtyReport"
     },
@@ -660,7 +660,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.enemyDecidesNotToPursue",
         "original": "The enemy ships make no move to pursue, allowing your forces to withdraw without further incident.",
-        "translation": "敌舰没有进行追击，使得你方战力得以顺利撤离，未再发生任何意外。",
+        "translation": "敌舰没有进行追击，使你方战力得以顺利撤离，再未发生任何变故。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.enemyDecidesNotToPursue"
     },
@@ -709,7 +709,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.enemyUnableToPursue",
         "original": "The enemy ships are unable to offer pursuit, allowing your forces to withdraw without further incident.",
-        "translation": "敌舰无法进行追击，使得你方战力得以顺利撤离，未再发生任何意外。",
+        "translation": "敌舰无法进行追击，使你方战力得以顺利撤离，再未发生任何变故。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.enemyUnableToPursue"
     },
@@ -1003,7 +1003,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.initialWithStationVsLargeFleet",
         "original": "The $faction $fleetOrShip maneuvers to remain supported by the station, allowing your fleet to disengage. However, your forces are likely to be harried as they pull back.",
-        "translation": "$faction $fleetOrShip 采取机动措施停留在空间站的支援范围内，让你的舰队有机会摆脱战斗接触。然而你的部队很可能在撤退时遭到骚扰。",
+        "translation": "$faction $fleetOrShip 进行了一轮机动动作，以保持在空间站的支援范围内，使你的舰队得以脱离交战。然而，你方战力很可能在撤退时遭到对方骚扰。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.initialWithStationVsLargeFleet"
     },
@@ -1101,7 +1101,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.ongoingBattleLetGo",
         "original": "The $alliedFactionAndTheirAllies let the $enemyFactionAndTheirAllies go without further incident.",
-        "translation": "$alliedFactionAndTheirAllies 让 $enemyFactionAndTheirAllies 顺利撤出。",
+        "translation": "$alliedFactionAndTheirAllies 任由 $enemyFactionAndTheirAllies 顺利撤出，再未发生任何变故。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.ongoingBattleLetGo"
     },
@@ -1157,7 +1157,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.playerLetGo",
         "original": "Your ships make no move to pursue, allowing the enemy forces to withdraw without further incident.",
-        "translation": "你的战舰没有进行追击，敌方战力得以顺利撤离。",
+        "translation": "你的舰船没有进行追击，使敌方战力得以顺利撤离，再未发生任何变故。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.playerLetGo"
     },
@@ -1395,14 +1395,14 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.tooltipCrashMothball",
         "original": "Some of your ships suffer from low combat readiness and could experience malfunctions during battle.\n\nTheir combat systems can be powered down to avoid malfunctions and allow the ships to make their best speed to escape.",
-        "translation": "你的舰队中有些船的战备值 (CR) 过低，有可能在交战中中发生故障。\n\n可以通过关闭它们的战斗系统来防止故障的发生，以便它们能尽全速逃离。",
+        "translation": "你的舰队中有些舰船的战备值 (CR) 过低，有可能在交战中中发生故障。\n\n可以通过关闭它们的战斗系统来防止故障的发生，以便它们能尽全速逃离。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.tooltipCrashMothball"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.tooltipCrashMothballUnavailable",
         "original": "All of your ships are ready for combat and do not run the risk of suffering malfunctions.",
-        "translation": "你所有的船只都做好了战斗的准备，且没有发生故障的风险。",
+        "translation": "你所有的舰船都做好了战斗的准备，且没有发生故障的风险。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.tooltipCrashMothballUnavailable"
     },

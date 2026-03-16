@@ -30,7 +30,7 @@
 		# $enemyFactionAndTheirAllies}"Hegemony forces and their allies"
 		# $yourForcesWereOrYourSideWas	 
 	
-		"initialWithStationVsLargeFleet":"$faction $fleetOrShip 采取机动措施停留在空间站的支援范围内，让你的舰队有机会摆脱战斗接触。然而你的部队很可能在撤退时遭到骚扰。",
+		"initialWithStationVsLargeFleet":"$faction $fleetOrShip 进行了一轮机动动作，以保持在空间站的支援范围内，使你的舰队得以脱离交战。然而，你方战力很可能在撤退时遭到对方骚扰。",
 		"initialAggressive":"$faction $fleetOrShip 进行了一轮机动动作，来防止你轻易脱离交战。",
 		"initialDisengage":"$faction $fleetOrShip 正尝试脱离交战。",
 		"initialCareful":"$faction $fleetOrShip 正小心保持距离，并做好在遭受敌对行动时能立即摆脱战斗的准备。",
@@ -75,8 +75,8 @@
 		"mutualDestructionRepairs":"但至少你还没有失去一切。你接管了 $boardableShipName 的指挥，组织修理队集中精力恢复基本的推进系统和维生系统。经过数小时后，你的努力成功了，并因此得以重新上路。",
 		
 		"enemyHarass":"敌军在你撤退时骚扰了你的船只，造成很大的干扰，但并没有强迫你应战。",
-		"enemyUnableToPursue":"敌舰无法进行追击，使得你方战力得以顺利撤离，未再发生任何意外。",
-		"enemyDecidesNotToPursue":"敌舰没有进行追击，使得你方战力得以顺利撤离，未再发生任何意外。",
+		"enemyUnableToPursue":"敌舰无法进行追击，使你方战力得以顺利撤离，再未发生任何变故。",
+		"enemyDecidesNotToPursue":"敌舰没有进行追击，使你方战力得以顺利撤离，再未发生任何变故。",
 		"enemyPursuit":"敌方舰队追击你方战力。",
 		
 		"playerRecovery":"由于成功控制了战斗区域且交战规模有限，$yourForcesWereOrYourSideWas设法恢复了一些战备值。",
@@ -110,7 +110,7 @@
 		"highlightCleanDisengage":"直接全身而退",
 		
 		
-		"playerLetGo":"你的战舰没有进行追击，敌方战力得以顺利撤离。",
+		"playerLetGo":"你的舰船没有进行追击，使敌方战力得以顺利撤离，再未发生任何变故。",
 		"playerHarass":"我军在敌方撤退时骚扰了其船只，虽造成很大的干扰，但并没有迫使对方应战。",
 		
 		
@@ -132,7 +132,7 @@
 		"cutComm":"你切断了通讯，开始考虑可用的战术对策。",
 	
 		"repairReport":"打捞人员能够修复$repairedShipList的基本系统。",
-		"casualtyReport":"初步报告显示，在上一次交战中牺牲了 $crewLost 名船员和 $marinesLost 名陆战队员。",
+		"casualtyReport":"初步报告表明，在上一次交战中牺牲了 $crewLost 名船员和 $marinesLost 名陆战队员。",
 		"recoveryReport":"战斗结束后，从残骸中的救生舱和完好的舱室中救出了 $crewRecovered 名船员和 $marinesRecovered 名陆战队员。",
 
 		#
@@ -164,7 +164,7 @@
 		"boardingNoMarines":"你没有陆战队可供使用，战术模拟机的结果显示你目前登舰的成功几率为0。",
 		"boardingProjection":"你有 $marines 位陆战队可用。根据伽马级AI的模拟运算，登舰成功的几率为 $boardingSuccessChance 。",
 		
-		"boardingCasualtyReport":"登陆行动报告：在登陆战中我方损失 $boardingMarinesLost 名陆战队。。",  
+		"boardingCasualtyReport":"行动后评估报告表明，在登陆战中我方损失 $boardingMarinesLost 名陆战队。",  
 		
 		#
 		# BEING BOARDED (limited to ship being engaged and shot down or not, at the moment)
@@ -197,8 +197,8 @@
 		#
 		"crashMothballSelectedOneShip":"你命令 $crashMothballList 关闭所有战斗系统以防止在交战中发生故障。船员将调用所有资源，尽可能地确保动力系统工作正常。",
 		"crashMothballSelectedMultiple":"你命令 $crashMothballList 关闭所有战斗系统以防止在交战中发生故障。船员将调用所有资源，尽可能地确保动力系统工作正常。",
-		"tooltipCrashMothball":"你的舰队中有些船的战备值 (CR) 过低，有可能在交战中中发生故障。\n\n可以通过关闭它们的战斗系统来防止故障的发生，以便它们能尽全速逃离。",
-		"tooltipCrashMothballUnavailable":"你所有的船只都做好了战斗的准备，且没有发生故障的风险。",
+		"tooltipCrashMothball":"你的舰队中有些舰船的战备值 (CR) 过低，有可能在交战中中发生故障。\n\n可以通过关闭它们的战斗系统来防止故障的发生，以便它们能尽全速逃离。",
+		"tooltipCrashMothballUnavailable":"你所有的舰船都做好了战斗的准备，且没有发生故障的风险。",
 		
 		#
 		# TOOLTIPS
@@ -253,7 +253,7 @@
 		"ongoingBattleStation":"$alliedFactionAndTheirAllies 尝试坚守阵地，来抵御 $enemyFactionAndTheirAllies 的进攻。",
 		"ongoingBattlePursue":"$alliedFactionAndTheirAllies 正在追击撤退中的 $enemyFactionAndTheirAllies。",
 		"ongoingBattleHarass":"$alliedFactionAndTheirAllies 骚扰了撤退中的 $enemyFactionAndTheirAllies，虽造成很大的干扰，但没有迫使对方应战。",
-		"ongoingBattleLetGo":"$alliedFactionAndTheirAllies 让 $enemyFactionAndTheirAllies 顺利撤出。",
+		"ongoingBattleLetGo":"$alliedFactionAndTheirAllies 任由 $enemyFactionAndTheirAllies 顺利撤出，再未发生任何变故。",
 		"ongoingBattleDisengage":"$alliedFactionAndTheirAllies 将尝试从与 $enemyFactionAndTheirAllies 的接触中脱离。",
 		#"ongoingBattleJoinEnemyWillFlee":"Your forces join the battle，and the now-outclassed $enemyFactionAndTheirAllies attempt to disengage。",
 		#"ongoingBattleJoinAlliesWillFight":"Your forces join the battle，and encouraged by this turn of events，the $alliedFactionAndTheirAllies turn to engage the enemy。",
@@ -340,7 +340,7 @@
 		"chmLowFuel_text":"燃料不足。\n\n如果在超空间内用光燃料，舰队会飘向最近的星系。如果你不能在那里获得燃料，你的舰队就会搁浅在此。",
 		"chmLowFuel_dismiss":"关闭",
 		
-		"chmLowSupplies_text":"补给不足。\n\n如果舰队补给耗尽，所有的维修都会停止，舰船也会随时间推移开始失去战备值 (CR)。在持续多日没有补给的情况下，舰队就会面临发生意外的风险，从轻微的{(如损失一些货物) 直至严重的 (损失一艘船)。\n\n建议你尽快获取更多的补给。\n\n为减少补给消耗，你可暂停任何正在进行的船只维修。获得补给品的最终方法是将你的一艘船进行自毁。\n\n你可以通过舰队面板暂停船只维修或自毁舰船。",
+		"chmLowSupplies_text":"补给不足。\n\n如果舰队补给耗尽，所有的维修都会停止，舰船也会随时间推移开始失去战备值。在持续多日没有补给的情况下，舰队就会面临发生意外的风险，从轻微 (如损失一些货物) 直至严重 (损失一艘船)。\n\n建议你尽快获取更多的补给。\n\n为减少补给消耗，你可暂停任何正在进行的舰船维修。若别无他法，你可以凿沉你的一艘船来获得更多补给。\n\n你可以通过舰队管理面板暂停船只维修或凿沉舰船。",
 		"chmLowSupplies_action":"打开舰队管理界面",
 		"chmLowSupplies_dismiss":"关闭",
 		
