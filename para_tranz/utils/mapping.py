@@ -153,7 +153,7 @@ class ParaTranzMap:
 
         data = [_drop_none(dataclasses.asdict(item)) for item in self.items]
         with open(MAP_PATH, 'w', encoding='utf-8') as f:
-            json.dump(data, f, indent=2, cls=SetEncoder)
+            json.dump(data, f, indent=2, cls=SetEncoder, ensure_ascii=False)
 
     def format(self) -> int:
         """对所有 jar 条目的类文件列表去重（合并同路径条目）并按路径排序。
