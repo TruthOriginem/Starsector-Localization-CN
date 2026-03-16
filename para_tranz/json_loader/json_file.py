@@ -15,10 +15,13 @@ from para_tranz.config import (
     ORIGINAL_PATH,
     PARA_TRANZ_PATH,
 )
+from para_tranz.json_loader.alexson.config import Config as AlexsonConfig
 from para_tranz.json_loader.alexson.parser import AlexsonParser
 from para_tranz.json_loader.alexson.syntax_tree import Array, Object, Root
 from para_tranz.json_loader.alexson.syntax_tree import String as AlexsonString
 from para_tranz.utils.util import DataFile, String, make_logger, relative_path
+
+_ALEXSON_CONFIG = AlexsonConfig(allow_duplicate_keys=True)
 
 # ---------------------------------------------------------------------------
 # 路径工具
@@ -260,7 +263,7 @@ class JsonFile(DataFile):
             return None
         try:
             with open(path, 'r', encoding='utf-8') as f:
-                return AlexsonParser(f.read()).parse()
+                return AlexsonParser(f.read(), _ALEXSON_CONFIG).parse()
         except Exception as e:
             self.logger.warning(f'解析文件失败 {relative_path(path)}：{e}')
             return None
