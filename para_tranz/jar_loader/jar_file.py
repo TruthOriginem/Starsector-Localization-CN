@@ -73,13 +73,12 @@ class JavaJarFile(DataFile):
         self,
         path: str,
         include_strings: List[str] = None,
-        exclude_strings: List[str] = None,
         override: bool = False,
     ) -> Optional['JavaClassFile']:
         if not override and path in self.class_files:
             return self.class_files[path]
         try:
-            class_file = JavaClassFile(self, path, include_strings, exclude_strings)
+            class_file = JavaClassFile(self, path, include_strings)
             self.class_files[path] = class_file
         except Exception as e:
             self.logger.warning(f'在 {self.path} 中读取 class 文件 {path} 时出错：{e}')
