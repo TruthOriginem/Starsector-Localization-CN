@@ -1,0 +1,17 @@
+# .github/workflows/notify-ssfb.yml
+name: Notify ss-file-browser
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send webhook
+        run: |
+          curl -sf -X POST https://ss-file.jnxyp.net/webhook \
+            -u "guest:${{ secrets.SSFB_WEBHOOK_PASSWORD }}" \
+            -H "Content-Type: application/json" \
+            -d '{"ref":"refs/heads/master","after":"${{ github.sha }}"}'
