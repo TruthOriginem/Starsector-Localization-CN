@@ -11,7 +11,9 @@ jobs:
     steps:
       - name: Send webhook
         run: |
-          curl -sf -X POST https://ss-file.jnxyp.net/webhook \
+          curl -s -X POST https://ss-file.jnxyp.net/webhook \
             -u "guest:${{ secrets.SSFB_WEBHOOK_PASSWORD }}" \
             -H "Content-Type: application/json" \
-            -d '{"ref":"refs/heads/master","after":"${{ github.sha }}"}'
+            -d '{"ref":"refs/heads/master","after":"${{ github.sha }}"}' \
+            -w "\nHTTP %{http_code}" \
+            && echo "Webhook sent successfully" || echo "Webhook failed"
