@@ -128,23 +128,23 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/campaign/PersonImportance.class#\"High\"",
         "original": "High",
-        "translation": "High",
-        "stage": 0,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/campaign/PersonImportance.class\n常量号：0044\n原始数据：\"High\"\n译文数据：\"High\"\n\n"
+        "translation": "高",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/campaign/PersonImportance.class\n常量号：0044\n原始数据：\"High\"\n译文数据：\"高\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/campaign/PersonImportance.class#\"Low\"",
         "original": "Low",
-        "translation": "Low",
-        "stage": 0,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/campaign/PersonImportance.class\n常量号：0032\n原始数据：\"Low\"\n译文数据：\"Low\"\n\n"
+        "translation": "低",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/campaign/PersonImportance.class\n常量号：0032\n原始数据：\"Low\"\n译文数据：\"低\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/campaign/PersonImportance.class#\"Medium\"",
         "original": "Medium",
-        "translation": "Medium",
-        "stage": 0,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/campaign/PersonImportance.class\n常量号：0038\n原始数据：\"Medium\"\n译文数据：\"Medium\"\n\n"
+        "translation": "中等",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/campaign/PersonImportance.class\n常量号：0038\n原始数据：\"Medium\"\n译文数据：\"中等\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/campaign/PersonImportance.class#\"Very High\"",
@@ -5771,14 +5771,14 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/GenerateSlipsurgeAbility.class#\"dwarf\"",
         "original": "dwarf",
         "translation": "矮星",
-        "stage": 2,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/abilities/GenerateSlipsurgeAbility.class\n常量号：0672\n原始数据：\"dwarf\"\n译文数据：\"矮星\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/GenerateSlipsurgeAbility.class#\"giant\"",
         "original": "giant",
         "translation": "巨行星",
-        "stage": 2,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/abilities/GenerateSlipsurgeAbility.class\n常量号：0676\n原始数据：\"giant\"\n译文数据：\"巨行星\"\n\n"
     },
     {
@@ -5792,14 +5792,14 @@
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/GenerateSlipsurgeAbility.class#\"neutron\"",
         "original": "neutron",
         "translation": "中子星",
-        "stage": 2,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/abilities/GenerateSlipsurgeAbility.class\n常量号：0663\n原始数据：\"neutron\"\n译文数据：\"中子星\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/GenerateSlipsurgeAbility.class#\"supergiant\"",
         "original": "supergiant",
         "translation": "超巨星",
-        "stage": 2,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/abilities/GenerateSlipsurgeAbility.class\n常量号：0674\n原始数据：\"supergiant\"\n译文数据：\"超巨星\"\n\n"
     },
     {
@@ -14625,9 +14625,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/MercsOnTheRunBarEvent.class#\"You prove yourself worth speaking to by partaking in a round of \"Atmo Drops\", a drink based largely on consuming eye-water~\"@ed67126b",
         "original": "You prove yourself worth speaking to by partaking in a round of \"Atmo Drops\", a drink based largely on consuming eye-watering liquor as quickly as possible, with the mercenary band. They're drunk for sure, but are composed enough to speak around the precise details of why they're being investigated by local authorities.\n\nAfter a couple of the mercs head up to order a round of \"Orbital Bombardments\", their leader pulls you aside and sketches out a proposal. \"We've got %s suits, we fight in vac or black. I'll give you our contract for %s, and that's giving it away. Put us to work, or sell it off elsewhere, doesn't matter to me if you can get us outta this fix. What'dya say?\"",
-        "translation": "为了证明自己值得他们交谈，你和这群雇佣兵一起喝了一轮 \"大气圈直降\"，大体上就是一种要尽可能快地喝下呛人烈酒的喝法。他们确实喝醉了，但还足够清醒，能够围绕为何被当局调查的细节进行讨论。\n\n趁着几个雇佣兵起身去点一轮 \"轨道轰炸\" 的工夫，他们的老大把你拉到一边，提出了一个建议。\"我们有 %s 人整装待发，不管是真空里还是黑暗中都能出动。我可以把我们的合同以 %s 的价格给你，这简直是白送。给我们找点活干，或者你在别的地方把合同再卖掉，只要能让我们摆脱这个困境就行，其他的我都不在乎。你怎么说？\"",
+        "translation": "你陪着佣兵团喝了一轮 \"大气圈直降\"，一种主要比谁能最快灌完辣眼睛烈酒的喝法，证明了自己是个值得打交道的角色。他们肯定都喝高了，但还算保持着能谈吐的清醒，聊起了为什么他们被地方政府所追查的细节\n\n趁着几个雇佣兵起身去点一轮 \"轨道轰炸\" 的工夫，他们的老大把你拉到一边，提出了一个建议。\"我们有 %s 人整装待发，管你是真空里还是黑舱都能出动。我可以把我们的合同以 %s 的价格给你，这简直是白送。给我们找点活干，或者你在别的地方把合同再卖掉，只要能让我们摆脱这个困境就行，其他的我都不在乎。你怎么说？\"",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/bar/events/MercsOnTheRunBarEvent.class\n常量号：0096\n原始数据：\"You prove yourself worth speaking to by partaking in a round of \"Atmo Drops\", a drink based largely on consuming eye-watering liquor as quickly as possible, with the mercenary band. They're drunk for sure, but are composed enough to speak around the precise details of why they're being investigated by local authorities.\n\nAfter a couple of the mercs head up to order a round of \"Orbital Bombardments\", their leader pulls you aside and sketches out a proposal. \"We've got %s suits, we fight in vac or black. I'll give you our contract for %s, and that's giving it away. Put us to work, or sell it off elsewhere, doesn't matter to me if you can get us outta this fix. What'dya say?\"\"\n译文数据：\"为了证明自己值得他们交谈，你和这群雇佣兵一起喝了一轮 \"大气圈直降\"，大体上就是一种要尽可能快地喝下呛人烈酒的喝法。他们确实喝醉了，但还足够清醒，能够围绕为何被当局调查的细节进行讨论。\n\n趁着几个雇佣兵起身去点一轮 \"轨道轰炸\" 的工夫，他们的老大把你拉到一边，提出了一个建议。\"我们有 %s 人整装待发，不管是真空里还是黑暗中都能出动。我可以把我们的合同以 %s 的价格给你，这简直是白送。给我们找点活干，或者你在别的地方把合同再卖掉，只要能让我们摆脱这个困境就行，其他的我都不在乎。你怎么说？\"\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/bar/events/MercsOnTheRunBarEvent.class\n常量号：0096\n原始数据：\"You prove yourself worth speaking to by partaking in a round of \"Atmo Drops\", a drink based largely on consuming eye-watering liquor as quickly as possible, with the mercenary band. They're drunk for sure, but are composed enough to speak around the precise details of why they're being investigated by local authorities.\n\nAfter a couple of the mercs head up to order a round of \"Orbital Bombardments\", their leader pulls you aside and sketches out a proposal. \"We've got %s suits, we fight in vac or black. I'll give you our contract for %s, and that's giving it away. Put us to work, or sell it off elsewhere, doesn't matter to me if you can get us outta this fix. What'dya say?\"\"\n译文数据：\"你陪着佣兵团喝了一轮 \"大气圈直降\"，一种主要比谁能最快灌完辣眼睛烈酒的喝法，证明了自己是个值得打交道的角色。他们肯定都喝高了，但还算保持着能谈吐的清醒，聊起了为什么他们被地方政府所追查的细节\n\n趁着几个雇佣兵起身去点一轮 \"轨道轰炸\" 的工夫，他们的老大把你拉到一边，提出了一个建议。\"我们有 %s 人整装待发，管你是真空里还是黑舱都能出动。我可以把我们的合同以 %s 的价格给你，这简直是白送。给我们找点活干，或者你在别的地方把合同再卖掉，只要能让我们摆脱这个困境就行，其他的我都不在乎。你怎么说？\"\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/MercsOnTheRunBarEvent.class#\"You wake up the next day in a small room above the bar with no particular memory of how you got there. How many more round~\"@87579f46",
@@ -19532,16 +19532,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class#\"High\"",
         "original": "High",
-        "translation": "高",
+        "translation": "较高",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class\n常量号：0956\n原始数据：\"High\"\n译文数据：\"高\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class\n常量号：0956\n原始数据：\"High\"\n译文数据：\"较高\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class#\"Low\"",
         "original": "Low",
-        "translation": "低",
+        "translation": "较低",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class\n常量号：0960\n原始数据：\"Low\"\n译文数据：\"低\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class\n常量号：0960\n原始数据：\"Low\"\n译文数据：\"较低\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class#\"Low-level pirate activity continues, but aside from that, there are no major crises on the horizon.\"",
@@ -19553,9 +19553,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class#\"Medium\"",
         "original": "Medium",
-        "translation": "中",
+        "translation": "中等",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class\n常量号：0958\n原始数据：\"Medium\"\n译文数据：\"中\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class\n常量号：0958\n原始数据：\"Medium\"\n译文数据：\"中等\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HostileActivityEventIntel.class#\"Minimal\"",
@@ -27722,9 +27722,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAAtTheGates.class#\"Optional: provide Daud with encrypted Yaribay comm codes.\"",
         "original": "Optional: provide Daud with encrypted Yaribay comm codes.",
-        "translation": "可选：向 Daud 提供加密的 Yaribay 通讯密码。",
+        "translation": "可选：向 Daud 提供加密的 Yaribay 通讯代码。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/academy/GAAtTheGates.class\n常量号：0886\n原始数据：\"Optional: provide Daud with encrypted Yaribay comm codes.\"\n译文数据：\"可选：向 Daud 提供加密的 Yaribay 通讯密码。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/academy/GAAtTheGates.class\n常量号：0886\n原始数据：\"Optional: provide Daud with encrypted Yaribay comm codes.\"\n译文数据：\"可选：向 Daud 提供加密的 Yaribay 通讯代码。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAAtTheGates.class#\"Return Clone Loke to Warlord Kanta\"",
