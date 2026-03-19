@@ -378,7 +378,7 @@ class JsonFile(DataFile):
 
         key_to_string = {s.key: s for s in strings}
 
-        for json_path, _orig_parent, accessor, is_key_rename in self._iter_strings(
+        for json_path, orig_parent, accessor, is_key_rename in self._iter_strings(
             self._original_root
         ):
             try:
@@ -409,14 +409,26 @@ class JsonFile(DataFile):
                 parent_segs = exact_segs[:-1]
                 old_key = str(accessor)
                 trans_parent = _navigate_exact(self._translation_root, parent_segs)
-                if isinstance(trans_parent, Object):
-                    if old_key in trans_parent.dict:
-                        if old_key != translation:
+                if isinstance(trans_parent, Object) and isinstance(orig_parent, Object):
+                    # 用位置匹配找到译文树中对应的 key（与 get_strings 保持一致）
+                    orig_keys = list(orig_parent.dict.keys())
+                    trans_keys = list(trans_parent.dict.keys())
+                    try:
+                        idx = orig_keys.index(old_key)
+                    except ValueError:
+                        self.logger.warning(f'在原文中找不到 key {old_key!r}：{key}')
+                        continue
+                    if idx >= len(trans_keys):
+                        continue
+                    current_trans_key = trans_keys[idx]
+                    if current_trans_key != translation:
+                        if translation in trans_parent.dict:
+                            pass  # 目标 key 已存在（中英文并存），跳过
+                        else:
                             try:
-                                trans_parent.rename_key(old_key, translation)
+                                trans_parent.rename_key(current_trans_key, translation)
                             except KeyError as e:
                                 self.logger.warning(f'重命名 key 失败 {key}：{e}')
-                    # old_key 不存在但 translation 已存在 → 已翻译，跳过
                 else:
                     self.logger.warning(
                         f'在 {self.path} 中没有找到词条 key={key} 对应的位置，未写入译文'
