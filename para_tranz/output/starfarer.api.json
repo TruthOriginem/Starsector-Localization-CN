@@ -1745,16 +1745,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/PlayerFleetPersonnelTracker$PersonnelRank.class#\"Experienced\"",
         "original": "Experienced",
-        "translation": "列兵",
-        "stage": 2,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/PlayerFleetPersonnelTracker$PersonnelRank.class\n常量号：0037\n原始数据：\"Experienced\"\n译文数据：\"列兵\"\n\n"
+        "translation": "熟练",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/PlayerFleetPersonnelTracker$PersonnelRank.class\n常量号：0037\n原始数据：\"Experienced\"\n译文数据：\"熟练\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/PlayerFleetPersonnelTracker$PersonnelRank.class#\"Regular\"",
         "original": "Regular",
-        "translation": "新兵",
+        "translation": "普通",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/PlayerFleetPersonnelTracker$PersonnelRank.class\n常量号：0025\n原始数据：\"Regular\"\n译文数据：\"新兵\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/PlayerFleetPersonnelTracker$PersonnelRank.class\n常量号：0025\n原始数据：\"Regular\"\n译文数据：\"普通\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/PlayerFleetPersonnelTracker$PersonnelRank.class#\"Veteran\"",
@@ -33521,6 +33521,69 @@
         "translation": "你决定...",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$4.class\n常量号：0117\n原始数据：\"You decide to...\"\n译文数据：\"你决定...\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class#\"Extreme\"",
+        "original": "Extreme",
+        "translation": "极高",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class\n常量号：0086\n原始数据：\"Extreme\"\n译文数据：\"极高\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class#\"Heavy\"",
+        "original": "Heavy",
+        "translation": "很高",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class\n常量号：0076\n原始数据：\"Heavy\"\n译文数据：\"很高\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class#\"High\"",
+        "original": "High",
+        "translation": "很高",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class\n常量号：0074\n原始数据：\"High\"\n译文数据：\"很高\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class#\"Light\"",
+        "original": "Light",
+        "translation": "较低",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class\n常量号：0055\n原始数据：\"Light\"\n译文数据：\"较低\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class#\"Low\"",
+        "original": "Low",
+        "translation": "较低",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class\n常量号：0053\n原始数据：\"Low\"\n译文数据：\"较低\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class#\"Medium\"",
+        "original": "Medium",
+        "translation": "普通",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class\n常量号：0062\n原始数据：\"Medium\"\n译文数据：\"普通\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class#\"Minimal\"",
+        "original": "Minimal",
+        "translation": "极低",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class\n常量号：0046\n原始数据：\"Minimal\"\n译文数据：\"极低\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class#\"Moderate\"",
+        "original": "Moderate",
+        "translation": "普通",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class\n常量号：0064\n原始数据：\"Moderate\"\n译文数据：\"普通\"\n\n"
+    },
+    {
+        "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class#\"None\"",
+        "original": "None",
+        "translation": "无",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class\n常量号：0030\n原始数据：\"None\"\n译文数据：\"无\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD.class#\"\n\nRequires transponder to be turned off\"",
