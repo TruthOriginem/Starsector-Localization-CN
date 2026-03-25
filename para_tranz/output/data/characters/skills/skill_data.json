@@ -408,8 +408,8 @@
     {
         "key": "skill_data.csv#flux_regulation$description",
         "original": "WARNING: By changing these settings user waives responsibility of Tri-Tachyon Corporation for any resulting equipment damage, injury, death, or otherwise anomalous spacetime effect or effects. Do you wish to continue?",
-        "translation": "警告：用户自行更改这些设置，将被视为放弃向 速子科技 公司追责的权利。公司对因此造成的设备损坏、人身伤亡及其它任何时空异常后果概不负责。您仍要继续吗？",
-        "stage": 5,
+        "translation": "警告：用户自行更改这些设置，将被视为放弃向 三一速子科技公司 公司追责的权利。公司对因此造成的设备损坏、人身伤亡及其它任何时空异常后果概不负责。您仍要继续吗？",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：skill_data.csv\n行：00032"
     },
     {
@@ -639,8 +639,8 @@
     {
         "key": "skill_data.csv#neural_link$description",
         "original": "Why should a captain go down with their ship? The Tri-Tachyon corporation does not waste top talent.",
-        "translation": "为什么舰长必须要和他们的舰船一起沉没？速子科技公司从不浪费顶级人才。",
-        "stage": 5,
+        "translation": "为何舰长必须要与舰船共存亡？三一速子科技公司从不浪费顶级人才。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：skill_data.csv\n行：00036"
     },
     {
@@ -681,8 +681,8 @@
     {
         "key": "skill_data.csv#officer_training$description",
         "original": "They may be a 'rag-tag gang of merchants, smugglers, and pirates', but if you give them something to fight for, I think they might surprise you.",
-        "translation": "他们或许是一群放不上台面的佣兵、走私犯、海盗，但如果你给予他们值得为之而战的事物，那我认为他们一定能还你一个惊喜。",
-        "stage": 5,
+        "translation": "他们或许是一群放不上台面的佣兵、走私犯、海盗，但只要给他们一个值得奋战的理由，我相信他们会令你刮目相看。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：skill_data.csv\n行：00020"
     },
     {
@@ -709,8 +709,8 @@
     {
         "key": "skill_data.csv#ordnance_expert$description",
         "original": "The weak fear the spiritual potency of the killing machine. The strong instinctually recognize its beauty.",
-        "translation": "弱者只会畏惧杀戮机器的力量，而强者则会本能地认识到它的美。",
-        "stage": 5,
+        "translation": "弱者只会畏惧杀戮机器的力量，而强者则会本能地欣赏它的美。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：skill_data.csv\n行：00044"
     },
     {
@@ -1066,8 +1066,8 @@
     {
         "key": "skill_data.csv#target_analysis$description",
         "original": "A machine-assisted human mind is capable of intuiting effective solutions despite conflicting sensor data and contradictory tactical directives. The targeting computer alone can never truly replace a warrior.",
-        "translation": "在机械的协助下，人脑有能力从大量互相冲突的传感器数据和自相矛盾的战术指示中分析出高效的火力投送方案。辅助瞄准计算机永远无法独立地取代一名真正的战士。",
-        "stage": 5,
+        "translation": "即便是面对相互冲突的传感器数据和自相矛盾的战术指令，人类心智依然能在机械的辅助下凭直觉找出最有效的火力投送方案。火控计算机永远无法独当一面地真正取代一名战士。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：skill_data.csv\n行：00008"
     },
     {
@@ -1087,8 +1087,8 @@
     {
         "key": "skill_data.csv#weapon_drills$description",
         "original": "What's it stopped the Tri-Tach plot? (Guns!)\nWhat was it ol' Ludd forgot? (Guns!)\nWhat've we got that they have not? (Big, big, guns!)",
-        "translation": "是什么阻止了速子的阴谋？(大炮！)\n是什么被老卢德忘在脑后？(大炮！)\n是什么我们有而他们没有？(更大，更大，更大的大炮！)",
-        "stage": 5,
+        "translation": "是什么挫败了速子的阴谋？(大炮！)\n是什么被老卢德忘在脑后？(大炮！)\n是什么我们有而他们没有？(更大，更大，更大的大炮！)",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：skill_data.csv\n行：00072"
     },
     {
@@ -1101,15 +1101,15 @@
     {
         "key": "skill_data.csv#wolfpack_tactics$author",
         "original": "Warlord Kanta, quoted in \"My Year With The Pirate Queen\"",
-        "translation": "军阀 Kanta 所言，引用于 [我当海盗女王的那些年]",
-        "stage": 5,
+        "translation": "军阀 Kanta 所言，引用于 [我服侍海盗女王的那些年]",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：skill_data.csv\n行：00016"
     },
     {
         "key": "skill_data.csv#wolfpack_tactics$description",
         "original": "A fleet that acts with one mind makes those pretty formations so beloved by senior desk officers a wallowing beast begging to have its throat slit. Cut loose the hounds that we may be wolves again.",
-        "translation": "一支只想着摆出那些没下过办公桌的军官喜欢的花架子的舰队，不过是头引颈受戮的贱畜。放出猎犬，我们才能再次化为群狼。",
-        "stage": 5,
+        "translation": "一支唯命是从的舰队，只会摆出些花架子阵型去讨好那些下不了办公桌的军官，不过是头引颈受戮的贱畜。放开猎犬吧，让我们再次化身为狼。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：skill_data.csv\n行：00016"
     },
     {

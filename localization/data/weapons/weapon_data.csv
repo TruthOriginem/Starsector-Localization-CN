@@ -139,13 +139,13 @@ IR 自动长矛,irautolance,1,,1200,1000,500,,,0,50,8,40,2,10,FRAGMENTATION,,150
 虚空冲击波,voidblaster,,,7000,700,,300,,0,15,16,12,0.5,4,HIGH_EXPLOSIVE,200,,0,0.25,,,10,10,0,10,,5000,,,,,,,"threat, restricted, codex_unlockable, he12",,威胁,,反装甲,,,,,即使该武器不是光束武器，也只能对护盾造成{%s}伤害。,软幅能,,,,19.5
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 # Shrouded Dweller related,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-伪粒子射流,pseudoparticle_jet,3,,10000,600,,25,,3,40,22,,,,KINETIC,30,,,0.05,6,0.05,0,0,0,0,,400,,,,,,,"monster, dweller, restricted, codex_unlockable, kinetic15, SR, no_drop, substrate_2",,渊幕栖兽,,反护盾,,,,,,,,,,20
-饥渴裂隙,assaying_rift,3,,10000,2000,,600,,,180,18,,,,ENERGY,600,,0,2,1,,0,0,0,0,,200,400,14,800,,,DO_NOT_AIM,"monster, dweller, restricted, codex_unlockable, pd10, missile10, no_drop, substrate_2",,渊幕栖兽,,通用,较慢,优秀,,,当命中船体或装甲时，随机为具象化在战场上的一只 渊幕栖兽 治疗{%s}点生命值。,1000,受到一种难以理解的时空固有特性影响，战场上的武器无法同时产生超过{%s}个裂隙。这个限制不会影响 渊幕栖兽 设计。,10,,20.5
-裂隙闪电,rift_lightning,3,,15000,600,,500,1000,0,50,20,,,,ENERGY,500,,0,2,,,,,,,,1000000,,,,,,"PD,PD_ALSO","monster, dweller, restricted, codex_unlockable, pd15, energy19, no_drop, substrate_3",,渊幕栖兽,,通用,,,,完美,向目标发射一道 EMP 电弧，并开启一道裂隙，在裂隙附近的一片区域内造成伤害。电弧是否命中取决于武器的精确瞄准方向，可以穿过友方舰船。,,,,,20.75
-裂隙闪电布雷器,rift_lightning_minelayer,0,,,,,500,1000,0,,,,,,ENERGY,0,,,,1,,,,,,,0,0,20,1000,,,SYSTEM,"restricted, no_drop",,渊幕栖兽,,,,,,,,,,,,21
-深渊耀光,abyssal_glare,3,,25000,800,500,,1000,0,7,30,,,,ENERGY,,500,0.1,0.1,,,,,,,6000,,,,,,,,"monster, dweller, restricted, codex_unlockable, beam21, no_drop, substrate_5",,渊幕栖兽,,通用,,,,,命中时会造成爆炸，对目标和命中点附近的其它目标造成{%s}{%s}伤害。,100 | 能量,,,,22
-恶性放射流,inimical_emanation,3,,5000,500,,100,500,0,120,10,,,,ENERGY,175,,0,1,1,,,,,,,10000,,,,,25,PD,"monster, dweller, restricted, codex_unlockable, pd14, no_drop, substrate_1",,渊幕栖兽,,压制 / 点防御,,,,完美,开火时向武器指向处最近的目标施放一道射线，且可以命中相位中的舰船。必定会命中目标的武器或引擎。命中船体或装甲时，使其武器和引擎的修复所需时长提高为{%s}，此效果持续{%s}秒，不可叠加。,双倍 | 5,,,,22.1
-涡动核心,vortex_launcher,0,,100000,3000,,0,0,0,0,50,2,0.1,,FRAGMENTATION,0,,0,3,,,0,0,0,0,,1,1,0.1,1,,,"DO_NOT_AIM, NO_MANUAL_FIRE","monster, dweller, restricted, codex_unlockable, no_drop, no_standard_data",,渊幕栖兽,,特殊,,,,,发射一个{%s}，涡流将跟踪附近的目标并发生爆炸，在一片区域内造成{%s}点{%s}伤害。,渊幕涡流 | 2000 | 能量,,,,22.2
+伪粒子射流,pseudoparticle_jet,3,,10000,600,,25,,3,40,22,,,,KINETIC,30,,,0.05,6,0.05,0,0,0,0,,400,,,,,,,"monster, dweller, restricted, codex_unlockable, kinetic15, SR, no_drop, substrate_2",,渊幕原种,,反护盾,,,,,,,,,,20
+饥渴裂隙,assaying_rift,3,,10000,2000,,600,,,180,18,,,,ENERGY,600,,0,2,1,,0,0,0,0,,200,400,14,800,,,DO_NOT_AIM,"monster, dweller, restricted, codex_unlockable, pd10, missile10, no_drop, substrate_2",,渊幕原种,,通用,较慢,优秀,,,当命中船体或装甲时，随机为具象化在战场上的一只 渊幕原种 治疗{%s}点生命值。,1000,受到一种难以理解的时空固有特性影响，战场上的武器无法同时产生超过{%s}个裂隙。这个限制不会影响 渊幕原种。,10,,20.5
+裂隙闪电,rift_lightning,3,,15000,600,,500,1000,0,50,20,,,,ENERGY,500,,0,2,,,,,,,,1000000,,,,,,"PD,PD_ALSO","monster, dweller, restricted, codex_unlockable, pd15, energy19, no_drop, substrate_3",,渊幕原种,,通用,,,,完美,向目标发射一道 EMP 电弧，并开启一道裂隙，在裂隙附近的一片区域内造成伤害。电弧是否命中取决于武器的精确瞄准方向，可以穿过友方舰船。,,,,,20.75
+裂隙闪电布雷器,rift_lightning_minelayer,0,,,,,500,1000,0,,,,,,ENERGY,0,,,,1,,,,,,,0,0,20,1000,,,SYSTEM,"restricted, no_drop",,渊幕原种,,,,,,,,,,,,21
+深渊耀光,abyssal_glare,3,,25000,800,500,,1000,0,7,30,,,,ENERGY,,500,0.1,0.1,,,,,,,6000,,,,,,,,"monster, dweller, restricted, codex_unlockable, beam21, no_drop, substrate_5",,渊幕原种,,通用,,,,,命中时会造成爆炸，对目标和命中点附近的其它目标造成{%s}{%s}伤害。,100 | 能量,,,,22
+恶性放射流,inimical_emanation,3,,5000,500,,100,500,0,120,10,,,,ENERGY,175,,0,1,1,,,,,,,10000,,,,,25,PD,"monster, dweller, restricted, codex_unlockable, pd14, no_drop, substrate_1",,渊幕原种,,压制 / 点防御,,,,完美,开火时向武器指向处最近的目标施放一道射线，且可以命中相位中的舰船。必定会命中目标的武器或引擎。命中船体或装甲时，使其武器和引擎的修复所需时长提高为{%s}，此效果持续{%s}秒，不可叠加。,双倍 | 5,,,,22.1
+涡动核心,vortex_launcher,0,,100000,3000,,0,0,0,0,50,2,0.1,,FRAGMENTATION,0,,0,3,,,0,0,0,0,,1,1,0.1,1,,,"DO_NOT_AIM, NO_MANUAL_FIRE","monster, dweller, restricted, codex_unlockable, no_drop, no_standard_data",,渊幕原种,,特殊,,,,,发射一个{%s}，涡流将跟踪附近的目标并发生爆炸，在一片区域内造成{%s}点{%s}伤害。,渊幕涡流 | 2000 | 能量,,,,22.2
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,31

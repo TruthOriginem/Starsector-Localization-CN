@@ -69,13 +69,13 @@ name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaid
 
 这显然是一台制造设备，只要提供足够的能源与原料供给，它会生产出 ""碎片单元""。每个碎片单元由分形组件按独特结构排列，功能基本一致，仅在尺寸上存在细微差异。尽管单个碎片单元结构简单，但多组单元聚合后，会突显复杂行为。",400
 威胁处理单元,threat_processing_unit,"threat, codex_unlockable",威胁,,15000,1000,1,,graphics/icons/cargo/threat_processing_unit.png,ui_cargo_special_industrial_pickup,ui_cargo_special_industrial_drop,com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin,,一种基础的模块化计算单元。这类单元似乎被大量投入使用，用来支撑 威胁 船只的各项功能。目前人们对其尚未完全了解，但显然其复杂度远低于任何等级的人工智能。,401
-渊幕基质,shrouded_substrate,"monster, codex_unlockable",渊幕栖兽,,5000,1000,1,,graphics/icons/cargo/shrouded_substrate.png,ui_cargo_special_biotech_pickup,ui_cargo_special_bio_drop,com.fs.starfarer.api.campaign.impl.items.ShroudedSubstratePlugin,,这些奇异物质被临时收容装置维持在半稳定静滞状态。建议执行 6 级，7 级，9 级和 13 级危险物质处理规程。初步调查显示，其在能量投射领域具备应用潜力。,450
-渊幕云砧,shrouded_thunderhead,"monster, codex_unlockable",渊幕栖兽,,30000,1000,1,,graphics/icons/cargo/shrouded_thunderhead.png,ui_cargo_special_biotech_pickup,ui_cargo_special_bio_drop,com.fs.starfarer.api.campaign.impl.items.ShroudedHullmodItemPlugin,shrouded_thunderhead,"""这种自持式反应会产生巨大的能量，这些能量会周期性地朝着它的，呃，目标释放。我以前不可能说一场风暴会带着恶意，但现在...""
+渊幕基质,shrouded_substrate,"monster, codex_unlockable",渊幕原种,,5000,1000,1,,graphics/icons/cargo/shrouded_substrate.png,ui_cargo_special_biotech_pickup,ui_cargo_special_bio_drop,com.fs.starfarer.api.campaign.impl.items.ShroudedSubstratePlugin,,这些奇异物质被临时收容装置维持在半稳定静滞状态。建议执行 6 级，7 级，9 级和 13 级危险物质处理规程。初步调查显示，其在能量投射领域具备应用潜力。,450
+渊幕云砧,shrouded_thunderhead,"monster, codex_unlockable",渊幕原种,,30000,1000,1,,graphics/icons/cargo/shrouded_thunderhead.png,ui_cargo_special_biotech_pickup,ui_cargo_special_bio_drop,com.fs.starfarer.api.campaign.impl.items.ShroudedHullmodItemPlugin,shrouded_thunderhead,"""这种自持式反应会产生巨大的能量，这些能量会周期性地朝着它的，呃，目标释放。我以前不可能说一场风暴会带着恶意，但现在...""
 
 —— 截获音频日志，发言者身份未知",451
-渊幕套膜,shrouded_mantle,"monster, codex_unlockable",渊幕栖兽,,50000,1000,1,,graphics/icons/cargo/shrouded_mantle.png,ui_cargo_special_biotech_pickup,ui_cargo_special_bio_drop,com.fs.starfarer.api.campaign.impl.items.ShroudedHullmodItemPlugin,shrouded_mantle,"""咱们没法将能量永远储存在这种理论级的模拟等离子体中，能量总得有个去处。""
+渊幕套膜,shrouded_mantle,"monster, codex_unlockable",渊幕原种,,50000,1000,1,,graphics/icons/cargo/shrouded_mantle.png,ui_cargo_special_biotech_pickup,ui_cargo_special_bio_drop,com.fs.starfarer.api.campaign.impl.items.ShroudedHullmodItemPlugin,shrouded_mantle,"""咱们没法将能量永远储存在这种理论级的模拟等离子体中，能量总得有个去处。""
 
 ""—— 反转幅能转换器的极性，再让驱动力场产生脉冲波动。这样一来，就能对局部时空产生一次轻微扰动。这种扰动也会作用在舰船身上。""
 
 ""但愿这招有用。""",452
-渊幕瞳晶,shrouded_lens,"monster, codex_unlockable",渊幕栖兽,,30000,1000,1,,graphics/icons/cargo/shrouded_lens.png,ui_cargo_special_biotech_pickup,ui_cargo_special_bio_drop,com.fs.starfarer.api.campaign.impl.items.ShroudedHullmodItemPlugin,shrouded_lens,"""该装置在战术机动过程中启动时，通过调整由驱动场稳定器改造而成的 '探测器' 的频率，可以制造出超空间裂隙，而这些裂隙将对正常空间内的结构造成严重破坏，比如一艘星舰。""",453
+渊幕瞳晶,shrouded_lens,"monster, codex_unlockable",渊幕原种,,30000,1000,1,,graphics/icons/cargo/shrouded_lens.png,ui_cargo_special_biotech_pickup,ui_cargo_special_bio_drop,com.fs.starfarer.api.campaign.impl.items.ShroudedHullmodItemPlugin,shrouded_lens,"""该装置在战术机动过程中启动时，通过调整由驱动场稳定器改造而成的 '探测器' 的频率，可以制造出超空间裂隙，而这些裂隙将对正常空间内的结构造成严重破坏，比如一艘星舰。""",453
