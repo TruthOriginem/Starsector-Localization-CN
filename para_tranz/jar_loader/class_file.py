@@ -103,7 +103,7 @@ class JavaClassFile:
     ) -> List[Tuple[Utf8Constant, Optional[Utf8Constant]]]:
         """
         获取原文和译文中被引用过的的utf8常量对。
-        返回结果会根据include_strings和exclude_strings进行过滤。
+        返回结果会根据include_strings进行过滤。
         :return: utf8常量对
         """
 
