@@ -1017,7 +1017,7 @@
     {
         "key": "hull_mods.csv#design_compromises$desc",
         "original": "The ship's performance suffers from competing design priorities, with multiple bleeding-edge projects integrated too late in the design cycle.\n\nThe ship's flux dissipation and capacity, even the nominal base values, are reduced by %s.\n\nThe range of ballistic weapons is reduced by %s, the rate of fire of missile weapons is reduced by %s, and the flux generation of energy weapons is increased by %s.\n\nOn the plus side, extra nanoforge capacity can be brought online more easily, allowing the installation of a %s despite the ship already having a fighter bay, increasing the number of operational fighter bays to %s.",
-        "translation": "这艘船的性能受限于相互矛盾的设计指标，多个尖端项目在设计周期后期才仓促整合，直接影响整体性能。\n\n舰船的幅能耗散效率与幅能容量因此下降{%s}。\n\n实弹武器射程缩短{%s}，导弹武器射速降低{%s}，能量武器的幅能输出增加{%s}。\n\n不过也有可取之处：配备了更多的纳米锻炉产能，即便舰船本身已配备一个战机甲板，仍能额外加装{%s}船插，从而使甲板总数达到{%s}个。",
+        "translation": "这艘船的性能受限于相互矛盾的设计指标，多个尖端项目在设计周期后期才仓促整合，直接影响整体性能。\n\n舰船的幅能耗散效率与幅能容量因此下降{%s}。\n\n实弹武器射程缩短{%s}，导弹武器射速降低{%s}，能量武器的幅能输出增加{%s}。\n\n不过也有可取之处：配备了更多的纳米锻炉产能，即便舰船本身已配备一个战机甲板，仍能额外加装{%s}，从而使甲板总数达到{%s}个。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：hull_mods.csv\n行：00081"
     },
@@ -2452,7 +2452,7 @@
     {
         "key": "hull_mods.csv#pointdefenseai$desc",
         "original": "Gives all point-defense weapons the ability to identify - and ignore - decoy flares. In addition, all point-defense weapons get the best possible target leading, regardless of combat readiness, and all damage to missiles is increased by %s. ",
-        "translation": "给予所有点防御武器识别并忽略诱饵弹的能力。此外，无论战备处于何种水平，所有点防御武器均可保持最佳精准度。所有舰载武器对导弹造成的伤害提高{%s}。",
+        "translation": "给予所有点防御武器识别并忽略诱饵弹的能力。此外，无论战备处于何种水平，所有点防御武器均可保持最佳精准度。所有武器对导弹造成的伤害提高{%s}。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：hull_mods.csv\n行：00032"
     },
@@ -2865,7 +2865,7 @@
     {
         "key": "hull_mods.csv#solar_shielding$desc",
         "original": "Originally developed by Diktat engineers after spending cycles dealing with the unique conditions of the inner Askonia system. Decreases the effect operating in a solar corona has on combat readiness by %s; also has the same effect against storms in deep hyperspace.\n\nIn combat, reduces energy damage taken by %s.",
-        "translation": "最早由辛达的工程师为应对 Askonia 星系核心区的独特环境而研发。降低 %s 日冕对战备值 (CR) 的影响，对超空间内的风暴也有同样的作用。\n\n战斗中降低 %s 舰船所受到的能量伤害。",
+        "translation": "最早由辛达的工程师为应对 Askonia 星系核心区的独特环境而研发。降低 %s 恒星日冕对战备值 (CR) 的影响，对超空间内的风暴也有同样的作用。\n\n战斗中降低 %s 舰船所受到的能量伤害。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：hull_mods.csv\n行：00062"
     },
@@ -2879,7 +2879,7 @@
     {
         "key": "hull_mods.csv#solar_shielding$sModDesc",
         "original": "Increases the protection from solar coronae and similar hazards to %s.",
-        "translation": "对日冕和类似危害的防护提高至 %s}。",
+        "translation": "对恒星日冕和类似危害的防护提高至 %s}。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：hull_mods.csv\n行：00062"
     },
@@ -3061,7 +3061,7 @@
     {
         "key": "hull_mods.csv#terminator_core$desc",
         "original": "Gives all point-defense weapons the ability to identify - and ignore - decoy flares. In addition, all weapons get the best possible target leading, regardless of combat readiness, all damage to missiles and fighters is increased by %s, and beam weapon range is increased by %s units.",
-        "translation": "终结者无人机的专属插件。",
+        "translation": "给予所有点防御武器识别并忽略诱饵弹的能力。此外，无论战备处于何种水平，所有点防御武器均可保持最佳精准度。所有武器对导弹和战机造成的伤害提高{%s}，且提高光束武器{%s}的射程。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：hull_mods.csv\n行：00066"
     },
@@ -3082,8 +3082,8 @@
     {
         "key": "hull_mods.csv#threat_hullmod$desc",
         "original": "Hidden hullmod for managing the special properties of Threat ships. Description created in script.",
-        "translation": "用于管理 威胁 舰船特殊属性的隐藏式船体插件。描述信息通过脚本生成。",
-        "stage": 2,
+        "translation": "用于管理 威胁 舰船特殊属性的隐藏式舰船插件。描述信息通过脚本生成。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：hull_mods.csv\n行：00114"
     },
     {

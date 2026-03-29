@@ -54,7 +54,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 同时还将战备值 (CR) 在战斗中衰减的速度降低{%s}。",提高峰值时间，且降低战备值 (CR) 的衰减速率。,,graphics/hullmods/hardened_subsystems.png
 重型装甲,heavyarmor,0,,,"defensive, merc, standard",防御,2500,,,,8,15,20,40,data.hullmods.HeavyArmor,根据船体级别，提高{%s}/{%s}/{%s}/{%s}装甲。,提高装甲值。,降低舰船{%s}的机动性。,graphics/hullmods/heavy_armor.png
 高散射增幅器,high_scatter_amp,3,,,"offensive, merc, standard",武器,5000,,,,4,8,12,20,com.fs.starfarer.api.impl.hullmods.HighScatterAmp,<tooltip created in the script due to sections>,提高光束武器的伤害，还可对护盾造成硬幅能伤害，但降低其基础射程。,光束武器伤害额外提高{%s}。,graphics/hullmods/high_scatter_amp.png
-整合点防御 AI,pointdefenseai,3,,,"defensive, merc, standard","武器, 防御",10000,,,,3,6,9,15,data.hullmods.IntegratedPointDefenseAI,给予所有点防御武器识别并忽略诱饵弹的能力。此外，无论战备处于何种水平，所有点防御武器均可保持最佳精准度。所有舰载武器对导弹造成的伤害提高{%s}。,点防御武器忽视热诱弹干扰，提高自动瞄准精度，对导弹造成更多伤害。,"所有小型非导弹且非打击型武器都将获得 ""点防御"" 武器特性，将自动向导弹开火，并受到点防御武器属性修正的影响。",graphics/hullmods/integrated_point_defense_ai.png
+整合点防御 AI,pointdefenseai,3,,,"defensive, merc, standard","武器, 防御",10000,,,,3,6,9,15,data.hullmods.IntegratedPointDefenseAI,给予所有点防御武器识别并忽略诱饵弹的能力。此外，无论战备处于何种水平，所有点防御武器均可保持最佳精准度。所有武器对导弹造成的伤害提高{%s}。,点防御武器忽视热诱弹干扰，提高自动瞄准精度，对导弹造成更多伤害。,"所有小型非导弹且非打击型武器都将获得 ""点防御"" 武器特性，将自动向导弹开火，并受到点防御武器属性修正的影响。",graphics/hullmods/integrated_point_defense_ai.png
 #Point Defense Integration,pdintegration,3,,,"defensive, merc","Weapons, Defenses",10000,,,,12,15,18,24,com.fs.starfarer.api.impl.hullmods.PDIntegration,"Reduces the ordnance point cost of small point-defense weapons by %s. The cost reduction only affects weapons that have PD capability as a feature of the weapon itself, and not when it's gained through other means such as from a hullmod.
 
 In addition, all point-defense weapons deal %s more damage to all targets.","Reduces ordnance point cost of small PD weapons, increases all PD damage.",,graphics/hullmods/integrated_point_defense_ai.png
@@ -120,13 +120,13 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 军事化子系统,militarized_subsystems,0,,,"req_spaceport, merc, standard","特殊, 后勤, 需要船坞",6000,TRUE,,,4,8,12,20,com.fs.starfarer.api.impl.hullmods.MilitarizedSubsystems,"移除民用级船体的惩罚，并提高{%s}最大宇宙航速。
 
 提高{%s}最低船员需求。",消除传感器惩罚、提高最大宇宙航速、并增加所需船员数量。,取消本插件导致的额外船员需求。,graphics/hullmods/militarized_subsystems.png
-恒星防护层,solar_shielding,2,,,"defensive, req_spaceport, merc, standard","防御, 后勤, 需要船坞",5000,,,,3,6,9,15,data.hullmods.SolarShielding,"最早由辛达的工程师为应对 Askonia 星系核心区的独特环境而研发。降低 %s 日冕对战备值 (CR) 的影响，对超空间内的风暴也有同样的作用。
+恒星防护层,solar_shielding,2,,,"defensive, req_spaceport, merc, standard","防御, 后勤, 需要船坞",5000,,,,3,6,9,15,data.hullmods.SolarShielding,"最早由辛达的工程师为应对 Askonia 星系核心区的独特环境而研发。降低 %s 恒星日冕对战备值 (CR) 的影响，对超空间内的风暴也有同样的作用。
 
-战斗中降低 %s 舰船所受到的能量伤害。",降低星冕影响与所受能量武器的伤害。,对日冕和类似危害的防护提高至 %s}。,graphics/hullmods/solar_shielding2.png
+战斗中降低 %s 舰船所受到的能量伤害。",降低星冕影响与所受能量武器的伤害。,对恒星日冕和类似危害的防护提高至 %s}。,graphics/hullmods/solar_shielding2.png
 勘探设备,surveying_equipment,1,,,"special, req_spaceport, standard","后勤, 需要船坞",5000,,,,5,10,15,25,data.hullmods.SurveyingEquipment,根据船体级别，降低 %s/%s/%s/%s 勘探星球时所需的重型机械和补给。所消耗资源的数量最低可降至 %s}。,降低勘探时所需的资源。,进一步降低 %s 的勘探资源花费。,graphics/hullmods/surveying_equipment.png
 ,,,,,,,,,,,,,,,,,,,
 # standard built-in hullmods,,,,,,,,,,,,,,,,,,,
-终结者核心,terminator_core,,,,,武器,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.TerminatorCore,终结者无人机的专属插件。,,,graphics/hullmods/terminator_core.png
+终结者核心,terminator_core,,,,,武器,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.TerminatorCore,给予所有点防御武器识别并忽略诱饵弹的能力。此外，无论战备处于何种水平，所有点防御武器均可保持最佳精准度。所有武器对导弹和战机造成的伤害提高{%s}，且提高光束武器{%s}的射程。,,,graphics/hullmods/terminator_core.png
 共享幅散管道,shared_flux_sink,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.SharedFluxSink,根据当前存活模块的数量，最高提高{%s}的幅能耗散。如果模块在战斗中遭到破坏，幅能耗散增益将在剩余模块间重新分配。而{%s}耗散增益将适用于硬幅能耗散。,模块损失后提高其他模块幅能与硬幅能的耗散效率。,,graphics/hullmods/shared_flux_sink.png
 感应雷区,stealth_minefield,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.StealthMinefield,战场周遭会布置大量感应空雷，并破坏靠近的敌舰。,战场周遭会布置大量感应空雷，并破坏靠近的敌舰。,,graphics/hullmods/stealth_mines.png
 感应雷区,stealth_minefield_lt,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.StealthMinefieldLT,战场周遭会布置大量感应空雷，并破坏靠近的敌舰。,战场周遭会布置大量感应空雷，并破坏靠近的敌舰。,,graphics/hullmods/stealth_mines.png
@@ -149,7 +149,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 
 实弹武器射程缩短{%s}，导弹武器射速降低{%s}，能量武器的幅能输出增加{%s}。
 
-不过也有可取之处：配备了更多的纳米锻炉产能，即便舰船本身已配备一个战机甲板，仍能额外加装{%s}船插，从而使甲板总数达到{%s}个。",减少导弹与实弹武器射程，并降低幅能耗散效率 / 幅能容量。,,graphics/hullmods/design_compromises.png
+不过也有可取之处：配备了更多的纳米锻炉产能，即便舰船本身已配备一个战机甲板，仍能额外加装{%s}，从而使甲板总数达到{%s}个。",减少导弹与实弹武器射程，并降低幅能耗散效率 / 幅能容量。,,graphics/hullmods/design_compromises.png
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
@@ -204,7 +204,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 取消后退,do_not_back_off,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DoNotBackOff,设置 DO_NOT_BACK_OFF AI 行为,,,
 ,,,,,,,,,,,,,,,,,,,
 # threat stuff,,,,,,,,,,,,,,,,,,,
-威胁船体,threat_hullmod,,,,"codex_require_related, threat",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.combat.threat.ThreatHullmod,用于管理 威胁 舰船特殊属性的隐藏式船体插件。描述信息通过脚本生成。,,,graphics/hullmods/the_threat.png
+威胁船体,threat_hullmod,,,,"codex_require_related, threat",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.combat.threat.ThreatHullmod,用于管理 威胁 舰船特殊属性的隐藏式舰船插件。描述信息通过脚本生成。,,,graphics/hullmods/the_threat.png
 碎片集群,fragment_swarm,,,,"codex_unlockable, fragment, no_drop_salvage","武器, 特殊",30000,,,,6,12,18,30,com.fs.starfarer.api.impl.combat.threat.FragmentSwarmHullmod,"一群 威胁 碎片在舰船周围涌动，为碎片武器提供补给。
 
 碎片基准数量为{%s}/{%s}/{%s}/{%s}，碎片补充频率为每秒{%s}/{%s}/{%s}/{%s}次，具体数值取决于船体级别。

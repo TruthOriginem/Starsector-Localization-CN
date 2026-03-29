@@ -147,9 +147,9 @@
 		"boardingTaskForceSelectedMultiple":"接到命令后，$boardingTaskForceShips 靠近并准备接触敌舰。",
 		
 		"boardingApproachDock":"完成与敌舰的对接后，陆战队员迅速控制了气闸阀门和 可能产生致命爆炸的脆弱部位。",
-		"boardingApproachLaunch":"在距离敌舰一公里的地方将 战队队员发射到敌舰舰体上，然后陆战队员依靠个人推进系统登录敌舰，在登陆时会遭到敌舰内部人员的反击。",
+		"boardingApproachLaunch":"在距离敌舰一公里的地方将 战队队员发射到敌舰舰体上，然后陆战队员依靠个人推进系统登陆敌舰，在登陆时会遭到敌舰内部人员的反击。",
 		
-		"boardingOutcomeSelfDestruct":"当陆战队员登录敌舰进行战斗时，敌舰自毁，大部分死于非命。",
+		"boardingOutcomeSelfDestruct":"当陆战队员登陆敌舰进行战斗时，敌舰自毁，大部分死于非命。",
 		"boardingOutcomeShipLost":"$boardingTaskForceShipName 已被摧毁。", 
 		"boardingOutcomeShipDamaged":"$boardingTaskForceShipName 遭到严重破坏。",
 		"boardingOutcomeTaskForceLost":"所有登陆敌舰的人员都已战死。", 
@@ -159,7 +159,7 @@
 		"boardingOutcomeSuccess":"经过艰苦卓绝的战斗，宇宙登陆队员占领敌舰，并开始接收人员和物资。",
 		"boardingOutcomeTooDamaged":"经过艰苦卓绝的战斗，宇宙登陆队员占领敌舰，但是战斗对敌舰的核心系统造成了 无法挽回的损坏。",
 		"boardingOutcomeEscape":"宇宙登陆队员在占领敌舰时遇到了顽强的抵抗，最终不敌导致敌舰逃走。",
-		"boardingCleanEscapeMissedLaunch":"在最后关头敌舰开挂恢复了动力，然后躲过了大部分正面攻击逃走啦； 在一切恢复正常之后，$boardingCrewLost 名船员和 $boardingMarinesLost 物资下落不明。",
+		"boardingCleanEscapeMissedLaunch":"在最后关头，敌舰恢复了动力，然后躲过了大部分正面攻击逃走啦； 在一切恢复正常之后，$boardingCrewLost 名船员和 $boardingMarinesLost 名陆战队员下落不明。",
 		
 		"boardingNoMarines":"你没有陆战队可供使用，战术模拟机的结果显示你目前登舰的成功几率为0。",
 		"boardingProjection":"你有 $marines 位陆战队可用。根据伽马级AI的模拟运算，登舰成功的几率为 $boardingSuccessChance 。",
@@ -284,10 +284,10 @@
 	
 
 	"campaignHelp":{
-		"chmNewgame_text":"欢迎来到 starsector 的生涯模式！ \n\n 按 F5 来快速存档，F9 到快速载入。\n\n尽量避免招惹比你规模更大、或拥有大型战舰的舰队。请记住，这是款正在开发的游戏，所以难免会有 bug。\n\n祝你好运！",
+		"chmNewgame_text":"欢迎来到 Starsector 的生涯模式！ \n\n 按 F5 来快速存档，F9 到快速载入。\n\n尽量避免招惹比你规模更大、或拥有大型战舰的舰队。请记住，这是款正在开发的游戏，所以难免会有 bug。\n\n祝你好运！",
 		"chmNewgame_dismiss":"关闭",
 		
-		"chmNewgameIron_text":"欢迎来到 starsector 的生涯模式！ \n\n当前为铁人模式，你只能在退出游戏时保存进度，并且不能在游戏进行时读档。\n\n尽量避免招惹比你规模更大、或拥有大型战舰的舰队。请记住，这是款正在开发的游戏，所以难免会有 bug。\n\n祝你好运！",
+		"chmNewgameIron_text":"欢迎来到 Starsector 的生涯模式！ \n\n当前为铁人模式，你只能在退出游戏时保存进度，并且不能在游戏进行时读档。\n\n尽量避免招惹比你规模更大、或拥有大型战舰的舰队。请记住，这是款正在开发的游戏，所以难免会有 bug。\n\n祝你好运！",
 		"chmNewgameIron_dismiss":"关闭",
 		
 		"chmDeployCritCR_text":"一些准备部署的舰船正处于危险的低战备状态 (低于20%)。\n\n将这些舰艇上的系统出力提升到战斗水平很可能会引发严重故障。严重故障将造成船体损害，使武器和引擎在战斗期间失效，并在部署期间造成更多的严重故障。\n\n很可能会导致舰船被彻底摧毁 - 除非这是你最后的手段，否则请不要部署它们。",
@@ -312,7 +312,7 @@
         "chmHyperStorm_text":"你的舰队刚刚被超空间风暴击中了！你的一艘舰船因此受到了损伤，并损失了一些战备值 (CR)。\n\n风暴袭击会让你的舰队偏离航线，不过你可以使用 \"紧急加速\" 来更快地修正航线并穿过风暴。",
 		"chmHyperStorm_dismiss":"关闭",
 	
-		"chmShipPurchase_text":"恭喜你，刚刚买了一艘新船! \n\n由于它没有安装任何武器或船插。所以现在最好前往船坞进行改装。\n\n同时记得要确保你有足够的船员来操纵这艘船。",
+		"chmShipPurchase_text":"恭喜你，刚刚买了一艘新船! \n\n由于它没有安装任何武器或舰船插件。所以现在最好前往船坞进行改装。\n\n同时记得要确保你有足够的船员来操纵这艘船。",
 		"chmShipPurchase_action":"打开改装界面",
 		"chmShipPurchase_dismiss":"关闭",
 		

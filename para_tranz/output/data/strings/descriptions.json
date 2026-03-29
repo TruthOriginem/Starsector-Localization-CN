@@ -345,7 +345,7 @@
     {
         "key": "descriptions.csv#('assault_unit', 'SHIP')$text1",
         "original": "Closest match found to archive entry for \"Erebid\"-class destroyer (recategorized), 43.87% confidence. Querying database... \"Armada leadership, most of whom escaped direct prosecution via the 'Grey Wave' which saw nearly four hundred senior officers resign fro- DOMAIN INFOSEC VIOLATION THRESHOLD WARNING\n// datastream resetting...\n\n-of the Interstellar Quality and Design Assurance Reforms - a series of acts passed over an energetic dozen cycles by the representative body of the Human Domain and only so-called by later historians - which build the legal basis for sweeping enforcement of fabrication rights management (henceforth- FATAL ACCESS ERROR //\n\nThis TriPad is not authorized to provide additional description for the requested product ID. Please upgrade your data permission level in compliance with Domain Information Security Standards.",
-        "translation": "最为匹配的档案条目为 \"裳蛾-级\" 驱逐舰 (已重新归类)，可信度 43.87%。正在查询数据库...\"舰队领导层中，多数人借由 '灰潮' 事件逃脱了直接追责 —— 在该事件中，近四百名高级军官被辞退...\" [人之领 信息安全违规阈值警告]\n// 数据重置中...\n\n...属于 [星际设计与质量保障改革法案] 的范畴。这是是 人之领 管理机构在局势动荡的十二个星历年内陆续通过的一系列法案的统称，\"星际设计与质量保障改革法案\" 这一名称实则是后世历史学家的叫法 —— 这些法案为全面执行制造权管理奠定了法律基础 (此后简称 —— [致命访问错误]//\n\n此 TriPad 未获授权，无法为请求的产品 ID 提供更多描述。请依据 [人之领 信息安全标准] 提升您的数据权限等级。",
+        "translation": "最为匹配的档案条目为 \"裳蛾-级\" 驱逐舰 (已重新归类)，可信度 43.87%。正在查询数据库...\"舰队领导层中，多数人借由 '灰潮' 事件逃脱了直接追责 —— 在该事件中，近四百名高级军官被辞退...\" [人之领 信息安全违规阈值警告]\n// 数据重置中...\n\n...属于 [星际设计与质量保障改革法案] 的范畴。这是 人之领 管理机构在局势动荡的十二个星历年内陆续通过的一系列法案的统称，\"星际设计与质量保障改革法案\" 这一名称实则是后世历史学家的叫法 —— 这些法案为全面执行制造权管理奠定了法律基础 (此后简称 —— [致命访问错误]//\n\n此 TriPad 未获授权，无法为请求的产品 ID 提供更多描述。请依据 [人之领 信息安全标准] 提升您的数据权限等级。",
         "stage": 2,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00093"
     },
@@ -380,8 +380,8 @@
     {
         "key": "descriptions.csv#('asteroid', 'ASTEROID')$text1",
         "original": "A pitted chunk of metal, ice, or rock hurtling through space. Mainly significant for being a navigational hazard.",
-        "translation": "在太空中飞驰的蜂窝状物体，通常由金属、冰或岩石构成。其意义主要在于威胁宇宙航行的安全性。",
-        "stage": 5,
+        "translation": "在太空中飞驰的碎块，通常由金属、冰或岩石构成。其意义主要在于威胁宇宙航行的安全性。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00232"
     },
     {
@@ -660,7 +660,7 @@
     {
         "key": "descriptions.csv#('buffalo2', 'SHIP')$text1",
         "original": "A derived class, based on the Buffalo freighter. The modifications include the addition of military grade power generators, heavier armor, and maneuvering thrusters as well as the removal of the Mk. I shield emitter and the majority of the cargo holds.\n\nThe Sector is violent and unpredictable, and conflicts often flare up over the smallest resource or perceived slight. In such situations military-grade ships are sometimes not available quickly enough. Thus, resourceful engineers turn to hull modifications in order to be able to meet the demand for war materiel.\n\nThe base hull of this destroyer is a standard Buffalo-class freighter, however due to the scope of the hull conversion, the Buffalo Mk. II is considered a separate class. The result is a fighting ship which can hold its own and fight back hard, especially if properly screened from strikes and heavier hulls. The unorthodox weapons configuration often leads to unique fleet formations, and hull modifications often mean that no two Buffalo Mk. IIs are quite the same.\n\nThe tactics employed by a Buffalo Mk. II captain will vary as much as his hull configuration, but rarely involve standing toe-to-toe with anything heavier than a frigate due to the lack of a shield generator and energy weapon emplacements. The combat plans usually involve a one hit wonder stratagem that never works on the same enemy twice, which is perfectly fine with the crew of the Buffalo Mk. II.",
-        "translation": "基于 水牛-级 货舰的衍生舰种。经过了大幅度的修改，包括安装军用发电机、加装重型装甲并增设机动推进器，同时还移除了 Mk.I 护盾发生器与和大部分的货舱。\n\n风云莫测的英仙座充斥着浓重的火药味，一点蝇头小利，一次眼神挑衅，就足以点燃一场冲突火拼。在这种环境下，军用级舰船并不总能及时达现场。因此某些才华横溢的工程师转而对某些民用船体进行军事化改造，以满足战备需求。\n\n虽然还是基于 水牛-级 民用船体框架，但因改造范围非常全面，该舰也被公认为一种独立分级舰船。这种舰船不仅能承受战火，还能进行猛烈的还击，特别是在能避开战机打击和大型敌舰的情况下。漫无章法的武器配置往往会导致各种独特的船体插件组合和舰队角色定位，让每一艘 水牛 Mk.II 都独一无二，各不相同。\n\n水牛 Mk.II 的舰长会根据不同的船体配置而采取相应的战术，但通常都不会和任何比护卫舰大的船近距离对决，毕竟它缺少护盾发生器，且布局偏向能量武器。作战计划通常都需要些一击必杀出奇制胜的险招，在同一个对手身上不可能奏效两次的那种，反正这对于 水牛 Mk.II 的船员来说也没什么区别。",
+        "translation": "基于 水牛-级 货舰的衍生舰种。经过了大幅度的修改，包括安装军用发电机、加装重型装甲并增设机动推进器，同时还移除了 Mk.I 护盾发生器与和大部分的货舱。\n\n风云莫测的英仙座星域充斥着浓重的火药味，一点蝇头小利，一次眼神挑衅，就足以点燃一场冲突火拼。在这种环境下，军用级舰船并不总能及时达现场。因此某些才华横溢的工程师转而对某些民用船体进行军事化改造，以满足战备需求。\n\n虽然还是基于 水牛-级 民用船体框架，但因改造范围非常全面，该舰也被公认为一种独立分级舰船。这种舰船不仅能承受战火，还能进行猛烈的还击，特别是在能避开战机打击和大型敌舰的情况下。漫无章法的武器配置往往会导致各种独特的船体插件组合和舰队角色定位，让每一艘 水牛 Mk.II 都独一无二，各不相同。\n\n水牛 Mk.II 的舰长会根据不同的船体配置而采取相应的战术，但通常都不会和任何比护卫舰大的船近距离对决，毕竟它缺少护盾发生器，且布局偏向能量武器。作战计划通常都需要些一击必杀出奇制胜的险招，在同一个对手身上不可能奏效两次的那种，反正这对于 水牛 Mk.II 的船员来说也没什么区别。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00117"
     },
@@ -1017,7 +1017,7 @@
     {
         "key": "descriptions.csv#('comm_relay_makeshift', 'CUSTOM')$text1",
         "original": "An imitation of the Domain-era counterpart, constructed using what passes for the state of the art in the Sector. Nonetheless, a makeshift comm relay is capable of facilitating faster-than-light comms between star systems, even if the transmission speeds are less than ideal and the occasional phantom comm streams picked up give nightmares to even the most seasoned operators.",
-        "translation": "效仿于 人之领 中继站而建成的设施，虽利用了时下被认为最先进的技术，但这种临时性的通讯中继站即便能发射超光速通讯信号，其传输速度仍弱于前者，且最老练的操作员也会被它偶尔发出的幽灵通讯流引得噩梦缠身。",
+        "translation": "效仿于 人之领 中继站而建成的设施，虽采用了时下尽可能最先进的技术，但这种临时性的通讯中继站即便能发射超光速通讯信号，其传输速度也并不理想，且最老练的操作员也会被它偶尔发出的幽灵通讯流引得噩梦缠身。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00326"
     },
@@ -1185,8 +1185,8 @@
     {
         "key": "descriptions.csv#('cryoblaster', 'WEAPON')$text2",
         "original": "- Salvor verbal report, hyperspace recovery of ISS Augusta",
-        "translation": "- 打捞者于超空间中回收 ISS Augusta 行动中的口头报告",
-        "stage": 5,
+        "translation": "- 打捞员于超空间中回收 ISS Augusta 行动中的口头报告",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00572"
     },
     {
@@ -1353,7 +1353,7 @@
     {
         "key": "descriptions.csv#('dead_zero_g', 'GALLERY')$text4",
         "original": "- Bora Sidereal, salvor",
-        "translation": "- Bora Sidereal，打捞者",
+        "translation": "- Bora Sidereal，打捞员",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00697"
     },
@@ -1409,14 +1409,14 @@
     {
         "key": "descriptions.csv#('derelict_mothership_bow_module', 'SHIP')$text1",
         "original": "A small armored module which mounts a pair of small turrets usually used for asteroid defense and mining. It has no shield emitter, but this unit does possess a dedicated power-flux subsystem so that its mothership is not left defenseless in the case of emergency power failure.",
-        "translation": "一个小型装甲模块，安装有一对用于防御小行星和采矿的小型炮塔。该模块没有安装护盾发生器，拥有有一套独立的幅能系统，以在母船过载时提供防御。",
+        "translation": "一个小型装甲模块，安装有一对用于防御小行星和采矿的小型炮塔。该模块没有安装护盾发生器，拥有一套独立的幅能系统，以在母船过载时提供防御。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00725"
     },
     {
         "key": "descriptions.csv#('derelict_mothership_pod_engine_left', 'SHIP')$text1",
         "original": "An armored engine pod with its own power-flux subsystem and a small complement of mining and impactor defense turrets. Built to ensure that the mothership may operate even under the most hostile conditions across countless cycles.",
-        "translation": "一款装甲引擎吊舱，自带独立幅能系统，配置少量兼具采矿与防御小行星撞击能力的炮塔。它的设计初衷，是保证母舰在在经历无数星历年的航程后，即便穿梭于各类极端环境，仍能保持稳定运行。",
+        "translation": "一款装甲引擎吊舱，自带独立幅能系统，配置少量兼具采矿与防御小行星撞击能力的炮塔。它的设计初衷，是保证母舰在经历无数星历年的航程后，即便穿梭于各类极端环境，仍能保持稳定运行。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00726"
     },
@@ -1479,7 +1479,7 @@
     {
         "key": "descriptions.csv#('derelict_vambrace', 'CUSTOM')$text1",
         "original": "A starship-sized structure of regular angular, geometric forms, albeit battle-damaged. It appears to consist largely of ferric alloys and has no active internal power source.",
-        "translation": "一个星舰级别的结构体，外形规整，棱角分明，带有明显的战损痕迹。主要主体材质为铁基合金，且未检测到活跃地内部能源信号。",
+        "translation": "一个星舰级别的结构体，外形规整，棱角分明，带有明显的战损痕迹。主要主体材质为铁基合金，且未检测到活跃的内部能源信号。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00736"
     },
@@ -2095,7 +2095,7 @@
     {
         "key": "descriptions.csv#('executor', 'SHIP')$text1",
         "original": "The Executor is a modification of Altair Exotech's radical \"Cruiser School\" capital Pegasus-class hull. Modifying starships at the forge-level is a feat only available to polities willing to invest in employing a highly trained specialist class of engineer-technicians. After all, why invest in risky innovations when the bones of the Domain provide ships to fill every role? -- Because the Lion of Askonia demands it! And, through domination of the starship fuel economy, Supreme Executor Philip Andrada had the credits to pay for a capital ship specially designed to outfit the products of his extravagant energy weapon program.\n\nAlthough the official reports have been subtly improved by parties seeking to avoid punishment, the Executor-class outfitted to Diktat specs tends to slightly underperform the grand expectations set out by the original proposal. But none could argue that the project was not delivered on schedule, and that its results don't make for a fine and terrifying sight in the skies of the Askonia system.",
-        "translation": "执行官-级 是一种改装主力舰，原型是 牵牛星科技 激进的 \"巡洋学派\" 主力舰设计，天马-级。在蓝图层次修改星舰的设计可谓一项壮举，唯有愿意在雇佣高水准的技术专家方面投入巨额财力的势力才有可能达成。毕竟，当 人之领 遗留的舰船设计已经满足了所有实用功能需求时，为什么还要冒着风险在创新方面投资呢？ — 因为这是 Askonia 雄狮的号令！况且，最高元首 Philip Andrada 掌控了庞大的燃料市场，拥有足够的财富来承担修改主力舰设计的费用，为他那奢侈的能量武器项目提供载体。\n\n尽管官方报告已经用上了各种巧妙的委婉措辞以避免追责，但 辛达强权 装配的 执行官-级 的表现似乎略低于最初提案中的宏伟期望。总之，这一项目已按期交付，它已然在 Askonia 星系的空域中形成了一道绝美又骇人的壮景。",
+        "translation": "执行官-级 是一种改装主力舰，原型是 牵牛星科技 激进的 \"巡洋学派\" 主力舰设计，天马-级。在蓝图层次修改星舰的设计可谓一项壮举，唯有愿意在雇佣高水准的工程技术专家方面投入巨额财力的势力才有可能达成。毕竟，当 人之领 遗留的舰船设计已经满足了所有实用功能需求时，为什么还要冒着风险在创新方面投资呢？ — 因为这是 Askonia 雄狮的号令！况且，最高元首 Philip Andrada 掌控了庞大的燃料市场，拥有足够的财富来承担修改主力舰设计的费用，为他那奢侈的能量武器项目提供载体。\n\n尽管官方报告已经用上了各种巧妙的委婉措辞以避免追责，但 辛达强权 装配的 执行官-级 的表现似乎略低于最初提案中的宏伟期望。总之，这一项目已按期交付，它已然在 Askonia 星系的空域中形成了一道绝美又骇人的壮景。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00617"
     },
@@ -2347,7 +2347,7 @@
     {
         "key": "descriptions.csv#('forgevats_station', 'SHIP_SYSTEM')$text1",
         "original": "A fixed architecture nanforge system which allows rapid conversion of pre-formulated feedstock into missile ammunition during battle.",
-        "translation": "一种内置构建的纳米机系统，可以在战斗中将预置的原材料迅速转换成弹药。",
+        "translation": "一种内置构建的纳米锻炉系统，可以在战斗中将预置的原材料迅速转换成弹药。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00453"
     },
@@ -2425,7 +2425,7 @@
         "key": "descriptions.csv#('fragment_volley', 'SHIP_SYSTEM')$text3",
         "original": "Extends the range of non-PD fragment weapons and rapidly fires them. The system is only activated when the ship is hit by an Energy Lash, and has a long cooldown.",
         "translation": "提高非 PD 类 碎片武器 的射程与射速。该系统仅在舰船被 能量之鞭 命中时才会激活，且冷却时间较长。",
-        "stage": 2,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00318"
     },
     {
@@ -2445,15 +2445,15 @@
     {
         "key": "descriptions.csv#('free_orbit', 'GALLERY')$text1",
         "original": "Free Orbit",
-        "translation": "轨道站",
+        "translation": "自由轨道",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00690"
     },
     {
         "key": "descriptions.csv#('free_orbit', 'GALLERY')$text2",
         "original": "I asked what drew him back out there, time and time again. The old spacer took a long time before he answered.\n\n\"Because it's clean,\" he said.",
-        "translation": "我问他，究竟是什么原因让他一次次回到那片深空。这位老船员员沉默了许久，开口回答。\n\n\"因为那里空无一物。\" 他说。",
-        "stage": 2,
+        "translation": "我问他，究竟是什么把他一次次地重新拉回那片深空。这位老船员沉默了许久，开口回答。\n\n\"因为那里纯净。\" 他说。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00690"
     },
     {
@@ -2564,8 +2564,8 @@
     {
         "key": "descriptions.csv#('gargoyle', 'SHIP')$text1",
         "original": "The Gargoyle is a high-tech station defense drone featuring the advanced Paladin PD System and its own shield generator. Because it requires no crew, travel drive, or any kind of independent command core, the Gargoyle operates more effectively in combat than a free-flying hull of similar size.",
-        "translation": "集尖端技术于一身的轨道站防御无人机，配备先进的保卫者 PD 系统与堡垒护盾发生器。因无需船员、巡航驱动器以及独立的控制核心，其作战性能要优于其他同类型的标准舰船。",
-        "stage": 5,
+        "translation": "集尖端技术于一身的空间站防御无人机，配备先进的保卫者 PD 系统与堡垒护盾发生器。因无需船员、巡航驱动器以及独立的控制核心，其作战性能要优于其他同类型的标准舰船。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00558"
     },
     {
@@ -2872,7 +2872,7 @@
     {
         "key": "descriptions.csv#('heavyac', 'WEAPON')$text1",
         "original": "A triple-barreled cannon that fires a burst of standardized shells at medium range. It is most effective versus enemy shields.\n\nMedium caliber, triple-barreled autocannon, typically deployed with medium-bore ammunition. Electrically primed firing fuses ensure precise fire counts. A great fire support weapon, it is typically fitted on destroyer and cruiser class ships. A battery of heavy autocannons with a proper firing solution may pose a serious threat to capital ships. \n\nAdditional mass necessity to accommodate the complex autoloader and cooling systems results in a very poor turn rate, however.",
-        "translation": "使用标准炮弹向中距离目标三发点射的三管自动加农炮。用来对付护盾时最为有效。\n\n这种中口径三联装自动加农炮，不仅采用等口径的标准弹药，且使用的电发火引信也能确保它能准确依次开火。作为一种优秀的火力支援武器，常常被安装于驱逐舰和巡洋舰上，而数组重型自动炮阵列配合恰当的攻击策略甚至能对主力舰构成重大威胁。\n\n但复杂的自动装填机与冷却系统所增加的质量使得炮塔的转速相当之慢。",
+        "translation": "使用标准炮弹向中距离目标三发点射的三管自动加农炮。用来对付护盾时最为有效。\n\n这种中口径三联装自动加农炮，不仅采用等口径的标准弹药，且使用的电发火引信也能确保它能准确依次开火。作为一种优秀的火力支援武器，常常被安装于驱逐舰和巡洋舰上，而数组重型自动炮组成的阵列配合恰当的攻击策略甚至能对主力舰构成重大威胁。\n\n但复杂的自动装填机与冷却系统所增加的质量使得炮塔的转速相当之慢。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00021"
     },
@@ -2977,7 +2977,7 @@
     {
         "key": "descriptions.csv#('hesperus', 'GALLERY')$text2",
         "original": "Monasteries clung to the sublime promontories which ringed the volcanic provinces forced through world-wrapping ice. Unseen were the bunkers, heavy batteries, and missile silos of the Knights of Ludd.\n\nThe reigning Presbyter Orbis declared a handful of special economic zones on the shifting floes; these transmitted welcomes, their beacons calling outside traders to port.",
-        "translation": "众多修道院依附在险峻的裂谷、火山岩层的岬角甚至是突破厚重冰层的岩体上。 卢德骑士团 的地堡、重型炮台与导弹发射井，就隐匿于无人可见之处。\n\n在执政的 行星教督 签署自由贸易协定后，浮冰上建立起了多处可以发射民用着陆信标的经济特区，吸引外界的商人。",
+        "translation": "众多修道院依附在险峻的裂谷、火山岩层的岬角甚至是突破厚重冰层的岩体上。 卢德骑士团 的地堡、重型炮台与导弹发射井，就隐匿于无人可见之处。\n\n执政的 行星教督 在浮冰之上划定了多处经济特区，这些区域向外发送欢迎讯息，其信标吸引着外来的商人入港。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00665"
     },
@@ -3159,7 +3159,7 @@
     {
         "key": "descriptions.csv#('hyperspace_storm', 'TERRAIN')$text1",
         "original": "This volume of hyperspace is undergoing chaotic phase shifts leading to wildly fluctuating resonance cascades. Ancient and dire warnings of prolonged exposure to so-called \"hyperspace storms\" have been passed down through generations of spacers.",
-        "translation": "这片超空间区域正处于混乱的相位偏移状态，导致谐振级联反应大幅波动。这种被称之为 \"超空间风暴\" 的古老恶兆被无数代星际舰长们口口相传延续至今。",
+        "translation": "这片超空间区域正处于混乱的相位偏移状态，导致谐振级联反应大幅波动。这种被称之为 \"超空间风暴\" 的古老恶兆被无数代太空佬们口口相传延续至今。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00440"
     },
@@ -3391,7 +3391,7 @@
         "key": "descriptions.csv#('jangala_shrine', 'GALLERY')$text2",
         "original": "There were figures, like an overgrown statue garden. The forms blistered with growth, draped in tendrils heavy with fruiting bodies. One moved. Not the wind, but a pilgrim exposed without a haz-suit. And there were others, wearing only light robes amongst the inimical xenolife. Easily overtaken.",
         "translation": "那里矗立着一些人形轮廓，宛如一座植物疯长的雕像园。那些轮廓的表面上有着鼓胀的分生组织，布满了垂挂着累累果实的藤蔓。其中一个轮廓动了 —— 并非风的作用，而是一名未穿防化服的朝圣者。此外还有其他人，仅裹着轻薄长袍，置身于各种敌意异种生命之间。他们极易被侵染。",
-        "stage": 2,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00664"
     },
     {
@@ -3418,7 +3418,7 @@
     {
         "key": "descriptions.csv#('jump_point_hyper', 'GALLERY')$text2",
         "original": "Now our contracts up, holds full and ready /\nHoo-rah for we jump now t'ward the core /\nWe'll burn bright, bright long and steady",
-        "translation": "如今契约已定下，货舱满载待启航 /\n呦吼！我们此刻向家乡跃迁 /\n我们航路无阻、一往无前",
+        "translation": "如今契约已定下，货舱满载待启航 /\n呦吼！我们此刻向家乡跃迁 /\n我们航行无阻、一往无前",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00626"
     },
@@ -3705,7 +3705,7 @@
     {
         "key": "descriptions.csv#('lrpdlaser', 'WEAPON')$text1",
         "original": "Medium range energy weapon, effective at neutralizing missile and fighter threats. Can be fired for extended periods, but the damage is subpar.\n\nAn additional lens assembly eliminates self-diffusing particles from a standard carbon dioxide beam fired at a wavelength of eleven microns. The extended range permits the otherwise low wattage to have a greater impact on the targets. Particularly useful in destroying missiles headed for a shielded target - a standard point defense laser generally doesn't have the range to extend far enough past the defensive shields of the ship it is supposed to protect.",
-        "translation": "用于拦截导弹与战机的中程激光武器，虽能长时间开火但威力颇低。\n\n通过加装额外透镜来解决标准二氧化碳激光器在工作时会散射的问题，由于仍发射波长为 11 微米的激光，而导致射程加长的它因较低的输出功率而大大削弱了伤害。其唯一的优势就是可以用来对付赛博这种特殊的反护盾导弹，毕竟标准点防武器可没有那么远的射程来拦截这些狡猾的家伙。",
+        "translation": "用于拦截导弹与战机的中程激光武器，虽能长时间开火但威力颇低。\n\n通过加装额外透镜来解决标准二氧化碳激光器在工作时会散射的问题，由于仍发射波长为 11 微米的激光，而导致射程加长的它因较低的输出功率而大大削弱了伤害。特别适用于对付某些特殊的反护盾导弹，毕竟标准点防武器可没有那么远的射程来拦截这些狡猾的家伙。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00063"
     },
@@ -3761,7 +3761,7 @@
     {
         "key": "descriptions.csv#('luxury_goods', 'RESOURCE')$text1",
         "original": "The elite of any world of the Sector desire precious things, rare and well-made by actual human artisans.",
-        "translation": "能让世界上任何一名行业精英都渴望拥有的奢侈品，每一件都是由真正的艺术大师亲手制作。",
+        "translation": "能让星域之中任何一个世界的精英都渴望拥有的奢侈品，每一件都是由真正的艺术大师亲手制作。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00355"
     },
@@ -3810,8 +3810,8 @@
     {
         "key": "descriptions.csv#('makeshift_station', 'CUSTOM')$text1",
         "original": "A makeshift station, serving as a meeting place, base of operations, and a home to a fairly significant semi-permanent population.",
-        "translation": "一种临时构建的轨道站，多半用作集会场所、行动基地或半永久居民的家。",
-        "stage": 5,
+        "translation": "一种临时构建的空间站，多半用作集会场所、行动基地或半永久居民的家。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00192"
     },
     {
@@ -3894,8 +3894,8 @@
     {
         "key": "descriptions.csv#('merlon', 'SHIP')$text1",
         "original": "The Merlon is a heavy station defense drone packed with an impressive array of point defense weapons. Requiring no crew, travel drive, or independent command AI, the Merlon is packed with more armor plating than a ship of comparable size.",
-        "translation": "作为一种重型轨道站防御无人机，它装备着令人印象深刻的点防御武器系统。因无需船员、巡航驱动器以及独立的人工智能，使其装甲强度要优于其他同类型的标准舰船。",
-        "stage": 5,
+        "translation": "作为一种重型空间站防御无人机，它装备着令人印象深刻的点防御武器系统。因无需船员、巡航驱动器以及独立的人工智能，使其装甲强度要优于其他同类型的标准舰船。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00557"
     },
     {
@@ -4202,14 +4202,14 @@
     {
         "key": "descriptions.csv#('module_onslaught_armor_left', 'SHIP')$text1",
         "original": "A huge piece of applique armor to be mounted on the left flank of the Onslaught Mk.I, allowing the ship to wade through impossibly heavy fire to focus on its primary target. The modular design was originally intended to minimize shipyard downtime.",
-        "translation": "一块巨大的附加装甲，将安装在 攻势 Mk.I-级 型的左舷，使它能够在炮火中穿行，集中火力于主要目标。这种模块化设计最初是为了尽量减少在船厂的检修时间。",
+        "translation": "一块巨大的附加装甲，将安装在 攻势 Mk.I 的左舷，使它能够在炮火中穿行，集中火力于主要目标。这种模块化设计最初是为了尽量减少在船厂的检修时间。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00099"
     },
     {
         "key": "descriptions.csv#('module_onslaught_armor_right', 'SHIP')$text1",
         "original": "A huge piece of applique armor to be mounted on the right flank of the Onslaught Mk.I, allowing the ship to wade through impossibly heavy to fire focus on its primary target. The modular design was originally intended to minimize shipyard downtime.",
-        "translation": "一块巨大的附加装甲，将安装在 攻势 Mk.I-级 型的右舷，使它能够在炮火中穿行，集中火力于主要目标。这种模块化设计最初是为了尽量减少在船厂的检修时间。",
+        "translation": "一块巨大的附加装甲，将安装在 攻势 Mk.I 的右舷，使它能够在炮火中穿行，集中火力于主要目标。这种模块化设计最初是为了尽量减少在船厂的检修时间。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00100"
     },
@@ -4286,7 +4286,7 @@
     {
         "key": "descriptions.csv#('nav_buoy', 'CUSTOM')$text1",
         "original": "A Domain-era technology, a nav buoy monitors the in-system hyperfield and is capable of transmitting its findings to friendly fleets in-system. The data readings are pristine and of great use in configuring drive fields.",
-        "translation": "基于 人之领 技术建成的导航信标，能被动监控整片星系内的超波场，能将计算后的导航信息传输给附近友方舰队。这将有助于增强舰队的航行效率。",
+        "translation": "基于 人之领 技术建成的导航浮标，能被动监控整片星系内的超波场，能将计算后的导航信息传输给附近友方舰队。这将有助于增强舰队的航行效率。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00329"
     },
@@ -4300,14 +4300,14 @@
     {
         "key": "descriptions.csv#('nav_buoy', 'GALLERY')$text2",
         "original": "A navigation buoy dating to the Domain era monitored local system hyperfield topography. The telemetry was of great use to configure and tune fleet drive bubbles.",
-        "translation": "这是一座可追溯至 人之领 时代的导航信标，用于监控所处恒星系统的超波场。计算后的导航信息有助于增强舰队的航行效率。 ",
+        "translation": "这是一座可追溯至 人之领 时代的导航浮标，用于监控所处恒星系统的超波场。计算后的导航信息有助于增强舰队的航行效率。 ",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00689"
     },
     {
         "key": "descriptions.csv#('nav_buoy_makeshift', 'CUSTOM')$text1",
         "original": "Built using the best technology available in the Sector, a nav buoy monitors the in-system hyperfield and is capable of transmitting its findings to friendly fleets in-system. The data is often somewhat unreliable but still useful in making on-the-fly drive field adjustments.",
-        "translation": "采用时下最先进的技术建成的导航浮标，尽管弱于其前辈，但它依旧能被动监控整片星系的超波场，并将计算好的数据传输给附近的友方舰队。虽然这些读数并不十分可靠，但仍有助于提高舰队动态驱动力场的效力。",
+        "translation": "采用时下尽可能最先进的技术建成的导航浮标，能被动监控整片星系的超波场，并将计算好的数据传输给附近的友方舰队。虽然这些读数并不十分可靠，但仍有助于提高舰队动态驱动力场的效力。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00330"
     },
@@ -4370,8 +4370,8 @@
     {
         "key": "descriptions.csv#('neutron_torpedo', 'WEAPON')$text2",
         "original": "- Domain Armada Procurement, APRC-3 proceedings // CLASSIFIED GALENA (historical)",
-        "translation": "- 人之领舰队采购部，APRC-3 号会议记录 // GALENA 级机密(历史档案)",
-        "stage": 2,
+        "translation": "- 人之领舰队采购部，APRC-3 号会议记录 // GALENA 级机密 (历史档案)",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00085"
     },
     {
@@ -4930,7 +4930,7 @@
     {
         "key": "descriptions.csv#('planet_ceyx', 'CUSTOM')$text3",
         "original": "Paranoid whispers of military comms echo around Ceyx; subsurface citadels and fortifications betray their presence by the invisible glow of heat-dissipation nets blooming outward across the scarred moon's surface like targeting grids.",
-        "translation": "军用通讯在 Ceyx 周围低语；伤痕累累行星的表面上，散热网的无形光芒像定位网格一样暴露了地下的堡垒和防御工事。",
+        "translation": "军用通讯的低语在 Ceyx 周围回荡着；这颗伤痕累累卫星的表面上，散热网的无形光芒像定位网格一样暴露了地下的堡垒和防御工事。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00372"
     },
@@ -5007,8 +5007,8 @@
     {
         "key": "descriptions.csv#('planet_cruor', 'CUSTOM')$text1",
         "original": "Cruor will always be a backwater due to its protean surface, broken and re-broken by the tidal forces of Salus. Under Diktat rule, Cruor is a world of temporary mining and prison operations. The free population is made of contractors and technicians from Volturn seeking their fortune off-world. Desperately bored workers burn their wages by partaking of the myriad vices provided by a lively black market quietly tolerated by the Diktat governor. ",
-        "translation": "Curor 残破不堪的地表被 Salus 的引力反复摧残，使之成为令人憎恶之地。如今在 辛达强权 控制下的 Curor 变成了一处临时采矿基地和收押囚犯的监牢，但仍有不少来自 Volturn 的承包商和技工来此寻求财富。极度乏味的工作迫使工人们养成了各式各样的恶习，来把他们的薪水挥霍一空，使得黑市在 辛达强权 政府的默许下经营得有声有色。",
-        "stage": 5,
+        "translation": "Cruor 残破不堪的地表被 Salus 的引力反复摧残，使之成为令人憎恶之地。如今在 辛达强权 控制下的 Cruor 变成了一处临时采矿基地和收押囚犯的监牢，但仍有不少来自 Volturn 的承包商和技工来此寻求财富。极度乏味的工作迫使工人们养成了各式各样的恶习，来把他们的薪水挥霍一空，使得黑市在 辛达强权 政府的默许下经营得有声有色。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00253"
     },
     {
@@ -5028,7 +5028,7 @@
     {
         "key": "descriptions.csv#('planet_culann', 'CUSTOM')$text3",
         "original": "Trains of high-tech ship gantries parade in glittering arcs above Culann, following Culann Starforge like a swarm of offspring. The planet is heavily bunkered and emplaced with anti-starship batteries. Tri-Tachyon marketing manages to project an image of business-friendly welcome into the receiving bays and galleries that only hints at the potency of the dread weaponry held beneath surface and hanging in orbit.",
-        "translation": "一列列 扩展纪元 船舶龙门架像幼虫一样跟随着星际煅炉，在 Culann 上空排成闪闪发光的弧线。这颗行星上布满了厚重的掩体，并且安置了反舰炮台。速子科技 公司成功地将商业友好的形象投影到登陆舱和走廊之中，用以掩盖在地表下与轨道上悬挂的可怕武器的威力。",
+        "translation": "一列列 扩展纪元 船舶龙门架像幼虫一样跟随着星际锻炉，在 Culann 上空排成闪闪发光的弧线。这颗行星上布满了厚重的掩体，并且安置了反舰炮台。速子科技 公司成功地将商业友好的形象投影到登陆舱和走廊之中，用以掩盖在地表下与轨道上悬挂的可怕武器的威力。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00408"
     },
@@ -5098,8 +5098,8 @@
     {
         "key": "descriptions.csv#('planet_epiphany', 'CUSTOM')$text1",
         "original": "Once a quiet mining colony, Epiphany was selected for settlement by the heretical leader of an obscure Luddic cult. After quite some scandal and a single violent death, the cult was ended, though a population sympathetic to Luddic beliefs lived on. Epiphany's civilian government was toppled by Pathers during a burst of enthusiasm during the Second AI War. With the grudging cooperation of the old natives its facilities are now used for Pather stockpiles and training.",
-        "translation": "Epiphany 在被一名卢德异端领袖选定为自己的 \"圣地\" 前只是个平静的采矿殖民地。尽管无数丑闻与一场刺杀为这个异端派系画上了句号，但卢德信仰依旧在此地发展壮大。在第二次 AI 战争爆发期间，Epithany 的平民政府被 卢德左径 的狂热分子所推翻。现如今，所有原住民的基础设施都被 卢德左径 征用以供军事用途。",
-        "stage": 5,
+        "translation": "Epiphany 在被一名卢德异端领袖选定为自己的 \"圣地\" 前只是个平静的采矿殖民地。尽管无数丑闻与一场刺杀为这个异端派系画上了句号，但卢德信仰依旧在此地发展壮大。在第二次 AI 战争爆发期间，Epiphany 的平民政府被 卢德左径 的狂热分子所推翻。现如今，所有原住民的基础设施都被 卢德左径 征用以供军事用途。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00503"
     },
     {
@@ -5182,7 +5182,7 @@
     {
         "key": "descriptions.csv#('planet_hesperus', 'CUSTOM')$text3",
         "original": "Monasteries cling to particularly sublime rifts, promontories of volcanic shields, or the occasional pluton that's forced its way through the world-wrapping crust of ice. These forbid outside visitors - particularly the unfaithful - without dispensation from the Knights. However, by authority of the reigning Presbyter Orbis, a number of special economic zones built on the shifting floes transmit civilian landing beacons to call outside traders to port.",
-        "translation": "众多修道院依附在险峻的裂谷、火山岩层的岬角甚至是突破厚重冰层的岩体上。如此险峻的地形阻止了外来者随意踏入，特别是那些未获得骑士赫免的不忠者。不过在执政的 行星教督 签署自由贸易协定后，浮冰上建立起了多处可以发射民用着陆信标的经济特区，吸引外界的商人。",
+        "translation": "众多修道院依附在险峻的裂谷、火山岩层的岬角甚至是突破厚重冰层的岩体上。如此险峻的地形阻止了外来者随意踏入，特别是那些未获得骑士特许的无信者。执政的 行星教督 在浮冰之上划定了多处经济特区，这些区域向外发送欢迎讯息，其信标吸引着外来的商人入港。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00371"
     },
@@ -5224,8 +5224,8 @@
     {
         "key": "descriptions.csv#('planet_ithaca', 'CUSTOM')$text1",
         "original": "An old, dry world with little magnetic field to speak of, Ithaca was nonetheless judged a good candidate by the Eridani-Utopia Terraforming Corporation. Quiet for billions of years, Penelope's Star became a hive of activity to fuel the transformation of Ithaca and its sibling world Ogygia, only to be thrown into complete chaos by the Collapse.",
-        "translation": "Ithaca 是一处古老且干旱的世界，虽然几乎不存在磁场，但依旧被天苑四-乌托邦地貌改造集团评定为适合地貌改造的候选之一。在沉寂了数十亿年后，随着 Penelope 星系的开发热潮，Ithaca 和它的兄弟星 Ogygi 的地貌改造进度得到了推动，直到 \"大崩塌\" 将这里推向了混乱的深渊。",
-        "stage": 5,
+        "translation": "Ithaca 是一处古老且干旱的世界，虽然几乎不存在磁场，但依旧被天苑四-乌托邦地貌改造集团评定为适合地貌改造的候选之一。在沉寂了数十亿年后，随着 Penelope 星系的开发热潮，Ithaca 和它的兄弟星 Ogygia 的地貌改造进度得到了推动，直到 \"大崩塌\" 将这里推向了混乱的深渊。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00419"
     },
     {
@@ -5350,7 +5350,7 @@
     {
         "key": "descriptions.csv#('planet_nachiketa', 'CUSTOM')$text1",
         "original": "This world was selected by Domain bureaucrats as a site for one of the Persean Sector's AM fuel production facilities due to having no outstanding value apart from existing on a convenient axis of expansion into further frontiers. Industry and port facilities followed the boost in starship traffic, growing like barnacles from the massive armored, half-buried fuel plant. A major confrontation during the First AI War saw these surrounding port facilities devastated due to a tactical purge of AM reserves; the Hegemony secured victory, but crippled the industry and infrastructure of Nachiketa.",
-        "translation": "由 人之领 官员选定，并将其作为英仙座星域的反物质燃料生产基地而开发建设，除了方便殖民舰队以 Naraka 星系为轴心对外扩张外，贫瘠的 Nachiketa 不具备任何突出的价值。工厂、港口等促进当地星际物流的基础设施如同藤壶般围绕着巨型武装半永固燃料厂建设起来。不幸的是，在第一次 AI 战争期间的一场重大战役中，针对反物质储备的战术打击严重破坏了附近的港口设施，尽管 霸主 取得了最终的胜利，但 Nachiketa 的产业以及基础设施依旧遭到了重创。",
+        "translation": "由 人之领 官员选定，并将其作为英仙座星域的反物质燃料生产基地之一而开发建设，除了其位于向更远边疆扩张的便利轴线上之外，贫瘠的 Nachiketa 不具备任何突出的价值。工厂、港口等促进当地星际物流的基础设施如同藤壶般围绕着巨型武装半永固燃料厂建设起来。不幸的是，在第一次 AI 战争期间的一场重大战役中，针对反物质储备的战术打击严重破坏了附近的港口设施，尽管 霸主 取得了最终的胜利，但 Nachiketa 的产业以及基础设施依旧遭到了重创。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00502"
     },
@@ -5434,7 +5434,7 @@
     {
         "key": "descriptions.csv#('planet_orthrus', 'CUSTOM')$text3",
         "original": "Ruled by a council of small family companies backed by outside investors, the Hegemony phoenix never saw fit to shelter Orthrus under its fiery wing. The reserves of resources too poor, the strategic value overshadowed by the militarized moon of Sphinx, and the polity too useful as a symbol of the Hegemony's alleged respect for independent worlds to integrate fully.",
-        "translation": "Orthus 被外来投资者所支持的小型家族企业组成的联盟控制，而霸主那不死鸟的羽翼从来没有庇护过这里。这里的资源相当匮乏，它的战略价值也被军事化卫星 Sphinx 掩盖，霸主 采取的尊重各独立世界的政策也使得此地难以充分整合。",
+        "translation": "Orthrus 被外来投资者所支持的小型家族企业组成的联盟控制，而霸主那不死鸟的羽翼从来没有庇护过这里。这里的资源相当匮乏，它的战略价值也被军事化卫星 Sphinx 掩盖，霸主 采取的尊重各独立世界的政策也使得此地难以充分整合。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00416"
     },
@@ -5511,7 +5511,7 @@
     {
         "key": "descriptions.csv#('planet_sindria', 'CUSTOM')$text3",
         "original": "This world's battered crust of cyclopean debris criss-crossed by kilometers-deep pits and chasms is bombarded with intense radiation on the day side, so habitats and industrial facilities must be built deep beneath the surface. The population of Sindria is concentrated in a handful of hive-cities where living conditions for most are poor and civil law harsh. A desperate underclass lives beneath those who are lucky enough to have found positions in the state bureaucracy or miltech incorporates. Infrastructure has never kept up with the population crisis of massive refugee immigration during the Askonia Crisis as resources have been concentrated on industry and military power.",
-        "translation": "这个世界的地表千疮百孔，数公里深的巨大坑洞、纵横交错的裂隙与白天强烈的辐射让这的栖息地与工业设施都必须建在地底深处。Sindria 的人口多数都集中在几个大型巢区都市里，人民生活条件恶劣，且受严苛的律法约束。与绝望的底层生活相比，那些能在国家官僚机构或军事技术部门寻得工作的则是这里的人上人。因绝大数资源都被集中在工业与军事力量上，基础设施不完善的 Sindria 从未能妥善应对 Askonia 危机期间涌入的大量难民与持续至今的人口危机。",
+        "translation": "这个世界的地表千疮百孔，数公里深的巨大坑洞、纵横交错的裂隙与白天强烈的辐射让这的栖息地与工业设施都必须建在地底深处。Sindria 的人口多数都集中在几个大型巢区都市里，人民生活条件恶劣，且受严苛的律法约束。与绝望的底层生活相比，那些能在国家官僚机构或军事技术部门寻得工作的则是这里的人上人。因绝大多数资源都被集中在工业与军事力量上，基础设施不完善的 Sindria 从未能妥善应对 Askonia 危机期间涌入的大量难民与持续至今的人口危机。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00250"
     },
@@ -5616,8 +5616,8 @@
     {
         "key": "descriptions.csv#('planet_viscacha', 'CUSTOM')$text1",
         "original": "A captured body from the outer system with a thick, toxic atmosphere, this moon is named both for its quick orbit and an amusingly shaped basin in the southern hemisphere.",
-        "translation": "Viscacha 是一颗受到 Chupi Orco 引力捕获的原系外星体，这颗充满剧毒大气层的卫星因极快的公转速度与有趣的南半球盆地而得名。",
-        "stage": 5,
+        "translation": "Viscacha 是一颗受到引力捕获的原系外星体，这颗充满剧毒大气层的卫星因极快的公转速度与有趣的南半球盆地而得名。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00401"
     },
     {
@@ -5882,7 +5882,7 @@
     {
         "key": "descriptions.csv#('rampart', 'SHIP')$text1",
         "original": "Although automated machines of war were forbidden in core Domain space, war drones were quietly employed outside of the officially incorporated volume. Frontier garrisons were often bolstered by drone ships, and they were deployed liberally against rebellious worlds to tip the terrible balance of attrition, setting the industrial might of the Domain versus the lives of 'freedom fighters'.\n\nLittle more than an artillery platform with engines, the Rampart was attached to drone units to provide the heavy firepower necessary to meet cruiser and capital class hulls in the line of combat or to crack armored orbital fortresses. In either role, heavy losses were anticipated, so the Rampart was designed with highly modular components which allowed badly damaged hulls to be rapidly cannibalized to repair lightly damaged hulls up to combat capacity without the need for shipyard facilities.",
-        "translation": "虽然 人之领 的核心星区内禁止一切全自动战争机械的存在，但在那些尚未被正式纳入 人之领 版图的地区里，还是有人在暗中使用无人战舰。尤其是边境驻军，他们除了利用无人舰组成的临时舰队来执行日常任务，还会大量将其部署在叛乱行星以避免永无止境的消耗战，以 人之领 的强大工业实力压垮这些 \"自由斗士\" 们的生命。\n\n堡垒-级 不仅仅是一种能飞的重炮平台。通过与其他无人战舰协同作战，它能在线列中提供对付巡洋舰和主力舰级时所必要的重火力，这甚至足以摧毁轨道站。由于 堡垒-级 的定位，它随时可能受到严重破坏，因此船体构造高度模块化，以允许在没有船坞设施的条件下也能迅速替换损毁部分快速修复到允许投入作战的状态。",
+        "translation": "虽然 人之领 的核心星区内禁止一切全自动战争机械的存在，但在那些尚未被正式纳入 人之领 版图的地区里，还是有人在暗中使用无人战舰。尤其是边境驻军，他们除了利用无人舰组成的临时舰队来执行日常任务，还会大量将其部署在叛乱行星以避免永无止境的消耗战，以 人之领 的强大工业实力压垮这些 \"自由斗士\" 们的生命。\n\n堡垒-级 不仅仅是一种能飞的重炮平台。通过与其他无人战舰协同作战，它能在线列中提供对付巡洋舰和主力舰级时所必要的重火力，这甚至足以摧毁重装空间站。由于 堡垒-级 的定位，它随时可能受到严重破坏，因此船体构造高度模块化，以允许在没有船坞设施的条件下也能迅速替换损毁部分快速修复到允许投入作战的状态。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00174"
     },
@@ -5903,7 +5903,7 @@
     {
         "key": "descriptions.csv#('ravelin', 'SHIP')$text1",
         "original": "The Ravelin is a heavy station defense drone focused on support fire and point defense. Because it requires no crew, travel drive, or any kind of independent command core, the Ravelin can punch well above its weight class in combat.",
-        "translation": "作为一种重型轨道站防御无人机，其主要用于提供支援与点防火力。因无需船员、巡航驱动器以及独立的控制核心，其作战性能要优于其他同类型的标准舰船。",
+        "translation": "作为一种重型空间站防御无人机，其主要用于提供支援与点防火力。因无需船员、巡航驱动器以及独立的控制核心，其作战性能要优于其他同类型的标准舰船。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00559"
     },
@@ -5931,7 +5931,7 @@
     {
         "key": "descriptions.csv#('recalldevice', 'SHIP_SYSTEM')$text1",
         "original": "Teleports all fighters back to the carrier, allowing them to be quickly refitted and relaunched.",
-        "translation": "将所有部署在外的战机立即召回至航母机库之内，使它们能迅速补充弹药或被修复。",
+        "translation": "将所有部署在外的战机立即召回至航母机库之内，使它们能迅速补充弹药或被修复，并立刻重新出击。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00313"
     },
@@ -5945,7 +5945,7 @@
     {
         "key": "descriptions.csv#('recalldevice', 'SHIP_SYSTEM')$text3",
         "original": "Teleports all fighters back to the carrier, allowing them to be quickly refitted and relaunched.",
-        "translation": "将所有部署在外的战机立即召回至航母机库之内，使它们能迅速补充弹药或被修复。",
+        "translation": "将所有部署在外的战机立即召回至航母机库之内，使它们能迅速补充弹药或被修复，并立刻重新出击。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00313"
     },
@@ -6071,7 +6071,7 @@
     {
         "key": "descriptions.csv#('resonatormrm', 'WEAPON')$text1",
         "original": "\"We're confounded by guidance, propulsion, payload containment... just about everything. Whether we're even dealing with baryonic matter is unclear; we've simply not been able to contain a specimen for long enough to get good data.\"",
-        "translation": "\"我们陷入了僵局。追踪算法，推进系统，装药成分... 一切的一切对我们来说都是无解之谜。我们甚至不知道自己处理的究竟是不是重物质。坦白讲，我们根本就无法捕捉一份足够稳定的样本来获取实验所必须的数据。\"",
+        "translation": "\"我们陷入了僵局。制导原理，推进方式，载荷约束... 一切的一切对我们来说都是无解之谜。我们甚至不知道自己处理的究竟是不是重物质。坦白讲，我们根本就无法捕捉一份足够稳定的样本来获取实验所必须的数据。\"",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00578"
     },
@@ -6204,7 +6204,7 @@
     {
         "key": "descriptions.csv#('rocky_unstable', 'PLANET')$text1",
         "original": "An unstable world rocked by quakes and eruptions. Where the surface is not covered by seas of cooled lava, it is dominated by rough peaks and scattered supervolcanoes which eject toxic gases to form a tenuous and corrosive atmosphere. This is not a place welcoming to any kind of permanent settlement.",
-        "translation": "深受地震与火山爆发影响的不稳定行星。其地表的大部分满是永不冷却的岩浆海，未被岩浆所覆盖的区域则是粗糙的山体与四处分布的火山群，它们喷出的各种毒气、可燃气体、腐蚀气体充斥在稀薄的大气层之中。此地显然不欢迎任何生物永久居住。",
+        "translation": "深受地震与火山爆发影响的不稳定行星。其地表未被岩浆海冷却产物所覆盖的区域布满了粗糙的山体与零散分布的超级火山，它们喷出的各种毒气、可燃气体、腐蚀气体充斥在稀薄的大气层之中。此地显然不欢迎任何生物永久居住。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00252"
     },
@@ -6253,14 +6253,14 @@
     {
         "key": "descriptions.csv#('salvor_explore_hull', 'GALLERY')$text2",
         "original": "\"It is said that an ex-salvor is either old or rich, never both.\"",
-        "translation": "\"据说，退休的拾荒佬员要么年老，要么富有，二选一。\"",
+        "translation": "\"据说，退休的打捞员要么年老，要么富有，绝不会兼得。\"",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00696"
     },
     {
         "key": "descriptions.csv#('salvor_ruins', 'GALLERY')$text1",
         "original": "Salvors in the Ruins",
-        "translation": "废墟中的拾荒佬",
+        "translation": "废墟中的打捞员",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00695"
     },
@@ -6323,7 +6323,7 @@
     {
         "key": "descriptions.csv#('sensor_array', 'CUSTOM')$text1",
         "original": "A Domain-era technology, this is a super-high-resolution passive monitoring array with a transmitter capable of real-time, faster-than-light data transmission within the star system. The data is used to supplement the regular sensor readings made by fleets.",
-        "translation": "基于 人之领 技术建成的超高分辨率被动监测阵列，内置的发射器能以超光速在星系间进行实时数据传输。这将有助于增强舰队常规传感器的探测效果。",
+        "translation": "基于 人之领 技术建成的超高分辨率被动监测阵列，内置的发射器能以超光速在星系内进行实时数据传输。这将有助于增强舰队常规传感器的探测效果。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00327"
     },
@@ -6344,7 +6344,7 @@
     {
         "key": "descriptions.csv#('sensor_array_makeshift', 'CUSTOM')$text1",
         "original": "Built using the best technology available in the Sector, a makeshift sensor array is nonetheless capable of passively monitoring the entire star system and has a transmitter capable of real-time, faster-than-light data transmission to friendly fleets within. The data is a useful supplement to the regular sensor readings made by fleets.",
-        "translation": "采用时下最先进的技术而建成的临时传感器阵列，尽管弱于其前辈，但它依旧能被动监测整片星系，并为附近友军舰队提供实时数据。这将有助于增强舰队常规传感器的探测效果。",
+        "translation": "采用时下尽可能最先进的技术而建成的临时传感器阵列，能被动监测整片星系，并为附近友军舰队提供实时数据。这将有助于增强舰队常规传感器的探测效果。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00328"
     },
@@ -6526,8 +6526,8 @@
     {
         "key": "descriptions.csv#('shrine_hesperus', 'CUSTOM')$text1",
         "original": "The Knights of Ludd claim the Shrine of Hesperus as their own; it is dedicated to the struggle and death of the many martyrs that follow in Ludd's path.",
-        "translation": "卢德骑士团 宣称 Hersperus 圣地 归于他们自己所有；此地纪念着卢德之道上众多殉道者的挣扎与牺牲。",
-        "stage": 5,
+        "translation": "卢德骑士团 宣称 Hesperus 圣地 归于他们自己所有；此地纪念着卢德之道上众多殉道者的挣扎与牺牲。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00604"
     },
     {
@@ -6820,22 +6820,22 @@
     {
         "key": "descriptions.csv#('star_red_supergiant', 'PLANET')$text1",
         "original": "A supergiant star in a late phase of its mayfly-short stellar life, this class M star has the largest volume of all known stellar types. It has exhausted its core's supply of hydrogen, transitioning smoothly to the fusion of helium, and is likely to proceed onward through the elements up to iron before creating a supernova. Although extraordinarily massive, the outer envelope of the star is extremely sparse and has a relatively low temperature, providing its characteristic hue. This star is casting off its constituent matter at a rapid rate and will form a spectacular nebula. Betelgeuse and Antares are examples of red supergiants known to classical pre-Domain astronomy.",
-        "translation": "进入了它短暂生命的末期的 M 型恒星已经演化成了红超巨星，是已知恒星类型中体积最大的一种。它已经耗尽核心内所有氢，平稳地过度到了氦聚变。随后它很可能会继续聚变产生更重的元素，直到生产铁元素引发超新星爆发。虽然非常巨大，但由于恒星外表壳层非常稀薄且表面温度相对较低，因此呈现出了独特的红色。这颗恒星释放其内部物质的速度非常快，将会产生一片壮观的星云。前人之领时代的经典天文学中所提到过的参宿四与心宿二就是这种红巨星里的典型。",
-        "stage": 5,
+        "translation": "进入了它短暂生命的末期的 M 型恒星已经演化成了红超巨星，是已知恒星类型中体积最大的一种。它已经耗尽核心内所有氢，平稳地过渡到了氦聚变。随后它很可能会继续聚变产生更重的元素，直到生产铁元素引发超新星爆发。虽然非常巨大，但由于恒星外表壳层非常稀薄且表面温度相对较低，因此呈现出了独特的红色。这颗恒星释放其内部物质的速度非常快，将会产生一片壮观的星云。前人之领时代的经典天文学中所提到过的参宿四与心宿二就是这种红巨星里的典型。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00266"
     },
     {
         "key": "descriptions.csv#('star_white', 'PLANET')$text1",
         "original": "The beginning of the end for most stars, the white dwarf was once a red giant not massive enough to fuse carbon. Extremely dense and slowly radiating away its heat as it no longer undergoes fusion reactions, its volume is supported against gravitational collapse only by electron degeneracy pressure. ",
-        "translation": "对于大多数恒星来说，白矮星很可能是由红超巨星演变的最终结果。这颗主要由碳构成的恒星没有足够的温度来融化碳元素，因而不再由核聚变的热来抵抗重力崩溃，而是由极端高密度的物质产生的电子简并压力来支撑。",
-        "stage": 5,
+        "translation": "对于大多数恒星而言，这是终结的开端。这颗白矮星曾是一颗红巨星，因其质量不足以进行碳聚变而演变成如今的状态。它不再由核聚变的热来抵抗重力崩溃，而是由极端高密度的物质产生的电子简并压力来支撑其体积。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00269"
     },
     {
         "key": "descriptions.csv#('star_yellow', 'PLANET')$text1",
         "original": "A G2 type primary sequence star, estimated age is five billion years. Surface temperature is only about six thousand degrees, while core temperature could well exceed fifteen million degrees.",
-        "translation": "G2 型主序星，估计年龄为 50 亿年。表面温度六千摄氏度左右，而核心温度很可能超过 1500 万摄氏度。",
-        "stage": 5,
+        "translation": "G2 型主序星，估计年龄为 50 亿年。表面温度六千度左右，而核心温度很可能超过 1500 万度。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00258"
     },
     {
@@ -7191,7 +7191,7 @@
     {
         "key": "descriptions.csv#('station_telepylus', 'CUSTOM')$text1",
         "original": "A vast orbital station built around the core of an old Expansion-era Sporeship buried under a forest of modular hangars, industrial pods, and hab rings. This station was once the staging area for asteroid-tenders and mobile refineries trawling the outer system. It is now completely dead.",
-        "translation": "一个巨大的轨道空间站，围绕着一艘来自古老的扩张时代的孢子母舰建造而成，外围覆盖着模块化机库、工业吊舱、居住环带。这个轨道站曾用作小行星驻地保障船以及移动式精炼平台在星区外围的集结地，如今只剩下一片死寂。",
+        "translation": "一个巨大的轨道空间站，围绕着一艘来自古老的扩张时代的孢子母舰建造而成，外围覆盖着模块化机库、工业吊舱、居住环带。这个空间站曾用作小行星驻地保障船以及移动式精炼平台在星区外围的集结地，如今只剩下一片死寂。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00421"
     },
@@ -7205,7 +7205,7 @@
     {
         "key": "descriptions.csv#('station_thulian_raiders', 'CUSTOM')$text1",
         "original": "The Thule system is riddled with prospectors and small-time miners who've escaped the oppressive power-mongering of Kazeron's aristocratic stratocracy to search for independence among the ore and volatiles of the many ring systems. Sometimes these free-agents band together and turn to richer prizes - thus have the Thulian Raiders plagued Kazeron for nearly as long as the system has been inhabited by humans.",
-        "translation": "Thule 星系里充斥着勘探者与个体矿工，他们为了摆脱 Kazeron 贵族阶级的强权，而在被气云与矿石所包围的环状带上建起了 Thulian 空间站以寻求独立。这些个体户们偶尔会如今为寻求更大的利益而团结起来开始干起非法的勾当，正因如此，几乎从这片星系有人居住以来，来自 Thulian 的掠夺者就一直让 Kazeron 的统治者头痛不已。",
+        "translation": "Thule 星系里充斥着勘探者与个体矿工，他们为了摆脱 Kazeron 贵族阶级的强权，而在被气云与矿石所包围的环状带之中寻求独立。这些个体户们偶尔会如今为寻求更大的利益而团结起来开始干起非法的勾当，正因如此，几乎从这片星系有人居住以来，来自 Thulian 的掠夺者就一直让 Kazeron 的统治者头痛不已。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00488"
     },
@@ -7233,8 +7233,8 @@
     {
         "key": "descriptions.csv#('station_tigra_city', 'CUSTOM')$text1",
         "original": "It was only shortly after humans arrived in the Sector that mining operations were established in the Tigra Ring. Successive waves of extraction have seen miner strikes and rebellion through the rotation of megacorps given license to oversee operation of Tigra Station.",
-        "translation": "在人类首次抵达英仙座不久后，名为 Tigra 的采矿基地就被迅速地建在了 Samarra 的陨石带里。随着历史长河中接二连三的矿业热潮，无数次罢工事件导致此地的控制权被频繁转移。",
-        "stage": 5,
+        "translation": "在人类首次抵达英仙座星域不久后，采矿基地就迅速地在 Tigra 环带 之中被建立了起来。随着历史长河中接二连三的矿业热潮，无数次罢工事件导致此地的控制权被频繁转移。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00413"
     },
     {
@@ -7387,7 +7387,7 @@
     {
         "key": "descriptions.csv#('survey_data_2', 'RESOURCE')$text1",
         "original": "This TriPad contains a recent survey database which holds information on the economic, industrial, and strategic qualities of a celestial object organized according to the traditional guidelines of the Domain Colonial Ministry. Surveys such as this are an essential element of successful military operations, colonization efforts, and corporate ventures.\n\nThe data contained herein is unexceptional.",
-        "translation": "这台 TriPad 包含了一个最新的调查数据库，依照经典的 人之领 殖民管理部 条例，罗列了其描述的天体的经济、工业及战略价值。而诸如此类的数据是成功进行军事行动、殖民化、企业发展的重要因素之一。\n\n里面包含了一则不寻常的数据。",
+        "translation": "这台 TriPad 包含了一个最新的调查数据库，依照经典的 人之领 殖民管理部 条例，罗列了其描述的天体的经济、工业及战略价值。而诸如此类的数据是成功进行军事行动、殖民化、企业发展的重要因素之一。\n\n里面包含的数据并无特殊之处。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00538"
     },
@@ -7520,7 +7520,7 @@
     {
         "key": "descriptions.csv#('tartessus', 'GALLERY')$text2",
         "original": "You stood together at last in the plaza under the archway of the Cathedral of Holy Exodus.\n\n\"And it is the seat of not more than a few heretical notions of doctrine, I'm afraid,\" he said in a low voice.",
-        "translation": "你们最终站到了 Exodus 神圣大教堂的广场上。\n\n\"这里恐怕就是是那些异端教义的发源地。\" 他低声说道。",
+        "translation": "你们最终站到了 Exodus 神圣大教堂的广场上。\n\n\"这里恐怕就是那些异端教义的发源地。\" 他低声说道。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00699"
     },
@@ -7632,7 +7632,7 @@
     {
         "key": "descriptions.csv#('tesseract', 'SHIP')$text1",
         "original": "\"This is the largest of the anomalous vessel class thus far encountered. Not even a partial specimen has been recovered, much to the consternation of the VP of Research. Some members of the board - unofficially of course - are asking about sabotage or mutiny. I don't think you're quite getting the reality of the situation through to them.\"",
-        "translation": "\"这是我们目前为止遭遇最大规模的异常舰体。因为仍旧没有获得任何一丁点的样本，我们的研究组对其感到相当恐惧。有些舰上人员 —— 当然都是一些非官方人士 —— 甚至开始出现了破坏与哗变的倾向。我不认为你在看到实际情况之前能意识到这到底有多糟糕。\"",
+        "translation": "\"这是我们目前为止遭遇最大规模的异常舰体。仍旧没有获得任何哪怕一丁点的样本，这令研发副总裁深感震惊。部分董事会成员 —— 当然是通过非正式渠道 —— 已经开始质疑是否存在蓄意破坏或哗变的问题。我认为你并没有将事态的严重性充分传达给他们。\"",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00587"
     },
@@ -7891,8 +7891,8 @@
     {
         "key": "descriptions.csv#('vigilance', 'SHIP')$text1",
         "original": "An excellent harasser and support frigate, the Vigilance-class has oversized (for its class) hybrid and missile mounts. While it shines in a fleet setting, it can be easily overwhelmed by large numbers of smaller threats.",
-        "translation": "用于骚扰或支援的优秀护卫舰，哨兵-级 拥有略微超出规格的混合炮塔和导弹槽位。虽然它能在舰队中表现出亮眼发挥，但非常容易被大量战机联队淹没。",
-        "stage": 5,
+        "translation": "用于骚扰或支援的优秀护卫舰，哨兵-级 拥有略微超出规格的混合炮塔和导弹槽位。虽然它能在舰队中表现出亮眼发挥，但非常容易被大量小型单位淹没。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00137"
     },
     {
@@ -7989,7 +7989,7 @@
     {
         "key": "descriptions.csv#('vortex_launcher', 'WEAPON')$text1",
         "original": "\"All command and tactical officers at risk of directly observing the phenomenon shall be required to perform their duties with a non-observing partner. When - not if - mesmerization manifests, the non-observing partner shall immediately execute remote display deactivation. This order stands until techops completes the automatic interrupt patch.\"",
-        "translation": "\"所有可能直接观测到该现象的指挥官及战术军官，均须在一名非观测搭档的配合下执行任务。当 —— 而非 '疑似'—— 催眠效应出现时，非观测搭档须立即远程关闭显示设备。此命令持续有效，直至技术操作部门完成自动中断补丁的开发。\"",
+        "translation": "\"所有可能直接观测到该现象的指挥官及战术军官，均须在一名非观测搭档的配合下执行任务。一旦 —— 而非 '如果' —— 催眠效应出现，非观测搭档须立即远程关闭显示设备。此命令持续有效，直至技术操作部门完成自动中断补丁的开发。\"",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00743"
     },

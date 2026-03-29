@@ -163,7 +163,7 @@
     {
         "key": "data/strings/strings.json$.campaignHelp.chmNewgameIron_text",
         "original": "Welcome to the Starsector campaign!\n\nSince you're playing in iron mode, you'll only be able to save the game when you exit, and won't be able to load another game without exiting (and saving) your current game first.\n\nTry to avoid taking on fleets much bigger than yours, or ones that have bigger ships, and please remember that it's a work-in-progress so bugs will occasionally happen.\n\nGood luck!",
-        "translation": "欢迎来到 starsector 的生涯模式！ \n\n当前为铁人模式，你只能在退出游戏时保存进度，并且不能在游戏进行时读档。\n\n尽量避免招惹比你规模更大、或拥有大型战舰的舰队。请记住，这是款正在开发的游戏，所以难免会有 bug。\n\n祝你好运！",
+        "translation": "欢迎来到 Starsector 的生涯模式！ \n\n当前为铁人模式，你只能在退出游戏时保存进度，并且不能在游戏进行时读档。\n\n尽量避免招惹比你规模更大、或拥有大型战舰的舰队。请记住，这是款正在开发的游戏，所以难免会有 bug。\n\n祝你好运！",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.campaignHelp.chmNewgameIron_text"
     },
@@ -177,7 +177,7 @@
     {
         "key": "data/strings/strings.json$.campaignHelp.chmNewgame_text",
         "original": "Welcome to the Starsector campaign!\n\nYou can press F5 to quicksave and F9 to quickload.\n\nTry to avoid taking on fleets much bigger than yours, or ones that have bigger ships, and please remember that it's a work-in-progress so bugs will occasionally happen.\n\nGood luck!",
-        "translation": "欢迎来到 starsector 的生涯模式！ \n\n 按 F5 来快速存档，F9 到快速载入。\n\n尽量避免招惹比你规模更大、或拥有大型战舰的舰队。请记住，这是款正在开发的游戏，所以难免会有 bug。\n\n祝你好运！",
+        "translation": "欢迎来到 Starsector 的生涯模式！ \n\n 按 F5 来快速存档，F9 到快速载入。\n\n尽量避免招惹比你规模更大、或拥有大型战舰的舰队。请记住，这是款正在开发的游戏，所以难免会有 bug。\n\n祝你好运！",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.campaignHelp.chmNewgame_text"
     },
@@ -338,7 +338,7 @@
     {
         "key": "data/strings/strings.json$.campaignHelp.chmShipPurchase_text",
         "original": "Congratulations, you just bought a new ship!\n\nIt doesn't have any weapons or hullmods installed, so it's a good idea to get it outfitted.\n\nYou'll also need to make sure you have enough personnel to crew it.",
-        "translation": "恭喜你，刚刚买了一艘新船! \n\n由于它没有安装任何武器或船插。所以现在最好前往船坞进行改装。\n\n同时记得要确保你有足够的船员来操纵这艘船。",
+        "translation": "恭喜你，刚刚买了一艘新船! \n\n由于它没有安装任何武器或舰船插件。所以现在最好前往船坞进行改装。\n\n同时记得要确保你有足够的船员来操纵这艘船。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.campaignHelp.chmShipPurchase_text"
     },
@@ -485,7 +485,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.boardingApproachLaunch",
         "original": "Assault teams are launched from about a kilometer out and approach the hull in waves, using personal propulsion systems to brake on the final approach. The defenders have an opportunity to fire on the landing forces with impunity until enough teams land to push inside the hull.",
-        "translation": "在距离敌舰一公里的地方将 战队队员发射到敌舰舰体上，然后陆战队员依靠个人推进系统登录敌舰，在登陆时会遭到敌舰内部人员的反击。",
+        "translation": "在距离敌舰一公里的地方将 战队队员发射到敌舰舰体上，然后陆战队员依靠个人推进系统登陆敌舰，在登陆时会遭到敌舰内部人员的反击。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.boardingApproachLaunch"
     },
@@ -499,7 +499,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.boardingCleanEscapeMissedLaunch",
         "original": "At the last moment, the enemy ship regains propulsion and is able to alter its trajectory enough to avoid most of the incoming attackers, gaining enough time to get away. After a recovery effort, $boardingCrewLost crew and $boardingMarinesLost marine(s) remain unaccounted for.",
-        "translation": "在最后关头敌舰开挂恢复了动力，然后躲过了大部分正面攻击逃走啦； 在一切恢复正常之后，$boardingCrewLost 名船员和 $boardingMarinesLost 物资下落不明。",
+        "translation": "在最后关头，敌舰恢复了动力，然后躲过了大部分正面攻击逃走啦； 在一切恢复正常之后，$boardingCrewLost 名船员和 $boardingMarinesLost 名陆战队员下落不明。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.boardingCleanEscapeMissedLaunch"
     },
@@ -520,7 +520,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.boardingOutcomeSelfDestruct",
         "original": "As your assault teams start to overcome resistance inside the enemy ship, it self-destructs. Most of the men and women in the boarding party are killed by the explosion.",
-        "translation": "当陆战队员登录敌舰进行战斗时，敌舰自毁，大部分死于非命。",
+        "translation": "当陆战队员登陆敌舰进行战斗时，敌舰自毁，大部分死于非命。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.boardingOutcomeSelfDestruct"
     },

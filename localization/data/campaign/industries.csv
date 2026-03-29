@@ -22,14 +22,14 @@ orbitalstation,轨道空间站 - 主宰纪元,50,90,,3,,battlestation,"station, 
 radius:55,
 variant:station1_Standard,
 fleetName:Orbital Station,
-}",graphics/icons/industry/orbital_station.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"设计于主宰纪元的标准轨道站，特点是极为厚重的装甲与不俗的火力。
+}",graphics/icons/industry/orbital_station.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"设计于主宰纪元的标准空间站，特点是极为厚重的装甲与不俗的火力。
 
 它的存在将阻止任何轰炸行动的发生。",2010,
 battlestation,作战基地 - 主宰纪元,100,120,,4,orbitalstation,starfortress,"station, battlestation, unraidable, structure","{
 radius:65,
 variant:station2_Standard,
 fleetName:Battlestation,
-}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"升级过的轨道站，在原有基础上增建了厚重的棱堡与点防御平台，并加装了外挂装甲以提高其防御力。
+}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"升级过的空间站，在原有基础上增建了厚重的棱堡与点防御平台，并加装了外挂装甲以提高其防御力。
 
 它的存在将阻止任何轰炸行动的发生。",2020,
 starfortress,星际要塞 - 主宰纪元,200,180,,5,battlestation,,"station, starfortress, unraidable, structure","{
@@ -43,14 +43,14 @@ orbitalstation_mid,轨道空间站 - 核心纪元,50,90,,3,,battlestation_mid,"s
 radius:55,
 variant:station1_midline_Standard,
 fleetName:Orbital Station,
-}",graphics/icons/industry/orbital_station.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"设计于核心纪元的标准轨道站，拥有极为强大的单侧火力，且绕轴旋转速度更快。
+}",graphics/icons/industry/orbital_station.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"设计于核心纪元的标准空间站，拥有极为强大的单侧火力，且绕轴旋转速度更快。
 
 它的存在将阻止任何轰炸行动的发生。",2040,
 battlestation_mid,作战基地 - 核心纪元,100,120,,4,orbitalstation_mid,starfortress_mid,"station, battlestation, unraidable, structure","{
 radius:65,
 variant:station2_midline_Standard,
 fleetName:Battlestation,
-}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"升级过的轨道站，在原有基础上增建了两处导弹支援平台。
+}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"升级过的空间站，在原有基础上增建了两处导弹支援平台。
 
 它的存在将阻止任何轰炸行动的发生。",2050,
 starfortress_mid,星际要塞 - 核心纪元,200,180,,5,battlestation_mid,,"station, starfortress, unraidable, structure","{
@@ -64,14 +64,14 @@ orbitalstation_high,轨道空间站 - 扩展纪元,50,90,,3,,battlestation_high,
 radius:55,
 variant:station1_hightech_Standard,
 fleetName:Orbital Station,
-}",graphics/icons/industry/orbital_station.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"设计于扩展纪元的标准轨道站，配备了两处独立的重型护盾模块，以及高效的机库平台与不俗火力。
+}",graphics/icons/industry/orbital_station.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"设计于扩展纪元的标准空间站，配备了两处独立的重型护盾模块，以及高效的机库平台与不俗火力。
 
 它的存在将阻止任何轰炸行动的发生。",2070,
 battlestation_high,作战基地 - 扩展纪元,100,120,,4,orbitalstation_high,starfortress_high,"station, battlestation, unraidable, structure","{
 radius:65,
 variant:station2_hightech_Standard,
 fleetName:Battlestation,
-}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"升级过的轨道站，在原有基础上增建了一处装备重型火力的防御碉堡。
+}",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"升级过的空间站，在原有基础上增建了一处装备重型火力的防御碉堡。
 
 它的存在将阻止任何轰炸行动的发生。",2080,
 starfortress_high,星际要塞 - 扩展纪元,200,180,,5,battlestation_high,,"station, starfortress, unraidable, structure","{
@@ -91,4 +91,4 @@ planetaryshield,行星护盾,150,90,,3,,,"grounddefenses, structure, codex_unloc
 waystation,星际驿站,20,60,,2,,,"waystation, structure",,graphics/icons/industry/waystation.png,com.fs.starfarer.api.impl.campaign.econ.impl.Waystation,为星际舰队提供补给和维修服务的中途站。增加殖民地的流通性。,155,MEDIUM
 cryosanctum,低温避难所,150,90,,5,,,"cryosanctum, structure, codex_unlockable",,graphics/icons/industry/cryosanctum.png,com.fs.starfarer.api.impl.campaign.econ.impl.Cryosanctum,一座巨大如墓穴般的建筑，用来安放为度过这次危机而冒险选择冷冻睡眠的人们，有可能的话，他们将在一个更文明的时代醒来。建筑配备了多套冗余的维生设施，大规模自动化保安系统以及反舰防御阵列。与之相比，冷冻舱本身的体积简直微不足道，而这一切都被安置在四通八达如迷宫般的地下堡垒内。,3000,EXTREME
 ,,,,,,,,,,,,,,
-cryorevival,低温复苏设施,60,60,,5,,,"cryorevival, structure, codex_unlockable",,graphics/icons/industry/cryorevival.png,com.fs.starfarer.api.impl.campaign.econ.impl.Cryorevival,一处为 人之领 时代的低温休眠者提供复苏与同化的重要设施。大幅度提高人口增长率。,3200,MEDIUM
+cryorevival,低温复苏设施,60,60,,5,,,"cryorevival, structure, codex_unlockable",,graphics/icons/industry/cryorevival.png,com.fs.starfarer.api.impl.campaign.econ.impl.Cryorevival,一处为 人之领 时代的低温休眠舰的乘员提供复苏与同化的重要设施。大幅度提高人口增长率。,3200,MEDIUM
