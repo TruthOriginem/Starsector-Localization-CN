@@ -31,7 +31,6 @@ class JavaClassFile:
     @param jar_file: 该class文件所在的jar文件对象
     @param path: 该class文件在jar文件中的路径
     @param include_strings: 该class文件中需要提取的原文字符串列表，留空则提取全部字符串
-    @param exclude_strings: 该class文件中不需要提取的原文字符串列表，留空则提取全部字符串
     """
 
     logger = make_logger('JavaClassFile')
@@ -41,18 +40,15 @@ class JavaClassFile:
         jar_file: 'JavaJarFile',
         path: str,
         include_strings: Set[str] = None,
-        exclude_strings: Set[str] = None,
         no_auto_load: bool = False,
         **kwargs,
     ) -> None:
         self.path_str = path
         self.path = PurePosixPath(path)
         self.include_strings = set(include_strings) if include_strings else set()
-        self.exclude_strings = set(exclude_strings) if exclude_strings else set()
 
         if ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS:
             self.include_strings = {s.strip(' \t') for s in self.include_strings}
-            self.exclude_strings = {s.strip(' \t') for s in self.exclude_strings}
 
         self.jar_file = jar_file
         self.class_name = path.replace('/', '.').replace('.class', '')
@@ -107,7 +103,7 @@ class JavaClassFile:
     ) -> List[Tuple[Utf8Constant, Optional[Utf8Constant]]]:
         """
         获取原文和译文中被引用过的的utf8常量对。
-        返回结果会根据include_strings和exclude_strings进行过滤。
+        返回结果会根据include_strings进行过滤。
         :return: utf8常量对
         """
 
@@ -131,8 +127,6 @@ class JavaClassFile:
             # 过滤掉不需要翻译的字符串
             if self.include_strings and (original_string not in self.include_strings):
                 continue
-            if self.exclude_strings and (original_string in self.exclude_strings):
-                continue
 
             constant_index = original_constant.constant_index
 
@@ -154,7 +148,7 @@ class JavaClassFile:
             )
 
         # 如果在include_strings中的字符串未在译文中出现，则输出警告
-        not_found_strings = self.include_strings - self.exclude_strings - added_strings
+        not_found_strings = self.include_strings - added_strings
         for s in not_found_strings:
             self.logger.warning(
                 f'在 {self.jar_file.path}:{self.path} 中未找到mapping中指定需要提取的字符串 "{s}"，未进行提取'
@@ -244,7 +238,9 @@ class JavaClassFile:
                 # 因此在修改格式时必须一并修改 jar_file.py 中的 construct_string_key_from_context 方法
                 context += (
                     f'{EXPORTED_STRING_CONTEXT_PREFIX}'
-                    f'提取自 {self.jar_file.path}:{self.path} 的第{str(original_constant.constant_index).zfill(4)}个常量\n'
+                    f'文件：{self.jar_file.path}\n'
+                    f'类：{self.path}\n'
+                    f'常量号：{str(original_constant.constant_index).zfill(4)}\n'
                     f'原始数据："{original_constant.string}"\n'
                     f'译文数据："{translated_constant.string}"'
                 )
@@ -312,12 +308,9 @@ class JavaClassFile:
                             f'也被其他非string属性引用，未更新该词条，需要手动更新'
                         )
             else:
-                if (
-                    s.original not in self.include_strings
-                    or s.original in self.exclude_strings
-                ):
+                if s.original not in self.include_strings:
                     self.logger.debug(
-                        f'在 {self.jar_file.path}:{self.path} 中原文为 "{s.original}" 的词条不在 include_strings 或在 exclude_strings 中，请从平台上删除该词条 key={s.key} 或修改 include_strings 和 exclude_strings'
+                        f'在 {self.jar_file.path}:{self.path} 中原文为 "{s.original}" 的词条不在 include_strings 中，请从平台上删除该词条 key={s.key} 或修改 include_strings'
                     )
                 else:
                     self.logger.warning(

@@ -14,6 +14,7 @@ if _env_path.exists():
 
 # [日志输出]
 LOG_LEVEL = logging.INFO
+LOG_FILE_PATH = Path(__file__).parent / 'para_tranz_script.log'
 
 # [路径配置]
 # 设置游戏原文，译文和Paratranz数据文件路径
@@ -24,8 +25,8 @@ PARA_TRANZ_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'output'
 MAP_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'para_tranz_map.json'
 
 # [处理的文件类型]
-# 可选：'jar'、'csv'，或两者都包含
-ENABLED_LOADERS = ['jar', 'csv']
+# 可选：'jar'、'csv'、'json'、'txt'，或任意组合
+ENABLED_LOADERS = ['jar', 'csv', 'json', 'txt']
 
 # [通用配置]
 # 在导出字符串时是否覆盖已导出字符串的翻译stage状态

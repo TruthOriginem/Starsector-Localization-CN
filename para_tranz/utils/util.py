@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Set, Union
 
 from para_tranz.config import (
+    LOG_FILE_PATH,
     LOG_LEVEL,
     ORIGINAL_PATH,
     OVERRIDE_STRING_STATUS,
@@ -69,6 +70,22 @@ class CustomFormatter(logging.Formatter):
         return formatter.format(record)
 
 
+_file_handler_initialized = False
+
+
+def _init_file_handler() -> None:
+    global _file_handler_initialized
+    if _file_handler_initialized:
+        return
+    _file_handler_initialized = True
+
+    file_handler = logging.FileHandler(LOG_FILE_PATH, mode='w', encoding='utf-8')
+    file_handler.setLevel(logging.DEBUG)
+    file_handler.terminator = ''
+    file_handler.setFormatter(logging.Formatter('[%(name)s][%(levelname)s] %(message)s \n'))
+    logging.root.addHandler(file_handler)
+
+
 def make_logger(name: str) -> logging.Logger:
     # 设置日志输出
     logging.root.setLevel(logging.NOTSET)
@@ -82,6 +99,8 @@ def make_logger(name: str) -> logging.Logger:
 
     handle_out.setFormatter(formatter)
     logger.addHandler(handle_out)
+
+    _init_file_handler()
 
     return logger
 
@@ -114,6 +133,7 @@ class DataFile:
         type: str,
         original_path: Optional[Path] = None,
         translation_path: Optional[Path] = None,
+        output_path: Optional[Path] = None,
     ) -> None:
         self.path = Path(path)  # 相对 original 或者 localization 文件夹的路径
         self.original_path = ORIGINAL_PATH / Path(
@@ -122,7 +142,10 @@ class DataFile:
         self.translation_path = TRANSLATION_PATH / Path(
             translation_path if translation_path else path
         )
-        self.para_tranz_path = PARA_TRANZ_PATH / self.path.with_suffix('.json')
+        if output_path is not None:
+            self.para_tranz_path = output_path
+        else:
+            self.para_tranz_path = PARA_TRANZ_PATH / self.path.with_suffix('.json')
 
     def get_strings(self) -> List[String]:
         raise NotImplementedError
@@ -137,27 +160,40 @@ class DataFile:
             s for s in self.get_strings() if s.original or self.export_empty_strings
         ]  # jar文件导出空原文词条，csv文件不导出
 
-        # 如果Paratranz json文件已存在，则从中同步任何词条的状态（包括未翻译的）
-        if not OVERRIDE_STRING_STATUS and self.para_tranz_path.exists():
-            self.logger.info(
+        my_keys = {s.key for s in strings}
+        other_strings: List[String] = []
+
+        # 如果 Paratranz json 文件已存在：同步 stage，并保留其他文件的词条（合并输出场景）
+        if self.para_tranz_path.exists():
+            self.logger.debug(
                 f'Paratranz 平台数据文件 {relative_path(self.para_tranz_path)} 已存在，从中读取已翻译词条的词条stage状态'
             )
+            existing = self.read_json_strings(self.para_tranz_path)
 
-            special_stages = (1, 2, 3, 5, 9, -1)
-            para_strings = self.read_json_strings(self.para_tranz_path)
-            para_key_strings = {
-                s.key: s for s in para_strings if s.stage in special_stages
-            }  # type:Dict[str, String]
-            for s in strings:
-                if s.key in para_key_strings:
-                    para_s = para_key_strings[s.key]
-                    if s.stage != para_s.stage:
-                        self.logger.debug(
-                            f'更新词条 {s.key} 的stage：{s.stage}->{para_s.stage}'
-                        )
-                        s.stage = para_s.stage
+            if not OVERRIDE_STRING_STATUS:
+                special_stages = (1, 2, 3, 5, 9, -1)
+                para_key_strings = {
+                    s.key: s for s in existing if s.stage in special_stages
+                }  # type:Dict[str, String]
+                for s in strings:
+                    if s.key in para_key_strings:
+                        para_s = para_key_strings[s.key]
+                        if s.stage != para_s.stage:
+                            self.logger.debug(
+                                f'更新词条 {s.key} 的stage：{s.stage}->{para_s.stage}'
+                            )
+                            s.stage = para_s.stage
 
-        self.write_json_strings(self.para_tranz_path, strings, ensure_ascii, indent)
+            # 保留不属于本文件的词条（用于合并输出）
+            other_strings = [s for s in existing if s.key not in my_keys]
+
+        if not strings:
+            self.logger.info(f'从 {relative_path(self.path)} 中未提取到可翻译词条，跳过导出')
+            return
+
+        self.write_json_strings(
+            self.para_tranz_path, other_strings + strings, ensure_ascii, indent
+        )
 
         self.logger.info(
             f'从 {relative_path(self.path)} 中导出了 {len(strings)} 个词条到 {relative_path(self.para_tranz_path)}'
@@ -175,7 +211,7 @@ class DataFile:
                 f'从 {relative_path(self.para_tranz_path)} 加载了 {len(strings)} 个词条到 {relative_path(self.translation_path)}'
             )
         else:
-            self.logger.warning(
+            self.logger.info(
                 f'未找到 {self.path} 所对应的 ParaTranz 数据 ({self.para_tranz_path})，未更新词条'
             )
 

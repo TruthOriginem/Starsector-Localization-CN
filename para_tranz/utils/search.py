@@ -3,7 +3,7 @@ from typing import List, Optional
 
 from para_tranz.jar_loader.jar_file import JavaJarFile
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, JarMapItem
-from para_tranz.utils.util import GREEN, RED, colorize, make_logger
+from para_tranz.utils.util import GREEN, colorize, make_logger
 
 logger = make_logger('JarStringSearch')
 
@@ -33,8 +33,6 @@ class StringSearchResult:
     class_path: str
     string: str
     is_in_mapping: bool
-    is_excluded: bool = False
-
     def __hash__(self):
         return hash((self.jar_name, self.class_path, self.string))
 
@@ -47,9 +45,7 @@ class StringSearchResult:
 
     def __str__(self):
         string = self.string
-        if self.is_excluded:
-            string = colorize(string, RED)
-        elif self.is_in_mapping:
+        if self.is_in_mapping:
             string = colorize(string, GREEN)
         return f'{self.jar_name}:{self.class_path}\n\t"{string}"'
 
@@ -64,18 +60,12 @@ def search_for_string_in_jar_files(pattern: str) -> List[StringSearchResult]:
     ]
     for jar_item in jar_file_items:
         for class_file_item in jar_item.class_files:
-            included, excluded = class_file_item.search_for_string(pattern)
+            included = class_file_item.search_for_string(pattern)
 
             for string in included:
                 results.add(
                     StringSearchResult(
-                        jar_item.path, class_file_item.path, string, True, False
-                    )
-                )
-            for string in excluded:
-                results.add(
-                    StringSearchResult(
-                        jar_item.path, class_file_item.path, string, True, True
+                        jar_item.path, class_file_item.path, string, True
                     )
                 )
 
@@ -88,7 +78,7 @@ def search_for_string_in_jar_files(pattern: str) -> List[StringSearchResult]:
             for s in strings:
                 if pattern in s.original:
                     result = StringSearchResult(
-                        jar_file.path, str(class_file.path), s.original, False, False
+                        jar_file.path, str(class_file.path), s.original, False
                     )
                     if result not in results:
                         results.add(result)

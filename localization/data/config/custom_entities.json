@@ -16,7 +16,7 @@
 	},
 	"comm_relay":{
 		"baseId":"base_campaign_objective",
-		"defaultName":"通讯中继站", # used if name=null in addCustomEntity()
+		"defaultName":"中继站", # used if name=null in addCustomEntity()
 		"nameInText":"通讯中继站",
 		"shortName":"通讯中继站",
 		"icon":"graphics/icons/relay.png",
@@ -423,7 +423,7 @@
 	},
 	
 	"station_galatia":{
-		"defaultName":"Galatia 学院 空间站", # used if name=null in addCustomEntity()
+		"defaultName":"Galatia 学院空间站", # used if name=null in addCustomEntity()
 		"defaultRadius":50, # used if radius<0 in addCustomEntity()
 		"customDescriptionId":"station_galatia_academy",
 		"interactionImage":"graphics/illustrations/corporate_lobby.jpg",
@@ -807,9 +807,9 @@
 	# procgen-related salvage things
 	
 	"derelict_probe":{
-		"defaultName":"人之领-探测器", # used if name=null in addCustomEntity()
-		"nameInText":"人之领-探测器",
-		"shortName":"探针",
+		"defaultName":"人之领时代探测器", # used if name=null in addCustomEntity()
+		"nameInText":"人之领时代探测器",
+		"shortName":"探测器",
 		"aOrAn":"一处",
 		"isOrAre":"可能",
 		"defaultRadius":35, # used if radius<0 in addCustomEntity()

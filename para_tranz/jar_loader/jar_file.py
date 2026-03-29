@@ -73,13 +73,12 @@ class JavaJarFile(DataFile):
         self,
         path: str,
         include_strings: List[str] = None,
-        exclude_strings: List[str] = None,
         override: bool = False,
     ) -> Optional['JavaClassFile']:
         if not override and path in self.class_files:
             return self.class_files[path]
         try:
-            class_file = JavaClassFile(self, path, include_strings, exclude_strings)
+            class_file = JavaClassFile(self, path, include_strings)
             self.class_files[path] = class_file
         except Exception as e:
             self.logger.warning(f'在 {self.path} 中读取 class 文件 {path} 时出错：{e}')
@@ -87,7 +86,7 @@ class JavaJarFile(DataFile):
 
         return class_file
 
-    re_jar_class = re.compile(r'提取自 (.*\.jar):(.*\.class)')
+    re_jar_class = re.compile(r'文件：(.*\.jar)\n类：(.*\.class)')
     re_original_text = re.compile(r'原始数据：(\".*\")\n译文数据：', re.DOTALL)
 
     # TODO: 重构 String 类，添加子类 JarString，用于处理 jar 文件中的词条。将这个方法移动到 JarString 类中

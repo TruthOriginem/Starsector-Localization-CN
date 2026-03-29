@@ -85,7 +85,7 @@ public class Samarra {
 			
 			// Samarra Relay - L5 (behind)
 			SectorEntityToken samarra_relay = system.addCustomEntity("samarra_relay", // unique id
-					 "Samarra Relay", // name - if null, defaultName from custom_entities.json will be used
+					 "Samarra 通讯中继站", // name - if null, defaultName from custom_entities.json will be used
 					 "comm_relay", // type of object, defined in custom_entities.json
 					 "hegemony"); // faction
 			samarra_relay.setCircularOrbitPointingDown( system.getEntityById("samarra"), 30 - 60, 4000, 200);

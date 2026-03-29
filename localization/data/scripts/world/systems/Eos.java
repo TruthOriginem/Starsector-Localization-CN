@@ -166,12 +166,12 @@ public class Eos {
 			//And then use $daedaleon as a condition for custom interaction text in rules.csv.
 			
 			
-		SectorEntityToken relay = system.addCustomEntity("hesperus_relay", "Hesperus Relay", "comm_relay", "luddic_church");
+		SectorEntityToken relay = system.addCustomEntity("hesperus_relay", "Hesperus 通讯中继站", "comm_relay", "luddic_church");
 		relay.setCircularOrbitPointingDown( star, 0 + 60, 7400, 200);
 		
 		// Eos Exodus Gate - Tartessus L4 (ahead)
 		SectorEntityToken gate = system.addCustomEntity("eos_exodus_gate", // unique id
-				 "Eos Exodus Gate", // name - if null, defaultName from custom_entities.json will be used
+				 "Eos Exodus 之门", // name - if null, defaultName from custom_entities.json will be used
 				 "inactive_gate", // type of object, defined in custom_entities.json
 				 null); // faction
 		

@@ -1,9 +1,14 @@
-# Jar文件手动处理记录
-对于以下两种情况，我们需要手动编辑jar文件中的数据或代码。
+# 原文文件手动处理记录
 
-本文件用于追踪当前版本jar文件的手动处理记录。
+本文件追踪当前版本中需要手动修改原文文件（`original/`）的内容。
 
-1. 需要翻译的string对应的UTF-8常量同时被其它代码元素引用，无法直接替换。
+---
+
+# 一、Jar 文件
+
+对于以下两种情况，我们需要手动编辑 jar 文件中的数据或代码：
+
+1. 需要翻译的 string 对应的 UTF-8 常量同时被其它代码元素引用，无法直接替换。
 2. 游戏本身的代码逻辑需要修改，以适应翻译后的文本。
 
 ## UTF-8常量被string以外的元素引用
@@ -19,6 +24,7 @@
 | starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/intel/misc/TradeFleetDepartureIntel.class | `materiel` |
 | starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/intel/misc/SalvorsTallyIntel.class | `orbital` |
 | starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/CoreScript.class | `ships`， `cargo`, `ships & cargo` |
+| starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class | `aggressive`, `reckless` |
 
 ## 代码逻辑修改
 
@@ -72,3 +78,28 @@
 ![save_date_locale.png](save_date_locale.png)
 
 > 解决方法：修改了存档列表页的日期格式化为CHINESE
+
+### 11. 星球列表页部分列宽度不足
+相关文件：`starfarer_obf.jar:com/fs/starfarer/campaign/ui/intel/PlanetListV2.class`
+
+> 解决方法：调整了星球列表页的列宽
+
+改动前：
+Name 230+(浮动) Type 270+(浮动) Location 85 Pop. 60 SL 50 Class 65 Hazard 75 Dist 60
+
+改动后：
+名称230+(浮动) 类型270+(浮动) 位置85 人口60 稳定点75 等级60 危险度75 距离60
+
+---
+
+# 二、settings.json
+
+## designTypeColors 保留英文原文 key
+
+**文件**：`original/data/config/settings.json`
+
+**背景**：`designTypeColors` 对象以舰船设计类型名称为 key，游戏运行时通过 key 查找对应颜色。玩家加载未汉化的 mod 时，mod 中的舰船仍以英文设计类型名称注册，若 key 已被翻译为中文则无法匹配颜色。
+
+**处理方式**：在 `localization/data/config/settings.json` 中，将 `designTypeColors` 的所有 key 翻译为中文后，在同一对象内手动追加一份完整的英文原文 key（value 相同），确保中英文两套名称均可命中颜色配置。
+
+> 注意：此对象因此包含两倍数量的条目，中英文 key 均唯一，无真正重复。

@@ -8,7 +8,6 @@ from para_tranz.utils.mapping import PARA_TRANZ_MAP, ClassFileMapItem, JarMapIte
 from para_tranz.utils.util import (
     BG_YELLOW,
     GREEN,
-    RED,
     colorize,
     make_logger,
     normalize_class_path,
@@ -24,7 +23,7 @@ def generate_class_mapping_diff_string(
 ) -> str:
     """
     生成类文件映射项的对比信息
-    将检测源类映射 include_strings 中的每个字符串是否在目标类映射中出现/排除
+    将检测源类映射 include_strings 中的每个字符串是否在目标类映射中出现
 
     :param target_class_map: 目标类文件映射
     :param source_class_map: 源类文件映射
@@ -34,16 +33,13 @@ def generate_class_mapping_diff_string(
     """
 
     included_strings = target_class_map.include_strings
-    excluded_strings = target_class_map.exclude_strings
 
     diff_str = f'  "path": "{source_class_map.path}",\n'
     diff_str += '  "include_strings": [\n'
     for s in sorted(list(source_class_map.include_strings)):
         # JSON 转义字符串内容（去掉 json.dumps 产生的外层引号），保证含双引号的字符串输出合法
         s_escaped = json.dumps(s, ensure_ascii=False)[1:-1]
-        if s in excluded_strings:
-            text = colorize(s_escaped, RED)
-        elif s in included_strings:
+        if s in included_strings:
             text = colorize(s_escaped, GREEN)
         else:
             text = s_escaped
@@ -145,7 +141,6 @@ def print_class_mapping_result(
         print(
             f'以下是与当前存在的映射项的对比'
             f'（{colorize("绿色", GREEN)}=已包含  '
-            f'{colorize("红色", RED)}=已排除  '
             f'无色=未包含  '
             f'{colorize("黄色背景", BG_YELLOW)}=同时被非string属性引用，无法自动写回）：'
         )

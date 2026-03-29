@@ -1,0 +1,20 @@
+# .github/workflows/notify-ssfb.yml
+# 通知 https://github.com/jnxyp/fossic-ss-file-browser 更新文件索引
+name: Notify ss-file-browser
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send webhook
+        run: |
+          curl -s -X POST https://ss-file.jnxyp.net/webhook \
+            -u "guest:${{ secrets.SSFB_WEBHOOK_PASSWORD }}" \
+            -H "Content-Type: application/json" \
+            -d '{"ref":"refs/heads/master","after":"${{ github.sha }}"}' \
+            -w "\nHTTP %{http_code}" \
+            && echo "Webhook sent successfully" || echo "Webhook failed"

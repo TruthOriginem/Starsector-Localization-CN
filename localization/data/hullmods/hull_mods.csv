@@ -66,12 +66,12 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 导航效率会提高你所部署舰船的最高航速。",提高已部署的舰船在战斗时的最高航速。,,graphics/hullmods/nav_relay.png
 神经接口,neural_interface,3,,,"special, no_drop, no_drop_salvage",特殊,10000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.NeuralInterface,"将旗舰与其他舰船连接起来，使它们均可{%s}。但诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果将不在另一艘舰船上起作用。
 
-允许在连接舰船之间快速切换，且无需通过穿梭机转移。如果二者的总部署成本小于或等于{%s}，则切换将瞬间完成。切换目标舰船不能由副官或 AI 核心操控。",允许在舰船之间快速切换，并重置战术系统的冷却时间或恢复一次充能。,无论部署点数总计多少，舰船切换总是瞬间完成。,graphics/hullmods/neural_interface.png
-神经集成器,neural_integrator,,,,"special, no_drop, no_drop_salvage",特殊,10000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.NeuralIntegrator,"用于自主无人舰的增强版神经接口，通过链接直接控制舰船的所有系统，可以与你的旗舰连接起来，使它们均可{%s}。但诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果将不在另一艘舰船上起作用。
+允许在连接舰船之间快速切换，且无需通过穿梭机转移。如果二者的总部署成本小于或等于{%s}，则切换将瞬间完成。切换目标舰船不能由副官或 AI 核心操控。",允许在舰船之间快速切换，并重置战术系统的冷却时间或恢复一次充能。,无论部署点总计为多少，舰船切换总是瞬间完成。,graphics/hullmods/neural_interface.png
+神经集成器,neural_integrator,,,,"special, no_drop, no_drop_salvage",特殊,10000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.NeuralIntegrator,"用于自主无人舰的增强版神经接口，通过链接直接控制无人舰的所有系统，可以与你的旗舰连接起来，使它们均可{%s}。但诸如提高武器备弹量之类需在战斗前更改舰船状态的技能效果将不在另一艘舰船上起作用。
 
 允许在连接舰船之间快速切换，且无需通过穿梭机转移。如果二者的总部署成本小于或等于{%s}，则切换将瞬间完成。切换目标舰船不能由副官或 AI 核心操控。
 
-复杂的改装将提高{%s}舰船部署点与战后恢复所需的补给。",自动化舰船专用的神经接口。,无论部署点数总计多少，舰船切换总是瞬间完成。,graphics/hullmods/neural_integrator.png
+复杂的改装将提高{%s}舰船部署点与战后恢复所需的补给。",自动化舰船专用的神经接口。,无论部署点总计为多少，舰船切换总是瞬间完成。,graphics/hullmods/neural_integrator.png
 固化护盾转化器,frontemitter,2,,,"shields, defensive, merc, standard",护盾,7000,,,,3,5,8,12,data.hullmods.FrontShieldEmitter,"将全角护盾发生器锁定至正前方并额外获得 %s 的护盾角度。
 
 定向护盾的展开速度是全角护盾的两倍，这也适用于本插件转化而来的定向护盾。",将全盾转换为前盾，并增大护盾面积。,降低{%s}护盾所受伤害。,graphics/hullmods/front_shield_emitter.png
@@ -137,7 +137,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 保持开盾,shield_always_on,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.ShieldAlwaysOn,,强制开启护盾。隐藏效果，不需要描述或图标。,,graphics/hullmods/hardened_shields.png
 导弹自动工厂,missile_reload,,,,codex_require_related,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PeriodicMissileReload,内置的导弹工厂会定期补满所有导弹武器。,内置的导弹工厂会定期补满所有导弹武器。,,graphics/hullmods/expanded_missile_racks.png
 屏蔽货舱,shielded_holds,2,,,,,,,TRUE,,0,0,0,0,data.hullmods.ShieldedCargoHolds,原本是保护无护盾货舰免受天体辐射的影响，但经过简单调整就可用于干扰远距离货舱扫描，降低违禁物品被发现的概率。,降低被检查到违禁品的风险。,,graphics/hullmods/shielded_cargo_hold.png
-打捞起重机,repair_gantry,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.campaign.RepairGantry,根据船体级别，提高{%s}/{%s}/{%s}/{%s}从废弃空间站、遗弃物、舰船残骸等打捞到的资源。只影响普通资源的回收，如燃料与补给，而蓝图等稀有物资将不受影响。此外，该效果在战后结算时仅有{%s}效率。,提高打捞收益。,,graphics/hullmods/repair_gantry.png
+打捞起重机,repair_gantry,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.campaign.RepairGantry,根据船体级别，提高{%s}/{%s}/{%s}/{%s}从废弃空间站、遗弃物、舰船残骸等打捞到的资源。只影响普通资源的回收，如燃料与补给，而蓝图等稀有物品将不受影响。此外，该效果在战后结算时仅有{%s}效率。,提高打捞收益。,,graphics/hullmods/repair_gantry.png
 相位力场,phasefield,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PhaseField,能长时间激活低水平相位场，使传感器截面降低{%s}。,降低舰队的传感器截面。,,graphics/hullmods/phase_field.png
 磁通分流,fluxshunt,,,,,,,,TRUE,,0,0,0,0,data.hullmods.FluxShunt,允许舰船以{%s}的正常耗散速率在护盾开启时耗散硬幅能。,允许舰船在展开护盾时耗散硬幅能。,,graphics/hullmods/flux_shunt.png
 民用级船体,civgrade,,,,,,,,TRUE,,0,0,0,0,data.hullmods.CivGrade,提高{%s}传感器截面，降低{%s}传感器探测强度。,提高传感器截面，降低传感器探测强度。,,graphics/hullmods/civilian_grade.png
@@ -168,7 +168,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 巨型机库,vast_hangar,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.VastHangar,"该舰拥有足以支援一个小型舰队的巨型机库。
 
 若安装 改装机库，则额外再提供 %s 个战机甲板，并抵消其包括整备时间、舰船部署点在内的全部负面副作用。",增强 改装机库 的效果并移除所有惩罚。,,graphics/hullmods/vast_hangar.png
-坚固结构,rugged,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.RuggedConstruction,"将大多数 D-插件 的负面影响降低{%s}。如果在战斗中停机或被摧毁，则该舰有{%s}的几率避免新 D-插件 的产生，且几乎总是可在战后被打捞并修复。
+坚固结构,rugged,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.RuggedConstruction,"将大多数 D-插件 的负面影响降低{%s}。如果在战斗中被停机或摧毁，则该舰有{%s}的几率避免新 D-插件 的产生，且几乎总是可在战后被打捞并修复。
 
 此外，该舰用于恢复部署战备损耗以及停机修复所需的补给降低{%s}。",降低 D-插件 的影响，且几乎总是可在战后被打捞并修复。,,graphics/hullmods/rugged_construction.png
 全自动舰船,automated,,,,codex_require_related,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.Automated,能全自动化运作，无需人类船员操作，亦无法搭载任何人类。,无需船员也无法搭载船员。,,graphics/hullmods/automated.png
@@ -214,7 +214,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 碎片协调器,fragment_coordinator,,,,"codex_unlockable, fragment, no_drop_salvage","武器, 特殊",15000,,,,3,6,9,15,com.fs.starfarer.api.impl.combat.threat.FragmentCoordinatorHullmod,将舰船碎片集群的最大数量提升{%s}。,提升船碎片集群的规模。,将舰船碎片集群的最大数量进一步提升{%s}。,graphics/hullmods/fragment_coordinator.png
 ,,,,,,,,,,,,,,,,,,,
 # shrouded dweller stuff,,,,,,,,,,,,,,,,,,,
-渊幕住民舰船插件,dweller_hullmod,,,,dweller,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.combat.dweller.DwellerHullmod,添加 渊幕住民 视觉特效及所有自定义机制。对玩家隐藏。,,,
+渊幕原种改造,dweller_hullmod,,,,dweller,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.combat.dweller.DwellerHullmod,添加 渊幕原种 视觉特效及所有自定义机制。对玩家隐藏。,,,
 渊幕套膜,shrouded_mantle,,,,"codex_unlockable, shrouded, no_drop_salvage",特殊,,,,,3,6,9,15,com.fs.starfarer.api.impl.combat.dweller.ShroudedMantleHullmod,"舰船在受到严重船体损伤时，会尝试向后撤退以远离危险。
 
 战斗中的船员伤亡增加{%s}。",舰船会在受到伤害时向后撤退。,饥渴裂隙 为该舰船提供{%s}的治疗量。,graphics/hullmods/shrouded_mantle.png
