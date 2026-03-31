@@ -660,7 +660,7 @@
     {
         "key": "descriptions.csv#('buffalo2', 'SHIP')$text1",
         "original": "A derived class, based on the Buffalo freighter. The modifications include the addition of military grade power generators, heavier armor, and maneuvering thrusters as well as the removal of the Mk. I shield emitter and the majority of the cargo holds.\n\nThe Sector is violent and unpredictable, and conflicts often flare up over the smallest resource or perceived slight. In such situations military-grade ships are sometimes not available quickly enough. Thus, resourceful engineers turn to hull modifications in order to be able to meet the demand for war materiel.\n\nThe base hull of this destroyer is a standard Buffalo-class freighter, however due to the scope of the hull conversion, the Buffalo Mk. II is considered a separate class. The result is a fighting ship which can hold its own and fight back hard, especially if properly screened from strikes and heavier hulls. The unorthodox weapons configuration often leads to unique fleet formations, and hull modifications often mean that no two Buffalo Mk. IIs are quite the same.\n\nThe tactics employed by a Buffalo Mk. II captain will vary as much as his hull configuration, but rarely involve standing toe-to-toe with anything heavier than a frigate due to the lack of a shield generator and energy weapon emplacements. The combat plans usually involve a one hit wonder stratagem that never works on the same enemy twice, which is perfectly fine with the crew of the Buffalo Mk. II.",
-        "translation": "基于 水牛-级 货舰的衍生舰种。经过了大幅度的修改，包括安装军用发电机、加装重型装甲并增设机动推进器，同时还移除了 Mk.I 护盾发生器与和大部分的货舱。\n\n风云莫测的英仙座星域充斥着浓重的火药味，一点蝇头小利，一次眼神挑衅，就足以点燃一场冲突火拼。在这种环境下，军用级舰船并不总能及时达现场。因此某些才华横溢的工程师转而对某些民用船体进行军事化改造，以满足战备需求。\n\n虽然还是基于 水牛-级 民用船体框架，但因改造范围非常全面，该舰也被公认为一种独立分级舰船。这种舰船不仅能承受战火，还能进行猛烈的还击，特别是在能避开战机打击和大型敌舰的情况下。漫无章法的武器配置往往会导致各种独特的船体插件组合和舰队角色定位，让每一艘 水牛 Mk.II 都独一无二，各不相同。\n\n水牛 Mk.II 的舰长会根据不同的船体配置而采取相应的战术，但通常都不会和任何比护卫舰大的船近距离对决，毕竟它缺少护盾发生器，且布局偏向能量武器。作战计划通常都需要些一击必杀出奇制胜的险招，在同一个对手身上不可能奏效两次的那种，反正这对于 水牛 Mk.II 的船员来说也没什么区别。",
+        "translation": "基于 水牛-级 货舰的衍生舰种。经过了大幅度的修改，包括安装军用发电机、加装重型装甲并增设机动推进器，同时还移除了 Mk.I 护盾发生器和大部分的货舱。\n\n风云莫测的英仙座星域充斥着浓重的火药味，一点蝇头小利，一次眼神挑衅，就足以点燃一场冲突火拼。在这种环境下，军用级舰船并不总能及时达现场。因此某些才华横溢的工程师转而对某些民用船体进行军事化改造，以满足战备需求。\n\n虽然还是基于 水牛-级 民用船体框架，但因改造范围非常全面，该舰也被公认为一种独立分级舰船。这种舰船不仅能承受战火，还能进行猛烈的还击，特别是在能避开战机打击和大型敌舰的情况下。漫无章法的武器配置往往会导致各种独特的船体插件组合和舰队角色定位，让每一艘 水牛 Mk.II 都独一无二，各不相同。\n\n水牛 Mk.II 的舰长会根据不同的船体配置而采取相应的战术，但通常都不会和任何比护卫舰大的船近距离对决，毕竟它缺少护盾发生器，且布局偏向能量武器。作战计划通常都需要些一击必杀出奇制胜的险招，在同一个对手身上不可能奏效两次的那种，反正这对于 水牛 Mk.II 的船员来说也没什么区别。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00117"
     },
@@ -1402,7 +1402,7 @@
     {
         "key": "descriptions.csv#('derelict_mothership', 'CUSTOM')$text1",
         "original": "One of the legendary survey motherships, the quiet automated workhorse of the Domain exploration and colonization effort. This is in essence a von Neumann probe, as the survey motherships contain autoforge capacity to manufacture a suite of smaller survey ships and the supplies required to perform its ongoing mission. This specimen is burned and battered by its centuries of service to the Domain, a drifting forgotten hulk.",
-        "translation": "具有传奇色彩的勘探母舰，这艘庞大的自动化工厂是 人之领 扩张时期用于探索与殖民的重要工具。其具备自我修复、自动补充任务所需耗材以及制造小型无人探测器的能力，因此这种勘探母舰本质上是一种冯·诺依曼探测器。如今这艘为 人之领 服务了数个世纪的母舰早已被烧毁，只留下一副巨大的残骸漂浮在宇宙之中。",
+        "translation": "具有传奇色彩的勘探母舰，这艘沉默的全自动舰船是 人之领 用于探索与殖民的重要工具。这种勘探母舰本质上是一种冯·诺依曼探测器，其内置的自动锻造设施还可以制造小型无人探测器，并具有自动补充任务所需耗材的能力。如今这艘为 人之领 服务了数个世纪的母舰早已被烧蚀磨损，只留下一副巨大的残骸漂浮在宇宙之中。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00468"
     },
@@ -1710,7 +1710,7 @@
     {
         "key": "descriptions.csv#('drone_borer', 'SHIP_SYSTEM')$text1",
         "original": "Deploys several combat-modified mining drones. The drones are highly autonomous and capable of operating far from the mothership.",
-        "translation": "部署几架经过武装过的探矿无人机，这些无人机能远离母舰进行远程作业。",
+        "translation": "部署几架经过武装的探矿无人机，这些无人机能远离母舰进行远程作业。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00305"
     },
@@ -2683,7 +2683,7 @@
     {
         "key": "descriptions.csv#('gilead', 'GALLERY')$text2",
         "original": "The face of Gilead smiled behind clouds of purest silk, cerulean seas, and verdant continents of gentle, rolling wilderness.\n\nThe Church reigned as a stern gardener, ensuring piety and duty in honoring the ground upon which Ludd once trod.",
-        "translation": "在 Gilead 的地表上，不论丝绸般的云朵，天蓝色的海洋，还是和平缓起伏的苍翠大陆，一切彷佛都在向你微笑。\n\n教会像严厉的园丁一样统治着这里，确保人人皆尽职尽责地向 卢德 曾经走过的土地致敬。",
+        "translation": "在 Gilead 的地表上，不论丝绸般的云朵，天蓝色的海洋，还是和平缓起伏的苍翠大陆，一切仿佛都在向你微笑。\n\n教会像严厉的园丁一样统治着这里，确保人人皆尽职尽责地向 卢德 曾经走过的土地致敬。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00663"
     },
@@ -3859,7 +3859,7 @@
     {
         "key": "descriptions.csv#('mark9', 'WEAPON')$text1",
         "original": "An imposing medium range autocannon which is used most effectively against shields, the Mark IX may also serve admirably to obliterate unarmored hull. A two-barrel designed and unique double-loader system allow the output of a large volume of heavy caliber projectile fire.\n\nThe Mark IX blueprints were first re-discovered by the Persean Sector in a drifting derelict captured in the gravity well of Penelope's Star. After a hasty examination of the files by an unqualified assessor - historical reports deemed the Mark IX obsolete due to poor performance against the heavily armored warships which were favored in that era - the blueprint was auctioned off and purchased by a small mercenary organization known as Tactistar, a military contractor which was then a subsidiary of the Ko Combine, and forgotten. After some cycles enough surplus capital was found to finally build a test a prototype for weapon trials. The Mark IX was generally unexceptional, considered overly large and mediocre against armored targets. Nonetheless, raw damage output was impressive and secondary trials showed devastating effect when employed against shielded targets.\n\nAfterward, the Mark IX did not remain secret for long. Tactistar Combine profitably sold manufacturing rights throughout the Persean Sector and soon repurchased itself from its ever-ponderous parent corporation.",
-        "translation": "强大的中程自动加农炮，对抗护盾极为高效，也能利用大口径炮弹一并摧毁装甲薄弱的舰体。\n\n众所周知，人之领 早期的战舰并不具备与现代水平相当的装甲保护。而 Mk.IX 型自动炮大概是从 人之领 最早的武器学院设计中得到的改良物。配有独特双重供弹机的两根炮管构成了该武器系统的核心。\n\n据传，Mk.IX 自动炮的蓝图最早是从一艘被 Penelope's Star 重力井捕获的遗弃舰中寻获的。不幸的是，一名糟糕的无证估价师在草草看了一眼后就宣布该设计过时且无用。之后这份蓝图就被拍卖给了 Ko 联合实业 旗下的一个名叫 \"自由之星联盟\" 的小型雇佣军组织，并逐渐淡出人们的视野。\n\n约数个星历年后，自由之星联盟终于制造出第一门原型炮并开始进行武器测试，但该武器在当时来说体积实在过于庞大，只能安装在最大的舰船上，其对装甲的破坏力仅能称为普通，而射程也并不突出。尽管如此，Mk.IX 自动炮仍用强悍的攻击力顽强地顶住了空谈者的诋毁。而在第二次测试中，其展现出的对护盾压倒性的破坏力，让反对者们彻底闭嘴。\n\n该测试结果很快就泄露了。Mk.IX 自动炮的蓝图目前已是随处可见，意味着其早已被投入大批量生产以满足全星域的需求。",
+        "translation": "强大的中程自动加农炮，对抗护盾极为高效，也能利用大口径炮弹一并摧毁装甲薄弱的舰体。\n\nMark IX 自动炮的蓝图最早在英仙座星域中被再次发现时，是从一艘被 Penelope's Star 重力井而捕获的一艘漂流遗弃船上搜寻到的。一名水准失格的评估员对相关文件只进行了草率的检查之后 —— 历史报告认为 Mark IX 已过时，因为其对旧世代流行的重甲战舰表现不佳 —— 该蓝图就被直接拍卖，并被当时处于 Ko 联合实业 旗下且规模尚小的 \"战术之星\" 雇佣军组织购得，随后逐渐淡出人们的视野。数个星历年缓缓过去，武器原型的生产和试验终于在筹集到足够的资金之后得以进行。测试表明，Mark IX 总体表现平平，被认为体型过大且对装甲目标效果一般。尽管如此，其原始伤害输出令人印象深刻，后续辅助测试更证实：这种武器对护盾具有毁灭性的杀伤力。\n\n此后，Mark IX 很快便不再保密。战术之星联合体在英仙座星域内广泛出售这种武器的制造权，以此获利丰厚，并很快从那家如同夕阳一般举步维艰的母公司手中购回了自身的一切权利。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00026"
     },
@@ -4223,7 +4223,7 @@
     {
         "key": "descriptions.csv#('mora', 'SHIP')$text1",
         "original": "This class of carrier was commissioned during the same period of carrier-centric Domain naval doctrine as the ubiquitous Talon fighter. armored to withstand the fury of battle alongside the Onslaught, the Mora was nonetheless decommissioned en masse as doctrine shifted to favor heavier guns and capital ships flanked by line-cruisers. \n\nDemilitarized hulls were sold and converted into mobile industrial platforms for use on the frontiers of the Domain. The rugged and eminently adaptable Mora was a common sight in long-range surveying, mining, construction, drone handling, and use as mobile drydocks. Some hulls were even half-buried on alien worlds and used as armored power-stations and workshops to form the core of new settlements.\n\nAfter the Collapse, Mora hulls were re-militarized almost suspiciously rapidly by factions that did not possess dedicated fleet carriers. Today they are an anvil upon which many an unwary Pirate warlord is broken.",
-        "translation": "莫拉-级 航母在 人之领 海军处于航母中心作战学说盛行的时期服役，和随处可见的 利爪 截击机同期。尽管它的装甲足以承受和 攻势-级 并肩的战火，但却挡不住海军作战学说的更迭。随着重炮巨舰辅以前线巡洋舰侧翼掩护的战法更受青睐，莫拉-级 也被大量除役。\n\n移除舰上军用设备后，莫拉-级 船体大量流入民用市场。这艘坚固可靠且适应性极强的前航母船体摇身一变，成了活跃于 人之领 边境地带的移动工业平台。无论是远程测量、采矿、建设、还是无人机收放、甚至是作为干船坞整备其他舰船等工作，它都可以胜任。有些船体甚至被半永固于待开发星球的地表，充当装甲发电站和临时车间，作为新定居点的核心设施之一继续发光发热。\n\n大崩塌 后，无数 莫拉-级 船体被没有专用航母的势力重新军事化，其改装速度快得令人生疑。如今，这艘坚固的航母便在击败无数粗心海盗军阀的砧锤战术中当任坚实的铁砧。",
+        "translation": "莫拉-级 航母在 人之领 海军处于航母中心作战学说盛行的时期服役，和随处可见的 利爪 截击机同期。尽管它的装甲足以承受和 攻势-级 并肩的战火，但却挡不住海军作战学说的更迭。随着重炮巨舰辅以前线巡洋舰侧翼掩护的战法更受青睐，莫拉-级 也被大量除役。\n\n移除舰上军用设备后，莫拉-级 船体大量流入民用市场。这艘坚固可靠且适应性极强的前航母船体摇身一变，成了活跃于 人之领 边境地带的移动工业平台。无论是远程测量、采矿、建设、还是无人机收放、甚至是作为干船坞整备其他舰船等工作，它都可以胜任。有些船体甚至被半永固于待开发星球的地表，充当装甲发电站和临时车间，作为新定居点的核心设施之一继续发光发热。\n\n大崩塌 后，无数 莫拉-级 船体被没有专用航母的势力重新军事化，其改装速度快得令人生疑。如今，这艘坚固的航母便在击败无数粗心海盗军阀的砧锤战术中担任坚实的铁砧。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00462"
     },
@@ -4909,8 +4909,8 @@
     {
         "key": "descriptions.csv#('planet_cethlenn', 'CUSTOM')$text1",
         "original": "A frozen world of ammonia rivers, plateaus of water ice, and methane glaciers. Charged particles caught in Balar's magnetic field create fantastic aurora in the thin atmosphere of Cethlenn. Seasonally occupied organics extraction rigs are served by the sole permanent settlement of Cethlenn, a city built upon a unique arc of erratic rocky promontories.",
-        "translation": "遍布有冻结的氨河、冰冻高原以及甲烷冰川的冰冻世界。来自 Balar 的带电粒子流进入 Cethlenn 的磁场，在后者稀薄的大气中创造出梦幻般的极光。此地唯一可供居住的城市坐落在一处不稳定的形岩石岬上，这座城市维护着季节性开采有机物的设备。",
-        "stage": 5,
+        "translation": "遍布有冻结的氨河、冰冻高原以及甲烷冰川的冰冻世界。来自 Balar 的带电粒子流进入 Cethlenn 的磁场，在后者稀薄的大气中创造出梦幻般的极光。此地唯一可供居住的城市坐落在一处不稳定的岩石岬上，这座城市维护着季节性开采有机物的设备。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00405"
     },
     {
@@ -5140,7 +5140,7 @@
     {
         "key": "descriptions.csv#('planet_gelan', 'CUSTOM')$text1",
         "original": "A large and relatively massive planet in close orbit of its primary, stellar wind has whisked away lighter elements leaving carbon and sulphur dioxides to dominate the atmosphere. The death-shroud of poisonous gas creates a runaway greenhouse effect which, in addition to the crushing gravity, ensures extremely inhospitable surface conditions.",
-        "translation": "相对比较庞大的行星。由于其环绕恒星的轨道半径较小，恒星风带走了 Gelan 大气层中的轻元素，只剩下二氧化碳和二氧化硫。满是有毒气体的大气产生了无法控制的温室效应，与极高重力一同产生的作用，让此地的地表环境变得极为恶劣。",
+        "translation": "相对比较庞大的行星。由于其环绕恒星的轨道半径较小，恒星风吹走了此地的轻元素，只剩下二氧化碳和二氧化硫。满是有毒气体的大气产生了无法控制的温室效应，与极高重力一同产生的作用，让此地的地表环境变得极为恶劣。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00464"
     },
@@ -5154,7 +5154,7 @@
     {
         "key": "descriptions.csv#('planet_gilead', 'CUSTOM')$text3",
         "original": "The face of Gilead smiles at you from clouds of purest silk, cerulean seas, and verdant continents of gentle, rolling wilderness. The Church here reigns like a stern gardener, ensuring that population is well controlled and dutiful in honoring the ground upon which Ludd once walked.",
-        "translation": "在 Gilead 的地表上，不论丝绸般的云朵，天蓝色的海洋，还是和平缓起伏的苍翠大陆，一切彷佛都在向你微笑。教会像严厉的园丁一样统治着这里，牢牢控制着这里的人口，并确保人人皆尽职尽责地向 卢德 曾经走过的土地致敬。",
+        "translation": "在 Gilead 的地表上，不论丝绸般的云朵，天蓝色的海洋，还是和平缓起伏的苍翠大陆，一切仿佛都在向你微笑。教会像严厉的园丁一样统治着这里，牢牢控制着这里的人口，并确保人人皆尽职尽责地向 卢德 曾经走过的土地致敬。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00530"
     },
@@ -5168,7 +5168,7 @@
     {
         "key": "descriptions.csv#('planet_hanan_pacha', 'CUSTOM')$text3",
         "original": "Hanan Pacha was razed by a planet-killer weapon during the Second AI War (which did not, of course, itself involve AI as the First AI War did, but rather concerned the right to perform inspections into alleged development of AI). A proper investigation into the details of the atrocity was dropped due to concessions made during the peace arrangement.",
-        "translation": "Hanan Pacha 在第二次 AI 战争期间被歼星武器所毁灭。虽然第二次 AI 战争不直接涉及无人舰船，但它的导火索却也是所谓 AI 开发权的审查。对行星被毁的具体调查因在和平谈判中达成的某些妥协而被取消。",
+        "translation": "Hanan Pacha 在第二次 AI 战争期间被歼星武器所毁灭。虽然第二次 AI 战争不直接涉及 AI 本身，但它的导火索却也是对于涉嫌研发 AI 的审查。对行星被毁的具体调查因在和平谈判中达成的某些妥协而被取消。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00399"
     },
@@ -5707,7 +5707,7 @@
     {
         "key": "descriptions.csv#('prometheus', 'SHIP')$text1",
         "original": "A tanker of vast capacity used to shift strategic quantities of fuel between worlds. Unlike its smaller cousins, the Prometheus features a reasonable defensive arsenal to protect its valuable and volatile cargo.",
-        "translation": "容量巨大的燃料输送舰，用于在不同星系之间运输战略级的燃料量。不像它的小兄弟，普罗米修斯-级 配备了合理的防御型武装，以保护那些宝贵且不稳定的货物。",
+        "translation": "容量巨大的燃料输送舰，用于在不同星球之间运输战略级的燃料量。不像它的小兄弟，普罗米修斯-级 配备了合理的防御型武装，以保护那些宝贵且不稳定的货物。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00129"
     },
@@ -6771,8 +6771,8 @@
     {
         "key": "descriptions.csv#('star_blue_supergiant', 'PLANET')$text1",
         "original": "An O-type star of extreme temperature, luminosity, mass, and volume. The supergiant star is sufficiently massive that it transitions smoothly from burning hydrogen to helium and onward. It is among the brightest candles, burning quickest and brightest before exploding as a supernova which may briefly outshine entire galaxies, bathing entire sectors in deadly radiation. The energies unleashed from the star's raging fusion heart erupt in powerful stellar winds that will strip the atmosphere from closely orbiting planets - and the hull from any starships that linger nearby.",
-        "translation": "具有高得远超寻常的温度、光度、质量和体积的 O 型恒星。蓝超巨星的质量巨大，足以平稳地完成从氢聚变向以氦和其他更重元素为燃料的过渡。它在恒星中具有几乎最高的亮度，并在达到最大的亮度和燃烧速率之后最终成为超新星爆发，暂时照亮整片河系，并让本星域沐浴在致命的辐射之中。目前这颗恒星心脏中汹涌的聚变能以能量的形式喷涌而出，产生强大的恒星风，将近距离环绕它的行星大气层剥离，也能将逗留在附近的舰船结构撕碎。",
-        "stage": 5,
+        "translation": "具有高得远超寻常的温度、光度、质量和体积的 O 型恒星。这种超巨星的质量巨大，足以平稳地完成从氢聚变向以氦和其他更重元素为燃料的过渡。它在恒星中具有几乎最高的亮度，并在达到最大的亮度和燃烧速率之后最终成为超新星爆发，暂时照亮整片河系，并让本星域沐浴在致命的辐射之中。目前这颗恒星心脏中汹涌的聚变能以能量的形式喷涌而出，产生强大的恒星风，将近距离环绕它的行星大气层剥离，也能将逗留在附近的舰船结构撕碎。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00261"
     },
     {
@@ -6785,15 +6785,15 @@
     {
         "key": "descriptions.csv#('star_neutron', 'PLANET')$text1",
         "original": "This is a star that lived, died in nova, and now lives again as an extraordinarily small, hot, dense mass whose volume is maintained by the strong nuclear force rather than rote electromagnetism. Although massing up to three Solar masses, the neutron star's radius is equivalent to barely that of Old Earth. Rapidly spinning neutron stars may emit intense beams of electromagnetic radiation; these are known as pulsars. A wise starship captain would do well to avoid them.  ",
-        "translation": "由超新星爆发演变而来，拥有极致的高温与稠密的质量，它的体积因巨大的引力而变得非常小巧。虽然其质量至少等同于三个太阳的总和，但它的半径甚至比旧地球还要稍小一些。由于这颗中子星会快速旋转并发射出强烈的射电脉冲，因此它也被称为脉冲星。任何一位明智的星舰船长都会对其避而远之。",
-        "stage": 5,
+        "translation": "这是一颗曾存活过、又在超新星爆发中死亡，如今以一种异常微小、炽热、致密的形态重生的恒星，其体积由强核力而非惯常的电磁力维持。虽然其质量至少等同于三个太阳的总和，但它的半径却仅与旧地球相当。某些中子星会快速自转并发射出强烈的射电脉冲，因此也被称为脉冲星。任何一位明智的太空舰长都会对其避而远之。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00263"
     },
     {
         "key": "descriptions.csv#('star_orange', 'PLANET')$text1",
         "original": "Slightly cooler and smaller than Old Earth's sun, this class K star most resembles Alpha Centauri B. It is particularly stable, burning on the lower end of the main sequence for tens of billions of years and thus considered a likely host to life-bearing and terraformable planets.",
-        "translation": "温度与体积都要比旧地球的太阳要稍小一些的 K 型恒星。与半人马座 Alpha B 相似，这种位于主星序下端的恒星不仅稳定，且至少燃烧了数百亿年，因此它被认为是最容易产生宜居行星和允许星系内地貌改造的恒星。",
-        "stage": 5,
+        "translation": "温度与体积都要比旧地球的太阳要稍小一些的 K 型恒星。与半人马座 Alpha B 相似，这种位于主星序下端的恒星特别稳定，往往能燃烧数百亿年，因此它被认为是最容易产生宜居行星和允许星系内地貌改造的恒星。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00259"
     },
     {
@@ -6813,14 +6813,14 @@
     {
         "key": "descriptions.csv#('star_red_giant', 'PLANET')$text1",
         "original": "A low-to-medium mass star in a late phase of stellar evolution, a red giant has exhausted the supply of hydrogen in its core and switched to hydrogen fusion in a shell around the now-helium core instead. While the star itself is huge, the outer envelope has a lower temperature, giving the star its characteristic hue.",
-        "translation": "恒星演化末期的一种质量较低的红巨星，由于已经耗尽了核心内的氢燃料，转而在不断增大的氦核周围燃烧为数不多的氢，使这颗恒星看起来非常巨大，但由于表面温度相对较低，因此才呈现出独特的红色。",
-        "stage": 5,
+        "translation": "恒星演化末期的一种质量较低的红巨星，由于已经耗尽了核心内部的氢燃料，只能转而依靠围绕氦核的外表壳层进行氢聚变。尽管这颗恒星的体积非常巨大，但由于表面温度相对较低，因此才呈现出独特的红色。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00267"
     },
     {
         "key": "descriptions.csv#('star_red_supergiant', 'PLANET')$text1",
         "original": "A supergiant star in a late phase of its mayfly-short stellar life, this class M star has the largest volume of all known stellar types. It has exhausted its core's supply of hydrogen, transitioning smoothly to the fusion of helium, and is likely to proceed onward through the elements up to iron before creating a supernova. Although extraordinarily massive, the outer envelope of the star is extremely sparse and has a relatively low temperature, providing its characteristic hue. This star is casting off its constituent matter at a rapid rate and will form a spectacular nebula. Betelgeuse and Antares are examples of red supergiants known to classical pre-Domain astronomy.",
-        "translation": "进入了它短暂生命的末期的 M 型恒星已经演化成了红超巨星，是已知恒星类型中体积最大的一种。它已经耗尽核心内所有氢，平稳地过渡到了氦聚变。随后它很可能会继续聚变产生更重的元素，直到生产铁元素引发超新星爆发。虽然非常巨大，但由于恒星外表壳层非常稀薄且表面温度相对较低，因此呈现出了独特的红色。这颗恒星释放其内部物质的速度非常快，将会产生一片壮观的星云。前人之领时代的经典天文学中所提到过的参宿四与心宿二就是这种红巨星里的典型。",
+        "translation": "这颗 M 型超巨星正处于其短暂生命的末期，拥有所有已知恒星类型中最大的体积。它已经耗尽核心内所有氢，平稳地过渡到了氦聚变。随后它很可能会继续聚变产生更重的元素，直到产生铁元素并引发超新星爆发。尽管非常巨大，但由于恒星外表壳层非常稀薄且表面温度相对较低，因此呈现出了独特的红色。这颗恒星释放其内部物质的速度非常快，将会产生一片壮观的星云。前人之领时代的经典天文学中所提到过的参宿四与心宿二就是这种红超巨星里的典型。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00266"
     },
@@ -6911,8 +6911,8 @@
     {
         "key": "descriptions.csv#('station_abandoned_mining', 'CUSTOM')$text1",
         "original": "An abandoned orbital mining platform, this station was built to anchor a skyhook which would be employed to efficiently extract resources from its primary's surface. Old industrial modules long since stripped for parts and silent hab rings are corroded by impacts and stellar weathering.",
-        "translation": "已被废弃的轨道采矿平台。为了从地表高效采取矿产资源，该平台被建立在一处已经固定好的大型高空吊运设施上。长期以来，陈旧的工业模块早已不堪重负并剥离大半，而寂静的居住区圆顶也因陨石冲击与恒星风的侵蚀而残破不堪。",
-        "stage": 5,
+        "translation": "已被废弃的轨道采矿平台。为了从地表高效采取矿产资源，该平台原本用于锚定一座天钩装置。长期以来，陈旧的工业模块早已不堪重负并剥离大半，而寂静的居住区圆顶也因陨石冲击与恒星风的侵蚀而残破不堪。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00529"
     },
     {
@@ -6967,8 +6967,8 @@
     {
         "key": "descriptions.csv#('station_beholder', 'CUSTOM')$text1",
         "original": "Originally a research platform established by the Domain Explorarium, funding was only ever a trickle in light of little hope for practical knowledge to be gained from study of Kumarian xenolife. Post-collapse, administration was usurped by a particularly inspired Luddic curate-errant and the station turned into a site of holy pilgrimage for Luddic believers. Only a handful of approved scholars are allowed aboard now, though there are few enough of those in this troubled age.",
-        "translation": "最初由 人之领 的勘探员建立起的研究平台，但由于对 Kumari Aru 中异星生命的研究很难有实际的应用价值，因而一直缺少经费。大崩塌后，空间站的管理权被一个卢德教会巡游牧师夺取，这处空间站也变成了卢德信徒们重要的朝圣之地。如今这里只有少数获取批准的学者才被允许进入，尽管在这个动荡的年代里学者的数量本来就已经够少了。",
-        "stage": 5,
+        "translation": "最初由 人之领 的勘探员建立起的研究平台，但由于对 Kumari Aru 中异星生命的研究很难有实际的应用价值，因而一直缺少经费。大崩塌后，空间站的管理权被一个卢德教会的游方祭司夺取，这处空间站也变成了卢德信徒们重要的朝圣之地。如今这里只有少数获取批准的学者才被允许进入，尽管在这个动荡的年代里学者的数量本来就已经够少了。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00505"
     },
     {
@@ -6988,8 +6988,8 @@
     {
         "key": "descriptions.csv#('station_chupi_orco', 'CUSTOM')$text1",
         "original": "Once a giant industrial machine that manipulated the magnetosphere of Chupi Orco to pull volatiles into space from the highest reaches of an artificial storm-system, the coils, generators, and tanks are now gutted, the habitats run-through by energy lances. A few hangars and access tunnels still show minimal life-support function, pitifully lingering until inevitable gas leakage and solar cell fouling leaves the station as cold and dead as the tomb it is. ",
-        "translation": "曾由一种巨型设备操控着 Chupi Orco 的磁层，目的是为了制造出人工风暴将大量挥发物驱入太空后进行收集。但由于受到战争的波及，使这里的线圈、发电机、储罐都遭到摧毁，尽管一些空置的机库与通道仍具备最低限度的维生功能，但因气体泄漏与太阳能电池板的结垢，最终使该虹吸站陷入了坟墓般的死寂。",
-        "stage": 5,
+        "translation": "曾由一种巨型设备操控着 Chupi Orco 的磁层，目的是为了制造出人工风暴将大量挥发物驱入太空后进行收集。但现如今这里的线圈、发电机、储罐都已被掏空，栖息舱也遭到某种能量武器的摧毁。尽管一些空置的机库与通道目前仍具备最低限度的维生功能，但气体泄漏与太阳能电池板的结垢，终将使该虹吸站陷入坟墓般的死寂。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00417"
     },
     {
@@ -7009,8 +7009,8 @@
     {
         "key": "descriptions.csv#('station_culann', 'CUSTOM')$text1",
         "original": "Culann Starforge was founded as a major center of zero-G refining and metallurgy several hundred years ago by an enterprise whose strength lay in a portfolio of ingenious energy conversion and storage technologies which enabled efficient harnessing of Hybrasil's nearby primary. This firm, its property, and Culann itself were rapidly acquired by the Tri-Tachyon Corporation which has traditionally dominated the energy conversion, generation, and projection industries.",
-        "translation": "Culann 星际锻炉早在几百年前就是一处重要的零重力精炼与冶金中心，该公司善于巧妙利用能源转换和存储技术来高效运作，并使其在 Hybrasil 星系中享有盛誉。如今这家公司名下的所有财产，以及 Culann 本身都被主打能源转换、生产及传输行业的 速子科技 所收购。",
-        "stage": 5,
+        "translation": "Culann 星际锻炉早在几百年前就是一处重要的零重力精炼与冶金中心，建立它的公司拥有一系列精巧的能量转换与储存技术，可高效利用 Hybrasil 恒星的能源以供其业务。如今这家公司名下的所有财产，以及 Culann 本身都被主导着能源的转换、生产与传输行业的 速子科技 所收购。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00409"
     },
     {
@@ -7023,7 +7023,7 @@
     {
         "key": "descriptions.csv#('station_derelict_survey_mothership', 'SHIP')$text1",
         "original": "One of the legendary survey motherships, the quiet automated workhorse of the Domain exploration and colonization effort. This is in essence a von Neumann probe, as the survey motherships contain autoforge capacity to manufacture a suite of smaller survey ships and the supplies required to perform its ongoing mission. This specimen is burned and battered by its centuries of service to the Domain, a drifting forgotten hulk.",
-        "translation": "具有传奇色彩的勘探母舰，这艘庞大的自动化工厂是 人之领 扩张时期用于探索与殖民的重要工具。其具备自我修复、自动补充任务所需耗材以及制造小型无人探测器的能力，因此这种勘探母舰本质上是一种冯·诺依曼探测器。如今这艘为 人之领 服务了数个世纪的母舰早已被烧毁，只留下一副巨大的残骸漂浮在宇宙之中。",
+        "translation": "具有传奇色彩的勘探母舰，这艘沉默的全自动舰船是 人之领 用于探索与殖民的重要工具。这种勘探母舰本质上是一种冯·诺依曼探测器，其内置的自动锻造设施还可以制造小型无人探测器，并具有自动补充任务所需耗材的能力。如今这艘为 人之领 服务了数个世纪的母舰早已被烧蚀磨损，只留下一副巨大的残骸漂浮在宇宙之中。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00469"
     },
@@ -7065,8 +7065,8 @@
     {
         "key": "descriptions.csv#('station_jangala', 'CUSTOM')$text1",
         "original": "Orbiting megacity, naval yard, and port; the unquestioned cosmopolitan center of civilization and culture in the Corvus system as well as the seat of the Hegemony military district encompassing the local systems. Heavy commercial and naval traffic swarm the station at all times.",
-        "translation": "拥有巨型太空城、海军码头与贸易港口的 Jangala 无疑是 Corvus 星系的文化中心，同时也是 霸主 军事区所在地，这座空间站总是挤满了往来的贸易舰队和 霸主 海军。",
-        "stage": 5,
+        "translation": "拥有巨型太空城、海军码头与贸易港口的 Jangala 无疑是 Corvus 星系的文化中心，同时也是控制范围涵盖几个临近星系的 霸主 军区总部，这座空间站总是挤满了往来的贸易舰队和军事舰队。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00335"
     },
     {
@@ -7079,7 +7079,7 @@
     {
         "key": "descriptions.csv#('station_kantas_den', 'CUSTOM')$text1",
         "original": "This asteroid habitat was taken by a wildly ambitious Domain logistics officer, Colonel Kanta, during the collapse of the Maxios Charter polity not long after the fall of the Gates. She subsequently joined with the Domain successor-state Hegemony only to betray them to cut a deal with the Warlord Onesimos Loke during his invasion of the Persean Sector. After Loke was defeated, Kanta took the title of warlord for herself.\n\nThe station is protected by a cloud of stealth-mines and crude firebases. Kanta herself, now rumored to be nearly two hundred years old in waking time, heads a minor pirate dynasty and still holds tight personal control over 'the family business'.",
-        "translation": "在 大崩塌 发生后不久，Maxios 政体瓦解期间，野心勃勃的 人之领 后勤官 Kanta 上校使用武力强行夺取了这处栖息地。她随后加入了 人之领 的继承者 霸主，但这不过是为了配合入侵英仙座星域军阀 Onesimos Loke 将 霸主 背刺。Loke 被打败后，Kanta 则夺取了其军阀的头衔。\n\n这座空间站被数不清的隐形空雷和简陋的火力基地保护着。据传，即使抛去待在休眠舱里的时间不算，Kanta 恐怕也已有近 200 岁的高龄，她是海盗王朝的领头人物，并牢牢掌控着她治下的这些 \"家族企业\"。",
+        "translation": "在 大崩塌 发生后不久，Maxios 政体瓦解期间，野心勃勃的 人之领 后勤官 Kanta 上校使用武力强行夺取了这处栖息地。她随后加入了 人之领 的继承者 霸主，但又迅速背叛，转而与入侵英仙座星域军阀 Onesimos Loke 达成交易。Loke 被打败后，Kanta 则夺取了其军阀的头衔。\n\n这座空间站被数不清的隐形空雷和简陋的火力基地保护着。据传，即使抛去待在休眠舱里的时间不算，Kanta 恐怕也已有近 200 岁的高龄，她是海盗王朝的领头人物，并牢牢掌控着她治下的这些 \"家族企业\"。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00376"
     },
@@ -7128,7 +7128,7 @@
     {
         "key": "descriptions.csv#('station_mimir', 'CUSTOM')$text3",
         "original": "A ruling class of Tri-Tachyon executives and managers oversee a tiny polity, more a company town, built from a cut-throat web of shell corporations. The desperate and greedy in equal measure are attracted from nearby systems by the high pay. The costs, however, often prove higher.",
-        "translation": "这是个由 速子科技 的高管和经理监督着的一个空壳公司所组成的一个小政权，相比之下更像个公司城。高薪吸引着临近星系那些贪婪而又饥渴的人，然而这些人往往会为此付出更大的代价。",
+        "translation": "这是个由 速子科技 的高管和经理监督着的微小政体，相比之下更像个公司城，建立在由无数空壳公司交织而成的残酷网络之上。高薪吸引着临近星系那些贪婪而又饥渴的人，然而这些人往往会为此付出更大的代价。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00364"
     },
@@ -7156,7 +7156,7 @@
     {
         "key": "descriptions.csv#('station_new_maxios', 'CUSTOM')$text3",
         "original": "Too small to force major factions to recognize its claim over the entire Disk, Nova Maxios nonetheless considers itself the successor-polity to the Maxios Charter.\n\nTraffic control enforced by the small militia-navy is firm but polite. Independent spacers are welcomed as cousins in the admittedly crude hulls and concourses of Nova Maxios.",
-        "translation": "Nova Maxios 仍然自认为是 Maxios 宪章的继承者，尽管由于势力太小而难以迫使其他主要势力承认这一宣称。\n\n由小规模民兵组织所实施的交通管制人性化但是十分严格；驾驶着粗劣舰船的非势力团体成员也在 Nova Maxios 中被热烈欢迎。",
+        "translation": "Nova Maxios 仍然自认为是 Maxios 宪章的继承者，尽管由于势力太小而难以迫使其他主要势力承认这一宣称。\n\n由小规模民兵组织所实施的交通管制人性化但是十分严格；独立的太空佬们在 Nova Maxios 不免粗糙的船体与会廊中受到了热烈的欢迎。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00374"
     },
@@ -7674,7 +7674,7 @@
     {
         "key": "descriptions.csv#('toxic_cold', 'PLANET')$text1",
         "original": "A frozen world enveloped by a thick nitrogen smog dappled with ethane and methane clouds. The surface is formed of eroded water-ice, windswept dunes of organic compounds, and hydrocarbon seas. Liquid water erupts bubbling with methane from cryovolcanoes driven by tidal heating and decaying radioactive elements deep within the mantle.",
-        "translation": "被乙烷、甲烷云和氮气雾所笼罩的冰冻世界。表面由被侵蚀的水冰、充满有机化合物的风化丘以及烃海所组成。而在地幔深处，一些参杂着甲烷的液态水，衰败的放射性元素，都被潮汐力加热后由冰火山口喷发而出。",
+        "translation": "被乙烷、甲烷云和氮气雾所笼罩的冰冻世界。表面由被侵蚀的水冰、充满有机化合物的风化丘以及烃海所组成。而在地幔深处，一些夹杂着甲烷的液态水，衰败的放射性元素，都被潮汐力加热后由冰火山口喷发而出。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00426"
     },
@@ -7954,7 +7954,7 @@
     {
         "key": "descriptions.csv#('volturn', 'GALLERY')$text2",
         "original": "The port of Volturn was built on a loose flotilla of huge, singed-looking barges that wallowed in an oily sea. Offloading spacers are interrogated by dour security officers, then allowed into the traders' concourse. Merchants in dull suits, loyalty pins dutifully displayed on the collar, passed around a datapad loaded with incoming cargo manifests.",
-        "translation": "Volturn 的港口由一群外观焦黑的巨型驳船组成，在泛着油光的海面上摇摇晃晃。下船太空船员会先接受面色阴沉的安保人员盘问，随后方可进入贸易大厅。身着暗沉西装的商人将一枚枚效忠徽章规规矩矩地别在衣领上，他们传阅着一台载有入境货物清单的数据终端。",
+        "translation": "Volturn 的港口由一群外观焦黑的巨型驳船组成，在泛着油光的海面上摇摇晃晃。下船太空船员会先接受面色阴沉的安保人员盘问，随后方可进入贸易大厅。身着暗沉西装的商人将一枚枚效忠徽章规规矩矩地别在衣领上，他们传阅着一台载有入境货物清单的数据平板。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00654"
     },
