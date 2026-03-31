@@ -2165,7 +2165,7 @@
     {
         "key": "descriptions.csv#('falcon', 'SHIP')$text1",
         "original": "Often called the Eagle cruiser's little brother, the Falcon-class cruiser sacrifices armor for speed, neatly filling the light cruiser role in military fleets throughout the Sector. \n\nThe \"light\" designation does not indicate a significant reduction in firepower, however, making the Falcon a valuable tactical asset to any fleet. The ship is easily able to fill a wide variety of roles, from close support to assault, given the proper configuration. \n\nThe Falcon's top notch engines give it the ability to quickly disengage from battle should its defenses be pressed to a critical point.\n\nSwift and elegant, Falcon-class cruisers are often found as lead elements in larger fleet formations, or deployed to reinforce anti-pirate convoys.",
-        "translation": "雄鹰-级 的小兄弟。猎鹰-级 通过牺牲装甲来换取优秀速度，以在军方舰队中充当轻型巡洋舰的角色。\n\n独特的 \"轻量化\" 设计并未使得火力显著下降，反而让 猎鹰-级 能为任何舰队提供有价值的战术支持。只要给予它适当的武装，就能让这种轻型巡洋舰不管是在密接支援还是突击方面都能轻松胜任。\n\n猎鹰-级 的辅助推进器不仅给予它优异的机动性，且能在某些危急关头起到快速脱离战场的作用。\n\n迅捷而优雅的 猎鹰-级 不仅常在稍大的舰队中担任指挥角色，同时也是各重要贸易路线的坚定守护者。",
+        "translation": "雄鹰-级 的小兄弟。猎鹰-级 通过牺牲装甲来换取优秀速度，以在军方舰队中充当轻型巡洋舰的角色。\n\n独特的 \"轻量化\" 设计并未使得火力显著下降，反而让 猎鹰-级 能为任何舰队提供有价值的战术支持。只要给予它适当的武装，就能让这种轻型巡洋舰不管是在密接支援还是突击方面都能轻松胜任。\n\n猎鹰-级 的辅助推进器不仅给予它优异的机动性，且能在某些危急关头起到快速脱离战场的作用。\n\n迅捷而优雅的 猎鹰-级 不仅常在稍大的舰队中担任先锋角色，同时也往往是反制海盗活动的坚定守护者。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00113"
     },
@@ -2207,7 +2207,7 @@
     {
         "key": "descriptions.csv#('fikenhild', 'GALLERY')$text2",
         "original": "The small ocean-moon of Fikenhild was the political center of the system, seat of the King and representative to the Persean League. The great floating arcologies glittered night and day, homes to the highly esteemed holo-entertainment studios of Westernesse.",
-        "translation": "这颗小型海洋行星是 Westernesse 星系的政治中心、Westernesse 国王的朝廷、联盟的核心成员之一。漂浮于 Fikenhild 海洋之上的巨型生态都市群永远繁华喧嚣，坐落着多家广为人知的全息娱乐工作室。 ",
+        "translation": "这颗小型海洋行星是 Westernesse 星系的政治中心、Westernesse 国王的朝廷、英仙座联盟的代表驻地之一。漂浮于 Fikenhild 海洋之上的巨型生态都市群永远繁华喧嚣，坐落着多家广为人知的全息娱乐工作室。 ",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00676"
     },
@@ -2403,7 +2403,7 @@
     {
         "key": "descriptions.csv#('fragbomb', 'WEAPON')$text1",
         "original": "Releases a cluster of free-floating bomblets that retain the momentum of the launching craft. The bomblets are equipped with a proximity fuse.\n\nA Frag Bomb projector fires Mark VI fragmentation bomblets from three tubes. Unguided and without a propulsion system, the bomblets rely on a friend-or-foe targeting system. Their vast numbers allow them to cover a wide swath of space, effectively creating a Point Defense barrier in that location, albeit for a limited time. When the proximity fuse is triggered by an enemy craft, the bomblet will detonate, achieving similar effects to those of flak weapons.",
-        "translation": "它能发射一连串依靠投放者惯性滑行，且配有近炸引信的小炸弹。\n\n这种简单的三联装发射管，通过持续发射几十枚 Mk.VI 型破片炸弹来打击敌舰。尽管不具备制导与推近系统，且所谓的敌我识别完全依靠投射方的瞄准器，但它却能利用庞大的数量优势来覆盖大片区域，并在近炸引信被敌机触发时引爆，来产生类似防空炮的效果，以暂时在该位置生成防空拦截区。",
+        "translation": "它能发射一连串依靠投放者惯性滑行，且配有近炸引信的小炸弹。\n\n这种简单的三联装发射管，通过持续发射几十枚 Mk.VI 型破片炸弹来打击敌舰。尽管不具备制导与推近系统，只能依靠单一的敌我识别系统进行目标判定，但它却能利用庞大的数量优势来覆盖大片区域，并在近炸引信被敌机触发时引爆，来产生类似防空炮的效果，以暂时在该位置生成防空拦截区。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00009"
     },
@@ -2746,14 +2746,14 @@
     {
         "key": "descriptions.csv#('guardian', 'SHIP')$text1",
         "original": "Although automated machines of war were forbidden in core Domain space, war drones were quietly employed outside of the officially incorporated volume. Nothing like this, however, could possibly have been deployed by the Domain drone armadas.\n\nThere are elements of standard droneships within the hull structure, but they are covered by malevolently angled glacises and illogical tangles of conduit. Surely this monstrous vessel is the product of some deranged Domain naval architect, or a production chip corrupted by exposure to kilolights of faulty drive field?",
-        "translation": "虽然 人之领 的核心星区内禁止一切全自动战争机械的存在，但在那些尚未被正式纳入 人之领 版图的地区里，还是有人在暗中使用无人战舰。不过长这样的家伙可不像是个 人之领 会部署在无人舰队里的东西。\n\n虽然从船体结构上还能看到不少标准无人舰的影子，但它们全都被阴森扭曲的斜角装甲和杂乱无章的幅能管道网所覆盖。想必这艘怪兽战舰应该是某些精神错乱的 人之领 海军设计师的杰作，不然就是存它蓝图的生产芯片在有毛病的驱动力场被运了几千光年给运坏了。",
+        "translation": "虽然 人之领 的核心星区内禁止一切全自动战争机械的存在，但在那些尚未被正式纳入 人之领 版图的地区里，还是有人在暗中使用无人战舰。不过长这样的家伙可不像是个 人之领 会部署在无人舰队里的东西。\n\n虽然从船体结构上还能看到不少标准无人舰的影子，但它们全都被阴森扭曲的斜角装甲和杂乱无章的幅能管道网所覆盖。想必这艘怪兽战舰应该是某些精神错乱的 人之领 海军设计师的杰作，不然就是存它蓝图的生产芯片在有毛病的驱动场被运了几千光年给运坏了。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00175"
     },
     {
         "key": "descriptions.csv#('guardian', 'WEAPON')$text1",
         "original": "A collection of smaller lasers mounted together on a rotating pod with a built-in capacitor allowing extremely high burst damage against fighters and missiles.\n\nThe Paladin is a military grade PD system usually deployed on capital ships due to production cost and high flux requirements. The embedded autonomous sub-gamma targeting core and IFF system are designed to detect and destroy incoming strike munitions and fighters which have penetrated the host ship's defensive escort screen. \n\nFive separate carbon dioxide lasers of venerable design and top-of-the-line manufacture provide exceptionally focused firepower in a compact package while a clever virtual inertia counterweight system makes target tracking almost instantaneous. The prohibitive energy requirements usually allow the weapon to be activated only in short bursts, though this is usually sufficient to deal with hostiles in the target threat-category.",
-        "translation": "由装满小型激光炮的旋转吊舱所构成的点防系统，其内置的电容器足以让对来袭的战机与导弹造成极高的爆发伤害。\n\n能够侦测并击毁一切突破护航部队火力圈的战机和导弹的军用级点防御武器。因其夸张的体积与较高的幅能输出，保卫者系统一般只会被安装在主力舰上。\n\n利用自主型亚 Gamma AI 核心与五组独立二氧化碳激光器组合，让此武器能够提供及其有效的点防御能力。独立的转向系统供能装置更使它几乎能瞬间锁定目标。虽较高的能源需求意味着每次开火仅能维持数秒，但也足以应对绝大多数威胁。",
+        "translation": "由装满小型激光炮的旋转吊舱所构成的点防系统，其内置的电容器足以让对来袭的战机与导弹造成极高的爆发伤害。\n\n能够侦测并击毁一切突破护航部队火力圈的战机和导弹的军用级点防御武器。因其夸张的体积与较高的幅能输出，保卫者系统一般只会被安装在主力舰上。\n\n利用自主型亚 Gamma AI 核心与五组独立二氧化碳激光器组合，让此武器能够提供极其有效的点防御能力。独立的转向系统供能装置更使它几乎能瞬间锁定目标。虽较高的能源需求意味着每次开火仅能维持数秒，但也足以应对绝大多数威胁。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00076"
     },
@@ -2795,7 +2795,7 @@
     {
         "key": "descriptions.csv#('harass', 'ACTION_TOOLTIP')$text1",
         "original": "Order a single frigate to harass this ship while staying out of its weapon range.",
-        "translation": "命令一艘护卫舰在它超出指定的舰船的射程时骚扰该舰船。",
+        "translation": "命令一艘护卫舰骚扰指定的舰船，同时保持在对方武器射程之外。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00222"
     },
@@ -3138,7 +3138,7 @@
     {
         "key": "descriptions.csv#('hyperspace_abyssal', 'TERRAIN')$text1",
         "original": "Abyssal hyperspace, nearly impenetrable to sensors and exerting an enormous pressure on the drive field. The subject of many an old spacer's tale, more easily laughed off in the comfort of a dockside bar.",
-        "translation": "深渊超空间，几乎不能用传感器进行探查，且会对驱动力场施加巨大压力。作为许多老船长式故事的常客，如果只是在舒适的码头酒吧里听人提起它的话倒还能一笑置之。",
+        "translation": "深渊超空间，几乎不能用传感器进行探查，且会对驱动场施加巨大压力。作为许多老船长式故事的常客，如果只是在舒适的码头酒吧里听人提起它的话倒还能一笑置之。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00441"
     },
@@ -3307,7 +3307,7 @@
         "key": "descriptions.csv#('interdictor', 'SHIP_SYSTEM')$text3",
         "original": "Interferes with the target ship's drive field, disabling some engines.",
         "translation": "干扰目标舰船的驱动场，瘫痪部分引擎。",
-        "stage": 5,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00274"
     },
     {
@@ -3404,7 +3404,7 @@
     {
         "key": "descriptions.csv#('jangala_station', 'GALLERY')$text2",
         "original": "Orbiting megacity, naval yard, and port; the axis of Corvus, swarmed by Starship traffic. Ancient repair gantries skulked between corroded industrial hangars in the shadow of laboratory rings and support modules. Higher still, commercial bays and metroplex districts were shepherded by the C&C spire bristling with weapons pods.",
-        "translation": "由轨道巨型太空城、海军码头和贸易港口一同构成的 Corvus 核心枢纽，星舰此交织涌动。在实验室环廊与支援模块的阴影之下，古老的维修架隐匿于锈蚀的工业机库之间。高处的商业港区和繁华都市则被配有武器吊舱的指挥控制中心高塔所监控。",
+        "translation": "由轨道巨型太空城、海军码头和贸易港口一同构成的 Corvus 核心枢纽，星舰在此交织涌动。在实验室环廊与支援模块的阴影之下，古老的维修架隐匿于锈蚀的工业机库之间。高处的商业港区和繁华都市则被配有武器吊舱的指挥控制中心高塔所监控。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00635"
     },
@@ -3502,7 +3502,7 @@
     {
         "key": "descriptions.csv#('kineticblaster', 'WEAPON')$text1",
         "original": "\"Long-range readings provided by HEGINT asset suggest weapon system integrates elements of SUPER ALABASTER technology to harness previously unutilized anti-shield effect. Native Askonian physics establishment, depleted post-Opis, not considered capable of such breakthrough [ref rep HEGINT/ASKON-M38-12]. Conclude: with near certainty, TT technical assistance to Sindrian Mutiny.\"",
-        "translation": "\"HEGINT 所提供的远程探测读数怀疑，该武器集成了部分 '圣白石' 级的技术要素，以掌控史无前例的反护盾效果。考虑到 Askonia 本土物理机构 在 Opis 事件之后所剩无几，不认为其有能力实现这种技术突破 [ 参考报告 HEGINT/ASKON-M38-12 ] 。结论：几乎可以确定，速子 为 辛达兵变 提供了技术支援。\"",
+        "translation": "\"HEGINT 所提供的远程探测读数怀疑，该武器集成了部分 '圣白石' 级的技术要素，以掌控史无前例的反护盾效果。考虑到 Askonia 本土物理机构 在 Opis 事件之后所剩无几，不认为其有能力实现这种技术突破 [ 参考报告 HEGINT/ASKON-M38-12 ] 。结论：几乎可以确定，速子 为 辛达乱军 提供了技术支援。\"",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00581"
     },
@@ -3691,7 +3691,7 @@
     {
         "key": "descriptions.csv#('locust', 'WEAPON')$text1",
         "original": "A large, short range guided missile system designed to launch large numbers of projectiles to overwhelm and cripple enemy fighter squadrons in a single salvo. The Locust can be used against larger targets, but will have little relative effect unless shields and armor are already breached.\n\nThe Locust launches bursts of thirty small missiles per salvo. Robust, low-power individual tracking systems are coordinated by a distributed swarm intelligence system to enable excellent tracking of targets, while chemical microthrusters provide maneuverability for a short time. Tried and true targeting algorithms based on the old standby Swarmer missile systems allow Locusts to miss only rarely. The Locust has rightly earned a place in the nightmares of fighter pilots.",
-        "translation": "大型近程导弹系统，旨在营造大量弹幕来淹没敌军战机联队。蝗虫也可用来对付大型目标，但除非目标的护盾和装甲已被破坏，否则将收效甚微。\n\n该武器可在一轮齐射中发射 20 枚小型导弹。其简单实用且低功耗的单体追踪系统，能在分布式运算系统的协调下完美地紧咬目标，并利用微形化学矫态推进器，来在短时间内提供最佳的机动性能。蝗虫导弹的目标追踪算法基于久经考验的蜂群导弹，而这也保证了它们极少脱靶，并在战机飞行员的噩梦中占有一席之地。",
+        "translation": "大型近程导弹系统，旨在营造大量弹幕来淹没敌军战机联队。蝗虫也可用来对付大型目标，但除非目标的护盾和装甲已被破坏，否则将收效甚微。\n\n该武器可在一轮齐射中发射 30 枚小型导弹。其简单实用且低功耗的单体追踪系统，能在分布式运算系统的协调下完美地紧咬目标，并利用微形化学矫态推进器，来在短时间内提供最佳的机动性能。蝗虫导弹的目标追踪算法基于久经考验的蜂群导弹，而这也保证了它们极少脱靶，并在战机飞行员的噩梦中占有一席之地。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00451"
     },
@@ -4153,7 +4153,7 @@
     {
         "key": "descriptions.csv#('module_hightech_hangar', 'SHIP')$text1",
         "original": "An advanced hangar module which may field four wings of fightercraft to dominate near-volume combat encounters. Due to a philosophy of specialization, this module does not have its own shield module; it is designed to work within the whole-station defense matrix. Nevertheless, enough directed energy firepower is mounted to discourage lighter warships. Integrates a fighter recall device, a specialized system originally created for the Astral-class carrier.",
-        "translation": "这是一款先进的机库模块，可部署四个中队的战机以控制临近空域。基于功能专业化的设计理念，该模块未配备专属护盾模块，其设计初衷便是在空间站防御矩阵体系内运作。尽管如此，模块上仍搭载了足够的能量武器，可对轻型战舰形成威慑。此外，该模块还还整合了与星体-级 航母同款的召回装置。",
+        "translation": "这是一款先进的机库模块，可部署四个中队的战机以控制临近空域。基于功能专业化的设计理念，该模块未配备专属护盾模块，其设计初衷便是在空间站防御矩阵体系内运作。尽管如此，模块上仍搭载了足够的能量武器，可对轻型战舰形成威慑。此外，该模块还整合了与星体-级 航母同款的召回装置。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00721"
     },
@@ -4195,7 +4195,7 @@
     {
         "key": "descriptions.csv#('module_midline_support', 'SHIP')$text1",
         "original": "A fighter support station module designed to enhance a station's local volume power-projection by mounting multiple fighter bays and missile launch points. This is a relatively soft target which nonetheless includes respectable point defense and armored hangars. A munitions depot, specialized on-site forges, and an isolated combat power system are situated on the inward-face.",
-        "translation": "这是一种战机支援模块，依靠搭载的多个战机甲板和导弹挂载点来强化空间站周边区域的火力投送。它相对脆弱，但也配备了可观的点防御系统和装甲机库。模块的内侧还安装由弹药库、专用移动锻炉，以及一套独立的供能系统。",
+        "translation": "这是一种战机支援模块，依靠搭载的多个战机甲板和导弹挂载点来强化空间站周边区域的火力投送。它相对脆弱，但也配备了可观的点防御系统和装甲机库。模块的内侧还安装了弹药库、专用移动锻炉，以及一套独立的供能系统。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00717"
     },
@@ -4307,7 +4307,7 @@
     {
         "key": "descriptions.csv#('nav_buoy_makeshift', 'CUSTOM')$text1",
         "original": "Built using the best technology available in the Sector, a nav buoy monitors the in-system hyperfield and is capable of transmitting its findings to friendly fleets in-system. The data is often somewhat unreliable but still useful in making on-the-fly drive field adjustments.",
-        "translation": "采用时下尽可能最先进的技术建成的导航浮标，能被动监控整片星系的超波场，并将计算好的数据传输给附近的友方舰队。虽然这些读数并不十分可靠，但仍有助于提高舰队动态驱动力场的效力。",
+        "translation": "采用时下尽可能最先进的技术建成的导航浮标，能被动监控整片星系的超波场，并将计算好的数据传输给附近的友方舰队。虽然这些读数并不十分可靠，但仍有助于提高舰队动态驱动场的效力。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00330"
     },
@@ -4321,8 +4321,8 @@
     {
         "key": "descriptions.csv#('nebula', 'TERRAIN')$text1",
         "original": "Interstellar clouds of hydrogen, helium, and dust that cause significant sensor noise that may aid a fleet hiding within. The (relatively) thick medium also interferes with drive field operation.",
-        "translation": "由氢、氦和星尘组成的星际云，会产生显著干扰传感器的噪声并影响驱动力场，也为不怀好意者提供了藏匿地。",
-        "stage": 5,
+        "translation": "由氢、氦和星尘组成的星际云，会产生显著干扰传感器的噪声并影响驱动场，也为不怀好意者提供了藏匿地。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00428"
     },
     {
@@ -4531,8 +4531,8 @@
     {
         "key": "descriptions.csv#('ox', 'SHIP')$text1",
         "original": "The Ox-class tug carries a drive field stabilizer that allows a fleet to reach a higher burn level. It's rare to see more than one or two of these in a fleet, however, due to prohibitive fuel consumption and high maintenance costs.",
-        "translation": "大型舰队的重要组成部分。公牛-级 凭借驱动力场稳定器来让缓慢的大型舰船以较高的速度航行。但夸张的燃料消耗与高昂的维护成本，使绝大多数舰队很少携带两艘以上的 公牛-级 拖船。",
-        "stage": 5,
+        "translation": "大型舰队的重要组成部分。公牛-级 凭借驱动场稳定器来让缓慢的大型舰船以较高的速度航行。但夸张的燃料消耗与高昂的维护成本，使绝大多数舰队很少携带两艘以上的 公牛-级 拖船。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00135"
     },
     {
@@ -4608,14 +4608,14 @@
     {
         "key": "descriptions.csv#('phantom', 'SHIP')$text1",
         "original": "An advanced troop transport employing phase stealth technology, this design was put to effective use by Tri-Tachyon black ops during the Second AI War. The Phantom should avoid ship-to-ship combat as integrated armor and weaponry are only rated effective versus light ground targets.\n\n\"The system patrols should have seen the Tachies coming, but didn't. ADA was tracking the bogey right up until it disappeared off the scope, leaving the ground guns spinning in circles trying to reacquire a target. We saw a shadow in the air, like dark wings falling on the compound. Don't remember much else. Suit rec says incoming fire already took the rest of the squad.\"\n- The Fall of Bunker 58",
-        "translation": "一种运用相位潜行科技的先进兵员输送舰，该设计在第二次 AI 战争期间速子科技的各类黑色行动中产生了巨大的成果。其装甲与武器阵列皆为低强度的地面作战所设计，故 魅影-级 应当尽量避免参与任何舰队战。\n\n\"星系巡逻队本该注意到那群速子鬼佬的接近，但他们没有。自动数据采集设备持续追踪着那吓人的玩意，直到它唐突地消失在了传感器中。地面的火炮阵列空转着炮管，试图重新获取目标。我们看见了空中的阴影，如同黑色的羽翼一样笼罩着据点。其他的事情我已经不太记得了，侦察兵只提到敌方火力已击溃其他部队...\"\n—— 58 号碉堡的陷落",
+        "translation": "一种运用相位潜行科技的先进兵员输送舰，该设计在第二次 AI 战争期间速子科技的各类隐秘行动中产生了巨大的成果。其装甲与武器阵列皆为低强度的地面作战所设计，故 魅影-级 应当尽量避免参与任何舰队战。\n\n\"星系巡逻队本该注意到那群速子鬼佬的接近，但他们没有。自动数据采集设备持续追踪着那吓人的玩意，直到它唐突地消失在了传感器中。地面的火炮阵列空转着炮管，试图重新获取目标。我们看见了空中的阴影，如同黑色的羽翼一样笼罩着据点。其他的事情我已经不太记得了，侦察兵只提到敌方火力已击溃其他部队...\"\n—— 58 号碉堡的陷落",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00593"
     },
     {
         "key": "descriptions.csv#('phasebeam', 'WEAPON')$text1",
         "original": "A short-range, short-duration beam that causes heavy damage in a burst. Capable against armor, as far as beam weapons go.\n\nThis weapon is, at base, simply a laser beam with a tripled sapphire gain medium to ensure the highest possible weaponized wavelengths. The photons are fired through a hyperdimensional filter which outputs an energy beam that exists partially in p-space. The physics of the filter are not properly understood, and in laboratory settings the p-space components of a beam exceeding 6.66 giga-watts will sometimes flicker - as if blocked. Weapon mounts never use such high energy levels to ensure reliability.",
-        "translation": "近程瞬时光束武器，一次开火就能造成严重的损害。反装甲能力强悍，至少对于光束武器而言。\n\n该武器的本质是一个激光束发射器。采用了三重蓝宝石增益介质确保其各个发射波长都尽可能地维持在适用于武器化应用的范围内。开火时，发射的光子都会通过一个超维滤波器，使产生的能量束部分存在于相位空间内。不过这套滤波器相关的物理原理尚未被完全理解。在实验室测试中，如果光束在相位部分的能量超过 6.66 吉瓦时就可能产生闪噪，导致光束被阻挡。因此实际武器并不会采取如此之高的能量水平，以确保其稳定性。",
+        "translation": "近程瞬时光束武器，一次开火就能造成严重的损害。反装甲能力强悍，至少对于光束武器而言。\n\n该武器的本质是一个激光束发射器。采用了三重蓝宝石增益介质确保其各个发射波长都尽可能地维持在适用于武器化应用的范围内。开火时，发射的光子都会通过一个超维滤波器，使产生的能量束部分存在于相位空间内。不过这套滤波器相关的物理原理尚未被完全理解。在实验室测试中，如果光束在相位部分的能量超过 6.66 吉瓦就可能产生闪噪，导致光束被阻挡。因此实际武器并不会采取如此之高的能量水平，以确保其稳定性。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00067"
     },
@@ -4797,8 +4797,8 @@
     {
         "key": "descriptions.csv#('planet_ailmar', 'CUSTOM')$text3",
         "original": "Industrialized pre-Collapse, Ailmar has been able to maintain its independence from the Kingdom of Westernesse by compromising with various competing out-of-system powers, including the Luddic Church and occasionally pirates, notoriously including a temporary alliance with the Warlord Leonis. The Ailmarene are the go-to antagonist in Fikenhild's holo-entertainment, portrayed as stoic as they are treacherous.  ",
-        "translation": "在 大崩塌 前就已实现工业化，Ailmar 在多方星系外敌对势力的阻挠之下，至今仍独立于 Westernesse 王朝统治之外。这些系外势力主要包括 卢德教会 和某些海盗组织，其中最臭名昭的莫过于 Leonis 军阀统治时期的临时联盟。在 Fikenhild 的全息娱乐作品中，Ailmar 星人通常都被描绘成坚忍狡诈的反派。",
-        "stage": 5,
+        "translation": "在 大崩塌 前就已实现工业化，Ailmar 在多方星系外敌对势力的阻挠之下，至今仍独立于 Westernesse 王朝统治之外。这些系外势力主要包括 卢德教会 和某些海盗组织，其中最臭名昭著的莫过于 Leonis 军阀统治时期的临时联盟。在 Fikenhild 的全息娱乐作品中，Ailmar 星人通常都被描绘成坚忍狡诈的反派。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00493"
     },
     {
@@ -4944,7 +4944,7 @@
     {
         "key": "descriptions.csv#('planet_chalcedon', 'CUSTOM')$text3",
         "original": "Human settlement on Chalcedon has adapted to the violent storms. When not buried underground, local architecture trends toward a sort of aerodynamic cyclopeanism at odds with the cheap prefabs that dominate poor worlds elsewhere in the Sector.",
-        "translation": "位于 Chalcedon 上的人类定居点已经适应了猛烈的风暴。与其他在星域中的贫穷世界里占主要使用的预制组件不同的是，当地建筑没有埋在地下的部分倾向于使用一种空气动力循环组件。",
+        "translation": "位于 Chalcedon 上的人类定居点已经适应了猛烈的风暴。与其他在星域中的贫穷世界里占主要使用的廉价预制组件不同的是，当地建筑没有埋在地下的部分倾向于一种流线型的巨石风格。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00513"
     },
@@ -5063,8 +5063,8 @@
     {
         "key": "descriptions.csv#('planet_eldfell', 'CUSTOM')$text1",
         "original": "A barren world notable for a cluster of unusually active hyper-volcanoes, the Grettir. A thin atmosphere is regenerated entirely through volcanism.",
-        "translation": "没有大气层的荒芜世界，其异常活跃的超级火山群值得注意。此地稀薄的大气完全通过火山作用而再生。",
-        "stage": 5,
+        "translation": "一个荒芜的世界，以其异常活跃的 Grettir 超级火山群而闻名。此地稀薄的大气完全通过火山作用而再生。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00487"
     },
     {
@@ -5168,7 +5168,7 @@
     {
         "key": "descriptions.csv#('planet_hanan_pacha', 'CUSTOM')$text3",
         "original": "Hanan Pacha was razed by a planet-killer weapon during the Second AI War (which did not, of course, itself involve AI as the First AI War did, but rather concerned the right to perform inspections into alleged development of AI). A proper investigation into the details of the atrocity was dropped due to concessions made during the peace arrangement.",
-        "translation": "Hana Pacha 在第二次 AI 战争期间被歼星武器所毁灭。虽然第二次 AI 战争不直接涉及无人舰船，但它的导火索却也是所谓 AI 开发权的审查。对行星被毁的具体调查因在和平谈判中达成的某些妥协而被取消。",
+        "translation": "Hanan Pacha 在第二次 AI 战争期间被歼星武器所毁灭。虽然第二次 AI 战争不直接涉及无人舰船，但它的导火索却也是所谓 AI 开发权的审查。对行星被毁的具体调查因在和平谈判中达成的某些妥协而被取消。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00399"
     },
@@ -5567,8 +5567,8 @@
     {
         "key": "descriptions.csv#('planet_tartessus', 'CUSTOM')$text1",
         "original": "Seat of the local branch of the Luddic Church and economic center of the system. The quiet cosmopolitan centers of Tartessus housing the Eos Exodus Curia are clustered around calm, warm seas. The world's population is dominated by Luddic practitioners of various sects and, while large, is mostly rural and agrarian, eking out a generally devout existence through subsistence farming and export of handcrafts.",
-        "translation": "卢德教会 的圣地与经济中心。作为 Eos Exodus 星系中人口最为稠密的行星，拥有大型政治区划的 Tartessus 将数个宁静的都会矗立于平静而温暖的海洋附近。这个世界的人口由卢德各个派别的信徒组成，这些大多来自农村的农业人口主要通过出口农作物与手工制品维持经济与生活。",
-        "stage": 5,
+        "translation": "卢德教会 的主要分支驻地与经济中心。作为 Eos Exodus 星系中人口最为稠密的行星，拥有大型政治区划的 Tartessus 将数个宁静的都会矗立于平静而温暖的海洋附近。这个世界的人口以各个派别的卢德信徒为主，这些大多来自农村的人口以自给农业和手工艺品出口维生，整体过着虔诚而清贫的生活。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00368"
     },
     {
@@ -6022,7 +6022,7 @@
     {
         "key": "descriptions.csv#('repair_and_refit', 'ACTION_TOOLTIP')$text1",
         "original": "Order this fighter wing to go back to the nearest carrier for repairs.\n\nDestroyed fighters will be replaced and the weapons of all fighters will be reloaded.",
-        "translation": "命令该战机联队返回最近的航母维修。\n\n被摧毁的战斗机将会被重新迟早且所有战机的武器弹药将得到补充。",
+        "translation": "命令该战机联队返回最近的航母维修。\n\n被摧毁的战斗机将会被重新整备且所有战机的武器弹药将得到补充。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00216"
     },
@@ -6155,8 +6155,8 @@
     {
         "key": "descriptions.csv#('riftlance', 'WEAPON')$text1",
         "original": "\"We commit this body to the holy vacuum, dust to dust, stars to stars, that the Creator may renew us in the cycle of eternal life.\"",
-        "translation": "\"我们将这具躯体托付予神圣的真空。尘归尘土，星还众星，愿造物主在永恒的生命轮回中将我们延续。\"",
-        "stage": 5,
+        "translation": "\"我们将这具躯体托付予神圣的虚空。尘归尘土，星还众星，愿造物主在永恒的生命轮回中将我们延续。\"",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00569"
     },
     {
@@ -6666,7 +6666,7 @@
     {
         "key": "descriptions.csv#('shuttlepod', 'SHIP')$text1",
         "original": "A tiny, nimble personnel-transfer shuttle just sufficient to transport the senior bridge officers of any ship in the Sector.",
-        "translation": "小巧且灵活的穿梭舱，往往用于将某些高级战地指挥官快速送往其它舰船。",
+        "translation": "小巧且灵活的穿梭舱，往往用于将某些高级舰桥军官快速送往其它舰船。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00121"
     },
@@ -6715,7 +6715,7 @@
     {
         "key": "descriptions.csv#('space_bar', 'GALLERY')$text2",
         "original": "The spacer bar was filled by the human white-noise of conversation and revelry. Ad-holos buzzed softly from ceiling-mounted projectors, shining garish highlights through glasses and bottles as crews mingled with merchants and locals trading drink for rumors, jobs, and connections.",
-        "translation": "太空酒吧里充斥着人群的嘈杂与喧嚣。天天花板上的全息广告装置发出柔和的嗡嗡声，全息影像的刺眼光线透过酒杯与酒瓶，映出斑驳的亮色。太空佬们混杂在生意人和本地人当中，用酒水换取流言、工作和机遇。",
+        "translation": "太空酒吧里充斥着人群的嘈杂与喧嚣。天花板上的全息广告装置发出柔和的嗡嗡声，全息影像的刺眼光线透过酒杯与酒瓶，映出斑驳的亮色。太空佬们混杂在生意人和本地人当中，用酒水换取流言、工作和机遇。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00655"
     },
@@ -6729,7 +6729,7 @@
     {
         "key": "descriptions.csv#('space_wreckage', 'GALLERY')$text2",
         "original": "\"Is there no place left unmarked by the leavings of Moloch, fouled by skin of plastic, and bones of alloy, and scales of ceramic?\"\n\n\"Is there no place left which may be made sacred and given unto the glory of the Creator alone?\"",
-        "translation": "\"普天之下莫非已无净土，未被 摩洛克 的污秽指染，免受塑料之皮、合金之骨与陶瓷之鳞的玷污？\n\n\"莫非这世上已无净土仍能自持圣洁，全然献与造物主的荣光？\"",
+        "translation": "\"普天之下莫非已无净土，未被 恶魔摩洛克 的污秽指染，免受塑料之皮、合金之骨与陶瓷之鳞的玷污？\n\n\"莫非这世上已无净土仍能自持圣洁，全然献与造物主的荣光？\"",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00622"
     },
@@ -7177,7 +7177,7 @@
     {
         "key": "descriptions.csv#('station_ragnar', 'CUSTOM')$text3",
         "original": "Nicknamed \"The Tomb\", broken arcs of hangars and gantries clutch row upon row of mothballed hulks awaiting inspection. Most are dark, lit only by inspection crews and the welding torches of armorers removing materiel. Hidden near the center of the shadow armada lies a stack of hab-rings populated by civilian contractors, navy crew, marines, and Hegemony administration.",
-        "translation": "此地被称为 \"坟墓\"。破碎的弧形机库与龙门架将大量等待检查的报废船只排列整齐，除了安检员手中的照明与焊枪所发出的亮光之外，整片区域全部处于黑暗之中。在这片将死的庞大舰队附近，有一处安置着民用承包商、海军船员、陆战队以及 霸主 管理人员的宜居生态环。",
+        "translation": "此地被称为 \"坟墓\"。破碎的弧形机库与龙门架将大量等待检查的报废船只排列整齐，除了安检员手中的照明与焊枪所发出的亮光之外，整片区域全部处于黑暗之中。在这片将死的庞大舰队附近，有一处安置着民用承包商、海军船员、陆战队员以及 霸主 管理人员的宜居生态环。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00363"
     },
@@ -7331,7 +7331,7 @@
     {
         "key": "descriptions.csv#('sunder', 'SHIP')$text1",
         "original": "An advanced yet fragile destroyer harkening from the ascendant \"Cruiser School\" era of the mid-to-late Human Domain, the Sunder class was designed to provide a heavy firepower supplement during long-range combined fleet actions of the thinly spread Domain Armada.\n\nBest used as part of a mixed task force with escorts, the Sunder has powerful forward-facing weapons but limited defensive capabilities which leave it vulnerable to strike craft and flanking assaults by fast-moving frigates.",
-        "translation": "技术先进但及其脆弱的驱逐舰，其设计可追溯至 人之领 中后期的 \"巡洋学派\" 鼎盛时期，破阵-级 旨在为分散部署的 人之领 舰队在远程联合舰队行动中提供重型火力支援。\n\n破阵-级最适合作为混编特遣部队的一部分，在护卫舰的伴随下作战。该舰拥有强大的前向武器，但防御能力有限，容易受到舰载机和快速护卫舰侧翼突击的威胁。",
+        "translation": "技术先进但极其脆弱的驱逐舰，其设计可追溯至 人之领 中后期的 \"巡洋学派\" 鼎盛时期，破阵-级 旨在为分散部署的 人之领 舰队在远程联合舰队行动中提供重型火力支援。\n\n破阵-级最适合作为混编特遣部队的一部分，在护卫舰的伴随下作战。该舰拥有强大的前向武器，但防御能力有限，容易受到舰载机和快速护卫舰侧翼突击的威胁。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00125"
     },
@@ -7835,7 +7835,7 @@
     {
         "key": "descriptions.csv#('vacuum_colony', 'GALLERY')$text1",
         "original": "Vacuum Colony",
-        "translation": "Vacuum 殖民地",
+        "translation": "真空中的殖民地",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00623"
     },

@@ -345,8 +345,8 @@
     {
         "key": "hull_mods.csv#augmentedengines$name",
         "original": "Augmented Drive Field",
-        "translation": "增强驱动力场",
-        "stage": 5,
+        "translation": "增强驱动场",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：hull_mods.csv\n行：00055"
     },
     {
@@ -926,15 +926,15 @@
     {
         "key": "hull_mods.csv#degraded_drive_field$desc",
         "original": "Whether due to battle damage, manufacturing defects, or cycles of poor maintenance, this ship's drive field is suffering from permanently degraded performance. \n\nMaximum burn level decreased by %s. Sensor profile increased by %s.\n\nSupply cost to recover from deployment reduced by %s.",
-        "translation": "由于受到了战斗损伤，或是有生产缺陷，亦或是年久失修，该舰的驱动力场性能已经永久性降低。\n\n最大宇宙航速下降{%s}，传感器截面上升{%s}。\n\n但部署所需补给下降{%s}。",
+        "translation": "由于受到了战斗损伤，或是有生产缺陷，亦或是年久失修，该舰的驱动场性能已经永久性降低。\n\n最大宇宙航速下降{%s}，传感器截面上升{%s}。\n\n但部署所需补给下降{%s}。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：hull_mods.csv\n行：00134"
     },
     {
         "key": "hull_mods.csv#degraded_drive_field$name",
         "original": "Degraded Drive Field",
-        "translation": "驱动力场故障",
-        "stage": 5,
+        "translation": "驱动场故障",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：hull_mods.csv\n行：00134"
     },
     {
@@ -1108,8 +1108,8 @@
     {
         "key": "hull_mods.csv#drive_field_stabilizer$name",
         "original": "Drive Field Stabilizer",
-        "translation": "驱动力场稳定器",
-        "stage": 5,
+        "translation": "驱动场稳定器",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：hull_mods.csv\n行：00086"
     },
     {
@@ -2648,7 +2648,7 @@
     {
         "key": "hull_mods.csv#secondary_fabricator$sModDesc",
         "original": "Increases the fragment replacement rate by a further %s.",
-        "translation": "碎片整备速度率进一步提高{%s}。",
+        "translation": "碎片整备速度进一步提高{%s}。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：hull_mods.csv\n行：00116"
     },
@@ -3061,7 +3061,7 @@
     {
         "key": "hull_mods.csv#terminator_core$desc",
         "original": "Gives all point-defense weapons the ability to identify - and ignore - decoy flares. In addition, all weapons get the best possible target leading, regardless of combat readiness, all damage to missiles and fighters is increased by %s, and beam weapon range is increased by %s units.",
-        "translation": "给予所有点防御武器识别并忽略诱饵弹的能力。此外，无论战备处于何种水平，所有点防御武器均可保持最佳精准度。所有武器对导弹和战机造成的伤害提高{%s}，且提高光束武器{%s}的射程。",
+        "translation": "给予所有点防御武器识别并忽略诱饵弹的能力。此外，无论战备处于何种水平，所有武器均可保持最佳精准度。所有武器对导弹和战机造成的伤害提高{%s}，且提高光束武器{%s}的射程。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：hull_mods.csv\n行：00066"
     },

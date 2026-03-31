@@ -146,8 +146,8 @@
 		"boardingTaskForceSelectedOneShip":"接到命令后，$boardingTaskForceShips 靠近并准备接触敌舰。",
 		"boardingTaskForceSelectedMultiple":"接到命令后，$boardingTaskForceShips 靠近并准备接触敌舰。",
 		
-		"boardingApproachDock":"完成与敌舰的对接后，陆战队员迅速控制了气闸阀门和 可能产生致命爆炸的脆弱部位。",
-		"boardingApproachLaunch":"在距离敌舰一公里的地方将 战队队员发射到敌舰舰体上，然后陆战队员依靠个人推进系统登陆敌舰，在登陆时会遭到敌舰内部人员的反击。",
+		"boardingApproachDock":"完成与敌舰的对接后，陆战队员迅速控制了气闸阀门，并在船体薄弱区域炸开了临时入口。",
+		"boardingApproachLaunch":"在距离敌舰大约一公里外发射突袭小组，分波次接近敌舰的船体，然后陆战队员依靠个人推进系统登陆敌舰。在登陆完全成功之前，突袭小组将会遭到防御力量的反击。",
 		
 		"boardingOutcomeSelfDestruct":"当陆战队员登陆敌舰进行战斗时，敌舰自毁，大部分死于非命。",
 		"boardingOutcomeShipLost":"$boardingTaskForceShipName 已被摧毁。", 
@@ -156,28 +156,28 @@
 		"boardingOutcomeTaskForceLostPartial":"敌舰爆炸时执行停靠作业的船也不幸殉爆，还有一些幸运的舰船受到了严重损毁。", 
 		"boardingOutcomeTaskForceDamaged":"万幸，一艘船也没坏。",
 		 
-		"boardingOutcomeSuccess":"经过艰苦卓绝的战斗，宇宙登陆队员占领敌舰，并开始接收人员和物资。",
-		"boardingOutcomeTooDamaged":"经过艰苦卓绝的战斗，宇宙登陆队员占领敌舰，但是战斗对敌舰的核心系统造成了 无法挽回的损坏。",
-		"boardingOutcomeEscape":"宇宙登陆队员在占领敌舰时遇到了顽强的抵抗，最终不敌导致敌舰逃走。",
+		"boardingOutcomeSuccess":"经过艰苦卓绝的战斗，登舰部队指挥官报告已占领敌舰，并开始接管人员。",
+		"boardingOutcomeTooDamaged":"经过艰苦卓绝的战斗，登舰部队指挥官报告已占领敌舰。但是战斗对敌舰的核心系统造成了无法挽回的损坏。",
+		"boardingOutcomeEscape":"突袭小组在占领敌舰时遇到了顽强的抵抗，敌舰修复了其引擎并成功逃走。",
 		"boardingCleanEscapeMissedLaunch":"在最后关头，敌舰恢复了动力，然后躲过了大部分正面攻击逃走啦； 在一切恢复正常之后，$boardingCrewLost 名船员和 $boardingMarinesLost 名陆战队员下落不明。",
 		
-		"boardingNoMarines":"你没有陆战队可供使用，战术模拟机的结果显示你目前登舰的成功几率为0。",
-		"boardingProjection":"你有 $marines 位陆战队可用。根据伽马级AI的模拟运算，登舰成功的几率为 $boardingSuccessChance 。",
+		"boardingNoMarines":"你没有陆战队员可供使用，战术模拟机的结果显示你目前登舰的成功几率为0。",
+		"boardingProjection":"你有 $marines 名陆战队员可用。根据伽马级AI的模拟运算，登舰成功的几率为 $boardingSuccessChance 。",
 		
-		"boardingCasualtyReport":"行动后评估报告表明，在登陆战中我方损失 $boardingMarinesLost 名陆战队。",  
+		"boardingCasualtyReport":"行动后评估报告表明，在登陆战中我方损失 $boardingMarinesLost 名陆战队员。",  
 		
 		#
 		# BEING BOARDED (limited to ship being engaged and shot down or not, at the moment)
 		#
 		"friendlyShipBoardable":"有艘破船上的维修人员走了狗屎运 修好了船上的核心控制系统，如果你愿意给这艘船提供动力的话，这艘船会加入你的舰队。",
-		"engageFriendlyBoardableDisabled":"不幸的是，敌舰接近后，几炮就把逃跑的机会打的无影无踪。",
-		"engageFriendlyBoardableDestroyed":"不幸的是，敌舰悄悄接近，在你将要看到希望的时候，抬起主炮就把船打的支离破碎。",
+		"engageFriendlyBoardableDisabled":"不幸的是，敌舰接近后，用几发精准的炮击彻底断绝了任何逃跑的机会。",
+		"engageFriendlyBoardableDestroyed":"不幸的是，敌舰接近并对其开火，断绝了任何进一步修复的机会。一发流弹导致了反应堆约束场崩溃 —— 被命中的舰船直接爆炸，只留下一片缓缓扩张的残骸区。",
 		"engageFriendlyBoardableEscaped":"动力工程师在敌人靠近前修好了引擎 溜回了自己的舰队。",
 		"engageFriendlyBoardableLetGo":"敌人的舰队好心地停了下来并让你完成了维修，你晃晃悠悠的回到了自己的舰队。",
 		
 		"lastFriendlyShipRepairs":"你指挥着 $boardableShipName，迅速组织抢修队伍，如果它能重新运作，你就可以侥幸逃脱。",
-		"lastFriendlyBoardableDisabled":"不幸的是，敌人的舰队不断接近并且开火，一点也不放过任何把你轰成渣渣的机会。",
-		"lastFriendlyBoardableDestroyed":"不幸的是，敌舰悄悄接近，在你将要看到希望的时候，抬起主炮就把船打的支离破碎。",
+		"lastFriendlyBoardableDisabled":"不幸的是，敌舰接近后，用几发精准的炮击彻底断绝了任何逃跑的机会。",
+		"lastFriendlyBoardableDestroyed":"不幸的是，敌舰接近并对其开火，断绝了任何进一步修复的机会。一发流弹导致了反应堆约束场崩溃 —— 被命中的舰船直接爆炸，只留下一片缓缓扩张的残骸区。",
 		"lastFriendlyBoardableEscaped":"动力工程师在敌人靠近前修好了引擎 ，你顺利逃脱!",
 		"lastFriendlyBoardableLetGo":"敌人的舰队好心地停了下来并让你完成了维修，你晃晃悠悠地离开了。",
 
@@ -211,7 +211,7 @@
 		"tooltipPursueTooSlow":"敌方舰队速度太快，你的部队无法追上。",
 		
 		"tooltipNoReadyShips":"你没有可以作战的船只。",
-		"tooltipNoPersonnel":"没有陆战队可派遣。",
+		"tooltipNoPersonnel":"没有陆战队员可派遣。",
 		
 		"tooltipHarassRetreat":"降低所有逃离船只的战备值，相当于经历一次战斗部署。\n\n同时也会使你的舰队减速一段时间，因为你的部队在实施骚扰行动后需要时间重整。",
 		"tooltipHarassRetreatUnavailable":"无法骚扰撤退部队。因为没有可以作战的船只或已下令撤退。",
@@ -223,13 +223,13 @@
 		"tooltipHarrassableDisengage":"在不冒被追击风险的情况下结束战斗。对方舰队仍然可能会在你撤退时进行骚扰。\n\n由于敌方仍然控制着战区，你将无法进行任何打捞作业。\n\n如果你的舰队没有采取任何敌对行动，脱离交战不会对你与对方势力的关系造成损害。",
 		"tootipAttemptToDisengage":"试图从战斗中撤退。对方舰队可能会追击并迫使你应战，也可能会让你就此离开。\n\n由于敌人仍然控制着战区，你将无法进行任何打捞行动。\n\n如果你的舰队没有采取任何敌对行动，在不损害任何追击船只的情况下脱离战斗将，可将双方关系的损害减小到最低。",
 		
-		"tooltipBoardingAction":"组织登舰行动，需要陆战队，可能造成严重的人员损失。",
+		"tooltipBoardingAction":"组织登舰行动，需要陆战队员，可能造成严重的人员损失。",
 		"tooltipEngageBoardable":"在舰船有机会完成维修前攻击它。\n\n有可能完全摧毁目标舰船。",
 		"tooltipLetShipGo":"让敌人的船完成紧急抢修并撤退。",
 		"tooltipHardDockBoarding":"组织专门的登陆小组接近并与敌舰对接。\n\n拥有最高的成功机会。\n\n如果目标舰船自毁，参与攻占行动船可能遭受重创，甚至被摧毁。",
-		"tooltipLaunchBoarding":"从安全距离发射陆战队，靠单兵推进器接近敌舰。\n\n给敌舰显著的逃脱成功率，但不会有舰船殉爆的风险。",
+		"tooltipLaunchBoarding":"从安全距离发射陆战队员，靠单兵推进器接近敌舰。\n\n给敌舰显著的逃脱成功率，但不会有舰船殉爆的风险。",
 		"tooltipAboutBoardingAction":"召回登舰组并取消行动，允许敌船撤退。", 
-		"tooltipSelectorMarines":"选择执行突击任务的陆战队人数。",
+		"tooltipSelectorMarines":"选择执行突击任务的陆战队员人数。",
 		"tooltipSelectorCrew":"选择执行突击任务的船员人数。",
 		"tooltipSelectFlagship":"选择你亲自指挥参与下一场战斗的旗舰。",
 		
@@ -306,7 +306,7 @@
 		"chmWeaponGroups_dismiss":"关闭",
 		
 		#"chmOpenTrade_text":"In the cargo/trade screen，you can: \n\n- Left-click to pick up a stack\n- Shift-click to pick up items from a stack one at a time\n- Shift-click and hold，then drag to pick up a specific quantity\n- Control-click to transfer an entire stack without picking it up\n- Hold down Alt and move the mouse to transfer multiple stacks quickly",
-		"chmOpenTrade_text":"在货物/交易面板里，你可以: \n\n- 左键单击: 全部拿起 \n- Shift + 左键单击: 一次拿一个 \n- Shift + 左键拖动: 拿起任意数量 \n- Ctrl + 左键单击: 购买/出售/存放/抛弃全部",
+		"chmOpenTrade_text":"在货物/交易面板里，你可以：\n\n- 左键点击以拿起整组物品\n- 按住 Shift 键并点击以从整组物品中一次拿起一个物品\n- 按住 Shift 键并点按拖动以拿起一个特定的数量\n- 按住 Ctrl 键并点击以转移整组物品而不用将其拿起",
 		"chmOpenTrade_dismiss":"关闭",
 		
         "chmHyperStorm_text":"你的舰队刚刚被超空间风暴击中了！你的一艘舰船因此受到了损伤，并损失了一些战备值 (CR)。\n\n风暴袭击会让你的舰队偏离航线，不过你可以使用 \"紧急加速\" 来更快地修正航线并穿过风暴。",
@@ -316,7 +316,7 @@
 		"chmShipPurchase_action":"打开改装界面",
 		"chmShipPurchase_dismiss":"关闭",
 		
-		"chmWingPurchase_text":"恭喜你，你购买了一个战机联队！ \n\n战机联队的战备值 (CR) 代表了战机的预备队列，但只有在战场上存在有飞行甲板的船时才会生效。\n\n战损的战机会由附近甲板上起飞的新战机代替。 只要你的舰队有拥有飞行甲板的船，战机联队就不会消失，即便战备值 (CR) 掉成 0。",
+		"chmWingPurchase_text":"恭喜你，你购买了一个战机联队！ \n\n战机联队的战备值 (CR) 代表了可用于整备的战机底盘数量，但只有舰队中存在带有飞行甲板的舰船时才会生效。\n\n在战斗中，被摧毁的战机会由附近飞行甲板上起飞的新战机补充。只要你的舰队中存在拥有飞行甲板的舰船，战机联队就不会彻底消失，即便战备值 (CR) 掉成 0。",
 		"chmWingPurchase_dismiss":"关闭",
 		
 		"chmRefitOnStation_text":"当停靠在空间站，并进行舰船改装时，你可以选择使用来自船舱或购自空间站市场内的武器。\n\n撤销更改或拆下购自市场的武器会退还购入所花费的星币，不过前提是你没有关闭改装的界面。",

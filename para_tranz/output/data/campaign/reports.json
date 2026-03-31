@@ -408,7 +408,7 @@
   {
     "key": "reports.csv#('investigation_smuggling', 'start_smuggling', '', 'secure_comm')$summary",
     "original": "An encryped message from one of your contacts in $market's underworld warns you that $theMarketFaction authorities have launched an investigation into the recent smuggling activity.",
-    "translation": "你的一位在 $market's 的犯罪集团中联系人发来加密信息警告你，$theMarketFaction 当局已经对最近的走私活动展开了调查。",
+    "translation": "你的一位在 $market 的犯罪集团中联系人发来加密信息警告你，$theMarketFaction 当局已经对最近的走私活动展开了调查。",
     "stage": 1,
     "context": "reports.csv第0023行\n[本行原始数据]\n{'event_type': 'investigation_smuggling',\n 'event_stage': 'start_smuggling',\n 'p': '',\n 'target_rel': '',\n 'channels': 'secure_comm',\n 'subject': 'Smuggling investigation $onOrAt $market',\n 'summary': \"An encryped message from one of your contacts in $market's \"\n            'underworld warns you that $theMarketFaction authorities have '\n            'launched an investigation into the recent smuggling activity.',\n 'assessment': 'If the investigation finds you involved in the smuggling, '\n               '$theMarketFaction will become inhospitable towards you.\n'\n               '\n'\n               '$InvestigatorPost $investigatorName is charged with carrying '\n               'out the investigation. You may be able to influence the '\n               'outcome by contacting $invHimOrHer.\n'\n               '\n'\n               'The investigation will last for $duration.',\n 'image': '',\n 'icon': '',\n 'tags': 'important',\n 'sound_id': '',\n 'implementation notes': ''}"
   },

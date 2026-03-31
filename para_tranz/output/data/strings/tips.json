@@ -44,7 +44,7 @@
     {
         "key": "data/strings/tips.json$.tips[15]",
         "original": "When refitting a ship, Shift-click on a weapon slot to install the previously selected weapon without opening the weapon selection menu.",
-        "translation": "改造舰船时，按住 Shift 键并单击武器槽能快速安装上次选择的武器，无需打开菜单重新选择。",
+        "translation": "改造舰船时，按住 Shift 键并点击武器槽能快速安装上次选择的武器，无需打开菜单重新选择。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\tips.json\n数据路径：$.tips[15]"
     },
@@ -93,14 +93,14 @@
     {
         "key": "data/strings/tips.json$.tips[21]",
         "original": "Control-click to buy/sell a stack. Shift-click to pick up items one at a time. Hold Shift and click and drag to select a specific quantity.",
-        "translation": "按住 Ctrl 键并单击能快速买卖整组物品；按住 Shift 键并单击可一次拾取一个物品，按住 Shift 键并用左键拖动则可选择获取的数量。",
+        "translation": "按住 Ctrl 键并点击可买卖整组物品。按住 Shift 键并点击可一次拿起一个物品。按住 Shift 键点击并拖动则可选择一个特定的数量。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\tips.json\n数据路径：$.tips[21]"
     },
     {
         "key": "data/strings/tips.json$.tips[22]",
         "original": "To pan the in-combat map, either right-click and drag or use the arrow keys.",
-        "translation": "在指挥界面按住右键可以拖动地图，方向键也可以移动地图。",
+        "translation": "在指挥界面右键点击并拖动可以移动地图，方向键也可以移动地图。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\tips.json\n数据路径：$.tips[22]"
     },
@@ -282,7 +282,7 @@
     {
         "key": "data/strings/tips.json$.tips[46]",
         "original": "Assigning marines to attack a low-danger objective can create a diversion and reduce casualties from a dangerous raid more than keeping those marines in reserve.",
-        "translation": "同时指派一些陆战队突袭一处低危险目标和一处高威胁目标，往往更能拖住敌方的脚步，从而减少高危险目标突袭行动所带来的伤亡。",
+        "translation": "指派一些陆战队员先突袭一处低危险目标，往往能拖住敌方的脚步，从而减少后续劫掠高危险目标所带来的伤亡。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\tips.json\n数据路径：$.tips[46]"
     },

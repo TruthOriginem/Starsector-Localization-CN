@@ -1,7 +1,7 @@
 name,id,tags,planetary,decivRemove,script,desc,icon,order
 城市化,urbanized_polity,,,TRUE,com.fs.starfarer.api.impl.campaign.econ.UrbanizedPolity,人口稠密的民族熔炉。各行各业的人们在城中的高层住宅群，商业中心与各种工业园区中生活，工作直至死亡。,graphics/icons/markets/urbanized_polity.png,130
 工业化,industrial_polity,,,TRUE,com.fs.starfarer.api.impl.campaign.econ.IndustrialPolity,一处繁荣的工业中心，因地方政府大肆鼓励工业发展，而牺牲了其他所有方面的利益。,graphics/icons/markets/urbanized_polity.png,130
-村镇化,rural_polity,,,TRUE,com.fs.starfarer.api.impl.campaign.econ.RuralPolity,人口稀少，由农庄与偏远乡镇组成的共和政体。在这乱世中，任何外来者一般都难以得到本地居民的信任。,graphics/icons/markets/rural_polity.png,130
+村镇化,rural_polity,,,TRUE,com.fs.starfarer.api.impl.campaign.econ.RuralPolity,人口稀少，由农庄与偏远乡镇组成的政体。在这乱世中，任何外来者一般都难以得到本地居民的信任。,graphics/icons/markets/rural_polity.png,130
 难民潮,large_refugee_population,,,TRUE,com.fs.starfarer.api.impl.campaign.econ.LargeRefugeePopulation,这里充斥着大量为逃离灾难而涌入的难民。这些勉强维持半合法身份的人们，只能无望地在社会的最底层挣扎，他们不仅会对社会基础设施带来很大的压力，还会让本地劳动生产率降低。而为了逃离这种恶劣的生活环境，许多人都愿意成为雇佣船员。,graphics/icons/markets/refugee_population.png,140
 Volturn 蓝龙虾养殖场,volturnian_lobster_pens,"show_in_codex, codex_unlockable",TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,混合了多种旧地球物种和一点想象力而创造出的生物，它们主要栖息在 Volturn 海底深处的破碎海床上，据说味道非常独特。,graphics/icons/markets/lobster_pens.png,137
 违禁品需求,vice_demand,,,TRUE,com.fs.starfarer.api.impl.campaign.econ.ViceDemand,这里有着非常高的违禁品需求。,graphics/icons/markets/vice_demand.png,145
@@ -32,7 +32,7 @@ Volturn 蓝龙虾养殖场,volturnian_lobster_pens,"show_in_codex, codex_unlocka
 苔原地貌,tundra,,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldTundra,$market 经地貌改造后已经足以让人类居住，但仍处在旧地球的冰河时期水平。虽数百万平方公里都覆盖着冰川，但在温和的地方也存在着针叶林和草原。,graphics/icons/markets/tundra_terran_wide.png,10
 冰火山地貌,cryovolcanic,,TRUE,,com.fs.starfarer.api.impl.campaign.econ.WorldUninhabitable,一个冰封的极寒世界。除了被甲烷雪所覆盖的冰川和随时会喷发的氨火山，那些因恒星辐射所分解的挥发物，让氢气得以逸散进入太空，并留下主要由氧气和氮气等轻质气体所组成的大气层。,graphics/icons/markets/cryo_world_wide.png,10
 ,,,,,,,,
-异议人士,dissident,,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Dissident,$Market 聚集着各种异政者、反叛者、自由思想家，艺术家和其他麻烦制造者。为管理这群乌合之众，武器和陆战队的需求增加。因频繁的移民也使可雇佣的船员增多。,graphics/icons/markets/dissidents.png,139
+异议人士,dissident,,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Dissident,$Market 聚集着各种异政者、反叛者、自由思想家，艺术家和其他麻烦制造者。为管理这群乌合之众，武器和陆战队员的需求增加。因频繁的移民也使可雇佣的船员增多。,graphics/icons/markets/dissidents.png,139
 指挥中心,headquarters,,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Headquarters,"$Market 是军事指挥和后勤运作的枢纽。市场稳定性提高。
 
 提高此地舰队的军官质量与数量。",graphics/icons/markets/headquarters.png,360
@@ -127,7 +127,7 @@ AI 管理员 (隐藏),ai_core_admin,,,TRUE,com.fs.starfarer.api.impl.campaign.ec
 海洋覆盖,water_surface,,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,这是一个海洋世界，没有足够面积的固态地表可供降落、行走或进行建设。对专业的培训与设备的需求让在此的一切行动变得复杂。,graphics/icons/markets/water_covered.png,31
 ,,,,,,,,
 昏暗,poor_light,,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,因距离较远，使得恒星只能为 $market 提供微弱的照明与能量。,graphics/icons/markets/poor_light.png,32
-黑暗,dark,,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,$Market 的表面一片黑暗，它的主要光源基本都来自于人工照明。,graphics/icons/markets/darkness.png,32
+黑暗,dark,,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,$Market 的表面一片黑暗，几乎完全得不到恒星的光照。,graphics/icons/markets/darkness.png,32
 ,,,,,,,,
 流星撞击,meteor_impacts,,TRUE,,com.fs.starfarer.api.impl.campaign.econ.BaseHazardCondition,这个世界经常遭受各种规格与速度的流星轰击。所有居住于此或暂时驻留的人类，都必须时刻警惕天空。而想在此永久定居就最好生活在地下深处的强化建筑内。,graphics/icons/markets/meteor_impacts.png,33
 ,,,,,,,,
@@ -157,7 +157,7 @@ AI 管理员 (隐藏),ai_core_admin,,,TRUE,com.fs.starfarer.api.impl.campaign.ec
 ,,,,,,,,
 微量的有机物,organics_trace,,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,虽然 $Market 存在有机物可供提取，但储量少得可怜。,graphics/icons/markets/organics_trace.png,38
 少量的有机物,organics_common,,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,$Market 拥有适合提取的有机物。,graphics/icons/markets/organics_common.png,38
-丰富的有机物,organics_abundant,,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,财富的河流在 $market 的表面流动 - 对于那些发现并提取它的人来说。,graphics/icons/markets/organics_abundant.png,38
+丰富的有机物,organics_abundant,,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,财富的河流在 $market 的地表之下流动 - 只待那些能够寻获并开发它的人。,graphics/icons/markets/organics_abundant.png,38
 富足的有机物,organics_plentiful,,TRUE,,com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition,有机物自动从 $market 的地底喷涌而出洒满大地，这些黑暗而神秘的喷泉，预示着财富的海洋就在下面。,graphics/icons/markets/organics_plentiful.png,38
 ,,,,,,,,
 ,,,,,,,,

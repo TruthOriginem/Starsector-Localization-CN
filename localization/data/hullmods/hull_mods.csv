@@ -103,7 +103,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 船员宿舍扩容,additional_berthing,0,,,"req_spaceport, merc, standard","后勤, 需要船坞",3000,TRUE,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.AdditionalBerthing,"根据船体级别，提高{%s}/{%s}/{%s}/{%s}或至少{%s}名最大载员。
 
 而对于民用舰船，还会提高{%s}维护时所消耗的补给量。",提高舰船的最大载员。,最大载员增加值翻倍，抵消民用舰船所增加的维护成本。,graphics/hullmods/berthing.png
-增强驱动力场,augmentedengines,1,,,"req_spaceport, merc, standard","后勤, 需要船坞",8000,,,,8,16,24,40,data.hullmods.AugmentedEngines,最大宇宙航速提高{%s}。,提高最大宇宙航速。,额外提高{%s}最大宇宙航速。,graphics/hullmods/augmented_drive_field2.png
+增强驱动场,augmentedengines,1,,,"req_spaceport, merc, standard","后勤, 需要船坞",8000,,,,8,16,24,40,data.hullmods.AugmentedEngines,最大宇宙航速提高{%s}。,提高最大宇宙航速。,额外提高{%s}最大宇宙航速。,graphics/hullmods/augmented_drive_field2.png
 辅助燃料罐,auxiliary_fuel_tanks,0,,,"req_spaceport, merc, standard","后勤, 需要船坞",4000,TRUE,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.AuxiliaryFuelTanks,"根据船体级别，提高{%s}/{%s}/{%s}/{%s}或至少{%s}单位燃料存储量。
 
 而对于民用舰船，还会提高{%s}维护时所消耗的补给量。",提高舰船的燃料存储量。,燃料存储量增加值翻倍，豁免民用舰船所增加的维护成本。,graphics/hullmods/fuel_tanks.png
@@ -126,7 +126,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 勘探设备,surveying_equipment,1,,,"special, req_spaceport, standard","后勤, 需要船坞",5000,,,,5,10,15,25,data.hullmods.SurveyingEquipment,根据船体级别，降低 %s/%s/%s/%s 勘探星球时所需的重型机械和补给。所消耗资源的数量最低可降至 %s}。,降低勘探时所需的资源。,进一步降低 %s 的勘探资源花费。,graphics/hullmods/surveying_equipment.png
 ,,,,,,,,,,,,,,,,,,,
 # standard built-in hullmods,,,,,,,,,,,,,,,,,,,
-终结者核心,terminator_core,,,,,武器,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.TerminatorCore,给予所有点防御武器识别并忽略诱饵弹的能力。此外，无论战备处于何种水平，所有点防御武器均可保持最佳精准度。所有武器对导弹和战机造成的伤害提高{%s}，且提高光束武器{%s}的射程。,,,graphics/hullmods/terminator_core.png
+终结者核心,terminator_core,,,,,武器,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.TerminatorCore,给予所有点防御武器识别并忽略诱饵弹的能力。此外，无论战备处于何种水平，所有武器均可保持最佳精准度。所有武器对导弹和战机造成的伤害提高{%s}，且提高光束武器{%s}的射程。,,,graphics/hullmods/terminator_core.png
 共享幅散管道,shared_flux_sink,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.SharedFluxSink,根据当前存活模块的数量，最高提高{%s}的幅能耗散。如果模块在战斗中遭到破坏，幅能耗散增益将在剩余模块间重新分配。而{%s}耗散增益将适用于硬幅能耗散。,模块损失后提高其他模块幅能与硬幅能的耗散效率。,,graphics/hullmods/shared_flux_sink.png
 感应雷区,stealth_minefield,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.StealthMinefield,战场周遭会布置大量感应空雷，并破坏靠近的敌舰。,战场周遭会布置大量感应空雷，并破坏靠近的敌舰。,,graphics/hullmods/stealth_mines.png
 感应雷区,stealth_minefield_lt,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.StealthMinefieldLT,战场周遭会布置大量感应空雷，并破坏靠近的敌舰。,战场周遭会布置大量感应空雷，并破坏靠近的敌舰。,,graphics/hullmods/stealth_mines.png
@@ -156,7 +156,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 牵引线缆,tow_cable,,,,hide_in_codex,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.campaign.TowCable,"使舰队中最慢舰船的宇宙航行速度提高 1 点。多个拖船不能提高同一艘船的航速。
 
 战斗中无效。",提高另一舰船的最大宇宙航速。,,graphics/hullmods/monofilament_cable.png
-驱动力场稳定器,drive_field_stabilizer,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DriveFieldStabilizer,"稳定舰队航行时的驱动泡，来提高{%s}的舰队最高航速。多个稳定器的效果可以累加。
+驱动场稳定器,drive_field_stabilizer,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DriveFieldStabilizer,"稳定舰队航行时的驱动泡，来提高{%s}的舰队最高航速。多个稳定器的效果可以累加。
 
 但提高{%s}传感器截面。",降低整支舰队的燃料消耗。,,graphics/hullmods/augmented_drive_field.png
 地面支援,ground_support,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.GroundSupport,针对地面防御工事配备了密接支援武器和专用反制措施。提高{%s}劫掠殖民地的有效强度，该加成不会超过携带陆战队员的总人数。,提高劫掠的效率。,,graphics/hullmods/ground_support.png
@@ -210,7 +210,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 碎片基准数量为{%s}/{%s}/{%s}/{%s}，碎片补充频率为每秒{%s}/{%s}/{%s}/{%s}次，具体数值取决于船体级别。
 
 此舰船插件是碎片武器正常运作的必要条件；若未安装该插件，或碎片集群中碎片数量不足，将无法启用碎片武器。",一群 威胁 碎片在舰船周围涌动。,战备值 (CR) 上限降低{%s}，维护成本提高{%s}。,graphics/hullmods/fragment_swarm.png
-加装仿织器,secondary_fabricator,,,,"codex_unlockable, fragment, no_drop_salvage","武器, 特殊",20000,,,,3,6,9,15,com.fs.starfarer.api.impl.combat.threat.SecondaryFabricatorHullmod,碎片整备速度提高{%s}。,提高碎片整备速度,碎片整备速度率进一步提高{%s}。,graphics/hullmods/secondary_fabricator.png
+加装仿织器,secondary_fabricator,,,,"codex_unlockable, fragment, no_drop_salvage","武器, 特殊",20000,,,,3,6,9,15,com.fs.starfarer.api.impl.combat.threat.SecondaryFabricatorHullmod,碎片整备速度提高{%s}。,提高碎片整备速度,碎片整备速度进一步提高{%s}。,graphics/hullmods/secondary_fabricator.png
 碎片协调器,fragment_coordinator,,,,"codex_unlockable, fragment, no_drop_salvage","武器, 特殊",15000,,,,3,6,9,15,com.fs.starfarer.api.impl.combat.threat.FragmentCoordinatorHullmod,将舰船碎片集群的最大数量提升{%s}。,提升船碎片集群的规模。,将舰船碎片集群的最大数量进一步提升{%s}。,graphics/hullmods/fragment_coordinator.png
 ,,,,,,,,,,,,,,,,,,,
 # shrouded dweller stuff,,,,,,,,,,,,,,,,,,,
@@ -238,7 +238,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 战斗中最大航速与机动性均降低{%s}。
 
 但部署所需补给下降{%s}。",,,graphics/hullmods/degraded_engines.png
-驱动力场故障,degraded_drive_field,,,,"dmod, damage, civOnly",,,,TRUE,,0,0,0,0,data.hullmods.DegradedDriveField,"由于受到了战斗损伤，或是有生产缺陷，亦或是年久失修，该舰的驱动力场性能已经永久性降低。
+驱动场故障,degraded_drive_field,,,,"dmod, damage, civOnly",,,,TRUE,,0,0,0,0,data.hullmods.DegradedDriveField,"由于受到了战斗损伤，或是有生产缺陷，亦或是年久失修，该舰的驱动场性能已经永久性降低。
 
 最大宇宙航速下降{%s}，传感器截面上升{%s}。
 
