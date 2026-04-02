@@ -2417,9 +2417,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/AbandonMarketPluginImpl.class#\"You have %s credits.\"",
         "original": "You have %s credits.",
-        "translation": "你目前有 %s 可用。",
+        "translation": "你有 %s 星币。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/AbandonMarketPluginImpl.class\n常量号：0169\n原始数据：\"You have %s credits.\"\n译文数据：\"你目前有 %s 可用。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/AbandonMarketPluginImpl.class\n常量号：0169\n原始数据：\"You have %s credits.\"\n译文数据：\"你有 %s 星币。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/AbandonMarketPluginImpl.class#\"cost\"",
@@ -6050,9 +6050,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/InterdictionPulseAbility.class#\"The disruption interrupts any movement-related abilities (such as %s or %s) and prevents their use for some time afterward~\"@64316d7c",
         "original": "The disruption interrupts any movement-related abilities (such as %s or %s) and prevents their use for some time afterwards. Also interrupts charging interdiction pulses.",
-        "translation": "阻断脉冲将打断任何机动性相关的技能 (例如 %s)，并在随后的一段时间内阻止它们被使用。同时也会打断其他阻断脉冲的充能。",
+        "translation": "阻断脉冲将打断任何机动性相关的技能 (例如 %s 或 %s)，并在随后的一段时间内阻止它们被使用。同时也会打断其他阻断脉冲的充能。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/abilities/InterdictionPulseAbility.class\n常量号：0520\n原始数据：\"The disruption interrupts any movement-related abilities (such as %s or %s) and prevents their use for some time afterwards. Also interrupts charging interdiction pulses.\"\n译文数据：\"阻断脉冲将打断任何机动性相关的技能 (例如 %s)，并在随后的一段时间内阻止它们被使用。同时也会打断其他阻断脉冲的充能。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/abilities/InterdictionPulseAbility.class\n常量号：0520\n原始数据：\"The disruption interrupts any movement-related abilities (such as %s or %s) and prevents their use for some time afterwards. Also interrupts charging interdiction pulses.\"\n译文数据：\"阻断脉冲将打断任何机动性相关的技能 (例如 %s 或 %s)，并在随后的一段时间内阻止它们被使用。同时也会打断其他阻断脉冲的充能。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/InterdictionPulseAbility.class#\"The disruption lasts for %s seconds, modified by %s second for every %s points of difference in the fleets' sensor strengths.\"",
@@ -6092,9 +6092,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/RemoteSurveyAbility.class#\"Increases the range at which the fleet can be detected by %s* units and brings the fleet to a near-stop as drives are powered down to reduce interference.\"",
         "original": "Increases the range at which the fleet can be detected by %s* units and brings the fleet to a near-stop as drives are powered down to reduce interference.",
-        "translation": "提高 %s* 单位被侦测范围，并暂停引擎供能，以降低干扰。",
+        "translation": "提高 %s* 单位被侦测范围，并暂停引擎供能，以降低干扰。这将使舰队几乎完全停止。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/abilities/RemoteSurveyAbility.class\n常量号：0295\n原始数据：\"Increases the range at which the fleet can be detected by %s* units and brings the fleet to a near-stop as drives are powered down to reduce interference.\"\n译文数据：\"提高 %s* 单位被侦测范围，并暂停引擎供能，以降低干扰。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/abilities/RemoteSurveyAbility.class\n常量号：0295\n原始数据：\"Increases the range at which the fleet can be detected by %s* units and brings the fleet to a near-stop as drives are powered down to reduce interference.\"\n译文数据：\"提高 %s* 单位被侦测范围，并暂停引擎供能，以降低干扰。这将使舰队几乎完全停止。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/RemoteSurveyAbility.class#\"No suitable planets in the star system.\"",
@@ -6946,16 +6946,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/LuddicMajority.class#\"Luddic immigration (Luddic majority)\"",
         "original": "Luddic immigration (Luddic majority)",
-        "translation": "卢德移民 (卢德教众)",
+        "translation": "卢德移民 (卢德信众)",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/econ/LuddicMajority.class\n常量号：0192\n原始数据：\"Luddic immigration (Luddic majority)\"\n译文数据：\"卢德移民 (卢德教众)\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/econ/LuddicMajority.class\n常量号：0192\n原始数据：\"Luddic immigration (Luddic majority)\"\n译文数据：\"卢德移民 (卢德信众)\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/LuddicMajority.class#\"Luddic majority\"",
         "original": "Luddic majority",
-        "translation": "卢德教众",
+        "translation": "卢德信众",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/econ/LuddicMajority.class\n常量号：0089\n原始数据：\"Luddic majority\"\n译文数据：\"卢德教众\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/econ/LuddicMajority.class\n常量号：0089\n原始数据：\"Luddic majority\"\n译文数据：\"卢德信众\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/LuddicMajority.class#\"The bonus is doubled due to the faithful \"",
@@ -7002,9 +7002,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/LuddicMajority.class#\"The following factors result in these bonuses being negated, and, unless addressed, will result in the \"Luddic Majority\" c~\"@70c66005",
         "original": "The following factors result in these bonuses being negated, and, unless addressed, will result in the \"Luddic Majority\" condition being removed if the colony increases in size:",
-        "translation": "以下因素导致增益被抵消，且除非因素被消除，否则可能导致殖民地增长时 失去 \"卢德教众\" 这一特质：",
+        "translation": "以下因素导致增益被抵消，且除非因素被消除，否则可能导致殖民地增长时 失去 \"卢德信众\" 这一特质：",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/econ/LuddicMajority.class\n常量号：0319\n原始数据：\"The following factors result in these bonuses being negated, and, unless addressed, will result in the \"Luddic Majority\" condition being removed if the colony increases in size:\"\n译文数据：\"以下因素导致增益被抵消，且除非因素被消除，否则可能导致殖民地增长时 失去 \"卢德教众\" 这一特质：\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/econ/LuddicMajority.class\n常量号：0319\n原始数据：\"The following factors result in these bonuses being negated, and, unless addressed, will result in the \"Luddic Majority\" condition being removed if the colony increases in size:\"\n译文数据：\"以下因素导致增益被抵消，且除非因素被消除，否则可能导致殖民地增长时 失去 \"卢德信众\" 这一特质：\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/LuddicMajority.class#\"The following factors result in these bonuses being negated:\"",
@@ -10271,9 +10271,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/fleets/EconomyFleetRouteManager.class#\"Recent incoming shipment lost\"",
         "original": "Recent incoming shipment lost",
-        "translation": "最近的一批货物遭到丢失",
+        "translation": "最近的一批货物遭到损失",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/fleets/EconomyFleetRouteManager.class\n常量号：0898\n原始数据：\"Recent incoming shipment lost\"\n译文数据：\"最近的一批货物遭到丢失\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/fleets/EconomyFleetRouteManager.class\n常量号：0898\n原始数据：\"Recent incoming shipment lost\"\n译文数据：\"最近的一批货物遭到损失\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/fleets/MercAssignmentAIV2.class#\"orbiting \"",
@@ -12763,9 +12763,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/SystemBountyIntel.class#\" have banded together and posted a modest but long-term bounty on all \"",
         "original": " have banded together and posted a modest but long-term bounty on all ",
-        "translation": " 已经联合起来发布了一个廉价的但长期的拨款，针对",
+        "translation": " 已经联合起来发布了一个廉价的但长期的赏金，针对",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/SystemBountyIntel.class\n常量号：0659\n原始数据：\" have banded together and posted a modest but long-term bounty on all \"\n译文数据：\" 已经联合起来发布了一个廉价的但长期的拨款，针对\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/SystemBountyIntel.class\n常量号：0659\n原始数据：\" have banded together and posted a modest but long-term bounty on all \"\n译文数据：\" 已经联合起来发布了一个廉价的但长期的赏金，针对\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/SystemBountyIntel.class#\" have posted a bounty on all hostile fleets \"",
@@ -14394,9 +14394,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/LuddicPathBaseBarEvent.class#\" asks will run you about %s. You have %s available.\"",
         "original": " asks will run you about %s. You have %s available.",
-        "translation": "从黑市那搞到一张新的身份芯片，而你当前有 %s 可用。",
+        "translation": "从黑市那搞到一张新的身份芯片。你有 %s 可用。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/bar/events/LuddicPathBaseBarEvent.class\n常量号：0300\n原始数据：\" asks will run you about %s. You have %s available.\"\n译文数据：\"从黑市那搞到一张新的身份芯片，而你当前有 %s 可用。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/bar/events/LuddicPathBaseBarEvent.class\n常量号：0300\n原始数据：\" asks will run you about %s. You have %s available.\"\n译文数据：\"从黑市那搞到一张新的身份芯片。你有 %s 可用。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bar/events/LuddicPathBaseBarEvent.class#\" eyes.\"",
@@ -17432,9 +17432,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathCellsIntel.class#\"If the base is destroyed, it will take some time to organize support from another base, and both ground and fleet operations will be disrupted.\"",
         "original": "If the base is destroyed, it will take some time to organize support from another base, and both ground and fleet operations will be disrupted.",
-        "translation": "如果该基地被摧毁，就能在其他基地发起支援之前争取到一些时间，使舰队和地面作战行动暂时被瓦解。",
+        "translation": "如果该基地被摧毁，就能在其他基地发起支援之前争取到一些时间，使舰队和地面作战行动暂时被瘫痪。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathCellsIntel.class\n常量号：0678\n原始数据：\"If the base is destroyed, it will take some time to organize support from another base, and both ground and fleet operations will be disrupted.\"\n译文数据：\"如果该基地被摧毁，就能在其他基地发起支援之前争取到一些时间，使舰队和地面作战行动暂时被瓦解。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathCellsIntel.class\n常量号：0678\n原始数据：\"If the base is destroyed, it will take some time to organize support from another base, and both ground and fleet operations will be disrupted.\"\n译文数据：\"如果该基地被摧毁，就能在其他基地发起支援之前争取到一些时间，使舰队和地面作战行动暂时被瘫痪。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathCellsIntel.class#\"If they succeed, the colony will effectively be destroyed.\"",
@@ -17474,9 +17474,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathCellsIntel.class#\"No impact on operations due to lack of material support.\"",
         "original": "No impact on operations due to lack of material support.",
-        "translation": "因缺乏物质支持，所以未对该市场造成影响。",
+        "translation": "因缺乏物质支持，所以未造成任何影响。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathCellsIntel.class\n常量号：0693\n原始数据：\"No impact on operations due to lack of material support.\"\n译文数据：\"因缺乏物质支持，所以未对该市场造成影响。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathCellsIntel.class\n常量号：0693\n原始数据：\"No impact on operations due to lack of material support.\"\n译文数据：\"因缺乏物质支持，所以未造成任何影响。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/LuddicPathCellsIntel.class#\"No perceptible impact on operations as of yet.\"",
@@ -19707,9 +19707,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchHostileActivityFactor.class#\"Luddic Majority\"",
         "original": "Luddic Majority",
-        "translation": "卢德教众",
+        "translation": "卢德信众",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchHostileActivityFactor.class\n常量号：0400\n原始数据：\"Luddic Majority\"\n译文数据：\"卢德教众\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchHostileActivityFactor.class\n常量号：0400\n原始数据：\"Luddic Majority\"\n译文数据：\"卢德信众\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchHostileActivityFactor.class#\"Luddic forces\"",
@@ -19756,30 +19756,30 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchHostileActivityFacto~#\"If the expedition is defeated, the Luddic faithful leaving the Church worlds will feel more secure, resulting in increased~\"@b5d420d4",
         "original": "If the expedition is defeated, the Luddic faithful leaving the Church worlds will feel more secure, resulting in increased immigration, stability, and productivity, and the Luddic Church will likely abandon further efforts of this sort.",
-        "translation": "如果这一远征被击败，逃离卢德教会的卢德信徒将感到更加安全，致使 移民增加、稳定性与设施生产力提高，且卢德教会将很可能彻底放弃此类行动。",
+        "translation": "如果这一远征被击败，逃离卢德教会治下星球的卢德信徒将感到更加安全，致使 移民增加、稳定性与设施生产力提高，且卢德教会将很可能彻底放弃此类行动。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchHostileActivityFactor.class\n常量号：0414\n原始数据：\"If the expedition is defeated, the Luddic faithful leaving the Church worlds will feel more secure, resulting in increased immigration, stability, and productivity, and the Luddic Church will likely abandon further efforts of this sort.\"\n译文数据：\"如果这一远征被击败，逃离卢德教会的卢德信徒将感到更加安全，致使 移民增加、稳定性与设施生产力提高，且卢德教会将很可能彻底放弃此类行动。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchHostileActivityFactor.class\n常量号：0414\n原始数据：\"If the expedition is defeated, the Luddic faithful leaving the Church worlds will feel more secure, resulting in increased immigration, stability, and productivity, and the Luddic Church will likely abandon further efforts of this sort.\"\n译文数据：\"如果这一远征被击败，逃离卢德教会治下星球的卢德信徒将感到更加安全，致使 移民增加、稳定性与设施生产力提高，且卢德教会将很可能彻底放弃此类行动。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchHostileActivityFacto~#\"You've received intel that the Knights of Ludd, under the aegis of the Luddic Church, are planning an operation to take ov~\"@27e806c1",
         "original": "You've received intel that the Knights of Ludd, under the aegis of the Luddic Church, are planning an operation to take over one of your colonies that has a Luddic Majority population.",
-        "translation": "你获知的情报表明，卢德教会庇下的卢德骑士团正计划 夺占你的某个殖民地 ，因其拥有大量 卢德教众 人口。",
+        "translation": "你获知的情报表明，卢德教会庇下的卢德骑士团正计划 夺占你的某个殖民地 ，因其拥有大量 卢德信众 人口。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchHostileActivityFactor.class\n常量号：0390\n原始数据：\"You've received intel that the Knights of Ludd, under the aegis of the Luddic Church, are planning an operation to take over one of your colonies that has a Luddic Majority population.\"\n译文数据：\"你获知的情报表明，卢德教会庇下的卢德骑士团正计划 夺占你的某个殖民地 ，因其拥有大量 卢德教众 人口。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchHostileActivityFactor.class\n常量号：0390\n原始数据：\"You've received intel that the Knights of Ludd, under the aegis of the Luddic Church, are planning an operation to take over one of your colonies that has a Luddic Majority population.\"\n译文数据：\"你获知的情报表明，卢德教会庇下的卢德骑士团正计划 夺占你的某个殖民地 ，因其拥有大量 卢德信众 人口。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchStandardActivityCause$1.class#\"Event progress value is based on the number and size of colonies with the \"Luddic Majority\" condition.\"",
         "original": "Event progress value is based on the number and size of colonies with the \"Luddic Majority\" condition.",
-        "translation": "事件进展将基于你拥有 \"卢德教众\" 的殖民地的数量与总规模。",
+        "translation": "事件进展将基于你拥有 \"卢德信众\" 这一特质的殖民地的数量与总规模。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchStandardActivityCause$1.class\n常量号：0060\n原始数据：\"Event progress value is based on the number and size of colonies with the \"Luddic Majority\" condition.\"\n译文数据：\"事件进展将基于你拥有 \"卢德教众\" 的殖民地的数量与总规模。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchStandardActivityCause$1.class\n常量号：0060\n原始数据：\"Event progress value is based on the number and size of colonies with the \"Luddic Majority\" condition.\"\n译文数据：\"事件进展将基于你拥有 \"卢德信众\" 这一特质的殖民地的数量与总规模。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchStandardActivityCause$1.class#\"Luddic Majority\"",
         "original": "Luddic Majority",
-        "translation": "卢德教众",
+        "translation": "卢德信众",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchStandardActivityCause$1.class\n常量号：0067\n原始数据：\"Luddic Majority\"\n译文数据：\"卢德教众\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchStandardActivityCause$1.class\n常量号：0067\n原始数据：\"Luddic Majority\"\n译文数据：\"卢德信众\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchStandardActivityCause$1.class#\"Negotiating\"",
@@ -19791,9 +19791,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchStandardActivityCause.class#\"Colonies with a Luddic Majority\"",
         "original": "Colonies with a Luddic Majority",
-        "translation": "拥有卢德教众的殖民地",
+        "translation": "拥有卢德信众的殖民地",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchStandardActivityCause.class\n常量号：0084\n原始数据：\"Colonies with a Luddic Majority\"\n译文数据：\"拥有卢德教众的殖民地\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchStandardActivityCause.class\n常量号：0084\n原始数据：\"Colonies with a Luddic Majority\"\n译文数据：\"拥有卢德信众的殖民地\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchStandardActivityCaus~#\"Negotiating with the Luddic Church about controlling the immigration of the faithful to your colonies is likely to get thi~\"@e78b7e72",
@@ -20498,9 +20498,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantHostileActivityFactor.cla~#\"There are signs of activity at a Remnant Nexus in your system. Intel evaluates a high probability of an attack fleet being~\"@a5d36e2f",
         "original": "There are signs of activity at a Remnant Nexus in your system. Intel evaluates a high probability of an attack fleet being assembled to saturation-bombard ",
-        "translation": "有迹象表明你星系内的某个余辉中枢正处于活跃状态。这意味着它很可能它派遣舰队 饱和轰炸 ",
+        "translation": "有迹象表明你星系内的某个余辉中枢正处于活跃状态。这意味着它很可能派遣舰队 饱和轰炸 ",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/RemnantHostileActivityFactor.class\n常量号：0182\n原始数据：\"There are signs of activity at a Remnant Nexus in your system. Intel evaluates a high probability of an attack fleet being assembled to saturation-bombard \"\n译文数据：\"有迹象表明你星系内的某个余辉中枢正处于活跃状态。这意味着它很可能它派遣舰队 饱和轰炸 \"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/RemnantHostileActivityFactor.class\n常量号：0182\n原始数据：\"There are signs of activity at a Remnant Nexus in your system. Intel evaluates a high probability of an attack fleet being assembled to saturation-bombard \"\n译文数据：\"有迹象表明你星系内的某个余辉中枢正处于活跃状态。这意味着它很可能派遣舰队 饱和轰炸 \"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantNexusActivityCause$1.class#\" in the \"",
@@ -21310,9 +21310,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTHighBurnFactor$1.class#\"Sensor readings gathered in hyperspace while traveling at a burn level above %s are particularly useful in providing insig~\"@2a6105bf",
         "original": "Sensor readings gathered in hyperspace while traveling at a burn level above %s are particularly useful in providing insight into the non-Euclidian properties of hyperspace. Traveling at higher speeds produces even more valuable readings.",
-        "translation": "在超空间中以超过 %s 的最大宇航速度飞行时，能够收集到极有价值的传感器数据，这些数据能够帮助我们更深入地了解超空间的非-欧几里得特性。航行速度越高，获得的数据价值也越高。",
+        "translation": "在超空间中以超过 %s 的最大宇宙航速飞行时，能够收集到极有价值的传感器数据，这些数据能够帮助我们更深入地了解超空间的非-欧几里得特性。航行速度越高，获得的数据价值也越高。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/ht/HTHighBurnFactor$1.class\n常量号：0029\n原始数据：\"Sensor readings gathered in hyperspace while traveling at a burn level above %s are particularly useful in providing insight into the non-Euclidian properties of hyperspace. Traveling at higher speeds produces even more valuable readings.\"\n译文数据：\"在超空间中以超过 %s 的最大宇航速度飞行时，能够收集到极有价值的传感器数据，这些数据能够帮助我们更深入地了解超空间的非-欧几里得特性。航行速度越高，获得的数据价值也越高。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/ht/HTHighBurnFactor$1.class\n常量号：0029\n原始数据：\"Sensor readings gathered in hyperspace while traveling at a burn level above %s are particularly useful in providing insight into the non-Euclidian properties of hyperspace. Traveling at higher speeds produces even more valuable readings.\"\n译文数据：\"在超空间中以超过 %s 的最大宇宙航速飞行时，能够收集到极有价值的传感器数据，这些数据能够帮助我们更深入地了解超空间的非-欧几里得特性。航行速度越高，获得的数据价值也越高。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/ht/HTHighBurnFactor.class#\"High burn sensor readings\"",
@@ -23186,9 +23186,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/inspection/HIOrdersInteractionDialogPluginImpl.class#\"Sufficient funding allocated to proper official and unofficial actors should ensure that the inspection reaches a satisfactory outcome.\"",
         "original": "Sufficient funding allocated to proper official and unofficial actors should ensure that the inspection reaches a satisfactory outcome.",
-        "translation": "分配适当的 \"活动资金\", 来确保视察工作取得令人满意的结果。",
+        "translation": "分配足够的资金用以打通官方和非官方渠道，应该足以确保视察工作取得 \"令人满意\" 的结果。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/inspection/HIOrdersInteractionDialogPluginImpl.class\n常量号：0166\n原始数据：\"Sufficient funding allocated to proper official and unofficial actors should ensure that the inspection reaches a satisfactory outcome.\"\n译文数据：\"分配适当的 \"活动资金\", 来确保视察工作取得令人满意的结果。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/inspection/HIOrdersInteractionDialogPluginImpl.class\n常量号：0166\n原始数据：\"Sufficient funding allocated to proper official and unofficial actors should ensure that the inspection reaches a satisfactory outcome.\"\n译文数据：\"分配足够的资金用以打通官方和非官方渠道，应该足以确保视察工作取得 \"令人满意\" 的结果。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/inspection/HIOrdersInteractionDialogPluginImpl.class#\"The Hegemony will become aware of this - and hostile - when the inspection task force enters the star system.\"",
@@ -25160,9 +25160,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/punitive/PEAvertInteractionDialogPluginImpl.class#\"Sufficient funding allocated to proper official and unofficial actors should ensure that the expedition does not go beyond the planning stages.\"",
         "original": "Sufficient funding allocated to proper official and unofficial actors should ensure that the expedition does not go beyond the planning stages.",
-        "translation": "分配足够的资金用以打通官方和非官方渠道应该足以确保这次远征计划胎死腹中。",
+        "translation": "分配足够的资金用以打通官方和非官方渠道，应该足以确保这次远征计划胎死腹中。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/punitive/PEAvertInteractionDialogPluginImpl.class\n常量号：0220\n原始数据：\"Sufficient funding allocated to proper official and unofficial actors should ensure that the expedition does not go beyond the planning stages.\"\n译文数据：\"分配足够的资金用以打通官方和非官方渠道应该足以确保这次远征计划胎死腹中。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/punitive/PEAvertInteractionDialogPluginImpl.class\n常量号：0220\n原始数据：\"Sufficient funding allocated to proper official and unofficial actors should ensure that the expedition does not go beyond the planning stages.\"\n译文数据：\"分配足够的资金用以打通官方和非官方渠道，应该足以确保这次远征计划胎死腹中。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/punitive/PEAvertInteractionDialogPluginImpl.class#\"Take the necessary actions\"",
@@ -29248,16 +29248,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAFindingCoureuse.class#\" and search for the experimental packages possibly being used by Coureuse\"",
         "original": " and search for the experimental packages possibly being used by Coureuse",
-        "translation": " 搜索 Coureuse 可能正在使用的实验程序",
+        "translation": " 搜索 Coureuse 可能正在使用的实验组件",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/academy/GAFindingCoureuse.class\n常量号：0728\n原始数据：\" and search for the experimental packages possibly being used by Coureuse\"\n译文数据：\" 搜索 Coureuse 可能正在使用的实验程序\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/academy/GAFindingCoureuse.class\n常量号：0728\n原始数据：\" and search for the experimental packages possibly being used by Coureuse\"\n译文数据：\" 搜索 Coureuse 可能正在使用的实验组件\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAFindingCoureuse.class#\" and search for the experimental packages possibly being used by Coureuse.\"",
         "original": " and search for the experimental packages possibly being used by Coureuse.",
-        "translation": " 搜索 Coureuse 可能正在使用的实验程序。",
+        "translation": " 搜索 Coureuse 可能正在使用的实验组件。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/academy/GAFindingCoureuse.class\n常量号：0697\n原始数据：\" and search for the experimental packages possibly being used by Coureuse.\"\n译文数据：\" 搜索 Coureuse 可能正在使用的实验程序。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/academy/GAFindingCoureuse.class\n常量号：0697\n原始数据：\" and search for the experimental packages possibly being used by Coureuse.\"\n译文数据：\" 搜索 Coureuse 可能正在使用的实验组件。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAFindingCoureuse.class#\"Confront the archon of Laicaille Habitat about hiding Scylla Coureuse on the station\"",
@@ -29577,9 +29577,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAKallichore.class#\"You've recovered the data archive of the Academy's previous Provost, Tomas Kallichore, which contains the results of failed gate activation experiments.\"",
         "original": "You've recovered the data archive of the Academy's previous Provost, Tomas Kallichore, which contains the results of failed gate activation experiments.",
-        "translation": "你找回了学院前任 院长Tomas Kallichore 的数据库。数据库里包括了一系列失败的星门激活实验的数据。",
+        "translation": "你找回了学院前任院长 Tomas Kallichore 的档案。档案里包括了一系列失败的星门激活实验的数据。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/academy/GAKallichore.class\n常量号：0416\n原始数据：\"You've recovered the data archive of the Academy's previous Provost, Tomas Kallichore, which contains the results of failed gate activation experiments.\"\n译文数据：\"你找回了学院前任 院长Tomas Kallichore 的数据库。数据库里包括了一系列失败的星门激活实验的数据。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/academy/GAKallichore.class\n常量号：0416\n原始数据：\"You've recovered the data archive of the Academy's previous Provost, Tomas Kallichore, which contains the results of failed gate activation experiments.\"\n译文数据：\"你找回了学院前任院长 Tomas Kallichore 的档案。档案里包括了一系列失败的星门激活实验的数据。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAKallichore.class#\"can be leveraged to compel his cooperation.\"",
@@ -29864,9 +29864,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAProjectZiggurat.class#\"Sell Arroyo's comm fakes to any highly-placed pirate\"",
         "original": "Sell Arroyo's comm fakes to any highly-placed pirate",
-        "translation": "把 Arroyo 的伪劣通讯器卖给一名有地位的海盗",
+        "translation": "把 Arroyo 的伪造通讯卖给一名有地位的海盗",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/academy/GAProjectZiggurat.class\n常量号：0771\n原始数据：\"Sell Arroyo's comm fakes to any highly-placed pirate\"\n译文数据：\"把 Arroyo 的伪劣通讯器卖给一名有地位的海盗\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/academy/GAProjectZiggurat.class\n常量号：0771\n原始数据：\"Sell Arroyo's comm fakes to any highly-placed pirate\"\n译文数据：\"把 Arroyo 的伪造通讯卖给一名有地位的海盗\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAProjectZiggurat.class#\"She was formerly employed as a weapons engineer \"",
@@ -29920,9 +29920,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAProjectZiggurat.class#\"You've sold the blackmail materials to a pirate leader, in exchange for which Arroyo has agreed to help you find Kelise Astraia.\"",
         "original": "You've sold the blackmail materials to a pirate leader, in exchange for which Arroyo has agreed to help you find Kelise Astraia.",
-        "translation": "因你成功把勒索材料卖给了一名海盗头目，而作为 交换，Arroyo 同意帮你找到 Kelise Astraia.",
+        "translation": "因你成功把勒索材料卖给了一名海盗头目，而作为 交换，Arroyo 同意帮你找到 Kelise Astraia。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/academy/GAProjectZiggurat.class\n常量号：0699\n原始数据：\"You've sold the blackmail materials to a pirate leader, in exchange for which Arroyo has agreed to help you find Kelise Astraia.\"\n译文数据：\"因你成功把勒索材料卖给了一名海盗头目，而作为 交换，Arroyo 同意帮你找到 Kelise Astraia.\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/academy/GAProjectZiggurat.class\n常量号：0699\n原始数据：\"You've sold the blackmail materials to a pirate leader, in exchange for which Arroyo has agreed to help you find Kelise Astraia.\"\n译文数据：\"因你成功把勒索材料卖给了一名海盗头目，而作为 交换，Arroyo 同意帮你找到 Kelise Astraia。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/academy/GAProjectZiggurat.class#\"You've talked to Gargoyle, who advised you to talk to Rayan Arroyo, \"a Tri-Tach goon from top to bottom\", who is likely to~\"@97a59bce",
@@ -30144,16 +30144,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/askonia/TheUsurpers.class#\"Meet Yannick Ram at his safehouse on Volturn. He has a plan to save the Sindrian Diktat from itself.\"",
         "original": "Meet Yannick Ram at his safehouse on Volturn. He has a plan to save the Sindrian Diktat from itself.",
-        "translation": "在 Volturn 的安全屋会见 Yannick Ram 。他有个能够从 辛达强权 自身中解救 强权的计划。",
+        "translation": "在 Volturn 的安全屋会见 Yannick Ram。他有个能让 辛达强权 免遭其自我毁灭的计划。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/askonia/TheUsurpers.class\n常量号：0871\n原始数据：\"Meet Yannick Ram at his safehouse on Volturn. He has a plan to save the Sindrian Diktat from itself.\"\n译文数据：\"在 Volturn 的安全屋会见 Yannick Ram 。他有个能够从 辛达强权 自身中解救 强权的计划。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/askonia/TheUsurpers.class\n常量号：0871\n原始数据：\"Meet Yannick Ram at his safehouse on Volturn. He has a plan to save the Sindrian Diktat from itself.\"\n译文数据：\"在 Volturn 的安全屋会见 Yannick Ram。他有个能让 辛达强权 免遭其自我毁灭的计划。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/askonia/TheUsurpers.class#\"Meet Yannick Ram at his safehouse on Volturn.\"",
         "original": "Meet Yannick Ram at his safehouse on Volturn.",
-        "translation": "在 Volturn 的安全屋会见 Yannick Ram 。",
+        "translation": "在 Volturn 的安全屋会见 Yannick Ram。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/askonia/TheUsurpers.class\n常量号：0930\n原始数据：\"Meet Yannick Ram at his safehouse on Volturn.\"\n译文数据：\"在 Volturn 的安全屋会见 Yannick Ram 。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/askonia/TheUsurpers.class\n常量号：0930\n原始数据：\"Meet Yannick Ram at his safehouse on Volturn.\"\n译文数据：\"在 Volturn 的安全屋会见 Yannick Ram。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/askonia/TheUsurpers.class#\"Mercenary Bounty Hunter\"",
@@ -31271,16 +31271,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/luddic/BornanewFilesFalseIdols.class#\"Report back to Excubitor Orbis Gideon Oak on Hesperus with news of Bornanew's quest.\"",
         "original": "Report back to Excubitor Orbis Gideon Oak on Hesperus with news of Bornanew's quest.",
-        "translation": "返回 Hesperus 向行星教卫 Orbis Gideon Oak 汇报 Bornanew 的任务情况。",
+        "translation": "返回 Hesperus 向行星教卫 Gideon Oak 汇报 Bornanew 的任务情况。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/luddic/BornanewFilesFalseIdols.class\n常量号：0722\n原始数据：\"Report back to Excubitor Orbis Gideon Oak on Hesperus with news of Bornanew's quest.\"\n译文数据：\"返回 Hesperus 向行星教卫 Orbis Gideon Oak 汇报 Bornanew 的任务情况。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/luddic/BornanewFilesFalseIdols.class\n常量号：0722\n原始数据：\"Report back to Excubitor Orbis Gideon Oak on Hesperus with news of Bornanew's quest.\"\n译文数据：\"返回 Hesperus 向行星教卫 Gideon Oak 汇报 Bornanew 的任务情况。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/luddic/BornanewFilesFalseIdols.class#\"Report back to Excubitor Orbis Gideon Oak on Hesperus\"",
         "original": "Report back to Excubitor Orbis Gideon Oak on Hesperus",
-        "translation": "返回 Hesperus 向行星教卫 Orbis Gideon Oak 汇报",
+        "translation": "返回 Hesperus 向行星教卫 Gideon Oak 汇报",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/luddic/BornanewFilesFalseIdols.class\n常量号：0762\n原始数据：\"Report back to Excubitor Orbis Gideon Oak on Hesperus\"\n译文数据：\"返回 Hesperus 向行星教卫 Orbis Gideon Oak 汇报\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/luddic/BornanewFilesFalseIdols.class\n常量号：0762\n原始数据：\"Report back to Excubitor Orbis Gideon Oak on Hesperus\"\n译文数据：\"返回 Hesperus 向行星教卫 Gideon Oak 汇报\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/luddic/BornanewFilesFalseIdols.class#\"Return Jethro Bornanew's body to the Knights of Ludd on Hesperus so he may rest with his fellow Knights.\"",
@@ -34309,9 +34309,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD.class#\"You forces have suffered casualties during the raid.\"",
         "original": "You forces have suffered casualties during the raid.",
-        "translation": "你的部队在劫掠中的伤亡报告。",
+        "translation": "你的部队在劫掠中遭受了伤亡。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD.class\n常量号：1663\n原始数据：\"You forces have suffered casualties during the raid.\"\n译文数据：\"你的部队在劫掠中的伤亡报告。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD.class\n常量号：1663\n原始数据：\"You forces have suffered casualties during the raid.\"\n译文数据：\"你的部队在劫掠中遭受了伤亡。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD.class#\"You're unable to join this battle.\"",
@@ -39006,9 +39006,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/ShipDesign$Level1.class#\"+20% maximum flux capacitors\"",
         "original": "+20% maximum flux capacitors",
-        "translation": "+20% 最大幅能容量改造上限",
+        "translation": "+20% 最大幅能寄存器改造上限",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/ShipDesign$Level1.class\n常量号：0051\n原始数据：\"+20% maximum flux capacitors\"\n译文数据：\"+20% 最大幅能容量改造上限\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/ShipDesign$Level1.class\n常量号：0051\n原始数据：\"+20% maximum flux capacitors\"\n译文数据：\"+20% 最大幅能寄存器改造上限\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/ShipDesign$Level2.class#\"+20% maximum flux vents\"",
@@ -40504,9 +40504,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/terrain/StarCoronaAkaMainyuTerrainPlugin.class#\"The ionized gas being ejected from the atmosphere makes the planet difficult to approach.\"",
         "original": "The ionized gas being ejected from the atmosphere makes the planet difficult to approach.",
-        "translation": "从大气中喷出的电离子气体使行星难以接近。",
+        "translation": "从大气中喷出的电离气体使行星难以接近。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/terrain/StarCoronaAkaMainyuTerrainPlugin.class\n常量号：0171\n原始数据：\"The ionized gas being ejected from the atmosphere makes the planet difficult to approach.\"\n译文数据：\"从大气中喷出的电离子气体使行星难以接近。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/terrain/StarCoronaAkaMainyuTerrainPlugin.class\n常量号：0171\n原始数据：\"The ionized gas being ejected from the atmosphere makes the planet difficult to approach.\"\n译文数据：\"从大气中喷出的电离气体使行星难以接近。\"\n\n"
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/terrain/StarCoronaAkaMainyuTerrainPlugin.class#\"Travel\"",

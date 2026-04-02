@@ -772,9 +772,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/OOoO.class#\"The hyperspace distortion from an in-system entity that's not massive enough to create a jump-point.\"",
         "original": "The hyperspace distortion from an in-system entity that's not massive enough to create a jump-point.",
-        "translation": "星系内的实体没有足够的质量，不足以创建跳跃点到超空间。",
+        "translation": "星系内某实体引发的超空间畸变，但其质量不足以形成跳跃点。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/campaign/OOoO.class\n常量号：0281\n原始数据：\"The hyperspace distortion from an in-system entity that's not massive enough to create a jump-point.\"\n译文数据：\"星系内的实体没有足够的质量，不足以创建跳跃点到超空间。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/campaign/OOoO.class\n常量号：0281\n原始数据：\"The hyperspace distortion from an in-system entity that's not massive enough to create a jump-point.\"\n译文数据：\"星系内某实体引发的超空间畸变，但其质量不足以形成跳跃点。\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/OOoO.class#\"Unidentified Entity\"",
@@ -5056,16 +5056,16 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class#\"    - %s days once accepted\"",
         "original": "    - %s days once accepted",
-        "translation": "    - 接受后%s天",
+        "translation": "    - 接受后 %s 天",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/campaign/comms/v2/D.class\n常量号：0317\n原始数据：\"    - %s days once accepted\"\n译文数据：\"    - 接受后%s天\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/campaign/comms/v2/D.class\n常量号：0317\n原始数据：\"    - %s days once accepted\"\n译文数据：\"    - 接受后 %s 天\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class#\"    - %s days remaining\"",
         "original": "    - %s days remaining",
-        "translation": "    - 剩余%s天",
+        "translation": "    - 剩余 %s 天",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/campaign/comms/v2/D.class\n常量号：0305\n原始数据：\"    - %s days remaining\"\n译文数据：\"    - 剩余%s天\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/campaign/comms/v2/D.class\n常量号：0305\n原始数据：\"    - %s days remaining\"\n译文数据：\"    - 剩余 %s 天\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class#\"    - %s reward\"",
@@ -5077,9 +5077,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class#\"    - %s reward, %s days remaining\"",
         "original": "    - %s reward, %s days remaining",
-        "translation": "    - %s奖励，剩余%s天",
+        "translation": "    - %s 奖励，剩余 %s 天",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/campaign/comms/v2/D.class\n常量号：0258\n原始数据：\"    - %s reward, %s days remaining\"\n译文数据：\"    - %s奖励，剩余%s天\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/campaign/comms/v2/D.class\n常量号：0258\n原始数据：\"    - %s reward, %s days remaining\"\n译文数据：\"    - %s 奖励，剩余 %s 天\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class#\"    - No effect on pirate activity\"",
@@ -5169,7 +5169,7 @@
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/comms/v2/D.class#\"Sector Decay - Minimal\"",
         "original": "Sector Decay - Minimal",
         "translation": "星域衰变 - 极低",
-        "stage": 2,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/campaign/comms/v2/D.class\n常量号：0267\n原始数据：\"Sector Decay - Minimal\"\n译文数据：\"星域衰变 - 极低\"\n\n"
     },
     {
@@ -5791,9 +5791,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ooOO.class#\"Warning: JVM RAM not allocated to maximum at start, this is not recommended as it may result in game instability!\"",
         "original": "Warning: JVM RAM not allocated to maximum at start, this is not recommended as it may result in game instability!",
-        "translation": "警告：未分配最大 JVM 内存就启动游戏是极不可取的，这可能会导致游戏性能大幅下降！",
+        "translation": "警告：未分配最大 JVM 内存就启动游戏是极不可取的，这可能会导致游戏不稳定！",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/campaign/ooOO.class\n常量号：0130\n原始数据：\"Warning: JVM RAM not allocated to maximum at start, this is not recommended as it may result in game instability!\"\n译文数据：\"警告：未分配最大 JVM 内存就启动游戏是极不可取的，这可能会导致游戏性能大幅下降！\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/campaign/ooOO.class\n常量号：0130\n原始数据：\"Warning: JVM RAM not allocated to maximum at start, this is not recommended as it may result in game instability!\"\n译文数据：\"警告：未分配最大 JVM 内存就启动游戏是极不可取的，这可能会导致游戏不稳定！\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ooOO.class#\"Warning: Low system RAM remaining, may result in poor performance due to possible pagefile usage\"",
@@ -5820,7 +5820,7 @@
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ooOO.class#\"Windows\"",
         "original": "Windows",
         "translation": "Windows",
-        "stage": 1,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/campaign/ooOO.class\n常量号：0069\n原始数据：\"Windows\"\n译文数据：\"Windows\"\n\n"
     },
     {
@@ -9033,7 +9033,7 @@
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/CommodityDetailDialog.class#\"station\"",
         "original": "station",
         "translation": "station",
-        "stage": 2,
+        "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/campaign/ui/marketinfo/CommodityDetailDialog.class\n常量号：0925\n原始数据：\"station\"\n译文数据：\"station\"\n\n"
     },
     {
@@ -11664,9 +11664,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/cdd/CommodityDetailDialogV2.class#\"\n\nIn-faction shipping limits are higher.\"",
         "original": "\n\nIn-faction shipping limits are higher.",
-        "translation": "\n\n同势力内的航运能力更高",
+        "translation": "\n\n同势力内的航运能力更高。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/campaign/ui/marketinfo/cdd/CommodityDetailDialogV2.class\n常量号：0974\n原始数据：\"\n\nIn-faction shipping limits are higher.\"\n译文数据：\"\n\n同势力内的航运能力更高\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/campaign/ui/marketinfo/cdd/CommodityDetailDialogV2.class\n常量号：0974\n原始数据：\"\n\nIn-faction shipping limits are higher.\"\n译文数据：\"\n\n同势力内的航运能力更高。\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/campaign/ui/marketinfo/cdd/CommodityDetailDialogV2.class#\" - Commodities\"",
@@ -17908,9 +17908,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/OOoOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO~#\"Can't transfer command or assign an officer to a fighter wing!\"@7ef476c1",
         "original": "Can't transfer command or assign an officer to a fighter wing!",
-        "translation": "无法转移指挥或分配军官至战机联队！",
+        "translation": "无法转移指挥部或分配军官至战机联队！",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/coreui/OOoOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO.class\n常量号：0883\n原始数据：\"Can't transfer command or assign an officer to a fighter wing!\"\n译文数据：\"无法转移指挥或分配军官至战机联队！\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/coreui/OOoOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO.class\n常量号：0883\n原始数据：\"Can't transfer command or assign an officer to a fighter wing!\"\n译文数据：\"无法转移指挥部或分配军官至战机联队！\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/OOoOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO~#\"Can't transfer the last ship in your fleet\"@72448e1c",
@@ -18930,9 +18930,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/o0OoOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO~#\"Maximum number of skills this AI core can have at a time.\"@b0e825ca",
         "original": "Maximum number of skills this AI core can have at a time.",
-        "translation": "该 AI 核心一次可拥有的最大技能数量。\"</font></font>",
-        "stage": 2,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/coreui/o0OoOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO$2.class\n常量号：0021\n原始数据：\"Maximum number of skills this AI core can have at a time.\"\n译文数据：\"该 AI 核心一次可拥有的最大技能数量。\"</font></font>\"\n\n"
+        "translation": "该 AI 核心一次可拥有的最大技能数量。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/coreui/o0OoOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO$2.class\n常量号：0021\n原始数据：\"Maximum number of skills this AI core can have at a time.\"\n译文数据：\"该 AI 核心一次可拥有的最大技能数量。\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/o0OoOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO~#\"Select skills for \"@2ba5d18a",
@@ -19504,9 +19504,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/ooo0.class#\"Can't transfer command to a fighter wing!\"",
         "original": "Can't transfer command to a fighter wing!",
-        "translation": "不能转移指挥至战机联队！",
+        "translation": "不能转移指挥部至战机联队！",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/coreui/ooo0.class\n常量号：1013\n原始数据：\"Can't transfer command to a fighter wing!\"\n译文数据：\"不能转移指挥至战机联队！\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/coreui/ooo0.class\n常量号：1013\n原始数据：\"Can't transfer command to a fighter wing!\"\n译文数据：\"不能转移指挥部至战机联队！\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/ooo0.class#\"Change skills\"",
@@ -22087,9 +22087,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/wgd2/WeaponGroupDialogV2$3.class#\"If a weapon group is on %s, the weapons fire independently and the group's fire mode has no effect.\"",
         "original": "If a weapon group is on %s, the weapons fire independently and the group's fire mode has no effect.",
-        "translation": "如果武器组处于 %s 状态，则该武器将默认使用 同步射击 模式。",
+        "translation": "如果武器组处于 %s 状态，则组内武器将无视射击模式，自行独立开火。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/coreui/refit/wgd2/WeaponGroupDialogV2$3.class\n常量号：0055\n原始数据：\"If a weapon group is on %s, the weapons fire independently and the group's fire mode has no effect.\"\n译文数据：\"如果武器组处于 %s 状态，则该武器将默认使用 同步射击 模式。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/coreui/refit/wgd2/WeaponGroupDialogV2$3.class\n常量号：0055\n原始数据：\"If a weapon group is on %s, the weapons fire independently and the group's fire mode has no effect.\"\n译文数据：\"如果武器组处于 %s 状态，则组内武器将无视射击模式，自行独立开火。\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/wgd2/WeaponGroupDialogV2$3.class#\"Linked\"",
@@ -22129,9 +22129,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/wgd2/WeaponGroupDialogV2$4.class#\"If a weapon group is on autofire, the weapons fire independently and the group's fire mode has no effect. A weapon group will not autofire while it is selected.\"",
         "original": "If a weapon group is on autofire, the weapons fire independently and the group's fire mode has no effect. A weapon group will not autofire while it is selected.",
-        "translation": "如果武器组处于 自动开火 状态，则该武器将默认使用 同步射击 模式。当该武器被选中时，则会暂停自动开火。",
+        "translation": "如果武器组处于 自动开火 状态，则组内武器将无视射击模式，自行独立开火。当该武器组被选中时，则会暂停自动开火。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/coreui/refit/wgd2/WeaponGroupDialogV2$4.class\n常量号：0041\n原始数据：\"If a weapon group is on autofire, the weapons fire independently and the group's fire mode has no effect. A weapon group will not autofire while it is selected.\"\n译文数据：\"如果武器组处于 自动开火 状态，则该武器将默认使用 同步射击 模式。当该武器被选中时，则会暂停自动开火。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/coreui/refit/wgd2/WeaponGroupDialogV2$4.class\n常量号：0041\n原始数据：\"If a weapon group is on autofire, the weapons fire independently and the group's fire mode has no effect. A weapon group will not autofire while it is selected.\"\n译文数据：\"如果武器组处于 自动开火 状态，则组内武器将无视射击模式，自行独立开火。当该武器组被选中时，则会暂停自动开火。\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/coreui/refit/wgd2/WeaponGroupDialogV2$4.class#\"Whether each group has %s turned on when combat starts. Autofire for weapon groups can also be toggled on and off during combat.\"",
@@ -22738,9 +22738,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/launcher/opengl/ooOO.class#\"Antialiasing is NOT RECOMMENDED when using UI scaling of 100%, 200%, or 300%.\n\nIt will likely negatively affect the look of certain UI elements.\n\n\n\"",
         "original": "Antialiasing is NOT RECOMMENDED when using UI scaling of 100%, 200%, or 300%.\n\nIt will likely negatively affect the look of certain UI elements.\n\n\n",
-        "translation": "当使用 100%/200%/300% 之类的整数 UI 缩放时，不建议开启抗锯齿功能。\n\n因为者这可能导致 UI 界面元素失调。\n\n\n",
+        "translation": "当使用 100%/200%/300% 之类的整数 UI 缩放时，不建议开启抗锯齿功能。\n\n因为这可能导致 UI 界面元素失调。\n\n\n",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/launcher/opengl/ooOO.class\n常量号：0711\n原始数据：\"Antialiasing is NOT RECOMMENDED when using UI scaling of 100%, 200%, or 300%.\n\nIt will likely negatively affect the look of certain UI elements.\n\n\n\"\n译文数据：\"当使用 100%/200%/300% 之类的整数 UI 缩放时，不建议开启抗锯齿功能。\n\n因为者这可能导致 UI 界面元素失调。\n\n\n\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/launcher/opengl/ooOO.class\n常量号：0711\n原始数据：\"Antialiasing is NOT RECOMMENDED when using UI scaling of 100%, 200%, or 300%.\n\nIt will likely negatively affect the look of certain UI elements.\n\n\n\"\n译文数据：\"当使用 100%/200%/300% 之类的整数 UI 缩放时，不建议开启抗锯齿功能。\n\n因为这可能导致 UI 界面元素失调。\n\n\n\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/launcher/opengl/ooOO.class#\"Antialiasing\"",
@@ -24600,9 +24600,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/title/OoOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO~#\"Raise flux levels\"@ac3943c5",
         "original": "Raise flux levels",
-        "translation": "提高幅能等级",
+        "translation": "提高幅能水平",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/title/OoOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO/OoOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO$oo.class\n常量号：0781\n原始数据：\"Raise flux levels\"\n译文数据：\"提高幅能等级\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/title/OoOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO/OoOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO$oo.class\n常量号：0781\n原始数据：\"Raise flux levels\"\n译文数据：\"提高幅能水平\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/title/OoOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO~#\"Rally carrier\"@bff85f2d",
@@ -25678,9 +25678,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/combat/class.class#\"Tip: holding SHIFT while pressing A or D will make your ship strafe. Your ship will auto-turn towards the mouse while strafing.\"",
         "original": "Tip: holding SHIFT while pressing A or D will make your ship strafe. Your ship will auto-turn towards the mouse while strafing.",
-        "translation": "提示：按住 Shift 键然后按 A 或 D 来左右平移你的船舰。你的船舰将自动瞄准光标所在的位置以方便扫射。",
+        "translation": "提示：按住 Shift 键然后按 A 或 D 来左右平移你的舰船。你的舰船将在平移时自动转向光标所在的位置。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/tutorial/combat/class.class\n常量号：0105\n原始数据：\"Tip: holding SHIFT while pressing A or D will make your ship strafe. Your ship will auto-turn towards the mouse while strafing.\"\n译文数据：\"提示：按住 Shift 键然后按 A 或 D 来左右平移你的船舰。你的船舰将自动瞄准光标所在的位置以方便扫射。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/tutorial/combat/class.class\n常量号：0105\n原始数据：\"Tip: holding SHIFT while pressing A or D will make your ship strafe. Your ship will auto-turn towards the mouse while strafing.\"\n译文数据：\"提示：按住 Shift 键然后按 A 或 D 来左右平移你的舰船。你的舰船将在平移时自动转向光标所在的位置。\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/combat/class.class#\"You have completed the tutorial. Press ESCAPE to go back to the main menu, or fly around a bit if you like.\"",
@@ -25692,9 +25692,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/combat/new.class#\"Press 1 to switch to the Assault Chainguns and destroy the enemy ship.\"",
         "original": "Press 1 to switch to the Assault Chainguns and destroy the enemy ship.",
-        "translation": "按下 1 键切换突击链炮，并摧毁敌人的船舰。",
+        "translation": "按下 1 键切换突击链炮，并摧毁敌人的舰船。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/tutorial/combat/new.class\n常量号：0088\n原始数据：\"Press 1 to switch to the Assault Chainguns and destroy the enemy ship.\"\n译文数据：\"按下 1 键切换突击链炮，并摧毁敌人的船舰。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/tutorial/combat/new.class\n常量号：0088\n原始数据：\"Press 1 to switch to the Assault Chainguns and destroy the enemy ship.\"\n译文数据：\"按下 1 键切换突击链炮，并摧毁敌人的舰船。\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/combat/new.class#\"Press 2 to switch to the Sabot missiles and keep firing until the enemy shields are down.\"",
@@ -25811,9 +25811,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/oOOO/oOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO~#\"We're almost done.\n\nYou can transfer your command to another ship during the battle. This is particularly useful if your f~\"@3d12f626",
         "original": "We're almost done.\n\nYou can transfer your command to another ship during the battle. This is particularly useful if your flagship is disabled, or if you just want to start the battle in a faster ship, but then switch over to a heavier one in the later stages.\n\nTo try it, let's transfer command to the Gemini. <highlight>Click on the Gemini and select \"Transfer Command\" from the context menu.</highlight>",
-        "translation": "我们就快要完成了。\n\n您可以战斗中将指挥权转移至另一艘舰船上。这在您的旗舰被停机时尤其有用，也可以让您在更快的舰船上抢先开始战斗，然后回到更重的舰船上。\n\n尝试这一动作。让我们将指挥部转移到这艘双子座上。<highlight>点击这艘双子座并在命令列表中选择 \"转移指挥\"。</highlight>",
-        "stage": 2,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/tutorial/oOOO/oOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO.class\n常量号：0077\n原始数据：\"We're almost done.\n\nYou can transfer your command to another ship during the battle. This is particularly useful if your flagship is disabled, or if you just want to start the battle in a faster ship, but then switch over to a heavier one in the later stages.\n\nTo try it, let's transfer command to the Gemini. <highlight>Click on the Gemini and select \"Transfer Command\" from the context menu.</highlight>\"\n译文数据：\"我们就快要完成了。\n\n您可以战斗中将指挥权转移至另一艘舰船上。这在您的旗舰被停机时尤其有用，也可以让您在更快的舰船上抢先开始战斗，然后回到更重的舰船上。\n\n尝试这一动作。让我们将指挥部转移到这艘双子座上。<highlight>点击这艘双子座并在命令列表中选择 \"转移指挥\"。</highlight>\"\n\n"
+        "translation": "我们就快要完成了。\n\n您可以战斗中将指挥部转移至另一艘舰船上。这在您的旗舰被停机时尤其有用，也可以让您在更快的舰船上抢先开始战斗，然后回到更重的舰船上。\n\n尝试这一动作。让我们将指挥部转移到这艘双子座上。<highlight>点击这艘双子座并在命令列表中选择 \"转移指挥\"。</highlight>",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/tutorial/oOOO/oOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO.class\n常量号：0077\n原始数据：\"We're almost done.\n\nYou can transfer your command to another ship during the battle. This is particularly useful if your flagship is disabled, or if you just want to start the battle in a faster ship, but then switch over to a heavier one in the later stages.\n\nTo try it, let's transfer command to the Gemini. <highlight>Click on the Gemini and select \"Transfer Command\" from the context menu.</highlight>\"\n译文数据：\"我们就快要完成了。\n\n您可以战斗中将指挥部转移至另一艘舰船上。这在您的旗舰被停机时尤其有用，也可以让您在更快的舰船上抢先开始战斗，然后回到更重的舰船上。\n\n尝试这一动作。让我们将指挥部转移到这艘双子座上。<highlight>点击这艘双子座并在命令列表中选择 \"转移指挥\"。</highlight>\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super$35.class#\"Accelerated\"",
@@ -25902,9 +25902,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"Firing most weapons (except for missiles) generates flux. Your ship has a limited flux capacity, and managing what you use~\"@9a9a98ac",
         "original": "Firing most weapons (except for missiles) generates flux. Your ship has a limited flux capacity, and managing what you use it on is key to survival. You can see your current flux level on the info display in the lower left corner of the screen.",
-        "translation": "大多数武器 (除了导弹) 开火都会产生幅能。而舰船的幅能容量是有上限的，所以对幅能合适的管理决定了您在战场上的表现...以及性命。您可在屏幕左下角的舰船信息上悉知您目前的幅能容量。",
+        "translation": "大多数武器 (除了导弹) 开火都会产生幅能。而舰船的幅能容量是有上限的，所以对幅能合适的管理决定了您在战场上的表现...以及性命。您可在屏幕左下角的舰船信息上悉知您目前的幅能水平。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/tutorial/super.class\n常量号：0413\n原始数据：\"Firing most weapons (except for missiles) generates flux. Your ship has a limited flux capacity, and managing what you use it on is key to survival. You can see your current flux level on the info display in the lower left corner of the screen.\"\n译文数据：\"大多数武器 (除了导弹) 开火都会产生幅能。而舰船的幅能容量是有上限的，所以对幅能合适的管理决定了您在战场上的表现...以及性命。您可在屏幕左下角的舰船信息上悉知您目前的幅能容量。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/tutorial/super.class\n常量号：0413\n原始数据：\"Firing most weapons (except for missiles) generates flux. Your ship has a limited flux capacity, and managing what you use it on is key to survival. You can see your current flux level on the info display in the lower left corner of the screen.\"\n译文数据：\"大多数武器 (除了导弹) 开火都会产生幅能。而舰船的幅能容量是有上限的，所以对幅能合适的管理决定了您在战场上的表现...以及性命。您可在屏幕左下角的舰船信息上悉知您目前的幅能水平。\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"Flux gained from firing weapons is called soft flux, and can dissipate while the shields are up.\"",
@@ -26147,9 +26147,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"While venting, your ship can't fire or use shields, so you generally only want to do it when it's safe.\"",
         "original": "While venting, your ship can't fire or use shields, so you generally only want to do it when it's safe.",
-        "translation": "当您在主动排幅时，您的舰船不能使用武器或护盾，且无法取消，只能等到结束。所以一般只有在安全情况下才会启用。",
-        "stage": 2,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/tutorial/super.class\n常量号：0480\n原始数据：\"While venting, your ship can't fire or use shields, so you generally only want to do it when it's safe.\"\n译文数据：\"当您在主动排幅时，您的舰船不能使用武器或护盾，且无法取消，只能等到结束。所以一般只有在安全情况下才会启用。\"\n\n"
+        "translation": "当您在主动排幅时，您的舰船不能使用武器或护盾。所以一般只有在安全情况下才会启用。",
+        "stage": 1,
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/tutorial/super.class\n常量号：0480\n原始数据：\"While venting, your ship can't fire or use shields, so you generally only want to do it when it's safe.\"\n译文数据：\"当您在主动排幅时，您的舰船不能使用武器或护盾。所以一般只有在安全情况下才会启用。\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"You can also lock onto a specific enemy to ensure missiles go after it, and to see more information about it.\"",
@@ -26203,9 +26203,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"flux|flux capacity|flux level\"",
         "original": "flux|flux capacity|flux level",
-        "translation": "幅能|幅能容量|管理",
+        "translation": "幅能|幅能容量|幅能水平",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/tutorial/super.class\n常量号：0415\n原始数据：\"flux|flux capacity|flux level\"\n译文数据：\"幅能|幅能容量|管理\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/tutorial/super.class\n常量号：0415\n原始数据：\"flux|flux capacity|flux level\"\n译文数据：\"幅能|幅能容量|幅能水平\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/super.class#\"hard flux\"",
@@ -26357,9 +26357,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/void.class#\"An assignment appropriate to your selection, and what you right-clicked on, was created - in this case, another \"Capture\".~\"@0ed443f4",
         "original": "An assignment appropriate to your selection, and what you right-clicked on, was created - in this case, another \"Capture\". You can also assign specific ships to existing assignments by selecting them and right-clicking on the assignment.",
-        "translation": "您可以根据右键所点击的目标来分配不同命令。在本例中，分配 \"占领\" 命令。您也可以指定特定的船舰选择执行命令。",
+        "translation": "您可以根据右键所点击的目标来分配不同命令。在本例中，分配 \"占领\" 命令。您也可以指定特定的舰船选择执行命令。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/tutorial/void.class\n常量号：0311\n原始数据：\"An assignment appropriate to your selection, and what you right-clicked on, was created - in this case, another \"Capture\". You can also assign specific ships to existing assignments by selecting them and right-clicking on the assignment.\"\n译文数据：\"您可以根据右键所点击的目标来分配不同命令。在本例中，分配 \"占领\" 命令。您也可以指定特定的船舰选择执行命令。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/tutorial/void.class\n常量号：0311\n原始数据：\"An assignment appropriate to your selection, and what you right-clicked on, was created - in this case, another \"Capture\". You can also assign specific ships to existing assignments by selecting them and right-clicking on the assignment.\"\n译文数据：\"您可以根据右键所点击的目标来分配不同命令。在本例中，分配 \"占领\" 命令。您也可以指定特定的舰船选择执行命令。\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/void.class#\"At the start of a battle, you have to decide what ships to deploy. Recovering after a deployment costs supplies, so you usually don't want to just deploy everything.\"",
@@ -26469,9 +26469,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/void.class#\"Let's transfer command to the Hammerhead, so you can pilot it yourself, and play out the rest of the battle.\"",
         "original": "Let's transfer command to the Hammerhead, so you can pilot it yourself, and play out the rest of the battle.",
-        "translation": "现在让我们将指挥权转移到这艘锤头上，这样您就可以自己操控，并完成剩余的战斗。",
+        "translation": "现在让我们将指挥部转移到这艘锤头上，这样您就可以自己操控，并完成剩余的战斗。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/tutorial/void.class\n常量号：0405\n原始数据：\"Let's transfer command to the Hammerhead, so you can pilot it yourself, and play out the rest of the battle.\"\n译文数据：\"现在让我们将指挥权转移到这艘锤头上，这样您就可以自己操控，并完成剩余的战斗。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/tutorial/void.class\n常量号：0405\n原始数据：\"Let's transfer command to the Hammerhead, so you can pilot it yourself, and play out the rest of the battle.\"\n译文数据：\"现在让我们将指挥部转移到这艘锤头上，这样您就可以自己操控，并完成剩余的战斗。\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/void.class#\"Now that the orders are locked in, let's unpause (press \"",
@@ -26554,7 +26554,7 @@
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/void.class#\"The first thing we want to do is capture some objectives - locations especially suited for the deployment of nav buoys, sensor arrays, or comm relays.\"",
         "original": "The first thing we want to do is capture some objectives - locations especially suited for the deployment of nav buoys, sensor arrays, or comm relays.",
         "translation": "我们现在要做的第一件事就是找到一些目标的位置，比如导航浮标、传感干扰器或通讯中继站。",
-        "stage": 2,
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/tutorial/void.class\n常量号：0245\n原始数据：\"The first thing we want to do is capture some objectives - locations especially suited for the deployment of nav buoys, sensor arrays, or comm relays.\"\n译文数据：\"我们现在要做的第一件事就是找到一些目标的位置，比如导航浮标、传感干扰器或通讯中继站。\"\n\n"
     },
     {
@@ -26595,9 +26595,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/void.class#\"You can also manually assign a ship to perform a task. Select one of the other frigates...\"",
         "original": "You can also manually assign a ship to perform a task. Select one of the other frigates...",
-        "translation": "您也可以手动指定舰船去执行命令。请选择两艘护卫舰之一...",
+        "translation": "您也可以手动指定舰船去执行命令。请选择其它护卫舰之一...",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/tutorial/void.class\n常量号：0302\n原始数据：\"You can also manually assign a ship to perform a task. Select one of the other frigates...\"\n译文数据：\"您也可以手动指定舰船去执行命令。请选择两艘护卫舰之一...\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/tutorial/void.class\n常量号：0302\n原始数据：\"You can also manually assign a ship to perform a task. Select one of the other frigates...\"\n译文数据：\"您也可以手动指定舰船去执行命令。请选择其它护卫舰之一...\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/void.class#\"You can also press ESCAPE to leave the tutorial.\"",
@@ -26616,9 +26616,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/void.class#\"You can keep an eye on what each ship is doing by clicking on it and selecting \"Show Video Feed\".\"",
         "original": "You can keep an eye on what each ship is doing by clicking on it and selecting \"Show Video Feed\".",
-        "translation": "你可以点选一友方艘舰船后，再按 \"接通视频信号\" 按钮，来获得该舰的实时影像。",
+        "translation": "您可以点选一艘友方舰船后，再按 \"接通视频信号\" 按钮，来获得该舰的实时影像。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/tutorial/void.class\n常量号：0321\n原始数据：\"You can keep an eye on what each ship is doing by clicking on it and selecting \"Show Video Feed\".\"\n译文数据：\"你可以点选一友方艘舰船后，再按 \"接通视频信号\" 按钮，来获得该舰的实时影像。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/tutorial/void.class\n常量号：0321\n原始数据：\"You can keep an eye on what each ship is doing by clicking on it and selecting \"Show Video Feed\".\"\n译文数据：\"您可以点选一艘友方舰船后，再按 \"接通视频信号\" 按钮，来获得该舰的实时影像。\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/tutorial/void.class#\"You might have noticed that you're not directly controlling a ship at the moment. This can happen if you don't deploy your flagship, or if your flagship is destroyed.\"",
@@ -30375,9 +30375,9 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/ui/impl/String$1.class#\"The wing has its full complement of %s fighters.\"",
         "original": "The wing has its full complement of %s fighters.",
-        "translation": "因为舰队有飞行甲板的船只，有 %s 架战机可更换战斗损失 (%s 战备值 (CR) 每架)。",
+        "translation": "战机拥有满编的 %s 架剩余。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/ui/impl/String$1.class\n常量号：0173\n原始数据：\"The wing has its full complement of %s fighters.\"\n译文数据：\"因为舰队有飞行甲板的船只，有 %s 架战机可更换战斗损失 (%s 战备值 (CR) 每架)。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/ui/impl/String$1.class\n常量号：0173\n原始数据：\"The wing has its full complement of %s fighters.\"\n译文数据：\"战机拥有满编的 %s 架剩余。\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/ui/impl/String$1.class#\"The wing only has %s (out of %s) fighters remaining.\"",
@@ -30977,16 +30977,16 @@
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/ui/impl/private$1.class#\"The average hull integrity for this %s is %s. The average armor integrity is %s.\"",
         "original": "The average hull integrity for this %s is %s. The average armor integrity is %s.",
-        "translation": "平均船体的结构值 %s %s. 平均装甲的完整性是 %s.",
+        "translation": "%s 的平均船体结构值是 %s 而平均装甲完整性是 %s 。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/ui/impl/private$1.class\n常量号：0203\n原始数据：\"The average hull integrity for this %s is %s. The average armor integrity is %s.\"\n译文数据：\"平均船体的结构值 %s %s. 平均装甲的完整性是 %s.\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/ui/impl/private$1.class\n常量号：0203\n原始数据：\"The average hull integrity for this %s is %s. The average armor integrity is %s.\"\n译文数据：\"%s 的平均船体结构值是 %s 而平均装甲完整性是 %s 。\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/ui/impl/private$1.class#\"This %s is not undergoing repairs because it is mothballed.\"",
         "original": "This %s is not undergoing repairs because it is mothballed.",
-        "translation": "船舰 %s 停止维修，因为已被封存。",
+        "translation": "舰船 %s 停止维修，因为已被封存。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/ui/impl/private$1.class\n常量号：0242\n原始数据：\"This %s is not undergoing repairs because it is mothballed.\"\n译文数据：\"船舰 %s 停止维修，因为已被封存。\"\n\n"
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer_obf.jar\n类：com/fs/starfarer/ui/impl/private$1.class\n常量号：0242\n原始数据：\"This %s is not undergoing repairs because it is mothballed.\"\n译文数据：\"舰船 %s 停止维修，因为已被封存。\"\n\n"
     },
     {
         "key": "starfarer_obf.jar:com/fs/starfarer/ui/impl/private$1.class#\"fighter wing\"",
