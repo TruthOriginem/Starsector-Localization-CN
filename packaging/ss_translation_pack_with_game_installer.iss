@@ -2,7 +2,7 @@
 #define TranslationPackVarient "(黑体版)"
 ; 注意：请确保 MyAppVersion 和 GameVersion 与 localization 文件夹中的 localization_version.json 中的版本号一致！
 #define MyAppVersion "1.0.0"
-#define GameVersion "0.97a-RC11"
+#define GameVersion "0.98a-RC8"
 ; 注意：请确保 OriginalGameFolder 指向远行星号原版文件的路径
 #define OriginalGameFolder "..\..\Starsector"
 
@@ -54,7 +54,7 @@ CreateUninstallRegKey=no
 Uninstallable=no
 
 [Languages]
-Name: "chinesesimplified"; MessagesFile: "compiler:Languages\ChineseSimplified.isl"
+Name: "chinesesimplified"; MessagesFile: ".\ChineseSimplified.isl"
 
 [Dirs]
 Name: "{app}"; Permissions: users-modify
