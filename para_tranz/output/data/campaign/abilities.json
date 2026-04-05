@@ -16,8 +16,8 @@
     {
         "key": "abilities.csv#emergency_burn$desc",
         "original": "Briefly boost burn level at the cost of fuel and combat readiness.",
-        "translation": "短时间内提高航行速度，消耗燃料和战备值 (CR)。",
-        "stage": 5,
+        "translation": "短时间内提高最大宇宙航速，消耗燃料和战备值 (CR)。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：abilities.csv\n行：00004"
     },
     {
@@ -58,8 +58,8 @@
     {
         "key": "abilities.csv#go_dark$desc",
         "original": "Reduce sensor profile at the cost of burn level.",
-        "translation": "缩小你的传感器截面，隐藏自身，降低航行速度。",
-        "stage": 5,
+        "translation": "缩小你的传感器截面，隐藏自身，降低最大宇宙航速。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：abilities.csv\n行：00002"
     },
     {
@@ -156,8 +156,8 @@
     {
         "key": "abilities.csv#sustained_burn$desc",
         "original": "Boost burn level at the cost of acceleration and wind-up time.",
-        "translation": "提高宇宙航行速度，降低加速度和机动性。",
-        "stage": 5,
+        "translation": "提高最大宇宙航速，降低加速度和机动性。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：abilities.csv\n行：00005"
     },
     {

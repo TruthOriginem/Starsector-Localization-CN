@@ -44,8 +44,8 @@
 	
 		"initialKnows":"由于你的$playerFleetOrShip开启了应答器，所以对方知道你的身份。",
 		"initialKnowsTOff":"尽管你的$playerFleetOrShip关闭了应答器，但有迹象表明对方知道你的身份。很可能是由于对方最近目击过你。",
-		"initialKnowsUnique":"尽管你的$playerFleetOrShip关闭了应答器，但对方显然知道你的身份。很可能是由于对方知道你舰队中一些船只的特征。",
-		"initialKnowsUniqueSide":"尽管你的$playerFleetOrShip关闭了应答器，但对方显然知道你的身份。很可能是由于对方知道你舰队中一些船只的特征。",
+		"initialKnowsUnique":"尽管你的$playerFleetOrShip关闭了应答器，但对方显然知道你的身份。很可能是由于你舰队中存在一些尤其著名的特殊舰船。",
+		"initialKnowsUniqueSide":"尽管你的$playerFleetOrShip关闭了应答器，但对方显然知道你的身份。很可能是由于你舰队中存在一些尤其著名的特殊舰船。",
 		"initialDoesntKnow":"看来对方并不清楚你的身份。这将降低采取敌对行动时，对彼此关系所造成的影响。",
 		"initialKnowsSide":"由于你的$playerFleetOrShip开启了应答器，所以对方知道你的身份。",
 		"initialKnowsTOffSide":"尽管你的$playerFleetOrShip关闭了应答器，仍有迹象表明对方知道你的身份。很可能是由于对方最近目击过你。",
@@ -67,21 +67,21 @@
 		"pursuitTotalDefeat":"出人意料的是，撤退中的敌军竟然扭转了战局，取得了压倒性的胜利。",
 		
 		"escapeDefeat":"$yourForcesWereOrYourSideWas设法从敌人面前脱离了交战。",
-		"escapeTotalDefeat":"你方的战舰没有任何一艘成功逃脱。",
+		"escapeTotalDefeat":"你方的战舰无一成功逃脱。",
 		"escapeVictory":"$yourForcesWereOrYourSideWas设法扭转了战局，为对方送上了一场惨败。",
 		"escapeTotalVictory":"$yourForcesWereOrYourSideWas设法扭转了战局，彻底击溃了追击的敌人。",
 		
 		"engagementMutualDestruction":"大战之后，交战双方的全都化作了废铁。",
 		"mutualDestructionRepairs":"但至少你还没有失去一切。你接管了 $boardableShipName 的指挥，组织修理队集中精力恢复基本的推进系统和维生系统。经过数小时后，你的努力成功了，并因此得以重新上路。",
 		
-		"enemyHarass":"敌军在你撤退时骚扰了你的船只，造成很大的干扰，但并没有强迫你应战。",
+		"enemyHarass":"敌军在你撤退时骚扰了你的舰船，造成很大的干扰，但并没有强迫你应战。",
 		"enemyUnableToPursue":"敌舰无法进行追击，使你方战力得以顺利撤离，再未发生任何变故。",
 		"enemyDecidesNotToPursue":"敌舰没有进行追击，使你方战力得以顺利撤离，再未发生任何变故。",
 		"enemyPursuit":"敌方舰队追击你方战力。",
 		
 		"playerRecovery":"由于成功控制了战斗区域且交战规模有限，$yourForcesWereOrYourSideWas设法恢复了一些战备值。",
 		"enemyRecovery":"由于战区尚处敌方控制下且交战规模有限，敌军战力的战备值得到了些许恢复。",
-		"bothRecovery":"由于双方在经过有限的混乱交战后都暂时解除了戒备状态，因此双方都恢复了一些战备值。",
+		"bothRecovery":"双方在经历一场短暂而混乱的交火之后撤出战斗，并借机恢复了一些战备值 (CR)。",
 		
 		"enemyCleanDisengage":"由于你方战力不足以进行追击，对方舰队能够直接脱离交战。",
 		"enemyCleanDisengageSide":"由于你所在方的战力不足以进行追击，对方舰队能够直接脱离交战。",
@@ -89,7 +89,7 @@
 		# in playerUnableToPursue, the player can still harass the escaping ships, so it's not a "clean" disengagement.
 		"playerUnableToPursue":"由于你无法强迫对方应战，因此看起来对方可以直接脱离战斗。",
 		"playerUnableToPursueNoReadyShips":"你没有任何舰船还处于可以承担追击任务的状态。",
-		"playerUnableToPursueStoodDown":"你的船只正专注于恢复战备值，因此无法承担追击任务。",
+		"playerUnableToPursueStoodDown":"你的舰船正专注于恢复战备值，因此无法承担追击任务。",
 		
 		"playerDisruptedEnemy":"尽管从上次交战中撤退，但你方战力成功打乱了敌人的阵脚，因此得以脱离交战而不被追击。",
 		"enemyDisruptedPlayer":"尽管取得了上一次交战的胜利，但你方战力损失惨重，因此无法在敌人脱离交战时进行追击。",
@@ -100,7 +100,7 @@
 		#"playerTooLargeCanFightToDisengage":"Engaging the opponent and destroying，disabling，or forcing enough of their ships to retreat will allow your fleet to disengage without being pursued。",
 		#"highlightTooLarge":"too large to be able to disengage",
 		#"highlightCanFight":"disengage without being pursued",
-		"playerTooLargeToDisengage":"你的舰队规模太大，无法轻易摆脱交战。需要与敌人交战并摧毁、瘫痪或迫使其撤出足够多的船只使你的舰队脱离战斗而不被追击。",
+		"playerTooLargeToDisengage":"你的舰队规模太大，无法轻易摆脱交战。需要与敌人交战并摧毁、瘫痪或迫使其撤出足够多的舰船使你的舰队脱离战斗而不被追击。",
 		"highlightTooLarge":"规模太大，无法轻易摆脱交战",
 		"highlightDisengage":"脱离战斗而不被追击",
 		
@@ -111,7 +111,7 @@
 		
 		
 		"playerLetGo":"你的舰船没有进行追击，使敌方战力得以顺利撤离，再未发生任何变故。",
-		"playerHarass":"我军在敌方撤退时骚扰了其船只，虽造成很大的干扰，但并没有迫使对方应战。",
+		"playerHarass":"我军在敌方撤退时骚扰了其舰船，虽造成很大的干扰，但并没有迫使对方应战。",
 		
 		
 		"engageForce":"你下令进行了一系列的机动动作，来将敌方指挥官可用的对应手段逼得越来越少。",
@@ -129,7 +129,7 @@
 		"postBattleNeutralSide":"$enemyFactionAndTheirAllies 维持着可攻可退的中立姿态。",
 		"postBattleHoldVsStrongerEnemySide":"面对你的优势兵力，$enemyFactionAndTheirAllies 依然摆出了准备战斗的架势，不过不太可能主动出击。",
 		
-		"cutComm":"你切断了通讯，开始考虑可用的战术对策。",
+		"cutComm":"你切断了通讯链接，开始考虑可用的战术对策。",
 	
 		"repairReport":"打捞人员能够修复$repairedShipList的基本系统。",
 		"casualtyReport":"初步报告表明，在上一次交战中牺牲了 $crewLost 名船员和 $marinesLost 名陆战队员。",
@@ -138,10 +138,10 @@
 		#
 		# BOARDING ENEMY SHIP
 		#
-		"enemyShipBoardable":"你的舰队正在愉快地收缴物资，一艘敌舰的控制系统突然重新上线，快速扫描显示其上有 $numLifeSigns 个生命信号。",
-		"engageBoardableDisabled":"你的舰队奉命攻击敌舰，数个精准轰击之后一切又重归寂静。",
-		"engageBoardableDestroyed":"你的舰队奉命攻击敌舰。不久巨大的爆炸后显示屏一片空白，然后画面显示的是慢慢扩散的碎片。",
-		"engageBoardableEscaped":"你的舰队奉命攻击敌舰，但是在最后一刻敌舰维修人员恢复了动力系统成功逃离。",
+		"enemyShipBoardable":"你的舰队正准备开始打捞作业，一艘敌舰的控制系统突然重新上线，快速扫描显示其上有 $numLifeSigns 个生命信号。",
+		"engageBoardableDisabled":"你的舰队奉命攻击敌舰，用几发精准的炮击将其彻底击毁。",
+		"engageBoardableDestroyed":"你的舰队奉命攻击敌舰。数发炮弹命中其受损船体后不久，巨大的爆炸便使视野屏幕瞬间变白，待画面恢复时，只剩下一片缓缓扩张的残骸区。",
+		"engageBoardableEscaped":"你的舰队试图接敌，但敌舰的维修人员在最后关头重启了驱动场并成功逃离。",
 		"letBoardableGo":"你命令舰队放敌人离开。",
 		"boardingTaskForceSelectedOneShip":"接到命令后，$boardingTaskForceShips 靠近并准备接触敌舰。",
 		"boardingTaskForceSelectedMultiple":"接到命令后，$boardingTaskForceShips 靠近并准备接触敌舰。",
@@ -153,32 +153,32 @@
 		"boardingOutcomeShipLost":"$boardingTaskForceShipName 已被摧毁。", 
 		"boardingOutcomeShipDamaged":"$boardingTaskForceShipName 遭到严重破坏。",
 		"boardingOutcomeTaskForceLost":"所有登陆敌舰的人员都已战死。", 
-		"boardingOutcomeTaskForceLostPartial":"敌舰爆炸时执行停靠作业的船也不幸殉爆，还有一些幸运的舰船受到了严重损毁。", 
+		"boardingOutcomeTaskForceLostPartial":"敌舰爆炸时，直接执行停靠作业的舰船不幸被摧毁，其余舰船也遭受重创。", 
 		"boardingOutcomeTaskForceDamaged":"万幸，一艘船也没坏。",
 		 
 		"boardingOutcomeSuccess":"经过艰苦卓绝的战斗，登舰部队指挥官报告已占领敌舰，并开始接管人员。",
 		"boardingOutcomeTooDamaged":"经过艰苦卓绝的战斗，登舰部队指挥官报告已占领敌舰。但是战斗对敌舰的核心系统造成了无法挽回的损坏。",
 		"boardingOutcomeEscape":"突袭小组在占领敌舰时遇到了顽强的抵抗，敌舰修复了其引擎并成功逃走。",
-		"boardingCleanEscapeMissedLaunch":"在最后关头，敌舰恢复了动力，然后躲过了大部分正面攻击逃走啦； 在一切恢复正常之后，$boardingCrewLost 名船员和 $boardingMarinesLost 名陆战队员下落不明。",
+		"boardingCleanEscapeMissedLaunch":"在最后关头，敌舰恢复了动力，得以改变航向避开大部分来袭攻击，争取到足够的脱身时间。在整编之后，有 $boardingCrewLost 名船员和 $boardingMarinesLost 名陆战队员下落不明。",
 		
 		"boardingNoMarines":"你没有陆战队员可供使用，战术模拟机的结果显示你目前登舰的成功几率为0。",
-		"boardingProjection":"你有 $marines 名陆战队员可用。根据伽马级AI的模拟运算，登舰成功的几率为 $boardingSuccessChance 。",
+		"boardingProjection":"你有 $marines 名陆战队员可用。根据伽马级 AI 的模拟运算，登舰成功的几率为 $boardingSuccessChance 。",
 		
 		"boardingCasualtyReport":"行动后评估报告表明，在登陆战中我方损失 $boardingMarinesLost 名陆战队员。",  
 		
 		#
 		# BEING BOARDED (limited to ship being engaged and shot down or not, at the moment)
 		#
-		"friendlyShipBoardable":"有艘破船上的维修人员走了狗屎运 修好了船上的核心控制系统，如果你愿意给这艘船提供动力的话，这艘船会加入你的舰队。",
+		"friendlyShipBoardable":"一艘停机舰船的船员已完成了相应的维修工作，使关键系统恢复运行。如果你愿意给这艘船提供动力的话，这艘船就能重新加入你的舰队。",
 		"engageFriendlyBoardableDisabled":"不幸的是，敌舰接近后，用几发精准的炮击彻底断绝了任何逃跑的机会。",
 		"engageFriendlyBoardableDestroyed":"不幸的是，敌舰接近并对其开火，断绝了任何进一步修复的机会。一发流弹导致了反应堆约束场崩溃 —— 被命中的舰船直接爆炸，只留下一片缓缓扩张的残骸区。",
-		"engageFriendlyBoardableEscaped":"动力工程师在敌人靠近前修好了引擎 溜回了自己的舰队。",
+		"engageFriendlyBoardableEscaped":"在敌方逼近之前，引擎维修完成，舰船成功脱身，重新与你的舰队会合。",
 		"engageFriendlyBoardableLetGo":"敌人的舰队好心地停了下来并让你完成了维修，你晃晃悠悠的回到了自己的舰队。",
 		
 		"lastFriendlyShipRepairs":"你指挥着 $boardableShipName，迅速组织抢修队伍，如果它能重新运作，你就可以侥幸逃脱。",
 		"lastFriendlyBoardableDisabled":"不幸的是，敌舰接近后，用几发精准的炮击彻底断绝了任何逃跑的机会。",
 		"lastFriendlyBoardableDestroyed":"不幸的是，敌舰接近并对其开火，断绝了任何进一步修复的机会。一发流弹导致了反应堆约束场崩溃 —— 被命中的舰船直接爆炸，只留下一片缓缓扩张的残骸区。",
-		"lastFriendlyBoardableEscaped":"动力工程师在敌人靠近前修好了引擎 ，你顺利逃脱!",
+		"lastFriendlyBoardableEscaped":"在敌人逼近之前，引擎修复完成，你顺利逃脱！",
 		"lastFriendlyBoardableLetGo":"敌人的舰队好心地停了下来并让你完成了维修，你晃晃悠悠地离开了。",
 
 		"finalOutcomeNoShipsLeft":"最后你只记得逃生舱突然加速，在你的船完蛋之前把你甩了出去。",
@@ -210,32 +210,32 @@
 		"tooltipPursueSeriousLosses":"你的部队在上一次交战中蒙受了巨大的损失，因此无法进行追击。",
 		"tooltipPursueTooSlow":"敌方舰队速度太快，你的部队无法追上。",
 		
-		"tooltipNoReadyShips":"你没有可以作战的船只。",
+		"tooltipNoReadyShips":"你没有可以作战的舰船。",
 		"tooltipNoPersonnel":"没有陆战队员可派遣。",
 		
-		"tooltipHarassRetreat":"降低所有逃离船只的战备值，相当于经历一次战斗部署。\n\n同时也会使你的舰队减速一段时间，因为你的部队在实施骚扰行动后需要时间重整。",
-		"tooltipHarassRetreatUnavailable":"无法骚扰撤退部队。因为没有可以作战的船只或已下令撤退。",
+		"tooltipHarassRetreat":"降低所有逃离舰船的战备值，相当于经历一次战斗部署。\n\n同时也会使你的舰队减速一段时间，因为你的部队在实施骚扰行动后需要时间重整。",
+		"tooltipHarassRetreatUnavailable":"无法骚扰撤退部队。因为没有可以作战的舰船或已下令撤退。",
 		
 		"tooltipLetThemGoNoPenalty":"让对方的舰队安全离开。\n\n你的舰队在脱离接触后不需要进行重整，也不会被减速。",
 		"tooltipLetThemGo":"让对方的舰队安全离开。\n\n你的舰队在脱离接触后不需要进行重整，也不会被减速",
 		"tooltipEngage":"攻击对方的舰队。\n\n如果你在战斗中造成了足够多的伤害，撤退后你将能够脱离战斗接触而不被追击。",
 		"tooltipCleanDisengage":"在不冒被对方舰队骚扰风险的情况下结束战斗。\n\n由于敌方仍然控制着战区，你将无法进行任何打捞作业。\n\n如果你的舰队没有采取任何敌对行动，脱离交战不会对你与对方势力的关系造成损害。",
 		"tooltipHarrassableDisengage":"在不冒被追击风险的情况下结束战斗。对方舰队仍然可能会在你撤退时进行骚扰。\n\n由于敌方仍然控制着战区，你将无法进行任何打捞作业。\n\n如果你的舰队没有采取任何敌对行动，脱离交战不会对你与对方势力的关系造成损害。",
-		"tootipAttemptToDisengage":"试图从战斗中撤退。对方舰队可能会追击并迫使你应战，也可能会让你就此离开。\n\n由于敌人仍然控制着战区，你将无法进行任何打捞行动。\n\n如果你的舰队没有采取任何敌对行动，在不损害任何追击船只的情况下脱离战斗将，可将双方关系的损害减小到最低。",
+		"tootipAttemptToDisengage":"试图从战斗中撤退。对方舰队可能会追击并迫使你应战，也可能会让你就此离开。\n\n由于敌人仍然控制着战区，你将无法进行任何打捞行动。\n\n如果你的舰队没有采取任何敌对行动，在不损害任何追击舰船的情况下脱离战斗，可将双方关系的损害减小到最低。",
 		
 		"tooltipBoardingAction":"组织登舰行动，需要陆战队员，可能造成严重的人员损失。",
 		"tooltipEngageBoardable":"在舰船有机会完成维修前攻击它。\n\n有可能完全摧毁目标舰船。",
-		"tooltipLetShipGo":"让敌人的船完成紧急抢修并撤退。",
-		"tooltipHardDockBoarding":"组织专门的登陆小组接近并与敌舰对接。\n\n拥有最高的成功机会。\n\n如果目标舰船自毁，参与攻占行动船可能遭受重创，甚至被摧毁。",
+		"tooltipLetShipGo":"让敌方舰船完成紧急抢修并撤退。",
+		"tooltipHardDockBoarding":"组织专门的登陆小组接近并与敌舰对接。\n\n拥有最高的成功机会。\n\n如果目标舰船自毁，参与攻占行动的舰船可能遭受重创，甚至被摧毁。",
 		"tooltipLaunchBoarding":"从安全距离发射陆战队员，靠单兵推进器接近敌舰。\n\n给敌舰显著的逃脱成功率，但不会有舰船殉爆的风险。",
-		"tooltipAboutBoardingAction":"召回登舰组并取消行动，允许敌船撤退。", 
+		"tooltipAboutBoardingAction":"召回登舰组并取消行动，允许敌舰撤退。", 
 		"tooltipSelectorMarines":"选择执行突击任务的陆战队员人数。",
 		"tooltipSelectorCrew":"选择执行突击任务的船员人数。",
 		"tooltipSelectFlagship":"选择你亲自指挥参与下一场战斗的旗舰。",
 		
 		"ongoingBattleEncounter":"你遇到了一场正在进行中的战斗。",
-		"ongoingBattleShareIFF":"$alliedFactionAndTheirAllies传输了它们的敌我识别编码，让你可以作为它们的援军来参与战斗。",
-		"ongoingBattleNoJoin":"交战双方对你的信任都没达到能和你交换敌我识别代码并肩作战的程度，因此你无法参与这场战斗。",
+		"ongoingBattleShareIFF":"$alliedFactionAndTheirAllies传输了他们的敌我识别代码，让你可以作为他们的援军来参与战斗。",
+		"ongoingBattleNoJoin":"双方都无法信任你，所以不会与你交换敌我识别代码，也不会与你并肩作战，因此你无法参与这场战斗。",
 		"ongoingBattleNoJoinTransponder":"双方都无法信任你，所以不会与你交换敌我识别代码。你可以打开应答器后再回来看看情况是否有所改变。",
 		#"playerOutFirstEscapeWin":"Your forces leave the battlespace before all of your allies，who are nonetheless able to rout the enemy forces。",
 		#"playerOutFirstEscapeLoss":"Your forces leave the battlespace before all of your allies，who are able to escape shortly thereafter。",
@@ -298,7 +298,7 @@
 		"chmDeployLowCR_action":"继续部署",
 		"chmDeployLowCR_dismiss":"关闭",
 		
-		"chmDeployCostsCR_text":"你可以在每场战斗开始时选择部署哪些船只参战，并在战斗进行时部署援军。\n\n部署舰船参战将在战后扣除战备值 (CR)。此外，舰船在峰值时间耗尽后，其战备值 (CR) 将会开始下降。\n\n恢复战备值 (CR) 需要时间，并消耗宝贵的补给。",
+		"chmDeployCostsCR_text":"你可以在每场战斗开始时选择部署哪些舰船参战，并在战斗进行时部署援军。\n\n部署舰船参战将在战后扣除战备值 (CR)。此外，舰船在峰值时间耗尽后，其战备值 (CR) 将会开始下降。\n\n恢复战备值 (CR) 需要时间，并消耗宝贵的补给。",
 		"chmDeployCostsCR_dismiss":"关闭",
 		
 		"chmWeaponGroups_text":"你更改了舰船的装配，但没有调整武器组。\n\n虽然舰船在部署后未编组武器会自动进行分组，但仍建议进行手动调整。",
@@ -340,11 +340,11 @@
 		"chmLowFuel_text":"燃料不足。\n\n如果在超空间内用光燃料，舰队会飘向最近的星系。如果你不能在那里获得燃料，你的舰队就会搁浅在此。",
 		"chmLowFuel_dismiss":"关闭",
 		
-		"chmLowSupplies_text":"补给不足。\n\n如果舰队补给耗尽，所有的维修都会停止，舰船也会随时间推移开始失去战备值。在持续多日没有补给的情况下，舰队就会面临发生意外的风险，从轻微 (如损失一些货物) 直至严重 (损失一艘船)。\n\n建议你尽快获取更多的补给。\n\n为减少补给消耗，你可暂停任何正在进行的舰船维修。若别无他法，你可以凿沉你的一艘船来获得更多补给。\n\n你可以通过舰队管理面板暂停船只维修或凿沉舰船。",
+		"chmLowSupplies_text":"补给不足。\n\n如果舰队补给耗尽，所有的维修都会停止，舰船也会随时间推移开始失去战备值。在持续多日没有补给的情况下，舰队就会面临发生意外的风险，从轻微 (如损失一些货物) 直至严重 (损失一艘船)。\n\n建议你尽快获取更多的补给。\n\n为减少补给消耗，你可暂停任何正在进行的舰船维修。若别无他法，你可以凿沉你的一艘船来获得更多补给。\n\n你可以通过舰队管理面板暂停舰船维修或凿沉舰船。",
 		"chmLowSupplies_action":"打开舰队管理界面",
 		"chmLowSupplies_dismiss":"关闭",
 		
-		"chmNotEnoughCrew_text":"没有足够的船员让所有舰船做好战斗准备。\n\n这会降低受影响舰船的战备值 (CR) 并影响它的战备恢复。\n\n你可以在舰队管理界面封存部分船只，把人手集中到其他船上。但请尽快从就近的空间站雇些人手。",
+		"chmNotEnoughCrew_text":"没有足够的船员让所有舰船做好战斗准备。\n\n这会降低受影响舰船的战备值 (CR) 并影响它的战备恢复。\n\n你可以在舰队管理界面封存部分舰船，把人手集中到其他船上。但请尽快从就近的空间站雇些人手。",
 		"chmNotEnoughCrew_action":"打开舰队管理界面",
 		"chmNotEnoughCrew_dismiss":"关闭",
 		
@@ -370,7 +370,7 @@
 		"chmEnteredHyper_text":"你的舰队进入了超空间！ \n\n在超空间航行时，燃料的消耗将与航行距离成正比。用光燃料后的舰队会飘向最近的星系，并搁浅在那。",
 		"chmEnteredHyper_dismiss":"关闭",
 	
-		"chmRefitCRLoss_text":"在宇宙中改装船只会导致战备值 (CR) 损失。\n\n损失的量取决于你改装的程度，通过战备值 (CR) 栏灰掉的那一部分所指示。\n\n在空间站改装不会影响战备值 (CR)。",
+		"chmRefitCRLoss_text":"在宇宙中改装舰船会导致战备值 (CR) 损失。\n\n损失的量取决于你改装的程度，通过战备值 (CR) 栏灰掉的那一部分所指示。\n\n在空间站改装不会影响战备值 (CR)。",
 		"chmRefitCRLoss_dismiss":"关闭",
 	},
 	

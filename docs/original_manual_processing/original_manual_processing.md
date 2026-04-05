@@ -25,6 +25,8 @@
 | starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/intel/misc/SalvorsTallyIntel.class | `orbital` |
 | starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/CoreScript.class | `ships`， `cargo`, `ships & cargo` |
 | starfarer.api.jar:<br/>com/fs/starfarer/api/impl/campaign/FactionPersonalityPickerPluginImpl.class | `aggressive`, `reckless` |
+| starfarer.api.jar:<br>com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$1.class | `objectives` |
+| starfarer.api.jar:<br>com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$2.class | `objectives` |
 
 ## 代码逻辑修改
 

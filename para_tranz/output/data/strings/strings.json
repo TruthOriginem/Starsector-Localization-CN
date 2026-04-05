@@ -30,7 +30,7 @@
     {
         "key": "data/strings/strings.json$.campaignHelp.chmDeployCostsCR_text",
         "original": "You can select which ships to deploy at the beginning of each battle, and deploy reinforcements as the battle goes on.\n\nDeploying a ship reduces its combat readiness by a fixed amount. In addition, ships will begin to gradually lose combat readiness after their peak readiness time runs out.\n\nRecovering combat readiness takes time and consumes valuable supplies.",
-        "translation": "你可以在每场战斗开始时选择部署哪些船只参战，并在战斗进行时部署援军。\n\n部署舰船参战将在战后扣除战备值 (CR)。此外，舰船在峰值时间耗尽后，其战备值 (CR) 将会开始下降。\n\n恢复战备值 (CR) 需要时间，并消耗宝贵的补给。",
+        "translation": "你可以在每场战斗开始时选择部署哪些舰船参战，并在战斗进行时部署援军。\n\n部署舰船参战将在战后扣除战备值 (CR)。此外，舰船在峰值时间耗尽后，其战备值 (CR) 将会开始下降。\n\n恢复战备值 (CR) 需要时间，并消耗宝贵的补给。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.campaignHelp.chmDeployCostsCR_text"
     },
@@ -149,7 +149,7 @@
     {
         "key": "data/strings/strings.json$.campaignHelp.chmLowSupplies_text",
         "original": "Your fleet is running low on supplies.\n\nIf it runs out of supplies, all repairs will stop and ships will start to lose combat readiness over time. After more than a couple of days without supplies, the fleet begins to run the risk of accidents that range from minor (such as the loss of some cargo) to critical (losing a ship).\n\nIt's recommended that you acquire more supplies as quickly as possible.\n\nTo reduce supply consumption, you can suspend any ongoing ship repairs. A last resort way to get more supplies is to scuttle one of your ships.\n\nThe commands to do so are available on the fleet screen.",
-        "translation": "补给不足。\n\n如果舰队补给耗尽，所有的维修都会停止，舰船也会随时间推移开始失去战备值。在持续多日没有补给的情况下，舰队就会面临发生意外的风险，从轻微 (如损失一些货物) 直至严重 (损失一艘船)。\n\n建议你尽快获取更多的补给。\n\n为减少补给消耗，你可暂停任何正在进行的舰船维修。若别无他法，你可以凿沉你的一艘船来获得更多补给。\n\n你可以通过舰队管理面板暂停船只维修或凿沉舰船。",
+        "translation": "补给不足。\n\n如果舰队补给耗尽，所有的维修都会停止，舰船也会随时间推移开始失去战备值。在持续多日没有补给的情况下，舰队就会面临发生意外的风险，从轻微 (如损失一些货物) 直至严重 (损失一艘船)。\n\n建议你尽快获取更多的补给。\n\n为减少补给消耗，你可暂停任何正在进行的舰船维修。若别无他法，你可以凿沉你的一艘船来获得更多补给。\n\n你可以通过舰队管理面板暂停舰船维修或凿沉舰船。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.campaignHelp.chmLowSupplies_text"
     },
@@ -198,7 +198,7 @@
     {
         "key": "data/strings/strings.json$.campaignHelp.chmNotEnoughCrew_text",
         "original": "Your fleet does not have enough personnel to fully crew all of your ships.\n\nThis results in reduced combat readiness and combat readiness recovery for the affected ships.\n\nYou can concentrate the available crew on specifc ships by mothballing some ships from the fleet screen. It's recommended that you hire more crew at a nearby space station as soon as possible.",
-        "translation": "没有足够的船员让所有舰船做好战斗准备。\n\n这会降低受影响舰船的战备值 (CR) 并影响它的战备恢复。\n\n你可以在舰队管理界面封存部分船只，把人手集中到其他船上。但请尽快从就近的空间站雇些人手。",
+        "translation": "没有足够的船员让所有舰船做好战斗准备。\n\n这会降低受影响舰船的战备值 (CR) 并影响它的战备恢复。\n\n你可以在舰队管理界面封存部分舰船，把人手集中到其他船上。但请尽快从就近的空间站雇些人手。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.campaignHelp.chmNotEnoughCrew_text"
     },
@@ -289,7 +289,7 @@
     {
         "key": "data/strings/strings.json$.campaignHelp.chmRefitCRLoss_text",
         "original": "Refitting a ship in space will cause it to lose some combat readiness.\n\nThe amount lost depends on the extent of the changes made and is indicated by the dimmed portion of the combat readiness bar.\n\nRefitting at a market or station does not reduce combat readiness.",
-        "translation": "在宇宙中改装船只会导致战备值 (CR) 损失。\n\n损失的量取决于你改装的程度，通过战备值 (CR) 栏灰掉的那一部分所指示。\n\n在空间站改装不会影响战备值 (CR)。",
+        "translation": "在宇宙中改装舰船会导致战备值 (CR) 损失。\n\n损失的量取决于你改装的程度，通过战备值 (CR) 栏灰掉的那一部分所指示。\n\n在空间站改装不会影响战备值 (CR)。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.campaignHelp.chmRefitCRLoss_text"
     },
@@ -499,7 +499,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.boardingCleanEscapeMissedLaunch",
         "original": "At the last moment, the enemy ship regains propulsion and is able to alter its trajectory enough to avoid most of the incoming attackers, gaining enough time to get away. After a recovery effort, $boardingCrewLost crew and $boardingMarinesLost marine(s) remain unaccounted for.",
-        "translation": "在最后关头，敌舰恢复了动力，然后躲过了大部分正面攻击逃走啦； 在一切恢复正常之后，$boardingCrewLost 名船员和 $boardingMarinesLost 名陆战队员下落不明。",
+        "translation": "在最后关头，敌舰恢复了动力，得以改变航向避开大部分来袭攻击，争取到足够的脱身时间。在整编之后，有 $boardingCrewLost 名船员和 $boardingMarinesLost 名陆战队员下落不明。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.boardingCleanEscapeMissedLaunch"
     },
@@ -562,7 +562,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.boardingOutcomeTaskForceLostPartial",
         "original": "Some of the ships docked with the enemy ship when it exploded are destroyed, while the rest take serious damage.",
-        "translation": "敌舰爆炸时执行停靠作业的船也不幸殉爆，还有一些幸运的舰船受到了严重损毁。",
+        "translation": "敌舰爆炸时，直接执行停靠作业的舰船不幸被摧毁，其余舰船也遭受重创。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.boardingOutcomeTaskForceLostPartial"
     },
@@ -576,7 +576,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.boardingProjection",
         "original": "You have $marines marine(s) available. According to simulations run by a gamma-level AI, a boarding operation would have a $boardingSuccessChance chance of success.",
-        "translation": "你有 $marines 名陆战队员可用。根据伽马级AI的模拟运算，登舰成功的几率为 $boardingSuccessChance 。",
+        "translation": "你有 $marines 名陆战队员可用。根据伽马级 AI 的模拟运算，登舰成功的几率为 $boardingSuccessChance 。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.boardingProjection"
     },
@@ -597,7 +597,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.bothRecovery",
         "original": "Both sides are able to recover some combat readiness as they stand down after a limited and chaotic engagement.",
-        "translation": "由于双方在经过有限的混乱交战后都暂时解除了戒备状态，因此双方都恢复了一些战备值。",
+        "translation": "双方在经历一场短暂而混乱的交火之后撤出战斗，并借机恢复了一些战备值 (CR)。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.bothRecovery"
     },
@@ -639,7 +639,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.cutComm",
         "original": "You cut the comm link and consider the tactical options available.",
-        "translation": "你切断了通讯，开始考虑可用的战术对策。",
+        "translation": "你切断了通讯链接，开始考虑可用的战术对策。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.cutComm"
     },
@@ -681,7 +681,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.enemyHarass",
         "original": "The enemy forces harass your ships as they retreat, causing much disruption, but ultimately do not force a battle.",
-        "translation": "敌军在你撤退时骚扰了你的船只，造成很大的干扰，但并没有强迫你应战。",
+        "translation": "敌军在你撤退时骚扰了你的舰船，造成很大的干扰，但并没有强迫你应战。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.enemyHarass"
     },
@@ -702,7 +702,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.enemyShipBoardable",
         "original": "Your forces are preparing to begin salvage operations, when suddenly an enemy ship's systems come back online. A quick scan picks up $numLifeSigns lifesign(s) on board.",
-        "translation": "你的舰队正在愉快地收缴物资，一艘敌舰的控制系统突然重新上线，快速扫描显示其上有 $numLifeSigns 个生命信号。",
+        "translation": "你的舰队正准备开始打捞作业，一艘敌舰的控制系统突然重新上线，快速扫描显示其上有 $numLifeSigns 个生命信号。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.enemyShipBoardable"
     },
@@ -716,21 +716,21 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.engageBoardableDestroyed",
         "original": "Your forces engage the enemy ship. A huge explosion blanks out the viewscreens shortly after a few shots impact its damaged hull, and all that's left when visuals come back online is a slowly expanding ball of debris.",
-        "translation": "你的舰队奉命攻击敌舰。不久巨大的爆炸后显示屏一片空白，然后画面显示的是慢慢扩散的碎片。",
+        "translation": "你的舰队奉命攻击敌舰。数发炮弹命中其受损船体后不久，巨大的爆炸便使视野屏幕瞬间变白，待画面恢复时，只剩下一片缓缓扩张的残骸区。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.engageBoardableDestroyed"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.engageBoardableDisabled",
         "original": "Your forces engage the enemy ship, and a few well-placed shots quickly neutralize it.",
-        "translation": "你的舰队奉命攻击敌舰，数个精准轰击之后一切又重归寂静。",
+        "translation": "你的舰队奉命攻击敌舰，用几发精准的炮击将其彻底击毁。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.engageBoardableDisabled"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.engageBoardableEscaped",
         "original": "Your forces move to engage the enemy ship, but its crew is able to bring the drive field back online at the last moment and it manages to get away.",
-        "translation": "你的舰队奉命攻击敌舰，但是在最后一刻敌舰维修人员恢复了动力系统成功逃离。",
+        "translation": "你的舰队试图接敌，但敌舰的维修人员在最后关头重启了驱动场并成功逃离。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.engageBoardableEscaped"
     },
@@ -758,7 +758,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.engageFriendlyBoardableEscaped",
         "original": "Before the enemy can close in, engine repairs are completed and the ship gets away to rejoin your fleet.",
-        "translation": "动力工程师在敌人靠近前修好了引擎 溜回了自己的舰队。",
+        "translation": "在敌方逼近之前，引擎维修完成，舰船成功脱身，重新与你的舰队会合。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.engageFriendlyBoardableEscaped"
     },
@@ -800,7 +800,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.escapeTotalDefeat",
         "original": "None of your side's ships managed to escape.",
-        "translation": "你方的战舰没有任何一艘成功逃脱。",
+        "translation": "你方的战舰无一成功逃脱。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.escapeTotalDefeat"
     },
@@ -835,7 +835,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.friendlyShipBoardable",
         "original": "The crew of one of your disabled ships has effected enough repairs for critical systems to come back online. If it's able to regain propulsion, it might be able to rejoin your fleet.",
-        "translation": "有艘破船上的维修人员走了狗屎运 修好了船上的核心控制系统，如果你愿意给这艘船提供动力的话，这艘船会加入你的舰队。",
+        "translation": "一艘停机舰船的船员已完成了相应的维修工作，使关键系统恢复运行。如果你愿意给这艘船提供动力的话，这艘船就能重新加入你的舰队。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.friendlyShipBoardable"
     },
@@ -975,14 +975,14 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.initialKnowsUnique",
         "original": "Despite your $playerFleetOrShip's transponder being turned off, it appears to be aware of your identity - likely due to the presence of notable ships in your fleet.",
-        "translation": "尽管你的$playerFleetOrShip关闭了应答器，但对方显然知道你的身份。很可能是由于对方知道你舰队中一些船只的特征。",
+        "translation": "尽管你的$playerFleetOrShip关闭了应答器，但对方显然知道你的身份。很可能是由于你舰队中存在一些尤其著名的特殊舰船。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.initialKnowsUnique"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.initialKnowsUniqueSide",
         "original": "Despite your $playerFleetOrShip's transponder being turned off, it appears to be aware of your identity - likely due to the presence of notable ships in your fleet.",
-        "translation": "尽管你的$playerFleetOrShip关闭了应答器，但对方显然知道你的身份。很可能是由于对方知道你舰队中一些船只的特征。",
+        "translation": "尽管你的$playerFleetOrShip关闭了应答器，但对方显然知道你的身份。很可能是由于你舰队中存在一些尤其著名的特殊舰船。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.initialKnowsUniqueSide"
     },
@@ -1024,7 +1024,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.lastFriendlyBoardableEscaped",
         "original": "Before the enemy can close in, engine repairs are completed and you're able to get away!",
-        "translation": "动力工程师在敌人靠近前修好了引擎 ，你顺利逃脱!",
+        "translation": "在敌人逼近之前，引擎修复完成，你顺利逃脱！",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.lastFriendlyBoardableEscaped"
     },
@@ -1108,7 +1108,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.ongoingBattleNoJoin",
         "original": "Neither side trusts you enough to share IFF codes or fight alongside, and you're unable to join the battle on either side.",
-        "translation": "交战双方对你的信任都没达到能和你交换敌我识别代码并肩作战的程度，因此你无法参与这场战斗。",
+        "translation": "双方都无法信任你，所以不会与你交换敌我识别代码，也不会与你并肩作战，因此你无法参与这场战斗。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.ongoingBattleNoJoin"
     },
@@ -1129,7 +1129,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.ongoingBattleShareIFF",
         "original": "The $alliedFactionAndTheirAllies transmit their IFF codes, which allow you to join the battle on their side if you decide to do so.",
-        "translation": "$alliedFactionAndTheirAllies传输了它们的敌我识别编码，让你可以作为它们的援军来参与战斗。",
+        "translation": "$alliedFactionAndTheirAllies传输了他们的敌我识别代码，让你可以作为他们的援军来参与战斗。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.ongoingBattleShareIFF"
     },
@@ -1150,7 +1150,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.playerHarass",
         "original": "Your forces harass the enemy ships as they retreat, causing much disruption, but ultimately do not force a battle.",
-        "translation": "我军在敌方撤退时骚扰了其船只，虽造成很大的干扰，但并没有迫使对方应战。",
+        "translation": "我军在敌方撤退时骚扰了其舰船，虽造成很大的干扰，但并没有迫使对方应战。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.playerHarass"
     },
@@ -1213,7 +1213,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.playerTooLargeToDisengage",
         "original": "Your fleet is too large to be able to disengage easily. Engaging the enemy and destroying, disabling, or forcing enough of their ships to retreat will allow your fleet to disengage without being pursued.",
-        "translation": "你的舰队规模太大，无法轻易摆脱交战。需要与敌人交战并摧毁、瘫痪或迫使其撤出足够多的船只使你的舰队脱离战斗而不被追击。",
+        "translation": "你的舰队规模太大，无法轻易摆脱交战。需要与敌人交战并摧毁、瘫痪或迫使其撤出足够多的舰船使你的舰队脱离战斗而不被追击。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.playerTooLargeToDisengage"
     },
@@ -1234,7 +1234,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.playerUnableToPursueStoodDown",
         "original": "Your ships are focused on regaining combat readiness and are unable to offer pursuit.",
-        "translation": "你的船只正专注于恢复战备值，因此无法承担追击任务。",
+        "translation": "你的舰船正专注于恢复战备值，因此无法承担追击任务。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.playerUnableToPursueStoodDown"
     },
@@ -1374,7 +1374,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.tooltipAboutBoardingAction",
         "original": "Recall the task force and cancel the boarding action, allowing the enemy ship to withdraw.",
-        "translation": "召回登舰组并取消行动，允许敌船撤退。",
+        "translation": "召回登舰组并取消行动，允许敌舰撤退。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.tooltipAboutBoardingAction"
     },
@@ -1423,21 +1423,21 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.tooltipHarassRetreat",
         "original": "Reduces the combat readiness of all disengaging ships as if they were deployed into combat.\n\nAlso slows down your fleet for a while as your forces require time to reorganize after the harassing action.",
-        "translation": "降低所有逃离船只的战备值，相当于经历一次战斗部署。\n\n同时也会使你的舰队减速一段时间，因为你的部队在实施骚扰行动后需要时间重整。",
+        "translation": "降低所有逃离舰船的战备值，相当于经历一次战斗部署。\n\n同时也会使你的舰队减速一段时间，因为你的部队在实施骚扰行动后需要时间重整。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.tooltipHarassRetreat"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.tooltipHarassRetreatUnavailable",
         "original": "Unable to harass the retreating forces either due to standing down or not having any combat-ready ships.",
-        "translation": "无法骚扰撤退部队。因为没有可以作战的船只或已下令撤退。",
+        "translation": "无法骚扰撤退部队。因为没有可以作战的舰船或已下令撤退。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.tooltipHarassRetreatUnavailable"
     },
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.tooltipHardDockBoarding",
         "original": "Ships assigned to the boarding task force approach the enemy ship and dock with it.\n\nOffers the best combat odds to the assault teams and a high chance of success.\n\nIf the ship being boarded self-destructs, the ships involved in the boarding action will take heavy damage and may be destroyed.",
-        "translation": "组织专门的登陆小组接近并与敌舰对接。\n\n拥有最高的成功机会。\n\n如果目标舰船自毁，参与攻占行动船可能遭受重创，甚至被摧毁。",
+        "translation": "组织专门的登陆小组接近并与敌舰对接。\n\n拥有最高的成功机会。\n\n如果目标舰船自毁，参与攻占行动的舰船可能遭受重创，甚至被摧毁。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.tooltipHardDockBoarding"
     },
@@ -1458,7 +1458,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.tooltipLetShipGo",
         "original": "Let the enemy ship finish emergency repairs and withdraw.",
-        "translation": "让敌人的船完成紧急抢修并撤退。",
+        "translation": "让敌方舰船完成紧急抢修并撤退。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.tooltipLetShipGo"
     },
@@ -1486,7 +1486,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.tooltipNoReadyShips",
         "original": "None of your ships are combat-ready.",
-        "translation": "你没有可以作战的船只。",
+        "translation": "你没有可以作战的舰船。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.tooltipNoReadyShips"
     },
@@ -1556,7 +1556,7 @@
     {
         "key": "data/strings/strings.json$.fleetInteractionDialog.tootipAttemptToDisengage",
         "original": "Attempt to retreat from battle. The opposing fleet may pursue and force a battle, or may let you go.\n\nAs the enemy remains in control of the battlespace, you won't be able to conduct any salvage operations.\n\nIf your fleet hasn't taken any hostile actions, disengaging - without damaging any pursuing ships - will do the least damage to your standing with the opposing faction.",
-        "translation": "试图从战斗中撤退。对方舰队可能会追击并迫使你应战，也可能会让你就此离开。\n\n由于敌人仍然控制着战区，你将无法进行任何打捞行动。\n\n如果你的舰队没有采取任何敌对行动，在不损害任何追击船只的情况下脱离战斗将，可将双方关系的损害减小到最低。",
+        "translation": "试图从战斗中撤退。对方舰队可能会追击并迫使你应战，也可能会让你就此离开。\n\n由于敌人仍然控制着战区，你将无法进行任何打捞行动。\n\n如果你的舰队没有采取任何敌对行动，在不损害任何追击舰船的情况下脱离战斗，可将双方关系的损害减小到最低。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.fleetInteractionDialog.tootipAttemptToDisengage"
     },
