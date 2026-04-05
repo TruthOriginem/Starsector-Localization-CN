@@ -17,6 +17,10 @@
 #ifndef OriginalGameFolder
   #define OriginalGameFolder ""
 #endif
+; INCLUDE_DATE=true -> OutputSuffix，例： 2026.04.05（含前导空格）
+#ifndef OutputSuffix
+  #define OutputSuffix ""
+#endif
 
 #define GameBaseName "Starsector(远行星号)"
 #define TranslationPackName " " + GameVersion + " 中文汉化版"
@@ -45,7 +49,7 @@ WizardSizePercent=100
 WizardResizable=no
 DisableProgramGroupPage=yes
 DisableWelcomePage=no
-OutputBaseFilename={#MyAppName} {#MyAppVersion} [{#MyAppPublisher}]
+OutputBaseFilename={#MyAppName} {#MyAppVersion}{#OutputSuffix} [{#MyAppPublisher}]
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern

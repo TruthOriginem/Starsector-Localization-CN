@@ -1,24 +1,40 @@
 """
 制作汉化补丁压缩包
-输出文件名格式：远行星号 {game_version} 汉化补丁 v{version} {date} {variant}
+输出文件名格式：远行星号 {game_version} 汉化补丁 v{version} [{date}] {variant}
+
+配置（在 packaging/.env 中设置，参考 packaging/.env.example）：
+  GAME_VERSION                 - 覆盖游戏版本号（留空则从 localization_version.json 读取）
+  APP_VERSION                  - 覆盖汉化版本号（留空则从 localization_version.json 读取）
+  INCLUDE_DATE                 - 文件名是否包含日期后缀，true/false（默认 true）
+  BRANCH_VARIANT_<分支名>      - 各分支对应的变体名，如：
+                                 BRANCH_VARIANT_master=(黑体版)
+                                 BRANCH_VARIANT_font-simsong=(宋体版)
 """
 
 import json
+import os
 import re
 import subprocess
 import zipfile
 from datetime import date
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).parent.parent
+PACKAGING_DIR = Path(__file__).parent
+REPO_ROOT = PACKAGING_DIR.parent
 LOCALIZATION_DIR = REPO_ROOT / 'localization'
-OUTPUT_DIR = Path(__file__).parent / 'Output'
+OUTPUT_DIR = PACKAGING_DIR / 'Output'
 
-BRANCH_VARIANT: dict[str, str] = {
-    'master': '(黑体版)',
-    'font-simsong': '(宋体版)',
-    'font-zongyi': '(综艺体版)',
-}
+
+def load_env() -> None:
+    env_file = PACKAGING_DIR / '.env'
+    if not env_file.exists():
+        return
+    for line in env_file.read_text(encoding='utf-8').splitlines():
+        line = line.strip()
+        if not line or line.startswith('#') or '=' not in line:
+            continue
+        key, _, value = line.partition('=')
+        os.environ.setdefault(key.strip(), value.strip())
 
 
 def get_git_branch() -> str:
@@ -40,23 +56,31 @@ def format_game_version(raw: str) -> str:
 
 
 def main() -> None:
+    load_env()
+
     version_file = LOCALIZATION_DIR / 'localization_version.json'
     info = json.loads(version_file.read_text(encoding='utf-8'))
-    version = info['version']
-    game_version = format_game_version(info['game_version'])
+    version: str = os.environ.get('APP_VERSION', '') or info['version']
+    game_version: str = format_game_version(
+        os.environ.get('GAME_VERSION', '') or info['game_version']
+    )
 
     branch = get_git_branch()
-    if branch not in BRANCH_VARIANT:
-        print(f'警告：当前分支 "{branch}" 不在 BRANCH_VARIANT 列表中，回退到 master 变体。')
-        branch = 'master'
-    variant = BRANCH_VARIANT.get(branch, '')
+    variant = os.environ.get(f'BRANCH_VARIANT_{branch}', '')
+    if not variant:
+        fallback = os.environ.get('BRANCH_VARIANT_master', '')
+        print(f'警告：当前分支 "{branch}" 没有对应的变体名（BRANCH_VARIANT_{branch} 未配置），回退到 master 变体。')
+        variant = fallback
 
+    include_date = os.environ.get('INCLUDE_DATE', 'true').lower() != 'false'
     today = date.today().strftime('%Y.%m.%d')
 
-    parts = [f'远行星号 {game_version} 汉化补丁 v{version} {today}']
+    name = f'远行星号 {game_version} 汉化补丁 v{version}'
+    if include_date:
+        name += f' {today}'
     if variant:
-        parts.append(variant)
-    zip_name = ' '.join(parts) + '.zip'
+        name += f' {variant}'
+    zip_name = name + '.zip'
 
     OUTPUT_DIR.mkdir(exist_ok=True)
     output_path = OUTPUT_DIR / zip_name

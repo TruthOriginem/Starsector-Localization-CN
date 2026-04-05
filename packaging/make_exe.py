@@ -4,7 +4,7 @@
 
 输出文件名由 ISS 脚本的 OutputBaseFilename 决定，格式如：
   Starsector(远行星号) 0.98a-RC8 独立汉化包(黑体版) 1.0.0 [远星汉化组].exe
-  Starsector(远行星号) 0.98a-RC8 中文汉化版(黑体版) 1.0.0 [远星汉化组].exe
+  Starsector(远行星号) 0.98a-RC8 独立汉化包(黑体版) 1.0.0 2026.04.05 [远星汉化组].exe  （INCLUDE_DATE=true 时）
 
 配置（在 packaging/.env 中设置，参考 packaging/.env.example）：
   ISCC_PATH                    - Inno Setup 6 编译器路径，留空则自动搜索常见安装位置（不支持 Inno Setup 5）
@@ -12,6 +12,7 @@
                                  留空或路径不存在则跳过 with_game 版本
   GAME_VERSION                 - 覆盖游戏版本号（留空则从 localization_version.json 读取）
   APP_VERSION                  - 覆盖汉化版本号（留空则从 localization_version.json 读取）
+  INCLUDE_DATE                 - 文件名是否包含日期后缀，true/false（默认 false）
   BRANCH_VARIANT_<分支名>      - 各分支对应的变体名，如：
                                  BRANCH_VARIANT_master=(黑体版)
                                  BRANCH_VARIANT_font-simsong=(宋体版)
@@ -21,6 +22,7 @@ import json
 import os
 import subprocess
 import sys
+from datetime import date
 from pathlib import Path
 
 PACKAGING_DIR = Path(__file__).parent
@@ -110,9 +112,12 @@ def main() -> None:
         print(f'警告：当前分支 "{branch}" 没有对应的变体名（BRANCH_VARIANT_{branch} 未配置），回退到 master 变体。')
         variant = fallback
 
+    include_date = os.environ.get('INCLUDE_DATE', 'false').lower() == 'true'
+    output_suffix = f' {date.today().strftime("%Y.%m.%d")}' if include_date else ''
+
     iscc = find_iscc()
     print(f'Inno Setup: {iscc}')
-    print(f'版本: {version}  游戏版本: {game_version}  变体: {variant or "(无)"}  分支: {branch}')
+    print(f'版本: {version}  游戏版本: {game_version}  变体: {variant or "(无)"}  分支: {branch}  日期后缀: {output_suffix or "(无)"}')
 
     OUTPUT_DIR.mkdir(exist_ok=True)
 
@@ -120,6 +125,7 @@ def main() -> None:
         'MyAppVersion': version,
         'GameVersion': game_version,
         'TranslationPackVarient': variant,
+        'OutputSuffix': output_suffix,
     }
 
     # 独立汉化包
