@@ -75,7 +75,8 @@
 | _updateOriginal.py                      | TODO                                                            |
 | _variant_name_map.json                  | 装配名映射文件，英文名对应汉化名，可后继继续更新。                                       |
 | para_tranz/para_tranz.py                | 用于ParaTranz平台的数据导入导出工具，使用方法参见[本指南](docs/paratranz/tut_admin.md) |
-| packaging/make_zip.py                   | 将 `localization` 文件夹打包为汉化补丁压缩包，文件名包含游戏版本、汉化版本、日期及字体变体（根据当前 git 分支自动判断）。直接运行即可，输出到 `packaging/Output/`。 |
+| packaging/make_zip.py                   | 将 `localization` 文件夹打包为汉化补丁 `.zip`，文件名包含游戏版本、汉化版本、日期及字体变体（根据当前 git 分支自动判断）。直接运行即可，输出到 `packaging/Output/`。 |
+| packaging/make_exe.py                   | 调用 **Inno Setup 6** 编译 `.exe` 安装包，包括独立汉化包和含游戏完整安装包（可选）。需先复制 `packaging/.env.example` 为 `packaging/.env` 并填写配置，再直接运行。输出到 `packaging/Output/`。 |
 
 ### 版本汉化流程
 

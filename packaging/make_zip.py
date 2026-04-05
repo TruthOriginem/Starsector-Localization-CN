@@ -46,6 +46,9 @@ def main() -> None:
     game_version = format_game_version(info['game_version'])
 
     branch = get_git_branch()
+    if branch not in BRANCH_VARIANT:
+        print(f'警告：当前分支 "{branch}" 不在 BRANCH_VARIANT 列表中，回退到 master 变体。')
+        branch = 'master'
     variant = BRANCH_VARIANT.get(branch, '')
 
     today = date.today().strftime('%Y.%m.%d')
