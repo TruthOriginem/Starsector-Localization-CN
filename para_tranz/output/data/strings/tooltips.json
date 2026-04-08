@@ -72,7 +72,7 @@
     {
         "key": "data/strings/tooltips.json$.fleetScreen.tooltipAdmin.body",
         "original": "Assign an administrator (or yourself) to govern this colony, which will then benefit from the assigned administrator's skills.",
-        "translation": "分配一个行政官 (或您自己) 来管理这处殖民地，该殖民地将受到其行政官的技能增益。",
+        "translation": "分配一个管理员 (或您自己) 来管理这处殖民地，该殖民地将受到其管理员的技能增益。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\tooltips.json\n数据路径：$.fleetScreen.tooltipAdmin.body"
     },
@@ -86,7 +86,7 @@
     {
         "key": "data/strings/tooltips.json$.fleetScreen.tooltipAdminNonPlayer.body",
         "original": "This colony is not governed by an administrator of any note.",
-        "translation": "该殖民地暂时不受任何行政官管辖。",
+        "translation": "该殖民地暂时不受任何管理员管辖。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\tooltips.json\n数据路径：$.fleetScreen.tooltipAdminNonPlayer.body"
     },
@@ -128,63 +128,63 @@
     {
         "key": "data/strings/tooltips.json$.fleetScreen.tooltipCrewBar.body",
         "original": "Crew fraction on this %s.",
-        "translation": "Crew fraction on this %s.",
+        "translation": "该 %s 的船员比例。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\tooltips.json\n数据路径：$.fleetScreen.tooltipCrewBar.body"
     },
     {
         "key": "data/strings/tooltips.json$.fleetScreen.tooltipCrewElite.body",
         "original": "Crew this %s with the best personnel available.",
-        "translation": "Crew this %s with the best personnel available.",
+        "translation": "为该 %s 配备最优秀的人员。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\tooltips.json\n数据路径：$.fleetScreen.tooltipCrewElite.body"
     },
     {
         "key": "data/strings/tooltips.json$.fleetScreen.tooltipCrewElite.title",
         "original": "Elite",
-        "translation": "Elite",
+        "translation": "精英",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\tooltips.json\n数据路径：$.fleetScreen.tooltipCrewElite.title"
     },
     {
         "key": "data/strings/tooltips.json$.fleetScreen.tooltipCrewGreen.body",
         "original": "Crew this %s only with green crew, if possible.",
-        "translation": "Crew this %s only with green crew, if possible.",
+        "translation": "为该 %s 配备熟练度尽可能低的船员。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\tooltips.json\n数据路径：$.fleetScreen.tooltipCrewGreen.body"
     },
     {
         "key": "data/strings/tooltips.json$.fleetScreen.tooltipCrewGreen.title",
         "original": "Green",
-        "translation": "Green",
+        "translation": "新兵",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\tooltips.json\n数据路径：$.fleetScreen.tooltipCrewGreen.title"
     },
     {
         "key": "data/strings/tooltips.json$.fleetScreen.tooltipCrewRegular.body",
         "original": "Crew this %s with only regular crew and below, if possible.",
-        "translation": "Crew this %s with only regular crew and below, if possible.",
+        "translation": "为该 %s 配备熟练度为普通或更低的船员。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\tooltips.json\n数据路径：$.fleetScreen.tooltipCrewRegular.body"
     },
     {
         "key": "data/strings/tooltips.json$.fleetScreen.tooltipCrewRegular.title",
         "original": "Regular",
-        "translation": "Regular",
+        "translation": "普通",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\tooltips.json\n数据路径：$.fleetScreen.tooltipCrewRegular.title"
     },
     {
         "key": "data/strings/tooltips.json$.fleetScreen.tooltipCrewVeteran.body",
         "original": "Crew this %s with only veteran crew and below, if possible.",
-        "translation": "Crew this %s with only veteran crew and below, if possible.",
+        "translation": "为该 %s 配备熟练度为老兵或更低的船员。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\tooltips.json\n数据路径：$.fleetScreen.tooltipCrewVeteran.body"
     },
     {
         "key": "data/strings/tooltips.json$.fleetScreen.tooltipCrewVeteran.title",
         "original": "Veteran",
-        "translation": "Veteran",
+        "translation": "老兵",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\tooltips.json\n数据路径：$.fleetScreen.tooltipCrewVeteran.title"
     },
@@ -219,7 +219,7 @@
     {
         "key": "data/strings/tooltips.json$.fleetScreen.tooltipMothball.body",
         "original": "Mothballed %ss can't be used in combat or repaired, and do not provide any fuel, cargo, or personnel capacity.\n\nMothballing a ship will reduce its combat readiness to zero; restoring it will require time and supplies.",
-        "translation": "封存的 %s 无法参加战斗也无法被修理，且不提供货舱和燃料存储以及人员乘载。\n\n封存一艘星舰会将其战备降低至 0，重新启用该舰需耗费补给与一定时间将其恢复。",
+        "translation": "封存的 %s 无法参加战斗也无法被修理，且不提供货舱和燃料存储以及人员乘载。\n\n封存一艘舰船会将其战备降低至 0，重新启用该舰需耗费补给与一定时间将其恢复。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\tooltips.json\n数据路径：$.fleetScreen.tooltipMothball.body"
     },

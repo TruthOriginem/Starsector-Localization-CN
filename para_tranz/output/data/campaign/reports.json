@@ -667,7 +667,7 @@
   {
     "key": "reports.csv#('survey_planet', 'posting', '', 'posting')$subject",
     "original": "Run a full survey on $planetName in $systemName within $daysLeft for $rewardCredits payment.",
-    "translation": "在 $daysLeft 天内对 $systemName 星系中的 $planetName 进行完整扫描以获得 $rewardCredits。",
+    "translation": "在 $daysLeft 天内对 $systemName 中的 $planetName 进行完整扫描以获得 $rewardCredits。",
     "stage": 1,
     "context": "reports.csv第0108行\n[本行原始数据]\n{'event_type': 'survey_planet',\n 'event_stage': 'posting',\n 'p': '',\n 'target_rel': '',\n 'channels': 'posting',\n 'subject': 'Run a full survey on $planetName in $systemName within $daysLeft '\n            'for $rewardCredits payment.',\n 'summary': 'Mission will be considered completed and payment posted '\n            'immediately upon survey completion.',\n 'assessment': '$surveyInfo',\n 'image': '',\n 'icon': '',\n 'tags': 'no_system_prefix',\n 'sound_id': '',\n 'implementation notes': ''}"
   },

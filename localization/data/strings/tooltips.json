@@ -48,11 +48,11 @@
 		},
 		"tooltipAdmin":{
 			"title":"分配管理员",
-		"body":"分配一个行政官 (或您自己) 来管理这处殖民地，该殖民地将受到其行政官的技能增益。",
+		"body":"分配一个管理员 (或您自己) 来管理这处殖民地，该殖民地将受到其管理员的技能增益。",
 		},
 		"tooltipAdminNonPlayer":{
 			"title":"管理员",
-			"body":"该殖民地暂时不受任何行政官管辖。",
+			"body":"该殖民地暂时不受任何管理员管辖。",
 		},
 		"tooltipBuy":{
 			"title":"购买",
@@ -72,7 +72,7 @@
 		},
 		"tooltipMothball":{
 			"title":"封存",
-			"body":"封存的 %s 无法参加战斗也无法被修理，且不提供货舱和燃料存储以及人员乘载。\n\n封存一艘星舰会将其战备降低至 0，重新启用该舰需耗费补给与一定时间将其恢复。",
+			"body":"封存的 %s 无法参加战斗也无法被修理，且不提供货舱和燃料存储以及人员乘载。\n\n封存一艘舰船会将其战备降低至 0，重新启用该舰需耗费补给与一定时间将其恢复。",
 		},
 		"tooltipUnmothball":{
 			"title":"封存",
@@ -99,24 +99,24 @@
 			"body":"将 %s 设为后勤优先供应对象，能够挑选更优秀的船员进行驾驶，并优先获得物资供应用于维修和战备补给。",
 		},
 		"tooltipCrewElite":{
-			"title":"Elite",
-			"body":"Crew this %s with the best personnel available.",
+			"title":"精英",
+			"body":"为该 %s 配备最优秀的人员。",
 		},
 		"tooltipCrewVeteran":{
-			"title":"Veteran",
-			"body":"Crew this %s with only veteran crew and below, if possible.", 
+			"title":"老兵",
+			"body":"为该 %s 配备熟练度为老兵或更低的船员。", 
 		},
 		"tooltipCrewRegular":{
-			"title":"Regular",
-			"body":"Crew this %s with only regular crew and below, if possible.",
+			"title":"普通",
+			"body":"为该 %s 配备熟练度为普通或更低的船员。",
 		},
 		"tooltipCrewGreen":{
-			"title":"Green",
-			"body":"Crew this %s only with green crew, if possible.",
+			"title":"新兵",
+			"body":"为该 %s 配备熟练度尽可能低的船员。",
 		},
 		"tooltipCrewBar":{
 			"title":"",
-			"body":"Crew fraction on this %s.",
+			"body":"该 %s 的船员比例。",
 		},
 	},
 	"logistics":{

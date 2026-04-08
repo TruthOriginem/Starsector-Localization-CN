@@ -18,63 +18,63 @@ commerce,贸易中心,90,90,,3,,,"industry, urban",,graphics/icons/industry/comm
 station_base,轨道空间站,,,,,,,"station, parent_item, important, structure",station,graphics/icons/industry/station_category.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"一处能够为殖民地附近的友军舰队提供火力支援的空间站，它的存在将阻止任何轰炸行动的发生。
 
 尽管有数种不同的设计类型，但这通常仅影响其所采用的战术，而非整体战力。",2000,
-orbitalstation,轨道空间站 - 主宰纪元,50,90,,3,,battlestation,"station, sub_item, unraidable, structure","{
+orbitalstation,轨道空间站 - 低端技术,50,90,,3,,battlestation,"station, sub_item, unraidable, structure","{
 radius:55,
 variant:station1_Standard,
 fleetName:Orbital Station,
-}",graphics/icons/industry/orbital_station.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"设计于主宰纪元的标准空间站，特点是极为厚重的装甲与不俗的火力。
+}",graphics/icons/industry/orbital_station.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"遵循低端技术设计风格的标准空间站，特点是极为厚重的装甲与不俗的火力。
 
 它的存在将阻止任何轰炸行动的发生。",2010,
-battlestation,作战基地 - 主宰纪元,100,120,,4,orbitalstation,starfortress,"station, battlestation, unraidable, structure","{
+battlestation,作战基地 - 低端技术,100,120,,4,orbitalstation,starfortress,"station, battlestation, unraidable, structure","{
 radius:65,
 variant:station2_Standard,
 fleetName:Battlestation,
 }",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"升级过的空间站，在原有基础上增建了厚重的棱堡与点防御平台，并加装了外挂装甲以提高其防御力。
 
 它的存在将阻止任何轰炸行动的发生。",2020,
-starfortress,星际要塞 - 主宰纪元,200,180,,5,battlestation,,"station, starfortress, unraidable, structure","{
+starfortress,星际要塞 - 低端技术,200,180,,5,battlestation,,"station, starfortress, unraidable, structure","{
 radius:70,
 variant:station3_Standard,
 fleetName:Star Fortress
 }",graphics/icons/industry/star_fortress.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"全副武装的作战基地，在原有基础上增建了大量的外挂装甲，在配备 城齿-级 无人机的同时布置了感应雷区。
 
 它的存在将阻止任何轰炸行动的发生。",2030,
-orbitalstation_mid,轨道空间站 - 核心纪元,50,90,,3,,battlestation_mid,"station, sub_item, unraidable, structure","{
+orbitalstation_mid,轨道空间站 - 中兼技术,50,90,,3,,battlestation_mid,"station, sub_item, unraidable, structure","{
 radius:55,
 variant:station1_midline_Standard,
 fleetName:Orbital Station,
-}",graphics/icons/industry/orbital_station.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"设计于核心纪元的标准空间站，拥有极为强大的单侧火力，且绕轴旋转速度更快。
+}",graphics/icons/industry/orbital_station.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"遵循中兼技术设计风格的标准空间站，拥有极为强大的单侧火力，且绕轴旋转速度更快。
 
 它的存在将阻止任何轰炸行动的发生。",2040,
-battlestation_mid,作战基地 - 核心纪元,100,120,,4,orbitalstation_mid,starfortress_mid,"station, battlestation, unraidable, structure","{
+battlestation_mid,作战基地 - 中兼技术,100,120,,4,orbitalstation_mid,starfortress_mid,"station, battlestation, unraidable, structure","{
 radius:65,
 variant:station2_midline_Standard,
 fleetName:Battlestation,
 }",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"升级过的空间站，在原有基础上增建了两处导弹支援平台。
 
 它的存在将阻止任何轰炸行动的发生。",2050,
-starfortress_mid,星际要塞 - 核心纪元,200,180,,5,battlestation_mid,,"station, starfortress, unraidable, structure","{
+starfortress_mid,星际要塞 - 中兼技术,200,180,,5,battlestation_mid,,"station, starfortress, unraidable, structure","{
 radius:70,
 variant:station3_midline_Standard,
 fleetName:Star Fortress
 }",graphics/icons/industry/star_fortress.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"全副武装的作战基地，在原有基础上增建了大量的外挂装甲，配备了 三角堡-级 无人机，可以部署感应雷区。
 
 它的存在将阻止任何轰炸行动的发生。",2060,
-orbitalstation_high,轨道空间站 - 扩展纪元,50,90,,3,,battlestation_high,"station, sub_item, unraidable, structure","{
+orbitalstation_high,轨道空间站 - 高端技术,50,90,,3,,battlestation_high,"station, sub_item, unraidable, structure","{
 radius:55,
 variant:station1_hightech_Standard,
 fleetName:Orbital Station,
-}",graphics/icons/industry/orbital_station.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"设计于扩展纪元的标准空间站，配备了两处独立的重型护盾模块，以及高效的机库平台与不俗火力。
+}",graphics/icons/industry/orbital_station.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"遵循高端技术设计风格的标准空间站，配备了两处独立的重型护盾模块，以及高效的机库平台与不俗火力。
 
 它的存在将阻止任何轰炸行动的发生。",2070,
-battlestation_high,作战基地 - 扩展纪元,100,120,,4,orbitalstation_high,starfortress_high,"station, battlestation, unraidable, structure","{
+battlestation_high,作战基地 - 高端技术,100,120,,4,orbitalstation_high,starfortress_high,"station, battlestation, unraidable, structure","{
 radius:65,
 variant:station2_hightech_Standard,
 fleetName:Battlestation,
 }",graphics/icons/industry/battlestation.png,com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation,"升级过的空间站，在原有基础上增建了一处装备重型火力的防御碉堡。
 
 它的存在将阻止任何轰炸行动的发生。",2080,
-starfortress_high,星际要塞 - 扩展纪元,200,180,,5,battlestation_high,,"station, starfortress, unraidable, structure","{
+starfortress_high,星际要塞 - 高端技术,200,180,,5,battlestation_high,,"station, starfortress, unraidable, structure","{
 radius:70,
 variant:station3_hightech_Standard,
 fleetName:Star Fortress

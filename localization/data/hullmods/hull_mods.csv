@@ -129,7 +129,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 终结者核心,terminator_core,,,,,武器,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.TerminatorCore,给予所有点防御武器识别并忽略诱饵弹的能力。此外，无论战备处于何种水平，所有武器均可保持最佳精准度。所有武器对导弹和战机造成的伤害提高{%s}，且提高光束武器{%s}的射程。,,,graphics/hullmods/terminator_core.png
 共享幅散管道,shared_flux_sink,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.SharedFluxSink,根据当前存活模块的数量，最高提高{%s}的幅能耗散。如果模块在战斗中遭到破坏，幅能耗散增益将在剩余模块间重新分配。而{%s}耗散增益将适用于硬幅能耗散。,模块损失后提高其他模块幅能与硬幅能的耗散效率。,,graphics/hullmods/shared_flux_sink.png
 感应雷区,stealth_minefield,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.StealthMinefield,战场周遭会布置大量感应空雷，并破坏靠近的敌舰。,战场周遭会布置大量感应空雷，并破坏靠近的敌舰。,,graphics/hullmods/stealth_mines.png
-感应雷区,stealth_minefield_lt,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.StealthMinefieldLT,战场周遭会布置大量感应空雷，并破坏靠近的敌舰。,战场周遭会布置大量感应空雷，并破坏靠近的敌舰。,,graphics/hullmods/stealth_mines.png
+感应雷区 - 低端技术,stealth_minefield_lt,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.StealthMinefieldLT,战场周遭会布置大量感应空雷，并破坏靠近的敌舰。,战场周遭会布置大量感应空雷，并破坏靠近的敌舰。,,graphics/hullmods/stealth_mines.png
 后备甲板,bdeck,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.BDeck,"当战机整备率下降到{%s}时，舰船将换用一套备用战机甲板，每次战斗可使用一次。
 
 切换至备用甲板时，将迅速部署后备战机以补满本舰部署的全部战机联队，并使战机整备率恢复至{%s}。",每场战斗可以恢复一次战机整备率并部署补充战机。,,graphics/hullmods/bdeck.png

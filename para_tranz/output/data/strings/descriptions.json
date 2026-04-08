@@ -884,7 +884,7 @@
     {
         "key": "descriptions.csv#('champion', 'SHIP')$text1",
         "original": "The Champion-class heavy cruiser is a versatile warship featuring a range of powerful energy weapons; the crowning element is a heavy energy turret mounting, rare among midline ships. This offensive array is backed by a robust energy grid capable of supercharging the energy weapon loadout, increasing damage output to devastating levels. A heavy missile hardpoint complements the loadout by enabling the Champion to unleash a crippling strike without taxing flux levels. The Champion is a solid and capable contender, able to face capital ships on the battle-line.\n\nA relatively recent design, the Champion is a product of the historically recent \"Cruiser School\" naval revolution that never saw active service in the pre-collapse Domain Armada. Although prototypes were constructed and forge-ready specifications distributed to several battlegroups, the Champion was never cleared for active deployment due to an ongoing lawsuit between Altair Exotech and Orion Shipyards. Each megacorp accused the other of industrial espionage and inappropriately influencing the Armada officers overseeing the procurement process. The truth was more complex, inflaming longstanding rivalries in the officer corps as the investigatory committee called witness after witness. The Collapse prevented any sort of conclusive ruling from reaching the Persean Sector however, and now the entire matter is considered irrelevant. With the discovery of Champion plans on a Domain armaments courier, the warship was quickly put into service by the fleet of the Persean League, among others.",
-        "translation": "捍卫者-级 重型巡洋舰是一种可胜任战斗中的任何角色的强大战舰，还能配备各式能量武器，其中最为抢眼的是在核心纪元船体设计中极其罕见的大型能量炮塔。该舰强大的电网系统能为武器阵列充分供能，甚至可在短时间内启动超量充能，将其伤害输出能力进一步提升到毁灭性的级别。而重型导弹挂载点也同时补全了它有效打击敌人而无需抬升自身幅能水平的能力，因此，坚强而能干的 捍卫者-级 足以在战线中直面主力舰。\n\n作为一款较为近代的设计，捍卫者-级 出自于历史年代相对较近的 \"巡洋学派\" 海军变革运动，因而从未在 大崩塌 前的 人之领 海军舰队中广泛服役。虽有无数原型舰和一些改装款被分发到各大战斗群以供测试，但一场 牵牛星科技 与 猎户座船坞 间的诉讼案件，致使该舰并未留下任何部署记录。双方同时指控对方涉嫌工业间谍活动以及采取非法手段干涉舰队军官监督的战舰采购活动。该案件的真实情况极其复杂，调查委员会传唤一波又一波的证人，最终也掀起了军官团体间的对立。尽管由于 \"大崩塌\" 的发生，这宗案件最终的裁决结果也无法为英仙座星域的人们所得知，但是这些都已经无关紧要。随着 捍卫者-级 生产计划在一个残存的 人之领 军用传讯器中被发现，这艘战舰迅速被 英仙座联盟 生产并投入实战。",
+        "translation": "捍卫者-级 重型巡洋舰是一种可胜任战斗中的任何角色的强大战舰，还能配备各式能量武器，其中最为抢眼的是在中兼技术舰船设计中极其罕见的大型能量炮塔。该舰强大的电网系统能为武器阵列充分供能，甚至可在短时间内启动超量充能，将其伤害输出能力进一步提升到毁灭性的级别。而重型导弹挂载点也同时补全了它有效打击敌人而无需抬升自身幅能水平的能力，因此，坚强而能干的 捍卫者-级 足以在战线中直面主力舰。\n\n作为一款较为近代的设计，捍卫者-级 出自于历史年代相对较近的 \"巡洋学派\" 海军变革运动，因而从未在 大崩塌 前的 人之领 海军舰队中广泛服役。虽有无数原型舰和一些改装款被分发到各大战斗群以供测试，但一场 牵牛星科技 与 猎户座船坞 间的诉讼案件，致使该舰并未留下任何部署记录。双方同时指控对方涉嫌工业间谍活动以及采取非法手段干涉舰队军官监督的战舰采购活动。该案件的真实情况极其复杂，调查委员会传唤一波又一波的证人，最终也掀起了军官团体间的对立。尽管由于 \"大崩塌\" 的发生，这宗案件最终的裁决结果也无法为英仙座星域的人们所得知，但是这些都已经无关紧要。随着 捍卫者-级 生产计划在一个残存的 人之领 军用传讯器中被发现，这艘战舰迅速被 英仙座联盟 生产并投入实战。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00595"
     },
@@ -1717,8 +1717,8 @@
     {
         "key": "descriptions.csv#('drone_borer', 'SHIP_SYSTEM')$text2",
         "original": "Drones (low tech)",
-        "translation": "无人机 (主宰纪元)",
-        "stage": 5,
+        "translation": "无人机 (低端技术)",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00305"
     },
     {
@@ -1738,8 +1738,8 @@
     {
         "key": "descriptions.csv#('drone_pd', 'SHIP_SYSTEM')$text2",
         "original": "Drones (high tech)",
-        "translation": "无人机 (扩展纪元)",
-        "stage": 5,
+        "translation": "无人机 (高端技术)",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00303"
     },
     {
@@ -1759,8 +1759,8 @@
     {
         "key": "descriptions.csv#('drone_pd_x2', 'SHIP_SYSTEM')$text2",
         "original": "Drones (midline)",
-        "translation": "无人机 (核心纪元)",
-        "stage": 5,
+        "translation": "无人机 (中兼技术)",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00304"
     },
     {
@@ -1780,8 +1780,8 @@
     {
         "key": "descriptions.csv#('drone_sensor', 'SHIP_SYSTEM')$text2",
         "original": "Drones (high tech)",
-        "translation": "无人机 (扩展纪元)",
-        "stage": 5,
+        "translation": "无人机 (高端技术)",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00306"
     },
     {
@@ -2774,8 +2774,8 @@
     {
         "key": "descriptions.csv#('hammerhead', 'SHIP')$text1",
         "original": "A midline destroyer from the golden age of the Domain, the Hammerhead is respected for its staying power in battle as well as its ballistic capabilities.",
-        "translation": "人之领 鼎盛时期的一种标准驱逐舰，锤头-级 以充足可靠的实弹武器与战斗中的高持久力而备受尊敬。",
-        "stage": 5,
+        "translation": "来自 人之领 黄金时代且遵循中兼技术设计风格的驱逐舰。锤头-级 以充足可靠的实弹武器与战斗中的高持久力而备受尊敬。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00126"
     },
     {
@@ -3110,7 +3110,7 @@
     {
         "key": "descriptions.csv#('hurricane', 'WEAPON')$text1",
         "original": "Launches a missile that splits into multiple warheads on closing with the target. Especially devastating to enemies with their shields down.\n\nHurricane Turrets are a late-Expansion Epoch weapon designed to launch a self-propelled, multiple missile delivery projector pod. A targeting computer programs the pod with a hit solution as it is released. The swarm of small missiles released is dangerous to all ship types. missiles feature a shaped charge warhead making them more effective versus enemy armor. These characteristics make the Hurricane a kill-weapon, usually only fired by gunnery officers with orders to destroy their crippled targets utterly.",
-        "translation": "能发射在接近目标时分裂成多个小型高爆弹头的导弹。可轻松重创那些失去护盾保护的大型舰船。\n\n飓风 MIRV 发射系统是扩展纪元所设计出的先进武器，旨在发射一种能投射多枚小型高爆制导弹头的动力运载舱。这些拥有锥形装药的小导弹不仅能有效破坏装甲，其内置的弹道计算机可确保所有弹头均可命中目标，且破坏力也足以威胁所有类型的舰船。而整合这些特点的飓风导弹使其成为了战场上闻风丧胆的杀戮利器，而炮手只会在接到彻底摧毁目标的命令时才会发射飓风 MIRV。",
+        "translation": "能发射在接近目标时分裂成多个小型高爆弹头的导弹。可轻松重创那些失去护盾保护的大型舰船。\n\n飓风 MIRV 发射系统是扩张纪元末期所设计出的先进武器，旨在发射一种能投射多枚小型高爆制导弹头的动力运载舱。这些拥有锥形装药的小导弹不仅能有效破坏装甲，其内置的弹道计算机可确保所有弹头均可命中目标，且破坏力也足以威胁所有类型的舰船。而整合这些特点的飓风导弹使其成为了战场上闻风丧胆的杀戮利器，而炮手只会在接到彻底摧毁目标的命令时才会发射飓风 MIRV。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00055"
     },
@@ -4461,8 +4461,8 @@
     {
         "key": "descriptions.csv#('orbital_dockyard', 'CUSTOM')$text1",
         "original": "An orbital dockyard, with enormous gantries and other equipment required for ship construction or extensive modifications. Largely open to space.",
-        "translation": "一个轨道船坞，拥有新建或大规模改装船舶所需的巨型龙门架和其他设备。大部分设施暴露在太空中。",
-        "stage": 5,
+        "translation": "一个轨道船坞，拥有新建或大规模改装舰船所需的巨型龙门架和其他设备。大部分设施暴露在太空中。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00184"
     },
     {
@@ -4769,8 +4769,8 @@
     {
         "key": "descriptions.csv#('pk_orbital_dockyard', 'CUSTOM')$text1",
         "original": "An orbital dockyard, with enormous gantries and other equipment required for ship construction or extensive modifications. This one bears the signs of hasty and temporary construction. Largely open to space.",
-        "translation": "一个轨道船坞，拥有新建或大规模改装船舶所需的巨型龙门架和其他设备。该处的建设显得比较仓促和临时。大部分设施暴露在太空中。",
-        "stage": 5,
+        "translation": "一个轨道船坞，拥有新建或大规模改装舰船所需的巨型龙门架和其他设备。该处的建设显得比较仓促和临时。大部分设施暴露在太空中。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00185"
     },
     {
@@ -5028,7 +5028,7 @@
     {
         "key": "descriptions.csv#('planet_culann', 'CUSTOM')$text3",
         "original": "Trains of high-tech ship gantries parade in glittering arcs above Culann, following Culann Starforge like a swarm of offspring. The planet is heavily bunkered and emplaced with anti-starship batteries. Tri-Tachyon marketing manages to project an image of business-friendly welcome into the receiving bays and galleries that only hints at the potency of the dread weaponry held beneath surface and hanging in orbit.",
-        "translation": "一列列 扩展纪元 船舶龙门架像幼虫一样跟随着星际锻炉，在 Culann 上空排成闪闪发光的弧线。这颗行星上布满了厚重的掩体，并且安置了反舰炮台。速子科技 公司成功地将商业友好的形象投影到登陆舱和走廊之中，用以掩盖在地表下与轨道上悬挂的可怕武器的威力。",
+        "translation": "一列列 高端技术 舰船龙门架像幼虫一样跟随着星际锻炉，在 Culann 上空排成闪闪发光的弧线。这颗行星上布满了厚重的掩体，并且安置了反舰炮台。速子科技 公司成功地将商业友好的形象投影到登陆舱和走廊之中，用以掩盖在地表下与轨道上悬挂的可怕武器的威力。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00408"
     },
@@ -6848,64 +6848,64 @@
     {
         "key": "descriptions.csv#('station1', 'SHIP')$text1",
         "original": "A low-tech model orbital station featuring heavy armor and moderate firepower. This platform hosts shipyards, habitats, factories, and large stockpiles of weapons and supplies allowing projection of military and industrial power throughout the local orbital volume.",
-        "translation": "遵循主宰纪元设计风格的轨道空间站，其特点是极为厚重的装甲与不俗的火力。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
+        "translation": "遵循低端技术设计风格的轨道空间站，其特点是极为厚重的装甲与不俗的火力。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00548"
     },
     {
         "key": "descriptions.csv#('station1_hightech', 'SHIP')$text1",
         "original": "A high-tech model orbital station featuring powerful rotating shields, a fighter complement, and moderate firepower. This platform hosts shipyards, habitats, factories, and large stockpiles of weapons and supplies allowing projection of military and industrial power throughout the local orbital volume.",
-        "translation": "遵循扩展纪元设计风格的轨道空间站，配备了可独立旋转的重型护盾模块、高效的机库平台与不俗火力。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
+        "translation": "遵循高端技术设计风格的轨道空间站，配备了可独立旋转的重型护盾模块、高效的机库平台与不俗火力。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00550"
     },
     {
         "key": "descriptions.csv#('station1_midline', 'SHIP')$text1",
         "original": "A midline-model orbital station featuring a heavy broadside and rapid axial rotation. This platform hosts shipyards, habitats, factories, and large stockpiles of weapons and supplies allowing projection of military and industrial power throughout the local orbital volume.",
-        "translation": "遵循核心纪元设计风格的轨道空间站，拥有极为强大的单侧火力，且绕轴旋转速度超常。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
+        "translation": "遵循中兼技术设计风格的轨道空间站，拥有极为强大的单侧火力，且绕轴旋转速度超常。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00549"
     },
     {
         "key": "descriptions.csv#('station2', 'SHIP')$text1",
         "original": "A large low-tech model battlestation featuring thick armor and additional heavy bastion and point defense citadels. This platform hosts shipyards, habitats, factories, and large stockpiles of weapons and supplies allowing projection of military and industrial power throughout the local orbital volume.",
-        "translation": "遵循主宰纪元设计风格的作战基地，拥有极为厚重的整体装甲和外挂装甲，且增建了可以提高其能力的重型火力平台与防御平台。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
-        "stage": 5,
+        "translation": "遵循低端技术设计风格的作战基地，拥有极为厚重的整体装甲和外挂装甲，且增建了可以提高其能力的重型火力平台与防御平台。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00551"
     },
     {
         "key": "descriptions.csv#('station2_hightech', 'SHIP')$text1",
         "original": "A large high-tech model battlestation featuring strong shields, a fighter complement, a defensive citadel, and heavy firepower. This platform hosts shipyards, habitats, factories, and large stockpiles of weapons and supplies allowing projection of military and industrial power throughout the local orbital volume.",
-        "translation": "遵循扩展纪元设计风格的作战基地，拥有强大的护盾模块和机库平台，增建的火力平台攻守兼备，整体火力卓越。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
-        "stage": 5,
+        "translation": "遵循高端技术设计风格的作战基地，拥有强大的护盾模块和机库平台，增建的火力平台攻守兼备，整体火力卓越。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00553"
     },
     {
         "key": "descriptions.csv#('station2_midline', 'SHIP')$text1",
         "original": "A large midline-model battlestation augmented with missile support modules in addition to a heavy broadside and rapid axial rotation. This platform hosts shipyards, habitats, factories, and large stockpiles of weapons and supplies allowing projection of military and industrial power throughout the local orbital volume.",
-        "translation": "遵循核心纪元设计风格的作战基地，单侧火力强大，绕轴速度超常，还在原有基础上增建了两处导弹支援平台。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
-        "stage": 5,
+        "translation": "遵循中兼技术设计风格的作战基地，单侧火力强大，绕轴速度超常，还在原有基础上增建了两处导弹支援平台。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00552"
     },
     {
         "key": "descriptions.csv#('station3', 'SHIP')$text1",
         "original": "An enormous star fortress, the pinnacle of contemporary zero-G construction in the Persean Sector, built to the low-tech model featuring Merlon-class defense drones and an extensive minefield. This platform hosts shipyards, habitats, factories, and large stockpiles of weapons and supplies which allow projection of military and industrial power throughout the local orbital volume.",
-        "translation": "遵循主宰纪元设计风格的星际要塞，时下英仙座星域零重力建筑技术的巅峰之作。在原有基础上配备了城齿无人机与一套感应雷区布置器。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
-        "stage": 5,
+        "translation": "遵循低端技术设计风格的星际要塞，时下英仙座星域零重力建筑技术的巅峰之作。在原有基础上配备了城齿无人机与一套感应雷区布置器。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00554"
     },
     {
         "key": "descriptions.csv#('station3_hightech', 'SHIP')$text1",
         "original": "An enormous high-tech model star fortress featuring powerful shields, up-armoring, Gargoyle-class defense drones, and terrifying long-range mine teleporters. This platform can host shipyards, habitats, factories, and large stockpiles of weapons and supplies enabling it to project military and industrial power throughout the local orbital volume.",
-        "translation": "遵循扩展纪元设计风格的星际要塞，时下英仙座星域零重力建筑技术的巅峰之作。其不仅在原有基础上增建了大量外挂装甲，还配备了石像鬼无人机和恐怖的重型空雷传送系统。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
-        "stage": 5,
+        "translation": "遵循高端技术设计风格的星际要塞，时下英仙座星域零重力建筑技术的巅峰之作。其不仅在原有基础上增建了大量外挂装甲，还配备了石像鬼无人机和恐怖的重型空雷传送系统。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00556"
     },
     {
         "key": "descriptions.csv#('station3_midline', 'SHIP')$text1",
         "original": "An enormous star fortress, the pinnacle of contemporary zero-G construction in the Persean Sector, which can host shipyards, habitats, factories, and large stockpiles of weapons and supplies. These platforms project military and industrial power throughout their local orbital volume.",
-        "translation": "遵循核心纪元设计风格的星际要塞，时下英仙座星域零重力建筑技术的巅峰之作。其不仅在原有基础上增建了大量外挂装甲，还配备了三角堡无人机与一套感应雷区布置器。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
-        "stage": 5,
+        "translation": "遵循中兼技术设计风格的星际要塞，时下英仙座星域零重力建筑技术的巅峰之作。其不仅在原有基础上增建了大量外挂装甲，还配备了三角堡无人机与一套感应雷区布置器。这种平台具备造船厂、栖息地、工厂以及大量武器与物资储备，能在轨道影响范围内投射军事和工业力量。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00555"
     },
     {
@@ -7541,8 +7541,8 @@
     {
         "key": "descriptions.csv#('tempest', 'SHIP')$text1",
         "original": "An asymmetric, advanced design from the late Expansion Epoch, the Tempest-class is the quintessential attack frigate - fast, deadly and difficult to destroy.",
-        "translation": "在扩展纪元晚期设计出的先进且不对称的护卫舰。暴雨-级 具备攻击护卫舰所应拥有的精髓：高速、致命、难以摧毁。",
-        "stage": 5,
+        "translation": "在扩张纪元末期设计出的先进且不对称的护卫舰。暴雨-级 具备攻击护卫舰所应拥有的精髓：高速、致命、难以摧毁。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：descriptions.csv\n行：00139"
     },
     {
