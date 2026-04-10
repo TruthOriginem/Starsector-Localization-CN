@@ -149,7 +149,7 @@
   {
     "key": "reports.csv#('food_shortage', 'warning_relief', '', 'player_intel')$subject",
     "original": "Food shortage $onOrAt $market: relief being organized on $reliefMarket",
-    "translation": "$market 发生的食品短缺: $reliefMarket 正在组织援助",
+    "translation": "$market 发生的食品短缺：$reliefMarket 正在组织援助",
     "stage": 1,
     "context": "reports.csv第0008行\n[本行原始数据]\n{'event_type': 'food_shortage',\n 'event_stage': 'warning_relief',\n 'p': '',\n 'target_rel': '',\n 'channels': 'player_intel',\n 'subject': 'Food shortage $onOrAt $market: relief being organized on '\n            '$reliefMarket',\n 'summary': 'Comm traffic analysis indicates that a relief fleet is being '\n            'organized at $reliefMarket in $reliefSystem and will be sent to '\n            '$market in the near future.',\n 'assessment': 'Fleet is carrying enough food to end the shortage.\n'\n               '\n'\n               'If the fleet does not arrive as expected, the situation at '\n               '$market will destabilize further.',\n 'image': '',\n 'icon': 'graphics/icons/markets/food_shortage.png',\n 'tags': '',\n 'sound_id': '',\n 'implementation notes': ''}"
   },
@@ -170,7 +170,7 @@
   {
     "key": "reports.csv#('food_shortage', 'warning_relief', 'HOSTILE', 'hegemony_internal,\\ntritachyon_internal,\\nsindrian_diktat_internal')$subject",
     "original": "Food shortage $onOrAt $market: relief being organized on $reliefMarket",
-    "translation": "$market 发生的食品短缺: $reliefMarket 正在组织援助",
+    "translation": "$market 发生的食品短缺：$reliefMarket 正在组织援助",
     "stage": 1,
     "context": "reports.csv第0009行\n[本行原始数据]\n{'event_type': 'food_shortage',\n 'event_stage': 'warning_relief',\n 'p': '0.5',\n 'target_rel': 'HOSTILE',\n 'channels': 'hegemony_internal,\n'\n             'tritachyon_internal,\n'\n             'sindrian_diktat_internal',\n 'subject': 'Food shortage $onOrAt $market: relief being organized on '\n            '$reliefMarket',\n 'summary': 'The report indicates that a relief fleet is being organized at '\n            '$reliefMarket in $reliefSystem, and is likely to get underway '\n            'within a few weeks.',\n 'assessment': 'Fleet is carrying enough food to end the shortage.\n'\n               '\n'\n               'If the fleet does not arrive as expected, the situation at '\n               '$market will destabilize further.',\n 'image': '',\n 'icon': 'graphics/icons/markets/food_shortage.png',\n 'tags': '',\n 'sound_id': '',\n 'implementation notes': ''}"
   },
@@ -191,7 +191,7 @@
   {
     "key": "reports.csv#('food_shortage', 'warning_relief', 'FRIENDLY', 'hegemony_internal,\\ntritachyon_internal,\\nsindrian_diktat_internal')$subject",
     "original": "Food shortage $onOrAt $market: relief being organized on $reliefMarket",
-    "translation": "$market 发生的食品短缺: $reliefMarket 正在组织援助",
+    "translation": "$market 发生的食品短缺：$reliefMarket 正在组织援助",
     "stage": 1,
     "context": "reports.csv第0010行\n[本行原始数据]\n{'event_type': 'food_shortage',\n 'event_stage': 'warning_relief',\n 'p': '0.5',\n 'target_rel': 'FRIENDLY',\n 'channels': 'hegemony_internal,\n'\n             'tritachyon_internal,\n'\n             'sindrian_diktat_internal',\n 'subject': 'Food shortage $onOrAt $market: relief being organized on '\n            '$reliefMarket',\n 'summary': 'The report indicates that a relief fleet is being organized at '\n            '$reliefMarket in $reliefSystem, and is likely to get underway '\n            'within a few days. Nearby units are advised to ensure the fleet '\n            'arrives to its destination safely.',\n 'assessment': 'Fleet is carrying enough food to end the shortage.\n'\n               '\n'\n               'If the fleet does not arrive as expected, the situation at '\n               '$market will destabilize further.',\n 'image': '',\n 'icon': 'graphics/icons/markets/food_shortage.png',\n 'tags': '',\n 'sound_id': '',\n 'implementation notes': ''}"
   },
@@ -212,7 +212,7 @@
   {
     "key": "reports.csv#('food_shortage', 'relief_sent', '', 'news')$subject",
     "original": "Food shortage $onOrAt $market: relief sent from $reliefMarket",
-    "translation": "$market 发生的食品短缺: $reliefMarket 的援助已经出发",
+    "translation": "$market 发生的食品短缺：$reliefMarket 的援助已经出发",
     "stage": 1,
     "context": "reports.csv第0011行\n[本行原始数据]\n{'event_type': 'food_shortage',\n 'event_stage': 'relief_sent',\n 'p': '',\n 'target_rel': '',\n 'channels': 'news',\n 'subject': 'Food shortage $onOrAt $market: relief sent from $reliefMarket',\n 'summary': 'A relief fleet is underway from $reliefMarket in the '\n            '$reliefSystem system, and should arrive in $marketSystem $eta.',\n 'assessment': 'Fleet is carrying enough food to end the shortage.\n'\n               '\n'\n               'If the fleet does not arrive as expected, the situation at '\n               '$market will destabilize further.',\n 'image': '',\n 'icon': 'graphics/icons/markets/food_shortage.png',\n 'tags': '',\n 'sound_id': '',\n 'implementation notes': ''}"
   },
@@ -233,7 +233,7 @@
   {
     "key": "reports.csv#('food_shortage', 'relief_unavailable', '', 'news')$subject",
     "original": "Food shortage $onOrAt $market: conditions worsen",
-    "translation": "$market 发生的食品短缺: 状态恶化",
+    "translation": "$market 发生的食品短缺：状态恶化",
     "stage": 1,
     "context": "reports.csv第0012行\n[本行原始数据]\n{'event_type': 'food_shortage',\n 'event_stage': 'relief_unavailable',\n 'p': '',\n 'target_rel': '',\n 'channels': 'news',\n 'subject': 'Food shortage $onOrAt $market: conditions worsen',\n 'summary': 'While there was speculation early on that a neighboring world '\n            'might be able to send relief, it appears no such aid is '\n            'forthcoming.',\n 'assessment': 'Unrest increased by $stabilityPenaltyRelief.',\n 'image': '',\n 'icon': 'graphics/icons/markets/food_shortage.png',\n 'tags': 'prices',\n 'sound_id': '',\n 'implementation notes': ''}"
   },
@@ -254,7 +254,7 @@
   {
     "key": "reports.csv#('food_shortage', 'relief_aborted', '', 'news')$subject",
     "original": "Food shortage $onOrAt $market: relief fleet turned back",
-    "translation": "$market 发生的食品短缺: 援助舰队折返",
+    "translation": "$market 发生的食品短缺：援助舰队折返",
     "stage": 1,
     "context": "reports.csv第0013行\n[本行原始数据]\n{'event_type': 'food_shortage',\n 'event_stage': 'relief_aborted',\n 'p': '',\n 'target_rel': '',\n 'channels': 'news',\n 'subject': 'Food shortage $onOrAt $market: relief fleet turned back',\n 'summary': 'The relief fleet from $reliefMarket was attacked on its way to '\n            '$market, suffered major losses, and was forced to turn back. The '\n            'food shortage contniues unabated.',\n 'assessment': 'Unrest increased by $stabilityPenaltyRelief.',\n 'image': '',\n 'icon': 'graphics/icons/markets/food_shortage.png',\n 'tags': 'prices',\n 'sound_id': '',\n 'implementation notes': ''}"
   },
@@ -275,7 +275,7 @@
   {
     "key": "reports.csv#('food_shortage', 'end_relief_arrived', '', 'news')$subject",
     "original": "Food shortage $onOrAt $market: relief fleet arrived",
-    "translation": "$market 发生的食品短缺: 援助舰队抵达",
+    "translation": "$market 发生的食品短缺：援助舰队抵达",
     "stage": 1,
     "context": "reports.csv第0014行\n[本行原始数据]\n{'event_type': 'food_shortage',\n 'event_stage': 'end_relief_arrived',\n 'p': '',\n 'target_rel': '',\n 'channels': 'news',\n 'subject': 'Food shortage $onOrAt $market: relief fleet arrived',\n 'summary': 'The relief fleet from $reliefMarket has arrived, and the food '\n            'shortage $onOrAt $market is over.',\n 'assessment': 'Unrest increased by $stabilityPenaltyEnd.\n'\n               '\n'\n               'Food prices $onOrAt $market are back to their normal levels.',\n 'image': '',\n 'icon': 'graphics/icons/markets/food_shortage.png',\n 'tags': 'prices',\n 'sound_id': '',\n 'implementation notes': ''}"
   },
@@ -296,7 +296,7 @@
   {
     "key": "reports.csv#('food_shortage', 'relief_lost', '', 'news')$subject",
     "original": "Food shortage $onOrAt $market: relief fleet lost",
-    "translation": "$market 发生的食品短缺: 援助舰队失事",
+    "translation": "$market 发生的食品短缺：援助舰队失事",
     "stage": 1,
     "context": "reports.csv第0015行\n[本行原始数据]\n{'event_type': 'food_shortage',\n 'event_stage': 'relief_lost',\n 'p': '',\n 'target_rel': '',\n 'channels': 'news',\n 'subject': 'Food shortage $onOrAt $market: relief fleet lost',\n 'summary': 'The relief fleet from $reliefMarket did not arrive at its '\n            'destination, and the food shortage contniues unabated.',\n 'assessment': 'Unrest increased by $stabilityPenaltyRelief.',\n 'image': '',\n 'icon': 'graphics/icons/markets/food_shortage.png',\n 'tags': 'prices',\n 'sound_id': '',\n 'implementation notes': ''}"
   },
@@ -457,7 +457,7 @@
   {
     "key": "reports.csv#('investigation_smuggling', 'clear_smuggling_bribe', '', 'player_intel_always')$assessment",
     "original": "Bribe to $InvestigatorPost $investigatorName was effective.\\n\\nRelationship with $theMarketFaction is unaffected.",
-    "translation": "对 $InvestigatorPost $investigatorName 的收买见效了。 \\n\\n与 $theMarketFaction 的关系未受影响。",
+    "translation": "对 $InvestigatorPost $investigatorName 的收买见效了。\\n\\n与 $theMarketFaction 的关系未受影响。",
     "stage": 1,
     "context": "reports.csv第0025行\n[本行原始数据]\n{'event_type': 'investigation_smuggling',\n 'event_stage': 'clear_smuggling_bribe',\n 'p': '',\n 'target_rel': '',\n 'channels': 'player_intel_always',\n 'subject': 'Smuggling investigation $onOrAt $market - cleared',\n 'summary': 'The $marketFaction smuggling investigation has been completed '\n            'according to your \"special arrangement\" with $investigatorName, '\n            'and this particular stain on your reputation has been erased.',\n 'assessment': 'Bribe to $InvestigatorPost $investigatorName was effective.\n'\n               '\n'\n               'Relationship with $theMarketFaction is unaffected.',\n 'image': '',\n 'icon': '',\n 'tags': 'important',\n 'sound_id': '',\n 'implementation notes': ''}"
   },
@@ -527,14 +527,14 @@
   {
     "key": "reports.csv#('investigation_goodrep', 'clear_goodrep_bribe', '', 'player_intel_always')$summary",
     "original": "The $marketFaction investigation of your ties with $theOtherFactionLong has been completed according to your \"special arrangement\" with $investigatorName, and you've been cleared of acting against $marketFaction interests.",
-    "translation": "$marketFaction 对你和 $theOtherFactionLong 之间的关系已经调查完毕。按照你和 $investigatorName 的 \"特殊安排\" ，你已摆脱了损害 $marketFaction 利益的嫌疑。",
+    "translation": "$marketFaction 对你和 $theOtherFactionLong 之间的关系已经调查完毕。按照你和 $investigatorName 的 \"特殊安排\"，你已摆脱了损害 $marketFaction 利益的嫌疑。",
     "stage": 1,
     "context": "reports.csv第0030行\n[本行原始数据]\n{'event_type': 'investigation_goodrep',\n 'event_stage': 'clear_goodrep_bribe',\n 'p': '',\n 'target_rel': '',\n 'channels': 'player_intel_always',\n 'subject': '$MarketFaction investigation of your ties to $OtherFaction - '\n            'cleared',\n 'summary': 'The $marketFaction investigation of your ties with '\n            '$theOtherFactionLong has been completed according to your '\n            '\"special arrangement\" with $investigatorName, and you\\'ve been '\n            'cleared of acting against $marketFaction interests.',\n 'assessment': 'Bribe to $InvestigatorPost $investigatorName was effective.\n'\n               '\n'\n               'Relationship with $theMarketFaction is unaffected.',\n 'image': '',\n 'icon': '',\n 'tags': 'important',\n 'sound_id': '',\n 'implementation notes': ''}"
   },
   {
     "key": "reports.csv#('investigation_goodrep', 'clear_goodrep_bribe', '', 'player_intel_always')$assessment",
     "original": "Bribe to $InvestigatorPost $investigatorName was effective.\\n\\nRelationship with $theMarketFaction is unaffected.",
-    "translation": "对 $InvestigatorPost $investigatorName 的收买见效了。 \\n\\n与 $theMarketFaction 的关系未受影响。",
+    "translation": "对 $InvestigatorPost $investigatorName 的收买见效了。\\n\\n与 $theMarketFaction 的关系未受影响。",
     "stage": 1,
     "context": "reports.csv第0030行\n[本行原始数据]\n{'event_type': 'investigation_goodrep',\n 'event_stage': 'clear_goodrep_bribe',\n 'p': '',\n 'target_rel': '',\n 'channels': 'player_intel_always',\n 'subject': '$MarketFaction investigation of your ties to $OtherFaction - '\n            'cleared',\n 'summary': 'The $marketFaction investigation of your ties with '\n            '$theOtherFactionLong has been completed according to your '\n            '\"special arrangement\" with $investigatorName, and you\\'ve been '\n            'cleared of acting against $marketFaction interests.',\n 'assessment': 'Bribe to $InvestigatorPost $investigatorName was effective.\n'\n               '\n'\n               'Relationship with $theMarketFaction is unaffected.',\n 'image': '',\n 'icon': '',\n 'tags': 'important',\n 'sound_id': '',\n 'implementation notes': ''}"
   },
@@ -590,7 +590,7 @@
   {
     "key": "reports.csv#('trade_disruption', 'report_td', '', 'news')$subject",
     "original": "Trade disrupted $onOrAt $market in the $marketSystem system",
-    "translation": "在 $marketSystem 星系中的 $market 上进行的交易被打乱了。 ",
+    "translation": "在 $marketSystem 星系中的 $market 上进行的交易被打乱了。",
     "stage": 1,
     "context": "reports.csv第0038行\n[本行原始数据]\n{'event_type': 'trade_disruption',\n 'event_stage': 'report_td',\n 'p': '',\n 'target_rel': '',\n 'channels': 'news',\n 'subject': 'Trade disrupted $onOrAt $market in the $marketSystem system',\n 'summary': 'Trade fleets going to or from $market are not reaching their '\n            'destination in significant numbers. The report points to piracy '\n            'or war as being the most likely culprits.',\n 'assessment': 'Prices likely to revert to norm within two months.\n'\n               '\n'\n               'The following commodities are affected:\n'\n               '$commoditySummary\n'\n               '\n'\n               'Select \"prices\" and switch to the map tab for details.',\n 'image': '',\n 'icon': 'graphics/icons/markets/trade_disruption.png',\n 'tags': 'prices',\n 'sound_id': '',\n 'implementation notes': ''}"
   },

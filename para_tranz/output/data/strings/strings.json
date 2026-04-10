@@ -86,7 +86,7 @@
     {
         "key": "data/strings/strings.json$.campaignHelp.chmEnteredHyper_text",
         "original": "Your fleet has entered hyperspace!\n\nShips traveling in hyperspace use fuel in proportion to the distance travelled. Fleets that run out of fuel drift towards the nearest star system and may become stranded there.",
-        "translation": "你的舰队进入了超空间！ \n\n在超空间航行时，燃料的消耗将与航行距离成正比。用光燃料后的舰队会飘向最近的星系，并搁浅在那。",
+        "translation": "你的舰队进入了超空间！\n\n在超空间航行时，燃料的消耗将与航行距离成正比。用光燃料后的舰队会飘向最近的星系，并搁浅在那。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.campaignHelp.chmEnteredHyper_text"
     },
@@ -163,7 +163,7 @@
     {
         "key": "data/strings/strings.json$.campaignHelp.chmNewgameIron_text",
         "original": "Welcome to the Starsector campaign!\n\nSince you're playing in iron mode, you'll only be able to save the game when you exit, and won't be able to load another game without exiting (and saving) your current game first.\n\nTry to avoid taking on fleets much bigger than yours, or ones that have bigger ships, and please remember that it's a work-in-progress so bugs will occasionally happen.\n\nGood luck!",
-        "translation": "欢迎来到 Starsector 的生涯模式！ \n\n当前为铁人模式，你只能在退出游戏时保存进度，并且不能在游戏进行时读档。\n\n尽量避免招惹比你规模更大、或拥有大型战舰的舰队。请记住，这是款正在开发的游戏，所以难免会有 bug。\n\n祝你好运！",
+        "translation": "欢迎来到 Starsector 的生涯模式！\n\n当前为铁人模式，你只能在退出游戏时保存进度，并且不能在游戏进行时读档。\n\n尽量避免招惹比你规模更大、或拥有大型战舰的舰队。请记住，这是款正在开发的游戏，所以难免会有 bug。\n\n祝你好运！",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.campaignHelp.chmNewgameIron_text"
     },
@@ -177,7 +177,7 @@
     {
         "key": "data/strings/strings.json$.campaignHelp.chmNewgame_text",
         "original": "Welcome to the Starsector campaign!\n\nYou can press F5 to quicksave and F9 to quickload.\n\nTry to avoid taking on fleets much bigger than yours, or ones that have bigger ships, and please remember that it's a work-in-progress so bugs will occasionally happen.\n\nGood luck!",
-        "translation": "欢迎来到 Starsector 的生涯模式！ \n\n 按 F5 来快速存档，F9 到快速载入。\n\n尽量避免招惹比你规模更大、或拥有大型战舰的舰队。请记住，这是款正在开发的游戏，所以难免会有 bug。\n\n祝你好运！",
+        "translation": "欢迎来到 Starsector 的生涯模式！\n\n 按 F5 来快速存档，F9 到快速载入。\n\n尽量避免招惹比你规模更大、或拥有大型战舰的舰队。请记住，这是款正在开发的游戏，所以难免会有 bug。\n\n祝你好运！",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.campaignHelp.chmNewgame_text"
     },
@@ -401,7 +401,7 @@
     {
         "key": "data/strings/strings.json$.campaignHelp.chmSupplyUseAfterBattle_text",
         "original": "Your fleet's supply consumption has just gone up!\n\nRecovering combat readiness used to deploy ships into battle costs supplies, as does repairing battle damage.\n\nTo reduce supply use, repairs and CR recovery on ships can be suspended from the fleet screen.",
-        "translation": "刚刚你舰队的补给消耗增加了！ \n\n修理舰船和恢复战备值 (CR) 都会消耗补给。\n\n在舰队管理界面可以暂停或恢复维修。",
+        "translation": "刚刚你舰队的补给消耗增加了！\n\n修理舰船和恢复战备值 (CR) 都会消耗补给。\n\n在舰队管理界面可以暂停或恢复维修。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.campaignHelp.chmSupplyUseAfterBattle_text"
     },
@@ -436,7 +436,7 @@
     {
         "key": "data/strings/strings.json$.campaignHelp.chmWingPurchase_text",
         "original": "Congratulations, you just bought a new fighter wing!\n\nFighter wing combat readiness represents the number of replacement fighter chassis available, but these can only be used if you have a ship with a flight deck in your fleet.\n\nNew fighters will take off from a nearby flight deck to replace any losses taken in combat. As long as your fleet has a ship with proper repair facilities (i.e. a flight deck), a fighter wing can not be completely lost, even if its combat readiness is reduced to zero.",
-        "translation": "恭喜你，你购买了一个战机联队！ \n\n战机联队的战备值 (CR) 代表了可用于整备的战机底盘数量，但只有舰队中存在带有飞行甲板的舰船时才会生效。\n\n在战斗中，被摧毁的战机会由附近飞行甲板上起飞的新战机补充。只要你的舰队中存在拥有飞行甲板的舰船，战机联队就不会彻底消失，即便战备值 (CR) 掉成 0。",
+        "translation": "恭喜你，你购买了一个战机联队！\n\n战机联队的战备值 (CR) 代表了可用于整备的战机底盘数量，但只有舰队中存在带有飞行甲板的舰船时才会生效。\n\n在战斗中，被摧毁的战机会由附近飞行甲板上起飞的新战机补充。只要你的舰队中存在拥有飞行甲板的舰船，战机联队就不会彻底消失，即便战备值 (CR) 掉成 0。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n源文件：data\\strings\\strings.json\n数据路径：$.campaignHelp.chmWingPurchase_text"
     },
