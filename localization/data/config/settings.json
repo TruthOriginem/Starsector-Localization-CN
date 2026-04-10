@@ -113,7 +113,7 @@
 
 	"uiFadeSpeedMult":1, # when set to 1000 or higher, also makes the hyperspace transition fade instant
 	
-	"showCNTranslationCredits":false,
+	"showCNTranslationCredits":true,
 	#"cnTranslationCreditsStringOverride":"",
 	
 	# no longer used due to saving/loading rendering happening on the main thread, bypassing the issue
