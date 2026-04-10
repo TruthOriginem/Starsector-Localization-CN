@@ -3,8 +3,8 @@
 调用 Inno Setup 编译 .iss 脚本，根据当前 git 分支自动选择变体名称。
 
 输出文件名由 ISS 脚本的 OutputBaseFilename 决定，格式如：
-  Starsector(远行星号) 0.98a-RC8 独立汉化包(黑体版) 1.0.0 [远星汉化组].exe
-  Starsector(远行星号) 0.98a-RC8 独立汉化包(黑体版) 1.0.0 2026.04.05 [远星汉化组].exe  （INCLUDE_DATE=true 时）
+  Starsector(远行星号) 0.98a-RC8 独立汉化包(黑体版) v1.0.0 [远星汉化组].exe
+  Starsector(远行星号) 0.98a-RC8 独立汉化包(黑体版) v1.0.0 2026.04.05 [远星汉化组].exe  （INCLUDE_DATE=true 时）
 
 配置（在 packaging/.env 中设置，参考 packaging/.env.example）：
   ISCC_PATH                    - Inno Setup 6 编译器路径，留空则自动搜索常见安装位置（不支持 Inno Setup 5）
