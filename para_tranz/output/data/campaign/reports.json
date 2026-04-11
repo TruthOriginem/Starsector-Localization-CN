@@ -429,7 +429,7 @@
   {
     "key": "reports.csv#('investigation_smuggling', 'clear_smuggling', '', 'player_intel_always')$summary",
     "original": "The $marketFaction smuggling investigation is over, and it looks like your name was cleared - or, at least, there was no conclusive evidence to prove your involvement.",
-    "translation": "$marketFaction 的走私调查已经结束，看起来你是清白的——起码没有确凿的证据证明你涉嫌走私。",
+    "translation": "$marketFaction 的走私调查已经结束，看起来你是清白的 —— 起码没有确凿的证据证明你涉嫌走私。",
     "stage": 1,
     "context": "reports.csv第0024行\n[本行原始数据]\n{'event_type': 'investigation_smuggling',\n 'event_stage': 'clear_smuggling',\n 'p': '',\n 'target_rel': '',\n 'channels': 'player_intel_always',\n 'subject': 'Smuggling investigation $onOrAt $market - cleared',\n 'summary': 'The $marketFaction smuggling investigation is over, and it looks '\n            'like your name was cleared - or, at least, there was no '\n            'conclusive evidence to prove your involvement.',\n 'assessment': 'Relationship with $theMarketFaction is unaffected.',\n 'image': '',\n 'icon': '',\n 'tags': 'important',\n 'sound_id': '',\n 'implementation notes': ''}"
   },

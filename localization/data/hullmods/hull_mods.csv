@@ -93,7 +93,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 ,,,,,,,,,,,,,,,,,,,
 稳定护盾,stabilizedshieldemitter,1,,,"shields, defensive, merc, standard",护盾,5000,,,,3,6,9,15,data.hullmods.StabilizedShieldEmitter,降低 {%s} 维持护盾所需的软幅能。不会影响护盾受到伤害所产生的硬幅能。,降低护盾维持幅能。,将护盾承受的 {%s} 硬幅能伤害转化为软幅能。,graphics/hullmods/stabilized_shields.png
 ,,,,,,,,,,,,,,,,,,,
-不稳定喷射器,unstable_injector,0,,,"engines, merc, standard",引擎,2500,TRUE,,,5,10,15,25,data.hullmods.UnstableInjector,"根据船体级别，提高 {%s}/{%s}/{%}s/{%s} 的最高航速。
+不稳定喷射器,unstable_injector,0,,,"engines, merc, standard",引擎,2500,TRUE,,,5,10,15,25,data.hullmods.UnstableInjector,"根据船体级别，提高 {%s}/{%s}/{%s}/{%s} 的最高航速。
 
 但干扰了武器定位与机库系统，而导致非导弹类武器射程降低 {%s}，且战机整备时间提高 {%s}。",提高航速，降低武器射程。,,graphics/hullmods/unstable_injector.png
 ,,,,,,,,,,,,,,,,,,,
