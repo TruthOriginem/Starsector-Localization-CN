@@ -151,9 +151,14 @@ class DataFile:
         raise NotImplementedError
 
     def update_strings(
-        self, strings: Set[String], version_migration: bool = False
+        self, strings: List[String], version_migration: bool = False
     ) -> None:
         raise NotImplementedError
+
+    def obsolete_existing_keys(
+        self, strings: List[String], existing: List[String]
+    ) -> Set[str]:
+        return set()
 
     def save_json(self, ensure_ascii: bool = False, indent: int = 4) -> None:
         strings = [
@@ -169,6 +174,7 @@ class DataFile:
                 f'Paratranz 平台数据文件 {relative_path(self.para_tranz_path)} 已存在，从中读取已翻译词条的词条stage状态'
             )
             existing = self.read_json_strings(self.para_tranz_path)
+            obsolete_keys = self.obsolete_existing_keys(strings, existing)
 
             if not OVERRIDE_STRING_STATUS:
                 special_stages = (1, 2, 3, 5, 9, -1)
@@ -185,7 +191,9 @@ class DataFile:
                             s.stage = para_s.stage
 
             # 保留不属于本文件的词条（用于合并输出）
-            other_strings = [s for s in existing if s.key not in my_keys]
+            other_strings = [
+                s for s in existing if s.key not in my_keys and s.key not in obsolete_keys
+            ]
 
         if not strings:
             self.logger.info(f'从 {relative_path(self.path)} 中未提取到可翻译词条，跳过导出')

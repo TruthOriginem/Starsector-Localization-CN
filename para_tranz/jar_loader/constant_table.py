@@ -1,5 +1,5 @@
 from enum import Enum
-from typing import List
+from typing import List, Set, Union
 
 
 class ConstantType(Enum):
@@ -51,9 +51,9 @@ class ConstantTable:
 
         self.table_end_index = None
 
-        self.constants = []  # type: List[Union[BaseConstant, bytes]]
-        self.utf8_string_references = set()  # type: Set[int]
-        self.utf8_other_references = set()  # type: Set[int]
+        self.constants: List[Union['BaseConstant', bytes]] = []
+        self.utf8_string_references: Set[int] = set()
+        self.utf8_other_references: Set[int] = set()
 
         self._load_constants()
 
@@ -145,18 +145,18 @@ class ConstantTable:
         """
         将常量表转换为字节流
         """
-        bytes = self.constant_count.to_bytes(2, 'big')
+        result = self.constant_count.to_bytes(2, 'big')
         for constant in self.constants:
             if isinstance(constant, BaseConstant):
-                bytes += constant.to_bytes()
+                result += constant.to_bytes()
             else:
-                bytes += constant
+                result += constant
 
-        return bytes
+        return result
 
 
 class BaseConstant:
-    def __init__(self, bytes: bytes, constant_index: int) -> None:
+    def __init__(self, data: bytes, constant_index: int) -> None:
         self.constant_index = constant_index
 
     def to_bytes(self) -> bytes:
@@ -164,10 +164,10 @@ class BaseConstant:
 
 
 class Utf8Constant(BaseConstant):
-    def __init__(self, bytes: bytes, constant_index: int) -> None:
-        super().__init__(bytes, constant_index)
-        self.length = int.from_bytes(bytes[1:3], 'big')
-        self.string = bytes[3 : 3 + self.length].decode('utf-8')
+    def __init__(self, data: bytes, constant_index: int) -> None:
+        super().__init__(data, constant_index)
+        self.length = int.from_bytes(data[1:3], 'big')
+        self.string = data[3 : 3 + self.length].decode('utf-8')
 
     def to_bytes(self) -> bytes:
         string_bytes = self.string.encode('utf-8')
@@ -187,9 +187,9 @@ class Utf8Constant(BaseConstant):
 
 
 class StringConstant(BaseConstant):
-    def __init__(self, bytes: bytes, constant_index: int) -> None:
-        super().__init__(bytes, constant_index)
-        self.string_index = int.from_bytes(bytes[1:3], 'big')
+    def __init__(self, data: bytes, constant_index: int) -> None:
+        super().__init__(data, constant_index)
+        self.string_index = int.from_bytes(data[1:3], 'big')
 
     def to_bytes(self) -> bytes:
         return ConstantType.String.value.to_bytes(
@@ -204,10 +204,10 @@ class StringConstant(BaseConstant):
 
 
 class NameAndTypeConstant(BaseConstant):
-    def __init__(self, bytes: bytes, constant_index: int) -> None:
-        super().__init__(bytes, constant_index)
-        self.name_index = int.from_bytes(bytes[1:3], 'big')
-        self.descriptor_index = int.from_bytes(bytes[3:5], 'big')
+    def __init__(self, data: bytes, constant_index: int) -> None:
+        super().__init__(data, constant_index)
+        self.name_index = int.from_bytes(data[1:3], 'big')
+        self.descriptor_index = int.from_bytes(data[3:5], 'big')
 
     def to_bytes(self) -> bytes:
         return (
@@ -224,9 +224,9 @@ class NameAndTypeConstant(BaseConstant):
 
 
 class ClassConstant(BaseConstant):
-    def __init__(self, bytes: bytes, constant_index: int) -> None:
-        super().__init__(bytes, constant_index)
-        self.name_index = int.from_bytes(bytes[1:3], 'big')
+    def __init__(self, data: bytes, constant_index: int) -> None:
+        super().__init__(data, constant_index)
+        self.name_index = int.from_bytes(data[1:3], 'big')
 
     def to_bytes(self) -> bytes:
         return ConstantType.Class.value.to_bytes(1, 'big') + self.name_index.to_bytes(
