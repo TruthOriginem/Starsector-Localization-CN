@@ -1,12 +1,24 @@
 import dataclasses
 import json
+import re
 from dataclasses import dataclass
-from typing import Iterator, List, Optional, Set, Tuple, Union
+from typing import Dict, Iterator, List, Optional, Set, Tuple, Union
 
 from para_tranz.config import MAP_PATH
 from para_tranz.utils.util import SetEncoder, make_logger
 
 logger = make_logger('MappingLoader')
+
+
+@dataclass(frozen=True)
+class IncludeStringRule:
+    val: str
+    occurs: Optional[Set[int]] = None
+
+    def to_json_value(self) -> Union[str, dict]:
+        if self.occurs is None:
+            return self.val
+        return {'val': self.val, 'occurs': sorted(self.occurs)}
 
 
 @dataclass
@@ -53,12 +65,102 @@ class CsvMapItem(ParaTranzMapItem):
 @dataclass
 class ClassFileMapItem:
     path: str
-    include_strings: Optional[Set[str]] = dataclasses.field(default_factory=set)
+    include_strings: Optional[List[Union[str, dict]]] = dataclasses.field(default_factory=list)
 
     def __post_init__(self):
-        # 从 JSON 加载时 include_strings 是 list，需转为 set 以去重
-        if not isinstance(self.include_strings, set):
-            self.include_strings = set(self.include_strings) if self.include_strings else set()
+        self.include_strings = self._normalize_include_strings(self.include_strings)
+
+    def _normalize_include_strings(
+        self, include_strings: Optional[Union[Set[str], List[Union[str, dict]]]]
+    ) -> List[Union[str, dict]]:
+        if not include_strings:
+            return []
+
+        rules_by_val = {}
+        normalized = []
+
+        for item in include_strings:
+            rule = self._parse_include_string_rule(item)
+            if rule.val in rules_by_val:
+                raise ValueError(
+                    f'类 {self.path} 的 include_strings 中重复声明了原文 "{rule.val}"，'
+                    f'请合并或删除重复规则'
+                )
+            rules_by_val[rule.val] = rule
+            normalized.append(rule.to_json_value())
+
+        return sorted(
+            normalized,
+            key=lambda item: item if isinstance(item, str) else item['val'],
+        )
+
+    def _parse_include_string_rule(self, item: Union[str, dict]) -> IncludeStringRule:
+        if isinstance(item, str):
+            return IncludeStringRule(item, None)
+
+        if not isinstance(item, dict):
+            raise ValueError(
+                f'类 {self.path} 的 include_strings 只能包含字符串或对象，发现：{item!r}'
+            )
+
+        if set(item.keys()) != {'val', 'occurs'}:
+            raise ValueError(
+                f'类 {self.path} 的 include_strings 对象必须只包含 val 和 occurs 字段，发现：{item!r}'
+            )
+
+        val = item['val']
+        occurs = item['occurs']
+        if not isinstance(val, str):
+            raise ValueError(
+                f'类 {self.path} 的 include_strings 对象 val 必须是字符串，发现：{item!r}'
+            )
+
+        if not isinstance(occurs, list) or len(occurs) == 0:
+            raise ValueError(
+                f'类 {self.path} 中原文 "{val}" 的 occurs 必须是非空整数数组'
+            )
+
+        occurs_set = set()
+        for occurrence_index in occurs:
+            if (
+                not isinstance(occurrence_index, int)
+                or isinstance(occurrence_index, bool)
+                or occurrence_index < 0
+            ):
+                raise ValueError(
+                    f'类 {self.path} 中原文 "{val}" 的 occurs 只能包含非负整数，发现：{occurrence_index!r}'
+                )
+            if occurrence_index in occurs_set:
+                raise ValueError(
+                    f'类 {self.path} 中原文 "{val}" 的 occurs 包含重复序号 {occurrence_index}'
+                )
+            occurs_set.add(occurrence_index)
+
+        return IncludeStringRule(val, occurs_set)
+
+    def get_include_rules(self) -> List[IncludeStringRule]:
+        return [self._parse_include_string_rule(item) for item in self.include_strings]
+
+    def get_include_rule(self, val: str) -> Optional[IncludeStringRule]:
+        for rule in self.get_include_rules():
+            if rule.val == val:
+                return rule
+        return None
+
+    def get_include_values(self) -> Set[str]:
+        return {rule.val for rule in self.get_include_rules()}
+
+    def add_include_rule(self, rule: IncludeStringRule) -> None:
+        if self.get_include_rule(rule.val) is not None:
+            raise ValueError(
+                f'类 {self.path} 的 include_strings 中重复声明了原文 "{rule.val}"'
+            )
+        self.include_strings.append(rule.to_json_value())
+        self.include_strings = self._normalize_include_strings(self.include_strings)
+
+    def merge_from(self, other: 'ClassFileMapItem') -> None:
+        for rule in other.get_include_rules():
+            self.add_include_rule(rule)
 
     def as_json(self) -> str:
         return json.dumps(
@@ -68,9 +170,9 @@ class ClassFileMapItem:
     def search_for_string(self, pattern: str) -> List[str]:
         included = set()
 
-        for s in self.include_strings:
-            if pattern in s:
-                included.add(s)
+        for rule in self.get_include_rules():
+            if pattern in rule.val:
+                included.add(rule.val)
 
         return sorted(list(included))
 
@@ -82,7 +184,7 @@ class JarMapItem(ParaTranzMapItem):
     def add_class_file_item(
         self,
         path: str,
-        include_strings: Optional[List[str]] = None,
+        include_strings: Optional[List[Union[str, dict]]] = None,
     ):
         self.class_files.append(
             ClassFileMapItem(path, include_strings)
@@ -149,21 +251,30 @@ class ParaTranzMap:
             return {k: v for k, v in d.items() if v is not None}
 
         data = [_drop_none(dataclasses.asdict(item)) for item in self.items]
+        json_str = json.dumps(data, indent=2, cls=SetEncoder, ensure_ascii=False)
+        # 将 "occurs" 数组折叠为单行（序号已在 to_json_value() 中排好序）
+        json_str = re.sub(
+            r'"occurs": \[([^\]]*)\]',
+            lambda m: '"occurs": ['
+            + ', '.join(x.strip().rstrip(',') for x in m.group(1).split('\n') if x.strip())
+            + ']',
+            json_str,
+        )
         with open(MAP_PATH, 'w', encoding='utf-8') as f:
-            json.dump(data, f, indent=2, cls=SetEncoder, ensure_ascii=False)
+            f.write(json_str)
 
     def format(self) -> int:
         """对所有 jar 条目的类文件列表去重（合并同路径条目）并按路径排序。
-        include_strings 为 set，已自动去重；保存时 SetEncoder 会排序。
+        include_strings 严格禁止同一 val 重复声明。
         返回合并掉的重复类条目数量。"""
         merged = 0
         for item in self.items:
             if not isinstance(item, JarMapItem):
                 continue
-            seen: dict[str, ClassFileMapItem] = {}
+            seen: Dict[str, ClassFileMapItem] = {}
             for cls in item.class_files:
                 if cls.path in seen:
-                    seen[cls.path].include_strings |= cls.include_strings
+                    seen[cls.path].merge_from(cls)
                     merged += 1
                 else:
                     seen[cls.path] = cls
