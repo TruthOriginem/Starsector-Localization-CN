@@ -52,8 +52,8 @@
 
 ### 文件夹结构
 
-* "game data"存档的是游戏的原始文件，包括 `starsector-core/data` 文件夹下的所有文件和 `starfarer.api.jar`、`starfarer_obf.jar` 文件。
-* "original" 内存放当前版本所有需要翻译的文件，不要直接编辑其内容
+* "game data" 内存放当前版本未经修改的原始游戏文件，包括 `starsector-core/data` 文件夹下的所有文件和 `starfarer.api.jar`、`starfarer_obf.jar` 文件
+* "original" 内存放当前版本所有需要翻译的未翻译游戏文件，其中的 Jar 文件已经过预处理，具体处理内容请参见 [original 手动处理记录](docs/original_manual_processing/original_manual_processing.md)，不要直接编辑其内容
 * "original.old" 内存放上个版本所有需要翻译的文件，不要直接编辑其内容
 * "localization" 内存放当前版本翻译后的文件
 * "localization.old" 内存放上个版本的译文，不要直接编辑其内容
@@ -82,7 +82,7 @@
 
 ![][flow-chart]
 
-> 其中内核文件在开始翻译前可能需要手动预处理，具体请参见[Jar文件手动处理记录](docs/jar_manual_processing/jar_manual_processing.md)
+> 其中内核文件在开始翻译前可能需要手动预处理，具体请参见 [original 手动处理记录](docs/original_manual_processing/original_manual_processing.md)
 
 1. 创建以新版本号命名的分支，例如`0.97`，并切换到该分支
 2. 删除 `original.old` 和 `localization.old` 文件夹，清空 `game data`文件夹
