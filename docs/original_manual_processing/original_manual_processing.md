@@ -85,46 +85,48 @@
 ![line_end_char_missing-1.png](line_end_char_missing-1.png)
 ![line_end_char_missing-2.png](line_end_char_missing-2.png)
 
-**原因**：游戏原代码在列举多个词条时，每项末尾追加 `", "`（英文逗号+空格，2字符），再统一截去末尾2字符。汉化将分隔符改为中文全角逗号 `"，"`（1字符），导致末尾多截了1个字符。
+**原因**：游戏原代码在列举多个词条时，每项末尾追加 `", "`（英文逗号+空格，2字符），再统一截去末尾2字符。为了使用中文全角逗号作为分隔符，需要将分隔符改为 `"，"`（1字符），并同步调整去尾长度，否则会多截或少截字符。
 
-**修改方案**：将分隔符从 `"，"` 改回 `", "`，并将 `substring(0, length()-1)` 改为 `substring(0, length()-2)`。
+**修改方案**：将分隔符从 `", "` 改为 `"，"`，并将 `substring(0, length()-2)` 改为 `substring(0, length()-1)`。
 
 **涉及文件**（均在 `starfarer_obf.jar`）：
 
-**`S.class`、`StandardTooltipV2.class`、`FleetMemberRecoveryDialog.class`、`G.class`** — 各1处，模式相同：
+**`starfarer_obf.jar:com/fs/starfarer/campaign/ui/S.class`、`starfarer_obf.jar:com/fs/starfarer/ui/newui/FleetMemberRecoveryDialog.class`、`starfarer_obf.jar:com/fs/starfarer/ui/newui/G.class`** — 各1处，模式相同：
 
 ```diff
-- string = String.valueOf(string) + mod.getDisplayName() + "，";
-+ string = String.valueOf(string) + mod.getDisplayName() + ", ";
+- string = String.valueOf(string) + mod.getDisplayName() + ", ";
++ string = String.valueOf(string) + mod.getDisplayName() + "，";
   ...
-- string = string.substring(0, string.length() - 1);
-+ string = string.substring(0, string.length() - 2);
+- string = string.substring(0, string.length() - 2);
++ string = string.substring(0, string.length() - 1);
 ```
 
-**`FleetMemberOrdnancePanel.class`** — 共3处，前两处为武器/插件列表，第三处含 `(D)`/`(S)` 标记：
+**`starfarer_obf.jar:com/fs/starfarer/ui/impl/StandardTooltipV2.class`** — 当前 0.98 `game data/` 与 `original/` 中未发现上述目标模式，预处理脚本仅保留 guard 检查；若后续版本重新出现该模式，strict 模式应失败并要求补充 patch。
+
+**`starfarer_obf.jar:com/fs/starfarer/ui/impl/FleetMemberOrdnancePanel.class`** — 共3处，前两处为武器/插件列表，第三处含 `(D)`/`(S)` 标记：
 
 ```diff
 // 武器/插件列表（前两处，变量名略有不同）
-- object10 = hashMap.get(string5) + "×" + " " + string5 + "，";
-+ object10 = hashMap.get(string5) + "×" + " " + string5 + ", ";
+- object10 = hashMap.get(string5) + "×" + " " + string5 + ", ";
++ object10 = hashMap.get(string5) + "×" + " " + string5 + "，";
   if (...last element...) {
--     object10 = ((String)object10).substring(0, ((String)object10).length() - 1);
-+     object10 = ((String)object10).substring(0, ((String)object10).length() - 2);
+-     object10 = ((String)object10).substring(0, ((String)object10).length() - 2);
++     object10 = ((String)object10).substring(0, ((String)object10).length() - 1);
   }
 
 // 改装列表（第三处，含 D-Mod/S-Mod 标记）
-- object4 = mod.getDisplayName() + "，";
-+ object4 = mod.getDisplayName() + ", ";
+- object4 = mod.getDisplayName() + ", ";
++ object4 = mod.getDisplayName() + "，";
   if (bl8) {
--     object4 = mod.getDisplayName() + " (D)，";
-+     object4 = mod.getDisplayName() + " (D), ";
+-     object4 = mod.getDisplayName() + " (D), ";
++     object4 = mod.getDisplayName() + " (D)，";
   } else if (bl9) {
--     object4 = mod.getDisplayName() + " (S)，";
-+     object4 = mod.getDisplayName() + " (S), ";
+-     object4 = mod.getDisplayName() + " (S), ";
++     object4 = mod.getDisplayName() + " (S)，";
   }
   if (...last element...) {
--     object4 = ((String)object4).substring(0, ((String)object4).length() - 1);
-+     object4 = ((String)object4).substring(0, ((String)object4).length() - 2);
+-     object4 = ((String)object4).substring(0, ((String)object4).length() - 2);
++     object4 = ((String)object4).substring(0, ((String)object4).length() - 1);
   }
 ```
 
@@ -132,16 +134,16 @@
 
 ### 7. 敌对活动事件名称为英文 'Hostilities'
 
-> **待处理**：098 相关代码已改变，需要重新测试。
+> **0.98 中不再适用**：当前 `original/starfarer.api.jar` 中仍保留 `Hostilities`，但 ParaTranz 导出数据中已有 `"Hostilities" -> "敌对活动"` 译文。后续预处理应依赖 `jar-string-decoupler` 解耦后由 ParaTranz 写回，不再作为 ASM 或手动替换项处理。
 
 相关文件：`starfarer.api.jar: com/fs/starfarer/api/impl/campaign/intel/FactionHostilityIntel.class`
 
-代码中直接引用了事件 tag `Tags.INTEL_HOSTILITIES`，无法直接翻译。
+旧版本中代码直接引用了事件 tag `Tags.INTEL_HOSTILITIES`，曾计划通过手动修改返回值处理。
 
 ![hostilities_intel_title.png](hostilities_intel_title.png)
 ![hostilities_intel_title-code.png](hostilities_intel_title-code.png)
 
-**修改方案**：修改为直接返回字符串 `"敌对活动"`。
+**当前处理方式**：不再手动修改此 class，保留原文字符串并交由 ParaTranz 流程写入译文。
 
 ---
 

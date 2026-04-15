@@ -12,6 +12,13 @@ packaging/Output/
 .idea/
 .vscode/
 
+# Java/Maven 构建产物
+target/
+*.class
+
+# jar_pre_processing 需要提交 vendored decoupler jar
+!jar_pre_processing/vendor/jar-string-decoupler-1.0.0-all.jar
+
 # Python 对应的 gitignore 规则
 # https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore
 
@@ -90,7 +97,6 @@ docs/_build/
 
 # PyBuilder
 .pybuilder/
-target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
