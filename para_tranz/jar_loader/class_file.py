@@ -309,7 +309,7 @@ class JavaClassFile:
                         )
             else:
                 if s.original not in self.include_strings:
-                    self.logger.debug(
+                    self.logger.warning(
                         f'在 {self.jar_file.path}:{self.path} 中原文为 "{s.original}" 的词条不在 include_strings 中，请从平台上删除该词条 key={s.key} 或修改 include_strings'
                     )
                 else:

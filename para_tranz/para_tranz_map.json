@@ -455,7 +455,8 @@
           "Used ",
           "You have ",
           "You have advanced to level ",
-          "point"
+          "point",
+          "points"
         ]
       },
       {
@@ -1951,7 +1952,6 @@
       {
         "path": "com/fs/starfarer/campaign/ui/Oo0o.class",
         "include_strings": [
-          ",",
           "cycle",
           "date"
         ]
@@ -3473,7 +3473,6 @@
           "STRAFE LOCK",
           "Shuttle ready for command transfer",
           "flux",
-          "graphics/fonts/victor21.fnt",
           "hull"
         ]
       },
@@ -5564,6 +5563,8 @@
           "be invalid. Please ensure that it matches the",
           "click here to paste code from clipboard",
           "code in your confirmation email and try again.",
+          "fullscreen",
+          "sound",
           "higher resolution."
         ]
       },
@@ -6730,7 +6731,6 @@
           " flux capacitors",
           " flux vent",
           " flux vents",
-          ", ",
           "Armaments:",
           "Fighter Bay",
           "Hull mods:",
@@ -7672,6 +7672,7 @@
         "path": "com/fs/starfarer/ui/newui/X.class",
         "include_strings": [
           "Lock",
+          "next",
           "prev"
         ]
       },
@@ -8486,7 +8487,10 @@
           "New planet data: ",
           "Officer payroll",
           "Storage",
-          "Weapons & fighter LPCs for produced ships"
+          "Weapons & fighter LPCs for produced ships",
+          "cargo",
+          "ships",
+          "ships & cargo"
         ]
       },
       {
@@ -8504,7 +8508,9 @@
           "Aggressive",
           "Cautious",
           "Reckless",
-          "Steady"
+          "Steady",
+          "aggressive",
+          "reckless"
         ]
       },
       {
@@ -12880,6 +12886,7 @@
           "days",
           "evenly matched",
           "fleet",
+          "fleets",
           "outmatched",
           "owing to their orbital defenses.",
           "projected to be %s and likely comprised of %s ",
@@ -13339,6 +13346,7 @@
           "Salvage",
           "Salvor's Tally - ",
           "habitat",
+          "orbital",
           "s",
           "station",
           "wreck"
@@ -13390,7 +13398,9 @@
           "Trade Fleet",
           "Trade Fleet Departure",
           "Your contacts ",
+          "goods",
           "goods and materiel",
+          "materiel",
           "until departure"
         ]
       },
@@ -15395,7 +15405,8 @@
           "is",
           "marine",
           "marines",
-          "objective"
+          "objective",
+          "objectives"
         ]
       },
       {
@@ -15406,7 +15417,8 @@
           "The estimated value of the items obtained is projected to be around %s.",
           "The marines are ready to go, awaiting your final confirmation. There are a total of %s marines in your fleet.",
           "Your marine commander submits a plan for your approval. Losses during this operation are projected to be %s.",
-          "objective"
+          "objective",
+          "objectives"
         ]
       },
       {
@@ -15420,10 +15432,13 @@
         "path": "com/fs/starfarer/api/impl/campaign/rulecmd/salvage/MarketCMD$RaidDangerLevel.class",
         "include_strings": [
           "Extreme",
+          "Heavy",
           "High",
+          "Light",
           "Low",
           "Medium",
           "Minimal",
+          "Moderate",
           "None"
         ]
       },
