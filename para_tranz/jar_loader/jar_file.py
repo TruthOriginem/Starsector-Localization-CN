@@ -1,18 +1,18 @@
 import datetime
-import re
 import zipfile
 from dataclasses import asdict
 from pathlib import Path
-from typing import List, Optional, Set, Union
+from typing import Dict, List, Optional, Union
 
 from para_tranz.jar_loader.class_file import JavaClassFile
 from para_tranz.config import (
     EXPORTED_STRING_CONTEXT_PREFIX_PREFIX,
     IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS,
     ORIGINAL_PATH,
+    OVERRIDE_STRING_STATUS,
     TRANSLATION_PATH,
 )
-from para_tranz.utils.mapping import PARA_TRANZ_MAP, JarMapItem
+from para_tranz.utils.mapping import ClassFileMapItem, IncludeStringRule, PARA_TRANZ_MAP, JarMapItem
 from para_tranz.utils.util import DataFile, String, make_logger, rename_class_path
 
 
@@ -38,11 +38,11 @@ class JavaJarFile(DataFile):
         self.original_path = ORIGINAL_PATH / path
         self.translation_path = TRANSLATION_PATH / path
 
-        self.original_file = None
-        self.translation_file = None
+        self.original_file: Optional[zipfile.ZipFile] = None
+        self.translation_file: Optional[zipfile.ZipFile] = None
         self.open_files()
 
-        self.class_files = {}  # type: Dict[str, JavaClassFile]
+        self.class_files: Dict[str, JavaClassFile] = {}
 
         if not no_auto_load:
             self.logger.info(
@@ -60,8 +60,10 @@ class JavaJarFile(DataFile):
         self.translation_file = zipfile.ZipFile(self.translation_path, 'r')
 
     def close_files(self) -> None:
-        self.original_file.close()
-        self.translation_file.close()
+        if self.original_file is not None:
+            self.original_file.close()
+        if self.translation_file is not None:
+            self.translation_file.close()
 
     def get_strings(self) -> List[String]:
         strings = []
@@ -72,7 +74,7 @@ class JavaJarFile(DataFile):
     def load_class_file(
         self,
         path: str,
-        include_strings: List[str] = None,
+        include_strings: Optional[List] = None,
         override: bool = False,
     ) -> Optional['JavaClassFile']:
         if not override and path in self.class_files:
@@ -86,35 +88,32 @@ class JavaJarFile(DataFile):
 
         return class_file
 
-    re_jar_class = re.compile(r'文件：(.*\.jar)\n类：(.*\.class)')
-    re_original_text = re.compile(r'原始数据：(\".*\")\n译文数据：', re.DOTALL)
+    def save_json(self, ensure_ascii: bool = False, indent: int = 4) -> None:
+        strings = [s for s in self.get_strings() if s.original or self.export_empty_strings]
 
-    # TODO: 重构 String 类，添加子类 JarString，用于处理 jar 文件中的词条。将这个方法移动到 JarString 类中
-    @classmethod
-    def construct_string_key_from_context(cls, context: str) -> str:
-        """
-            用于在类名或原文内容过长导致生成的key过长时
-            从上下文中还原词条的完整key使用
+        if not strings:
+            self.logger.info(f'从 {self.path} 中未提取到可翻译词条，跳过导出')
+            return
 
-        Args:
-            context (str): 词条的上下文
+        # 从已有 output 同步 stage（保留平台上的翻译状态），但不保留任何旧词条。
+        # jar 导出结果严格等于当前 map 定义的内容，不使用 other_strings 合并机制。
+        if self.para_tranz_path.exists() and not OVERRIDE_STRING_STATUS:
+            special_stages = (1, 2, 3, 5, 9, -1)
+            existing_stages = {
+                s.key: s.stage
+                for s in self.read_json_strings(self.para_tranz_path)
+                if s.stage in special_stages
+            }
+            for s in strings:
+                if s.key in existing_stages and s.stage != existing_stages[s.key]:
+                    self.logger.debug(f'更新词条 {s.key} 的stage：{s.stage}->{existing_stages[s.key]}')
+                    s.stage = existing_stages[s.key]
 
-        Returns:
-            str: 根据上下文还原的词条key
-        """
-
-        jar_class_match = cls.re_jar_class.search(context)
-        orignal_text_match = cls.re_original_text.search(context)
-
-        if jar_class_match and orignal_text_match:
-            jar_path, class_path = jar_class_match.groups()
-            original_text = orignal_text_match.group(1)
-            return f'{jar_path}:{class_path}#{original_text}'
-        else:
-            raise ValueError(f'无法从上下文\n{context}\n中还原词条key')
+        self.write_json_strings(self.para_tranz_path, strings, ensure_ascii, indent)
+        self.logger.info(f'从 {self.path} 中导出了 {len(strings)} 个词条到 {self.para_tranz_path}')
 
     def update_strings(
-        self, strings: Set[String], version_migration: bool = False
+        self, strings: List[String], version_migration: bool = False
     ) -> None:
         class_file_path_strings_mapping = {
             class_file_path: [] for class_file_path in self.class_files
@@ -123,11 +122,26 @@ class JavaJarFile(DataFile):
         strings_without_class = []
 
         for s in strings:
-            key = s.key
-            # 如果词条key中包含'~'和'@'，则说明词条key过长，有字段被截断，需要从上下文中还原词条key
-            if '~' in key and '@' in key:
-                key = self.construct_string_key_from_context(s.context)
-            class_file_path = re.split(r'[#:]', key)[1]
+            try:
+                parsed_context = JavaClassFile.parse_jar_string_context(s.context)
+            except ValueError as e:
+                if (
+                    IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS
+                    and not s.context.startswith(EXPORTED_STRING_CONTEXT_PREFIX_PREFIX)
+                ):
+                    self.logger.debug(
+                        f'在 {self.path} 中词条 key={s.key} 的词条上下文前缀与当前上下文前缀不匹配，跳过词条'
+                    )
+                    continue
+                raise e
+
+            if parsed_context.jar_path != str(self.path):
+                raise ValueError(
+                    f'词条 key={s.key}{JavaClassFile._format_occurrence_index(parsed_context.occurrence_index)} '
+                    f'的上下文 jar 为 {parsed_context.jar_path}，'
+                    f'但当前正在更新 {self.path}'
+                )
+            class_file_path = parsed_context.class_path
 
             class_file = self.class_files.get(class_file_path, None)
 
@@ -140,16 +154,19 @@ class JavaJarFile(DataFile):
                         )
                     ):
                         self.logger.debug(
-                            f'在 {self.path} 中词条 key={s.key} 的词条上下文前缀与当前上下文前缀不匹配，跳过词条'
+                            f'在 {self.path} 中词条 key={s.key}{JavaClassFile._format_occurrence_index(parsed_context.occurrence_index)} '
+                            f'的词条上下文前缀与当前上下文前缀不匹配，跳过词条'
                         )
                     else:
                         self.logger.warning(
-                            f'在更新词条 {s.key} 时，在文件 {self.path} 中找不到类 {class_file_path}。未更新该词条。'
+                            f'在更新词条 {s.key}{JavaClassFile._format_occurrence_index(parsed_context.occurrence_index)} 时，'
+                            f'在文件 {self.path} 中找不到类 {class_file_path}。未更新该词条。'
                         )
                 else:
                     strings_without_class.append(s)
                     self.logger.debug(
-                        f'在更新词条 {s.key} 时，在文件 {self.path} 中找不到类 {class_file_path}。稍后尝试进行模糊匹配。'
+                        f'在更新词条 {s.key}{JavaClassFile._format_occurrence_index(parsed_context.occurrence_index)} 时，'
+                        f'在文件 {self.path} 中找不到类 {class_file_path}。稍后尝试进行模糊匹配。'
                     )
                 continue
 
@@ -172,10 +189,7 @@ class JavaJarFile(DataFile):
 
         strings_by_class = {}
         for s in strings_without_class:
-            key = s.key
-            if '~' in key and '@' in key:
-                key = self.construct_string_key_from_context(s.context)
-            class_path = re.split(r'[#:]', key)[1]
+            class_path = JavaClassFile.parse_jar_string_context(s.context).class_path
             if class_path not in strings_by_class:
                 strings_by_class[class_path] = []
             strings_by_class[class_path].append(s)
@@ -199,8 +213,9 @@ class JavaJarFile(DataFile):
             class_map_item = jar_map_item.get_class_file_item(
                 str(matched_class.path), create=True
             )  # type: ClassFileMapItem
-            original_strings = [s.original for s in strings]
-            class_map_item.include_strings.update(original_strings)
+            original_strings = {s.original for s in strings}
+            for original in original_strings:
+                class_map_item.add_include_rule(IncludeStringRule(original, None))
 
         self.logger.info(
             f'模糊匹配完成，共 {match_success_count} / {len(strings_without_class)} 个词条成功匹配'
@@ -256,6 +271,7 @@ class JavaJarFile(DataFile):
                 best_match = matched_class
                 best_match_rate = match_rate
 
+        assert best_match is not None  # matched_classes 非空时循环必定赋值
         if best_match_rate >= 0.5:
             self.logger.info(
                 f'在文件 {self.path} 中成功建立匹配关系，类 {class_file_path} => {best_match.path}，匹配率 {best_match_rate}'
@@ -337,7 +353,7 @@ class JavaJarFile(DataFile):
             )
 
         for class_file_info in class_files:
-            self.load_class_file(**class_file_info, override=override_loaded)
+            self.load_class_file(path=class_file_info['path'], override=override_loaded)
 
     @classmethod
     def load_files_from_config(cls) -> List['JavaJarFile']:
