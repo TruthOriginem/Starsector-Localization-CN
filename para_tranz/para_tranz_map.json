@@ -606,34 +606,19 @@
       {
         "path": "com/fs/starfarer/campaign/String.class",
         "include_strings": [
-          " (TM)",
-          " (tm)",
           " OpenGL Engine",
           " Series",
           " series",
-          "(R)",
-          "(TM)",
-          "(r)",
-          "(tm)",
-          "/",
-          "AMD",
-          "ATI",
           "Dedicated VRAM: ",
           "Device name: ",
           "Driver version: ",
           "Free VRAM: ",
           "If running with mods, consider disabling some of them",
-          "Intel",
           "Maximum VRAM: ",
-          "NVIDIA",
           "Unidentified graphics device detected: ",
           "VRAM information not available for Intel graphics devices",
           "Vendor: ",
-          "Warning: VRAM low, may result in game instability and poor performance!",
-          "amd",
-          "ati",
-          "intel",
-          "nvidia"
+          "Warning: VRAM low, may result in game instability and poor performance!"
         ]
       },
       {
@@ -752,7 +737,6 @@
         "path": "com/fs/starfarer/campaign/accidents/Oo0OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO.class",
         "include_strings": [
           " and ",
-          ")",
           {
             "val": ", ",
             "occurs": [0, 1, 2]
@@ -1288,21 +1272,12 @@
       {
         "path": "com/fs/starfarer/campaign/command/OooO.class",
         "include_strings": [
-          {
-            "val": " / ",
-            "occurs": [0, 1, 2]
-          },
           " colonies",
           {
             "val": "(size ",
             "occurs": [0, 1, 2]
           },
-          {
-            "val": ")",
-            "occurs": [0, 1, 2]
-          },
           ", including ",
-          "/ ",
           "?\n\nThis decision is irreversible.",
           "Are you sure you want to dismiss ",
           "Assign",
@@ -1570,15 +1545,7 @@
       {
         "path": "com/fs/starfarer/campaign/comms/oo0O.class",
         "include_strings": [
-          {
-            "val": " (",
-            "occurs": [0, 1, 2, 3]
-          },
           " star system)",
-          {
-            "val": ")",
-            "occurs": [0, 1, 2]
-          },
           "Date:",
           "Delivered by:",
           "From: ",
@@ -1663,15 +1630,7 @@
       {
         "path": "com/fs/starfarer/campaign/comms/while.class",
         "include_strings": [
-          {
-            "val": " (",
-            "occurs": [0, 1, 2, 3, 4]
-          },
           " star system)",
-          {
-            "val": ")",
-            "occurs": [0, 1, 2, 3]
-          },
           ", ",
           {
             "val": "Date:",
@@ -1813,8 +1772,7 @@
           "Warning: JVM RAM not allocated to maximum at start, this is not recommended as it may result in game instability!",
           "Warning: Low system RAM remaining, may result in poor performance due to possible pagefile usage",
           "Warning: Maximum JVM RAM allocation exceeds half of system RAM, this is not recommended as it may result in game instability and poor system performance!",
-          "Warning: low RAM remaining, may result in game instability!",
-          "Windows"
+          "Warning: low RAM remaining, may result in game instability!"
         ]
       },
       {
@@ -2080,7 +2038,6 @@
             "val": "Difficulty: ",
             "occurs": [0, 1, 2]
           },
-          "EEE, MMM d, yyyy, hh:mm a",
           "Incompatible with enabled mods",
           "Level %d",
           "Mod compatibility warning",
@@ -2257,12 +2214,6 @@
         "include_strings": [
           "cycle",
           "date"
-        ]
-      },
-      {
-        "path": "com/fs/starfarer/campaign/ui/OooOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO.class",
-        "include_strings": [
-          ">"
         ]
       },
       {
@@ -2484,11 +2435,7 @@
       {
         "path": "com/fs/starfarer/campaign/ui/intel/PlanetListV2$o.class",
         "include_strings": [
-          "II",
-          "III",
-          "IV",
-          "Station",
-          "V"
+          "Station"
         ]
       },
       {
@@ -2702,7 +2649,6 @@
           "second",
           "seventh",
           "sixth",
-          "station",
           "tenth",
           "third",
           {
@@ -3360,10 +3306,6 @@
             "occurs": [0, 1, 2, 3, 4]
           },
           ".\n\n",
-          {
-            "val": "...",
-            "occurs": [0, 1, 2]
-          },
           "Assign AI core...",
           {
             "val": "Cancel",
@@ -3550,7 +3492,6 @@
             "val": ", ",
             "occurs": [0, 1, 2]
           },
-          "?",
           "Cancel",
           "Colony name:",
           "Confirm",
@@ -3677,12 +3618,10 @@
           "Guild",
           "House",
           "Imperium",
-          "Inc",
           "Intrepid",
           "LTD",
           "League",
           "Legion",
-          "MC",
           "Megacorp",
           "Mutuality",
           "No \"the\"",
@@ -4066,10 +4005,6 @@
       {
         "path": "com/fs/starfarer/class/C.class",
         "include_strings": [
-          {
-            "val": " (",
-            "occurs": [0, 1, 2, 3, 4]
-          },
           " at location ",
           {
             "val": " captured!",
@@ -4082,10 +4017,6 @@
           " lost",
           " retreated",
           " wing",
-          {
-            "val": ")",
-            "occurs": [0, 1, 2]
-          },
           {
             "val": "-class)",
             "occurs": [0, 1, 2]
@@ -4265,14 +4196,6 @@
         "path": "com/fs/starfarer/codex/ui/oooO.class",
         "include_strings": [
           {
-            "val": " (",
-            "occurs": [0, 1, 2]
-          },
-          {
-            "val": ")",
-            "occurs": [0, 1, 2]
-          },
-          {
             "val": "Accuracy",
             "occurs": [0, 1, 2]
           },
@@ -4340,8 +4263,6 @@
       {
         "path": "com/fs/starfarer/codex2/CodexDetailPanel.class",
         "include_strings": [
-          " Marines",
-          "(?s)\\",
           {
             "val": "Base value: %s",
             "occurs": [0, 1, 2, 3]
@@ -4391,7 +4312,6 @@
             "occurs": [0, 1, 2, 3, 4]
           },
           "increased effectiveness of ground operations",
-          "null",
           "reduction to marine casualties suffered during ground operations",
           {
             "val": "the colony",
@@ -4403,7 +4323,6 @@
       {
         "path": "com/fs/starfarer/codex2/CodexDialog$2.class",
         "include_strings": [
-          "E",
           "Go up a level, or cancel a search.",
           "Shortcuts: [%s] [%s]",
           "UP"
@@ -4414,7 +4333,6 @@
         "include_strings": [
           "Go back.",
           "LEFT",
-          "Q",
           "Shortcuts: [%s] [%s]"
         ]
       },
@@ -4423,15 +4341,13 @@
         "include_strings": [
           "Go forward.",
           "RIGHT",
-          "Shortcuts: [%s] [%s]",
-          "W"
+          "Shortcuts: [%s] [%s]"
         ]
       },
       {
         "path": "com/fs/starfarer/codex2/CodexDialog$5.class",
         "include_strings": [
           "Open a random entry.",
-          "R",
           "Shortcuts: [%s]"
         ]
       },
@@ -4793,7 +4709,6 @@
         "path": "com/fs/starfarer/combat/private.class",
         "include_strings": [
           " Wing",
-          ")",
           "Attack ",
           "Capture ",
           "Defend ",
@@ -4917,13 +4832,6 @@
       {
         "path": "com/fs/starfarer/coreui/A/O0Oo.class",
         "include_strings": [
-          " (",
-          {
-            "val": " + ",
-            "occurs": [0, 1, 2]
-          },
-          ")",
-          "/",
           "Days",
           "Distance",
           "Fuel",
@@ -5174,7 +5082,6 @@
       {
         "path": "com/fs/starfarer/coreui/O.class",
         "include_strings": [
-          "?",
           "Administrator name:",
           "Cancel",
           "Confirm",
@@ -5245,12 +5152,10 @@
       {
         "path": "com/fs/starfarer/coreui/OOoOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO.class",
         "include_strings": [
-          " (",
           {
             "val": " credits",
             "occurs": [0, 1, 2]
           },
-          ")",
           "Bought %s for %d credits",
           "Buy for %s credits?\n\n(Space to confirm, Esc to cancel.)",
           "Buying ",
@@ -5518,7 +5423,6 @@
             "val": " (maximum)",
             "occurs": [0, 1, 2]
           },
-          " / ",
           "Fixed level",
           {
             "val": "Level ",
@@ -5660,8 +5564,6 @@
         "include_strings": [
           "    - Doubles the rate of their experience gain",
           "    - Increases the range of skills available to choose from",
-          " (",
-          ")",
           "Mentored ",
           "Mentoring ",
           "Take this officer under your wing, providing guidance and helping them develop their professional skills.",
@@ -5673,12 +5575,10 @@
         "include_strings": [
           "    - Can not be removed by any means short of scuttling the ship",
           "    - Increases the AI core's level by %s and grants an additional skill",
-          " (",
           {
             "val": " into ",
             "occurs": [0, 1, 2]
           },
-          ")",
           "Fully integrate this AI core into the ship, giving it improved access to all subsystems.",
           "Integrated ",
           "Integrating "
@@ -5687,14 +5587,9 @@
       {
         "path": "com/fs/starfarer/coreui/ooo0.class",
         "include_strings": [
-          {
-            "val": " (",
-            "occurs": [0, 1, 2, 3, 4]
-          },
           " (level ",
           " is fully integrated with its ship and can not be removed",
           " is permanently assigned to their ship",
-          ")",
           ")?\n\nThis decision is irreversible.",
           ", assigned to the ",
           ", fully integrated with the ",
@@ -6404,7 +6299,6 @@
       {
         "path": "com/fs/starfarer/coreui/refit/returnsuper.class",
         "include_strings": [
-          " (",
           " (Built in)",
           " (Empty)",
           " OP)",
@@ -6877,11 +6771,6 @@
           "  fighters: ",
           " Wing",
           " variant",
-          {
-            "val": "----m",
-            "occurs": [0, 1, 2]
-          },
-          "----m/s",
           "ALLIED",
           "DISABLED",
           "FRIENDLY",
@@ -6939,19 +6828,14 @@
       {
         "path": "com/fs/starfarer/title/A/oOOO.class",
         "include_strings": [
-          "    Zeke \"MesoTroniK\" W. (QA & testing)\n    Mathieu Dugon (QA & testing)",
           " - art, game design, writing, coding",
           " - dev & game design lead",
           " - music, sound design",
           " - writing, game design, coding",
-          "Alex Mosolov",
-          "David Baumgart",
           "Dismiss",
           "In loving memory of Ivaylo Kovatchev",
-          "Ivaylo Kovatchev",
           "Originem and Yuanxing Hanhuazu (Farstar localization group)",
-          "Special thanks to:",
-          "Stian Stark"
+          "Special thanks to:"
         ]
       },
       {
@@ -7052,10 +6936,7 @@
         "path": "com/fs/starfarer/title/OoOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO/C.class",
         "include_strings": [
           "<none>",
-          "<press a key>",
-          "Alt-",
-          "Ctrl-",
-          "Shift-"
+          "<press a key>"
         ]
       },
       {
@@ -7068,7 +6949,6 @@
       {
         "path": "com/fs/starfarer/title/OoOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO/F.class",
         "include_strings": [
-          "\"",
           "\" button",
           "\" button acts as a toggle instead of having to be held down",
           "Battle size:",
@@ -7261,16 +7141,6 @@
             "val": "<none>",
             "occurs": [0, 1, 2]
           },
-          {
-            "val": "Alt",
-            "occurs": [0, 1, 2]
-          },
-          {
-            "val": "Ctrl",
-            "occurs": [0, 1, 2, 3, 4]
-          },
-          "Enter",
-          "Esc",
           "Left click",
           "MOUSE%d",
           "Middle click",
@@ -7278,12 +7148,7 @@
           "Mousewheel up",
           "Print Screen",
           "Right click",
-          {
-            "val": "Shift",
-            "occurs": [0, 1, 2]
-          },
           "Space",
-          "Tab",
           "Tilde"
         ]
       },
@@ -7649,12 +7514,6 @@
         ]
       },
       {
-        "path": "com/fs/starfarer/ui/OO0O.class",
-        "include_strings": [
-          "[%f,%f: %fx%f]"
-        ]
-      },
-      {
         "path": "com/fs/starfarer/ui/d$1.class",
         "include_strings": [
           " points: "
@@ -7777,10 +7636,6 @@
           {
             "val": ", ",
             "occurs": [0, 1, 2, 3, 4]
-          },
-          {
-            "val": "<",
-            "occurs": [0, 1, 2]
           },
           "Accuracy",
           "All values approximate. Prices do not include tariffs, which can be avoided through black market trade.",
@@ -8069,7 +7924,6 @@
           ", ",
           "Captain:",
           "Level ",
-          "No description... yet",
           "flux capacitor",
           "flux capacitors",
           "flux vent",
@@ -8274,7 +8128,6 @@
           "Fighter",
           "Frigate",
           "Hull integrity",
-          "No description... yet",
           "Replacement chassis"
         ]
       },
@@ -8548,10 +8401,8 @@
             "val": " (Utility)",
             "occurs": [0, 1, 2, 3, 4]
           },
-          " for",
           " for a quick video feed that lasts for as long as the key is pressed.",
           " in fleet",
-          " to",
           ", including carriers and militarized civilian ships",
           "All mods ever saved with:",
           "Can only transfer command to combat-ready ships.",
@@ -9114,18 +8965,6 @@
         "path": "com/fs/starfarer/ui/ooooOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO.class",
         "include_strings": [
           {
-            "val": "(",
-            "occurs": [0, 1, 2]
-          },
-          {
-            "val": "(+",
-            "occurs": [0, 1, 2]
-          },
-          {
-            "val": ")",
-            "occurs": [0, 1, 2, 3, 4]
-          },
-          {
             "val": "Shield arc",
             "occurs": [0, 1, 2]
           },
@@ -9446,7 +9285,6 @@
         "path": "com/fs/starfarer/api/combat/BaseHullMod.class",
         "include_strings": [
           " %s to install.",
-          " (",
           " at a colony with a spaceport or an orbital station",
           " available)",
           " bonus",
@@ -9547,9 +9385,6 @@
       {
         "path": "com/fs/starfarer/api/impl/PlanetSearchData$4.class",
         "include_strings": [
-          "100%",
-          "150%",
-          "200%",
           "Do not filter out any planets based on their hazard rating.",
           "Hazard rating",
           "Only show planets with a hazard rating of %s or lower."
@@ -9558,9 +9393,6 @@
       {
         "path": "com/fs/starfarer/api/impl/PlanetSearchData$5.class",
         "include_strings": [
-          "1",
-          "2",
-          "3",
           "Do not filter out any planets based on the number of stable locations in the star system they are in.",
           "Only show planets with %s or more stable locations in the star system they're in, including locations already in use by objectives or similar.",
           "Stable locations"
@@ -9589,12 +9421,6 @@
       {
         "path": "com/fs/starfarer/api/impl/PlanetSearchData.class",
         "include_strings": [
-          "1+",
-          "100%-",
-          "150%-",
-          "2+",
-          "200%-",
-          "3+",
           {
             "val": "Any",
             "occurs": [0, 1, 2]
@@ -10080,11 +9906,11 @@
           "Steady",
           {
             "val": "aggressive",
-            "occurs": [0, 1, 2, 3]
+            "occurs": [3]
           },
           {
             "val": "reckless",
-            "occurs": [0, 1, 2, 3]
+            "occurs": [3]
           }
         ]
       },
@@ -10596,7 +10422,6 @@
       {
         "path": "com/fs/starfarer/api/impl/campaign/TempImmigrationModifier.class",
         "include_strings": [
-          " (",
           " left)",
           "day",
           "days"
@@ -10939,10 +10764,6 @@
           " suffers damage from ",
           " worth of fuel and reduces the combat readiness ",
           " worth of fuel.",
-          {
-            "val": "%",
-            "occurs": [0, 1, 2]
-          },
           ", ",
           {
             "val": "C",
@@ -11048,9 +10869,7 @@
       {
         "path": "com/fs/starfarer/api/impl/campaign/econ/EstablishedPolity.class",
         "include_strings": [
-          "%",
           "%s accessibility.",
-          "+",
           "Established Polity",
           "League development programs",
           "You've proven the independence and strength of your colonies by defeating a Persean League force sent against you, and are viewed as a stable trading partner.",
@@ -11843,8 +11662,7 @@
       {
         "path": "com/fs/starfarer/api/impl/campaign/enc/AbyssalRogueStellarObjectDireHintsEPEC.class",
         "include_strings": [
-          "Derelict Structure",
-          "GAS Itzamna"
+          "Derelict Structure"
         ]
       },
       {
@@ -12332,17 +12150,7 @@
       {
         "path": "com/fs/starfarer/api/impl/campaign/fleets/SDFLeague.class",
         "include_strings": [
-          "All-League Aegis",
-          "Fortuna's Gift",
-          "Mairaath Remembered",
-          "Navarch Arnulf Hannan",
-          "Navarch Herman Zhou",
-          "Navarch Leandro Tethys",
-          "Navarch Mars Kato",
-          "Pride of Hannan",
-          "Pride of Kato",
-          "Pride of Yaribay",
-          "Reynard's Gift"
+          "All-League Aegis"
         ]
       },
       {
@@ -12485,15 +12293,9 @@
           "Colony",
           "Confirm",
           "Delete log entry",
-          "Exploration",
           "Faction",
-          {
-            "val": "Fleet log",
-            "occurs": [0, 1, 2]
-          },
           "Log entry added ",
           "Log entry added less than a day ago.",
-          "Marker",
           "None",
           "Size",
           "cycle",
@@ -13459,11 +13261,6 @@
           " as soon as you're back ",
           " services.",
           " was no-one important.",
-          {
-            "val": "Exploration",
-            "occurs": [0, 1, 2]
-          },
-          "Fleet log",
           "Salvaged",
           {
             "val": "Technology Cache",
@@ -13618,8 +13415,6 @@
           " Blueprint Location",
           " blueprint",
           "... the possible location of a blueprint (",
-          "Exploration",
-          "Fleet log",
           "Learned location of ",
           "Weapon Blueprint"
         ]
@@ -13696,8 +13491,6 @@
           " Blueprint Location",
           " blueprint",
           "... the possible location of a blueprint (",
-          "Exploration",
-          "Fleet log",
           "Learned location of ",
           "Ship Blueprint"
         ]
@@ -13708,8 +13501,6 @@
           " - Recovered",
           " Location",
           "... the possible location of an item (",
-          "Exploration",
-          "Fleet log",
           "Learned location of "
         ]
       },
@@ -13720,8 +13511,6 @@
           " Blueprint Location",
           " blueprint",
           "... the possible location of a blueprint (",
-          "Exploration",
-          "Fleet log",
           "Learned location of ",
           "Weapon Blueprint"
         ]
@@ -13745,22 +13534,15 @@
           ". ",
           "Asylum",
           "Atonement",
-          "Bounties",
           "Bounty faction: ",
           "Brought in by smugglers",
           "Citadel",
           "Cleansing",
-          "Colony threats",
           {
             "val": "Development level",
             "occurs": [0, 1, 2]
           },
           "Devotion",
-          {
-            "val": "Exploration",
-            "occurs": [0, 1, 2]
-          },
-          "Fleet log",
           "Hammer",
           "Harbor",
           "Haven",
@@ -13790,7 +13572,6 @@
           "You have not yet discovered the exact location or capabilities of this base.",
           "You have successfully completed this bounty.",
           "remaining",
-          "the ",
           "to cause widespread damage and destruction."
         ]
       },
@@ -13925,11 +13706,6 @@
             "occurs": [0, 1, 2]
           },
           "Donjon",
-          {
-            "val": "Exploration",
-            "occurs": [0, 1, 2]
-          },
-          "Fleet log",
           "Fort",
           "Free Orbit",
           "Freehaven",
@@ -13985,8 +13761,7 @@
           "You have destroyed this base.",
           "You have not yet discovered the exact location or capabilities of this base.",
           "You have successfully completed this bounty.",
-          "remaining",
-          "underworld"
+          "remaining"
         ]
       },
       {
@@ -15633,13 +15408,6 @@
         ]
       },
       {
-        "path": "com/fs/starfarer/api/impl/campaign/intel/misc/BreadcrumbIntelV2.class",
-        "include_strings": [
-          "Exploration",
-          "Fleet log"
-        ]
-      },
-      {
         "path": "com/fs/starfarer/api/impl/campaign/intel/misc/CargoPodsIntel.class",
         "include_strings": [
           "A clutch of cargo pods in a temporarily stable orbit. Once the orbit degrades, the pods will be lost.",
@@ -15728,11 +15496,6 @@
             "val": "Estimated %s ",
             "occurs": [0, 1, 2, 3]
           },
-          "Exploration",
-          {
-            "val": "Fleet log",
-            "occurs": [0, 1, 2]
-          },
           "Gate Hauler",
           "Location: ",
           "Once it's in open space, it's estimated that it will take %s ",
@@ -15796,7 +15559,6 @@
           "Discovered: ",
           "Go back",
           "Luddic Shrine - ",
-          "Luddic shrines",
           "Not visited",
           "Show shrines",
           "Visited"
@@ -15809,8 +15571,7 @@
           ",.?!:;",
           ".",
           "Discovered: ",
-          "Edit",
-          "Marker"
+          "Edit"
         ]
       },
       {
@@ -15831,7 +15592,6 @@
       {
         "path": "com/fs/starfarer/api/impl/campaign/intel/misc/RemnantNexusIntel.class",
         "include_strings": [
-          "Colony threats",
           "The station's long arc gapes with empty sockets where weapons platforms and citadels were once present. Despite the obvious damage, the station is armed and operational."
         ]
       },
@@ -15848,8 +15608,6 @@
           "Class III",
           "Class IV",
           "Class V",
-          "Exploration",
-          "Fleet log",
           "Remote Survey: ",
           "and is likely the most promising candidate ",
           "for a full survey operation in the ",
@@ -15877,11 +15635,9 @@
           ".",
           ". The projected total value of the known salvage is %s.",
           "A log of the salvage known to be available in the ",
-          "Exploration",
           "No salvage is known to be available in the ",
           "Other, as yet undiscovered, salvage may be present in the system.",
           "Projected value: %s",
-          "Salvage",
           "Salvor's Tally - ",
           "habitat",
           {
@@ -15892,11 +15648,7 @@
             "val": "s",
             "occurs": [0, 1, 2, 3, 4, 5, 6]
           },
-          "station",
-          {
-            "val": "wreck",
-            "occurs": [0, 1, 2]
-          }
+          "station"
         ]
       },
       {
@@ -15918,8 +15670,6 @@
       {
         "path": "com/fs/starfarer/api/impl/campaign/intel/misc/SurveyDataForPlanetIntel.class",
         "include_strings": [
-          "Exploration",
-          "Fleet log",
           "Survey Data: "
         ]
       },
@@ -15977,11 +15727,7 @@
         "include_strings": [
           " until stabilized",
           "%s ",
-          "1",
           "Deployed: ",
-          "Exploration",
-          "Fleet log",
-          "Gates",
           "Wormholes can be used for rapid transit between termini located many light-years apart.",
           {
             "val": "day",
@@ -17501,10 +17247,6 @@
             "occurs": [0, 1, 2]
           },
           "Effectively bombarding the target will require approximately %s units of fuel.",
-          {
-            "val": "Exploration",
-            "occurs": [0, 1, 2]
-          },
           "Get within comms range to complete the mission",
           "Get within range of a functional comm relay to complete the mission and receive your reward.",
           {
@@ -18039,10 +17781,6 @@
           {
             "val": "Lost ",
             "occurs": [0, 1, 2, 3, 4, 5, 6, 7, 8]
-          },
-          {
-            "val": "×",
-            "occurs": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
           }
         ]
       },
@@ -18310,8 +18048,7 @@
         "path": "com/fs/starfarer/api/impl/campaign/rulecmd/missions/GateCMD$1.class",
         "include_strings": [
           "    Fuel available:",
-          "    Fuel required:",
-          " - "
+          "    Fuel required:"
         ]
       },
       {
@@ -18796,8 +18533,7 @@
         "path": "com/fs/starfarer/api/impl/campaign/rulecmd/salvage/ZGRTurnIn$1.class",
         "include_strings": [
           " will improve by %s points.",
-          "If you turn in the selected items, you will receive a %s bounty and your standing with ",
-          "¢"
+          "If you turn in the selected items, you will receive a %s bounty and your standing with "
         ]
       },
       {
@@ -21678,8 +21414,7 @@
             "val": "Deep Space",
             "occurs": [0, 1, 2]
           },
-          "Nameless Rock",
-          "Serial #2F38CB017"
+          "Nameless Rock"
         ]
       },
       {
@@ -21809,12 +21544,6 @@
         ]
       },
       {
-        "path": "com/fs/starfarer/api/impl/codex/CodexDataV2$3.class",
-        "include_strings": [
-          "Spacer's manual description test."
-        ]
-      },
-      {
         "path": "com/fs/starfarer/api/impl/codex/CodexDataV2$30.class",
         "include_strings": [
           "Module",
@@ -21852,8 +21581,6 @@
           "Commodities",
           "Composite",
           "Cruisers",
-          "Custom detail example",
-          "Custom example",
           "D-mods",
           "Destroyers",
           "Energy",
@@ -21867,7 +21594,6 @@
           "Gallery",
           "Gas giants",
           "Habitable",
-          "Has to be set to something for detail to show; usually this is the data for what the entry is about",
           "High explosive",
           "Hullmods",
           "Hybrid",
@@ -22167,7 +21893,6 @@
       {
         "path": "com/fs/starfarer/api/impl/combat/dweller/HumanShipShroudedHullmod.class",
         "include_strings": [
-          "%",
           "Can not be installed on a phase ship",
           "Crew casualties in combat are increased by %s.",
           "Incompatible with Fragment Swarm"
@@ -22223,7 +21948,6 @@
         "path": "com/fs/starfarer/api/impl/combat/threat/ExtractionProtocolSystemScript.class",
         "include_strings": [
           " top speed",
-          "+",
           "improved maneuverability"
         ]
       },
@@ -22260,10 +21984,8 @@
         "include_strings": [
           " flux dissipation",
           " top speed",
-          "+",
           "improved maneuverability",
-          "rapid charge regen",
-          "x"
+          "rapid charge regen"
         ]
       },
       {
@@ -22287,11 +22009,6 @@
       {
         "path": "com/fs/starfarer/api/impl/combat/threat/ThreatHullmod.class",
         "include_strings": [
-          {
-            "val": "%",
-            "occurs": [0, 1, 2, 3]
-          },
-          "0",
           "Campaign",
           "Combat",
           "Sensor profile reduced to %s.",
