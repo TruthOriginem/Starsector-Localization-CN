@@ -280,7 +280,7 @@ class JavaClassFile:
     ) -> str:
         # 生成词条key
         # 唯一原文格式：  jar文件路径:类文件路径.class#"原文内容"
-        # 重复原文格式：  jar文件路径:类文件路径.class#同值序号:"原文内容"
+        # 重复原文格式：  jar文件路径:类文件路径.class#"原文内容":同值序号
         # 同值序号（occurrence_index）仅在 occurrence_total > 1 时传入，见 get_strings()。
         # key 只用于唯一标识和平台同步；导入时以 context 中的同值序号定位，不从 key 解析。
         if occurrence_index is None:
@@ -288,7 +288,7 @@ class JavaClassFile:
         else:
             full_key = (
                 f'{self.jar_file.path}:{self.path}#'
-                f'{occurrence_index}:"{original_constant.string}"'
+                f'"{original_constant.string}":{occurrence_index}'
             )
 
         # 测量key长度
@@ -318,7 +318,7 @@ class JavaClassFile:
 
         if occurrence_index is None:
             return f'{self.jar_file.path}:{new_path}#"{new_string}"@{key_hash}'
-        return f'{self.jar_file.path}:{new_path}#{occurrence_index}:"{new_string}"@{key_hash}'
+        return f'{self.jar_file.path}:{new_path}#"{new_string}":{occurrence_index}@{key_hash}'
 
     def get_strings(self) -> List[String]:
         strings = []
