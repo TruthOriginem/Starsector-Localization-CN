@@ -10,7 +10,7 @@
 
 ### 从论坛下载
 
-目前0.98尚且没有打包的汉化包。您可以在论坛帖子 [远行星号 0.97a-RC11 中文汉化v1.0.0](https://www.fossic.org/thread-13676-1-1.html) 下载0.97汉化版游戏安装包。
+0.98 汉化包已正式发布！下载： [远行星号 0.98a-RC8 中文汉化包](https://www.fossic.org/thread-19430-1-1.html)。
 
 ### 下载 GitHub 上的最新汉化
 
@@ -53,11 +53,12 @@
 ### 文件夹结构
 
 * "game data" 内存放当前版本未经修改的原始游戏文件，包括 `starsector-core/data` 文件夹下的所有文件和 `starfarer.api.jar`、`starfarer_obf.jar` 文件
-* "original" 内存放当前版本所有需要翻译的未翻译游戏文件，其中的 Jar 文件已经过预处理，具体处理内容请参见 [original 手动处理记录](docs/original_manual_processing/original_manual_processing.md)，不要直接编辑其内容
+* "original" 内存放当前版本所有需要翻译的未翻译游戏文件，其中的 Jar 文件已经过预处理，具体处理内容请参见 [Jar 预处理工具说明](jar_pre_processing/README.md)，不要直接编辑其内容
 * "original.old" 内存放上个版本所有需要翻译的文件，不要直接编辑其内容
 * "localization" 内存放当前版本翻译后的文件
 * "localization.old" 内存放上个版本的译文，不要直接编辑其内容
 * "para_tranz" 内存放Paratranz平台相关脚本
+* "jar_pre_processing" 内存放 Jar 预处理相关脚本
 * "docs" 内存放项目文档内容
 * "packaging" 内存放安装包及汉化包打包相关脚本和素材
 
@@ -69,12 +70,12 @@
 |-----------------------------------------|-----------------------------------------------------------------|
 | _cleanLocalization.py                   | 根据original文件夹清理localization文件夹。                                 |
 | _copyOldLocalization.py                 | 通过比对original文件夹，更新汉化包中的未变更文件。                                   |
+| jar_pre_processing/*           | Jar 预处理工具，执行 ASM Patch 与字符串解耦，生成可供翻译流程使用的original jar。详情参见[Jar 预处理工具说明](jar_pre_processing/README.md)。 |
 | _handleVariantNames.py                  | 处理指定文件夹中所有装配名，并更新/使用映射 json 用于翻译。                               |
 | _overwriteLocalizationByOriginal.py     | TODO                                                            |
 | _swapLangFile.py                        | 用来更替汉化文件和英文文件的脚本。                                               |
 | _updateOriginal.py                      | TODO                                                            |
-| _variant_name_map.json                  | 装配名映射文件，英文名对应汉化名，可后继继续更新。                                       |
-| para_tranz/para_tranz.py                | 用于ParaTranz平台的数据导入导出工具，使用方法参见[本指南](docs/paratranz/tut_admin.md) |
+| para_tranz/para_tranz_script.py         | 用于ParaTranz平台的数据导入导出工具，使用方法参见[本指南](docs/paratranz/tut_admin.md) |
 | packaging/make_zip.py                   | 将 `localization` 文件夹打包为汉化补丁 `.zip`，文件名包含游戏版本、汉化版本、日期及字体变体（根据当前 git 分支自动判断）。直接运行即可，输出到 `packaging/Output/`。 |
 | packaging/make_exe.py                   | 调用 **Inno Setup 6** 编译 `.exe` 安装包，包括独立汉化包和含游戏完整安装包（可选）。需先复制 `packaging/.env.example` 为 `packaging/.env` 并填写配置，再直接运行。输出到 `packaging/Output/`。 |
 
@@ -82,9 +83,7 @@
 
 ![][flow-chart]
 
-> 其中内核文件在开始翻译前可能需要手动预处理，具体请参见 [original 手动处理记录](docs/original_manual_processing/original_manual_processing.md)
-
-1. 创建以新版本号命名的分支，例如`0.97`，并切换到该分支
+1. 创建以新版本号命名的分支，例如`0.98`，并切换到该分支
 2. 删除 `original.old` 和 `localization.old` 文件夹，清空 `game data`文件夹
 3. 将新版本游戏目录下 `starsector-core` 文件夹中的`data`文件夹和 `starfarer.api.jar`，`starfarer_obf.jar` 复制到`game data`文件夹中
 4. 复制 `original`文件夹为 `original.old`
@@ -94,17 +93,18 @@
     2. 运行 `_copyOldLocalization.py` 脚本，将 `localization.old` 文件夹中对应原文件未变更的文件复制到 `localization` 文件夹中
     3. 手动添加游戏新增加的，需要翻译的文件到 `original` 文件夹中
     4. 运行 `_overwriteLocalizationByOriginal.py` 脚本，将 `original` 中出现变化的文件覆盖到 `localization` 文件夹中
-7. 将 `localization.old/graphics` 文件夹下的可以复用的图像和字体资源复制到 `localization/graphics` 文件夹中
-8. 在使用Paratranz脚本前，请确保词条对照表文件 `para_tranz/para_tranz_map.json` 已经更新
+7. 参照 [Jar 预处理工具说明](jar_pre_processing/README.md)，运行 `jar_pre_processing` 相关脚本，完成 `starfarer.api.jar` 和 `starfarer_obf.jar` 的预处理
+8. 将 `localization.old/graphics` 文件夹下的可以复用的图像和字体资源复制到 `localization/graphics` 文件夹中
+9. 在使用Paratranz脚本前，请确保词条对照表文件 `para_tranz/para_tranz_map.json` 已经更新
      - 请联系 jn_xyp 以获取最新的 `para_tranz_map.json` 文件
-9. **参照[Paratran版本管理指南](docs/paratranz/tut_admin.md)步骤，从 git 导入新的原文到 ParaTranz**
+10. **参照[Paratran版本管理指南](docs/paratranz/tut_admin.md)步骤，从 git 导入新的原文到 ParaTranz**
      - 在导入前必须下载最新的 ParaTranz 平台数据作为备份
      - 首先导入原文，然后导入译文
        - 必须在导入时选择**安全模式（不删除词条）**！
-10. **参照[Paratran版本管理指南](docs/paratranz/tut_admin.md)中的步骤，将翻译完成的译文导入 git**
-11. 提交commit并push
+11. **参照[Paratran版本管理指南](docs/paratranz/tut_admin.md)中的步骤，将翻译完成的译文导入 git**
+12. 提交commit并push
      - 在提交前，请将汉化文件复制入游戏，尝试能否正常启动游戏
-12. 待测试通过后，可以考虑将更改合并到`master`分支
-     - 在合并前，请在`master`分支上创建以上一个版本号命名的tag，例如`0.97`
+13. 待测试通过后，可以考虑将更改合并到`master`分支
+     - 在合并前，请在`master`分支上创建以上一个版本号命名的tag，例如`0.98`
 
 [flow-chart]:docs/paratranz/flow_chart.png

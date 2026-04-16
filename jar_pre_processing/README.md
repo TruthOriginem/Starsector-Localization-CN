@@ -63,16 +63,12 @@ jar_pre_processing/
 
 ---
 
-# 手动修改记录
+# 修改记录
 
 本节记录当前版本中各 ASM Patch 的修改背景与 diff，以及其他需要手动维护的配置文件改动。
 
 > 以下所有 diff 方向均为：`game data/`（未修改的游戏原文件） → `original/`（已手动修改后的版本），
 > 即 `-` 行为游戏原始内容，`+` 行为我们的修改结果。
-
----
-
-## 一、Jar 文件
 
 游戏本身的代码逻辑需要修改，以适应翻译后的文本。
 
@@ -226,8 +222,3 @@ jar_pre_processing/
 | Hazard（危险度） | 75 | 75 |
 | Dist（距离） | 60 | 60 |
 
----
-
-## 二、settings.json
-
-`settings.json` 相关手动修改记录已移至 [`docs/settings_json_manual_processing.md`](../docs/settings_json_manual_processing.md)。
