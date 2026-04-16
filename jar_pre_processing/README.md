@@ -8,7 +8,7 @@
 
 1. **ASM 字节码 Patch**：通过 [ASM](https://asm.ow2.io/) 库直接修改 `.class` 文件中的字节码，修复游戏原代码中与中文显示不兼容的逻辑（分隔符、字体、列宽、日期格式等）。各 Patch 的详细说明见下文。
 
-2. **字符串解耦（jar-string-decoupler）**：调用 `vendor/jar-string-decoupler-1.0.0-all.jar`，将 `.class` 文件中硬编码的字符串常量提取并解耦，使 ParaTranz 的 jar 加载器能够读取、翻译并写回字符串，无需再手动修改字节码。
+2. **字符串解耦（jar-string-decoupler）**：调用 `vendor/jar-string-decoupler-1.0.0-all.jar`，将 `.class` 文件中硬编码的字符串常量提取并解耦，使 ParaTranz 的 jar 加载器能够读取、翻译并写回字符串，无需再手动修改字节码。该工具来自[jar-string-decoupler项目](https://github.com/jnxyp/jar-string-decoupler)。
 
 处理完成后，结果 jar 同时写入仓库根目录的 `original/` 和 `localization/`，并在 `target/preprocess-work/preprocess-report.json` 生成处理报告（含输入/输出哈希、各 Patch 结果）。
 
@@ -74,6 +74,8 @@ jar_pre_processing/
 
 ### 6. 舰船信息页文本末尾丢字
 
+**对应 ASM Patch**：`src/main/java/com/truthoriginem/starsector/preprocessing/patches/ShipInfoSeparatorPatch.java`
+
 ![line_end_char_missing-1.png](docs/line_end_char_missing-1.png)
 ![line_end_char_missing-2.png](docs/line_end_char_missing-2.png)
 
@@ -126,6 +128,8 @@ jar_pre_processing/
 
 ### 7. 敌对活动事件名称为英文 'Hostilities'
 
+**对应 ASM Patch**：`src/main/java/com/truthoriginem/starsector/preprocessing/patches/FactionHostilityNoManualPatch.java`
+
 > **0.98 中不再适用**：当前 `original/starfarer.api.jar` 中仍保留 `Hostilities`，但 ParaTranz 导出数据中已有 `"Hostilities" -> "敌对活动"` 译文。后续预处理应依赖 `jar-string-decoupler` 解耦后由 ParaTranz 写回，不再作为 ASM 或手动替换项处理。
 
 相关文件：`starfarer.api.jar: com/fs/starfarer/api/impl/campaign/intel/FactionHostilityIntel.class`
@@ -140,6 +144,8 @@ jar_pre_processing/
 ---
 
 ### 8. 战斗页面舰船部署提示字体不显示
+
+**对应 ASM Patch**：`src/main/java/com/truthoriginem/starsector/preprocessing/patches/CombatDeploymentFontPatch.java`
 
 相关文件：`starfarer_obf.jar: com/fs/starfarer/class/new/return.class`
 
@@ -156,6 +162,8 @@ jar_pre_processing/
 ---
 
 ### 9. 战役界面左上角日期显示宽度不足
+
+**对应 ASM Patch**：`src/main/java/com/truthoriginem/starsector/preprocessing/patches/CampaignDateWidthPatch.java`
 
 相关文件：`starfarer_obf.jar: com/fs/starfarer/campaign/ui/Oo0o.class`
 
@@ -183,7 +191,9 @@ jar_pre_processing/
 
 ### 10. 存档列表页存档保存日期未按中文格式化
 
-相关文件：`starfarer_obf.jar: com/fs/starfarer/campaign/save/LoadGameDialog.class`（内部类 `$o`）
+**对应 ASM Patch**：`src/main/java/com/truthoriginem/starsector/preprocessing/patches/SaveDateLocalePatch.java`
+
+相关文件：`starfarer_obf.jar: com/fs/starfarer/campaign/save/LoadGameDialog$o.class`
 
 ![save_date_locale.png](docs/save_date_locale.png)
 
@@ -197,6 +207,8 @@ jar_pre_processing/
 ---
 
 ### 11. 星球列表页部分列宽度不足
+
+**对应 ASM Patch**：`src/main/java/com/truthoriginem/starsector/preprocessing/patches/PlanetListColumnWidthPatch.java`
 
 相关文件：`starfarer_obf.jar: com/fs/starfarer/campaign/ui/intel/PlanetListV2.class`
 
