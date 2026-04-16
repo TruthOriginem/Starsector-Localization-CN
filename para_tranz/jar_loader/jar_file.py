@@ -298,7 +298,7 @@ class JavaJarFile(DataFile):
                 for info in old_zf.infolist():
                     # 复制老文件
                     if info.filename not in updated_file_contents:
-                        zf.writestr(info, old_zf.read(info.filename))
+                        zf.writestr(info, old_zf.read(info))
                     # 写入新文件
                     else:
                         # 将文件修改日期设置为当前时间
