@@ -1,3 +1,4 @@
+import html
 import json
 import re
 from dataclasses import dataclass
@@ -386,7 +387,7 @@ class JavaClassFile:
         return JarStringContext(
             jar_path=match.group('jar'),
             class_path=match.group('class'),
-            original=match.group('original'),
+            original=html.unescape(match.group('original')),
             occurrence_index=int(occurrence_index)
             if occurrence_index is not None
             else None,
