@@ -12,7 +12,7 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 自动修复单元,autorepair,2,,,"engines, defensive, merc, standard",防御,7500,,,,3,6,9,15,data.hullmods.AutomatedRepairUnit,降低 {%s} 在战斗中修复受损武器及引擎的时间。,提高战斗中武器的维修速率。,将武器与引擎的修复时间降低至 {%s}，且降低 {%s} 舰船过载持续时间。,graphics/hullmods/automated_repair_unit.png
 辅助推进器,auxiliarythrusters,1,,,"engines, merc, standard",引擎,5000,TRUE,,,4,8,12,20,data.hullmods.AuxiliaryThrusters,提高舰船 {%s} 机动性，如加速度/减速度/转向加速/转向角速度。,提高舰船的机动性。,"""零幅能加速"" 状态下的航速增益提高 {%s}，且转向速度 {%s}。",graphics/hullmods/auxilliary_thrusters.png
 弹道测距仪,ballistic_rangefinder,2,,,"offensive, merc, standard",武器,8000,,,,5,10,15,25,com.fs.starfarer.api.impl.hullmods.BallisticRangefinder,<tooltip created in the script due to lots of highlighting>,提高实弹槽位上中小型武器的射程。,,graphics/hullmods/ballistic_rangefinder.png
-防爆气密门,blast_doors,0,,,"defensive, merc, standard",防御,2500,TRUE,,,4,8,12,20,data.hullmods.BlastDoors,"在各个要害部位加装坚固的密封门，提高{%s}船体结构值。
+防爆舱门,blast_doors,0,,,"defensive, merc, standard",防御,2500,TRUE,,,4,8,12,20,data.hullmods.BlastDoors,"在各个要害部位加装坚固的密封门，提高{%s}船体结构值。
 
 降低 {%s} 战斗中因船体结构受损而造成的船员伤亡。",提高舰船结构值，降低船员伤亡。,将减免船员伤亡的效果提高至 {%s}。,graphics/hullmods/blast_doors.png
 机库改装,converted_hangar,1,,,"special, non_phase, merc, standard",战机,5000,,,,0,10,10,10,com.fs.starfarer.api.impl.hullmods.ConvertedHangar,<Tooltip created in script>,给非航母舰船提供临时战机甲板。,提高战机整备率的恢复速度，巡洋舰提高 {%s}，主力舰提高 {%s}。对驱逐舰无效。,graphics/hullmods/converted_hangar.png
@@ -138,7 +138,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 导弹自动工厂,missile_reload,,,,codex_require_related,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PeriodicMissileReload,内置的导弹工厂会定期补满所有导弹武器。,内置的导弹工厂会定期补满所有导弹武器。,,graphics/hullmods/expanded_missile_racks.png
 屏蔽货舱,shielded_holds,2,,,,,,,TRUE,,0,0,0,0,data.hullmods.ShieldedCargoHolds,原本是保护无护盾货舰免受天体辐射的影响，但经过简单调整就可用于干扰远距离货舱扫描，降低违禁物品被发现的概率。,降低被检查到违禁品的风险。,,graphics/hullmods/shielded_cargo_hold.png
 打捞起重机,repair_gantry,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.campaign.RepairGantry,根据船体级别，提高 {%s}/{%s}/{%s}/{%s} 从废弃空间站、遗弃物、舰船残骸等打捞到的资源。只影响普通资源的回收，如燃料与补给，而蓝图等稀有物品将不受影响。此外，该效果在战后结算时仅有 {%s} 效率。,提高打捞收益。,,graphics/hullmods/repair_gantry.png
-相位力场,phasefield,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PhaseField,能长时间激活低水平相位场，使传感器截面降低 {%s}。,降低舰队的传感器截面。,,graphics/hullmods/phase_field.png
+相位场,phasefield,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.PhaseField,能长时间激活低水平相位场，使传感器截面降低 {%s}。,降低舰队的传感器截面。,,graphics/hullmods/phase_field.png
 磁通分流,fluxshunt,,,,,,,,TRUE,,0,0,0,0,data.hullmods.FluxShunt,允许舰船以 {%s} 的正常耗散速率在护盾开启时耗散硬幅能。,允许舰船在展开护盾时耗散硬幅能。,,graphics/hullmods/flux_shunt.png
 民用级船体,civgrade,,,,,,,,TRUE,,0,0,0,0,data.hullmods.CivGrade,提高 {%s} 传感器截面，降低 {%s} 传感器探测强度。,提高传感器截面，降低传感器探测强度。,,graphics/hullmods/civilian_grade.png
 高维护需求,high_maintenance,,,,,,,,TRUE,,0,0,0,0,data.hullmods.HighMaintenance,提高 {%s} 的每月维护所需补给。,提高维护成本。,,graphics/hullmods/high_maintenance.png

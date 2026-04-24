@@ -583,7 +583,7 @@
   {
     "key": "reports.csv#('investigation_comm_sniffer', 'player_guilty_comm_sniffer', '', 'player_intel_always')$summary",
     "original": "A thorough audit of the security logs on $name has resulted in you being blamed for the security breach.",
-    "translation": "对 $name 上的安全日志进行彻底审查后，你被指认为安全漏洞的罪魁祸首。",
+    "translation": "对 $name 上的安全日志进行彻底审查后，你被指认为安全破坏的罪魁祸首。",
     "stage": 1,
     "context": "reports.csv第0035行\n[本行原始数据]\n{'event_type': 'investigation_comm_sniffer',\n 'event_stage': 'player_guilty_comm_sniffer',\n 'p': '',\n 'target_rel': '',\n 'channels': 'player_intel_always',\n 'subject': 'Comm sniffer at $name traced back to you',\n 'summary': 'A thorough audit of the security logs on $name has resulted in '\n            'you being blamed for the security breach.',\n 'assessment': '',\n 'image': '',\n 'icon': '',\n 'tags': '',\n 'sound_id': '',\n 'implementation notes': ''}"
   },
