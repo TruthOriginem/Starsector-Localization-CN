@@ -28838,7 +28838,7 @@ $option = rao_nerieneConvOutPitchCheck 0
 FireBest DialogOptionSelected","""是的，"" 他说道，一边长久地凝视着你，随后补充道，""当然，她的志向是她自己的事。""",,
 raoNerieneConvOut3,DialogOptionSelected,$option == rao_nerieneConvOut4,"
 $option = rao_nerieneConvOutPitchCheck 0
-FireBest DialogOptionSelected","""Neriene曾是个天才。她通过放弃这门艺术所表达的反抗..."" 他移开目光。
+FireBest DialogOptionSelected","""Neriene 曾是个天才。她通过放弃这门艺术所表达的反抗..."" 他移开目光。
 
 ""确实击中了要害，"" 他轻声说道，将手放在胸前，""总之，不需要我这样的老头子来告诉你该怎么想。她的志向是她自己的事。""",,
 raoNerieneConvOutPitchCheckA,DialogOptionSelected,$option == rao_nerieneConvOutPitchCheck,"$gotAnOpening = true
