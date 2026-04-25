@@ -1,4 +1,4 @@
-package com.truthoriginem.starsector.preprocessing;
+package org.fossic.starsector.preprocessing;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

@@ -1,4 +1,4 @@
-package com.truthoriginem.starsector.preprocessing;
+package org.fossic.starsector.preprocessing;
 
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;

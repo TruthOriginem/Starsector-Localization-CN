@@ -4,14 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.truthoriginem.starsector</groupId>
+    <groupId>org.fossic.starsector</groupId>
     <artifactId>jar-pre-processing</artifactId>
     <version>1.0.0</version>
 
     <properties>
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <exec.mainClass>com.truthoriginem.starsector.preprocessing.JarPreProcessorMain</exec.mainClass>
+        <exec.mainClass>org.fossic.starsector.preprocessing.JarPreProcessorMain</exec.mainClass>
         <asm.version>9.7.1</asm.version>
     </properties>
 

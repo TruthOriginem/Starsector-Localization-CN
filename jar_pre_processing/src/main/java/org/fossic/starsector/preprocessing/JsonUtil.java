@@ -1,4 +1,4 @@
-package com.truthoriginem.starsector.preprocessing;
+package org.fossic.starsector.preprocessing;
 
 import java.util.List;
 import java.util.Map;

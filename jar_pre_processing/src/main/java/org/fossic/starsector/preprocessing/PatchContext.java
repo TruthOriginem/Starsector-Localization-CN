@@ -1,4 +1,4 @@
-package com.truthoriginem.starsector.preprocessing;
+package org.fossic.starsector.preprocessing;
 
 public record PatchContext(String jarName, String classPath) {
 }

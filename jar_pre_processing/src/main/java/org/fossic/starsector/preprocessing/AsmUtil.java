@@ -1,4 +1,4 @@
-package com.truthoriginem.starsector.preprocessing;
+package org.fossic.starsector.preprocessing;
 
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.tree.AbstractInsnNode;
@@ -174,4 +174,5 @@ public final class AsmUtil {
         }
         return current;
     }
+
 }

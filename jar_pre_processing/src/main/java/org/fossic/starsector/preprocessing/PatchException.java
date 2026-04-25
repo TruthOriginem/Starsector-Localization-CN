@@ -1,4 +1,4 @@
-package com.truthoriginem.starsector.preprocessing;
+package org.fossic.starsector.preprocessing;
 
 public class PatchException extends RuntimeException {
     public PatchException(String message) {

@@ -1,11 +1,11 @@
-package com.truthoriginem.starsector.preprocessing.patches;
+package org.fossic.starsector.preprocessing.patches;
 
-import com.truthoriginem.starsector.preprocessing.AsmUtil;
-import com.truthoriginem.starsector.preprocessing.JarPatch;
-import com.truthoriginem.starsector.preprocessing.JarWorkspace;
-import com.truthoriginem.starsector.preprocessing.PatchContext;
-import com.truthoriginem.starsector.preprocessing.PatchException;
-import com.truthoriginem.starsector.preprocessing.PatchResult;
+import org.fossic.starsector.preprocessing.AsmUtil;
+import org.fossic.starsector.preprocessing.JarPatch;
+import org.fossic.starsector.preprocessing.JarWorkspace;
+import org.fossic.starsector.preprocessing.PatchContext;
+import org.fossic.starsector.preprocessing.PatchException;
+import org.fossic.starsector.preprocessing.PatchResult;
 import org.objectweb.asm.tree.ClassNode;
 
 import java.util.Set;
