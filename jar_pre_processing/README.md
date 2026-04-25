@@ -74,7 +74,7 @@ jar_pre_processing/
 
 ### 6. 舰船信息页文本末尾丢字
 
-**对应 ASM Patch**：`src/main/java/com/truthoriginem/starsector/preprocessing/patches/ShipInfoSeparatorPatch.java`
+**对应 ASM Patch**：`src/main/java/org/fossic/starsector/preprocessing/patches/ShipInfoSeparatorPatch.java`
 
 ![line_end_char_missing-1.png](docs/line_end_char_missing-1.png)
 ![line_end_char_missing-2.png](docs/line_end_char_missing-2.png)
@@ -128,7 +128,7 @@ jar_pre_processing/
 
 ### 7. 敌对活动事件名称为英文 'Hostilities'
 
-**对应 ASM Patch**：`src/main/java/com/truthoriginem/starsector/preprocessing/patches/FactionHostilityNoManualPatch.java`
+**对应 ASM Patch**：`src/main/java/org/fossic/starsector/preprocessing/patches/FactionHostilityNoManualPatch.java`
 
 > **0.98 中不再适用**：当前 `original/starfarer.api.jar` 中仍保留 `Hostilities`，但 ParaTranz 导出数据中已有 `"Hostilities" -> "敌对活动"` 译文。后续预处理应依赖 `jar-string-decoupler` 解耦后由 ParaTranz 写回，不再作为 ASM 或手动替换项处理。
 
@@ -145,25 +145,25 @@ jar_pre_processing/
 
 ### 8. 战斗页面舰船部署提示字体不显示
 
-**对应 ASM Patch**：`src/main/java/com/truthoriginem/starsector/preprocessing/patches/CombatDeploymentFontPatch.java`
+**对应 ASM Patch**：`src/main/java/org/fossic/starsector/preprocessing/patches/CombatDeploymentFontPatch.java`
 
 相关文件：`starfarer_obf.jar: com/fs/starfarer/class/new/return.class`
 
 ![combat-ship_deployment_note.jpg](docs/combat-ship_deployment_note.jpg)
 ![combat-ship_deployment_note-after.jpg](docs/combat-ship_deployment_note-after.jpg)
 
-**修改**：将字体从 `graphics/fonts/victor21.fnt` 改为 `graphics/fonts/victor14.fnt`。
+**修改**：将字体从 `graphics/fonts/victor21.fnt` 改为 `graphics/fonts/victor16.fnt`。该类共有 2 处此字符串引用，均被替换。
 
 ```diff
 - d d2 = new d(string, "graphics/fonts/victor21.fnt");
-+ d d2 = new d(string, "graphics/fonts/victor14.fnt");
++ d d2 = new d(string, "graphics/fonts/victor16.fnt");
 ```
 
 ---
 
 ### 9. 战役界面左上角日期显示宽度不足
 
-**对应 ASM Patch**：`src/main/java/com/truthoriginem/starsector/preprocessing/patches/CampaignDateWidthPatch.java`
+**对应 ASM Patch**：`src/main/java/org/fossic/starsector/preprocessing/patches/CampaignDateWidthPatch.java`
 
 相关文件：`starfarer_obf.jar: com/fs/starfarer/campaign/ui/Oo0o.class`
 
@@ -191,7 +191,7 @@ jar_pre_processing/
 
 ### 10. 存档列表页存档保存日期未按中文格式化
 
-**对应 ASM Patch**：`src/main/java/com/truthoriginem/starsector/preprocessing/patches/SaveDateLocalePatch.java`
+**对应 ASM Patch**：`src/main/java/org/fossic/starsector/preprocessing/patches/SaveDateLocalePatch.java`
 
 相关文件：`starfarer_obf.jar: com/fs/starfarer/campaign/save/LoadGameDialog$o.class`
 
@@ -208,7 +208,7 @@ jar_pre_processing/
 
 ### 11. 星球列表页部分列宽度不足
 
-**对应 ASM Patch**：`src/main/java/com/truthoriginem/starsector/preprocessing/patches/PlanetListColumnWidthPatch.java`
+**对应 ASM Patch**：`src/main/java/org/fossic/starsector/preprocessing/patches/PlanetListColumnWidthPatch.java`
 
 相关文件：`starfarer_obf.jar: com/fs/starfarer/campaign/ui/intel/PlanetListV2.class`
 
@@ -234,3 +234,29 @@ jar_pre_processing/
 | Hazard（危险度） | 75 | 75 |
 | Dist（距离） | 60 | 60 |
 
+---
+
+### 12. 星系地图星系名称字体偏小
+
+**对应 ASM Patch**：
+- `src/main/java/org/fossic/starsector/preprocessing/patches/StarSystemMapFontPatch.java`
+
+**背景**：星系地图的星系名称 label 在缩放时会在两档字体间切换：
+
+- 缩放值 > 阈值 → 小字（原为 `graphics/fonts/victor10.fnt`）
+- 缩放值 ≤ 阈值 → 大字（原为 `graphics/fonts/victor14.fnt`）
+
+切换逻辑位于通用地图标记父类 `starfarer_obf.jar: com/fs/starfarer/coreui/A/ooOO.class`。
+
+汉字在原始小字体下可读性较差，因此将两档字体整体上调一级。
+
+**修改：两档字体整体上调**
+
+涉及文件：`starfarer_obf.jar: com/fs/starfarer/coreui/A/ooOO.class`
+
+Patch 先替换大字体 `victor14.fnt` → `victor16.fnt`，再替换小字体 `victor10.fnt` → `victor14.fnt`，避免新写入的小字体 `victor14.fnt` 被二次替换。
+
+```diff
+- object = f5 > this.ö00000() ? "graphics/fonts/victor10.fnt" : "graphics/fonts/victor14.fnt";
++ object = f5 > this.ö00000() ? "graphics/fonts/victor14.fnt" : "graphics/fonts/victor16.fnt";
+```
