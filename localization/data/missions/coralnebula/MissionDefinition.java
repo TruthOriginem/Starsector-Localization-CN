@@ -16,13 +16,13 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
 		// Set a blurb for each fleet
 		api.setFleetTagline(FleetSide.PLAYER, "海军都统 Kato 率领的 英仙座联盟 特遣队");
-		api.setFleetTagline(FleetSide.ENEMY, "第三神圣舰队支队和当地非正规军");
+		api.setFleetTagline(FleetSide.ENEMY, "第三神圣舰队支队与左径非正规军");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
-		api.addBriefingItem("你的鱼雷轰炸机是胜利的关键所在");
-		api.addBriefingItem("星体-级航母 Sirocco 的作用是确保战机联队持续作战的重要支柱, 请务必照顾好它");
-		api.addBriefingItem("击败所有敌舰");
+		api.addBriefingItem("善用你的鱼雷轰炸机是取胜的关键");
+		api.addBriefingItem("确保 星体-级 航母 'Sirocco' 驻留在战场上，作为战机联队持续作战的重要支柱");
+		api.addBriefingItem("击败所有敌军");
 		
 		// Set up the player's fleet
 		api.addToFleet(FleetSide.PLAYER, "astral_Strike", FleetMemberType.SHIP, "PLS Sirocco", true);

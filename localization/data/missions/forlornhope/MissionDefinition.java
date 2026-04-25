@@ -21,7 +21,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
 		// Set a blurb for each fleet
 		api.setFleetTagline(FleetSide.PLAYER, "TTS Invincible");
-			api.setFleetTagline(FleetSide.ENEMY, "霸主 防御舰队主要战力");
+			api.setFleetTagline(FleetSide.ENEMY, "霸主 防御舰队的主要战力");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen

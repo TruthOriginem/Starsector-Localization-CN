@@ -23,14 +23,14 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		
 		// Set a small blurb for each fleet that shows up on the mission detail and
 		// mission results screens to identify each side.
-		api.setFleetTagline(FleetSide.PLAYER, "\"这只是一名诚实商人的谋生手段, 警官.\"");
-		api.setFleetTagline(FleetSide.ENEMY, "坏家伙 \"High Rad\" Salazar 以及 Moon 的生锈骡子");
+		api.setFleetTagline(FleetSide.PLAYER, "'只是个混口饭吃的老实商人，长官。'");
+		api.setFleetTagline(FleetSide.ENEMY, "不三不四的二五仔 'High Rad' Moon Salazar，开着一艘破骡子");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
-		api.addBriefingItem("告诉 'High Rad' Moon 撕毁一桩交易会导致什么后果.");
-		api.addBriefingItem("别让 'Stranger II' 挂掉 - 这可是我最宝贵的财富.");
-		api.addBriefingItem("Moon 骡子-级的引擎状态看起来很糟糕, 用火蛇让它飘起来吧.");
+		api.addBriefingItem("让 'High Rad' Moon 明白违背交易的代价");
+		api.addBriefingItem("别让 'Stranger II' 挂掉 —— 那可是我最宝贵的财产");
+		api.addBriefingItem("Moon 舰船的引擎因为改装而十分脆弱；用火蛇导弹让它飘起来吧。");
 		
 		boolean testMode = false;
 		// Set up the player's fleet.  Variant names come from the

@@ -24,7 +24,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
 		api.addBriefingItem("ISS Black Star 必须存活");
-		api.addBriefingItem("至少需要 25% 的霸主舰队撤离战场");
+		api.addBriefingItem("至少 25% 的 霸主 舰队必须撤离");
 		
 		// Set up the player's fleet
 		api.addToFleet(FleetSide.PLAYER, "hammerhead_Elite", FleetMemberType.SHIP, "ISS Black Star", true);

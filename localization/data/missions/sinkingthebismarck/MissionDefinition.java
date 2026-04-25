@@ -23,13 +23,13 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
 		// Set a small blurb for each fleet that shows up on the mission detail and
 		// mission results screens to identify each side.
-		api.setFleetTagline(FleetSide.PLAYER, "速子科技 的侦察舰队和补给船只");
+		api.setFleetTagline(FleetSide.PLAYER, "速子科技 的侦察分队与补给舰");
 		api.setFleetTagline(FleetSide.ENEMY, "HSS Bismar");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
-		api.addBriefingItem("击沉 HSS Bismar");
-		api.addBriefingItem("TTS Chimera 是一艘宝贵的原型机, 请确保它的完好");
+		api.addBriefingItem("摧毁 HSS Bismar");
+		api.addBriefingItem("TTS Chimera 是一台珍贵的原型机，务必确保其存活");
 		
 		// Set up the player's fleet.  Variant names come from the
 		// files in data/variants and data/variants/fighters

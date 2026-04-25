@@ -20,13 +20,13 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
 		// Set a blurb for each fleet
 		api.setFleetTagline(FleetSide.PLAYER, "霸主 巡逻队");
-		api.setFleetTagline(FleetSide.ENEMY, "速子科技 航母支队");
+		api.setFleetTagline(FleetSide.ENEMY, "速子科技 航母分队");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
-		api.addBriefingItem("击败所有敌舰");
-		api.addBriefingItem("击退敌方战机联队将帮助你围攻敌军航母");
-		api.addBriefingItem("在你推进时, 需时刻把握鱼雷来袭的节奏");
+		api.addBriefingItem("击败敌方部队");
+		api.addBriefingItem("撤退中的敌方战机将会带你找到其母舰");
+		api.addBriefingItem("调整你的推进节奏，以应对敌方鱼雷攻击的频率");
 		
 		// Set up the player's fleet
 		//api.addToFleet(FleetSide.PLAYER, "dominator_Assault", FleetMemberType.SHIP, "HSS Shogun", true);

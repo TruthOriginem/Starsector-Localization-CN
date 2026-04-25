@@ -15,15 +15,15 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		api.initFleet(FleetSide.ENEMY, "HSS", FleetGoal.ATTACK, true, 10);
 
 		// Set a blurb for each fleet
-		api.setFleetTagline(FleetSide.PLAYER, "Mayasurian 海军和重型战机支援队");
+		api.setFleetTagline(FleetSide.PLAYER, "Mayasura 海军与重型战机支援队");
 		api.setFleetTagline(FleetSide.ENEMY, "海军准将 Jensulte 指挥的 霸主 舰队");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
-		api.addBriefingItem("击败所有敌舰");
+		api.addBriefingItem("击败所有敌军");
 		api.addBriefingItem("MSS Garuda 必须存活");
-		api.addBriefingItem("保持战术意识, 利用机动战术来参与战斗");
-		api.addBriefingItem("记住: 如果你想与敌方旗舰正面交锋, 那么你就已经输了");
+		api.addBriefingItem("保持战术意识，利用机动性优势选择战斗时机");
+		api.addBriefingItem("记住：如果你与敌方旗舰正面交锋，则必输无疑");
 		
 		// Set up the player's fleet
 		api.addToFleet(FleetSide.PLAYER, "conquest_Standard", FleetMemberType.SHIP, "MSS Garuda", true);

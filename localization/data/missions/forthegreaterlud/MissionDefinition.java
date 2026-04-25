@@ -20,12 +20,12 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		// Set a small blurb for each fleet that shows up on the mission detail and
 		// mission results screens to identify each side.
 		api.setFleetTagline(FleetSide.PLAYER, "ISS Black Star 和 卢德左径 突袭舰队");
-		api.setFleetTagline(FleetSide.ENEMY, "PLS Praxis 与它的护卫以及 速子科技 盟军");
+		api.setFleetTagline(FleetSide.ENEMY, "PLS Praxis 与它的护航舰队以及 速子科技 盟军");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
-		api.addBriefingItem("分散敌人的旗舰, 让轰炸机找准机会从侧翼摧毁敌人.");
-		api.addBriefingItem("击败所有敌舰");
+		api.addBriefingItem("分散敌方旗舰的注意力，让轰炸机从侧翼对其进行包抄");
+		api.addBriefingItem("击败所有敌军");
 		api.addBriefingItem("ISS Black Star 必须存活");
 		
 		// Set up the player's fleet.  Variant names come from the

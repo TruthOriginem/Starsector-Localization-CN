@@ -24,13 +24,13 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		// Set a small blurb for each fleet that shows up on the mission detail and
 		// mission results screens to identify each side.
 		api.setFleetTagline(FleetSide.PLAYER, "速子科技 相位舰队 Gamma III");
-		api.setFleetTagline(FleetSide.ENEMY, "霸主 特种反掠夺巡逻舰队");
+		api.setFleetTagline(FleetSide.ENEMY, "霸主 特种反劫掠巡逻舰队");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
 		api.addBriefingItem("击败所有敌军");
-		api.addBriefingItem("先用赛博 SRM 超载目标，然后用死神鱼雷摧毁它们");
-		api.addBriefingItem("记住: 你的旗舰拥有足够的装甲，因此无需惧怕来袭的蜂群导弹");
+		api.addBriefingItem("先用赛博 SRM 过载顽固目标，再用死神鱼雷摧毁它们");
+		api.addBriefingItem("记住：你旗舰的装甲可以安全地吸收反战机导弹的攻击");
 		
 		// Set up the player's fleet.  Variant names come from the
 		// files in data/variants and data/variants/fighters

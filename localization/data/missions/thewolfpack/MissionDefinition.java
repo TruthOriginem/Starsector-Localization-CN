@@ -20,15 +20,15 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 
 		// Set a small blurb for each fleet that shows up on the mission detail and
 		// mission results screens to identify each side.
-		api.setFleetTagline(FleetSide.PLAYER, "参与突袭的佣兵舰队");
-		api.setFleetTagline(FleetSide.ENEMY, "霸主 护航舰队与货运商队");
+		api.setFleetTagline(FleetSide.PLAYER, "佣兵劫掠者");
+		api.setFleetTagline(FleetSide.ENEMY, "霸主 运输队与护航舰队");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
-		api.addBriefingItem("霸主 的舰队将尝试从地图的顶端逃离");
-		api.addBriefingItem("控制导航浮标是防止敌方快速撤离的关键");
-		api.addBriefingItem("利用 \"全面进攻\" 命令来使你的舰队更积极的搜索并摧毁敌人");
-		api.addBriefingItem("利用 \"消灭\" 命令来使你的舰队更具攻击性");
+		api.addBriefingItem("霸主 的运输队将试图从地图顶端逃离");
+		api.addBriefingItem("控制导航浮标是阻止敌方快速撤离的关键");
+		api.addBriefingItem("下达 全面进攻 指令来使你的舰队积极应战");
+		api.addBriefingItem("下达 歼灭 指令来使特定舰船积极应战");
 //		api.addBriefingItem("Disable as many enemy ships as you can");
 //		api.addBriefingItem("The Deimos must survive");
 		

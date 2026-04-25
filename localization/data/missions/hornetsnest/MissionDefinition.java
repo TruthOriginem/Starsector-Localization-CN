@@ -21,10 +21,10 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
-		api.addBriefingItem("击败所有敌舰");
+		api.addBriefingItem("击败所有敌军");
 		//api.addBriefingItem("ISS Van Rijn must survive");
-		api.addBriefingItem("珍惜你有限的命令点数");
-		api.addBriefingItem("集中你的优势兵力来打击主要目标");
+		api.addBriefingItem("你的指挥点非常有限");
+		api.addBriefingItem("集中你的优势兵力，将敌军逐个击破");
 		
 		// Set up the player's fleet
 		api.addToFleet(FleetSide.PLAYER, "apogee_Balanced", FleetMemberType.SHIP, "ISS Van Rijn", true);

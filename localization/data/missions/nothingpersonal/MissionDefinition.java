@@ -15,16 +15,16 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		api.initFleet(FleetSide.ENEMY, "HSS", FleetGoal.ATTACK, true, 5);
 
 		// Set a blurb for each fleet
-		api.setFleetTagline(FleetSide.PLAYER, "科考舰队与带头的 ISS Athena");
+		api.setFleetTagline(FleetSide.PLAYER, "由 ISS Athena 率领的科考舰队");
 		api.setFleetTagline(FleetSide.ENEMY, "HSS Phoenix 和 霸主 设施警卫舰队");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen
 //		api.addBriefingItem("At least 25% of your forces must escape");
 //		api.addBriefingItem("Ships ordered to retreat will escape along the top edge of the map");
-		api.addBriefingItem("击败所有敌舰");
-		api.addBriefingItem("ISS Enki 必须存活 - 它装载有不可替代的科学设备");
-		api.addBriefingItem("先击毁敌方护卫，然后摧毁它们的旗舰.");
+		api.addBriefingItem("击败敌方部队");
+		api.addBriefingItem("ISS Enki 必须存活 —— 它装载有不可替代的科学设备");
+		api.addBriefingItem("先摧毁敌方的护航舰船，再直击舰队核心");
 		
 		// Set up the player's fleet
 		//api.addToFleet(FleetSide.PLAYER, "apogee_Balanced", FleetMemberType.SHIP, "ISS Van Rijn", true);
