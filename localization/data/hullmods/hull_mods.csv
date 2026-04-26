@@ -120,7 +120,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 军事化子系统,militarized_subsystems,0,,,"req_spaceport, merc, standard","特殊, 后勤, 需要船坞",6000,TRUE,,,4,8,12,20,com.fs.starfarer.api.impl.hullmods.MilitarizedSubsystems,"移除民用级船体的惩罚，并提高 {%s} 最大宇宙航速。
 
 提高 {%s} 最低船员需求。",消除传感器惩罚、提高最大宇宙航速、并增加所需船员数量。,取消本插件导致的额外船员需求。,graphics/hullmods/militarized_subsystems.png
-恒星防护层,solar_shielding,2,,,"defensive, req_spaceport, merc, standard","防御, 后勤, 需要船坞",5000,,,,3,6,9,15,data.hullmods.SolarShielding,"最早由辛达的工程师为应对 Askonia 星系核心区的独特环境而研发。降低 {%s} 恒星日冕对战备值 (CR) 的影响，对超空间内的风暴也有同样的作用。
+恒星防护层,solar_shielding,2,,,"defensive, req_spaceport, merc, standard","防御, 后勤, 需要船坞",5000,,,,3,6,9,15,data.hullmods.SolarShielding,"最早由辛达强权的工程师为应对 Askonia 星系核心区的独特环境而研发。降低 {%s} 恒星日冕对战备值 (CR) 的影响，对超空间内的风暴也有同样的作用。
 
 战斗中降低 {%s} 舰船所受到的能量伤害。",降低星冕影响与所受能量武器的伤害。,对恒星日冕和类似危害的防护提高至 {%s}。,graphics/hullmods/solar_shielding2.png
 勘探设备,surveying_equipment,1,,,"special, req_spaceport, standard","后勤, 需要船坞",5000,,,,5,10,15,25,data.hullmods.SurveyingEquipment,根据船体级别，降低 {%s}/{%s}/{%s}/{%s} 勘探星球时所需的重型机械和补给。所消耗资源的数量最低可降至 {%s}。,降低勘探时所需的资源。,进一步降低 {%s} 的勘探资源花费。,graphics/hullmods/surveying_equipment.png
