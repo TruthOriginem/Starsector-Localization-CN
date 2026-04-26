@@ -260,6 +260,9 @@ class JavaSourceFile(DataFile):
             return ''
         return f'（同值序号：{occurrence_index}）'
 
+    def _path_key(self) -> str:
+        return self.path.as_posix()
+
     def _get_original_string_literals_mapping(self) -> Dict[str, List[JavaStringLiteral]]:
         literals_by_original: Dict[str, List[JavaStringLiteral]] = {}
         for literal in self.original_literals:
@@ -339,10 +342,11 @@ class JavaSourceFile(DataFile):
     def generate_string_key(
         self, literal: JavaStringLiteral, occurrence_index: Optional[int] = None
     ) -> str:
+        path_key = self._path_key()
         if occurrence_index is None:
-            full_key = f'{self.path}#"{literal.value}"'
+            full_key = f'{path_key}#"{literal.value}"'
         else:
-            full_key = f'{self.path}#"{literal.value}":{occurrence_index}'
+            full_key = f'{path_key}#"{literal.value}":{occurrence_index}'
 
         full_key_escaped = json.dumps(full_key)[1:-1]
         if len(full_key_escaped) <= MAX_STRING_KEY_LENGTH:
@@ -353,7 +357,7 @@ class JavaSourceFile(DataFile):
         new_string_length = new_length - new_path_length
 
         key_hash = hash_string(full_key)
-        path_str = str(self.path)
+        path_str = path_key
         new_path = (
             path_str
             if len(path_str) <= new_path_length
@@ -391,7 +395,7 @@ class JavaSourceFile(DataFile):
 
             context = (
                 f'{EXPORTED_STRING_CONTEXT_PREFIX}'
-                f'文件：{self.path}\n'
+                f'文件：{self._path_key()}\n'
                 f'源码序号：{original_literal.source_index}\n'
             )
             if occurrence.include_occurrence_index:
@@ -443,10 +447,10 @@ class JavaSourceFile(DataFile):
                 continue
 
             context = self.parse_java_string_context(s.context)
-            if context.path != str(self.path):
+            if context.path != self._path_key():
                 raise ValueError(
                     f'词条 key={s.key}{self._format_occurrence_index(context.occurrence_index)} '
-                    f'的上下文 Java 文件为 {context.path}，但当前正在更新 {self.path}'
+                    f'的上下文 Java 文件为 {context.path}，但当前正在更新 {self._path_key()}'
                 )
 
             rule = include_rules.get(context.original)
@@ -547,7 +551,7 @@ class JavaSourceFile(DataFile):
         return files
 
     def export_map_item(self) -> JavaMapItem:
-        item = JavaMapItem(type='java', path=str(self.path))
+        item = JavaMapItem(type='java', path=self._path_key())
         literals_by_original = self._get_original_string_literals_mapping()
         for original, literals in literals_by_original.items():
             if len(literals) == 1:
