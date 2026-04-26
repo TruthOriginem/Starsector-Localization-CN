@@ -12,8 +12,8 @@ from para_tranz.config import (
     OVERRIDE_STRING_STATUS,
     TRANSLATION_PATH,
 )
-from para_tranz.utils.mapping import ClassFileMapItem, IncludeStringRule, PARA_TRANZ_MAP, JarMapItem
-from para_tranz.utils.util import DataFile, String, make_logger, rename_class_path
+from para_tranz.utils.mapping import PARA_TRANZ_MAP, JarMapItem
+from para_tranz.utils.util import DataFile, String, make_logger
 
 
 class JavaJarFile(DataFile):
@@ -112,14 +112,10 @@ class JavaJarFile(DataFile):
         self.write_json_strings(self.para_tranz_path, strings, ensure_ascii, indent)
         self.logger.info(f'从 {self.path} 中导出了 {len(strings)} 个词条到 {self.para_tranz_path}')
 
-    def update_strings(
-        self, strings: List[String], version_migration: bool = False
-    ) -> None:
+    def update_strings(self, strings: List[String]) -> None:
         class_file_path_strings_mapping = {
             class_file_path: [] for class_file_path in self.class_files
         }  # type: Dict[str, List[String]]
-
-        strings_without_class = []
 
         for s in strings:
             try:
@@ -146,27 +142,20 @@ class JavaJarFile(DataFile):
             class_file = self.class_files.get(class_file_path, None)
 
             if class_file is None:
-                if not version_migration:
-                    if (
-                        IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS
-                        and not s.context.startswith(
-                            EXPORTED_STRING_CONTEXT_PREFIX_PREFIX
-                        )
-                    ):
-                        self.logger.debug(
-                            f'在 {self.path} 中词条 key={s.key}{JavaClassFile._format_occurrence_index(parsed_context.occurrence_index)} '
-                            f'的词条上下文前缀与当前上下文前缀不匹配，跳过词条'
-                        )
-                    else:
-                        self.logger.warning(
-                            f'在更新词条 {s.key}{JavaClassFile._format_occurrence_index(parsed_context.occurrence_index)} 时，'
-                            f'在文件 {self.path} 中找不到类 {class_file_path}。未更新该词条。'
-                        )
-                else:
-                    strings_without_class.append(s)
+                if (
+                    IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS
+                    and not s.context.startswith(
+                        EXPORTED_STRING_CONTEXT_PREFIX_PREFIX
+                    )
+                ):
                     self.logger.debug(
+                        f'在 {self.path} 中词条 key={s.key}{JavaClassFile._format_occurrence_index(parsed_context.occurrence_index)} '
+                        f'的词条上下文前缀与当前上下文前缀不匹配，跳过词条'
+                    )
+                else:
+                    self.logger.warning(
                         f'在更新词条 {s.key}{JavaClassFile._format_occurrence_index(parsed_context.occurrence_index)} 时，'
-                        f'在文件 {self.path} 中找不到类 {class_file_path}。稍后尝试进行模糊匹配。'
+                        f'在文件 {self.path} 中找不到类 {class_file_path}。未更新该词条。'
                     )
                 continue
 
@@ -174,114 +163,6 @@ class JavaJarFile(DataFile):
 
         for class_file_path, strings in class_file_path_strings_mapping.items():
             self.class_files[class_file_path].update_strings(strings)
-
-        if not version_migration or len(strings_without_class) == 0:
-            return
-
-        # 版本迁移时，为找不到类的词条进行模糊匹配
-        self.logger.info(
-            '存在未找到类的词条，准备进行模糊匹配，开始加载jar中的所有类文件'
-        )
-        self.load_all_classes_in_jar()
-
-        self.logger.info(f'开始进行模糊匹配，共 {len(strings_without_class)} 个词条')
-        match_success_count = 0
-
-        strings_by_class = {}
-        for s in strings_without_class:
-            class_path = JavaClassFile.parse_jar_string_context(s.context).class_path
-            if class_path not in strings_by_class:
-                strings_by_class[class_path] = []
-            strings_by_class[class_path].append(s)
-
-        for class_file_path, strings in strings_by_class.items():
-            self.logger.info(f'开始为类 {class_file_path} 进行模糊匹配')
-            matched_class = self._fuzzy_match_class_file(class_file_path, strings)
-            if matched_class is None:
-                self.logger.warning(
-                    f'在更新词条时，未能通过模糊匹配在文件 {self.path} 中找到类 {class_file_path} 对应的新类。未更新该词条。'
-                )
-                continue
-            match_success_count += matched_class.update_strings(strings)
-
-            # 更新mapping文件，添加该类的原文映射
-            jar_map_item = PARA_TRANZ_MAP.get_item_by_path(self.path)
-            if jar_map_item is None:
-                raise ValueError(
-                    f'在更新词条时，未能在mapping文件中找到 jar 文件 {self.path} 对应的映射'
-                )
-            class_map_item = jar_map_item.get_class_file_item(
-                str(matched_class.path), create=True
-            )  # type: ClassFileMapItem
-            original_strings = {s.original for s in strings}
-            for original in original_strings:
-                class_map_item.add_include_rule(IncludeStringRule(original, None))
-
-        self.logger.info(
-            f'模糊匹配完成，共 {match_success_count} / {len(strings_without_class)} 个词条成功匹配'
-        )
-
-        PARA_TRANZ_MAP.save()
-        self.logger.info('保存mapping文件完成')
-
-    def _fuzzy_match_class_file(
-        self, class_file_path: str, strings: Optional[List[String]]
-    ) -> Optional['JavaClassFile']:
-        normalized_path = rename_class_path(class_file_path)
-        matched_classes: List[JavaClassFile] = []
-
-        normalized_class_files = {}
-
-        for class_file in self.class_files.values():
-            normalized_name = rename_class_path(str(class_file.path))
-            if normalized_name not in normalized_class_files:
-                normalized_class_files[normalized_name] = [class_file]
-            else:
-                normalized_class_files[normalized_name].append(class_file)
-
-        if normalized_path in normalized_class_files:
-            matched_classes = normalized_class_files[normalized_path]
-
-        if not matched_classes:
-            self.logger.info(
-                f'在文件 {self.path} 按类名模糊匹配 {class_file_path} 时，未能找到可能的结果'
-            )
-            return None
-
-        if strings is None:
-            self.logger.info(
-                f'在文件 {self.path} 中成功建立匹配关系，类 {class_file_path} ==> {matched_classes[0].path}'
-            )
-            return matched_classes[0]
-
-        best_match = None
-        best_match_rate = 0
-
-        for matched_class in matched_classes:
-            string_match_count = 0
-            matched_class_original_strings = {
-                s.original for s in matched_class.get_strings()
-            }
-            for s in strings:
-                if s.original in matched_class_original_strings:
-                    string_match_count += 1
-
-            match_rate = string_match_count / len(strings)
-            if match_rate >= best_match_rate:
-                best_match = matched_class
-                best_match_rate = match_rate
-
-        assert best_match is not None  # matched_classes 非空时循环必定赋值
-        if best_match_rate >= 0.5:
-            self.logger.info(
-                f'在文件 {self.path} 中成功建立匹配关系，类 {class_file_path} => {best_match.path}，匹配率 {best_match_rate}'
-            )
-            return best_match
-        else:
-            self.logger.info(
-                f'在文件 {self.path} 中找到匹配关系，类 {class_file_path} => {best_match.path}，但匹配率 {best_match_rate} 过低不予采用'
-            )
-            return None
 
     def save_file(self) -> None:
         # 对于每一个已读取的class文件，生成新的字节码

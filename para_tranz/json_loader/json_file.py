@@ -365,9 +365,7 @@ class JsonFile(DataFile):
 
         return strings
 
-    def update_strings(
-        self, strings: List[String], version_migration: bool = False
-    ) -> None:
+    def update_strings(self, strings: List[String]) -> None:
         if self._translation_root is None:
             self.logger.warning(
                 f'译文文件不存在，无法更新：{relative_path(self.translation_path)}'

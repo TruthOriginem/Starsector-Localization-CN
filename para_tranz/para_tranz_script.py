@@ -39,13 +39,6 @@ def paratranz_to_game() -> None:
     logger.info('ParaTranz 词条导入到译文数据完成')
 
 
-def paratranz_to_game_new_version() -> None:
-    for Loader in loaders:
-        for file in Loader.load_files_from_config():
-            file.update_from_json(version_migration=True)
-            file.save_file()
-
-
 def download_and_import_from_paratranz() -> None:
     success = download_paratranz_export()
     if success:

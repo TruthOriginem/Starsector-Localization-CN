@@ -65,7 +65,7 @@ class TxtFile(DataFile):
             )
         ]
 
-    def update_strings(self, strings: List[String], version_migration: bool = False) -> None:
+    def update_strings(self, strings: List[String]) -> None:
         key = self._key()
         for s in strings:
             if s.key != key:

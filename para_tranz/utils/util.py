@@ -2,7 +2,6 @@ import dataclasses
 import hashlib
 import json
 import logging
-import re
 import sys
 import urllib.parse
 from dataclasses import dataclass
@@ -150,9 +149,7 @@ class DataFile:
     def get_strings(self) -> List[String]:
         raise NotImplementedError
 
-    def update_strings(
-        self, strings: List[String], version_migration: bool = False
-    ) -> None:
+    def update_strings(self, strings: List[String]) -> None:
         raise NotImplementedError
 
     def obsolete_existing_keys(
@@ -207,14 +204,14 @@ class DataFile:
             f'从 {relative_path(self.path)} 中导出了 {len(strings)} 个词条到 {relative_path(self.para_tranz_path)}'
         )
 
-    def update_from_json(self, version_migration: bool = False) -> None:
+    def update_from_json(self) -> None:
         """
         从json文件读取 ParaTranz 词条数据对象中的译文数据合并到现有数据中
         :return:
         """
         if self.para_tranz_path.exists():
             strings = self.read_json_strings(self.para_tranz_path)
-            self.update_strings(strings, version_migration)
+            self.update_strings(strings)
             self.logger.info(
                 f'从 {relative_path(self.para_tranz_path)} 加载了 {len(strings)} 个词条到 {relative_path(self.translation_path)}'
             )
@@ -296,34 +293,6 @@ def replace_weird_chars(s: str) -> str:
         .replace('\udc96', '-')
         .replace('\udc85', '...')
     )
-
-
-def rename_class_path(class_path: str) -> str:
-    """
-    将类路径中可能因混淆产生的部分替换为一个标准形式以便模糊匹配
-    """
-    segments = class_path.split('/')
-
-    def normalize(s: str) -> str:
-        if re.fullmatch(r'[Oo0]+', s):
-            return 'O'
-        elif re.fullmatch(r'[a-zA-Z0-9]', s):
-            return 'X'
-        elif re.fullmatch(r'([A-Z][a-z0-9]*)+', s):
-            # 返回驼峰的所有开头字母
-            return ''.join([c for c in s if c.isupper() or c.isdigit()]).lower()
-        else:
-            return s
-
-    name_segments = segments[-1].removesuffix('.class').split('$')
-    class_name = normalize(name_segments[0])
-    if len(name_segments) > 1:
-        subclass_name = normalize(name_segments[1])
-        class_name += '$' + subclass_name
-
-    class_name += '.class'
-
-    return '/'.join([normalize(s) for s in segments[:-1]] + [class_name])
 
 
 def url_encode(s: str) -> str:
