@@ -26,6 +26,7 @@ from para_tranz.utils.util import (
     make_logger,
     relative_path,
     replace_weird_chars,
+    should_write_translation,
 )
 
 
@@ -116,7 +117,7 @@ class CsvFile(DataFile):
                 continue
             if row_id in self.translation_id_data and row_id in self.original_id_data:
                 # 如果词条已翻译并且译文不为空
-                if s.stage > 0 and s.translation:
+                if should_write_translation(s):
                     if self.original_id_data[row_id][column] == '':
                         self.logger.warning(
                             f'文件 {self.path} 中 {self.id_column_name}="{row_id}" 的行中 "{column}" 列原文为空，'
@@ -146,6 +147,11 @@ class CsvFile(DataFile):
             f'开始在保存前校验 {relative_path(self.translation_path)} 中的译文数据'
         )
         for row_id, translated_row in self.translation_id_data.items():
+            if row_id not in self.original_id_data:
+                raise ValueError(
+                    f'文件 {relative_path(self.translation_path)} 中存在原文文件没有的有效行：'
+                    f'{self.id_column_name}="{row_id}"，请删除该行或同步原文文件'
+                )
             original_row = self.original_id_data[row_id]
             # 检查译文是否包含中文引号
             for col, translated_value in translated_row.items():
@@ -273,6 +279,12 @@ class CsvFile(DataFile):
         if len(self.original_id_data) != len(self.translation_id_data):
             self.logger.warning(
                 f'文件 {relative_path(self.path)} 所加载的未被注释且不为空的原文与译文数据量不匹配：加载有效原文 {len(self.original_id_data)} 条，有效译文 {len(self.translation_id_data)} 条'
+            )
+        extra_translation_ids = set(self.translation_id_data) - set(self.original_id_data)
+        if extra_translation_ids:
+            raise ValueError(
+                f'文件 {relative_path(self.translation_path)} 中存在原文文件没有的有效行：'
+                f'{sorted(extra_translation_ids)}，请删除这些行或同步原文文件'
             )
 
     # 从原文和译文csv中读取数据

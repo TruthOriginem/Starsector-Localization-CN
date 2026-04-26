@@ -4,9 +4,10 @@ import json
 import logging
 import sys
 import urllib.parse
+from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Set, Union
+from typing import Any, Dict, List, Optional, Union
 
 from para_tranz.config import (
     LOG_FILE_PATH,
@@ -122,6 +123,10 @@ class String:
         return dataclasses.asdict(self)
 
 
+def should_write_translation(string: String, allow_empty: bool = False) -> bool:
+    return string.stage > 0 and (bool(string.translation) or allow_empty)
+
+
 class DataFile:
     logger = make_logger('util.py - DataFile')
     export_empty_strings = False  # jar子类覆盖为True以允许导出空原文词条
@@ -152,57 +157,73 @@ class DataFile:
     def update_strings(self, strings: List[String]) -> None:
         raise NotImplementedError
 
-    def obsolete_existing_keys(
-        self, strings: List[String], existing: List[String]
-    ) -> Set[str]:
-        return set()
-
     def save_json(self, ensure_ascii: bool = False, indent: int = 4) -> None:
-        strings = [
-            s for s in self.get_strings() if s.original or self.export_empty_strings
-        ]  # jar文件导出空原文词条，csv文件不导出
+        self.save_json_files([self], ensure_ascii, indent)
 
-        my_keys = {s.key for s in strings}
-        other_strings: List[String] = []
+    @classmethod
+    def save_json_files(
+        cls,
+        files: List['DataFile'],
+        ensure_ascii: bool = False,
+        indent: int = 4,
+    ) -> None:
+        output_path_files: Dict[Path, List['DataFile']] = defaultdict(list)
+        for file in files:
+            output_path_files[file.para_tranz_path].append(file)
 
-        # 如果 Paratranz json 文件已存在：同步 stage，并保留其他文件的词条（合并输出场景）
-        if self.para_tranz_path.exists():
-            self.logger.debug(
-                f'Paratranz 平台数据文件 {relative_path(self.para_tranz_path)} 已存在，从中读取已翻译词条的词条stage状态'
-            )
-            existing = self.read_json_strings(self.para_tranz_path)
-            obsolete_keys = self.obsolete_existing_keys(strings, existing)
+        for output_path, grouped_files in output_path_files.items():
+            strings: List[String] = []
+            for file in grouped_files:
+                file_strings = [
+                    s
+                    for s in file.get_strings()
+                    if s.original or file.export_empty_strings
+                ]
+                if not file_strings:
+                    file.logger.info(
+                        f'从 {relative_path(file.path)} 中未提取到可翻译词条，跳过导出'
+                    )
+                    continue
+                strings.extend(file_strings)
+                file.logger.info(
+                    f'从 {relative_path(file.path)} 中提取了 {len(file_strings)} 个词条'
+                )
 
-            if not OVERRIDE_STRING_STATUS:
+            if not strings:
+                if output_path.exists():
+                    cls.write_json_strings(output_path, [], ensure_ascii, indent)
+                    cls.logger.info(
+                        f'当前配置未导出任何词条，已清空 {relative_path(output_path)}'
+                    )
+                continue
+
+            if output_path.exists() and not OVERRIDE_STRING_STATUS:
+                cls.logger.debug(
+                    f'Paratranz 平台数据文件 {relative_path(output_path)} 已存在，从中读取已翻译词条的词条stage状态'
+                )
                 special_stages = (1, 2, 3, 5, 9, -1)
-                para_key_strings = {
-                    s.key: s for s in existing if s.stage in special_stages
-                }  # type:Dict[str, String]
+                existing_stages = {
+                    s.key: s.stage
+                    for s in cls.read_json_strings(output_path)
+                    if s.stage in special_stages
+                }
                 for s in strings:
-                    if s.key in para_key_strings:
-                        para_s = para_key_strings[s.key]
-                        if s.stage != para_s.stage:
-                            self.logger.debug(
-                                f'更新词条 {s.key} 的stage：{s.stage}->{para_s.stage}'
-                            )
-                            s.stage = para_s.stage
+                    if s.key in existing_stages and s.stage != existing_stages[s.key]:
+                        cls.logger.debug(
+                            f'更新词条 {s.key} 的stage：{s.stage}->{existing_stages[s.key]}'
+                        )
+                        s.stage = existing_stages[s.key]
 
-            # 保留不属于本文件的词条（用于合并输出）
-            other_strings = [
-                s for s in existing if s.key not in my_keys and s.key not in obsolete_keys
-            ]
+            cls.write_json_strings(output_path, strings, ensure_ascii, indent)
 
-        if not strings:
-            self.logger.info(f'从 {relative_path(self.path)} 中未提取到可翻译词条，跳过导出')
-            return
-
-        self.write_json_strings(
-            self.para_tranz_path, other_strings + strings, ensure_ascii, indent
-        )
-
-        self.logger.info(
-            f'从 {relative_path(self.path)} 中导出了 {len(strings)} 个词条到 {relative_path(self.para_tranz_path)}'
-        )
+            source_text = (
+                str(relative_path(grouped_files[0].path))
+                if len(grouped_files) == 1
+                else f'{len(grouped_files)} 个文件'
+            )
+            cls.logger.info(
+                f'从 {source_text} 中导出了 {len(strings)} 个词条到 {relative_path(output_path)}'
+            )
 
     def update_from_json(self) -> None:
         """

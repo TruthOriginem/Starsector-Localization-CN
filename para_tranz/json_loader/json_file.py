@@ -19,7 +19,13 @@ from para_tranz.json_loader.alexson.config import Config as AlexsonConfig
 from para_tranz.json_loader.alexson.parser import AlexsonParser
 from para_tranz.json_loader.alexson.syntax_tree import Array, Object, Root
 from para_tranz.json_loader.alexson.syntax_tree import String as AlexsonString
-from para_tranz.utils.util import DataFile, String, make_logger, relative_path
+from para_tranz.utils.util import (
+    DataFile,
+    String,
+    make_logger,
+    relative_path,
+    should_write_translation,
+)
 
 _ALEXSON_CONFIG = AlexsonConfig(allow_duplicate_keys=True)
 
@@ -397,9 +403,9 @@ class JsonFile(DataFile):
                     self.logger.debug(f'跳过版本前缀不匹配的词条：{key}')
                     continue
 
-            translation = pt_string.translation
-            if not translation:
+            if not should_write_translation(pt_string):
                 continue
+            translation = pt_string.translation
 
             exact_segs = _parse_exact_path(json_path)
 

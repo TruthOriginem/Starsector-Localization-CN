@@ -24,6 +24,7 @@ from para_tranz.utils.util import (
     contains_english,
     hash_string,
     make_logger,
+    should_write_translation,
 )
 
 
@@ -488,9 +489,7 @@ class JavaClassFile:
             # 如果原文在原文jar中只被常量引用
             if original_constant not in const_ref_by_other_attrs:
                 # 如果译文已被翻译且不为空（这个条件写在里面是因为要优先报出“也被其他非string属性引用”的警告）
-                if s.stage > 0 and (
-                    s.translation or UPDATE_STRING_ALLOW_EMPTY_TRANSLATION
-                ):
+                if should_write_translation(s, UPDATE_STRING_ALLOW_EMPTY_TRANSLATION):
                     translation.string = s.translation
                     update_success_count += 1
                 else:

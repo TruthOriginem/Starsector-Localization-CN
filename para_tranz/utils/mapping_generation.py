@@ -1,5 +1,6 @@
 import dataclasses
 import json
+import re
 from dataclasses import asdict
 from typing import Optional, Set, Tuple
 
@@ -32,20 +33,36 @@ def generate_class_mapping_diff_string(
     :return: 可打印的对比信息，带有ANSI颜色标记
     """
 
-    included_strings = target_class_map.include_strings
+    included_rules = target_class_map.get_include_rules()
+
+    def _is_included(source_rule) -> bool:
+        for target_rule in included_rules:
+            if target_rule.val != source_rule.val:
+                continue
+            if target_rule.occurs is None:
+                return True
+            return target_rule.occurs == source_rule.occurs
+        return False
 
     diff_str = f'  "path": "{source_class_map.path}",\n'
     diff_str += '  "include_strings": [\n'
-    for s in sorted(list(source_class_map.include_strings)):
-        # JSON 转义字符串内容（去掉 json.dumps 产生的外层引号），保证含双引号的字符串输出合法
-        s_escaped = json.dumps(s, ensure_ascii=False)[1:-1]
-        if s in included_strings:
-            text = colorize(s_escaped, GREEN)
+    for rule in source_class_map.get_include_rules():
+        item = rule.to_json_value()
+        item_json = json.dumps(item, ensure_ascii=False)
+        item_json = re.sub(
+            r'"occurs": \[([^\]]*)\]',
+            lambda m: '"occurs": ['
+            + ', '.join(x.strip().rstrip(',') for x in m.group(1).split('\n') if x.strip())
+            + ']',
+            item_json,
+        )
+        if _is_included(rule):
+            text = colorize(item_json, GREEN)
         else:
-            text = s_escaped
-        if extra_ref_strings and s in extra_ref_strings:
+            text = item_json
+        if extra_ref_strings and rule.val in extra_ref_strings:
             text = colorize(text, BG_YELLOW)
-        diff_str += f'    "{text}",\n'
+        diff_str += f'    {text},\n'
     diff_str = diff_str[:-2] + '\n'
     diff_str += '  ]\n'
 

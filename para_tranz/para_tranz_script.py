@@ -16,7 +16,7 @@ from para_tranz.utils.mapping_generation import (
 )
 from para_tranz.utils.paratranz_api import download_paratranz_export
 from para_tranz.utils.search import print_search_results, search_for_string_in_jar_files
-from para_tranz.utils.util import make_logger
+from para_tranz.utils.util import DataFile, make_logger
 
 logger = make_logger('ParaTranzScript')
 
@@ -26,8 +26,7 @@ loaders = [_LOADER_MAP[name] for name in ENABLED_LOADERS if name in _LOADER_MAP]
 
 def game_to_paratranz() -> None:
     for Loader in loaders:
-        for file in Loader.load_files_from_config():
-            file.save_json()
+        DataFile.save_json_files(Loader.load_files_from_config())
     logger.info('ParaTranz 词条导出完成')
 
 

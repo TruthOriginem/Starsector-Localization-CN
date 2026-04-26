@@ -9,7 +9,6 @@ from para_tranz.config import (
     EXPORTED_STRING_CONTEXT_PREFIX_PREFIX,
     IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS,
     ORIGINAL_PATH,
-    OVERRIDE_STRING_STATUS,
     TRANSLATION_PATH,
 )
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, JarMapItem
@@ -88,30 +87,6 @@ class JavaJarFile(DataFile):
 
         return class_file
 
-    def save_json(self, ensure_ascii: bool = False, indent: int = 4) -> None:
-        strings = [s for s in self.get_strings() if s.original or self.export_empty_strings]
-
-        if not strings:
-            self.logger.info(f'从 {self.path} 中未提取到可翻译词条，跳过导出')
-            return
-
-        # 从已有 output 同步 stage（保留平台上的翻译状态），但不保留任何旧词条。
-        # jar 导出结果严格等于当前 map 定义的内容，不使用 other_strings 合并机制。
-        if self.para_tranz_path.exists() and not OVERRIDE_STRING_STATUS:
-            special_stages = (1, 2, 3, 5, 9, -1)
-            existing_stages = {
-                s.key: s.stage
-                for s in self.read_json_strings(self.para_tranz_path)
-                if s.stage in special_stages
-            }
-            for s in strings:
-                if s.key in existing_stages and s.stage != existing_stages[s.key]:
-                    self.logger.debug(f'更新词条 {s.key} 的stage：{s.stage}->{existing_stages[s.key]}')
-                    s.stage = existing_stages[s.key]
-
-        self.write_json_strings(self.para_tranz_path, strings, ensure_ascii, indent)
-        self.logger.info(f'从 {self.path} 中导出了 {len(strings)} 个词条到 {self.para_tranz_path}')
-
     def update_strings(self, strings: List[String]) -> None:
         class_file_path_strings_mapping = {
             class_file_path: [] for class_file_path in self.class_files
@@ -172,6 +147,10 @@ class JavaJarFile(DataFile):
             # 如果字节码有变化，则将新的字节码加入 updated_file_contents
             if new_bytecode != class_file.translation_bytes:
                 updated_file_contents[str(class_file.path)] = new_bytecode
+
+        if not updated_file_contents:
+            self.logger.info(f'{self.path} 中没有 class 字节码变化，跳过重写 jar')
+            return
 
         # 生成新的jar文件，写入新的class文件，并将老jar中的其它文件也复制进去
         with zipfile.ZipFile(self.translation_path.with_suffix('.temp'), 'w') as zf:

@@ -13,7 +13,13 @@ from para_tranz.config import (
     ORIGINAL_PATH,
     PARA_TRANZ_PATH,
 )
-from para_tranz.utils.util import DataFile, String, make_logger, relative_path
+from para_tranz.utils.util import (
+    DataFile,
+    String,
+    make_logger,
+    relative_path,
+    should_write_translation,
+)
 
 
 class TxtFile(DataFile):
@@ -67,20 +73,23 @@ class TxtFile(DataFile):
 
     def update_strings(self, strings: List[String]) -> None:
         key = self._key()
+        found = False
         for s in strings:
             if s.key != key:
                 continue
+            found = True
             if IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS and s.context:
                 if not s.context.startswith(EXPORTED_STRING_CONTEXT_PREFIX_PREFIX):
                     self.logger.debug(f'跳过版本前缀不匹配的词条：{key}')
                     continue
-            if not s.translation:
+            if not should_write_translation(s):
                 continue
             self._translation_text = s.translation
             return
-        self.logger.warning(
-            f'在 {relative_path(self.translation_path)} 中未找到词条 key={key!r}，未写入译文'
-        )
+        if not found:
+            self.logger.warning(
+                f'在 {relative_path(self.translation_path)} 中未找到词条 key={key!r}，未写入译文'
+            )
 
     def save_file(self) -> None:
         if self._translation_text is None:
