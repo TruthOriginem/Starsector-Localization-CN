@@ -32,7 +32,7 @@ public class AdvancedOptics extends BaseHullMod {
 	
 	public String getUnapplicableReason(ShipAPI ship) {
 		if (ship.getVariant().getHullMods().contains(HullMods.HIGH_SCATTER_AMP)) {
-			return "Incompatible with High Scatter Amplifier";
+			return "不兼容于 高散射增幅器";
 		}
 		return null;
 	}
