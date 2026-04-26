@@ -64,8 +64,8 @@ class CSVParserAlex:
                 headerList.append(header)
 
             csvContent = csvContent[newlineIndex + 1 :] + '\n'
-            currentRow: Union[dict, None] = None
-            currentCellBuffer: Union[List[str], None] = None
+            currentRow: dict = {}
+            currentCellBuffer: List[str] = []
             columnIndex: int = 0
             lastQuotedString: List[str] = []
             lastRowString: Union[str, None] = None

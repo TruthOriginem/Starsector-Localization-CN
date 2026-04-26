@@ -1,5 +1,5 @@
 from enum import Enum
-from typing import List, Set, Union
+from typing import List, Optional, Set, Union, cast
 
 
 class ConstantType(Enum):
@@ -49,7 +49,7 @@ class ConstantTable:
         self.class_bytes = class_bytes
         self.constant_count = int.from_bytes(class_bytes[8:10], 'big')
 
-        self.table_end_index = None
+        self.table_end_index: Optional[int] = None
 
         self.constants: List[Union['BaseConstant', bytes]] = []
         self.utf8_string_references: Set[int] = set()
@@ -126,7 +126,7 @@ class ConstantTable:
         获取常量表中所有被String类型常量引用的Utf8常量
         """
         return [
-            self.constants[i - 1]
+            cast(Utf8Constant, self.constants[i - 1])
             for i in self.utf8_string_references
             if isinstance(self.constants[i - 1], Utf8Constant)
         ]
@@ -136,7 +136,7 @@ class ConstantTable:
         获取常量表中所有被String常量和其他常量同时引用的Utf8常量
         """
         return [
-            self.constants[i - 1]
+            cast(Utf8Constant, self.constants[i - 1])
             for i in (self.utf8_other_references & self.utf8_string_references)
             if isinstance(self.constants[i - 1], Utf8Constant)
         ]
@@ -160,7 +160,7 @@ class BaseConstant:
         self.constant_index = constant_index
 
     def to_bytes(self) -> bytes:
-        pass
+        raise NotImplementedError
 
 
 class Utf8Constant(BaseConstant):

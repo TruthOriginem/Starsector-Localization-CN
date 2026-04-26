@@ -4,7 +4,7 @@ from ast import literal_eval
 from csv import DictReader
 from dataclasses import asdict
 from pathlib import Path
-from typing import Dict, List, Optional, Set, Tuple, Union
+from typing import Dict, List, Optional, Sequence, Set, Tuple, Union
 
 from para_tranz.csv_loader.csv_util import (
     rules_csv_extract_highlight_targets_from_script,
@@ -36,7 +36,7 @@ class CsvFile(DataFile):
     def __init__(
         self,
         path: Path,
-        id_column_name: str,
+        id_column_name: Union[str, List[str]],
         text_column_names: Set[str],
         original_path: Optional[Path] = None,
         translation_path: Optional[Path] = None,
@@ -323,6 +323,8 @@ class CsvFile(DataFile):
                 replace_weird_chars(line).replace('\\n', '^n') for line in csv_file
             ]
             rows: List[Dict[str, str]] = list(DictReader(csv_lines))
+            if not rows:
+                raise ValueError(f'文件 {path} 为空或缺少数据行')
             columns = list(rows[0].keys())
             for i, row in enumerate(rows):
                 if isinstance(id_column_name, str):
@@ -350,7 +352,7 @@ class CsvFile(DataFile):
         return columns, data, id_data
 
     @classmethod
-    def load_files_from_config(cls) -> List['CsvFile']:
+    def load_files_from_config(cls) -> Sequence['CsvFile']:
         """
         根据 para_tranz_map.json 设置，批量读取原文、译文csv文件
         :return: CsvFile文件对象列表

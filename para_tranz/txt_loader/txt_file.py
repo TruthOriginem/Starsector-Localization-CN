@@ -4,7 +4,7 @@
 """
 
 from pathlib import Path
-from typing import List, Optional, Union
+from typing import List, Optional, Sequence, Union
 
 from para_tranz.config import (
     EXPORTED_STRING_CONTEXT_PREFIX,
@@ -101,7 +101,7 @@ class TxtFile(DataFile):
         self.logger.info(f'已保存译文文件：{relative_path(self.translation_path)}')
 
     @classmethod
-    def load_files_from_config(cls) -> List['TxtFile']:
+    def load_files_from_config(cls) -> Sequence['TxtFile']:
         from para_tranz.utils.mapping import PARA_TRANZ_MAP, TxtMapItem
 
         files: List['TxtFile'] = []

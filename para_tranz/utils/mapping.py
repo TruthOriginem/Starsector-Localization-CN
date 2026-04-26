@@ -2,7 +2,7 @@ import dataclasses
 import json
 import re
 from dataclasses import dataclass
-from typing import Dict, Iterator, List, Optional, Set, Tuple, Union
+from typing import Dict, Iterator, List, Optional, Set, Tuple, Union, overload
 
 from para_tranz.config import MAP_PATH
 from para_tranz.utils.util import SetEncoder, make_logger
@@ -65,7 +65,7 @@ class CsvMapItem(ParaTranzMapItem):
 @dataclass
 class ClassFileMapItem:
     path: str
-    include_strings: Optional[List[Union[str, dict]]] = dataclasses.field(default_factory=list)
+    include_strings: List[Union[str, dict]] = dataclasses.field(default_factory=list)
 
     def __post_init__(self):
         self.include_strings = self._normalize_include_strings(self.include_strings)
@@ -187,7 +187,7 @@ class JarMapItem(ParaTranzMapItem):
         include_strings: Optional[List[Union[str, dict]]] = None,
     ):
         self.class_files.append(
-            ClassFileMapItem(path, include_strings)
+            ClassFileMapItem(path, include_strings or [])
         )
 
     def get_class_file_item(
@@ -209,7 +209,7 @@ class JarMapItem(ParaTranzMapItem):
         d['class_files'] = [
             ClassFileMapItem(
                 path=item['path'],
-                include_strings=item.get('include_strings'),
+                include_strings=item.get('include_strings') or [],
             )
             for item in d['class_files']
         ]
@@ -218,12 +218,18 @@ class JarMapItem(ParaTranzMapItem):
 
 class ParaTranzMap:
     def __init__(self):
-        self.items = []
+        self.items: List[ParaTranzMapItem] = []
 
-    def __getitem__(self, item) -> Union[CsvMapItem, JarMapItem]:
+    @overload
+    def __getitem__(self, item: int) -> ParaTranzMapItem: ...
+
+    @overload
+    def __getitem__(self, item: slice) -> List[ParaTranzMapItem]: ...
+
+    def __getitem__(self, item: Union[int, slice]) -> Union[ParaTranzMapItem, List[ParaTranzMapItem]]:
         return self.items[item]
 
-    def __iter__(self) -> Iterator[Union[CsvMapItem, JarMapItem]]:
+    def __iter__(self) -> Iterator[ParaTranzMapItem]:
         return iter(self.items)
 
     def get_item_by_path(self, path: str) -> Optional[ParaTranzMapItem]:

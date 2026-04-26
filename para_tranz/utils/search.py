@@ -78,7 +78,7 @@ def search_for_string_in_jar_files(pattern: str) -> List[StringSearchResult]:
             for s in strings:
                 if pattern in s.original:
                     result = StringSearchResult(
-                        jar_file.path, str(class_file.path), s.original, False
+                        str(jar_file.path), str(class_file.path), s.original, False
                     )
                     if result not in results:
                         results.add(result)

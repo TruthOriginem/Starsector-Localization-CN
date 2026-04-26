@@ -96,7 +96,7 @@ class JavaClassFile:
     ) -> None:
         self.path_str = path
         self.path = PurePosixPath(path)
-        self.map_item = ClassFileMapItem(path, include_strings)
+        self.map_item = ClassFileMapItem(path, include_strings or [])
 
         if ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS:
             include_rules = []
@@ -125,6 +125,16 @@ class JavaClassFile:
 
     def get_translation_version(self) -> int:
         return self.translation_bytes[7]
+
+    @property
+    def original_table(self) -> ConstantTable:
+        assert self.original_constant_table is not None
+        return self.original_constant_table
+
+    @property
+    def translation_table(self) -> ConstantTable:
+        assert self.translation_constant_table is not None
+        return self.translation_constant_table
 
     def validate(self) -> None:
         # 检查是否为java class文件
@@ -193,7 +203,7 @@ class JavaClassFile:
         constants_by_original: Dict[str, List[Utf8Constant]] = {}
 
         for original_constant in (
-            self.original_constant_table.get_utf8_constants_with_string_ref()
+            self.original_table.get_utf8_constants_with_string_ref()
         ):
             original_string = self._normalize_original_string(original_constant.string)
             constants_by_original.setdefault(original_string, []).append(
@@ -208,7 +218,7 @@ class JavaClassFile:
     def _get_translation_constants_by_index(self) -> Dict[int, Utf8Constant]:
         return {
             c.constant_index: c
-            for c in self.translation_constant_table.get_utf8_constants_with_string_ref()
+            for c in self.translation_table.get_utf8_constants_with_string_ref()
         }
 
     def _get_included_string_occurrences(self) -> List[StringOccurrence]:
@@ -403,7 +413,7 @@ class JavaClassFile:
         constants_by_original = self._get_original_string_constants_mapping()
         translated_constant_index_constants = self._get_translation_constants_by_index()
         const_ref_by_other_attrs = (
-            self.original_constant_table.get_utf8_constants_with_extra_ref()
+            self.original_table.get_utf8_constants_with_extra_ref()
         )
         include_values = self.map_item.get_include_values()
         update_success_count = 0
@@ -512,12 +522,13 @@ class JavaClassFile:
         return update_success_count
 
     def generate_translated_bytecode(self) -> bytes:
-        const_table_end_index = self.translation_constant_table.table_end_index
+        const_table_end_index = self.translation_table.table_end_index
+        assert const_table_end_index is not None
 
         new_translation_bytes = self.translation_bytes[
             : 4 + 2 + 2
         ]  # magic, minor_ver, major_ver
-        new_translation_bytes += self.translation_constant_table.to_bytes()  # 常量表
+        new_translation_bytes += self.translation_table.to_bytes()  # 常量表
         new_translation_bytes += self.translation_bytes[
             const_table_end_index:
         ]  # 剩余部分

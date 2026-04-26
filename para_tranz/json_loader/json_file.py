@@ -5,7 +5,7 @@
 """
 
 from pathlib import Path
-from typing import Iterator, List, Optional, Set, Tuple, Union
+from typing import Iterator, List, Optional, Sequence, Set, Tuple, Union, cast
 
 from para_tranz.config import (
     EXPORTED_STRING_CONTEXT_PREFIX,
@@ -142,11 +142,14 @@ def _is_translatable_string(node) -> bool:
     return isinstance(node, AlexsonString) and bool(node.value)
 
 
+JsonParent = Union[Object, Array]
+
+
 def _traverse_path(
     node,
     segments: List[str],
     current_path: str,
-) -> Iterator[Tuple[str, object, Union[str, int], bool]]:
+) -> Iterator[Tuple[str, JsonParent, Union[str, int], bool]]:
     """递归遍历路径段，生成匹配项。
 
     Yields:
@@ -213,7 +216,7 @@ def _traverse_path(
                 yield (new_path, node, seg, False)
 
 
-def _navigate_exact(root, segments: List[Union[str, int]]):
+def _navigate_exact(root, segments: List[Union[str, int]]) -> Optional[Union[AlexsonString, Object, Array]]:
     """在树中按精确路径导航，返回目标节点，找不到返回 None。"""
     node = root.get_primary_obj() if isinstance(root, Root) else root
     for seg in segments:
@@ -228,7 +231,7 @@ def _navigate_exact(root, segments: List[Union[str, int]]):
             node = node[seg]
         else:
             return None
-    return node
+    return node if isinstance(node, (AlexsonString, Object, Array)) else None
 
 
 # ---------------------------------------------------------------------------
@@ -296,7 +299,7 @@ class JsonFile(DataFile):
 
     def _iter_strings(
         self, root: Root
-    ) -> Iterator[Tuple[str, object, Union[str, int], bool]]:
+    ) -> Iterator[Tuple[str, JsonParent, Union[str, int], bool]]:
         """遍历所有 text_paths，生成 (json_path, parent, accessor, is_key_rename)。"""
         for text_path in self.text_paths:
             try:
@@ -330,7 +333,7 @@ class JsonFile(DataFile):
             if is_key_rename:
                 original = str(accessor)
             else:
-                node = orig_parent[accessor]
+                node = orig_parent[cast(str, accessor)] if isinstance(orig_parent, Object) else orig_parent[cast(int, accessor)]
                 if not isinstance(node, AlexsonString):
                     continue
                 original = node.value
@@ -345,6 +348,7 @@ class JsonFile(DataFile):
                     orig_key = str(accessor)
                     trans_parent = _navigate_exact(self._translation_root, parent_segs)
                     if isinstance(trans_parent, Object):
+                        assert isinstance(orig_parent, Object)
                         orig_keys = list(orig_parent.dict.keys())
                         trans_keys = list(trans_parent.dict.keys())
                         try:
@@ -474,7 +478,7 @@ class JsonFile(DataFile):
         self.logger.info(f'已保存译文文件：{relative_path(self.translation_path)}')
 
     @classmethod
-    def load_files_from_config(cls) -> List['JsonFile']:
+    def load_files_from_config(cls) -> Sequence['JsonFile']:
         from para_tranz.utils.mapping import PARA_TRANZ_MAP, JsonMapItem
 
         files: List['JsonFile'] = []

@@ -7,7 +7,7 @@ import urllib.parse
 from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Union
+from typing import Any, Dict, List, Optional, Sequence, Union
 
 from para_tranz.config import (
     LOG_FILE_PATH,
@@ -90,15 +90,18 @@ def make_logger(name: str) -> logging.Logger:
     # 设置日志输出
     logging.root.setLevel(logging.NOTSET)
     logger = logging.getLogger(name)
+    logger.setLevel(logging.NOTSET)
 
-    handle_out = logging.StreamHandler(sys.stdout)
-    handle_out.setLevel(LOG_LEVEL)
-    handle_out.terminator = ''
+    if not any(getattr(handler, '_para_tranz_stdout', False) for handler in logger.handlers):
+        handle_out = logging.StreamHandler(sys.stdout)
+        handle_out.setLevel(LOG_LEVEL)
+        handle_out.terminator = ''
+        setattr(handle_out, '_para_tranz_stdout', True)
 
-    formatter = CustomFormatter()
+        formatter = CustomFormatter()
 
-    handle_out.setFormatter(formatter)
-    logger.addHandler(handle_out)
+        handle_out.setFormatter(formatter)
+        logger.addHandler(handle_out)
 
     _init_file_handler()
 
@@ -248,7 +251,7 @@ class DataFile:
         raise NotImplementedError
 
     @classmethod
-    def load_files_from_config(cls) -> List['DataFile']:
+    def load_files_from_config(cls) -> Sequence['DataFile']:
         raise NotImplementedError
 
     @staticmethod
@@ -339,10 +342,10 @@ class SetEncoder(json.JSONEncoder):
     From: https://stackoverflow.com/questions/8230315/how-to-json-serialize-sets
     """
 
-    def default(self, obj: Any) -> Any:
-        if isinstance(obj, set):
-            return sorted(list(obj))
-        return json.JSONEncoder.default(self, obj)
+    def default(self, o: Any) -> Any:
+        if isinstance(o, set):
+            return sorted(list(o))
+        return json.JSONEncoder.default(self, o)
 
 
 if __name__ == '__main__':

@@ -4,6 +4,7 @@ import re
 from dataclasses import asdict
 from typing import Optional, Set, Tuple
 
+from para_tranz.jar_loader.class_file import JavaClassFile
 from para_tranz.jar_loader.jar_file import JavaJarFile
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, ClassFileMapItem, JarMapItem
 from para_tranz.utils.util import (
@@ -88,10 +89,11 @@ def generate_class_file_mapping_by_path(
         jar_path, raw_class_path = class_file_path.split(':')
         class_path = normalize_class_path(raw_class_path)
 
-        jar_item = PARA_TRANZ_MAP.get_item_by_path(jar_path)
-        if not jar_item:
+        map_item = PARA_TRANZ_MAP.get_item_by_path(jar_path)
+        if not isinstance(map_item, JarMapItem):
             logger.error(f'未找到jar文件映射项：{jar_path}')
             return
+        jar_item = map_item
 
         existing_class_item = jar_item.get_class_file_item(class_path)
         # 同 else 分支，创建副本避免污染 PARA_TRANZ_MAP
@@ -106,7 +108,8 @@ def generate_class_file_mapping_by_path(
 
         # 如果在 para_tranz_map.json 中找到了类文件映射项，那么就可以确定所属的jar文件
         if result:
-            jar_item, existing_class_item = result
+            found_jar_item, existing_class_item = result
+            jar_item = found_jar_item
             # 用 dataclasses.replace 创建副本而非直接修改 jar_item，
             # 避免污染 PARA_TRANZ_MAP 中的原始对象（否则循环调用时后续查找会失败）
             jar_file_items = [
@@ -138,7 +141,7 @@ def generate_class_file_mapping_by_path(
     generated_class_map_item = class_file.export_map_item()
     extra_ref_strings = {
         c.string
-        for c in class_file.original_constant_table.get_utf8_constants_with_extra_ref()
+        for c in class_file.original_table.get_utf8_constants_with_extra_ref()
     }
 
     return jar_item, generated_class_map_item, existing_class_item, extra_ref_strings

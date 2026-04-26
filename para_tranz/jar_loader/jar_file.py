@@ -2,7 +2,7 @@ import datetime
 import zipfile
 from dataclasses import asdict
 from pathlib import Path
-from typing import Dict, List, Optional, Union
+from typing import Dict, List, Optional, Sequence, Union
 
 from para_tranz.jar_loader.class_file import JavaClassFile
 from para_tranz.config import (
@@ -33,9 +33,9 @@ class JavaJarFile(DataFile):
     ):
         super().__init__(path, type)
 
-        self.path = path
-        self.original_path = ORIGINAL_PATH / path
-        self.translation_path = TRANSLATION_PATH / path
+        self.path = Path(path)
+        self.original_path = ORIGINAL_PATH / self.path
+        self.translation_path = TRANSLATION_PATH / self.path
 
         self.original_file: Optional[zipfile.ZipFile] = None
         self.translation_file: Optional[zipfile.ZipFile] = None
@@ -152,8 +152,12 @@ class JavaJarFile(DataFile):
             self.logger.info(f'{self.path} 中没有 class 字节码变化，跳过重写 jar')
             return
 
+        temp_path = self.translation_path.with_name(
+            self.translation_path.name + '.temp'
+        )
+
         # 生成新的jar文件，写入新的class文件，并将老jar中的其它文件也复制进去
-        with zipfile.ZipFile(self.translation_path.with_suffix('.temp'), 'w') as zf:
+        with zipfile.ZipFile(temp_path, 'w') as zf:
             with zipfile.ZipFile(self.translation_path) as old_zf:
                 for info in old_zf.infolist():
                     # 复制老文件
@@ -169,7 +173,7 @@ class JavaJarFile(DataFile):
         self.close_files()
         # 删除老jar文件，将新jar文件重命名为老jar文件
         self.translation_path.unlink()
-        self.translation_path.with_suffix('.temp').rename(self.translation_path)
+        temp_path.rename(self.translation_path)
         # 重新打开文件
         self.open_files()
 
@@ -178,6 +182,7 @@ class JavaJarFile(DataFile):
             class_file.load_from_file()
 
     def read_original_class_file(self, class_file_path: str) -> bytes:
+        assert self.original_file is not None
         path = zipfile.Path(self.original_file, class_file_path)
         if not path.exists():
             raise FileNotFoundError(
@@ -186,6 +191,7 @@ class JavaJarFile(DataFile):
         return path.read_bytes()
 
     def read_translation_class_file(self, class_file_path: str) -> bytes:
+        assert self.translation_file is not None
         path = zipfile.Path(self.translation_file, class_file_path)
         if not path.exists():
             raise FileNotFoundError(
@@ -216,7 +222,7 @@ class JavaJarFile(DataFile):
             self.load_class_file(path=class_file_info['path'], override=override_loaded)
 
     @classmethod
-    def load_files_from_config(cls) -> List['JavaJarFile']:
+    def load_files_from_config(cls) -> Sequence['JavaJarFile']:
         cls.logger.info('开始读取游戏jar数据')
         files = [
             cls(**asdict(item)) for item in PARA_TRANZ_MAP if isinstance(item, JarMapItem)
