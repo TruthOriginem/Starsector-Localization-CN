@@ -7,6 +7,7 @@ sys.path.append(dirname(dirname(abspath(__file__))))
 from para_tranz.config import ENABLED_LOADERS
 from para_tranz.csv_loader.csv_file import CsvFile
 from para_tranz.jar_loader.jar_file import JavaJarFile
+from para_tranz.java_loader.java_file import JavaSourceFile
 from para_tranz.json_loader.json_file import JsonFile
 from para_tranz.txt_loader.txt_file import TxtFile
 from para_tranz.utils.mapping import PARA_TRANZ_MAP
@@ -20,7 +21,13 @@ from para_tranz.utils.util import DataFile, make_logger
 
 logger = make_logger('ParaTranzScript')
 
-_LOADER_MAP = {'jar': JavaJarFile, 'csv': CsvFile, 'json': JsonFile, 'txt': TxtFile}
+_LOADER_MAP = {
+    'jar': JavaJarFile,
+    'csv': CsvFile,
+    'json': JsonFile,
+    'txt': TxtFile,
+    'java': JavaSourceFile,
+}
 loaders = [_LOADER_MAP[name] for name in ENABLED_LOADERS if name in _LOADER_MAP]
 
 
@@ -62,7 +69,7 @@ def gen_mapping_by_class_path(class_path: str | None = None) -> None:
 def format_map() -> None:
     merged = PARA_TRANZ_MAP.format()
     PARA_TRANZ_MAP.save()
-    logger.info(f'map 格式化完成，合并了 {merged} 个重复类条目')
+    logger.info(f'map 格式化完成，合并了 {merged} 个重复条目')
 
 
 def search_string_in_jar_files(pattern: str | None = None) -> None:

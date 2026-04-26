@@ -25,8 +25,8 @@ PARA_TRANZ_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'output'
 MAP_PATH = PROJECT_DIRECTORY / 'para_tranz' / 'para_tranz_map.json'
 
 # [处理的文件类型]
-# 可选：'jar'、'csv'、'json'、'txt'，或任意组合
-ENABLED_LOADERS = ['jar', 'csv', 'json', 'txt']
+# 可选：'jar'、'csv'、'json'、'txt'、'java'，或任意组合
+ENABLED_LOADERS = ['jar', 'csv', 'json', 'txt', 'java']
 
 # [通用配置]
 # 在导出字符串时是否覆盖已导出字符串的翻译stage状态

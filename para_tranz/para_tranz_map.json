@@ -298,6 +298,686 @@
     "combined_output": "data/variants/variants_combined.json"
   },
   {
+    "type": "java",
+    "path": "data/hullmods/AcceleratedShieldEmitter.java",
+    "include_strings": [
+      "Ship has no shields"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/hullmods/AdvancedOptics.java",
+    "include_strings": [
+      "Incompatible with High Scatter Amplifier"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/hullmods/AuxiliaryThrusters.java",
+    "include_strings": [
+      "doubles"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/hullmods/ConvertedFighterBay.java",
+    "include_strings": [
+      "Requires built-in fighter wings only"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/hullmods/DedicatedTargetingCore.java",
+    "include_strings": [
+      "Can only be installed on cruisers and capital ships",
+      "Incompatible with Advanced Targeting Core",
+      "Incompatible with Distributed Fire Control",
+      "Incompatible with Integrated Targeting Unit"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/hullmods/ExtendedShieldEmitter.java",
+    "include_strings": [
+      "Ship has no shields"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/hullmods/FrontShieldEmitter.java",
+    "include_strings": [
+      "Incompatible with Shield Conversion - Omni",
+      "Ship already has front shields",
+      "Ship has no shields"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/hullmods/FrontShieldGenerator.java",
+    "include_strings": [
+      "Incompatible with Shield Shunt",
+      "Ship already has shields",
+      "Ship can not have shields"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/hullmods/HardenedShieldEmitter.java",
+    "include_strings": [
+      "Ship has no shields"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/hullmods/HardenedSubsystems.java",
+    "include_strings": [
+      "Combat readiness decay",
+      "Ship does not suffer from CR degradation",
+      "With all the modifications currently installed on the ship, it will take %s seconds.",
+      "Without this hullmor or any other modifiers, it would take %s seconds for ",
+      "this ship to lose %s combat readiness, after its peak performance time has run out."
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/hullmods/IntegratedTargetingUnit.java",
+    "include_strings": [
+      "Incompatible with Advanced Targeting Core",
+      "Incompatible with Dedicated Targeting Core",
+      "Incompatible with Distributed Fire Control"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/hullmods/OmniShieldEmitter.java",
+    "include_strings": [
+      "Incompatible with Shield Conversion - Front",
+      "Ship already has omni-directional shields",
+      "Ship has no shields"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/hullmods/SafetyOverrides.java",
+    "include_strings": [
+      "Can not be installed on capital ships",
+      "Can not be installed on civilian ships",
+      "Incompatible with Flux Shunt"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/hullmods/StabilizedShieldEmitter.java",
+    "include_strings": [
+      "Ship has no shields"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/hullmods/SurveyingEquipment.java",
+    "include_strings": [
+      "The combined surveying equipment in your fleet reduces the survey cost by %s ",
+      "supplies and %s heavy machinery."
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/missions/afistfulofcredits/MissionDefinition.java",
+    "include_strings": [
+      "'Just an honest trader trying to make a living, officer.'",
+      "Don't lose 'Stranger II' - it's my most valuable possession",
+      "Moon's ship has delicate engine mods; use Salamander Missiles to leave her adrift",
+      "No-good two-timing 'High Rad' Moon Salazar in a rustbucket mule",
+      "Show 'High Rad' Moon what it means to break a deal"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/missions/ambush/MissionDefinition.java",
+    "include_strings": [
+      "Defeat all enemy forces",
+      "Hegemony special anti-raider patrol force",
+      "Remember: Your armor can safely absorb hits from anti-fighter missiles",
+      "Tri-Tachyon phase group Gamma III",
+      "Use Sabot SRMs to overload tough targets before finishing them off with Reaper torpedos"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/missions/coralnebula/MissionDefinition.java",
+    "include_strings": [
+      "Defeat all enemy forces",
+      "Detachment from the 3rd Holy Armada and Pather irregulars",
+      "Keep the Astral carrier 'Sirocco' on the field to repair and rearm them",
+      "Persean League task force led by Navarch Kato",
+      "Using your torpedo bombers is key to victory"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/missions/direstraits/MissionDefinition.java",
+    "include_strings": [
+      "At least 25% of the Hegemony forces must escape",
+      "Hegemony relief fleet with mercenary escort",
+      "ISS Black Star must survive",
+      "Tri-Tachyon containment task force"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/missions/forlornhope/MissionDefinition.java",
+    "include_strings": [
+      "Leading elements of the Hegemony Defense Fleet",
+      "The TTS Invincible must survive"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/missions/forthegreaterlud/MissionDefinition.java",
+    "include_strings": [
+      "Defeat all enemy forces",
+      "Distract the enemy flagship to allow your bombers to flank it",
+      "ISS Black Star and Luddic Path strike force",
+      "ISS Black Star must survive",
+      "PLS Praxis with escort and Tri-Tachyon allies"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/missions/hornetsnest/MissionDefinition.java",
+    "include_strings": [
+      "Concentrate your superior forces to defeat the enemy in detail",
+      "Defeat all enemy forces",
+      "ISS Van Rijn and salvage fleet",
+      "Kanta pirate coalition forces",
+      "You have very limited Command Points"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/missions/nothingpersonal/MissionDefinition.java",
+    "include_strings": [
+      "Defeat the enemy forces",
+      "Destroy the enemy escort ships first, then strike at the heart of their fleet.",
+      "HSS Phoenix and Hegemony facility guard detachments",
+      "ISS Athena at the head of a survey fleet",
+      "ISS Enki must survive - it carries irreplacable scientific equipment"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/missions/predatororprey/MissionDefinition.java",
+    "include_strings": [
+      "Defeat the enemy forces",
+      "Hegemony patrol",
+      "Retreating enemy fighters will lead you to their carrier",
+      "Time your advance against the rhythm of enemy torpedo attacks",
+      "Tri-Tachyon carrier detachment"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/missions/randombattle1/MissionDefinition.java",
+    "include_strings": [
+      "Defeat all enemy forces",
+      "Enemy forces",
+      "Your forces"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/missions/sinkingthebismarck/MissionDefinition.java",
+    "include_strings": [
+      "Destroy the HSS Bismar",
+      "The TTS Chimera is a valuable prototype and must survive",
+      "Tri-Tachyon recon detachment and supply craft"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/missions/thelasthurrah/MissionDefinition.java",
+    "include_strings": [
+      "Defeat all enemy forces",
+      "Hegemony fleet under Commodore Jensulte",
+      "MSS Garuda must survive",
+      "Maintain tactical awareness and use superior mobility to choose your battles.",
+      "Mayasurian navy with heavy fighter complement",
+      "Remember: If you engage the enemy flagship in a fair fight, you will lose."
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/missions/thewolfpack/MissionDefinition.java",
+    "include_strings": [
+      "Controlling the Nav Buoys is critical to preventing a quick escape",
+      "Hegemony convoy with escort",
+      "Mercenary raiders",
+      "Ordering a fleetwide search & destroy will make your ships more aggressive",
+      "Ordering your ships to eliminate a target will make them more aggressive",
+      "The Hegemony convoy will attempt to flee towards the top of the map"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/missions/turningthetables/MissionDefinition.java",
+    "include_strings": [
+      "Defeat all enemy forces",
+      "ISS Black Star & ISS Hamatsu must survive",
+      "ISS Hamatsu and ISS Black Star with drone escort",
+      "Luddic Path forces",
+      "Stay with the ISS Hamatsu (friendly cruiser) for safety"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/corvus/Corvus.java",
+    "include_strings": [
+      "Abandoned Terraforming Platform",
+      "Asharu Stellar Shade",
+      "Barad L4 Asteroids",
+      "Barad L5 Asteroids",
+      "Corvus Gate",
+      "Jangala Jump-point",
+      "Jangala Relay",
+      "Jangala Station",
+      "Nemo's Belt"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/AlGebbar.java",
+    "include_strings": [
+      "Abandoned Skyhook Anchor",
+      "Al Gebbar Jump-point",
+      "Custodes"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/Arcadia.java",
+    "include_strings": [
+      "Citadel Arcadia",
+      "Syrinx Passage",
+      "Syrinx Relay"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/Askonia.java",
+    "include_strings": [
+      "Askonia Fringe Listening Station",
+      "Askonia Gate",
+      "Cloud Ring",
+      "Command & Control",
+      "Dust Ring",
+      "Opis Debris Cloud",
+      "Salus L4 Asteroids",
+      "Salus L5 Asteroids",
+      "Salus L5 Jump-point",
+      "Salus Navigation Buoy",
+      "Sindria Jump-point",
+      "Sindria Relay",
+      "Stone River"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/Aztlan.java",
+    "include_strings": [
+      "Aztlan Gate",
+      "Aztlan Inner System Jump-point",
+      "Aztlan Outer System Jump-point",
+      "Aztlan Relay",
+      "Aztlan Starport",
+      "Coatl Bastion",
+      "The Ciltetl"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/Canaan.java",
+    "include_strings": [
+      "Gad L4 Asteroids",
+      "Gad L5 Asteroids",
+      "Gate of Canaan",
+      "Gilead Jump-point",
+      "Gilead Relay"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/Duzahk.java",
+    "include_strings": [
+      "Hyper Station",
+      "The Daevas"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/Eos.java",
+    "include_strings": [
+      "Cherubim Asteroids",
+      "Eos Exodus Gate",
+      "Hesperus Relay",
+      "Paladins' Bridge",
+      "Seraphim Asteroids",
+      "The Pilgrims"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/Galatia.java",
+    "include_strings": [
+      "Ancyra Orbital Facility",
+      "Ancyra Relay",
+      "Derinkuyu Mining Station",
+      "Fringe Jump-point",
+      "Galatia Academy Station",
+      "Galatia Gate",
+      "Inner System Jump-point"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/Hybrasil.java",
+    "include_strings": [
+      "Culann Starforge",
+      "Elada Relay",
+      {
+        "val": "Eochu Bres Stellar Mirror",
+        "occurs": [0, 1, 2]
+      },
+      "Hybrasil Inner System Jump-point"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/Isirah.java",
+    "include_strings": [
+      "Corb Accretion Swarm",
+      "Disk of Vosud",
+      "Groombridge Habitat",
+      "Isirah Gate",
+      "Isirah Inner Jump-point",
+      "Kapteyn Starworks",
+      "Laicaille Habitat",
+      "Utgarda's Wall"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/KumariKandam.java",
+    "include_strings": [
+      "Abandoned Spacedock",
+      "Beholder Station",
+      "Kumari Aru L4 Asteroids",
+      "Kumari Aru L5 Asteroids",
+      "Kumarian Gate",
+      "Rama's Bridge",
+      "The Mullam"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/Magec.java",
+    "include_strings": [
+      "Achaman Relay",
+      "Guayota Relay",
+      {
+        "val": "Guayota's Disk",
+        "occurs": [0, 1, 2, 3]
+      },
+      "Kanta's Den",
+      "Magec Gate",
+      "Maxios Jump-point"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/Mayasura.java",
+    "include_strings": [
+      "Abandoned Astropolis",
+      "Gelan's Shackle",
+      "Lost Astropolis",
+      "Mayasura Jump-point",
+      "Mayasura Relay",
+      "Port Tse Franchise Station",
+      "Shade Chah",
+      "The Daitya",
+      "The Danavas",
+      "The Takshaka"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/Naraka.java",
+    "include_strings": [
+      "Naraka Jump-point",
+      "Naraka Relay",
+      "The Servants",
+      "The Yamuna"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/Penelope.java",
+    "include_strings": [
+      "Penelope L4 Asteroids",
+      "Penelope L5 Asteroids",
+      "Penelope's Inner Jump-point",
+      "Penelope's Outer Jump-point",
+      "Telepylus Station",
+      "The Cyclopeans"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/Samarra.java",
+    "include_strings": [
+      "Eventide Stellar Mirror Alpha",
+      "Eventide Stellar Mirror Beta",
+      "Eventide Stellar Mirror Delta",
+      "Eventide Stellar Mirror Epsilon",
+      "Eventide Stellar Mirror Gamma",
+      "Eventide Stellar Shade Chi",
+      "Eventide Stellar Shade Omega",
+      "Eventide Stellar Shade Psi",
+      "Orthrus Relay",
+      "Samarra Jump-point",
+      "Samarra Relay",
+      "Tigra City",
+      "Tigra Ring",
+      "Typhon L4 Asteroids",
+      "Typhon L5 Asteroids"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/Thule.java",
+    "include_strings": [
+      "Garmund's Ring",
+      "Gate of Thule",
+      "Hama's Band",
+      "Inged's Crown",
+      "Kazeron Relay",
+      "Morn L4 Cloud",
+      "Morn L5 Cloud",
+      "The Ingwin",
+      "Thule Jump-point",
+      "Thulian Raider Base"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/TiaTaxet.java",
+    "include_strings": [
+      "Abandoned Research Station",
+      "Lagua's Torus",
+      "Tia-Ta'xet Asteroid Cluster",
+      "Tia-Ta'xet Jump-point"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/Tyle.java",
+    "include_strings": [
+      "Canaria Relay",
+      "Sargossa",
+      "The Wuya",
+      "Tyle's Archipelago",
+      "Wuya Jump"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/Valhalla.java",
+    "include_strings": [
+      "Mimir Siphon Platform",
+      "Ragnar Complex",
+      "Ragnar Jump-point",
+      "Ragnar Relay",
+      {
+        "val": "The Valkyries",
+        "occurs": [0, 1]
+      },
+      "The Vipers",
+      "Valkyrie Jump-point",
+      "Yggdrasil L4 Asteroids",
+      "Yggdrasil L5 Asteroids"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/Westernesse.java",
+    "include_strings": [
+      "Westernesse Jump-point",
+      "Westernesse Relay"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/Yma.java",
+    "include_strings": [
+      "Abandoned Siphon Station",
+      "Chupi Orco L4 Asteroids",
+      "Chupi Orco L5 Asteroids",
+      "Qaras Relay",
+      "Qaras Stellar Mirror",
+      "Viscacha Jump-point",
+      "Warawara Orco L4 Asteroids",
+      "Warawara Orco L5 Asteroids",
+      "Yma B Jump-point",
+      "Yma Gate"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/scripts/world/systems/Zagan.java",
+    "include_strings": [
+      "Mazalot Gate",
+      "Mazalot Relay",
+      "Shoals of Perdition",
+      "Yesod Jump-point"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/shipsystems/scripts/AmmoFeedStats.java",
+    "include_strings": [
+      "ballistic flux use -",
+      "ballistic rate of fire +"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/shipsystems/scripts/BurnDriveStats.java",
+    "include_strings": [
+      "increased engine power"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/shipsystems/scripts/CombatBurnStats.java",
+    "include_strings": [
+      "increased engine power"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/shipsystems/scripts/DisplacerStats.java",
+    "include_strings": [
+      "out of phase"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/shipsystems/scripts/DynamicStabilizerStats.java",
+    "include_strings": [
+      "beam damage +",
+      "improved maneuverability",
+      "rate of fire +",
+      "recoil -"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/shipsystems/scripts/FortressShieldStats.java",
+    "include_strings": [
+      "shield absorbs 10x damage"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/shipsystems/scripts/HighEnergyFocusStats.java",
+    "include_strings": [
+      "% energy weapon damage"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/shipsystems/scripts/ManeuveringJetsStats.java",
+    "include_strings": [
+      "+50 top speed",
+      "improved maneuverability"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/shipsystems/scripts/MicroBurnOmegaStats.java",
+    "include_strings": [
+      "increased engine power"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/shipsystems/scripts/MicroBurnStats.java",
+    "include_strings": [
+      "increased engine power"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/shipsystems/scripts/PhaseCloakStatsOld.java",
+    "include_strings": [
+      "time flow altered"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/shipsystems/scripts/SensorDroneStats.java",
+    "include_strings": [
+      "sensor range +",
+      "weapon range +"
+    ]
+  },
+  {
+    "type": "java",
+    "path": "data/shipsystems/scripts/TravelDriveStats.java",
+    "include_strings": [
+      "increased engine power"
+    ]
+  },
+  {
     "type": "jar",
     "path": "starfarer_obf.jar",
     "class_files": [

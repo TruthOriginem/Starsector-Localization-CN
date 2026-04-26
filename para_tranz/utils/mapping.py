@@ -32,6 +32,8 @@ class ParaTranzMapItem:
             return CsvMapItem(**d)
         elif d['type'] == 'jar':
             return JarMapItem.from_dict(d)
+        elif d['type'] == 'java':
+            return JavaMapItem(**d)
         elif d['type'] == 'json':
             return JsonMapItem(**d)
         elif d['type'] == 'txt':
@@ -60,6 +62,36 @@ class TxtMapItem(ParaTranzMapItem):
 class CsvMapItem(ParaTranzMapItem):
     id_column_name: Union[str, List[str]]
     text_column_names: List[str]
+
+
+@dataclass
+class JavaMapItem(ParaTranzMapItem):
+    include_strings: List[Union[str, dict]] = dataclasses.field(default_factory=list)
+
+    def __post_init__(self):
+        normalized = ClassFileMapItem(self.path, self.include_strings)
+        self.include_strings = normalized.include_strings
+
+    def get_include_rules(self) -> List[IncludeStringRule]:
+        return ClassFileMapItem(self.path, self.include_strings).get_include_rules()
+
+    def get_include_rule(self, val: str) -> Optional[IncludeStringRule]:
+        return ClassFileMapItem(self.path, self.include_strings).get_include_rule(val)
+
+    def get_include_values(self) -> Set[str]:
+        return ClassFileMapItem(self.path, self.include_strings).get_include_values()
+
+    def add_include_rule(self, rule: IncludeStringRule) -> None:
+        item = ClassFileMapItem(self.path, self.include_strings)
+        item.add_include_rule(rule)
+        self.include_strings = item.include_strings
+
+    def merge_from(self, other: 'JavaMapItem') -> None:
+        for rule in other.get_include_rules():
+            self.add_include_rule(rule)
+
+    def search_for_string(self, pattern: str) -> List[str]:
+        return ClassFileMapItem(self.path, self.include_strings).search_for_string(pattern)
 
 
 @dataclass
@@ -270,21 +302,39 @@ class ParaTranzMap:
             f.write(json_str)
 
     def format(self) -> int:
-        """对所有 jar 条目的类文件列表去重（合并同路径条目）并按路径排序。
+        """整理 map：合并重复 jar class 和重复 java 文件项。
         include_strings 严格禁止同一 val 重复声明。
-        返回合并掉的重复类条目数量。"""
+        返回合并掉的重复条目数量。"""
         merged = 0
+        java_items_by_path: Dict[str, JavaMapItem] = {}
+        formatted_items: List[ParaTranzMapItem] = []
+
         for item in self.items:
-            if not isinstance(item, JarMapItem):
+            if isinstance(item, JarMapItem):
+                seen: Dict[str, ClassFileMapItem] = {}
+                for cls in item.class_files:
+                    if cls.path in seen:
+                        seen[cls.path].merge_from(cls)
+                        merged += 1
+                    else:
+                        seen[cls.path] = cls
+                item.class_files = sorted(seen.values(), key=lambda c: c.path)
+                formatted_items.append(item)
                 continue
-            seen: Dict[str, ClassFileMapItem] = {}
-            for cls in item.class_files:
-                if cls.path in seen:
-                    seen[cls.path].merge_from(cls)
+
+            if isinstance(item, JavaMapItem):
+                existing = java_items_by_path.get(item.path)
+                if existing is not None:
+                    existing.merge_from(item)
                     merged += 1
                 else:
-                    seen[cls.path] = cls
-            item.class_files = sorted(seen.values(), key=lambda c: c.path)
+                    java_items_by_path[item.path] = item
+                    formatted_items.append(item)
+                continue
+
+            formatted_items.append(item)
+
+        self.items = formatted_items
         return merged
 
 
