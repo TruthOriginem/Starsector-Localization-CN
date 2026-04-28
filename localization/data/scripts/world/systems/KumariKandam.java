@@ -112,7 +112,7 @@ public class KumariKandam {
 		chalcedon_loc.setCircularOrbitPointingDown(kumarikandam_star, 220-180, 4300, 180);
 		
 			// Destroyed station
-			SectorEntityToken abandoned_station1 = system.addCustomEntity("abandoned_spacedock", "废弃的空间港口", "station_side00", "neutral");
+			SectorEntityToken abandoned_station1 = system.addCustomEntity("abandoned_spacedock", "废弃的太空船坞", "station_side00", "neutral");
 			abandoned_station1.setInteractionImage("illustrations", "abandoned_station3");
 			abandoned_station1.setCircularOrbitPointingDown(kumarikandam_star, 220 + 14, 4300, 180);
 			abandoned_station1.setCustomDescriptionId("station_chalcedon");

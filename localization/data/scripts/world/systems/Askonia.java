@@ -120,7 +120,7 @@ public class Askonia {
 			
 			system.addRingBand(a2, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 1800, 70f);
 			system.addRingBand(a2, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 1800, 90f);
-			system.addRingBand(a2, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 1800, 110f, Terrain.RING, "粉尘环");
+			system.addRingBand(a2, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 1800, 110f, Terrain.RING, "尘埃环");
 			
 			system.addRingBand(a2, "misc", "rings_ice0", 256f, 0, Color.white, 256f, 2150, 50f);
 			system.addRingBand(a2, "misc", "rings_ice0", 256f, 0, Color.white, 256f, 2150, 70f);
@@ -183,7 +183,7 @@ public class Askonia {
 		a4.setInteractionImage("illustrations", "pirate_station");
 		
 		// makeshift sensor array in counter-orbit to Umbra
-		SectorEntityToken askonia_outer_array = system.addCustomEntity(null, "Askonia 边缘监听站点", "sensor_array_makeshift", Factions.DIKTAT); 
+		SectorEntityToken askonia_outer_array = system.addCustomEntity(null, "Askonia 边缘监听站", "sensor_array_makeshift", Factions.DIKTAT); 
 		askonia_outer_array.setCircularOrbitPointingDown( star, 150+180, 11000, 600);
 	
 //		system.addOrbitalJunk(a1,

@@ -89,7 +89,7 @@ public class Mayasura {
 			mairaathStation1.setInteractionImage("illustrations", "abandoned_station3");
 		
 			// Mairaath stellar shade - out of orbit
-			SectorEntityToken mairaath_shade = system.addCustomEntity("mairaath_shade", "恒星镜", "stellar_shade", "neutral");
+			SectorEntityToken mairaath_shade = system.addCustomEntity("mairaath_shade", "Chah 恒星罩", "stellar_shade", "neutral");
 			mairaath_shade.setCircularOrbitPointingDown( mayasura_star, 300, 3550, 183 );		
 			mairaath_shade.setCustomDescriptionId("stellar_shade");
 		
@@ -158,7 +158,7 @@ public class Mayasura {
 		mayasura_e.applySpecChanges();
 		
 			// rumoured to have the finest cocktail lounge in the entire Sector
-			SectorEntityToken tritachStation = system.addCustomEntity("port_tse", "Port Tse 特许经营站", "station_side00", "tritachyon");
+			SectorEntityToken tritachStation = system.addCustomEntity("port_tse", "Tse 特许经营站", "station_side00", "tritachyon");
 			tritachStation.setCustomDescriptionId("station_tse_enterprise");
 			tritachStation.setInteractionImage("illustrations", "space_bar");
 			tritachStation.setCircularOrbitWithSpin(mayasura_e, 60, 510, 30, 3, 5);

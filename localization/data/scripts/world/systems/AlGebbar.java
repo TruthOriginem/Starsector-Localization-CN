@@ -73,7 +73,7 @@ public class AlGebbar {
 		PlanetAPI gebbar5 = system.addPlanet("gebbar5", algebbar_star, "Loutron", "cryovolcanic", 90, 120, 6400, 295);
 			gebbar5.getSpec().setPlanetColor(new Color(235,255,245,255));
 			
-			SectorEntityToken abandoned_station = system.addCustomEntity("abandoned_station", "遗弃的采矿站", "station_mining00", "neutral");
+			SectorEntityToken abandoned_station = system.addCustomEntity("abandoned_station", "遗弃的天钩锚点", "station_mining00", "neutral");
 			abandoned_station.setCircularOrbitPointingDown(system.getEntityById("gebbar5"), 90, 220, 25);		
 			abandoned_station.setCustomDescriptionId("station_abandoned_mining");
 			abandoned_station.setInteractionImage("illustrations", "orbital_construction");
