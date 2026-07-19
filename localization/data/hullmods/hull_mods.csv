@@ -275,7 +275,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 过度维护,increased_maintenance,,,,"dmod, damage, civ, notAuto",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.IncreasedMaintenance,"每月维护消耗的补给提高 {%s}，最低所需船员提高 {%s}，并降低 {%s} 战备值 (CR) 上限。
 
 但部署所需补给下降 {%s}。",提高维护成本与最低船员要求，并降低战备值 (CR) 上限。,,graphics/hullmods/increased_maintenance.png
-不稳定推进器,erratic_injector,,,,"dmod, damage, civ",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.ErraticInjector,"燃料消耗量提高 {%s}，且降低 {%s} 点零幅能加速所提高的航速。
+失常的燃料喷注器,erratic_injector,,,,"dmod, damage, civ",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.ErraticInjector,"燃料消耗量提高 {%s}，且降低 {%s} 点零幅能加速所提高的航速。
 
 但部署所需补给下降 {%s}。",提高燃料消耗，并降低零幅能加速增益。,,graphics/hullmods/erratic_injector.png
 自动化系统损毁,faulty_auto,,,,"dmod, damage, notAuto",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.FaultyAutomatedSystems,"提高最低所需船员数量 {%s}，并降低 {%s} 战备值 (CR) 上限。
