@@ -22,23 +22,32 @@ ParaTranz 项目：[https://paratranz.cn/projects/3489](https://paratranz.cn/pro
 ## 编码和命令
 
 - 默认使用 UTF-8。PowerShell、Python、Java 命令涉及中文文件时必须显式避免本地编码乱码。
-- Python 命令优先使用 `py -3 -X utf8 ...` 或显式 `encoding='utf-8'`。
+- Python 命令优先使用 `python -X utf8 ...`（或本地实际可用的 Python 3 解释器）或显式 `encoding='utf-8'`。
 - Java 命令优先使用 `-Dfile.encoding=UTF-8`；编译时使用 `-encoding UTF-8`。
 - Windows PowerShell 中读写文本文件时使用 `-Encoding UTF8`。
 
 ## 常用命令
 
-ParaTranz 脚本：
+ParaTranz 脚本（不带参数运行进入交互式菜单，带数字参数直接执行对应操作）。使用本地可用的 Python 3 解释器（如 `python`），不要假定 `py` 启动器存在：
 
 ```powershell
-py -3 -X utf8 para_tranz\para_tranz_script.py
-py -3 -X utf8 para_tranz\para_tranz_script.py 1  # 导出：游戏文件 -> para_tranz/output
-py -3 -X utf8 para_tranz\para_tranz_script.py 2  # 导入：para_tranz/output -> localization
-py -3 -X utf8 para_tranz\para_tranz_script.py 3  # 下载平台导出并导入，需要 .env
-py -3 -X utf8 para_tranz\para_tranz_script.py 4 "com.fs.starfarer.api.SomeClass"
-py -3 -X utf8 para_tranz\para_tranz_script.py 5 "search pattern"
-py -3 -X utf8 para_tranz\para_tranz_script.py 6  # 格式化 para_tranz_map.json
+python -X utf8 para_tranz\para_tranz_script.py
+python -X utf8 para_tranz\para_tranz_script.py 1  # 导出：游戏文件 -> para_tranz/output
+python -X utf8 para_tranz\para_tranz_script.py 2  # 导入：para_tranz/output -> localization
+python -X utf8 para_tranz\para_tranz_script.py 3  # 下载平台导出并导入，需要 .env
+python -X utf8 para_tranz\para_tranz_script.py 4 "com.fs.starfarer.api.SomeClass"
+python -X utf8 para_tranz\para_tranz_script.py 5 "search pattern"
+python -X utf8 para_tranz\para_tranz_script.py 6  # 格式化 para_tranz_map.json
 ```
+
+子命令说明：
+
+- `1` 导出：按 `para_tranz_map.json` 的映射，从 `original/` 和 `localization/` 读取原文与现有译文，生成 ParaTranz JSON 词条文件写入 `para_tranz/output/`，用于上传到平台。
+- `2` 导入：将 `para_tranz/output/` 中的 ParaTranz JSON 词条（通常来自平台导出）写回 `localization/` 下的译文文件。
+- `3` 下载并导入：通过 ParaTranz API 下载平台最新导出压缩包并解压到 `para_tranz/output/`，随后自动执行 `2`（写回译文）和 `1`（重新导出），需要在 `.env` 中配置 API Key。
+- `4` 生成类映射：对指定的 jar 内类文件（接受 `starfarer.api.jar:com/.../Foo.class` 或 `com.fs.starfarer.api.Foo` 两种路径格式），提取其中所有字符串并打印可粘贴到 `para_tranz_map.json` 的类文件映射项，用于把新类纳入翻译范围。
+- `5` 搜索字符串：在所有 jar 文件的类中查找指定原文字符串并打印所在类和位置，用于定位某句游戏文本出自哪个类。
+- `6` 格式化映射：对 `para_tranz_map.json` 去重、排序并保存，修改该文件后建议运行一次以校验格式。
 
 Jar 预处理：
 
