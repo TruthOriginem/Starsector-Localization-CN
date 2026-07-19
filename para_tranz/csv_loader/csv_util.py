@@ -8,6 +8,7 @@ REGEX_IGNORED_TOKENS = re.compile(
 REGEX_HIGHLIGHT_TARGET = re.compile(
     r'^(SetTextHighlights|Highlight) (.*)(?:\n|$)', re.MULTILINE
 )
+REGEX_OPTION_ID = re.compile(r'^\s*((?:\d+:)?[A-Za-z0-9_]+):', re.MULTILINE)
 
 
 def rules_csv_extract_csv_tokens(s: str) -> Set[str]:
@@ -60,6 +61,19 @@ def rules_csv_find_missing_csv_tokens(original: str, translation: str) -> Set[st
     return {token.name for token in original_tokens - included_tokens}
 
 
+def rules_csv_extract_option_ids(options: str) -> List[str]:
+    """
+    从rules的options列中按顺序提取每行行首的选项ID（含可选的数字排序前缀，如 "100:id"）
+
+    Args:
+        options (str): options列内容
+
+    Returns:
+        List[str]: 选项ID列表
+    """
+    return REGEX_OPTION_ID.findall(options or '')
+
+
 def rules_csv_extract_highlight_targets_from_script(script: str) -> Set[str]:
     """
     从rules的scripts列中提取高亮目标string
@@ -79,7 +93,9 @@ def rules_csv_extract_highlight_targets_from_script(script: str) -> Set[str]:
     return highlights
 
 
-_REGEX_HIGHLIGHT_PARAM = re.compile(r'"((?:[^"\\]|\\.)*)"|\$[a-zA-Z0-9][a-zA-Z0-9_.]+[a-zA-Z0-9]')
+_REGEX_HIGHLIGHT_PARAM = re.compile(
+    r'"((?:[^"\\]|\\.)*)"|\$[a-zA-Z0-9][a-zA-Z0-9_.]+[a-zA-Z0-9]'
+)
 
 
 def parse_highlight_params(input_text: str) -> List[str]:

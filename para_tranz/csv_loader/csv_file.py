@@ -6,16 +6,17 @@ from dataclasses import asdict
 from pathlib import Path
 from typing import Dict, List, Optional, Sequence, Set, Tuple, Union
 
-from para_tranz.csv_loader.csv_util import (
-    rules_csv_extract_highlight_targets_from_script,
-    rules_csv_find_missing_csv_tokens,
-    rules_csv_find_text_highlight_targets_adjacent_to_non_space,
-)
 from para_tranz.config import (
     EXPORTED_STRING_CONTEXT_PREFIX,
     EXPORTED_STRING_CONTEXT_PREFIX_PREFIX,
     IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS,
     REMOVE_TRANSLATION_WHEN_ORIGINAL_IS_EMPTY,
+)
+from para_tranz.csv_loader.csv_util import (
+    rules_csv_extract_highlight_targets_from_script,
+    rules_csv_extract_option_ids,
+    rules_csv_find_missing_csv_tokens,
+    rules_csv_find_text_highlight_targets_adjacent_to_non_space,
 )
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, CsvMapItem
 from para_tranz.utils.util import (
@@ -159,6 +160,23 @@ class CsvFile(DataFile):
                     raise ValueError(
                         f'key="{self.generate_string_key(row_id, col)}" 的词条中译文数据包含中文引号，请移除后再保存'
                     )
+            # 选项ID一致性检查：译文 options 列中各选项的ID必须与原文逐一相同，
+            # ID 错误会导致游戏内找不到规则报错，或对话路由到错误分支。
+            # 注意不能依赖 text 列非空：只添加选项的规则行 text 列为空
+            if self.path.name == 'rules.csv' and translated_row.get('options'):
+                original_option_ids = rules_csv_extract_option_ids(
+                    original_row.get('options', '')
+                )
+                translated_option_ids = rules_csv_extract_option_ids(
+                    translated_row['options']
+                )
+                if original_option_ids != translated_option_ids:
+                    raise ValueError(
+                        f'key="{self.generate_string_key(row_id, "options")}" 的译文选项ID '
+                        f'{translated_option_ids} 与原文选项ID {original_option_ids} 不一致，'
+                        f'请修正译文 options 列中的选项ID'
+                    )
+
             # 针对 rules.csv 的特殊检查（译文不为空时）
             if self.path.name == 'rules.csv' and translated_row['text']:
                 # 逐列检查：$var token 完整性 和 原译文行数一致性
@@ -190,14 +208,17 @@ class CsvFile(DataFile):
                         original_row['text'] + '\n' + original_row.get('options', '')
                     )
                     runtime_highlights = {
-                        h for h in highlights
+                        h
+                        for h in highlights
                         if h.startswith('$') and h not in original_combined
                     }
                     checkable_highlights = highlights - runtime_highlights
 
                     # 检查可验证的高亮目标是否出现在译文的 text 或 options 中
                     translated_combined = (
-                        translated_row['text'] + '\n' + translated_row.get('options', '')
+                        translated_row['text']
+                        + '\n'
+                        + translated_row.get('options', '')
                     )
                     missing_highlights = {
                         h for h in checkable_highlights if h not in translated_combined
@@ -212,9 +233,13 @@ class CsvFile(DataFile):
                         ('text', translated_row['text']),
                         ('options', translated_row.get('options', '')),
                     ]:
-                        highlights_in_col = {h for h in checkable_highlights if h in col_value}
-                        not_surrounded = rules_csv_find_text_highlight_targets_adjacent_to_non_space(
-                            col_value, highlights_in_col
+                        highlights_in_col = {
+                            h for h in checkable_highlights if h in col_value
+                        }
+                        not_surrounded = (
+                            rules_csv_find_text_highlight_targets_adjacent_to_non_space(
+                                col_value, highlights_in_col
+                            )
                         )
                         if not_surrounded:
                             self.logger.warning(
@@ -280,7 +305,9 @@ class CsvFile(DataFile):
             self.logger.warning(
                 f'文件 {relative_path(self.path)} 所加载的未被注释且不为空的原文与译文数据量不匹配：加载有效原文 {len(self.original_id_data)} 条，有效译文 {len(self.translation_id_data)} 条'
             )
-        extra_translation_ids = set(self.translation_id_data) - set(self.original_id_data)
+        extra_translation_ids = set(self.translation_id_data) - set(
+            self.original_id_data
+        )
         if extra_translation_ids:
             raise ValueError(
                 f'文件 {relative_path(self.translation_path)} 中存在原文文件没有的有效行：'
