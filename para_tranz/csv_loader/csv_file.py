@@ -13,10 +13,12 @@ from para_tranz.config import (
     REMOVE_TRANSLATION_WHEN_ORIGINAL_IS_EMPTY,
 )
 from para_tranz.csv_loader.csv_util import (
+    rules_csv_count_highlight_commands,
     rules_csv_extract_highlight_targets_from_script,
     rules_csv_extract_option_ids,
     rules_csv_find_missing_csv_tokens,
     rules_csv_find_text_highlight_targets_adjacent_to_non_space,
+    rules_csv_max_highlight_commands_per_paragraph,
 )
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, CsvMapItem
 from para_tranz.utils.util import (
@@ -177,6 +179,23 @@ class CsvFile(DataFile):
                         f'请修正译文 options 列中的选项ID'
                     )
 
+            # 高亮命令数量检查：游戏中每条 Highlight/SetTextHighlights 命令都会
+            # 重置目标段落的全部已有高亮，同一段落多条时只有最后一条生效，
+            # 译文中必须合并为一条多参数命令（AddText 之后为新段落，不受影响）
+            if self.path.name == 'rules.csv' and translated_row.get('script'):
+                highlight_command_count = (
+                    rules_csv_max_highlight_commands_per_paragraph(
+                        translated_row['script']
+                    )
+                )
+                if highlight_command_count > 1:
+                    raise ValueError(
+                        f'key="{self.generate_string_key(row_id, "script")}" 的译文script中'
+                        f'同一段落包含 {highlight_command_count} 条正文高亮命令'
+                        f'(Highlight/SetTextHighlights)，后执行的命令会清除先前命令的高亮，'
+                        f'请合并为一条多参数命令'
+                    )
+
             # 针对 rules.csv 的特殊检查（译文不为空时）
             if self.path.name == 'rules.csv' and translated_row['text']:
                 # 逐列检查：$var token 完整性 和 原译文行数一致性
@@ -192,6 +211,15 @@ class CsvFile(DataFile):
                     if translated_value and (
                         original_value.count('\n') != translated_value.count('\n')
                     ):
+                        # 译文会把 script 中多条高亮命令合并为一条（修复游戏的
+                        # 高亮重置问题），扣除高亮命令行数后行数一致则不告警
+                        if col == 'script' and (
+                            original_value.count('\n')
+                            - rules_csv_count_highlight_commands(original_value)
+                            == translated_value.count('\n')
+                            - rules_csv_count_highlight_commands(translated_value)
+                        ):
+                            continue
                         self.logger.warning(
                             f'key="{self.generate_string_key(row_id, col)}" 的词条中原文行数'
                             f'({original_value.count(chr(10)) + 1})与译文行数'

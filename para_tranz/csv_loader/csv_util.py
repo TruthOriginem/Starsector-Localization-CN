@@ -9,6 +9,9 @@ REGEX_HIGHLIGHT_TARGET = re.compile(
     r'^(SetTextHighlights|Highlight) (.*)(?:\n|$)', re.MULTILINE
 )
 REGEX_OPTION_ID = re.compile(r'^\s*((?:\d+:)?[A-Za-z0-9_]+):', re.MULTILINE)
+REGEX_HIGHLIGHT_COMMAND = re.compile(
+    r'^\s*(?:Highlight|SetTextHighlights)\b', re.MULTILINE
+)
 
 
 def rules_csv_extract_csv_tokens(s: str) -> Set[str]:
@@ -72,6 +75,44 @@ def rules_csv_extract_option_ids(options: str) -> List[str]:
         List[str]: 选项ID列表
     """
     return REGEX_OPTION_ID.findall(options or '')
+
+
+def rules_csv_count_highlight_commands(script: str) -> int:
+    """
+    统计script列中设置正文高亮的命令(Highlight / SetTextHighlights)总行数。
+
+    Args:
+        script (str): rules脚本
+
+    Returns:
+        int: 高亮命令行数
+    """
+    return len(REGEX_HIGHLIGHT_COMMAND.findall(script or ''))
+
+
+def rules_csv_max_highlight_commands_per_paragraph(script: str) -> int:
+    """
+    统计script中同一段落内正文高亮命令(Highlight / SetTextHighlights)数量的最大值。
+
+    游戏中每条该命令都会重置目标段落的全部已有高亮（后执行的命令会清除先前
+    命令的效果），因此同一段落内出现多条时只有最后一条生效，应合并为一条多
+    参数命令。AddText 命令会新增一个段落，其后的高亮命令作用于新段落，
+    因此以 AddText 为界分段统计。
+
+    Args:
+        script (str): rules脚本
+
+    Returns:
+        int: 单个段落内高亮命令数量的最大值
+    """
+    max_count = count = 0
+    for line in (script or '').splitlines():
+        if line.strip().startswith('AddText'):
+            count = 0
+        elif REGEX_HIGHLIGHT_COMMAND.match(line):
+            count += 1
+            max_count = max(max_count, count)
+    return max_count
 
 
 def rules_csv_extract_highlight_targets_from_script(script: str) -> Set[str]:
