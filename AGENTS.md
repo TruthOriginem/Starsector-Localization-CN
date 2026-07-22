@@ -15,7 +15,7 @@ ParaTranz 项目：[https://paratranz.cn/projects/3489](https://paratranz.cn/pro
 - `localization/`：当前版本汉化结果；导入译文会写入这里。
 - `original.old/`、`localization.old/`：上个版本快照；通常只读。
 - `para_tranz/`：ParaTranz 导入导出脚本、映射和输出数据。
-- `jar_pre_processing/`：Jar 预处理工具；详见 [jar_pre_processing/README.md](jar_pre_processing/README.md)。
+- `jar_pre_processing/`：Jar 预处理工具（ASM Patch、字符串解耦）与中文输入法支持模块（`src/main/java/org/fossic/starsector/ime/` 运行时类、`native/` 原生库）；详见 [jar_pre_processing/README.md](jar_pre_processing/README.md) 与 [jar_pre_processing/docs/ime-support.md](jar_pre_processing/docs/ime-support.md)。
 - `docs/`：翻译、平台和迁移文档。
 - `packaging/`：打包脚本与安装包素材。
 
@@ -62,12 +62,15 @@ python -X utf8 para_tranz\para_tranz_script.py 6  # 格式化 para_tranz_map.jso
 7. **检查 diff**：`git diff` 确认改动只有预期的新增词条，无意外漂移。
 8. **停下交由管理员**：将词条文件上传到 ParaTranz 平台翻译，平台确认后再运行 `3` 回写译文。
 
-Jar 预处理：
+Jar 预处理（ASM Patch + 字符串解耦 + 输入法运行时注入，产出 original/ 与 localization/ 的 jar 及 ssime.dll）：
 
 ```powershell
 cd jar_pre_processing
-.\mvnw.cmd compile exec:java
+.\mvnw.cmd compile exec:java             # 完整预处理流程
+.\mvnw.cmd -Pbuild-native compile        # 重编输入法原生库 ssime.dll（仅改 native/ssime.cpp 后需要，依赖 MinGW g++）
 ```
+
+注意：预处理产出的 jar 为未翻译状态，之后必须运行 ParaTranz 脚本子命令 `2` 把译文写回 `localization/*.jar`。
 
 Lint / format：
 
@@ -105,6 +108,8 @@ ruff format .
 - 导入 ParaTranz 数据后，应检查 `localization/` 的 git diff 是否符合预期。
 - 向 ParaTranz 平台导入词条时必须使用安全模式，避免删除平台词条。
 - `original/` 下的 jar 已经过预处理，不等同于 `game data/` 的原始 jar。
+- 运行 Jar 预处理后，若 `localization/starfarer.api.jar` 只有 zip 元数据变化（内容与 HEAD 逐条一致），用 `git checkout` 恢复以保持 diff 干净；`starfarer_obf.jar` 需跑 ParaTranz 子命令 `2` 恢复译文后再对比。
+- `localization/native/windows/ssime.dll` 是中文输入法原生库，由预处理从 `jar_pre_processing/native/` 复制，不要手动编辑。
 - 修改 `para_tranz_map.json` 后可运行选项 `6` 格式化并校验。
 - Git commit message 使用中文。
 - 提交前尽量运行相关脚本或最小验证；涉及汉化结果时，最好复制到游戏目录测试启动。
@@ -119,5 +124,6 @@ ruff format .
 
 - 项目说明和版本更新流程：[README.md](README.md)
 - Jar 预处理细节：[jar_pre_processing/README.md](jar_pre_processing/README.md)
+- 中文输入法支持（架构/构建/日志/限制）：[jar_pre_processing/docs/ime-support.md](jar_pre_processing/docs/ime-support.md)
 - 非标准 JSON 解析设计：[para_tranz/json_loader/DESIGN.md](para_tranz/json_loader/DESIGN.md)
 - 临时脚本说明：[para_tranz/temporary_scripts/README.md](para_tranz/temporary_scripts/README.md)

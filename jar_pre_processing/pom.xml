@@ -13,6 +13,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <exec.mainClass>org.fossic.starsector.preprocessing.JarPreProcessorMain</exec.mainClass>
         <asm.version>9.7.1</asm.version>
+        <exec-plugin.version>3.5.0</exec-plugin.version>
     </properties>
 
     <dependencies>
@@ -31,6 +32,15 @@
             <artifactId>asm-commons</artifactId>
             <version>${asm.version}</version>
         </dependency>
+        <!-- 游戏 API jar：仅供 IME 运行时类（org.fossic.starsector.ime）编译期使用。
+             这些类由预处理注入 starfarer_obf.jar，运行时由游戏 classpath 提供该 API。 -->
+        <dependency>
+            <groupId>com.fs.starfarer</groupId>
+            <artifactId>starfarer-api</artifactId>
+            <version>0.98a-RC8</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/../game data/starfarer.api.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <build>
@@ -47,7 +57,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>3.5.0</version>
+                <version>${exec-plugin.version}</version>
                 <configuration>
                     <mainClass>${exec.mainClass}</mainClass>
                     <systemProperties>
@@ -60,4 +70,54 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <!-- 重新编译 IME 原生库（仅修改 native/ssime.cpp 后需要）：
+                 .\mvnw.cmd -Pbuild-native compile
+             依赖 PATH 中的 MinGW-w64 g++；JNI 头文件取自运行 Maven 的 JDK（java.home）。
+             产物 native/ssime.dll 提交入库，日常构建不需要本 profile。 -->
+        <profile>
+            <id>build-native</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>${exec-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <id>build-ssime-dll</id>
+                                <phase>compile</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>g++</executable>
+                                    <workingDirectory>${project.basedir}</workingDirectory>
+                                    <arguments>
+                                        <argument>-shared</argument>
+                                        <argument>-O2</argument>
+                                        <argument>-s</argument>
+                                        <argument>-static</argument>
+                                        <argument>-static-libgcc</argument>
+                                        <argument>-static-libstdc++</argument>
+                                        <!-- 去除 PE 头时间戳：源码不变时重建产物字节一致，避免无意义的二进制 diff -->
+                                        <argument>-Wl,--no-insert-timestamp</argument>
+                                        <argument>-I${java.home}/include</argument>
+                                        <argument>-I${java.home}/include/win32</argument>
+                                        <argument>-o</argument>
+                                        <argument>native/ssime.dll</argument>
+                                        <argument>native/ssime.cpp</argument>
+                                        <argument>-limm32</argument>
+                                        <argument>-lgdi32</argument>
+                                        <argument>-luser32</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>

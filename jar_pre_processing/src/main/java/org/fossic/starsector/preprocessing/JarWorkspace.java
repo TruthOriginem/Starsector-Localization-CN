@@ -17,6 +17,7 @@ public final class JarWorkspace {
     public static final String OBF_JAR = "starfarer_obf.jar";
 
     private final Path projectDir;
+    private final Path repoDir;
     private final Path gameDataDir;
     private final Path originalDir;
     private final Path localizationDir;
@@ -25,12 +26,22 @@ public final class JarWorkspace {
 
     public JarWorkspace(Path projectDir) {
         this.projectDir = projectDir.toAbsolutePath().normalize();
-        Path repoDir = this.projectDir.getParent();
+        this.repoDir = this.projectDir.getParent();
         this.gameDataDir = repoDir.resolve("game data");
         this.originalDir = repoDir.resolve("original");
         this.localizationDir = repoDir.resolve("localization");
         this.workDir = this.projectDir.resolve("target").resolve("preprocess-work");
         this.vendorDecoupler = this.projectDir.resolve("vendor").resolve("jar-string-decoupler-1.0.0-all.jar");
+    }
+
+    /** 预编译的 IME 原生库，随汉化包分发到 native/windows。 */
+    public Path imeNativeDll() {
+        return projectDir.resolve("native").resolve("ssime.dll");
+    }
+
+    /** 汉化包中原生库的目标目录（对应游戏 java.library.path = native\windows）。 */
+    public Path localizationNativeWindowsDir() {
+        return localizationDir.resolve("native").resolve("windows");
     }
 
     public Path workDir() {
@@ -97,6 +108,18 @@ public final class JarWorkspace {
                         + originalHash + ", localization=" + localizationHash);
             }
         }
+    }
+
+    /** 把预编译的 IME 原生库分发到汉化结果的 native/windows 目录。 */
+    public void distributeImeNativeLibrary() throws IOException {
+        Path dll = imeNativeDll();
+        if (!Files.exists(dll)) {
+            throw new PatchException("缺少预编译的 IME 原生库: " + dll
+                    + "（请先运行 .\\mvnw.cmd -Pbuild-native compile 生成 ssime.dll）");
+        }
+        Path targetDir = localizationNativeWindowsDir();
+        Files.createDirectories(targetDir);
+        atomicWrite(targetDir.resolve("ssime.dll"), Files.readAllBytes(dll));
     }
 
     public Map<String, String> inputHashes() throws IOException {

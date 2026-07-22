@@ -4,11 +4,13 @@
 
 ## 功能
 
-预处理分两个阶段，按顺序对 `starfarer.api.jar` 和 `starfarer_obf.jar` 执行：
+预处理按顺序对 `starfarer.api.jar` 和 `starfarer_obf.jar` 执行：
 
-1. **ASM 字节码 Patch**：通过 [ASM](https://asm.ow2.io/) 库直接修改 `.class` 文件中的字节码，修复游戏原代码中与中文显示不兼容的逻辑（分隔符、字体、列宽、日期格式等）。各 Patch 的详细说明见下文。
+1. **ASM 字节码 Patch**：通过 [ASM](https://asm.ow2.io/) 库直接修改 `.class` 文件中的字节码，修复游戏原代码中与中文显示不兼容的逻辑（分隔符、字体、列宽、日期格式等），并注入中文输入法钩子。各 Patch 的详细说明见下文。
 
 2. **字符串解耦（jar-string-decoupler）**：调用 `vendor/jar-string-decoupler-1.0.0-all.jar`，将 `.class` 文件中硬编码的字符串常量提取并解耦，使 ParaTranz 的 jar 加载器能够读取、翻译并写回字符串，无需再手动修改字节码。该工具来自[jar-string-decoupler项目](https://github.com/jnxyp/jar-string-decoupler)。
+
+3. **中文输入法运行时注入**：把随本模块一起编译的输入法运行时类（`org.fossic.starsector.ime.*`）追加进 `starfarer_obf.jar`，并把预编译的原生库 `native/ssime.dll` 分发到 `localization/native/windows/`。详见 [docs/ime-support.md](docs/ime-support.md)。
 
 处理完成后，结果 jar 同时写入仓库根目录的 `original/` 和 `localization/`，并在 `target/preprocess-work/preprocess-report.json` 生成处理报告（含输入/输出哈希、各 Patch 结果）。
 
@@ -35,24 +37,37 @@
 **输出**：
 - `original/starfarer.api.jar`、`original/starfarer_obf.jar`
 - `localization/starfarer.api.jar`、`localization/starfarer_obf.jar`
+- `localization/native/windows/ssime.dll`（中文输入法原生库）
 - `target/preprocess-work/preprocess-report.json`（处理报告）
 - `target/preprocess-work/reports/*.decoupler.json`（解耦报告）
+
+**重编输入法原生库**（仅修改 `native/ssime.cpp` 后需要，依赖 PATH 中的 MinGW-w64 g++）：
+
+```bash
+.\mvnw.cmd -Pbuild-native compile
+```
 
 ## 目录结构
 
 ```
 jar_pre_processing/
-├── src/main/java/.../preprocessing/
-│   ├── JarPreProcessorMain.java   # 主入口
-│   ├── JarWorkspace.java          # 路径管理与文件 IO
-│   ├── JarRewriter.java           # ASM Patch 调度器
-│   ├── DecouplerRunner.java       # jar-string-decoupler 调用
-│   ├── PatchRegistry.java         # 注册所有 Patch
-│   ├── JarPatch.java              # Patch 接口
-│   └── patches/                   # 各具体 Patch 实现
+├── src/main/java/org/fossic/starsector/
+│   ├── preprocessing/
+│   │   ├── JarPreProcessorMain.java   # 主入口
+│   │   ├── JarWorkspace.java          # 路径管理与文件 IO
+│   │   ├── JarRewriter.java           # ASM Patch 调度器
+│   │   ├── DecouplerRunner.java       # jar-string-decoupler 调用
+│   │   ├── ImeRuntimeInjector.java    # 输入法运行时类注入
+│   │   ├── PatchRegistry.java         # 注册所有 Patch
+│   │   ├── JarPatch.java              # Patch 接口
+│   │   └── patches/                   # 各具体 Patch 实现
+│   └── ime/                           # 中文输入法运行时（注入 obf jar，见 docs/ime-support.md）
+├── native/
+│   ├── ssime.cpp                      # 输入法原生库源码（IMM32 / JNI）
+│   └── ssime.dll                      # 预编译产物（提交入库）
 ├── vendor/
 │   └── jar-string-decoupler-1.0.0-all.jar
-├── docs/                          # 截图等文档资源
+├── docs/                              # 文档与截图（含 ime-support.md）
 └── pom.xml
 ```
 
