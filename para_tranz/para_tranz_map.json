@@ -14441,6 +14441,10 @@
           "You have destroyed this base.",
           "You have not yet discovered the exact location or capabilities of this base.",
           "You have successfully completed this bounty.",
+          {
+            "val": "agreement",
+            "occurs": [0, 1, 2]
+          },
           "remaining"
         ]
       },

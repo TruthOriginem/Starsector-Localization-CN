@@ -10780,7 +10780,7 @@ BFFItalkToEngineer2,DialogOptionSelected,$option == bffi_talkToEngineer2,,"""明
 BFFItalkToEngShuttle,DialogOptionSelected,$option == bffi_talkToEngShuttle,"EndConversation DO_NOT_FIRE
 ShowLargePlanet","Bornanew 的权限 —— 说穿了，就是大祭司 Sophronia Jaspis 的权限 —— 在当地交通管理部门与制造业公会的官僚机构那里足以通行无阻。
 
-你的穿梭艇缓缓驶入 Asher 的大气层。随着穿越那片由巨型沙尘暴常年补给的平流层尘雾，窗外的景致渐渐晕染成一片温暖而浑浊的灰蒙之色。当进入低空大气层时，显示屏彻底黑屏，随即切换为模拟成像模式。
+你的穿梭机缓缓驶入 Asher 的大气层。随着穿越那片由巨型沙尘暴常年补给的平流层尘雾，窗外的景致渐渐晕染成一片温暖而浑浊的灰蒙之色。当进入低空大气层时，显示屏彻底黑屏，随即切换为模拟成像模式。
 
 这并非什么危险状况。那些风暴虽然声势浩大，但因这颗星球的大气稀薄至极，其物质密度其实很低。",bffi_talkToEngineer4:继续,
 BFFItalkToEngineer4,DialogOptionSelected,$option == bffi_talkToEngineer4,"BeginConversation nanoforge_engineer
@@ -12162,7 +12162,7 @@ Call $global.bffi_ref updateData
 $bffi_stage == ARREST_THE_CURATE",,,2:bffi_arrestCurate1:与 $global.jethroName 一同乘坐穿梭机前往大教堂,
 BFFIarrestCurate1,DialogOptionSelected,$option == bffi_arrestCurate1,ShowLargePlanet,"Bornanew 出示的证件实际上就是大祭司 Jaspis 的，这让那些从中作梗、挡路的交通管制官员们一个个乖乖放行。
 
-一名与 $global.jethroName 级别相同但是年轻些的见习骑士，带着不情愿的苦相，被迫将某位神职人员的穿梭机停机位，从原本靠近 Exodus 神圣大教堂的停机坪重新调配到别处时。
+一名与 $global.jethroName 级别相同但是年轻些的见习骑士，带着不情愿的苦相，被迫将某位神职人员的穿梭机停机位，从原本靠近 Exodus 神圣大教堂的停机坪重新调配到别处。
 
 靠近 本就是个相对概念。在 Tartessus 星球上，银河救赎教会 秉持着这样一种观点：太空飞行器的往来是种不光彩的行为，应当避开地面居民的视线。当你们的穿梭机降落时，Bornanew 注意到，大教堂其实还在视线尽头的地平线之外。",bffi_idolTalkIntro1:登上 Tartessus 上那台勉强能算作交通工具的设备,
 BFFIidolTalkIntro1,DialogOptionSelected,$option == bffi_idolTalkIntro1,ShowDefaultVisual,"* * *
