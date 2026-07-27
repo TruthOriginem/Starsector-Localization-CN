@@ -27780,7 +27780,7 @@ SetTextHighlightColors h h h h $jabr_factionColor
 Highlight $jabr_marketName $jabr_dist $jabr_reward $jabr_marines $jabr_marketFaction
 Call $jabr_ref showMap ""目标：$jabr_marketName ""","当你走近时，这个$jabr_manOrWoman一言不发地打量着你。片刻之后，$jabr_heOrShe似乎觉得你够格了，便把一个廉价的数据平板从桌子那边滑了过来。上面显示着一份个人资料和一个安全设施的结构图。
 
-$jabr_heOrShe轻声解释道：""我需要一次解救行动，任务对象正被...呃...非法监禁在 $jabr_dist 光年之外的 $jabr_marketName}。我的赞助人可以为此提供 $jabr_reward 星币。"" $jabr_manOrWoman等待你的答复，依稀可见得眼睛反射着犹如星宿般的光芒。
+$jabr_heOrShe轻声解释道：""我需要一次解救行动，任务对象正被...呃...非法监禁在 $jabr_dist 光年之外的 $jabr_marketName}。我的赞助人可以为此提供 $jabr_reward 星币。"" $jabr_manOrWoman等待你的答复，双眼反射出依稀可见的光芒，犹如星宿。
 
 你扫视了资料，他们调查得很彻底。你估计大约需要 $jabr_marines 名陆战队员才能完成这次任务。袭击 $jabr_marketFactionArticle $jabr_marketFaction 的监狱设施可能会对你的声望造成影响。你可以采取一些措施来避免暴露身份，但这些手段无法完全摆脱官方的怀疑。","contact_acceptBar:接受
 contact_declineBarNoContinue:拒绝",
