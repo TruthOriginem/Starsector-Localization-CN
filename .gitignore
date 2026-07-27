@@ -163,3 +163,21 @@ ruff.toml
 
 # Cython debug symbols
 cython_debug/
+
+# ── 功能分支的构建产物（规则置于 master，使其在任何分支下都生效）───────────────
+# 这些路径仅存在于 win-ime-support / dynamic-font-rendering 分支，且都是不入库的
+# 构建产物或大体积源文件。它们原本由分支内的 .gitignore 忽略，但那些 .gitignore
+# 自身也是受版本控制的文件——切回 master 后随之消失，规则失效，产物遂变成 untracked
+# 残渣，既干扰 git status 也容易被误提交。故在此统一声明。
+
+# 动态字体 native：FreeType 源码由 build.py 首次构建时自动 clone；字体源文件体积大，
+# 所需清单见 fonts/README.md，由 build.py 打包进分发 data。（build/ 已由上方通用规则覆盖）
+jar_pre_processing/native/dyn_font/third_party/freetype/
+jar_pre_processing/native/dyn_font/fonts/*.ttf
+jar_pre_processing/native/dyn_font/fonts/*.TTF
+jar_pre_processing/native/dyn_font/fonts/*.otf
+
+# 动态字体分发目录：data 为构建产物（含 TTF，体积大不入库，build.py 生成）；
+# chars.txt（玩家可编辑字表）入库直接分发；cache/ 为运行时按缩放档生成的图集。
+localization/graphics/fonts/dyn_font/*
+!localization/graphics/fonts/dyn_font/chars.txt
