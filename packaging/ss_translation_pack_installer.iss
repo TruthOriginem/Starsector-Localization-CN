@@ -185,7 +185,11 @@ begin
     Exit;
   if not LoadStringFromFile(TmpPath, Raw) then
     Exit;
-  if Copy(Raw, 1, 3) = #$EF + #$BB + #$BF then
+  { 逐字节比 Ord，不能写成 Copy(Raw,1,3) = #$EF+#$BB+#$BF —— 左侧是 AnsiString
+    的原始字节，右侧那串拼出来是 Unicode String（U+00EF/U+00BB/U+00BF），跨类型
+    比较永不相等，BOM 会留在文件里，游戏读 settings.json 时直接 JSONException。 }
+  if (Length(Raw) >= 3) and (Ord(Raw[1]) = $EF) and (Ord(Raw[2]) = $BB)
+     and (Ord(Raw[3]) = $BF) then
     Raw := Copy(Raw, 4, Length(Raw));
   Result := SaveStringToFile(Path, Raw, False);
   DeleteFile(TmpPath);
@@ -207,6 +211,7 @@ procedure PatchSettingsJson();
 var
   Path, BakPath, FragPath, Key: String;
   Lines, FragLines, Missing: TArrayOfString;
+  Probe: AnsiString;
   I, DtcIdx, NumMissing, OrigCount: Integer;
   Changed, Restored: Boolean;
 begin
@@ -314,7 +319,19 @@ begin
     Exit;
   end;
 
-  { 回读校验：行数应与预期一致，挡住"写了一半"的情况 }
+  { 回读校验：行数一致 + 首字节不是 BOM。游戏的 JSON 解析器不接受 BOM，读到就
+    直接 JSONException、进不去游戏；而写回链路里 SaveStringsToUTF8File 恰恰强制
+    写 BOM，靠 SaveLinesAsUtf8NoBom 剥掉，故此处兜底确认它确实被剥干净了。 }
+  if not LoadStringFromFile(Path, Probe) then
+    Probe := '';
+  if (Length(Probe) >= 3) and (Ord(Probe[1]) = $EF) and (Ord(Probe[2]) = $BB)
+     and (Ord(Probe[3]) = $BF) then begin
+    Restored := CopyFile(BakPath, Path, False);
+    if Restored then
+      DeleteFile(BakPath);
+    WarnPatchFailed('写入结果带 BOM，游戏将无法读取，已恢复原文件。');
+    Exit;
+  end;
   if (not LoadStringsFromFile(Path, FragLines))
      or (GetArrayLength(FragLines) < GetArrayLength(Lines)) then begin
     Restored := CopyFile(BakPath, Path, False);
