@@ -15,8 +15,18 @@ import java.util.Map;
 public final class JarWorkspace {
     public static final String API_JAR = "starfarer.api.jar";
     public static final String OBF_JAR = "starfarer_obf.jar";
+    /**
+     * 仅 ASM 注入、不做字符串解耦/翻译的 jar。
+     *
+     * <p>本分支不对它打任何 patch，产物即原版副本。之所以仍要纳入分发：各变体
+     * 汉化包之间要能互相覆盖安装。动态字体分支会往这个 jar 注入 hook，若其余
+     * 变体的包不含此文件，玩家从动态字体版换回来时它不会被覆盖，留下的 hook
+     * 找不到已被换走的运行时类，游戏启动即 NoClassDefFoundError。
+     */
+    public static final String COMMON_OBF_JAR = "fs.common_obf.jar";
 
     private final Path projectDir;
+    private final Path repoDir;
     private final Path gameDataDir;
     private final Path originalDir;
     private final Path localizationDir;
@@ -25,7 +35,7 @@ public final class JarWorkspace {
 
     public JarWorkspace(Path projectDir) {
         this.projectDir = projectDir.toAbsolutePath().normalize();
-        Path repoDir = this.projectDir.getParent();
+        this.repoDir = this.projectDir.getParent();
         this.gameDataDir = repoDir.resolve("game data");
         this.originalDir = repoDir.resolve("original");
         this.localizationDir = repoDir.resolve("localization");
@@ -74,7 +84,7 @@ public final class JarWorkspace {
         Files.createDirectories(workDir.resolve("decoupled"));
         Files.createDirectories(workDir.resolve("patched"));
         Files.createDirectories(workDir.resolve("reports"));
-        for (String jarName : jars()) {
+        for (String jarName : allJars()) {
             Path input = inputJar(jarName);
             if (!Files.exists(input)) {
                 throw new PatchException("Missing input jar: " + input);
@@ -83,9 +93,19 @@ public final class JarWorkspace {
         }
     }
 
+    /** jar 的最终产物：解耦集合取 decoupled，仅注入集合（common_obf）取 patched。 */
+    private Path finalJar(String jarName) {
+        for (String decoupled : jars()) {
+            if (decoupled.equals(jarName)) {
+                return decoupledJar(jarName);
+            }
+        }
+        return patchedJar(jarName);
+    }
+
     public void writeOutputs() throws IOException {
-        for (String jarName : jars()) {
-            byte[] bytes = Files.readAllBytes(decoupledJar(jarName));
+        for (String jarName : allJars()) {
+            byte[] bytes = Files.readAllBytes(finalJar(jarName));
             Path originalTarget = originalDir.resolve(jarName);
             Path localizationTarget = localizationDir.resolve(jarName);
             atomicWrite(originalTarget, bytes);
@@ -101,7 +121,7 @@ public final class JarWorkspace {
 
     public Map<String, String> inputHashes() throws IOException {
         Map<String, String> hashes = new LinkedHashMap<>();
-        for (String jarName : jars()) {
+        for (String jarName : allJars()) {
             hashes.put(jarName, sha256(inputJar(jarName)));
         }
         return hashes;
@@ -109,15 +129,21 @@ public final class JarWorkspace {
 
     public Map<String, String> outputHashes() throws IOException {
         Map<String, String> hashes = new LinkedHashMap<>();
-        for (String jarName : jars()) {
+        for (String jarName : allJars()) {
             hashes.put("original/" + jarName, sha256(originalDir.resolve(jarName)));
             hashes.put("localization/" + jarName, sha256(localizationDir.resolve(jarName)));
         }
         return hashes;
     }
 
+    /** 需要字符串解耦（含翻译流程）的 jar。 */
     public static String[] jars() {
         return new String[]{API_JAR, OBF_JAR};
+    }
+
+    /** 全部处理的 jar（解耦集合 + 仅 ASM 注入的 fs.common_obf.jar）。 */
+    public static String[] allJars() {
+        return new String[]{API_JAR, OBF_JAR, COMMON_OBF_JAR};
     }
 
     public static String sha256(Path path) throws IOException {

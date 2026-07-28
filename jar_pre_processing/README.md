@@ -4,11 +4,13 @@
 
 ## 功能
 
-预处理分两个阶段，按顺序对 `starfarer.api.jar` 和 `starfarer_obf.jar` 执行：
+预处理分两个阶段，对 `starfarer.api.jar` 和 `starfarer_obf.jar` 依次执行：
 
 1. **ASM 字节码 Patch**：通过 [ASM](https://asm.ow2.io/) 库直接修改 `.class` 文件中的字节码，修复游戏原代码中与中文显示不兼容的逻辑（分隔符、字体、列宽、日期格式等）。各 Patch 的详细说明见下文。
 
 2. **字符串解耦（jar-string-decoupler）**：调用 `vendor/jar-string-decoupler-1.0.0-all.jar`，将 `.class` 文件中硬编码的字符串常量提取并解耦，使 ParaTranz 的 jar 加载器能够读取、翻译并写回字符串，无需再手动修改字节码。该工具来自[jar-string-decoupler项目](https://github.com/jnxyp/jar-string-decoupler)。
+
+`fs.common_obf.jar` 只过第 1 阶段、不做字符串解耦。本分支不对它打任何 Patch，产物即原版副本——纳入分发是为了让各变体汉化包能互相覆盖安装：动态字体分支会往这个 jar 注入 hook，若其余变体的包不含此文件，玩家换回来时它不会被覆盖，残留的 hook 找不到已被换走的运行时类，游戏启动即 `NoClassDefFoundError`。
 
 处理完成后，结果 jar 同时写入仓库根目录的 `original/` 和 `localization/`，并在 `target/preprocess-work/preprocess-report.json` 生成处理报告（含输入/输出哈希、各 Patch 结果）。
 
@@ -31,10 +33,11 @@
 **前置条件**：仓库根目录的 `game data/` 下需存在待处理的原版 jar 文件：
 - `game data/starfarer.api.jar`
 - `game data/starfarer_obf.jar`
+- `game data/fs.common_obf.jar`
 
 **输出**：
-- `original/starfarer.api.jar`、`original/starfarer_obf.jar`
-- `localization/starfarer.api.jar`、`localization/starfarer_obf.jar`
+- `original/starfarer.api.jar`、`original/starfarer_obf.jar`、`original/fs.common_obf.jar`
+- `localization/starfarer.api.jar`、`localization/starfarer_obf.jar`、`localization/fs.common_obf.jar`
 - `target/preprocess-work/preprocess-report.json`（处理报告）
 - `target/preprocess-work/reports/*.decoupler.json`（解耦报告）
 

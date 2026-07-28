@@ -21,7 +21,7 @@ public final class JarPreProcessorMain {
         Map<String, String> inputHashes = workspace.inputHashes();
         JarRewriter rewriter = new JarRewriter(PatchRegistry.patches());
         List<PatchResult> patchResults = new ArrayList<>();
-        for (String jarName : JarWorkspace.jars()) {
+        for (String jarName : JarWorkspace.allJars()) {
             System.out.println("Applying ASM patches to " + jarName);
             patchResults.addAll(rewriter.rewrite(
                     jarName,
@@ -30,6 +30,8 @@ public final class JarPreProcessorMain {
             ));
         }
 
+        // 字符串解耦仅针对含翻译文本的 jar；fs.common_obf.jar 只过 patch 阶段
+        // （本分支无 patch，产物即原版副本），patched 结果直接作为最终输出。
         DecouplerRunner decoupler = new DecouplerRunner(workspace);
         for (String jarName : JarWorkspace.jars()) {
             System.out.println("Decoupling " + jarName);
