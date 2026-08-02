@@ -24,6 +24,13 @@ public final class JarWorkspace {
      * 找不到已被换走的运行时类，游戏启动即 NoClassDefFoundError。
      */
     public static final String COMMON_OBF_JAR = "fs.common_obf.jar";
+    /**
+     * 仅 ASM 注入、不做字符串解耦/翻译的声音引擎 jar。
+     *
+     * <p>启动优化分支会修改此文件；其它分支仍需分发原版副本，确保从启动优化版
+     * 覆盖安装回来时不会残留声音加载 hook。
+     */
+    public static final String SOUND_OBF_JAR = "fs.sound_obf.jar";
 
     private final Path projectDir;
     private final Path repoDir;
@@ -93,7 +100,7 @@ public final class JarWorkspace {
         }
     }
 
-    /** jar 的最终产物：解耦集合取 decoupled，仅注入集合（common_obf）取 patched。 */
+    /** jar 的最终产物：解耦集合取 decoupled，仅 ASM 注入集合取 patched。 */
     private Path finalJar(String jarName) {
         for (String decoupled : jars()) {
             if (decoupled.equals(jarName)) {
@@ -141,9 +148,10 @@ public final class JarWorkspace {
         return new String[]{API_JAR, OBF_JAR};
     }
 
-    /** 全部处理的 jar（解耦集合 + 仅 ASM 注入的 fs.common_obf.jar）。 */
+    /** 全部处理的 jar（解耦集合 + 仅 ASM 注入的引擎 jar）。 */
     public static String[] allJars() {
-        return new String[]{API_JAR, OBF_JAR, COMMON_OBF_JAR};
+        return new String[]{
+                API_JAR, OBF_JAR, COMMON_OBF_JAR, SOUND_OBF_JAR};
     }
 
     public static String sha256(Path path) throws IOException {
