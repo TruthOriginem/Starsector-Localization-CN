@@ -174,5 +174,12 @@ class NativeBuildGuardTests(unittest.TestCase):
         self.assertIn("-DBUILD_TESTING=ON", build.DYNFONT_CMAKE_DEFINES)
 
 
+class BuildArgumentsTest(unittest.TestCase):
+    def test_release_default_does_not_inject_profiling(self) -> None:
+        args = build.parse_args([])
+
+        self.assertEqual("off", args.profiling)
+
+
 if __name__ == "__main__":
     unittest.main()
