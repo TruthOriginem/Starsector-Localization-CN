@@ -175,4 +175,14 @@ public final class AsmUtil {
         return current;
     }
 
+    public static AbstractInsnNode previousReal(AbstractInsnNode node) {
+        AbstractInsnNode current = node.getPrevious();
+        while (current != null && (current.getType() == AbstractInsnNode.LABEL
+                || current.getType() == AbstractInsnNode.LINE
+                || current.getType() == AbstractInsnNode.FRAME)) {
+            current = current.getPrevious();
+        }
+        return current;
+    }
+
 }
