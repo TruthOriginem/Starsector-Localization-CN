@@ -14,6 +14,9 @@
         <exec.mainClass>org.fossic.starsector.preprocessing.JarPreProcessorMain</exec.mainClass>
         <asm.version>9.7.1</asm.version>
         <exec-plugin.version>3.5.0</exec-plugin.version>
+        <janino.version>2.7.8</janino.version>
+        <junit.version>5.11.4</junit.version>
+        <surefire.version>3.5.2</surefire.version>
     </properties>
 
     <dependencies>
@@ -33,10 +36,22 @@
             <version>${asm.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.11.4</version>
-            <scope>test</scope>
+            <groupId>org.l33tlabs.twl</groupId>
+            <artifactId>pngdecoder</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.luben</groupId>
+            <artifactId>zstd-jni</artifactId>
+            <version>1.5.7-4</version>
+        </dependency>
+        <!-- 游戏运行时自带 Janino 2.7.8；只用于编译/测试自定义 source loader，
+             不把另一份 Janino 打进游戏 jar。 -->
+        <dependency>
+            <groupId>org.codehaus.janino</groupId>
+            <artifactId>janino</artifactId>
+            <version>${janino.version}</version>
+            <scope>provided</scope>
         </dependency>
         <!-- 游戏 API jar：仅供 IME 运行时类（org.fossic.starsector.ime）编译期使用。
              这些类由预处理注入 starfarer_obf.jar，运行时由游戏 classpath 提供该 API。 -->
@@ -46,6 +61,12 @@
             <version>0.98a-RC8</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/../game data/starfarer.api.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -77,7 +98,15 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.5.2</version>
+                <version>${surefire.version}</version>
+                <configuration>
+                    <argLine>-Dfile.encoding=UTF-8</argLine>
+                    <systemPropertyVariables>
+                        <starsector.optimization.zstdNativeDirectory>
+                            ${project.build.directory}/zstd-native-test/v1
+                        </starsector.optimization.zstdNativeDirectory>
+                    </systemPropertyVariables>
+                </configuration>
             </plugin>
         </plugins>
     </build>

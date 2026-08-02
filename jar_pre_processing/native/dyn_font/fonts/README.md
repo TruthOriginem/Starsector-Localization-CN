@@ -7,7 +7,7 @@
 `build.py` 的 `jar` 步骤依据 `../assets.json` 同步所需 kerning，再把清单引用的字体与
 固化表打成单文件数据包
 `localization/graphics/fonts/dyn_font/typefaces.dat`（格式见 build.py 的打包函数与
-native 侧 `src/pack_reader.cpp`）随汉化包分发；运行时 native 库从 data 包
+native 侧 `src/pack_reader.cpp`）随汉化包分发；运行时 native 库从该数据包
 读取，不再依赖散装文件。
 
 **TTF 与 `*.kern.txt` 均不入 git**（见 `../.gitignore`）。构建前需将下列字体放入
@@ -41,5 +41,5 @@ native 生成时按渲染字号像素化。
 - 宋体（font-simsong）/ 综艺体（font-zongyi）分支将 insignia 系中文替换为
   对应分支字体，其余文件相同。
 - 玩家可编辑的字表 `chars.txt` 不在本目录——它直接位于分发位置
-  `localization/graphics/fonts/dyn_font/chars.txt`（与 data 包并列的两个
+  `localization/graphics/fonts/dyn_font/chars.txt`（与 `typefaces.dat` 并列的两个
   运行时文件之一）。

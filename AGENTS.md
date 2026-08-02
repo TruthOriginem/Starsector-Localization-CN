@@ -15,7 +15,7 @@ ParaTranz 项目：[https://paratranz.cn/projects/3489](https://paratranz.cn/pro
 - `localization/`：当前版本汉化结果；导入译文会写入这里。
 - `original.old/`、`localization.old/`：上个版本快照；通常只读。
 - `para_tranz/`：ParaTranz 导入导出脚本、映射和输出数据。
-- `jar_pre_processing/`：Jar 预处理工具（ASM Patch、字符串解耦）与中文输入法支持模块（`src/main/java/org/fossic/starsector/ime/` 运行时类、`native/` 原生库）；详见 [jar_pre_processing/README.md](jar_pre_processing/README.md) 与 [jar_pre_processing/docs/ime-support.md](jar_pre_processing/docs/ime-support.md)。
+- `jar_pre_processing/`：Jar 预处理工具（ASM Patch、字符串解耦）、输入法/动态字体运行时，以及可分组启停的启动优化与 profiling；详见 [jar_pre_processing/README.md](jar_pre_processing/README.md)。
 - `docs/`：翻译、平台和迁移文档。
 - `packaging/`：打包脚本与安装包素材。
 
@@ -68,10 +68,12 @@ Java 管线与产物分发）：
 
 ```powershell
 cd jar_pre_processing
-python build.py                          # 日常预处理流程 = jar 步骤（Java 管线 → 分发，用已提交的 native 库）
-python build.py ime                      # 只重编输入法原生库 ssime.dll（g++）
-python build.py dynfont                  # 只重编动态字体原生库 ss_dyn_font.dll（CMake+Ninja）
-python build.py all                      # 全部步骤；步骤可任意组合，如 `dynfont jar`，详见 --help
+python -X utf8 build.py                          # 日常预处理流程 = jar 步骤（Java 管线 → 分发，用已提交的 native 库）
+python -X utf8 build.py ime                      # 只重编输入法原生库 ssime.dll（g++）
+python -X utf8 build.py dynfont                  # 只重编动态字体原生库 ss_dyn_font.dll（CMake+Ninja）
+python -X utf8 build.py all                      # 全部步骤；步骤可任意组合，如 `dynfont jar`，详见 --help
+python -X utf8 build.py jar --optimizations none # 构建不含启动优化的对照 Jar
+python -X utf8 build.py jar --disable-patch-group fast-png # 禁用单个优化组及其依赖组
 ```
 
 注意：预处理产出的 jar 为未翻译状态，之后必须运行 ParaTranz 脚本子命令 `2` 把译文写回 `localization/*.jar`。
@@ -81,6 +83,14 @@ Lint / format：
 ```powershell
 ruff check .
 ruff format .
+```
+
+Java 单元测试（JDK 17+）：
+
+```powershell
+cd jar_pre_processing
+$env:MAVEN_OPTS='-Dfile.encoding=UTF-8'
+.\mvnw.cmd clean test
 ```
 
 ## ParaTranz 工作流
@@ -112,8 +122,9 @@ ruff format .
 - 导入 ParaTranz 数据后，应检查 `localization/` 的 git diff 是否符合预期。
 - 向 ParaTranz 平台导入词条时必须使用安全模式，避免删除平台词条。
 - `original/` 下的 jar 已经过预处理，不等同于 `game data/` 的原始 jar。
-- 运行 Jar 预处理后，若 `localization/starfarer.api.jar` 只有 zip 元数据变化（内容与 HEAD 逐条一致），用 `git checkout` 恢复以保持 diff 干净；`starfarer_obf.jar` 需跑 ParaTranz 子命令 `2` 恢复译文后再对比。
-- `localization/native/windows/` 下的 `ssime.dll`（中文输入法）与 `ss_dyn_font.dll`（动态字体）由 `build.py` 从 `jar_pre_processing/native/` 复制；`localization/graphics/fonts/dyn_font/data` 由 `build.py` 从 `jar_pre_processing/native/dyn_font/fonts/` 打包。均不要手动编辑。
+- 运行 Jar 预处理后，若 `localization/starfarer.api.jar` 只有 zip 元数据变化（内容与 HEAD 逐条一致），用 `git restore --source=HEAD -- localization/starfarer.api.jar` 恢复以保持 diff 干净；`starfarer_obf.jar` 需跑 ParaTranz 子命令 `2` 恢复译文后再对比。
+- `localization/native/windows/` 下的 `ssime.dll`（中文输入法）与 `ss_dyn_font.dll`（动态字体）由 `build.py` 从 `jar_pre_processing/native/` 复制；`localization/graphics/fonts/dyn_font/typefaces.dat` 由 `build.py` 从 `jar_pre_processing/native/dyn_font/fonts/` 打包。均不要手动编辑。
+- 启动优化的具体逻辑放在 `org.fossic.starsector.optimization` 并用单元测试覆盖；ASM Patch 只负责最小挂接、精确结构校验和功能组装配。新增优化遵循测试优先：先写会失败的行为测试，再实现 helper 与 Patch，最后进行实际启动 profiling。
 - 修改 `para_tranz_map.json` 后可运行选项 `6` 格式化并校验。
 - Git commit message 使用中文。
 - 提交前尽量运行相关脚本或最小验证；涉及汉化结果时，最好复制到游戏目录测试启动。
@@ -123,11 +134,15 @@ ruff format .
 - `master`：主分支，正文字体为兰亭黑体。
 - `font-simsong`：宋体字体分支。
 - `font-zongyi`：综艺体字体分支。
+- `dynamic-font-rendering`：动态字体渲染与中文输入法分支。
+- `startup-optimization`：基于动态字体分支的启动优化实验与 profiling 分支。
 
 ## 参考链接
 
 - 项目说明和版本更新流程：[README.md](README.md)
 - Jar 预处理细节：[jar_pre_processing/README.md](jar_pre_processing/README.md)
 - 中文输入法支持（架构/构建/日志/限制）：[jar_pre_processing/docs/ime-support.md](jar_pre_processing/docs/ime-support.md)
+- 启动优化总体设计、决策与优化列表：[jar_pre_processing/docs/startup_optimization.md](jar_pre_processing/docs/startup_optimization.md)
+- 启动 profiling 测量口径与可比结果：[jar_pre_processing/docs/startup_profile_runs.md](jar_pre_processing/docs/startup_profile_runs.md)
 - 非标准 JSON 解析设计：[para_tranz/json_loader/DESIGN.md](para_tranz/json_loader/DESIGN.md)
 - 临时脚本说明：[para_tranz/temporary_scripts/README.md](para_tranz/temporary_scripts/README.md)

@@ -9,6 +9,7 @@ import org.fossic.starsector.preprocessing.PatchResult;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.tree.InsnList;
 import org.objectweb.asm.tree.ClassNode;
+import org.objectweb.asm.tree.FrameNode;
 import org.objectweb.asm.tree.InsnNode;
 import org.objectweb.asm.tree.JumpInsnNode;
 import org.objectweb.asm.tree.LabelNode;
@@ -37,8 +38,8 @@ import java.util.Set;
  * 被调用的 {@code org.fossic.starsector.dynfont.*} 运行时类注入在
  * {@code starfarer_obf.jar}（与本 jar 同属游戏固定 classpath，跨 jar 可见）。
  *
- * <p>注入净栈变化 0、峰值栈需求 2；游戏以 {@code -noverify} 启动，
- * 分支目标无需补 StackMapTable 帧（管线 ClassWriter(0) 不重算帧）。
+ * <p>注入净栈变化 0、峰值栈需求 2。管线使用 {@code ClassWriter(0)}，因此 patch
+ * 会显式为新增分支目标写入 StackMapTable 帧，使产物在启用 JVM verifier 时同样合法。
  */
 public final class ResourceStreamDynFontPatch implements JarPatch {
     private static final String TARGET_CLASS = "com/fs/util/C.class";
@@ -81,6 +82,12 @@ public final class ResourceStreamDynFontPatch implements JarPatch {
         prelude.add(new JumpInsnNode(Opcodes.IFNULL, fallThrough));
         prelude.add(new InsnNode(Opcodes.ARETURN));
         prelude.add(fallThrough);
+        prelude.add(new FrameNode(
+                Opcodes.F_FULL,
+                2,
+                new Object[] {"com/fs/util/C", "java/lang/String"},
+                1,
+                new Object[] {"java/io/InputStream"}));
         prelude.add(new InsnNode(Opcodes.POP));
         method.instructions.insert(prelude);
         method.maxStack = Math.max(method.maxStack, 2);

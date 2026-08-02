@@ -2,7 +2,7 @@
 third_party/freetype/
 # CMake 构建目录
 build/
-# 字体源文件（体积大，不入库；所需清单见 fonts/README.md，build.py 打包进分发 data）
+# 字体源文件（体积大，不入库；所需清单见 fonts/README.md，build.py 打包进 typefaces.dat）
 fonts/*.ttf
 fonts/*.TTF
 fonts/*.otf

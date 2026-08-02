@@ -3,18 +3,32 @@ package org.fossic.starsector.dynfont;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.channels.FileChannel;
+import java.nio.channels.FileLock;
+import java.nio.channels.OverlappingFileLockException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.AtomicMoveNotSupportedException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
+import java.nio.file.LinkOption;
 import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
+import java.nio.file.StandardOpenOption;
+import java.nio.file.attribute.BasicFileAttributes;
+import java.nio.file.attribute.FileTime;
 import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.List;
 import java.util.HexFormat;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeSet;
+import java.util.UUID;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.prefs.Preferences;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -32,6 +46,7 @@ import java.util.regex.Pattern;
  * 绝不允许因动态字体故障影响游戏启动。
  */
 public final class DynFontOverrides {
+    private static final String LOGICAL_FONT_DIRECTORY = "graphics/fonts/";
     /** 覆盖的 11 套字体（须与 native 内置 spec 表一致）。 */
     private static final Set<String> FONT_NAMES = Set.of(
             "insignia15LTaa", "insignia21LTaa", "insignia25LTaa",
@@ -44,20 +59,37 @@ public final class DynFontOverrides {
     /** native 日志文件名（写在游戏 logs 目录，与 starsector.log 同级）。 */
     private static final String NATIVE_LOG_NAME = "ss_dyn_font_native.log";
     /** 参数表/生成语义版本（进缓存键；native 侧 spec 表变更时递增强制重生成）。 */
-    private static final String SPEC_VERSION = "1";
+    private static final String SPEC_VERSION = "2";
     /**
      * 同一份安装下最多保留几个缩放档的缓存。每档约 200 MB（hd 图集占大头），
      * 保留多档是为了让玩家切回旧缩放时秒开，但必须有上限——早先无上限的策略
      * 实测积到 9 档 / 1.7 GB。超出时按目录 mtime 淘汰最旧的。
      */
     private static final int MAX_CACHED_SCALES = 3;
+    private static final long TEMPORARY_CACHE_RETENTION_MILLIS =
+            24L * 60L * 60L * 1000L;
+    private static final String CACHE_MANIFEST_VERSION =
+            "dynfont-cache-manifest-v3";
+    private static final String CACHE_PUBLICATION_LOCK = ".publish.lock";
+    private static final String CACHE_USE_LOCK = ".in-use.lock";
+    private static final long MAXIMUM_MANIFEST_BYTES = 128L * 1024L;
+    private static final long MANIFEST_REVERIFY_MILLIS =
+            7L * 24L * 60L * 60L * 1000L;
+    /** JVM 文件锁不会等待同一进程内的重叠锁，先在进程内串行化。 */
+    private static final Object CACHE_PUBLICATION_MONITOR = new Object();
+    /**
+     * 本 JVM 已认领缓存的生命周期锁。旧 scale 的锁也保留到进程退出：资源线程可能已
+     * 取到旧路径但尚未打开文件，过早释放会让本进程自己的剪枝删掉它。
+     */
+    private static final Map<Path, CacheLease> RETAINED_CACHE_LEASES =
+            new HashMap<>();
 
     private static final int STATE_UNINITIALIZED = 0;
     private static final int STATE_ENABLED = 1;
     private static final int STATE_DISABLED = 2;
 
     private static volatile int state = STATE_UNINITIALIZED;
-    /** 认领的文件名（小写）→ 缓存文件路径；重生成时整体替换（volatile 原子）。 */
+    /** 小写完整逻辑路径→缓存文件路径；重生成时整体替换（volatile 原子）。 */
     private static volatile Map<String, Path> claimed;
     private static volatile boolean errorLogged;
     /** 当前产物对应的 UI 缩放。 */
@@ -86,8 +118,9 @@ public final class DynFontOverrides {
      */
     private static final Map<String, String> EXACT_FNT_PATH =
             new java.util.concurrent.ConcurrentHashMap<>();
-    /** 游戏 GL context 是否已就绪，见 {@link #isGameContextReady()}。 */
-    private static volatile boolean gameContextReady;
+    /** 游戏 GL context 是否已就绪；CAS 不依赖已被 O03 移除的资源加载器总锁。 */
+    private static final AtomicBoolean GAME_CONTEXT_READY =
+            new AtomicBoolean();
     /** 重生成进行中：渲染侧此期间不得加载 hd 套（否则会拿到旧 scale 的产物）。 */
     private static volatile boolean regenerating;
 
@@ -100,10 +133,15 @@ public final class DynFontOverrides {
             if (state == STATE_DISABLED || path == null) {
                 return null;
             }
-            String name = baseName(path);
+            String logicalPath = normalizeLogicalPath(path);
+            if (logicalPath == null) {
+                return null;
+            }
+            String name = logicalPath.substring(
+                    LOGICAL_FONT_DIRECTORY.length());
             if (state == STATE_UNINITIALIZED) {
                 // 只有命中我们字体的 .fnt 请求才触发初始化（其余资源请求零开销通过）
-                if (!isOwnedFnt(name)) {
+                if (!isOwnedFntPath(logicalPath)) {
                     return null;
                 }
                 initialize();
@@ -115,20 +153,20 @@ public final class DynFontOverrides {
             if (map == null) {
                 return null;
             }
-            Path file = map.get(name);
+            Path file = map.get(logicalPath);
             if (file == null) {
                 return null;
             }
             if (name.endsWith(".fnt") && !name.contains("_hd.")) {
                 EXACT_FNT_PATH.putIfAbsent(name.substring(0, name.length() - 4), path);
-                if (!gameContextReady && inGameContext()) {
-                    gameContextReady = true;
+                if (inGameContext() && markGameContextReady()) {
                     DynFontLog.info("检测到游戏 GL context 就绪（游戏本体正在加载字体）");
                     prepareHdDuringLoading();
                     // 同步重生成可能已整体替换产物映射（旧 scale 目录还会被缓存清理
                     // 顺手删掉），故重取一次，避免把已失效的路径交给游戏
                     Map<String, Path> refreshed = claimed;
-                    Path updated = refreshed == null ? null : refreshed.get(name);
+                    Path updated = refreshed == null
+                            ? null : refreshed.get(logicalPath);
                     if (updated != null) {
                         file = updated;
                     }
@@ -161,7 +199,15 @@ public final class DynFontOverrides {
     /** 缓存产物中是否存在指定文件（小写文件名，如 {@code orbitron24aa_hd.fnt}）。 */
     public static boolean hasClaim(String lowerFileName) {
         Map<String, Path> map = claimed;
-        return map != null && map.containsKey(lowerFileName);
+        if (map == null || lowerFileName == null) {
+            return false;
+        }
+        String key = lowerFileName.indexOf('/') >= 0
+                || lowerFileName.indexOf('\\') >= 0
+                ? normalizeLogicalPath(lowerFileName)
+                : LOGICAL_FONT_DIRECTORY
+                        + lowerFileName.toLowerCase(Locale.ROOT);
+        return key != null && map.containsKey(key);
     }
 
     /**
@@ -180,7 +226,15 @@ public final class DynFontOverrides {
      * 必须等游戏 context 建立后再加载。判据见 {@link #inGameContext()}。
      */
     public static boolean isGameContextReady() {
-        return gameContextReady;
+        return GAME_CONTEXT_READY.get();
+    }
+
+    static boolean markGameContextReady() {
+        return GAME_CONTEXT_READY.compareAndSet(false, true);
+    }
+
+    static void resetGameContextGateForTests() {
+        GAME_CONTEXT_READY.set(false);
     }
 
     /**
@@ -319,7 +373,7 @@ public final class DynFontOverrides {
                     dynFontDir.resolve("chars.txt"),
                     Path.of("native", "windows", "ss_dyn_font.dll").toAbsolutePath(),
                     dynFontDir.resolve("cache"), scale);
-            Map<String, Path> rebuilt = buildClaims(outDir);
+            Map<String, Path> rebuilt = buildClaims(outDir, scale);
             claimed = rebuilt;
             screenScale = scale;
             long ms = (System.nanoTime() - t0) / 1_000_000;
@@ -332,13 +386,35 @@ public final class DynFontOverrides {
         }
     }
 
-    private static String baseName(String path) {
-        String p = path.replace('\\', '/');
-        int slash = p.lastIndexOf('/');
-        return (slash >= 0 ? p.substring(slash + 1) : p).toLowerCase(Locale.ROOT);
+    private static String normalizeLogicalPath(String path) {
+        if (path == null || path.isEmpty()) {
+            return null;
+        }
+        String normalized = path.replace('\\', '/')
+                .toLowerCase(Locale.ROOT);
+        if (!normalized.startsWith(LOGICAL_FONT_DIRECTORY)
+                || normalized.length() <= LOGICAL_FONT_DIRECTORY.length()) {
+            return null;
+        }
+        String name = normalized.substring(
+                LOGICAL_FONT_DIRECTORY.length());
+        if (name.indexOf('/') >= 0
+                || ".".equals(name)
+                || "..".equals(name)
+                || name.contains("/../")
+                || name.contains("/./")) {
+            return null;
+        }
+        return LOGICAL_FONT_DIRECTORY + name;
     }
 
-    private static boolean isOwnedFnt(String name) {
+    static boolean isOwnedFntPath(String path) {
+        String logicalPath = normalizeLogicalPath(path);
+        if (logicalPath == null) {
+            return false;
+        }
+        String name = logicalPath.substring(
+                LOGICAL_FONT_DIRECTORY.length());
         return name.endsWith(".fnt")
                 && ownedFontStem(name.substring(0, name.length() - 4)) != null;
     }
@@ -388,11 +464,10 @@ public final class DynFontOverrides {
             screenScale = scale;
             Path cacheRoot = dynFontDir.resolve("cache");
 
-            // 方案 Y 单套："1x 度量 fnt + 共享布局高清图集"。fnt 一切字段永远是
-            // 1x 值（布局层天然正确），scale>1 时仅 PNG 为按同布局等比放大摆放的
-            // 高清版（UV 归一化数学自动成立），游戏侧零运行时替换。
+            // 方案 Y 双套：基础 fnt/png 永远是纯 1x；scale>1 时另生成度量同比例
+            // 同构的 hd fnt/png 自洽套，由渲染 hook 整体切换。
             Path outDir = ensureGenerated(typefacePack, charsFile, dll, cacheRoot, scale);
-            claimed = buildClaims(outDir);
+            claimed = buildClaims(outDir, scale);
             state = STATE_ENABLED;
             long ms = (System.nanoTime() - t0) / 1_000_000;
             DynFontLog.info("动态字体已启用: scale=" + scale + ", " + claimed.size()
@@ -406,26 +481,466 @@ public final class DynFontOverrides {
     /** 确保指定 scale 的缓存套存在（键不匹配则调 native 重生成），返回缓存目录。 */
     private static Path ensureGenerated(Path typefacePack, Path charsFile, Path dll,
                                         Path cacheRoot, double scale) throws Exception {
-        String scaleTag = String.format(Locale.ROOT, "s%.2f", scale);
+        String scaleTag = scaleTag(scale);
         String fingerprint = inputFingerprint(typefacePack, charsFile, dll);
         Path outDir = cacheRoot.resolve(scaleTag + "-" + fingerprint);
-        Path marker = outDir.resolve(".complete");
-        if (Files.isRegularFile(marker)) {
-            // 命中也要清理：玩家可能刚更新过汉化包，旧指纹的档需要回收
-            pruneCaches(cacheRoot, fingerprint, outDir.getFileName().toString());
+        if (claimCompleteCache(
+                cacheRoot, outDir, fingerprint, scale, true)) {
             return outDir;
         }
-        pruneCaches(cacheRoot, fingerprint, outDir.getFileName().toString());
         DynFontLog.info("生成动态字体图集: scale=" + scale + " → " + outDir);
+        Files.createDirectories(cacheRoot);
+        Path temporary = cacheRoot.resolve(
+                "." + outDir.getFileName() + ".tmp-" + UUID.randomUUID());
         Path nativeLog = nativeLogPath();
-        int rc = DynFontNatives.nativeGenerate(typefacePack.toString(), charsFile.toString(),
-                outDir.toString(), scale, "", nativeLog.toString());
-        if (rc != 0) {
-            throw new IOException("原生生成失败 rc=" + rc + "（详见 " + nativeLog + "）");
+        try {
+            int rc = DynFontNatives.nativeGenerate(
+                    typefacePack.toString(),
+                    charsFile.toString(),
+                    temporary.toString(),
+                    scale,
+                    "",
+                    nativeLog.toString());
+            if (rc != 0) {
+                throw new IOException(
+                        "原生生成失败 rc=" + rc + "（详见 " + nativeLog + "）");
+            }
+            relayNativeWarnings(nativeLog);
+            String fingerprintAfterGeneration = inputFingerprint(
+                    typefacePack, charsFile, dll);
+            if (!fingerprint.equals(fingerprintAfterGeneration)) {
+                throw new IOException(
+                        "动态字体生成期间输入发生变化，丢弃本轮产物");
+            }
+            if (!hasExpectedOutputs(temporary, scale)) {
+                throw new IOException("原生生成结果不完整: " + temporary);
+            }
+            writeCompletionMarker(temporary, fingerprint, scale);
+            publishClaimAndPrune(
+                    cacheRoot, temporary, outDir, fingerprint, scale);
+            return outDir;
+        } finally {
+            if (Files.exists(temporary)) {
+                deleteCache(temporary, "未发布临时产物");
+            }
         }
-        relayNativeWarnings(nativeLog);
-        Files.writeString(marker, fingerprint);
-        return outDir;
+    }
+
+    static void writeCompletionMarker(
+            Path directory, String fingerprint, double scale) throws IOException {
+        if (!isPlainDirectory(directory)) {
+            throw new IOException(
+                    "动态字体完成清单目录不是普通目录: " + directory);
+        }
+        ensureUseLockFile(directory);
+        Map<String, CacheFileManifest> files = new HashMap<>();
+        for (String name : new TreeSet<>(expectedOutputNames(scale))) {
+            Path output = directory.resolve(name);
+            if (!Files.isRegularFile(output, LinkOption.NOFOLLOW_LINKS)) {
+                throw new IOException("动态字体产物缺失: " + output);
+            }
+            long size = Files.size(output);
+            if (size <= 0L) {
+                throw new IOException("动态字体产物为空: " + output);
+            }
+            files.put(name, new CacheFileManifest(
+                    size,
+                    Files.getLastModifiedTime(
+                            output, LinkOption.NOFOLLOW_LINKS).toMillis(),
+                    sha256(output)));
+        }
+        writeCompletionMarker(
+                directory, fingerprint, scale, System.currentTimeMillis(), files);
+    }
+
+    private static void ensureUseLockFile(Path directory) throws IOException {
+        Path lock = directory.resolve(CACHE_USE_LOCK);
+        if (Files.exists(lock, LinkOption.NOFOLLOW_LINKS)
+                && !Files.isRegularFile(lock, LinkOption.NOFOLLOW_LINKS)) {
+            throw new IOException("动态字体使用锁不是普通文件: " + lock);
+        }
+        try (FileChannel ignored = FileChannel.open(
+                lock,
+                StandardOpenOption.CREATE,
+                StandardOpenOption.WRITE)) {
+            // 文件本身是跨进程共享锁的稳定锚点，不写入进程相关内容。
+        }
+    }
+
+    private static void writeCompletionMarker(
+            Path directory,
+            String fingerprint,
+            double scale,
+            long verifiedAtMillis,
+            Map<String, CacheFileManifest> files) throws IOException {
+        Path marker = directory.resolve(".complete");
+        Path temporary = directory.resolve(
+                ".complete.tmp-" + UUID.randomUUID());
+        StringBuilder body = new StringBuilder();
+        body.append(CACHE_MANIFEST_VERSION).append('\n');
+        body.append("fingerprint\t").append(fingerprint).append('\n');
+        body.append("scale\t").append(manifestScale(scale)).append('\n');
+        body.append("verified-at\t").append(verifiedAtMillis).append('\n');
+        for (String name : new TreeSet<>(expectedOutputNames(scale))) {
+            CacheFileManifest file = files.get(name);
+            if (file == null) {
+                throw new IOException("动态字体清单缺失: " + name);
+            }
+            body.append(name)
+                    .append('\t').append(file.size())
+                    .append('\t').append(file.modifiedMillis())
+                    .append('\t').append(file.sha256())
+                    .append('\n');
+        }
+        String manifest = body
+                + "manifest-sha256\t"
+                + sha256(body.toString().getBytes(StandardCharsets.UTF_8))
+                + '\n';
+        try {
+            Files.writeString(
+                    temporary,
+                    manifest,
+                    StandardCharsets.UTF_8,
+                    StandardOpenOption.CREATE_NEW,
+                    StandardOpenOption.WRITE);
+            try {
+                Files.move(
+                        temporary,
+                        marker,
+                        StandardCopyOption.ATOMIC_MOVE,
+                        StandardCopyOption.REPLACE_EXISTING);
+            } catch (AtomicMoveNotSupportedException unsupported) {
+                Files.move(
+                        temporary,
+                        marker,
+                        StandardCopyOption.REPLACE_EXISTING);
+            }
+        } finally {
+            Files.deleteIfExists(temporary);
+        }
+    }
+
+    /**
+     * 原子发布已生成且带完成清单的目录。
+     *
+     * <p>JVM monitor 处理同进程线程，文件锁处理两个同时启动的游戏进程。锁内必须
+     * 重新验证目标：后到者只能复用先到者的完整结果，绝不能把它当作旧残留删除。
+     */
+    static void publishGeneratedDirectory(
+            Path cacheRoot,
+            Path generated,
+            Path target,
+            String fingerprint,
+            double scale) throws IOException {
+        Path normalizedRoot = cacheRoot.toAbsolutePath().normalize();
+        Path normalizedGenerated = generated.toAbsolutePath().normalize();
+        Path normalizedTarget = target.toAbsolutePath().normalize();
+        if (!normalizedRoot.equals(normalizedGenerated.getParent())
+                || !normalizedRoot.equals(normalizedTarget.getParent())) {
+            throw new IOException("动态字体发布路径越界");
+        }
+        if (!cacheDirectoryName(fingerprint, scale).equals(
+                normalizedTarget.getFileName().toString())) {
+            throw new IOException("动态字体目标目录与 scale/指纹不匹配");
+        }
+        if (!isCompleteCache(normalizedGenerated, fingerprint, scale)) {
+            throw new IOException("动态字体完成标记复验失败: " + generated);
+        }
+        withCacheRootLock(normalizedRoot, root -> {
+            publishGeneratedDirectoryLocked(
+                    root,
+                    normalizedGenerated,
+                    normalizedTarget,
+                    fingerprint,
+                    scale);
+            return null;
+        });
+    }
+
+    private static void publishClaimAndPrune(
+            Path cacheRoot,
+            Path generated,
+            Path target,
+            String fingerprint,
+            double scale) throws IOException {
+        Path normalizedGenerated = generated.toAbsolutePath().normalize();
+        Path normalizedTarget = target.toAbsolutePath().normalize();
+        withCacheRootLock(cacheRoot, root -> {
+            if (!root.equals(normalizedGenerated.getParent())
+                    || !root.equals(normalizedTarget.getParent())) {
+                throw new IOException("动态字体发布路径越界");
+            }
+            publishGeneratedDirectoryLocked(
+                    root,
+                    normalizedGenerated,
+                    normalizedTarget,
+                    fingerprint,
+                    scale);
+            acquireCacheLeaseLocked(root, normalizedTarget);
+            touchCacheDirectory(normalizedTarget);
+            pruneCachesLocked(
+                    root, fingerprint, normalizedTarget.getFileName().toString());
+            return null;
+        });
+    }
+
+    private static void publishGeneratedDirectoryLocked(
+            Path normalizedRoot,
+            Path normalizedGenerated,
+            Path normalizedTarget,
+            String fingerprint,
+            double scale) throws IOException {
+        if (!normalizedRoot.equals(normalizedGenerated.getParent())
+                || !normalizedRoot.equals(normalizedTarget.getParent())) {
+            throw new IOException("动态字体发布路径越界");
+        }
+        if (!cacheDirectoryName(fingerprint, scale).equals(
+                normalizedTarget.getFileName().toString())) {
+            throw new IOException("动态字体目标目录与 scale/指纹不匹配");
+        }
+        if (!isCompleteCache(normalizedGenerated, fingerprint, scale)) {
+            throw new IOException(
+                    "动态字体完成标记复验失败: " + normalizedGenerated);
+        }
+        if (isCompleteCache(normalizedTarget, fingerprint, scale)) {
+            return;
+        }
+        if (Files.exists(normalizedTarget, LinkOption.NOFOLLOW_LINKS)) {
+            if (isCacheInUseLocked(normalizedTarget)) {
+                throw new IOException(
+                        "动态字体目标缓存不完整但仍被其它游戏实例使用: "
+                                + normalizedTarget);
+            }
+            deleteTreeStrict(normalizedTarget);
+        }
+        moveDirectory(normalizedGenerated, normalizedTarget);
+        // 移动前已逐文件验证；移动后再做清单与全部元数据复验，拒绝半发布目录。
+        if (!isCompleteCache(normalizedTarget, fingerprint, scale)) {
+            throw new IOException(
+                    "动态字体目录发布后复验失败: " + normalizedTarget);
+        }
+    }
+
+    private static void deleteTreeStrict(Path root) throws IOException {
+        BasicFileAttributes attributes;
+        try {
+            attributes = Files.readAttributes(
+                    root,
+                    BasicFileAttributes.class,
+                    LinkOption.NOFOLLOW_LINKS);
+        } catch (java.nio.file.NoSuchFileException missing) {
+            return;
+        }
+        // Windows junction 在 NIO 中同时是 directory 与 other，Files.walk() 即使未传
+        // FOLLOW_LINKS 也会穿过它。所有 reparse-point/符号链接都只能删除链接本身。
+        if (!attributes.isDirectory()
+                || attributes.isOther()
+                || attributes.isSymbolicLink()) {
+            Files.deleteIfExists(root);
+            return;
+        }
+        try (DirectoryStream<Path> children = Files.newDirectoryStream(root)) {
+            for (Path child : children) {
+                deleteTreeStrict(child);
+            }
+        }
+        Files.deleteIfExists(root);
+    }
+
+    private static void moveDirectory(Path source, Path target)
+            throws IOException {
+        try {
+            Files.move(source, target, StandardCopyOption.ATOMIC_MOVE);
+        } catch (AtomicMoveNotSupportedException unsupported) {
+            Files.move(source, target);
+        }
+    }
+
+    private static boolean claimCompleteCache(
+            Path cacheRoot,
+            Path target,
+            String fingerprint,
+            double scale,
+            boolean prune) throws IOException {
+        Path normalizedTarget = target.toAbsolutePath().normalize();
+        try {
+            return withCacheRootLock(cacheRoot, root -> claimCompleteCacheLocked(
+                    root,
+                    normalizedTarget,
+                    fingerprint,
+                    scale,
+                    prune));
+        } catch (IOException exclusiveFailure) {
+            try {
+                // 已发布缓存的两个锁文件都可只读获取共享锁。只读安装目录不能
+                // touch/prune，但仍能安全阻止其它可写进程取得根独占锁并删除它。
+                return withCacheRootSharedLock(
+                        cacheRoot,
+                        root -> claimCompleteCacheLocked(
+                                root,
+                                normalizedTarget,
+                                fingerprint,
+                                scale,
+                                false));
+            } catch (IOException sharedFailure) {
+                exclusiveFailure.addSuppressed(sharedFailure);
+                throw exclusiveFailure;
+            }
+        }
+    }
+
+    private static boolean claimCompleteCacheLocked(
+            Path normalizedRoot,
+            Path normalizedTarget,
+            String fingerprint,
+            double scale,
+            boolean prune) throws IOException {
+        if (!normalizedRoot.equals(normalizedTarget.getParent())) {
+            throw new IOException("动态字体认领路径越界");
+        }
+        if (!cacheDirectoryName(fingerprint, scale).equals(
+                normalizedTarget.getFileName().toString())) {
+            throw new IOException("动态字体认领目录与 scale/指纹不匹配");
+        }
+        if (!isCompleteCache(normalizedTarget, fingerprint, scale)) {
+            return false;
+        }
+        acquireCacheLeaseLocked(normalizedRoot, normalizedTarget);
+        if (prune) {
+            touchCacheDirectory(normalizedTarget);
+            pruneCachesLocked(
+                    normalizedRoot,
+                    fingerprint,
+                    normalizedTarget.getFileName().toString());
+        }
+        return true;
+    }
+
+    static boolean claimCompleteCacheForTests(
+            Path cacheRoot,
+            Path target,
+            String fingerprint,
+            double scale) throws IOException {
+        return claimCompleteCache(
+                cacheRoot, target, fingerprint, scale, false);
+    }
+
+    private static CacheLease acquireCacheLeaseLocked(
+            Path normalizedRoot, Path normalizedDirectory) throws IOException {
+        if (!normalizedRoot.equals(normalizedDirectory.getParent())) {
+            throw new IOException("动态字体认领路径越界");
+        }
+        CacheLease retained = RETAINED_CACHE_LEASES.get(normalizedDirectory);
+        if (retained != null && retained.isValid()) {
+            return retained;
+        }
+        Path lockPath = normalizedDirectory.resolve(CACHE_USE_LOCK);
+        if (!Files.isRegularFile(lockPath, LinkOption.NOFOLLOW_LINKS)) {
+            throw new IOException("动态字体使用锁缺失: " + lockPath);
+        }
+        FileChannel channel = FileChannel.open(
+                lockPath,
+                StandardOpenOption.READ);
+        try {
+            FileLock lock = channel.tryLock(0L, Long.MAX_VALUE, true);
+            if (lock == null) {
+                throw new IOException("无法获取动态字体缓存共享使用锁: " + lockPath);
+            }
+            CacheLease lease = new CacheLease(normalizedDirectory, channel, lock);
+            RETAINED_CACHE_LEASES.put(normalizedDirectory, lease);
+            return lease;
+        } catch (Throwable failure) {
+            try {
+                channel.close();
+            } catch (IOException closeFailure) {
+                failure.addSuppressed(closeFailure);
+            }
+            if (failure instanceof IOException ioFailure) {
+                throw ioFailure;
+            }
+            throw new IOException(
+                    "获取动态字体缓存共享使用锁失败: " + lockPath,
+                    failure);
+        }
+    }
+
+    /** 必须在 cache root 独占锁内调用；未知锁状态一律按正在使用处理。 */
+    private static boolean isCacheInUseLocked(Path directory) {
+        Path normalized = directory.toAbsolutePath().normalize();
+        CacheLease retained = RETAINED_CACHE_LEASES.get(normalized);
+        if (retained != null && retained.isValid()) {
+            return true;
+        }
+        Path lockPath = normalized.resolve(CACHE_USE_LOCK);
+        if (!Files.exists(lockPath, LinkOption.NOFOLLOW_LINKS)) {
+            return false;
+        }
+        if (!Files.isRegularFile(lockPath, LinkOption.NOFOLLOW_LINKS)) {
+            return true;
+        }
+        try (FileChannel channel = FileChannel.open(
+                lockPath,
+                StandardOpenOption.READ,
+                StandardOpenOption.WRITE)) {
+            try (FileLock lock = channel.tryLock()) {
+                return lock == null;
+            } catch (OverlappingFileLockException activeInThisJvm) {
+                return true;
+            }
+        } catch (IOException | RuntimeException unknown) {
+            return true;
+        }
+    }
+
+    private static void touchCacheDirectory(Path directory) {
+        try {
+            Files.setLastModifiedTime(
+                    directory, FileTime.fromMillis(System.currentTimeMillis()));
+        } catch (IOException ignored) {
+            // LRU 提示写失败不影响已取得的生命周期锁与缓存正确性。
+        }
+    }
+
+    private static <T> T withCacheRootLock(
+            Path cacheRoot, CacheLockedAction<T> action) throws IOException {
+        Path normalizedRoot = cacheRoot.toAbsolutePath().normalize();
+        Files.createDirectories(normalizedRoot);
+        synchronized (CACHE_PUBLICATION_MONITOR) {
+            Path lockPath = normalizedRoot.resolve(CACHE_PUBLICATION_LOCK);
+            if (Files.exists(lockPath, LinkOption.NOFOLLOW_LINKS)
+                    && !Files.isRegularFile(
+                            lockPath, LinkOption.NOFOLLOW_LINKS)) {
+                throw new IOException(
+                        "动态字体缓存根锁不是普通文件: " + lockPath);
+            }
+            try (FileChannel channel = FileChannel.open(
+                    lockPath,
+                    StandardOpenOption.CREATE,
+                    StandardOpenOption.WRITE);
+                 FileLock ignored = channel.lock()) {
+                return action.run(normalizedRoot);
+            }
+        }
+    }
+
+    private static <T> T withCacheRootSharedLock(
+            Path cacheRoot, CacheLockedAction<T> action) throws IOException {
+        Path normalizedRoot = cacheRoot.toAbsolutePath().normalize();
+        if (!Files.isDirectory(normalizedRoot, LinkOption.NOFOLLOW_LINKS)) {
+            throw new IOException("动态字体缓存根目录不存在: " + normalizedRoot);
+        }
+        synchronized (CACHE_PUBLICATION_MONITOR) {
+            Path lockPath = normalizedRoot.resolve(CACHE_PUBLICATION_LOCK);
+            if (!Files.isRegularFile(lockPath, LinkOption.NOFOLLOW_LINKS)) {
+                throw new IOException("动态字体缓存根锁缺失: " + lockPath);
+            }
+            try (FileChannel channel = FileChannel.open(
+                    lockPath, StandardOpenOption.READ);
+                 FileLock ignored = channel.lock(
+                         0L, Long.MAX_VALUE, true)) {
+                return action.run(normalizedRoot);
+            }
+        }
     }
 
     /**
@@ -446,7 +961,7 @@ public final class DynFontOverrides {
     /**
      * 把 native 日志里的告警转抄进游戏日志。
      *
-     * <p>native 日志写在缓存目录内，玩家不会主动去看；而「图集接近单页上限」这类
+     * <p>native 的独立日志不一定会被玩家主动查看；而「图集接近单页上限」这类
      * 告警恰恰是需要玩家知道的——他继续扩字表就会触发降级。生成只在冷启动发生，
      * 转抄成本可忽略。读取失败一律忽略：告警转抄本身绝不能影响主流程。
      */
@@ -470,18 +985,280 @@ public final class DynFontOverrides {
         DynFontLog.info("动态字体已禁用（回退原版位图字体）: " + reason);
     }
 
-    /** 认领缓存目录下全部 .fnt 与 .png（键小写文件名）。 */
-    private static Map<String, Path> buildClaims(Path outDir) throws IOException {
+    /** 认领缓存目录下全部 .fnt 与 .png（键为小写完整游戏逻辑路径）。 */
+    static Map<String, Path> buildClaims(Path outDir, double scale) throws IOException {
+        if (!isPlainDirectory(outDir)) {
+            throw new IOException("动态字体缓存目录不是普通目录: " + outDir);
+        }
         Map<String, Path> map = new HashMap<>();
-        try (DirectoryStream<Path> stream = Files.newDirectoryStream(outDir, "*.{fnt,png}")) {
-            for (Path file : stream) {
-                map.put(file.getFileName().toString().toLowerCase(Locale.ROOT), file);
+        Set<String> expected = expectedOutputNames(scale);
+        for (String name : expected) {
+            Path file = outDir.resolve(name);
+            if (Files.isRegularFile(file, LinkOption.NOFOLLOW_LINKS)) {
+                map.put(
+                        LOGICAL_FONT_DIRECTORY
+                                + file.getFileName().toString()
+                                .toLowerCase(Locale.ROOT),
+                        file);
             }
         }
-        if (map.isEmpty()) {
-            throw new IOException("缓存目录为空: " + outDir);
+        if (map.size() != expected.size()) {
+            throw new IOException(
+                    "动态字体缓存认领不完整: " + map.size() + "/"
+                            + expected.size() + "（" + outDir + "）");
         }
         return map;
+    }
+
+    /** 与 native 的严格合同一致：{@code scale > 1.001} 才生成 hd 套。 */
+    static Set<String> expectedOutputNames(double scale) {
+        TreeSet<String> names = new TreeSet<>();
+        for (String font : FONT_NAMES) {
+            names.add(font + ".fnt");
+            names.add(font + "_0.png");
+            if (scale > 1.001) {
+                names.add(font + "_hd.fnt");
+                names.add(font + "_hd_0.png");
+            }
+        }
+        return Set.copyOf(names);
+    }
+
+    private static String scaleTag(double scale) {
+        return String.format(Locale.ROOT, "s%.2f", scale);
+    }
+
+    private static String manifestScale(double scale) {
+        return Double.toString(scale);
+    }
+
+    private static String cacheDirectoryName(
+            String fingerprint, double scale) {
+        return scaleTag(scale) + "-" + fingerprint;
+    }
+
+    static boolean isCompleteCache(
+            Path outDir, String fingerprint, double scale) {
+        try {
+            if (!isPlainDirectory(outDir)) {
+                return false;
+            }
+            Path marker = outDir.resolve(".complete");
+            if (!Files.isRegularFile(marker, LinkOption.NOFOLLOW_LINKS)) {
+                return false;
+            }
+            if (!Files.isRegularFile(
+                    outDir.resolve(CACHE_USE_LOCK),
+                    LinkOption.NOFOLLOW_LINKS)) {
+                return false;
+            }
+            long markerSize = Files.size(marker);
+            if (markerSize <= 0L || markerSize > MAXIMUM_MANIFEST_BYTES) {
+                return false;
+            }
+            List<String> lines = Files.readAllLines(marker, StandardCharsets.UTF_8);
+            List<String> expected = new TreeSet<>(
+                    expectedOutputNames(scale)).stream().toList();
+            if (lines.size() != expected.size() + 5
+                    || !CACHE_MANIFEST_VERSION.equals(lines.get(0))
+                    || !("fingerprint\t" + fingerprint).equals(lines.get(1))
+                    || !("scale\t" + manifestScale(scale)).equals(lines.get(2))
+                    || !lines.get(3).startsWith("verified-at\t")
+                    || !validManifestChecksum(lines)) {
+                return false;
+            }
+            long verifiedAt = Long.parseLong(
+                    lines.get(3).substring("verified-at\t".length()));
+            long now = System.currentTimeMillis();
+            boolean reverify = verifiedAt < 0L
+                    || verifiedAt > now
+                    || now - verifiedAt >= MANIFEST_REVERIFY_MILLIS;
+            Map<String, CacheFileManifest> current = new HashMap<>();
+            for (int index = 0; index < expected.size(); index++) {
+                String[] fields = lines.get(index + 4).split("\\t", -1);
+                String name = expected.get(index);
+                if (fields.length != 4 || !name.equals(fields[0])) {
+                    return false;
+                }
+                long expectedSize = Long.parseLong(fields[1]);
+                long expectedModified = Long.parseLong(fields[2]);
+                if (expectedSize <= 0L || !isSha256(fields[3])) {
+                    return false;
+                }
+                Path output = outDir.resolve(name);
+                if (!Files.isRegularFile(output, LinkOption.NOFOLLOW_LINKS)) {
+                    return false;
+                }
+                long actualSize = Files.size(output);
+                long actualModified = Files.getLastModifiedTime(
+                        output, LinkOption.NOFOLLOW_LINKS).toMillis();
+                if (actualSize != expectedSize
+                        || actualModified != expectedModified) {
+                    reverify = true;
+                }
+                current.put(name, new CacheFileManifest(
+                        actualSize, actualModified, fields[3]));
+            }
+            if (!reverify) {
+                return true;
+            }
+            for (String name : expected) {
+                Path output = outDir.resolve(name);
+                CacheFileManifest file = current.get(name);
+                if (file.size() <= 0L
+                        || !file.sha256().equals(sha256(output))
+                        || Files.size(output) != file.size()
+                        || Files.getLastModifiedTime(
+                                output, LinkOption.NOFOLLOW_LINKS).toMillis()
+                                != file.modifiedMillis()) {
+                    return false;
+                }
+            }
+            try {
+                writeCompletionMarker(
+                        outDir, fingerprint, scale, now, current);
+            } catch (IOException refreshFailure) {
+                // 内容已完整验证；只读安装目录不能刷新元数据时仍可安全命中。
+                DynFontLog.error("刷新动态字体完成清单失败（忽略）", refreshFailure);
+            }
+            return true;
+        } catch (IOException | RuntimeException failure) {
+            return false;
+        }
+    }
+
+    private static boolean validManifestChecksum(List<String> lines) {
+        String checksumLine = lines.get(lines.size() - 1);
+        String prefix = "manifest-sha256\t";
+        if (!checksumLine.startsWith(prefix)) {
+            return false;
+        }
+        String expected = checksumLine.substring(prefix.length());
+        if (!isSha256(expected)) {
+            return false;
+        }
+        StringBuilder body = new StringBuilder();
+        for (int index = 0; index < lines.size() - 1; index++) {
+            body.append(lines.get(index)).append('\n');
+        }
+        return expected.equals(sha256(
+                body.toString().getBytes(StandardCharsets.UTF_8)));
+    }
+
+    private static boolean hasExpectedOutputs(Path outDir, double scale)
+            throws IOException {
+        if (!isPlainDirectory(outDir)) {
+            return false;
+        }
+        for (String name : expectedOutputNames(scale)) {
+            Path output = outDir.resolve(name);
+            if (!Files.isRegularFile(output, LinkOption.NOFOLLOW_LINKS)
+                    || Files.size(output) <= 0L) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static boolean isSha256(String value) {
+        if (value.length() != 64) {
+            return false;
+        }
+        for (int index = 0; index < value.length(); index++) {
+            char character = value.charAt(index);
+            if (!((character >= '0' && character <= '9')
+                    || (character >= 'a' && character <= 'f'))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static String sha256(Path path) throws IOException {
+        MessageDigest digest;
+        try {
+            digest = MessageDigest.getInstance("SHA-256");
+        } catch (NoSuchAlgorithmException impossible) {
+            throw new IllegalStateException("JVM 缺少 SHA-256", impossible);
+        }
+        byte[] buffer = new byte[64 * 1024];
+        try (InputStream input = Files.newInputStream(path)) {
+            int read;
+            while ((read = input.read(buffer)) >= 0) {
+                if (read > 0) {
+                    digest.update(buffer, 0, read);
+                }
+            }
+        }
+        return HexFormat.of().formatHex(digest.digest());
+    }
+
+    private static String sha256(byte[] bytes) {
+        MessageDigest digest;
+        try {
+            digest = MessageDigest.getInstance("SHA-256");
+        } catch (NoSuchAlgorithmException impossible) {
+            throw new IllegalStateException("JVM 缺少 SHA-256", impossible);
+        }
+        return HexFormat.of().formatHex(digest.digest(bytes));
+    }
+
+    private record CacheFileManifest(
+            long size, long modifiedMillis, String sha256) {
+    }
+
+    private record CacheCandidate(
+            Path directory, long lastModified, boolean inUse) {
+    }
+
+    @FunctionalInterface
+    private interface CacheLockedAction<T> {
+        T run(Path normalizedRoot) throws IOException;
+    }
+
+    private static final class CacheLease implements AutoCloseable {
+        private final Path directory;
+        private final FileChannel channel;
+        private final FileLock lock;
+
+        private CacheLease(
+                Path directory, FileChannel channel, FileLock lock) {
+            this.directory = directory;
+            this.channel = channel;
+            this.lock = lock;
+        }
+
+        private boolean isValid() {
+            return channel.isOpen() && lock.isValid();
+        }
+
+        @Override
+        public void close() {
+            try {
+                lock.release();
+            } catch (IOException ignored) {
+                // 测试清理/进程退出路径；channel.close 仍会释放系统锁。
+            }
+            try {
+                channel.close();
+            } catch (IOException ignored) {
+                // 同上。
+            }
+        }
+
+        @Override
+        public String toString() {
+            return directory.toString();
+        }
+    }
+
+    static void releaseCacheLeasesForTests() {
+        synchronized (CACHE_PUBLICATION_MONITOR) {
+            for (CacheLease lease : RETAINED_CACHE_LEASES.values()) {
+                lease.close();
+            }
+            RETAINED_CACHE_LEASES.clear();
+        }
     }
 
     /**
@@ -493,25 +1270,61 @@ public final class DynFontOverrides {
      * 无法互相识别，非当前档的失效目录会永久滞留（实测积到 1.7 GB / 9 档）。
      *
      * <p>同指纹的档按目录 mtime 保留最近若干个（切回旧缩放可秒开），其余淘汰。
+     * 被当前或其它 JVM 共享锁认领的档绝不删除，因此多实例运行期间上限是软上限；
+     * 实例退出后的下一次清理会恢复到硬上限。
      *
      * <p>清理纯属磁盘卫生，任何文件操作失败都只记日志不中断生成。
      */
-    private static void pruneCaches(Path cacheRoot, String fingerprint, String keep) {
-        if (!Files.isDirectory(cacheRoot)) {
-            return;
+    static void pruneCaches(Path cacheRoot, String fingerprint, String keep) {
+        try {
+            withCacheRootLock(cacheRoot, root -> {
+                pruneCachesLocked(root, fingerprint, keep);
+                return null;
+            });
+        } catch (IOException e) {
+            DynFontLog.error("获取缓存清理锁失败（跳过清理）", e);
         }
+    }
+
+    private static void pruneCachesLocked(
+            Path cacheRoot, String fingerprint, String keep) {
         String suffix = "-" + fingerprint;
-        List<Path> sameFingerprint = new ArrayList<>();
+        List<CacheCandidate> sameFingerprint = new ArrayList<>();
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(cacheRoot)) {
             for (Path dir : stream) {
                 String name = dir.getFileName().toString();
-                if (!Files.isDirectory(dir) || name.equals(keep)) {
+                if (name.equals(keep)
+                        || name.equals(CACHE_PUBLICATION_LOCK)) {
+                    continue;
+                }
+                if (!isPlainDirectory(dir)) {
+                    if (Files.isDirectory(dir)
+                            || Files.isSymbolicLink(dir)) {
+                        deleteCache(dir, "非普通目录/reparse point");
+                    }
+                    continue;
+                }
+                if (name.startsWith(".")) {
+                    Long modified = lastModifiedOrNull(dir);
+                    long age = modified == null
+                            ? -1L : System.currentTimeMillis() - modified;
+                    if (age >= TEMPORARY_CACHE_RETENTION_MILLIS
+                            && !isCacheInUseLocked(dir)) {
+                        deleteCache(dir, "过期临时产物");
+                    }
                     continue;
                 }
                 if (name.endsWith(suffix)) {
-                    sameFingerprint.add(dir);   // 同一份安装的其它缩放档，稍后按 LRU 处理
+                    // 非当前缩放档无需做 200+ MB 的定期 SHA 复验；真正命中该档时
+                    // claimCompleteCache 会完整验证。这里只负责有界 LRU。
+                    sameFingerprint.add(new CacheCandidate(
+                            dir,
+                            lastModifiedOrZero(dir),
+                            isCacheInUseLocked(dir)));
                 } else {
-                    deleteCache(dir, "指纹失效");
+                    if (!isCacheInUseLocked(dir)) {
+                        deleteCache(dir, "指纹失效");
+                    }
                 }
             }
         } catch (IOException e) {
@@ -524,33 +1337,58 @@ public final class DynFontOverrides {
         if (over <= 0) {
             return;
         }
-        sameFingerprint.sort(Comparator.comparingLong(DynFontOverrides::lastModifiedOrZero));
-        for (int i = 0; i < over && i < sameFingerprint.size(); i++) {
-            deleteCache(sameFingerprint.get(i), "超出保留档数");
+        sameFingerprint.sort(Comparator.comparingLong(CacheCandidate::lastModified));
+        for (CacheCandidate candidate : sameFingerprint) {
+            if (over <= 0) {
+                break;
+            }
+            if (candidate.inUse()) {
+                continue;
+            }
+            deleteCache(candidate.directory(), "超出保留档数");
+            over--;
+        }
+    }
+
+    private static Long lastModifiedOrNull(Path dir) {
+        try {
+            return Files.getLastModifiedTime(
+                    dir, LinkOption.NOFOLLOW_LINKS).toMillis();
+        } catch (IOException e) {
+            return null;
         }
     }
 
     private static long lastModifiedOrZero(Path dir) {
-        try {
-            return Files.getLastModifiedTime(dir).toMillis();
-        } catch (IOException e) {
-            return 0L;  // 读不到时间戳的目录优先淘汰
-        }
+        Long modified = lastModifiedOrNull(dir);
+        return modified == null ? 0L : modified;
     }
 
     /** 递归删除一个缓存档；失败只记日志（可能被杀软/资源管理器占用）。 */
     private static void deleteCache(Path dir, String reason) {
-        try (var stream = Files.walk(dir)) {
-            for (Path path : stream.sorted(Comparator.reverseOrder()).toList()) {
-                Files.deleteIfExists(path);
-            }
+        try {
+            deleteTreeStrict(dir);
             DynFontLog.info("清理缓存（" + reason + "）: " + dir.getFileName());
         } catch (Throwable t) {
             DynFontLog.error("清理缓存失败（忽略）: " + dir.getFileName(), t);
         }
     }
 
-    // ── 缓存键：spec 版本 + scale + chars.txt/dll/全部 TTF 与 kerning 表内容哈希 ──
+    private static boolean isPlainDirectory(Path path) {
+        try {
+            BasicFileAttributes attributes = Files.readAttributes(
+                    path,
+                    BasicFileAttributes.class,
+                    LinkOption.NOFOLLOW_LINKS);
+            return attributes.isDirectory()
+                    && !attributes.isOther()
+                    && !attributes.isSymbolicLink();
+        } catch (IOException | RuntimeException failure) {
+            return false;
+        }
+    }
+
+    // ── 输入指纹：有域元组(spec + chars/dll/字体包)；scale 作为目录/清单独立维度 ──
 
     /**
      * 输入指纹：spec 版本 + data 包（含全部 TTF 与 kerning 表）/chars.txt/dll 内容。
@@ -560,20 +1398,61 @@ public final class DynFontOverrides {
      */
     private static String inputFingerprint(Path typefacePack, Path charsFile, Path dll)
             throws Exception {
+        return framedInputFingerprint(typefacePack, charsFile, dll);
+    }
+
+    /**
+     * 对输入元组做有域、有长度的编码。文件名与内容不能直接拼接：例如
+     * {@code ("a", "Xb"), ("c", "Y")} 与
+     * {@code ("a", "X"), ("bc", "Y")} 的裸拼接完全相同。
+     */
+    static String framedInputFingerprint(Path... inputs) throws Exception {
         MessageDigest digest = MessageDigest.getInstance("SHA-256");
-        digest.update(("spec" + SPEC_VERSION + ";").getBytes());
+        digest.update((byte) 1);
+        updateFramedUtf8(digest, "dynfont-input-fingerprint");
+        digest.update((byte) 2);
+        updateFramedUtf8(digest, SPEC_VERSION);
+        digest.update((byte) 3);
+        updateLong(digest, inputs.length);
         byte[] buf = new byte[65536];
-        for (Path input : new Path[]{typefacePack, charsFile, dll}) {
-            digest.update(input.getFileName().toString().getBytes());
+        for (Path input : inputs) {
+            digest.update((byte) 4);
+            updateFramedUtf8(digest, input.getFileName().toString());
+            long expectedLength = Files.size(input);
+            long expectedModified = Files.getLastModifiedTime(
+                    input, LinkOption.NOFOLLOW_LINKS).toMillis();
+            updateLong(digest, expectedLength);
             // 流式读：data 包 15+ MB，一次性 readAllBytes 会在 G1 下产生 humongous 分配
+            long total = 0L;
             try (InputStream is = Files.newInputStream(input)) {
                 int n;
                 while ((n = is.read(buf)) > 0) {
                     digest.update(buf, 0, n);
+                    total += n;
                 }
+            }
+            if (total != expectedLength
+                    || Files.size(input) != expectedLength
+                    || Files.getLastModifiedTime(
+                            input, LinkOption.NOFOLLOW_LINKS).toMillis()
+                            != expectedModified) {
+                throw new IOException("动态字体指纹计算期间输入发生变化: " + input);
             }
         }
         return HexFormat.of().formatHex(digest.digest()).substring(0, 16);
+    }
+
+    private static void updateFramedUtf8(
+            MessageDigest digest, String value) {
+        byte[] bytes = value.getBytes(StandardCharsets.UTF_8);
+        updateLong(digest, bytes.length);
+        digest.update(bytes);
+    }
+
+    private static void updateLong(MessageDigest digest, long value) {
+        for (int shift = Long.SIZE - Byte.SIZE; shift >= 0; shift -= Byte.SIZE) {
+            digest.update((byte) (value >>> shift));
+        }
     }
 
     // ── 游戏 UI 缩放读取（复刻 launcher 规则；启动时定死，改缩放需重启游戏）────
