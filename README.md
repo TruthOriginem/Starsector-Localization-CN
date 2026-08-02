@@ -82,7 +82,7 @@
 |-----------------------------------------|-----------------------------------------------------------------|
 | _cleanLocalization.py                   | 根据original文件夹清理localization文件夹。                                 |
 | _copyOldLocalization.py                 | 通过比对original文件夹，更新汉化包中的未变更文件。                                   |
-| jar_pre_processing/*           | Jar 预处理工具（`python build.py` 运行），编译输入法与动态字体原生库并执行 ASM Patch、字符串解耦、运行时类注入，生成可供翻译流程使用的 original jar 及 `localization/native/windows/` 下的原生库、`localization/graphics/fonts/dyn_font/` 下的字体数据包。**预处理后 jar 为未翻译状态，需再运行 ParaTranz 脚本子命令 2 写回译文**。详情参见[Jar 预处理工具说明](jar_pre_processing/README.md)、[中文输入法支持说明](jar_pre_processing/docs/ime-support.md)、[动态字体渲染说明](jar_pre_processing/docs/dynamic-font.md)。 |
+| jar_pre_processing/*           | Jar 预处理工具（`python build.py` 运行），编译输入法、PNG 解码与动态字体原生库并执行 ASM Patch、字符串解耦、运行时类注入，生成可供翻译流程使用的 original jar 及 `localization/native/windows/` 下的原生库、`localization/graphics/fonts/dyn_font/` 下的字体数据包。**预处理后 jar 为未翻译状态，需再运行 ParaTranz 脚本子命令 2 写回译文**。详情参见[Jar 预处理工具说明](jar_pre_processing/README.md)、[中文输入法支持说明](jar_pre_processing/docs/ime-support.md)、[动态字体渲染说明](jar_pre_processing/docs/dynamic-font.md)。 |
 | _handleVariantNames.py                  | 处理指定文件夹中所有装配名，并更新/使用映射 json 用于翻译。                               |
 | _overwriteLocalizationByOriginal.py     | TODO                                                            |
 | _swapLangFile.py                        | 用来更替汉化文件和英文文件的脚本。                                               |

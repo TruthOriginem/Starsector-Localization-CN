@@ -2,20 +2,26 @@
 
 本工具用于对《远行星号》游戏 jar 文件进行汉化前预处理，输出可供 ParaTranz 工作流直接使用的 jar 文件。
 
+启动优化的总体设计、决策流程、完整优化台账和兼容边界见
+[docs/startup_optimization.md](docs/startup_optimization.md)；测量口径、关键 A/B 与当前基准见
+[docs/startup_profile_runs.md](docs/startup_profile_runs.md)。
+
 ## 功能
 
-预处理按顺序对 `starfarer.api.jar`、`starfarer_obf.jar`、
-`fs.common_obf.jar` 和 `fs.sound_obf.jar` 执行：
+预处理按顺序对 `starfarer.api.jar`、`starfarer_obf.jar`、`fs.common_obf.jar`
+与 `fs.sound_obf.jar` 执行：
 
 1. **ASM 字节码 Patch**：通过 [ASM](https://asm.ow2.io/) 库直接修改 `.class` 文件中的字节码，修复游戏原代码中与中文显示不兼容的逻辑（分隔符、字体、列宽、日期格式等），并注入中文输入法与动态字体钩子。各 Patch 的详细说明见下文。
 
 2. **字符串解耦（jar-string-decoupler）**：调用 `vendor/jar-string-decoupler-1.0.0-all.jar`，将 `.class` 文件中硬编码的字符串常量提取并解耦，使 ParaTranz 的 jar 加载器能够读取、翻译并写回字符串，无需再手动修改字节码。该工具来自[jar-string-decoupler项目](https://github.com/jnxyp/jar-string-decoupler)。仅 `starfarer.api.jar` 与 `starfarer_obf.jar` 参与解耦；`fs.common_obf.jar` 和 `fs.sound_obf.jar` 只做 ASM 注入。
 
-3. **运行时类注入**：把随本模块一起编译的运行时类追加进 `starfarer_obf.jar`——中文输入法（`org.fossic.starsector.ime.*`，见 [docs/ime-support.md](docs/ime-support.md)）与动态字体（`org.fossic.starsector.dynfont.*`，见 [docs/dynamic-font.md](docs/dynamic-font.md)）。
+3. **运行时类注入**：把随本模块一起编译的运行时类追加进 `starfarer_obf.jar`——中文输入法（`org.fossic.starsector.ime.*`，见 [docs/ime-support.md](docs/ime-support.md)）、动态字体（`org.fossic.starsector.dynfont.*`，见 [docs/dynamic-font.md](docs/dynamic-font.md)）和优化 helper。启动计时 runtime 只有显式启用 `--profiling on` 才会注入；发布默认完全不携带。
 
 `fs.common_obf.jar` 和 `fs.sound_obf.jar` 只过第 1 阶段、不做字符串解耦。
-本分支会修改前者，后者保持原版副本；两者均随包分发，以便各变体汉化包互相
-覆盖安装时能清除其它分支残留的 hook，避免旧 hook 与已被换走的运行时类不匹配。
+前者始终纳入分发，以便各字体变体互相覆盖安装时能清掉其它分支的动态字体
+hook，避免残留 hook 找不到已被换走的运行时类而导致
+`NoClassDefFoundError`。后者作为声音加载优化的 patch-only 输入/输出；没有相关
+Patch 的分支可原样产出副本。
 
 处理完成后，结果 jar 同时写入仓库根目录的 `original/` 和 `localization/`，
 并在 `target/preprocess-work/preprocess-report.json` 生成处理报告（含输入/输出哈希、
@@ -25,7 +31,8 @@
 
 构建编排以 Python 为主（与仓库其它构建脚本一致）：`build.py` 负责编译 native 库
 （g++ 编 `ssime.dll`、CMake+Ninja 编 `ss_dyn_font.dll`）、调用 mvnw 运行上述 Java
-管线，以及全部产物复制分发；Maven 只负责 Java 部分。
+管线，以及全部产物复制分发；Maven 只负责 Java 部分。`jar` 步骤固定先执行
+`mvnw clean compile`，避免 IDE/增量编译目录中的旧 helper 或错误桩被注入发布 Jar。
 
 ## 环境要求
 
@@ -48,18 +55,32 @@ python build.py dynfont jar      # 重编动态字体库后走完整流程
 python build.py all              # 全部
 ```
 
-Patch 通过系统属性按组选择。基线组默认启用；可用下面的诊断命令显式关闭
-`localization`，验证不含本地化 Patch 的管线：
+`jar` 步骤支持按功能组选择 ASM patch。默认启用全部优化，但不注入 profiling；
+基准或诊断构建必须显式使用 `--profiling on`：
 
 ```powershell
-.\mvnw.cmd -Dstarsector.preprocess.optimizations=none `
-  -Dstarsector.preprocess.disabledPatchGroups=localization compile exec:java
+python -X utf8 build.py jar --optimizations all
+python -X utf8 build.py jar --optimizations none
+python -X utf8 build.py jar --optimizations fast-text,resource-locks,rules-id-index
+python -X utf8 build.py jar --disable-patch-group texture-pipeline
+python -X utf8 build.py jar --profiling on
 ```
 
-选择器采用严格语义：只启用明确请求的组，不自动补齐依赖，也不递归禁用依赖方；
-显式禁用一个未请求的组、请求未知组或缺少依赖都会在改写 Jar 前汇总报错。
-优化参数可使用 `all`、`none` 或逗号分隔的优化组 ID。最终请求和实际启用组会写入
-`preprocess-report.json`。
+完整优化组、依赖、JVM 调试属性、缓存失效/清理规则和各项兼容边界统一见
+[docs/startup_optimization.md](docs/startup_optimization.md)。请求项、依赖展开后的最终启用组及显式禁用组
+会写入 `target/preprocess-work/preprocess-report.json`，构建和 A/B 核对应以该报告为准。
+
+Java 单元测试单独执行：
+
+```powershell
+$env:MAVEN_OPTS='-Dfile.encoding=UTF-8'
+.\mvnw.cmd test
+```
+
+新增运行时优化时，具体算法应放在 `org.fossic.starsector.optimization`，ASM Patch 只保留
+结构校验和最小桥接。采用测试优先流程：先加入会失败的语义/回归测试并确认红灯，再实现
+helper，最后运行全套测试和实际游戏 profiling。完整决策与验证流程见
+[docs/startup_optimization.md](docs/startup_optimization.md#决策与验证流程)。
 
 native 库是提交入库的预编译产物，日常构建不重编（编译器升级会产生无关的
 二进制 diff）；重编是显式操作（`ime` / `dynfont` 步骤），并连同产物一起提交。
@@ -101,14 +122,14 @@ jar_pre_processing/
 │   │   ├── JarWorkspace.java          # 路径管理与文件 IO
 │   │   ├── JarRewriter.java           # ASM Patch 调度器
 │   │   ├── DecouplerRunner.java       # jar-string-decoupler 调用
-│   │   ├── RuntimeClassInjector.java  # 运行时类注入（ime / dynfont 两组）
-│   │   ├── PatchGroup.java            # 组目录、类型与组间依赖
-│   │   ├── PatchSelection.java        # 严格解析和校验组选择
-│   │   ├── PatchRegistry.java         # 有序注册所有 Patch
+│   │   ├── RuntimeClassInjector.java  # 运行时类注入（ime / dynfont / startup / optimization）
+│   │   ├── PatchRegistry.java         # 注册所有 Patch
 │   │   ├── JarPatch.java              # Patch 接口
 │   │   └── patches/                   # 各具体 Patch 实现
 │   ├── ime/                           # 中文输入法运行时（注入 obf jar，见 docs/ime-support.md）
-│   └── dynfont/                       # 动态字体运行时（注入 obf jar，hook 在 fs.common_obf.jar）
+│   ├── dynfont/                       # 动态字体运行时（注入 obf jar，hook 在 fs.common_obf.jar）
+│   └── optimization/                  # 可单测的运行时优化算法
+├── src/test/java/                     # JUnit 单元与回归测试
 ├── native/
 │   ├── ime/
 │   │   ├── ssime.cpp                  # 输入法原生库源码（IMM32 / JNI）
@@ -121,19 +142,15 @@ jar_pre_processing/
 │       └── ss_dyn_font.dll            # 预编译产物（提交入库）
 ├── vendor/
 │   └── jar-string-decoupler-1.0.0-all.jar
-├── docs/                              # 文档与截图（ime-support.md、dynamic-font.md）
+├── docs/                              # 输入法、动态字体与启动优化文档
 └── pom.xml
 ```
 
 ## 添加新 Patch
 
 1. 在 `patches/` 目录下新建实现 `JarPatch` 接口的类。
-2. 由 Patch 的 `group()` 返回所属 `PatchGroup`；分组事实不要重复写在 Registry。
-3. 在 `PatchRegistry` 的有序 catalog 中注册该类。Registry 只决定执行顺序并按
-   Patch 自身声明的组筛选。
-4. 若需新组，在 `PatchGroup` 中定义稳定 ID、类型和直接依赖。依赖仅用于严格校验，
-   不会隐式启用或禁用其它组。
-5. 补充 Registry 顺序、组声明和选择失败路径的单元测试。
+2. 在 `PatchGroup` 中选择或增加一个原子功能组；有依赖时同时声明。
+3. 在 `PatchRegistry` 中按原版字节码所需顺序注册该类与所属组。
 
 ---
 

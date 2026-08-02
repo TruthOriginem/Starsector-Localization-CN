@@ -2,12 +2,15 @@ package org.fossic.starsector.preprocessing;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
+import java.nio.file.LinkOption;
+import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
+import java.nio.file.attribute.BasicFileAttributes;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Comparator;
 import java.util.HexFormat;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -25,12 +28,7 @@ public final class JarWorkspace {
      * 或运行时类依赖。
      */
     public static final String COMMON_OBF_JAR = "fs.common_obf.jar";
-    /**
-     * 仅 ASM 注入、不做字符串解耦/翻译的声音引擎 jar。
-     *
-     * <p>启动优化分支会修改此文件；其它分支仍需分发原版副本，确保从启动优化版
-     * 覆盖安装回来时不会残留声音加载 hook。
-     */
+    /** 仅 ASM 注入、不做字符串解耦/翻译的声音引擎 jar。 */
     public static final String SOUND_OBF_JAR = "fs.sound_obf.jar";
 
     private final Path projectDir;
@@ -315,13 +313,31 @@ public final class JarWorkspace {
     }
 
     private static void deleteDirectory(Path dir) throws IOException {
-        if (!Files.exists(dir)) {
+        BasicFileAttributes attributes;
+        try {
+            attributes = Files.readAttributes(
+                    dir,
+                    BasicFileAttributes.class,
+                    LinkOption.NOFOLLOW_LINKS);
+        } catch (NoSuchFileException missing) {
             return;
         }
-        try (var stream = Files.walk(dir)) {
-            for (Path path : stream.sorted(Comparator.reverseOrder()).toList()) {
-                Files.delete(path);
+
+        // Windows junction 在 NIO 中可同时表现为 directory 与 other，
+        // Files.walk() 即使未显式 FOLLOW_LINKS 也可能进入其目标。任何链接或
+        // reparse point 都只删除入口本身；仅普通目录允许逐层打开。
+        if (!attributes.isDirectory()
+                || attributes.isOther()
+                || attributes.isSymbolicLink()) {
+            Files.deleteIfExists(dir);
+            return;
+        }
+        try (DirectoryStream<Path> children =
+                     Files.newDirectoryStream(dir)) {
+            for (Path child : children) {
+                deleteDirectory(child);
             }
         }
+        Files.deleteIfExists(dir);
     }
 }

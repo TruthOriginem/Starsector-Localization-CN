@@ -171,7 +171,7 @@ cython_debug/
 # 残渣，既干扰 git status 也容易被误提交。故在此统一声明。
 
 # 动态字体 native：FreeType 源码由 build.py 首次构建时自动 clone；字体源文件体积大，
-# 所需清单见 fonts/README.md，由 build.py 打包进分发 data。（build/ 已由上方通用规则覆盖）
+# 所需清单见 fonts/README.md，由 build.py 打包进分发 typefaces.dat。（build/ 已由上方通用规则覆盖）
 jar_pre_processing/native/dyn_font/third_party/freetype/
 jar_pre_processing/native/dyn_font/fonts/*.ttf
 jar_pre_processing/native/dyn_font/fonts/*.TTF

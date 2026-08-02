@@ -6,7 +6,7 @@ jar 预处理构建编排 —— Python 指挥 native 编译、Java 管线与产
     ss_dyn_font.dll）、调 mvnw 运行 Java 管线、所有产物打包与复制分发
     （两个 dll → localization/native/windows/；
       动态字体源资产打成单文件数据包 → localization/graphics/fonts/dyn_font/typefaces.dat）
-  - Java 管线（mvnw compile exec:java）：jar 的 ASM patch、字符串解耦、
+  - Java 管线（mvnw clean compile exec:java）：jar 的 ASM patch、字符串解耦、
     运行时类注入、original/ 与 localization/ 的 jar 写出
 
 localization/ 是直接用于打包分发的内容，只放运行时需要的文件；字体源 TTF 与
@@ -208,11 +208,27 @@ def build_dynfont() -> None:
     sync_kerning_tables(assets)
 
 
-def run_java_pipeline() -> None:
-    """mvnw compile exec:java：jar patch/解耦/注入/写出（详见 README）。"""
+def run_java_pipeline(
+    optimizations: str,
+    disabled_patch_groups: list[str],
+    profiling: bool,
+) -> None:
+    """从干净 classes 目录运行 jar patch/解耦/注入/写出（详见 README）。"""
     mvnw = PROJECT_DIR / ('mvnw.cmd' if os.name == 'nt' else 'mvnw')
-    print('[java] 运行 jar 预处理管线 (mvnw compile exec:java) ...')
-    subprocess.run([str(mvnw), 'compile', 'exec:java'], check=True, cwd=PROJECT_DIR)
+    print('[java] 运行 jar 预处理管线 (mvnw clean compile exec:java) ...')
+    subprocess.run([
+        str(mvnw),
+        '-Dfile.encoding=UTF-8',
+        f'-Dstarsector.preprocess.optimizations={optimizations}',
+        '-Dstarsector.preprocess.disabledPatchGroups='
+        + ','.join(disabled_patch_groups),
+        '-Dstarsector.preprocess.profiling='
+        + ('true' if profiling else 'false'),
+        # 防止 IDE/增量编译器遗留的错误桩或旧 runtime helper 被注入发布 jar。
+        'clean',
+        'compile',
+        'exec:java',
+    ], check=True, cwd=PROJECT_DIR)
 
 
 def _validate_asset_name(value: object, field: str) -> str:
@@ -392,8 +408,12 @@ def distribute() -> None:
     build_data_pack()
 
 
-def run_jar_step() -> None:
-    run_java_pipeline()
+def run_jar_step(
+    optimizations: str,
+    disabled_patch_groups: list[str],
+    profiling: bool,
+) -> None:
+    run_java_pipeline(optimizations, disabled_patch_groups, profiling)
     distribute()
 
 
@@ -406,7 +426,7 @@ STEPS: dict[str, tuple[str, Callable[[], None]]] = {
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
-    step_lines = '\n'.join(f'  {name:<9}{desc}' for name, (desc, _) in STEPS.items())
+    step_lines = '\n'.join(f'  {name:<11}{desc}' for name, (desc, _) in STEPS.items())
     parser = argparse.ArgumentParser(
         description='jar 预处理构建编排：native 编译（g++/CMake）、Java 管线（mvnw）与产物分发。',
         epilog=(
@@ -425,6 +445,9 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
             f'  python build.py dynfont          # 重编动态字体并刷新资产清单/kerning\n'
             f'  python build.py ime dynfont      # 重编两个 native 库\n'
             f'  python build.py dynfont jar      # 重编动态字体库后走完整流程\n'
+            f'  python build.py jar --optimizations none\n'
+            f'  python build.py jar --disable-patch-group texture-pipeline\n'
+            f'  python build.py jar --profiling on\n'
             f'  python build.py all              # 全部'
         ),
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -433,6 +456,15 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         'steps', nargs='*', metavar='step',
         choices=[*STEPS, 'all'], default=['jar'],
         help=f'要运行的步骤：{" / ".join([*STEPS, "all"])}（默认 jar）')
+    parser.add_argument(
+        '--optimizations', default='all', metavar='SPEC',
+        help='启用的优化组：all、none 或逗号分隔组名（默认 all）')
+    parser.add_argument(
+        '--disable-patch-group', action='append', default=[], metavar='GROUP',
+        help='显式禁用一个 patch 组；可重复使用，依赖它的组也会关闭')
+    parser.add_argument(
+        '--profiling', choices=('on', 'off'), default='off',
+        help='是否注入启动阶段 profiling patch 与 runtime（默认 off；基准测试时显式 on）')
     return parser.parse_args(argv)
 
 
@@ -441,7 +473,13 @@ def main(argv: list[str] | None = None) -> None:
     selected = set(STEPS) if 'all' in args.steps else set(args.steps)
     for name, (_, step) in STEPS.items():  # 按注册表顺序执行
         if name in selected:
-            step()
+            if name == 'jar':
+                run_jar_step(
+                    args.optimizations,
+                    args.disable_patch_group,
+                    args.profiling == 'on')
+            else:
+                step()
     print(f'[done] 完成步骤: {" ".join(n for n in STEPS if n in selected)}')
 
 

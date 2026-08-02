@@ -20,11 +20,6 @@ public final class JarPreProcessorMain {
         workspace.prepare();
 
         PatchSelection patchSelection = PatchSelection.fromSystemProperties();
-        System.out.println("Requested optimizations: "
-                + patchSelection.requestedOptimizationSpec()
-                + "; profiling: " + patchSelection.requestedProfiling()
-                + "; disabled patch groups: "
-                + patchSelection.requestedDisabledGroupIds());
         System.out.println("Enabled patch groups: "
                 + patchSelection.enabledGroupIds());
         Map<String, String> inputHashes = workspace.inputHashes();
@@ -40,8 +35,8 @@ public final class JarPreProcessorMain {
             ));
         }
 
-        // 字符串解耦仅针对含翻译文本的 jar；fs.common_obf.jar 和
-        // fs.sound_obf.jar 只过 patch 阶段，patched 结果直接作为最终输出。
+        // 字符串解耦仅针对含翻译文本的 jar；其余引擎 jar 只做 ASM 注入，
+        // patched 产物直接作为最终输出。
         DecouplerRunner decoupler = new DecouplerRunner(workspace);
         for (String jarName : JarWorkspace.jars()) {
             System.out.println("Decoupling " + jarName);
@@ -49,14 +44,13 @@ public final class JarPreProcessorMain {
         }
 
         // 注入运行时类到 obf jar（original 与 localization 一致）：
-        // IME（输入法）与 DynFont（动态字体；被 fs.common_obf.jar 的 hook 调用，
-        // 两 jar 同处游戏固定 classpath，跨 jar 可见）。
-        Map<String, Integer> injectedCounts = new LinkedHashMap<>();
+        // IME（输入法）、DynFont（动态字体；被 fs.common_obf.jar 的 hook 调用）
+        // StartupProfiler（仅 profiling 组显式启用时）与启动优化 helper。
+        // 各组类均与目标 hook 所在 jar 同处游戏固定 classpath，支持跨 jar 调用。
         Path obfJar = workspace.decoupledJar(JarWorkspace.OBF_JAR);
-        injectedCounts.put("ime", new RuntimeClassInjector(
-                "org/fossic/starsector/ime/", "ImeHooks.class").injectInto(obfJar));
-        injectedCounts.put("dynfont", new RuntimeClassInjector(
-                "org/fossic/starsector/dynfont/", "DynFontOverrides.class").injectInto(obfJar));
+        Map<String, Integer> injectedCounts = injectRuntimeClasses(
+                obfJar, patchSelection);
+
         System.out.println("Injected runtime classes into " + JarWorkspace.OBF_JAR
                 + ": " + injectedCounts);
 
@@ -72,6 +66,80 @@ public final class JarPreProcessorMain {
                 patchResults,
                 injectedCounts);
         System.out.println("Preprocessing complete. Report: " + workspace.preprocessReport());
+    }
+
+    static Map<String, Integer> injectRuntimeClasses(
+            Path obfJar, PatchSelection patchSelection) throws IOException {
+        Map<String, Integer> injectedCounts = new LinkedHashMap<>();
+        injectedCounts.put("ime", new RuntimeClassInjector(
+                "org/fossic/starsector/ime/", "ImeHooks.class").injectInto(obfJar));
+        injectDynFontRuntime(obfJar, patchSelection, injectedCounts);
+        injectStartupProfilerRuntime(
+                obfJar, patchSelection, injectedCounts);
+        injectedCounts.put("optimization", new RuntimeClassInjector(
+                "org/fossic/starsector/optimization/", "FastTextReader.class").injectInto(obfJar));
+        if (patchSelection.enabled(PatchGroup.FAST_PNG)) {
+            int provider = new RuntimeClassInjector(
+                    "org/fossic/starsector/privateimpl/png/",
+                    "TwlPngProvider.class")
+                    .injectPrivatelyInto(
+                            obfJar,
+                            "META-INF/starsector-optimization/private/png/",
+                            new String[0]);
+            int dependency = new RuntimeClassInjector(
+                    "de/matthiasmann/twl/utils/", "PNGDecoder.class")
+                    .injectPrivatelyInto(
+                            obfJar,
+                            "META-INF/starsector-optimization/private/png/",
+                            new String[0],
+                            "META-INF/LICENSE-pngdecoder.txt");
+            injectedCounts.put("pngDecoder", provider + dependency);
+        }
+        if (patchSelection.enabled(PatchGroup.TEXTURE_CACHE)
+                || patchSelection.enabled(PatchGroup.PCM_CACHE)) {
+            int provider = new RuntimeClassInjector(
+                    "org/fossic/starsector/privateimpl/zstd/",
+                    "ZstdProvider.class")
+                    .injectPrivatelyInto(
+                            obfJar,
+                            "META-INF/starsector-optimization/private/zstd/",
+                            new String[0]);
+            int dependency = new RuntimeClassInjector(
+                    "com/github/luben/zstd/", "Zstd.class")
+                    .injectPrivatelyInto(
+                            obfJar,
+                            "META-INF/starsector-optimization/private/zstd/",
+                            new String[]{
+                                "win/amd64/libzstd-jni-1.5.7-4.dll"
+                            },
+                            "META-INF/LICENSE-zstd-jni.txt");
+            injectedCounts.put("zstd", provider + dependency);
+        }
+        return injectedCounts;
+    }
+
+    static void injectDynFontRuntime(
+            Path obfJar,
+            PatchSelection patchSelection,
+            Map<String, Integer> injectedCounts) throws IOException {
+        if (!patchSelection.enabled(PatchGroup.DYNFONT)) {
+            return;
+        }
+        injectedCounts.put("dynfont", new RuntimeClassInjector(
+                "org/fossic/starsector/dynfont/", "DynFontOverrides.class")
+                .injectInto(obfJar));
+    }
+
+    static void injectStartupProfilerRuntime(
+            Path obfJar,
+            PatchSelection patchSelection,
+            Map<String, Integer> injectedCounts) throws IOException {
+        if (!patchSelection.enabled(PatchGroup.PROFILING)) {
+            return;
+        }
+        injectedCounts.put("startupProfiler", new RuntimeClassInjector(
+                "org/fossic/starsector/startup/", "StartupProfiler.class")
+                .injectInto(obfJar));
     }
 
     private static void writeReport(
@@ -93,9 +161,9 @@ public final class JarPreProcessorMain {
         json.append("    \"requestedProfiling\": ")
                 .append(patchSelection.requestedProfiling())
                 .append(",\n");
-        json.append("    \"requestedDisabledGroups\": ")
+        json.append("    \"disabledGroups\": ")
                 .append(JsonUtil.stringArray(
-                        patchSelection.requestedDisabledGroupIds()))
+                        patchSelection.disabledGroupIds()))
                 .append(",\n");
         json.append("    \"enabledOptimizations\": ")
                 .append(JsonUtil.stringArray(
