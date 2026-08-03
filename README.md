@@ -33,6 +33,18 @@
 3. 正常游玩，**如果遇到翻译质量问题或bug，请向我们报告**。
    1. 由于汉化尚未完成，出现未翻译英文属于正常现象，无需报告。 
 
+### 游戏内中文输入法支持（Windows）
+
+汉化包内置游戏内中文输入法支持：安装汉化后即可直接在游戏输入框（船名、存档名、角色名等）中使用系统输入法输入中文，无需任何额外配置。注意：独占全屏模式下输入法候选窗无法显示，请使用**窗口化**或**无边框全屏**。技术细节参见 [中文输入法支持说明](jar_pre_processing/docs/ime-support.md)。
+
+### 动态字体渲染（Windows）
+
+汉化包的中文字体改为**按界面缩放实时生成**：游戏启动时按当前的界面缩放倍率现场渲染字体，因此在任何缩放档位下文字都保持清晰，不再像原先那样被放大导致模糊。首次启动（或修改字表、更新汉化包后）需要约 2~4 秒生成字体，之后启动直接读缓存。
+
+**缺字可以自己补**：字表位于 `starsector-core/graphics/fonts/dyn_font/chars.txt`，用**记事本以 UTF-8 编码**打开后直接增删字符，重启游戏即生效。
+
+如果动态字体因故无法启用（非 Windows 系统、文件缺失或损坏等），会自动回退到汉化包内附带的静态字体，中文显示不受影响。技术细节参见 [动态字体渲染说明](jar_pre_processing/docs/dynamic-font.md)。
+
 ## 参与汉化
 
 如果想参与汉化或者想为汉化提出意见和建议，请通过 QQ 553816216 添加 **议长**的好友，或者申请加入 QQ 群 **788249918 汉化顾问团**，然后才申请加入本项目。
@@ -58,7 +70,7 @@
 * "localization" 内存放当前版本翻译后的文件
 * "localization.old" 内存放上个版本的译文，不要直接编辑其内容
 * "para_tranz" 内存放Paratranz平台相关脚本
-* "jar_pre_processing" 内存放 Jar 预处理相关脚本
+* "jar_pre_processing" 内存放 Jar 预处理工具（ASM Patch、字符串解耦）与中文输入法、动态字体两个支持模块（运行时类源码及原生库）
 * "docs" 内存放项目文档内容
 * "packaging" 内存放安装包及汉化包打包相关脚本和素材
 
@@ -70,7 +82,7 @@
 |-----------------------------------------|-----------------------------------------------------------------|
 | _cleanLocalization.py                   | 根据original文件夹清理localization文件夹。                                 |
 | _copyOldLocalization.py                 | 通过比对original文件夹，更新汉化包中的未变更文件。                                   |
-| jar_pre_processing/*           | Jar 预处理工具，执行 ASM Patch 与字符串解耦，生成可供翻译流程使用的original jar。详情参见[Jar 预处理工具说明](jar_pre_processing/README.md)。 |
+| jar_pre_processing/*           | Jar 预处理工具（`python build.py` 运行），编译输入法与动态字体原生库并执行 ASM Patch、字符串解耦、运行时类注入，生成可供翻译流程使用的 original jar 及 `localization/native/windows/` 下的原生库、`localization/graphics/fonts/dyn_font/` 下的字体数据包。**预处理后 jar 为未翻译状态，需再运行 ParaTranz 脚本子命令 2 写回译文**。详情参见[Jar 预处理工具说明](jar_pre_processing/README.md)、[中文输入法支持说明](jar_pre_processing/docs/ime-support.md)、[动态字体渲染说明](jar_pre_processing/docs/dynamic-font.md)。 |
 | _handleVariantNames.py                  | 处理指定文件夹中所有装配名，并更新/使用映射 json 用于翻译。                               |
 | _overwriteLocalizationByOriginal.py     | TODO                                                            |
 | _swapLangFile.py                        | 用来更替汉化文件和英文文件的脚本。                                               |
