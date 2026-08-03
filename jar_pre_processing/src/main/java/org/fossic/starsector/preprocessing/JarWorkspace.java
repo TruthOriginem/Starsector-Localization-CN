@@ -16,12 +16,11 @@ public final class JarWorkspace {
     public static final String API_JAR = "starfarer.api.jar";
     public static final String OBF_JAR = "starfarer_obf.jar";
     /**
-     * 仅 ASM 注入、不做字符串解耦/翻译的 jar。
+     * 仅 ASM 注入、不做字符串解耦/翻译的 jar：本分支的动态字体 hook 目标。
      *
-     * <p>本分支不对它打任何 patch，产物即原版副本。之所以仍要纳入分发：各变体
-     * 汉化包之间要能互相覆盖安装。动态字体分支会往这个 jar 注入 hook，若其余
-     * 变体的包不含此文件，玩家从动态字体版换回来时它不会被覆盖，留下的 hook
-     * 找不到已被换走的运行时类，游戏启动即 NoClassDefFoundError。
+     * <p>各变体汉化包都要分发它（其余分支产出的是原版副本），否则玩家从本分支
+     * 换回其它变体时这个 jar 不会被覆盖，残留的 hook 找不到已被换走的运行时类，
+     * 游戏启动即 NoClassDefFoundError。
      */
     public static final String COMMON_OBF_JAR = "fs.common_obf.jar";
     /**

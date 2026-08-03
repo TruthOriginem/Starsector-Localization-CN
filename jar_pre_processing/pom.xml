@@ -13,6 +13,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <exec.mainClass>org.fossic.starsector.preprocessing.JarPreProcessorMain</exec.mainClass>
         <asm.version>9.7.1</asm.version>
+        <exec-plugin.version>3.5.0</exec-plugin.version>
     </properties>
 
     <dependencies>
@@ -37,6 +38,15 @@
             <version>5.11.4</version>
             <scope>test</scope>
         </dependency>
+        <!-- 游戏 API jar：仅供 IME 运行时类（org.fossic.starsector.ime）编译期使用。
+             这些类由预处理注入 starfarer_obf.jar，运行时由游戏 classpath 提供该 API。 -->
+        <dependency>
+            <groupId>com.fs.starfarer</groupId>
+            <artifactId>starfarer-api</artifactId>
+            <version>0.98a-RC8</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/../game data/starfarer.api.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <build>
@@ -53,7 +63,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>3.5.0</version>
+                <version>${exec-plugin.version}</version>
                 <configuration>
                     <mainClass>${exec.mainClass}</mainClass>
                     <systemProperties>
@@ -71,4 +81,7 @@
             </plugin>
         </plugins>
     </build>
+
+    <!-- native 库（native/ime/ssime.dll）的编译与产物分发由 build.py 编排
+         （仓库构建脚本以 Python 为主），Maven 只负责 Java 编译与管线运行。 -->
 </project>

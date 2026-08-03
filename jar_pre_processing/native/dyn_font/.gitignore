@@ -1,0 +1,10 @@
+# FreeType 源码由 build.py 首次构建时自动 clone（体积大，不入库）
+third_party/freetype/
+# CMake 构建目录
+build/
+# 字体源文件（体积大，不入库；所需清单见 fonts/README.md，build.py 打包进分发 data）
+fonts/*.ttf
+fonts/*.TTF
+fonts/*.otf
+# kerning 固化表由 build.py 根据 native 资产清单自动生成
+fonts/*.kern.txt
