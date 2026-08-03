@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -49,14 +50,29 @@ public final class JarPreProcessorMain {
 
         // 解耦器同步重定位并校验 StackMapTable；所有 jar 成功后才分发。
         // 此后不能重新序列化整个类，否则会合并独立字符串常量、破坏翻译索引。
+        // 注入运行时类到 obf jar（original 与 localization 一致）：
+        // IME（输入法）与 DynFont（动态字体；被 fs.common_obf.jar 的 hook 调用，
+        // 两 jar 同处游戏固定 classpath，跨 jar 可见）。
+        Map<String, Integer> injectedCounts = new LinkedHashMap<>();
+        Path obfJar = workspace.decoupledJar(JarWorkspace.OBF_JAR);
+        injectedCounts.put("ime", new RuntimeClassInjector(
+                "org/fossic/starsector/ime/", "ImeHooks.class").injectInto(obfJar));
+        injectedCounts.put("dynfont", new RuntimeClassInjector(
+                "org/fossic/starsector/dynfont/", "DynFontOverrides.class").injectInto(obfJar));
+        System.out.println("Injected runtime classes into " + JarWorkspace.OBF_JAR
+                + ": " + injectedCounts);
+
         workspace.writeOutputs();
+        // 原生库（ssime.dll / ss_dyn_font.dll）的编译与分发由 build.py 负责，不在本管线内。
+
         Map<String, String> outputHashes = workspace.outputHashes();
         writeReport(
                 workspace,
                 patchSelection,
                 inputHashes,
                 outputHashes,
-                patchResults);
+                patchResults,
+                injectedCounts);
         System.out.println("Preprocessing complete. Report: " + workspace.preprocessReport());
     }
 
@@ -65,7 +81,8 @@ public final class JarPreProcessorMain {
             PatchSelection patchSelection,
             Map<String, String> inputHashes,
             Map<String, String> outputHashes,
-            List<PatchResult> patchResults)
+            List<PatchResult> patchResults,
+            Map<String, Integer> injectedCounts)
             throws IOException {
         StringBuilder json = new StringBuilder();
         json.append("{\n");
@@ -106,6 +123,15 @@ public final class JarPreProcessorMain {
             json.append(i + 1 == patchResults.size() ? "\n" : ",\n");
         }
         json.append("  ],\n");
+        json.append("  \"runtimeInjection\": {");
+        int i = 0;
+        for (Map.Entry<String, Integer> entry : injectedCounts.entrySet()) {
+            if (i++ > 0) {
+                json.append(", ");
+            }
+            json.append(JsonUtil.quote(entry.getKey())).append(": ").append(entry.getValue());
+        }
+        json.append("},\n");
         json.append("  \"outputHashes\": ").append(JsonUtil.stringMap(outputHashes)).append("\n");
         json.append("}\n");
         Files.writeString(workspace.preprocessReport(), json.toString(), StandardCharsets.UTF_8);
