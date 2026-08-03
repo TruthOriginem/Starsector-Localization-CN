@@ -18,7 +18,7 @@ public final class JarWorkspace {
     public static final String API_JAR = "starfarer.api.jar";
     public static final String OBF_JAR = "starfarer_obf.jar";
     /**
-     * 仅 ASM 注入、不做字符串解耦/翻译的 jar。
+     * 仅 ASM 注入、不做字符串解耦/翻译的 jar：本分支的动态字体 hook 目标。
      *
      * <p>主分支会在这里修复高亮颜色数组的空值崩溃，动态字体分支还会注入额外
      * hook。各变体汉化包都分发此文件，以便覆盖安装时不会残留其它变体的 hook

@@ -4,16 +4,18 @@
 
 ## 功能
 
-预处理分两个阶段，对 `starfarer.api.jar`、`starfarer_obf.jar`、
-`fs.common_obf.jar` 和 `fs.sound_obf.jar` 依次执行：
+预处理按顺序对 `starfarer.api.jar`、`starfarer_obf.jar`、
+`fs.common_obf.jar` 和 `fs.sound_obf.jar` 执行：
 
-1. **ASM 字节码 Patch**：通过 [ASM](https://asm.ow2.io/) 库直接修改 `.class` 文件中的字节码，修复游戏原代码中与中文显示不兼容的逻辑（分隔符、字体、列宽、日期格式等）。各 Patch 的详细说明见下文。
+1. **ASM 字节码 Patch**：通过 [ASM](https://asm.ow2.io/) 库直接修改 `.class` 文件中的字节码，修复游戏原代码中与中文显示不兼容的逻辑（分隔符、字体、列宽、日期格式等），并注入中文输入法与动态字体钩子。各 Patch 的详细说明见下文。
 
-2. **字符串解耦（jar-string-decoupler）**：调用 `vendor/jar-string-decoupler-1.0.0-all.jar`，将 `.class` 文件中硬编码的字符串常量提取并解耦，使 ParaTranz 的 jar 加载器能够读取、翻译并写回字符串，无需再手动修改字节码。该工具来自[jar-string-decoupler项目](https://github.com/jnxyp/jar-string-decoupler)。
+2. **字符串解耦（jar-string-decoupler）**：调用 `vendor/jar-string-decoupler-1.0.0-all.jar`，将 `.class` 文件中硬编码的字符串常量提取并解耦，使 ParaTranz 的 jar 加载器能够读取、翻译并写回字符串，无需再手动修改字节码。该工具来自[jar-string-decoupler项目](https://github.com/jnxyp/jar-string-decoupler)。仅 `starfarer.api.jar` 与 `starfarer_obf.jar` 参与解耦；`fs.common_obf.jar` 和 `fs.sound_obf.jar` 只做 ASM 注入。
+
+3. **运行时类注入**：把随本模块一起编译的运行时类追加进 `starfarer_obf.jar`——中文输入法（`org.fossic.starsector.ime.*`，见 [docs/ime-support.md](docs/ime-support.md)）与动态字体（`org.fossic.starsector.dynfont.*`，见 [docs/dynamic-font.md](docs/dynamic-font.md)）。
 
 `fs.common_obf.jar` 和 `fs.sound_obf.jar` 只过第 1 阶段、不做字符串解耦。
-主分支会在前者中修复高亮颜色数组的空值崩溃；后者的产物仍是原版副本。两者都纳入
-分发，以便各变体汉化包能够互相覆盖安装，避免切换版本后残留旧 hook 或运行时类。
+本分支会修改前者，后者保持原版副本；两者均随包分发，以便各变体汉化包互相
+覆盖安装时能清除其它分支残留的 hook，避免旧 hook 与已被换走的运行时类不匹配。
 
 处理完成后，结果 jar 同时写入仓库根目录的 `original/` 和 `localization/`，
 并在 `target/preprocess-work/preprocess-report.json` 生成处理报告（含输入/输出哈希、
@@ -21,24 +23,33 @@
 现有 `original/` 和结构兼容的 `localization/`，避免仅因 ZIP 时间戳、压缩流或权限
 字段变化而产生二进制 diff；内容实际变化、文件缺失或结构不兼容时仍会重置两个输出。
 
+构建编排以 Python 为主（与仓库其它构建脚本一致）：`build.py` 负责编译 native 库
+（g++ 编 `ssime.dll`、CMake+Ninja 编 `ss_dyn_font.dll`）、调用 mvnw 运行上述 Java
+管线，以及全部产物复制分发；Maven 只负责 Java 部分。
+
 ## 环境要求
 
-- **JDK 17+**（Maven Wrapper 已内置，无需单独安装 Maven）
+- **JDK 17+**（`JAVA_HOME` 指向之；Maven Wrapper 已内置，无需单独安装 Maven）
+- **Python 3.10+** 与 **fontTools**（构建编排及 GPOS kerning 固化表生成）
+- **MinGW-w64 g++、CMake、Ninja**（PATH 中；仅重编 native 库时需要）
 
 ## 使用方法
 
 在 `jar_pre_processing/` 目录下执行：
 
-```bash
-# Windows
-.\mvnw.cmd compile exec:java
+三个步骤（`ime` / `dynfont` / `jar`）可单独、组合或用 `all` 全量运行
+（执行顺序固定为 native 先于 jar，与输入顺序无关）：
 
-# Linux / macOS
-./mvnw compile exec:java
+```bash
+python build.py                  # 日常流程 = jar：Java 管线 → 分发（用已提交的 native 库）
+python build.py ime              # 只重编输入法原生库 ssime.dll
+python build.py dynfont          # 重编动态字体，并刷新资产清单与 kerning
+python build.py dynfont jar      # 重编动态字体库后走完整流程
+python build.py all              # 全部
 ```
 
-Patch 通过系统属性按组选择。当前主分支只有始终默认启用的基线组
-`localization`；可用下面的诊断命令显式关闭它，验证无 Patch 的管线：
+Patch 通过系统属性按组选择。基线组默认启用；可用下面的诊断命令显式关闭
+`localization`，验证不含本地化 Patch 的管线：
 
 ```powershell
 .\mvnw.cmd -Dstarsector.preprocess.optimizations=none `
@@ -47,8 +58,14 @@ Patch 通过系统属性按组选择。当前主分支只有始终默认启用�
 
 选择器采用严格语义：只启用明确请求的组，不自动补齐依赖，也不递归禁用依赖方；
 显式禁用一个未请求的组、请求未知组或缺少依赖都会在改写 Jar 前汇总报错。
-主分支没有优化组，因此优化参数应为 `none`；包含优化实现的分支可使用 `all` 或
-逗号分隔的优化组 ID。最终请求和实际启用组会写入 `preprocess-report.json`。
+优化参数可使用 `all`、`none` 或逗号分隔的优化组 ID。最终请求和实际启用组会写入
+`preprocess-report.json`。
+
+native 库是提交入库的预编译产物，日常构建不重编（编译器升级会产生无关的
+二进制 diff）；重编是显式操作（`ime` / `dynfont` 步骤），并连同产物一起提交。
+`dynfont` 首次构建会自动 clone FreeType 源码（需网络）。该步骤还会从刚编译的
+`dynfont_cli --list-assets` 刷新并提交 `native/dyn_font/assets.json`；`dynfont` 与 `jar`
+都会据此自动生成当前字重所需的 kerning 表并删除旧表。`*.kern.txt` 是忽略的生成物。
 
 **前置条件**：仓库根目录的 `game data/` 下需存在待处理的原版 jar 文件：
 - `game data/starfarer.api.jar`
@@ -59,26 +76,50 @@ Patch 通过系统属性按组选择。当前主分支只有始终默认启用�
 **输出**：
 - `original/` 与 `localization/` 下的 `starfarer.api.jar`、`starfarer_obf.jar`、
   `fs.common_obf.jar` 和 `fs.sound_obf.jar`
+- `localization/native/windows/`：`ssime.dll` 与 `ss_dyn_font.dll`（两个 native 库，build.py 分发）
+- `localization/graphics/fonts/dyn_font/typefaces.dat`（动态字体源资产单文件数据包，build.py 打包；
+  与入库的 `chars.txt` 一起构成该目录仅有的两个分发文件）
 - `target/preprocess-work/preprocess-report.json`（处理报告）
 - `target/preprocess-work/reports/*.decoupler.json`（解耦报告）
+
+构建脚本单元测试：
+
+```powershell
+python -X utf8 -m unittest discover -s tests -v
+```
 
 ## 目录结构
 
 ```
 jar_pre_processing/
-├── src/main/java/.../preprocessing/
-│   ├── JarPreProcessorMain.java   # 主入口
-│   ├── JarWorkspace.java          # 路径管理与文件 IO
-│   ├── JarRewriter.java           # ASM Patch 调度器
-│   ├── DecouplerRunner.java       # jar-string-decoupler 调用
-│   ├── PatchGroup.java            # 组目录、类型与组间依赖
-│   ├── PatchSelection.java        # 严格解析和校验组选择
-│   ├── PatchRegistry.java         # 有序注册所有 Patch
-│   ├── JarPatch.java              # Patch 接口
-│   └── patches/                   # 各具体 Patch 实现
+├── build.py                           # 构建编排入口（native 编译 + Java 管线 + 分发）
+├── src/main/java/org/fossic/starsector/
+│   ├── preprocessing/
+│   │   ├── JarPreProcessorMain.java   # Java 管线主入口
+│   │   ├── JarWorkspace.java          # 路径管理与文件 IO
+│   │   ├── JarRewriter.java           # ASM Patch 调度器
+│   │   ├── DecouplerRunner.java       # jar-string-decoupler 调用
+│   │   ├── RuntimeClassInjector.java  # 运行时类注入（ime / dynfont 两组）
+│   │   ├── PatchGroup.java            # 组目录、类型与组间依赖
+│   │   ├── PatchSelection.java        # 严格解析和校验组选择
+│   │   ├── PatchRegistry.java         # 有序注册所有 Patch
+│   │   ├── JarPatch.java              # Patch 接口
+│   │   └── patches/                   # 各具体 Patch 实现
+│   ├── ime/                           # 中文输入法运行时（注入 obf jar，见 docs/ime-support.md）
+│   └── dynfont/                       # 动态字体运行时（注入 obf jar，hook 在 fs.common_obf.jar）
+├── native/
+│   ├── ime/
+│   │   ├── ssime.cpp                  # 输入法原生库源码（IMM32 / JNI）
+│   │   └── ssime.dll                  # 预编译产物（提交入库）
+│   └── dyn_font/                      # 动态字体原生库（CMake 工程，FreeType 静态链接）
+│       ├── assets.json                # native 规格导出的资产依赖清单（提交入库）
+│       ├── src/                       # 渲染/装箱/写出全流程（金标准：fnt_composer）
+│       ├── fonts/                     # 本地生成资产（TTF + kerning 均不入库，按清单打包）
+│       ├── tools/                     # kerning 导出与金标准 diff 工具
+│       └── ss_dyn_font.dll            # 预编译产物（提交入库）
 ├── vendor/
 │   └── jar-string-decoupler-1.0.0-all.jar
-├── docs/                          # 截图等文档资源
+├── docs/                              # 文档与截图（ime-support.md、dynamic-font.md）
 └── pom.xml
 ```
 
