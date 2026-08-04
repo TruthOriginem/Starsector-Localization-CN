@@ -2,6 +2,7 @@ package org.fossic.starsector.preprocessing;
 
 import org.fossic.starsector.preprocessing.patches.CampaignDateWidthPatch;
 import org.fossic.starsector.preprocessing.patches.CombatDeploymentFontPatch;
+import org.fossic.starsector.preprocessing.patches.CombatTargetInfoWidthPatch;
 import org.fossic.starsector.preprocessing.patches.FactionHostilityNoManualPatch;
 import org.fossic.starsector.preprocessing.patches.IntelPutFirstTagIdPatch;
 import org.fossic.starsector.preprocessing.patches.PlanetListColumnWidthPatch;
@@ -24,6 +25,7 @@ public final class PatchRegistry {
                 new FactionHostilityNoManualPatch(),
                 new ShipInfoSeparatorPatch(),
                 new CombatDeploymentFontPatch(),
+                new CombatTargetInfoWidthPatch(),
                 new CampaignDateWidthPatch(),
                 new SaveDateLocalePatch(),
                 new PlanetListColumnWidthPatch(),
