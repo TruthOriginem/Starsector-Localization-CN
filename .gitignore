@@ -176,6 +176,8 @@ jar_pre_processing/native/dyn_font/third_party/freetype/
 jar_pre_processing/native/dyn_font/fonts/*.ttf
 jar_pre_processing/native/dyn_font/fonts/*.TTF
 jar_pre_processing/native/dyn_font/fonts/*.otf
+# kerning 固化表由 build.py 根据 native 资产清单自动生成
+jar_pre_processing/native/dyn_font/fonts/*.kern.txt
 
 # 动态字体分发目录：data 为构建产物（含 TTF，体积大不入库，build.py 生成）；
 # chars.txt（玩家可编辑字表）入库直接分发；cache/ 为运行时按缩放档生成的图集。
