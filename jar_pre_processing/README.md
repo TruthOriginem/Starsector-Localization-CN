@@ -290,3 +290,29 @@ Patch 先替换大字体 `victor14.fnt` → `victor16.fnt`，再替换小字体 
 
 Patch 只替换紧邻 `CountingMap.add(Object, int)` 的一处 getter 调用，并验证后续两处
 合法的显示名读取保持不变。
+
+---
+
+### 14. 高 DPI 缩放下窗口模式错误隐藏边框
+
+**对应 ASM Patch**：`src/main/java/org/fossic/starsector/preprocessing/patches/WindowDecorationPhysicalResolutionPatch.java`
+
+相关文件：`starfarer_obf.jar: com/fs/starfarer/combat/CombatMain.class`
+
+**原因**：游戏用启动分辨率与 `Toolkit.getScreenSize()` 返回的桌面尺寸判断窗口是否铺满
+屏幕。Windows 开启 DPI 缩放后，启动分辨率是物理像素，而 AWT 返回的是逻辑像素；
+例如 2560×1600、缩放 150% 时会被报告为约 1707×1067，使 1920×1080 窗口被误判为
+铺满屏幕并自动隐藏边框。
+
+**修改**：改用 LWJGL 返回的物理桌面分辨率进行比较。仅修正自动隐藏边框的判定，
+不改变真正全屏、显式无边框和 `alwaysUndecoratedAtFullscreen` 设置的行为。
+
+> **维护备注**：预计游戏下一版本会在原版中修复此问题。本 Patch 属于临时兼容修复；
+> 升级目标游戏版本时应优先检查原版实现，若上游修复已包含等价逻辑，则移除此 Patch。
+
+```diff
+- Toolkit.getDefaultToolkit().getScreenSize().width
+- Toolkit.getDefaultToolkit().getScreenSize().height
++ Display.getDesktopDisplayMode().getWidth()
++ Display.getDesktopDisplayMode().getHeight()
+```

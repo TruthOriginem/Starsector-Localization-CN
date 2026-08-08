@@ -8,6 +8,7 @@ import org.fossic.starsector.preprocessing.patches.PlanetListColumnWidthPatch;
 import org.fossic.starsector.preprocessing.patches.SaveDateLocalePatch;
 import org.fossic.starsector.preprocessing.patches.ShipInfoSeparatorPatch;
 import org.fossic.starsector.preprocessing.patches.StarSystemMapFontPatch;
+import org.fossic.starsector.preprocessing.patches.WindowDecorationPhysicalResolutionPatch;
 
 import java.util.List;
 
@@ -24,7 +25,8 @@ public final class PatchRegistry {
                 new SaveDateLocalePatch(),
                 new PlanetListColumnWidthPatch(),
                 new StarSystemMapFontPatch(),
-                new IntelPutFirstTagIdPatch()
+                new IntelPutFirstTagIdPatch(),
+                new WindowDecorationPhysicalResolutionPatch()
         );
     }
 }
