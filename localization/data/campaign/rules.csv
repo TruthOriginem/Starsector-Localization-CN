@@ -36840,7 +36840,7 @@ AdjustRepActivePerson -5","""我会给你个面子，就当你在开玩笑。"" 
 
 ""我不会在你身上浪费更多时间了。"" $HeOrShe朝谁点了下头，链接就直接中断了，甚至连个中断码都没有。",cutCommLinkNoText:继续,
 PSKMercOptionsStorySel,DialogOptionSelected,$option == pskMerc_story,,"""哦？请讲。"" $HeOrShe看上去既有些被冒犯，也有些好奇。就好像$heOrShe在拒绝你前想先听听你能找出什么蹩脚的借口。",pskMerc_story1:继续,
-PSKMercOptionsStory1,DialogOptionSelected,$option == pskMerc_story1,,"你解释道这群海盗的威胁程度被一帮佣兵组织故意低估了。黑箭袋小队，Ilm 遗子，披甲联盟，战术之星；他们全都勾结在一起，包括海盗也跟他们一伙。
+PSKMercOptionsStory1,DialogOptionSelected,$option == pskMerc_story1,,"你解释道这群海盗的威胁程度被一帮佣兵组织故意低估了。黑箭袋，Ilm 遗子，披甲联盟，战术之星；他们全都勾结在一起，包括海盗也跟他们一伙。
 
 现在佣兵合同的收入不如以往，这点$heOrShe自然应该知道。雇主认为他们可以拿比燃料补给费加船员工资高不了多少的低价便能请到一流 —— 例如 $personName —— 的舰队。你看到$himOrHer边听边点头。",pskMerc_story2:继续,
 PSKMercOptionsStory2,DialogOptionSelected,$option == pskMerc_story2,,"问题就是同业竞争压低了价位 —— 而这帮勾结在一起的佣兵组织则和海盗达成了交易来解决这一问题。
