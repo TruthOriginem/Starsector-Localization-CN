@@ -268,3 +268,25 @@ Patch 先替换大字体 `victor14.fnt` → `victor16.fnt`，再替换小字体 
 - object = f5 > this.ö00000() ? "graphics/fonts/victor10.fnt" : "graphics/fonts/victor14.fnt";
 + object = f5 > this.ö00000() ? "graphics/fonts/victor14.fnt" : "graphics/fonts/victor16.fnt";
 ```
+
+---
+
+### 13. 情报页优先标签汉化后重复
+
+**对应 ASM Patch**：`src/main/java/org/fossic/starsector/preprocessing/patches/IntelPutFirstTagIdPatch.java`
+
+相关文件：`starfarer_obf.jar: com/fs/starfarer/campaign/comms/v2/EventsPanel.class`
+
+**原因**：游戏按英文标签 ID 统计情报数量，但补充 `putFirst` 标签时误将配置中的
+本地化显示名加入统计表。英文配置的 ID 与显示名相同，问题不会显现；汉化后会同时
+出现例如 `New` 和 `新消息` 两个键，最终生成两个同名按钮。
+
+**修改**：补充 `putFirst` 标签时使用配置 ID，显示按钮时仍使用本地化 `name`。
+
+```diff
+- countingMap.add(tagSpec.getName(), 0);
++ countingMap.add(tagSpec.getId(), 0);
+```
+
+Patch 只替换紧邻 `CountingMap.add(Object, int)` 的一处 getter 调用，并验证后续两处
+合法的显示名读取保持不变。
