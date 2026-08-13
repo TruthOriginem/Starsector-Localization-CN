@@ -4,7 +4,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import call, patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
@@ -76,6 +76,102 @@ class DynFontAssetTests(unittest.TestCase):
             self.assertIn(["--table", "900", "Orbitron_w900.kern.txt"], [
                 command[index:index + 3] for index, value in enumerate(command) if value == "--table"
             ])
+
+
+class NativeBuildGuardTests(unittest.TestCase):
+    def _checkout(self, root: Path) -> Path:
+        checkout = root / "freetype"
+        checkout.mkdir()
+        (checkout / "CMakeLists.txt").write_text("project(freetype)\n", encoding="utf-8")
+        return checkout
+
+    def test_freetype_checkout_accepts_only_exact_clean_commit(self):
+        with tempfile.TemporaryDirectory() as temp:
+            checkout = self._checkout(Path(temp))
+            with (
+                patch.object(build, "FREETYPE_DIR", checkout),
+                patch.object(
+                    build,
+                    "_freetype_git_output",
+                    side_effect=[build.FREETYPE_COMMIT.upper(), ""],
+                ) as git_output,
+            ):
+                build.ensure_freetype_checkout()
+
+            self.assertEqual(git_output.call_args_list, [
+                call("rev-parse", "HEAD"),
+                call("status", "--porcelain=v1", "--untracked-files=all"),
+            ])
+
+    def test_freetype_checkout_clones_missing_tree_then_verifies_it(self):
+        with tempfile.TemporaryDirectory() as temp:
+            checkout = Path(temp) / "freetype"
+
+            def fake_clone(command, **kwargs):
+                checkout.mkdir()
+                (checkout / "CMakeLists.txt").write_text(
+                    "project(freetype)\n", encoding="utf-8")
+                return subprocess.CompletedProcess(command, 0)
+
+            with (
+                patch.object(build, "FREETYPE_DIR", checkout),
+                patch.object(build.subprocess, "run", side_effect=fake_clone) as clone,
+                patch.object(
+                    build,
+                    "_freetype_git_output",
+                    side_effect=[build.FREETYPE_COMMIT, ""],
+                ),
+            ):
+                build.ensure_freetype_checkout()
+
+            command = clone.call_args.args[0]
+            self.assertEqual(command[:4], ["git", "clone", "--depth", "1"])
+            self.assertIn(build.FREETYPE_TAG, command)
+
+    def test_freetype_checkout_rejects_wrong_commit(self):
+        with tempfile.TemporaryDirectory() as temp:
+            checkout = self._checkout(Path(temp))
+            with (
+                patch.object(build, "FREETYPE_DIR", checkout),
+                patch.object(build, "_freetype_git_output", return_value="0" * 40),
+                self.assertRaisesRegex(SystemExit, "HEAD"),
+            ):
+                build.ensure_freetype_checkout()
+
+    def test_freetype_checkout_rejects_dirty_tree(self):
+        with tempfile.TemporaryDirectory() as temp:
+            checkout = self._checkout(Path(temp))
+            with (
+                patch.object(build, "FREETYPE_DIR", checkout),
+                patch.object(
+                    build,
+                    "_freetype_git_output",
+                    side_effect=[build.FREETYPE_COMMIT, " M src/base/ftsystem.c"],
+                ),
+                self.assertRaisesRegex(SystemExit, "本地改动"),
+            ):
+                build.ensure_freetype_checkout()
+
+    def test_freetype_checkout_rejects_partial_existing_directory(self):
+        with tempfile.TemporaryDirectory() as temp:
+            checkout = Path(temp) / "freetype"
+            checkout.mkdir()
+            with (
+                patch.object(build, "FREETYPE_DIR", checkout),
+                self.assertRaisesRegex(SystemExit, "不是完整源码"),
+            ):
+                build.ensure_freetype_checkout()
+
+    def test_native_tests_are_mandatory_and_fail_when_none_are_registered(self):
+        with patch.object(build.subprocess, "run") as run:
+            build.run_dynfont_native_tests()
+
+        command = run.call_args.args[0]
+        self.assertEqual(command[0], "ctest")
+        self.assertIn("--output-on-failure", command)
+        self.assertIn("--no-tests=error", command)
+        self.assertTrue(run.call_args.kwargs["check"])
+        self.assertIn("-DBUILD_TESTING=ON", build.DYNFONT_CMAKE_DEFINES)
 
 
 if __name__ == "__main__":

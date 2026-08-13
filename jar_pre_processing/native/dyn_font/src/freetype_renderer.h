@@ -35,7 +35,7 @@ struct RenderParams {
     double boldPx = 0;      // >0：超采样分辨率下方形膨胀半径 pyRound(boldPx×ss)
     bool xadvCompat = true; // starsector_xadvance_compat：xoffset>0 时 xadvance-=xoffset
     bool bitmapStrike = false;  // Zpix 内嵌 strike 模式（整数字号、默认加载允许位图）
-    // >1：strike 渲染后逐像素整数放大（NEAREST，含全部度量 ×k）。victor hd 套的
+    // >1：strike 渲染后逐像素整数放大（NEAREST，含全部度量 ×k）。像素字体的
     // 拉丁用——Zpix strike 拉丁（等宽窄体）与矢量轮廓（比例宽体）是两套设计，
     // 大字号轮廓墨迹会撑爆与 1x 包同构的 advance；strike 整数放大保设计一致且硬边。
     int postUpscale = 1;

@@ -37,6 +37,7 @@ final class ImeController {
     private int lastSpotX = Integer.MIN_VALUE;
     private int lastSpotY = Integer.MIN_VALUE;
     private int lastSpotHeight = Integer.MIN_VALUE;
+    private boolean spotBroken;
 
     private ImeController() {
     }
@@ -62,17 +63,59 @@ final class ImeController {
 
         if (hasFocus) {
             if (current != field) {
+                // 先解除旧文本框并清空其组合/上屏队列，再把同一原生上下文交给新文本框。
+                // 即使 WeakReference 已失效也执行 false，避免旧文本进入新文本框。
+                ImeNatives.nativeSetFocused(ctx, false);
                 focusedField = new WeakReference<>(field);
                 ImeNatives.nativeSetFocused(ctx, true);
-                ImeLog.debug("文本框获得焦点，启用输入法");
             }
             drainCommittedText(field);
             updateSpot(field);
-        } else if (current == field) {
-            focusedField = null;
-            ImeNatives.nativeSetFocused(ctx, false);
-            ImeLog.debug("文本框失去焦点，解除输入法");
+        } else if (current == field || (current == null && focusedField != null)) {
+            clearFocus();
         }
+    }
+
+    /** {@code releaseFocus} 正常返回后调用，覆盖文本框同帧关闭、此后不再 advance 的情况。 */
+    void onFocusReleased(TextFieldAPI field) {
+        if (!available || field == null) {
+            return;
+        }
+        TextFieldAPI current = focusedField != null ? focusedField.get() : null;
+        if (current == null || current == field) {
+            clearFocus();
+        }
+    }
+
+    /** 钩子发生不可恢复错误时尽力解除 IME，随后彻底停用本模块。 */
+    void disableAfterFailure() {
+        long active = ctx;
+        focusedField = null;
+        available = false;
+        ctx = 0L;
+        resetSpot();
+        if (active != 0L) {
+            try {
+                ImeNatives.nativeSetFocused(active, false);
+            } catch (Throwable ignored) {
+                // 原始错误可能正是 JNI 故障，清理绝不能覆盖它或再次传播。
+            }
+        }
+    }
+
+    private void clearFocus() {
+        focusedField = null;
+        resetSpot();
+        long active = ctx;
+        if (active != 0L) {
+            ImeNatives.nativeSetFocused(active, false);
+        }
+    }
+
+    private void resetSpot() {
+        lastSpotX = Integer.MIN_VALUE;
+        lastSpotY = Integer.MIN_VALUE;
+        lastSpotHeight = Integer.MIN_VALUE;
     }
 
     private synchronized void ensureInit() {
@@ -82,12 +125,10 @@ final class ImeController {
         initAttempted = true;
 
         if (!ImeNatives.isLoaded()) {
-            ImeLog.info("原生库未加载，输入法支持不可用");
             return;
         }
         long hwnd = resolveHwnd();
         if (hwnd == 0L) {
-            ImeLog.info("未能获取窗口句柄（HWND），输入法支持不可用");
             return;
         }
         long attached = ImeNatives.nativeAttach(hwnd);
@@ -97,8 +138,6 @@ final class ImeController {
         }
         ctx = attached;
         available = true;
-        ImeLog.info("输入法支持已启用，hwnd=0x" + Long.toHexString(hwnd) + " ctx=0x" + Long.toHexString(ctx));
-        registerShutdownHook();
     }
 
     /** 反射读取 org.lwjgl.opengl.WindowsDisplay 实例的 hwnd 字段。 */
@@ -109,14 +148,15 @@ final class ImeController {
             getImplementation.setAccessible(true);
             Object implementation = getImplementation.invoke(null);
             if (implementation == null) {
-                ImeLog.info("Display.getImplementation() 返回 null");
+                ImeLog.error("Display.getImplementation() 返回 null", null);
                 return 0L;
             }
             Field hwndField = implementation.getClass().getDeclaredField("hwnd");
             hwndField.setAccessible(true);
             long hwnd = hwndField.getLong(implementation);
-            ImeLog.info("获取到窗口实现 " + implementation.getClass().getName()
-                    + " hwnd=0x" + Long.toHexString(hwnd));
+            if (hwnd == 0L) {
+                ImeLog.error("窗口实现返回了无效的 HWND", null);
+            }
             return hwnd;
         } catch (Throwable t) {
             ImeLog.error("反射获取 HWND 失败", t);
@@ -130,7 +170,6 @@ final class ImeController {
             if (text.isEmpty()) {
                 continue;
             }
-            ImeLog.debug("注入上屏文本：" + text);
             for (int i = 0; i < text.length(); i++) {
                 char c = text.charAt(i);
                 if (c < 0x20) {
@@ -138,10 +177,7 @@ final class ImeController {
                 }
                 // appendCharIfPossible 返回 false 表示输入框拒绝该字符（超出长度/宽度
                 // 限制或字体无字形），尊重游戏自身的约束与反馈（提示音），不强行写入。
-                if (!field.appendCharIfPossible(c)) {
-                    ImeLog.debug("字符被输入框拒绝，已丢弃：U+"
-                            + Integer.toHexString(c).toUpperCase());
-                }
+                field.appendCharIfPossible(c);
             }
         }
     }
@@ -156,6 +192,9 @@ final class ImeController {
      * 左对齐，导致居中框错位。
      */
     private void updateSpot(TextFieldAPI field) {
+        if (spotBroken) {
+            return;
+        }
         try {
             LabelAPI label = field.getTextLabelAPI();
             PositionAPI textPos = label != null ? label.getPosition() : null;
@@ -195,25 +234,9 @@ final class ImeController {
             lastSpotY = winY;
             lastSpotHeight = winHeight;
             ImeNatives.nativeSetSpot(ctx, winX, winY, winHeight);
-            ImeLog.debug("候选窗定位 x=" + winX + " y=" + winY + " h=" + winHeight
-                    + "（文本框x=" + (fieldPos != null ? Math.round(fieldPos.getX()) : -1)
-                    + " 文本x=" + Math.round(basis.getX())
-                    + " 文本宽=" + Math.round(basis.getWidth()) + "）");
         } catch (Throwable t) {
+            spotBroken = true;
             ImeLog.error("更新候选窗位置失败", t);
-        }
-    }
-
-    private void registerShutdownHook() {
-        try {
-            Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-                long c = ctx;
-                if (c != 0L) {
-                    ImeNatives.nativeDetach(c);
-                }
-            }, "ss-ime-detach"));
-        } catch (Throwable ignored) {
-            // 关机钩子注册失败无关紧要，进程退出时 OS 会恢复窗口过程。
         }
     }
 }

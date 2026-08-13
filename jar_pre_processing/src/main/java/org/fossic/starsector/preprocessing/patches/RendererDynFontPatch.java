@@ -106,9 +106,12 @@ public final class RendererDynFontPatch implements JarPatch {
 
         injectFontSetter(fontSetter);
         injectDisableExpansion(expansionSetter);
-        injectRenderFontDefense(render);
         injectProxyCacheBypass(cachePredicate);
+        // 两者都 prepend；先插 scope、再插 defense，最终执行顺序才是
+        // resolveFont(field) -> begin(resolved field)。否则绕过 setter 的字体首帧
+        // 会拿基础字体开启 scope，漏掉一次像素吸附。
         int scopeEnds = injectScope(render);
+        injectRenderFontDefense(render);
         injectPassTranslation(drawPass);
         MethodNode exactGlyphQuad = cloneMethod(glyphQuad, GLYPH_QUAD + EXACT_SUFFIX);
         MethodNode exactUnderlineQuad = cloneMethod(

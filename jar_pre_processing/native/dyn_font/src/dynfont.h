@@ -90,11 +90,6 @@ struct OutputSpec {
     int infoSize = 0;            // 1x 带符号；写出 sign×round(|v|×s)（负号为原版 fnt 惯例）
     int lineHeight = 0;          // 1x；写出 round(v×s)
     int base = 0;
-    // 像素字体（Zpix strike）：hd 套走「基准字号 strike 逐像素整数放大」而非
-    // 按 scale 渲染轮廓。Zpix 的内嵌位图与矢量轮廓是两套不同设计（strike 拉丁
-    // 等宽窄体、轮廓为正常宽体），混用会让 advance 与墨迹错配；且 upm=256 非
-    // 设计网格的整数倍，轮廓在大字号 mono 下笔画粗细不均。
-    bool pixelFont = false;
     int upshiftPx = 0;           // 基线规则：西文实心底对齐中文实心底后上飘 round(upshiftPx×s)
                                  // 物理像素（1x 逻辑值，任意 scale 下对齐关系恒定）
     // 数字 0-9 的 xadvance override（1x 基准，逐字符 round(v×s)；全 0 = 无 override）。
@@ -125,6 +120,7 @@ struct GenerateConfig {
 
 // 全量生成入口（generate.cpp）。返回 0 成功；错误信息经 log 输出。
 int generateAll(const GenerateConfig& config);
+bool isSupportedScreenScale(double scale) noexcept;
 
 // ── 日志（CLI 直通 stderr；JNI 模式写文件，参照 ssime 的日志习惯）──────────
 void logLine(const char* fmt, ...);

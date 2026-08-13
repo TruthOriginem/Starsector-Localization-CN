@@ -1,6 +1,5 @@
 package org.fossic.starsector.dynfont;
 
-import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -8,7 +7,6 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 
 /** 游戏原生 BitmapFont renderer 的精确代理字体入口。 */
 public final class DynFontRenderHooks {
@@ -18,14 +16,11 @@ public final class DynFontRenderHooks {
             "orbitron24aa", "orbitron24aabold",
             "victor10", "victor14", "victor16");
 
-    /** 基础/代理实例 -> 代理实例；只有全套映射成功后才整体发布。 */
-    private static final Map<Object, Object> RESOLVED = new ConcurrentHashMap<>();
-    /** 代理实例 -> {proxy nominal, base nominal, proxy/base multiplier}。 */
-    private static final Map<Object, float[]> PROXY_INFO = new ConcurrentHashMap<>();
+    /** 基础/代理映射与代理度量使用一个 volatile 快照，避免读线程看到半套发布。 */
+    private static volatile Registry registry = Registry.EMPTY;
 
     private static volatile Method managerGet;
     private static volatile Method managerRegister;
-    private static volatile Field managerMap;
     private static volatile Method fontNominal;
     private static volatile boolean warmedUp;
     private static volatile boolean mappedAll;
@@ -38,12 +33,15 @@ public final class DynFontRenderHooks {
     /** renderer 的字体 setter 注入点：游戏 context 内把已知基础字体换为 exact 代理。 */
     public static Object resolveFont(Object font) {
         try {
-            if (font == null || broken) {
+            if (font == null) {
                 return font;
             }
-            Object hit = RESOLVED.get(font);
+            Object hit = registry.resolved().get(font);
             if (hit != null) {
                 return hit;
+            }
+            if (broken) {
+                return font;
             }
             if (!DynFontOverrides.isEnabled() || !DynFontOverrides.isGameContextReady()) {
                 return font;
@@ -53,7 +51,7 @@ public final class DynFontRenderHooks {
                 return font;
             }
             mapAll(font.getClass());
-            hit = RESOLVED.get(font);
+            hit = registry.resolved().get(font);
             return hit != null ? hit : resolveLate(font);
         } catch (Throwable t) {
             fail("精确代理字体映射异常，已永久回退基础字体", t);
@@ -64,7 +62,7 @@ public final class DynFontRenderHooks {
     /** BitmapFont 公开 getter：代理对外暴露逻辑 nominal，未接管字体不变。 */
     public static int logicalNominal(Object font, int rawNominal) {
         try {
-            float[] info = PROXY_INFO.get(font);
+            float[] info = registry.proxyInfo().get(font);
             return info == null ? rawNominal : Math.round(info[1]);
         } catch (Throwable t) {
             fail("精确代理逻辑 nominal 读取异常", t);
@@ -74,7 +72,7 @@ public final class DynFontRenderHooks {
 
     /** 供 quad scope/display-list 门控使用；热路径只有一次并发 map 查询。 */
     public static boolean isProxyFont(Object font) {
-        return font != null && PROXY_INFO.containsKey(font);
+        return font != null && registry.proxyInfo().containsKey(font);
     }
 
     /**
@@ -152,8 +150,7 @@ public final class DynFontRenderHooks {
             info.put(proxy, new float[]{proxyRawNominal, baseRawNominal, multiplier});
         }
 
-        RESOLVED.putAll(resolved);
-        PROXY_INFO.putAll(info);
+        registry = new Registry(Map.copyOf(resolved), Map.copyOf(info));
         mappedAll = true;
         DynFontLog.info("精确代理映射已原子启用: " + MANAGED.size()
                 + " 套，metricScale=64, atlasScale="
@@ -186,26 +183,23 @@ public final class DynFontRenderHooks {
         return font;
     }
 
-    /** manager 在映射发布后重新注册基础路径时，按当前注册表身份补上新实例。 */
+    /** manager 在映射发布后重新注册基础路径时，按已知路径补上新实例。 */
     private static Object resolveLate(Object font) throws Exception {
-        Map<?, ?> fonts = (Map<?, ?>) managerMap.get(null);
-        for (Map.Entry<?, ?> entry : fonts.entrySet()) {
-            if (entry.getValue() != font || !(entry.getKey() instanceof String key)) {
+        Registry snapshot = registry;
+        for (String stem : MANAGED) {
+            String basePath = DynFontOverrides.exactFntPath(stem);
+            if (basePath == null) {
+                String originalName = DynFontOverrides.ownedFontStem(stem);
+                basePath = "graphics/fonts/" + originalName + ".fnt";
+            }
+            // 不遍历 BitmapFontManager 的普通 HashMap：mod 可能在其它线程重新注册
+            // 字体；按 11 个已知路径逐项 get 不会触发 ConcurrentModificationException。
+            if (managerGet.invoke(null, basePath) != font) {
                 continue;
             }
-            String normalized = key.replace('\\', '/').toLowerCase(Locale.ROOT);
-            int slash = normalized.lastIndexOf('/');
-            String name = slash >= 0 ? normalized.substring(slash + 1) : normalized;
-            if (!name.endsWith(".fnt") || name.endsWith("_exact.fnt")) {
-                return font;
-            }
-            String stem = name.substring(0, name.length() - 4);
-            if (!MANAGED.contains(stem)) {
-                return font;
-            }
             Object proxy = managerGet.invoke(null, exactPath(stem));
-            if (proxy != null && PROXY_INFO.containsKey(proxy)) {
-                RESOLVED.put(font, proxy);
+            if (proxy != null && snapshot.proxyInfo().containsKey(proxy)) {
+                cacheLateMapping(font, proxy);
                 return proxy;
             }
             return font;
@@ -221,22 +215,31 @@ public final class DynFontRenderHooks {
         Class<?> manager = Class.forName("com.fs.graphics.A.D", false, loader);
         Method get = manager.getDeclaredMethod("Ò" + "00000", String.class);
         Method register = manager.getDeclaredMethod("super", String.class, String.class);
-        Field map = manager.getDeclaredField("Ò" + "00000");
         Method nominal = fontClass.getDeclaredMethod("$dynfontRawNominal");
         get.setAccessible(true);
         register.setAccessible(true);
-        map.setAccessible(true);
         nominal.setAccessible(true);
         managerGet = get;
         managerRegister = register;
-        managerMap = map;
         fontNominal = nominal;
     }
 
     private static void fail(String message, Throwable t) {
+        // 已写入 renderer 的代理对象无法批量换回基础字体。发布后故障只能让本次
+        // 未识别的新实例回退；保留快照才能维持 nominal/quad 语义一致。
+        if (!registry.proxyInfo().isEmpty()) {
+            // 已知代理仍由 resolveFont 的快照命中；未知实例直接回退，不再反复
+            // 执行导致本次异常的 late resolve/reflection 路径。
+            broken = true;
+            logFailureOnce(message + "（保留已发布代理映射）", t);
+            return;
+        }
         broken = true;
-        RESOLVED.clear();
-        PROXY_INFO.clear();
+        registry = Registry.EMPTY;
+        logFailureOnce(message, t);
+    }
+
+    private static void logFailureOnce(String message, Throwable t) {
         if (!failureLogged) {
             failureLogged = true;
             try {
@@ -248,8 +251,7 @@ public final class DynFontRenderHooks {
     }
 
     static void resetForTests() {
-        RESOLVED.clear();
-        PROXY_INFO.clear();
+        registry = Registry.EMPTY;
         warmedUp = false;
         mappedAll = false;
         broken = false;
@@ -258,7 +260,40 @@ public final class DynFontRenderHooks {
 
     static void registerProxyForTests(Object proxy, float proxyNominal,
                                       float baseNominal) {
-        PROXY_INFO.put(proxy, new float[]{proxyNominal, baseNominal,
-                proxyNominal / baseNominal});
+        registry = new Registry(Map.of(), Map.of(proxy, new float[]{
+                proxyNominal, baseNominal, proxyNominal / baseNominal}));
+    }
+
+    static void registerMappingForTests(Object base, Object proxy,
+                                        float proxyNominal, float baseNominal) {
+        registry = new Registry(
+                Map.of(base, proxy, proxy, proxy),
+                Map.of(proxy, new float[]{proxyNominal, baseNominal,
+                        proxyNominal / baseNominal}));
+        mappedAll = true;
+    }
+
+    static void failForTests() {
+        failureLogged = true;
+        fail("test failure", new IllegalStateException("test"));
+    }
+
+    static boolean isBrokenForTests() {
+        return broken;
+    }
+
+    private static synchronized void cacheLateMapping(Object font, Object proxy) {
+        Registry current = registry;
+        if (current.resolved().get(font) == proxy) {
+            return;
+        }
+        Map<Object, Object> updated = new HashMap<>(current.resolved());
+        updated.put(font, proxy);
+        registry = new Registry(Map.copyOf(updated), current.proxyInfo());
+    }
+
+    private record Registry(Map<Object, Object> resolved,
+                            Map<Object, float[]> proxyInfo) {
+        private static final Registry EMPTY = new Registry(Map.of(), Map.of());
     }
 }
