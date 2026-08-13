@@ -13,6 +13,8 @@ public final class DynFontQuadHooks {
     private static final int GL_MODELVIEW_MATRIX = 0x0BA6;
     private static final int GL_PROJECTION_MATRIX = 0x0BA7;
     private static final int GL_VIEWPORT = 0x0BA2;
+    // LWJGL2 对所有 glGetInteger pname 都先检查至少 16 个剩余元素。
+    private static final int LWJGL_QUERY_BUFFER_ELEMENTS = 16;
 
     private static volatile MethodHandle glGetFloat;
     private static volatile MethodHandle glGetInteger;
@@ -147,7 +149,7 @@ public final class DynFontQuadHooks {
     private static final class State {
         final FloatBuffer model = directFloats(16);
         final FloatBuffer projection = directFloats(16);
-        final IntBuffer viewport = directInts(4);
+        final IntBuffer viewport = directInts(LWJGL_QUERY_BUFFER_ELEMENTS);
         final float[] modelValues = new float[16];
         final float[] projectionValues = new float[16];
         final float[] combinedValues = new float[16];
