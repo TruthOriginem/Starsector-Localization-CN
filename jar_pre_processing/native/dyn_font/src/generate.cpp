@@ -16,6 +16,7 @@
 
 #include "chars_file.h"
 #include "composer.h"
+#include "dfnt_writer.h"
 #include "fnt_writer.h"
 
 namespace dynfont {
@@ -103,6 +104,36 @@ bool writePack(const std::filesystem::path& outDir, const std::string& outName,
         }
     }
     return true;
+}
+
+/* 写出供新渲染器读取的精确浮点度量；PNG 与同一份高清 ComposedFont 共用。 */
+bool writeDfnt(const std::filesystem::path& outDir, const std::string& outName,
+               double atlasScale, float baseNominal, const ComposedFont& font) {
+    try {
+        std::vector<uint8_t> data = buildDfnt(atlasScale, baseNominal, font);
+        return writeBinary(outDir / (outName + ".dfnt"), data.data(), data.size());
+    } catch (const std::exception& e) {
+        logLine("[error] %s.dfnt 写出失败: %s", outName.c_str(), e.what());
+        return false;
+    }
+}
+
+constexpr int PROXY_METRIC_SCALE = 64;
+
+/*
+ * 写出游戏原生 renderer 使用的精确代理 FNT。PNG 已由 exact 套写出；代理只
+ * 更换整数坐标系，不重复写纹理。游戏加载该 FNT 时仍会按 page 行请求同一张
+ * {name}_exact_0.png。
+ */
+bool writeProxyFnt(const std::filesystem::path& outDir, const std::string& outName,
+                   const ComposedFont& font) {
+    try {
+        std::string fnt = buildProxyFntText(outName, font, PROXY_METRIC_SCALE);
+        return writeBinary(outDir / (outName + ".fnt"), fnt.data(), fnt.size());
+    } catch (const std::exception& e) {
+        logLine("[error] %s.fnt 代理写出失败: %s", outName.c_str(), e.what());
+        return false;
+    }
 }
 
 /*
@@ -240,7 +271,7 @@ int generateAll(const GenerateConfig& config) {
     std::vector<std::future<bool>> jobs;
     jobs.reserve(specs.size());
     for (const OutputSpec& spec : specs) {
-        jobs.push_back(std::async(std::launch::async, [&]() -> bool {
+        jobs.push_back(std::async(std::launch::async, [&, spec]() -> bool {
           // 异常不出线程：future 会把它存起来并在 job.get() 处重抛到 generateAll
           // 栈上，越过下面的 ok 汇总逻辑。单套失败不应带走其余 10 套。
           try {
@@ -254,6 +285,29 @@ int generateAll(const GenerateConfig& config) {
                 return false;
             }
             if (!writePack(outDir, composed.name, composed)) {
+                return false;
+            }
+
+            // 精确套始终存在。100% 时可复用基础栅格化结果；高缩放按真正的
+            // screenScale 独立栅格化，不经过整数 nominal 量化。
+            ComposedFont exact;
+            if (config.scale <= 1.001) {
+                exact = composed;
+            } else if (!composeOutput(spec, config.scale, pack, chars,
+                                      config.atlasWidth, exact)) {
+                return false;
+            }
+            const std::string exactName = std::string(spec.name) + "_exact";
+            if (!writePack(outDir, exactName, exact)) {
+                return false;
+            }
+            // 覆盖刚才仅用于写 PNG 的普通 exact FNT，改为 64 倍虚拟度量代理。
+            // 纹理 UV 与几何/nominal 的同倍率在原版 renderer 内精确抵消。
+            if (!writeProxyFnt(outDir, exactName, exact)) {
+                return false;
+            }
+            if (!writeDfnt(outDir, spec.name, config.scale,
+                           static_cast<float>(std::abs(spec.infoSize)), exact)) {
                 return false;
             }
 

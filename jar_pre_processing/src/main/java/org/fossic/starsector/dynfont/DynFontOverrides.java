@@ -39,12 +39,12 @@ public final class DynFontOverrides {
             "orbitron24aa", "orbitron24aabold",
             "victor10", "victor14", "victor16");
 
-    /** 期望的 native ABI 版本（dll 不匹配时禁用）。v8：nativeGenerate 增 logPath。 */
-    private static final int EXPECTED_NATIVE_VERSION = 8;
+    /** 期望的 native ABI 版本（dll 不匹配时禁用）。v9：新增精确 .dfnt 度量。 */
+    private static final int EXPECTED_NATIVE_VERSION = 9;
     /** native 日志文件名（写在游戏 logs 目录，与 starsector.log 同级）。 */
     private static final String NATIVE_LOG_NAME = "ss_dyn_font_native.log";
     /** 参数表/生成语义版本（进缓存键；native 侧 spec 表变更时递增强制重生成）。 */
-    private static final String SPEC_VERSION = "1";
+    private static final String SPEC_VERSION = "2";
     /**
      * 同一份安装下最多保留几个缩放档的缓存。每档约 200 MB（hd 图集占大头），
      * 保留多档是为了让玩家切回旧缩放时秒开，但必须有上限——早先无上限的策略
@@ -119,8 +119,10 @@ public final class DynFontOverrides {
             if (file == null) {
                 return null;
             }
-            if (name.endsWith(".fnt") && !name.contains("_hd.")) {
-                EXACT_FNT_PATH.putIfAbsent(name.substring(0, name.length() - 4), path);
+            String requestedStem = name.endsWith(".fnt")
+                    ? name.substring(0, name.length() - 4) : null;
+            if (requestedStem != null && ownedFontStem(requestedStem) != null) {
+                EXACT_FNT_PATH.putIfAbsent(requestedStem, path);
                 if (!gameContextReady && inGameContext()) {
                     gameContextReady = true;
                     DynFontLog.info("检测到游戏 GL context 就绪（游戏本体正在加载字体）");
@@ -162,6 +164,12 @@ public final class DynFontOverrides {
     public static boolean hasClaim(String lowerFileName) {
         Map<String, Path> map = claimed;
         return map != null && map.containsKey(lowerFileName);
+    }
+
+    /** 取得生成缓存文件；仅供同包运行时读取，不向游戏资源层暴露真实路径。 */
+    static Path claimedPath(String lowerFileName) {
+        Map<String, Path> map = claimed;
+        return map == null ? null : map.get(lowerFileName.toLowerCase(Locale.ROOT));
     }
 
     /**
@@ -222,7 +230,7 @@ public final class DynFontOverrides {
      * 拿到的会是旧 scale 的产物，而游戏的 BitmapFontManager 按路径缓存字体
      * 对象与纹理，之后无法再换掉（陈旧 UV/纹理正是方案 A 碎块的成因）。
      */
-    public static boolean isHdReady() {
+    public static boolean isProxyReady() {
         return !regenerating;
     }
 
@@ -302,9 +310,7 @@ public final class DynFontOverrides {
     private static void prepareHdDuringLoading() {
         try {
             recheckScaleForGame(true);
-            if (screenScale > 1.001) {
-                DynFontRenderHooks.warmUpHdTextures();
-            }
+            DynFontRenderHooks.warmUpExactTextures();
         } catch (Throwable t) {
             DynFontLog.error("读条阶段预热高清套失败（退回首帧加载）", t);
         }
@@ -388,9 +394,8 @@ public final class DynFontOverrides {
             screenScale = scale;
             Path cacheRoot = dynFontDir.resolve("cache");
 
-            // 方案 Y 单套："1x 度量 fnt + 共享布局高清图集"。fnt 一切字段永远是
-            // 1x 值（布局层天然正确），scale>1 时仅 PNG 为按同布局等比放大摆放的
-            // 高清版（UV 归一化数学自动成立），游戏侧零运行时替换。
+            // 精确代理套：native 按真实 scale 生成物理图集，代理 FNT 用固定倍率
+            // 虚拟度量抵消游戏后续 UI 缩放；DFNT 保留精确小数排版数据。
             Path outDir = ensureGenerated(typefacePack, charsFile, dll, cacheRoot, scale);
             claimed = buildClaims(outDir);
             state = STATE_ENABLED;
@@ -411,9 +416,18 @@ public final class DynFontOverrides {
         Path outDir = cacheRoot.resolve(scaleTag + "-" + fingerprint);
         Path marker = outDir.resolve(".complete");
         if (Files.isRegularFile(marker)) {
-            // 命中也要清理：玩家可能刚更新过汉化包，旧指纹的档需要回收
-            pruneCaches(cacheRoot, fingerprint, outDir.getFileName().toString());
-            return outDir;
+            try {
+                // 完成标记不是唯一真值：玩家、杀软或异常退出都可能只删掉
+                // 某个大 PNG。命中时重验整套产物，避免永久 fail-open 到原版字体。
+                buildClaims(outDir);
+                // 命中也要清理：玩家可能刚更新过汉化包，旧指纹的档需要回收
+                pruneCaches(cacheRoot, fingerprint, outDir.getFileName().toString());
+                return outDir;
+            } catch (IOException invalid) {
+                DynFontLog.info("动态字体缓存不完整，自动重建: "
+                        + invalid.getMessage());
+                deleteCache(outDir, "产物不完整");
+            }
         }
         pruneCaches(cacheRoot, fingerprint, outDir.getFileName().toString());
         DynFontLog.info("生成动态字体图集: scale=" + scale + " → " + outDir);
@@ -470,16 +484,24 @@ public final class DynFontOverrides {
         DynFontLog.info("动态字体已禁用（回退原版位图字体）: " + reason);
     }
 
-    /** 认领缓存目录下全部 .fnt 与 .png（键小写文件名）。 */
+    /** 认领缓存目录下全部 .fnt、.png 与 .dfnt（键小写文件名）。 */
     private static Map<String, Path> buildClaims(Path outDir) throws IOException {
         Map<String, Path> map = new HashMap<>();
-        try (DirectoryStream<Path> stream = Files.newDirectoryStream(outDir, "*.{fnt,png}")) {
+        try (DirectoryStream<Path> stream =
+                     Files.newDirectoryStream(outDir, "*.{fnt,png,dfnt}")) {
             for (Path file : stream) {
                 map.put(file.getFileName().toString().toLowerCase(Locale.ROOT), file);
             }
         }
-        if (map.isEmpty()) {
-            throw new IOException("缓存目录为空: " + outDir);
+        for (String font : FONT_NAMES) {
+            String stem = font.toLowerCase(Locale.ROOT);
+            for (String suffix : List.of(".fnt", "_0.png", "_exact.fnt",
+                    "_exact_0.png", ".dfnt")) {
+                if (!map.containsKey(stem + suffix)) {
+                    throw new IOException("动态字体缓存缺少 " + stem + suffix
+                            + ": " + outDir);
+                }
+            }
         }
         return map;
     }

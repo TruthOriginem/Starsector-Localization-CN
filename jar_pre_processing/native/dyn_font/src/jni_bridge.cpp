@@ -38,7 +38,7 @@ extern "C" {
 // ABI 版本（Java 侧校验，dll 与 Java 薄层不匹配时降级禁用）
 JNIEXPORT jint JNICALL
 Java_org_fossic_starsector_dynfont_DynFontNatives_nativeVersion(JNIEnv*, jclass) {
-    return 8;  // v8：nativeGenerate 新增 logPath 参数（日志改写游戏 logs 目录）
+    return 9;  // v9：每套字体新增精确度量 .dfnt 与 exact 高清图集
 }
 
 /*
