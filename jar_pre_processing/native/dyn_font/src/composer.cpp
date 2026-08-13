@@ -195,6 +195,17 @@ std::string kerningTableName(const SourceSpec& source) {
     return name + ".kern.txt";
 }
 
+BaselineDeltas calculateBaselineDeltas(int westBottom, int cjkBottom,
+                                       double preciseWestBottom,
+                                       double preciseCjkBottom,
+                                       double upshift) {
+    BaselineDeltas result;
+    result.integerDelta = -static_cast<int>(pyRound(upshift))
+        - (westBottom - cjkBottom);
+    result.preciseDelta = -upshift - (preciseWestBottom - preciseCjkBottom);
+    return result;
+}
+
 bool composeOutput(const OutputSpec& spec, double s, const TypefacePack& typefaces,
                    const std::vector<uint32_t>& charList, int atlasWidth, ComposedFont& out) {
     // ── 西文源（latin 区 [32, 0x2FFF]）──────────────────────────────────────
@@ -216,8 +227,10 @@ bool composeOutput(const OutputSpec& spec, double s, const TypefacePack& typefac
     // 西文无 yAdjust：垂直位置由 post_align + upshiftPx 全权（yAdjust 会被
     // post_align 的闭环 delta 严格抵消，属死参数，已删）
     int wx = static_cast<int>(pyRound(spec.west.xadvAdjust * s));
+    double preciseWx = spec.west.xadvAdjust * s;
     for (auto& [id, g] : westGlyphs) {
         g.xadvance += wx;
+        g.preciseAdvance += preciseWx;
     }
     // 数字等宽（字距已计入，故必须在上面的 += wx 之后）：取 0-9 的最大 advance
     // 作为等宽单元，窄字形在其中居中。游戏的 BMFont 渲染器实际每字前进量为
@@ -225,10 +238,12 @@ bool composeOutput(const OutputSpec& spec, double s, const TypefacePack& typefac
     // 必须从 xadvance 扣回，否则窄数字“1”反而会使整串变宽。
     if (spec.west.tabularDigits) {
         int widest = 0;
+        double preciseWidest = 0;
         for (uint32_t d = '0'; d <= '9'; d++) {
             auto it = westGlyphs.find(d);
             if (it != westGlyphs.end()) {
                 widest = std::max(widest, it->second.xadvance);
+                preciseWidest = std::max(preciseWidest, it->second.preciseAdvance);
             }
         }
         for (uint32_t d = '0'; d <= '9'; d++) {
@@ -237,9 +252,14 @@ bool composeOutput(const OutputSpec& spec, double s, const TypefacePack& typefac
                 continue;
             }
             if (it->second.xadvance < widest) {
-                it->second.xoffset += (widest - it->second.xadvance) / 2;
+                int center = (widest - it->second.xadvance) / 2;
+                it->second.xoffset += center;
             }
             it->second.xadvance = widest - it->second.xoffset;
+            // 精确路径独立按26.6 advance居中；不继承整数 BMFont 的舍入。
+            it->second.preciseBearingX +=
+                (preciseWidest - it->second.preciseAdvance) / 2.0;
+            it->second.preciseAdvance = preciseWidest;
         }
     }
 
@@ -264,6 +284,8 @@ bool composeOutput(const OutputSpec& spec, double s, const TypefacePack& typefac
     for (auto& [id, g] : cjkGlyphs) {
         g.yoffset += cy;
         g.xadvance += cx;
+        g.preciseBearingY += spec.cjk.yAdjust * s;
+        g.preciseAdvance += spec.cjk.xadvAdjust * s;
     }
 
     out.glyphs = std::move(westGlyphs);
@@ -278,6 +300,7 @@ bool composeOutput(const OutputSpec& spec, double s, const TypefacePack& typefac
         if (it != out.glyphs.end()) {
             // 原版数字为加宽等宽设计，advance 逐字符抄录原版值
             it->second.xadvance = static_cast<int>(pyRound(spec.digitAdv[i] * s));
+            it->second.preciseAdvance = spec.digitAdv[i] * s;
         }
     }
     for (uint32_t b : {static_cast<uint32_t>('{'), static_cast<uint32_t>('}')}) {
@@ -285,6 +308,7 @@ bool composeOutput(const OutputSpec& spec, double s, const TypefacePack& typefac
         if (it != out.glyphs.end()) {
             // 游戏高亮标记：清零不渲染
             it->second.xadvance = 0;
+            it->second.preciseAdvance = 0;
             it->second.widthOverride = 0;
             it->second.heightOverride = 0;
         }
@@ -313,6 +337,10 @@ bool composeOutput(const OutputSpec& spec, double s, const TypefacePack& typefac
                 if (amount != 0) {
                     out.kernings.emplace_back(first, second, amount);
                 }
+                double preciseAmount = static_cast<double>(u) * wp.sizePx / units.upm;
+                if (preciseAmount != 0.0) {
+                    out.preciseKernings.emplace_back(first, second, preciseAmount);
+                }
             }
         } else {
             logLine("[warning] %s: 数据包缺 kerning 表条目 (%s)，本套无字偶距", spec.name,
@@ -325,15 +353,33 @@ bool composeOutput(const OutputSpec& spec, double s, const TypefacePack& typefac
 
     // ── post_align：西文实心底对齐中文实心底后上飘 round(upshiftPx×s)（1x 逻辑
     // 像素等比缩放；旧百分比制 floor(0.1×lh_s) 在不同 scale 下取整漂移，已废）──
-    int target = -static_cast<int>(pyRound(spec.upshiftPx * s));
     std::optional<int> bWest = solidBottom(out.glyphs, 'H');
     std::optional<int> bCjk = solidBottom(out.glyphs, POST_ALIGN_CJK_REF);  // 舰
     if (bWest && bCjk) {
-        int delta = target - (*bWest - *bCjk);
+        const Glyph& westRef = out.glyphs.at('H');
+        const Glyph& cjkRef = out.glyphs.at(POST_ALIGN_CJK_REF);
+        // solidBottom 的 y 是字形 alpha 内的整数行索引；它在精确路径
+        // 中不变，只将 bearing 替换为未舍入的 26.6 值即得精确底边。
+        double preciseWestBottom = westRef.preciseBearingY
+            + (*bWest - westRef.yoffset);
+        double preciseCjkBottom = cjkRef.preciseBearingY
+            + (*bCjk - cjkRef.yoffset);
+        BaselineDeltas deltas = calculateBaselineDeltas(
+            *bWest, *bCjk, preciseWestBottom, preciseCjkBottom,
+            spec.upshiftPx * s);
+        int delta = deltas.integerDelta;
+        double preciseDelta = deltas.preciseDelta;
         if (delta != 0) {
             for (auto& [id, g] : out.glyphs) {
                 if (id < 0x3000) {
                     g.yoffset += delta;
+                }
+            }
+        }
+        if (preciseDelta != 0.0) {
+            for (auto& [id, g] : out.glyphs) {
+                if (id < 0x3000) {
+                    g.preciseBearingY += preciseDelta;
                 }
             }
         }
@@ -349,8 +395,11 @@ bool composeOutput(const OutputSpec& spec, double s, const TypefacePack& typefac
     out.infoSize = spec.infoSize >= 0
         ? static_cast<int>(pyRound(spec.infoSize * s))
         : -static_cast<int>(pyRound(-static_cast<double>(spec.infoSize) * s));
+    out.preciseInfoSize = spec.infoSize * s;
     out.lineHeight = static_cast<int>(pyRound(spec.lineHeight * s));
     out.base = static_cast<int>(pyRound(spec.base * s));
+    out.preciseLineHeight = spec.lineHeight * s;
+    out.preciseBase = spec.base * s;
     out.smooth = spec.smooth;
     out.aa = spec.aa;
     // face 值禁止含空格：游戏 fnt 解析器按空格 split token，含空格的 face 会

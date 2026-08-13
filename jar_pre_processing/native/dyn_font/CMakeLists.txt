@@ -11,6 +11,8 @@
 cmake_minimum_required(VERSION 3.20)
 project(ss_dyn_font CXX)
 
+include(CTest)
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -64,6 +66,7 @@ add_library(dynfont_core STATIC
     src/freetype_renderer.cpp
     src/packer.cpp
     src/fnt_writer.cpp
+    src/dfnt_writer.cpp
     src/chars_file.cpp
     src/kerning.cpp
     src/pack_reader.cpp
@@ -76,6 +79,23 @@ target_link_libraries(dynfont_core PUBLIC freetype fpng)
 # （Lanczos 系数定点化对末位敏感，金标准逐像素 diff 的前提）
 target_compile_options(dynfont_core PRIVATE -Wall -Wextra -ffp-contract=off)
 dynfont_apply_project_optimization(dynfont_core)
+
+if(BUILD_TESTING)
+    add_executable(dfnt_writer_test tests/dfnt_writer_test.cpp)
+    target_link_libraries(dfnt_writer_test PRIVATE dynfont_core)
+    dynfont_apply_project_optimization(dfnt_writer_test)
+    add_test(NAME dfnt_writer_test COMMAND dfnt_writer_test)
+
+    add_executable(proxy_fnt_writer_test tests/proxy_fnt_writer_test.cpp)
+    target_link_libraries(proxy_fnt_writer_test PRIVATE dynfont_core)
+    dynfont_apply_project_optimization(proxy_fnt_writer_test)
+    add_test(NAME proxy_fnt_writer_test COMMAND proxy_fnt_writer_test)
+
+    add_executable(baseline_alignment_test tests/baseline_alignment_test.cpp)
+    target_link_libraries(baseline_alignment_test PRIVATE dynfont_core)
+    dynfont_apply_project_optimization(baseline_alignment_test)
+    add_test(NAME baseline_alignment_test COMMAND baseline_alignment_test)
+endif()
 
 # ── 命令行驱动（-municode：wmain 接收宽字符参数，正确处理中文路径）───────────
 add_executable(dynfont_cli src/cli_main.cpp)

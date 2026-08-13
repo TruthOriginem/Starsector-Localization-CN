@@ -14,6 +14,8 @@
 
 namespace dynfont {
 
+struct ComposedFont;
+
 struct FntInfo {
     std::string face;
     int size = 0;        // 带符号
@@ -31,5 +33,11 @@ std::string buildFntText(const std::string& name, const FntInfo& info,
 
 // alpha 页展开为 (A,A,A,A) 并编码 PNG（fpng）。
 bool encodePagePng(const AtlasPage& page, std::vector<uint8_t>& out);
+
+// 把精确高清度量编码进游戏原生 BitmapFont 可读取的整数坐标系。metricScale
+// 同时放大 nominal、glyph 度量、kerning 与虚拟 atlas 尺寸，游戏 renderer 的
+// requested/nominal 会把它完整抵消；page PNG 仍保持真实像素尺寸。
+std::string buildProxyFntText(
+    const std::string& name, const ComposedFont& font, int metricScale);
 
 }  // namespace dynfont

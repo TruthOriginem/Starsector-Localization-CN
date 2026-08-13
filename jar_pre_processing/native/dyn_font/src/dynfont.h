@@ -11,6 +11,7 @@
 #pragma once
 
 #include <cstdint>
+#include <limits>
 #include <string>
 #include <vector>
 
@@ -31,6 +32,11 @@ struct Glyph {
     int xoffset = 0;
     int yoffset = 0;
     int xadvance = 0;
+    // 新渲染器使用的完整 pen advance（物理像素，FreeType 26.6 真值）；与旧
+    // BMFont 的 xoffset+xadvance 兼容语义并存，迁移期互不推导。
+    double preciseAdvance = std::numeric_limits<double>::quiet_NaN();
+    double preciseBearingX = std::numeric_limits<double>::quiet_NaN();
+    double preciseBearingY = std::numeric_limits<double>::quiet_NaN();
     GlyphImage img;
 
     // 装箱后填入

@@ -26,8 +26,11 @@ struct ComposedFont {
     std::string name;
     std::string face;
     int infoSize = 0;
+    double preciseInfoSize = 0;
     int lineHeight = 0;
     int base = 0;
+    double preciseLineHeight = 0;
+    double preciseBase = 0;
     int smooth = 1;
     int aa = 1;
     // post_align 是否真的执行（基准字形渲染成功）。false 表示西文相对中文的
@@ -36,7 +39,19 @@ struct ComposedFont {
     std::map<uint32_t, Glyph> glyphs;
     std::vector<AtlasPage> pages;
     std::vector<std::tuple<uint32_t, uint32_t, int>> kernings;
+    std::vector<std::tuple<uint32_t, uint32_t, double>> preciseKernings;
 };
+
+/** 整数 BMFont 与精确 26.6 度量各自的基线对齐修正。 */
+struct BaselineDeltas {
+    int integerDelta = 0;
+    double preciseDelta = 0;
+};
+
+BaselineDeltas calculateBaselineDeltas(int westBottom, int cjkBottom,
+                                       double preciseWestBottom,
+                                       double preciseCjkBottom,
+                                       double upshift);
 
 // kerning 固化表命名规则的唯一实现；运行时读取与构建资产清单共用。
 std::string kerningTableName(const SourceSpec& source);
