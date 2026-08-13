@@ -88,35 +88,6 @@ public final class StableZstdNativeLibrary {
             throw new IOException("zstd native 发布路径越界");
         }
 
-        synchronized (PUBLICATION_MONITOR) {
-            Path lockPath = root.resolve(".publish.lock");
-            try (FileChannel channel = FileChannel.open(
-                    lockPath,
-                    StandardOpenOption.CREATE,
-                    StandardOpenOption.WRITE);
-                 FileLock ignored = channel.lock()) {
-                if (!matches(target, hash)) {
-                    if (Files.exists(target, LinkOption.NOFOLLOW_LINKS)) {
-                        if (Files.isSymbolicLink(target)
-                                || !Files.deleteIfExists(target)) {
-                            throw new IOException(
-                                    "无法替换损坏的 zstd native: " + target);
-                        }
-                    }
-                    publish(target, embedded);
-                    if (!matches(target, hash)) {
-                        throw new IOException(
-                                "zstd native 发布后校验失败: " + target);
-                    }
-                }
-                // 在发布锁内刷新活跃版本，缩小其它进程按容量清理时从
-                // prepare 返回到 System.load 之间误删旧 hash 的窗口。
-                Files.setLastModifiedTime(
-                        target, FileTime.fromMillis(
-                                System.currentTimeMillis()));
-            }
-        }
-
         PersistentCacheCleaner.Policy policy =
                 new PersistentCacheCleaner.Policy(
                         "zstd-native",
@@ -128,8 +99,54 @@ public final class StableZstdNativeLibrary {
                         8L * 1024L * 1024L,
                         2,
                         pruneObsoleteVersions);
-        PersistentCacheMaintenance.recordUse(policy, target);
-        return target;
+        synchronized (PUBLICATION_MONITOR) {
+            // 同一路径串行区内先 pin；失败时 token 可安全撤销。
+            long useToken = PersistentCacheMaintenance.recordUse(
+                    policy, target);
+            boolean successful = false;
+            boolean published = false;
+            try {
+                Path lockPath = root.resolve(".publish.lock");
+                try (FileChannel channel = FileChannel.open(
+                        lockPath,
+                        StandardOpenOption.CREATE,
+                        StandardOpenOption.WRITE);
+                     FileLock ignored = channel.lock()) {
+                    if (!matches(target, hash)) {
+                        if (Files.exists(target, LinkOption.NOFOLLOW_LINKS)) {
+                            if (Files.isSymbolicLink(target)
+                                    || !Files.deleteIfExists(target)) {
+                                throw new IOException(
+                                        "无法替换损坏的 zstd native: "
+                                                + target);
+                            }
+                        }
+                        publish(target, embedded);
+                        published = true;
+                        if (!matches(target, hash)) {
+                            throw new IOException(
+                                    "zstd native 发布后校验失败: " + target);
+                        }
+                    }
+                    // 在发布锁内刷新活跃版本，缩小其它进程按容量清理时从
+                    // prepare 返回到 System.load 之间误删旧 hash 的窗口。
+                    Files.setLastModifiedTime(
+                            target, FileTime.fromMillis(
+                                    System.currentTimeMillis()));
+                }
+                if (published) {
+                    PersistentCacheMaintenance.recordPublication(
+                            policy, target);
+                }
+                successful = true;
+                return target;
+            } finally {
+                if (!successful) {
+                    PersistentCacheMaintenance.discardUse(
+                            policy, target, useToken);
+                }
+            }
+        }
     }
 
     private static void publish(Path target, byte[] bytes) throws IOException {

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.LinkOption;
+import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.attribute.BasicFileAttributeView;
 import java.nio.file.attribute.BasicFileAttributes;
@@ -146,23 +147,6 @@ public final class PersistentCacheCleaner {
                     remainingEntries--;
                 }
             }
-        } else {
-            // 超大/敌意缓存树无法在一批内得到完整 LRU 视图。缓存可重建，故宁可
-            // 淘汰本批已确认未被本进程使用的项，也不能永远从同一前缀重扫而失控增长。
-            for (Entry candidate : capacityCandidates) {
-                if (deleteUnchangedEntry(
-                        candidate,
-                        protectedNormalized,
-                        protectedFiles,
-                        result)) {
-                    result.overflowFilesDeleted++;
-                    result.bytesDeleted = saturatedAdd(
-                            result.bytesDeleted, candidate.bytes());
-                    remainingBytes = Math.max(
-                            0L, remainingBytes - candidate.bytes());
-                    remainingEntries--;
-                }
-            }
         }
 
         removeEmptyHashDirectories(policy, result, budget);
@@ -216,6 +200,9 @@ public final class PersistentCacheCleaner {
                         LinkOption.NOFOLLOW_LINKS)
                         .setTimes(now, null, null);
                 result.touchedFiles++;
+            } catch (NoSuchFileException missing) {
+                // A speculative pin may disappear before maintenance reaches
+                // it. A missing cache entry is already clean, not a failure.
             } catch (IOException | RuntimeException failure) {
                 result.failures++;
             }
