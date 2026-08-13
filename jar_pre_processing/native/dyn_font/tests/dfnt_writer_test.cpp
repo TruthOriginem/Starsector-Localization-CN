@@ -5,6 +5,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <iostream>
+#include <limits>
 
 using namespace dynfont;
 
@@ -44,6 +45,14 @@ double f64(const std::vector<uint8_t>& data, size_t offset) {
 }  // namespace
 
 int main() {
+    CHECK(isSupportedScreenScale(1.0));
+    CHECK(isSupportedScreenScale(1.95));
+    CHECK(isSupportedScreenScale(3.0));
+    CHECK(!isSupportedScreenScale(0.99));
+    CHECK(!isSupportedScreenScale(3.01));
+    CHECK(!isSupportedScreenScale(std::numeric_limits<double>::infinity()));
+    CHECK(!isSupportedScreenScale(std::numeric_limits<double>::quiet_NaN()));
+
     ComposedFont font;
     font.lineHeight = 31;
     font.base = 27;

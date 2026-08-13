@@ -19,7 +19,7 @@
   → WM_IME_COMPOSITION（被 ssime.dll 子类化的窗口过程截获）
   → 读取上屏文本入队
   → 游戏每帧 ui.new.processInputImpl
-  → ImeHooks.onProcessInput(this)  ← ASM 注入的调用
+  → ImeHooks.onProcessInput(this)  ← ASM 注入的入口调用
   → ImeController 轮询队列，逐字符 appendCharIfPossible 注入输入框
 ```
 
@@ -27,7 +27,11 @@
 |---|---|---|
 | 原生库 `ssime.dll` | `jar_pre_processing/native/ime/ssime.cpp` | `SetWindowLongPtrW` 子类化 LWJGL2 窗口过程，处理 `WM_IME_STARTCOMPOSITION/COMPOSITION/ENDCOMPOSITION`，维护上屏队列与候选窗定位；焦点管理用 `ImmAssociateContext` 保存/恢复上下文，避免无输入框聚焦时按键被输入法截获；并修复 Win+空格 引发的修饰键卡死（见下） |
 | 运行时类 `org.fossic.starsector.ime.*` | `jar_pre_processing/src/main/java/org/fossic/starsector/ime/` | `ImeController`（生命周期/焦点/注入/定位）、`ImeNatives`（JNI 绑定）、`ImeHooks`（ASM 注入入口，全程异常隔离）、`ImeLog`（日志） |
-| ASM 注入 | `patches/TextFieldImeHookPatch.java` | 在 `com.fs.starfarer.ui.new`（`TextFieldAPI` 实现）的 `processInputImpl` 开头插入 `ImeHooks.onProcessInput(this)` |
+| ASM 注入 | `patches/TextFieldImeHookPatch.java` | 在 `com.fs.starfarer.ui.new`（`TextFieldAPI` 实现）的 `processInputImpl` 开头插入输入处理；在 `releaseFocus` 正常出口插入失焦清理，覆盖文本框同帧关闭后不再执行下一帧处理的情况 |
+
+文本框从 A 切换到 B 时，Java 层先解除 A、清空其尚未消费的组合与上屏队列，再启用 B；
+`releaseFocus` 返回时立即解除原生 IME 上下文。因此旧文本不会串入新输入框，关闭文本框后的
+游戏快捷键也不会继续被输入法截获。
 
 候选窗定位基于文本 label（`getTextLabelAPI()`）自身的 position 而非外层文本框，
 对左对齐与居中对齐（如舰船命名框）均正确。文本框 position 是游戏 UI 的逻辑坐标，
@@ -79,10 +83,14 @@ python build.py ime jar         # 重编后走完整流程
 
 ## 日志
 
-- **游戏日志**（`starsector.log`）：常规日志前缀 `[SS-IME]`（初始化、HWND、错误等）；
-  交互级调试日志前缀 `[SS-IME][DEBUG]`（焦点切换、上屏注入、候选窗定位），
-  可用 `findstr "[SS-IME][DEBUG]" starsector.log` 单独检索。
-- **原生日志**（`<游戏 logs 目录>/starsector_ime_native.log`，与 `starsector.log` 同级）：记录窗口过程接管、`WM_IME_*` 消息，每行带毫秒时间戳。每次游戏启动时清空重写。路径由 Java 侧读 `com.fs.starfarer.settings.paths.logs` 构造后经 `nativeInit` 传入——原生侧不再用相对文件名（那依赖进程 CWD 恰好是 `starsector-core`，且 `fopen` 失败是静默的）。
+- **游戏日志**（`starsector.log`）：只记录带 `[SS-IME]` 前缀的错误，不记录焦点切换、
+  候选窗坐标或玩家输入内容。不可恢复错误会让钩子在本次会话熔断，避免热路径逐帧抛错。
+- **原生日志**（`<游戏 logs 目录>/starsector_ime_native.log`，与 `starsector.log` 同级）：
+  只记录窗口过程接管失败等原生错误，每次游戏启动时清空重写。路径由 Java 侧读
+  `com.fs.starfarer.settings.paths.logs` 构造后经 `nativeInit` 传入。
+
+原生窗口上下文与游戏进程同生命周期，不在 JVM shutdown hook 中主动释放。退出时 Windows
+会随进程统一回收窗口过程和上下文，避免 shutdown 线程与仍在执行的 WndProc 发生释放竞态。
 
 ## 已知限制
 

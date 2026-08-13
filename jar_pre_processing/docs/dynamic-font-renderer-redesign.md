@@ -1,12 +1,12 @@
 # 动态字体精确代理渲染设计
 
-状态：代码与自动测试已完成，等待实机视觉与回归验收。本文记录从“双 BMFont 套替换”
+状态：代码、自动测试及实机回归已完成。本文记录从“双 BMFont 套替换”
 迁移到“精确代理 BMFont + 最终物理像素吸附”的设计、边界、实施顺序和验收标准。
-当前发布架构仍以 [dynamic-font.md](dynamic-font.md) 为准，实机确认后再合并文档并删除旧 A/B 产物。
+当前发布架构以 [dynamic-font.md](dynamic-font.md) 为准；旧 A/B 产物已经移除。
 
 ## 问题与目标
 
-当前实现生成基础 `.fnt` 与 `_hd.fnt`。游戏以整数 `nominalHd` 计算
+旧实现生成基础 `.fnt` 与 `_hd.fnt`。游戏以整数 `nominalHd` 计算
 `requestedSize / nominalHd`，上层 UI 再乘 `screenScale`。高清图集倍率
 `k = nominalHd / nominal1x` 因整数 nominal 量化而常不等于 screenScale：
 
@@ -146,6 +146,12 @@ Patch 只在代理字体的最终 glyph `glVertex2f` 提交处改变坐标。
 5. 反算为当前对象空间坐标，UV 保持不变；
 6. 正文与阴影使用相同算法。
 
+矩阵 buffer、复制数组、乘积数组和两个变换对象均为渲染线程的 `ThreadLocal` 复用状态，
+正常热路径零分配。每个 render scope 仍各查询一次 model-view、projection 和 viewport：游戏与
+mod 可在相邻文本间改变任一 GL 状态，而当前没有可靠的帧/状态失效信号；跨 scope 缓存会把
+坐标吸附到错误 framebuffer。若以后要消除查询，必须先增加覆盖所有原版/mod GL 状态变更的
+失效挂点，不能仅按时间或当前帧猜测。
+
 吸附仅改变可见 quad，不改变 pen、advance、kerning、测量或换行。旋转、shear、透视、奇异矩阵、
 非四顶点序列或 GL 查询失败时原样提交。hook 只读 GL 状态，不切换 program、active texture、纹理、
 blend 或颜色，因此 GraphicsLib/BoxUtil 保持原版兼容路径。
@@ -217,8 +223,8 @@ glyph quad 私有方法、`glVertex2f` 数量及注入调用数；结构漂移�
 
 ### D. 清理迁移
 
-实机确认后删除 `_hd.fnt`、`k` 与旧首帧 swap 逻辑，更新 `dynamic-font.md`。在此之前保留旧生成物
-用于 A/B，但构建的实际注入只能启用一种路径。
+实机确认后已删除 `_hd.fnt/png`、`k` 与旧首帧 swap 逻辑，并更新 `dynamic-font.md`。缓存完整性
+清单从未包含 `_hd`；升级后旧指纹档会被回收，新档不再产生无消费者文件。
 
 出现以下情况必须与用户确认而不自行扩大范围：需要改 mod 自有字体；需要完整支持 supplementary
 codepoint；必须引入 shader/离屏缓冲；单页 POT 图集无法容纳常用缩放字表；或像素吸附必须改变

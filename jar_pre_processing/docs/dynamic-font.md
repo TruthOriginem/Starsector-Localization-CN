@@ -10,8 +10,9 @@
 必然模糊——游戏在 screenScale>1 时不请求更大字号，而是在几何变换层放大画面，1× 位图
 被 GPU 拉伸。
 
-本模块改为运行时从 TTF 栅格化：字表由 `chars.txt` 决定，并额外生成高分辨率图集供
-游戏内渲染，实现物理像素 1:1 采样。
+本模块改为运行时从 TTF 栅格化：字表由 `chars.txt` 决定，并按最终 screenScale 生成
+exact 高分辨率图集供游戏内渲染。代理 FNT 使用 64 倍虚拟整数度量，使原版 renderer
+在保持 1× 逻辑布局的同时直接采样 exact 图集；最终 quad 再吸附 framebuffer 像素边界。
 
 ## 架构
 
@@ -24,8 +25,8 @@
 
 游戏内文本渲染
   └─ BitmapFontRenderer.render（ASM 注入）
-     └─ DynFontRenderHooks.resolveFont          链 B：渲染期高清切换
-        替换渲染器的 font 字段为 hd 套
+     └─ DynFontRenderHooks.resolveFont          链 B：渲染期精确代理切换
+        替换渲染器的 font 字段为 exact 代理
 ```
 
 | 组件 | 位置 | 职责 |
@@ -33,44 +34,25 @@
 | `ss_dyn_font.dll` | `native/dyn_font/` | FreeType 栅格化、度量计算、装箱、PNG 编码；11 套并行生成。CMake + MinGW + Ninja，FreeType 静态链接，PNG 编码使用 vendored fpng |
 | `org.fossic.starsector.dynfont.*` | `src/main/java/.../dynfont/` | `DynFontOverrides`（资源拦截、缩放检测、缓存管理）、`DynFontRenderHooks`（渲染期切换）、`DynFontNatives`（JNI 绑定）、`DynFontLog` |
 | `ResourceStreamDynFontPatch` | `patches/` | 在 `com.fs.util.C`（ResourceLoader）的 `openStream(String)` 入口插入拦截调用 |
-| `RendererDynFontPatch` | `patches/` | 在主渲染器 render 入口插入 `resolveFont` / `adjustSize` |
+| `RendererDynFontPatch` | `patches/` | 接入 exact 代理、内部 raw nominal、display-list 绕过及最终 glyph quad 像素吸附 |
 
 运行时类注入 `starfarer_obf.jar`，由 `fs.common_obf.jar` 中的 hook 跨 jar 调用；两者
 同属游戏固定 classpath。
 
-### 双包模型
+### 基础包与 exact 代理
 
-每套字体生成两个包：
+每套字体只保留运行时真正使用的五类产物：
 
-| 包 | 内容 | 使用者 |
+| 产物 | 内容 | 使用者 |
 |---|---|---|
-| `{name}.fnt` / `.png` | 纯 1× 渲染，与 screenScale 无关 | 启动器；游戏内布局层读其度量 |
-| `{name}_hd.fnt` / `.png` | ×k 渲染的自洽包 | 仅游戏内渲染器 |
+| `{name}.fnt` / `_0.png` | 纯 1× 栅格与整数度量 | 启动器、游戏内布局层及安全回退 |
+| `{name}_exact.fnt` / `_exact_0.png` | 按真实 screenScale 栅格化；FNT 度量乘固定 64 倍 | 游戏原生 BitmapFont renderer |
+| `{name}.dfnt` | 精确浮点 line/base/glyph/kerning 度量 | exact 代理完整性校验与后续精确排版扩展 |
 
-hd 套自洽：装箱框、offset、像素均为 ×k 渲染的真值，`scaleW/H` 为其图集实际尺寸。
-布局度量（`xadvance`、`kerning`）由 `syncHdLayoutMetrics` 改写为 `round(1× 值 × k)`，
-与基础包保持同比例。
-
-替换字体不影响布局的原理：引擎按 `scale = requestedFontSize / font.nominalSize` 计算
-绘制缩放。hd 套的 nominal 为 1× 的 k 倍，而 `requestedFontSize` 保持 1× 逻辑字号不变，
-引擎因此得到 `1/k` 的补偿——quad 仍为 1× 逻辑尺寸，经几何层放大后以物理 1:1 采样高清
-纹理。布局层（启动器、直接读取 font 度量的 UI 组件）始终只见基础包。
-
-### 缩放比 k
-
-k 与 screenScale 解耦：引擎补偿的是 `1/k`，故 k 只决定纹理密度，不影响布局。两类字体
-规则不同（`generate.cpp`）：
-
-**矢量字体**（`vectorHdScale`）：不能直接取 screenScale。`.fnt` 的 `info size` 必须为
-整数，`nominal_hd = round(nominal_1x × s)` 的取整误差会使字形缩放比与引擎补偿比不再
-互逆，导致 quad 与字距同比例偏移并沿长文本累积。故先确定 `nominal_hd`，再取其精确比值
-作为渲染与度量的统一缩放比。整数 s 下退化为 s 本身，余下仅各字形 advance 的 ±0.5px
-独立舍入（有界，就近舍入不累积）。
-
-**像素字体**（`pixelHdScale`）：必须为整数——strike 只能整数倍逐像素复制，且整数 k 下
-nominal/lineHeight/base 恒为精确整数倍。取 `ceil(s − 0.1)`，下限 2。向上取整是因为密度
-过剩仅多占显存，密度不足会退化为放大采样；0.1 容差用于吸收略高于整数的档位（游戏
-scale 粒度为 0.05）。victor 改用矢量后已无规格走此路径，代码仅作为通用能力保留。
+引擎仍按 `requestedFontSize / nominalSize` 缩放。代理的全部几何度量与 nominal 同乘 64，
+因此该倍率在 renderer 内精确抵消，逻辑布局仍为原始 1×；纹理则来自按真实 screenScale
+栅格化的 exact 图集。旧 `_hd.fnt/png` 的整数 nominal/k 方案已退出运行时，现也不再生成，
+避免每档留下约三分之一的无用缓存与重复栅格化工作。
 
 ## 字体参数
 
@@ -108,7 +90,7 @@ scale 粒度为 0.05）。victor 改用矢量后已无规格走此路径，代�
 | victor14 | 10.0 | 800 | +1 | 12 | 0 | 0.15 | −14 / 13 / 11 | 1 |
 | victor16 | 13.5 | 800 | +1 | 17 | 0 | 0.15 | −20 / 18 / 16 | 2 |
 
-原为 ZpixEX2_EX 点阵（中英文同源同字号、`pixelFont=true`、hd 走 strike 整数放大）。改用
+原为 ZpixEX2_EX 点阵（中英文同源同字号，旧方案用 strike 整数放大）。改用
 矢量的原因：strike 整数放大在高缩放下仍是放大的点阵，清晰度不足。当前 victor 三套均使用
 Orbitron VF + 锐字，旧的 `victor-pixel.ttf` 与 `ZpixEX2_EX.ttf` 不再作为构建输入，也不再写入
 `typefaces.dat`。
@@ -141,8 +123,8 @@ Orbitron VF + 锐字，旧的 `victor-pixel.ttf` 与 `ZpixEX2_EX.ttf` 不再作�
   orbitron / victor 的西文按 wght 轴实例化可变字体。
 - `{` `}` 清零（游戏的高亮标记字符）；`starsector_xadvance_compat` 全局开启。
 
-`RenderMode::ZpixAuto` 与 `PixelCeil` 两条路径、以及 `OutputSpec::pixelFont` 仍在代码中，
-但已无规格引用（victor 改用矢量后 11 套全走 `LightAA`），仅保留为通用渲染能力；如需恢复
+`RenderMode::ZpixAuto` 与 `PixelCeil` 两条路径仍在代码中，但已无规格引用（victor 改用矢量后
+11 套全走 `LightAA`），仅保留为通用渲染能力；如需恢复
 旧点阵方案，必须重新加入对应字体源。
 
 ### 基线对齐
@@ -201,15 +183,27 @@ bbox 底，因后者会被抗锯齿灰边污染 2~3px。
    进 display list（`len×(copies+1)>20` 触发），若烘焙时使用 1× 字体的 UV，之后替换
    font 并绑定新纹理，重放时即产生错位。
 2. **时机整齐**。按套懒加载会使各套在不同时刻切换，先渲染的文本同样会烘焙出不一致的
-   display list。故 `preloadAllHd` 在首个可切换时刻一次性加载全部 hd 套并建立全部映射。
+   display list。故在首个可切换时刻一次性加载全部 exact 代理并建立全部映射；代理绘制
+   同时强制绕过 display list，避免缓存旧 UV/quad。
 
 预加载主动注册原字体（路径由已知规格名构造并保留原始大小写——BitmapFontManager 以
 路径字符串为 key，大小写不同会产生第二个 font 实例），不依赖游戏的加载进度。预加载
-对每套隔离异常：任一套失败即清空映射、整体回退 1×，避免半 hd 半 1× 的混合状态。
+全套映射通过一个不可变快照原子发布。发布前任一套失败会整体回退 1×；发布后的偶发
+late-resolve 故障则保留既有快照，因为 renderer 内已有的代理对象无法批量换回，清空身份
+反而会让 raw nominal 与 quad 门控进入半降级状态。late-resolve 不再遍历 manager 的普通
+`HashMap`，只按 11 个已知路径逐项查询，从而兼容 mod 并发注册字体。
+
+最终 glyph quad 的物理像素吸附在每个 renderer render scope 入口读取一次
+model-view、projection 和 viewport。buffer、矩阵数组与变换对象均由渲染线程
+`ThreadLocal` 复用，因而查询周边的 Java 热路径零分配。这 3 次 GL 查询是正确性
+所必需，不能跨 scope/按帧猜测缓存：游戏和 mod 可在**同一帧、相邻文本之间**
+切换矩阵、FBO 及 viewport，LWJGL2 又不维护可供 hook 读取的 Java 状态镜像。
+一旦复用过期状态，quad 会被吸附到错误 framebuffer 的像素网格；为了与
+GraphicsLib、BoxUtil 及其他自定义 GL 渲染保持兼容，保留每 scope 三次只读查询。
 
 ### 读条阶段预热
 
-`preloadAllHd` 挂在渲染入口上，而 `AppDriver.begin` 要等 `ResourceLoaderState.init` 整个
+代理映射挂在渲染入口上，而 `AppDriver.begin` 要等 `ResourceLoaderState.init` 整个
 跑完才进入渲染循环——**读条期间一次 render 都没有**。因此渲染侧最早的可切换时刻就是主菜单
 第一帧，11 张图集的解码上传（实测数秒）必然砸在那一帧，表现为进入主菜单后卡顿并当场替换
 字体。
@@ -218,11 +212,11 @@ bbox 底，因后者会被抗锯齿灰边污染 2~3px。
 
 1. **就地复检缩放**。启动器阶段 `initialize()` 读到的可能是玩家改设置之前的旧值，此处同步
    重新生成（读条里阻塞只是让读条条多走一两秒，渲染线程上则绝不可阻塞）。
-2. **`warmUpHdTextures()`**：逐套 `loadOrRegister` 全部 `*_hd.fnt`，把图集喂进显存，**不**
+2. **`warmUpExactTextures()`**：逐套 `loadOrRegister` 全部 `*_exact.fnt`，把图集喂进显存，**不**
    建立映射。
 
-映射仍留到首帧的 `preloadAllHd` 建立，届时两侧 `loadOrRegister` 全部命中 BitmapFontManager
-缓存，开销可忽略。预热只注册 `*_hd.fnt`（游戏永不注册这些路径），不碰原字体，故不会与读条
+映射仍留到首帧建立，届时两侧 `loadOrRegister` 全部命中 BitmapFontManager 缓存，开销可忽略。
+预热只注册 `*_exact.fnt`（游戏永不主动注册这些路径），不碰原字体，故不会与读条
 正在进行的注册相互覆盖。
 
 递归进入 `D.super()` 是安全的：预热由资源流拦截调用，位置在 `C.openStream()` 内，外层此刻
@@ -234,23 +228,23 @@ bbox 底，因后者会被抗锯齿灰边污染 2~3px。
 
 启动器与游戏本体运行于同一 JVM 进程，但使用**不同的 GL context**（启动器收尾时
 `GLLauncher` 调 `Display.destroy()`，游戏本体再 `Display.create()`）：前者加载的纹理 id
-在后者中全部失效，故 hd 套必须等待游戏 context 建立。
+在后者中全部失效，故 exact 代理必须等待游戏 context 建立。
 
 判据取**调用栈上是否存在 `CombatMain` 或 `ResourceLoaderState`**。游戏读条注册字体的栈是
 `ResourceLoaderState.init → AppDriver.begin → CombatMain.main`，启动器的是
 `GLLauncher.prepare → loadFont → GLLauncher$2.run`，两者互斥且这两个类名未被混淆。该事件
 位于启动读条阶段，早于 `Global.getSettings()` 可用的时点。判据失败方向是安全的：认不出来
-只会一直返回 false，hd 不加载、全程 1×。
+只会一直返回 false，exact 代理不加载、全程 1×。
 
 **不可退回「基础包 `.fnt` 被二次请求」一类的启发式。** 启动器与游戏同进程，玩家在启动器内
 改设置后启动器会在同一 JVM 内重启，`GLLauncher.prepare` 遂第二次加载同一批字体，而静态状态
-不会重置——旧判据因此在启动器阶段就误判翻转，hd 套被装进启动器的 GL context；进入游戏后
-context 已换，而 `BitmapFontManager`（`com/fs/graphics/A/D`）的 HashMap 是 static 且无 clear，
-游戏读条只重新注册原版路径，`*_hd.fnt` 永远停留在失效的纹理 id 上，屏幕上即整片色块。
+不会重置——旧判据因此在启动器阶段就误判翻转，代理纹理被装进启动器的 GL context；进入
+游戏后 context 已换，而 `BitmapFontManager`（`com/fs/graphics/A/D`）的 HashMap 是 static
+且无 clear，旧纹理 id 会导致屏幕上出现整片色块。
 
 同进程还意味着玩家在启动器内修改缩放后仅重建 UI，静态状态不会重置。`recheckScaleForGame()`
 在游戏阶段复检一次，不一致时由后台线程重新生成（native 生成耗时数秒，不可阻塞渲染
-线程）并整体替换产物映射；期间 `isHdReady()` 为 false，渲染侧不加载 hd 套。
+线程）并整体替换产物映射；期间代理未就绪，渲染侧保持基础字体。
 
 ### 渲染语义一致性
 
@@ -314,8 +308,11 @@ scale**——scale 仅体现在目录名前缀。同一份安装的所有缩放�
 1. 指纹不匹配的档一律删除（更新汉化包后一次性回收全部旧档）；
 2. 同指纹的档按目录 mtime 保留最近 3 个，其余淘汰。
 
-单档约 200 MB（hd 图集为主），故档数上限是必要的。清理属磁盘维护，任何文件操作失败
-仅记录日志，不中断生成。缓存命中路径同样执行清理。
+缓存根自身必须是普通目录；符号链接和 Windows junction/reparse point 会被拒绝。
+缓存根与父目录的真实路径还必须位于游戏工作目录内，防止上级目录是 junction
+时清理越界。同样不会跟随档内链接。单档包含 1× 与 exact 两套图集，档数上限仍是
+必要的。清理属磁盘维护，任何文件操作失败仅记录日志，不中断生成。缓存命中路径同样执行
+清理。
 
 `chars.txt` 的可编辑性要求指纹取其**内容哈希**而非 mtime。dll 内容亦在指纹内，故重新
 编译 native 会使全部缓存失效。
@@ -327,6 +324,7 @@ scale**——scale 仅体现在目录名前缀。同一份安装的所有缩放�
 
 - 链 A 位于资源加载热路径，异常仅记录一次日志，此后按未命中处理；
 - 数据包/dll 缺失、ABI 版本不匹配、native 生成失败 → 禁用动态字体；
+- screenScale 仅接受有限的 1.0～3.0（游戏启动器支持范围），Java 与 native 双重校验；
 - 链 B 任何异常 → 永久降级为不切换；
 - 后台重新生成失败 → 保留原有产物。
 
@@ -379,21 +377,18 @@ python -X utf8 para_tranz/para_tranz_script.py 2
 - **游戏日志**（`starsector.log`，GBK 编码）：前缀 `[SS-DYNFONT]`。关键记录：
 
   ```
-  动态字体已启用: scale=1.5, 44 个文件, 初始化耗时 xxx ms
+  动态字体已启用: scale=1.5, 55 个文件, 初始化耗时 xxx ms
   检测到游戏 GL context 就绪（游戏本体正在加载字体）
-  读条阶段预热高清套: 11/11 套纹理已就位，耗时 xxxx ms
-  预加载高清套: 11/11 套已建立映射，耗时 xx ms
+  读条阶段预热 exact 代理: 11/11 套纹理及度量已校验，耗时 xxxx ms
+  精确代理映射已原子启用: 11 套，metricScale=64, atlasScale=1.5
   ```
 
-  预热与预加载的套数应一致；预热生效时后者耗时应在数十毫秒量级——若仍是数秒，说明预热未
-  命中，高清套又落回首帧加载。
-
-  验收标准：映射数应等于预期套数，且该行之后不应再出现 `渲染切换高清套:`——出现即
-  表示存在走懒路径的套。映射不全时会输出告警。
+  预热与映射的套数都应为 11；映射发布必须一次完成，不能出现半套代理。预热失败或
+  映射不全会输出错误并整体回退基础字体，不存在旧版 `_hd` 套的首帧懒切换路径。
 
 - **原生日志**（`<游戏 logs 目录>/ss_dyn_font_native.log`，与 `starsector.log` 同级；
   路径由 Java 侧读取 `com.fs.starfarer.settings.paths.logs` 后经 JNI 传入）：逐套生成
-  耗时、图集尺寸、hd 的 k 值与纹理密度。每次生成时重写。其中的 `[warning]` 行会被转抄
+  耗时及图集尺寸。每次生成时重写。其中的 `[warning]` 行会被转抄
   进游戏日志。
 
 ## 参考耗时
@@ -405,7 +400,7 @@ python -X utf8 para_tranz/para_tranz_script.py 2
 | 1.25 | 1.3 s | |
 | 1.5 | 1.5 s | |
 | 2.0 | 2.2 s | |
-| 3.0 | 4.1 s | insignia25LTaa_hd 图集纵向已用 86% |
+| 3.0 | 4.1 s | 旧 `_hd` 方案数据，仅供历史参考；移除重复生成后需重新采样 |
 
 缓存命中约 60 ms。
 
@@ -413,17 +408,17 @@ python -X utf8 para_tranz/para_tranz_script.py 2
 
 - **仅 Windows**。dll 为 win64，Linux/macOS 静默回退原版位图字体。
 - **启动器在高缩放下模糊**，与原版一致。启动器的 GL context 与游戏不同，且直接读取
-  字体度量进行排版，无法使用 hd 套。
+  字体度量进行排版，无法使用 exact 代理。
 - **未接管的 9 套仍为原版位图**：`arial10` / `arial12bold` / `arial16bold` /
   `small_fonts8` / `insignia16` / `insignia16a` / `orbitron10` / `orbitron12` /
   `orbitron20bold` / `victor21`。它们在游戏读条时同样被加载，但实机未见明显使用位置，
   故未纳入。若后续发现某处确实在用且在高缩放下发虚，按 `makeSpecs()` 的现有模式补一
   套规格即可，机制上无新增内容。
 - **后台重新生成期间使用基础包渲染**。此窗口内绘制的长文本会将 1× 的 UV 烘焙进
-  display list，若之后被重放则与 hd 纹理不匹配。根治方式是将缩放复检提前至启动器阶段
+  display list，若之后被重放则与 exact 纹理不匹配。根治方式是将缩放复检提前至启动器阶段
   的 `openStream` 首次命中处，使游戏阶段不再触发重新生成。
-- **单页图集上限**。字表约 6.7k 字时 scale≥3.5 会分页，分页产物游戏无法加载，会被
-  `validatePack` 拦截并降级。scale 3.0 下已用至 8192 高度的约 87%。提高
+- **单页图集上限**。支持的最高 scale 3.0 已接近单页纵向预算；分页产物游戏无法加载，会被
+  `validatePack` 拦截并降级。提高
   `packer.cpp` 的宽度枚举上限（4096→8192）可缓解，但需先验证目标 GPU 的
   `GL_MAX_TEXTURE_SIZE`——LWJGL2 时代的设备仅保证 4096。
 

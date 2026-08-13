@@ -5,7 +5,7 @@
 的本地构建输入：TTF 字体源文件，以及构建时生成的 GPOS kerning 固化表。
 
 `build.py` 的 `jar` 步骤依据 `../assets.json` 同步所需 kerning，再把清单引用的字体与
-固化表打成单文件数据包
+固化表确定性打包为入库的单文件数据包
 `localization/graphics/fonts/dyn_font/typefaces.dat`（格式见 build.py 的打包函数与
 native 侧 `src/pack_reader.cpp`）随汉化包分发；运行时 native 库从 data 包
 读取，不再依赖散装文件。
