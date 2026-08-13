@@ -114,6 +114,9 @@ void upscaleGlyphNearest(Glyph& g, int k) {
     g.xoffset *= k;
     g.yoffset *= k;
     g.xadvance *= k;
+    g.preciseBearingX *= k;
+    g.preciseBearingY *= k;
+    g.preciseAdvance *= k;
 }
 
 // Zpix 内嵌 strike 模式（ttf_extractor._extract_bitmap 复刻）：
@@ -158,6 +161,8 @@ bool renderBitmapStrike(const std::vector<uint8_t>& font, const RenderParams& p,
         g.id = ch;
         g.xoffset = static_cast<int>(slot->bitmap_left);
         g.xadvance = static_cast<int>(slot->advance.x >> 6);
+        g.preciseBearingX = static_cast<double>(g.xoffset);
+        g.preciseAdvance = static_cast<double>(slot->advance.x) / 64.0;
         if (p.xadvCompat && (g.xoffset > 0 || g.xoffset < -1)) {
             // 正 offset 预减（游戏渲染怪癖补偿，原规则）；≤-2 的真实左挂补回
             // （如 Orbitron 'j' left=-3：advance 不含左挂宽度，不补则与邻字粘连）。
@@ -172,6 +177,7 @@ bool renderBitmapStrike(const std::vector<uint8_t>& font, const RenderParams& p,
             g.img = extractAlpha(slot->bitmap);
             g.yoffset = ascender - static_cast<int>(slot->bitmap_top);
         }
+        g.preciseBearingY = static_cast<double>(g.yoffset);
         if (p.postUpscale > 1) {
             upscaleGlyphNearest(g, p.postUpscale);
         }
@@ -242,6 +248,7 @@ bool renderGlyphs(const std::vector<uint8_t>& font, const RenderParams& p,
         }
         int xoffset = static_cast<int>(metrics.face->glyph->bitmap_left);
         int xadvance = static_cast<int>(metrics.face->glyph->advance.x >> 6);
+        double preciseAdvance = static_cast<double>(metrics.face->glyph->advance.x) / 64.0;
 
         if (FT_Load_Glyph(render.face, gi, loadFlags) != 0) {
             continue;
@@ -289,6 +296,9 @@ bool renderGlyphs(const std::vector<uint8_t>& font, const RenderParams& p,
         }
         g.xoffset = xoffset;
         g.xadvance = xadvance;
+        g.preciseBearingX = static_cast<double>(xoffset);
+        g.preciseBearingY = static_cast<double>(g.yoffset);
+        g.preciseAdvance = preciseAdvance;
         out[ch] = std::move(g);
     }
     return true;
