@@ -63,7 +63,9 @@ Patch 通过系统属性按组选择。基线组默认启用；可用下面的�
 
 native 库是提交入库的预编译产物，日常构建不重编（编译器升级会产生无关的
 二进制 diff）；重编是显式操作（`ime` / `dynfont` 步骤），并连同产物一起提交。
-`dynfont` 首次构建会自动 clone FreeType 源码（需网络）。该步骤还会从刚编译的
+`dynfont` 首次构建会自动 clone 锁定 commit 的 FreeType 2.13.2 源码（需网络）；
+之后每次都会拒绝错误版本或含本地改动的 checkout。该步骤会先构建并运行全部
+native CTest，通过后才覆盖预编译 DLL；还会从刚编译的
 `dynfont_cli --list-assets` 刷新并提交 `native/dyn_font/assets.json`；`dynfont` 与 `jar`
 都会据此自动生成当前字重所需的 kerning 表并删除旧表。`*.kern.txt` 是忽略的生成物。
 
@@ -77,7 +79,7 @@ native 库是提交入库的预编译产物，日常构建不重编（编译器�
 - `original/` 与 `localization/` 下的 `starfarer.api.jar`、`starfarer_obf.jar`、
   `fs.common_obf.jar` 和 `fs.sound_obf.jar`
 - `localization/native/windows/`：`ssime.dll` 与 `ss_dyn_font.dll`（两个 native 库，build.py 分发）
-- `localization/graphics/fonts/dyn_font/typefaces.dat`（动态字体源资产单文件数据包，build.py 打包；
+- `localization/graphics/fonts/dyn_font/typefaces.dat`（动态字体源资产单文件数据包，build.py 确定性打包并入库；
   与入库的 `chars.txt` 一起构成该目录仅有的两个分发文件）
 - `target/preprocess-work/preprocess-report.json`（处理报告）
 - `target/preprocess-work/reports/*.decoupler.json`（解耦报告）

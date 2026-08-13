@@ -11,7 +11,8 @@ jar 预处理构建编排 —— Python 指挥 native 编译、Java 管线与产
 
 localization/ 是直接用于打包分发的内容，只放运行时需要的文件；字体源 TTF 与
 自动生成的 kerning 固化表都在 jar_pre_processing/native/dyn_font/fonts/ 下，
-不纳入 git。native CLI 导出的 assets.json 是实际资产依赖清单。
+不纳入 git。两者经确定性打包生成的 typefaces.dat 作为预构建分发资产入库；
+native CLI 导出的 assets.json 是实际资产依赖清单。
 
 native 库是**提交入库的预编译产物**，日常构建不重编：确定性构建参数
 （-Wl,--no-insert-timestamp）只保证同一编译器下源码不变则产物字节一致，
@@ -53,12 +54,15 @@ DYNFONT_KERNING_EXPORTER = DYNFONT_DIR / 'tools' / 'export_kerning.py'
 FREETYPE_DIR = DYNFONT_DIR / 'third_party' / 'freetype'
 # 2.13.2 与 fnt_composer 用的 freetype-py 内嵌版本一致（金标准逐字形 diff 的前提）
 FREETYPE_TAG = 'VER-2-13-2'
+# 不只依赖可被移动的 tag：发布构建必须使用这一确切源码树。
+FREETYPE_COMMIT = '920c5502cc3ddda88f6c7d85ee834ac611bb11cc'
 DYNFONT_DIST_DIR = REPO_ROOT / 'localization' / 'graphics' / 'fonts' / 'dyn_font'
 DYNFONT_DATA_PACK = DYNFONT_DIST_DIR / 'typefaces.dat'
 
 # 发布构建参数显式固定，避免既有 CMake cache 或工具链默认值改变实际产物。
 DYNFONT_CMAKE_DEFINES = (
     '-DCMAKE_BUILD_TYPE=Release',
+    '-DBUILD_TESTING=ON',
     '-DDYNFONT_ENABLE_IPO=ON',
     '-DDYNFONT_PROJECT_OPTIMIZATION=-O2',
     # CMake 4.x 兼容 FreeType 2.13.2 的旧 cmake_minimum_required
@@ -104,6 +108,62 @@ def find_jni_include() -> Path:
     return include
 
 
+def _freetype_git_output(*args: str) -> str:
+    """在 FreeType checkout 中执行只读 git 查询，并转换为可操作的构建错误。"""
+    result = subprocess.run(
+        ['git', '-C', str(FREETYPE_DIR), *args],
+        stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+        text=True, encoding='utf-8', errors='replace',
+    )
+    if result.returncode != 0:
+        detail = result.stderr.strip() or result.stdout.strip() or f'exit {result.returncode}'
+        sys.exit(f'错误：无法校验 FreeType checkout ({" ".join(args)}): {detail}')
+    return result.stdout.strip()
+
+
+def ensure_freetype_checkout() -> None:
+    """准备并校验确切、干净的 FreeType 源码，避免静默编入本地改动。"""
+    if not os.path.lexists(FREETYPE_DIR):
+        print(f'[native] 首次构建：clone FreeType {FREETYPE_TAG} 源码 ...')
+        subprocess.run(
+            ['git', 'clone', '--depth', '1', '--branch', FREETYPE_TAG,
+             'https://github.com/freetype/freetype.git', str(FREETYPE_DIR)],
+            check=True,
+        )
+    if not FREETYPE_DIR.is_dir() or not (FREETYPE_DIR / 'CMakeLists.txt').is_file():
+        sys.exit(
+            f'错误：FreeType 路径不是完整源码 checkout: {FREETYPE_DIR}\n'
+            '该目录已被仓库 .gitignore 忽略；请删除它后重跑以自动重建。'
+        )
+
+    head = _freetype_git_output('rev-parse', 'HEAD').lower()
+    if head != FREETYPE_COMMIT:
+        sys.exit(
+            f'错误：FreeType HEAD 不是已锁定的 {FREETYPE_TAG}\n'
+            f'  期望: {FREETYPE_COMMIT}\n  实际: {head}\n'
+            '请删除被忽略的 third_party/freetype 目录后重跑。'
+        )
+    dirty = _freetype_git_output('status', '--porcelain=v1', '--untracked-files=all')
+    if dirty:
+        preview = '\n'.join(dirty.splitlines()[:20])
+        suffix = '\n  ...' if len(dirty.splitlines()) > 20 else ''
+        sys.exit(
+            '错误：FreeType checkout 含本地改动，拒绝生成不可复现的 native 库:\n'
+            f'{preview}{suffix}\n'
+            '请还原改动，或删除被忽略的 third_party/freetype 目录后重跑。'
+        )
+
+
+def run_dynfont_native_tests() -> None:
+    """运行 CMake 注册的全部 native 测试；零测试也视为构建失败。"""
+    print('[native] 运行动态字体 native 测试 ...')
+    subprocess.run(
+        ['ctest', '--test-dir', str(DYNFONT_BUILD_DIR), '-C', 'Release',
+         '--output-on-failure', '--no-tests=error'],
+        check=True, cwd=DYNFONT_DIR,
+    )
+
+
 def build_ssime() -> None:
     """g++ 编译输入法原生库（参数含义见 native/ime/ssime.cpp 头注释）。"""
     if shutil.which('g++') is None:
@@ -125,25 +185,22 @@ def build_ssime() -> None:
 
 def build_dynfont() -> None:
     """CMake+Ninja 编译动态字体原生库（FreeType 静态链接，见 native/dyn_font/CMakeLists.txt）。"""
-    for tool in ('cmake', 'ninja', 'g++'):
+    for tool in ('cmake', 'ctest', 'ninja', 'g++', 'git'):
         if shutil.which(tool) is None:
             sys.exit(f'错误：PATH 中找不到 {tool}（需要 CMake + Ninja + MinGW-w64）')
     find_jni_include()  # CMake 从 JAVA_HOME 取 JNI 头，先行校验
 
-    if not (FREETYPE_DIR / 'CMakeLists.txt').is_file():
-        print(f'[native] 首次构建：clone FreeType {FREETYPE_TAG} 源码 ...')
-        subprocess.run(
-            ['git', 'clone', '--depth', '1', '--branch', FREETYPE_TAG,
-             'https://github.com/freetype/freetype.git', str(FREETYPE_DIR)],
-            check=True)
+    ensure_freetype_checkout()
 
     print(f'[native] 编译 {DYNFONT_DLL.name} (CMake + Ninja) ...')
     subprocess.run(
         ['cmake', '-B', str(DYNFONT_BUILD_DIR), '-G', 'Ninja', *DYNFONT_CMAKE_DEFINES],
         check=True, cwd=DYNFONT_DIR)
+    # 构建默认 all 目标，让当前及未来新增的 CTest 可执行文件都不会漏掉。
     subprocess.run(
-        ['cmake', '--build', str(DYNFONT_BUILD_DIR), '--target', 'dynfont_cli', 'ss_dyn_font'],
+        ['cmake', '--build', str(DYNFONT_BUILD_DIR), '--config', 'Release'],
         check=True, cwd=DYNFONT_DIR)
+    run_dynfont_native_tests()
     # dll 产物提交入库；CLI（dynfont_cli.exe）留在 build/ 供离线调试与金标准 diff
     shutil.copyfile(DYNFONT_BUILD_DIR / DYNFONT_DLL.name, DYNFONT_DLL)
     print(f'[native] 完成  sha256={sha256(DYNFONT_DLL)}')

@@ -43,4 +43,20 @@ final class DynFontRenderHooksTest {
 
         assertTrue(DynFontRenderHooks.isProxyFont(proxy));
     }
+
+    @Test
+    void failureAfterPublicationKeepsExistingProxyMappingConsistent() {
+        Object base = new Object();
+        Object proxy = new Object();
+        DynFontRenderHooks.registerMappingForTests(base, proxy, 1248f, 10f);
+
+        DynFontRenderHooks.failForTests();
+
+        assertTrue(DynFontRenderHooks.isBrokenForTests());
+        assertEquals(proxy, DynFontRenderHooks.resolveFont(base));
+        assertTrue(DynFontRenderHooks.isProxyFont(proxy));
+        assertEquals(10, DynFontRenderHooks.logicalNominal(proxy, 1248));
+        Object lateUnknown = new Object();
+        assertEquals(lateUnknown, DynFontRenderHooks.resolveFont(lateUnknown));
+    }
 }

@@ -9,12 +9,14 @@ import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.tree.AbstractInsnNode;
 import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.MethodInsnNode;
+import org.objectweb.asm.tree.MethodNode;
 
 import java.nio.file.Path;
 import java.util.zip.ZipFile;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 final class RendererDynFontPatchTest {
     private static final String HOOK = "org/fossic/starsector/dynfont/DynFontQuadHooks";
@@ -37,6 +39,7 @@ final class RendererDynFontPatchTest {
         // 字体 setter 的默认字号必须保留公开 getter，取得逻辑 nominal。
         assertEquals(1, countCalls(renderer, FONT,
                 BitmapFontLogicalNominalPatch.NOMINAL_GETTER, "()I"));
+        assertResolveRunsBeforePixelScope(renderer);
     }
 
     @Test
@@ -75,6 +78,29 @@ final class RendererDynFontPatchTest {
         throw new IllegalStateException("real renderer has no glVertex2f");
     }
 
+    private static void assertResolveRunsBeforePixelScope(ClassNode node) {
+        MethodNode render = node.methods.stream()
+                .filter(method -> countCalls(method, HOOK, "begin",
+                        "(Ljava/lang/Object;Ljava/lang/Object;)V") == 1)
+                .findFirst().orElseThrow();
+        int index = 0;
+        int resolve = -1;
+        int begin = -1;
+        for (AbstractInsnNode insn : render.instructions) {
+            if (insn instanceof MethodInsnNode call) {
+                if ("org/fossic/starsector/dynfont/DynFontRenderHooks".equals(call.owner)
+                        && "resolveFont".equals(call.name)) {
+                    resolve = index;
+                } else if (HOOK.equals(call.owner) && "begin".equals(call.name)) {
+                    begin = index;
+                }
+            }
+            index++;
+        }
+        assertTrue(resolve >= 0 && begin > resolve,
+                "render prologue must resolve the font before opening pixel scope");
+    }
+
     private static int countCalls(ClassNode node, String owner, String name, String desc) {
         int count = 0;
         for (var method : node.methods) {
@@ -82,6 +108,15 @@ final class RendererDynFontPatchTest {
                 if (insn instanceof MethodInsnNode call && owner.equals(call.owner)
                         && name.equals(call.name) && desc.equals(call.desc)) count++;
             }
+        }
+        return count;
+    }
+
+    private static int countCalls(MethodNode method, String owner, String name, String desc) {
+        int count = 0;
+        for (AbstractInsnNode insn : method.instructions) {
+            if (insn instanceof MethodInsnNode call && owner.equals(call.owner)
+                    && name.equals(call.name) && desc.equals(call.desc)) count++;
         }
         return count;
     }

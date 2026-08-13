@@ -7,7 +7,9 @@ package org.fossic.starsector.ime;
  * 加载。加载失败时 {@link #isLoaded()} 返回 {@code false}，上层据此静默降级，
  * 不影响游戏其余功能。
  *
- * <p>约定：{@code ctx} 为原生上下文句柄，0 表示无效。
+ * <p>约定：{@code ctx} 为原生上下文句柄，0 表示无效。上下文与进程同生命周期，
+ * 退出时交由 Windows 回收；不从 JVM shutdown hook 主动释放，以免和仍在执行的
+ * 窗口过程发生生命周期竞态。
  */
 final class ImeNatives {
     private static final boolean LOADED = load();
@@ -23,9 +25,11 @@ final class ImeNatives {
             return false;
         }
         try {
-            boolean ok = nativeInit(nativeLogPath());
-            ImeLog.info("ssime 原生库已加载，nativeInit=" + ok);
-            return ok;
+            boolean initialized = nativeInit(nativeLogPath());
+            if (!initialized) {
+                ImeLog.error("ssime 原生库初始化失败", null);
+            }
+            return initialized;
         } catch (Throwable t) {
             ImeLog.error("ssime 原生库 nativeInit 调用失败", t);
             return false;
@@ -58,9 +62,6 @@ final class ImeNatives {
 
     /** 子类化窗口过程，返回原生上下文句柄；失败返回 0。 */
     static native long nativeAttach(long hwnd);
-
-    /** 恢复窗口过程并释放上下文。 */
-    static native void nativeDetach(long ctx);
 
     /** 设置输入框焦点状态：true 启用输入法，false 解除以免按键被输入法截获。 */
     static native void nativeSetFocused(long ctx, boolean focused);

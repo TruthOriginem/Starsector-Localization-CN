@@ -49,6 +49,9 @@ std::wstring g_logPath;
 
 // 每个被接管的窗口对应一个上下文。
 //
+// 上下文与游戏进程同生命周期，退出时由 Windows 统一回收。不能从 JVM shutdown
+// hook 删除：shutdown hook 在独立线程运行，可能与已进入 imeWndProc 的调用形成 UAF。
+//
 // mutex 必须是递归锁：Imm* API（如 ImmAssociateContext 在组合中途解除上下文时）
 // 会以同线程 SendMessage 方式同步回调本窗口过程（WM_IME_ENDCOMPOSITION 等），
 // 形成"持锁 → Imm 调用 → WndProc 重入 → 再次加锁"的同线程重入，非递归锁在此
@@ -198,7 +201,6 @@ void resyncModifiers(HWND hwnd, WNDPROC original) {
             CallWindowProcW(original, hwnd, WM_KEYUP, vk, makeKeyUpLParam(vk));
         }
     }
-    logLine("resyncModifiers: 修饰键状态已复位（Win 组合结束）");
 }
 
 LRESULT CALLBACK imeWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
@@ -237,21 +239,16 @@ LRESULT CALLBACK imeWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
                     ctx->preedit.clear();
                     updateSpotLocked(ctx);
                 }
-                logLine("WM_IME_STARTCOMPOSITION");
                 break;
             }
             case WM_IME_COMPOSITION: {
                 if (lParam & GCS_RESULTSTR) {
                     std::wstring result = readCompositionString(hwnd, GCS_RESULTSTR);
                     if (!result.empty()) {
-                        size_t queueSize;
                         {
                             ImeLock lock(ctx->mutex);
                             ctx->committed.push_back(result);
-                            queueSize = ctx->committed.size();
                         }
-                        logLine("WM_IME_COMPOSITION result len=%d queue=%zu",
-                                (int) result.size(), queueSize);
                     }
                 }
                 if (lParam & GCS_COMPSTR) {
@@ -269,7 +266,6 @@ LRESULT CALLBACK imeWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
                     ctx->composing = false;
                     ctx->preedit.clear();
                 }
-                logLine("WM_IME_ENDCOMPOSITION");
                 break;
             }
             default:
@@ -300,7 +296,6 @@ Java_org_fossic_starsector_ime_ImeNatives_nativeInit(JNIEnv* env, jclass, jstrin
         }
     }
     resetLog();
-    logLine("nativeInit: ssime native library loaded");
     return JNI_TRUE;
 }
 
@@ -345,32 +340,7 @@ Java_org_fossic_starsector_ime_ImeNatives_nativeAttach(JNIEnv*, jclass, jlong hw
     ctx->savedContext = ImmAssociateContext(hwnd, nullptr);
     ctx->imeEnabled = false;
 
-    logLine("nativeAttach: attached hwnd=%p ctx=%p originalWndProc=%p",
-            (void*) hwnd, (void*) ctx, (void*) ctx->originalWndProc);
     return static_cast<jlong>(reinterpret_cast<uintptr_t>(ctx));
-}
-
-JNIEXPORT void JNICALL
-Java_org_fossic_starsector_ime_ImeNatives_nativeDetach(JNIEnv*, jclass, jlong ctxValue) {
-    ImeContext* ctx = reinterpret_cast<ImeContext*>(static_cast<uintptr_t>(ctxValue));
-    if (ctx == nullptr) {
-        return;
-    }
-    HWND hwnd = ctx->hwnd;
-    if (hwnd != nullptr && IsWindow(hwnd)) {
-        if (!ctx->imeEnabled && ctx->savedContext != nullptr) {
-            ImmAssociateContext(hwnd, ctx->savedContext);
-        }
-        if (GetPropW(hwnd, CONTEXT_PROP) == reinterpret_cast<HANDLE>(ctx)) {
-            RemovePropW(hwnd, CONTEXT_PROP);
-        }
-        if (ctx->originalWndProc != nullptr) {
-            SetWindowLongPtrW(hwnd, GWLP_WNDPROC,
-                              reinterpret_cast<LONG_PTR>(ctx->originalWndProc));
-        }
-    }
-    logLine("nativeDetach: detached ctx=%p", (void*) ctx);
-    delete ctx;
 }
 
 JNIEXPORT void JNICALL
@@ -380,7 +350,6 @@ Java_org_fossic_starsector_ime_ImeNatives_nativeSetFocused(JNIEnv*, jclass, jlon
     if (ctx == nullptr || ctx->hwnd == nullptr || !IsWindow(ctx->hwnd)) {
         return;
     }
-    int change = 0;  // 0=无变化 1=启用 -1=解除
     {
         ImeLock lock(ctx->mutex);
         if (focused == JNI_TRUE) {
@@ -389,22 +358,22 @@ Java_org_fossic_starsector_ime_ImeNatives_nativeSetFocused(JNIEnv*, jclass, jlon
                 // 注意：ImmAssociateContext 可能同步重入本窗口过程（见 ImeContext 注释）。
                 ImmAssociateContext(ctx->hwnd, ctx->savedContext);
                 ctx->imeEnabled = true;
-                change = 1;
             }
             updateSpotLocked(ctx);
         } else {
             if (ctx->imeEnabled) {
                 // 解除并保存 IME 上下文，避免按键被输入法截获。
+                // ImmAssociateContext 可能同步重入 WndProc 并把旧组合结果入队，
+                // 因此必须在调用之后再清空 committed。
                 ctx->savedContext = ImmAssociateContext(ctx->hwnd, nullptr);
                 ctx->imeEnabled = false;
-                ctx->composing = false;
-                ctx->preedit.clear();
-                change = -1;
             }
+            // 即使已经是失焦状态也清理队列：Java 侧 WeakReference 失效或文本框直接
+            // 切换时仍可能调用 false，以保证旧文本绝不会进入下一个输入框。
+            ctx->composing = false;
+            ctx->preedit.clear();
+            ctx->committed.clear();
         }
-    }
-    if (change != 0) {
-        logLine(change > 0 ? "nativeSetFocused: enabled ime" : "nativeSetFocused: disabled ime");
     }
 }
 

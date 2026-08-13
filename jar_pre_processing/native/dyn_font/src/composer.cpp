@@ -135,7 +135,7 @@ RenderParams deriveParams(const SourceSpec& src, double s) {
             // 小字号读内嵌位图 strike（≤16px 覆盖），大字号走字体自带矢量轮廓
             // mono no-hint —— 一律不超采样，保住像素字体的硬边。字号取整：
             // 渲小数字号会使同一字内笔画粗细不均。
-            // victor hd 套例外：>16px 一律改用基准字号 strike 逐像素整数放大
+            // 对像素字体做整数倍输出时：>16px 一律改用基准字号 strike 逐像素放大
             // （postUpscale），不走轮廓。两个实证理由：① strike 拉丁（等宽 6px
             // 窄体）与轮廓（比例宽体，A@24px 墨迹 ~18px）是两套设计，轮廓墨迹
             // 会撑爆与 1x 包同构的 advance；② Zpix upm=256 非 12 的整数倍

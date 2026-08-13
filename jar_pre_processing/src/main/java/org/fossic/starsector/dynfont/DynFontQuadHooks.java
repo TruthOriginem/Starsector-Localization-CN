@@ -40,11 +40,12 @@ public final class DynFontQuadHooks {
             glGetFloat.invokeExact(GL_MODELVIEW_MATRIX, state.model);
             glGetFloat.invokeExact(GL_PROJECTION_MATRIX, state.projection);
             glGetInteger.invokeExact(GL_VIEWPORT, state.viewport);
-            PixelTransform transform = PixelTransform.fromOpenGl(
-                    copy(state.model, 16), copy(state.projection, 16),
-                    copy(state.viewport, 4));
-            if (transform != null) {
-                state.baseTransform = transform;
+            copy(state.model, state.modelValues);
+            copy(state.projection, state.projectionValues);
+            copy(state.viewport, state.viewportValues);
+            if (state.baseTransform.setFromOpenGl(
+                    state.modelValues, state.projectionValues,
+                    state.viewportValues, state.combinedValues)) {
                 state.active = true;
             }
         } catch (Throwable t) {
@@ -60,7 +61,7 @@ public final class DynFontQuadHooks {
     public static void translate(float x, float y) {
         State state = STATE.get();
         if (state.active) {
-            state.transform = state.baseTransform.translated(x, y);
+            state.transform.setTranslatedFrom(state.baseTransform, x, y);
             state.vertexIndex = 0;
         }
     }
@@ -122,16 +123,12 @@ public final class DynFontQuadHooks {
         reflectionReady = true;
     }
 
-    private static float[] copy(FloatBuffer buffer, int count) {
-        float[] out = new float[count];
-        for (int i = 0; i < count; i++) out[i] = buffer.get(i);
-        return out;
+    private static void copy(FloatBuffer buffer, float[] out) {
+        for (int i = 0; i < out.length; i++) out[i] = buffer.get(i);
     }
 
-    private static int[] copy(IntBuffer buffer, int count) {
-        int[] out = new int[count];
-        for (int i = 0; i < count; i++) out[i] = buffer.get(i);
-        return out;
+    private static void copy(IntBuffer buffer, int[] out) {
+        for (int i = 0; i < out.length; i++) out[i] = buffer.get(i);
     }
 
     private static void fail(Throwable t) {
@@ -150,10 +147,14 @@ public final class DynFontQuadHooks {
     private static final class State {
         final FloatBuffer model = directFloats(16);
         final FloatBuffer projection = directFloats(16);
-        final IntBuffer viewport = directInts(16);
+        final IntBuffer viewport = directInts(4);
+        final float[] modelValues = new float[16];
+        final float[] projectionValues = new float[16];
+        final float[] combinedValues = new float[16];
+        final int[] viewportValues = new int[4];
+        final PixelTransform baseTransform = new PixelTransform(1f, 0f, 1f, 0f);
+        final PixelTransform transform = new PixelTransform(1f, 0f, 1f, 0f);
         boolean active;
-        PixelTransform baseTransform;
-        PixelTransform transform;
         int vertexIndex;
         float rawLeft;
         float rawTop;
@@ -164,8 +165,6 @@ public final class DynFontQuadHooks {
 
         void reset() {
             active = false;
-            baseTransform = null;
-            transform = null;
             vertexIndex = 0;
         }
 

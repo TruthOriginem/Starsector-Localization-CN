@@ -57,7 +57,9 @@ endfunction()
 # ── fpng（快速 PNG 编码；SSE4.1+PCLMUL 路径带运行时 CPU 检测回退）────────────
 add_library(fpng STATIC third_party/fpng/fpng.cpp)
 target_include_directories(fpng PUBLIC third_party/fpng)
-target_compile_options(fpng PRIVATE -msse4.1 -mpclmul)
+# fpng 上游明确要求 GCC/Clang 禁用 strict aliasing；否则其指针 type-punning
+# 在 Release + IPO/LTO 下存在误编译风险。
+target_compile_options(fpng PRIVATE -msse4.1 -mpclmul -fno-strict-aliasing)
 
 # ── 核心静态库（渲染/装箱/写出全流程，CLI 与 JNI 共用）──────────────────────
 add_library(dynfont_core STATIC
@@ -95,6 +97,11 @@ if(BUILD_TESTING)
     target_link_libraries(baseline_alignment_test PRIVATE dynfont_core)
     dynfont_apply_project_optimization(baseline_alignment_test)
     add_test(NAME baseline_alignment_test COMMAND baseline_alignment_test)
+
+    add_executable(png_encoding_test tests/png_encoding_test.cpp)
+    target_link_libraries(png_encoding_test PRIVATE dynfont_core)
+    dynfont_apply_project_optimization(png_encoding_test)
+    add_test(NAME png_encoding_test COMMAND png_encoding_test)
 endif()
 
 # ── 命令行驱动（-municode：wmain 接收宽字符参数，正确处理中文路径）───────────

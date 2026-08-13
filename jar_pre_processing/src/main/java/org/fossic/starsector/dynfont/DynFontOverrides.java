@@ -5,7 +5,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
+import java.nio.file.LinkOption;
 import java.nio.file.Path;
+import java.nio.file.attribute.BasicFileAttributes;
 import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -46,11 +48,13 @@ public final class DynFontOverrides {
     /** 参数表/生成语义版本（进缓存键；native 侧 spec 表变更时递增强制重生成）。 */
     private static final String SPEC_VERSION = "2";
     /**
-     * 同一份安装下最多保留几个缩放档的缓存。每档约 200 MB（hd 图集占大头），
+     * 同一份安装下最多保留几个缩放档的缓存（基础与 exact 两套图集），
      * 保留多档是为了让玩家切回旧缩放时秒开，但必须有上限——早先无上限的策略
      * 实测积到 9 档 / 1.7 GB。超出时按目录 mtime 淘汰最旧的。
      */
     private static final int MAX_CACHED_SCALES = 3;
+    /** 游戏 0.98a 启动器支持的最大 UI 缩放为 300%。 */
+    static final double MAX_SCREEN_SCALE = 3.0;
 
     private static final int STATE_UNINITIALIZED = 0;
     private static final int STATE_ENABLED = 1;
@@ -88,7 +92,7 @@ public final class DynFontOverrides {
             new java.util.concurrent.ConcurrentHashMap<>();
     /** 游戏 GL context 是否已就绪，见 {@link #isGameContextReady()}。 */
     private static volatile boolean gameContextReady;
-    /** 重生成进行中：渲染侧此期间不得加载 hd 套（否则会拿到旧 scale 的产物）。 */
+    /** 重生成进行中：渲染侧此期间不得加载 exact 代理（否则会拿到旧 scale 的产物）。 */
     private static volatile boolean regenerating;
 
     private DynFontOverrides() {
@@ -160,7 +164,7 @@ public final class DynFontOverrides {
         return screenScale;
     }
 
-    /** 缓存产物中是否存在指定文件（小写文件名，如 {@code orbitron24aa_hd.fnt}）。 */
+    /** 缓存产物中是否存在指定文件（小写文件名，如 {@code orbitron24aa_exact.fnt}）。 */
     public static boolean hasClaim(String lowerFileName) {
         Map<String, Path> map = claimed;
         return map != null && map.containsKey(lowerFileName);
@@ -180,11 +184,11 @@ public final class DynFontOverrides {
     }
 
     /**
-     * 游戏 GL context 是否已就绪（可安全加载 hd 纹理）。
+     * 游戏 GL context 是否已就绪（可安全加载 exact 纹理）。
      *
      * <p>launcher 与游戏使用不同的 GL context（launcher 收尾时
      * {@code GLLauncher} 调 {@code Display.destroy()}，游戏再
-     * {@code Display.create()}），前者加载的纹理 id 在后者中全部失效，故 hd 套
+     * {@code Display.create()}），前者加载的纹理 id 在后者中全部失效，故 exact 代理
      * 必须等游戏 context 建立后再加载。判据见 {@link #inGameContext()}。
      */
     public static boolean isGameContextReady() {
@@ -202,13 +206,13 @@ public final class DynFontOverrides {
      * <p><b>为何不能用「基础包 .fnt 被二次请求」这类启发式。</b>launcher 与游戏
      * 同进程：玩家在 launcher 里改设置后 launcher 会在同一 JVM 内重启，
      * {@code GLLauncher.prepare} 遂第二次加载同一批字体，静态状态却不会重置。
-     * 旧判据因此在 launcher 阶段就误判翻转，hd 套被装进 launcher 的 GL context；
+     * 旧判据因此在 launcher 阶段就误判翻转，代理纹理被装进 launcher 的 GL context；
      * 进游戏后 context 已换，而 {@code BitmapFontManager}
      * （{@code com/fs/graphics/A/D}）的 HashMap 是 static 且无 clear，游戏读条只
-     * 重新注册原版路径，{@code *_hd.fnt} 永远停在失效的纹理 id 上 —— 屏幕上就是
+     * 重新注册原版路径，{@code *_exact.fnt} 永远停在失效的纹理 id 上 —— 屏幕上就是
      * 整片色块。
      *
-     * <p>判据失败方向是安全的：认不出来只会一直返回 false，hd 不加载、全程 1x，
+     * <p>判据失败方向是安全的：认不出来只会一直返回 false，代理不加载、全程 1x，
      * 不会出现错配纹理。
      */
     private static boolean inGameContext() {
@@ -226,7 +230,7 @@ public final class DynFontOverrides {
     }
 
     /**
-     * hd 套是否可安全加载。重生成期间为 false —— 此时若让游戏加载 hd 套，
+     * exact 代理是否可安全加载。重生成期间为 false —— 此时若让游戏加载代理，
      * 拿到的会是旧 scale 的产物，而游戏的 BitmapFontManager 按路径缓存字体
      * 对象与纹理，之后无法再换掉（陈旧 UV/纹理正是方案 A 碎块的成因）。
      */
@@ -244,8 +248,8 @@ public final class DynFontOverrides {
      * 里全部文本被几何层放大糊掉。
      *
      * <p>故在游戏阶段重新检测：不一致则后台线程重新生成（native 生成耗时数秒，
-     * 绝不能阻塞渲染线程），完成后整体替换 {@link #claimed}。此时 hd 套尚未被
-     * 游戏加载过（渲染切换由 isHdReady 门控），因此不存在陈旧字体对象——1x 包
+     * 绝不能阻塞渲染线程），完成后整体替换 {@link #claimed}。此时代理尚未被
+     * 游戏加载过（渲染切换由 {@link #isProxyReady()} 门控），因此不存在陈旧字体对象——1x 包
      * 虽已加载但其度量与 scale 无关，布局照旧正确。
      */
     public static void recheckScaleForGame() {
@@ -289,17 +293,17 @@ public final class DynFontOverrides {
     }
 
     /**
-     * 读条阶段（判据翻转的那一刻，即 {@code ResourceLoaderState.init} 内）把 hd
-     * 套准备到位：先就地复检缩放，再把全部 hd 图集喂进显存。
+     * 读条阶段（判据翻转的那一刻，即 {@code ResourceLoaderState.init} 内）把 exact
+     * 代理准备到位：先就地复检缩放，再把全部 exact 图集喂进显存。
      *
-     * <p>为什么必须在这里做：{@code preloadAllHd} 挂在渲染入口上，而
+     * <p>为什么必须在这里做：代理映射挂在渲染入口上，而
      * {@code AppDriver.begin} 要等 {@code ResourceLoaderState.init} 整个跑完才进入
      * 渲染循环——读条期间一次 render 都没有。因此渲染侧最早的可切换时刻就是主菜单
      * 第一帧，11 张图集的解码上传（数秒）必然砸在那一帧上，表现为进入主菜单后卡顿
      * 并当场替换字体。
      *
-     * <p>这里只注册 {@code *_hd.fnt}（游戏永不注册这些路径），不碰原字体，故不会与
-     * 读条正在进行的注册相互覆盖；映射仍留到首帧的 {@code preloadAllHd} 建立，那时
+     * <p>这里只注册 {@code *_exact.fnt}（游戏永不主动注册这些路径），不碰原字体，故不会与
+     * 读条正在进行的注册相互覆盖；映射仍留到首帧建立，那时
      * 全部命中 BitmapFontManager 缓存，代价可忽略。
      *
      * <p>递归进入 {@code D.super()} 是安全的：本方法由资源流拦截调用，位置在
@@ -411,6 +415,7 @@ public final class DynFontOverrides {
     /** 确保指定 scale 的缓存套存在（键不匹配则调 native 重生成），返回缓存目录。 */
     private static Path ensureGenerated(Path typefacePack, Path charsFile, Path dll,
                                         Path cacheRoot, double scale) throws Exception {
+        cacheRoot = prepareCacheRoot(cacheRoot);
         String scaleTag = String.format(Locale.ROOT, "s%.2f", scale);
         String fingerprint = inputFingerprint(typefacePack, charsFile, dll);
         Path outDir = cacheRoot.resolve(scaleTag + "-" + fingerprint);
@@ -519,7 +524,10 @@ public final class DynFontOverrides {
      * <p>清理纯属磁盘卫生，任何文件操作失败都只记日志不中断生成。
      */
     private static void pruneCaches(Path cacheRoot, String fingerprint, String keep) {
-        if (!Files.isDirectory(cacheRoot)) {
+        try {
+            cacheRoot = prepareCacheRoot(cacheRoot);
+        } catch (IOException unsafeRoot) {
+            DynFontLog.error("动态字体缓存根不安全（跳过清理）", unsafeRoot);
             return;
         }
         String suffix = "-" + fingerprint;
@@ -550,6 +558,50 @@ public final class DynFontOverrides {
         for (int i = 0; i < over && i < sameFingerprint.size(); i++) {
             deleteCache(sameFingerprint.get(i), "超出保留档数");
         }
+    }
+
+    /**
+     * 创建并验证缓存根是工作目录内的普通目录。除了拒绝缓存根
+     * 自身是 symlink/junction，还要比较真实路径：否则上级 {@code dyn_font/}
+     * 可以是指向游戏目录外的 junction，后续递归清理仍会越界。
+     */
+    static Path prepareCacheRoot(Path cacheRoot) throws IOException {
+        return prepareCacheRoot(cacheRoot, Path.of("."));
+    }
+
+    /** 可注入允许根的安全校验核心；生产路径固定使用当前工作目录。 */
+    static Path prepareCacheRoot(Path cacheRoot, Path allowedRoot) throws IOException {
+        Path normalized = cacheRoot.toAbsolutePath().normalize();
+        Path allowedReal = allowedRoot.toAbsolutePath().normalize().toRealPath();
+        Path parent = normalized.getParent();
+        if (parent == null) {
+            throw new IOException("动态字体缓存根缺少上级目录: " + normalized);
+        }
+        // 先验证已存在的父目录，再创建 cache，避免经父 junction
+        // 在允许根外产生任何文件系统写入。
+        Path parentReal = parent.toRealPath();
+        if (!parentReal.startsWith(allowedReal)) {
+            throw new IOException("动态字体缓存父目录越出工作目录: "
+                    + parentReal + " (root=" + allowedReal + ")");
+        }
+        try {
+            Files.createDirectory(normalized);
+        } catch (java.nio.file.FileAlreadyExistsException exists) {
+            // 下方统一读取 NOFOLLOW 属性并验证，不能用 Files.isDirectory 跟随链接。
+        }
+        BasicFileAttributes attributes = Files.readAttributes(
+                normalized, BasicFileAttributes.class, LinkOption.NOFOLLOW_LINKS);
+        if (!attributes.isDirectory()
+                || attributes.isOther()
+                || attributes.isSymbolicLink()) {
+            throw new IOException("动态字体缓存根不是普通目录: " + normalized);
+        }
+        Path rootReal = normalized.toRealPath();
+        if (!rootReal.startsWith(allowedReal)) {
+            throw new IOException("动态字体缓存根越出工作目录: "
+                    + rootReal + " (root=" + allowedReal + ")");
+        }
+        return normalized;
     }
 
     private static long lastModifiedOrZero(Path dir) {
@@ -608,8 +660,17 @@ public final class DynFontOverrides {
         if (scale <= 0) {
             scale = defaultScaleFromResolution();
         }
-        if (scale < 1.0) {
-            scale = 1.0;
+        return normalizeScreenScale(scale);
+    }
+
+    static double normalizeScreenScale(double scale) {
+        if (!Double.isFinite(scale)) {
+            throw new IllegalArgumentException("UI 缩放不是有限值: " + scale);
+        }
+        scale = Math.max(1.0, scale);
+        if (scale > MAX_SCREEN_SCALE) {
+            throw new IllegalArgumentException("UI 缩放超出支持范围: " + scale
+                    + " > " + MAX_SCREEN_SCALE);
         }
         // 游戏存储粒度 0.05
         return Math.round(scale * 20.0) / 20.0;

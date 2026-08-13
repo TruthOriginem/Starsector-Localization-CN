@@ -83,7 +83,7 @@ struct FaceGuard {
     }
 };
 
-// strike 整数放大（NEAREST 逐像素复制，全部度量同乘 k）。victor hd 套拉丁用：
+// strike 整数放大（NEAREST 逐像素复制，全部度量同乘 k）。供像素字体整数倍率输出：
 // 在 strike 坐标系完成渲染后整体 ×k，与 1x 包逐像素设计一致且保硬边。
 void upscaleGlyphNearest(Glyph& g, int k) {
     if (k <= 1) {
