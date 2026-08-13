@@ -213,7 +213,33 @@ final class PersistentCacheCleanerTest {
     }
 
     @Test
-    void traversalBudgetBoundsEachBatchAndMakesDestructiveProgress()
+    void missingProtectedEntryIsAlreadyCleanRatherThanAFailure()
+            throws IOException {
+        long now = 2_000_000_000_000L;
+        Path root = temporaryDirectory.resolve("missing").resolve("v1");
+        Path shard = Files.createDirectories(root.resolve("aa"));
+        Path missing = shard.resolve("a".repeat(64) + ".cache");
+
+        PersistentCacheCleaner.Result result = PersistentCacheCleaner.clean(
+                new PersistentCacheCleaner.Policy(
+                        "missing",
+                        root,
+                        PersistentCacheCleaner.Layout.HASH_SHARDED,
+                        "",
+                        ".cache",
+                        365 * DAY_MILLIS,
+                        1024,
+                        32,
+                        false),
+                Set.of(missing),
+                now);
+
+        assertEquals(0, result.touchedFiles());
+        assertEquals(0, result.failures());
+    }
+
+    @Test
+    void traversalBudgetDoesNotEvictFreshEntriesFromIncompleteView()
             throws IOException {
         long now = 2_000_000_000_000L;
         Path root = temporaryDirectory.resolve("bounded").resolve("v1");
@@ -229,8 +255,8 @@ final class PersistentCacheCleanerTest {
                         "",
                         ".cache",
                         365 * DAY_MILLIS,
-                        0,
-                        0,
+                        1024,
+                        32,
                         false),
                 Set.of(),
                 now,
@@ -239,17 +265,16 @@ final class PersistentCacheCleanerTest {
         assertTrue(result.traversalLimitReached());
         assertTrue(result.scannedPaths() <= 5);
         assertEquals(0, result.capacityFilesDeleted());
-        assertTrue(result.overflowFilesDeleted() > 0);
+        assertEquals(0, result.overflowFilesDeleted());
         try (Stream<Path> paths = Files.walk(root)) {
-            assertTrue(paths
-                    .filter(Files::isRegularFile)
-                    .findAny()
-                    .isPresent());
+            assertEquals(
+                    16,
+                    paths.filter(Files::isRegularFile).count());
         }
     }
 
     @Test
-    void repeatedBoundedBatchesEventuallyReachTheTreeTail()
+    void traversalBudgetSkipsCapacityEvictionEvenWhenPartialViewIsOverLimit()
             throws IOException {
         long now = 2_000_000_000_000L;
         Path root = temporaryDirectory.resolve("progress").resolve("v1");
@@ -263,18 +288,16 @@ final class PersistentCacheCleanerTest {
                         "", ".cache", 365 * DAY_MILLIS,
                         0, 0, false);
 
-        int rounds = 0;
-        PersistentCacheCleaner.Result result;
-        do {
-            result = PersistentCacheCleaner.clean(
-                    policy, Set.of(), now, 5);
-            rounds++;
-        } while (result.traversalLimitReached() && rounds < 100);
+        PersistentCacheCleaner.Result result = PersistentCacheCleaner.clean(
+                policy, Set.of(), now, 5);
 
-        assertFalse(result.traversalLimitReached());
-        assertTrue(rounds > 1);
+        assertTrue(result.traversalLimitReached());
+        assertEquals(0, result.capacityFilesDeleted());
+        assertEquals(0, result.overflowFilesDeleted());
         try (Stream<Path> paths = Files.walk(root)) {
-            assertTrue(paths.noneMatch(Files::isRegularFile));
+            assertEquals(
+                    16,
+                    paths.filter(Files::isRegularFile).count());
         }
     }
 

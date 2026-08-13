@@ -42,6 +42,7 @@ public final class CachingIndexedDeduplicatingJavaSourceClassLoader
     private static final long DEFAULT_MAXIMUM_BYTES =
             32L * 1024L * 1024L;
     private static final int DEFAULT_MAXIMUM_PACKS = 8;
+    private static final Object[] CACHE_PATH_LOCKS = cachePathLocks();
 
     private final JaninoSourceIndex sourceIndex;
     private final MutableBytecodeResourceFinder cachedClassFinder;
@@ -208,50 +209,56 @@ public final class CachingIndexedDeduplicatingJavaSourceClassLoader
         if (!persistenceEnabled) {
             return;
         }
-        PersistentCacheMaintenance.register(cleanupPolicy);
-
-        try {
-            fingerprint = computeFingerprint();
-            cachePath = cacheDirectory.resolve(
-                    "pack-" + fingerprint + ".bin");
-            if (!Files.isRegularFile(cachePath)) {
-                return;
-            }
-            // 在打开和完整源码图验证前 pin，避免异步清理删除正在使用的 warm pack。
-            PersistentCacheMaintenance.recordUse(
-                    cleanupPolicy, cachePath);
-            JaninoBytecodeCacheDiagnostics.recordPackLoad();
-            JaninoBytecodePack pack;
+        synchronized (cachePathLock(cacheDirectory)) {
+            long useToken = 0L;
             try {
-                pack = JaninoBytecodePack.read(cachePath, fingerprint);
-            } catch (IOException | RuntimeException exception) {
-                JaninoBytecodeCacheDiagnostics.recordInvalidPack(true);
-                deleteInvalidPack();
-                return;
-            }
+                fingerprint = computeFingerprint();
+                cachePath = cacheDirectory.resolve(
+                        "pack-" + fingerprint + ".bin");
+                if (!Files.isRegularFile(cachePath)) {
+                    PersistentCacheMaintenance.register(cleanupPolicy);
+                    return;
+                }
+                // 在打开和完整源码图验证前 pin，避免异步清理删除正在使用的 warm pack。
+                useToken = PersistentCacheMaintenance.recordUse(
+                        cleanupPolicy, cachePath);
+                JaninoBytecodeCacheDiagnostics.recordPackLoad();
+                JaninoBytecodePack pack;
+                try {
+                    pack = JaninoBytecodePack.read(cachePath, fingerprint);
+                } catch (IOException | RuntimeException exception) {
+                    JaninoBytecodeCacheDiagnostics.recordInvalidPack(true);
+                    deleteInvalidPack(useToken);
+                    return;
+                }
 
-            boolean valid = validateSources(pack.sources());
-            JaninoBytecodeCacheDiagnostics.recordSourceValidation(valid);
-            if (!valid) {
-                JaninoBytecodeCacheDiagnostics.recordInvalidPack(false);
-                deleteInvalidPack();
-                return;
-            }
+                boolean valid = validateSources(pack.sources());
+                JaninoBytecodeCacheDiagnostics.recordSourceValidation(valid);
+                if (!valid) {
+                    JaninoBytecodeCacheDiagnostics.recordInvalidPack(false);
+                    deleteInvalidPack(useToken);
+                    return;
+                }
 
-            Map<String, byte[]> bytecodes = pack.classBytecodes();
-            cachedClassFinder.install(bytecodes);
-            cachedForDefinition = bytecodes;
-            generationBytecodes.putAll(bytecodes);
-            validatedSources = pack.sources();
-            validPack = true;
-            PersistentCacheMaintenance.recordUse(
-                    cleanupPolicy, cachePath);
-            JaninoBytecodeCacheDiagnostics.recordValidPack();
-        } catch (IOException | RuntimeException | LinkageError exception) {
-            persistenceEnabled = false;
-            cachedForDefinition = Map.of();
-            cachedClassFinder.install(Map.of());
-            JaninoBytecodeCacheDiagnostics.recordEnvironmentFailure();
+                Map<String, byte[]> bytecodes = pack.classBytecodes();
+                cachedClassFinder.install(bytecodes);
+                cachedForDefinition = bytecodes;
+                generationBytecodes.putAll(bytecodes);
+                validatedSources = pack.sources();
+                validPack = true;
+                JaninoBytecodeCacheDiagnostics.recordValidPack();
+            } catch (IOException | RuntimeException | LinkageError exception) {
+                if (cachePath != null) {
+                    PersistentCacheMaintenance.discardUse(
+                            cleanupPolicy, cachePath, useToken);
+                } else {
+                    PersistentCacheMaintenance.register(cleanupPolicy);
+                }
+                persistenceEnabled = false;
+                cachedForDefinition = Map.of();
+                cachedClassFinder.install(Map.of());
+                JaninoBytecodeCacheDiagnostics.recordEnvironmentFailure();
+            }
         }
     }
 
@@ -280,11 +287,14 @@ public final class CachingIndexedDeduplicatingJavaSourceClassLoader
                 debugSource(), debugLines(), debugVars());
     }
 
-    private void deleteInvalidPack() {
+    private void deleteInvalidPack(long useToken) {
         try {
             Files.deleteIfExists(cachePath);
         } catch (IOException | RuntimeException ignored) {
             // 旧包无法删除也不能妨碍本次实时编译；成功发布时会原子替换。
+        } finally {
+            PersistentCacheMaintenance.discardUse(
+                    cleanupPolicy, cachePath, useToken);
         }
     }
 
@@ -315,29 +325,45 @@ public final class CachingIndexedDeduplicatingJavaSourceClassLoader
         if (validPack && !generatedThisSession) {
             return;
         }
-        try {
-            List<JaninoSourceIndex.SourceSnapshot> liveSources =
-                    sourceIndex.snapshotAll();
-            List<JaninoSourceIndex.SourceSnapshot> currentSources = validPack
-                    ? mergeSourceGraphs(validatedSources, liveSources)
-                    : liveSources;
-            Map<String, byte[]> bytecodes;
-            synchronized (this) {
-                bytecodes = new LinkedHashMap<>(generationBytecodes);
-            }
-            new JaninoBytecodePack(
-                    fingerprint, currentSources, bytecodes)
-                    .writeAtomically(cachePath);
-            PersistentCacheMaintenance.recordUse(
+        synchronized (cachePathLock(cacheDirectory)) {
+            // 惰性编译可能发生在标题画面之后；在原子替换前先保护目标，避免
+            // cleaner 在 move 与 publication 记录之间删除刚生成的 pack。
+            long useToken = PersistentCacheMaintenance.recordUse(
                     cleanupPolicy, cachePath);
-            JaninoBytecodeCacheDiagnostics.recordPublishedPack();
-        } catch (IOException | RuntimeException | LinkageError exception) {
-            JaninoBytecodeCacheDiagnostics.recordPublishFailure();
-            if (exception instanceof IOException ioException) {
-                throw ioException;
+            boolean published = false;
+            try {
+                List<JaninoSourceIndex.SourceSnapshot> liveSources =
+                        sourceIndex.snapshotAll();
+                List<JaninoSourceIndex.SourceSnapshot> currentSources =
+                        validPack
+                                ? mergeSourceGraphs(
+                                        validatedSources, liveSources)
+                                : liveSources;
+                Map<String, byte[]> bytecodes;
+                synchronized (this) {
+                    bytecodes = new LinkedHashMap<>(generationBytecodes);
+                }
+                new JaninoBytecodePack(
+                        fingerprint, currentSources, bytecodes)
+                        .writeAtomically(cachePath);
+                PersistentCacheMaintenance.recordPublication(
+                        cleanupPolicy, cachePath);
+                published = true;
+                JaninoBytecodeCacheDiagnostics.recordPublishedPack();
+            } catch (IOException | RuntimeException | LinkageError exception) {
+                // 已验证的旧 pack 即使替换失败仍可复用，应继续受保护；首次发布
+                // 失败则撤销不存在/不完整目标的预 pin。
+                if (!published && !validPack) {
+                    PersistentCacheMaintenance.discardUse(
+                            cleanupPolicy, cachePath, useToken);
+                }
+                JaninoBytecodeCacheDiagnostics.recordPublishFailure();
+                if (exception instanceof IOException ioException) {
+                    throw ioException;
+                }
+                throw new IOException(
+                        "Failed to publish Janino bytecode cache", exception);
             }
-            throw new IOException(
-                    "Failed to publish Janino bytecode cache", exception);
         }
     }
 
@@ -366,6 +392,19 @@ public final class CachingIndexedDeduplicatingJavaSourceClassLoader
             merged.put(snapshot.logicalPath(), snapshot);
         }
         return List.copyOf(merged.values());
+    }
+
+    private static Object[] cachePathLocks() {
+        Object[] locks = new Object[64];
+        for (int index = 0; index < locks.length; index++) {
+            locks[index] = new Object();
+        }
+        return locks;
+    }
+
+    private static Object cachePathLock(Path path) {
+        return CACHE_PATH_LOCKS[(path.toAbsolutePath().normalize().hashCode()
+                & Integer.MAX_VALUE) % CACHE_PATH_LOCKS.length];
     }
 
     Path cachePathForTests() {

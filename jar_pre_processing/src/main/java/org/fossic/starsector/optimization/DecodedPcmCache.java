@@ -306,7 +306,6 @@ public final class DecodedPcmCache {
         Path target;
         try {
             policy = cleanupPolicy();
-            PersistentCacheMaintenance.register(policy);
             target = safeCacheFile(
                     policy.directory(), sourceHash, false);
         } catch (IOException | RuntimeException | LinkageError failure) {
@@ -314,22 +313,25 @@ public final class DecodedPcmCache {
         }
         if (target == null || !Files.isRegularFile(
                 target, LinkOption.NOFOLLOW_LINKS)) {
+            PersistentCacheMaintenance.register(policy);
             PcmCacheDiagnostics.recordMiss();
             return null;
         }
         synchronized (lockFor(sourceHash)) {
             if (!Files.isRegularFile(
                     target, LinkOption.NOFOLLOW_LINKS)) {
+                PersistentCacheMaintenance.register(policy);
                 PcmCacheDiagnostics.recordMiss();
                 return null;
             }
-            PersistentCacheMaintenance.recordUse(policy, target);
+            long useToken = PersistentCacheMaintenance.recordUse(
+                    policy, target);
             try {
-                CachedPcm cached = read(target, sourceHash);
-                PersistentCacheMaintenance.recordUse(policy, target);
-                return cached;
+                return read(target, sourceHash);
             } catch (IOException | RuntimeException | LinkageError failure) {
                 deleteQuietly(target);
+                PersistentCacheMaintenance.discardUse(
+                        policy, target, useToken);
                 PcmCacheDiagnostics.recordCorruption();
                 return null;
             }
@@ -384,33 +386,39 @@ public final class DecodedPcmCache {
         Path target;
         try {
             policy = cleanupPolicy();
-            PersistentCacheMaintenance.register(policy);
             target = safeCacheFile(
                     policy.directory(), sourceHash, true);
         } catch (IOException | RuntimeException | LinkageError failure) {
             return;
         }
         if (target == null) {
+            PersistentCacheMaintenance.register(policy);
             return;
         }
-        PersistentCacheMaintenance.recordUse(policy, target);
         synchronized (lockFor(sourceHash)) {
+            long useToken = PersistentCacheMaintenance.recordUse(
+                    policy, target);
             if (Files.isRegularFile(
                     target, LinkOption.NOFOLLOW_LINKS)) {
-                PersistentCacheMaintenance.recordUse(policy, target);
                 return;
             }
             Path temporary = temporaryFile(target);
+            boolean published = false;
             try {
                 byte[] compressed = IsolatedZstdCodec.compress(
                         payload.pcmBytes(), 1);
                 write(temporary, sourceHash, payload, compressed);
                 moveAtomic(temporary, target);
+                PersistentCacheMaintenance.recordPublication(policy, target);
+                published = true;
                 PcmCacheDiagnostics.recordStore(
                         payload.pcmBytes().length, Files.size(target));
-                PersistentCacheMaintenance.recordUse(policy, target);
             } catch (IOException | RuntimeException | LinkageError failure) {
                 deleteQuietly(temporary);
+                if (!published) {
+                    PersistentCacheMaintenance.discardUse(
+                            policy, target, useToken);
+                }
             }
         }
     }

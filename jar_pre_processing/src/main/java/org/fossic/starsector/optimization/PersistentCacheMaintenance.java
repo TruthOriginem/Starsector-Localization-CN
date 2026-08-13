@@ -7,6 +7,7 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * 汇总本进程实际启用的持久缓存，并在启动完成后异步执行批量维护。
@@ -38,22 +39,32 @@ public final class PersistentCacheMaintenance {
     /**
      * 与 {@link #SCHEDULED} 分离的工作请求握手。
      *
-     * <p>注册/命中可能恰好发生在 worker 完成本轮遍历、尚未清除
+     * <p>注册/发布可能恰好发生在 worker 完成本轮遍历、尚未清除
      * {@code SCHEDULED} 的窗口内。调用方此时无法另起 worker，因此必须留下
      * 请求，让当前 worker 再跑一轮或在撤销 scheduled 后重新调度。
      */
     private static final AtomicBoolean WORK_REQUESTED = new AtomicBoolean();
+    private static final AtomicLong USE_GENERATION = new AtomicLong();
     private static final Object CLEAN_LOCK = new Object();
 
     private static volatile Thread shutdownHook;
     private static volatile Thread maintenanceWorker;
     private static volatile Runnable beforeWorkerUnscheduleHookForTests;
+    private static volatile Runnable beforeMaintenanceRequestHookForTests;
 
     private PersistentCacheMaintenance() {
     }
 
     /** 注册一个已实际启用的缓存；没有命中时也要注册，以便回收其旧内容。 */
     public static void register(PersistentCacheCleaner.Policy policy) {
+        Registration registration = registerState(policy);
+        if (registration.changed()) {
+            requestMaintenance();
+        }
+    }
+
+    private static Registration registerState(
+            PersistentCacheCleaner.Policy policy) {
         Objects.requireNonNull(policy, "policy");
         NamespaceState existing = STATES.get(policy.namespace());
         boolean changed = false;
@@ -69,24 +80,72 @@ public final class PersistentCacheMaintenance {
         }
         // 即使重复注册也重试 hook；首次尝试可能因 JVM shutdown 状态或策略失败。
         ensureShutdownHook();
-        // 首次/策略变更必须清理；上轮失败或受扫描上限阻塞的 dirty state
-        // 则由下一次真实缓存访问触发重试，而不是后台无休止自旋。
-        if (changed || (existing != null && existing.dirty().get())) {
+        return new Registration(existing, changed);
+    }
+
+    /**
+     * 在打开缓存前保护文件，维护阶段不会删除它。
+     *
+     * <p>该操作刻意不标记 namespace 为 dirty，也不调度目录遍历。读取失败的
+     * 调用方必须用对应 token 调用 {@link #discardUse} 撤销；
+     * 读取成功则保留到进程结束，shutdown 维护会统一刷新 mtime。
+     * 重复 pin 返回零 token；失败调用不能借此撤销另一个消费者或已成功发布者
+     * 持有的长期保护。
+     */
+    public static long recordUse(
+            PersistentCacheCleaner.Policy policy, Path path) {
+        Objects.requireNonNull(path, "path");
+        Registration registration = registerState(policy);
+        NamespaceState state = registration.state();
+        if (state.policy().equals(policy)) {
+            Path normalized = path.toAbsolutePath().normalize();
+            long generation = nextUseGeneration();
+            Long existing = state.touched().putIfAbsent(
+                    normalized, generation);
+            long token = existing == null ? generation : 0L;
+            // 首次注册必须在 pre-pin 可见之后才允许 worker 启动。
+            if (registration.changed()) {
+                requestMaintenance();
+            }
+            return token;
+        }
+        return 0L;
+    }
+
+    /** 记录成功发布的新文件，并请求一次容量/过期维护。 */
+    public static void recordPublication(
+            PersistentCacheCleaner.Policy policy, Path path) {
+        Objects.requireNonNull(path, "path");
+        Registration registration = registerState(policy);
+        NamespaceState state = registration.state();
+        if (state.policy().equals(policy)) {
+            state.touched().put(
+                    path.toAbsolutePath().normalize(), nextUseGeneration());
+            state.dirty().set(true);
             requestMaintenance();
         }
     }
 
-    /** 记录本进程成功命中或发布的文件，维护阶段不会删除这些活跃项。 */
-    public static void recordUse(
-            PersistentCacheCleaner.Policy policy, Path path) {
+    /** 撤销读取/发布前的保护，避免失败或不存在的路径被永久保留。 */
+    public static void discardUse(
+            PersistentCacheCleaner.Policy policy, Path path, long token) {
+        Objects.requireNonNull(policy, "policy");
         Objects.requireNonNull(path, "path");
-        register(policy);
         NamespaceState state = STATES.get(policy.namespace());
-        if (state != null && state.policy().equals(policy)) {
-            state.touched().add(path.toAbsolutePath().normalize());
-            state.dirty().set(true);
-            requestMaintenance();
+        if (token != 0L
+                && state != null
+                && state.policy().equals(policy)) {
+            state.touched().remove(
+                    path.toAbsolutePath().normalize(), token);
         }
+    }
+
+    private static long nextUseGeneration() {
+        long generation = USE_GENERATION.incrementAndGet();
+        if (generation != 0L) {
+            return generation;
+        }
+        return USE_GENERATION.incrementAndGet();
     }
 
     /** 标题 prepare 返回后才允许后台清理，避免与慢启动中的缓存读写竞争。 */
@@ -96,6 +155,10 @@ public final class PersistentCacheMaintenance {
     }
 
     private static void requestMaintenance() {
+        Runnable hook = beforeMaintenanceRequestHookForTests;
+        if (hook != null) {
+            hook.run();
+        }
         WORK_REQUESTED.set(true);
         if (STARTUP_COMPLETE.get()) {
             scheduleMaintenance();
@@ -197,7 +260,7 @@ public final class PersistentCacheMaintenance {
                     PersistentCacheCleaner.Result result =
                             PersistentCacheCleaner.clean(
                                     state.policy(),
-                                    state.touched(),
+                                    state.touched().keySet(),
                                     nowMillis);
                     LAST_RESULTS.put(entry.getKey(), result);
                     if (result.traversalLimitReached()
@@ -259,7 +322,7 @@ public final class PersistentCacheMaintenance {
                 return;
             }
             Thread hook = new Thread(
-                    () -> cleanAll(System.currentTimeMillis()),
+                    () -> cleanAtShutdown(System.currentTimeMillis()),
                     "Starsector persistent cache cleanup shutdown");
             try {
                 Runtime.getRuntime().addShutdownHook(hook);
@@ -271,7 +334,29 @@ public final class PersistentCacheMaintenance {
     }
 
     static void cleanNowForTests(long nowMillis) {
+        // 模拟 worker 在进入 cleanAll 前认领已有请求。
+        WORK_REQUESTED.set(false);
         cleanAll(nowMillis);
+    }
+
+    private static void cleanAtShutdown(long nowMillis) {
+        // 标题画面后的普通命中不触发后台扫描，但其近似 LRU mtime 仍需在退出时
+        // 落盘。dirty 的并发 set 足以和正在退出的后台 worker 安全汇合。
+        for (NamespaceState state : STATES.values()) {
+            if (!state.touched().isEmpty()) {
+                state.dirty().set(true);
+            }
+        }
+        cleanAll(nowMillis);
+    }
+
+    static void cleanAtShutdownForTests(long nowMillis) {
+        cleanAtShutdown(nowMillis);
+    }
+
+    static Set<Path> protectedPathsForTests(String namespace) {
+        NamespaceState state = STATES.get(namespace);
+        return state == null ? Set.of() : Set.copyOf(state.touched().keySet());
     }
 
     static Set<String> registeredNamespacesForTests() {
@@ -295,6 +380,10 @@ public final class PersistentCacheMaintenance {
         beforeWorkerUnscheduleHookForTests = hook;
     }
 
+    static void setBeforeMaintenanceRequestHookForTests(Runnable hook) {
+        beforeMaintenanceRequestHookForTests = hook;
+    }
+
     static boolean interruptMaintenanceWorkerForTests() {
         Thread worker = maintenanceWorker;
         if (worker == null) {
@@ -308,6 +397,7 @@ public final class PersistentCacheMaintenance {
         STARTUP_COMPLETE.set(false);
         WORK_REQUESTED.set(false);
         beforeWorkerUnscheduleHookForTests = null;
+        beforeMaintenanceRequestHookForTests = null;
         Thread worker = maintenanceWorker;
         maintenanceWorker = null;
         if (worker != null) {
@@ -330,6 +420,7 @@ public final class PersistentCacheMaintenance {
         }
         STATES.clear();
         LAST_RESULTS.clear();
+        USE_GENERATION.set(0L);
         SCHEDULED.set(false);
         System.clearProperty(DISABLE_PROPERTY);
         System.clearProperty(RETENTION_DAYS_PROPERTY);
@@ -340,13 +431,16 @@ public final class PersistentCacheMaintenance {
 
     private record NamespaceState(
             PersistentCacheCleaner.Policy policy,
-            Set<Path> touched,
+            ConcurrentHashMap<Path, Long> touched,
             AtomicBoolean dirty) {
         private NamespaceState(PersistentCacheCleaner.Policy policy) {
             this(
                     policy,
-                    ConcurrentHashMap.newKeySet(),
+                    new ConcurrentHashMap<>(),
                     new AtomicBoolean(true));
         }
+    }
+
+    private record Registration(NamespaceState state, boolean changed) {
     }
 }
