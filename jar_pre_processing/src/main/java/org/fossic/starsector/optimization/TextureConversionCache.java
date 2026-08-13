@@ -111,7 +111,6 @@ public final class TextureConversionCache {
         Path target;
         try {
             policy = cleanupPolicy();
-            PersistentCacheMaintenance.register(policy);
             target = safeCacheFile(
                     policy.directory(), sourceHash, false);
         } catch (IOException | RuntimeException | LinkageError failure) {
@@ -119,6 +118,7 @@ public final class TextureConversionCache {
         }
         if (target == null || !Files.isRegularFile(
                 target, LinkOption.NOFOLLOW_LINKS)) {
+            PersistentCacheMaintenance.register(policy);
             TextureCacheDiagnostics.recordMiss();
             return null;
         }
@@ -126,19 +126,22 @@ public final class TextureConversionCache {
         synchronized (lockFor(sourceHash)) {
             if (!Files.isRegularFile(
                     target, LinkOption.NOFOLLOW_LINKS)) {
+                PersistentCacheMaintenance.register(policy);
                 TextureCacheDiagnostics.recordMiss();
                 return null;
             }
-            PersistentCacheMaintenance.recordUse(policy, target);
+            long useToken = PersistentCacheMaintenance.recordUse(
+                    policy, target);
             try {
                 CachedTexture cached = read(target, sourceHash);
                 TextureCacheDiagnostics.recordHit(
                         cached.pixelBytes().length,
                         Files.size(target));
-                PersistentCacheMaintenance.recordUse(policy, target);
                 return cached;
             } catch (IOException | RuntimeException | LinkageError failure) {
                 deleteQuietly(target);
+                PersistentCacheMaintenance.discardUse(
+                        policy, target, useToken);
                 TextureCacheDiagnostics.recordCorruption();
                 return null;
             }
@@ -172,36 +175,42 @@ public final class TextureConversionCache {
             cached = snapshot(
                     imageWidth, imageHeight, hasAlpha, result);
             policy = cleanupPolicy();
-            PersistentCacheMaintenance.register(policy);
             target = safeCacheFile(
                     policy.directory(), sourceHash, true);
         } catch (IOException | RuntimeException | LinkageError failure) {
             return false;
         }
         if (target == null) {
+            PersistentCacheMaintenance.register(policy);
             return false;
         }
-        PersistentCacheMaintenance.recordUse(policy, target);
         synchronized (lockFor(sourceHash)) {
+            long useToken = PersistentCacheMaintenance.recordUse(
+                    policy, target);
             if (Files.isRegularFile(
                     target, LinkOption.NOFOLLOW_LINKS)) {
-                PersistentCacheMaintenance.recordUse(policy, target);
                 return true;
             }
 
             Path temporary = temporaryFile(target);
+            boolean published = false;
             try {
                 byte[] compressed = IsolatedZstdCodec.compress(
                         cached.pixelBytes(), 1);
                 write(temporary, sourceHash, cached, compressed);
                 moveAtomic(temporary, target);
+                PersistentCacheMaintenance.recordPublication(policy, target);
+                published = true;
                 TextureCacheDiagnostics.recordStore(
                         cached.pixelBytes().length,
                         Files.size(target));
-                PersistentCacheMaintenance.recordUse(policy, target);
                 return true;
             } catch (IOException | RuntimeException | LinkageError failure) {
                 deleteQuietly(temporary);
+                if (!published) {
+                    PersistentCacheMaintenance.discardUse(
+                            policy, target, useToken);
+                }
                 return false;
             }
         }

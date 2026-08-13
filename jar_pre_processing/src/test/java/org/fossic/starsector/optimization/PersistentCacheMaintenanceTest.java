@@ -145,7 +145,7 @@ final class PersistentCacheMaintenanceTest {
     }
 
     @Test
-    void lateUseWhileWorkerIsUnschedulingIsNotLost()
+    void latePublicationWhileWorkerIsUnschedulingIsNotLost()
             throws IOException, InterruptedException {
         System.setProperty(
                 PersistentCacheMaintenance.START_DELAY_SECONDS_PROPERTY,
@@ -173,13 +173,207 @@ final class PersistentCacheMaintenanceTest {
                 root, 'e', ".cache", now - 90 * DAY_MILLIS);
         Path stale = entry(
                 root, 'f', ".cache", now - 90 * DAY_MILLIS);
-        PersistentCacheMaintenance.recordUse(policy, active);
+        PersistentCacheMaintenance.recordPublication(policy, active);
         allowFirstWorkerToExit.countDown();
 
         assertTrue(awaitCondition(() -> !Files.exists(stale)
                 && !PersistentCacheMaintenance.scheduledForTests()));
         assertTrue(Files.exists(active));
         assertTrue(workerExits.get() >= 2);
+    }
+
+    @Test
+    void ordinaryHitAfterStartupDoesNotScheduleAnotherTreeScan()
+            throws IOException {
+        long now = 2_000_000_000_000L;
+        Path root = temporaryDirectory.resolve("hit/v1");
+        Path active = entry(root, 'a', ".cache", now - DAY_MILLIS);
+        PersistentCacheCleaner.Policy policy =
+                policy("hit", root, ".cache");
+        PersistentCacheMaintenance.register(policy);
+        PersistentCacheMaintenance.cleanNowForTests(now);
+        PersistentCacheCleaner.Result first =
+                PersistentCacheMaintenance.lastResultsForTests().get("hit");
+
+        PersistentCacheMaintenance.recordUse(policy, active);
+        PersistentCacheMaintenance.cleanNowForTests(now + 1);
+
+        assertFalse(PersistentCacheMaintenance.workRequestedForTests());
+        assertFalse(PersistentCacheMaintenance.scheduledForTests());
+        assertSame(first,
+                PersistentCacheMaintenance.lastResultsForTests().get("hit"));
+    }
+
+    @Test
+    void shutdownTouchesHitRecordedAfterLastBackgroundScan()
+            throws IOException {
+        long now = 2_000_000_000_000L;
+        Path root = temporaryDirectory.resolve("shutdown/v1");
+        Path active = entry(root, 'a', ".cache", now - DAY_MILLIS);
+        PersistentCacheCleaner.Policy policy =
+                policy("shutdown", root, ".cache");
+        PersistentCacheMaintenance.register(policy);
+        PersistentCacheMaintenance.cleanNowForTests(now);
+        Files.setLastModifiedTime(
+                active, FileTime.fromMillis(now - DAY_MILLIS));
+
+        PersistentCacheMaintenance.recordUse(policy, active);
+        PersistentCacheMaintenance.cleanAtShutdownForTests(now + 1234L);
+
+        assertEquals(
+                now + 1234L,
+                Files.getLastModifiedTime(active).toMillis());
+        assertEquals(
+                1,
+                PersistentCacheMaintenance.lastResultsForTests()
+                        .get("shutdown").touchedFiles());
+    }
+
+    @Test
+    void discardedPrePinIsNotRetainedOrScheduled() {
+        Path root = temporaryDirectory.resolve("missing/v1");
+        Path missing = root.resolve("aa")
+                .resolve("a".repeat(64) + ".cache");
+        PersistentCacheCleaner.Policy policy =
+                policy("missing", root, ".cache");
+        PersistentCacheMaintenance.register(policy);
+        PersistentCacheMaintenance.cleanNowForTests(1L);
+
+        long token = PersistentCacheMaintenance.recordUse(policy, missing);
+        assertEquals(Set.of(missing.toAbsolutePath().normalize()),
+                PersistentCacheMaintenance.protectedPathsForTests("missing"));
+        PersistentCacheMaintenance.discardUse(policy, missing, token);
+
+        assertEquals(Set.of(),
+                PersistentCacheMaintenance.protectedPathsForTests("missing"));
+        assertFalse(PersistentCacheMaintenance.workRequestedForTests());
+    }
+
+    @Test
+    void successfulPublicationMarksNamespaceDirtyAndRequestsMaintenance()
+            throws IOException {
+        long now = 2_000_000_000_000L;
+        Path root = temporaryDirectory.resolve("published/v1");
+        PersistentCacheCleaner.Policy policy =
+                policy("published", root, ".cache");
+        PersistentCacheMaintenance.register(policy);
+        PersistentCacheMaintenance.cleanNowForTests(now);
+        Path published = entry(root, 'b', ".cache", now);
+
+        PersistentCacheMaintenance.recordPublication(policy, published);
+
+        assertTrue(PersistentCacheMaintenance.workRequestedForTests());
+        assertEquals(Set.of(published),
+                PersistentCacheMaintenance.protectedPathsForTests(
+                        "published"));
+    }
+
+    @Test
+    void firstUseIsPinnedBeforeItsRegistrationRequestsMaintenance() {
+        Path root = temporaryDirectory.resolve("pin-before-request/v1");
+        Path target = root.resolve("aa")
+                .resolve("a".repeat(64) + ".cache")
+                .toAbsolutePath().normalize();
+        PersistentCacheCleaner.Policy policy =
+                policy("pin-before-request", root, ".cache");
+        AtomicInteger requests = new AtomicInteger();
+        PersistentCacheMaintenance.setBeforeMaintenanceRequestHookForTests(
+                () -> {
+                    requests.incrementAndGet();
+                    assertEquals(Set.of(target),
+                            PersistentCacheMaintenance
+                                    .protectedPathsForTests(
+                                            "pin-before-request"));
+                });
+
+        PersistentCacheMaintenance.recordUse(policy, target);
+
+        assertEquals(1, requests.get());
+    }
+
+    @Test
+    void publicationBeforeDiscardWinsTheProtectionRace()
+            throws IOException {
+        Path root = temporaryDirectory.resolve("publish-first/v1");
+        PersistentCacheCleaner.Policy policy =
+                policy("publish-first", root, ".cache");
+        Path target = root.resolve("aa")
+                .resolve("a".repeat(64) + ".cache")
+                .toAbsolutePath().normalize();
+
+        long token = PersistentCacheMaintenance.recordUse(policy, target);
+        Files.createDirectories(target.getParent());
+        Files.write(target, new byte[] {1});
+        PersistentCacheMaintenance.recordPublication(policy, target);
+        PersistentCacheMaintenance.discardUse(policy, target, token);
+
+        assertEquals(Set.of(target),
+                PersistentCacheMaintenance.protectedPathsForTests(
+                        "publish-first"));
+    }
+
+    @Test
+    void publicationAfterDiscardRestoresProtection()
+            throws IOException {
+        Path root = temporaryDirectory.resolve("discard-first/v1");
+        PersistentCacheCleaner.Policy policy =
+                policy("discard-first", root, ".cache");
+        Path target = root.resolve("aa")
+                .resolve("a".repeat(64) + ".cache")
+                .toAbsolutePath().normalize();
+
+        long token = PersistentCacheMaintenance.recordUse(policy, target);
+        PersistentCacheMaintenance.discardUse(policy, target, token);
+        Files.createDirectories(target.getParent());
+        Files.write(target, new byte[] {1});
+        PersistentCacheMaintenance.recordPublication(policy, target);
+
+        assertEquals(Set.of(target),
+                PersistentCacheMaintenance.protectedPathsForTests(
+                        "discard-first"));
+    }
+
+    @Test
+    void duplicatePinCannotDiscardAnotherConsumersProtection() {
+        Path root = temporaryDirectory.resolve("duplicate/v1");
+        PersistentCacheCleaner.Policy policy =
+                policy("duplicate", root, ".cache");
+        Path target = root.resolve("aa")
+                .resolve("a".repeat(64) + ".cache")
+                .toAbsolutePath().normalize();
+
+        long ownerToken = PersistentCacheMaintenance.recordUse(
+                policy, target);
+        long duplicateToken = PersistentCacheMaintenance.recordUse(
+                policy, target);
+        PersistentCacheMaintenance.discardUse(
+                policy, target, duplicateToken);
+
+        assertTrue(ownerToken != 0L);
+        assertEquals(0L, duplicateToken);
+        assertEquals(Set.of(target),
+                PersistentCacheMaintenance.protectedPathsForTests(
+                        "duplicate"));
+    }
+
+    @Test
+    void cleanupKeepsInFlightMissingPrePinsAndDoesNotReportFailure() {
+        Path root = temporaryDirectory.resolve("prune/v1");
+        PersistentCacheCleaner.Policy policy =
+                policy("prune", root, ".cache");
+        Path missing = root.resolve("aa")
+                .resolve("a".repeat(64) + ".cache")
+                .toAbsolutePath().normalize();
+        PersistentCacheMaintenance.recordUse(policy, missing);
+
+        PersistentCacheMaintenance.cleanNowForTests(1L);
+
+        assertEquals(Set.of(missing),
+                PersistentCacheMaintenance.protectedPathsForTests("prune"));
+        assertEquals(
+                0,
+                PersistentCacheMaintenance.lastResultsForTests()
+                        .get("prune").failures());
     }
 
     @Test

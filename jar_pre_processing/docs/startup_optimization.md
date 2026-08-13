@@ -161,7 +161,11 @@ O11 结果通知已撤回，主线程恢复原版 10 ms 轮询；O16/O27 仅保�
 表中省略了共同前缀 `starsector.optimization.`。纹理、PCM 和 Janino 默认目录位于
 `starsector-core/cache/startup-optimization/`。缓存按内容命中，带格式/完整性验证和原子发布；
 失效或损坏时回原加载路径。清理仅注册实际打包并运行的 namespace，不跟随
-junction/symlink/reparse point，不会因只启用某一缓存组而扫描或删除其他组。
+junction/symlink/reparse point，不会因只启用某一缓存组而扫描或删除其他组。普通缓存命中只
+登记本进程活跃项，不在游玩期间反复触发整树扫描；成功发布新条目才请求容量维护，退出时再
+批量刷新晚期命中的近似 LRU 时间。失败或已消失的预保护路径会按发布代次撤销，不会形成永久
+dirty 状态。扫描预算耗尽意味着视图不完整，此时只保留已确认的过期/临时/畸形清理，不做
+基于局部枚举顺序的容量淘汰。
 
 ## SSOptimizer 对照与剩余方向
 
@@ -193,11 +197,13 @@ SSO 未覆盖而本项目收益明确的重点包括 O03 资源锁、O05 Rules�
   图像/声音、CSV/JSON 多来源回退均纳入。
 - 纹理、PCM、Janino 缓存均内容寻址并有版本/完整性验证、原子发布、失效/损坏 fail-soft 回退。
   自动回收只注册已打包 namespace，30 天保留期；纹理 2 GiB、PCM 1 GiB、Janino 32 MiB/8 pack。
+- 缓存读取的临时保护、成功发布和失败撤销按代次区分；命中不会在战役/战斗中重复安排全目录
+  维护，损坏/写入失败也不会留下不存在路径迫使后续每次访问重扫。
 - 清理与动态字体缓存不跟随 junction/symlink/reparse point；仍存在 Windows 检查到删除之间极窄的
   恶意 TOCTOU，不影响正常本地缓存模型。动态字体 manifest/lease 已覆盖 scale、输出和并发。
 - 并行规格解析不允许 worker 改变资源选择器、日志顺序、最早异常或 registry 顺序；`workers=0`
   是同 Jar 原顺序对照。声音默认 2 worker；高并发仍是用户自担风险的调优选项。
-- 当前 Java `clean test`：330 项通过、0 failure/error、3 项平台权限跳过；`none`、流安全、PNG、
+- 当前 Java `clean test`：377 项通过、0 failure/error、3 项平台权限跳过；`none`、流安全、PNG、
   三缓存和 `all` 的 profiling-off Jar 均可构建。11-mod 发布 smoke 无 verifier/缺类/链接错误。
 
 ## 已解决风险与后续验证

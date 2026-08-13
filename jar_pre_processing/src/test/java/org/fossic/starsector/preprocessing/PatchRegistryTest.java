@@ -21,14 +21,18 @@ final class PatchRegistryTest {
                 "ship-info-separator",
                 "combat-deployment-font",
                 "combat-target-info-width",
+                "fleet-card-cr-text-width",
                 "campaign-date-width",
                 "save-date-locale",
                 "planet-list-column-width",
                 "star-system-map-font",
                 "intel-put-first-tag-id",
                 "window-decoration-physical-resolution",
+                "terrain-status-bar-visible-separator",
+                "codex-special-weapon-type-filter",
                 "textfield-ime-hook",
                 "resource-stream-dynfont-hook",
+                "new-game-seed-field-width",
                 "bitmap-font-logical-nominal",
                 "headless-console-log-detach",
                 "font-glyph-bulk-array-growth",
@@ -38,6 +42,7 @@ final class PatchRegistryTest {
                 "resource-lookup-short-monitor",
                 "resource-loader-partial-stream-safety",
                 "fast-png-image-decode",
+                "renderer-highlight-safe-regex",
                 "renderer-dynfont-exact-proxy",
                 "loading-utils-fast-text-reader",
                 "csv-lazy-error-row-formatting",
@@ -102,12 +107,14 @@ final class PatchRegistryTest {
     }
 
     @Test
-    void dynfontGroupControlsAllThreeCooperatingPatches() {
+    void dynfontGroupControlsAllFiveCooperatingPatches() {
         List<String> enabled = PatchRegistry.patches(
                 PatchSelection.fromOptions("none", List.of(), false))
                 .stream().map(JarPatch::id).toList();
         assertTrue(enabled.contains("resource-stream-dynfont-hook"));
+        assertTrue(enabled.contains("new-game-seed-field-width"));
         assertTrue(enabled.contains("bitmap-font-logical-nominal"));
+        assertTrue(enabled.contains("renderer-highlight-safe-regex"));
         assertTrue(enabled.contains("renderer-dynfont-exact-proxy"));
 
         List<String> disabled = PatchRegistry.patches(
@@ -115,7 +122,9 @@ final class PatchRegistryTest {
                         "none", List.of("dynfont"), false))
                 .stream().map(JarPatch::id).toList();
         assertFalse(disabled.contains("resource-stream-dynfont-hook"));
+        assertFalse(disabled.contains("new-game-seed-field-width"));
         assertFalse(disabled.contains("bitmap-font-logical-nominal"));
+        assertFalse(disabled.contains("renderer-highlight-safe-regex"));
         assertFalse(disabled.contains("renderer-dynfont-exact-proxy"));
     }
 
