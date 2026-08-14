@@ -1,469 +1,290 @@
 # 动态字体渲染
 
-按游戏界面缩放（screenScale）在运行时生成中英混排位图字体，使任意缩放档位下文字保持
-清晰。玩家端零配置，字表可编辑。仅 Windows。
+本模块在 Windows 游戏本体启动时，按最终界面缩放生成中英混排位图字体，并以精确代理
+接入原版 BMFont renderer。目标是让 125%、150%、195%、200% 等缩放档都直接使用对应
+分辨率的图集，同时保留原版排版、高亮、阴影、混合和 mod 渲染路径。
 
-## 背景
+玩家无需配置；`graphics/fonts/dyn_font/chars.txt` 可编辑，重启后自动重新生成。
+任何初始化或渲染异常都会回退汉化包内的 1× 静态中文字体。
 
-游戏 UI 使用 BMFont 位图字体（`.fnt` 度量文件 + PNG 图集）。汉化需要中文字形，原先
-随包分发离线烘焙的 11 套位图，存在两个限制：字表固定，玩家无法自行补字；界面缩放下
-必然模糊——游戏在 screenScale>1 时不请求更大字号，而是在几何变换层放大画面，1× 位图
-被 GPU 拉伸。
+## 当前架构
 
-本模块改为运行时从 TTF 栅格化：字表由 `chars.txt` 决定，并按最终 screenScale 生成
-exact 高分辨率图集供游戏内渲染。代理 FNT 使用 64 倍虚拟整数度量，使原版 renderer
-在保持 1× 逻辑布局的同时直接采样 exact 图集；最终 quad 再吸附 framebuffer 像素边界。
+```text
+ResourceLoader.openStream（ASM）
+  └─ DynFontOverrides
+     ├─ 读取 screenScale
+     ├─ 校验或生成 11 套基础、exact 和 .dfnt 产物
+     └─ 在游戏 GL context 的读条阶段预热 exact 纹理
 
-## 架构
-
-```
-游戏启动
-  └─ 请求 graphics/fonts/{name}.fnt
-     └─ ResourceLoader.openStream（ASM 注入）
-        └─ DynFontOverrides.openStream          链 A：资源流拦截
-           首次命中时初始化：检测缩放 → 校验缓存 → 调 native 生成 → 供流
-
-游戏内文本渲染
-  └─ BitmapFontRenderer.render（ASM 注入）
-     └─ DynFontRenderHooks.resolveFont          链 B：渲染期精确代理切换
-        替换渲染器的 font 字段为 exact 代理
+BitmapFont / BitmapFontRenderer（ASM）
+  ├─ DynFontRenderHooks：基础字体实例 -> exact 代理实例
+  ├─ 公开 nominal 保持逻辑字号，renderer 内部读取 raw proxy nominal
+  └─ DynFontQuadHooks：最终 glyph quad 按共同原点吸附到 framebuffer 像素
 ```
 
-| 组件 | 位置 | 职责 |
+| 组件 | 位置 | 作用 |
 |---|---|---|
-| `ss_dyn_font.dll` | `native/dyn_font/` | FreeType 栅格化、度量计算、装箱、PNG 编码；11 套并行生成。CMake + MinGW + Ninja，FreeType 静态链接，PNG 编码使用 vendored fpng |
-| `org.fossic.starsector.dynfont.*` | `src/main/java/.../dynfont/` | `DynFontOverrides`（资源拦截、缩放检测、缓存管理）、`DynFontRenderHooks`（渲染期切换）、`DynFontNatives`（JNI 绑定）、`DynFontLog` |
-| `ResourceStreamDynFontPatch` | `patches/` | 在 `com.fs.util.C`（ResourceLoader）的 `openStream(String)` 入口插入拦截调用 |
-| `RendererDynFontPatch` | `patches/` | 接入 exact 代理、内部 raw nominal、display-list 绕过及最终 glyph quad 像素吸附 |
+| `ss_dyn_font.dll` | `native/dyn_font/` | FreeType 栅格化、排版度量、单页 POT 装箱和 PNG 编码 |
+| `DynFontOverrides` | `src/main/java/.../dynfont/` | 资源拦截、缩放检测、缓存、native 调用和游戏 context 判定 |
+| `DynFontRenderHooks` | 同上 | 预热、11 套代理的原子映射和逻辑 nominal |
+| `DynFontQuadHooks` / `PixelTransform` | 同上 | 读取 GL 变换并对整段文本做刚性像素吸附 |
+| `ResourceStreamDynFontPatch` | `src/main/java/.../patches/` | 在资源流入口接入生成产物 |
+| `BitmapFontLogicalNominalPatch` | 同上 | 对外保留逻辑 nominal，为 renderer 增加 raw nominal getter |
+| `RendererDynFontPatch` | 同上 | 接入代理、即时绘制副本和最终顶点 hook |
 
-运行时类注入 `starfarer_obf.jar`，由 `fs.common_obf.jar` 中的 hook 跨 jar 调用；两者
-同属游戏固定 classpath。
+运行时类注入 `starfarer_obf.jar`；字体链本身位于 `fs.common_obf.jar`。两者都在游戏固定
+classpath 中。
 
-### 基础包与 exact 代理
+### 基础字体、exact 代理与精确度量
 
-每套字体只保留运行时真正使用的五类产物：
+每套字体生成五个文件：
 
-| 产物 | 内容 | 使用者 |
-|---|---|---|
-| `{name}.fnt` / `_0.png` | 纯 1× 栅格与整数度量 | 启动器、游戏内布局层及安全回退 |
-| `{name}_exact.fnt` / `_exact_0.png` | 按真实 screenScale 栅格化；FNT 度量乘固定 64 倍 | 游戏原生 BitmapFont renderer |
-| `{name}.dfnt` | 精确浮点 line/base/glyph/kerning 度量 | exact 代理完整性校验与后续精确排版扩展 |
+| 产物 | 用途 |
+|---|---|
+| `{name}.fnt` / `{name}_0.png` | 1× 基础字体；供启动器、身份识别和故障回退 |
+| `{name}_exact.fnt` / `{name}_exact_0.png` | 按真实 screenScale 栅格化；游戏本体使用的精确代理 |
+| `{name}.dfnt` | 带版本的精确浮点 line/base/glyph/kerning 数据；用于完整性校验 |
 
-引擎仍按 `requestedFontSize / nominalSize` 缩放。代理的全部几何度量与 nominal 同乘 64，
-因此该倍率在 renderer 内精确抵消，逻辑布局仍为原始 1×；纹理则来自按真实 screenScale
-栅格化的 exact 图集。旧 `_hd.fnt/png` 的整数 nominal/k 方案已退出运行时，现也不再生成，
-避免每档留下约三分之一的无用缓存与重复栅格化工作。
+exact FNT 使用固定虚拟度量倍率 `M=64`。图集仍保持真实像素尺寸，FNT 中的 nominal、
+glyph 几何、advance、kerning 和虚拟图集尺寸则同乘 64：
 
-## 字体参数
+```text
+proxyNominal = baseNominal × screenScale × 64
+proxyMetric  = exactPhysicalMetric × 64
+```
 
-11 套输出，参数定义于 `native/dyn_font/src/composer.cpp` 的 `makeSpecs()`。下表为 1×
-基准值，各档按 `round(v×s)` 派生。游戏读条共加载 20 套，其余 9 套实机未见明显使用位置，
-未纳入（见「已知限制」）。
+原 renderer 的 `requestedSize / proxyNominal` 与上层 screenScale 会抵消这两个倍率，基准
+字号下一个 exact texel 对应一个 framebuffer 像素。公开 nominal getter 对代理仍返回
+`baseNominal`，因此星图和 mod 用 `nominal × 0.2` 等任意系数派生字号时不会把 64 倍代理
+字号误当成逻辑字号；只有 renderer 内部使用新增的 raw getter。
 
-**insignia 系**（西文 lte50549 + 中文 方正兰亭中粗黑，smooth=1 aa=4）
+11 套 exact 纹理在游戏 GL context 的读条阶段全部注册并校验，基础到代理的映射随后通过
+一个不可变快照一次发布。任一套失败则整套回退，避免同一界面混用两种 UV 或度量。映射
+发布后只按 11 个已知路径处理重新注册的字体实例，不遍历游戏的普通 `HashMap`，以兼容 mod
+并发注册字体。
 
-| 套名 | 西文字号 | 西文 x | 中文字号 | 中文 x | info/lh/base | upshiftPx |
-|---|---|---|---|---|---|---|
+启动器和游戏本体在同一 JVM 中使用不同 GL context。代理纹理只能在调用栈确认进入
+`ResourceLoaderState` 或 `CombatMain` 后加载；若在启动器 context 中提前加载，进入游戏后
+缓存的纹理 id 会失效并产生色块。
+
+## 物理像素吸附
+
+原版始终使用 `GL_LINEAR`。即使 exact 图集的采样倍率正确，quad 落在半像素相位时仍会
+发虚，因此代理字体在最终 `glVertex2f` 前进行 framebuffer 像素吸附。
+
+每个 renderer render scope 只读取一次 model-view、projection 和 viewport。只有变换为
+轴对齐、可逆正交变换且没有额外矩阵时启用；旋转、shear、透视、奇异矩阵或 GL 查询失败
+均原样提交。buffer、矩阵数组和变换对象由渲染线程的 `ThreadLocal` 复用，Java 热路径不
+产生临时对象。
+
+当前采用**整段文本共同原点**，不是每个字独立按屏幕相位吸附：
+
+```text
+snappedEdge = round(renderOrigin) + round(edge - renderOrigin)
+```
+
+第一个阴影或正文 pass 的窗口坐标原点成为本次 render 的共同原点；后续 pass 和全部 glyph
+都相对它量化。这样整段文本移动时所有字符同时移动，字间距不会随着小数相位逐字跳动。
+每个 quad 的另一条边同样相对共同原点吸附，非空字形至少保留一个物理像素。
+
+代价是移动仍是离散的：理论网格为一个物理像素；如果上层动画本身只按整数逻辑坐标更新，
+在高缩放下屏幕步长会约为 screenScale 个物理像素。该阶梯感来自上层位置精度和像素对齐，
+不是字间距变化。关闭所有吸附能获得连续亚像素移动，但实测静止文字明显变虚，因此保留
+当前折中。
+
+吸附不改变 pen、advance、kerning、测量或换行。原版长文本 display list 会固化首次绘制
+位置的像素相位，所以仅代理字体绕过字体 display list，继续执行原版即时 glyph 绘制；
+基础字体和 mod 自有字体仍走原缓存。
+
+每个 scope 保留两次 `glGetFloat` 和一次 `glGetInteger`。游戏和 mod 可在同一帧相邻文本间
+切换矩阵、FBO 或 viewport，LWJGL2 没有可靠的 Java 状态镜像；按帧缓存会把文字吸附到错误
+framebuffer。当前实现不改 shader、program、纹理、blend、颜色或 active texture，因而保持
+GraphicsLib、BoxUtil 等自定义渲染路径兼容。
+
+## 字体规格
+
+唯一权威配置是 `native/dyn_font/src/composer.cpp` 的 `makeSpecs()`。以下均为 1× 基准值；
+字号可为小数并直接传给 FreeType 26.6，生成 exact 时再乘真实 screenScale。
+
+### Insignia
+
+西文：`lte50549.ttf`；中文：方正兰亭中粗黑；`smooth=1`、`aa=4`。
+
+| 套名 | 西文字号 | 西文 xadv | 中文字号 | 中文 xadv | info / lineHeight / base | 西文上移 |
+|---|---:|---:|---:|---:|---:|---:|
 | insignia15LTaa | 14.5 | 0 | 15 | 0 | 15 / 17 / 15 | 2 |
 | insignia21LTaa | 15.0 | +1 | 16 | +1 | 18 / 18 / 16 | 2 |
 | insignia25LTaa | 23.0 | 0 | 22 | +1 | 24 / 25 / 22 | 2 |
 
-**orbitron 系**（西文 Orbitron VF + 中文 锐字逼格青春粗黑体简 2.0）
+### Orbitron
 
-| 套名 | 西文字号 | wght | 西文 x | 中文字号 | cy | 中文 bold | info/lh/base | smooth/aa | upshiftPx |
-|---|---|---|---|---|---|---|---|---|---|
+西文：Orbitron VF；中文：锐字逼格青春粗黑体简 2.0。
+
+| 套名 | 西文字号 | wght | 西文 xadv | 中文字号 | 中文 y | 中文 bold | info / lh / base | smooth / aa | 上移 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | orbitron12condensed | 12.0 | 800 | +0.5 | 16 | 0 | 0.15 | −12 / 16 / 16 | 1 / 1 | 2 |
 | orbitron20aa | 15.5 | 800 | +0.5 | 18 | +1 | 0.15 | 20 / 20 / 19 | 0 / 4 | 2 |
 | orbitron20aabold | 16.0 | 800 | +0.5 | 18 | +1 | 0.15 | −20 / 20 / 19 | 0 / 4 | 2 |
 | orbitron24aa | 18.0 | 800 | +0.5 | 20 | +1 | 0.15 | −24 / 24 / 21 | 0 / 4 | 0 |
 | orbitron24aabold | 20.0 | 800 | +0.5 | 20 | +1 | 0.15 | 24 / 24 / 21 | 0 / 4 | 0 |
 
-数字 `xadvance` 逐字符覆盖，抄录原版（原版为加宽等宽设计，个别字符略窄）：12c `1`=8
-余 10；20 系 `1`=11 余 13；24 系 `1`=13、`7`=14 余 16。orbitron 五套均按 `_w800`
-固化表应用 kerning。
+Orbitron 数字 advance 保持原版数值栏设计：12c 的 `1=8`、其余 `10`；20 系的 `1=11`、
+其余 `13`；24 系的 `1=13`、`7=14`、其余 `16`。这些是最终 advance，不再叠加 `+0.5`。
+五套均使用 w800 GPOS 固化 kerning。
 
-**victor 系**（与 orbitron 系同源同策略：西文 Orbitron VF + 中文锐字，smooth=0 aa=1）
+### Victor
 
-| 套名 | 西文字号 | wght | 西文 x | 中文字号 | cy | 中文 bold | info/lh/base | upshiftPx |
-|---|---|---|---|---|---|---|---|---|
+西文同样使用 Orbitron VF，中文使用锐字；`smooth=0`、`aa=1`。
+
+| 套名 | 西文字号 | wght | 西文 xadv | 中文字号 | 中文 y | 中文 bold | info / lh / base | 上移 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | victor10 | 10.0 | 900 | +1 | 11 | 0 | 0.17 | −10 / 10 / 9 | 1 |
 | victor14 | 10.0 | 800 | +1 | 12 | 0 | 0.15 | −14 / 13 / 11 | 1 |
 | victor16 | 13.5 | 800 | +1 | 17 | 0 | 0.15 | −20 / 18 / 16 | 2 |
 
-原为 ZpixEX2_EX 点阵（中英文同源同字号，旧方案用 strike 整数放大）。改用
-矢量的原因：strike 整数放大在高缩放下仍是放大的点阵，清晰度不足。当前 victor 三套均使用
-Orbitron VF + 锐字，旧的 `victor-pixel.ttf` 与 `ZpixEX2_EX.ttf` 不再作为构建输入，也不再写入
-`typefaces.dat`。
+Victor 的 `info/lineHeight/base` 保持旧静态字体的布局规格。数字取 0～9 自然 advance 的
+最大值统一，并把窄字形在单元格内居中；victor10 使用 w900 kerning，victor14/16 使用
+w800。`a-z` 保留原码位，但复制对应 `A-Z` 的图形、bearing 和 advance，kerning 也展开到
+大小写输入组合，因此输入小写仍可查字，视觉统一为大写。
 
-`info`/`lineHeight`/`base` 沿用点阵版原值，**布局度量冻结**；中文字号取点阵版原字号
-（victor16 例外取 17——锐字 advance/em≈0.963，`round(16×0.963)=15` 会让汉字排版窄 1px，
-10/12 恰好进位故无须调整），故汉字 `xadvance` 与视觉大小不变，变的只是字形。西文字号与
-`upshiftPx` 均为实机调校值。
+### 共同渲染规则
 
-字母 `xadvance` 随 Orbitron 字形自然产生（比例宽度，点阵版为等宽），英文串因此变宽，
-中文与数字不受影响。victor10 按 `_w900` 固化表应用 kerning，victor14/victor16 使用
-`_w800`；未被当前参数引用的旧字重表不再保留或打包。
+- 11 套均使用 4× 超采样、Lanczos 降采样和 `FT_LOAD_TARGET_LIGHT`。
+- Orbitron/Victor 通过可变字体 `wght` 轴取字重；GPOS kerning 由 `fontTools` 离线导出，
+  native 按字号像素化。
+- `{`、`}` 的宽高、bearing 和 advance 清零，作为游戏高亮用的不可见边界字符。
+- `bold` 是在 4× mask 上做方形膨胀的微调，不扩大画布；整体字重应优先调整 `wght`。
+- 西文以 `H`、中文以“舰”的 alpha≥128 实心底对齐，再把整套西文上移表中的逻辑像素值；
+  不允许只移动部分字形。
+- 图集必须是单页、2 的幂。游戏只解析一行 page，分页会加载失败；非 POT 图集又会被纹理层
+  padding，导致 FNT 的 UV 错位。
 
-数字不用 `digitAdv` 覆盖——victor 没有需要逐字符对齐的原版等宽设计。改由西文源的
-`tabularDigits` 自动等宽：取 0-9 自然 `xadvance` 的最大值统一，窄字形在新宽度内居中。
-该处理在叠加 `x` 之后执行，故字距对数字与字母一致生效，调 `sz`/`x` 时数字自动跟随。
+## 动态字体相关 Patch
 
-Victor 三套保留 `a-z` 的字符码位，但统一复用对应 `A-Z` 的字形、bearing 与 advance；
-kerning 同样从大写字偶展开到大小写输入组合。因此游戏或 mod 传入小写文本时仍能正常查字，
-视觉上则只出现大写字形。
+除核心资源与 renderer hook 外，当前分支包含三项由字体度量变化暴露的兼容修正：
 
-参数语义：`x` 为该源字形的 `xadvance` 增量；`cy` 为中文字形的 `yoffset` 增量（西文无
-独立 y 参数，见基线对齐）；`info` 取负值表示抄录原版的像素制标记；`smooth`/`aa` 抄录
-原版 `.fnt`。
+| Patch | 修正 |
+|---|---|
+| `CombatTargetInfoWidthPatch` | 战斗 HUD 距离/航速栏由 58 扩到 80，防止三位数航速把 `su/s` 换行 |
+| `NewGameSeedFieldWidthPatch` | 新生涯种子框由 185 扩到 210，同时把“粘贴”按钮右移 25，保持左侧标签位置不变 |
+| `RendererHighlightRegexPatch` | 给两条模糊高亮 fallback 的动态文本加安全 quoting，保留原有精确搜索，避免译文被当作正则表达式 |
 
-`bold` 在 4× 超采样分辨率做方形膨胀（`dilateMax`，PIL `ImageFilter.MaxFilter` 语义）。
-**该滤镜不扩画布**，而输入是 FreeType 紧贴墨迹的 bbox，故膨胀只能向内填字腔、外轮廓
-不动——它是微调手段，加大取值只会把笔画密的字填糊，不能用来整体加粗（实测 victor10
-从 0.5 调到 2.0，`一`/`国`/`题` 的墨迹尺寸一个像素都没变）。整体加粗应调 `wght`。
+所有 Patch 都按目标类、方法描述符和相邻调用结构严格匹配；数量或结构漂移时构建失败，不会
+猜测修改其它常量。
 
-### 渲染规则
+## 生成、分发与缓存
 
-- **全部 11 套**：4× 超采样 + Lanczos 降采样 + `FT_LOAD_TARGET_LIGHT`，字号浮点直传；
-  orbitron / victor 的西文按 wght 轴实例化可变字体。
-- `{` `}` 清零（游戏的高亮标记字符）；`starsector_xadvance_compat` 全局开启。
+`native/dyn_font/assets.json` 是规格实际引用的资产清单。当前包含四个 TTF 和 w800/w900
+两份自动生成的 kerning 表。TTF 与 `.kern.txt` 是本机构建输入并被 Git 忽略；确定性打包后的
+`localization/graphics/fonts/dyn_font/typefaces.dat` 是入库的预构建分发资产。
 
-`RenderMode::ZpixAuto` 与 `PixelCeil` 两条路径仍在代码中，但已无规格引用（victor 改用矢量后
-11 套全走 `LightAA`），仅保留为通用渲染能力；如需恢复
-旧点阵方案，必须重新加入对应字体源。
-
-### 基线对齐
-
-西文无独立 y 参数，垂直位置由装箱后的 `post_align` 统一决定（`composer.cpp`）：
-
-```
-target = -round(upshiftPx × s)
-bWest  = solidBottom('H')                    实心底 = alpha≥128 的最低行 +1
-bCjk   = solidBottom(POST_ALIGN_CJK_REF)     基准汉字「舰」
-delta  = target - (bWest - bCjk)
-delta ≠ 0 时，所有 id < 0x3000 的字形 yoffset += delta
-```
-
-即先将西文实心底对齐至中文实心底，再整体上移 `upshiftPx` 逻辑像素。使用实心底而非
-bbox 底，因后者会被抗锯齿灰边污染 2~3px。
-
-两个基准字符均无条件注入字表（ASCII `H` 与 `POST_ALIGN_CJK_REF`），确保玩家替换字表
-后对齐仍可执行。
-
-> **位移只能整体施加。** 仅作用于部分字形的位置修正（居中、钳位等）会导致同一行内
-> 字形高低不一。
-
-### 战斗 HUD 目标信息栏宽度
-
-战斗中按 R 锁定舰船后，目标框的距离和航速均使用 `victor10.fnt`。原版在
-`com/fs/starfarer/renderers/A/null.class` 中把两个数值栏宽度固定为 58 px，航速文本格式为
-`%4d su/s`。旧静态 victor10 的空格与数字有效前进宽度相同，1～4 位数字的整串宽度恒为
-57 px；动态 victor10 的空格为 4 px、等宽数字为 9 px，宽度会随有效数字增加：两位数
-57 px、三位数 62 px、四位数约 67 px。三位数起超过栏宽，文本组件便在 `su/s` 前换行。
-
-`CombatTargetInfoWidthPatch` 以 `RANGE`、`SPEED`、`----m`、`----m/s` 四个字符串共同锚定
-唯一的布局初始化方法，只将紧邻 `setSize(FF)` 的两处 `58.0f` 改为 `80.0f`。两列保持等宽，
-可容纳五位航速及更大的距离读数；中文标签与数值栏合计仍小于目标框约 128 px 的右侧布局
-预算。Patch 要求恰好应用并验证两处，游戏升级导致结构漂移时构建会直接失败，不会误改类中
-其他常量。这里不通过缩小字号或调整全局 `xadvance` 规避，否则会影响所有使用 victor10 的
-战斗 HUD 文本。
-
-## 实现约束
-
-### 图集尺寸必须是 2 的幂
-
-游戏纹理层对非 POT 图集会进行 padding，而 `.fnt` 的归一化 UV（`x / scaleW`）无法感知
-这一点，字形将整体采样至错位区域。装箱器按 2^n 枚举，天然满足；**任何在装箱之后改动
-页尺寸的机制都会破坏该性质**。
-
-图集分页同样不可用：BMFont 的 common 行只有一组 `scaleW/H`，且游戏的 `.fnt` 解析器
-硬编码只读取一行 page，多页产物在解析时会数组越界。故 `validatePack` 将分页视为生成
-失败。
-
-### 渲染期切换的两项要求
-
-替换渲染器的 font 字段需满足：
-
-1. **决策恒定**。缩放在启动时确定，映射建立后不变。否则长文本会被 GLListManager 烘焙
-   进 display list（`len×(copies+1)>20` 触发），若烘焙时使用 1× 字体的 UV，之后替换
-   font 并绑定新纹理，重放时即产生错位。
-2. **时机整齐**。按套懒加载会使各套在不同时刻切换，先渲染的文本同样会烘焙出不一致的
-   display list。故在首个可切换时刻一次性加载全部 exact 代理并建立全部映射；代理绘制
-   同时强制绕过 display list，避免缓存旧 UV/quad。
-
-预加载主动注册原字体（路径由已知规格名构造并保留原始大小写——BitmapFontManager 以
-路径字符串为 key，大小写不同会产生第二个 font 实例），不依赖游戏的加载进度。预加载
-全套映射通过一个不可变快照原子发布。发布前任一套失败会整体回退 1×；发布后的偶发
-late-resolve 故障则保留既有快照，因为 renderer 内已有的代理对象无法批量换回，清空身份
-反而会让 raw nominal 与 quad 门控进入半降级状态。late-resolve 不再遍历 manager 的普通
-`HashMap`，只按 11 个已知路径逐项查询，从而兼容 mod 并发注册字体。
-
-最终 glyph quad 的物理像素吸附在每个 renderer render scope 入口读取一次
-model-view、projection 和 viewport。buffer、矩阵数组与变换对象均由渲染线程
-`ThreadLocal` 复用，因而查询周边的 Java 热路径零分配。这 3 次 GL 查询是正确性
-所必需，不能跨 scope/按帧猜测缓存：游戏和 mod 可在**同一帧、相邻文本之间**
-切换矩阵、FBO 及 viewport，LWJGL2 又不维护可供 hook 读取的 Java 状态镜像。
-一旦复用过期状态，quad 会被吸附到错误 framebuffer 的像素网格；为了与
-GraphicsLib、BoxUtil 及其他自定义 GL 渲染保持兼容，保留每 scope 三次只读查询。
-
-### 读条阶段预热
-
-代理映射挂在渲染入口上，而 `AppDriver.begin` 要等 `ResourceLoaderState.init` 整个
-跑完才进入渲染循环——**读条期间一次 render 都没有**。因此渲染侧最早的可切换时刻就是主菜单
-第一帧，11 张图集的解码上传（实测数秒）必然砸在那一帧，表现为进入主菜单后卡顿并当场替换
-字体。
-
-故在判据翻转处（即 `ResourceLoaderState.init` 内）先行完成两件事：
-
-1. **就地复检缩放**。启动器阶段 `initialize()` 读到的可能是玩家改设置之前的旧值，此处同步
-   重新生成（读条里阻塞只是让读条条多走一两秒，渲染线程上则绝不可阻塞）。
-2. **`warmUpExactTextures()`**：逐套 `loadOrRegister` 全部 `*_exact.fnt`，把图集喂进显存，**不**
-   建立映射。
-
-映射仍留到首帧建立，届时两侧 `loadOrRegister` 全部命中 BitmapFontManager 缓存，开销可忽略。
-预热只注册 `*_exact.fnt`（游戏永不主动注册这些路径），不碰原字体，故不会与读条
-正在进行的注册相互覆盖。
-
-递归进入 `D.super()` 是安全的：预热由资源流拦截调用，位置在 `C.openStream()` 内，外层此刻
-尚未开始使用它那两个静态解析游标（`Object` / `o00000`）——它在拿到流之后才 `readLine()` 并
-重新设置它们。同步重生成会整体替换产物映射，故拦截返回前需重取一次文件路径，避免把已被缓存
-清理删除的旧路径交给游戏。
-
-### 切换时机与 GL context
-
-启动器与游戏本体运行于同一 JVM 进程，但使用**不同的 GL context**（启动器收尾时
-`GLLauncher` 调 `Display.destroy()`，游戏本体再 `Display.create()`）：前者加载的纹理 id
-在后者中全部失效，故 exact 代理必须等待游戏 context 建立。
-
-判据取**调用栈上是否存在 `CombatMain` 或 `ResourceLoaderState`**。游戏读条注册字体的栈是
-`ResourceLoaderState.init → AppDriver.begin → CombatMain.main`，启动器的是
-`GLLauncher.prepare → loadFont → GLLauncher$2.run`，两者互斥且这两个类名未被混淆。该事件
-位于启动读条阶段，早于 `Global.getSettings()` 可用的时点。判据失败方向是安全的：认不出来
-只会一直返回 false，exact 代理不加载、全程 1×。
-
-**不可退回「基础包 `.fnt` 被二次请求」一类的启发式。** 启动器与游戏同进程，玩家在启动器内
-改设置后启动器会在同一 JVM 内重启，`GLLauncher.prepare` 遂第二次加载同一批字体，而静态状态
-不会重置——旧判据因此在启动器阶段就误判翻转，代理纹理被装进启动器的 GL context；进入
-游戏后 context 已换，而 `BitmapFontManager`（`com/fs/graphics/A/D`）的 HashMap 是 static
-且无 clear，旧纹理 id 会导致屏幕上出现整片色块。
-
-同进程还意味着玩家在启动器内修改缩放后仅重建 UI，静态状态不会重置。`recheckScaleForGame()`
-在游戏阶段复检一次，不一致时由后台线程重新生成（native 生成耗时数秒，不可阻塞渲染
-线程）并整体替换产物映射；期间代理未就绪，渲染侧保持基础字体。
-
-### 渲染语义一致性
-
-native 的渲染结果以 Python 实现 `fnt_composer` 为金标准，同参数下逐字形一致。以下行为
-系为保持一致而刻意保留，**不得"修正"**：
-
-1. FreeType 版本固定 **2.13.2**（`build.py` 按 `VER-2-13-2` tag 拉取源码）。
-2. PIL 带 mask 的 paste 在透明底上等效于 `alpha = MULDIV255(A, A)`（Pillow 的四舍五入
-   除 255 位技巧，非截断除）。中间调被平方压暗是既定观感的组成部分，由
-   `squareAlphaInPlace` 复刻。
-3. Lanczos 复刻自 Pillow 12.2.0 `Resample.c` 的 8bpc 单通道路径：22bit 定点、半像素
-   中心、窗口 `(int)(x+0.5)` 舍入、边界窗口重归一。
-4. 所有对应 Python `round()` 的取整使用 banker's rounding（half-to-even，`nearbyint`）。
-5. 自有 C++ 目标使用 `-O2` 与经 CMake `CheckIPOSupported` 验证的 IPO/LTO（A/B 基准中
-   `-O3` 对该工作负载反而退化）；FreeType/fpng 保持其 Release 默认优化。构建维持通用
-   x86-64 目标，不使用 `-march=native`。自有渲染核心继续启用 `-ffp-contract=off`，禁止
-   会改变金标准结果的 FMA 收缩。
-6. bbox 裁剪只将 y0 记入 yoffset，x 方向不补偿 xoffset。
-
-GPOS kerning 走离线固化表：FreeType 的 `FT_Get_Kerning` 只读 kern 表，而 Orbitron 的
-字偶距位于 GPOS。`tools/export_kerning.py` 按 wght 实例化导出 font units，native 仅做
-`round(units×size/upm)` 像素化。固化表是忽略的构建产物，不入 Git。
-
-字体与字重只有一份权威配置：`composer.cpp` 的 `builtinSpecs()`。重编时
-`dynfont_cli --list-assets` 将实际字体及 kerning 依赖导出为入库的 `assets.json`；`build.py`
-按清单生成新增字重、删除不再引用的表，并只打包清单列出的文件。因此修改字重后运行
-`python build.py dynfont jar` 即可，不再手工维护 Python 字重列表。
-
-## 生成与缓存
-
-### 数据包
-
-TTF 与自动生成的 kerning 固化表位于 `native/dyn_font/fonts/`，由 `build.py` 按
-`native/dyn_font/assets.json` 打包为单文件分发。两者均为本机构建资产，不入 Git；
-`assets.json` 是随 native 预编译产物提交的依赖快照，支持无需 C++ 工具链的日常 `jar` 构建。
-格式（小端，见 `pack_reader.h`）：
-
-```
-"SSDF" | uint32 version | uint32 count | count × ( uint16 nameLen | name | uint64 size | payload )
-```
-
-按名排序、无时间戳，输入不变则输出字节稳定。
-
-### 运行时布局
-
-```
+```text
 starsector-core/
-├── native/windows/ss_dyn_font.dll   java.library.path，System.loadLibrary 加载
+├── native/windows/ss_dyn_font.dll
 └── graphics/fonts/dyn_font/
-    ├── typefaces.dat                 数据包（TTF + kerning 表）
-    ├── chars.txt                     字符集，玩家可编辑，重启生效
-    └── cache/s{scale}-{指纹}/         生成产物
+    ├── typefaces.dat
+    ├── chars.txt
+    └── cache/s{scale}-{fingerprint}/
+        ├── 11 ×（基础 FNT/PNG + exact FNT/PNG + DFNT）
+        └── .complete
 ```
 
-### 缓存策略
+指纹为 `SHA-256(spec version + typefaces.dat + chars.txt + DLL)` 的前 16 个十六进制字符；
+scale 单独写在目录名前缀中。命中 `.complete` 时仍会逐项检查 55 个产物，缺失则重建。
+输入内容变化会生成新指纹并清掉旧指纹目录；同一指纹最多保留最近三个缩放档。
 
-指纹 = `SHA-256(SPEC_VERSION + data 包 + chars.txt + dll 内容)` 取前 16 位，**不含
-scale**——scale 仅体现在目录名前缀。同一份安装的所有缩放档因此共享一个指纹，清理时
-可据此识别归属。清理规则：
+缓存根及其父目录的真实路径必须留在游戏工作目录内；缓存根必须是普通目录，符号链接、
+Windows junction/reparse point 和档内链接都不会被跟随。清理失败只记录日志，不中断字体
+生成。screenScale 只接受有限的 1.0～3.0，Java 与 native 双重校验。
 
-1. 指纹不匹配的档一律删除（更新汉化包后一次性回收全部旧档）；
-2. 同指纹的档按目录 mtime 保留最近 3 个，其余淘汰。
+native 还会在写盘前验证单页、产物非空、基线和图集占用；JNI 入口及并行任务捕获所有 C++
+异常并返回错误码，避免异常穿过 JVM 帧导致进程终止。损坏的数据包长度、非法 UTF-8 字表、
+UTF-16 BOM、截断或非法 `.dfnt` 都会被拒绝并走静态字体回退。
 
-缓存根自身必须是普通目录；符号链接和 Windows junction/reparse point 会被拒绝。
-缓存根与父目录的真实路径还必须位于游戏工作目录内，防止上级目录是 junction
-时清理越界。同样不会跟随档内链接。单档包含 1× 与 exact 两套图集，档数上限仍是
-必要的。清理属磁盘维护，任何文件操作失败仅记录日志，不中断生成。缓存命中路径同样执行
-清理。
-
-`chars.txt` 的可编辑性要求指纹取其**内容哈希**而非 mtime。dll 内容亦在指纹内，故重新
-编译 native 会使全部缓存失效。
-
-### 失败处理
-
-设计契约为**任何异常均静默降级为原版位图字体**——包内仍分发完整的静态中文位图字体，
-最坏情况下中文显示不受影响。
-
-- 链 A 位于资源加载热路径，异常仅记录一次日志，此后按未命中处理；
-- 数据包/dll 缺失、ABI 版本不匹配、native 生成失败 → 禁用动态字体；
-- screenScale 仅接受有限的 1.0～3.0（游戏启动器支持范围），Java 与 native 双重校验；
-- 链 B 任何异常 → 永久降级为不切换；
-- 后台重新生成失败 → 保留原有产物。
-
-该契约要求 native 侧不得在已知产物有问题时返回 0，故设三道防线：
-
-| 防线 | 位置 | 拦截对象 |
-|---|---|---|
-| JNI 异常屏障 | `jni_bridge.cpp` 两个入口，以及 `generateAll` 的 async 任务体 | C++ 异常。异常若逃出 native 方法不会转为 Java 异常，而是穿过 JVM 帧到达 `UnhandledExceptionFilter`，导致进程终止，Java 侧的 `catch(Throwable)` 无法拦截。收敛为 rc=2/3 后走既有降级链 |
-| 产物自检 | `generate.cpp` `validatePack`，写盘前 | 页数 >1、产物为空、基线未对齐；并在图集纵向占用超过上限 80% 时预警 |
-| 字表编码自检 | `chars_file.cpp` | UTF-16 BOM；非法 UTF-8 序列占比过高。判据不能仅检查是否存在非 ASCII 码点——GBK 的双字节汉字有相当比例会误命中 UTF-8 首字节前缀并解出无效码点 |
-
-`pack_reader` 另对条目声明长度做上界校验：`size` 为文件中直读的 uint64，损坏时会导致
-`vector` 构造抛出 `bad_alloc`。
-
-## 构建
+## 构建与验证
 
 ```powershell
 cd jar_pre_processing
-python build.py dynfont      # 重编 native，并从规格刷新 assets.json 与 kerning
-python build.py jar          # 同步 kerning、完整 Java 注入管线与产物分发
-python build.py dynfont jar  # 修改 native 字体规格后的标准完整流程
-```
 
-构建编排回归测试：
+# 只改 Java/ASM 时
+python -X utf8 build.py jar
 
-```powershell
-python -X utf8 -m unittest discover -s tests -v
-```
+# 修改 native、字体规格、字号、字重或字距后
+python -X utf8 build.py dynfont jar
 
-修改 jar 后须重新写回译文，否则分发的是原文状态：
-
-```powershell
+# Jar 预处理后重新写回译文
 cd ..
 python -X utf8 para_tranz/para_tranz_script.py 2
 ```
 
-离线验证（无需启动游戏）：
+`build.py dynfont` 会从 native CLI 刷新 `assets.json`，生成清单需要的 kerning、删除不再引用的
+kerning，使用 CMake/Ninja/MinGW 构建，并在复制 DLL 前强制运行 CTest。FreeType 固定为
+2.13.2 的 commit `920c5502cc3ddda88f6c7d85ee834ac611bb11cc`，checkout 版本不符或有
+未提交内容时构建直接停止；自有 C++ 使用 `-O2`、可用时启用 IPO/LTO，并禁用 FMA 收缩以
+保持金标准输出。
 
-```bash
-./native/dyn_font/build/dynfont_cli.exe \
-  --typefaces ../localization/graphics/fonts/dyn_font/typefaces.dat \
-  --chars ../localization/graphics/fonts/dyn_font/chars.txt \
-  --out <目录> --scale 2.0 [--only <套名>]
+单独运行测试：
+
+```powershell
+cd jar_pre_processing
+$env:MAVEN_OPTS='-Dfile.encoding=UTF-8'
+.\mvnw.cmd clean test
+python -X utf8 -m unittest discover -s tests -v
+ctest --test-dir native/dyn_font/build -C Release --output-on-failure --no-tests=error
 ```
 
-依赖 CMake + Ninja + MinGW-w64（仅重新编译 native 时）。
+真实 Jar 构建后检查 `target/preprocess-work/preprocess-report.json`，所有 Patch 的
+`expected/applied/verified` 必须相等。字体参数也由 native `font_spec_test` 覆盖，PNG、FNT、
+DFNT、基线、字距、缓存安全和像素变换分别有自动测试。
 
-## 日志
+离线生成单套字体：
 
-- **游戏日志**（`starsector.log`，GBK 编码）：前缀 `[SS-DYNFONT]`。关键记录：
+```powershell
+native\dyn_font\build\dynfont_cli.exe `
+  --typefaces ..\localization\graphics\fonts\dyn_font\typefaces.dat `
+  --chars ..\localization\graphics\fonts\dyn_font\chars.txt `
+  --out <目录> --scale 1.95 --only victor10
+```
 
-  ```
-  动态字体已启用: scale=1.5, 55 个文件, 初始化耗时 xxx ms
-  检测到游戏 GL context 就绪（游戏本体正在加载字体）
-  读条阶段预热 exact 代理: 11/11 套纹理及度量已校验，耗时 xxxx ms
-  精确代理映射已原子启用: 11 套，metricScale=64, atlasScale=1.5
-  ```
+## 日志与排障
 
-  预热与映射的套数都应为 11；映射发布必须一次完成，不能出现半套代理。预热失败或
-  映射不全会输出错误并整体回退基础字体，不存在旧版 `_hd` 套的首帧懒切换路径。
+游戏日志 `starsector-core/starsector.log` 使用 GBK 编码，动态字体前缀为 `[SS-DYNFONT]`。
+正常启动应包含：
 
-- **原生日志**（`<游戏 logs 目录>/ss_dyn_font_native.log`，与 `starsector.log` 同级；
-  路径由 Java 侧读取 `com.fs.starfarer.settings.paths.logs` 后经 JNI 传入）：逐套生成
-  耗时及图集尺寸。每次生成时重写。其中的 `[warning]` 行会被转抄
-  进游戏日志。
+```text
+动态字体已启用: scale=1.5, 55 个文件, 初始化耗时 ... ms
+检测到游戏 GL context 就绪（游戏本体正在加载字体）
+读条阶段预热 exact 代理: 11/11 套纹理及度量已校验，耗时 ... ms
+精确代理映射已原子启用: 11 套，metricScale=64, atlasScale=1.5
+```
 
-## 参考耗时
+native 生成详情写入与 `starsector.log` 同级的 `ss_dyn_font_native.log`，每次冷生成重写；
+其中 `[warning]` 会转抄进游戏日志。缓存命中通常只需几十毫秒；冷生成耗时与 CPU、字表和
+scale 相关，常见桌面多核机器约为数秒。
 
-全字表 6754 字，11 套并行（32 核实测）：
+## 兼容边界
 
-| scale | 冷生成 | 备注 |
-|---|---|---|
-| 1.25 | 1.3 s | |
-| 1.5 | 1.5 s | |
-| 2.0 | 2.2 s | |
-| 3.0 | 4.1 s | 旧 `_hd` 方案数据，仅供历史参考；移除重复生成后需重新采样 |
+- 仅支持 64 位 Windows；其它系统自动使用静态字体。
+- 启动器仍显示 1× 字体，在高缩放下与原版一样可能偏模糊。
+- 只接管上述 11 套字体实例；mod 自有字体不变。mod 若主动使用这些路径，会获得同一代理语义。
+- 原版 renderer 仍以 Java `char` 查 glyph；U+FFFF 以上字符继续显示 `?` fallback。
+- 单页图集是硬限制。扩充字表导致单页无法容纳时会拒绝产物并回退，而不是生成不可加载的分页。
+- 缩放在启动时确定；运行中修改需要重启。启动器内改缩放会在进入游戏读条时复检并重新生成。
+- 像素吸附只适用于轴对齐 UI 文本；带额外矩阵、旋转或透视的文字保留原版亚像素路径。
 
-缓存命中约 60 ms。
+## 历史方案
 
-## 已知限制
-
-- **仅 Windows**。dll 为 win64，Linux/macOS 静默回退原版位图字体。
-- **启动器在高缩放下模糊**，与原版一致。启动器的 GL context 与游戏不同，且直接读取
-  字体度量进行排版，无法使用 exact 代理。
-- **未接管的 9 套仍为原版位图**：`arial10` / `arial12bold` / `arial16bold` /
-  `small_fonts8` / `insignia16` / `insignia16a` / `orbitron10` / `orbitron12` /
-  `orbitron20bold` / `victor21`。它们在游戏读条时同样被加载，但实机未见明显使用位置，
-  故未纳入。若后续发现某处确实在用且在高缩放下发虚，按 `makeSpecs()` 的现有模式补一
-  套规格即可，机制上无新增内容。
-- **后台重新生成期间使用基础包渲染**。此窗口内绘制的长文本会将 1× 的 UV 烘焙进
-  display list，若之后被重放则与 exact 纹理不匹配。根治方式是将缩放复检提前至启动器阶段
-  的 `openStream` 首次命中处，使游戏阶段不再触发重新生成。
-- **单页图集上限**。支持的最高 scale 3.0 已接近单页纵向预算；分页产物游戏无法加载，会被
-  `validatePack` 拦截并降级。提高
-  `packer.cpp` 的宽度枚举上限（4096→8192）可缓解，但需先验证目标 GPU 的
-  `GL_MAX_TEXTURE_SIZE`——LWJGL2 时代的设备仅保证 4096。
-
----
-
-## 附录：游戏字体链的反编译结论
-
-0.98a-RC8 Windows 实测。整条字体链位于 `fs.common_obf.jar`（90 类的小 jar），不在
-汉化管线原先处理的 `starfarer_obf.jar` / `starfarer.api.jar` 中。
-
-| 还原名 | 混淆名 | 关键成员 |
-|---|---|---|
-| ResourceLoader | `com.fs.util.C` | `openStream(String)→InputStream`（实例方法、synchronized；按签名匹配，类中唯一） |
-| BitmapFontManager | `com.fs.graphics.A.D` | getFont = `static Ò00000(String)→F`（纯 map.get）；register = `static super(String,String)`；注册表 = `static HashMap Ò00000` |
-| BitmapFont | `com.fs.graphics.A.F` | nominal = `Õ00000()I`；纹理 getter = `øO0000()Lcom/fs/graphics/Object;` |
-| BitmapGlyph | `com.fs.graphics.A.oOOO` | 10 个 int 度量 + 4 个 float UV |
-| BitmapFontRenderer | `com.fs.graphics.A.oo` + 254×`O`（274 字符） | render 入口 `Õ00000()V`；setFontSize `Ô00000(F)V`；font 字段 `float.new`；requestedFontSize 字段 `float` |
-
-渲染模型：
-
-- 所有绘制按 `scale = requestedFontSize / font.nominalSize(info size)` 计算。
-- **screenScale 不进入字体链**：requested 恒为 1× 逻辑字号，放大在几何变换层完成——
-  逻辑坐标系不变，物理像素 ×s。
-- **启动器与部分 UI 组件不经 renderer 排版**：`GLLauncher` 及其组件直接读取
-  `A.D.getFont(path)` 的度量计算布局，任何向布局层暴露 ×s 度量的方案都会破坏它们。
-- **display list 烘焙**：长文本加阴影（`len×(copies+1)>20`）经 GLListManager 缓存，
-  重放时不重走取字形路径。
-- **纹理过滤恒为 GL_LINEAR**：两个 jar 字节码全扫描 `GL_NEAREST(9728)` 零命中，
-  TextureLoader 中 6 处均为 `GL_LINEAR(9729)`。`.fnt` 的 `smooth` 字段不控制纹理过滤。
-
-其它约束：
-
-- `.fnt` 的 `face` 值不得含空格——游戏解析器按空格切分 token，含空格会使后续字段错位。
-- 游戏以 `-noverify` 启动，ASM 分支注入无需补充 StackMapTable 帧。
-- 游戏自带 Zulu OpenJDK 17.0.10 LTS，Java 运行时类可使用 Java 17 语言特性。
+- 最早的离线 1× 静态图集在高缩放下会被直接放大，现仅作为回退。
+- 旧 `_hd.fnt/png` 以整数 nominal 计算倍率 `k`，在 195% 等非整数缩放下仍有二次缩放，已由
+  exact 代理和 64 倍虚拟度量取代；旧产物不再生成。
+- 将纹理过滤全局改为 `GL_NEAREST` 虽在部分字号清晰，但小字号字形破坏明显，已经撤回。
+- 最初每个 glyph 独立吸附屏幕像素会让移动文本的字间距交替跳动，现改为整段共同原点。
+- 完整接管字体排版/绘制，或引入 SDF/MSDF/ClearType，会扩大 shader、混合、mod 和颜色语义的
+  兼容面；当前精确代理复用原 renderer，未采用这些路线。
 
 ## 致谢
 
-本模块的技术路线借鉴了 [KasumiNova](https://github.com/KasumiNova)（Hikari_Nova）的
-开源项目 [SSOptimizer](https://github.com/KasumiNova/SSOptimizer)（MIT 许可）中的运行时
-字体缩放实现思路，包括：按屏幕缩放生成高分辨率 BMFont、在渲染入口替换字体实例而保持
-`requestedFontSize` 不变以复用引擎自身的 scale 补偿、以及资源流拦截供流的整体结构。
-本模块为独立实现（静态字节码注入 + native 生成器 + 随汉化包分发，非 Java Agent 路线），
-未复制其代码。
+技术路线参考了 [KasumiNova](https://github.com/KasumiNova)（Hikari_Nova）的
+[SSOptimizer](https://github.com/KasumiNova/SSOptimizer)（MIT）中按缩放生成 BMFont、在
+renderer 入口替换字体实例和资源流拦截的思路。本模块为独立实现：使用静态 ASM 注入、native
+生成器和随汉化包分发的资产，不使用 Java Agent，也未复制其代码。
