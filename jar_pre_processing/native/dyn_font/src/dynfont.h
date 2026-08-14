@@ -78,6 +78,7 @@ struct SourceSpec {
     double bold = 0;             // 基准像素，生成时 ×s 后在超采样分辨率做方形膨胀
     bool latinOnly = false;      // char_range [32, 0x2FFF]（西文源）
     bool kerning = false;        // 从固化的 GPOS units 表取 kerning（orbitron 西文）
+    bool uppercaseLatin = false; // a-z 保留码位，但复用 A-Z 的字形与度量
     // 数字等宽：把 0-9 的 advance 统一为其中最大值（字距已计入），窄字形居中。
     // Orbitron 的数字是比例宽度（'1' 仅 '0' 的一半），逐帧变化的读数会左右跳。
     // 与 OutputSpec::digitAdv 二选一：后者用于有原版等宽值要精确匹配的套。

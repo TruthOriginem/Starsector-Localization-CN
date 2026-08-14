@@ -53,6 +53,13 @@ BaselineDeltas calculateBaselineDeltas(int westBottom, int cjkBottom,
                                        double preciseCjkBottom,
                                        double upshift);
 
+// Victor 风格：保留小写码位，但令 a-z 使用对应 A-Z 的字形与完整度量。
+bool remapLowercaseLatinGlyphs(std::map<uint32_t, Glyph>& glyphs);
+
+// 大写字偶向大小写输入码位展开；含小写的源字偶不是规范源，返回空。
+std::vector<std::pair<uint32_t, uint32_t>> uppercaseLatinKerningAliases(
+    uint32_t first, uint32_t second);
+
 // kerning 固化表命名规则的唯一实现；运行时读取与构建资产清单共用。
 std::string kerningTableName(const SourceSpec& source);
 
