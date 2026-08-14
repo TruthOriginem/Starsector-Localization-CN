@@ -79,6 +79,57 @@ final class PixelTransformTest {
                 1.95f * (y + 3.4f) - 0.4f, 0.0001f);
     }
 
+    @Test
+    void sharedPhysicalOriginKeepsGlyphSpacingRigidWhileTextMoves() {
+        PixelTransform firstFrame = new PixelTransform(1f, 100.4f, 1f, 40.2f);
+        PixelTransform secondFrame = new PixelTransform(1f, 100.6f, 1f, 40.2f);
+
+        float firstAnchor = firstFrame.translateX();
+        float secondAnchor = secondFrame.translateX();
+        float firstLeft = firstFrame.snapXRelativeTo(0f, firstAnchor);
+        float firstNext = firstFrame.snapXRelativeTo(11.3f, firstAnchor);
+        float secondLeft = secondFrame.snapXRelativeTo(0f, secondAnchor);
+        float secondNext = secondFrame.snapXRelativeTo(11.3f, secondAnchor);
+        float firstLeftWindow = firstFrame.scaleX() * firstLeft + firstFrame.translateX();
+        float firstNextWindow = firstFrame.scaleX() * firstNext + firstFrame.translateX();
+        float secondLeftWindow = secondFrame.scaleX() * secondLeft + secondFrame.translateX();
+        float secondNextWindow = secondFrame.scaleX() * secondNext + secondFrame.translateX();
+
+        assertEquals(11f, firstNextWindow - firstLeftWindow, 0.0001f);
+        assertEquals(firstNextWindow - firstLeftWindow,
+                secondNextWindow - secondLeftWindow, 0.0001f);
+        assertEquals(1f, secondLeftWindow - firstLeftWindow, 0.0001f);
+        assertEquals(1f, secondNextWindow - firstNextWindow, 0.0001f);
+    }
+
+    @Test
+    void sharedOriginAlsoKeepsLaterDrawPassOffsetRigid() {
+        PixelTransform shadowFirst = new PixelTransform(1f, 100.4f, 1f, 40.2f);
+        PixelTransform mainFirst = new PixelTransform(1f, 101.65f, 1f, 41.45f);
+        PixelTransform shadowSecond = new PixelTransform(1f, 100.6f, 1f, 40.4f);
+        PixelTransform mainSecond = new PixelTransform(1f, 101.85f, 1f, 41.65f);
+
+        float first = mainFirst.snapXRelativeTo(0.2f, shadowFirst.translateX());
+        float second = mainSecond.snapXRelativeTo(0.2f, shadowSecond.translateX());
+        float firstWindow = mainFirst.scaleX() * first + mainFirst.translateX();
+        float secondWindow = mainSecond.scaleX() * second + mainSecond.translateX();
+
+        assertEquals(1f, secondWindow - firstWindow, 0.0001f);
+    }
+
+    @Test
+    void relativeSnappingPreservesAtLeastOnePhysicalPixel() {
+        PixelTransform transform = new PixelTransform(1f, 100.4f, 1f, 40.2f);
+        float origin = transform.translateX();
+
+        float start = transform.snapXRelativeTo(4.20f, origin);
+        float end = transform.snapXEndRelativeTo(4.20f, start, 4.45f, origin);
+        float startWindow = transform.scaleX() * start + transform.translateX();
+        float endWindow = transform.scaleX() * end + transform.translateX();
+
+        assertEquals(1f, endWindow - startWindow, 0.0001f);
+    }
+
     private static float[] identity() {
         return new float[]{
                 1, 0, 0, 0,

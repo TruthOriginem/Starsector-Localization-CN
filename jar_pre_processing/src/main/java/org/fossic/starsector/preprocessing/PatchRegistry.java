@@ -11,6 +11,7 @@ import org.fossic.starsector.preprocessing.patches.IntelPutFirstTagIdPatch;
 import org.fossic.starsector.preprocessing.patches.PlanetListColumnWidthPatch;
 import org.fossic.starsector.preprocessing.patches.RendererHighlightColorNullPatch;
 import org.fossic.starsector.preprocessing.patches.RendererDynFontPatch;
+import org.fossic.starsector.preprocessing.patches.RendererHighlightRegexPatch;
 import org.fossic.starsector.preprocessing.patches.ResourceStreamDynFontPatch;
 import org.fossic.starsector.preprocessing.patches.SaveDateLocalePatch;
 import org.fossic.starsector.preprocessing.patches.ShipInfoSeparatorPatch;
@@ -60,6 +61,7 @@ public final class PatchRegistry {
                 TextFieldImeHookPatch::new,
                 ResourceStreamDynFontPatch::new,
                 BitmapFontLogicalNominalPatch::new,
+                RendererHighlightRegexPatch::new,
                 RendererDynFontPatch::new
         );
     }
