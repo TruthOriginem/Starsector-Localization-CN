@@ -316,3 +316,26 @@ Patch 只替换紧邻 `CountingMap.add(Object, int)` 的一处 getter 调用，�
 + Display.getDesktopDisplayMode().getWidth()
 + Display.getDesktopDisplayMode().getHeight()
 ```
+
+---
+
+### 15. 航行状态栏地形名称出现尾随逗号
+
+**对应 ASM Patch**：`src/main/java/org/fossic/starsector/preprocessing/patches/TerrainStatusBarSeparatorPatch.java`
+
+相关文件：`starfarer_obf.jar: com/fs/starfarer/ui/newui/public.class`
+
+**原因**：游戏按内部地形表的原始条目位置判断是否在名称后绘制分隔符，之后才跳过
+名称为 `null` 的地形。mod 地形还可能返回空白名称，或在运行期间动态隐藏名称；此时
+最后一个可见名称后仍可能留下一个 ASCII 逗号。
+
+**修改**：每个地形插件的名称只读取一次，并跳过 `null` 或空白名称。分隔符不再根据
+原始表中的“非最后一项”后置，而是仅在已经绘制过一个可见名称时，插入到当前可见
+名称之前。因此单个地形不会显示尾随逗号，多个可见地形仍保留原有分隔效果。
+
+```diff
+- 绘制当前名称
+- 如果当前条目不是原始表最后一项：绘制逗号
++ 如果此前已有可见名称：绘制逗号
++ 绘制当前非空白名称
+```
