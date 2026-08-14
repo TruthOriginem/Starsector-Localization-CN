@@ -102,6 +102,11 @@ if(BUILD_TESTING)
     target_link_libraries(png_encoding_test PRIVATE dynfont_core)
     dynfont_apply_project_optimization(png_encoding_test)
     add_test(NAME png_encoding_test COMMAND png_encoding_test)
+
+    add_executable(font_spec_test tests/font_spec_test.cpp)
+    target_link_libraries(font_spec_test PRIVATE dynfont_core)
+    dynfont_apply_project_optimization(font_spec_test)
+    add_test(NAME font_spec_test COMMAND font_spec_test)
 endif()
 
 # ── 命令行驱动（-municode：wmain 接收宽字符参数，正确处理中文路径）───────────
