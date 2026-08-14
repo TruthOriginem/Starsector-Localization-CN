@@ -64,25 +64,25 @@ std::vector<OutputSpec> makeSpecs() {
     struct {
         const char* n; double sz, wght, x; const int* dig; int info, lh, base;
         double csz, cy, cbold;
-        int smooth, aa, up;
+        int smooth, aa, up; bool uppercaseLatin;
     } orb[] = {
-        {"orbitron12condensed", 12.0, 800, 1, dig12, -12, 16, 16, 16, 0, 0.15, 1, 1, 2},
-        {"orbitron20aa", 15.5, 800, 2, dig20, 20, 20, 19, 18, 1, 0.15, 0, 4, 2},
-        {"orbitron20aabold", 16.0, 800, 1, dig20, -20, 20, 19, 18, 1, 0.15, 0, 4, 2},
-        {"orbitron24aa", 18.0, 800, 1, dig24, -24, 24, 21, 20, 1, 0.15, 0, 4, 0},
-        {"orbitron24aabold", 20.0, 800, 1, dig24, 24, 24, 21, 20, 1, 0.15, 0, 4, 0},
+        {"orbitron12condensed", 12.0, 800, 0.5, dig12, -12, 16, 16, 16, 0, 0.15, 1, 1, 2, false},
+        {"orbitron20aa", 15.5, 800, 0.5, dig20, 20, 20, 19, 18, 1, 0.15, 0, 4, 2, false},
+        {"orbitron20aabold", 16.0, 800, 0.5, dig20, -20, 20, 19, 18, 1, 0.15, 0, 4, 2, false},
+        {"orbitron24aa", 18.0, 800, 0.5, dig24, -24, 24, 21, 20, 1, 0.15, 0, 4, 0, false},
+        {"orbitron24aabold", 20.0, 800, 0.5, dig24, 24, 24, 21, 20, 1, 0.15, 0, 4, 0, false},
         // victor 系：原为 Zpix 点阵（见文件末注），因高缩放下 strike 整数放大仍是
         // 放大的点阵、清晰度不足，改为与 orbitron 同源同策略的矢量渲染。
         // infoSize/lineHeight/base 一律沿用原值——布局度量冻结，UI 零位移；
         // 中文字号取 Zpix 版原字号（10/12/16），故汉字 advance 与视觉大小不变，
         // 变的只是字形从点阵变矢量。西文取 csz×0.85（orbitron 系 sz/csz 在
         // 0.75~1.0 之间），上飘取行高的 10%（与 orbitron 系的 2/20 同比例）。
-        {"victor10", 10.0, 900, 1, nullptr, -10, 10, 9, 11, 0, 0.17, 0, 1, 1},
-        {"victor14", 10.0, 800, 1, nullptr, -14, 13, 11, 12, 0, 0.15, 0, 1, 1},
+        {"victor10", 10.0, 900, 1, nullptr, -10, 10, 9, 11, 0, 0.17, 0, 1, 1, true},
+        {"victor14", 10.0, 800, 1, nullptr, -14, 13, 11, 12, 0, 0.15, 0, 1, 1, true},
         // victor16 的中文字号取 17 而非 16：锐字 advance/em≈0.963，round(16×0.963)=15
         // 会让汉字排版窄 1px（victor10/14 恰好进位故取原字号即可）。17 → round=16，
         // 与 Zpix 版逐字同宽。
-        {"victor16", 13.5, 800, 1, nullptr, -20, 18, 16, 17, 0, 0.15, 0, 1, 2},
+        {"victor16", 13.5, 800, 1, nullptr, -20, 18, 16, 17, 0, 0.15, 0, 1, 2, true},
     };
     for (const auto& r : orb) {
         OutputSpec o;
@@ -102,6 +102,7 @@ std::vector<OutputSpec> makeSpecs() {
         o.west = light(ORBITRON_VF, r.sz, 0, r.x, 0, true);
         o.west.wght = r.wght;
         o.west.kerning = true;
+        o.west.uppercaseLatin = r.uppercaseLatin;
         // 数字等宽的两条路：orbitron 系有原版加宽等宽值要逐字符精确匹配 → digitAdv；
         // victor 系无原版设计要对齐 → 自动取最大值统一，随 sz/x 自动跟随。
         o.west.tabularDigits = (r.dig == nullptr);
@@ -206,6 +207,40 @@ BaselineDeltas calculateBaselineDeltas(int westBottom, int cjkBottom,
     return result;
 }
 
+bool remapLowercaseLatinGlyphs(std::map<uint32_t, Glyph>& glyphs) {
+    for (uint32_t lower = 'a'; lower <= 'z'; lower++) {
+        auto lowerIt = glyphs.find(lower);
+        if (lowerIt == glyphs.end()) continue;
+        auto upperIt = glyphs.find(lower - 'a' + 'A');
+        if (upperIt == glyphs.end()) return false;
+        Glyph mapped = upperIt->second;
+        mapped.id = lower;
+        lowerIt->second = std::move(mapped);
+    }
+    return true;
+}
+
+std::vector<std::pair<uint32_t, uint32_t>> uppercaseLatinKerningAliases(
+        uint32_t first, uint32_t second) {
+    auto isLower = [](uint32_t ch) { return ch >= 'a' && ch <= 'z'; };
+    auto isUpper = [](uint32_t ch) { return ch >= 'A' && ch <= 'Z'; };
+    if (isLower(first) || isLower(second)) return {};
+
+    std::vector<uint32_t> firstAliases = {first};
+    std::vector<uint32_t> secondAliases = {second};
+    if (isUpper(first)) firstAliases.push_back(first - 'A' + 'a');
+    if (isUpper(second)) secondAliases.push_back(second - 'A' + 'a');
+
+    std::vector<std::pair<uint32_t, uint32_t>> result;
+    result.reserve(firstAliases.size() * secondAliases.size());
+    for (uint32_t firstAlias : firstAliases) {
+        for (uint32_t secondAlias : secondAliases) {
+            result.emplace_back(firstAlias, secondAlias);
+        }
+    }
+    return result;
+}
+
 bool composeOutput(const OutputSpec& spec, double s, const TypefacePack& typefaces,
                    const std::vector<uint32_t>& charList, int atlasWidth, ComposedFont& out) {
     // ── 西文源（latin 区 [32, 0x2FFF]）──────────────────────────────────────
@@ -222,6 +257,10 @@ bool composeOutput(const OutputSpec& spec, double s, const TypefacePack& typefac
             || !renderGlyphs(westFont->second, wp, westChars, westGlyphs)) {
         logLine("[error] %s: 西文源渲染失败（数据包缺条目或字体损坏: %s）",
                 spec.name, spec.west.file);
+        return false;
+    }
+    if (spec.west.uppercaseLatin && !remapLowercaseLatinGlyphs(westGlyphs)) {
+        logLine("[error] %s: Victor 大写映射缺少对应 A-Z 字形", spec.name);
         return false;
     }
     // 西文无 yAdjust：垂直位置由 post_align + upshiftPx 全权（yAdjust 会被
@@ -329,17 +368,24 @@ bool composeOutput(const OutputSpec& spec, double s, const TypefacePack& typefac
                             || (second >= '0' && second <= '9'))) {
                     continue;
                 }
-                if (out.glyphs.count(first) == 0 || out.glyphs.count(second) == 0) {
-                    continue;
-                }
-                int amount = static_cast<int>(pyRound(static_cast<double>(u) * wp.sizePx
-                                                      / units.upm));
-                if (amount != 0) {
-                    out.kernings.emplace_back(first, second, amount);
-                }
                 double preciseAmount = static_cast<double>(u) * wp.sizePx / units.upm;
-                if (preciseAmount != 0.0) {
-                    out.preciseKernings.emplace_back(first, second, preciseAmount);
+                int amount = static_cast<int>(pyRound(preciseAmount));
+                std::vector<std::pair<uint32_t, uint32_t>> aliases =
+                    spec.west.uppercaseLatin
+                        ? uppercaseLatinKerningAliases(first, second)
+                        : std::vector<std::pair<uint32_t, uint32_t>>{{first, second}};
+                for (const auto& [aliasFirst, aliasSecond] : aliases) {
+                    if (out.glyphs.count(aliasFirst) == 0
+                            || out.glyphs.count(aliasSecond) == 0) {
+                        continue;
+                    }
+                    if (amount != 0) {
+                        out.kernings.emplace_back(aliasFirst, aliasSecond, amount);
+                    }
+                    if (preciseAmount != 0.0) {
+                        out.preciseKernings.emplace_back(
+                            aliasFirst, aliasSecond, preciseAmount);
+                    }
                 }
             }
         } else {
