@@ -64,6 +64,13 @@ public final class DynFontQuadHooks {
         State state = STATE.get();
         if (state.active) {
             state.transform.setTranslatedFrom(state.baseTransform, x, y);
+            if (!state.originSet) {
+                // 第一个阴影/正文 pass 的局部原点是整个 render 的共同物理原点。
+                // 后续 pass 和全部 glyph 都相对它量化，保证动画平移时刚性移动。
+                state.originWindowX = state.transform.translateX();
+                state.originWindowY = state.transform.translateY();
+                state.originSet = true;
+            }
             state.vertexIndex = 0;
         }
     }
@@ -81,18 +88,20 @@ public final class DynFontQuadHooks {
             if (vertex == 0) {
                 state.rawLeft = x;
                 state.rawTop = y;
-                state.left = state.transform.snapX(x);
-                state.top = state.transform.snapY(y);
+                state.left = state.transform.snapXRelativeTo(
+                        x, state.originWindowX);
+                state.top = state.transform.snapYRelativeTo(
+                        y, state.originWindowY);
                 x = state.left;
                 y = state.top;
             } else if (vertex == 1) {
-                state.bottom = state.transform.snapYEnd(
-                        state.rawTop, state.top, y);
+                state.bottom = state.transform.snapYEndRelativeTo(
+                        state.rawTop, state.top, y, state.originWindowY);
                 x = state.left;
                 y = state.bottom;
             } else if (vertex == 2) {
-                state.right = state.transform.snapXEnd(
-                        state.rawLeft, state.left, x);
+                state.right = state.transform.snapXEndRelativeTo(
+                        state.rawLeft, state.left, x, state.originWindowX);
                 x = state.right;
                 y = state.bottom;
             } else {
@@ -164,10 +173,14 @@ public final class DynFontQuadHooks {
         float top;
         float right;
         float bottom;
+        boolean originSet;
+        float originWindowX;
+        float originWindowY;
 
         void reset() {
             active = false;
             vertexIndex = 0;
+            originSet = false;
         }
 
         private static FloatBuffer directFloats(int count) {

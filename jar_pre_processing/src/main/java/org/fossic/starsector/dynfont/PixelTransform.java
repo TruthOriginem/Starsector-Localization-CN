@@ -79,6 +79,18 @@ final class PixelTransform {
         return (Math.round(scaleY * y + translateY) - translateY) / scaleY;
     }
 
+    /**
+     * 以整个文字 render 共享的物理原点吸附坐标。移动只改变原点的整数位置，
+     * 字形相对原点的量化结果不随平移相位变化。
+     */
+    float snapXRelativeTo(float x, float originWindowX) {
+        return snapRelative(scaleX, translateX, x, originWindowX);
+    }
+
+    float snapYRelativeTo(float y, float originWindowY) {
+        return snapRelative(scaleY, translateY, y, originWindowY);
+    }
+
     PixelTransform translated(float x, float y) {
         return new PixelTransform(scaleX, translateX + scaleX * x,
                 scaleY, translateY + scaleY * y);
@@ -97,12 +109,48 @@ final class PixelTransform {
         return snapEnd(scaleY, translateY, start, snappedStart, end);
     }
 
+    float snapXEndRelativeTo(float start, float snappedStart, float end,
+                             float originWindowX) {
+        return snapEndRelative(scaleX, translateX, start, snappedStart, end,
+                originWindowX);
+    }
+
+    float snapYEndRelativeTo(float start, float snappedStart, float end,
+                             float originWindowY) {
+        return snapEndRelative(scaleY, translateY, start, snappedStart, end,
+                originWindowY);
+    }
+
+    private static float snapRelative(float scale, float translate, float value,
+                                      float originWindow) {
+        float window = scale * value + translate;
+        float snappedWindow = Math.round(originWindow)
+                + Math.round(window - originWindow);
+        return (snappedWindow - translate) / scale;
+    }
+
     private static float snapEnd(float scale, float translate,
                                  float start, float snappedStart, float end) {
         float startWindow = scale * start + translate;
         float endWindow = scale * end + translate;
         float snappedStartWindow = scale * snappedStart + translate;
         float snappedEndWindow = Math.round(endWindow);
+        float span = endWindow - startWindow;
+        if (Math.abs(span) >= EPSILON
+                && Math.abs(snappedEndWindow - snappedStartWindow) < EPSILON) {
+            snappedEndWindow = snappedStartWindow + Math.copySign(1f, span);
+        }
+        return (snappedEndWindow - translate) / scale;
+    }
+
+    private static float snapEndRelative(float scale, float translate,
+                                         float start, float snappedStart, float end,
+                                         float originWindow) {
+        float startWindow = scale * start + translate;
+        float endWindow = scale * end + translate;
+        float snappedStartWindow = scale * snappedStart + translate;
+        float snappedEnd = snapRelative(scale, translate, end, originWindow);
+        float snappedEndWindow = scale * snappedEnd + translate;
         float span = endWindow - startWindow;
         if (Math.abs(span) >= EPSILON
                 && Math.abs(snappedEndWindow - snappedStartWindow) < EPSILON) {
