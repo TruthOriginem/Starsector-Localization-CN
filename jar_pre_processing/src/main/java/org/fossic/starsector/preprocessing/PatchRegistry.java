@@ -7,6 +7,7 @@ import org.fossic.starsector.preprocessing.patches.CombatDeploymentFontPatch;
 import org.fossic.starsector.preprocessing.patches.CodexWeaponTypeFilterPatch;
 import org.fossic.starsector.preprocessing.patches.CombatTargetInfoWidthPatch;
 import org.fossic.starsector.preprocessing.patches.FactionHostilityNoManualPatch;
+import org.fossic.starsector.preprocessing.patches.FleetCardCrTextWidthPatch;
 import org.fossic.starsector.preprocessing.patches.IntelPutFirstTagIdPatch;
 import org.fossic.starsector.preprocessing.patches.NewGameSeedFieldWidthPatch;
 import org.fossic.starsector.preprocessing.patches.PlanetListColumnWidthPatch;
@@ -47,6 +48,7 @@ public final class PatchRegistry {
                 ShipInfoSeparatorPatch::new,
                 CombatDeploymentFontPatch::new,
                 CombatTargetInfoWidthPatch::new,
+                FleetCardCrTextWidthPatch::new,
                 NewGameSeedFieldWidthPatch::new,
                 CampaignDateWidthPatch::new,
                 SaveDateLocalePatch::new,

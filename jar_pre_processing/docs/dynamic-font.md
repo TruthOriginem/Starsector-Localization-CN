@@ -168,11 +168,12 @@ w800。`a-z` 保留原码位，但复制对应 `A-Z` 的图形、bearing 和 adv
 
 ## 动态字体相关 Patch
 
-除核心资源与 renderer hook 外，当前分支包含三项由字体度量变化暴露的兼容修正：
+除核心资源与 renderer hook 外，当前分支包含四项由字体度量变化暴露的兼容修正：
 
 | Patch | 修正 |
 |---|---|
 | `CombatTargetInfoWidthPatch` | 战斗 HUD 距离/航速栏由 58 扩到 80，防止三位数航速把 `su/s` 换行 |
+| `FleetCardCrTextWidthPatch` | 舰队列表卡片的 CR 百分比栏由 26 扩到 40，容纳动态 victor10 的 `100%` |
 | `NewGameSeedFieldWidthPatch` | 新生涯种子框由 185 扩到 210，同时把“粘贴”按钮右移 25，保持左侧标签位置不变 |
 | `RendererHighlightRegexPatch` | 给两条模糊高亮 fallback 的动态文本加安全 quoting，保留原有精确搜索，避免译文被当作正则表达式 |
 
