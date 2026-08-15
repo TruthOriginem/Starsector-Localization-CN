@@ -19,11 +19,13 @@ constexpr const char* ORBITRON_VF = "Orbitron-VariableFont_wght.ttf";
 constexpr const char* RUIZI =
     "锐字逼格青春粗黑体简2.0.TTF";
 
-SourceSpec light(const char* file, double size, double y, double x, double bold, bool latin) {
+SourceSpec light(const char* file, double size, double y, double x, double bold,
+                 bool latin, int supersample = 4) {
     SourceSpec s;
     s.file = file;
     s.size = size;
     s.mode = RenderMode::LightAA;
+    s.supersample = supersample;
     s.yAdjust = y;
     s.xadvAdjust = x;
     s.bold = bold;
@@ -33,11 +35,16 @@ SourceSpec light(const char* file, double size, double y, double x, double bold,
 
 std::vector<OutputSpec> makeSpecs() {
     std::vector<OutputSpec> specs;
-    // insignia：西文 lte50549、中文兰亭（name, 西文 size/x, 中文 size/x, info/lh/base, 西文上飘）
-    struct { const char* n; double lsz, x, csz, cx; int info, lh, base, up; } ins[] = {
-        {"insignia15LTaa", 14.5, 0, 15, 0, 15, 17, 15, 2},
-        {"insignia21LTaa", 15.0, 1, 16, 1, 18, 18, 16, 2},
-        {"insignia25LTaa", 23.0, 0, 22, 1, 24, 25, 22, 2},
+    // insignia：西文 lte50549、中文兰亭（name, 西文 size/x/bold,
+    // 中文 size/x/bold, info/lh/base, 西文上飘）
+    struct {
+        const char* n;
+        double lsz, x, lbold, csz, cx, cbold;
+        int info, lh, base, up, westSupersample, cjkSupersample;
+    } ins[] = {
+        {"insignia15LTaa", 15.0, 0, 0.13, 15, 0, 0.08, 15, 17, 15, 2, 8, 8},
+        {"insignia21LTaa", 17.0, 1, 0.0, 16, 1, 0.0, 18, 18, 16, 2, 4, 4},
+        {"insignia25LTaa", 24.0, 0, 0.0, 22, 1, 0.0, 24, 25, 22, 2, 4, 4},
     };
     for (const auto& r : ins) {
         OutputSpec o;
@@ -48,8 +55,11 @@ std::vector<OutputSpec> makeSpecs() {
         o.smooth = 1;  // 原版 insignia 系 smooth=1 aa=4
         o.aa = 4;
         o.upshiftPx = r.up;
-        o.west = light(LTE, r.lsz, 0, r.x, 0, true);
-        o.cjk = light(LANTING, r.csz, 0, r.cx, 0, false);
+        o.west = light(LTE, r.lsz, 0, r.x, r.lbold, true,
+                       r.westSupersample);
+        o.west.kerning = true;
+        o.cjk = light(LANTING, r.csz, 0, r.cx, r.cbold, false,
+                      r.cjkSupersample);
         specs.push_back(o);
     }
     // orbitron / victor：西文 Orbitron VF（wght + GPOS kerning + 等宽数字）、中文锐字。
@@ -124,7 +134,7 @@ RenderParams deriveParams(const SourceSpec& src, double s) {
     switch (src.mode) {
         case RenderMode::LightAA:
             p.sizePx = src.size * s;
-            p.supersample = 4;
+            p.supersample = src.supersample;
             p.hint = HintMode::Light;
             break;
         case RenderMode::PixelCeil:
@@ -353,7 +363,7 @@ bool composeOutput(const OutputSpec& spec, double s, const TypefacePack& typefac
         }
     }
 
-    // ── kerning（GPOS 固化表 → 按渲染字号像素化）────────────────────────────
+    // ── kerning（来源 TTF 的 kern/GPOS 固化表 → 按渲染字号像素化）───────────
     if (spec.west.kerning) {
         std::string kernName = kerningTableName(spec.west);
         auto kernEntry = typefaces.find(kernName);

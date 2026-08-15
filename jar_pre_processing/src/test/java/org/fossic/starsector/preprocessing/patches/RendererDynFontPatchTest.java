@@ -12,6 +12,8 @@ import org.objectweb.asm.tree.MethodInsnNode;
 import org.objectweb.asm.tree.MethodNode;
 
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.zip.ZipFile;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,6 +27,8 @@ final class RendererDynFontPatchTest {
     @Test
     void patchesReal098Rc8RendererAtAllExactProxyAnchors() throws Exception {
         ClassNode renderer = readRealRenderer();
+        MethodNode expansionSetter = uniqueMethod(renderer, "int", "(I)V");
+        List<Integer> originalExpansionSetter = opcodes(expansionSetter);
 
         PatchResult result = new RendererDynFontPatch().applyAndVerify(
                 renderer, new PatchContext("fs.common_obf.jar", renderer.name + ".class"));
@@ -39,6 +43,8 @@ final class RendererDynFontPatchTest {
         // 字体 setter 的默认字号必须保留公开 getter，取得逻辑 nominal。
         assertEquals(1, countCalls(renderer, FONT,
                 BitmapFontLogicalNominalPatch.NOMINAL_GETTER, "()I"));
+        // 保留原版调用者选择的 0/2/3 层 quad 扩张，不再由动态字体补丁强制清零。
+        assertEquals(originalExpansionSetter, opcodes(expansionSetter));
         assertResolveRunsBeforePixelScope(renderer);
     }
 
@@ -119,5 +125,21 @@ final class RendererDynFontPatchTest {
                     && name.equals(call.name) && desc.equals(call.desc)) count++;
         }
         return count;
+    }
+
+    private static MethodNode uniqueMethod(ClassNode node, String name, String desc) {
+        List<MethodNode> matches = node.methods.stream()
+                .filter(method -> name.equals(method.name) && desc.equals(method.desc))
+                .toList();
+        assertEquals(1, matches.size());
+        return matches.get(0);
+    }
+
+    private static List<Integer> opcodes(MethodNode method) {
+        List<Integer> result = new ArrayList<>();
+        for (AbstractInsnNode insn : method.instructions) {
+            if (insn.getOpcode() >= 0) result.add(insn.getOpcode());
+        }
+        return result;
     }
 }

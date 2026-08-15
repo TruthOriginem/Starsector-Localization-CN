@@ -54,8 +54,8 @@ struct Glyph {
 
 // ── 渲染模式（三条路径，见文档「渲染规则」）─────────────────────────────────────
 enum class RenderMode {
-    // ss4 超采样 + Lanczos 降采样 + FT_LOAD_TARGET_LIGHT，字号 = 基准×s 浮点直传。
-    // 当前全部 insignia / orbitron / victor 西文与中文。
+    // 规格指定的超采样倍率 + Lanczos 降采样 + FT_LOAD_TARGET_LIGHT，
+    // 字号 = 基准×s 浮点直传。
     LightAA,
     // 直渲 FT_LOAD_NO_HINTING|FT_LOAD_TARGET_MONO，字号 = ceil(基准×s) 整数。
     // 当前无输出规格引用，作为通用像素字体渲染能力保留。
@@ -71,13 +71,14 @@ struct SourceSpec {
     const char* file = nullptr;  // dyn_font 目录下的 TTF 文件名（UTF-8）
     double size = 0;             // 基准字号
     RenderMode mode = RenderMode::LightAA;
+    int supersample = 4;         // LightAA 超采样倍率
     double wght = 0;             // >0 时设置可变字体 wght 轴（Orbitron VF）
     double yAdjust = 0;          // 基准像素，生成时 round(y×s)；仅 cjk 源生效（西文垂直
                                  // 位置由 post_align + upshiftPx 全权，见 composeOutput）
     double xadvAdjust = 0;       // 基准像素，生成时 round(x×s)
     double bold = 0;             // 基准像素，生成时 ×s 后在超采样分辨率做方形膨胀
     bool latinOnly = false;      // char_range [32, 0x2FFF]（西文源）
-    bool kerning = false;        // 从固化的 GPOS units 表取 kerning（orbitron 西文）
+    bool kerning = false;        // 从来源 TTF 的 kern/GPOS units 固化表取 kerning
     bool uppercaseLatin = false; // a-z 保留码位，但复用 A-Z 的字形与度量
     // 数字等宽：把 0-9 的 advance 统一为其中最大值（字距已计入），窄字形居中。
     // Orbitron 的数字是比例宽度（'1' 仅 '0' 的一半），逐帧变化的读数会左右跳。

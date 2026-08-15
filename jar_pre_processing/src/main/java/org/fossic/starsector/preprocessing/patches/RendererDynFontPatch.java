@@ -39,9 +39,6 @@ public final class RendererDynFontPatch implements JarPatch {
     private static final String SIZE_SETTER_DESC = "(F)V";
     private static final String FONT_NOMINAL_GETTER = "Õ00000";
     private static final String RAW_NOMINAL_GETTER = "$dynfontRawNominal";
-    private static final String EXPANSION_FIELD = "oo0000";
-    private static final String EXPANSION_SETTER = "int";
-    private static final String EXPANSION_SETTER_DESC = "(I)V";
     private static final String RENDER_METHOD = "Õ00000";
     private static final String RENDER_DESC = "()V";
     private static final String IMMEDIATE_DRAW = "Õ00000";
@@ -85,9 +82,6 @@ public final class RendererDynFontPatch implements JarPatch {
                 "optional text transform");
         MethodNode fontSetter = requireOneMethod(classNode, FONT_SETTER, FONT_SETTER_DESC);
         requireOneMethod(classNode, SIZE_SETTER, SIZE_SETTER_DESC);
-        requireOneField(classNode, EXPANSION_FIELD, "I", "glyph expansion layers");
-        MethodNode expansionSetter = requireOneMethod(
-                classNode, EXPANSION_SETTER, EXPANSION_SETTER_DESC);
         MethodNode render = requireOneMethod(classNode, RENDER_METHOD, RENDER_DESC);
         MethodNode immediate = requireOneMethod(classNode, IMMEDIATE_DRAW, IMMEDIATE_DRAW_DESC);
         MethodNode cachePredicate = requireOneMethod(
@@ -98,14 +92,12 @@ public final class RendererDynFontPatch implements JarPatch {
                 classNode, GLYPH_QUAD, GLYPH_UNDERLINE_DESC);
 
         requireFontWrite(fontSetter);
-        requireFieldWrite(expansionSetter, EXPANSION_FIELD, "I", "expansion setter");
         requireFontTextureGetter(render);
         requireVertexCount(glyphQuad, 8);
         requireVertexCount(underlineQuad, 4);
         int rawNominalCalls = redirectInternalNominalReads(classNode, fontSetter);
 
         injectFontSetter(fontSetter);
-        injectDisableExpansion(expansionSetter);
         injectProxyCacheBypass(cachePredicate);
         // 两者都 prepend；先插 scope、再插 defense，最终执行顺序才是
         // resolveFont(field) -> begin(resolved field)。否则绕过 setter 的字体首帧
@@ -137,10 +129,8 @@ public final class RendererDynFontPatch implements JarPatch {
                 + countCalls(classNode, QUAD_HOOK, "isActive", "()Z")
                 + countCalls(classNode, QUAD_HOOK, "transform", "(FF)J")
                 + rawNominalVerified;
-        int expansionVerified = startsWithForceZero(expansionSetter) ? 1 : 0;
-        int expected = 2 + 1 + 1 + scopeEnds + 1 + 1 + vertices + 1
+        int expected = 2 + 1 + 1 + scopeEnds + 1 + 1 + vertices
                 + rawNominalVerified;
-        verified += expansionVerified;
         return PatchResult.of(id(), context.classPath(), expected, expected, verified,
                 "exact proxy in font setter; internal raw nominal reads="
                         + rawNominalCalls + "; proxy display-list bypass; "
@@ -204,14 +194,6 @@ public final class RendererDynFontPatch implements JarPatch {
                     + ", redirected=" + redirected);
         }
         return redirected;
-    }
-
-    private static void injectDisableExpansion(MethodNode method) {
-        InsnList code = new InsnList();
-        code.add(new InsnNode(Opcodes.ICONST_0));
-        code.add(new VarInsnNode(Opcodes.ISTORE, 1));
-        method.instructions.insert(code);
-        method.maxStack = Math.max(method.maxStack, 1);
     }
 
     private static void injectProxyCacheBypass(MethodNode method) {
@@ -367,14 +349,6 @@ public final class RendererDynFontPatch implements JarPatch {
                     && desc.equals(field.desc)) count++;
         }
         if (count != 1) throw new PatchException(label + " 未唯一写入 " + name + ": " + count);
-    }
-
-    private static boolean startsWithForceZero(MethodNode method) {
-        AbstractInsnNode first = method.instructions.getFirst();
-        AbstractInsnNode second = first == null ? null : first.getNext();
-        return first != null && first.getOpcode() == Opcodes.ICONST_0
-                && second instanceof VarInsnNode store
-                && store.getOpcode() == Opcodes.ISTORE && store.var == 1;
     }
 
     private static void requireFontTextureGetter(MethodNode method) {

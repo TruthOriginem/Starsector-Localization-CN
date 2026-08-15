@@ -18,15 +18,39 @@ const dynfont::OutputSpec& findSpec(const char* name) {
 }
 
 void checkConfiguredFamilies() {
+    const auto& insignia15 = findSpec("insignia15LTaa");
+    CHECK(insignia15.west.size == 15.0);
+    CHECK(insignia15.west.supersample == 8);
+    CHECK(insignia15.cjk.supersample == 8);
+    CHECK(insignia15.west.bold == 0.13);
+    CHECK(insignia15.cjk.bold == 0.08);
+    CHECK(insignia15.west.kerning);
+    for (const auto& [name, size] : {
+            std::pair{"insignia21LTaa", 17.0},
+            std::pair{"insignia25LTaa", 24.0}}) {
+        const auto& spec = findSpec(name);
+        CHECK(spec.west.size == size);
+        CHECK(spec.west.supersample == 4);
+        CHECK(spec.cjk.supersample == 4);
+        CHECK(spec.west.bold == 0.0);
+        CHECK(spec.cjk.bold == 0.0);
+        CHECK(spec.west.kerning);
+    }
     for (const char* name : {
             "orbitron12condensed", "orbitron20aa", "orbitron20aabold",
             "orbitron24aa", "orbitron24aabold"}) {
         const auto& spec = findSpec(name);
         CHECK(spec.west.xadvAdjust == 0.5);
+        CHECK(spec.west.kerning);
         CHECK(!spec.west.uppercaseLatin);
     }
     for (const char* name : {"victor10", "victor14", "victor16"}) {
-        CHECK(findSpec(name).west.uppercaseLatin);
+        const auto& spec = findSpec(name);
+        CHECK(spec.west.kerning);
+        CHECK(spec.west.uppercaseLatin);
+    }
+    for (const auto& spec : dynfont::builtinSpecs()) {
+        CHECK(!spec.cjk.kerning);
     }
 }
 

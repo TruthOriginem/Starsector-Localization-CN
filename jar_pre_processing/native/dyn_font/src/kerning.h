@@ -1,5 +1,5 @@
 /*
- * GPOS kerning 固化表解析与像素化。
+ * TTF kern/GPOS kerning 固化表解析与像素化。
  *
  * FreeType 的 FT_Get_Kerning 只读传统 kern 表，而 Orbitron 的字偶距在 GPOS——
  * 因此 pair 表由 fontTools 离线导出（tools/export_kerning.py，可变字体先按
