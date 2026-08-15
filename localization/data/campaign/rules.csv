@@ -24011,7 +24011,7 @@ soeMeetCaspian2,DialogOptionSelected,$option == soe_meetCaspian2,,"""得了吧�
 和他一道的人为此欢呼起来。",soe_meetCaspian3:继续,
 soeMeetCaspian3,DialogOptionSelected,$option == soe_meetCaspian3,,"""我们彼此几乎就是战友。可看看我，礼节都到哪里去了？Caspian Sang，前来报到。"" 他握着酒又随手敬了个礼，差点就把杯子里的烈酒泼出来了。你逮到 Sang 的一个酒友正在窃笑，但搞不清楚是在笑谁。
 
-""不过..."" 他用手指托着下巴，假装沉思起来，""...也许我最多只能把你，算作一个辅助军同志，你在 霸主 这里拿到的报酬优厚吗？当然不用回答，朋友。这是属于你自己的 '买卖'，""他强调着这个词，""与他人无关。""
+""不过..."" 他用手指托着下巴，假装沉思起来，""...也许我最多只能把你，算作一个辅助军同志，你在 霸主 这里拿到的报酬优厚吗？当然不用回答，朋友。这是属于你自己的 '买卖'，"" 他强调着这个词，""与他人无关。""
 
 ""当然也和 Daud 老头有点关系。"" 他眨眨眼补充道。","soe_meetCaspianPleasure:""我确信这是我的荣幸。""
 soe_meetCaspianPay:""报酬无所谓，我拥护 霸主。""
@@ -24027,7 +24027,7 @@ soeMeetCaspian4,DialogOptionSelected,$option == soe_meetCaspian4,,"""你知道�
 
 ""一个再精彩不过了的好主意。考虑到 Daud 宣称你身为军官的统率水平和我们不相上下，正好现在有个机会，能让你来和海军精英们一起分享一两件你的智慧轶事，这再合适不过了，不是吗？""
 
-""Rao 家族，你一定听过这个名字，他们将在 Eventide 举行本季的盛大舞会。而我会以卑微的  Sang 家族的名义，将你的名字列入宾客名单。怎么样，听起来是不是相当一流？我敢肯定，你会成为这个季度的话题人物。""","soe_meetCaspianAccept:""我绝不会错过的。""
+""Rao 家族，你一定听过这个名字，他们将在 Eventide 举行本季的盛大舞会。而我会以卑微的 Sang 家族的名义，将你的名字列入宾客名单。怎么样，听起来是不是相当一流？我敢肯定，你会成为这个季度的话题人物。""","soe_meetCaspianAccept:""我绝不会错过的。""
 soe_meetCaspianMaybe:""我会考虑的。""
 soe_meetCaspianDecline:""我不得不拒绝你慷慨的邀请。""
 ",
@@ -24135,7 +24135,7 @@ FireBest DialogOptionSelected",一个你很熟悉但令人不爽的声音透过�
 soeTakeDrink,DialogOptionSelected,"$option == soe_takeDrink
 $player.sawCaspian","BeginConversation caspian
 $player.tookDrink = true 0
-FireAll SOEsangRound1","""怎么了，舰长，"" Caspian Sang 慢悠悠地开口了。尽管身上的制服是新熨烫过的，他的笑容却依旧和上次一样虚伪，""看来你已经搞到你的佣金了，""他指着你那没动过的饮料，""东道主尽地主之谊，风度翩翩地慷慨施恩，可没想到这么快就被你这种人给糟蹋了。""
+FireAll SOEsangRound1","""怎么了，舰长，"" Caspian Sang 慢悠悠地开口了。尽管身上的制服是新熨烫过的，他的笑容却依旧和上次一样虚伪，""看来你已经搞到你的佣金了，"" 他指着你那没动过的饮料，""东道主尽地主之谊，风度翩翩地慷慨施恩，可没想到这么快就被你这种人给糟蹋了。""
 
 当他继续说下去时，你闻到了一身酒气。""但我还是让你赚得太少了点。你说你为 霸主 效忠，不是吗？现在是你立功的好机会，帮我加满这杯饮料，好吗？""
 

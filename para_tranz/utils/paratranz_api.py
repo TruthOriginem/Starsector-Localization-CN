@@ -25,7 +25,13 @@ def _request(path: str, method: str = 'GET') -> dict:
 
 
 def _get_artifact() -> dict:
-    return _request(f'/projects/{PARATRANZ_PROJECT_ID}/artifacts')
+    response = _request(f'/projects/{PARATRANZ_PROJECT_ID}/artifacts')
+    # ParaTranz 旧版接口直接返回最新 artifact；新版返回按时间倒序的分页列表。
+    # 在这里统一成单个 artifact，避免轮询一直读不到顶层 createdAt 而等待到超时。
+    results = response.get('results')
+    if isinstance(results, list):
+        return results[0] if results else {}
+    return response
 
 
 def _trigger_export() -> bool:
