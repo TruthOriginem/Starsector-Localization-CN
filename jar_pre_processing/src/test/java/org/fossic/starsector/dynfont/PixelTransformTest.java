@@ -103,6 +103,22 @@ final class PixelTransformTest {
     }
 
     @Test
+    void sharedPhysicalOriginSnapsEveryMultilineVerticalEdge() {
+        PixelTransform transform = new PixelTransform(1f, 100.4f, 1f, 40.2f);
+        float origin = transform.translateY();
+        for (float rawTop : new float[]{0f, -17.3f, -34.6f}) {
+            float top = transform.snapYRelativeTo(rawTop, origin);
+            float bottom = transform.snapYEndRelativeTo(
+                    rawTop, top, rawTop - 14.2f, origin);
+            float topWindow = transform.scaleY() * top + transform.translateY();
+            float bottomWindow = transform.scaleY() * bottom + transform.translateY();
+
+            assertEquals(Math.round(topWindow), topWindow, 0.0001f);
+            assertEquals(Math.round(bottomWindow), bottomWindow, 0.0001f);
+        }
+    }
+
+    @Test
     void sharedOriginAlsoKeepsLaterDrawPassOffsetRigid() {
         PixelTransform shadowFirst = new PixelTransform(1f, 100.4f, 1f, 40.2f);
         PixelTransform mainFirst = new PixelTransform(1f, 101.65f, 1f, 41.45f);
