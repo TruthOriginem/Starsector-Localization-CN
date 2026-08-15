@@ -2,7 +2,7 @@
 
 本目录存放**动态字体系统**（运行时按 UI 缩放生成字体图集，见
 [../../../docs/dynamic-font.md](../../../docs/dynamic-font.md)）
-的本地构建输入：TTF 字体源文件，以及构建时生成的 GPOS kerning 固化表。
+的本地构建输入：TTF 字体源文件，以及构建时生成的 kern/GPOS kerning 固化表。
 
 `build.py` 的 `jar` 步骤依据 `../assets.json` 同步所需 kerning，再把清单引用的字体与
 固化表确定性打包为入库的单文件数据包
@@ -28,11 +28,12 @@ victor 系现与 orbitron 系共用 Orbitron VF + 锐字，因此旧的 `victor-
 
 ## kerning 固化表（自动生成，不入 git）
 
-`Orbitron-VariableFont_wght_w{800,900}.kern.txt`——Orbitron 的字偶距在
-GPOS（FreeType 运行时读不到），由 `../tools/export_kerning.py` 离线导出为 font units，
-native 生成时按渲染字号像素化。
+`lte50549.kern.txt` 来自 Insignia 源 TTF 的传统 kern 表；
+`Orbitron-VariableFont_wght_w{800,900}.kern.txt` 来自 Orbitron 的 GPOS。它们均由
+`../tools/export_kerning.py` 离线导出为 font units，native 生成时按渲染字号像素化。
 
-当前 orbitron 五套及 victor14/victor16 使用 w800 表，victor10 使用 w900 表。无需手工维护
+当前 insignia 三套使用 LTE kern 表；orbitron 五套及 victor14/victor16 使用 w800 表，
+victor10 使用 w900 表。无需手工维护
 字重列表：`python build.py dynfont` 从编译后的 native 规格刷新 `../assets.json`；`dynfont`
 与 `jar` 步骤都会按清单生成所需表，删除未引用表，并且只打包清单中的表。
 

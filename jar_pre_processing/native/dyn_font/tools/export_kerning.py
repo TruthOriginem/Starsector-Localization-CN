@@ -1,4 +1,4 @@
-"""按构建清单导出字体的 GPOS kerning 固化表（font units）。
+"""按构建清单导出字体的 kern/GPOS kerning 固化表（font units）。
 
 FreeType 的 FT_Get_Kerning 只读传统 kern 表，Orbitron 的字偶距在 GPOS，
 故由 fontTools 离线提取（可变字体先按 wght 实例化），以 font units 固化为

@@ -72,6 +72,9 @@ proxyMetric  = exactPhysicalMetric × 64
 原版始终使用 `GL_LINEAR`。即使 exact 图集的采样倍率正确，quad 落在半像素相位时仍会
 发虚，因此代理字体在最终 `glVertex2f` 前进行 framebuffer 像素吸附。
 
+游戏原版按调用场景设置的 0/2/3 层字形四边形扩张保持不变；动态字体补丁只调整顶点的
+像素相位，不再覆盖扩张层数。
+
 每个 renderer render scope 只读取一次 model-view、projection 和 viewport。只有变换为
 轴对齐、可逆正交变换且没有额外矩阵时启用；旋转、shear、透视、奇异矩阵或 GL 查询失败
 均原样提交。buffer、矩阵数组和变换对象由渲染线程的 `ThreadLocal` 复用，Java 热路径不
@@ -110,11 +113,14 @@ GraphicsLib、BoxUtil 等自定义渲染路径兼容。
 
 西文：`lte50549.ttf`；中文：方正兰亭中粗黑；`smooth=1`、`aa=4`。
 
-| 套名 | 西文字号 | 西文 xadv | 中文字号 | 中文 xadv | info / lineHeight / base | 西文上移 |
+| 套名 | 西文字号 | 西文 xadv / bold / SS | 中文字号 | 中文 xadv / bold / SS | info / lineHeight / base | 西文上移 |
 |---|---:|---:|---:|---:|---:|---:|
-| insignia15LTaa | 14.5 | 0 | 15 | 0 | 15 / 17 / 15 | 2 |
-| insignia21LTaa | 15.0 | +1 | 16 | +1 | 18 / 18 / 16 | 2 |
-| insignia25LTaa | 23.0 | 0 | 22 | +1 | 24 / 25 / 22 | 2 |
+| insignia15LTaa | 15.0 | 0 / 0.13 / 8× | 15 | 0 / 0.08 / 8× | 15 / 17 / 15 | 2 |
+| insignia21LTaa | 17.0 | +1 / 0 / 4× | 16 | +1 / 0 / 4× | 18 / 18 / 16 | 2 |
+| insignia25LTaa | 24.0 | 0 / 0 / 4× | 22 | +1 / 0 / 4× | 24 / 25 / 22 | 2 |
+
+三套西文字号与静态版继承的原版 Insignia FNT 对齐，并使用 `lte50549.ttf`
+自带的 kern 表（101 对，其中 94 对 ASCII）。
 
 ### Orbitron
 
@@ -149,11 +155,12 @@ w800。`a-z` 保留原码位，但复制对应 `A-Z` 的图形、bearing 和 adv
 
 ### 共同渲染规则
 
-- 11 套均使用 4× 超采样、Lanczos 降采样和 `FT_LOAD_TARGET_LIGHT`。
-- Orbitron/Victor 通过可变字体 `wght` 轴取字重；GPOS kerning 由 `fontTools` 离线导出，
-  native 按字号像素化。
+- 全部矢量字体使用规格指定的 4×/8× 超采样、Lanczos 降采样和
+  `FT_LOAD_TARGET_LIGHT`。
+- Insignia 使用来源 TTF 的 kern 表；Orbitron/Victor 通过可变字体 `wght` 轴
+  取字重并使用 GPOS。两类 kerning 都由 `fontTools` 离线导出，native 按字号像素化。
 - `{`、`}` 的宽高、bearing 和 advance 清零，作为游戏高亮用的不可见边界字符。
-- `bold` 是在 4× mask 上做方形膨胀的微调，不扩大画布；整体字重应优先调整 `wght`。
+- `bold` 是在超采样 mask 上做方形膨胀的微调，不扩大画布；整体字重应优先调整 `wght`。
 - 西文以 `H`、中文以“舰”的 alpha≥128 实心底对齐，再把整套西文上移表中的逻辑像素值；
   不允许只移动部分字形。
 - 图集必须是单页、2 的幂。游戏只解析一行 page，分页会加载失败；非 POT 图集又会被纹理层
@@ -174,8 +181,9 @@ w800。`a-z` 保留原码位，但复制对应 `A-Z` 的图形、bearing 和 adv
 
 ## 生成、分发与缓存
 
-`native/dyn_font/assets.json` 是规格实际引用的资产清单。当前包含四个 TTF 和 w800/w900
-两份自动生成的 kerning 表。TTF 与 `.kern.txt` 是本机构建输入并被 Git 忽略；确定性打包后的
+`native/dyn_font/assets.json` 是规格实际引用的资产清单。当前包含四个 TTF，以及
+Insignia kern、Orbitron w800/w900 GPOS 三份自动生成的 kerning 表。TTF 与
+`.kern.txt` 是本机构建输入并被 Git 忽略；确定性打包后的
 `localization/graphics/fonts/dyn_font/typefaces.dat` 是入库的预构建分发资产。
 
 ```text

@@ -30,7 +30,7 @@
 ## 环境要求
 
 - **JDK 17+**（`JAVA_HOME` 指向之；Maven Wrapper 已内置，无需单独安装 Maven）
-- **Python 3.10+** 与 **fontTools**（构建编排及 GPOS kerning 固化表生成）
+- **Python 3.10+** 与 **fontTools**（构建编排及 kern/GPOS kerning 固化表生成）
 - **MinGW-w64 g++、CMake、Ninja**（PATH 中；仅重编 native 库时需要）
 
 ## 使用方法
