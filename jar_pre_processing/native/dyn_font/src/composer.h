@@ -2,7 +2,7 @@
  * 单套字体组装 — fnt_composer main.py run() 的运行时对应物。
  *
  * 流程：西文源渲染（latin 区）→ 中文源补渲余集 → 合并 → overrides
- * （orbitron 等宽数字 / { } 清零）→ kerning 像素化 → Shelf 装箱 →
+ * （Insignia/Victor 数字等宽 / { } 清零）→ kerning 像素化 → Shelf 装箱 →
  * post_align（西文实心底对齐中文后上飘 round(upshiftPx×s)）→ 锚点定稿。
  *
  * 字体与 kerning 表均取自分发数据包（pack_reader，build.py 打包）。
@@ -33,6 +33,8 @@ struct ComposedFont {
     double preciseBase = 0;
     int smooth = 1;
     int aa = 1;
+    // true 时发布前强制复核 0-9 等宽且不存在任何数字相关 kerning。
+    bool tabularDigits = false;
     // post_align 是否真的执行（基准字形渲染成功）。false 表示西文相对中文的
     // 垂直位置退化为 FreeType 原始 ascender 差 —— 由 generateAll 的产物自检拦截。
     bool baselineAligned = false;
@@ -59,6 +61,10 @@ bool remapLowercaseLatinGlyphs(std::map<uint32_t, Glyph>& glyphs);
 // 大写字偶向大小写输入码位展开；含小写的源字偶不是规范源，返回空。
 std::vector<std::pair<uint32_t, uint32_t>> uppercaseLatinKerningAliases(
     uint32_t first, uint32_t second);
+
+// 把 0-9 统一到最大自然前进量，并把窄字形居中；整数路径按游戏实际的
+// xoffset+xadvance 计步，精确路径直接统一 preciseAdvance。
+void makeDigitsTabular(std::map<uint32_t, Glyph>& glyphs);
 
 // kerning 固化表命名规则的唯一实现；运行时读取与构建资产清单共用。
 std::string kerningTableName(const SourceSpec& source);

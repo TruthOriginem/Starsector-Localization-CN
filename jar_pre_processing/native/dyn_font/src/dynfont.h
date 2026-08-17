@@ -81,8 +81,6 @@ struct SourceSpec {
     bool kerning = false;        // 从来源 TTF 的 kern/GPOS units 固化表取 kerning
     bool uppercaseLatin = false; // a-z 保留码位，但复用 A-Z 的字形与度量
     // 数字等宽：把 0-9 的 advance 统一为其中最大值（字距已计入），窄字形居中。
-    // Orbitron 的数字是比例宽度（'1' 仅 '0' 的一半），逐帧变化的读数会左右跳。
-    // 与 OutputSpec::digitAdv 二选一：后者用于有原版等宽值要精确匹配的套。
     bool tabularDigits = false;
 };
 
@@ -94,10 +92,6 @@ struct OutputSpec {
     int base = 0;
     int upshiftPx = 0;           // 基线规则：西文实心底对齐中文实心底后上飘 round(upshiftPx×s)
                                  // 物理像素（1x 逻辑值，任意 scale 下对齐关系恒定）
-    // 数字 0-9 的 xadvance override（1x 基准，逐字符 round(v×s)；全 0 = 无 override）。
-    // 值抄录原版 fnt 的数字 advance（原版为加宽等宽设计，个别字符如 1/7 略窄），
-    // 保证数字列宽与静态位图版逐字符一致。
-    int digitAdv[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     // info 行 smooth/aa 抄录原版 fnt（游戏可能据 smooth 决定纹理过滤，
     // victor 若 smooth=1 会线性过滤糊掉像素字）
     int smooth = 1;

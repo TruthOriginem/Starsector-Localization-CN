@@ -80,6 +80,11 @@ public final class DynFontQuadHooks {
         return STATE.get().active;
     }
 
+    /** 每个 exact glyph quad 入口：所有代理字形都使用单角吸附。 */
+    public static void beginGlyph(Object glyph) {
+        STATE.get().vertexIndex = 0;
+    }
+
     /** 返回打包后的两个 float；ASM 解包后仍由原版直接调用 GL11.glVertex2f。 */
     public static long transform(float x, float y) {
         State state = STATE.get();
@@ -95,13 +100,11 @@ public final class DynFontQuadHooks {
                 x = state.left;
                 y = state.top;
             } else if (vertex == 1) {
-                state.bottom = state.transform.snapYEndRelativeTo(
-                        state.rawTop, state.top, y, state.originWindowY);
+                state.bottom = state.transform.preserveEnd(state.rawTop, state.top, y);
                 x = state.left;
                 y = state.bottom;
             } else if (vertex == 2) {
-                state.right = state.transform.snapXEndRelativeTo(
-                        state.rawLeft, state.left, x, state.originWindowX);
+                state.right = state.transform.preserveEnd(state.rawLeft, state.left, x);
                 x = state.right;
                 y = state.bottom;
             } else {

@@ -46,6 +46,8 @@ bool writeBinary(const std::filesystem::path& path, const void* data, size_t siz
  *    **硬编码只读一行 page**（反编译实证），多页产物会在解析 chars 行时
  *    数组越界抛异常 —— exact 代理根本加载不进来。分页在本项目里等价于产物不可用。
  * ② 基线未对齐：西文相对中文的垂直位置退化，各套方向幅度还不一致。
+ * ③ 等宽数字契约：启用该规格的 Insignia/Victor 必须保证 0-9 的整数/精确
+ *    计步严格一致，且过滤任何数字字偶距；Orbitron 保留来源字体的自然度量。
  */
 bool validatePack(const ComposedFont& font, const char* name) {
     if (font.pages.size() > 1) {
@@ -61,6 +63,46 @@ bool validatePack(const ComposedFont& font, const char* name) {
     if (!font.baselineAligned) {
         logLine("[error] %s: 基线对齐未执行（基准字形 H/舰 渲染失败）", name);
         return false;
+    }
+
+    if (font.tabularDigits) {
+        int digitPen = -1;
+        double preciseDigitPen = -1;
+        for (uint32_t d = '0'; d <= '9'; d++) {
+            auto it = font.glyphs.find(d);
+            if (it == font.glyphs.end()) {
+                logLine("[error] %s: 等宽数字自检缺少字符 %c", name,
+                        static_cast<char>(d));
+                return false;
+            }
+            int pen = it->second.xoffset + it->second.xadvance;
+            double precisePen = it->second.preciseAdvance;
+            if (digitPen < 0) {
+                digitPen = pen;
+                preciseDigitPen = precisePen;
+            } else if (pen != digitPen || !std::isfinite(precisePen)
+                    || std::abs(precisePen - preciseDigitPen) > 1e-6) {
+                logLine("[error] %s: 数字 %c 非等宽（整数 %d/%d，精确 %.6f/%.6f）",
+                        name, static_cast<char>(d), pen, digitPen,
+                        precisePen, preciseDigitPen);
+                return false;
+            }
+        }
+        auto isDigit = [](uint32_t ch) { return ch >= '0' && ch <= '9'; };
+        for (const auto& [first, second, amount] : font.kernings) {
+            if (isDigit(first) || isDigit(second)) {
+                logLine("[error] %s: 整数 kerning 仍包含数字字偶 %u/%u=%d",
+                        name, first, second, amount);
+                return false;
+            }
+        }
+        for (const auto& [first, second, amount] : font.preciseKernings) {
+            if (isDigit(first) || isDigit(second)) {
+                logLine("[error] %s: 精确 kerning 仍包含数字字偶 %u/%u=%.6f",
+                        name, first, second, amount);
+                return false;
+            }
+        }
     }
 
     // 接近单页上限时提前预警。撞线才报错对玩家没有可操作性——他扩字表或调高

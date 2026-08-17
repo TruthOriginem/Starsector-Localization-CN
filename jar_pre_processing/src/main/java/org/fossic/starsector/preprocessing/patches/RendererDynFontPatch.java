@@ -110,6 +110,8 @@ public final class RendererDynFontPatch implements JarPatch {
                 underlineQuad, GLYPH_QUAD + EXACT_SUFFIX);
         MethodNode exactImmediate = cloneMethod(
                 immediate, IMMEDIATE_DRAW + EXACT_SUFFIX);
+        injectGlyphSnapMode(exactGlyphQuad);
+        injectGlyphSnapMode(exactUnderlineQuad);
         redirectExactGlyphCalls(exactImmediate);
         int vertices = replaceVertices(exactGlyphQuad) + replaceVertices(exactUnderlineQuad);
         injectExactDispatch(immediate);
@@ -127,9 +129,11 @@ public final class RendererDynFontPatch implements JarPatch {
                 + countCalls(classNode, QUAD_HOOK, "end", "()V")
                 + countCalls(classNode, QUAD_HOOK, "translate", "(FF)V")
                 + countCalls(classNode, QUAD_HOOK, "isActive", "()Z")
+                + countCalls(classNode, QUAD_HOOK, "beginGlyph",
+                        "(Ljava/lang/Object;)V")
                 + countCalls(classNode, QUAD_HOOK, "transform", "(FF)J")
                 + rawNominalVerified;
-        int expected = 2 + 1 + 1 + scopeEnds + 1 + 1 + vertices
+        int expected = 2 + 1 + 1 + scopeEnds + 1 + 1 + 2 + vertices
                 + rawNominalVerified;
         return PatchResult.of(id(), context.classPath(), expected, expected, verified,
                 "exact proxy in font setter; internal raw nominal reads="
@@ -276,6 +280,16 @@ public final class RendererDynFontPatch implements JarPatch {
         }
         method.maxStack = Math.max(method.maxStack, 4);
         return count;
+    }
+
+    private static void injectGlyphSnapMode(MethodNode method) {
+        // 两个 glyph 方法的第 3 个参数均为 oOOO glyph（local 3）。
+        InsnList code = new InsnList();
+        code.add(new VarInsnNode(Opcodes.ALOAD, 3));
+        code.add(new MethodInsnNode(Opcodes.INVOKESTATIC, QUAD_HOOK,
+                "beginGlyph", "(Ljava/lang/Object;)V", false));
+        method.instructions.insert(code);
+        method.maxStack = Math.max(method.maxStack, 1);
     }
 
     private static MethodNode cloneMethod(MethodNode original, String newName) {

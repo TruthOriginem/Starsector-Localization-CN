@@ -146,6 +146,24 @@ final class PixelTransformTest {
         assertEquals(1f, endWindow - startWindow, 0.0001f);
     }
 
+    @Test
+    void singleCornerSnappingPreservesOriginalQuadSpan() {
+        PixelTransform transform = new PixelTransform(1.95f, 0.25f, 1.95f, -0.4f);
+        float rawLeft = 4.20f;
+        float rawRight = 11.55f;
+        float snappedLeft = transform.snapXRelativeTo(
+                rawLeft, transform.translateX());
+
+        float translatedRight = transform.preserveEnd(
+                rawLeft, snappedLeft, rawRight);
+
+        assertEquals(rawRight - rawLeft, translatedRight - snappedLeft,
+                0.0001f);
+        assertEquals((rawRight - rawLeft) * transform.scaleX(),
+                (translatedRight - snappedLeft) * transform.scaleX(),
+                0.0001f);
+    }
+
     private static float[] identity() {
         return new float[]{
                 1, 0, 0, 0,

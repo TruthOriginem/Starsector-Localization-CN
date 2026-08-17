@@ -38,6 +38,8 @@ final class RendererDynFontPatchTest {
         assertEquals(1, countCalls(renderer, HOOK, "begin",
                 "(Ljava/lang/Object;Ljava/lang/Object;)V"));
         assertEquals(1, countCalls(renderer, HOOK, "translate", "(FF)V"));
+        assertEquals(2, countCalls(renderer, HOOK, "beginGlyph",
+                "(Ljava/lang/Object;)V"));
         assertEquals(12, countCalls(renderer, FONT,
                 BitmapFontLogicalNominalPatch.RAW_NOMINAL_GETTER, "()I"));
         // 字体 setter 的默认字号必须保留公开 getter，取得逻辑 nominal。

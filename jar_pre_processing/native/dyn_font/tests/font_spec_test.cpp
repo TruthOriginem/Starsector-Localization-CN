@@ -22,8 +22,8 @@ void checkConfiguredFamilies() {
     CHECK(insignia15.west.size == 15.0);
     CHECK(insignia15.west.supersample == 8);
     CHECK(insignia15.cjk.supersample == 8);
-    CHECK(insignia15.west.bold == 0.13);
-    CHECK(insignia15.cjk.bold == 0.08);
+    CHECK(insignia15.west.bold == 0.0);
+    CHECK(insignia15.cjk.bold == 0.10);
     CHECK(insignia15.west.kerning);
     for (const auto& [name, size] : {
             std::pair{"insignia21LTaa", 17.0},
@@ -42,16 +42,19 @@ void checkConfiguredFamilies() {
         const auto& spec = findSpec(name);
         CHECK(spec.west.xadvAdjust == 0.5);
         CHECK(spec.west.kerning);
+        CHECK(!spec.west.tabularDigits);
         CHECK(!spec.west.uppercaseLatin);
     }
     for (const char* name : {"victor10", "victor14", "victor16"}) {
         const auto& spec = findSpec(name);
         CHECK(spec.west.kerning);
+        CHECK(spec.west.tabularDigits);
         CHECK(spec.west.uppercaseLatin);
     }
-    for (const auto& spec : dynfont::builtinSpecs()) {
-        CHECK(!spec.cjk.kerning);
-    }
+    CHECK(findSpec("insignia15LTaa").west.tabularDigits);
+    CHECK(findSpec("insignia21LTaa").west.tabularDigits);
+    CHECK(findSpec("insignia25LTaa").west.tabularDigits);
+    for (const auto& spec : dynfont::builtinSpecs()) CHECK(!spec.cjk.kerning);
 }
 
 void checkLowercaseGlyphUsesUppercaseShapeAndMetrics() {
@@ -102,11 +105,41 @@ void checkUppercaseKerningExpandsToLowercaseAliases() {
     CHECK(dynfont::uppercaseLatinKerningAliases('T', '.') == punctuation);
 }
 
+void checkTabularDigitsUseOnePenWidth() {
+    std::map<uint32_t, dynfont::Glyph> glyphs;
+    for (int i = 0; i < 10; i++) {
+        dynfont::Glyph glyph;
+        glyph.id = static_cast<uint32_t>('0' + i);
+        int naturalPen = 5 + i;
+        glyph.xoffset = i == 1 ? 2 : 0;
+        glyph.xadvance = naturalPen - glyph.xoffset;
+        glyph.preciseBearingX = i == 1 ? 2.0 : 0.25;
+        glyph.preciseAdvance = 5.5 + i;
+        glyphs.emplace(glyph.id, glyph);
+    }
+
+    dynfont::makeDigitsTabular(glyphs);
+
+    for (uint32_t d = '0'; d <= '9'; d++) {
+        const auto& glyph = glyphs.at(d);
+        CHECK(glyph.xoffset + glyph.xadvance == 14);
+        CHECK(glyph.preciseAdvance == 14.5);
+    }
+    CHECK(glyphs.at('0').xoffset == 4);
+    CHECK(glyphs.at('0').preciseBearingX == 4.75);
+    // '1' 原始 pen=6、bearing=2；加入 8px 后必须左右各分 4px，不能居左。
+    CHECK(glyphs.at('1').xoffset == 6);
+    CHECK(glyphs.at('1').preciseBearingX == 6.0);
+    CHECK(glyphs.at('9').xoffset == 0);
+    CHECK(glyphs.at('9').preciseBearingX == 0.25);
+}
+
 }  // namespace
 
 int main() {
     checkConfiguredFamilies();
     checkLowercaseGlyphUsesUppercaseShapeAndMetrics();
     checkUppercaseKerningExpandsToLowercaseAliases();
+    checkTabularDigitsUseOnePenWidth();
     return 0;
 }

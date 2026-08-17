@@ -294,6 +294,7 @@ public final class DynFontRenderHooks {
 
     private record Registry(Map<Object, Object> resolved,
                             Map<Object, float[]> proxyInfo) {
-        private static final Registry EMPTY = new Registry(Map.of(), Map.of());
+        private static final Registry EMPTY = new Registry(
+                Map.of(), Map.of());
     }
 }
