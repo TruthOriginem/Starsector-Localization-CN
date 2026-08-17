@@ -24,7 +24,7 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		// Set a small blurb for each fleet that shows up on the mission detail and
 		// mission results screens to identify each side.
 		api.setFleetTagline(FleetSide.PLAYER, "'只是个混口饭吃的老实商人，长官。'");
-		api.setFleetTagline(FleetSide.ENEMY, "不三不四的二五仔 'High Rad' Moon Salazar，开着一艘破骡子");
+		api.setFleetTagline(FleetSide.ENEMY, "不三不四的二五仔 'High Rad' Moon Salazar，开着艘破骡子");
 		
 		// These show up as items in the bulleted list under 
 		// "Tactical Objectives" on the mission detail screen

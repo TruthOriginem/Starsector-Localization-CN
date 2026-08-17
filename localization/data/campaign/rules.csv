@@ -9886,13 +9886,13 @@ FireBest DialogOptionSelected","""愿今日得上天赐福，"" 他说道。",,
 BFFIattendParty3,DialogOptionSelected,$option == BFFI_attendParty3,ShowSecondPerson bornanew,"Bornanew 点了点头，双手合十，但还不到鞠躬的程度。也许是为了避免被 Menes 戴满戒指的手抓住。你可就没那么幸运了，不得不忍受一次过长的握手。
 
 Menes 对这一切感到非常高兴，眼中闪烁着近乎贪婪的光芒。",BFFI_attendPartyHub1Intro1:继续,
-BFFIattendPartyHub1Intro1,DialogOptionSelected,$option == BFFI_attendPartyHub1Intro1,,"Menes 领你走过几座镀金雕像，它们的姿态仿佛在守卫着通往主建筑的入口；那些雕像的形态，宛如飞溅的熔金在偶然间凝固成的人形。
+BFFIattendPartyHub1Intro1,DialogOptionSelected,$option == BFFI_attendPartyHub1Intro1,,"Menes 领着你走过了几尊守在主建筑入口前的鎏金雕像。雕像的造型宛如飞溅的熔金在机缘巧合之间凝成了千姿百态的性感人形。
 
-你忍受着 Menes 滔滔不绝的吹嘘，他向你讲述了庄园翻修的费用、艺术品的收购，以及那些为他的宅邸和收藏做出贡献的艺术家和工程公司的独特地位。
+Menes 一直喋喋不休，犹如徐进弹幕轰了你一身。从装潢的高昂开销和画作的搜罗过程，到那些为他的府邸与藏品操刀的顶级艺术家与工程公司究竟有多难请到。
 
-偶尔会有机器人或人类侍者出现，送上饮品或小吃，你越来越觉得 Menes 只是从托盘上拿起一杯酒，而后又放到另一个托盘上，自己根本就没喝过一口。
+偶尔会有机器人或人类侍者出现，呈上饮品或小吃。但你越发觉得 Menes 纯粹只是从托盘上拿起一杯酒，而后又放到另一个托盘上，自始至终一口都没喝过。
 
-Menes 手中换了一杯新酒，精致的琥珀色液体嘶嘶作响，他领着你走进了他那引以为傲的绝佳娱乐区域。",BFFI_attendPartyHub1Intro2:继续,
+手中又换了一杯正在冒泡的精致琥珀色烈酒后，Menes 领着你走进了那处显然是他最引以为傲的主招待厅。",BFFI_attendPartyHub1Intro2:继续,
 BFFIattendPartyHub1Intro2,DialogOptionSelected,$option == BFFI_attendPartyHub1Intro2,ShowThirdPerson ulmus_pond,"这个区域宽敞又温馨；视线、雕刻、锻造和编织的细节都经过精心计算，营造出一种温馨舒适的氛围，仿佛是某个热爱艺术、历史和文学的有识之士的书房。
 
 一群衣着光鲜的宾客四处走动，当 Menes 现身时，他们纷纷停下交谈，微笑着向他举杯致意。这些人看起来像是工业家、金融家、远房亲戚，还有至少一名来自当地驻军的军官，后者似乎已经有点醉意了。大多数人向你和 Bornanew 点头致意，目光没有停留太久，以免显得失礼。
@@ -10325,16 +10325,16 @@ ShowThirdPerson bornanew","Horus 回以冷淡的微笑，他走上前，只用�
 Menes 勉强挤出讨好的笑声作为回应。
 
 完全被遗忘掉的 Bornanew，则跟在你和 Yaribay 氏族的两人后面。",bffi_apHorus5:继续,
-BFFIapHorus5,DialogOptionSelected,$option == bffi_apHorus5,,"Menes 领你走过几座镀金雕像，它们的姿态仿佛在守卫着通往主建筑的入口；那些雕像的形态，宛如飞溅的熔金在偶然间凝固成的人形。
+BFFIapHorus5,DialogOptionSelected,$option == bffi_apHorus5,,"Menes 领着你们一行人走过了几尊守在主建筑入口前的鎏金雕像。雕像的造型宛如飞溅的熔金在机缘巧合之间凝成了千姿百态的性感人形。
 
-你看着 Horus，他精干而凌厉，就像一只小型猛兽，默默忍受着 Menes 的喋喋不休。Menes 则体型魁梧，性格宽厚，他轻描淡写地谈论着装修的 ""边远地区风格""、艺术品选择的贫乏、以及在这 ""形同流放"" 的地方很难请到顶尖艺术家和工程公司。
+你看着精干而凌厉的 Horus 就像一只小型猛兽一般，忍受着心宽体胖的 Menes 一直喋喋不休。Menes 轻描淡写地嫌弃着自家 ""边陲质感"" 的装潢和品味匮乏的艺术品，以及在他这 ""形同流放"" 的家里，想请到顶尖艺术家和工程公司相助是多么困难。
 
-偶尔会有机器人或人类侍者出现，送上饮品或小吃，你越来越觉得 Menes 只是从托盘上拿起一杯酒，而后又放到另一个托盘上，自己根本就没喝过一口。
+偶尔会有机器人或人类侍者出现，呈上饮品或小吃。但你越看越觉得 Menes 纯粹只是从托盘上拿起一杯酒，而后又放到另一个托盘上，自始至终一口都没喝过。
 
-手中换了一杯新酒后，Menes 试探性地领着 Horus 领进了他那引以为傲的绝佳娱乐区域。",bffi_apHorus6:跟上,
-BFFIapHorus6,DialogOptionSelected,$option == bffi_apHorus6,,"这个区域宽敞又温馨；视线、雕刻、锻造和编织的细节都经过精心计算，营造出一种温馨舒适的氛围，仿佛是某个热爱艺术、历史和文学的有识之士的书房。
+手中又换了一杯新酒后，Menes 试着将 Horus 领进他最引以为傲的主招待厅。",bffi_apHorus6:跟上,
+BFFIapHorus6,DialogOptionSelected,$option == bffi_apHorus6,,"这处空间既深邃又私密；无论是整体景致，还是雕刻、金工与织物的细节，无不历经考究，刻意营造出一种私密书房般的温馨舒适氛围，仿佛这的主人是某位在艺术、历史与文学上都造诣颇深的雅士。
 
-一群衣着光鲜的宾客四处走动，当 Menes 现身时，这些人纷纷停下交谈，转身注视着他。他们看起来像是工业家、金融家、远房亲戚，还有至少一名来自当地驻军的军官，后者似乎已经有点醉意了。",bffi_apHorus7:继续,
+十来个衣着光鲜的附庸四处走动，当 Menes 现身时，这些人纷纷停下交谈，转身相迎。他们看起来像是实业家、金融家、远房宗亲，以及至少一名来自当地驻军高层的军官，不过那位似乎已经有点醉意了。",bffi_apHorus7:继续,
 BFFIapHorus7,DialogOptionSelected,$option == bffi_apHorus7,"HideThirdPerson
 ShowThirdPerson ulmus_pond","Menes 进来时，大多数人开始礼貌地点头挥手致意，但当他们认出他身旁的 Horus 时，就都停下了动作，转而直勾勾地看着他们。很少有目光停留在你和 Bornanew 身上，而后者只要往旁边一站，就仿佛只是个助理或侍者。
 
@@ -10436,15 +10436,15 @@ ShowSecondPerson ulmus_pond","你独自一人回到主厅，所有人都转头�
 当 Pond 看到你就这么把 Menes 的宝贝圣物拿在手里时，他的眼睛好像睁得更大了。就连 Bornanew，也在意识到你手里拿着什么东西之后有些不淡定了。","bffi_apHorus22:""你好啊，$global.jethroName。我觉得我们该走了。""",
 BFFIapHorus22,DialogOptionSelected,$option == bffi_apHorus22,HideSecondPerson,"Pond 瞠目结舌，显得更像条鱼了。
 
-Bornanew 把一杯没碰过的金色起泡饮料塞进 Pond 手里，然后和你一起返回穿梭机泊位。
+Bornanew 把一杯原封未动的金黄色气泡饮料塞进 Pond 手里，然后和你一起返回穿梭机泊位。
 
 ""你应该拿到了...那东西？"" 他目视前方，轻声问道。","bffi_apHorus23b:""对。""
 bffi_apHorus23e:""是啊，你自己看看吧。"" (把手套给他)
 bffi_apHorus23c:""我拿到了，你看到他们的表情没，$global.jethroName？""",
 BFFIapHorus22b,DialogOptionSelected,"$option == bffi_apHorus22
-$player.bffi_carriedGloveOpenly",HideSecondPerson,"Pond 看着你，瞠目结舌，显得更像条鱼了。
+$player.bffi_carriedGloveOpenly",HideSecondPerson,"Pond 瞠目结舌，显得更像条鱼了。
 
-Bornanew 把一杯没碰过的金色起泡饮料塞进 Pond 手里，然后和你一起返回穿梭机泊位。
+Bornanew 把一杯原封未动的金黄色气泡饮料塞进 Pond 手里，然后和你一起返回穿梭机泊位。
 
 ""我觉得，大概，"" 他目视前方，轻声说道，""你该把那只手套藏起来的。""","bffi_apHorus23a:""来，给你拿着。""
 bffi_apHorus23b:""也许你是对的。""
@@ -24137,7 +24137,7 @@ $player.sawCaspian","BeginConversation caspian
 $player.tookDrink = true 0
 FireAll SOEsangRound1","""怎么了，舰长，"" Caspian Sang 慢悠悠地开口了。尽管身上的制服是新熨烫过的，他的笑容却依旧和上次一样虚伪，""看来你已经搞到你的佣金了，"" 他指着你那没动过的饮料，""东道主尽地主之谊，风度翩翩地慷慨施恩，可没想到这么快就被你这种人给糟蹋了。""
 
-当他继续说下去时，你闻到了一身酒气。""但我还是让你赚得太少了点。你说你为 霸主 效忠，不是吗？现在是你立功的好机会，帮我加满这杯饮料，好吗？""
+当他继续说下去时，你闻到了一身酒气。""但我还是让你赚得太少了点。你说你为 霸主 效忠，不是吗？现在是你立功的好机会，帮我加满这杯酒，好吗？""
 
 目光越过 Caspian 的肩头，你看到他那群跟屁虫在窃笑。",,
 soeNoDrink,DialogOptionSelected,"$option == soe_noDrink
@@ -27115,21 +27115,21 @@ $id == beholder_station",FireAll BeholderShrineMainOptions,,,
 # AVIPT - Angry VIP Transport,,,,,,
 AVIPTblurbBar,avipt_blurbBar,!$market.toldAVIPTtoGoAway,,一位衣着考究的$manOrWoman正为一趟错过的行程之类的事大吐苦水，以此 '招待' 着闷不吭声的酒保。,,
 AVIPToptionBar,avipt_optionBar,!$market.toldAVIPTtoGoAway,,,avipt_textBar1:试着让那个衣着考究的$manOrWoman冷静下来，别再纠缠酒保,
-AVIPTtextBar1,DialogOptionSelected,$option == avipt_textBar1,,"你做了个友善的问候，试图吸引那个$manOrWoman的注意。酒保在$hisOrHer转身时向你投来了感激的眼神。
+AVIPTtextBar1,DialogOptionSelected,$option == avipt_textBar1,,"你友善地打了个招呼，顺势吸引了那个$manOrWoman的注意。酒保趁着$hisOrHer转身的时候感激地向你点头道谢。
 
-""这些人，这些太空飞行员，已经被火箭燃料和零重力搞得糊涂透顶。他们根本不懂什么叫尊重！顾客！服务！""
+""这些人，这些太空飞行员，全都给火箭燃料和零重力灌糊涂了！他们根本不懂什么叫尊重！顾客！服务！""
 
-每喊出这三个词中的一个，对方就用摊开的手掌猛拍一下吧台。你看到随着每次拍击，都有酒水从杯子的边缘中溅出来，那杯饮品还没被动过一口。","avipt_textBar2:展现一下你的领导魅力
+最后的三个词，每个都伴随着对方的巴掌狠狠地拍在吧台上。你看着每次拍击过后，旁边那杯本就没动过的酒水都有小小的浪花飞溅出杯缘。","avipt_textBar2:展现一下你的领导魅力
 avipt_textBarDecline:趁机离开",
 AVIPTtextBar2,DialogOptionSelected,$option == avipt_textBar2,"$missionId = avipt
 SetTextHighlights $avipt_reward $avipt_reward $avipt_timelimit $avipt_marketName terrible
-Call $avipt_ref showMap ""目的地：$avipt_marketName""","你摆出一副严肃沉稳的威严神情，就是舰桥军官私下称作 ""舰长脸"" 的样子。
+Call $avipt_ref showMap ""目的地：$avipt_marketName""","你摆出一副严肃沉稳的威严神情，就是那个被舰桥军官私下称为 ""舰长脸"" 的样子。
 
-这招似乎很管用。
+看来这招很管用。
 
-此人 —— 据其自述，家境殷实，身份显赫且人脉广阔 —— 已预先支付了 $avipt_reward 星币，要求在 $avipt_timelimit 天内获得优先运输服务，以前往 $avipt_marketName}；但那艘舰船出于你不知道的理由，昨晚已经偷偷离港了。在他看来，这是 ""一桩骇人听闻的丑闻""，""玷污了本就声名狼藉的全体太空舰长的声誉""。
+这位自称家财万贯、名声显赫且人脉广阔之人士，已经预先支付了 $avipt_reward 星币，要求在 $avipt_timelimit 天内专程前往 $avipt_marketName}。然而，预定的舰船却在昨晚悄然离港，连任何能让你为其辩解的音讯都没留下。这完全是 ""一桩骇人听闻的丑闻""，让 ""全体太空舰长本就狼藉不堪的声誉再次雪上加霜""。
 
-听完这段糟糕的经历，你点了点头，脸上露出了恰到好处的凝重神情。","avipt_textBarAccept:提出以相同费用为 VIP 提供运输服务
+听罢这段糟糕的经历，你点了点头，脸上适时浮现出凝重而同情的神色。","avipt_textBarAccept:提出以相同费用为 VIP 提供运输服务
 avipt_textBarDecline:尝试结束对话
 avipt_textBarDeclineRude:向 VIP 解释为什么$hisOrHer活该被撇下",
 AVIPTtextBarAccept,DialogOptionSelected,$option == avipt_textBarAccept,"BarCMD accept $missionId
