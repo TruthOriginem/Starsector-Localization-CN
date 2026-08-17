@@ -42,7 +42,7 @@ std::vector<OutputSpec> makeSpecs() {
         double lsz, x, lbold, csz, cx, cbold;
         int info, lh, base, up, westSupersample, cjkSupersample;
     } ins[] = {
-        {"insignia15LTaa", 15.0, 0, 0.13, 15, 0, 0.08, 15, 17, 15, 2, 8, 8},
+        {"insignia15LTaa", 15.0, 0, 0.0, 15, 0, 0.10, 15, 17, 15, 2, 8, 8},
         {"insignia21LTaa", 17.0, 1, 0.0, 16, 1, 0.0, 18, 18, 16, 2, 4, 4},
         {"insignia25LTaa", 24.0, 0, 0.0, 22, 1, 0.0, 24, 25, 22, 2, 4, 4},
     };
@@ -58,41 +58,35 @@ std::vector<OutputSpec> makeSpecs() {
         o.west = light(LTE, r.lsz, 0, r.x, r.lbold, true,
                        r.westSupersample);
         o.west.kerning = true;
+        o.west.tabularDigits = true;
         o.cjk = light(LANTING, r.csz, 0, r.cx, r.cbold, false,
                       r.cjkSupersample);
         specs.push_back(o);
     }
-    // orbitron / victor：西文 Orbitron VF（wght + GPOS kerning + 等宽数字）、中文锐字。
-    // 数字 advance 抄录原版 fnt 逐字符值（12c: 10/1=8；20 系: 13/1=11；24 系: 16/1=13,7=14）
-    const int dig12[10] = {10, 8, 10, 10, 10, 10, 10, 10, 10, 10};
-    const int dig20[10] = {13, 11, 13, 13, 13, 13, 13, 13, 13, 13};
-    const int dig24[10] = {16, 13, 16, 16, 16, 16, 16, 14, 16, 16};
-    // digitAdv 只用于「原版为加宽等宽设计」的套（orbitron 系）：它是最终 advance，
-    // 不再叠西文字距，契约是数值列宽与静态位图版逐字符一致。victor 系没有这种
-    // 原版设计要对齐，传 nullptr 不覆盖——数字与字母同属西文源，一律由
-    // Orbitron 的自然 advance + xadvAdjust 决定，不按字符类别开特例。
+    // orbitron / victor：西文 Orbitron VF（wght + GPOS kerning）、中文锐字。
     struct {
-        const char* n; double sz, wght, x; const int* dig; int info, lh, base;
+        const char* n; double sz, wght, x; int info, lh, base;
         double csz, cy, cbold;
-        int smooth, aa, up; bool uppercaseLatin;
+        int smooth, aa, up;
+        bool uppercaseLatin, tabularDigits;
     } orb[] = {
-        {"orbitron12condensed", 12.0, 800, 0.5, dig12, -12, 16, 16, 16, 0, 0.15, 1, 1, 2, false},
-        {"orbitron20aa", 15.5, 800, 0.5, dig20, 20, 20, 19, 18, 1, 0.15, 0, 4, 2, false},
-        {"orbitron20aabold", 16.0, 800, 0.5, dig20, -20, 20, 19, 18, 1, 0.15, 0, 4, 2, false},
-        {"orbitron24aa", 18.0, 800, 0.5, dig24, -24, 24, 21, 20, 1, 0.15, 0, 4, 0, false},
-        {"orbitron24aabold", 20.0, 800, 0.5, dig24, 24, 24, 21, 20, 1, 0.15, 0, 4, 0, false},
+        {"orbitron12condensed", 12.0, 800, 0.5, -12, 16, 16, 16, 0, 0.15, 1, 1, 2, false, false},
+        {"orbitron20aa", 15.5, 800, 0.5, 20, 20, 19, 18, 1, 0.15, 0, 4, 2, false, false},
+        {"orbitron20aabold", 16.0, 800, 0.5, -20, 20, 19, 18, 1, 0.15, 0, 4, 2, false, false},
+        {"orbitron24aa", 18.0, 800, 0.5, -24, 24, 21, 20, 1, 0.15, 0, 4, 0, false, false},
+        {"orbitron24aabold", 20.0, 800, 0.5, 24, 24, 21, 20, 1, 0.15, 0, 4, 0, false, false},
         // victor 系：原为 Zpix 点阵（见文件末注），因高缩放下 strike 整数放大仍是
         // 放大的点阵、清晰度不足，改为与 orbitron 同源同策略的矢量渲染。
         // infoSize/lineHeight/base 一律沿用原值——布局度量冻结，UI 零位移；
         // 中文字号取 Zpix 版原字号（10/12/16），故汉字 advance 与视觉大小不变，
         // 变的只是字形从点阵变矢量。西文取 csz×0.85（orbitron 系 sz/csz 在
         // 0.75~1.0 之间），上飘取行高的 10%（与 orbitron 系的 2/20 同比例）。
-        {"victor10", 10.0, 900, 1, nullptr, -10, 10, 9, 11, 0, 0.17, 0, 1, 1, true},
-        {"victor14", 10.0, 800, 1, nullptr, -14, 13, 11, 12, 0, 0.15, 0, 1, 1, true},
+        {"victor10", 10.0, 900, 1, -10, 10, 9, 11, 0, 0.17, 0, 1, 1, true, true},
+        {"victor14", 10.0, 800, 1, -14, 13, 11, 12, 0, 0.15, 0, 1, 1, true, true},
         // victor16 的中文字号取 17 而非 16：锐字 advance/em≈0.963，round(16×0.963)=15
         // 会让汉字排版窄 1px（victor10/14 恰好进位故取原字号即可）。17 → round=16，
         // 与 Zpix 版逐字同宽。
-        {"victor16", 13.5, 800, 1, nullptr, -20, 18, 16, 17, 0, 0.15, 0, 1, 2, true},
+        {"victor16", 13.5, 800, 1, -20, 18, 16, 17, 0, 0.15, 0, 1, 2, true, true},
     };
     for (const auto& r : orb) {
         OutputSpec o;
@@ -100,11 +94,6 @@ std::vector<OutputSpec> makeSpecs() {
         o.infoSize = r.info;
         o.lineHeight = r.lh;
         o.base = r.base;
-        if (r.dig != nullptr) {
-            for (int i = 0; i < 10; i++) {
-                o.digitAdv[i] = r.dig[i];
-            }
-        }
         o.smooth = r.smooth;
         o.aa = r.aa;
         // 西文上飘（实机校准值见表末列）
@@ -113,9 +102,7 @@ std::vector<OutputSpec> makeSpecs() {
         o.west.wght = r.wght;
         o.west.kerning = true;
         o.west.uppercaseLatin = r.uppercaseLatin;
-        // 数字等宽的两条路：orbitron 系有原版加宽等宽值要逐字符精确匹配 → digitAdv；
-        // victor 系无原版设计要对齐 → 自动取最大值统一，随 sz/x 自动跟随。
-        o.west.tabularDigits = (r.dig == nullptr);
+        o.west.tabularDigits = r.tabularDigits;
         o.cjk = light(RUIZI, r.csz, r.cy, 0, r.cbold, false);
         specs.push_back(o);
     }
@@ -251,6 +238,32 @@ std::vector<std::pair<uint32_t, uint32_t>> uppercaseLatinKerningAliases(
     return result;
 }
 
+void makeDigitsTabular(std::map<uint32_t, Glyph>& glyphs) {
+    int widestPen = 0;
+    double preciseWidest = 0;
+    for (uint32_t d = '0'; d <= '9'; d++) {
+        auto it = glyphs.find(d);
+        if (it != glyphs.end()) {
+            widestPen = std::max(
+                widestPen, it->second.xoffset + it->second.xadvance);
+            preciseWidest = std::max(preciseWidest, it->second.preciseAdvance);
+        }
+    }
+    for (uint32_t d = '0'; d <= '9'; d++) {
+        auto it = glyphs.find(d);
+        if (it == glyphs.end()) {
+            continue;
+        }
+        int naturalPen = it->second.xoffset + it->second.xadvance;
+        int center = static_cast<int>(pyRound((widestPen - naturalPen) / 2.0));
+        it->second.xoffset += center;
+        it->second.xadvance = widestPen - it->second.xoffset;
+        it->second.preciseBearingX +=
+            (preciseWidest - it->second.preciseAdvance) / 2.0;
+        it->second.preciseAdvance = preciseWidest;
+    }
+}
+
 bool composeOutput(const OutputSpec& spec, double s, const TypefacePack& typefaces,
                    const std::vector<uint32_t>& charList, int atlasWidth, ComposedFont& out) {
     // ── 西文源（latin 区 [32, 0x2FFF]）──────────────────────────────────────
@@ -286,30 +299,7 @@ bool composeOutput(const OutputSpec& spec, double s, const TypefacePack& typefac
     // xoffset + xadvance（而非标准 BMFont 的单独 xadvance），所以居中增加 xoffset 后
     // 必须从 xadvance 扣回，否则窄数字“1”反而会使整串变宽。
     if (spec.west.tabularDigits) {
-        int widest = 0;
-        double preciseWidest = 0;
-        for (uint32_t d = '0'; d <= '9'; d++) {
-            auto it = westGlyphs.find(d);
-            if (it != westGlyphs.end()) {
-                widest = std::max(widest, it->second.xadvance);
-                preciseWidest = std::max(preciseWidest, it->second.preciseAdvance);
-            }
-        }
-        for (uint32_t d = '0'; d <= '9'; d++) {
-            auto it = westGlyphs.find(d);
-            if (it == westGlyphs.end()) {
-                continue;
-            }
-            if (it->second.xadvance < widest) {
-                int center = (widest - it->second.xadvance) / 2;
-                it->second.xoffset += center;
-            }
-            it->second.xadvance = widest - it->second.xoffset;
-            // 精确路径独立按26.6 advance居中；不继承整数 BMFont 的舍入。
-            it->second.preciseBearingX +=
-                (preciseWidest - it->second.preciseAdvance) / 2.0;
-            it->second.preciseAdvance = preciseWidest;
-        }
+        makeDigitsTabular(westGlyphs);
     }
 
     // ── 中文源（补渲西文未覆盖的余集，含西文字体缺字的拉丁字符）────────────
@@ -341,17 +331,6 @@ bool composeOutput(const OutputSpec& spec, double s, const TypefacePack& typefac
     out.glyphs.merge(cjkGlyphs);  // 已有键不覆盖（西文优先，同 fnt_composer needed 语义）
 
     // ── overrides ───────────────────────────────────────────────────────────
-    for (int i = 0; i < 10; i++) {
-        if (spec.digitAdv[i] <= 0) {
-            continue;
-        }
-        auto it = out.glyphs.find(static_cast<uint32_t>('0' + i));
-        if (it != out.glyphs.end()) {
-            // 原版数字为加宽等宽设计，advance 逐字符抄录原版值
-            it->second.xadvance = static_cast<int>(pyRound(spec.digitAdv[i] * s));
-            it->second.preciseAdvance = spec.digitAdv[i] * s;
-        }
-    }
     for (uint32_t b : {static_cast<uint32_t>('{'), static_cast<uint32_t>('}')}) {
         auto it = out.glyphs.find(b);
         if (it != out.glyphs.end()) {
@@ -371,8 +350,7 @@ bool composeOutput(const OutputSpec& spec, double s, const TypefacePack& typefac
             KerningUnits units;
             parseKerningUnits(kernEntry->second, units);
             for (const auto& [first, second, u] : units.pairs) {
-                // 等宽数字不允许任何一端的 kerning 改变单元宽度。当前 Orbitron
-                // GPOS 表没有数字字偶，此过滤是对未来字体/表更换的契约保障。
+                // 等宽数字不允许任何一端的 kerning 改变单元宽度。
                 if (spec.west.tabularDigits
                         && ((first >= '0' && first <= '9')
                             || (second >= '0' && second <= '9'))) {
@@ -458,6 +436,7 @@ bool composeOutput(const OutputSpec& spec, double s, const TypefacePack& typefac
     out.preciseBase = spec.base * s;
     out.smooth = spec.smooth;
     out.aa = spec.aa;
+    out.tabularDigits = spec.west.tabularDigits;
     // face 值禁止含空格：游戏 fnt 解析器按空格 split token，含空格的 face 会
     // 使后续字段错位（实测 ArrayIndexOutOfBoundsException 崩启动器）
     char face[256];

@@ -121,6 +121,11 @@ final class PixelTransform {
                 originWindowY);
     }
 
+    /** 只吸附起点时让终点跟随相同平移量，严格保留原始跨度。 */
+    float preserveEnd(float start, float snappedStart, float end) {
+        return snappedStart + (end - start);
+    }
+
     private static float snapRelative(float scale, float translate, float value,
                                       float originWindow) {
         float window = scale * value + translate;
