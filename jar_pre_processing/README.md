@@ -337,3 +337,35 @@ Patch 只替换紧邻 `CountingMap.add(Object, int)` 的一处 getter 调用，�
 - 如果当前条目不是原始表最后一项：绘制英文逗号
 + 如果当前条目不是原始表最后一项：绘制空格
 ```
+
+---
+
+### 16. 数据百科特殊类型武器错误通过其它类型筛选
+
+**对应 ASM Patch**：`src/main/java/org/fossic/starsector/preprocessing/patches/CodexWeaponTypeFilterPatch.java`
+
+相关文件：`starfarer.api.jar: com/fs/starfarer/api/impl/codex/CodexDataV2$21.class`
+
+**原因**：原版武器通常用 `type=BALLISTIC/MISSILE/ENERGY` 表示基础类型，再用
+`mountTypeOverride=HYBRID/COMPOSITE/SYNERGY/UNIVERSAL` 表示特殊挂载分类。原版筛选器
+先按特殊挂载类型放行，再明确拒绝未选中的三种基础类型，最后默认返回 `true`。
+
+部分 mod 直接把特殊类型写入武器的 `type`，且不设置 `mountTypeOverride`。此时
+`getType()` 与 `getMountType()` 都是例如 `COMPOSITE`；未选择“复合”时，它仍会避开
+三种基础类型的拒绝分支，并被末尾默认值错误放行到“能量”“通用”“光束”等列表。
+按钮计数使用另一段严格判断，所以还会出现计数正确而列表内容错误。
+
+**修改**：保留原版基础类型与特殊挂载类型可以交叉匹配的行为，只把末尾默认放行改成
+对四种特殊 `getType()` 的严格检查。直接定义为复合、混合、协同或通用的 mod 武器必须
+选中自身类型（或由前面的挂载类型判断命中）才能显示；普通基础类型及未知扩展类型仍
+沿用原版回退行为，降低 mod 兼容风险。
+
+注入逻辑不新增跳转、Label 或 StackMap frame，而是使用布尔按位组合完成判断，避免改写
+该混淆类的控制流。测试直接读取 0.98a-RC8 原始类，校验原始锚点、四类字段访问和最终
+无分支保护结构。
+
+```diff
+- 未被实弹、导弹、能量拒绝：默认显示
++ 若 getType() 是特殊类型：仅在对应类型已选择时显示
++ 其它类型：保留原版默认行为
+```

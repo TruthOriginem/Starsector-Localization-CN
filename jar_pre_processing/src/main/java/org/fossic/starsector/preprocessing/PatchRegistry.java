@@ -2,6 +2,7 @@ package org.fossic.starsector.preprocessing;
 
 import org.fossic.starsector.preprocessing.patches.CampaignDateWidthPatch;
 import org.fossic.starsector.preprocessing.patches.CombatDeploymentFontPatch;
+import org.fossic.starsector.preprocessing.patches.CodexWeaponTypeFilterPatch;
 import org.fossic.starsector.preprocessing.patches.FactionHostilityNoManualPatch;
 import org.fossic.starsector.preprocessing.patches.IntelPutFirstTagIdPatch;
 import org.fossic.starsector.preprocessing.patches.PlanetListColumnWidthPatch;
@@ -28,7 +29,8 @@ public final class PatchRegistry {
                 new StarSystemMapFontPatch(),
                 new IntelPutFirstTagIdPatch(),
                 new WindowDecorationPhysicalResolutionPatch(),
-                new TerrainStatusBarSeparatorPatch()
+                new TerrainStatusBarSeparatorPatch(),
+                new CodexWeaponTypeFilterPatch()
         );
     }
 }

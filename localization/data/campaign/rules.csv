@@ -618,7 +618,7 @@ UniqueEncounter setInteractedWith $gsType","你通过视频观察着打捞小组
 远距离光学扫描确认了细节：在被太空环境旧化的表层之下，船体上仍然勉强可见公司的注册登记和 Opis 宪章联合体 的徽标，那是一个在星历 181 年的 Askonia 危机中被消灭的政治实体。",GS_OPIS_cont2:继续,
 GS_OPIS_cont2Sel,DialogOptionSelected,$option == GS_OPIS_cont2,,"船舱内唯一找到的尸体是坐在控制台上的前舰长，他干涸的眼睛凝视着前方令人窒息的，一片虚无的深空。
 
-在战斗指挥中心后面，武装计算机中心中，有一个速子科技制造的 AI 核心接口。它就那么静静地裸露着，像一个随处可见的商用硬件装置。这表明这艘船的历史可以追溯很早以前，乃至 AI 战争之前。
+在作战信息中心后面，武装计算机中心中，有一个速子科技制造的 AI 核心接口。它就那么静静地裸露着，像一个随处可见的商用硬件装置。这表明这艘船的历史可以追溯很早以前，乃至 AI 战争之前。
 
 然而，接口中没有核心。也许是在舰船被遗弃时被人拿走了。",GS_OPIS_cont3:继续,
 GS_OPIS_cont3Sel,DialogOptionSelected,$option == GS_OPIS_cont3,$salvageLeaveText = 离开 0,"在你的技术军官的监督下，船员们尝试读取日志，试图寻找能够说明发生了什么问题及其原因的蛛丝马迹 —— 但舰上有个擦除程序一直在循环擦除，一直工作到备用电源都耗尽了，这也彻底清空了舰上所有存储记忆库。
@@ -5048,7 +5048,7 @@ $confirmedInsurgent = true 0
 AdjustRepPerson standfast FRIENDLY 1
 FireAll LPPVolturnCurateResponses2","祭司微笑着，苍老的脸上登时又添了更多皱纹。""我们可真是心有灵犀。""",,
 lppVolturnCurateConfirmed,DialogOptionSelected,$option == lpp_volturnCurateConfirmed,"$confirmedInsurgent = true 0
-FireAll LPPVolturnCurateResponses2","""听你这么一说，我反倒要变成你的信众了。"" 祭司笑着说，""好啊。""",,
+FireAll LPPVolturnCurateResponses2","""看来我让你确信这一点了。"" 祭司笑着说，""很好。""",,
 lppVolturnCurateChurchThink,DialogOptionSelected,$option == lpp_volturnCurateChurchThink,"$churchThink = true 0
 $canLeave = true 0
 FireAll LPPVolturnCurateResponses2","""教会并非铁板一块，而是众多个体在议会中凝聚而成的整体，"" 她说道，""有些人热忱地支持我们在此地的事业，而有些人则仅仅满足于祈祷。""
