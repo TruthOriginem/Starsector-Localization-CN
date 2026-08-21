@@ -793,9 +793,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/campaign/listeners/CoreDiscoverEntityPlugin.class#\"Discovered: \"",
         "original": "Discovered: ",
-        "translation": "发现：",
+        "translation": "发现：{",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/campaign/listeners/CoreDiscoverEntityPlugin.class\n常量号：0085\n原始数据：\"Discovered: \"\n译文数据：\"发现：\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/campaign/listeners/CoreDiscoverEntityPlugin.class\n常量号：0085\n原始数据：\"Discovered: \"\n译文数据：\"发现：{\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/campaign/listeners/TestIndustryOptionProvider.class#\"This option shows a rule-driven interaction dialog. In this case, the dialog targets the Asharu Terraforming Platform and ~\"@d81ae22d",
@@ -919,9 +919,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/characters/SkillsChangeOfficerEffect.class#\"Officers whose skills that exceed the new limits will have their excess skills removed, or become mercenaries on a tempora~\"@085578dc",
         "original": "Officers whose skills that exceed the new limits will have their excess skills removed, or become mercenaries on a temporary contract. Officers that already had those kinds of skills when acquired will not be affected.",
-        "translation": "如果军官的技能超过了新的上限，则需要移除超额部分的技能，或签署临时合同作为雇佣军官效力。加入时技能就已经突破限制的军官不受影响。",
+        "translation": "如果军官的技能超过了新的上限，则需要{移除过量的技能}，或签署临时合同作为雇佣军官效力。加入时技能就已经突破限制的军官不受影响。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/characters/SkillsChangeOfficerEffect.class\n常量号：0377\n原始数据：\"Officers whose skills that exceed the new limits will have their excess skills removed, or become mercenaries on a temporary contract. Officers that already had those kinds of skills when acquired will not be affected.\"\n译文数据：\"如果军官的技能超过了新的上限，则需要移除超额部分的技能，或签署临时合同作为雇佣军官效力。加入时技能就已经突破限制的军官不受影响。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/characters/SkillsChangeOfficerEffect.class\n常量号：0377\n原始数据：\"Officers whose skills that exceed the new limits will have their excess skills removed, or become mercenaries on a temporary contract. Officers that already had those kinds of skills when acquired will not be affected.\"\n译文数据：\"如果军官的技能超过了新的上限，则需要{移除过量的技能}，或签署临时合同作为雇佣军官效力。加入时技能就已经突破限制的军官不受影响。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/characters/SkillsChangeOfficerEffect.class#\"Officers\"",
@@ -947,9 +947,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/characters/SkillsChangeRemoveExcessOPEffect.class#\"Ships using more than their maximum ordnance points will have vents, capacitors, hullmods, and other equipment removed to bring them under the limit.\"",
         "original": "Ships using more than their maximum ordnance points will have vents, capacitors, hullmods, and other equipment removed to bring them under the limit.",
-        "translation": "所有 装配点 超出上限的舰船将会移除 幅能寄存器、耗散通道、舰船插件以及武器，直至其处于限制之下。",
+        "translation": "所有 装配点 超出上限的舰船将会移除 {幅能寄存器、耗散通道、舰船插件以及武器，直至其处于限制之下}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/characters/SkillsChangeRemoveExcessOPEffect.class\n常量号：0192\n原始数据：\"Ships using more than their maximum ordnance points will have vents, capacitors, hullmods, and other equipment removed to bring them under the limit.\"\n译文数据：\"所有 装配点 超出上限的舰船将会移除 幅能寄存器、耗散通道、舰船插件以及武器，直至其处于限制之下。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/characters/SkillsChangeRemoveExcessOPEffect.class\n常量号：0192\n原始数据：\"Ships using more than their maximum ordnance points will have vents, capacitors, hullmods, and other equipment removed to bring them under the limit.\"\n译文数据：\"所有 装配点 超出上限的舰船将会移除 {幅能寄存器、耗散通道、舰船插件以及武器，直至其处于限制之下}。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/characters/SkillsChangeRemoveExcessOPEffect.class#\"vents, capacitors, hullmods, and other equipment removed\"",
@@ -989,9 +989,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/characters/SkillsChangeRemoveSmodsEffect.class#\"Ships that you've built s-mods into that now have more than their maximum number of s-mods will have the cheapest s-mods removed.\"",
         "original": "Ships that you've built s-mods into that now have more than their maximum number of s-mods will have the cheapest s-mods removed.",
-        "translation": "如果由你内置的 S-插件 的数量超出上限，那么 装配点最低的 S-插件 将会被移除。",
+        "translation": "如果由你内置的 S-插件 的数量超出上限，那么 {装配点最低的 S-插件 将会被移除}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/characters/SkillsChangeRemoveSmodsEffect.class\n常量号：0302\n原始数据：\"Ships that you've built s-mods into that now have more than their maximum number of s-mods will have the cheapest s-mods removed.\"\n译文数据：\"如果由你内置的 S-插件 的数量超出上限，那么 装配点最低的 S-插件 将会被移除。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/characters/SkillsChangeRemoveSmodsEffect.class\n常量号：0302\n原始数据：\"Ships that you've built s-mods into that now have more than their maximum number of s-mods will have the cheapest s-mods removed.\"\n译文数据：\"如果由你内置的 S-插件 的数量超出上限，那么 {装配点最低的 S-插件 将会被移除}。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/characters/SkillsChangeRemoveSmodsEffect.class#\"The \"",
@@ -1017,9 +1017,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/characters/SkillsChangeRemoveVentsCapsEffect.class#\"Ships that have more than the new maximum number of flux vents and capacitors will have the excess vents and capacitors removed.\"",
         "original": "Ships that have more than the new maximum number of flux vents and capacitors will have the excess vents and capacitors removed.",
-        "translation": "当前 幅能寄存器 和 耗散通道 超出上限的舰船，将会移除过量的部分。",
+        "translation": "当前 幅能寄存器 和 耗散通道 超出上限的舰船，{将会移除过量的部分}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/characters/SkillsChangeRemoveVentsCapsEffect.class\n常量号：0224\n原始数据：\"Ships that have more than the new maximum number of flux vents and capacitors will have the excess vents and capacitors removed.\"\n译文数据：\"当前 幅能寄存器 和 耗散通道 超出上限的舰船，将会移除过量的部分。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/characters/SkillsChangeRemoveVentsCapsEffect.class\n常量号：0224\n原始数据：\"Ships that have more than the new maximum number of flux vents and capacitors will have the excess vents and capacitors removed.\"\n译文数据：\"当前 幅能寄存器 和 耗散通道 超出上限的舰船，{将会移除过量的部分}。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/characters/SkillsChangeRemoveVentsCapsEffect.class#\"excess vents and capacitors removed\"",
@@ -4062,16 +4062,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/CoreScript.class#\"Monthly expenses: \"",
         "original": "Monthly expenses: ",
-        "translation": "每月支出：",
+        "translation": "每月支出：{",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/CoreScript.class\n常量号：1719\n原始数据：\"Monthly expenses: \"\n译文数据：\"每月支出：\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/CoreScript.class\n常量号：1719\n原始数据：\"Monthly expenses: \"\n译文数据：\"每月支出：{\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/CoreScript.class#\"Monthly income: \"",
         "original": "Monthly income: ",
-        "translation": "月收益：",
+        "translation": "每月收益：{",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/CoreScript.class\n常量号：1714\n原始数据：\"Monthly income: \"\n译文数据：\"月收益：\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/CoreScript.class\n常量号：1714\n原始数据：\"Monthly income: \"\n译文数据：\"每月收益：{\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/CoreScript.class#\"New planet data: \"",
@@ -6953,9 +6953,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/RuleBasedInteractionDialogPluginImpl.class#\"Note: this may break any mission interaction in the current dialog, it's recommended that you reload an earlier save if you use this option.\"",
         "original": "Note: this may break any mission interaction in the current dialog, it's recommended that you reload an earlier save if you use this option.",
-        "translation": "注意：这可能会破坏当前对话框中的某些任务交互，如果你使用了该选项，建议你重新加载之前的一个存档。",
+        "translation": "注意：这可能会破坏当前对话框中的某些任务交互，如果你使用了该选项，{建议你重新加载之前的一个存档}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/RuleBasedInteractionDialogPluginImpl.class\n常量号：0370\n原始数据：\"Note: this may break any mission interaction in the current dialog, it's recommended that you reload an earlier save if you use this option.\"\n译文数据：\"注意：这可能会破坏当前对话框中的某些任务交互，如果你使用了该选项，建议你重新加载之前的一个存档。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/RuleBasedInteractionDialogPluginImpl.class\n常量号：0370\n原始数据：\"Note: this may break any mission interaction in the current dialog, it's recommended that you reload an earlier save if you use this option.\"\n译文数据：\"注意：这可能会破坏当前对话框中的某些任务交互，如果你使用了该选项，{建议你重新加载之前的一个存档}。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/RuleBasedInteractionDialogPluginImpl.class#\"recommended that you reload an earlier save\"",
@@ -7352,9 +7352,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/DurationAbilityWithCost2.class#\"Some ships don't have enough combat readiness and may suffer damage if the ability is activated:\"",
         "original": "Some ships don't have enough combat readiness and may suffer damage if the ability is activated:",
-        "translation": "以下舰船的战备值不足，如果强行激活将有可能遭受损伤：",
+        "translation": "以下舰船的战备值不足，如果强行激活将{有可能遭受损伤}：",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/abilities/DurationAbilityWithCost2.class\n常量号：0378\n原始数据：\"Some ships don't have enough combat readiness and may suffer damage if the ability is activated:\"\n译文数据：\"以下舰船的战备值不足，如果强行激活将有可能遭受损伤：\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/abilities/DurationAbilityWithCost2.class\n常量号：0378\n原始数据：\"Some ships don't have enough combat readiness and may suffer damage if the ability is activated:\"\n译文数据：\"以下舰船的战备值不足，如果强行激活将{有可能遭受损伤}：\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/DurationAbilityWithCost2.class#\"may suffer damage\"",
@@ -7499,9 +7499,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/EmergencyBurnAbility.class#\"Some ships don't have enough combat readiness to safely initiate an emergency burn and may suffer damage if the ability is activated:\"",
         "original": "Some ships don't have enough combat readiness to safely initiate an emergency burn and may suffer damage if the ability is activated:",
-        "translation": "当某些舰船战备值 (CR) 不足时，将无法安全地启动紧急加速，因此当该能力激活时，以下舰船将可能遭受损害：",
+        "translation": "当某些舰船战备值 (CR) 不足时，将无法安全地启动紧急加速，因此当该能力激活时，以下舰船{有可能遭受损伤}：",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/abilities/EmergencyBurnAbility.class\n常量号：0439\n原始数据：\"Some ships don't have enough combat readiness to safely initiate an emergency burn and may suffer damage if the ability is activated:\"\n译文数据：\"当某些舰船战备值 (CR) 不足时，将无法安全地启动紧急加速，因此当该能力激活时，以下舰船将可能遭受损害：\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/abilities/EmergencyBurnAbility.class\n常量号：0439\n原始数据：\"Some ships don't have enough combat readiness to safely initiate an emergency burn and may suffer damage if the ability is activated:\"\n译文数据：\"当某些舰船战备值 (CR) 不足时，将无法安全地启动紧急加速，因此当该能力激活时，以下舰船{有可能遭受损伤}：\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/EmergencyBurnAbility.class#\"may suffer damage\"",
@@ -7618,9 +7618,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/FractureJumpAbility.class#\"Some ships don't have enough combat readiness to safely initiate a transverse jump and may suffer damage if the ability is activated:\"",
         "original": "Some ships don't have enough combat readiness to safely initiate a transverse jump and may suffer damage if the ability is activated:",
-        "translation": "当某些舰船战备值 (CR) 不足时，将无法安全地启动横轴跳跃，因此当该能力激活时，以下舰船将可能遭受损害：",
+        "translation": "当某些舰船战备值 (CR) 不足时，将无法安全地启动横轴跳跃，因此当该能力激活时，以下舰船{有可能遭受损伤}：",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/abilities/FractureJumpAbility.class\n常量号：0507\n原始数据：\"Some ships don't have enough combat readiness to safely initiate a transverse jump and may suffer damage if the ability is activated:\"\n译文数据：\"当某些舰船战备值 (CR) 不足时，将无法安全地启动横轴跳跃，因此当该能力激活时，以下舰船将可能遭受损害：\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/abilities/FractureJumpAbility.class\n常量号：0507\n原始数据：\"Some ships don't have enough combat readiness to safely initiate a transverse jump and may suffer damage if the ability is activated:\"\n译文数据：\"当某些舰船战备值 (CR) 不足时，将无法安全地启动横轴跳跃，因此当该能力激活时，以下舰船{有可能遭受损伤}：\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/FractureJumpAbility.class#\"Transverse Jump\"",
@@ -8780,9 +8780,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/ToggleAbilityWithCost.class#\"Some ships don't have enough combat readiness and may suffer damage if the ability is activated:\"",
         "original": "Some ships don't have enough combat readiness and may suffer damage if the ability is activated:",
-        "translation": "以下舰船的战备值不足，如果强行激活将有可能遭受损伤：",
+        "translation": "以下舰船的战备值不足，如果强行激活将{有可能遭受损伤}：",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/abilities/ToggleAbilityWithCost.class\n常量号：0370\n原始数据：\"Some ships don't have enough combat readiness and may suffer damage if the ability is activated:\"\n译文数据：\"以下舰船的战备值不足，如果强行激活将有可能遭受损伤：\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/abilities/ToggleAbilityWithCost.class\n常量号：0370\n原始数据：\"Some ships don't have enough combat readiness and may suffer damage if the ability is activated:\"\n译文数据：\"以下舰船的战备值不足，如果强行激活将{有可能遭受损伤}：\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/abilities/ToggleAbilityWithCost.class#\"educes the combat readiness \"",
@@ -9452,16 +9452,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/LuddicMajority.class#\"The following factors result in these bonuses being negated, and, unless addressed, will result in the \"Luddic Majority\" c~\"@70c66005",
         "original": "The following factors result in these bonuses being negated, and, unless addressed, will result in the \"Luddic Majority\" condition being removed if the colony increases in size:",
-        "translation": "以下因素导致增益被抵消，且除非因素被消除，否则可能导致殖民地增长时 失去 \"卢德信众\" 这一特质：",
+        "translation": "以下因素导致增益被{抵消}，且除非因素被消除，否则可能导致殖民地增长时 失去 \"卢德信众\" 这一特质：",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/econ/LuddicMajority.class\n常量号：0325\n原始数据：\"The following factors result in these bonuses being negated, and, unless addressed, will result in the \"Luddic Majority\" condition being removed if the colony increases in size:\"\n译文数据：\"以下因素导致增益被抵消，且除非因素被消除，否则可能导致殖民地增长时 失去 \"卢德信众\" 这一特质：\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/econ/LuddicMajority.class\n常量号：0325\n原始数据：\"The following factors result in these bonuses being negated, and, unless addressed, will result in the \"Luddic Majority\" condition being removed if the colony increases in size:\"\n译文数据：\"以下因素导致增益被{抵消}，且除非因素被消除，否则可能导致殖民地增长时 失去 \"卢德信众\" 这一特质：\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/LuddicMajority.class#\"The following factors result in these bonuses being negated:\"",
         "original": "The following factors result in these bonuses being negated:",
-        "translation": "以下因素导致增益被抵消：",
+        "translation": "以下因素导致增益被{抵消}：",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/econ/LuddicMajority.class\n常量号：0334\n原始数据：\"The following factors result in these bonuses being negated:\"\n译文数据：\"以下因素导致增益被抵消：\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/econ/LuddicMajority.class\n常量号：0334\n原始数据：\"The following factors result in these bonuses being negated:\"\n译文数据：\"以下因素导致增益被{抵消}：\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/LuddicMajority.class#\"This may result in a substantial boost \"",
@@ -10649,9 +10649,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/impl/BaseInstallableItemEffect.class#\"Requires: \"",
         "original": "Requires: ",
-        "translation": "要求：",
+        "translation": "要求：{",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/econ/impl/BaseInstallableItemEffect.class\n常量号：0353\n原始数据：\"Requires: \"\n译文数据：\"要求：\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/econ/impl/BaseInstallableItemEffect.class\n常量号：0353\n原始数据：\"Requires: \"\n译文数据：\"要求：{\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/econ/impl/Cryorevival$CryosleeperFactor.class#\" away, allowing \"",
@@ -13421,9 +13421,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/events/OfficerManagerEvent.class#\", level: \"",
         "original": ", level: ",
-        "translation": "，等级：",
+        "translation": "}，等级：{",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/events/OfficerManagerEvent.class\n常量号：0977\n原始数据：\", level: \"\n译文数据：\"，等级：\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/events/OfficerManagerEvent.class\n常量号：0977\n原始数据：\", level: \"\n译文数据：\"}，等级：{\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/events/OfficerManagerEvent.class#\"Added officer at \"",
@@ -13442,9 +13442,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/events/OfficerManagerEvent.class#\"Personality: \"",
         "original": "Personality: ",
-        "translation": "性格：",
+        "translation": "性格：{",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/events/OfficerManagerEvent.class\n常量号：0975\n原始数据：\"Personality: \"\n译文数据：\"性格：\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/events/OfficerManagerEvent.class\n常量号：0975\n原始数据：\"Personality: \"\n译文数据：\"性格：{\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/events/OfficerManagerEvent.class#\"Picking initial skill: \"",
@@ -15304,16 +15304,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/BaseMissionIntel.class#\".\":0",
         "original": ".",
-        "translation": "。",
+        "translation": "}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/BaseMissionIntel.class\n常量号：0250\n同值序号：0\n原始数据：\".\"\n译文数据：\"。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/BaseMissionIntel.class\n常量号：0250\n同值序号：0\n原始数据：\".\"\n译文数据：\"}。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/BaseMissionIntel.class#\".\":1",
         "original": ".",
-        "translation": "。",
+        "translation": "}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/BaseMissionIntel.class\n常量号：0428\n同值序号：1\n原始数据：\".\"\n译文数据：\"。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/BaseMissionIntel.class\n常量号：0428\n同值序号：1\n原始数据：\".\"\n译文数据：\"}。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/BaseMissionIntel.class#\".\":2",
@@ -16004,9 +16004,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/LuddicChurchImmigrationDeal.class#\"You've made an agreement with the Luddic Church, curtailing excessive immigration from their worlds. In exchange, the Knig~\"@42f3fbf7",
         "original": "You've made an agreement with the Luddic Church, curtailing excessive immigration from their worlds. In exchange, the Knights of Ludd \"protector\" fleets no longer operate in your volume.",
-        "translation": "你已与 卢德教会 达成协议，不再从他们的世界大量接收移民。而相应地，卢德骑士团 的 \"保护者\" 舰队将不再于你的领地附近行动。",
+        "translation": "你已与 卢德教会 达成协议，不再从他们的世界大量接收移民。而相应地，{卢德骑士团} 的 \"保护者\" 舰队将不再于你的领地附近行动。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/LuddicChurchImmigrationDeal.class\n常量号：0271\n原始数据：\"You've made an agreement with the Luddic Church, curtailing excessive immigration from their worlds. In exchange, the Knights of Ludd \"protector\" fleets no longer operate in your volume.\"\n译文数据：\"你已与 卢德教会 达成协议，不再从他们的世界大量接收移民。而相应地，卢德骑士团 的 \"保护者\" 舰队将不再于你的领地附近行动。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/LuddicChurchImmigrationDeal.class\n常量号：0271\n原始数据：\"You've made an agreement with the Luddic Church, curtailing excessive immigration from their worlds. In exchange, the Knights of Ludd \"protector\" fleets no longer operate in your volume.\"\n译文数据：\"你已与 卢德教会 达成协议，不再从他们的世界大量接收移民。而相应地，{卢德骑士团} 的 \"保护者\" 舰队将不再于你的领地附近行动。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/NewMessagesIntel.class#\"New intel (%s)\"",
@@ -16151,16 +16151,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/PerseanLeagueMembership.class#\"If you leave, \":1",
         "original": "If you leave, ",
-        "translation": "如果你选择退出，",
+        "translation": "如果你选择退出，{",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/PerseanLeagueMembership.class\n常量号：0873\n同值序号：1\n原始数据：\"If you leave, \"\n译文数据：\"如果你选择退出，\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/PerseanLeagueMembership.class\n常量号：0873\n同值序号：1\n原始数据：\"If you leave, \"\n译文数据：\"如果你选择退出，{\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/PerseanLeagueMembership.class#\"If you leave, \":2",
         "original": "If you leave, ",
-        "translation": "如果你选择退出，",
+        "translation": "如果你选择退出，{",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/PerseanLeagueMembership.class\n常量号：0875\n同值序号：2\n原始数据：\"If you leave, \"\n译文数据：\"如果你选择退出，\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/PerseanLeagueMembership.class\n常量号：0875\n同值序号：2\n原始数据：\"If you leave, \"\n译文数据：\"如果你选择退出，{\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/PerseanLeagueMembership.class#\"League\":0",
@@ -16235,9 +16235,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/PerseanLeagueMembership.class#\"You've joined the Persean League, though it's whispered that you only did so to avoid harassment, and your membership dues~\"@480d2f72",
         "original": "You've joined the Persean League, though it's whispered that you only did so to avoid harassment, and your membership dues are nothing more than protection payments. However, the League still supports you politically, which for example makes it untenable for the Hegemony to insist on AI inspections in your space.",
-        "translation": "你加入了英仙座联盟，尽管有传言说你这样做只是为了避免骚扰，而你的会费只不过是保护费。即使如此，英仙座联盟仍将在星际政治上支持你，例如，霸主将无法合理地在你领地内进行 AI 审查活动。",
+        "translation": "你加入了{英仙座联盟}，尽管有传言说你这样做只是为了避免骚扰，而你的会费只不过是保护费。即使如此，{英仙座联盟}仍将在星际政治上支持你，例如，霸主将无法合理地在你领地内进行 AI 审查活动。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/PerseanLeagueMembership.class\n常量号：0452\n原始数据：\"You've joined the Persean League, though it's whispered that you only did so to avoid harassment, and your membership dues are nothing more than protection payments. However, the League still supports you politically, which for example makes it untenable for the Hegemony to insist on AI inspections in your space.\"\n译文数据：\"你加入了英仙座联盟，尽管有传言说你这样做只是为了避免骚扰，而你的会费只不过是保护费。即使如此，英仙座联盟仍将在星际政治上支持你，例如，霸主将无法合理地在你领地内进行 AI 审查活动。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/PerseanLeagueMembership.class\n常量号：0452\n原始数据：\"You've joined the Persean League, though it's whispered that you only did so to avoid harassment, and your membership dues are nothing more than protection payments. However, the League still supports you politically, which for example makes it untenable for the Hegemony to insist on AI inspections in your space.\"\n译文数据：\"你加入了{英仙座联盟}，尽管有传言说你这样做只是为了避免骚扰，而你的会费只不过是保护费。即使如此，{英仙座联盟}仍将在星际政治上支持你，例如，霸主将无法合理地在你领地内进行 AI 审查活动。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/PerseanLeagueMembership.class#\"You've negotiated a good membership deal from a position of strength. If you leave, you will not be allowed to rejoin, but the \"",
@@ -16249,9 +16249,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/PerseanLeagueMembership.class#\"You've negotiated a good membership deal from a position of strength. The League will support you politically, which for e~\"@3bf79416",
         "original": "You've negotiated a good membership deal from a position of strength. The League will support you politically, which for example makes it untenable for the Hegemony to insist on AI inspections in your space.",
-        "translation": "你处于强势地位，并通过谈判达成了一项优待式成员协议。英仙座联盟将在星际政治上支持你，例如，霸主将无法合理地在你领地内进行 AI 审查活动。",
+        "translation": "你处于强势地位，并通过谈判达成了一项优待式成员协议。{英仙座联盟}将在星际政治上支持你，例如，霸主将无法合理地在你领地内进行 AI 审查活动。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/PerseanLeagueMembership.class\n常量号：0419\n原始数据：\"You've negotiated a good membership deal from a position of strength. The League will support you politically, which for example makes it untenable for the Hegemony to insist on AI inspections in your space.\"\n译文数据：\"你处于强势地位，并通过谈判达成了一项优待式成员协议。英仙座联盟将在星际政治上支持你，例如，霸主将无法合理地在你领地内进行 AI 审查活动。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/PerseanLeagueMembership.class\n常量号：0419\n原始数据：\"You've negotiated a good membership deal from a position of strength. The League will support you politically, which for example makes it untenable for the Hegemony to insist on AI inspections in your space.\"\n译文数据：\"你处于强势地位，并通过谈判达成了一项优待式成员协议。{英仙座联盟}将在星际政治上支持你，例如，霸主将无法合理地在你领地内进行 AI 审查活动。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/PerseanLeagueMembership.class#\"Your League membership is contingent on maintaining an active Persean League commission. If you resign it, or if it is ann~\"@e0399f44",
@@ -16949,9 +16949,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/PromoteOfficerIntel.class#\"Skill: \"",
         "original": "Skill: ",
-        "translation": "技能：",
+        "translation": "技能：{",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/PromoteOfficerIntel.class\n常量号：0246\n原始数据：\"Skill: \"\n译文数据：\"技能：\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/PromoteOfficerIntel.class\n常量号：0246\n原始数据：\"Skill: \"\n译文数据：\"技能：{\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/PromoteOfficerIntel.class#\"This opportunity will be available for %s more \"",
@@ -17047,9 +17047,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/SindrianDiktatFuelDeal.class#\"You are no longer abiding by your agreement with the Sindrian Diktat.\"",
         "original": "You are no longer abiding by your agreement with the Sindrian Diktat.",
-        "translation": "你不再遵守与辛达强权的协议。",
+        "translation": "你不再遵守与{辛达强权}的协议。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/SindrianDiktatFuelDeal.class\n常量号：0280\n原始数据：\"You are no longer abiding by your agreement with the Sindrian Diktat.\"\n译文数据：\"你不再遵守与辛达强权的协议。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/SindrianDiktatFuelDeal.class\n常量号：0280\n原始数据：\"You are no longer abiding by your agreement with the Sindrian Diktat.\"\n译文数据：\"你不再遵守与{辛达强权}的协议。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/SindrianDiktatFuelDeal.class#\"You can end this agreement, but there would be no possibility of re-negotiating a similar one in the future.\"",
@@ -17061,9 +17061,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/SindrianDiktatFuelDeal.class#\"You've made an agreement with the Sindrian Diktat, paying a sizeable fee, %s of your gross fuel exports, in exchange for t~\"@3c4b5445",
         "original": "You've made an agreement with the Sindrian Diktat, paying a sizeable fee, %s of your gross fuel exports, in exchange for them not bombarding your fuel production facilities from orbit.",
-        "translation": "你已与辛达强权达成协议，支付你燃料出口收入的 {%s} 作为自适应式赔款。而相应地，辛达强权将不再对你的燃料生产设施进行轨道轰炸。",
+        "translation": "你已与{辛达强权}达成协议，支付你燃料出口收入的 {%s} 作为自适应式赔款。而相应地，{辛达强权}将不再对你的燃料生产设施进行轨道轰炸。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/SindrianDiktatFuelDeal.class\n常量号：0298\n原始数据：\"You've made an agreement with the Sindrian Diktat, paying a sizeable fee, %s of your gross fuel exports, in exchange for them not bombarding your fuel production facilities from orbit.\"\n译文数据：\"你已与辛达强权达成协议，支付你燃料出口收入的 {%s} 作为自适应式赔款。而相应地，辛达强权将不再对你的燃料生产设施进行轨道轰炸。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/SindrianDiktatFuelDeal.class\n常量号：0298\n原始数据：\"You've made an agreement with the Sindrian Diktat, paying a sizeable fee, %s of your gross fuel exports, in exchange for them not bombarding your fuel production facilities from orbit.\"\n译文数据：\"你已与{辛达强权}达成协议，支付你燃料出口收入的 {%s} 作为自适应式赔款。而相应地，{辛达强权}将不再对你的燃料生产设施进行轨道轰炸。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/SurveyPlanetMissionIntel.class#\" have posted a reward for completing a full survey of \"",
@@ -22619,9 +22619,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class#\"Agreement made with base commander\"",
         "original": "Agreement made with base commander",
-        "translation": "与基地指挥官达成协议",
+        "translation": "与基地指挥官达成{协议}",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class\n常量号：1270\n原始数据：\"Agreement made with base commander\"\n译文数据：\"与基地指挥官达成协议\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class\n常量号：1270\n原始数据：\"Agreement made with base commander\"\n译文数据：\"与基地指挥官达成{协议}\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/bases/PirateBaseIntel.class#\"Agreement\"",
@@ -24369,9 +24369,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HegemonyHostileActivityFactor.class#\"If this inspection is defeated by military means, the Hegemony is likely to escalate the conflict, although only up to a point.\"",
         "original": "If this inspection is defeated by military means, the Hegemony is likely to escalate the conflict, although only up to a point.",
-        "translation": "如果审查团被以军事手段击败，霸主很可能会 发起更大的冲突，不过冲突升级 不是无限制 的。",
+        "translation": "如果审查团被以军事手段击败，霸主很可能会 {发起更大的冲突}，不过冲突升级 不是无限制 的。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/HegemonyHostileActivityFactor.class\n常量号：0385\n原始数据：\"If this inspection is defeated by military means, the Hegemony is likely to escalate the conflict, although only up to a point.\"\n译文数据：\"如果审查团被以军事手段击败，霸主很可能会 发起更大的冲突，不过冲突升级 不是无限制 的。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/HegemonyHostileActivityFactor.class\n常量号：0385\n原始数据：\"If this inspection is defeated by military means, the Hegemony is likely to escalate the conflict, although only up to a point.\"\n译文数据：\"如果审查团被以军事手段击败，霸主很可能会 {发起更大的冲突}，不过冲突升级 不是无限制 的。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HegemonyHostileActivityFactor.class#\"The %s has no functional military bases\"",
@@ -24383,9 +24383,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HegemonyHostileActivityFactor.class#\"Upcoming Hegemony AI inspection targeting %s\"",
         "original": "Upcoming Hegemony AI inspection targeting %s",
-        "translation": "下一个霸主 AI 审查目标是 {%s}",
+        "translation": "下一个{霸主} AI 审查目标是 {%s}",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/HegemonyHostileActivityFactor.class\n常量号：0318\n原始数据：\"Upcoming Hegemony AI inspection targeting %s\"\n译文数据：\"下一个霸主 AI 审查目标是 {%s}\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/HegemonyHostileActivityFactor.class\n常量号：0318\n原始数据：\"Upcoming Hegemony AI inspection targeting %s\"\n译文数据：\"下一个{霸主} AI 审查目标是 {%s}\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/HegemonyHostileActivityFactor.class#\"crisis\":0",
@@ -24733,9 +24733,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchHostileActivityFactor.class#\"Impending Luddic Church takeover operation\"",
         "original": "Impending Luddic Church takeover operation",
-        "translation": "迫近的卢德教会宣称夺占",
+        "translation": "迫近的{卢德教会}宣称夺占",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchHostileActivityFactor.class\n常量号：0318\n原始数据：\"Impending Luddic Church takeover operation\"\n译文数据：\"迫近的卢德教会宣称夺占\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchHostileActivityFactor.class\n常量号：0318\n原始数据：\"Impending Luddic Church takeover operation\"\n译文数据：\"迫近的{卢德教会}宣称夺占\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicChurchHostileActivityFactor.class#\"Knights of Ludd \"",
@@ -24950,9 +24950,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class#\"An agreement is reached with the Luddic Path\"",
         "original": "An agreement is reached with the Luddic Path",
-        "translation": "与卢德左径达成某种和解",
+        "translation": "与{卢德左径}达成某种和解",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class\n常量号：0386\n原始数据：\"An agreement is reached with the Luddic Path\"\n译文数据：\"与卢德左径达成某种和解\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class\n常量号：0386\n原始数据：\"An agreement is reached with the Luddic Path\"\n译文数据：\"与{卢德左径}达成某种和解\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class#\"It's possible that you might reach some kind of understanding with the Pathers, provided you find the right people to talk to.\"",
@@ -25041,9 +25041,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class#\"The Luddic Path cells on %s are disrupted\"",
         "original": "The Luddic Path cells on %s are disrupted",
-        "translation": "位于 {%s} 的左径狂信徒已被瘫痪",
+        "translation": "位于 {%s} 的{卢德左径}教徒已被瘫痪",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class\n常量号：0384\n原始数据：\"The Luddic Path cells on %s are disrupted\"\n译文数据：\"位于 {%s} 的左径狂信徒已被瘫痪\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class\n常量号：0384\n原始数据：\"The Luddic Path cells on %s are disrupted\"\n译文数据：\"位于 {%s} 的{卢德左径}教徒已被瘫痪\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/LuddicPathHostileActivityFactor.class#\"You've %s a signficant amount to the Pathers, and their fleets and ground-based cells should leave your colonies alone for another %s \"",
@@ -25160,9 +25160,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PerseanLeagueHostileActivityFactor.class#\"Impending Persean League blockade\"",
         "original": "Impending Persean League blockade",
-        "translation": "迫近的英仙座联盟封锁",
+        "translation": "迫近的{英仙座联盟}封锁",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/PerseanLeagueHostileActivityFactor.class\n常量号：0214\n原始数据：\"Impending Persean League blockade\"\n译文数据：\"迫近的英仙座联盟封锁\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/PerseanLeagueHostileActivityFactor.class\n常量号：0214\n原始数据：\"Impending Persean League blockade\"\n译文数据：\"迫近的{英仙座联盟}封锁\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PerseanLeagueHostileActivityFactor.class#\"Persean League blockade averted\"",
@@ -25622,16 +25622,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class#\"If the raid is defeated, your colonies will gain increased accessibility for several cycles.\"",
         "original": "If the raid is defeated, your colonies will gain increased accessibility for several cycles.",
-        "translation": "如果劫掠者们被击败，你的殖民地将在数年内获得 流通性增益。",
+        "translation": "如果劫掠者们被击败，你的殖民地将在数年内获得 {流通性增益}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class\n常量号：0278\n原始数据：\"If the raid is defeated, your colonies will gain increased accessibility for several cycles.\"\n译文数据：\"如果劫掠者们被击败，你的殖民地将在数年内获得 流通性增益。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class\n常量号：0278\n原始数据：\"If the raid is defeated, your colonies will gain increased accessibility for several cycles.\"\n译文数据：\"如果劫掠者们被击败，你的殖民地将在数年内获得 {流通性增益}。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class#\"If the raid is defeated, your colonies will permanently gain increased accessibility.\"",
         "original": "If the raid is defeated, your colonies will permanently gain increased accessibility.",
-        "translation": "如果劫掠者们被击败，你的殖民地将永久地获得 流通性增益。",
+        "translation": "如果劫掠者们被击败，你的殖民地将永久地获得 {流通性增益}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class\n常量号：0274\n原始数据：\"If the raid is defeated, your colonies will permanently gain increased accessibility.\"\n译文数据：\"如果劫掠者们被击败，你的殖民地将永久地获得 流通性增益。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class\n常量号：0274\n原始数据：\"If the raid is defeated, your colonies will permanently gain increased accessibility.\"\n译文数据：\"如果劫掠者们被击败，你的殖民地将永久地获得 {流通性增益}。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class#\"If the raid is defeated, your colonies will suffer less shipping disruptions from piracy for the foreseeable future.\"",
@@ -25692,9 +25692,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class#\"There are rumors that a pirate raid targeting your colonies may be organized in the near future. If the raid is successful~\"@49f5f723",
         "original": "There are rumors that a pirate raid targeting your colonies may be organized in the near future. If the raid is successful, the targeted colonies will suffer from reduced stability.",
-        "translation": "有传闻声称海盗们近期可能会组织一次针对你殖民地的劫掠。如果劫掠成功，则目标殖民地将降低稳定性。",
+        "translation": "有传闻声称海盗们近期可能会组织一次针对你殖民地的劫掠。如果劫掠成功，则目标殖民地将{降低稳定性}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class\n常量号：0235\n原始数据：\"There are rumors that a pirate raid targeting your colonies may be organized in the near future. If the raid is successful, the targeted colonies will suffer from reduced stability.\"\n译文数据：\"有传闻声称海盗们近期可能会组织一次针对你殖民地的劫掠。如果劫掠成功，则目标殖民地将降低稳定性。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class\n常量号：0235\n原始数据：\"There are rumors that a pirate raid targeting your colonies may be organized in the near future. If the raid is successful, the targeted colonies will suffer from reduced stability.\"\n译文数据：\"有传闻声称海盗们近期可能会组织一次针对你殖民地的劫掠。如果劫掠成功，则目标殖民地将{降低稳定性}。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/PirateHostileActivityFactor.class#\"increased accessibility\":0",
@@ -25748,16 +25748,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantHostileActivityFactor.class#\"Defeating the attack fleet would only put off the problem, but destroying the Remnant Nexus will end the threat for good.\"",
         "original": "Defeating the attack fleet would only put off the problem, but destroying the Remnant Nexus will end the threat for good.",
-        "translation": "击退袭击舰队只能暂时延缓此情况，只有彻底摧毁 余辉中枢 才能一劳永逸地将其 解决。",
+        "translation": "击退袭击舰队只能暂时延缓此情况，只有彻底摧毁 余辉中枢 才能一劳永逸地将其 {解决}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/RemnantHostileActivityFactor.class\n常量号：0162\n原始数据：\"Defeating the attack fleet would only put off the problem, but destroying the Remnant Nexus will end the threat for good.\"\n译文数据：\"击退袭击舰队只能暂时延缓此情况，只有彻底摧毁 余辉中枢 才能一劳永逸地将其 解决。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/RemnantHostileActivityFactor.class\n常量号：0162\n原始数据：\"Defeating the attack fleet would only put off the problem, but destroying the Remnant Nexus will end the threat for good.\"\n译文数据：\"击退袭击舰队只能暂时延缓此情况，只有彻底摧毁 余辉中枢 才能一劳永逸地将其 {解决}。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantHostileActivityFactor.class#\"Impending Remnant attack\"",
         "original": "Impending Remnant attack",
-        "translation": "迫近的余辉袭击",
+        "translation": "迫近的{余辉}袭击",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/RemnantHostileActivityFactor.class\n常量号：0087\n原始数据：\"Impending Remnant attack\"\n译文数据：\"迫近的余辉袭击\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/RemnantHostileActivityFactor.class\n常量号：0087\n原始数据：\"Impending Remnant attack\"\n译文数据：\"迫近的{余辉}袭击\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/RemnantHostileActivityFactor.class#\"Remnant Nexus\":0",
@@ -26035,16 +26035,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/SindrianDiktatHostileActivityFactor.class#\"If the attack is defeated the Diktat will likely abandon further efforts against you, and your ability to export fuel will be improved.\"",
         "original": "If the attack is defeated the Diktat will likely abandon further efforts against you, and your ability to export fuel will be improved.",
-        "translation": "如果这一袭击被击败，辛达强权 将很可能彻底放弃此类行动，且你 出口燃料 的能力将得到 增益。",
+        "translation": "如果这一袭击被击败，{辛达强权} 将很可能彻底放弃此类行动，且你 出口燃料 的能力将得到 {增益}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/SindrianDiktatHostileActivityFactor.class\n常量号：0282\n原始数据：\"If the attack is defeated the Diktat will likely abandon further efforts against you, and your ability to export fuel will be improved.\"\n译文数据：\"如果这一袭击被击败，辛达强权 将很可能彻底放弃此类行动，且你 出口燃料 的能力将得到 增益。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/SindrianDiktatHostileActivityFactor.class\n常量号：0282\n原始数据：\"If the attack is defeated the Diktat will likely abandon further efforts against you, and your ability to export fuel will be improved.\"\n译文数据：\"如果这一袭击被击败，{辛达强权} 将很可能彻底放弃此类行动，且你 出口燃料 的能力将得到 {增益}。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/SindrianDiktatHostileActivityFactor.class#\"Impending Sindrian Diktat attack\"",
         "original": "Impending Sindrian Diktat attack",
-        "translation": "迫近的辛达强权袭击",
+        "translation": "迫近的{辛达强权}袭击",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/SindrianDiktatHostileActivityFactor.class\n常量号：0238\n原始数据：\"Impending Sindrian Diktat attack\"\n译文数据：\"迫近的辛达强权袭击\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/SindrianDiktatHostileActivityFactor.class\n常量号：0238\n原始数据：\"Impending Sindrian Diktat attack\"\n译文数据：\"迫近的{辛达强权}袭击\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/SindrianDiktatHostileActivityFactor.class#\"Sindrian Diktat attack averted\"",
@@ -26098,9 +26098,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/SindrianDiktatHostileActivityFactor.class#\"You've received intel that the Sindrian Diktat is planning an attack to saturation-bombard your fuel production facilities.\"",
         "original": "You've received intel that the Sindrian Diktat is planning an attack to saturation-bombard your fuel production facilities.",
-        "translation": "你获知的情报表明，辛达强权正计划于你的某个具有燃料生产设施的殖民地实施一次 饱和轰炸。",
+        "translation": "你获知的情报表明，{辛达强权}正计划于你的某个具有燃料生产设施的殖民地实施一次 {饱和轰炸}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/SindrianDiktatHostileActivityFactor.class\n常量号：0272\n原始数据：\"You've received intel that the Sindrian Diktat is planning an attack to saturation-bombard your fuel production facilities.\"\n译文数据：\"你获知的情报表明，辛达强权正计划于你的某个具有燃料生产设施的殖民地实施一次 饱和轰炸。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/SindrianDiktatHostileActivityFactor.class\n常量号：0272\n原始数据：\"You've received intel that the Sindrian Diktat is planning an attack to saturation-bombard your fuel production facilities.\"\n译文数据：\"你获知的情报表明，{辛达强权}正计划于你的某个具有燃料生产设施的殖民地实施一次 {饱和轰炸}。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/SindrianDiktatHostileActivityFactor.class#\"crisis\":0",
@@ -26378,16 +26378,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/TriTachyonHostileActivityFactor.class#\"If the mercenary attack is defeated, it will go a long way towards convincing the Tri-Tachyon Corporation to abandon its anti-competitive efforts.\"",
         "original": "If the mercenary attack is defeated, it will go a long way towards convincing the Tri-Tachyon Corporation to abandon its anti-competitive efforts.",
-        "translation": "如果雇佣兵被击败，这将有助于引导 三一速子科技公司 放弃其反竞争行为。",
+        "translation": "如果雇佣兵被击败，这将有助于引导 三一速子科技公司 {放弃其反竞争行为}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/TriTachyonHostileActivityFactor.class\n常量号：0388\n原始数据：\"If the mercenary attack is defeated, it will go a long way towards convincing the Tri-Tachyon Corporation to abandon its anti-competitive efforts.\"\n译文数据：\"如果雇佣兵被击败，这将有助于引导 三一速子科技公司 放弃其反竞争行为。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/TriTachyonHostileActivityFactor.class\n常量号：0388\n原始数据：\"If the mercenary attack is defeated, it will go a long way towards convincing the Tri-Tachyon Corporation to abandon its anti-competitive efforts.\"\n译文数据：\"如果雇佣兵被击败，这将有助于引导 三一速子科技公司 {放弃其反竞争行为}。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/TriTachyonHostileActivityFactor.class#\"Impending Tri-Tachyon mercenary attack\"",
         "original": "Impending Tri-Tachyon mercenary attack",
-        "translation": "迫近的速子科技雇佣兵袭击",
+        "translation": "迫近的{速子科技}雇佣兵袭击",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/TriTachyonHostileActivityFactor.class\n常量号：0356\n原始数据：\"Impending Tri-Tachyon mercenary attack\"\n译文数据：\"迫近的速子科技雇佣兵袭击\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/events/TriTachyonHostileActivityFactor.class\n常量号：0356\n原始数据：\"Impending Tri-Tachyon mercenary attack\"\n译文数据：\"迫近的{速子科技}雇佣兵袭击\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/events/TriTachyonHostileActivityFactor.class#\"The %s is convinced that its efforts are unprofitable\"",
@@ -27785,16 +27785,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class#\", and \":1",
         "original": ", and ",
-        "translation": "，而",
+        "translation": "}，而",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class\n常量号：1484\n同值序号：1\n原始数据：\", and \"\n译文数据：\"，而\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class\n常量号：1484\n同值序号：1\n原始数据：\", and \"\n译文数据：\"}，而\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class#\", and \":2",
         "original": ", and ",
-        "translation": "，而",
+        "translation": "}，而",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class\n常量号：1516\n同值序号：2\n原始数据：\", and \"\n译文数据：\"，而\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class\n常量号：1516\n同值序号：2\n原始数据：\", and \"\n译文数据：\"}，而\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/group/FleetGroupIntel.class#\".\":0",
@@ -29500,9 +29500,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/inspection/HegemonyInspectionIntel.class#\" and is likely comprised of \"",
         "original": " and is likely comprised of ",
-        "translation": "，且预计有 ",
+        "translation": "}，且预计有 ",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/inspection/HegemonyInspectionIntel.class\n常量号：0627\n原始数据：\" and is likely comprised of \"\n译文数据：\"，且预计有 \""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/inspection/HegemonyInspectionIntel.class\n常量号：0627\n原始数据：\" and is likely comprised of \"\n译文数据：\"}，且预计有 \""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/inspection/HegemonyInspectionIntel.class#\" confiscated\":0",
@@ -29584,9 +29584,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/inspection/HegemonyInspectionIntel.class#\". Your forces will attempt to resist the inspection.\"",
         "original": ". Your forces will attempt to resist the inspection.",
-        "translation": "。目前正处于敌对状态，这将导致你的舰队会试图抵制视察工作。",
+        "translation": "}。目前正处于敌对状态，这将导致你的舰队会试图抵制视察工作。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/inspection/HegemonyInspectionIntel.class\n常量号：0684\n原始数据：\". Your forces will attempt to resist the inspection.\"\n译文数据：\"。目前正处于敌对状态，这将导致你的舰队会试图抵制视察工作。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/inspection/HegemonyInspectionIntel.class\n常量号：0684\n原始数据：\". Your forces will attempt to resist the inspection.\"\n译文数据：\"}。目前正处于敌对状态，这将导致你的舰队会试图抵制视察工作。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/inspection/HegemonyInspectionIntel.class#\"Arrived in-system\"",
@@ -31964,9 +31964,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/punitive/PunitiveExpeditionIntel.class#\"This operation is being carried without an open declaration of war. Defeating the expeditionary force will only result in ~\"@994403e0",
         "original": "This operation is being carried without an open declaration of war. Defeating the expeditionary force will only result in a small reputation reduction with ",
-        "translation": "此次行动是在没有正式宣战的情况下进行。击败远征军只会稍微降低和下列势力的关系",
+        "translation": "此次行动是在没有正式宣战的情况下进行。击败远征军只会稍微降低和下列势力的关系{",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/punitive/PunitiveExpeditionIntel.class\n常量号：0715\n原始数据：\"This operation is being carried without an open declaration of war. Defeating the expeditionary force will only result in a small reputation reduction with \"\n译文数据：\"此次行动是在没有正式宣战的情况下进行。击败远征军只会稍微降低和下列势力的关系\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/intel/punitive/PunitiveExpeditionIntel.class\n常量号：0715\n原始数据：\"This operation is being carried without an open declaration of war. Defeating the expeditionary force will only result in a small reputation reduction with \"\n译文数据：\"此次行动是在没有正式宣战的情况下进行。击败远征军只会稍微降低和下列势力的关系{\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/intel/punitive/PunitiveExpeditionIntel.class#\"a saturation bombardment of the colony\"",
@@ -33742,9 +33742,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/ExtractionMission.class#\" in the \":2",
         "original": " in the ",
-        "translation": "，而此地位于 ",
+        "translation": "}，而此地位于 ",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/ExtractionMission.class\n常量号：0628\n同值序号：2\n原始数据：\" in the \"\n译文数据：\"，而此地位于 \""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/ExtractionMission.class\n常量号：0628\n同值序号：2\n原始数据：\" in the \"\n译文数据：\"}，而此地位于 \""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/ExtractionMission.class#\"Combat Extraction\"",
@@ -38740,16 +38740,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/hub/BaseHubMission.class#\", \":3",
         "original": ", ",
-        "translation": "，",
+        "translation": "}，",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/hub/BaseHubMission.class\n常量号：3544\n同值序号：3\n原始数据：\", \"\n译文数据：\"，\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/hub/BaseHubMission.class\n常量号：3544\n同值序号：3\n原始数据：\", \"\n译文数据：\"}，\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/hub/BaseHubMission.class#\", \":4",
         "original": ", ",
-        "translation": "，",
+        "translation": "}，",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/hub/BaseHubMission.class\n常量号：3552\n同值序号：4\n原始数据：\", \"\n译文数据：\"，\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/hub/BaseHubMission.class\n常量号：3552\n同值序号：4\n原始数据：\", \"\n译文数据：\"}，\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/hub/BaseHubMission.class#\", a size %s \":0",
@@ -38761,16 +38761,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/hub/BaseHubMission.class#\", a size %s \":1",
         "original": ", a size %s ",
-        "translation": "，规模：{%s}，",
+        "translation": "}，规模：{%s}，",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/hub/BaseHubMission.class\n常量号：3576\n同值序号：1\n原始数据：\", a size %s \"\n译文数据：\"，规模：{%s}，\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/hub/BaseHubMission.class\n常量号：3576\n同值序号：1\n原始数据：\", a size %s \"\n译文数据：\"}，规模：{%s}，\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/hub/BaseHubMission.class#\", a size %s \":2",
         "original": ", a size %s ",
-        "translation": "，规模：{%s}，",
+        "translation": "}，规模：{%s}，",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/hub/BaseHubMission.class\n常量号：3584\n同值序号：2\n原始数据：\", a size %s \"\n译文数据：\"，规模：{%s}，\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/missions/hub/BaseHubMission.class\n常量号：3584\n同值序号：2\n原始数据：\", a size %s \"\n译文数据：\"}，规模：{%s}，\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/missions/hub/BaseHubMission.class#\", affiliated with \"",
@@ -41057,9 +41057,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/AddRemoveCommodity.class#\"(level \"",
         "original": "(level ",
-        "translation": " (等级 ",
+        "translation": "(等级 ",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/AddRemoveCommodity.class\n常量号：0421\n原始数据：\"(level \"\n译文数据：\" (等级 \""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/AddRemoveCommodity.class\n常量号：0421\n原始数据：\"(level \"\n译文数据：\"(等级 \""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/AddRemoveCommodity.class#\") has joined your fleet\"",
@@ -41155,9 +41155,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/AddRemoveCommodity.class#\"Gained ability: \"",
         "original": "Gained ability: ",
-        "translation": "获得能力：",
+        "translation": "获得能力：{",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/AddRemoveCommodity.class\n常量号：0373\n原始数据：\"Gained ability: \"\n译文数据：\"获得能力：\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/AddRemoveCommodity.class\n常量号：0373\n原始数据：\"Gained ability: \"\n译文数据：\"获得能力：{\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/AddRemoveCommodity.class#\"Lost \":0",
@@ -41281,9 +41281,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/CustomsInspectionGenerateResult.class#\"Cargo toll: \"",
         "original": "Cargo toll: ",
-        "translation": "货物关税：",
+        "translation": "货物关税：{",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/CustomsInspectionGenerateResult.class\n常量号：0287\n原始数据：\"Cargo toll: \"\n译文数据：\"货物关税：\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/CustomsInspectionGenerateResult.class\n常量号：0287\n原始数据：\"Cargo toll: \"\n译文数据：\"货物关税：{\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/CustomsInspectionGenerateResult.class#\"Contraband found!\"",
@@ -41295,23 +41295,23 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/CustomsInspectionGenerateResult.class#\"Fine: \"",
         "original": "Fine: ",
-        "translation": "明细：",
+        "translation": "明细：{",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/CustomsInspectionGenerateResult.class\n常量号：0329\n原始数据：\"Fine: \"\n译文数据：\"明细：\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/CustomsInspectionGenerateResult.class\n常量号：0329\n原始数据：\"Fine: \"\n译文数据：\"明细：{\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/CustomsInspectionGenerateResult.class#\"Fleet size toll: \"",
         "original": "Fleet size toll: ",
-        "translation": "舰队规模收费：",
+        "translation": "舰队规模收费：{",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/CustomsInspectionGenerateResult.class\n常量号：0276\n原始数据：\"Fleet size toll: \"\n译文数据：\"舰队规模收费：\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/CustomsInspectionGenerateResult.class\n常量号：0276\n原始数据：\"Fleet size toll: \"\n译文数据：\"舰队规模收费：{\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/CustomsInspectionGenerateResult.class#\"Total: \"",
         "original": "Total: ",
-        "translation": "总计：",
+        "translation": "总计：{",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/CustomsInspectionGenerateResult.class\n常量号：0331\n原始数据：\"Total: \"\n译文数据：\"总计：\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/CustomsInspectionGenerateResult.class\n常量号：0331\n原始数据：\"Total: \"\n译文数据：\"总计：{\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/DoCanAffordCheck$1.class#\"You have %s credits available.\"",
@@ -41400,9 +41400,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/DwellerCMD.class#\"Acquired hull mod: \"",
         "original": "Acquired hull mod: ",
-        "translation": "获得船体插件：",
+        "translation": "获得船体插件：{",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/DwellerCMD.class\n常量号：0257\n原始数据：\"Acquired hull mod: \"\n译文数据：\"获得船体插件：\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/DwellerCMD.class\n常量号：0257\n原始数据：\"Acquired hull mod: \"\n译文数据：\"获得船体插件：{\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/DwellerCMD.class#\"Manifestation\"",
@@ -41470,16 +41470,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/FleetDesc.class#\"Engaging this fleet in battle will not cause any changes to your reputation with the faction it nominally belongs to.\"",
         "original": "Engaging this fleet in battle will not cause any changes to your reputation with the faction it nominally belongs to.",
-        "translation": "与这支舰队交战，将不会影响你与它名义上所属势力的关系。",
+        "translation": "与这支舰队交战，{不会对你的声誉造成任何改变}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/FleetDesc.class\n常量号：0349\n原始数据：\"Engaging this fleet in battle will not cause any changes to your reputation with the faction it nominally belongs to.\"\n译文数据：\"与这支舰队交战，将不会影响你与它名义上所属势力的关系。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/FleetDesc.class\n常量号：0349\n原始数据：\"Engaging this fleet in battle will not cause any changes to your reputation with the faction it nominally belongs to.\"\n译文数据：\"与这支舰队交战，{不会对你的声誉造成任何改变}。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/FleetDesc.class#\"Engaging this fleet in battle will not cause immediate hostilities with the faction it nominally belongs to, though it will slightly strain the relationship.\"",
         "original": "Engaging this fleet in battle will not cause immediate hostilities with the faction it nominally belongs to, though it will slightly strain the relationship.",
-        "translation": "与这支舰队交战，将不会立即引起它名义上所属势力的敌对行动，但仍会使双方的关系略微紧张起来。",
+        "translation": "与这支舰队交战，{将不会立即引起它名义上所属势力的敌对行动}，但仍会使双方的关系略微紧张起来。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/FleetDesc.class\n常量号：0360\n原始数据：\"Engaging this fleet in battle will not cause immediate hostilities with the faction it nominally belongs to, though it will slightly strain the relationship.\"\n译文数据：\"与这支舰队交战，将不会立即引起它名义上所属势力的敌对行动，但仍会使双方的关系略微紧张起来。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/FleetDesc.class\n常量号：0360\n原始数据：\"Engaging this fleet in battle will not cause immediate hostilities with the faction it nominally belongs to, though it will slightly strain the relationship.\"\n译文数据：\"与这支舰队交战，{将不会立即引起它名义上所属势力的敌对行动}，但仍会使双方的关系略微紧张起来。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/FleetDesc.class#\"If this fleet does not reach its destination safely, it will cause a shortage of the commodities it carries. In addition, its loss would reduce the accessbility of \"",
@@ -41533,16 +41533,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/FleetDesc.class#\"This fleet is either operating in a legal gray area or its behavior falls outside accepted norms. Engaging it in battle wi~\"@38fcac5b",
         "original": "This fleet is either operating in a legal gray area or its behavior falls outside accepted norms. Engaging it in battle will not cause immediate hostilities with the faction it nominally belongs to, though it will slightly strain the relationship.",
-        "translation": "这个舰队要么在法律的灰色地带行动，要么在进行非常规的活动。与其交锋不会立刻导致和其母势力进入敌对关系，但是会对关系有轻微的负面影响。",
+        "translation": "这个舰队要么在法律的灰色地带行动，要么在进行非常规的活动。与其交锋{将不会立即引起它名义上所属势力的敌对行动}，但是会对关系有轻微的负面影响。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/FleetDesc.class\n常量号：0364\n原始数据：\"This fleet is either operating in a legal gray area or its behavior falls outside accepted norms. Engaging it in battle will not cause immediate hostilities with the faction it nominally belongs to, though it will slightly strain the relationship.\"\n译文数据：\"这个舰队要么在法律的灰色地带行动，要么在进行非常规的活动。与其交锋不会立刻导致和其母势力进入敌对关系，但是会对关系有轻微的负面影响。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/FleetDesc.class\n常量号：0364\n原始数据：\"This fleet is either operating in a legal gray area or its behavior falls outside accepted norms. Engaging it in battle will not cause immediate hostilities with the faction it nominally belongs to, though it will slightly strain the relationship.\"\n译文数据：\"这个舰队要么在法律的灰色地带行动，要么在进行非常规的活动。与其交锋{将不会立即引起它名义上所属势力的敌对行动}，但是会对关系有轻微的负面影响。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/FleetDesc.class#\"This fleet is operating without official sanction from the faction it nominally belongs to. Engaging it in battle will not cause any changes to your reputation.\"",
         "original": "This fleet is operating without official sanction from the faction it nominally belongs to. Engaging it in battle will not cause any changes to your reputation.",
-        "translation": "因这支舰队在未经其名义上所属势力的批准而擅自行动，所以与其交战 将不会对你的声誉造成任何影响。",
+        "translation": "因这支舰队在未经其名义上所属势力的批准而擅自行动，所以与其交战{不会对你的声誉造成任何改变}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/FleetDesc.class\n常量号：0353\n原始数据：\"This fleet is operating without official sanction from the faction it nominally belongs to. Engaging it in battle will not cause any changes to your reputation.\"\n译文数据：\"因这支舰队在未经其名义上所属势力的批准而擅自行动，所以与其交战 将不会对你的声誉造成任何影响。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/FleetDesc.class\n常量号：0353\n原始数据：\"This fleet is operating without official sanction from the faction it nominally belongs to. Engaging it in battle will not cause any changes to your reputation.\"\n译文数据：\"因这支舰队在未经其名义上所属势力的批准而擅自行动，所以与其交战{不会对你的声誉造成任何改变}。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/FleetDesc.class#\"Unknown\"",
@@ -50661,9 +50661,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/terrain/AsteroidBeltTerrainPlugin.class#\"Smaller fleets are usually able to avoid the heavier impacts, and slow-moving fleets do not risk impacts at all.\"",
         "original": "Smaller fleets are usually able to avoid the heavier impacts, and slow-moving fleets do not risk impacts at all.",
-        "translation": "规模较小的舰队通常能避开小行星的直接撞击，而进行缓速航行的舰队将没有任何风险。",
+        "translation": "规模较小的舰队通常能避开小行星的直接撞击，而进行{缓速航行}的舰队将没有任何风险。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/terrain/AsteroidBeltTerrainPlugin.class\n常量号：0408\n原始数据：\"Smaller fleets are usually able to avoid the heavier impacts, and slow-moving fleets do not risk impacts at all.\"\n译文数据：\"规模较小的舰队通常能避开小行星的直接撞击，而进行缓速航行的舰队将没有任何风险。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/terrain/AsteroidBeltTerrainPlugin.class\n常量号：0408\n原始数据：\"Smaller fleets are usually able to avoid the heavier impacts, and slow-moving fleets do not risk impacts at all.\"\n译文数据：\"规模较小的舰队通常能避开小行星的直接撞击，而进行{缓速航行}的舰队将没有任何风险。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/terrain/AsteroidBeltTerrainPlugin.class#\"Travel\"",
@@ -52362,9 +52362,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialMissionEvent.class#\"In addition, you now have access to local storage at Ancyra, and some weapons and supplies have been placed there. To acce~\"@97269480",
         "original": "In addition, you now have access to local storage at Ancyra, and some weapons and supplies have been placed there. To access it, click on the \"Storage\" button in the trade screen.)",
-        "translation": "除此之外，你现在可以使用 Ancyra 当地的仓库，并且里面已经存放了一些武器和补给。你可以点击 交易页面的 仓库 按钮来拿取它们。)",
+        "translation": "除此之外，你现在可以使用 Ancyra 当地的仓库，并且里面已经存放了一些武器和补给。你可以点击 交易页面的 {\"仓库\"} 按钮来拿取它们。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialMissionEvent.class\n常量号：0678\n原始数据：\"In addition, you now have access to local storage at Ancyra, and some weapons and supplies have been placed there. To access it, click on the \"Storage\" button in the trade screen.)\"\n译文数据：\"除此之外，你现在可以使用 Ancyra 当地的仓库，并且里面已经存放了一些武器和补给。你可以点击 交易页面的 仓库 按钮来拿取它们。)\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialMissionEvent.class\n常量号：0678\n原始数据：\"In addition, you now have access to local storage at Ancyra, and some weapons and supplies have been placed there. To access it, click on the \"Storage\" button in the trade screen.)\"\n译文数据：\"除此之外，你现在可以使用 Ancyra 当地的仓库，并且里面已经存放了一些武器和补给。你可以点击 交易页面的 {\"仓库\"} 按钮来拿取它们。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialMissionEvent.class#\"Stabilize the Jump-points\"",
@@ -52642,9 +52642,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialMissionIntel.class#\"In addition, you now have access to local storage at Ancyra, and some weapons and supplies have been placed there. To acce~\"@397e1cff",
         "original": "In addition, you now have access to local storage at Ancyra, and some weapons and supplies have been placed there. To access it, click on the \"Storage\" button in the trade screen.)",
-        "translation": "除此之外，你现在可以使用 Ancyra 当地的仓库，并且里面已经存放了一些武器和补给。你可以点击 交易页面的 仓库 按钮来拿取它们。)",
+        "translation": "除此之外，你现在可以使用 Ancyra 当地的仓库，并且里面已经存放了一些武器和补给。你可以点击 交易页面的 {\"仓库\"} 按钮来拿取它们。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialMissionIntel.class\n常量号：0720\n原始数据：\"In addition, you now have access to local storage at Ancyra, and some weapons and supplies have been placed there. To access it, click on the \"Storage\" button in the trade screen.)\"\n译文数据：\"除此之外，你现在可以使用 Ancyra 当地的仓库，并且里面已经存放了一些武器和补给。你可以点击 交易页面的 仓库 按钮来拿取它们。)\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialMissionIntel.class\n常量号：0720\n原始数据：\"In addition, you now have access to local storage at Ancyra, and some weapons and supplies have been placed there. To access it, click on the \"Storage\" button in the trade screen.)\"\n译文数据：\"除此之外，你现在可以使用 Ancyra 当地的仓库，并且里面已经存放了一些武器和补给。你可以点击 交易页面的 {\"仓库\"} 按钮来拿取它们。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialMissionIntel.class#\"It's likely that you will have to overcome some automated defenses first.\"",
@@ -53055,9 +53055,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class#\"Since turning it on and off has major consequences, it requires a double-tap to turn on or off - once to prime, and once more to confirm.\"",
         "original": "Since turning it on and off has major consequences, it requires a double-tap to turn on or off - once to prime, and once more to confirm.",
-        "translation": "由于打开和关闭均会产生严重的后果，因此应答器需要通过双击来打开或关闭 —— 单击一次准备，并再次单击加以确认。",
+        "translation": "由于打开和关闭均会产生严重的后果，因此应答器需要通过{双击}来打开或关闭 —— 单击一次准备，并再次单击加以确认。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class\n常量号：0249\n原始数据：\"Since turning it on and off has major consequences, it requires a double-tap to turn on or off - once to prime, and once more to confirm.\"\n译文数据：\"由于打开和关闭均会产生严重的后果，因此应答器需要通过双击来打开或关闭 —— 单击一次准备，并再次单击加以确认。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class\n常量号：0249\n原始数据：\"Since turning it on and off has major consequences, it requires a double-tap to turn on or off - once to prime, and once more to confirm.\"\n译文数据：\"由于打开和关闭均会产生严重的后果，因此应答器需要通过{双击}来打开或关闭 —— 单击一次准备，并再次单击加以确认。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/tutorial/TutorialTransponderDialogPluginImpl.class#\"Your fleet is getting closer to \"",
@@ -55960,9 +55960,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"A combat-rated autoloader that provides a limited number of reloads, out of a shared reload capacity, to missile weapons installed in small missile mounts.\"",
         "original": "A combat-rated autoloader that provides a limited number of reloads, out of a shared reload capacity, to missile weapons installed in small missile mounts.",
-        "translation": "一个军用自动装填器，具备有限的 \"装填容量\"，可以为小型导弹槽位内的导弹武器恢复备弹量。",
+        "translation": "一个军用自动装填器，具备有限的 \"装填容量\"，可以为{安装在小型导弹槽位上的导弹武器}恢复备弹量。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class\n常量号：0448\n原始数据：\"A combat-rated autoloader that provides a limited number of reloads, out of a shared reload capacity, to missile weapons installed in small missile mounts.\"\n译文数据：\"一个军用自动装填器，具备有限的 \"装填容量\"，可以为小型导弹槽位内的导弹武器恢复备弹量。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class\n常量号：0448\n原始数据：\"A combat-rated autoloader that provides a limited number of reloads, out of a shared reload capacity, to missile weapons installed in small missile mounts.\"\n译文数据：\"一个军用自动装填器，具备有限的 \"装填容量\"，可以为{安装在小型导弹槽位上的导弹武器}恢复备弹量。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"A partial reload is possible when running out of capacity.\"",
@@ -56275,9 +56275,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/PhaseField.class#\"The detected-at range multiplier for your fleet is %s. The fleet's transponder must be off for the multiplier to be applied.\"",
         "original": "The detected-at range multiplier for your fleet is %s. The fleet's transponder must be off for the multiplier to be applied.",
-        "translation": "舰队的被侦测范围倍率是 {%s}。该倍率仅在舰队应答器关闭时生效。",
+        "translation": "舰队的被侦测范围倍率是 {%s}。该倍率仅在舰队{关闭应答器}时生效。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/hullmods/PhaseField.class\n常量号：0233\n原始数据：\"The detected-at range multiplier for your fleet is %s. The fleet's transponder must be off for the multiplier to be applied.\"\n译文数据：\"舰队的被侦测范围倍率是 {%s}。该倍率仅在舰队应答器关闭时生效。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/hullmods/PhaseField.class\n常量号：0233\n原始数据：\"The detected-at range multiplier for your fleet is %s. The fleet's transponder must be off for the multiplier to be applied.\"\n译文数据：\"舰队的被侦测范围倍率是 {%s}。该倍率仅在舰队{关闭应答器}时生效。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/PhaseField.class#\"The sensor profile of the %s top ships in your fleet is %s. The sensor strength of the top %s phase ships is %s.\"",

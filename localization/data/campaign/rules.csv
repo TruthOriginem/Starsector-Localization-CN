@@ -25152,7 +25152,7 @@ RemoveCommodity $proCom_commodityId $proCom_quantity
 $proCom_completed = true
 Call $proCom_ref updateStage
 FireAll PopulateOptions",,,
-proComDeliverCompleted,ProComCompletedText,,,"""非常感谢，这批 $proCom_commodityName 的重要程度比你想象的大多了""
+proComDeliverCompleted,ProComCompletedText,,,"""非常感谢，这批 $proCom_commodityName 的重要程度比你想象的大多了。""
 OR
 ""我就知道你非常可靠，多谢了你的护送。""
 OR
@@ -30500,7 +30500,7 @@ ZGR_firstVisit7c:""这就直奔主题了，嗯？不先寒暄几下？""",
 ZGRfirstVisit7a,DialogOptionSelected,$option == ZGR_firstVisit7a,"$option = ZGR_firstVisit8 0
 FireBest DialogOptionSelected","""我认为这符合你的才能，"" 她说道，""请允许我简要回顾你的成就，以让你清楚我们现在的立场。""",,
 ZGRfirstVisit7b,DialogOptionSelected,$option == ZGR_firstVisit7b,"$option = ZGR_firstVisit8 0
-FireBest DialogOptionSelected","""湮灭的风险，"" 她平静地答道，""对此你将获得相应补偿。""
+FireBest DialogOptionSelected","""尸骨无存的风险，"" 她平静地答道，""对此你也将获得相应的补偿。""
 
 ""请允许我简要回顾你的成就，以便你知道我的提议并非是轻率之举。""",,
 ZGRfirstVisit7c,DialogOptionSelected,$option == ZGR_firstVisit7c,"$option = ZGR_firstVisit8 0
@@ -40133,7 +40133,7 @@ $global.gaDHO_elekRevealedZGRasPatron = true
 $global.gaDHO_elekRevealedTriTachyonAsPatron
 FireAll gaDHOvisitElekHub","他神色骤变。
 
-""Zunya Glamor-Rotanev，速子科技的特殊采购部总监，其实是她在赞助我的项目。她是一位极具远见的女性，远超我对这样一家表面以盈利为导向的企业中居高位者的预期。""
+""Zunya Glamor-Rotanev}，速子科技的特殊采购部总监，其实是她在赞助我的项目。她是一位极具远见的女性，远超我对这样一家表面以盈利为导向的企业中居高位者的预期。""
 
 ""我把这些知道的透露给你，舰长，就是相信你会守口如瓶。"" 他说道，郑重其事地点了头。",,
 gaDHOvisitElekHubSelC,DialogOptionSelected,$option == gaDHO_visitElekHubSelC,,"""问得好。"" Elek 点了点数据平板，一边转向他的全息显示屏。
