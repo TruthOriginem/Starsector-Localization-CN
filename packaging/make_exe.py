@@ -2,6 +2,11 @@
 制作汉化安装包（.exe）
 调用 Inno Setup 编译 .iss 脚本，根据当前 git 分支自动选择变体名称。
 
+用法：
+  python -X utf8 packaging/make_exe.py --package all           # 两种安装包
+  python -X utf8 packaging/make_exe.py --package translation   # 仅独立汉化包
+  python -X utf8 packaging/make_exe.py --package full          # 仅含游戏完整包
+
 输出文件名由 ISS 脚本的 OutputBaseFilename 决定，格式如：
   Starsector(远行星号) 0.98a-RC8 独立汉化包(黑体版) v1.0.0 [远星汉化组].exe
   Starsector(远行星号) 0.98a-RC8 独立汉化包(黑体版) v1.0.0 2026.04.05 [远星汉化组].exe  （INCLUDE_DATE=true 时）
@@ -9,7 +14,7 @@
 配置（在 packaging/.env 中设置，参考 packaging/.env.example）：
   ISCC_PATH                    - Inno Setup 6 编译器路径，留空则自动搜索常见安装位置（不支持 Inno Setup 5）
   ORIGINAL_GAME_FOLDER         - 原版游戏文件夹路径，用于制作含游戏完整安装包；
-                                 留空或路径不存在则跳过 with_game 版本
+                                 请求完整包时必须存在并通过原版文件树校验
   GAME_VERSION                 - 覆盖游戏版本号（留空则从 localization_version.json 读取）
   APP_VERSION                  - 覆盖汉化版本号（留空则从 localization_version.json 读取）
   INCLUDE_DATE                 - 文件名是否包含日期后缀，true/false（默认 false）
@@ -18,12 +23,15 @@
                                  BRANCH_VARIANT_font-simsong=(宋体版)
 """
 
-import json
+import argparse
 import os
 import subprocess
 import sys
 from datetime import date
 from pathlib import Path
+
+from game_integrity import validate_original_game_folder
+from package_utils import load_env, load_package_metadata, read_env_bool
 
 PACKAGING_DIR = Path(__file__).parent
 REPO_ROOT = PACKAGING_DIR.parent
@@ -44,17 +52,29 @@ ISCC_SEARCH_PATHS = [
     r'C:\Program Files\Inno Setup 6\ISCC.exe',
 ]
 
+def create_argument_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        description='生成 Starsector 中文 EXE 安装包。无参数时只显示本帮助。',
+        epilog=(
+            '示例：\n'
+            '  python -X utf8 packaging/make_exe.py --package all\n'
+            '  python -X utf8 packaging/make_exe.py --package translation\n'
+            '  python -X utf8 packaging/make_exe.py --package full'
+        ),
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+    )
+    parser.add_argument(
+        '--package',
+        choices=('all', 'translation', 'full'),
+        required=True,
+        metavar='{all,translation,full}',
+        help='all=两种安装包，translation=仅独立汉化包，full=仅含游戏完整包',
+    )
+    return parser
 
-def load_env() -> None:
-    env_file = PACKAGING_DIR / '.env'
-    if not env_file.exists():
-        return
-    for line in env_file.read_text(encoding='utf-8').splitlines():
-        line = line.strip()
-        if not line or line.startswith('#') or '=' not in line:
-            continue
-        key, _, value = line.partition('=')
-        os.environ.setdefault(key.strip(), value.strip())
+
+def parse_args(argv: list[str]) -> argparse.Namespace:
+    return create_argument_parser().parse_args(argv)
 
 
 def find_iscc() -> Path:
@@ -63,33 +83,20 @@ def find_iscc() -> Path:
         p = Path(iscc_path)
         if p.exists():
             return p
-        print(f'错误：.env 中 ISCC_PATH 指向的路径不存在：{iscc_path}', file=sys.stderr)
-        sys.exit(1)
+        raise RuntimeError(f'.env 中 ISCC_PATH 指向的路径不存在：{iscc_path}')
 
     for candidate in ISCC_SEARCH_PATHS:
         p = Path(candidate)
         if p.exists():
             return p
 
-    print(
-        '错误：未找到 Inno Setup 编译器（ISCC.exe）。\n'
-        '请安装 Inno Setup 6，或在 packaging/.env 中设置 ISCC_PATH=<路径>。',
-        file=sys.stderr,
+    raise RuntimeError(
+        '未找到 Inno Setup 编译器（ISCC.exe）。\n'
+        '请安装 Inno Setup 6，或在 packaging/.env 中设置 ISCC_PATH=<路径>。'
     )
-    sys.exit(1)
 
 
-def get_git_branch() -> str:
-    result = subprocess.run(
-        ['git', 'rev-parse', '--abbrev-ref', 'HEAD'],
-        capture_output=True,
-        text=True,
-        cwd=REPO_ROOT,
-    )
-    return result.stdout.strip()
-
-
-def run_iscc(iscc: Path, iss_file: Path, defines: dict[str, str]) -> bool:
+def run_iscc(iscc: Path, iss_file: Path, defines: dict[str, str]) -> None:
     define_args = [f'/D{k}={v}' for k, v in defines.items()]
     output_dir_arg = f'/O{OUTPUT_DIR}'
     cmd = [str(iscc), output_dir_arg, *define_args, str(iss_file)]
@@ -101,9 +108,7 @@ def run_iscc(iscc: Path, iss_file: Path, defines: dict[str, str]) -> bool:
 
     result = subprocess.run(cmd, cwd=PACKAGING_DIR)
     if result.returncode != 0:
-        print(f'错误：ISCC 编译失败，返回码 {result.returncode}', file=sys.stderr)
-        return False
-    return True
+        raise RuntimeError(f'ISCC 编译失败，返回码 {result.returncode}')
 
 
 def generate_design_type_fragment() -> None:
@@ -181,30 +186,48 @@ def generate_design_type_fragment() -> None:
           f'（{DESIGN_TYPE_FRAGMENT.relative_to(REPO_ROOT)}）')
 
 
-def main() -> None:
-    load_env()
+def build_installers(args: argparse.Namespace) -> None:
+    load_env(PACKAGING_DIR / '.env')
+    metadata = load_package_metadata(REPO_ROOT, LOCALIZATION_DIR)
+    version = metadata.version
+    game_version = metadata.game_version
+
+    build_translation = args.package in ('all', 'translation')
+    build_full = args.package in ('all', 'full')
+    game_folder: Path | None = None
+    if build_full:
+        original_game_folder = os.environ.get('ORIGINAL_GAME_FOLDER', '')
+        if not original_game_folder:
+            raise RuntimeError(
+                '请求生成含游戏完整包，但 .env 未配置 ORIGINAL_GAME_FOLDER。'
+            )
+        game_folder = Path(original_game_folder)
+        if not game_folder.is_dir():
+            raise RuntimeError(f'原版游戏目录不存在：{game_folder}')
+        validate_original_game_folder(game_folder, game_version)
+
     generate_design_type_fragment()
 
-    version_file = LOCALIZATION_DIR / 'localization_version.json'
-    info = json.loads(version_file.read_text(encoding='utf-8'))
-    version: str = os.environ.get('APP_VERSION', '') or info['version']
-    game_version: str = os.environ.get('GAME_VERSION', '') or info['game_version']
+    branch = metadata.branch
+    variant = metadata.variant
+    if metadata.used_fallback_variant:
+        print(
+            f'警告：当前分支 "{branch}" 没有对应的变体名'
+            f'（BRANCH_VARIANT_{branch} 未配置），回退到 master 变体。'
+        )
 
-    branch = get_git_branch()
-    variant = os.environ.get(f'BRANCH_VARIANT_{branch}', '')
-    if not variant:
-        fallback = os.environ.get('BRANCH_VARIANT_master', '')
-        print(f'警告：当前分支 "{branch}" 没有对应的变体名（BRANCH_VARIANT_{branch} 未配置），回退到 master 变体。')
-        variant = fallback
-
-    include_date = os.environ.get('INCLUDE_DATE', 'false').lower() == 'true'
+    include_date = read_env_bool('INCLUDE_DATE', default=False)
     output_suffix = f' {date.today().strftime("%Y.%m.%d")}' if include_date else ''
 
     iscc = find_iscc()
     print(f'Inno Setup: {iscc}')
-    print(f'版本: {version}  游戏版本: {game_version}  变体: {variant or "(无)"}  分支: {branch}  日期后缀: {output_suffix or "(无)"}')
+    print(
+        f'版本: {version}  游戏版本: {game_version}  变体: {variant or "(无)"}  '
+        f'分支: {branch}  日期后缀: {output_suffix or "(无)"}'
+    )
+    print(f'打包类型: {args.package}')
 
-    OUTPUT_DIR.mkdir(exist_ok=True)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     common_defines = {
         'MyAppVersion': version,
@@ -213,27 +236,33 @@ def main() -> None:
         'OutputSuffix': output_suffix,
     }
 
-    # 独立汉化包
-    pack_iss = PACKAGING_DIR / 'ss_translation_pack_installer.iss'
-    if not run_iscc(iscc, pack_iss, common_defines):
-        sys.exit(1)
+    if build_translation:
+        pack_iss = PACKAGING_DIR / 'ss_translation_pack_installer.iss'
+        run_iscc(iscc, pack_iss, common_defines)
 
-    # 含游戏完整安装包（可选）
-    original_game_folder = os.environ.get('ORIGINAL_GAME_FOLDER', '')
-    game_folder = Path(original_game_folder) if original_game_folder else None
-    if not game_folder or not game_folder.exists():
-        if original_game_folder:
-            print(f'\n警告：.env 中 ORIGINAL_GAME_FOLDER 路径不存在：{original_game_folder}，跳过含游戏安装包。')
-        else:
-            print('\n未配置 ORIGINAL_GAME_FOLDER，跳过含游戏安装包。')
-    else:
+    if build_full:
+        assert game_folder is not None
         with_game_iss = PACKAGING_DIR / 'ss_translation_pack_with_game_installer.iss'
         with_game_defines = {**common_defines, 'OriginalGameFolder': str(game_folder)}
-        if not run_iscc(iscc, with_game_iss, with_game_defines):
-            sys.exit(1)
+        run_iscc(iscc, with_game_iss, with_game_defines)
 
     print(f'\n完成，输出目录：{OUTPUT_DIR}')
 
 
+def main(argv: list[str] | None = None) -> int:
+    arguments = list(sys.argv[1:] if argv is None else argv)
+    parser = create_argument_parser()
+    if not arguments:
+        parser.print_help()
+        return 0
+    args = parser.parse_args(arguments)
+    try:
+        build_installers(args)
+    except RuntimeError as exc:
+        print(f'错误：{exc}', file=sys.stderr)
+        return 1
+    return 0
+
+
 if __name__ == '__main__':
-    main()
+    raise SystemExit(main())

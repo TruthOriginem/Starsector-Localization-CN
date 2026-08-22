@@ -76,8 +76,19 @@
 | _swapLangFile.py                        | 用来更替汉化文件和英文文件的脚本。                                               |
 | _updateOriginal.py                      | TODO                                                            |
 | para_tranz/para_tranz_script.py         | 用于ParaTranz平台的数据导入导出工具，使用方法参见[本指南](docs/paratranz/tut_admin.md) |
-| packaging/make_zip.py                   | 将 `localization` 文件夹打包为汉化补丁 `.zip`，文件名包含游戏版本、汉化版本、日期及字体变体（根据当前 git 分支自动判断）。直接运行即可，输出到 `packaging/Output/`。 |
-| packaging/make_exe.py                   | 调用 **Inno Setup 6** 编译 `.exe` 安装包，包括独立汉化包和含游戏完整安装包（可选）。需先复制 `packaging/.env.example` 为 `packaging/.env` 并填写配置，再直接运行。输出到 `packaging/Output/`。 |
+| packaging/make_zip.py                   | 将 `localization` 文件夹原子打包为汉化补丁 `.zip`。使用 `build` 子命令，可显式控制日期和压缩级别。 |
+| packaging/make_exe.py                   | 调用 **Inno Setup 6** 编译 `.exe` 安装包。必须用 `--package all`、`translation` 或 `full` 显式选择类型；完整包会先校验原版游戏目录的文件树哈希，额外存档、mod、日志及任何文件改动都会中止打包。 |
+
+两个打包脚本无参数运行时只显示帮助，不会产生文件。常用调用如下；完整配置见
+`packaging/.env.example`，产物均写入 `packaging/Output/`：
+
+```powershell
+python -X utf8 packaging\make_exe.py --package all
+python -X utf8 packaging\make_exe.py --package translation
+python -X utf8 packaging\make_exe.py --package full
+python -X utf8 packaging\make_zip.py build
+python -X utf8 packaging\make_zip.py build --no-date --compression-level 9
+```
 
 ### 版本汉化流程
 
