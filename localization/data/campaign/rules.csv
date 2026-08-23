@@ -38979,9 +38979,9 @@ $player.ethosCocky++","你开始讲话了，声音很低，语速很慢，暗示
 
 不知为何，你就成了今天的主角，虽然刚刚进入酒吧的时候只有少数几个人知晓。",barHRE_transitionOut:继续,
 BarHREHumble1,DialogOptionSelected,$option == barHighRepEventHumble1,"AdjustRep independent COOPERATIVE 1
-$player.ethosHumble++","你小声问了问在场的大家为何干杯，人群中爆发出一片欢呼喝彩。有人递给你一份酒水，正在你细细品鉴的时候，你一下子听到了你最近遭遇的好几个版本，每个版本都比前一个更加夸张。
+$player.ethosHumble++","你打听起大家在为什么干杯，顿时引发了一阵欢笑与喝彩。你一边抿着别人递来的酒水，一边听着人们谈论你最近的光荣事迹的好几种说法，一个比一个更离谱。
 
-你尽力纠正某些过于夸张的发言，但酒馆的大家明显都只当你是在低调处理。",barHighRepEventHumble2:继续,
+你极力想纠正那些最离谱的吹嘘，但大伙明显都只当你是在谦虚罢了。",barHighRepEventHumble2:继续,
 BarHREHumble2,DialogOptionSelected,$option == barHighRepEventHumble2,,"你喝完了酒，为你本就没什么恶意的小小玩笑道了个歉，然后委婉推脱着找了个昏暗的角落坐下，开始复盘你在酒吧的所见所想。服务生点了点头，为你盛上了一大杯冰水用来醒酒。
 
 等你精神恢复了，周围也安静下来了，你终于有机会四处看看了。",barHRE_goToNormalBar:在酒吧里四处看看,
@@ -38989,9 +38989,9 @@ BarHRE0calm,DialogOptionSelected,$option == barHighRepEvent0calm,,"你笑了笑�
 
 所有人都注意到你的情况下，再想单独联络某一个人可就相当困难了。","barHighRepEvent0join:不如就和他们一起喝几杯吧
 barHighRepEvent0leave:这太过火了，和善地挥手离开吧",
-BarHRE0nod,DialogOptionSelected,$option == barHighRepEvent0nod,,"你坚定地点点头，做出一副淡泊名利的表情。
+BarHRE0nod,DialogOptionSelected,$option == barHighRepEvent0nod,,"你摆出一脸沉稳，波澜不惊地微微点头示意。
 
-见你如此，酒吧里有几个稍有些醉醺醺的人向你敬礼，也有人热情过度地向你点头回礼，这期间洒掉了更多酒水，但好歹所有人都安静下来了。",barHRE_goToNormalBar:在酒吧里四处看看,
+如此表率引来了一片伴着微醺的回礼和过分热情的点头回应。虽然又洒了些酒水，但好歹所有人都安静下来了。",barHRE_goToNormalBar:在酒吧里四处看看,
 BarHRE0leave,DialogOptionSelected,$option == barHighRepEvent0leave,"unset $faction.didHighRepBarEncounter
 BarCMD leaveBar","你平静地挥了挥手，表示自己知道了，顺势转身走出了酒吧。
 
