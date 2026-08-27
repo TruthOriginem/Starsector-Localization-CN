@@ -29,6 +29,7 @@ final class PatchRegistryTest {
                 "intel-put-first-tag-id",
                 "window-decoration-physical-resolution",
                 "terrain-status-bar-visible-separator",
+                "top-message-highlight-after-layout",
                 "codex-special-weapon-type-filter",
                 "textfield-ime-hook",
                 "resource-stream-dynfont-hook",
