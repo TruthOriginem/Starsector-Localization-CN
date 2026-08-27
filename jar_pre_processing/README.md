@@ -393,3 +393,23 @@ CJK 排版路径，该路径可能在初始的零宽度布局中插入换行并�
   label.getRenderer().setHighlightColor(highlightColor);
   label.getRenderer().highlight(highlightText);
 ```
+
+---
+
+### 18. 牵引线缆船插提示框宽度异常
+
+**对应 ASM Patch**：`src/main/java/org/fossic/starsector/preprocessing/patches/TowCableTooltipWidthPatch.java`
+
+相关文件：`starfarer.api.jar: com/fs/starfarer/api/impl/campaign/TowCable.class`
+
+**原因**：原版 `TowCable` 直接实现 `HullModEffect`，其 `getTooltipWidth()` 固定返回 `0`，
+没有继承 `BaseHullMod` 的标准提示框宽度 `369`。该船插虽在原版中隐藏，仍可能被 Mod 引用；
+中文可按字符换行，因此零宽度提示框会把描述排成一条很长的竖线。
+
+**修改**：仅将 `TowCable.getTooltipWidth()` 的返回值改为原版标准宽度 `369`。Patch 严格
+校验目标方法仍为唯一的 `FCONST_0; FRETURN` 指令序列，不改变其它船插或 Mod 自定义宽度。
+
+```diff
+- return 0.0f;
++ return 369.0f;
+```
