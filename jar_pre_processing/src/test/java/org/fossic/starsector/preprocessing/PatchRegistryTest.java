@@ -30,6 +30,7 @@ final class PatchRegistryTest {
                 "window-decoration-physical-resolution",
                 "terrain-status-bar-visible-separator",
                 "top-message-highlight-after-layout",
+                "tow-cable-tooltip-width",
                 "codex-special-weapon-type-filter",
                 "textfield-ime-hook",
                 "resource-stream-dynfont-hook",
@@ -102,6 +103,7 @@ final class PatchRegistryTest {
         assertTrue(ids.contains("texture-row-pixel-conversion"));
         assertFalse(ids.contains("texture-upload-lifetime-cleanup"));
         assertFalse(ids.contains("texture-reusable-staging-cleanup"));
+        assertTrue(ids.contains("tow-cable-tooltip-width"));
         assertTrue(ids.contains("textfield-ime-hook"));
         assertFalse(ids.contains("loading-utils-fast-text-reader"));
         assertFalse(ids.contains("startup-profile-combat-main"));
