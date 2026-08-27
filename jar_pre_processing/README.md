@@ -369,3 +369,27 @@ Patch 只替换紧邻 `CountingMap.add(Object, int)` 的一处 getter 调用，�
 + 若 getType() 是特殊类型：仅在对应类型已选择时显示
 + 其它类型：保留原版默认行为
 ```
+
+---
+
+### 17. 屏幕顶部提示的高亮位置偏移
+
+**对应 ASM Patch**：`src/main/java/org/fossic/starsector/preprocessing/patches/TopMessageHighlightLayoutPatch.java`
+
+相关文件：`starfarer_obf.jar: com/fs/starfarer/campaign/ui/O00O$o.class`
+
+**原因**：顶部消息在标签尚未取得最终宽度时就按当前文本计算高亮索引。中文文本会进入
+CJK 排版路径，该路径可能在初始的零宽度布局中插入换行并删除断行空格。消息随后调用
+`autoSize()` 恢复成最终单行文本，却不会重新计算之前保存的高亮范围，因此数字等动态
+内容的颜色会落到错误字符上。
+
+**修改**：在设置高亮前先调用一次 `autoSize()`，使高亮查找基于最终文本。消息显示阶段
+原有的尺寸更新保持不变；Patch 不修改分支、局部变量或 StackMap，并严格校验原版创建、
+设色和高亮调用的结构。
+
+```diff
+  label.setColor(baseColor);
++ label.autoSize();
+  label.getRenderer().setHighlightColor(highlightColor);
+  label.getRenderer().highlight(highlightText);
+```
