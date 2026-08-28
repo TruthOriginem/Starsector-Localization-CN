@@ -32,6 +32,7 @@ final class PatchRegistryTest {
                 "top-message-highlight-after-layout",
                 "tow-cable-tooltip-width",
                 "codex-special-weapon-type-filter",
+                "global-ime-focus-hook",
                 "textfield-ime-hook",
                 "resource-stream-dynfont-hook",
                 "new-game-seed-field-width",
@@ -104,9 +105,20 @@ final class PatchRegistryTest {
         assertFalse(ids.contains("texture-upload-lifetime-cleanup"));
         assertFalse(ids.contains("texture-reusable-staging-cleanup"));
         assertTrue(ids.contains("tow-cable-tooltip-width"));
+        assertTrue(ids.contains("global-ime-focus-hook"));
         assertTrue(ids.contains("textfield-ime-hook"));
         assertFalse(ids.contains("loading-utils-fast-text-reader"));
         assertFalse(ids.contains("startup-profile-combat-main"));
+    }
+
+    @Test
+    void disablingImeGroupRemovesBothImePatches() {
+        List<String> ids = PatchRegistry.patches(
+                PatchSelection.fromOptions("none", List.of("ime"), false))
+                .stream().map(JarPatch::id).toList();
+
+        assertFalse(ids.contains("global-ime-focus-hook"));
+        assertFalse(ids.contains("textfield-ime-hook"));
     }
 
     @Test

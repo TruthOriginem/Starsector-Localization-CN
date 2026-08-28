@@ -30,7 +30,7 @@ import java.util.Set;
  * 类注入步骤（{@link org.fossic.starsector.preprocessing.RuntimeClassInjector}）
  * 额外写入同一 jar，因此运行时可解析。
  *
- * <p>两处注入均只压入 {@code this} 并调用一个静态 void 方法，净栈变化为 0，
+ * <p>三处注入均只压入 {@code this} 并调用一个静态 void 方法，净栈变化为 0，
  * 峰值栈需求为 1，不影响原方法控制流。
  */
 public final class TextFieldImeHookPatch implements JarPatch {
@@ -39,9 +39,12 @@ public final class TextFieldImeHookPatch implements JarPatch {
     private static final String PROCESS_DESC = "(Lcom/fs/starfarer/util/A/new;)V";
     private static final String RELEASE_METHOD = "releaseFocus";
     private static final String RELEASE_DESC = "(Lcom/fs/starfarer/util/A/C;)V";
+    private static final String GRAB_METHOD = "grabFocus";
+    private static final String GRAB_DESC = "(Z)V";
     private static final String HOOKS_OWNER = "org/fossic/starsector/ime/ImeHooks";
     private static final String PROCESS_HOOK = "onProcessInput";
     private static final String RELEASE_HOOK = "onFocusReleased";
+    private static final String GAIN_HOOK = "onTextFieldFocusGained";
     private static final String HOOK_DESC = "(Ljava/lang/Object;)V";
 
     @Override
@@ -63,6 +66,7 @@ public final class TextFieldImeHookPatch implements JarPatch {
     public PatchResult applyAndVerify(ClassNode classNode, PatchContext context) {
         MethodNode process = null;
         MethodNode release = null;
+        MethodNode grab = null;
         for (MethodNode method : classNode.methods) {
             if (PROCESS_METHOD.equals(method.name) && PROCESS_DESC.equals(method.desc)) {
                 if (process != null) {
@@ -74,26 +78,21 @@ public final class TextFieldImeHookPatch implements JarPatch {
                     throw new PatchException(id() + " found duplicate " + RELEASE_METHOD + RELEASE_DESC);
                 }
                 release = method;
+            } else if (GRAB_METHOD.equals(method.name) && GRAB_DESC.equals(method.desc)) {
+                if (grab != null) {
+                    throw new PatchException(id() + " found duplicate " + GRAB_METHOD + GRAB_DESC);
+                }
+                grab = method;
             }
         }
-        if (process == null || release == null) {
+        if (process == null || release == null || grab == null) {
             throw new PatchException(id() + " requires exactly one " + PROCESS_METHOD + PROCESS_DESC
-                    + " and one " + RELEASE_METHOD + RELEASE_DESC);
+                    + ", one " + RELEASE_METHOD + RELEASE_DESC
+                    + " and one " + GRAB_METHOD + GRAB_DESC);
         }
 
-        AbstractInsnNode releaseReturn = null;
-        for (AbstractInsnNode insn = release.instructions.getFirst(); insn != null; insn = insn.getNext()) {
-            if (insn.getOpcode() == Opcodes.RETURN) {
-                if (releaseReturn != null) {
-                    throw new PatchException(id() + " expected one normal return in "
-                            + RELEASE_METHOD + RELEASE_DESC);
-                }
-                releaseReturn = insn;
-            }
-        }
-        if (releaseReturn == null) {
-            throw new PatchException(id() + " found no normal return in " + RELEASE_METHOD + RELEASE_DESC);
-        }
+        AbstractInsnNode releaseReturn = soleReturn(release, RELEASE_METHOD, RELEASE_DESC);
+        AbstractInsnNode grabReturn = soleReturn(grab, GRAB_METHOD, GRAB_DESC);
 
         InsnList prelude = hook(PROCESS_HOOK);
         process.instructions.insert(prelude);
@@ -101,11 +100,30 @@ public final class TextFieldImeHookPatch implements JarPatch {
 
         release.instructions.insertBefore(releaseReturn, hook(RELEASE_HOOK));
         release.maxStack = Math.max(release.maxStack, 1);
+        grab.instructions.insertBefore(grabReturn, hook(GAIN_HOOK));
+        grab.maxStack = Math.max(grab.maxStack, 1);
 
         int verified = AsmUtil.countMethodCall(classNode, HOOKS_OWNER, PROCESS_HOOK, HOOK_DESC)
-                + AsmUtil.countMethodCall(classNode, HOOKS_OWNER, RELEASE_HOOK, HOOK_DESC);
-        return PatchResult.of(id(), context.classPath(), 2, 2, verified,
-                "inject IME processing at processInputImpl entry and cleanup at releaseFocus exit");
+                + AsmUtil.countMethodCall(classNode, HOOKS_OWNER, RELEASE_HOOK, HOOK_DESC)
+                + AsmUtil.countMethodCall(classNode, HOOKS_OWNER, GAIN_HOOK, HOOK_DESC);
+        return PatchResult.of(id(), context.classPath(), 3, 3, verified,
+                "inject IME process, focus-gain and focus-release hooks");
+    }
+
+    private AbstractInsnNode soleReturn(MethodNode method, String name, String descriptor) {
+        AbstractInsnNode result = null;
+        for (AbstractInsnNode insn = method.instructions.getFirst(); insn != null; insn = insn.getNext()) {
+            if (insn.getOpcode() == Opcodes.RETURN) {
+                if (result != null) {
+                    throw new PatchException(id() + " expected one normal return in " + name + descriptor);
+                }
+                result = insn;
+            }
+        }
+        if (result == null) {
+            throw new PatchException(id() + " found no normal return in " + name + descriptor);
+        }
+        return result;
     }
 
     private static InsnList hook(String method) {

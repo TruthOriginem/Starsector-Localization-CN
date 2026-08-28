@@ -18,10 +18,12 @@ final class TextFieldImeHookPatchTest {
     private static final String TARGET_CLASS = "com/fs/starfarer/ui/new";
     private static final String PROCESS_DESC = "(Lcom/fs/starfarer/util/A/new;)V";
     private static final String RELEASE_DESC = "(Lcom/fs/starfarer/util/A/C;)V";
+    private static final String GRAB_DESC = "(Z)V";
+    private static final String GRAB_WRAPPER_DESC = "()V";
     private static final String HOOKS = "org/fossic/starsector/ime/ImeHooks";
 
     @Test
-    void injectsProcessingAtEntryAndCleanupImmediatelyBeforeReleaseReturn() {
+    void injectsProcessingAndFocusHooksWithoutTouchingGrabFocusWrapper() {
         ClassNode classNode = completeClass();
 
         new TextFieldImeHookPatch().applyAndVerify(classNode, context()).requireSuccess();
@@ -41,6 +43,15 @@ final class TextFieldImeHookPatchTest {
         MethodInsnNode releaseHook = assertInstanceOf(MethodInsnNode.class, returnInsn.getPrevious());
         assertEquals(HOOKS, releaseHook.owner);
         assertEquals("onFocusReleased", releaseHook.name);
+
+        MethodNode grab = method(classNode, "grabFocus", GRAB_DESC);
+        AbstractInsnNode grabReturn = grab.instructions.getLast();
+        assertEquals(Opcodes.RETURN, grabReturn.getOpcode());
+        MethodInsnNode gainHook = assertInstanceOf(MethodInsnNode.class, grabReturn.getPrevious());
+        assertEquals(HOOKS, gainHook.owner);
+        assertEquals("onTextFieldFocusGained", gainHook.name);
+
+        assertEquals(0, hookCalls(method(classNode, "grabFocus", GRAB_WRAPPER_DESC)));
     }
 
     @Test
@@ -48,6 +59,8 @@ final class TextFieldImeHookPatchTest {
         ClassNode classNode = new ClassNode();
         classNode.name = TARGET_CLASS;
         classNode.methods.add(voidMethod("processInputImpl", PROCESS_DESC));
+        classNode.methods.add(voidMethod("grabFocus", GRAB_DESC));
+        classNode.methods.add(voidMethod("grabFocus", GRAB_WRAPPER_DESC));
 
         assertThrows(PatchException.class,
                 () -> new TextFieldImeHookPatch().applyAndVerify(classNode, context()));
@@ -67,6 +80,8 @@ final class TextFieldImeHookPatchTest {
         classNode.name = TARGET_CLASS;
         classNode.methods.add(voidMethod("processInputImpl", PROCESS_DESC));
         classNode.methods.add(voidMethod("releaseFocus", RELEASE_DESC));
+        classNode.methods.add(voidMethod("grabFocus", GRAB_DESC));
+        classNode.methods.add(voidMethod("grabFocus", GRAB_WRAPPER_DESC));
         return classNode;
     }
 
@@ -81,6 +96,17 @@ final class TextFieldImeHookPatchTest {
                 .filter(candidate -> name.equals(candidate.name) && descriptor.equals(candidate.desc))
                 .findFirst()
                 .orElseThrow();
+    }
+
+    private static int hookCalls(MethodNode method) {
+        int count = 0;
+        for (AbstractInsnNode instruction = method.instructions.getFirst(); instruction != null;
+             instruction = instruction.getNext()) {
+            if (instruction instanceof MethodInsnNode call && HOOKS.equals(call.owner)) {
+                count++;
+            }
+        }
+        return count;
     }
 
     private static PatchContext context() {
