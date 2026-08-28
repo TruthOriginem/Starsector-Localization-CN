@@ -1,14 +1,8 @@
 package org.fossic.starsector.ime;
 
-import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.SettingsAPI;
-import com.fs.starfarer.api.ui.LabelAPI;
-import com.fs.starfarer.api.ui.PositionAPI;
 import com.fs.starfarer.api.ui.TextFieldAPI;
 
 import java.lang.ref.WeakReference;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 
 /**
  * 输入法支持的核心协调器（单例）。
@@ -25,36 +19,159 @@ import java.lang.reflect.Method;
  * 因此无需复杂同步。所有对外入口在 {@link ImeHooks} 中以异常隔离方式调用。
  */
 final class ImeController {
-    private static final ImeController INSTANCE = new ImeController();
+    private static final int MAX_CLEANUP_ATTEMPTS_PER_PHASE = 4;
 
-    private volatile boolean initAttempted;
-    private volatile boolean available;
+    enum InitState {
+        UNINITIALIZED,
+        ATTACHED,
+        RETRY_WAIT,
+        PERMANENT_FAILURE,
+        UNSAFE_CLEANUP
+    }
+
+    enum InputState {
+        NONE,
+        ACTIVE,
+        SUSPENDED,
+        CANCELLING
+    }
+
+    private enum CleanupPhase {
+        NONE,
+        BEGIN_CANCEL,
+        FINISH_CANCEL
+    }
+
+    private static final ImeController INSTANCE = new ImeController(
+            new SystemImeNativeFacade(), new LwjglHwndResolver(), ImeLog::error,
+            new GameImeSpotResolver());
+
+    private final ImeNativeFacade nativeFacade;
+    private final HwndResolver hwndResolver;
+    private final ImeLogSink log;
+    private final ImeSpotResolver spotResolver;
+
+    private volatile InitState initState = InitState.UNINITIALIZED;
     private volatile long ctx;
+    private long attachedHwnd;
 
+    private final WeakIdentityRegistry<TextFieldAPI> registeredFields =
+            new WeakIdentityRegistry<>();
     private WeakReference<TextFieldAPI> focusedField;
+    private WeakReference<TextFieldAPI> requestedNextField;
+    private InputState inputState = InputState.NONE;
+    private long frameId;
+    private long cancellationFrame = -1L;
+    private boolean suspendAfterCancel;
+    private CleanupPhase cleanupPhase = CleanupPhase.NONE;
+    private int cleanupBeginAttempts;
+    private int cleanupFinishAttempts;
+    private boolean cleanupExhaustionLogged;
+    private volatile Thread ownerThread;
+    private volatile boolean wrongThreadLogged;
 
     // 候选窗定位去重：坐标未变化时跳过原生调用（每帧 4+ 次系统调用）与日志
     private int lastSpotX = Integer.MIN_VALUE;
     private int lastSpotY = Integer.MIN_VALUE;
     private int lastSpotHeight = Integer.MIN_VALUE;
-    private boolean spotBroken;
+    private final WeakIdentityRegistry<TextFieldAPI> brokenSpotFields =
+            new WeakIdentityRegistry<>();
+    private boolean nativeSpotBroken;
 
-    private ImeController() {
+    ImeController(ImeNativeFacade nativeFacade, HwndResolver hwndResolver, ImeLogSink log) {
+        this(nativeFacade, hwndResolver, log, new GameImeSpotResolver());
+    }
+
+    ImeController(ImeNativeFacade nativeFacade, HwndResolver hwndResolver, ImeLogSink log,
+                  ImeSpotResolver spotResolver) {
+        if (nativeFacade == null || hwndResolver == null || log == null || spotResolver == null) {
+            throw new IllegalArgumentException("IME dependencies must not be null");
+        }
+        this.nativeFacade = nativeFacade;
+        this.hwndResolver = hwndResolver;
+        this.log = log;
+        this.spotResolver = spotResolver;
     }
 
     static ImeController get() {
         return INSTANCE;
     }
 
-    /** 每帧对每个文本框调用（注入点：ui.new.processInputImpl 开头）。 */
-    void onProcessInput(TextFieldAPI field) {
-        if (field == null) {
+    /** 全局输入帧入口；负责初始化并推进跨帧取消屏障。 */
+    void onGlobalInputFrame(Object focusOwner) {
+        if (!acceptGlobalFrameThread()) {
             return;
         }
-        if (!initAttempted) {
-            ensureInit();
+        frameId++;
+        if (initState == InitState.UNSAFE_CLEANUP) {
+            advanceUnsafeCleanup();
+            return;
         }
-        if (!available) {
+        if (!ensureAttached(true)) {
+            return;
+        }
+        if (inputState == InputState.CANCELLING && frameId > cancellationFrame) {
+            ImeNativeFacade.TransitionResult result = nativeFacade.finishCancel(ctx);
+            handleNormalFinishResult(result);
+            if (initState != InitState.ATTACHED) {
+                return;
+            }
+        }
+        convergeGlobalFocus(focusOwner);
+    }
+
+    /** Hook 熔断后仍由全局帧调用；只推进原生解绑，不再接触游戏 UI 对象。 */
+    void onEmergencyCleanupFrame() {
+        if (!acceptGlobalFrameThread()) {
+            return;
+        }
+        frameId++;
+        if (initState == InitState.UNSAFE_CLEANUP) {
+            advanceUnsafeCleanup();
+        } else if (ctx != 0L && initState == InitState.ATTACHED) {
+            disableAfterFailure();
+        }
+    }
+
+    /** 焦点栈底层修改完成后的即时通知；不推进跨帧取消屏障。 */
+    void onGlobalFocusChanged(Object focusOwner) {
+        if (!acceptCurrentThread() || !ensureAttached(false)) {
+            return;
+        }
+        convergeGlobalFocus(focusOwner);
+    }
+
+    InitState initStateForTest() {
+        return initState;
+    }
+
+    long contextForTest() {
+        return ctx;
+    }
+
+    boolean isAttachedForTest() {
+        return initState == InitState.ATTACHED;
+    }
+
+    boolean isRegisteredForTest(TextFieldAPI field) {
+        return registeredFields.contains(field);
+    }
+
+    InputState inputStateForTest() {
+        return inputState;
+    }
+
+    TextFieldAPI inputOwnerForTest() {
+        return focusedField == null ? null : focusedField.get();
+    }
+
+    /** 每帧对每个文本框调用（注入点：ui.new.processInputImpl 开头）。 */
+    void onProcessInput(TextFieldAPI field) {
+        if (field == null || !acceptCurrentThread()) {
+            return;
+        }
+        registeredFields.add(field);
+        if (!ensureAttached(false)) {
             return;
         }
 
@@ -63,53 +180,201 @@ final class ImeController {
 
         if (hasFocus) {
             if (current != field) {
-                // 先解除旧文本框并清空其组合/上屏队列，再把同一原生上下文交给新文本框。
-                // 即使 WeakReference 已失效也执行 false，避免旧文本进入新文本框。
-                ImeNatives.nativeSetFocused(ctx, false);
-                focusedField = new WeakReference<>(field);
-                ImeNatives.nativeSetFocused(ctx, true);
+                activateIfEligible(field);
             }
-            drainCommittedText(field);
-            updateSpot(field);
+            if (inputState == InputState.ACTIVE && inputOwnerForTest() == field) {
+                drainCommittedText(field);
+                updateSpot(field);
+            }
         } else if (current == field || (current == null && focusedField != null)) {
-            clearFocus();
+            beginCancellation(current, null, true);
         }
     }
 
     /** {@code releaseFocus} 正常返回后调用，覆盖文本框同帧关闭、此后不再 advance 的情况。 */
     void onFocusReleased(TextFieldAPI field) {
-        if (!available || field == null) {
+        if (!acceptCurrentThread() || initState != InitState.ATTACHED || field == null) {
             return;
         }
         TextFieldAPI current = focusedField != null ? focusedField.get() : null;
         if (current == null || current == field) {
-            clearFocus();
+            if (inputState == InputState.CANCELLING) {
+                suspendAfterCancel = false;
+            } else {
+                beginCancellation(current, null, false);
+            }
         }
     }
 
     /** 钩子发生不可恢复错误时尽力解除 IME，随后彻底停用本模块。 */
     void disableAfterFailure() {
-        long active = ctx;
-        focusedField = null;
-        available = false;
-        ctx = 0L;
+        requestedNextField = null;
+        suspendAfterCancel = false;
         resetSpot();
-        if (active != 0L) {
+        if (ctx == 0L) {
+            focusedField = null;
+            inputState = InputState.NONE;
+            cleanupPhase = CleanupPhase.NONE;
+            initState = InitState.PERMANENT_FAILURE;
+            attachedHwnd = 0L;
+            return;
+        }
+
+        inputState = InputState.CANCELLING;
+        try {
+            ImeNativeFacade.TransitionResult result = nativeFacade.beginCancel(ctx);
+            if (result.status() == ImeNativeFacade.TransitionStatus.SUCCESS) {
+                cleanupPhase = CleanupPhase.FINISH_CANCEL;
+                cleanupBeginAttempts = 0;
+                cleanupFinishAttempts = 0;
+                cancellationFrame = frameId;
+                initState = InitState.UNSAFE_CLEANUP;
+            } else if (result.status() == ImeNativeFacade.TransitionStatus.WINDOW_GONE) {
+                finishAfterWindowGone();
+            } else {
+                enterUnsafeCleanup(result.message(), CleanupPhase.BEGIN_CANCEL, 1);
+            }
+        } catch (Throwable cleanupFailure) {
+            // 原始错误可能正是 JNI 故障；保持 Hook 活着，仅用于有限次数紧急清理。
+            enterUnsafeCleanup("输入法异常后的解绑调用失败",
+                    CleanupPhase.BEGIN_CANCEL, 1);
+        }
+    }
+
+    private void beginCancellation(TextFieldAPI previous, TextFieldAPI requestedNext,
+                                   boolean suspendPrevious) {
+        if (inputState != InputState.ACTIVE) {
+            return;
+        }
+        if (previous != null) {
+            drainCommittedText(previous);
+        }
+        ImeNativeFacade.TransitionResult result = nativeFacade.beginCancel(ctx);
+        if (result.status() == ImeNativeFacade.TransitionStatus.SUCCESS) {
+            requestedNextField = requestedNext == null ? null : new WeakReference<>(requestedNext);
+            suspendAfterCancel = suspendPrevious;
+            inputState = InputState.CANCELLING;
+            cancellationFrame = frameId;
+            resetSpot();
+        } else if (result.status() == ImeNativeFacade.TransitionStatus.WINDOW_GONE) {
+            finishAfterWindowGone();
+        } else {
+            enterUnsafeCleanup(result.message(), CleanupPhase.BEGIN_CANCEL, 1);
+        }
+    }
+
+    private void enterUnsafeCleanup(String message) {
+        enterUnsafeCleanup(message, CleanupPhase.BEGIN_CANCEL, 0);
+    }
+
+    private void enterUnsafeCleanup(String message, CleanupPhase phase, int attempts) {
+        requestedNextField = null;
+        suspendAfterCancel = false;
+        inputState = InputState.CANCELLING;
+        cleanupPhase = phase;
+        cleanupBeginAttempts = phase == CleanupPhase.BEGIN_CANCEL ? attempts : 0;
+        cleanupFinishAttempts = phase == CleanupPhase.FINISH_CANCEL ? attempts : 0;
+        cleanupExhaustionLogged = false;
+        initState = InitState.UNSAFE_CLEANUP;
+        resetSpot();
+        log.error(message == null || message.isEmpty()
+                ? "输入法解绑未确认，进入紧急清理" : message, null);
+    }
+
+    private void advanceUnsafeCleanup() {
+        if (ctx == 0L) {
+            finishAfterWindowGone();
+            return;
+        }
+        if (cleanupPhase == CleanupPhase.BEGIN_CANCEL) {
+            if (cleanupBeginAttempts >= MAX_CLEANUP_ATTEMPTS_PER_PHASE) {
+                logCleanupExhausted("beginCancel");
+                return;
+            }
+            cleanupBeginAttempts++;
+            ImeNativeFacade.TransitionResult result;
             try {
-                ImeNatives.nativeSetFocused(active, false);
-            } catch (Throwable ignored) {
-                // 原始错误可能正是 JNI 故障，清理绝不能覆盖它或再次传播。
+                result = nativeFacade.beginCancel(ctx);
+            } catch (Throwable failure) {
+                logCleanupExhaustedIfFinal("beginCancel 抛出异常");
+                return;
+            }
+            if (result.status() == ImeNativeFacade.TransitionStatus.SUCCESS) {
+                cleanupPhase = CleanupPhase.FINISH_CANCEL;
+                cleanupFinishAttempts = 0;
+                cancellationFrame = frameId;
+            } else if (result.status() == ImeNativeFacade.TransitionStatus.WINDOW_GONE) {
+                finishAfterWindowGone();
+            } else if (result.status() == ImeNativeFacade.TransitionStatus.PERMANENT_FAILURE
+                    || result.status() == ImeNativeFacade.TransitionStatus.WRONG_THREAD) {
+                cleanupBeginAttempts = MAX_CLEANUP_ATTEMPTS_PER_PHASE;
+                logCleanupExhausted(result.message());
+            }
+            return;
+        }
+        if (cleanupPhase == CleanupPhase.FINISH_CANCEL && frameId > cancellationFrame) {
+            if (cleanupFinishAttempts >= MAX_CLEANUP_ATTEMPTS_PER_PHASE) {
+                logCleanupExhausted("finishCancel");
+                return;
+            }
+            cleanupFinishAttempts++;
+            ImeNativeFacade.TransitionResult result;
+            try {
+                result = nativeFacade.finishCancel(ctx);
+            } catch (Throwable failure) {
+                logCleanupExhaustedIfFinal("finishCancel 抛出异常");
+                return;
+            }
+            if (result.status() == ImeNativeFacade.TransitionStatus.SUCCESS
+                    || result.status() == ImeNativeFacade.TransitionStatus.WINDOW_GONE) {
+                focusedField = null;
+                requestedNextField = null;
+                inputState = InputState.NONE;
+                cleanupPhase = CleanupPhase.NONE;
+                cleanupBeginAttempts = 0;
+                cleanupFinishAttempts = 0;
+                cancellationFrame = -1L;
+                ctx = 0L;
+                attachedHwnd = 0L;
+                initState = InitState.PERMANENT_FAILURE;
+                resetSpot();
+            } else if (result.status() == ImeNativeFacade.TransitionStatus.PERMANENT_FAILURE
+                    || result.status() == ImeNativeFacade.TransitionStatus.WRONG_THREAD) {
+                cleanupFinishAttempts = MAX_CLEANUP_ATTEMPTS_PER_PHASE;
+                logCleanupExhausted(result.message());
             }
         }
     }
 
-    private void clearFocus() {
-        focusedField = null;
-        resetSpot();
-        long active = ctx;
-        if (active != 0L) {
-            ImeNatives.nativeSetFocused(active, false);
+    private void logCleanupExhaustedIfFinal(String phase) {
+        if (cleanupBeginAttempts >= MAX_CLEANUP_ATTEMPTS_PER_PHASE
+                || cleanupFinishAttempts >= MAX_CLEANUP_ATTEMPTS_PER_PHASE) {
+            logCleanupExhausted(phase);
         }
+    }
+
+    private void logCleanupExhausted(String detail) {
+        if (cleanupExhaustionLogged) {
+            return;
+        }
+        cleanupExhaustionLogged = true;
+        log.error("输入法紧急解绑已耗尽重试，仍未确认安全状态：" + detail, null);
+    }
+
+    private void finishAfterWindowGone() {
+        focusedField = null;
+        requestedNextField = null;
+        inputState = InputState.NONE;
+        cleanupPhase = CleanupPhase.NONE;
+        cleanupBeginAttempts = 0;
+        cleanupFinishAttempts = 0;
+        cleanupExhaustionLogged = false;
+        suspendAfterCancel = false;
+        cancellationFrame = -1L;
+        ctx = 0L;
+        attachedHwnd = 0L;
+        initState = InitState.RETRY_WAIT;
+        resetSpot();
     }
 
     private void resetSpot() {
@@ -118,55 +383,311 @@ final class ImeController {
         lastSpotHeight = Integer.MIN_VALUE;
     }
 
-    private synchronized void ensureInit() {
-        if (initAttempted) {
-            return;
+    private void handleNormalFinishResult(ImeNativeFacade.TransitionResult result) {
+        switch (result.status()) {
+            case SUCCESS -> completeNormalCancellation();
+            case WINDOW_GONE -> finishAfterWindowGone();
+            case RETRYABLE_FAILURE -> enterUnsafeCleanup(
+                    result.message(), CleanupPhase.FINISH_CANCEL, 1);
+            // finish 已经判定当前 native 状态不能沿原路径完成；重新从允许修复
+            // FAILED 状态的 beginCancel 开始，而不是继续调用必然失败的 finishCancel。
+            case WRONG_THREAD, PERMANENT_FAILURE -> enterUnsafeCleanup(
+                    result.message(), CleanupPhase.BEGIN_CANCEL, 0);
         }
-        initAttempted = true;
-
-        if (!ImeNatives.isLoaded()) {
-            return;
-        }
-        long hwnd = resolveHwnd();
-        if (hwnd == 0L) {
-            return;
-        }
-        long attached = ImeNatives.nativeAttach(hwnd);
-        if (attached == 0L) {
-            ImeLog.error("接管窗口过程失败：" + ImeNatives.nativeLastError(), null);
-            return;
-        }
-        ctx = attached;
-        available = true;
     }
 
-    /** 反射读取 org.lwjgl.opengl.WindowsDisplay 实例的 hwnd 字段。 */
-    private long resolveHwnd() {
-        try {
-            Class<?> displayClass = Class.forName("org.lwjgl.opengl.Display");
-            Method getImplementation = displayClass.getDeclaredMethod("getImplementation");
-            getImplementation.setAccessible(true);
-            Object implementation = getImplementation.invoke(null);
-            if (implementation == null) {
-                ImeLog.error("Display.getImplementation() 返回 null", null);
-                return 0L;
-            }
-            Field hwndField = implementation.getClass().getDeclaredField("hwnd");
-            hwndField.setAccessible(true);
-            long hwnd = hwndField.getLong(implementation);
-            if (hwnd == 0L) {
-                ImeLog.error("窗口实现返回了无效的 HWND", null);
-            }
-            return hwnd;
-        } catch (Throwable t) {
-            ImeLog.error("反射获取 HWND 失败", t);
-            return 0L;
+    private void completeNormalCancellation() {
+        TextFieldAPI previous = inputOwnerForTest();
+        TextFieldAPI requestedNext = requestedNextField == null
+                ? null : requestedNextField.get();
+        requestedNextField = null;
+        cancellationFrame = -1L;
+        boolean keepSuspended = suspendAfterCancel && previous != null;
+        suspendAfterCancel = false;
+        resetSpot();
+        if (requestedNext != null
+                && registeredFields.contains(requestedNext)
+                && requestedNext.hasFocus()) {
+            focusedField = null;
+            inputState = InputState.NONE;
+            activateIfEligible(requestedNext);
+        } else if (keepSuspended) {
+            inputState = InputState.SUSPENDED;
+        } else {
+            focusedField = null;
+            inputState = InputState.NONE;
         }
+    }
+
+    private synchronized boolean ensureAttached(boolean auditWindow) {
+        if (initState == InitState.ATTACHED) {
+            if (!auditWindow) {
+                return true;
+            }
+            HwndResolver.Resolution currentResolution = hwndResolver.resolve();
+            if (currentResolution.status() == HwndResolver.Status.PERMANENT_FAILURE) {
+                failPermanently(currentResolution.message());
+                return false;
+            }
+            if (currentResolution.status() == HwndResolver.Status.RETRY_LATER) {
+                ImeNativeFacade.NativeState state = nativeFacade.state(ctx);
+                if (state == ImeNativeFacade.NativeState.WINDOW_GONE) {
+                    prepareForWindowRetry();
+                    return false;
+                }
+                if (state == ImeNativeFacade.NativeState.FAILED) {
+                    enterUnsafeCleanup("ssime 原生状态已失败");
+                    return false;
+                }
+                return true;
+            }
+            ImeNativeFacade.NativeState state = nativeFacade.state(ctx);
+            if (currentResolution.hwnd() == attachedHwnd
+                    && state != ImeNativeFacade.NativeState.WINDOW_GONE
+                    && state != ImeNativeFacade.NativeState.RETIRED) {
+                if (state == ImeNativeFacade.NativeState.FAILED) {
+                    enterUnsafeCleanup("ssime 原生状态已失败");
+                    return false;
+                }
+                return true;
+            }
+            if (state == ImeNativeFacade.NativeState.WINDOW_GONE) {
+                prepareForWindowRetry();
+                return attachResolvedWindow(currentResolution);
+            }
+            if (state == ImeNativeFacade.NativeState.RETIRED) {
+                prepareForWindowRetry();
+                return attachResolvedWindow(currentResolution);
+            }
+            return retireAndAttach(currentResolution);
+        }
+        if (initState == InitState.PERMANENT_FAILURE
+                || initState == InitState.UNSAFE_CLEANUP) {
+            return false;
+        }
+
+        if (!nativeFacade.isLoaded()) {
+            failPermanently("ssime 原生库不可用");
+            return false;
+        }
+
+        HwndResolver.Resolution resolution = hwndResolver.resolve();
+        switch (resolution.status()) {
+            case RETRY_LATER -> {
+                initState = InitState.RETRY_WAIT;
+                return false;
+            }
+            case PERMANENT_FAILURE -> {
+                failPermanently(resolution.message());
+                return false;
+            }
+            case READY -> {
+                return attachResolvedWindow(resolution);
+            }
+            default -> throw new IllegalStateException("unknown HWND resolution status");
+        }
+    }
+
+    private boolean retireAndAttach(HwndResolver.Resolution resolution) {
+        ImeNativeFacade.TransitionResult result = nativeFacade.retire(ctx);
+        if (result.status() == ImeNativeFacade.TransitionStatus.SUCCESS
+                || result.status() == ImeNativeFacade.TransitionStatus.WINDOW_GONE) {
+            prepareForWindowRetry();
+            return attachResolvedWindow(resolution);
+        }
+        enterUnsafeCleanup(result.message());
+        return false;
+    }
+
+    private boolean attachResolvedWindow(HwndResolver.Resolution resolution) {
+        ImeNativeFacade.AttachResult result = nativeFacade.attach(resolution.hwnd());
+        if (result.status() == ImeNativeFacade.AttachStatus.SUCCESS) {
+            ctx = result.context();
+            attachedHwnd = resolution.hwnd();
+            ownerThread = Thread.currentThread();
+            initState = InitState.ATTACHED;
+            return true;
+        }
+        if (result.status() == ImeNativeFacade.AttachStatus.RETRYABLE_FAILURE) {
+            initState = InitState.RETRY_WAIT;
+            return false;
+        }
+        failPermanently(result.message());
+        return false;
+    }
+
+    private void prepareForWindowRetry() {
+        focusedField = null;
+        requestedNextField = null;
+        inputState = InputState.NONE;
+        cleanupPhase = CleanupPhase.NONE;
+        cleanupBeginAttempts = 0;
+        cleanupFinishAttempts = 0;
+        cleanupExhaustionLogged = false;
+        suspendAfterCancel = false;
+        cancellationFrame = -1L;
+        ctx = 0L;
+        attachedHwnd = 0L;
+        initState = InitState.RETRY_WAIT;
+        resetSpot();
+    }
+
+    /**
+     * 文本框显式取得焦点后的入口。未经过 {@link #onProcessInput(TextFieldAPI)} 验证的实例
+     * 一律忽略，避免只继承焦点方法、却没有消费中文上屏队列的 mod 控件误开启 IME。
+     *
+     * <p>由文本框 {@code grabFocus(boolean)} 正常出口的 ASM Hook 调用。
+     */
+    void onTextFieldFocusGained(TextFieldAPI field) {
+        if (!acceptCurrentThread() || field == null || !registeredFields.contains(field)) {
+            return;
+        }
+        if (!field.hasFocus() || !ensureAttached(false)) {
+            return;
+        }
+        activateIfEligible(field);
+    }
+
+    private void activateIfEligible(TextFieldAPI field) {
+        TextFieldAPI current = inputOwnerForTest();
+        if (inputState == InputState.ACTIVE && current == field) {
+            return;
+        }
+        if (inputState == InputState.ACTIVE) {
+            beginCancellation(current, field, false);
+            return;
+        }
+        if (inputState == InputState.SUSPENDED && current == field) {
+            focusedField = null;
+            inputState = InputState.NONE;
+        }
+        if (inputState != InputState.NONE || current != null) {
+            return;
+        }
+
+        updateSpot(field);
+        ImeNativeFacade.TransitionResult result = nativeFacade.enable(ctx);
+        if (result.status() == ImeNativeFacade.TransitionStatus.SUCCESS) {
+            focusedField = new WeakReference<>(field);
+            inputState = InputState.ACTIVE;
+        } else if (result.status() == ImeNativeFacade.TransitionStatus.WINDOW_GONE) {
+            prepareForWindowRetry();
+        } else if (result.status() == ImeNativeFacade.TransitionStatus.WRONG_THREAD) {
+            failPermanently(result.message());
+        } else if (result.status() == ImeNativeFacade.TransitionStatus.PERMANENT_FAILURE) {
+            enterUnsafeCleanup(result.message());
+        }
+    }
+
+    private void convergeGlobalFocus(Object focusOwner) {
+        TextFieldAPI verifiedFocus = focusOwner instanceof TextFieldAPI field
+                && registeredFields.contains(field) ? field : null;
+        TextFieldAPI current = inputOwnerForTest();
+
+        if (inputState == InputState.ACTIVE && (current == null || current != focusOwner)) {
+            beginCancellation(current, verifiedFocus, verifiedFocus == null);
+            return;
+        }
+        if (inputState == InputState.SUSPENDED && verifiedFocus != null
+                && verifiedFocus.hasFocus()) {
+            focusedField = null;
+            inputState = InputState.NONE;
+            activateIfEligible(verifiedFocus);
+            return;
+        }
+        if (inputState == InputState.NONE && verifiedFocus != null
+                && verifiedFocus.hasFocus()) {
+            activateIfEligible(verifiedFocus);
+        }
+    }
+
+    private void failPermanently(String message) {
+        if (ctx != 0L) {
+            enterUnsafeCleanup(message);
+            return;
+        }
+        ctx = 0L;
+        attachedHwnd = 0L;
+        initState = InitState.PERMANENT_FAILURE;
+        log.error(message == null || message.isEmpty() ? "输入法初始化失败" : message, null);
+    }
+
+    private boolean acceptCurrentThread() {
+        Thread expected = ownerThread;
+        if (expected == null || expected == Thread.currentThread()) {
+            return true;
+        }
+        if (!wrongThreadLogged) {
+            wrongThreadLogged = true;
+            log.error("输入法 Hook 被非游戏窗口线程调用，已忽略该次调用", null);
+        }
+        return false;
+    }
+
+    /**
+     * 启动器窗口和游戏窗口可能分别由不同 Java/Win32 线程持有。只有全局帧入口允许
+     * 在线程改变且 HWND 已切换时移交 owner；普通文本框 Hook 永远不能自行夺取状态机。
+     *
+     * <p>旧上下文必须已经处于 gameplay 安全态，或者旧窗口已经消失/退役。此时不从
+     * 新线程调用旧窗口的 IMM API，只遗忘 Java 句柄；旧 WndProc 会在其窗口销毁时恢复
+     * 保存的用户状态并由进程最终回收上下文。
+     */
+    private boolean acceptGlobalFrameThread() {
+        Thread expected = ownerThread;
+        Thread current = Thread.currentThread();
+        if (expected == null || expected == current) {
+            return true;
+        }
+        if (transferToReplacementWindowThread(current)) {
+            return true;
+        }
+        if (!wrongThreadLogged) {
+            wrongThreadLogged = true;
+            log.error("输入法全局 Hook 来自非窗口线程，且未发现可安全接管的新窗口，已忽略",
+                    null);
+        }
+        return false;
+    }
+
+    private synchronized boolean transferToReplacementWindowThread(Thread current) {
+        if (ownerThread == null || ownerThread == current) {
+            return true;
+        }
+
+        HwndResolver.Resolution resolution;
+        ImeNativeFacade.NativeState nativeState;
+        try {
+            resolution = hwndResolver.resolve();
+            if (resolution.status() != HwndResolver.Status.READY) {
+                return false;
+            }
+            nativeState = ctx == 0L
+                    ? ImeNativeFacade.NativeState.WINDOW_GONE
+                    : nativeFacade.state(ctx);
+        } catch (Throwable failure) {
+            return false;
+        }
+
+        boolean replacementWindow = resolution.hwnd() != attachedHwnd
+                || nativeState == ImeNativeFacade.NativeState.WINDOW_GONE
+                || nativeState == ImeNativeFacade.NativeState.RETIRED;
+        boolean oldContextSafe = ctx == 0L
+                || nativeState == ImeNativeFacade.NativeState.DETACHED
+                || nativeState == ImeNativeFacade.NativeState.WINDOW_GONE
+                || nativeState == ImeNativeFacade.NativeState.RETIRED;
+        if (!replacementWindow || !oldContextSafe) {
+            return false;
+        }
+
+        prepareForWindowRetry();
+        ownerThread = current;
+        wrongThreadLogged = false;
+        return true;
     }
 
     private void drainCommittedText(TextFieldAPI field) {
         String text;
-        while ((text = ImeNatives.nativePoll(ctx)) != null) {
+        while ((text = nativeFacade.poll(ctx)) != null) {
             if (text.isEmpty()) {
                 continue;
             }
@@ -192,51 +713,35 @@ final class ImeController {
      * 左对齐，导致居中框错位。
      */
     private void updateSpot(TextFieldAPI field) {
-        if (spotBroken) {
+        if (nativeSpotBroken || brokenSpotFields.contains(field)) {
+            return;
+        }
+        ImeSpot spot;
+        try {
+            spot = spotResolver.resolve(field);
+            if (spot == null) {
+                return;
+            }
+        } catch (Throwable t) {
+            brokenSpotFields.add(field);
+            log.error("计算候选窗位置失败，已只停用当前文本框的定位", t);
+            return;
+        }
+
+        // 坐标未变化时跳过原生调用（否则每帧产生 4+ 次 Imm* 系统调用）。
+        if (spot.x() == lastSpotX
+                && spot.y() == lastSpotY
+                && spot.height() == lastSpotHeight) {
             return;
         }
         try {
-            LabelAPI label = field.getTextLabelAPI();
-            PositionAPI textPos = label != null ? label.getPosition() : null;
-            PositionAPI fieldPos = field.getPosition();
-            PositionAPI basis = textPos != null ? textPos : fieldPos;
-            if (basis == null) {
-                return;
-            }
-
-            float caretX = basis.getX() + basis.getWidth();
-            float caretBottom = basis.getY();
-            float height = basis.getHeight();
-            if (height <= 0f && fieldPos != null) {
-                height = fieldPos.getHeight();
-            }
-
-            // 文本框 position 是游戏 UI 的逻辑坐标；候选窗需要客户区物理像素坐标。
-            // UI 缩放非 100% 时二者不同，需乘以 缩放倍数 = 物理高 / 逻辑高
-            // （自算比值，不依赖 getScreenScaleMult 的方向约定）。
-            SettingsAPI settings = Global.getSettings();
-            float logicalHeight = settings.getScreenHeight();
-            float pixelHeight = settings.getScreenHeightPixels();
-            if (logicalHeight <= 0f || pixelHeight <= 0f) {
-                return;
-            }
-            float scale = pixelHeight / logicalHeight;
-
-            int winX = Math.round(caretX * scale);
-            int winY = Math.round(pixelHeight - (caretBottom + height) * scale);
-            int winHeight = Math.round(height * scale);
-
-            // 坐标未变化时跳过原生调用（否则每帧产生 4+ 次 Imm* 系统调用）。
-            if (winX == lastSpotX && winY == lastSpotY && winHeight == lastSpotHeight) {
-                return;
-            }
-            lastSpotX = winX;
-            lastSpotY = winY;
-            lastSpotHeight = winHeight;
-            ImeNatives.nativeSetSpot(ctx, winX, winY, winHeight);
+            nativeFacade.setSpot(ctx, spot.x(), spot.y(), spot.height());
+            lastSpotX = spot.x();
+            lastSpotY = spot.y();
+            lastSpotHeight = spot.height();
         } catch (Throwable t) {
-            spotBroken = true;
-            ImeLog.error("更新候选窗位置失败", t);
+            nativeSpotBroken = true;
+            log.error("原生候选窗定位失败，已停用本次会话的定位功能", t);
         }
     }
 }

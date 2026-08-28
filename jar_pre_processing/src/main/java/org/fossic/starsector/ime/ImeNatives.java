@@ -25,13 +25,18 @@ final class ImeNatives {
             return false;
         }
         try {
-            boolean initialized = nativeInit(nativeLogPath());
+            int abiVersion = nativeAbiVersion();
+            if (abiVersion != 2) {
+                ImeLog.error("ssime 原生库 ABI 版本不匹配：期望 2，实际 " + abiVersion, null);
+                return false;
+            }
+            boolean initialized = nativeInitV2(nativeLogPath(), ImeRuntimeConfig.debug());
             if (!initialized) {
                 ImeLog.error("ssime 原生库初始化失败", null);
             }
             return initialized;
         } catch (Throwable t) {
-            ImeLog.error("ssime 原生库 nativeInit 调用失败", t);
+            ImeLog.error("ssime 原生库 nativeInitV2 调用失败", t);
             return false;
         }
     }
@@ -58,13 +63,31 @@ final class ImeNatives {
     }
 
     /** @param logPath 日志完整路径；空串表示沿用 CWD 下的相对路径 */
-    static native boolean nativeInit(String logPath);
+    static native boolean nativeInitV2(String logPath, boolean debug);
+
+    /** 用于在调用其他 JNI 前拒绝新旧 Jar/DLL 混装。 */
+    static native int nativeAbiVersion();
 
     /** 子类化窗口过程，返回原生上下文句柄；失败返回 0。 */
     static native long nativeAttach(long hwnd);
 
-    /** 设置输入框焦点状态：true 启用输入法，false 解除以免按键被输入法截获。 */
-    static native void nativeSetFocused(long ctx, boolean focused);
+    /** 最近一次当前线程 attach 的结果：0=成功，1=可重试，2=永久失败。 */
+    static native int nativeLastAttachStatus();
+
+    /** 恢复保存的 HIMC 并验证窗口实际处于 ENABLED；返回状态码。 */
+    static native int nativeEnable(long ctx);
+
+    /** 取消未完成组合、关闭候选窗、解绑 HIMC 并进入 CANCELLING。 */
+    static native int nativeBeginCancel(long ctx);
+
+    /** 跨帧屏障后复核 HIMC 仍已解绑，并进入 DETACHED。 */
+    static native int nativeFinishCancel(long ctx);
+
+    /** 退役仍然存活的旧窗口，并把保存的用户 IME 状态交还给线程上下文。 */
+    static native int nativeRetire(long ctx);
+
+    /** 返回 native 状态机状态码。 */
+    static native int nativeState(long ctx);
 
     /** 设置候选/组合窗定位点（客户区物理像素坐标，y 向下）。 */
     static native void nativeSetSpot(long ctx, int x, int y, int height);

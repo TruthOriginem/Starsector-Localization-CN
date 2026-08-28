@@ -21,6 +21,7 @@ import org.fossic.starsector.preprocessing.patches.FontDefinitionParserPatch;
 import org.fossic.starsector.preprocessing.patches.FontDefinitionCursorPatch;
 import org.fossic.starsector.preprocessing.patches.HeadlessConsoleLogPatch;
 import org.fossic.starsector.preprocessing.patches.GlyphArrayGrowthPatch;
+import org.fossic.starsector.preprocessing.patches.GlobalImeFocusPatch;
 import org.fossic.starsector.preprocessing.patches.GraphicsResourceStreamSafetyPatch;
 import org.fossic.starsector.preprocessing.patches.LoadingUtilsTextReadPatch;
 import org.fossic.starsector.preprocessing.patches.LoadingUtilsResourceStreamSafetyPatch;
@@ -106,6 +107,7 @@ public final class PatchRegistry {
                         TowCableTooltipWidthPatch::new),
                 register(PatchGroup.LOCALIZATION,
                         CodexWeaponTypeFilterPatch::new),
+                register(PatchGroup.IME, GlobalImeFocusPatch::new),
                 register(PatchGroup.IME, TextFieldImeHookPatch::new),
                 register(PatchGroup.DYNFONT, ResourceStreamDynFontPatch::new),
                 register(PatchGroup.DYNFONT, NewGameSeedFieldWidthPatch::new),

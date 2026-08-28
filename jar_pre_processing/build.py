@@ -43,6 +43,10 @@ NATIVE_DIST_DIR = REPO_ROOT / 'localization' / 'native' / 'windows'
 IME_DIR = PROJECT_DIR / 'native' / 'ime'
 IME_SOURCE = IME_DIR / 'ssime.cpp'
 IME_DLL = IME_DIR / 'ssime.dll'
+IME_TEST_SOURCE = IME_DIR / 'tests' / 'ssime_smoke_test.cpp'
+IME_TEST_DIR = PROJECT_DIR / 'target' / 'native-tests'
+IME_TEST_EXE = IME_TEST_DIR / 'ssime_smoke_test.exe'
+IME_TEST_LOG = IME_TEST_DIR / 'starsector_ime_native.log'
 
 DYNFONT_DIR = PROJECT_DIR / 'native' / 'dyn_font'
 DYNFONT_DLL = DYNFONT_DIR / 'ss_dyn_font.dll'
@@ -170,7 +174,7 @@ def build_ssime() -> None:
         sys.exit('错误：PATH 中找不到 g++（需要 MinGW-w64）')
     include = find_jni_include()
     cmd = [
-        'g++', '-shared', '-O2', '-s',
+        'g++', '-std=c++17', '-shared', '-O2', '-s', '-Wall', '-Wextra', '-Werror',
         '-static', '-static-libgcc', '-static-libstdc++',
         # 去除 PE 头时间戳：源码不变时重建产物字节一致
         '-Wl,--no-insert-timestamp',
@@ -180,6 +184,23 @@ def build_ssime() -> None:
     ]
     print(f'[native] 编译 {IME_DLL.name} ...')
     subprocess.run(cmd, check=True, cwd=PROJECT_DIR)
+    IME_TEST_DIR.mkdir(parents=True, exist_ok=True)
+    test_cmd = [
+        'g++', '-std=c++17', '-O2', '-Wall', '-Wextra', '-Werror',
+        '-o', str(IME_TEST_EXE), str(IME_TEST_SOURCE), '-limm32',
+    ]
+    print('[native] 编译并运行 ssime 隐藏窗口 smoke test ...')
+    subprocess.run(test_cmd, check=True, cwd=PROJECT_DIR)
+    IME_TEST_LOG.unlink(missing_ok=True)
+    try:
+        subprocess.run(
+            [str(IME_TEST_EXE), str(IME_DLL.resolve())],
+            check=True,
+            cwd=IME_TEST_DIR,
+            timeout=30,
+        )
+    finally:
+        IME_TEST_LOG.unlink(missing_ok=True)
     print(f'[native] 完成  sha256={sha256(IME_DLL)}')
 
 
