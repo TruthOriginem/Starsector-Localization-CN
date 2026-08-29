@@ -7,6 +7,8 @@ import org.fossic.starsector.preprocessing.patches.CodexStartupProfilePatch;
 import org.fossic.starsector.preprocessing.patches.CombatDeploymentFontPatch;
 import org.fossic.starsector.preprocessing.patches.CodexWeaponTypeFilterPatch;
 import org.fossic.starsector.preprocessing.patches.CombatMainStartupProfilePatch;
+import org.fossic.starsector.preprocessing.patches.CombatHudCounterWidthPatch;
+import org.fossic.starsector.preprocessing.patches.CombatPlayerStatusValueWidthPatch;
 import org.fossic.starsector.preprocessing.patches.CombatTargetInfoWidthPatch;
 import org.fossic.starsector.preprocessing.patches.CsvLazyErrorFormattingPatch;
 import org.fossic.starsector.preprocessing.patches.CsvMergeLinearPatch;
@@ -88,6 +90,10 @@ public final class PatchRegistry {
                 register(PatchGroup.LOCALIZATION, ShipInfoSeparatorPatch::new),
                 register(PatchGroup.LOCALIZATION, CombatDeploymentFontPatch::new),
                 register(PatchGroup.LOCALIZATION, CombatTargetInfoWidthPatch::new),
+                register(PatchGroup.DYNFONT,
+                        CombatPlayerStatusValueWidthPatch::new),
+                register(PatchGroup.DYNFONT,
+                        CombatHudCounterWidthPatch::new),
                 register(PatchGroup.DYNFONT, FleetCardCrTextWidthPatch::new),
                 register(PatchGroup.LOCALIZATION, CampaignDateWidthPatch::new),
                 register(PatchGroup.LOCALIZATION, SaveDateLocalePatch::new),
