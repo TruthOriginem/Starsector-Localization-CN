@@ -21,6 +21,8 @@ final class PatchRegistryTest {
                 "ship-info-separator",
                 "combat-deployment-font",
                 "combat-target-info-width",
+                "combat-player-status-value-width",
+                "combat-hud-counter-width",
                 "fleet-card-cr-text-width",
                 "campaign-date-width",
                 "save-date-locale",
@@ -122,11 +124,14 @@ final class PatchRegistryTest {
     }
 
     @Test
-    void dynfontGroupControlsAllFiveCooperatingPatches() {
+    void dynfontGroupControlsAllEightCooperatingPatches() {
         List<String> enabled = PatchRegistry.patches(
                 PatchSelection.fromOptions("none", List.of(), false))
                 .stream().map(JarPatch::id).toList();
         assertTrue(enabled.contains("resource-stream-dynfont-hook"));
+        assertTrue(enabled.contains("combat-player-status-value-width"));
+        assertTrue(enabled.contains("combat-hud-counter-width"));
+        assertTrue(enabled.contains("fleet-card-cr-text-width"));
         assertTrue(enabled.contains("new-game-seed-field-width"));
         assertTrue(enabled.contains("bitmap-font-logical-nominal"));
         assertTrue(enabled.contains("renderer-highlight-safe-regex"));
@@ -137,6 +142,9 @@ final class PatchRegistryTest {
                         "none", List.of("dynfont"), false))
                 .stream().map(JarPatch::id).toList();
         assertFalse(disabled.contains("resource-stream-dynfont-hook"));
+        assertFalse(disabled.contains("combat-player-status-value-width"));
+        assertFalse(disabled.contains("combat-hud-counter-width"));
+        assertFalse(disabled.contains("fleet-card-cr-text-width"));
         assertFalse(disabled.contains("new-game-seed-field-width"));
         assertFalse(disabled.contains("bitmap-font-logical-nominal"));
         assertFalse(disabled.contains("renderer-highlight-safe-regex"));
