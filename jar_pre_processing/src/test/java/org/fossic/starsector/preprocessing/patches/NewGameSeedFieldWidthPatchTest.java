@@ -33,8 +33,8 @@ final class NewGameSeedFieldWidthPatchTest {
 
         MethodNode constructor = classNode.methods.get(0);
         assertEquals(0, countFloat(constructor, 185.0f));
-        assertEquals(1, countFloat(constructor, 210.0f));
-        assertEquals(1, countShiftAfterPastePlacement(constructor, 25.0f));
+        assertEquals(1, countFloat(constructor, 273.0f));
+        assertEquals(1, countShiftAfterPastePlacement(constructor, 88.0f));
     }
 
     @Test
