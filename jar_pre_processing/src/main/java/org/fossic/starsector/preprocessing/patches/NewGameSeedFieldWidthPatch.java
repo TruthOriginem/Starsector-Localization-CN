@@ -33,7 +33,7 @@ public final class NewGameSeedFieldWidthPatch implements JarPatch {
             "(Lcom/fs/starfarer/campaign/save/return;Lcom/fs/starfarer/ui/interfacenew;)V";
 
     private static final float ORIGINAL_WIDTH = 185.0f;
-    private static final float PATCHED_WIDTH = 210.0f;
+    private static final float PATCHED_WIDTH = 273.0f;
     private static final float RIGHT_SHIFT = PATCHED_WIDTH - ORIGINAL_WIDTH;
     private static final String POSITION_OWNER = "com/fs/starfarer/ui/OO0O";
     private static final String POSITION_DESC = "Lcom/fs/starfarer/ui/OO0O;";
