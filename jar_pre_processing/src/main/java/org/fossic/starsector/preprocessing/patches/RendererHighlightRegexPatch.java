@@ -8,15 +8,18 @@ import org.fossic.starsector.preprocessing.PatchResult;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.tree.AbstractInsnNode;
 import org.objectweb.asm.tree.ClassNode;
+import org.objectweb.asm.tree.FieldInsnNode;
+import org.objectweb.asm.tree.InsnList;
 import org.objectweb.asm.tree.LdcInsnNode;
 import org.objectweb.asm.tree.MethodInsnNode;
 import org.objectweb.asm.tree.MethodNode;
+import org.objectweb.asm.tree.VarInsnNode;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-/** Makes the renderer's fuzzy highlight fallback safe for translated tooltip text. */
+/** Makes translated-text highlight matching and per-range colors safe. */
 public final class RendererHighlightRegexPatch implements JarPatch {
     private static final String TARGET_CLASS = RendererDynFontPatch.RENDERER_CLASS;
     private static final String TARGET_CLASS_FILE = TARGET_CLASS + ".class";
@@ -28,6 +31,13 @@ public final class RendererHighlightRegexPatch implements JarPatch {
             "org/fossic/starsector/dynfont/DynFontHighlightHooks";
     private static final String COMPILE_DESC =
             "(Ljava/lang/String;)Ljava/util/regex/Pattern;";
+    private static final String COLOR_DESC = "Ljava/awt/Color;";
+    private static final String COLOR_ARRAY_DESC = "[Ljava/awt/Color;";
+    private static final String COLOR_ARRAY_SETTER_DESC = "(" + COLOR_ARRAY_DESC + ")V";
+    private static final String DEFAULT_HIGHLIGHT_FIELD = "Ô00000";
+    private static final String HIGHLIGHT_COLORS_FIELD = "ØÓ0000";
+    private static final String NORMALIZE_COLORS_DESC =
+            "(" + COLOR_ARRAY_DESC + COLOR_DESC + ")" + COLOR_ARRAY_DESC;
 
     @Override
     public String id() {
@@ -49,6 +59,8 @@ public final class RendererHighlightRegexPatch implements JarPatch {
         if (!TARGET_CLASS.equals(classNode.name)) {
             throw failure(context, "unexpected class " + classNode.name);
         }
+
+        MethodNode colorSetter = requireHighlightColorSetter(classNode, context);
 
         List<MethodNode> fallbacks = new ArrayList<>();
         for (MethodNode method : classNode.methods) {
@@ -101,12 +113,70 @@ public final class RendererHighlightRegexPatch implements JarPatch {
             }
         }
 
-        int verified = countCalls(classNode, HOOK, "compileFallback", COMPILE_DESC);
+        injectHighlightColorNormalization(colorSetter);
+        applied++;
+
+        int verified = countCalls(classNode, HOOK, "compileFallback", COMPILE_DESC)
+                + countCalls(classNode, HOOK,
+                        "normalizeHighlightColors", NORMALIZE_COLORS_DESC);
         if (countCalls(classNode, PATTERN, "compile", COMPILE_DESC) != 0) {
             throw failure(context, "an unsafe Pattern.compile call remains");
         }
-        return PatchResult.of(id(), context.classPath(), 2, applied, verified,
-                "retain exact highlight searches and safely quote two fuzzy fallbacks");
+        return PatchResult.of(id(), context.classPath(), 3, applied, verified,
+                "quote two fuzzy fallbacks and normalize one per-range color array");
+    }
+
+    private static MethodNode requireHighlightColorSetter(
+            ClassNode node, PatchContext context) {
+        long defaultFields = node.fields.stream()
+                .filter(field -> DEFAULT_HIGHLIGHT_FIELD.equals(field.name)
+                        && COLOR_DESC.equals(field.desc))
+                .count();
+        long arrayFields = node.fields.stream()
+                .filter(field -> HIGHLIGHT_COLORS_FIELD.equals(field.name)
+                        && COLOR_ARRAY_DESC.equals(field.desc))
+                .count();
+        if (defaultFields != 1 || arrayFields != 1) {
+            throw failure(context, "unexpected highlight color fields: default="
+                    + defaultFields + ", array=" + arrayFields);
+        }
+
+        List<MethodNode> methods = node.methods.stream()
+                .filter(method -> "o00000".equals(method.name)
+                        && COLOR_ARRAY_SETTER_DESC.equals(method.desc))
+                .toList();
+        if (methods.size() != 1) {
+            throw failure(context, "expected one highlight color-array setter, found "
+                    + methods.size());
+        }
+        MethodNode setter = methods.get(0);
+        int stores = 0;
+        for (AbstractInsnNode insn : setter.instructions) {
+            if (insn instanceof FieldInsnNode field
+                    && field.getOpcode() == Opcodes.PUTFIELD
+                    && TARGET_CLASS.equals(field.owner)
+                    && HIGHLIGHT_COLORS_FIELD.equals(field.name)
+                    && COLOR_ARRAY_DESC.equals(field.desc)) {
+                stores++;
+            }
+        }
+        if (stores != 1) {
+            throw failure(context, "expected one highlight color-array store, found " + stores);
+        }
+        return setter;
+    }
+
+    private static void injectHighlightColorNormalization(MethodNode setter) {
+        InsnList code = new InsnList();
+        code.add(new VarInsnNode(Opcodes.ALOAD, 1));
+        code.add(new VarInsnNode(Opcodes.ALOAD, 0));
+        code.add(new FieldInsnNode(Opcodes.GETFIELD, TARGET_CLASS,
+                DEFAULT_HIGHLIGHT_FIELD, COLOR_DESC));
+        code.add(new MethodInsnNode(Opcodes.INVOKESTATIC, HOOK,
+                "normalizeHighlightColors", NORMALIZE_COLORS_DESC, false));
+        code.add(new VarInsnNode(Opcodes.ASTORE, 1));
+        setter.instructions.insert(code);
+        setter.maxStack = Math.max(setter.maxStack, 2);
     }
 
     private static void requireFallbackShape(MethodNode method, PatchContext context) {
