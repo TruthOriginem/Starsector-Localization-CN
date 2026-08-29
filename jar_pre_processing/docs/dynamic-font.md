@@ -156,7 +156,7 @@ w800。`a-z` 保留原码位但复用对应 `A-Z` 的图形、bearing 与 advanc
 | `CombatPlayerStatusValueWidthPatch` | 左下角玩家 HUD 结构/幅能数值栏由 4 倍行高扩至 8 倍，容纳约 7 位数 |
 | `CombatHudCounterWidthPatch` | 左下角 HUD 武器备弹栏扩至 4 位、系统次数栏扩至 3 位；等量压缩左侧名称栏，保持数字右边界和后续控件位置不变 |
 | `FleetCardCrTextWidthPatch` | 舰队卡片 CR 百分比栏 26 → 40，容纳 `100%` |
-| `NewGameSeedFieldWidthPatch` | 新生涯种子框 185 → 210，“粘贴”按钮同步右移 25 |
+| `NewGameSeedFieldWidthPatch` | 新生涯种子框 185 → 273，“粘贴”按钮同步右移 88，保持标签左边缘不变 |
 | `RendererHighlightRegexPatch` | 模糊高亮 fallback 安全引用动态文本；空的分段颜色沿用 renderer 默认高亮色，避免 mod 弹窗在透明度计算时崩溃 |
 
 Patch 都严格匹配目标类、方法描述符和相邻字节码结构；结构或数量漂移时构建失败。
