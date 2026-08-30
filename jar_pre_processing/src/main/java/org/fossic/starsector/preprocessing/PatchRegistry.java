@@ -54,6 +54,7 @@ import org.fossic.starsector.preprocessing.patches.ScriptStoreWorkerStartupProfi
 import org.fossic.starsector.preprocessing.patches.ShipInfoSeparatorPatch;
 import org.fossic.starsector.preprocessing.patches.SoundDecodeWorkerPatch;
 import org.fossic.starsector.preprocessing.patches.StarSystemMapFontPatch;
+import org.fossic.starsector.preprocessing.patches.SubmarketTitleWidthPatch;
 import org.fossic.starsector.preprocessing.patches.TerrainStatusBarSeparatorPatch;
 import org.fossic.starsector.preprocessing.patches.TextFieldImeHookPatch;
 import org.fossic.starsector.preprocessing.patches.TopMessageHighlightLayoutPatch;
@@ -95,6 +96,7 @@ public final class PatchRegistry {
                 register(PatchGroup.DYNFONT,
                         CombatHudCounterWidthPatch::new),
                 register(PatchGroup.DYNFONT, FleetCardCrTextWidthPatch::new),
+                register(PatchGroup.DYNFONT, SubmarketTitleWidthPatch::new),
                 register(PatchGroup.LOCALIZATION, CampaignDateWidthPatch::new),
                 register(PatchGroup.LOCALIZATION, SaveDateLocalePatch::new),
                 register(PatchGroup.LOCALIZATION, PlanetListColumnWidthPatch::new),
