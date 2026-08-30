@@ -413,3 +413,27 @@ CJK 排版路径，该路径可能在初始的零宽度布局中插入换行并�
 - return 0.0f;
 + return 369.0f;
 ```
+
+---
+
+### 19. 大地图实体提示的势力与关系高亮错位
+
+**对应 ASM Patch**：`src/main/java/org/fossic/starsector/preprocessing/patches/CampaignEntityTooltipHighlightLayoutPatch.java`
+
+相关文件：`starfarer_obf.jar: com/fs/starfarer/ui/impl/F$2.class`
+
+**原因**：实体提示先在 Label 尚未取得最终宽度时解析势力名和关系文本的高亮范围，之后
+才调用 `autoSizeToWidth()`。中文文本在初始零宽度布局中会被临时插入换行；最终布局会
+恢复正常文本，却不会重算已保存的高亮索引。因此势力色可能落到逗号上，而被换行拆开的
+关系文本没有找到匹配范围，表现为关系颜色缺失。
+
+**修改**：把原有的 `autoSizeToWidth()` 调用块移动到高亮解析之前。原宽度公式、调用次数、
+高亮颜色、控制流、局部变量和 StackMap 均保持不变；Patch 同时校验目标 Label 字段、两项
+高亮数组和宽度计算结构，原版代码发生漂移时中止构建。
+
+```diff
++ label.autoSizeToWidth(width - margin * 2);
+  label.getRenderer().highlight(factionName, relationshipText);
+  label.getRenderer().setHighlightColors(factionColor, relationshipColor);
+- label.autoSizeToWidth(width - margin * 2);
+```

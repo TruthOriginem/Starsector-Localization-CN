@@ -1,6 +1,7 @@
 package org.fossic.starsector.preprocessing;
 
 import org.fossic.starsector.preprocessing.patches.CampaignDateWidthPatch;
+import org.fossic.starsector.preprocessing.patches.CampaignEntityTooltipHighlightLayoutPatch;
 import org.fossic.starsector.preprocessing.patches.CombatDeploymentFontPatch;
 import org.fossic.starsector.preprocessing.patches.CodexWeaponTypeFilterPatch;
 import org.fossic.starsector.preprocessing.patches.FactionHostilityNoManualPatch;
@@ -33,6 +34,7 @@ public final class PatchRegistry {
                 new WindowDecorationPhysicalResolutionPatch(),
                 new TerrainStatusBarSeparatorPatch(),
                 new TopMessageHighlightLayoutPatch(),
+                new CampaignEntityTooltipHighlightLayoutPatch(),
                 new TowCableTooltipWidthPatch(),
                 new CodexWeaponTypeFilterPatch()
         );
