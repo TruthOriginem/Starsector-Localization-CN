@@ -22,8 +22,10 @@ class EnvironmentTest(unittest.TestCase):
     def test_read_env_bool_is_strict(self) -> None:
         with mock.patch.dict(os.environ, {'FLAG': 'yes'}, clear=True):
             self.assertTrue(package_utils.read_env_bool('FLAG', default=False))
-        with mock.patch.dict(os.environ, {'FLAG': 'invalid'}, clear=True), \
-                self.assertRaisesRegex(RuntimeError, 'FLAG'):
+        with (
+            mock.patch.dict(os.environ, {'FLAG': 'invalid'}, clear=True),
+            self.assertRaisesRegex(RuntimeError, 'FLAG'),
+        ):
             package_utils.read_env_bool('FLAG', default=False)
 
 

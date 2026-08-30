@@ -91,7 +91,9 @@ class JavaMapItem(ParaTranzMapItem):
             self.add_include_rule(rule)
 
     def search_for_string(self, pattern: str) -> List[str]:
-        return ClassFileMapItem(self.path, self.include_strings).search_for_string(pattern)
+        return ClassFileMapItem(self.path, self.include_strings).search_for_string(
+            pattern
+        )
 
 
 @dataclass
@@ -218,9 +220,7 @@ class JarMapItem(ParaTranzMapItem):
         path: str,
         include_strings: Optional[List[Union[str, dict]]] = None,
     ):
-        self.class_files.append(
-            ClassFileMapItem(path, include_strings or [])
-        )
+        self.class_files.append(ClassFileMapItem(path, include_strings or []))
 
     def get_class_file_item(
         self, path: str, create: bool = False
@@ -258,7 +258,9 @@ class ParaTranzMap:
     @overload
     def __getitem__(self, item: slice) -> List[ParaTranzMapItem]: ...
 
-    def __getitem__(self, item: Union[int, slice]) -> Union[ParaTranzMapItem, List[ParaTranzMapItem]]:
+    def __getitem__(
+        self, item: Union[int, slice]
+    ) -> Union[ParaTranzMapItem, List[ParaTranzMapItem]]:
         return self.items[item]
 
     def __iter__(self) -> Iterator[ParaTranzMapItem]:
@@ -293,9 +295,13 @@ class ParaTranzMap:
         # 将 "occurs" 数组折叠为单行（序号已在 to_json_value() 中排好序）
         json_str = re.sub(
             r'"occurs": \[([^\]]*)\]',
-            lambda m: '"occurs": ['
-            + ', '.join(x.strip().rstrip(',') for x in m.group(1).split('\n') if x.strip())
-            + ']',
+            lambda m: (
+                '"occurs": ['
+                + ', '.join(
+                    x.strip().rstrip(',') for x in m.group(1).split('\n') if x.strip()
+                )
+                + ']'
+            ),
             json_str,
         )
         with open(MAP_PATH, 'w', encoding='utf-8') as f:

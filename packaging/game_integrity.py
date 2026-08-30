@@ -37,8 +37,7 @@ class TreeIntegrity:
 
 def _is_reparse_point(path: Path) -> bool:
     return bool(
-        getattr(os.lstat(path), 'st_file_attributes', 0)
-        & FILE_ATTRIBUTE_REPARSE_POINT
+        getattr(os.lstat(path), 'st_file_attributes', 0) & FILE_ATTRIBUTE_REPARSE_POINT
     )
 
 
@@ -49,11 +48,15 @@ def calculate_tree_integrity(root: Path) -> TreeIntegrity:
     except OSError as exc:
         raise RuntimeError(f'无法读取原版游戏目录：{root}（{exc}）') from exc
     if not stat.S_ISDIR(root_stat.st_mode) or _is_reparse_point(root):
-        raise RuntimeError(f'原版游戏路径必须是真实目录，不能是符号链接或联接点：{root}')
+        raise RuntimeError(
+            f'原版游戏路径必须是真实目录，不能是符号链接或联接点：{root}'
+        )
 
     entries: list[tuple[str, str, Path]] = []
     try:
-        for dirpath, dirnames, filenames in os.walk(root, topdown=True, followlinks=False):
+        for dirpath, dirnames, filenames in os.walk(
+            root, topdown=True, followlinks=False
+        ):
             directory = Path(dirpath)
             for name in dirnames:
                 path = directory / name
@@ -102,7 +105,9 @@ def calculate_tree_integrity(root: Path) -> TreeIntegrity:
         except OSError as exc:
             raise RuntimeError(f'读取原版游戏文件失败：{path}（{exc}）') from exc
         if (before.st_size, before.st_mtime_ns) != (after.st_size, after.st_mtime_ns):
-            raise RuntimeError(f'校验期间文件发生变化，请关闭游戏及相关程序后重试：{path}')
+            raise RuntimeError(
+                f'校验期间文件发生变化，请关闭游戏及相关程序后重试：{path}'
+            )
         file_count += 1
         total_bytes += before.st_size
 

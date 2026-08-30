@@ -9,10 +9,9 @@ from para_tranz.config import (
     EXPORTED_STRING_CONTEXT_PREFIX_PREFIX,
     IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS,
     MAX_STRING_KEY_LENGTH,
-    ORIGINAL_PATH,
     UPDATE_STRING_ALLOW_EMPTY_TRANSLATION,
 )
-from para_tranz.utils.mapping import IncludeStringRule, JavaMapItem, PARA_TRANZ_MAP
+from para_tranz.utils.mapping import PARA_TRANZ_MAP, IncludeStringRule, JavaMapItem
 from para_tranz.utils.util import (
     DataFile,
     String,
@@ -72,7 +71,9 @@ class JavaSourceFile(DataFile):
         **kwargs,
     ):
         super().__init__(path, type)
-        self.map_item = JavaMapItem(type=type, path=str(path), include_strings=include_strings or [])
+        self.map_item = JavaMapItem(
+            type=type, path=str(path), include_strings=include_strings or []
+        )
         self.original_text = ''
         self.translation_text = ''
         self.original_literals: List[JavaStringLiteral] = []
@@ -129,7 +130,9 @@ class JavaSourceFile(DataFile):
                 while i < len(raw_inner) and raw_inner[i] == 'u':
                     i += 1
                 hex_digits = raw_inner[i : i + 4]
-                if len(hex_digits) == 4 and all(c in '0123456789abcdefABCDEF' for c in hex_digits):
+                if len(hex_digits) == 4 and all(
+                    c in '0123456789abcdefABCDEF' for c in hex_digits
+                ):
                     result.append(chr(int(hex_digits, 16)))
                     i += 4
                 else:
@@ -141,9 +144,7 @@ class JavaSourceFile(DataFile):
                 i += 1
                 max_extra = 2 if escaped in '0123' else 1
                 while (
-                    max_extra > 0
-                    and i < len(raw_inner)
-                    and raw_inner[i] in '01234567'
+                    max_extra > 0 and i < len(raw_inner) and raw_inner[i] in '01234567'
                 ):
                     octal += raw_inner[i]
                     i += 1
@@ -263,7 +264,9 @@ class JavaSourceFile(DataFile):
     def _path_key(self) -> str:
         return self.path.as_posix()
 
-    def _get_original_string_literals_mapping(self) -> Dict[str, List[JavaStringLiteral]]:
+    def _get_original_string_literals_mapping(
+        self,
+    ) -> Dict[str, List[JavaStringLiteral]]:
         literals_by_original: Dict[str, List[JavaStringLiteral]] = {}
         for literal in self.original_literals:
             literals_by_original.setdefault(literal.value, []).append(literal)
@@ -529,7 +532,7 @@ class JavaSourceFile(DataFile):
         for literal in self.translation_literals:
             if literal.source_index not in replacements:
                 continue
-            parts.append(self.translation_text[last_index:literal.start])
+            parts.append(self.translation_text[last_index : literal.start])
             parts.append(self._encode_java_string(replacements[literal.source_index]))
             last_index = literal.end
         parts.append(self.translation_text[last_index:])
@@ -545,7 +548,9 @@ class JavaSourceFile(DataFile):
     def load_files_from_config(cls) -> Sequence['JavaSourceFile']:
         cls.logger.info('开始读取 Java 源码数据')
         files = [
-            cls(**asdict(item)) for item in PARA_TRANZ_MAP if isinstance(item, JavaMapItem)
+            cls(**asdict(item))
+            for item in PARA_TRANZ_MAP
+            if isinstance(item, JavaMapItem)
         ]
         cls.logger.info('Java 源码数据读取完成')
         return files
@@ -557,5 +562,7 @@ class JavaSourceFile(DataFile):
             if len(literals) == 1:
                 item.add_include_rule(IncludeStringRule(original, None))
             else:
-                item.add_include_rule(IncludeStringRule(original, set(range(len(literals)))))
+                item.add_include_rule(
+                    IncludeStringRule(original, set(range(len(literals))))
+                )
         return item

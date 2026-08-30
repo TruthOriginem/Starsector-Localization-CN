@@ -52,6 +52,7 @@ ISCC_SEARCH_PATHS = [
     r'C:\Program Files\Inno Setup 6\ISCC.exe',
 ]
 
+
 def create_argument_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description='生成 Starsector 中文 EXE 安装包。无参数时只显示本帮助。',
@@ -128,7 +129,9 @@ def generate_design_type_fragment() -> None:
 
     start = src.find('"designTypeColors"')
     if start < 0:
-        raise RuntimeError('settings.json 中未找到 designTypeColors（游戏版本可能已变）')
+        raise RuntimeError(
+            'settings.json 中未找到 designTypeColors（游戏版本可能已变）'
+        )
     brace = src.find('{', start)
     if brace < 0:
         raise RuntimeError('designTypeColors 之后未找到 {')
@@ -145,9 +148,10 @@ def generate_design_type_fragment() -> None:
     if end < 0:
         raise RuntimeError('settings.json 的 designTypeColors 块大括号不匹配')
 
-    body = src[brace + 1:end]
-    cn_lines = [ln.rstrip() for ln in body.splitlines()
-                if any(ord(ch) > 127 for ch in ln)]
+    body = src[brace + 1 : end]
+    cn_lines = [
+        ln.rstrip() for ln in body.splitlines() if any(ord(ch) > 127 for ch in ln)
+    ]
     if not cn_lines:
         raise RuntimeError('settings.json 的 designTypeColors 中未找到中文条目')
     # 片段若含 } 会提前闭合 designTypeColors 对象，插入后整个文件结构报废
@@ -177,13 +181,14 @@ def generate_design_type_fragment() -> None:
     text = text.replace('\r\n', '\n').replace('\n', '\r\n')
 
     DESIGN_TYPE_FRAGMENT.parent.mkdir(parents=True, exist_ok=True)
-    old = (DESIGN_TYPE_FRAGMENT.read_bytes()
-           if DESIGN_TYPE_FRAGMENT.is_file() else b'')
+    old = DESIGN_TYPE_FRAGMENT.read_bytes() if DESIGN_TYPE_FRAGMENT.is_file() else b''
     new = text.encode('utf-8')
     DESIGN_TYPE_FRAGMENT.write_bytes(new)
     status = '内容未变' if old == new else ('已更新' if old else '已创建')
-    print(f'settings.json 补丁片段：{len(cn_lines)} 个中文条目，{status}'
-          f'（{DESIGN_TYPE_FRAGMENT.relative_to(REPO_ROOT)}）')
+    print(
+        f'settings.json 补丁片段：{len(cn_lines)} 个中文条目，{status}'
+        f'（{DESIGN_TYPE_FRAGMENT.relative_to(REPO_ROOT)}）'
+    )
 
 
 def build_installers(args: argparse.Namespace) -> None:

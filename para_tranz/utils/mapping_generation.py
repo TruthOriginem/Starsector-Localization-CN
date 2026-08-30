@@ -4,7 +4,6 @@ import re
 from dataclasses import asdict
 from typing import Optional, Set, Tuple
 
-from para_tranz.jar_loader.class_file import JavaClassFile
 from para_tranz.jar_loader.jar_file import JavaJarFile
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, ClassFileMapItem, JarMapItem
 from para_tranz.utils.util import (
@@ -52,9 +51,13 @@ def generate_class_mapping_diff_string(
         item_json = json.dumps(item, ensure_ascii=False)
         item_json = re.sub(
             r'"occurs": \[([^\]]*)\]',
-            lambda m: '"occurs": ['
-            + ', '.join(x.strip().rstrip(',') for x in m.group(1).split('\n') if x.strip())
-            + ']',
+            lambda m: (
+                '"occurs": ['
+                + ', '.join(
+                    x.strip().rstrip(',') for x in m.group(1).split('\n') if x.strip()
+                )
+                + ']'
+            ),
             item_json,
         )
         if _is_included(rule):
@@ -72,7 +75,9 @@ def generate_class_mapping_diff_string(
 
 def generate_class_file_mapping_by_path(
     class_file_path: str,
-) -> Optional[Tuple[Optional[JarMapItem], ClassFileMapItem, Optional[ClassFileMapItem], Set[str]]]:
+) -> Optional[
+    Tuple[Optional[JarMapItem], ClassFileMapItem, Optional[ClassFileMapItem], Set[str]]
+]:
     """
     通过类文件路径查找类，并生成类文件映射项
 
@@ -98,7 +103,9 @@ def generate_class_file_mapping_by_path(
         existing_class_item = jar_item.get_class_file_item(class_path)
         # 同 else 分支，创建副本避免污染 PARA_TRANZ_MAP
         jar_file_items = [
-            dataclasses.replace(jar_item, class_files=[ClassFileMapItem(path=class_path)])
+            dataclasses.replace(
+                jar_item, class_files=[ClassFileMapItem(path=class_path)]
+            )
         ]
 
     # 否则，只有类文件路径，需要尝试在所有jar文件中搜索
@@ -113,7 +120,9 @@ def generate_class_file_mapping_by_path(
             # 用 dataclasses.replace 创建副本而非直接修改 jar_item，
             # 避免污染 PARA_TRANZ_MAP 中的原始对象（否则循环调用时后续查找会失败）
             jar_file_items = [
-                dataclasses.replace(jar_item, class_files=[ClassFileMapItem(path=class_path)])
+                dataclasses.replace(
+                    jar_item, class_files=[ClassFileMapItem(path=class_path)]
+                )
             ]
 
         # 否则，需要手动为每一个jar文件映射添加类文件映射项
@@ -140,15 +149,18 @@ def generate_class_file_mapping_by_path(
 
     generated_class_map_item = class_file.export_map_item()
     extra_ref_strings = {
-        c.string
-        for c in class_file.original_table.get_utf8_constants_with_extra_ref()
+        c.string for c in class_file.original_table.get_utf8_constants_with_extra_ref()
     }
 
     return jar_item, generated_class_map_item, existing_class_item, extra_ref_strings
 
 
 def print_class_mapping_result(
-    result: Optional[Tuple[Optional[JarMapItem], ClassFileMapItem, Optional[ClassFileMapItem], Set[str]]]
+    result: Optional[
+        Tuple[
+            Optional[JarMapItem], ClassFileMapItem, Optional[ClassFileMapItem], Set[str]
+        ]
+    ],
 ) -> None:
     """打印 generate_class_file_mapping_by_path 的结果"""
     if not result:
@@ -164,6 +176,10 @@ def print_class_mapping_result(
             f'无色=未包含  '
             f'{colorize("黄色背景", BG_YELLOW)}=同时被非string属性引用，无法自动写回）：'
         )
-        print(generate_class_mapping_diff_string(existing_class_item, class_item, extra_ref_strings))
+        print(
+            generate_class_mapping_diff_string(
+                existing_class_item, class_item, extra_ref_strings
+            )
+        )
     else:
         print('此类未包含在当前映射表中')

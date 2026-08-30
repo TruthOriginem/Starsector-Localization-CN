@@ -93,7 +93,9 @@ class TxtFile(DataFile):
 
     def save_file(self) -> None:
         if self._translation_text is None:
-            self.logger.warning(f'译文内容为空，无法保存：{relative_path(self.translation_path)}')
+            self.logger.warning(
+                f'译文内容为空，无法保存：{relative_path(self.translation_path)}'
+            )
             return
         self.translation_path.parent.mkdir(parents=True, exist_ok=True)
         with open(self.translation_path, 'w', encoding='utf-8') as f:
@@ -108,7 +110,11 @@ class TxtFile(DataFile):
         for item in PARA_TRANZ_MAP:
             if not isinstance(item, TxtMapItem):
                 continue
-            output_path = (PARA_TRANZ_PATH / item.combined_output) if item.combined_output else None
+            output_path = (
+                (PARA_TRANZ_PATH / item.combined_output)
+                if item.combined_output
+                else None
+            )
             if '*' in item.path or '?' in item.path:
                 matched = sorted(ORIGINAL_PATH.glob(item.path))
                 if not matched:

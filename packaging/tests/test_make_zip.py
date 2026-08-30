@@ -46,21 +46,24 @@ class BuildZipTest(unittest.TestCase):
             )
             args = make_zip.create_argument_parser().parse_args(['build', '--no-date'])
 
-            with mock.patch.object(make_zip, 'REPO_ROOT', repo), \
-                    mock.patch.object(make_zip, 'LOCALIZATION_DIR', localization), \
-                    mock.patch.object(make_zip, 'OUTPUT_DIR', output), \
-                    mock.patch.object(make_zip, 'load_env'), \
-                    mock.patch.object(
-                        make_zip, 'load_package_metadata', return_value=metadata
-                    ):
+            with (
+                mock.patch.object(make_zip, 'REPO_ROOT', repo),
+                mock.patch.object(make_zip, 'LOCALIZATION_DIR', localization),
+                mock.patch.object(make_zip, 'OUTPUT_DIR', output),
+                mock.patch.object(make_zip, 'load_env'),
+                mock.patch.object(
+                    make_zip, 'load_package_metadata', return_value=metadata
+                ),
+            ):
                 result = make_zip.build_zip(args)
 
             self.assertTrue(result.is_file())
             self.assertEqual(list(output.glob('*.tmp')), [])
             with zipfile.ZipFile(result) as archive:
                 self.assertEqual(archive.namelist(), ['localization/data/text.txt'])
-                self.assertEqual(archive.read('localization/data/text.txt'),
-                                 '译文'.encode())
+                self.assertEqual(
+                    archive.read('localization/data/text.txt'), '译文'.encode()
+                )
 
 
 if __name__ == '__main__':

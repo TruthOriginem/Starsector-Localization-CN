@@ -3,13 +3,13 @@ from dataclasses import asdict
 from pathlib import Path
 from typing import Dict, List, Optional, Sequence, Union
 
-from para_tranz.jar_loader.class_file import JavaClassFile
 from para_tranz.config import (
     EXPORTED_STRING_CONTEXT_PREFIX_PREFIX,
     IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS,
     ORIGINAL_PATH,
     TRANSLATION_PATH,
 )
+from para_tranz.jar_loader.class_file import JavaClassFile
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, JarMapItem
 from para_tranz.utils.util import DataFile, String, make_logger
 
@@ -110,9 +110,8 @@ class JavaJarFile(DataFile):
             try:
                 parsed_context = JavaClassFile.parse_jar_string_context(s.context)
             except ValueError as e:
-                if (
-                    IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS
-                    and not s.context.startswith(EXPORTED_STRING_CONTEXT_PREFIX_PREFIX)
+                if IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS and not s.context.startswith(
+                    EXPORTED_STRING_CONTEXT_PREFIX_PREFIX
                 ):
                     self.logger.debug(
                         f'在 {self.path} 中词条 key={s.key} 的词条上下文前缀与当前上下文前缀不匹配，跳过词条'
@@ -131,11 +130,8 @@ class JavaJarFile(DataFile):
             class_file = self.class_files.get(class_file_path, None)
 
             if class_file is None:
-                if (
-                    IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS
-                    and not s.context.startswith(
-                        EXPORTED_STRING_CONTEXT_PREFIX_PREFIX
-                    )
+                if IGNORE_CONTEXT_PREFIX_MISMATCH_STRINGS and not s.context.startswith(
+                    EXPORTED_STRING_CONTEXT_PREFIX_PREFIX
                 ):
                     self.logger.debug(
                         f'在 {self.path} 中词条 key={s.key}{JavaClassFile._format_occurrence_index(parsed_context.occurrence_index)} '
@@ -230,7 +226,9 @@ class JavaJarFile(DataFile):
     def load_files_from_config(cls) -> Sequence['JavaJarFile']:
         cls.logger.info('开始读取游戏jar数据')
         files = [
-            cls(**asdict(item)) for item in PARA_TRANZ_MAP if isinstance(item, JarMapItem)
+            cls(**asdict(item))
+            for item in PARA_TRANZ_MAP
+            if isinstance(item, JarMapItem)
         ]
         cls.logger.info('游戏jar数据读取完成')
         return files

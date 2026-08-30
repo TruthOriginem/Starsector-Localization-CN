@@ -82,7 +82,9 @@ def _init_file_handler() -> None:
     file_handler = logging.FileHandler(LOG_FILE_PATH, mode='w', encoding='utf-8')
     file_handler.setLevel(logging.DEBUG)
     file_handler.terminator = ''
-    file_handler.setFormatter(logging.Formatter('[%(name)s][%(levelname)s] %(message)s \n'))
+    file_handler.setFormatter(
+        logging.Formatter('[%(name)s][%(levelname)s] %(message)s \n')
+    )
     logging.root.addHandler(file_handler)
 
 
@@ -92,7 +94,9 @@ def make_logger(name: str) -> logging.Logger:
     logger = logging.getLogger(name)
     logger.setLevel(logging.NOTSET)
 
-    if not any(getattr(handler, '_para_tranz_stdout', False) for handler in logger.handlers):
+    if not any(
+        getattr(handler, '_para_tranz_stdout', False) for handler in logger.handlers
+    ):
         handle_out = logging.StreamHandler(sys.stdout)
         handle_out.setLevel(LOG_LEVEL)
         handle_out.terminator = ''

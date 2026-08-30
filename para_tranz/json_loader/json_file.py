@@ -216,7 +216,9 @@ def _traverse_path(
                 yield (new_path, node, seg, False)
 
 
-def _navigate_exact(root, segments: List[Union[str, int]]) -> Optional[Union[AlexsonString, Object, Array]]:
+def _navigate_exact(
+    root, segments: List[Union[str, int]]
+) -> Optional[Union[AlexsonString, Object, Array]]:
     """在树中按精确路径导航，返回目标节点，找不到返回 None。"""
     node = root.get_primary_obj() if isinstance(root, Root) else root
     for seg in segments:
@@ -333,7 +335,11 @@ class JsonFile(DataFile):
             if is_key_rename:
                 original = str(accessor)
             else:
-                node = orig_parent[cast(str, accessor)] if isinstance(orig_parent, Object) else orig_parent[cast(int, accessor)]
+                node = (
+                    orig_parent[cast(str, accessor)]
+                    if isinstance(orig_parent, Object)
+                    else orig_parent[cast(int, accessor)]
+                )
                 if not isinstance(node, AlexsonString):
                     continue
                 original = node.value
@@ -487,7 +493,11 @@ class JsonFile(DataFile):
                 continue
 
             item_path = Path(item.path)
-            output_path = (PARA_TRANZ_PATH / item.combined_output) if item.combined_output else None
+            output_path = (
+                (PARA_TRANZ_PATH / item.combined_output)
+                if item.combined_output
+                else None
+            )
 
             # 支持 glob 模式（如 data/missions/*/descriptor.json）
             if '*' in item.path or '?' in item.path:
@@ -496,8 +506,20 @@ class JsonFile(DataFile):
                     cls.logger.warning(f'glob 模式未匹配到任何文件：{item.path}')
                 for actual_path in matched:
                     rel_path = actual_path.relative_to(ORIGINAL_PATH)
-                    files.append(cls(path=rel_path, text_paths=item.text_paths, output_path=output_path))
+                    files.append(
+                        cls(
+                            path=rel_path,
+                            text_paths=item.text_paths,
+                            output_path=output_path,
+                        )
+                    )
             else:
-                files.append(cls(path=item_path, text_paths=item.text_paths, output_path=output_path))
+                files.append(
+                    cls(
+                        path=item_path,
+                        text_paths=item.text_paths,
+                        output_path=output_path,
+                    )
+                )
 
         return files

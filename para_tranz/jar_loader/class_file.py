@@ -3,9 +3,8 @@ import json
 import re
 from dataclasses import dataclass
 from pathlib import Path, PurePosixPath
-from typing import Dict, List, Optional, Set, Tuple
+from typing import Dict, List, Optional, Tuple
 
-from para_tranz.jar_loader.constant_table import ConstantTable, Utf8Constant
 from para_tranz.config import (
     EXPORTED_STRING_CONTEXT_PREFIX,
     EXPORTED_STRING_CONTEXT_PREFIX_PREFIX,
@@ -17,6 +16,7 @@ from para_tranz.config import (
     ORIGINAL_TEXT_MATCH_IGNORE_WHITESPACE_CHARS,
     UPDATE_STRING_ALLOW_EMPTY_TRANSLATION,
 )
+from para_tranz.jar_loader.constant_table import ConstantTable, Utf8Constant
 from para_tranz.utils.mapping import ClassFileMapItem, IncludeStringRule
 from para_tranz.utils.util import (
     String,
@@ -202,9 +202,9 @@ class JavaClassFile:
         """
         constants_by_original: Dict[str, List[Utf8Constant]] = {}
 
-        for original_constant in (
-            self.original_table.get_utf8_constants_with_string_ref()
-        ):
+        for (
+            original_constant
+        ) in self.original_table.get_utf8_constants_with_string_ref():
             original_string = self._normalize_original_string(original_constant.string)
             constants_by_original.setdefault(original_string, []).append(
                 original_constant
@@ -340,9 +340,7 @@ class JavaClassFile:
             # 只有 occurrence_total > 1 时才在 key/context 中写入同值序号。
             # 唯一原文不写同值序号，保持旧格式 key，与平台已有词条兼容。
             occurrence_index = (
-                occurrence.occurrence_index
-                if occurrence.occurrence_total > 1
-                else None
+                occurrence.occurrence_index if occurrence.occurrence_total > 1 else None
             )
 
             key = self.generate_string_key(original_constant, occurrence_index)
@@ -451,7 +449,11 @@ class JavaClassFile:
             # 检查 occurrence_index 是否在 include_strings 规则的 occurs 中
             if include_values and context.occurrence_index is not None:
                 rule = self.map_item.get_include_rule(original)
-                if rule is not None and rule.occurs is not None and context.occurrence_index not in rule.occurs:
+                if (
+                    rule is not None
+                    and rule.occurs is not None
+                    and context.occurrence_index not in rule.occurs
+                ):
                     self.logger.warning(
                         f'在 {self.jar_file.path}:{self.path} 中原文为 "{context.original}"'
                         f'（同值序号：{context.occurrence_index}） 的词条，'

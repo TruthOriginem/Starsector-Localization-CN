@@ -92,7 +92,9 @@ def mian() -> None:
         print('请选择您要进行的操作：')
         print('1 - 从原始(original)和汉化(localization)文件导出 ParaTranz 词条')
         print('2 - 将 ParaTranz 词条写回汉化(localization)文件')
-        print('3 - 从 ParaTranz 平台下载最新导出并写回汉化文件（需要在 .env 中配置 API Key）')
+        print(
+            '3 - 从 ParaTranz 平台下载最新导出并写回汉化文件（需要在 .env 中配置 API Key）'
+        )
         print(
             '4 - 对指定类文件，生成包含所有string的类文件映射项(用于添加新类到para_tranz_map.json)'
         )

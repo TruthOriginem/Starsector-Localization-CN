@@ -12,8 +12,8 @@ from para_tranz.utils.util import make_logger
 logger = make_logger('ParaTranzAPI')
 
 _BASE_URL = 'https://paratranz.cn/api'
-_POLL_INTERVAL = 10   # 轮询间隔（秒）
-_POLL_TIMEOUT = 300   # 最长等待时间（秒）
+_POLL_INTERVAL = 10  # 轮询间隔（秒）
+_POLL_TIMEOUT = 300  # 最长等待时间（秒）
 
 
 def _request(path: str, method: str = 'GET') -> dict:
@@ -80,7 +80,7 @@ def _download_and_extract() -> None:
         for member in zf.infolist():
             rel = member.filename
             if prefix and rel.startswith(prefix):
-                rel = rel[len(prefix):]
+                rel = rel[len(prefix) :]
             if not rel:  # 跳过顶层目录本身
                 continue
             target = PARA_TRANZ_PATH / rel
@@ -105,7 +105,9 @@ def download_paratranz_export() -> bool:
     返回是否成功。
     """
     if not PARATRANZ_PROJECT_ID or not PARATRANZ_API_KEY:
-        logger.error('未配置 PARATRANZ_PROJECT_ID 或 PARATRANZ_API_KEY，请检查 .env 文件')
+        logger.error(
+            '未配置 PARATRANZ_PROJECT_ID 或 PARATRANZ_API_KEY，请检查 .env 文件'
+        )
         return False
 
     trigger_time = datetime.now(timezone.utc)

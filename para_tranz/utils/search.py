@@ -33,6 +33,7 @@ class StringSearchResult:
     class_path: str
     string: str
     is_in_mapping: bool
+
     def __hash__(self):
         return hash((self.jar_name, self.class_path, self.string))
 

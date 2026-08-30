@@ -106,7 +106,8 @@ def build_zip(args: argparse.Namespace) -> Path:
 
     include_date = (
         read_env_bool('INCLUDE_DATE', default=True)
-        if args.include_date is None else args.include_date
+        if args.include_date is None
+        else args.include_date
     )
     today = date.today().strftime('%Y.%m.%d')
 
