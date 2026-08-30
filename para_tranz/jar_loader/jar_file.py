@@ -1,4 +1,3 @@
-import datetime
 import zipfile
 from dataclasses import asdict
 from pathlib import Path
@@ -13,6 +12,21 @@ from para_tranz.config import (
 )
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, JarMapItem
 from para_tranz.utils.util import DataFile, String, make_logger
+
+
+def _rewrite_jar(
+    source_path: Path,
+    target_path: Path,
+    updated_file_contents: Dict[str, bytes],
+) -> None:
+    """Rewrite a jar while retaining every source entry's stable timestamp."""
+    with zipfile.ZipFile(target_path, 'w') as target:
+        with zipfile.ZipFile(source_path) as source:
+            for info in source.infolist():
+                contents = updated_file_contents.get(info.filename)
+                if contents is None:
+                    contents = source.read(info)
+                target.writestr(info, contents)
 
 
 class JavaJarFile(DataFile):
@@ -156,18 +170,9 @@ class JavaJarFile(DataFile):
             self.translation_path.name + '.temp'
         )
 
-        # 生成新的jar文件，写入新的class文件，并将老jar中的其它文件也复制进去
-        with zipfile.ZipFile(temp_path, 'w') as zf:
-            with zipfile.ZipFile(self.translation_path) as old_zf:
-                for info in old_zf.infolist():
-                    # 复制老文件
-                    if info.filename not in updated_file_contents:
-                        zf.writestr(info, old_zf.read(info))
-                    # 写入新文件
-                    else:
-                        # 将文件修改日期设置为当前时间
-                        info.date_time = datetime.datetime.now().timetuple()[:6]
-                        zf.writestr(info, updated_file_contents[info.filename])
+        # 生成新的jar文件，写入新的class文件，并将老jar中的其它文件也复制进去。
+        # 保留源 entry 时间，避免相同译文因构建时间不同而产生二进制漂移。
+        _rewrite_jar(self.translation_path, temp_path, updated_file_contents)
 
         # 关闭读模式的文件
         self.close_files()

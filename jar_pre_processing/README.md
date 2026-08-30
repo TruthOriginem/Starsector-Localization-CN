@@ -16,7 +16,11 @@
 能互相覆盖安装：动态字体分支会修改前者，启动优化分支会修改后者；若其余变体的
 包不含对应文件，覆盖回来时就会残留旧 hook，甚至因运行时类已被换走而启动失败。
 
-处理完成后，结果 jar 同时写入仓库根目录的 `original/` 和 `localization/`，并在 `target/preprocess-work/preprocess-report.json` 生成处理报告（含输入/输出哈希、各 Patch 结果）。
+处理完成后，结果 jar 同时写入仓库根目录的 `original/` 和 `localization/`，
+并在 `target/preprocess-work/preprocess-report.json` 生成处理报告（含输入/输出哈希、
+各 Patch 结果）。如果新产物与现有 `original/` 的 entry 内容完全一致，工具会保留
+现有 `original/` 和结构兼容的 `localization/`，避免仅因 ZIP 时间戳、压缩流或权限
+字段变化而产生二进制 diff；内容实际变化、文件缺失或结构不兼容时仍会重置两个输出。
 
 ## 环境要求
 

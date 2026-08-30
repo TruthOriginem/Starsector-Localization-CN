@@ -11,6 +11,8 @@ import java.util.Comparator;
 import java.util.HexFormat;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
 
 public final class JarWorkspace {
     public static final String API_JAR = "starfarer.api.jar";
@@ -112,17 +114,153 @@ public final class JarWorkspace {
 
     public void writeOutputs() throws IOException {
         for (String jarName : allJars()) {
-            byte[] bytes = Files.readAllBytes(finalJar(jarName));
+            Path generated = finalJar(jarName);
             Path originalTarget = originalDir.resolve(jarName);
             Path localizationTarget = localizationDir.resolve(jarName);
+
+            if (jarContentsEqual(generated, originalTarget)) {
+                if (localizationIsCompatible(originalTarget, localizationTarget)) {
+                    System.out.println("Preserving " + jarName
+                            + ": generated entries match the existing original");
+                    continue;
+                }
+
+                byte[] originalBytes = Files.readAllBytes(originalTarget);
+                atomicWrite(localizationTarget, originalBytes);
+                requireEqualHashes(jarName, originalTarget, localizationTarget);
+                System.out.println("Resetting localization/" + jarName
+                        + ": existing localization is missing or incompatible");
+                continue;
+            }
+
+            byte[] bytes = Files.readAllBytes(generated);
             atomicWrite(originalTarget, bytes);
             atomicWrite(localizationTarget, bytes);
-            String originalHash = sha256(originalTarget);
-            String localizationHash = sha256(localizationTarget);
-            if (!originalHash.equals(localizationHash)) {
-                throw new PatchException("Output hash mismatch for " + jarName + ": original="
-                        + originalHash + ", localization=" + localizationHash);
+            requireEqualHashes(jarName, originalTarget, localizationTarget);
+            System.out.println("Resetting " + jarName
+                    + ": generated entry contents changed");
+        }
+    }
+
+    private static boolean jarContentsEqual(Path generated, Path existing)
+            throws IOException {
+        if (!Files.isRegularFile(existing)) {
+            return false;
+        }
+
+        try (ZipFile generatedZip = new ZipFile(generated.toFile())) {
+            try (ZipFile existingZip = new ZipFile(existing.toFile())) {
+                Map<String, ZipEntry> generatedEntries = uniqueEntries(generatedZip);
+                Map<String, ZipEntry> existingEntries = uniqueEntries(existingZip);
+                if (generatedEntries == null || existingEntries == null
+                        || !generatedEntries.keySet().equals(existingEntries.keySet())) {
+                    return false;
+                }
+
+                for (Map.Entry<String, ZipEntry> item : generatedEntries.entrySet()) {
+                    ZipEntry generatedEntry = item.getValue();
+                    ZipEntry existingEntry = existingEntries.get(item.getKey());
+                    if (generatedEntry.isDirectory() != existingEntry.isDirectory()
+                            || !entryContentsEqual(
+                                    generatedZip, generatedEntry,
+                                    existingZip, existingEntry)) {
+                        return false;
+                    }
+                }
+                return true;
+            } catch (IOException invalidExisting) {
+                return false;
             }
+        }
+    }
+
+    private static boolean localizationIsCompatible(Path original, Path localization)
+            throws IOException {
+        if (!Files.isRegularFile(localization)) {
+            return false;
+        }
+
+        try (ZipFile originalZip = new ZipFile(original.toFile())) {
+            try (ZipFile localizationZip = new ZipFile(localization.toFile())) {
+                Map<String, ZipEntry> originalEntries = uniqueEntries(originalZip);
+                Map<String, ZipEntry> localizationEntries = uniqueEntries(localizationZip);
+                if (originalEntries == null || localizationEntries == null
+                        || !originalEntries.keySet().equals(localizationEntries.keySet())) {
+                    return false;
+                }
+
+                for (Map.Entry<String, ZipEntry> item : originalEntries.entrySet()) {
+                    ZipEntry originalEntry = item.getValue();
+                    ZipEntry localizationEntry = localizationEntries.get(item.getKey());
+                    if (originalEntry.isDirectory() != localizationEntry.isDirectory()) {
+                        return false;
+                    }
+                    if (item.getKey().endsWith(".class")) {
+                        // Read the entry to force CRC/integrity validation; translated class
+                        // bytes are intentionally allowed to differ from the original.
+                        try (InputStream input =
+                                     localizationZip.getInputStream(localizationEntry)) {
+                            input.readAllBytes();
+                        }
+                    } else if (!entryContentsEqual(
+                            originalZip, originalEntry,
+                            localizationZip, localizationEntry)) {
+                        return false;
+                    }
+                }
+                return true;
+            } catch (IOException invalidLocalization) {
+                return false;
+            }
+        }
+    }
+
+    private static Map<String, ZipEntry> uniqueEntries(ZipFile zip) {
+        Map<String, ZipEntry> entries = new LinkedHashMap<>();
+        for (ZipEntry entry : zip.stream().toList()) {
+            if (entries.put(entry.getName(), entry) != null) {
+                return null;
+            }
+        }
+        return entries;
+    }
+
+    private static boolean entryContentsEqual(
+            ZipFile leftZip, ZipEntry left,
+            ZipFile rightZip, ZipEntry right) throws IOException {
+        if (left.getSize() != right.getSize()) {
+            return false;
+        }
+        try (InputStream leftInput = leftZip.getInputStream(left);
+             InputStream rightInput = rightZip.getInputStream(right)) {
+            byte[] leftBuffer = new byte[8192];
+            byte[] rightBuffer = new byte[8192];
+            while (true) {
+                int leftRead = leftInput.readNBytes(leftBuffer, 0, leftBuffer.length);
+                int rightRead = rightInput.readNBytes(rightBuffer, 0, rightBuffer.length);
+                if (leftRead != rightRead) {
+                    return false;
+                }
+                if (leftRead == 0) {
+                    return true;
+                }
+                for (int index = 0; index < leftRead; index++) {
+                    if (leftBuffer[index] != rightBuffer[index]) {
+                        return false;
+                    }
+                }
+            }
+        }
+    }
+
+    private static void requireEqualHashes(
+            String jarName, Path originalTarget, Path localizationTarget)
+            throws IOException {
+        String originalHash = sha256(originalTarget);
+        String localizationHash = sha256(localizationTarget);
+        if (!originalHash.equals(localizationHash)) {
+            throw new PatchException("Output hash mismatch for " + jarName + ": original="
+                    + originalHash + ", localization=" + localizationHash);
         }
     }
 
