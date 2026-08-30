@@ -33,6 +33,7 @@ final class PatchRegistryTest {
                 "window-decoration-physical-resolution",
                 "terrain-status-bar-visible-separator",
                 "top-message-highlight-after-layout",
+                "campaign-entity-tooltip-highlight-after-layout",
                 "tow-cable-tooltip-width",
                 "codex-special-weapon-type-filter",
                 "global-ime-focus-hook",

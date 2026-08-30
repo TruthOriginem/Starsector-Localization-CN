@@ -51,7 +51,9 @@ IME_TEST_LOG = IME_TEST_DIR / 'starsector_ime_native.log'
 DYNFONT_DIR = PROJECT_DIR / 'native' / 'dyn_font'
 DYNFONT_DLL = DYNFONT_DIR / 'ss_dyn_font.dll'
 DYNFONT_BUILD_DIR = DYNFONT_DIR / 'build'
-DYNFONT_CLI = DYNFONT_BUILD_DIR / ('dynfont_cli.exe' if os.name == 'nt' else 'dynfont_cli')
+DYNFONT_CLI = DYNFONT_BUILD_DIR / (
+    'dynfont_cli.exe' if os.name == 'nt' else 'dynfont_cli'
+)
 DYNFONT_FONTS_DIR = DYNFONT_DIR / 'fonts'
 DYNFONT_ASSET_MANIFEST = DYNFONT_DIR / 'assets.json'
 DYNFONT_KERNING_EXPORTER = DYNFONT_DIR / 'tools' / 'export_kerning.py'
@@ -116,11 +118,18 @@ def _freetype_git_output(*args: str) -> str:
     """在 FreeType checkout 中执行只读 git 查询，并转换为可操作的构建错误。"""
     result = subprocess.run(
         ['git', '-C', str(FREETYPE_DIR), *args],
-        stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-        text=True, encoding='utf-8', errors='replace',
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        encoding='utf-8',
+        errors='replace',
     )
     if result.returncode != 0:
-        detail = result.stderr.strip() or result.stdout.strip() or f'exit {result.returncode}'
+        detail = (
+            result.stderr.strip()
+            or result.stdout.strip()
+            or f'exit {result.returncode}'
+        )
         sys.exit(f'错误：无法校验 FreeType checkout ({" ".join(args)}): {detail}')
     return result.stdout.strip()
 
@@ -130,8 +139,16 @@ def ensure_freetype_checkout() -> None:
     if not os.path.lexists(FREETYPE_DIR):
         print(f'[native] 首次构建：clone FreeType {FREETYPE_TAG} 源码 ...')
         subprocess.run(
-            ['git', 'clone', '--depth', '1', '--branch', FREETYPE_TAG,
-             'https://github.com/freetype/freetype.git', str(FREETYPE_DIR)],
+            [
+                'git',
+                'clone',
+                '--depth',
+                '1',
+                '--branch',
+                FREETYPE_TAG,
+                'https://github.com/freetype/freetype.git',
+                str(FREETYPE_DIR),
+            ],
             check=True,
         )
     if not FREETYPE_DIR.is_dir() or not (FREETYPE_DIR / 'CMakeLists.txt').is_file():
@@ -162,9 +179,17 @@ def run_dynfont_native_tests() -> None:
     """运行 CMake 注册的全部 native 测试；零测试也视为构建失败。"""
     print('[native] 运行动态字体 native 测试 ...')
     subprocess.run(
-        ['ctest', '--test-dir', str(DYNFONT_BUILD_DIR), '-C', 'Release',
-         '--output-on-failure', '--no-tests=error'],
-        check=True, cwd=DYNFONT_DIR,
+        [
+            'ctest',
+            '--test-dir',
+            str(DYNFONT_BUILD_DIR),
+            '-C',
+            'Release',
+            '--output-on-failure',
+            '--no-tests=error',
+        ],
+        check=True,
+        cwd=DYNFONT_DIR,
     )
 
 
@@ -174,20 +199,42 @@ def build_ssime() -> None:
         sys.exit('错误：PATH 中找不到 g++（需要 MinGW-w64）')
     include = find_jni_include()
     cmd = [
-        'g++', '-std=c++17', '-shared', '-O2', '-s', '-Wall', '-Wextra', '-Werror',
-        '-static', '-static-libgcc', '-static-libstdc++',
+        'g++',
+        '-std=c++17',
+        '-shared',
+        '-O2',
+        '-s',
+        '-Wall',
+        '-Wextra',
+        '-Werror',
+        '-static',
+        '-static-libgcc',
+        '-static-libstdc++',
         # 去除 PE 头时间戳：源码不变时重建产物字节一致
         '-Wl,--no-insert-timestamp',
-        f'-I{include}', f'-I{include / "win32"}',
-        '-o', str(IME_DLL), str(IME_SOURCE),
-        '-limm32', '-lgdi32', '-luser32',
+        f'-I{include}',
+        f'-I{include / "win32"}',
+        '-o',
+        str(IME_DLL),
+        str(IME_SOURCE),
+        '-limm32',
+        '-lgdi32',
+        '-luser32',
     ]
     print(f'[native] 编译 {IME_DLL.name} ...')
     subprocess.run(cmd, check=True, cwd=PROJECT_DIR)
     IME_TEST_DIR.mkdir(parents=True, exist_ok=True)
     test_cmd = [
-        'g++', '-std=c++17', '-O2', '-Wall', '-Wextra', '-Werror',
-        '-o', str(IME_TEST_EXE), str(IME_TEST_SOURCE), '-limm32',
+        'g++',
+        '-std=c++17',
+        '-O2',
+        '-Wall',
+        '-Wextra',
+        '-Werror',
+        '-o',
+        str(IME_TEST_EXE),
+        str(IME_TEST_SOURCE),
+        '-limm32',
     ]
     print('[native] 编译并运行 ssime 隐藏窗口 smoke test ...')
     subprocess.run(test_cmd, check=True, cwd=PROJECT_DIR)
@@ -216,11 +263,15 @@ def build_dynfont() -> None:
     print(f'[native] 编译 {DYNFONT_DLL.name} (CMake + Ninja) ...')
     subprocess.run(
         ['cmake', '-B', str(DYNFONT_BUILD_DIR), '-G', 'Ninja', *DYNFONT_CMAKE_DEFINES],
-        check=True, cwd=DYNFONT_DIR)
+        check=True,
+        cwd=DYNFONT_DIR,
+    )
     # 构建默认 all 目标，让当前及未来新增的 CTest 可执行文件都不会漏掉。
     subprocess.run(
         ['cmake', '--build', str(DYNFONT_BUILD_DIR), '--config', 'Release'],
-        check=True, cwd=DYNFONT_DIR)
+        check=True,
+        cwd=DYNFONT_DIR,
+    )
     run_dynfont_native_tests()
     # dll 产物提交入库；CLI（dynfont_cli.exe）留在 build/ 供离线调试与金标准 diff
     shutil.copyfile(DYNFONT_BUILD_DIR / DYNFONT_DLL.name, DYNFONT_DLL)
@@ -237,19 +288,22 @@ def run_java_pipeline(
     """从干净 classes 目录运行 jar patch/解耦/注入/写出（详见 README）。"""
     mvnw = PROJECT_DIR / ('mvnw.cmd' if os.name == 'nt' else 'mvnw')
     print('[java] 运行 jar 预处理管线 (mvnw clean compile exec:java) ...')
-    subprocess.run([
-        str(mvnw),
-        '-Dfile.encoding=UTF-8',
-        f'-Dstarsector.preprocess.optimizations={optimizations}',
-        '-Dstarsector.preprocess.disabledPatchGroups='
-        + ','.join(disabled_patch_groups),
-        '-Dstarsector.preprocess.profiling='
-        + ('true' if profiling else 'false'),
-        # 防止 IDE/增量编译器遗留的错误桩或旧 runtime helper 被注入发布 jar。
-        'clean',
-        'compile',
-        'exec:java',
-    ], check=True, cwd=PROJECT_DIR)
+    subprocess.run(
+        [
+            str(mvnw),
+            '-Dfile.encoding=UTF-8',
+            f'-Dstarsector.preprocess.optimizations={optimizations}',
+            '-Dstarsector.preprocess.disabledPatchGroups='
+            + ','.join(disabled_patch_groups),
+            '-Dstarsector.preprocess.profiling=' + ('true' if profiling else 'false'),
+            # 防止 IDE/增量编译器遗留的错误桩或旧 runtime helper 被注入发布 jar。
+            'clean',
+            'compile',
+            'exec:java',
+        ],
+        check=True,
+        cwd=PROJECT_DIR,
+    )
 
 
 def _validate_asset_name(value: object, field: str) -> str:
@@ -257,7 +311,9 @@ def _validate_asset_name(value: object, field: str) -> str:
         sys.exit(f'错误：{DYNFONT_ASSET_MANIFEST.name} 的 {field} 必须是非空字符串')
     path = Path(value)
     if path.is_absolute() or path.name != value or value in {'.', '..'}:
-        sys.exit(f'错误：{DYNFONT_ASSET_MANIFEST.name} 的 {field} 只能是文件名: {value!r}')
+        sys.exit(
+            f'错误：{DYNFONT_ASSET_MANIFEST.name} 的 {field} 只能是文件名: {value!r}'
+        )
     return value
 
 
@@ -271,10 +327,12 @@ def parse_dynfont_asset_manifest(raw: object) -> DynFontAssets:
     if not isinstance(raw_fonts, list) or not isinstance(raw_kerning, list):
         sys.exit(f'错误：{DYNFONT_ASSET_MANIFEST.name} 缺少 fonts/kerning 数组')
 
-    fonts = tuple(sorted(
-        (_validate_asset_name(value, 'fonts[]') for value in raw_fonts),
-        key=lambda value: value.encode('utf-8'),
-    ))
+    fonts = tuple(
+        sorted(
+            (_validate_asset_name(value, 'fonts[]') for value in raw_fonts),
+            key=lambda value: value.encode('utf-8'),
+        )
+    )
     if len(fonts) != len(set(fonts)):
         sys.exit(f'错误：{DYNFONT_ASSET_MANIFEST.name} 的 fonts 存在重复项')
 
@@ -315,8 +373,10 @@ def _asset_manifest_bytes(assets: DynFontAssets) -> bytes:
 
 def load_dynfont_asset_manifest() -> DynFontAssets:
     if not DYNFONT_ASSET_MANIFEST.is_file():
-        sys.exit(f'错误：缺少 {DYNFONT_ASSET_MANIFEST.relative_to(REPO_ROOT)}；'
-                 '请先运行 `python build.py dynfont` 从 native 规格生成')
+        sys.exit(
+            f'错误：缺少 {DYNFONT_ASSET_MANIFEST.relative_to(REPO_ROOT)}；'
+            '请先运行 `python build.py dynfont` 从 native 规格生成'
+        )
     try:
         raw = json.loads(DYNFONT_ASSET_MANIFEST.read_text(encoding='utf-8'))
     except (OSError, json.JSONDecodeError) as exc:
@@ -329,15 +389,22 @@ def refresh_dynfont_asset_manifest() -> DynFontAssets:
     if not DYNFONT_CLI.is_file():
         sys.exit(f'错误：缺少 {DYNFONT_CLI}，无法从 native 规格导出资产清单')
     result = subprocess.run(
-        [str(DYNFONT_CLI), '--list-assets'], check=True, cwd=DYNFONT_DIR,
-        stdout=subprocess.PIPE, text=True, encoding='utf-8')
+        [str(DYNFONT_CLI), '--list-assets'],
+        check=True,
+        cwd=DYNFONT_DIR,
+        stdout=subprocess.PIPE,
+        text=True,
+        encoding='utf-8',
+    )
     try:
         assets = parse_dynfont_asset_manifest(json.loads(result.stdout))
     except json.JSONDecodeError as exc:
         sys.exit(f'错误：dynfont_cli --list-assets 输出了无效 JSON: {exc}')
     changed = write_if_changed(DYNFONT_ASSET_MANIFEST, _asset_manifest_bytes(assets))
     state = '已更新' if changed else '无变化'
-    print(f'[assets] native 资产清单 {state}: {DYNFONT_ASSET_MANIFEST.relative_to(REPO_ROOT)}')
+    print(
+        f'[assets] native 资产清单 {state}: {DYNFONT_ASSET_MANIFEST.relative_to(REPO_ROOT)}'
+    )
     return assets
 
 
@@ -349,14 +416,21 @@ def sync_kerning_tables(assets: DynFontAssets) -> tuple[Path, ...]:
     for item in assets.kerning:
         by_font[item.font].append(item)
 
-    for font, tables in sorted(by_font.items(), key=lambda item: item[0].encode('utf-8')):
+    for font, tables in sorted(
+        by_font.items(), key=lambda item: item[0].encode('utf-8')
+    ):
         source = DYNFONT_FONTS_DIR / font
         if not source.is_file():
             sys.exit(f'错误：缺少 kerning 字体源: {source.relative_to(REPO_ROOT)}')
         command = [
-            sys.executable, '-X', 'utf8', str(DYNFONT_KERNING_EXPORTER),
-            '--font', str(source),
-            '--output-dir', str(DYNFONT_FONTS_DIR),
+            sys.executable,
+            '-X',
+            'utf8',
+            str(DYNFONT_KERNING_EXPORTER),
+            '--font',
+            str(source),
+            '--output-dir',
+            str(DYNFONT_FONTS_DIR),
         ]
         for table in sorted(tables, key=lambda item: item.table.encode('utf-8')):
             command.extend(('--table', str(table.weight), table.table))
@@ -371,7 +445,9 @@ def sync_kerning_tables(assets: DynFontAssets) -> tuple[Path, ...]:
     if removed:
         print(f'[kern] 删除未引用固化表: {", ".join(sorted(removed))}')
 
-    missing = sorted(name for name in expected_names if not (DYNFONT_FONTS_DIR / name).is_file())
+    missing = sorted(
+        name for name in expected_names if not (DYNFONT_FONTS_DIR / name).is_file()
+    )
     if missing:
         sys.exit('错误：kerning 导出后仍缺少清单要求的表:\n  ' + '\n  '.join(missing))
     return tuple(DYNFONT_FONTS_DIR / item.table for item in assets.kerning)
@@ -381,12 +457,16 @@ def collect_dynfont_pack_files(assets: DynFontAssets) -> tuple[Path, ...]:
     names = [*assets.fonts, *(item.table for item in assets.kerning)]
     missing = sorted(name for name in names if not (DYNFONT_FONTS_DIR / name).is_file())
     if missing:
-        sys.exit('错误：动态字体数据包缺少资产（来源见 fonts/README.md）:\n  '
-                 + '\n  '.join(missing))
-    return tuple(sorted(
-        (DYNFONT_FONTS_DIR / name for name in names),
-        key=lambda path: path.name.encode('utf-8'),
-    ))
+        sys.exit(
+            '错误：动态字体数据包缺少资产（来源见 fonts/README.md）:\n  '
+            + '\n  '.join(missing)
+        )
+    return tuple(
+        sorted(
+            (DYNFONT_FONTS_DIR / name for name in names),
+            key=lambda path: path.name.encode('utf-8'),
+        )
+    )
 
 
 def write_data_pack(files: tuple[Path, ...]) -> None:
@@ -404,8 +484,10 @@ def write_data_pack(files: tuple[Path, ...]) -> None:
         payload.extend(content)
     changed = write_if_changed(DYNFONT_DATA_PACK, bytes(payload))
     state = '已更新' if changed else '无变化'
-    print(f'[dist] 字体数据包 {state} ({len(files)} 个条目) -> '
-          f'{DYNFONT_DATA_PACK.relative_to(REPO_ROOT)}  sha256={sha256(DYNFONT_DATA_PACK)}')
+    print(
+        f'[dist] 字体数据包 {state} ({len(files)} 个条目) -> '
+        f'{DYNFONT_DATA_PACK.relative_to(REPO_ROOT)}  sha256={sha256(DYNFONT_DATA_PACK)}'
+    )
 
 
 def build_data_pack() -> None:
@@ -425,7 +507,9 @@ def distribute() -> None:
         NATIVE_DIST_DIR.mkdir(parents=True, exist_ok=True)
         target = NATIVE_DIST_DIR / dll.name
         shutil.copyfile(dll, target)
-        print(f'[dist] {dll.name} -> {target.relative_to(REPO_ROOT)}  sha256={sha256(target)}')
+        print(
+            f'[dist] {dll.name} -> {target.relative_to(REPO_ROOT)}  sha256={sha256(target)}'
+        )
     build_data_pack()
 
 
@@ -442,7 +526,10 @@ def run_jar_step(
 STEPS: dict[str, tuple[str, Callable[[], None]]] = {
     'ime': ('编译输入法原生库 ssime.dll（g++）', build_ssime),
     'dynfont': ('编译动态字体原生库，并刷新资产清单/kerning', build_dynfont),
-    'jar': ('Java 管线（mvnw：ASM patch/字符串解耦/运行时注入/jar 写出）+ 产物分发', run_jar_step),
+    'jar': (
+        'Java 管线（mvnw：ASM patch/字符串解耦/运行时注入/jar 写出）+ 产物分发',
+        run_jar_step,
+    ),
 }
 
 
@@ -474,18 +561,32 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     parser.add_argument(
-        'steps', nargs='*', metavar='step',
-        choices=[*STEPS, 'all'], default=['jar'],
-        help=f'要运行的步骤：{" / ".join([*STEPS, "all"])}（默认 jar）')
+        'steps',
+        nargs='*',
+        metavar='step',
+        choices=[*STEPS, 'all'],
+        default=['jar'],
+        help=f'要运行的步骤：{" / ".join([*STEPS, "all"])}（默认 jar）',
+    )
     parser.add_argument(
-        '--optimizations', default='all', metavar='SPEC',
-        help='启用的优化组：all、none 或逗号分隔组名（默认 all）')
+        '--optimizations',
+        default='all',
+        metavar='SPEC',
+        help='启用的优化组：all、none 或逗号分隔组名（默认 all）',
+    )
     parser.add_argument(
-        '--disable-patch-group', action='append', default=[], metavar='GROUP',
-        help='显式禁用一个 patch 组；可重复使用，依赖它的组也会关闭')
+        '--disable-patch-group',
+        action='append',
+        default=[],
+        metavar='GROUP',
+        help='显式禁用一个 patch 组；可重复使用，依赖它的组也会关闭',
+    )
     parser.add_argument(
-        '--profiling', choices=('on', 'off'), default='off',
-        help='是否注入启动阶段 profiling patch 与 runtime（默认 off；基准测试时显式 on）')
+        '--profiling',
+        choices=('on', 'off'),
+        default='off',
+        help='是否注入启动阶段 profiling patch 与 runtime（默认 off；基准测试时显式 on）',
+    )
     return parser.parse_args(argv)
 
 
@@ -496,9 +597,8 @@ def main(argv: list[str] | None = None) -> None:
         if name in selected:
             if name == 'jar':
                 run_jar_step(
-                    args.optimizations,
-                    args.disable_patch_group,
-                    args.profiling == 'on')
+                    args.optimizations, args.disable_patch_group, args.profiling == 'on'
+                )
             else:
                 step()
     print(f'[done] 完成步骤: {" ".join(n for n in STEPS if n in selected)}')
