@@ -5,6 +5,7 @@ import org.fossic.starsector.preprocessing.patches.CampaignEntityTooltipHighligh
 import org.fossic.starsector.preprocessing.patches.BitmapFontLogicalNominalPatch;
 import org.fossic.starsector.preprocessing.patches.CodexStartupProfilePatch;
 import org.fossic.starsector.preprocessing.patches.CombatDeploymentFontPatch;
+import org.fossic.starsector.preprocessing.patches.CombatCommandShipInfoValueWidthPatch;
 import org.fossic.starsector.preprocessing.patches.CodexWeaponTypeFilterPatch;
 import org.fossic.starsector.preprocessing.patches.CombatMainStartupProfilePatch;
 import org.fossic.starsector.preprocessing.patches.CombatHudCounterWidthPatch;
@@ -93,6 +94,8 @@ public final class PatchRegistry {
                 register(PatchGroup.LOCALIZATION, CombatTargetInfoWidthPatch::new),
                 register(PatchGroup.DYNFONT,
                         CombatPlayerStatusValueWidthPatch::new),
+                register(PatchGroup.DYNFONT,
+                        CombatCommandShipInfoValueWidthPatch::new),
                 register(PatchGroup.DYNFONT,
                         CombatHudCounterWidthPatch::new),
                 register(PatchGroup.DYNFONT, FleetCardCrTextWidthPatch::new),
