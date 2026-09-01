@@ -16,27 +16,39 @@ import org.fossic.starsector.preprocessing.patches.TowCableTooltipWidthPatch;
 import org.fossic.starsector.preprocessing.patches.WindowDecorationPhysicalResolutionPatch;
 
 import java.util.List;
+import java.util.function.Supplier;
 
 public final class PatchRegistry {
     private PatchRegistry() {
     }
 
     public static List<JarPatch> patches() {
+        return patches(PatchSelection.defaults());
+    }
+
+    public static List<JarPatch> patches(PatchSelection selection) {
+        return catalog().stream()
+                .map(Supplier::get)
+                .filter(patch -> selection.enabled(patch.group()))
+                .toList();
+    }
+
+    private static List<Supplier<JarPatch>> catalog() {
         return List.of(
-                new FactionHostilityNoManualPatch(),
-                new ShipInfoSeparatorPatch(),
-                new CombatDeploymentFontPatch(),
-                new CampaignDateWidthPatch(),
-                new SaveDateLocalePatch(),
-                new PlanetListColumnWidthPatch(),
-                new StarSystemMapFontPatch(),
-                new IntelPutFirstTagIdPatch(),
-                new WindowDecorationPhysicalResolutionPatch(),
-                new TerrainStatusBarSeparatorPatch(),
-                new TopMessageHighlightLayoutPatch(),
-                new CampaignEntityTooltipHighlightLayoutPatch(),
-                new TowCableTooltipWidthPatch(),
-                new CodexWeaponTypeFilterPatch()
+                FactionHostilityNoManualPatch::new,
+                ShipInfoSeparatorPatch::new,
+                CombatDeploymentFontPatch::new,
+                CampaignDateWidthPatch::new,
+                SaveDateLocalePatch::new,
+                PlanetListColumnWidthPatch::new,
+                StarSystemMapFontPatch::new,
+                IntelPutFirstTagIdPatch::new,
+                WindowDecorationPhysicalResolutionPatch::new,
+                TerrainStatusBarSeparatorPatch::new,
+                TopMessageHighlightLayoutPatch::new,
+                CampaignEntityTooltipHighlightLayoutPatch::new,
+                TowCableTooltipWidthPatch::new,
+                CodexWeaponTypeFilterPatch::new
         );
     }
 }

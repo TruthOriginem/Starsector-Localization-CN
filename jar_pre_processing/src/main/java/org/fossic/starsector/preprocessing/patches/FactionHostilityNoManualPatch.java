@@ -5,6 +5,7 @@ import org.fossic.starsector.preprocessing.JarPatch;
 import org.fossic.starsector.preprocessing.JarWorkspace;
 import org.fossic.starsector.preprocessing.PatchContext;
 import org.fossic.starsector.preprocessing.PatchException;
+import org.fossic.starsector.preprocessing.PatchGroup;
 import org.fossic.starsector.preprocessing.PatchResult;
 import org.objectweb.asm.tree.ClassNode;
 
@@ -16,6 +17,11 @@ public final class FactionHostilityNoManualPatch implements JarPatch {
     @Override
     public String id() {
         return "faction-hostility-no-manual";
+    }
+
+    @Override
+    public PatchGroup group() {
+        return PatchGroup.LOCALIZATION;
     }
 
     @Override

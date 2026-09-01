@@ -38,6 +38,19 @@
 ./mvnw compile exec:java
 ```
 
+Patch 通过系统属性按组选择。当前主分支只有始终默认启用的基线组
+`localization`；可用下面的诊断命令显式关闭它，验证无 Patch 的管线：
+
+```powershell
+.\mvnw.cmd -Dstarsector.preprocess.optimizations=none `
+  -Dstarsector.preprocess.disabledPatchGroups=localization compile exec:java
+```
+
+选择器采用严格语义：只启用明确请求的组，不自动补齐依赖，也不递归禁用依赖方；
+显式禁用一个未请求的组、请求未知组或缺少依赖都会在改写 Jar 前汇总报错。
+主分支没有优化组，因此优化参数应为 `none`；包含优化实现的分支可使用 `all` 或
+逗号分隔的优化组 ID。最终请求和实际启用组会写入 `preprocess-report.json`。
+
 **前置条件**：仓库根目录的 `game data/` 下需存在待处理的原版 jar 文件：
 - `game data/starfarer.api.jar`
 - `game data/starfarer_obf.jar`
@@ -59,7 +72,9 @@ jar_pre_processing/
 │   ├── JarWorkspace.java          # 路径管理与文件 IO
 │   ├── JarRewriter.java           # ASM Patch 调度器
 │   ├── DecouplerRunner.java       # jar-string-decoupler 调用
-│   ├── PatchRegistry.java         # 注册所有 Patch
+│   ├── PatchGroup.java            # 组目录、类型与组间依赖
+│   ├── PatchSelection.java        # 严格解析和校验组选择
+│   ├── PatchRegistry.java         # 有序注册所有 Patch
 │   ├── JarPatch.java              # Patch 接口
 │   └── patches/                   # 各具体 Patch 实现
 ├── vendor/
@@ -71,7 +86,12 @@ jar_pre_processing/
 ## 添加新 Patch
 
 1. 在 `patches/` 目录下新建实现 `JarPatch` 接口的类。
-2. 在 `PatchRegistry.patches()` 中注册该类。
+2. 由 Patch 的 `group()` 返回所属 `PatchGroup`；分组事实不要重复写在 Registry。
+3. 在 `PatchRegistry` 的有序 catalog 中注册该类。Registry 只决定执行顺序并按
+   Patch 自身声明的组筛选。
+4. 若需新组，在 `PatchGroup` 中定义稳定 ID、类型和直接依赖。依赖仅用于严格校验，
+   不会隐式启用或禁用其它组。
+5. 补充 Registry 顺序、组声明和选择失败路径的单元测试。
 
 ---
 

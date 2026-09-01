@@ -18,8 +18,17 @@ public final class JarPreProcessorMain {
         JarWorkspace workspace = new JarWorkspace(projectDir);
         workspace.prepare();
 
+        PatchSelection patchSelection = PatchSelection.fromSystemProperties();
+        System.out.println("Requested optimizations: "
+                + patchSelection.requestedOptimizationSpec()
+                + "; profiling: " + patchSelection.requestedProfiling()
+                + "; disabled patch groups: "
+                + patchSelection.requestedDisabledGroupIds());
+        System.out.println("Enabled patch groups: "
+                + patchSelection.enabledGroupIds());
         Map<String, String> inputHashes = workspace.inputHashes();
-        JarRewriter rewriter = new JarRewriter(PatchRegistry.patches());
+        JarRewriter rewriter = new JarRewriter(
+                PatchRegistry.patches(patchSelection));
         List<PatchResult> patchResults = new ArrayList<>();
         for (String jarName : JarWorkspace.allJars()) {
             System.out.println("Applying ASM patches to " + jarName);
@@ -40,16 +49,46 @@ public final class JarPreProcessorMain {
 
         workspace.writeOutputs();
         Map<String, String> outputHashes = workspace.outputHashes();
-        writeReport(workspace, inputHashes, outputHashes, patchResults);
+        writeReport(
+                workspace,
+                patchSelection,
+                inputHashes,
+                outputHashes,
+                patchResults);
         System.out.println("Preprocessing complete. Report: " + workspace.preprocessReport());
     }
 
-    private static void writeReport(JarWorkspace workspace, Map<String, String> inputHashes,
-                                    Map<String, String> outputHashes, List<PatchResult> patchResults)
+    private static void writeReport(
+            JarWorkspace workspace,
+            PatchSelection patchSelection,
+            Map<String, String> inputHashes,
+            Map<String, String> outputHashes,
+            List<PatchResult> patchResults)
             throws IOException {
         StringBuilder json = new StringBuilder();
         json.append("{\n");
         json.append("  \"generatedAt\": ").append(JsonUtil.quote(Instant.now().toString())).append(",\n");
+        json.append("  \"patchSelection\": {\n");
+        json.append("    \"requestedOptimizations\": ")
+                .append(JsonUtil.quote(
+                        patchSelection.requestedOptimizationSpec()))
+                .append(",\n");
+        json.append("    \"requestedProfiling\": ")
+                .append(patchSelection.requestedProfiling())
+                .append(",\n");
+        json.append("    \"requestedDisabledGroups\": ")
+                .append(JsonUtil.stringArray(
+                        patchSelection.requestedDisabledGroupIds()))
+                .append(",\n");
+        json.append("    \"enabledOptimizations\": ")
+                .append(JsonUtil.stringArray(
+                        patchSelection.enabledOptimizationIds()))
+                .append(",\n");
+        json.append("    \"enabledGroups\": ")
+                .append(JsonUtil.stringArray(
+                        patchSelection.enabledGroupIds()))
+                .append("\n");
+        json.append("  },\n");
         json.append("  \"inputHashes\": ").append(JsonUtil.stringMap(inputHashes)).append(",\n");
         json.append("  \"decouplerReports\": {\n");
         for (int i = 0; i < JarWorkspace.jars().length; i++) {

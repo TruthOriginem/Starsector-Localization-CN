@@ -4,6 +4,7 @@ import org.fossic.starsector.preprocessing.AsmUtil;
 import org.fossic.starsector.preprocessing.JarPatch;
 import org.fossic.starsector.preprocessing.JarWorkspace;
 import org.fossic.starsector.preprocessing.PatchContext;
+import org.fossic.starsector.preprocessing.PatchGroup;
 import org.fossic.starsector.preprocessing.PatchResult;
 import org.objectweb.asm.tree.AbstractInsnNode;
 import org.objectweb.asm.tree.ClassNode;
@@ -20,6 +21,11 @@ public final class SaveDateLocalePatch implements JarPatch {
     @Override
     public String id() {
         return "save-date-locale";
+    }
+
+    @Override
+    public PatchGroup group() {
+        return PatchGroup.LOCALIZATION;
     }
 
     @Override

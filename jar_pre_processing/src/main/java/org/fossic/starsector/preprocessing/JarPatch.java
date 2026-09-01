@@ -7,6 +7,8 @@ import java.util.Set;
 public interface JarPatch {
     String id();
 
+    PatchGroup group();
+
     String targetJar();
 
     Set<String> targetClasses();
