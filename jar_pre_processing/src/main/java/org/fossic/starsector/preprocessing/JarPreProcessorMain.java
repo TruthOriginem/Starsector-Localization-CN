@@ -20,6 +20,11 @@ public final class JarPreProcessorMain {
         workspace.prepare();
 
         PatchSelection patchSelection = PatchSelection.fromSystemProperties();
+        System.out.println("Requested optimizations: "
+                + patchSelection.requestedOptimizationSpec()
+                + "; profiling: " + patchSelection.requestedProfiling()
+                + "; disabled patch groups: "
+                + patchSelection.requestedDisabledGroupIds());
         System.out.println("Enabled patch groups: "
                 + patchSelection.enabledGroupIds());
         Map<String, String> inputHashes = workspace.inputHashes();
@@ -161,9 +166,9 @@ public final class JarPreProcessorMain {
         json.append("    \"requestedProfiling\": ")
                 .append(patchSelection.requestedProfiling())
                 .append(",\n");
-        json.append("    \"disabledGroups\": ")
+        json.append("    \"requestedDisabledGroups\": ")
                 .append(JsonUtil.stringArray(
-                        patchSelection.disabledGroupIds()))
+                        patchSelection.requestedDisabledGroupIds()))
                 .append(",\n");
         json.append("    \"enabledOptimizations\": ")
                 .append(JsonUtil.stringArray(

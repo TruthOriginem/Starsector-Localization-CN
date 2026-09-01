@@ -554,7 +554,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
             f'  python build.py ime dynfont      # 重编两个 native 库\n'
             f'  python build.py dynfont jar      # 重编动态字体库后走完整流程\n'
             f'  python build.py jar --optimizations none\n'
-            f'  python build.py jar --disable-patch-group texture-pipeline\n'
+            f'  python build.py jar --disable-patch-group texture-cache\n'
             f'  python build.py jar --profiling on\n'
             f'  python build.py all              # 全部'
         ),
@@ -579,7 +579,10 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         action='append',
         default=[],
         metavar='GROUP',
-        help='显式禁用一个 patch 组；可重复使用，依赖它的组也会关闭',
+        help=(
+            '显式禁用一个已请求的 patch 组；可重复使用。不会递归禁用依赖方，'
+            '若仍启用的组缺少依赖则构建报错'
+        ),
     )
     parser.add_argument(
         '--profiling',

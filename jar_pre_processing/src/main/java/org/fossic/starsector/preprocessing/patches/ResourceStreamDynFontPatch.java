@@ -2,6 +2,7 @@ package org.fossic.starsector.preprocessing.patches;
 
 import org.fossic.starsector.preprocessing.AsmUtil;
 import org.fossic.starsector.preprocessing.JarPatch;
+import org.fossic.starsector.preprocessing.PatchGroup;
 import org.fossic.starsector.preprocessing.JarWorkspace;
 import org.fossic.starsector.preprocessing.PatchContext;
 import org.fossic.starsector.preprocessing.PatchException;
@@ -50,6 +51,11 @@ public final class ResourceStreamDynFontPatch implements JarPatch {
     @Override
     public String id() {
         return "resource-stream-dynfont-hook";
+    }
+
+    @Override
+    public PatchGroup group() {
+        return PatchGroup.DYNFONT;
     }
 
     @Override

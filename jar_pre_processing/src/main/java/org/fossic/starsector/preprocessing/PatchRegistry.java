@@ -67,7 +67,6 @@ import org.fossic.starsector.preprocessing.patches.AppStateInitStartupProfilePat
 import org.fossic.starsector.preprocessing.patches.WindowDecorationPhysicalResolutionPatch;
 
 import java.util.List;
-import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 public final class PatchRegistry {
@@ -79,118 +78,78 @@ public final class PatchRegistry {
     }
 
     public static List<JarPatch> patches(PatchSelection selection) {
-        return registrations().stream()
-                .filter(registration ->
-                        registration.enabledWhen().test(selection))
-                .map(registration -> registration.factory().get())
+        return catalog().stream()
+                .map(Supplier::get)
+                .filter(patch -> selection.enabled(patch.group()))
                 .toList();
     }
 
-    private static List<Registration> registrations() {
+    private static List<Supplier<JarPatch>> catalog() {
         return List.of(
-                register(PatchGroup.LOCALIZATION, FactionHostilityNoManualPatch::new),
-                register(PatchGroup.LOCALIZATION, ShipInfoSeparatorPatch::new),
-                register(PatchGroup.LOCALIZATION, CombatDeploymentFontPatch::new),
-                register(PatchGroup.LOCALIZATION, CombatTargetInfoWidthPatch::new),
-                register(PatchGroup.DYNFONT,
-                        CombatPlayerStatusValueWidthPatch::new),
-                register(PatchGroup.DYNFONT,
-                        CombatCommandShipInfoValueWidthPatch::new),
-                register(PatchGroup.DYNFONT,
-                        CombatHudCounterWidthPatch::new),
-                register(PatchGroup.DYNFONT, FleetCardCrTextWidthPatch::new),
-                register(PatchGroup.DYNFONT, SubmarketTitleWidthPatch::new),
-                register(PatchGroup.LOCALIZATION, CampaignDateWidthPatch::new),
-                register(PatchGroup.LOCALIZATION, SaveDateLocalePatch::new),
-                register(PatchGroup.LOCALIZATION, PlanetListColumnWidthPatch::new),
-                register(PatchGroup.LOCALIZATION, StarSystemMapFontPatch::new),
-                register(PatchGroup.LOCALIZATION, IntelPutFirstTagIdPatch::new),
-                register(PatchGroup.LOCALIZATION,
-                        WindowDecorationPhysicalResolutionPatch::new),
-                register(PatchGroup.LOCALIZATION,
-                        TerrainStatusBarSeparatorPatch::new),
-                register(PatchGroup.LOCALIZATION,
-                        TopMessageHighlightLayoutPatch::new),
-                register(PatchGroup.LOCALIZATION,
-                        CampaignEntityTooltipHighlightLayoutPatch::new),
-                register(PatchGroup.LOCALIZATION, RendererHighlightColorNullPatch::new),
-                register(PatchGroup.LOCALIZATION,
-                        TowCableTooltipWidthPatch::new),
-                register(PatchGroup.LOCALIZATION,
-                        CodexWeaponTypeFilterPatch::new),
-                register(PatchGroup.IME, GlobalImeFocusPatch::new),
-                register(PatchGroup.IME, TextFieldImeHookPatch::new),
-                register(PatchGroup.DYNFONT, ResourceStreamDynFontPatch::new),
-                register(PatchGroup.DYNFONT, NewGameSeedFieldWidthPatch::new),
-                register(PatchGroup.DYNFONT,
-                        BitmapFontLogicalNominalPatch::new),
-                register(PatchGroup.GUI_CONSOLE_LOG, HeadlessConsoleLogPatch::new),
-                register(PatchGroup.FONT_GLYPH_COPY, GlyphArrayGrowthPatch::new),
-                register(PatchGroup.FONT_LINE_PARSER, FontDefinitionParserPatch::new),
-                register(PatchGroup.FONT_TOKEN_CURSOR, FontDefinitionCursorPatch::new),
-                register(PatchGroup.RESOURCE_LOCKS, ResourceLeafSynchronizationPatch::new),
-                register(PatchGroup.RESOURCE_LOCKS, ResourceLookupSynchronizationPatch::new),
-                register(PatchGroup.RESOURCE_STREAM_SAFETY,
-                        ResourceLoaderStreamSafetyPatch::new),
-                register(PatchGroup.FAST_PNG, FastPngDecoderPatch::new),
-                register(PatchGroup.DYNFONT,
-                        RendererHighlightRegexPatch::new),
-                register(PatchGroup.DYNFONT, RendererDynFontPatch::new),
-                register(PatchGroup.FAST_TEXT, LoadingUtilsTextReadPatch::new),
-                register(PatchGroup.CSV_ERROR_FORMATTING, CsvLazyErrorFormattingPatch::new),
-                register(PatchGroup.CSV_MERGE_LINEAR, CsvMergeLinearPatch::new),
-                register(PatchGroup.PARALLEL_SPEC_PARSE, ParallelSpecParsePatch::new),
-                register(PatchGroup.RESOURCE_STREAM_SAFETY,
-                        LoadingUtilsResourceStreamSafetyPatch::new),
-                register(PatchGroup.RULES_ID_INDEX, RulesDuplicateIdPatch::new),
-                register(PatchGroup.TEXTURE_PIPELINE, TexturePixelConversionPatch::new),
-                register(PatchGroup.TEXTURE_CACHE, TextureConversionCachePatch::new),
-                register(PatchGroup.PCM_BUFFER, DecodedPcmBufferPatch::new),
-                register(PatchGroup.PCM_BULK_READ, PcmDecoderAccessPatch::new),
-                register(PatchGroup.PCM_BULK_READ, DecodedPcmBulkReadPatch::new),
-                register(PatchGroup.PCM_CACHE, DecodedPcmCachePatch::new),
-                register(PatchGroup.SOUND_DECODE_WORKERS, SoundDecodeWorkerPatch::new),
-                register(PatchGroup.RESOURCE_PARTITION, ResourceStablePartitionPatch::new),
-                register(PatchGroup.PRELOAD_COORDINATION, PreloadResultCoordinatorPatch::new),
-                register(PatchGroup.PRELOAD_PATH_DEDUP, PreloadPathDedupPatch::new),
-                register(PatchGroup.PARALLEL_IMAGE_PRELOAD, ParallelImagePreloadPatch::new),
-                register(PatchGroup.RESOURCE_STREAM_SAFETY,
-                        GraphicsResourceStreamSafetyPatch::new),
-                register(PatchGroup.JANINO_CU_DEDUP,
-                        JaninoCompilationUnitDedupPatch::new),
-                register(PatchGroup.JANINO_SOURCE_INDEX,
-                        JaninoSourceIndexPatch::new),
-                register(PatchGroup.JANINO_BYTECODE_CACHE,
-                        JaninoBytecodeCachePatch::new),
-                register(PatchGroup.PROFILING, CombatMainStartupProfilePatch::new),
-                register(PatchGroup.PROFILING, ResourceLoaderStartupProfilePatch::new),
-                register(PatchGroup.PROFILING, ScriptStoreWorkerStartupProfilePatch::new),
-                register(PatchGroup.PROFILING, TitleScreenStartupProfilePatch::new),
-                registerPersistentCacheMaintenance(
-                        PersistentCacheCleanupPatch::new),
-                register(PatchGroup.PROFILING, FirstTitleFrameStartupProfilePatch::new),
-                register(PatchGroup.PROFILING, AppStateInitStartupProfilePatch::new),
-                register(PatchGroup.PROFILING, CodexStartupProfilePatch::new));
-    }
-
-    private static Registration register(
-            PatchGroup group, Supplier<JarPatch> factory) {
-        return new Registration(
-                selection -> selection.enabled(group), factory);
-    }
-
-    private static Registration registerPersistentCacheMaintenance(
-            Supplier<JarPatch> factory) {
-        return new Registration(
-                selection -> selection.enabled(PatchGroup.TEXTURE_CACHE)
-                        || selection.enabled(PatchGroup.PCM_CACHE)
-                        || selection.enabled(
-                                PatchGroup.JANINO_BYTECODE_CACHE),
-                factory);
-    }
-
-    private record Registration(
-            Predicate<PatchSelection> enabledWhen,
-            Supplier<JarPatch> factory) {
+                FactionHostilityNoManualPatch::new,
+                ShipInfoSeparatorPatch::new,
+                CombatDeploymentFontPatch::new,
+                CombatTargetInfoWidthPatch::new,
+                CombatPlayerStatusValueWidthPatch::new,
+                CombatCommandShipInfoValueWidthPatch::new,
+                CombatHudCounterWidthPatch::new,
+                FleetCardCrTextWidthPatch::new,
+                SubmarketTitleWidthPatch::new,
+                CampaignDateWidthPatch::new,
+                SaveDateLocalePatch::new,
+                PlanetListColumnWidthPatch::new,
+                StarSystemMapFontPatch::new,
+                IntelPutFirstTagIdPatch::new,
+                WindowDecorationPhysicalResolutionPatch::new,
+                TerrainStatusBarSeparatorPatch::new,
+                TopMessageHighlightLayoutPatch::new,
+                CampaignEntityTooltipHighlightLayoutPatch::new,
+                RendererHighlightColorNullPatch::new,
+                TowCableTooltipWidthPatch::new,
+                CodexWeaponTypeFilterPatch::new,
+                GlobalImeFocusPatch::new,
+                TextFieldImeHookPatch::new,
+                ResourceStreamDynFontPatch::new,
+                NewGameSeedFieldWidthPatch::new,
+                BitmapFontLogicalNominalPatch::new,
+                HeadlessConsoleLogPatch::new,
+                GlyphArrayGrowthPatch::new,
+                FontDefinitionParserPatch::new,
+                FontDefinitionCursorPatch::new,
+                ResourceLeafSynchronizationPatch::new,
+                ResourceLookupSynchronizationPatch::new,
+                ResourceLoaderStreamSafetyPatch::new,
+                FastPngDecoderPatch::new,
+                RendererHighlightRegexPatch::new,
+                RendererDynFontPatch::new,
+                LoadingUtilsTextReadPatch::new,
+                CsvLazyErrorFormattingPatch::new,
+                CsvMergeLinearPatch::new,
+                ParallelSpecParsePatch::new,
+                LoadingUtilsResourceStreamSafetyPatch::new,
+                RulesDuplicateIdPatch::new,
+                TexturePixelConversionPatch::new,
+                TextureConversionCachePatch::new,
+                DecodedPcmBufferPatch::new,
+                PcmDecoderAccessPatch::new,
+                DecodedPcmBulkReadPatch::new,
+                DecodedPcmCachePatch::new,
+                SoundDecodeWorkerPatch::new,
+                ResourceStablePartitionPatch::new,
+                PreloadResultCoordinatorPatch::new,
+                PreloadPathDedupPatch::new,
+                ParallelImagePreloadPatch::new,
+                GraphicsResourceStreamSafetyPatch::new,
+                JaninoCompilationUnitDedupPatch::new,
+                JaninoSourceIndexPatch::new,
+                JaninoBytecodeCachePatch::new,
+                CombatMainStartupProfilePatch::new,
+                ResourceLoaderStartupProfilePatch::new,
+                ScriptStoreWorkerStartupProfilePatch::new,
+                TitleScreenStartupProfilePatch::new,
+                PersistentCacheCleanupPatch::new,
+                FirstTitleFrameStartupProfilePatch::new,
+                AppStateInitStartupProfilePatch::new,
+                CodexStartupProfilePatch::new);
     }
 }

@@ -2,6 +2,7 @@ package org.fossic.starsector.preprocessing.patches;
 
 import org.fossic.starsector.preprocessing.AsmUtil;
 import org.fossic.starsector.preprocessing.JarPatch;
+import org.fossic.starsector.preprocessing.PatchGroup;
 import org.fossic.starsector.preprocessing.JarWorkspace;
 import org.fossic.starsector.preprocessing.PatchContext;
 import org.fossic.starsector.preprocessing.PatchResult;
@@ -30,6 +31,11 @@ public final class CombatTargetInfoWidthPatch implements JarPatch {
     @Override
     public String id() {
         return "combat-target-info-width";
+    }
+
+    @Override
+    public PatchGroup group() {
+        return PatchGroup.LOCALIZATION;
     }
 
     @Override

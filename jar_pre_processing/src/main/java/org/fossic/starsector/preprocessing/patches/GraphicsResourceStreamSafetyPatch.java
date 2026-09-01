@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Set;
 import org.fossic.starsector.preprocessing.AsmUtil;
 import org.fossic.starsector.preprocessing.JarPatch;
+import org.fossic.starsector.preprocessing.PatchGroup;
 import org.fossic.starsector.preprocessing.JarWorkspace;
 import org.fossic.starsector.preprocessing.PatchContext;
 import org.fossic.starsector.preprocessing.PatchException;
@@ -52,6 +53,11 @@ public final class GraphicsResourceStreamSafetyPatch implements JarPatch {
     @Override
     public String id() {
         return "graphics-resource-stream-safety";
+    }
+
+    @Override
+    public PatchGroup group() {
+        return PatchGroup.RESOURCE_STREAM_SAFETY;
     }
 
     @Override
