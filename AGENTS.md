@@ -73,7 +73,7 @@ python -X utf8 build.py ime                      # 只重编输入法原生库 s
 python -X utf8 build.py dynfont                  # 只重编动态字体原生库 ss_dyn_font.dll（CMake+Ninja）
 python -X utf8 build.py all                      # 全部步骤；步骤可任意组合，如 `dynfont jar`，详见 --help
 python -X utf8 build.py jar --optimizations none # 构建不含启动优化的对照 Jar
-python -X utf8 build.py jar --disable-patch-group fast-png # 禁用单个优化组及其依赖组
+python -X utf8 build.py jar --disable-patch-group texture-cache # 禁用一个无依赖方的优化组
 ```
 
 注意：预处理产出的 jar 为未翻译状态，之后必须运行 ParaTranz 脚本子命令 `2` 把译文写回 `localization/*.jar`。

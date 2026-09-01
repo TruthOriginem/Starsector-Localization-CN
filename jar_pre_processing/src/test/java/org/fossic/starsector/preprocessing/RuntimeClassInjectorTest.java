@@ -24,6 +24,11 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
 final class RuntimeClassInjectorTest {
+    private static final String PCM_CACHE_SPEC =
+            "pcm-buffer,pcm-bulk-read,pcm-cache,cache-maintenance";
+    private static final String TEXTURE_CACHE_SPEC =
+            "fast-png,texture-pipeline,texture-cache,cache-maintenance";
+
     @Test
     void dynfontRuntimeFollowsItsIndependentPatchGroup(
             @TempDir Path tempDir) throws IOException {
@@ -201,42 +206,26 @@ final class RuntimeClassInjectorTest {
         Path zstd = emptyJar(tempDir.resolve("zstd.jar"));
         JarPreProcessorMain.injectRuntimeClasses(
                 zstd,
-                PatchSelection.fromOptions("pcm-cache", List.of(), false));
+                PatchSelection.fromOptions(
+                        PCM_CACHE_SPEC, List.of(), false));
         assertDependencyPresence(zstd, false, true);
 
         Path texture = emptyJar(tempDir.resolve("texture.jar"));
         PatchSelection textureSelection = PatchSelection.fromOptions(
-                "texture-cache", List.of(), false);
+                TEXTURE_CACHE_SPEC, List.of(), false);
         assertTrue(textureSelection.enabled(PatchGroup.TEXTURE_CACHE));
         assertTrue(textureSelection.enabled(PatchGroup.FAST_PNG));
         JarPreProcessorMain.injectRuntimeClasses(
                 texture, textureSelection);
         assertDependencyPresence(texture, true, true);
 
-        Path textureWithoutPng = emptyJar(
-                tempDir.resolve("texture-without-png.jar"));
-        PatchSelection reverseDisabledTexture = PatchSelection.fromOptions(
-                "texture-cache", List.of("fast-png"), false);
-        assertFalse(reverseDisabledTexture.enabled(PatchGroup.FAST_PNG));
-        assertFalse(reverseDisabledTexture.enabled(PatchGroup.TEXTURE_CACHE));
-        JarPreProcessorMain.injectRuntimeClasses(
-                textureWithoutPng, reverseDisabledTexture);
-        assertDependencyPresence(textureWithoutPng, false, false);
-
-        Path allWithoutPng = emptyJar(
-                tempDir.resolve("all-without-png.jar"));
-        PatchSelection allReverseDisabled = PatchSelection.fromOptions(
-                "all", List.of("fast-png"), false);
-        assertFalse(allReverseDisabled.enabled(PatchGroup.TEXTURE_CACHE));
-        assertTrue(allReverseDisabled.enabled(PatchGroup.PCM_CACHE));
-        JarPreProcessorMain.injectRuntimeClasses(
-                allWithoutPng, allReverseDisabled);
-        assertDependencyPresence(allWithoutPng, false, true);
-
         Path pngWithoutCaches = emptyJar(
                 tempDir.resolve("png-without-caches.jar"));
         PatchSelection independentPng = PatchSelection.fromOptions(
-                "all", List.of("texture-cache", "pcm-cache"), false);
+                "all",
+                List.of("texture-cache", "pcm-cache",
+                        "janino-bytecode-cache", "cache-maintenance"),
+                false);
         assertTrue(independentPng.enabled(PatchGroup.FAST_PNG));
         assertFalse(independentPng.enabled(PatchGroup.TEXTURE_CACHE));
         assertFalse(independentPng.enabled(PatchGroup.PCM_CACHE));
@@ -309,7 +298,7 @@ final class RuntimeClassInjectorTest {
         JarPreProcessorMain.injectRuntimeClasses(
                 jar,
                 PatchSelection.fromOptions(
-                        "pcm-cache", List.of(), false));
+                        PCM_CACHE_SPEC, List.of(), false));
         Path processTemp = tempDir.resolve("process-temp");
         Files.createDirectories(processTemp);
         runPackagedZstdChild(
@@ -331,7 +320,7 @@ final class RuntimeClassInjectorTest {
         JarPreProcessorMain.injectRuntimeClasses(
                 complete,
                 PatchSelection.fromOptions(
-                        "pcm-cache", List.of(), false));
+                        PCM_CACHE_SPEC, List.of(), false));
         Path missingNative = copyJarWithout(
                 complete,
                 tempDir.resolve("missing-native.jar"),

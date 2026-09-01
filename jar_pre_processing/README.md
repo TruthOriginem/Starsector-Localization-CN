@@ -62,13 +62,15 @@ python build.py all              # 全部
 python -X utf8 build.py jar --optimizations all
 python -X utf8 build.py jar --optimizations none
 python -X utf8 build.py jar --optimizations fast-text,resource-locks,rules-id-index
-python -X utf8 build.py jar --disable-patch-group texture-pipeline
+python -X utf8 build.py jar --disable-patch-group texture-cache
 python -X utf8 build.py jar --profiling on
 ```
 
 完整优化组、依赖、JVM 调试属性、缓存失效/清理规则和各项兼容边界统一见
-[docs/startup_optimization.md](docs/startup_optimization.md)。请求项、依赖展开后的最终启用组及显式禁用组
-会写入 `target/preprocess-work/preprocess-report.json`，构建和 A/B 核对应以该报告为准。
+[docs/startup_optimization.md](docs/startup_optimization.md)。选择器不会自动启用依赖，也不会在禁用
+一个组时递归关闭依赖方；缺依赖、冗余禁用和未知组会在改写 Jar 前汇总报错。请求项、严格
+校验后的最终启用组及显式禁用组会写入 `target/preprocess-work/preprocess-report.json`，构建和
+A/B 核对应以该报告为准。
 
 Java 单元测试单独执行：
 
@@ -123,7 +125,9 @@ jar_pre_processing/
 │   │   ├── JarRewriter.java           # ASM Patch 调度器
 │   │   ├── DecouplerRunner.java       # jar-string-decoupler 调用
 │   │   ├── RuntimeClassInjector.java  # 运行时类注入（ime / dynfont / startup / optimization）
-│   │   ├── PatchRegistry.java         # 注册所有 Patch
+│   │   ├── PatchGroup.java            # 组目录、类型与组间依赖
+│   │   ├── PatchSelection.java        # 严格解析和校验组选择
+│   │   ├── PatchRegistry.java         # 有序注册所有 Patch
 │   │   ├── JarPatch.java              # Patch 接口
 │   │   └── patches/                   # 各具体 Patch 实现
 │   ├── ime/                           # 中文输入法运行时（注入 obf jar，见 docs/ime-support.md）
@@ -149,8 +153,11 @@ jar_pre_processing/
 ## 添加新 Patch
 
 1. 在 `patches/` 目录下新建实现 `JarPatch` 接口的类。
-2. 在 `PatchGroup` 中选择或增加一个原子功能组；有依赖时同时声明。
-3. 在 `PatchRegistry` 中按原版字节码所需顺序注册该类与所属组。
+2. 由 Patch 自身的 `group()` 返回所属 `PatchGroup`；分组事实不要重复写在 Registry。
+3. 若需新组，在 `PatchGroup` 中定义稳定 ID、类型和直接依赖。依赖只做严格校验，
+   不会隐式启用或禁用其它组。
+4. 在 `PatchRegistry` 的有序 catalog 中按原版字节码所需顺序注册工厂。
+5. 补充 Registry 顺序、组声明和选择失败路径的单元测试。
 
 ---
 

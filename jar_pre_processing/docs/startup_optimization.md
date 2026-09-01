@@ -1,6 +1,6 @@
 # Starsector 启动优化
 
-更新时间：2026-08-02。本文是启动优化的维护入口，说明总体设计、决策方法、
+更新时间：2026-08-31。本文是启动优化的维护入口，说明总体设计、决策方法、
 优化取舍、兼容边界和后续工作。可复算的基准与关键 A/B 数据单独保存在
 [startup_profile_runs.md](startup_profile_runs.md)。原始游戏版本为 `0.98a-RC8`，实验实现位于
 `startup-optimization` 分支。
@@ -119,7 +119,9 @@ O11 结果通知已撤回，主线程恢复原版 10 ms 轮询；O16/O27 仅保�
 
 日常发布构建使用 `python -X utf8 build.py jar --optimizations all`，不注入 profiling。
 单项 A/B 通过 `--optimizations`、`--disable-patch-group` 和 `--profiling on` 组合；
-依赖展开后的最终功能组必须以 `target/preprocess-work/preprocess-report.json` 为准。
+所有直接和传递依赖都必须在命令中显式列出。选择器不会自动补齐依赖，也不会在禁用
+一个组时递归关闭依赖方；缺依赖会在改写 Jar 前汇总报错。严格校验后的最终功能组必须以
+`target/preprocess-work/preprocess-report.json` 为准。
 基础命令见 [README.md](../README.md#使用方法)；测量约定与历史数据见
 [startup_profile_runs.md](startup_profile_runs.md)。
 
@@ -134,15 +136,24 @@ O11 结果通知已撤回，主线程恢复原版 10 ms 轮询；O16/O27 仅保�
 | 预读 | `preload-coordination`、`preload-path-dedup`、`parallel-image-preload` | O16、O27；协调组不包含已撤回的 O11 |
 | 字体 | `font-glyph-copy`、`font-line-parser`、`font-token-cursor` | O25、O26、O28 |
 | Janino | `janino-cu-dedup`、`janino-source-index`、`janino-bytecode-cache` | O31–O33 |
+| 公共缓存维护 | `cache-maintenance` | 纹理、PCM、Janino 缓存的延迟清理 hook |
 | 日志 | `gui-console-log` | O23 |
 
-依赖链：`pcm-cache → pcm-bulk-read → pcm-buffer`；
-`texture-cache → fast-png + texture-pipeline`；
+依赖链：`pcm-cache → pcm-bulk-read → pcm-buffer`，且 `pcm-cache → cache-maintenance`；
+`texture-cache → fast-png + texture-pipeline + cache-maintenance`；
 `font-token-cursor → font-line-parser`；
 `parallel-spec-parse → resource-locks`；
 `preload-path-dedup/parallel-image-preload → preload-coordination`；
-`janino-bytecode-cache → janino-source-index → janino-cu-dedup`。
+`janino-bytecode-cache → janino-source-index → janino-cu-dedup`，且
+`janino-bytecode-cache → cache-maintenance`。
 `localization`、`ime`、`dynfont` 和 `profiling` 是可开关的非优化组。
+
+例如只启用纹理缓存必须显式写出完整集合：
+
+```powershell
+python -X utf8 build.py jar --optimizations `
+  fast-png,texture-pipeline,texture-cache,cache-maintenance
+```
 
 ### 运行时调试属性
 
@@ -203,7 +214,7 @@ SSO 未覆盖而本项目收益明确的重点包括 O03 资源锁、O05 Rules�
   恶意 TOCTOU，不影响正常本地缓存模型。动态字体 manifest/lease 已覆盖 scale、输出和并发。
 - 并行规格解析不允许 worker 改变资源选择器、日志顺序、最早异常或 registry 顺序；`workers=0`
   是同 Jar 原顺序对照。声音默认 2 worker；高并发仍是用户自担风险的调优选项。
-- 当前 Java `clean test`：377 项通过、0 failure/error、3 项平台权限跳过；`none`、流安全、PNG、
+- 当前 Java `clean test`：461 项通过、0 failure/error、3 项平台权限跳过；`none`、流安全、PNG、
   三缓存和 `all` 的 profiling-off Jar 均可构建。11-mod 发布 smoke 无 verifier/缺类/链接错误。
 
 ## 已解决风险与后续验证
