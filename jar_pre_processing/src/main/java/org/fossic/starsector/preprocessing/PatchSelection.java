@@ -40,35 +40,48 @@ public final class PatchSelection {
     public static PatchSelection fromSystemProperties() {
         String optimizationSpec = System.getProperty(
                 OPTIMIZATIONS_PROPERTY, defaultOptimizationSpec());
-        List<String> disabled = splitList(System.getProperty(
-                DISABLED_GROUPS_PROPERTY, ""));
+        String disabled = System.getProperty(DISABLED_GROUPS_PROPERTY, "");
+        String profilingValue = System.getProperty(
+                PROFILING_PROPERTY, "false");
+        List<String> problems = new ArrayList<>();
         boolean profiling = parseBooleanProperty(
-                PROFILING_PROPERTY,
-                System.getProperty(PROFILING_PROPERTY, "false"));
-        return fromOptions(optimizationSpec, disabled, profiling);
+                PROFILING_PROPERTY, profilingValue, problems);
+        return fromOptions(
+                optimizationSpec, List.of(disabled), profiling, problems);
     }
 
     public static PatchSelection fromOptions(
             String optimizationSpec,
             Collection<String> disabledGroupIds,
             boolean profiling) {
+        return fromOptions(
+                optimizationSpec,
+                disabledGroupIds,
+                profiling,
+                new ArrayList<>());
+    }
+
+    private static PatchSelection fromOptions(
+            String optimizationSpec,
+            Collection<String> disabledGroupIds,
+            boolean profiling,
+            List<String> problems) {
         PatchGroup.validateDefinitions();
-        String normalizedSpec = normalizeSpec(optimizationSpec);
+        String normalizedSpec = normalizeSpec(optimizationSpec, problems);
 
         EnumSet<PatchGroup> requested = EnumSet.noneOf(PatchGroup.class);
         requested.addAll(PatchGroup.baselineGroups());
-        requested.addAll(parseOptimizations(normalizedSpec));
+        requested.addAll(parseOptimizations(normalizedSpec, problems));
         if (profiling) {
             List<PatchGroup> profilingGroups = PatchGroup.profilingGroups();
             if (profilingGroups.isEmpty()) {
-                throw new IllegalArgumentException(
-                        "当前产品未定义 profiling patch 组");
+                problems.add("当前产品未定义 profiling patch 组");
             }
             requested.addAll(profilingGroups);
         }
 
-        EnumSet<PatchGroup> disabled = parseDisabledGroups(disabledGroupIds);
-        List<String> problems = new ArrayList<>();
+        EnumSet<PatchGroup> disabled = parseDisabledGroups(
+                disabledGroupIds, problems);
         for (PatchGroup group : PatchGroup.values()) {
             if (disabled.contains(group) && !requested.contains(group)) {
                 problems.add("patch 组 '" + group.id()
@@ -124,12 +137,12 @@ public final class PatchSelection {
         return PatchGroup.optimizationGroups().isEmpty() ? "none" : "all";
     }
 
-    private static EnumSet<PatchGroup> parseOptimizations(String spec) {
+    private static EnumSet<PatchGroup> parseOptimizations(
+            String spec, List<String> problems) {
         List<PatchGroup> available = PatchGroup.optimizationGroups();
         if ("all".equals(spec)) {
             if (available.isEmpty()) {
-                throw new IllegalArgumentException(
-                        "当前产品未定义可启用的优化组；请使用 none");
+                problems.add("当前产品未定义可启用的优化组；请使用 none");
             }
             EnumSet<PatchGroup> result = EnumSet.noneOf(PatchGroup.class);
             result.addAll(available);
@@ -140,34 +153,52 @@ public final class PatchSelection {
         }
 
         EnumSet<PatchGroup> result = EnumSet.noneOf(PatchGroup.class);
-        for (String id : splitList(spec)) {
+        List<String> ids = splitList(spec, problems, "优化组列表");
+        boolean hasSelector = ids.stream()
+                .anyMatch(id -> "all".equals(id) || "none".equals(id));
+        if (hasSelector) {
+            problems.add("all/none 不能与具体优化组混用: " + spec);
+        }
+        for (String id : ids) {
             if ("all".equals(id) || "none".equals(id)) {
-                throw new IllegalArgumentException(
-                        "all/none 不能与具体优化组混用: " + spec);
+                continue;
             }
-            PatchGroup group = PatchGroup.fromOptimizationId(id);
+            PatchGroup group;
+            try {
+                group = PatchGroup.fromOptimizationId(id);
+            } catch (IllegalArgumentException error) {
+                problems.add(error.getMessage());
+                continue;
+            }
             if (!result.add(group)) {
-                throw new IllegalArgumentException("重复优化组: " + id);
+                problems.add("重复优化组: " + id);
             }
         }
         if (result.isEmpty()) {
-            throw new IllegalArgumentException(
-                    "优化组列表不能为空；请使用 all 或 none");
+            problems.add("优化组列表不能为空；请使用 all 或 none");
         }
         return result;
     }
 
     private static EnumSet<PatchGroup> parseDisabledGroups(
-            Collection<String> disabledGroupIds) {
+            Collection<String> disabledGroupIds,
+            List<String> problems) {
         if (disabledGroupIds == null) {
-            throw new IllegalArgumentException("禁用 patch 组列表不能为 null");
+            problems.add("禁用 patch 组列表不能为 null");
+            return EnumSet.noneOf(PatchGroup.class);
         }
         EnumSet<PatchGroup> result = EnumSet.noneOf(PatchGroup.class);
         for (String value : disabledGroupIds) {
-            for (String id : splitList(value)) {
-                PatchGroup group = PatchGroup.fromId(id);
+            for (String id : splitList(value, problems, "禁用 patch 组列表")) {
+                PatchGroup group;
+                try {
+                    group = PatchGroup.fromId(id);
+                } catch (IllegalArgumentException error) {
+                    problems.add(error.getMessage());
+                    continue;
+                }
                 if (!result.add(group)) {
-                    throw new IllegalArgumentException("重复禁用 patch 组: " + id);
+                    problems.add("重复禁用 patch 组: " + id);
                 }
             }
         }
@@ -216,9 +247,11 @@ public final class PatchSelection {
                 .toList());
     }
 
-    private static String normalizeSpec(String value) {
+    private static String normalizeSpec(
+            String value, List<String> problems) {
         if (value == null) {
-            throw new IllegalArgumentException("optimizations 不能为 null");
+            problems.add("optimizations 不能为 null");
+            return "";
         }
         return value.trim().toLowerCase(Locale.ROOT);
     }
@@ -230,7 +263,12 @@ public final class PatchSelection {
         return value.trim().toLowerCase(Locale.ROOT);
     }
 
-    private static List<String> splitList(String value) {
+    private static List<String> splitList(
+            String value, List<String> problems, String fieldName) {
+        if (value == null) {
+            problems.add(fieldName + "不能包含 null");
+            return List.of();
+        }
         ArrayList<String> result = new ArrayList<>();
         for (String item : normalizeId(value).split(",")) {
             String normalized = normalizeId(item);
@@ -241,15 +279,17 @@ public final class PatchSelection {
         return result;
     }
 
-    private static boolean parseBooleanProperty(String name, String value) {
+    private static boolean parseBooleanProperty(
+            String name, String value, List<String> problems) {
         if ("true".equalsIgnoreCase(value)) {
             return true;
         }
         if ("false".equalsIgnoreCase(value)) {
             return false;
         }
-        throw new IllegalArgumentException(
+        problems.add(
                 "系统属性 " + name + " 必须为 true 或 false，实际为: " + value);
+        return false;
     }
 
     private static EnumSet<PatchGroup> copyOf(Collection<PatchGroup> groups) {

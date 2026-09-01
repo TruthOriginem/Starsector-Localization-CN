@@ -87,16 +87,36 @@ final class PatchSelectionTest {
     }
 
     @Test
-    void systemPropertiesRejectInvalidBoolean() {
-        String oldValue = System.getProperty(PatchSelection.PROFILING_PROPERTY);
+    void systemPropertiesAggregateIndependentConfigurationErrors() {
+        String oldOptimizations = System.getProperty(
+                PatchSelection.OPTIMIZATIONS_PROPERTY);
+        String oldDisabled = System.getProperty(
+                PatchSelection.DISABLED_GROUPS_PROPERTY);
+        String oldProfiling = System.getProperty(
+                PatchSelection.PROFILING_PROPERTY);
         try {
+            System.setProperty(PatchSelection.OPTIMIZATIONS_PROPERTY,
+                    "all,missing-optimization");
+            System.setProperty(PatchSelection.DISABLED_GROUPS_PROPERTY,
+                    "missing-disabled,localization,localization");
             System.setProperty(PatchSelection.PROFILING_PROPERTY, "yes");
             IllegalArgumentException error = assertThrows(
                     IllegalArgumentException.class,
                     PatchSelection::fromSystemProperties);
+
             assertTrue(error.getMessage().contains("必须为 true 或 false"));
+            assertTrue(error.getMessage().contains(
+                    "all/none 不能与具体优化组混用"));
+            assertTrue(error.getMessage().contains("missing-optimization"));
+            assertTrue(error.getMessage().contains("missing-disabled"));
+            assertTrue(error.getMessage().contains(
+                    "重复禁用 patch 组: localization"));
         } finally {
-            restoreProperty(PatchSelection.PROFILING_PROPERTY, oldValue);
+            restoreProperty(PatchSelection.OPTIMIZATIONS_PROPERTY,
+                    oldOptimizations);
+            restoreProperty(PatchSelection.DISABLED_GROUPS_PROPERTY,
+                    oldDisabled);
+            restoreProperty(PatchSelection.PROFILING_PROPERTY, oldProfiling);
         }
     }
 
