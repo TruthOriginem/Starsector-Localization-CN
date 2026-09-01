@@ -1,92 +1,176 @@
 package org.fossic.starsector.preprocessing;
 
+import org.junit.jupiter.api.Test;
+
+import java.util.HashSet;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import java.util.List;
-import org.junit.jupiter.api.Test;
-
 final class PatchSelectionTest {
     @Test
-    void defaultsEnableRuntimeFeaturesAndOptimizationsButNotProfiling() {
+    void defaultsEnableEveryBaselineAndOptimizationButNotProfiling() {
         PatchSelection selection = PatchSelection.defaults();
 
         for (PatchGroup group : PatchGroup.values()) {
-            if (group == PatchGroup.PROFILING) {
-                assertFalse(selection.enabled(group), group.id());
-            } else {
-                assertTrue(selection.enabled(group), group.id());
-            }
+            assertEquals(group.kind() != PatchGroupKind.PROFILING,
+                    selection.enabled(group), group.id());
         }
+        assertEquals("all", selection.requestedOptimizationSpec());
+        assertFalse(selection.requestedProfiling());
+        assertEquals(List.of(), selection.requestedDisabledGroupIds());
     }
 
     @Test
-    /* Master-only tests are superseded by this branch's historical suite.
-    void explicitNoneStillKeepsTheBaselineGroup() {
+    void noneEnablesOnlyTheThreeBaselineGroups() {
         PatchSelection selection = PatchSelection.fromOptions(
                 "none", List.of(), false);
 
-        assertEquals(List.of("localization"), selection.enabledGroupIds());
+        assertEquals(List.of("localization", "ime", "dynfont"),
+                selection.enabledGroupIds());
+        assertEquals(List.of(), selection.enabledOptimizationIds());
     }
 
     @Test
-    void explicitlyDisablingTheRequestedBaselineGroupLeavesNoPatchesEnabled() {
+    void profilingIsExplicitAndIndependentFromOptimizations() {
         PatchSelection selection = PatchSelection.fromOptions(
-                "none", List.of("localization"), false);
+                "none", List.of(), true);
 
-        assertFalse(selection.enabled(PatchGroup.LOCALIZATION));
-        assertEquals(List.of("localization"),
-                selection.requestedDisabledGroupIds());
+        assertEquals(List.of(
+                        "localization", "ime", "dynfont", "profiling"),
+                selection.enabledGroupIds());
+    }
+
+    @Test
+    void independentOptimizationDoesNotEnableUnrequestedGroups() {
+        PatchSelection selection = PatchSelection.fromOptions(
+                "fast-text", List.of(), false);
+
+        assertTrue(selection.enabled(PatchGroup.FAST_TEXT));
+        assertFalse(selection.enabled(PatchGroup.FAST_PNG));
+        assertFalse(selection.enabled(PatchGroup.CACHE_MAINTENANCE));
+    }
+
+    @Test
+    void completeDependencyChainsAreAcceptedWithoutExpansion() {
+        assertEnabledOptimizations(
+                "font-line-parser,font-token-cursor",
+                "font-line-parser", "font-token-cursor");
+        assertEnabledOptimizations(
+                "fast-png,texture-pipeline,texture-cache,cache-maintenance",
+                "fast-png", "texture-cache", "texture-pipeline",
+                "cache-maintenance");
+        assertEnabledOptimizations(
+                "pcm-buffer,pcm-bulk-read,pcm-cache,cache-maintenance",
+                "pcm-buffer", "pcm-bulk-read", "pcm-cache",
+                "cache-maintenance");
+        assertEnabledOptimizations(
+                "janino-cu-dedup,janino-source-index,"
+                        + "janino-bytecode-cache,cache-maintenance",
+                "janino-cu-dedup", "janino-source-index",
+                "janino-bytecode-cache", "cache-maintenance");
+    }
+
+    @Test
+    void missingDependenciesFailInsteadOfBeingEnabledImplicitly() {
+        assertDependencyFailure("font-token-cursor",
+                "font-token-cursor -> font-line-parser：未启用");
+        assertDependencyFailure("parallel-spec-parse",
+                "parallel-spec-parse -> resource-locks：未启用");
+        assertDependencyFailure("texture-cache",
+                "texture-cache -> fast-png：未启用",
+                "texture-cache -> texture-pipeline：未启用",
+                "texture-cache -> cache-maintenance：未启用");
+        assertDependencyFailure("pcm-bulk-read",
+                "pcm-bulk-read -> pcm-buffer：未启用");
+        assertDependencyFailure("pcm-cache,pcm-bulk-read",
+                "pcm-bulk-read -> pcm-buffer：未启用",
+                "pcm-cache -> pcm-bulk-read -> pcm-buffer：未启用",
+                "pcm-cache -> cache-maintenance：未启用");
+        assertDependencyFailure("preload-path-dedup",
+                "preload-path-dedup -> preload-coordination：未启用");
+        assertDependencyFailure("parallel-image-preload",
+                "parallel-image-preload -> preload-coordination：未启用");
+        assertDependencyFailure("janino-source-index",
+                "janino-source-index -> janino-cu-dedup：未启用");
+        assertDependencyFailure(
+                "janino-bytecode-cache,janino-source-index",
+                "janino-source-index -> janino-cu-dedup：未启用",
+                "janino-bytecode-cache -> janino-source-index"
+                        + " -> janino-cu-dedup：未启用",
+                "janino-bytecode-cache -> cache-maintenance：未启用");
+    }
+
+    @Test
+    void disablingDependenciesFailsInsteadOfDisablingDependents() {
+        assertDisabledDependencyFailure("font-line-parser",
+                "font-token-cursor -> font-line-parser：被显式禁用");
+        assertDisabledDependencyFailure("resource-locks",
+                "parallel-spec-parse -> resource-locks：被显式禁用");
+        assertDisabledDependencyFailure("preload-coordination",
+                "preload-path-dedup -> preload-coordination：被显式禁用",
+                "parallel-image-preload -> preload-coordination：被显式禁用");
+        assertDisabledDependencyFailure("janino-source-index",
+                "janino-bytecode-cache -> janino-source-index：被显式禁用");
+    }
+
+    @Test
+    void disablingCacheMaintenanceReportsEveryStillEnabledDependent() {
+        IllegalArgumentException error = assertThrows(
+                IllegalArgumentException.class,
+                () -> PatchSelection.fromOptions(
+                        "all", List.of("cache-maintenance"), false));
+
+        assertMessageContains(error,
+                "texture-cache -> cache-maintenance：被显式禁用",
+                "pcm-cache -> cache-maintenance：被显式禁用",
+                "janino-bytecode-cache -> cache-maintenance：被显式禁用");
+    }
+
+    @Test
+    void explicitlyDisablingTopLevelGroupsNeverRecurses() {
+        PatchSelection selection = PatchSelection.fromOptions(
+                "all",
+                List.of("texture-cache", "pcm-cache",
+                        "janino-bytecode-cache", "cache-maintenance"),
+                false);
+
+        assertFalse(selection.enabled(PatchGroup.TEXTURE_CACHE));
+        assertFalse(selection.enabled(PatchGroup.PCM_CACHE));
+        assertFalse(selection.enabled(PatchGroup.JANINO_BYTECODE_CACHE));
+        assertFalse(selection.enabled(PatchGroup.CACHE_MAINTENANCE));
+        assertTrue(selection.enabled(PatchGroup.FAST_PNG));
+        assertTrue(selection.enabled(PatchGroup.PCM_BULK_READ));
+        assertTrue(selection.enabled(PatchGroup.JANINO_SOURCE_INDEX));
+    }
+
+    @Test
+    void baselineGroupsCanBeExplicitlyDisabledWithoutAffectingOthers() {
+        PatchSelection selection = PatchSelection.fromOptions(
+                "none", List.of("localization", "ime", "dynfont"), false);
+
         assertEquals(List.of(), selection.enabledGroupIds());
+        assertEquals(List.of("localization", "ime", "dynfont"),
+                selection.requestedDisabledGroupIds());
     }
 
     @Test
-    void rejectsOptimizationAllWhenThisProductDefinesNoOptimizationGroups() {
-        IllegalArgumentException error = assertThrows(
-                IllegalArgumentException.class,
-                () -> PatchSelection.fromOptions("all", List.of(), false));
-
-        assertTrue(error.getMessage().contains("未定义可启用的优化组"));
-    }
-
-    @Test
-    void rejectsUnknownOptimizationGroup() {
+    void rejectsDisablingAGroupThatWasNotRequested() {
         IllegalArgumentException error = assertThrows(
                 IllegalArgumentException.class,
                 () -> PatchSelection.fromOptions(
-                        "missing-optimization", List.of(), false));
+                        "fast-text", List.of("texture-cache"), false));
 
-        assertTrue(error.getMessage().contains("未知 patch 组"));
+        assertTrue(error.getMessage().contains(
+                "texture-cache' 未处于请求启用集合中"));
     }
 
     @Test
-    void rejectsProfilingWhenThisProductDefinesNoProfilingGroup() {
-        IllegalArgumentException error = assertThrows(
-                IllegalArgumentException.class,
-                () -> PatchSelection.fromOptions("none", List.of(), true));
-
-        assertTrue(error.getMessage().contains("未定义 profiling patch 组"));
-    }
-
-    @Test
-    void rejectsUnknownAndDuplicateDisabledGroups() {
-        IllegalArgumentException unknown = assertThrows(
-                IllegalArgumentException.class,
-                () -> PatchSelection.fromOptions(
-                        "none", List.of("missing-group"), false));
-        IllegalArgumentException duplicate = assertThrows(
-                IllegalArgumentException.class,
-                () -> PatchSelection.fromOptions(
-                        "none", List.of("localization", "localization"), false));
-
-        assertTrue(unknown.getMessage().contains("未知 patch 组"));
-        assertTrue(duplicate.getMessage().contains("重复禁用 patch 组"));
-    }
-
-    @Test
-    void systemPropertiesAggregateIndependentConfigurationErrors() {
+    void aggregatesIndependentSyntaxAndPropertyErrors() {
         String oldOptimizations = System.getProperty(
                 PatchSelection.OPTIMIZATIONS_PROPERTY);
         String oldDisabled = System.getProperty(
@@ -97,314 +181,90 @@ final class PatchSelectionTest {
             System.setProperty(PatchSelection.OPTIMIZATIONS_PROPERTY,
                     "all,missing-optimization");
             System.setProperty(PatchSelection.DISABLED_GROUPS_PROPERTY,
-                    "missing-disabled,localization,localization");
+                    "missing-disabled,ime,ime");
             System.setProperty(PatchSelection.PROFILING_PROPERTY, "yes");
+
             IllegalArgumentException error = assertThrows(
                     IllegalArgumentException.class,
                     PatchSelection::fromSystemProperties);
 
-            assertTrue(error.getMessage().contains("必须为 true 或 false"));
-            assertTrue(error.getMessage().contains(
-                    "all/none 不能与具体优化组混用"));
-            assertTrue(error.getMessage().contains("missing-optimization"));
-            assertTrue(error.getMessage().contains("missing-disabled"));
-            assertTrue(error.getMessage().contains(
-                    "重复禁用 patch 组: localization"));
+            assertMessageContains(error,
+                    "必须为 true 或 false",
+                    "all/none 不能与具体优化组混用",
+                    "missing-optimization",
+                    "missing-disabled",
+                    "重复禁用 patch 组: ime");
         } finally {
             restoreProperty(PatchSelection.OPTIMIZATIONS_PROPERTY,
                     oldOptimizations);
             restoreProperty(PatchSelection.DISABLED_GROUPS_PROPERTY,
                     oldDisabled);
             restoreProperty(PatchSelection.PROFILING_PROPERTY, oldProfiling);
-    */
-    void missingSystemPropertyDoesNotEnableProfiling() {
-        String previous = System.getProperty(
-                PatchSelection.PROFILING_PROPERTY);
-        try {
-            System.clearProperty(PatchSelection.PROFILING_PROPERTY);
-
-            PatchSelection selection =
-                    PatchSelection.fromSystemProperties();
-
-            assertFalse(selection.enabled(PatchGroup.PROFILING));
-            assertFalse(selection.requestedProfiling());
-        } finally {
-            if (previous == null) {
-                System.clearProperty(PatchSelection.PROFILING_PROPERTY);
-            } else {
-                System.setProperty(
-                        PatchSelection.PROFILING_PROPERTY, previous);
-            }
         }
     }
 
     @Test
-    void noneDisablesOnlyOptimizationGroups() {
+    void reportsRequestedAndEnabledConfigurationInStableEnumOrder() {
         PatchSelection selection = PatchSelection.fromOptions(
-                "none", List.of(), true);
+                "pcm-buffer,pcm-bulk-read,fast-text",
+                List.of("ime"), false);
 
-        assertTrue(selection.enabled(PatchGroup.LOCALIZATION));
-        assertTrue(selection.enabled(PatchGroup.IME));
-        assertTrue(selection.enabled(PatchGroup.DYNFONT));
-        assertTrue(selection.enabled(PatchGroup.PROFILING));
-        for (PatchGroup group : PatchGroup.optimizationGroups()) {
-            assertFalse(selection.enabled(group), group.id());
-        }
-    }
-
-    @Test
-    void selectedOptimizationIncludesItsTransitiveDependencies() {
-        PatchSelection selection = PatchSelection.fromOptions(
-                "pcm-bulk-read", List.of(), false);
-
-        assertTrue(selection.enabled(PatchGroup.PCM_BUFFER));
-        assertTrue(selection.enabled(PatchGroup.PCM_BULK_READ));
-        assertFalse(selection.enabled(PatchGroup.FAST_TEXT));
-        assertFalse(selection.enabled(PatchGroup.PROFILING));
-    }
-
-    @Test
-    void fastPngIsAnIndependentOptimizationGroup() {
-        PatchSelection selection = PatchSelection.fromOptions(
-                "fast-png", List.of(), false);
-
-        assertTrue(selection.enabled(PatchGroup.FAST_PNG));
-        assertFalse(selection.enabled(PatchGroup.TEXTURE_PIPELINE));
-        assertFalse(selection.enabled(PatchGroup.PARALLEL_IMAGE_PRELOAD));
-    }
-
-    @Test
-    void resourceStreamSafetyIsAnIndependentOptimizationGroup() {
-        PatchSelection selection = PatchSelection.fromOptions(
-                "resource-stream-safety", List.of(), false);
-
-        assertTrue(selection.enabled(
-                PatchGroup.RESOURCE_STREAM_SAFETY));
-        assertFalse(selection.enabled(PatchGroup.FAST_PNG));
-        assertFalse(selection.enabled(PatchGroup.PARALLEL_SPEC_PARSE));
-        assertFalse(selection.enabled(PatchGroup.PARALLEL_IMAGE_PRELOAD));
-    }
-
-    @Test
-    void textureCacheRequiresFastDecodeAndTextureConversion() {
-        PatchSelection selection = PatchSelection.fromOptions(
-                "texture-cache", List.of(), false);
-
-        assertTrue(selection.enabled(PatchGroup.TEXTURE_CACHE));
-        assertTrue(selection.enabled(PatchGroup.FAST_PNG));
-        assertTrue(selection.enabled(PatchGroup.TEXTURE_PIPELINE));
-        assertFalse(selection.enabled(PatchGroup.FAST_TEXT));
-
-        PatchSelection dependencyDisabled = PatchSelection.fromOptions(
-                "all", List.of("fast-png"), true);
-        assertFalse(dependencyDisabled.enabled(PatchGroup.TEXTURE_CACHE));
-    }
-
-    @Test
-    void parallelImagePreloadDependsOnResultCoordination() {
-        PatchSelection selection = PatchSelection.fromOptions(
-                "parallel-image-preload", List.of(), false);
-
-        assertTrue(selection.enabled(PatchGroup.PRELOAD_COORDINATION));
-        assertTrue(selection.enabled(PatchGroup.PARALLEL_IMAGE_PRELOAD));
-
-        PatchSelection dependencyDisabled = PatchSelection.fromOptions(
-                "all", List.of("preload-coordination"), true);
-        assertFalse(dependencyDisabled.enabled(
-                PatchGroup.PARALLEL_IMAGE_PRELOAD));
-    }
-
-    @Test
-    void parallelSpecParseDependsOnlyOnResourceLocks() {
-        PatchSelection selection = PatchSelection.fromOptions(
-                "parallel-spec-parse", List.of(), false);
-
-        assertTrue(selection.enabled(PatchGroup.RESOURCE_LOCKS));
-        assertTrue(selection.enabled(PatchGroup.PARALLEL_SPEC_PARSE));
-        assertFalse(selection.enabled(PatchGroup.FAST_TEXT));
-
-        PatchSelection dependencyDisabled = PatchSelection.fromOptions(
-                "all", List.of("resource-locks"), true);
-        assertFalse(dependencyDisabled.enabled(
-                PatchGroup.PARALLEL_SPEC_PARSE));
-    }
-
-    @Test
-    void soundDecodeWorkersAreIndependentlySelectable() {
-        PatchSelection selection = PatchSelection.fromOptions(
-                "sound-decode-workers", List.of(), false);
-
-        assertTrue(selection.enabled(
-                PatchGroup.SOUND_DECODE_WORKERS));
-        assertFalse(selection.enabled(PatchGroup.PCM_BUFFER));
-        assertFalse(selection.enabled(
-                PatchGroup.PARALLEL_IMAGE_PRELOAD));
-    }
-
-    @Test
-    void preloadPathDedupDependsOnResultCoordination() {
-        PatchSelection selection = PatchSelection.fromOptions(
-                "preload-path-dedup", List.of(), false);
-
-        assertTrue(selection.enabled(PatchGroup.PRELOAD_COORDINATION));
-        assertTrue(selection.enabled(PatchGroup.PRELOAD_PATH_DEDUP));
-        assertFalse(selection.enabled(PatchGroup.PARALLEL_IMAGE_PRELOAD));
-
-        PatchSelection dependencyDisabled = PatchSelection.fromOptions(
-                "all", List.of("preload-coordination"), true);
-        assertFalse(dependencyDisabled.enabled(
-                PatchGroup.PRELOAD_PATH_DEDUP));
-    }
-
-    @Test
-    void guiConsoleLogIsIndependentlySelectable() {
-        PatchSelection selection = PatchSelection.fromOptions(
-                "gui-console-log", List.of(), false);
-
-        assertTrue(selection.enabled(PatchGroup.GUI_CONSOLE_LOG));
-        assertFalse(selection.enabled(PatchGroup.FAST_TEXT));
-        assertFalse(selection.enabled(PatchGroup.TEXTURE_CACHE));
-    }
-
-    @Test
-    void janinoCompilationUnitDedupIsIndependentlySelectable() {
-        PatchSelection selection = PatchSelection.fromOptions(
-                "janino-cu-dedup", List.of(), false);
-
-        assertTrue(selection.enabled(PatchGroup.JANINO_CU_DEDUP));
-        assertFalse(selection.enabled(PatchGroup.FAST_TEXT));
-        assertFalse(selection.enabled(PatchGroup.PROFILING));
-    }
-
-    @Test
-    void janinoSourceIndexDependsOnCompilationUnitDedup() {
-        PatchSelection selection = PatchSelection.fromOptions(
-                "janino-source-index", List.of(), false);
-
-        assertTrue(selection.enabled(PatchGroup.JANINO_CU_DEDUP));
-        assertTrue(selection.enabled(PatchGroup.JANINO_SOURCE_INDEX));
-        assertFalse(selection.enabled(PatchGroup.FAST_TEXT));
-
-        PatchSelection dependencyDisabled = PatchSelection.fromOptions(
-                "all", List.of("janino-cu-dedup"), true);
-        assertFalse(dependencyDisabled.enabled(
-                PatchGroup.JANINO_SOURCE_INDEX));
-    }
-
-    @Test
-    void janinoBytecodeCacheDependsOnTheCompleteJaninoPipeline() {
-        PatchSelection selection = PatchSelection.fromOptions(
-                "janino-bytecode-cache", List.of(), false);
-
-        assertTrue(selection.enabled(PatchGroup.JANINO_CU_DEDUP));
-        assertTrue(selection.enabled(PatchGroup.JANINO_SOURCE_INDEX));
-        assertTrue(selection.enabled(PatchGroup.JANINO_BYTECODE_CACHE));
-
-        PatchSelection dependencyDisabled = PatchSelection.fromOptions(
-                "all", List.of("janino-source-index"), true);
-        assertFalse(dependencyDisabled.enabled(
-                PatchGroup.JANINO_BYTECODE_CACHE));
-    }
-
-    @Test
-    void fontGlyphCopyIsIndependentlySelectable() {
-        PatchSelection selection = PatchSelection.fromOptions(
-                "font-glyph-copy", List.of(), false);
-
-        assertTrue(selection.enabled(PatchGroup.FONT_GLYPH_COPY));
-        assertFalse(selection.enabled(PatchGroup.GUI_CONSOLE_LOG));
-        assertFalse(selection.enabled(PatchGroup.TEXTURE_PIPELINE));
-    }
-
-    @Test
-    void fontLineParserIsIndependentlySelectable() {
-        PatchSelection selection = PatchSelection.fromOptions(
-                "font-line-parser", List.of(), false);
-
-        assertTrue(selection.enabled(PatchGroup.FONT_LINE_PARSER));
-        assertFalse(selection.enabled(PatchGroup.FONT_GLYPH_COPY));
-        assertFalse(selection.enabled(PatchGroup.TEXTURE_PIPELINE));
-    }
-
-    @Test
-    void fontTokenCursorDependsOnTheLineParser() {
-        PatchSelection selection = PatchSelection.fromOptions(
-                "font-token-cursor", List.of(), false);
-
-        assertTrue(selection.enabled(PatchGroup.FONT_LINE_PARSER));
-        assertTrue(selection.enabled(PatchGroup.FONT_TOKEN_CURSOR));
-        assertFalse(selection.enabled(PatchGroup.FONT_GLYPH_COPY));
-
-        PatchSelection dependencyDisabled = PatchSelection.fromOptions(
-                "all", List.of("font-line-parser"), true);
-        assertFalse(dependencyDisabled.enabled(
-                PatchGroup.FONT_TOKEN_CURSOR));
-    }
-
-    @Test
-    void decodedPcmCacheRequiresTheExistingPcmPipeline() {
-        PatchSelection selection = PatchSelection.fromOptions(
-                "pcm-cache", List.of(), false);
-
-        assertTrue(selection.enabled(PatchGroup.PCM_BUFFER));
-        assertTrue(selection.enabled(PatchGroup.PCM_BULK_READ));
-        assertTrue(selection.enabled(PatchGroup.PCM_CACHE));
-        assertFalse(selection.enabled(PatchGroup.FAST_TEXT));
-
-        PatchSelection dependencyDisabled = PatchSelection.fromOptions(
-                "all", List.of("pcm-buffer"), true);
-        assertFalse(dependencyDisabled.enabled(PatchGroup.PCM_CACHE));
-    }
-
-    @Test
-    void disablingADependencyAlsoDisablesItsDependents() {
-        PatchSelection selection = PatchSelection.fromOptions(
-                "all", List.of("pcm-buffer"), true);
-
-        assertFalse(selection.enabled(PatchGroup.PCM_BUFFER));
-        assertFalse(selection.enabled(PatchGroup.PCM_BULK_READ));
-        assertTrue(selection.enabled(PatchGroup.FAST_TEXT));
-    }
-
-    @Test
-    void anyPatchGroupCanBeExplicitlyDisabled() {
-        PatchSelection selection = PatchSelection.fromOptions(
-                "all", List.of("dynfont", "preload-coordination"), true);
-
-        assertFalse(selection.enabled(PatchGroup.DYNFONT));
-        assertFalse(selection.enabled(PatchGroup.PRELOAD_COORDINATION));
-        assertTrue(selection.enabled(PatchGroup.IME));
-    }
-
-    @Test
-    void rejectsUnknownOptimizationAndDisabledGroupNames() {
-        IllegalArgumentException unknownOptimization = assertThrows(
-                IllegalArgumentException.class,
-                () -> PatchSelection.fromOptions(
-                        "fast-text,typo", List.of(), true));
-        IllegalArgumentException unknownDisabledGroup = assertThrows(
-                IllegalArgumentException.class,
-                () -> PatchSelection.fromOptions(
-                        "all", List.of("typo"), true));
-
-        assertTrue(unknownOptimization.getMessage().contains("typo"));
-        assertTrue(unknownDisabledGroup.getMessage().contains("typo"));
-    }
-
-    @Test
-    void reportsRequestedAndResolvedConfigurationInStableOrder() {
-        PatchSelection selection = PatchSelection.fromOptions(
-                "pcm-bulk-read,fast-text",
-                List.of("profiling"),
-                true);
-
-        assertIterableEquals(
-                List.of("fast-text", "pcm-buffer", "pcm-bulk-read"),
+        assertEquals("pcm-buffer,pcm-bulk-read,fast-text",
+                selection.requestedOptimizationSpec());
+        assertEquals(List.of("ime"), selection.requestedDisabledGroupIds());
+        assertEquals(List.of("fast-text", "pcm-buffer", "pcm-bulk-read"),
                 selection.enabledOptimizationIds());
-        assertIterableEquals(
-                List.of("localization", "ime", "dynfont", "fast-text",
+        assertEquals(List.of(
+                        "localization", "dynfont", "fast-text",
                         "pcm-buffer", "pcm-bulk-read"),
                 selection.enabledGroupIds());
-        assertIterableEquals(List.of("profiling"), selection.disabledGroupIds());
+    }
+
+    @Test
+    void groupIdsAndDependencyGraphAreValid() {
+        assertDoesNotThrow(PatchGroup::validateDefinitions);
+        assertEquals(PatchGroup.values().length,
+                new HashSet<>(PatchGroup.allIds()).size());
+    }
+
+    private static void assertEnabledOptimizations(
+            String spec, String... expected) {
+        PatchSelection selection = PatchSelection.fromOptions(
+                spec, List.of(), false);
+        assertEquals(List.of(expected), selection.enabledOptimizationIds());
+    }
+
+    private static void assertDependencyFailure(
+            String spec, String... expectedFragments) {
+        IllegalArgumentException error = assertThrows(
+                IllegalArgumentException.class,
+                () -> PatchSelection.fromOptions(spec, List.of(), false));
+        assertMessageContains(error, expectedFragments);
+    }
+
+    private static void assertDisabledDependencyFailure(
+            String disabled, String... expectedFragments) {
+        IllegalArgumentException error = assertThrows(
+                IllegalArgumentException.class,
+                () -> PatchSelection.fromOptions(
+                        "all", List.of(disabled), false));
+        assertMessageContains(error, expectedFragments);
+    }
+
+    private static void assertMessageContains(
+            Exception error, String... expectedFragments) {
+        for (String fragment : expectedFragments) {
+            assertTrue(error.getMessage().contains(fragment),
+                    () -> "missing fragment '" + fragment
+                            + "' in:\n" + error.getMessage());
+        }
+    }
+
+    private static void restoreProperty(String name, String value) {
+        if (value == null) {
+            System.clearProperty(name);
+        } else {
+            System.setProperty(name, value);
+        }
     }
 }
