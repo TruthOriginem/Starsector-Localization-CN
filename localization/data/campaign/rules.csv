@@ -1423,8 +1423,8 @@ TTmarketPostWeirdHMbegin,DialogOptionSelected,$option == TTmarketWeirdHullmodChe
 ""这位舰长。"" $HisOrHer眼睛看向一旁的屏幕，""... 您是 $playerLastName 对吧。我个人想欢迎您来到 $marketName。""
 
 他仓促表现出的笑容中夹杂着一丝紧张。","TTmarket_weirdMods1a:""谢谢。我能停靠港口了吗？""
-TTmarket_weirdMods1b:""何意味？""
-TTmarket_weirdMods1c:""这是要 '意思' 一下的意思？给我说个数吧。""",
+TTmarket_weirdMods1b:""这是什么意思？""
+TTmarket_weirdMods1c:""索贿？给我说个数吧。""",
 TTmarketWeirdMods1a,DialogOptionSelected,$option == TTmarket_weirdMods1a,"$option = TTmarket_weirdMods2 0
 FireBest DialogOptionSelected","""哈哈。当然，当然。不过在这之前 —— 还有件小事。不算问题，只是...""
 
