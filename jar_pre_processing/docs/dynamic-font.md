@@ -154,6 +154,7 @@ w800。`a-z` 保留原码位但复用对应 `A-Z` 的图形、bearing 与 advanc
 |---|---|
 | `CombatTargetInfoWidthPatch` | 战斗 HUD 距离/航速栏 58 → 80，避免三位数航速换行 |
 | `CombatPlayerStatusValueWidthPatch` | 左下角玩家 HUD 结构/幅能数值栏由 4 倍行高扩至 8 倍，容纳约 7 位数 |
+| `CombatCommandShipInfoValueWidthPatch` | Tab 指挥界面的结构/幅能/战备数值栏统一由 4 倍行高扩至 5 倍，保持右对齐并容纳 6 位数 |
 | `CombatHudCounterWidthPatch` | 左下角 HUD 武器备弹栏扩至 4 位、系统次数栏扩至 3 位；等量压缩左侧名称栏，保持数字右边界和后续控件位置不变 |
 | `FleetCardCrTextWidthPatch` | 舰队卡片 CR 百分比栏 26 → 40，容纳 `100%` |
 | `NewGameSeedFieldWidthPatch` | 新生涯种子框 185 → 273，“粘贴”按钮同步右移 88，保持标签左边缘不变 |
