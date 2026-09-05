@@ -8,9 +8,7 @@ import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.tree.AbstractInsnNode;
 import org.objectweb.asm.tree.ClassNode;
-import org.objectweb.asm.tree.FieldInsnNode;
 import org.objectweb.asm.tree.MethodInsnNode;
-import org.objectweb.asm.tree.MethodNode;
 
 import java.nio.file.Path;
 import java.util.zip.ZipFile;
@@ -26,7 +24,6 @@ final class RendererHighlightRegexPatchTest {
             "(Ljava/lang/String;)Ljava/util/regex/Pattern;";
     private static final String COLOR_HOOK_DESC =
             "([Ljava/awt/Color;Ljava/awt/Color;)[Ljava/awt/Color;";
-    private static final String COLOR_ARRAY_SETTER_DESC = "([Ljava/awt/Color;)V";
 
     @Test
     void redirectsBothReal098Rc8RegexFallbacksToSafeCompiler() throws Exception {
@@ -38,20 +35,25 @@ final class RendererHighlightRegexPatchTest {
         result.requireSuccess();
         assertEquals(0, countCalls(renderer, PATTERN, "compile", COMPILE_DESC));
         assertEquals(2, countCalls(renderer, HOOK, "compileFallback", COMPILE_DESC));
-        assertEquals(1, countCalls(renderer, HOOK,
+        assertEquals(0, countCalls(renderer, HOOK,
                 "normalizeHighlightColors", COLOR_HOOK_DESC));
     }
 
     @Test
-    void composesWithExactProxyRendererPatchOnReal098Rc8Renderer() throws Exception {
+    void composesWithBaselineColorAndExactProxyPatchesWithoutDuplicateNormalization() throws Exception {
         ClassNode renderer = readRealRenderer();
         PatchContext context =
                 new PatchContext("fs.common_obf.jar", renderer.name + ".class");
 
+        new RendererHighlightColorNullPatch().applyAndVerify(renderer, context).requireSuccess();
         new RendererHighlightRegexPatch().applyAndVerify(renderer, context).requireSuccess();
         new RendererDynFontPatch().applyAndVerify(renderer, context).requireSuccess();
 
-        assertEquals(1, countCalls(renderer, HOOK,
+        assertEquals(1, countCalls(renderer, renderer.name,
+                RendererHighlightColorNullPatch.INJECTED_METHOD, COLOR_HOOK_DESC));
+        assertEquals(2, countCalls(renderer, HOOK, "compileFallback", COMPILE_DESC));
+
+        assertEquals(0, countCalls(renderer, HOOK,
                 "normalizeHighlightColors", COLOR_HOOK_DESC));
     }
 
@@ -60,29 +62,6 @@ final class RendererHighlightRegexPatchTest {
         ClassNode renderer = readRealRenderer();
         MethodInsnNode compile = firstCall(renderer, PATTERN, "compile", COMPILE_DESC);
         compile.owner = "test/DriftedPattern";
-
-        assertThrows(PatchException.class, () ->
-                new RendererHighlightRegexPatch().applyAndVerify(
-                        renderer,
-                        new PatchContext("fs.common_obf.jar", renderer.name + ".class")));
-    }
-
-    @Test
-    void rejectsRendererWhenHighlightColorArrayStorageDrifts() throws Exception {
-        ClassNode renderer = readRealRenderer();
-        MethodNode setter = renderer.methods.stream()
-                .filter(method -> COLOR_ARRAY_SETTER_DESC.equals(method.desc))
-                .findFirst().orElseThrow();
-        FieldInsnNode storage = null;
-        for (AbstractInsnNode insn : setter.instructions) {
-            if (insn instanceof FieldInsnNode field
-                    && "[Ljava/awt/Color;".equals(field.desc)) {
-                storage = field;
-                break;
-            }
-        }
-        if (storage == null) throw new IllegalStateException("missing highlight color storage");
-        storage.owner = "test/DriftedRenderer";
 
         assertThrows(PatchException.class, () ->
                 new RendererHighlightRegexPatch().applyAndVerify(

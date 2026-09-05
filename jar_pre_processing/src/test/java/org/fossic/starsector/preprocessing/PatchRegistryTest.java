@@ -31,6 +31,7 @@ final class PatchRegistryTest {
             "terrain-status-bar-visible-separator",
             "top-message-highlight-after-layout",
             "campaign-entity-tooltip-highlight-after-layout",
+            "renderer-highlight-color-null",
             "tow-cable-tooltip-width",
             "codex-special-weapon-type-filter",
             "global-ime-focus-hook",
@@ -88,8 +89,8 @@ final class PatchRegistryTest {
             counts.merge(patch.group(), 1, Integer::sum);
         }
 
-        assertEquals(64, patches.size());
-        assertEquals(15, counts.get(PatchGroup.LOCALIZATION));
+        assertEquals(65, patches.size());
+        assertEquals(16, counts.get(PatchGroup.LOCALIZATION));
         assertEquals(2, counts.get(PatchGroup.IME));
         assertEquals(10, counts.get(PatchGroup.DYNFONT));
         assertEquals(2, counts.get(PatchGroup.RESOURCE_LOCKS));
@@ -132,6 +133,8 @@ final class PatchRegistryTest {
                 PatchSelection.fromOptions(
                         "none", List.of("dynfont"), false)));
 
+        assertFalse(noLocalization.contains("renderer-highlight-color-null"));
+        assertTrue(noDynfont.contains("renderer-highlight-color-null"));
         assertFalse(noLocalization.contains("tow-cable-tooltip-width"));
         assertFalse(noLocalization.contains("combat-target-info-width"));
         assertFalse(noIme.contains("global-ime-focus-hook"));
