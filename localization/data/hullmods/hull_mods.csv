@@ -167,7 +167,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 重弹集成,hbi,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.HeavyBallisticsIntegration,降低 {%s} 点所有大型实弹武器所需的装配点。,降低大型实弹武器所需装配点。,,graphics/hullmods/ballistics_integration.png
 巨型机库,vast_hangar,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.VastHangar,"该舰拥有足以支援一个小型舰队的巨型机库。
 
-若安装 改装机库，则额外再提供 {%s} 个战机甲板，并抵消其包括整备时间、舰船部署点在内的全部负面副作用。",增强 改装机库 的效果并移除所有惩罚。,,graphics/hullmods/vast_hangar.png
+若安装 机库改装，则额外再提供 {%s} 个战机甲板，并抵消其包括整备时间、舰船部署点在内的全部负面副作用。",增强 改装机库 的效果并移除所有惩罚。,,graphics/hullmods/vast_hangar.png
 坚固结构,rugged,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.RuggedConstruction,"将大多数 D-插件 的负面影响降低 {%s}。如果在战斗中被停机或摧毁，则该舰有 {%s} 的几率避免新 D-插件 的产生，且几乎总是可在战后被打捞并修复。
 
 此外，该舰用于恢复部署战备损耗以及停机修复所需的补给降低 {%s}。",降低 D-插件 的影响，且几乎总是可在战后被打捞并修复。,,graphics/hullmods/rugged_construction.png

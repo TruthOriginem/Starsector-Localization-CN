@@ -12,9 +12,8 @@
 2. **字符串解耦（jar-string-decoupler）**：调用 `vendor/jar-string-decoupler-1.0.0-all.jar`，将 `.class` 文件中硬编码的字符串常量提取并解耦，使 ParaTranz 的 jar 加载器能够读取、翻译并写回字符串，无需再手动修改字节码。该工具来自[jar-string-decoupler项目](https://github.com/jnxyp/jar-string-decoupler)。
 
 `fs.common_obf.jar` 和 `fs.sound_obf.jar` 只过第 1 阶段、不做字符串解耦。
-本分支不对它们打任何 Patch，产物即原版副本——纳入分发是为了让各变体汉化包
-能互相覆盖安装：动态字体分支会修改前者，启动优化分支会修改后者；若其余变体的
-包不含对应文件，覆盖回来时就会残留旧 hook，甚至因运行时类已被换走而启动失败。
+主分支会在前者中修复高亮颜色数组的空值崩溃；后者的产物仍是原版副本。两者都纳入
+分发，以便各变体汉化包能够互相覆盖安装，避免切换版本后残留旧 hook 或运行时类。
 
 处理完成后，结果 jar 同时写入仓库根目录的 `original/` 和 `localization/`，
 并在 `target/preprocess-work/preprocess-report.json` 生成处理报告（含输入/输出哈希、
@@ -454,6 +453,22 @@ CJK 排版路径，该路径可能在初始的零宽度布局中插入换行并�
 **修改**：把原有的 `autoSizeToWidth()` 调用块移动到高亮解析之前。原宽度公式、调用次数、
 高亮颜色、控制流、局部变量和 StackMap 均保持不变；Patch 同时校验目标 Label 字段、两项
 高亮数组和宽度计算结构，原版代码发生漂移时中止构建。
+
+---
+
+### 20. 高亮颜色数组含空项时偶发崩溃
+
+**对应 ASM Patch**：`src/main/java/org/fossic/starsector/preprocessing/patches/RendererHighlightColorNullPatch.java`
+
+**原因**：底层文本渲染器允许单项高亮颜色为空，并在部分路径中把它视为“使用默认
+高亮色”，但透明度重算的另一条路径会直接调用该空项的 `Color.getAlpha()`。模组若传入
+含空项的颜色数组，便可能在界面刷新或存档期间触发 `NullPointerException`；原版代码也
+存在同一缺陷，只是原版内容较少生成这种输入。
+
+**修改**：在底层渲染器保存颜色数组前进行规范化。空数组引用仍原样保留；不含空项的
+数组保持原对象；仅对含空项的数组创建副本，并以渲染器默认高亮色补齐，默认色意外为空
+时退回白色。补丁把自包含的私有静态规范化方法直接加入目标类，不依赖动态字体运行时，
+并严格校验目标字段、setter 和唯一数组写入结构。
 
 ```diff
 + label.autoSizeToWidth(width - margin * 2);

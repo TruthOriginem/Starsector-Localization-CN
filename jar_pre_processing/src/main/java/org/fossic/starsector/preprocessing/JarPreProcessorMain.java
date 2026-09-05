@@ -39,8 +39,8 @@ public final class JarPreProcessorMain {
             ));
         }
 
-        // 字符串解耦仅针对含翻译文本的 jar；fs.common_obf.jar 只过 patch 阶段
-        // （本分支无 patch，产物即原版副本），patched 结果直接作为最终输出。
+        // 字符串解耦仅针对含翻译文本的 jar；fs.common_obf.jar 和
+        // fs.sound_obf.jar 只过 patch 阶段，patched 结果直接作为最终输出。
         DecouplerRunner decoupler = new DecouplerRunner(workspace);
         for (String jarName : JarWorkspace.jars()) {
             System.out.println("Decoupling " + jarName);

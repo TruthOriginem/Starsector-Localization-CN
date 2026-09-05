@@ -22,6 +22,7 @@ final class PatchRegistryTest {
             "terrain-status-bar-visible-separator",
             "top-message-highlight-after-layout",
             "campaign-entity-tooltip-highlight-after-layout",
+            "renderer-highlight-color-null",
             "tow-cable-tooltip-width",
             "codex-special-weapon-type-filter");
 

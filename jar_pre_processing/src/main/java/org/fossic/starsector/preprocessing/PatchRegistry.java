@@ -7,6 +7,7 @@ import org.fossic.starsector.preprocessing.patches.CodexWeaponTypeFilterPatch;
 import org.fossic.starsector.preprocessing.patches.FactionHostilityNoManualPatch;
 import org.fossic.starsector.preprocessing.patches.IntelPutFirstTagIdPatch;
 import org.fossic.starsector.preprocessing.patches.PlanetListColumnWidthPatch;
+import org.fossic.starsector.preprocessing.patches.RendererHighlightColorNullPatch;
 import org.fossic.starsector.preprocessing.patches.SaveDateLocalePatch;
 import org.fossic.starsector.preprocessing.patches.ShipInfoSeparatorPatch;
 import org.fossic.starsector.preprocessing.patches.StarSystemMapFontPatch;
@@ -47,6 +48,7 @@ public final class PatchRegistry {
                 TerrainStatusBarSeparatorPatch::new,
                 TopMessageHighlightLayoutPatch::new,
                 CampaignEntityTooltipHighlightLayoutPatch::new,
+                RendererHighlightColorNullPatch::new,
                 TowCableTooltipWidthPatch::new,
                 CodexWeaponTypeFilterPatch::new
         );

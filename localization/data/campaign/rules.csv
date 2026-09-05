@@ -26179,7 +26179,7 @@ LOCRPwhoIsFenius2,DialogOptionSelected,$option == locrp_whoIsFenius2,FireAll LOC
 海盗终于坐了下来，冷静了一些：""那崽种让我们在这降落，说这里就能找到 Marlowe 的财宝，然后他自己从轨道上对我们的船一通猛射，之后脚底一抹油，溜了。我们一个反应堆临界了，另一个...就，直接报废了。但我这艘船的，啊，上一任主人考虑周全，给我们留了生存装备，这才让我们挨到了现在。""",,
 LOCRPwhoIsMarlowe,DialogOptionSelected,$option == locrp_whoIsMarlowe,$askedMarlowe = true,"""啊，老 Marlowe 诶！"" 对面的海盗眼里瞬间泛起泪光，""那才叫真正的海盗。他那酒量简直绝了！哦，你是不知道他多能喝。他还很能打！那个嗜血狂魔，管你过来是正面、背面还是侧面，只要抓住机会他就往死里开枪。为了能赢，他什么招都使得出来。""
 
-""其实吧，他确实不算什么好人。只要一下注，他就耍赖出千。绝了，真不知道他哪来那么多出千招数！我就跟你讲，他出千，绝了。可怎么说呢，他最后到底是坑错了人，然后嘛..."" $heOrShe一只手比成枪做了个开火的动作，嘴里配合着发出吧唧一声，用另一只手比划出那人被射了个对穿，血肉飞溅的场面，如果你没理解错这一通肢体语言的话。","locrp_whoIsMarlowe2:继续
+""其实吧，他确实不算什么好人。只要一下注赌钱，他就耍赖出千。哦，真不知道他哪来的那么多赖招！我就跟你讲，他出千，绝了。可怎么说呢，他最后到底是坑错了人，然后嘛..."" $heOrShe一只手比成枪做了个开火的动作，嘴里配合着发出吧唧一声，用另一只手比划出那人被射了个对穿，血肉飞溅的场面，如果你没理解错这一通肢体语言的话。","locrp_whoIsMarlowe2:继续
 locrp_whoIsMarlowe2a:""呕。""",
 LOCRPwhoIsMarlowe2a,DialogOptionSelected,$option == locrp_whoIsMarlowe2a,"AdjustRepActivePerson FRIENDLY 1
 $option = locrp_whoIsMarlowe2 0
