@@ -158,7 +158,11 @@ w800。`a-z` 保留原码位但复用对应 `A-Z` 的图形、bearing 与 advanc
 | `CombatHudCounterWidthPatch` | 左下角 HUD 武器备弹栏扩至 4 位、系统次数栏扩至 3 位；等量压缩左侧名称栏，保持数字右边界和后续控件位置不变 |
 | `FleetCardCrTextWidthPatch` | 舰队卡片 CR 百分比栏 26 → 40，容纳 `100%` |
 | `NewGameSeedFieldWidthPatch` | 新生涯种子框 185 → 273，“粘贴”按钮同步右移 88，保持标签左边缘不变 |
-| `RendererHighlightRegexPatch` | 模糊高亮 fallback 安全引用动态文本；空的分段颜色沿用 renderer 默认高亮色，避免 mod 弹窗在透明度计算时崩溃 |
+| `RendererHighlightRegexPatch` | 模糊高亮 fallback 安全引用动态文本；仅负责正则匹配安全性 |
+
+分段高亮颜色的空值防护由主分支的 `RendererHighlightColorNullPatch`（`localization` 组）
+统一提供，直接在 renderer 内规范化颜色数组，不依赖 `DynFontHighlightHooks`。
+禁用 `dynfont` 时仍保留这项基础防护；显式禁用 `localization` 时按组关闭。
 
 Patch 都严格匹配目标类、方法描述符和相邻字节码结构；结构或数量漂移时构建失败。
 
