@@ -1,30 +1,19 @@
-"""
-制作汉化补丁压缩包
-输出文件名格式：远行星号 {game_version} 汉化补丁 v{version} [{date}] {variant}
+"""制作汉化 ZIP 包，参数与 make_exe.py 一致。
 
-用法：
-  python -X utf8 packaging/make_zip.py build
-  python -X utf8 packaging/make_zip.py build --include-date
-  python -X utf8 packaging/make_zip.py build --no-date
-
-配置（在 packaging/.env 中设置，参考 packaging/.env.example）：
-  GAME_VERSION                 - 覆盖游戏版本号（留空则从 localization_version.json 读取）
-  APP_VERSION                  - 覆盖汉化版本号（留空则从 localization_version.json 读取）
-  INCLUDE_DATE                 - 文件名是否包含日期后缀，true/false（默认 true）
-  BRANCH_VARIANT_<分支名>      - 各分支对应的变体名，如：
-                                 BRANCH_VARIANT_master=(黑体版)
-                                 BRANCH_VARIANT_font-simsong=(宋体版)
+用法：python -X utf8 packaging/make_zip.py --package all|translation|full
+配置见 packaging/.env.example；日期默认关闭，输出名称与 EXE 仅扩展名不同。
+独立包保留 localization/；完整包将汉化覆盖到原版的 starsector-core/。
 """
 
 import argparse
 import os
-import re
 import sys
 import tempfile
 import zipfile
 from datetime import date
 from pathlib import Path
 
+from game_integrity import validate_original_game_folder
 from package_utils import load_env, load_package_metadata, read_env_bool
 
 PACKAGING_DIR = Path(__file__).parent
@@ -33,70 +22,51 @@ LOCALIZATION_DIR = REPO_ROOT / 'localization'
 OUTPUT_DIR = PACKAGING_DIR / 'Output'
 
 
-def compression_level(value: str) -> int:
-    try:
-        level = int(value)
-    except ValueError as exc:
-        raise argparse.ArgumentTypeError('压缩级别必须是 0 到 9 的整数') from exc
-    if not 0 <= level <= 9:
-        raise argparse.ArgumentTypeError('压缩级别必须是 0 到 9 的整数')
-    return level
-
-
 def create_argument_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description='生成 Starsector 中文汉化 ZIP 补丁。无参数时只显示本帮助。',
+        description='生成 Starsector 中文 ZIP 包。无参数时只显示本帮助。',
         epilog=(
             '示例：\n'
-            '  python -X utf8 packaging/make_zip.py build\n'
-            '  python -X utf8 packaging/make_zip.py build --no-date\n'
-            '  python -X utf8 packaging/make_zip.py build --compression-level 9'
+            '  python -X utf8 packaging/make_zip.py --package all\n'
+            '  python -X utf8 packaging/make_zip.py --package translation\n'
+            '  python -X utf8 packaging/make_zip.py --package full'
         ),
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
-    subparsers = parser.add_subparsers(dest='command', metavar='{build}')
-    build = subparsers.add_parser(
-        'build',
-        help='把 localization 目录打包为 ZIP',
-        description='把 localization 目录原子地写入一个 ZIP 汉化补丁。',
-    )
-    date_group = build.add_mutually_exclusive_group()
-    date_group.add_argument(
-        '--include-date',
-        dest='include_date',
-        action='store_true',
-        default=None,
-        help='文件名包含当天日期（覆盖 INCLUDE_DATE）',
-    )
-    date_group.add_argument(
-        '--no-date',
-        dest='include_date',
-        action='store_false',
-        help='文件名不包含日期（覆盖 INCLUDE_DATE）',
-    )
-    build.add_argument(
-        '--compression-level',
-        type=compression_level,
-        default=6,
-        metavar='0-9',
-        help='Deflate 压缩级别，默认 6',
+    parser.add_argument(
+        '--package',
+        choices=('all', 'translation', 'full'),
+        required=True,
+        metavar='{all,translation,full}',
+        help='all=两种安装包，translation=仅独立汉化包，full=仅含游戏完整包',
     )
     return parser
 
 
-def format_game_version(raw: str) -> str:
-    """'0.98a-RC8' -> '0.98 RC-8'"""
-    m = re.match(r'(\d+\.\d+)[a-zA-Z]?-RC(\d+)', raw)
-    if m:
-        return f'{m.group(1)} RC-{m.group(2)}'
-    return raw
+def parse_args(argv: list[str]) -> argparse.Namespace:
+    return create_argument_parser().parse_args(argv)
 
 
-def build_zip(args: argparse.Namespace) -> Path:
+def collect_entries(game_folder: Path | None) -> dict[str, Path]:
+    """合并原版与汉化路径，避免 ZIP 内出现同名条目，并保留空目录。"""
+    entries: dict[str, Path] = {}
+    if game_folder is not None:
+        for path in sorted(game_folder.rglob('*')):
+            entries[path.relative_to(game_folder).as_posix()] = path
+    prefix = 'starsector-core' if game_folder is not None else 'localization'
+    for path in sorted(LOCALIZATION_DIR.rglob('*')):
+        relative = path.relative_to(LOCALIZATION_DIR)
+        if 'rules分段' in relative.parts:
+            continue
+        entries[f'{prefix}/{relative.as_posix()}'] = path
+    return entries
+
+
+def build_zip(args: argparse.Namespace) -> list[Path]:
     load_env(PACKAGING_DIR / '.env')
     metadata = load_package_metadata(REPO_ROOT, LOCALIZATION_DIR)
     version = metadata.version
-    game_version = format_game_version(metadata.game_version)
+    game_version = metadata.game_version
     variant = metadata.variant
     if metadata.used_fallback_variant:
         print(
@@ -104,20 +74,36 @@ def build_zip(args: argparse.Namespace) -> Path:
             f'（BRANCH_VARIANT_{metadata.branch} 未配置），回退到 master 变体。'
         )
 
-    include_date = (
-        read_env_bool('INCLUDE_DATE', default=True)
-        if args.include_date is None
-        else args.include_date
-    )
-    today = date.today().strftime('%Y.%m.%d')
+    game_folder: Path | None = None
+    if args.package in ('all', 'full'):
+        original_game_folder = os.environ.get('ORIGINAL_GAME_FOLDER', '')
+        if not original_game_folder:
+            raise RuntimeError(
+                '请求生成含游戏完整包，但 .env 未配置 ORIGINAL_GAME_FOLDER。'
+            )
+        game_folder = Path(original_game_folder)
+        if not game_folder.is_dir():
+            raise RuntimeError(f'原版游戏目录不存在：{game_folder}')
+        validate_original_game_folder(game_folder, game_version)
 
-    name = f'远行星号 {game_version} 汉化补丁 v{version}'
-    if include_date:
-        name += f' {today}'
-    if variant:
-        name += f' {variant}'
-    zip_name = name + '.zip'
+    if not LOCALIZATION_DIR.is_dir():
+        raise RuntimeError(f'汉化目录不存在：{LOCALIZATION_DIR}')
+    include_date = read_env_bool('INCLUDE_DATE', default=False)
+    suffix = f' {date.today().strftime("%Y.%m.%d")}' if include_date else ''
+    packages = ('translation', 'full') if args.package == 'all' else (args.package,)
+    outputs = []
+    for package in packages:
+        label = '独立汉化包' if package == 'translation' else '中文汉化版'
+        name = (
+            f'Starsector(远行星号) {game_version} {label}{variant}'
+            f' v{version}{suffix} [远星汉化组].zip'
+        )
+        entries = collect_entries(game_folder if package == 'full' else None)
+        outputs.append(write_zip(name, entries))
+    return outputs
 
+
+def write_zip(zip_name: str, entries: dict[str, Path]) -> Path:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     output_path = OUTPUT_DIR / zip_name
 
@@ -132,13 +118,10 @@ def build_zip(args: argparse.Namespace) -> Path:
             temp_path,
             'w',
             zipfile.ZIP_DEFLATED,
-            compresslevel=args.compression_level,
+            compresslevel=6,
         ) as archive:
-            for file in sorted(LOCALIZATION_DIR.rglob('*')):
-                if file.is_file():
-                    arcname = file.relative_to(REPO_ROOT)
-                    archive.write(file, arcname)
-                    print(f'  {arcname}')
+            for arcname, file in sorted(entries.items()):
+                archive.write(file, arcname)
         os.replace(temp_path, output_path)
     except (OSError, zipfile.BadZipFile) as exc:
         if temp_path is not None:
@@ -157,9 +140,6 @@ def main(argv: list[str] | None = None) -> int:
         parser.print_help()
         return 0
     args = parser.parse_args(arguments)
-    if args.command is None:
-        parser.print_help()
-        return 0
     try:
         build_zip(args)
     except RuntimeError as exc:

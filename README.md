@@ -76,7 +76,7 @@
 | _swapLangFile.py                        | 用来更替汉化文件和英文文件的脚本。                                               |
 | _updateOriginal.py                      | TODO                                                            |
 | para_tranz/para_tranz_script.py         | 用于ParaTranz平台的数据导入导出工具，使用方法参见[本指南](docs/paratranz/tut_admin.md) |
-| packaging/make_zip.py                   | 将 `localization` 文件夹原子打包为汉化补丁 `.zip`。使用 `build` 子命令，可显式控制日期和压缩级别。 |
+| packaging/make_zip.py                   | 生成 `.zip` 独立汉化包或含游戏完整包，参数、文件命名与 `make_exe.py` 一致；完整包同样校验原版文件树。 |
 | packaging/make_exe.py                   | 调用 **Inno Setup 6** 编译 `.exe` 安装包。必须用 `--package all`、`translation` 或 `full` 显式选择类型；完整包会先校验原版游戏目录的文件树哈希，额外存档、mod、日志及任何文件改动都会中止打包。 |
 
 两个打包脚本无参数运行时只显示帮助，不会产生文件。常用调用如下；完整配置见
@@ -86,9 +86,12 @@
 python -X utf8 packaging\make_exe.py --package all
 python -X utf8 packaging\make_exe.py --package translation
 python -X utf8 packaging\make_exe.py --package full
-python -X utf8 packaging\make_zip.py build
-python -X utf8 packaging\make_zip.py build --no-date --compression-level 9
+python -X utf8 packaging\make_zip.py --package all
+python -X utf8 packaging\make_zip.py --package translation
+python -X utf8 packaging\make_zip.py --package full
 ```
+
+ZIP 独立包保留 `localization/` 顶层目录，使用时将其中内容覆盖到游戏的 `starsector-core/`；会覆盖 `settings.json`，如需保留个人设置可使用 EXE 安装器。完整 ZIP 根目录为游戏目录，汉化已合并到 `starsector-core/`，两种 ZIP 均排除 `rules分段`。日期由 `INCLUDE_DATE` 控制（默认 false），ZIP 使用 Deflate 级别 6。旧 ZIP 的 `build`、日期及压缩级别命令行参数已移除。
 
 ### 版本汉化流程
 
