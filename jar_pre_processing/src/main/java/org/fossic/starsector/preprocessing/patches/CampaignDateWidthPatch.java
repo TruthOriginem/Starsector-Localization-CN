@@ -44,13 +44,14 @@ public final class CampaignDateWidthPatch implements JarPatch {
         for (MethodNode method : classNode.methods) {
             applied += replaceDaySuffix(method);
             applied += replaceWidthBeforeSetSize(method, 60.0f, 100.0f);
-            applied += replaceWidthBeforeSetSize(method, 38.0f, 50.0f);
+            applied += replaceWidthBeforeSetSize(method, 38.0f, 55.0f);
             applied += replaceWidthBeforeSetSize(method, 35.0f, 50.0f);
             applied += replaceWidthBeforeSetSize(method, 135.0f, 150.0f);
 
             verified += countDaySuffix(method);
             verified += countWidthBeforeSetSize(method, 100.0f, 1);
-            verified += countWidthBeforeSetSize(method, 50.0f, 2);
+            verified += countWidthBeforeSetSize(method, 55.0f, 1);
+            verified += countWidthBeforeSetSize(method, 50.0f, 1);
             verified += countWidthBeforeSetSize(method, 150.0f, 1);
         }
         return PatchResult.of(id(), context.classPath(), 6, applied, Math.min(6, verified),

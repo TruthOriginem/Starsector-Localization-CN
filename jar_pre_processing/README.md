@@ -202,7 +202,7 @@ jar_pre_processing/
 
 **修改**：
 1. 日期显示末尾加上 `"日"` 字。
-2. 调整各显示元素宽度：年份/周期 60→100，月份 38→50，日期 35→50，整体组件 135→150。
+2. 调整各显示元素宽度：年份/周期 60→100，月份 38→55（较原汉化宽度 50 加宽 10%），日期 35→50，整体组件 135→150。
 
 ```diff
 - this.ø0Oo00 = new d(campaignClock.getDay() + ",", ...);
@@ -213,7 +213,7 @@ jar_pre_processing/
 - this.ø0Oo00.setSize(35.0f, ...);   // 日期
 - this.setSize(135.0f, 28.0f);       // 整体
 + this.OOOo00.setSize(100.0f, ...);
-+ this.do.this$do.setSize(50.0f, ...);
++ this.do.this$do.setSize(55.0f, ...);
 + this.ø0Oo00.setSize(50.0f, ...);
 + this.setSize(150.0f, 28.0f);
 ```
