@@ -157,6 +157,7 @@ w800。`a-z` 保留原码位但复用对应 `A-Z` 的图形、bearing 与 advanc
 | `CombatCommandShipInfoValueWidthPatch` | Tab 指挥界面的结构/幅能/战备数值栏统一由 4 倍行高扩至 5 倍，保持右对齐并容纳 6 位数 |
 | `CombatHudCounterWidthPatch` | 左下角 HUD 武器备弹栏扩至 4 位、系统次数栏扩至 3 位；等量压缩左侧名称栏，保持数字右边界和后续控件位置不变 |
 | `FleetCardCrTextWidthPatch` | 舰队卡片 CR 百分比栏 26 → 40，容纳 `100%` |
+| `CommodityQuantityWidthPatch` | 商品生产商／消费方列表的数量标签统一 24 → 28，容纳两位数加 `×`；图标区等量缩小，各行图标起点保持对齐 |
 | `NewGameSeedFieldWidthPatch` | 新生涯种子框 185 → 273，“粘贴”按钮同步右移 88，保持标签左边缘不变 |
 | `RendererHighlightRegexPatch` | 模糊高亮 fallback 安全引用动态文本；仅负责正则匹配安全性 |
 
