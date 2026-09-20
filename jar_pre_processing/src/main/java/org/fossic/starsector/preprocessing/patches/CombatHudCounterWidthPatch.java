@@ -70,6 +70,7 @@ public final class CombatHudCounterWidthPatch implements JarPatch {
 
         insertSubtract(constructor, shortenWidth, layout.nameWidthReduction());
         insertSubtract(constructor, labelWidth, layout.nameWidthReduction());
+        SingleLineLabel.beforeWidth(constructor, counterWidth);
         counterWidth.cst = layout.counterWidth();
 
         int verified = 0;

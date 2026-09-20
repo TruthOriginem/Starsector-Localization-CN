@@ -89,6 +89,7 @@ public final class CombatCommandShipInfoValueWidthPatch implements JarPatch {
         }
 
         for (ValueLayout layout : layouts) {
+            SingleLineLabel.beforeWidth(constructor, layout.width());
             layout.width().cst = PATCHED_LINE_MULTIPLIER;
         }
 

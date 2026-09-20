@@ -85,6 +85,7 @@ public final class NewGameSeedFieldWidthPatch implements JarPatch {
                     + ": Paste button placement anchor is missing or ambiguous");
         }
 
+        SingleLineLabel.beforeWidth(constructor, width);
         width.cst = PATCHED_WIDTH;
         constructor.instructions.insert(pastePlacement, new LdcInsnNode(RIGHT_SHIFT));
         constructor.instructions.insert(

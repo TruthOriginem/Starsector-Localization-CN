@@ -83,6 +83,7 @@ public final class SubmarketTitleWidthPatch implements JarPatch {
             throw failure(context, "autoSize receiver is not the title label field");
         }
 
+        SingleLineLabel.beforeFieldRead(create, field);
         InsnList width = new InsnList();
         width.add(new VarInsnNode(Opcodes.ALOAD, 0));
         width.add(new MethodInsnNode(
