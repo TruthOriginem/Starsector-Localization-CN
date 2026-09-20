@@ -120,6 +120,7 @@ $env:MAVEN_OPTS='-Dfile.encoding=UTF-8'
 
 - 不要直接编辑 `original/`、`original.old/`、`localization.old/`，除非任务明确要求。
 - 导入 ParaTranz 数据后，应检查 `localization/` 的 git diff 是否符合预期。
+- 译文修改必须在 ParaTranz 平台进行，不要直接修改本地 `para_tranz/output/` 或 `localization/` 中的译文（包括引号、空格等格式修正）。平台同步或导入遇到译文校验错误时，立即停止后续导入、导出和部署，向用户说明出错文件、词条 key、错误原因及需要在平台修改的内容；待用户在平台修正后重新下载同步。不要通过本地修正、跳过校验或修改校验规则绕过错误。
 - 向 ParaTranz 平台导入词条时必须使用安全模式，避免删除平台词条。
 - `original/` 下的 jar 已经过预处理，不等同于 `game data/` 的原始 jar。
 - 运行 Jar 预处理后，若 `localization/starfarer.api.jar` 只有 zip 元数据变化（内容与 HEAD 逐条一致），用 `git restore --source=HEAD -- localization/starfarer.api.jar` 恢复以保持 diff 干净；`starfarer_obf.jar` 需跑 ParaTranz 子命令 `2` 恢复译文后再对比。
