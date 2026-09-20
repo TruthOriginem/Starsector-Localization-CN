@@ -99,6 +99,11 @@ final class NewGameSeedFieldWidthPatchTest {
     }
 
     private static void addSeedWidthLayout(MethodNode method) {
+        method.instructions.add(new VarInsnNode(Opcodes.ALOAD, 0));
+        method.instructions.add(new VarInsnNode(Opcodes.ALOAD, 0));
+        method.instructions.add(new FieldInsnNode(Opcodes.GETFIELD, TARGET_CLASS, "seed", "Lcom/fs/starfarer/ui/new;"));
+        method.instructions.add(new MethodInsnNode(Opcodes.INVOKEVIRTUAL, TARGET_CLASS, "add",
+                "(Lcom/fs/starfarer/ui/c;)" + POSITION_DESC, false));
         method.instructions.add(new LdcInsnNode(185.0f));
         method.instructions.add(new VarInsnNode(Opcodes.FLOAD, 1));
         method.instructions.add(call("setSize", "(FF)" + POSITION_DESC));

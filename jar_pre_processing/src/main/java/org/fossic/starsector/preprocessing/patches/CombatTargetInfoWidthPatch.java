@@ -89,6 +89,7 @@ public final class CombatTargetInfoWidthPatch implements JarPatch {
         int count = 0;
         for (int i = 0; i < nodes.size(); i++) {
             if (AsmUtil.isFloatLdc(nodes.get(i), from) && hasSetSizeCallSoon(nodes, i)) {
+                SingleLineLabel.beforeWidth(method, nodes.get(i));
                 ((LdcInsnNode) nodes.get(i)).cst = to;
                 count++;
             }

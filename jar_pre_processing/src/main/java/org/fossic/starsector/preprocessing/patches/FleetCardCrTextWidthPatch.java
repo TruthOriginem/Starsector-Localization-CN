@@ -57,6 +57,7 @@ public final class FleetCardCrTextWidthPatch implements JarPatch {
                     + ": expected one " + ORIGINAL_WIDTH
                     + " CR label width anchor, found " + anchors.size());
         }
+        SingleLineLabel.beforeWidth(advance, anchors.get(0));
         anchors.get(0).cst = PATCHED_WIDTH;
 
         int verified = findWidthsBeforeSetSize(advance, PATCHED_WIDTH).size() == 1

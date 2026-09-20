@@ -152,13 +152,13 @@ w800。`a-z` 保留原码位但复用对应 `A-Z` 的图形、bearing 与 advanc
 
 | Patch | 修正 |
 |---|---|
-| `CombatTargetInfoWidthPatch` | 战斗 HUD 距离/航速栏 58 → 80，避免三位数航速换行 |
-| `CombatPlayerStatusValueWidthPatch` | 左下角玩家 HUD 结构/幅能数值栏由 4 倍行高扩至 8 倍，容纳约 7 位数 |
-| `CombatCommandShipInfoValueWidthPatch` | Tab 指挥界面的结构/幅能/战备数值栏统一由 4 倍行高扩至 5 倍，保持右对齐并容纳 6 位数 |
-| `CombatHudCounterWidthPatch` | 左下角 HUD 武器备弹栏扩至 4 位、系统次数栏扩至 3 位；等量压缩左侧名称栏，保持数字右边界和后续控件位置不变 |
-| `FleetCardCrTextWidthPatch` | 舰队卡片 CR 百分比栏 26 → 40，容纳 `100%` |
-| `CommodityQuantityWidthPatch` | 商品生产商／消费方列表的数量标签统一 24 → 28，容纳两位数加 `×`；图标区等量缩小，各行图标起点保持对齐 |
-| `NewGameSeedFieldWidthPatch` | 新生涯种子框 185 → 273，“粘贴”按钮同步右移 88，保持标签左边缘不变 |
+| `CombatTargetInfoWidthPatch` | 战斗 HUD 距离/航速栏 58 → 80，避免三位数航速换行；距离／航速标签禁用自动换行 |
+| `CombatPlayerStatusValueWidthPatch` | 左下角玩家 HUD 结构/幅能数值栏由 4 倍行高扩至 8 倍，容纳约 7 位数；两项数值禁用自动换行 |
+| `CombatCommandShipInfoValueWidthPatch` | Tab 指挥界面的结构/幅能/战备数值栏统一由 4 倍行高扩至 5 倍，保持右对齐并容纳 6 位数；四处数值布局均禁用自动换行 |
+| `CombatHudCounterWidthPatch` | 左下角 HUD 武器备弹栏扩至 4 位、系统次数栏扩至 3 位；等量压缩左侧名称栏，保持数字右边界和后续控件位置不变；仅计数标签禁用自动换行 |
+| `FleetCardCrTextWidthPatch` | 舰队卡片 CR 百分比栏 26 → 40，容纳 `100%`；CR 标签禁用自动换行 |
+| `CommodityQuantityWidthPatch` | 商品生产商／消费方列表数量栏 24 → 26；右侧商品面板普通／紧凑模式分别 32 → 34、24 → 26，容纳两位数加 `×`；图标区等量缩小 2，各行图标起点保持对齐；两处数量标签均禁用自动换行 |
+| `NewGameSeedFieldWidthPatch` | 新生涯种子框 185 → 273，“粘贴”按钮同步右移 88，保持标签左边缘不变；通过输入框 `getTextLabel()` 禁用种子文本自动换行 |
 | `RendererHighlightRegexPatch` | 模糊高亮 fallback 安全引用动态文本；仅负责正则匹配安全性 |
 
 分段高亮颜色的空值防护由主分支的 `RendererHighlightColorNullPatch`（`localization` 组）
@@ -253,3 +253,32 @@ Java `char` 查字；单页图集是硬限制；缩放变化后需要重启；�
 [SSOptimizer](https://github.com/KasumiNova/SSOptimizer)（MIT）中按缩放生成 BMFont、在
 renderer 入口替换字体实例与资源流拦截的思路。本模块为独立实现，不使用 Java Agent，也未
 复制其代码。
+
+### 防换行宽度 Patch 审计（2026-09-20）
+
+所有宽度相关 Patch 已逐项检查。保留既有宽度和定位，只对预期单行的文本调用
+`label.getRenderer().return(false)`；不修改全局渲染器，不使用反射，不调整字号。
+新补充的 7 个 Patch 共覆盖 8 个组件类、13 处布局（指挥界面战备标签有两个创建分支）。
+
+| Patch | 对应文本 | 处理 |
+| --- | --- | --- |
+| `CampaignDateWidthPatch` | 年、月、日数值 | 已有局部禁用换行，保留 |
+| `CommodityQuantityWidthPatch` | 生产商／消费方数量及侧栏商品数量 | 已有局部禁用换行，保留 |
+| `CombatTargetInfoWidthPatch` | 目标距离、航速 | 新增禁用换行 |
+| `CombatPlayerStatusValueWidthPatch` | 玩家 HUD 结构、幅能数值 | 新增禁用换行 |
+| `CombatCommandShipInfoValueWidthPatch` | 指挥界面结构、幅能、战备数值 | 四处布局均新增禁用换行 |
+| `CombatHudCounterWidthPatch` | 武器备弹、系统次数 | 两类计数新增禁用换行；名称截短逻辑不变 |
+| `FleetCardCrTextWidthPatch` | 舰队卡片 CR 百分比 | 固定宽度布局前禁用换行 |
+| `SubmarketTitleWidthPatch` | 子市场卡片标题 | `autoSizeToWidth` 前禁用换行 |
+| `NewGameSeedFieldWidthPatch` | 新生涯种子输入框文本 | 通过公开 `getTextLabel()` 禁用换行 |
+| `PlanetListColumnWidthPatch` | SL／Class 列 | 不改；调整列空间分配，表头 `o0oO.create()` 使用 `autoSize()` 按自然文本宽度排版，不把列宽传入标签的换行布局。若强行补开关需跨表格、列描述与表头组件挂接，当前无必要 |
+| `TowCableTooltipWidthPatch` | 牵引缆船插提示正文 | 不改；修复零宽度提示框，正文应按 369 宽度正常多行显示 |
+
+`TopMessageHighlightLayoutPatch` 和 `CampaignEntityTooltipHighlightLayoutPatch` 仅修复排版与
+高亮计算的先后顺序，不属于防换行加宽；它们的多行正文继续正常换行。
+
+`SingleLineLabel` 是预处理阶段的小型字节码辅助类，只接受现有宽度锚点对应的
+`this.label`／`this.input` 结构；不匹配时中止构建。它在原有布局前插入独立调用，
+保持操作数栈、原有宽度表达式、对齐和控件位置不变。
+测试覆盖真实游戏类的目标字段、调用数量、输入框公开接口、字节码往返和 JVM 加载，
+并拒绝未知组件结构。禁用换行不会自动缩小字体，已有宽度修复仍需保留。

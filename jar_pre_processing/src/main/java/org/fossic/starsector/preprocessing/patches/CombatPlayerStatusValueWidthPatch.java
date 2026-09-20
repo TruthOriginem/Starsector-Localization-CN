@@ -59,6 +59,7 @@ public final class CombatPlayerStatusValueWidthPatch implements JarPatch {
             List<LdcInsnNode> anchors = findValueWidthAnchors(
                     constructor, ORIGINAL_LINE_MULTIPLIER);
             for (LdcInsnNode anchor : anchors) {
+                SingleLineLabel.beforeWidth(constructor, anchor);
                 anchor.cst = PATCHED_LINE_MULTIPLIER;
                 applied++;
             }
