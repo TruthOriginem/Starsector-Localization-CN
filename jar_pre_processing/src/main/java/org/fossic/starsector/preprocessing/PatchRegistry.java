@@ -1,6 +1,7 @@
 package org.fossic.starsector.preprocessing;
 
 import org.fossic.starsector.preprocessing.patches.CampaignDateWidthPatch;
+import org.fossic.starsector.preprocessing.patches.CommodityQuantityWidthPatch;
 import org.fossic.starsector.preprocessing.patches.CampaignEntityTooltipHighlightLayoutPatch;
 import org.fossic.starsector.preprocessing.patches.BitmapFontLogicalNominalPatch;
 import org.fossic.starsector.preprocessing.patches.CodexStartupProfilePatch;
@@ -94,6 +95,7 @@ public final class PatchRegistry {
                 CombatCommandShipInfoValueWidthPatch::new,
                 CombatHudCounterWidthPatch::new,
                 FleetCardCrTextWidthPatch::new,
+                CommodityQuantityWidthPatch::new,
                 SubmarketTitleWidthPatch::new,
                 CampaignDateWidthPatch::new,
                 SaveDateLocalePatch::new,

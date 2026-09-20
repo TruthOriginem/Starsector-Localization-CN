@@ -21,6 +21,7 @@ final class PatchRegistryTest {
             "combat-command-ship-info-value-width",
             "combat-hud-counter-width",
             "fleet-card-cr-text-width",
+            "commodity-quantity-width",
             "submarket-title-width",
             "campaign-date-width",
             "save-date-locale",
@@ -89,10 +90,10 @@ final class PatchRegistryTest {
             counts.merge(patch.group(), 1, Integer::sum);
         }
 
-        assertEquals(65, patches.size());
+        assertEquals(66, patches.size());
         assertEquals(16, counts.get(PatchGroup.LOCALIZATION));
         assertEquals(2, counts.get(PatchGroup.IME));
-        assertEquals(10, counts.get(PatchGroup.DYNFONT));
+        assertEquals(11, counts.get(PatchGroup.DYNFONT));
         assertEquals(2, counts.get(PatchGroup.RESOURCE_LOCKS));
         assertEquals(3, counts.get(PatchGroup.RESOURCE_STREAM_SAFETY));
         assertEquals(2, counts.get(PatchGroup.PCM_BULK_READ));
