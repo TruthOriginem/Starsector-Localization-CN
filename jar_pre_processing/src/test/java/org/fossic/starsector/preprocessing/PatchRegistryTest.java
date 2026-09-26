@@ -24,6 +24,7 @@ final class PatchRegistryTest {
             "commodity-quantity-width",
             "submarket-title-width",
             "campaign-date-width",
+            "campaign-sensor-value-alignment",
             "save-date-locale",
             "planet-list-column-width",
             "star-system-map-font",
@@ -90,10 +91,10 @@ final class PatchRegistryTest {
             counts.merge(patch.group(), 1, Integer::sum);
         }
 
-        assertEquals(66, patches.size());
+        assertEquals(67, patches.size());
         assertEquals(16, counts.get(PatchGroup.LOCALIZATION));
         assertEquals(2, counts.get(PatchGroup.IME));
-        assertEquals(11, counts.get(PatchGroup.DYNFONT));
+        assertEquals(12, counts.get(PatchGroup.DYNFONT));
         assertEquals(2, counts.get(PatchGroup.RESOURCE_LOCKS));
         assertEquals(3, counts.get(PatchGroup.RESOURCE_STREAM_SAFETY));
         assertEquals(2, counts.get(PatchGroup.PCM_BULK_READ));
