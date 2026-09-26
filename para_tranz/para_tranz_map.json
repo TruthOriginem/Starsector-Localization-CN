@@ -165,6 +165,11 @@
   },
   {
     "type": "txt",
+    "path": "data/codex/spacers_manual_*.txt",
+    "combined_output": "data/codex/spacers_manual_combined.json"
+  },
+  {
+    "type": "txt",
     "path": "data/missions/*/mission_text.txt",
     "combined_output": "data/missions/mission_text_combined.json"
   },

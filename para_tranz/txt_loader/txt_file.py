@@ -61,6 +61,9 @@ class TxtFile(DataFile):
         if self._original_text is None:
             return []
         translation = self._translation_text or ''
+        # 汉化目录可能仅保留原文副本；不能将其误标为已翻译。
+        if translation == self._original_text:
+            translation = ''
         return [
             String(
                 key=self._key(),
