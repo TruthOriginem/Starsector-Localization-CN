@@ -947,16 +947,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/characters/SkillsChangeRemoveExcessOPEffect.class#\"Ships using more than their maximum ordnance points will have vents, capacitors, hullmods, and other equipment removed to bring them under the limit.\"",
         "original": "Ships using more than their maximum ordnance points will have vents, capacitors, hullmods, and other equipment removed to bring them under the limit.",
-        "translation": "所有 装配点 超出上限的舰船将会移除 {幅能寄存器、耗散通道、舰船插件以及武器，直至其处于限制之下}。",
+        "translation": "所有 装配点 超出上限的舰船将会移除 {幅能寄存器、耗散通道、船体插件以及武器，直至其处于限制之下}。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/characters/SkillsChangeRemoveExcessOPEffect.class\n常量号：0192\n原始数据：\"Ships using more than their maximum ordnance points will have vents, capacitors, hullmods, and other equipment removed to bring them under the limit.\"\n译文数据：\"所有 装配点 超出上限的舰船将会移除 {幅能寄存器、耗散通道、舰船插件以及武器，直至其处于限制之下}。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/characters/SkillsChangeRemoveExcessOPEffect.class\n常量号：0192\n原始数据：\"Ships using more than their maximum ordnance points will have vents, capacitors, hullmods, and other equipment removed to bring them under the limit.\"\n译文数据：\"所有 装配点 超出上限的舰船将会移除 {幅能寄存器、耗散通道、船体插件以及武器，直至其处于限制之下}。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/characters/SkillsChangeRemoveExcessOPEffect.class#\"vents, capacitors, hullmods, and other equipment removed\"",
         "original": "vents, capacitors, hullmods, and other equipment removed",
-        "translation": "幅能寄存器、耗散通道、舰船插件以及武器，直至其处于限制之下",
+        "translation": "幅能寄存器、耗散通道、船体插件以及武器，直至其处于限制之下",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/characters/SkillsChangeRemoveExcessOPEffect.class\n常量号：0201\n原始数据：\"vents, capacitors, hullmods, and other equipment removed\"\n译文数据：\"幅能寄存器、耗散通道、舰船插件以及武器，直至其处于限制之下\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/characters/SkillsChangeRemoveExcessOPEffect.class\n常量号：0201\n原始数据：\"vents, capacitors, hullmods, and other equipment removed\"\n译文数据：\"幅能寄存器、耗散通道、船体插件以及武器，直至其处于限制之下\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/characters/SkillsChangeRemoveSmodsEffect.class#\" OP)\"",
@@ -1080,16 +1080,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/combat/BaseHullMod.class#\"Cheap hullmods have stronger effects.\"",
         "original": "Cheap hullmods have stronger effects.",
-        "translation": "装配消耗低的舰船插件会获得更强的加成。",
+        "translation": "装配消耗低的船体插件会获得更强的加成。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/combat/BaseHullMod.class\n常量号：0313\n原始数据：\"Cheap hullmods have stronger effects.\"\n译文数据：\"装配消耗低的舰船插件会获得更强的加成。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/combat/BaseHullMod.class\n常量号：0313\n原始数据：\"Cheap hullmods have stronger effects.\"\n译文数据：\"装配消耗低的船体插件会获得更强的加成。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/combat/BaseHullMod.class#\"Cheaper hullmods have stronger effects, more expensive hullmods may have penalties.\"",
         "original": "Cheaper hullmods have stronger effects, more expensive hullmods may have penalties.",
-        "translation": "装配消耗低的舰船插件会获得更强的加成，消耗高的舰船插件可能会受到惩罚。",
+        "translation": "装配消耗低的船体插件会获得更强的加成，消耗高的船体插件可能会受到惩罚。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/combat/BaseHullMod.class\n常量号：0320\n原始数据：\"Cheaper hullmods have stronger effects, more expensive hullmods may have penalties.\"\n译文数据：\"装配消耗低的舰船插件会获得更强的加成，消耗高的舰船插件可能会受到惩罚。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/combat/BaseHullMod.class\n常量号：0320\n原始数据：\"Cheaper hullmods have stronger effects, more expensive hullmods may have penalties.\"\n译文数据：\"装配消耗低的船体插件会获得更强的加成，消耗高的船体插件可能会受到惩罚。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/combat/BaseHullMod.class#\"Requires \"",
@@ -1129,9 +1129,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/combat/BaseHullMod.class#\"This effect only applies if this hullmod is built into the hull using a story point. \"",
         "original": "This effect only applies if this hullmod is built into the hull using a story point. ",
-        "translation": "该加成只有在消耗 故事点 将舰船插件内置到船体中之后才能生效。",
+        "translation": "该加成只有在消耗 故事点 将船体插件内置到船体中之后才能生效。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/combat/BaseHullMod.class\n常量号：0322\n原始数据：\"This effect only applies if this hullmod is built into the hull using a story point. \"\n译文数据：\"该加成只有在消耗 故事点 将舰船插件内置到船体中之后才能生效。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/combat/BaseHullMod.class\n常量号：0322\n原始数据：\"This effect only applies if this hullmod is built into the hull using a story point. \"\n译文数据：\"该加成只有在消耗 故事点 将船体插件内置到船体中之后才能生效。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/combat/BaseHullMod.class#\"Using item: \"",
@@ -14821,9 +14821,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/graid/ShipWeaponsGroundRaidObjectivePluginImpl.class#\"Ship weapons, fighter LPCs, and hullmod specs. Availability is based on the \"\"",
         "original": "Ship weapons, fighter LPCs, and hullmod specs. Availability is based on the \"",
-        "translation": "舰船武器、战机 LPC，以及舰船插件的质量取决于 \"",
+        "translation": "舰船武器、战机 LPC，以及船体插件的质量取决于 \"",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/graid/ShipWeaponsGroundRaidObjectivePluginImpl.class\n常量号：0566\n原始数据：\"Ship weapons, fighter LPCs, and hullmod specs. Availability is based on the \"\"\n译文数据：\"舰船武器、战机 LPC，以及舰船插件的质量取决于 \"\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/graid/ShipWeaponsGroundRaidObjectivePluginImpl.class\n常量号：0566\n原始数据：\"Ship weapons, fighter LPCs, and hullmod specs. Availability is based on the \"\"\n译文数据：\"舰船武器、战机 LPC，以及船体插件的质量取决于 \"\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/graid/ShipWeaponsGroundRaidObjectivePluginImpl.class#\"This colony does not have heavy industry or a military presence and has no access to high-tier ship equipment.\"",
@@ -41400,9 +41400,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/DwellerCMD.class#\"Acquired hull mod: \"",
         "original": "Acquired hull mod: ",
-        "translation": "获得船体插件：{",
+        "translation": "获得船体插件：",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/DwellerCMD.class\n常量号：0257\n原始数据：\"Acquired hull mod: \"\n译文数据：\"获得船体插件：{\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/rulecmd/DwellerCMD.class\n常量号：0257\n原始数据：\"Acquired hull mod: \"\n译文数据：\"获得船体插件：\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/rulecmd/DwellerCMD.class#\"Manifestation\"",
@@ -46573,9 +46573,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/AutomatedShips$Level1.class#\"offsets built-in \"",
         "original": "offsets built-in ",
-        "translation": "用以抵消内置舰船插件降低 ",
+        "translation": "用以抵消内置船体插件降低 ",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/AutomatedShips$Level1.class\n常量号：0161\n原始数据：\"offsets built-in \"\n译文数据：\"用以抵消内置舰船插件降低 \""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/AutomatedShips$Level1.class\n常量号：0161\n原始数据：\"offsets built-in \"\n译文数据：\"用以抵消内置船体插件降低 \""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/AutomatedShips$Level1.class#\"partially \"",
@@ -47140,9 +47140,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/BestOfTheBest$Level1.class#\" more permanent hullmod* into ships\"",
         "original": " more permanent hullmod* into ships",
-        "translation": " 个最大可 内置* 舰船插件数",
+        "translation": " 个最大可 内置* 船体插件数",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/BestOfTheBest$Level1.class\n常量号：0071\n原始数据：\" more permanent hullmod* into ships\"\n译文数据：\" 个最大可 内置* 舰船插件数\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/BestOfTheBest$Level1.class\n常量号：0071\n原始数据：\" more permanent hullmod* into ships\"\n译文数据：\" 个最大可 内置* 船体插件数\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/BestOfTheBest$Level1.class#\"Able to build \"",
@@ -47371,9 +47371,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/CombatEndurance$Level2.class#\"% combat readiness degradation rate after peak performance time runs out\"",
         "original": "% combat readiness degradation rate after peak performance time runs out",
-        "translation": "% 峰值时间耗尽后整备值衰减的速度",
+        "translation": "% 峰值时间耗尽后战备值衰减的速度",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/CombatEndurance$Level2.class\n常量号：0063\n原始数据：\"% combat readiness degradation rate after peak performance time runs out\"\n译文数据：\"% 峰值时间耗尽后整备值衰减的速度\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/CombatEndurance$Level2.class\n常量号：0063\n原始数据：\"% combat readiness degradation rate after peak performance time runs out\"\n译文数据：\"% 峰值时间耗尽后战备值衰减的速度\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/CombatEndurance$Level3.class#\"% maximum combat readiness\"",
@@ -48141,9 +48141,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/FieldRepairs$Level5B.class#\"Recovered ships start with 30-40% combat readiness\"",
         "original": "Recovered ships start with 30-40% combat readiness",
-        "translation": "被打捞的舰船将立刻恢复 30-40% 的整备值",
+        "translation": "被打捞的舰船将立刻恢复 30-40% 的战备值",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/FieldRepairs$Level5B.class\n常量号：0057\n原始数据：\"Recovered ships start with 30-40% combat readiness\"\n译文数据：\"被打捞的舰船将立刻恢复 30-40% 的整备值\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/FieldRepairs$Level5B.class\n常量号：0057\n原始数据：\"Recovered ships start with 30-40% combat readiness\"\n译文数据：\"被打捞的舰船将立刻恢复 30-40% 的战备值\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/FieldRepairsScript.class#\" - repaired \":0",
@@ -49233,9 +49233,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/PhaseCorps$Level0.class#\"\n*The sensor strength of phase ships also contributes to the fleetwide stealth bonus granted by the Phase Field hullmod.\"",
         "original": "\n*The sensor strength of phase ships also contributes to the fleetwide stealth bonus granted by the Phase Field hullmod.",
-        "translation": "\n*相位场舰船插件将根据相位舰船的传感器探测强度为舰队提供隐蔽性增益，本技能带来的传感器探测强度增益也会计入其中。",
+        "translation": "\n*相位场船体插件将根据相位舰船的传感器探测强度为舰队提供隐蔽性增益，本技能带来的传感器探测强度增益也会计入其中。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/PhaseCorps$Level0.class\n常量号：0019\n原始数据：\"\n*The sensor strength of phase ships also contributes to the fleetwide stealth bonus granted by the Phase Field hullmod.\"\n译文数据：\"\n*相位场舰船插件将根据相位舰船的传感器探测强度为舰队提供隐蔽性增益，本技能带来的传感器探测强度增益也会计入其中。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/PhaseCorps$Level0.class\n常量号：0019\n原始数据：\"\n*The sensor strength of phase ships also contributes to the fleetwide stealth bonus granted by the Phase Field hullmod.\"\n译文数据：\"\n*相位场船体插件将根据相位舰船的传感器探测强度为舰队提供隐蔽性增益，本技能带来的传感器探测强度增益也会计入其中。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/PhaseCorps$Level3.class#\"+%s seconds peak operating time for combat phase ships (maximum: %s)\"",
@@ -49576,9 +49576,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/ReliabilityEngineering$Level3.class#\"% combat readiness degradation rate after peak performance time runs out\"",
         "original": "% combat readiness degradation rate after peak performance time runs out",
-        "translation": "% 峰值时间耗尽后整备值衰减的速度",
+        "translation": "% 峰值时间耗尽后战备值衰减的速度",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/ReliabilityEngineering$Level3.class\n常量号：0063\n原始数据：\"% combat readiness degradation rate after peak performance time runs out\"\n译文数据：\"% 峰值时间耗尽后整备值衰减的速度\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/ReliabilityEngineering$Level3.class\n常量号：0063\n原始数据：\"% combat readiness degradation rate after peak performance time runs out\"\n译文数据：\"% 峰值时间耗尽后战备值衰减的速度\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/ReliabilityEngineering$Level4.class#\"% maximum combat readiness\"",
@@ -49814,16 +49814,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/SpecialModifications$Level3.class#\"% bonus experience from building permanent hullmods* into ships\"",
         "original": "% bonus experience from building permanent hullmods* into ships",
-        "translation": "% 内置* 舰船插件后所获得的额外经验",
+        "translation": "% 内置* 船体插件后所获得的额外经验",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/SpecialModifications$Level3.class\n常量号：0075\n原始数据：\"% bonus experience from building permanent hullmods* into ships\"\n译文数据：\"% 内置* 舰船插件后所获得的额外经验\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/SpecialModifications$Level3.class\n常量号：0075\n原始数据：\"% bonus experience from building permanent hullmods* into ships\"\n译文数据：\"% 内置* 船体插件后所获得的额外经验\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/SpecialModifications$Level4.class#\" more permanent hullmod* into ships\"",
         "original": " more permanent hullmod* into ships",
-        "translation": " 个最大可 内置* 舰船插件数",
+        "translation": " 个最大可 内置* 船体插件数",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/SpecialModifications$Level4.class\n常量号：0071\n原始数据：\" more permanent hullmod* into ships\"\n译文数据：\" 个最大可 内置* 舰船插件数\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/SpecialModifications$Level4.class\n常量号：0071\n原始数据：\" more permanent hullmod* into ships\"\n译文数据：\" 个最大可 内置* 船体插件数\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/SpecialModifications$Level4.class#\"Able to build \"",
@@ -53503,9 +53503,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/codex/CodexDataV2$26.class#\"Hullmod\"",
         "original": "Hullmod",
-        "translation": "舰船插件",
+        "translation": "船体插件",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/codex/CodexDataV2$26.class\n常量号：0052\n原始数据：\"Hullmod\"\n译文数据：\"舰船插件\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/codex/CodexDataV2$26.class\n常量号：0052\n原始数据：\"Hullmod\"\n译文数据：\"船体插件\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/codex/CodexDataV2$27.class#\"Industry\"",
@@ -53825,9 +53825,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/codex/CodexDataV2.class#\"Hullmods\"",
         "original": "Hullmods",
-        "translation": "舰船插件",
+        "translation": "船体插件",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/codex/CodexDataV2.class\n常量号：0706\n原始数据：\"Hullmods\"\n译文数据：\"舰船插件\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/codex/CodexDataV2.class\n常量号：0706\n原始数据：\"Hullmods\"\n译文数据：\"船体插件\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/codex/CodexDataV2.class#\"Hybrid\"",
@@ -54966,9 +54966,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/dweller/ShroudedLensHullmod.class#\"The rate of fire depends on the size of the ship the hullmod is installed on. Can not be turned off during combat operatio~\"@8566aeb3",
         "original": "The rate of fire depends on the size of the ship the hullmod is installed on. Can not be turned off during combat operations, and continues to function even if the ship is venting flux or overloaded.",
-        "translation": "武器射速取决于安装该舰船插件的舰船的船体级别。该武器在战斗期间无法关闭，且即使舰船正在主动排幅或处于过载状态也仍会持续运作。",
+        "translation": "武器射速取决于安装该船体插件的舰船的船体级别。该武器在战斗期间无法关闭，且即使舰船正在主动排幅或处于过载状态也仍会持续运作。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/combat/dweller/ShroudedLensHullmod.class\n常量号：0505\n原始数据：\"The rate of fire depends on the size of the ship the hullmod is installed on. Can not be turned off during combat operations, and continues to function even if the ship is venting flux or overloaded.\"\n译文数据：\"武器射速取决于安装该舰船插件的舰船的船体级别。该武器在战斗期间无法关闭，且即使舰船正在主动排幅或处于过载状态也仍会持续运作。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/combat/dweller/ShroudedLensHullmod.class\n常量号：0505\n原始数据：\"The rate of fire depends on the size of the ship the hullmod is installed on. Can not be turned off during combat operations, and continues to function even if the ship is venting flux or overloaded.\"\n译文数据：\"武器射速取决于安装该船体插件的舰船的船体级别。该武器在战斗期间无法关闭，且即使舰船正在主动排幅或处于过载状态也仍会持续运作。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/dweller/ShroudedThunderheadHullmod.class#\"Damage\"",
@@ -55008,9 +55008,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/dweller/ShroudedThunderheadHullmod.class#\"The amount of damage and the flux generated depend on the size of the ship the hullmod is installed on. The probability of~\"@97d1dee1",
         "original": "The amount of damage and the flux generated depend on the size of the ship the hullmod is installed on. The probability of a bolt being fired increases with the number of hits landed over the previous %s seconds. Bolts are not triggered by weapons dealing soft flux damage, such as beams.",
-        "translation": "造成的伤害与产生的幅能取决于安装该舰船插件的舰船的舰船级别。触发闪电束的概率随着过去 {%s} 秒内命中次数的增加而提高。光束武器等造成软幅能伤害的武器不会触发闪电束。",
+        "translation": "造成的伤害与产生的幅能取决于安装该船体插件的舰船的舰船级别。触发闪电束的概率随着过去 {%s} 秒内命中次数的增加而提高。光束武器等造成软幅能伤害的武器不会触发闪电束。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/combat/dweller/ShroudedThunderheadHullmod.class\n常量号：0499\n原始数据：\"The amount of damage and the flux generated depend on the size of the ship the hullmod is installed on. The probability of a bolt being fired increases with the number of hits landed over the previous %s seconds. Bolts are not triggered by weapons dealing soft flux damage, such as beams.\"\n译文数据：\"造成的伤害与产生的幅能取决于安装该舰船插件的舰船的舰船级别。触发闪电束的概率随着过去 {%s} 秒内命中次数的增加而提高。光束武器等造成软幅能伤害的武器不会触发闪电束。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/combat/dweller/ShroudedThunderheadHullmod.class\n常量号：0499\n原始数据：\"The amount of damage and the flux generated depend on the size of the ship the hullmod is installed on. The probability of a bolt being fired increases with the number of hits landed over the previous %s seconds. Bolts are not triggered by weapons dealing soft flux damage, such as beams.\"\n译文数据：\"造成的伤害与产生的幅能取决于安装该船体插件的舰船的舰船级别。触发闪电束的概率随着过去 {%s} 秒内命中次数的增加而提高。光束武器等造成软幅能伤害的武器不会触发闪电束。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/threat/ConstructionSwarmSystemScript.class#\"LOW CR\"",
@@ -55092,9 +55092,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/threat/FragmentCoordinatorHullmod.class#\"Requires Fragment Swarm hullmod\"",
         "original": "Requires Fragment Swarm hullmod",
-        "translation": "需要 碎片集群 舰船插件",
+        "translation": "需要 碎片集群 船体插件",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/combat/threat/FragmentCoordinatorHullmod.class\n常量号：0129\n原始数据：\"Requires Fragment Swarm hullmod\"\n译文数据：\"需要 碎片集群 舰船插件\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/combat/threat/FragmentCoordinatorHullmod.class\n常量号：0129\n原始数据：\"Requires Fragment Swarm hullmod\"\n译文数据：\"需要 碎片集群 船体插件\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/threat/FragmentSwarmHullmod.class#\"Can not be installed on a phase ship\"",
@@ -55120,9 +55120,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/threat/FragmentSwarmHullmod.class#\"Incompatible with Shrouded hullmods\"",
         "original": "Incompatible with Shrouded hullmods",
-        "translation": "不兼容于 渊幕 舰船插件",
+        "translation": "不兼容于 渊幕 船体插件",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/combat/threat/FragmentSwarmHullmod.class\n常量号：0533\n原始数据：\"Incompatible with Shrouded hullmods\"\n译文数据：\"不兼容于 渊幕 舰船插件\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/combat/threat/FragmentSwarmHullmod.class\n常量号：0533\n原始数据：\"Incompatible with Shrouded hullmods\"\n译文数据：\"不兼容于 渊幕 船体插件\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/threat/FragmentVolleySystemScript.class#\"firing fragments\"",
@@ -55176,9 +55176,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/threat/SecondaryFabricatorHullmod.class#\"Requires Fragment Swarm hullmod\"",
         "original": "Requires Fragment Swarm hullmod",
-        "translation": "需要 碎片集群 舰船插件",
+        "translation": "需要 碎片集群 船体插件",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/combat/threat/SecondaryFabricatorHullmod.class\n常量号：0129\n原始数据：\"Requires Fragment Swarm hullmod\"\n译文数据：\"需要 碎片集群 舰船插件\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/combat/threat/SecondaryFabricatorHullmod.class\n常量号：0129\n原始数据：\"Requires Fragment Swarm hullmod\"\n译文数据：\"需要 碎片集群 船体插件\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/combat/threat/SwarmLauncherEffect.class#\"SWARMS ACTIVE: \"",
@@ -55435,9 +55435,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class#\"Since the base range is increased, this modifier - unlike most other flat modifiers - is increased by percentage modifiers from other hullmods and skills.\"",
         "original": "Since the base range is increased, this modifier - unlike most other flat modifiers - is increased by percentage modifiers from other hullmods and skills.",
-        "translation": "由于提高的是基础射程，所以本增益在绝大多数其他增益的计算之前生效，可以进一步受到其他技能和舰船插件比例修正影响。",
+        "translation": "由于提高的是基础射程，所以本增益在绝大多数其他增益的计算之前生效，可以进一步受到其他技能和船体插件比例修正影响。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class\n常量号：0291\n原始数据：\"Since the base range is increased, this modifier - unlike most other flat modifiers - is increased by percentage modifiers from other hullmods and skills.\"\n译文数据：\"由于提高的是基础射程，所以本增益在绝大多数其他增益的计算之前生效，可以进一步受到其他技能和舰船插件比例修正影响。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class\n常量号：0291\n原始数据：\"Since the base range is increased, this modifier - unlike most other flat modifiers - is increased by percentage modifiers from other hullmods and skills.\"\n译文数据：\"由于提高的是基础射程，所以本增益在绝大多数其他增益的计算之前生效，可以进一步受到其他技能和船体插件比例修正影响。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/BallisticRangefinder.class#\"Small / Medium\":0",
@@ -55771,9 +55771,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/EnergyBoltCoherer.class#\"Since the base range is increased, this range modifier - unlike most other flat modifiers in the game - is increased by percentage modifiers from other hullmods and skills.\"",
         "original": "Since the base range is increased, this range modifier - unlike most other flat modifiers in the game - is increased by percentage modifiers from other hullmods and skills.",
-        "translation": "由于提高的是基础射程，所以本增益在绝大多数其他增益的计算之前生效，可以进一步受到其他技能和舰船插件比例修正影响。",
+        "translation": "由于提高的是基础射程，所以本增益在绝大多数其他增益的计算之前生效，可以进一步受到其他技能和船体插件比例修正影响。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/hullmods/EnergyBoltCoherer.class\n常量号：0136\n原始数据：\"Since the base range is increased, this range modifier - unlike most other flat modifiers in the game - is increased by percentage modifiers from other hullmods and skills.\"\n译文数据：\"由于提高的是基础射程，所以本增益在绝大多数其他增益的计算之前生效，可以进一步受到其他技能和舰船插件比例修正影响。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/hullmods/EnergyBoltCoherer.class\n常量号：0136\n原始数据：\"Since the base range is increased, this range modifier - unlike most other flat modifiers in the game - is increased by percentage modifiers from other hullmods and skills.\"\n译文数据：\"由于提高的是基础射程，所以本增益在绝大多数其他增益的计算之前生效，可以进一步受到其他技能和船体插件比例修正影响。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/EnergyBoltCoherer.class#\"The coherence field is unstable under combat conditions, with stresses on the hull resulting in spot failures that release~\"@2db8e689",
@@ -56009,9 +56009,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"Does not affect weapons that do not use ammo or regenerate it, or are mounted in any other type of slot. Reload size is no~\"@aaf2487f",
         "original": "Does not affect weapons that do not use ammo or regenerate it, or are mounted in any other type of slot. Reload size is not affected by skills or hullmods that increase missile ammo capacity.",
-        "translation": "不影响无限备弹量或会自行恢复备弹量的武器，也不影响安装在其他类型槽位上的武器。重装数量等于基础备弹量上限，不受到增加导弹备弹量的技能或舰船插件的影响。",
+        "translation": "不影响无限备弹量或会自行恢复备弹量的武器，也不影响安装在其他类型槽位上的武器。重装数量等于基础备弹量上限，不受到增加导弹备弹量的技能或船体插件的影响。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class\n常量号：0458\n原始数据：\"Does not affect weapons that do not use ammo or regenerate it, or are mounted in any other type of slot. Reload size is not affected by skills or hullmods that increase missile ammo capacity.\"\n译文数据：\"不影响无限备弹量或会自行恢复备弹量的武器，也不影响安装在其他类型槽位上的武器。重装数量等于基础备弹量上限，不受到增加导弹备弹量的技能或舰船插件的影响。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class\n常量号：0458\n原始数据：\"Does not affect weapons that do not use ammo or regenerate it, or are mounted in any other type of slot. Reload size is not affected by skills or hullmods that increase missile ammo capacity.\"\n译文数据：\"不影响无限备弹量或会自行恢复备弹量的武器，也不影响安装在其他类型槽位上的武器。重装数量等于基础备弹量上限，不受到增加导弹备弹量的技能或船体插件的影响。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/hullmods/MissileAutoloader.class#\"No affected weapons mounted\"",
@@ -56429,9 +56429,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Spend any unused ordnance points on flux vents, capacitors, and essential hullmods.\n\nWill not make any changes to weapon l~\"@e66fcce5",
         "original": "Spend any unused ordnance points on flux vents, capacitors, and essential hullmods.\n\nWill not make any changes to weapon loadout, will not affect ship modules (if any), and will not spend any credits.",
-        "translation": "将所有未使用的装配点投入到耗散通道、幅能寄存器与其他必要的舰船插件中去。\n\n不会对武器产生任何改动，也不会影响舰船的模块 (如果有)，且不会花费任何星币。",
+        "translation": "将所有未使用的装配点投入到耗散通道、幅能寄存器与其他必要的船体插件中去。\n\n不会对武器产生任何改动，也不会影响舰船的模块 (如果有)，且不会花费任何星币。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class\n常量号：1438\n原始数据：\"Spend any unused ordnance points on flux vents, capacitors, and essential hullmods.\n\nWill not make any changes to weapon loadout, will not affect ship modules (if any), and will not spend any credits.\"\n译文数据：\"将所有未使用的装配点投入到耗散通道、幅能寄存器与其他必要的舰船插件中去。\n\n不会对武器产生任何改动，也不会影响舰船的模块 (如果有)，且不会花费任何星币。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class\n常量号：1438\n原始数据：\"Spend any unused ordnance points on flux vents, capacitors, and essential hullmods.\n\nWill not make any changes to weapon loadout, will not affect ship modules (if any), and will not spend any credits.\"\n译文数据：\"将所有未使用的装配点投入到耗散通道、幅能寄存器与其他必要的船体插件中去。\n\n不会对武器产生任何改动，也不会影响舰船的模块 (如果有)，且不会花费任何星币。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Spend free OP\"",
@@ -56485,9 +56485,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class#\"Use weapons better than the ones specified in the goal variant, if there are ordnance points left to mount them.\n\nWill add~\"@c0a6932e",
         "original": "Use weapons better than the ones specified in the goal variant, if there are ordnance points left to mount them.\n\nWill add flux vents and capacitors up to the number specified in the goal variant first, then upgrade weapons, and then add more vents and some common hullmods.\n\nLeaving some unspent ordnance points in a goal variant can help take advantage of this option.",
-        "translation": "尽可能使用比目标装配中的武器更强大的武器，如果剩余装配点充足。\n\n将优先满足目标装配的耗散通道与幅能寄存器数量要求，然后才升级武器，最后补充更多耗散通道与其他舰船插件。\n\n在目标装配中预留一些冗余装配点可以让这个选项表现地更好。",
+        "translation": "尽可能使用比目标装配中的武器更强大的武器，如果剩余装配点充足。\n\n将优先满足目标装配的耗散通道与幅能寄存器数量要求，然后才升级武器，最后补充更多耗散通道与其他船体插件。\n\n在目标装配中预留一些冗余装配点可以让这个选项表现地更好。",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class\n常量号：0314\n原始数据：\"Use weapons better than the ones specified in the goal variant, if there are ordnance points left to mount them.\n\nWill add flux vents and capacitors up to the number specified in the goal variant first, then upgrade weapons, and then add more vents and some common hullmods.\n\nLeaving some unspent ordnance points in a goal variant can help take advantage of this option.\"\n译文数据：\"尽可能使用比目标装配中的武器更强大的武器，如果剩余装配点充足。\n\n将优先满足目标装配的耗散通道与幅能寄存器数量要求，然后才升级武器，最后补充更多耗散通道与其他舰船插件。\n\n在目标装配中预留一些冗余装配点可以让这个选项表现地更好。\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/plugins/impl/CoreAutofitPlugin.class\n常量号：0314\n原始数据：\"Use weapons better than the ones specified in the goal variant, if there are ordnance points left to mount them.\n\nWill add flux vents and capacitors up to the number specified in the goal variant first, then upgrade weapons, and then add more vents and some common hullmods.\n\nLeaving some unspent ordnance points in a goal variant can help take advantage of this option.\"\n译文数据：\"尽可能使用比目标装配中的武器更强大的武器，如果剩余装配点充足。\n\n将优先满足目标装配的耗散通道与幅能寄存器数量要求，然后才升级武器，最后补充更多耗散通道与其他船体插件。\n\n在目标装配中预留一些冗余装配点可以让这个选项表现地更好。\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/util/Misc.class#\" Survey Data\"",

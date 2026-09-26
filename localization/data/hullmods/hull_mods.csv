@@ -160,7 +160,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 
 但提高 {%s} 传感器截面。",降低整支舰队的燃料消耗。,,graphics/hullmods/augmented_drive_field.png
 地面支援,ground_support,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.GroundSupport,针对地面防御工事配备了密接支援武器和专用反制措施。提高 {%s} 劫掠殖民地的有效强度，该加成不会超过携带陆战队员的总人数。,提高劫掠的效率。,,graphics/hullmods/ground_support.png
-进阶地面支援,advanced_ground_support,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.AdvancedGroundSupport,针对地面防御工事配备了密接支援武器和专用反制措施。提高 {%s} 劫掠殖民地的有效强度，该加成不会超过携带陆战队员的总人数。,提高劫掠的效率。,,graphics/hullmods/ground_support_adv.png
+进阶地面支援,advanced_ground_support,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.AdvancedGroundSupport,针对地面防御工事配备的密接支援武器和专用反制措施。提高 {%s} 劫掠殖民地的有效强度，该加成不会超过携带陆战队员的总人数。,提高劫掠的效率。,,graphics/hullmods/ground_support_adv.png
 精密机械,delicate,,,,,,,,TRUE,,0,0,0,0,data.hullmods.DelicateMachinery,"舰载系统需要巨量维护，且无法长期在战斗下维持良好运转。
 
 当峰值时间耗尽后，战备值 (CR) 衰减的速率提高 {%s}。",提高峰值时间耗尽后的战备值 (CR) 衰减速率。,,graphics/hullmods/delicate_machinery.png
@@ -204,12 +204,12 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 取消后退,do_not_back_off,,,,,,,,TRUE,TRUE,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DoNotBackOff,设置 DO_NOT_BACK_OFF AI 行为,,,
 ,,,,,,,,,,,,,,,,,,,
 # threat stuff,,,,,,,,,,,,,,,,,,,
-威胁船体,threat_hullmod,,,,"codex_require_related, threat",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.combat.threat.ThreatHullmod,用于管理 威胁 舰船特殊属性的隐藏式舰船插件。描述信息通过脚本生成。,,,graphics/hullmods/the_threat.png
+威胁船体,threat_hullmod,,,,"codex_require_related, threat",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.combat.threat.ThreatHullmod,用于管理 威胁 舰船特殊属性的隐藏式船体插件。描述信息通过脚本生成。,,,graphics/hullmods/the_threat.png
 碎片集群,fragment_swarm,,,,"codex_unlockable, fragment, no_drop_salvage","武器, 特殊",30000,,,,6,12,18,30,com.fs.starfarer.api.impl.combat.threat.FragmentSwarmHullmod,"一群 威胁 碎片在舰船周围涌动，为碎片武器提供补给。
 
 碎片基准数量为 {%s}/{%s}/{%s}/{%s}，碎片补充频率为每秒 {%s}/{%s}/{%s}/{%s} 次，具体数值取决于船体级别。
 
-此舰船插件是碎片武器正常运作的必要条件；若未安装该插件，或碎片集群中碎片数量不足，将无法启用碎片武器。",一群 威胁 碎片在舰船周围涌动。,战备值 (CR) 上限降低 {%s}，维护成本提高 {%s}。,graphics/hullmods/fragment_swarm.png
+此船体插件是碎片武器正常运作的必要条件；若未安装该插件，或碎片集群中碎片数量不足，将无法启用碎片武器。",一群 威胁 碎片在舰船周围涌动。,战备值 (CR) 上限降低 {%s}，维护成本提高 {%s}。,graphics/hullmods/fragment_swarm.png
 加装仿织器,secondary_fabricator,,,,"codex_unlockable, fragment, no_drop_salvage","武器, 特殊",20000,,,,3,6,9,15,com.fs.starfarer.api.impl.combat.threat.SecondaryFabricatorHullmod,碎片整备速度提高 {%s}。,提高碎片整备速度,碎片整备速度进一步提高 {%s}。,graphics/hullmods/secondary_fabricator.png
 碎片协调器,fragment_coordinator,,,,"codex_unlockable, fragment, no_drop_salvage","武器, 特殊",15000,,,,3,6,9,15,com.fs.starfarer.api.impl.combat.threat.FragmentCoordinatorHullmod,将舰船碎片集群的最大数量提升 {%s}。,提升船碎片集群的规模。,将舰船碎片集群的最大数量进一步提升 {%s}。,graphics/hullmods/fragment_coordinator.png
 ,,,,,,,,,,,,,,,,,,,

@@ -121,7 +121,7 @@
     {
         "key": "hull_mods.csv#advanced_ground_support$desc",
         "original": "Close support weapons and counter-measures for ground defenses. Increases the effective strength of planetary raids by %s, up to the total number of marines in the fleet.",
-        "translation": "针对地面防御工事配备了密接支援武器和专用反制措施。提高 {%s} 劫掠殖民地的有效强度，该加成不会超过携带陆战队员的总人数。",
+        "translation": "针对地面防御工事配备的密接支援武器和专用反制措施。提高 {%s} 劫掠殖民地的有效强度，该加成不会超过携带陆战队员的总人数。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：hull_mods.csv\n行：00088"
     },
@@ -1633,7 +1633,7 @@
     {
         "key": "hull_mods.csv#fragment_swarm$desc",
         "original": "A swarm of Threat fragments roils around the ship, providing a regenerating supply of fragments for fragment-based weapons.\n\nThe base number of fragments is %s/%s/%s/%s, and replacement fragments are launched %s/%s/%s/%s times a second, depending on hull size.\n\nThis hullmod is required for fragment weapons to function, if the hullmod is not present or there are not enough fragments in the swarm, fragment weapons will be disabled.",
-        "translation": "一群 威胁 碎片在舰船周围涌动，为碎片武器提供补给。\n\n碎片基准数量为 {%s}/{%s}/{%s}/{%s}，碎片补充频率为每秒 {%s}/{%s}/{%s}/{%s} 次，具体数值取决于船体级别。\n\n此舰船插件是碎片武器正常运作的必要条件；若未安装该插件，或碎片集群中碎片数量不足，将无法启用碎片武器。",
+        "translation": "一群 威胁 碎片在舰船周围涌动，为碎片武器提供补给。\n\n碎片基准数量为 {%s}/{%s}/{%s}/{%s}，碎片补充频率为每秒 {%s}/{%s}/{%s}/{%s} 次，具体数值取决于船体级别。\n\n此船体插件是碎片武器正常运作的必要条件；若未安装该插件，或碎片集群中碎片数量不足，将无法启用碎片武器。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：hull_mods.csv\n行：00115"
     },
@@ -3082,7 +3082,7 @@
     {
         "key": "hull_mods.csv#threat_hullmod$desc",
         "original": "Hidden hullmod for managing the special properties of Threat ships. Description created in script.",
-        "translation": "用于管理 威胁 舰船特殊属性的隐藏式舰船插件。描述信息通过脚本生成。",
+        "translation": "用于管理 威胁 舰船特殊属性的隐藏式船体插件。描述信息通过脚本生成。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：hull_mods.csv\n行：00114"
     },

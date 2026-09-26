@@ -6934,7 +6934,7 @@ $market.lkePlayerKidnapped",,你瞟到你的随身武器落在地上，旁边就
 lkeSedgeEndShootB2,LKESedgeShootOptions,"$market.talkingOutside
 !$market.lkePlayerKidnapped",,,lke_sedgeEndShoot:从背后向 Sedge 射击,
 lkeSedgeEndShootC,LKESedgeShootOptions,"$market.talkingOutside
-$market.lkePlayerKidnapped",,,lke_sedgeEndGuardShoot:让你的一名警卫在他背后射击他,
+$market.lkePlayerKidnapped",,,lke_sedgeEndGuardShoot:让你的一名警卫从他背后射击他,
 lkeSedgeEndBarShoot,DialogOptionSelected,$option == lke_sedgeEndBarShoot,"Call $global.lke_ref shootEm
 Call $global.lke_ref endMusic","你拔枪射击。枪声在狭小的空间中回荡，尖锐的声音震得瓷器嗡嗡作响。
 
@@ -6977,9 +6977,9 @@ $player.ethosRuthless+++","他无神的双眼凝视着半透明的雨篷，雨�
 他在笑。他死了。",lke_sedgeEndShootEnd:离开,
 lkeSedgeEndShootEnd,DialogOptionSelected,$option == lke_sedgeEndShootEnd,"$player.luddicAttitudePather--
 AdjustRep luddic_path HOSTILE -50
-FireAll PopulateOptions","你留下他的尸体回到了你的$shipOrFleet里。左径会处理好这一切。
+FireAll PopulateOptions","你丢下了他的尸体，径直返回了你的$shipOrFleet。左径自然知道该怎么处理。
 
-他们肯定会来找你的麻烦，如果他们之前没有来找过的话。",,
+他们肯定会来追寻你的下落了，即便他们此前还没动手的话。",,
 lkeSedgeEnd2Inside,DialogOptionSelected,"$option == lke_sedgeEnd2
 $market.talkingAtBar","Call $global.lke_ref resumeMusic
 FireAll MostLuddicEthosRefresh
@@ -34075,11 +34075,11 @@ anhDiktatPatrolBluff,DialogOptionSelected,$option == anh_diktatPatrolBluff,,"""�
 anhDiktatPatrolBluff1,DialogOptionSelected,$option == anh_diktatPatrolBluff1,,"$hisOrHer终于愤怒地爆发了。""这是我听过最扯淡的 ——"" 
 
 一声哔声从对面舰桥的通讯台传来，打断了$hisOrHer正要开始的长篇大论。辛达强权的军官死死瞪了你一眼，掉头跟几个手下低声交谈了几句；你的通讯军官试探性地点了点头。",anh_diktatPatrolBluff2:继续,
-anhDiktatPatrolBluff2,DialogOptionSelected,$option == anh_diktatPatrolBluff2,,"你机警的舰桥船员自然已替你准备了一张假的乘客名单。
+anhDiktatPatrolBluff2,DialogOptionSelected,$option == anh_diktatPatrolBluff2,,"你反应机敏的舰桥组员早就理所当然地替你提交了一份伪造的载员名册。
 
-就是为了应付当前这种情况，你的船员们早已准备好了一份看似合理却具有误导性的预制船员与乘客名单。是要你足够快，足够自信地把它交出去，搞不好能糊弄过去。
+正是为了应付这种情况，他们理所当然地预先备好了一份看似合理却极具误导性的载员名册。只要你不带半点犹豫、自信满满地把它递交上去，搞不好真能糊弄过去。
 
-你以圣人般的耐心等待着，看着这位辛达强权士官让其手下以强权最新的搜索和校对引擎审核你提供的假名单。",anh_patrolBluffEnd:继续,
+你心怀圣人般的沉稳耐心等待，看着这位辛达强权军官吩咐手下用强权最新的检索与核验算法去过一遍那份伪造的舱单。",anh_patrolBluffEnd:继续,
 anhDiktatPatrolMixedEnd,DialogOptionSelected,$option == anh_diktatPatrolOldMan,"AddTextSmall ""把可能是 Volturn 反抗军的人员交给了 辛达强权"" highlight
 Call $entity.anh_ref makeUnimportant
 $entity.ignorePlayerCommRequests = true
@@ -34780,13 +34780,13 @@ PlayerHasCargo planetkiller
 $kpNumGifts < 5
 $kpNumGifts++",,,kpPlanetkiller:一台 人之领 时代的行星杀手。,
 kpPlanetkillerSel,DialogOptionSelected,$option == kpPlanetkiller,"$kpTriedPK = true
-SetEnabled kpPlanetkiller false","Cydonia 满脸犹豫地先偷偷瞥了一眼 Kanta，才将目光重新转向你。见他嘴巴微张，但你却听到了一个铿锵作响的声音有节奏地传了过来。那声音逐渐清晰响亮，形成了笑声的模样。
+SetEnabled kpPlanetkiller false","Cydonia 神色不宁，匆匆地瞥了 Kanta 一眼，才把视线重新投回你身上。见他嘴巴微张，你听到的却是有节奏的咯吱声在铿锵作响。异响愈发高亢洪亮。竟是笑声。
 
-Kanta 站起身，一边大笑着。笑声随即戛然而止，她那双漆黑的眼睛就这么直勾勾地盯着你。Cydonia 和整座王庭都陷入了死尸般的沉默，等待着她那难以琢磨的裁定。
+Kanta 霍然起身，放声大笑。随即笑声戛然而止，那双漆黑的眼睛死死地盯住了你。Cydonia 与王庭众人瞬间陷入死寂，静候她喜怒无常的裁决落下。
 
-""你献上来的是个美丽的东西。"" 她洪亮的合成音向你袭来，""但掠食者的武器没有毁天灭地的必要。留着它吧。然后被那些在梦中幻想着能掌控死亡的小人们追遍英仙座旋臂的每一个角落。""
+""你献上的东西着实美妙。"" 她洪亮的合成音向你袭来，""但掠食者的武器可用不着毁天灭地。留着它。尔后就等着被那些追逐死亡痴梦的卑鄙小人，一路追杀到英仙座旋臂的尽头去吧。""
 
-Cydonia ，以及整座王庭，在她的裁定下鞠躬接旨；交头接耳之声不绝于耳。",,
+Cydonia 和王庭众人皆躬身认同她的裁定；但交头接耳之声不绝于耳。",,
 kpPristineForge,KPFindGifts,"PlayerHasCargo pristine_nanoforge
 $kpNumGifts < 5
 $kpNumGifts++",,,kpPristineForge:一台完好的 人之领 时代纳米锻炉，真正的稀罕之物。,

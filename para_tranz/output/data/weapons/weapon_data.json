@@ -569,7 +569,7 @@
     {
         "key": "weapon_data.csv#devouring_swarm$customPrimary",
         "original": "Requires the %s hullmod and at least %s fragments per shot. Deals no damage vs shields.",
-        "translation": "需要 {%s} 舰船插件，每次射击至少消耗 {%s} 碎片。对护盾{不造成伤害}。",
+        "translation": "需要 {%s} 船体插件，每次射击至少消耗 {%s} 碎片。对护盾{不造成伤害}。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：weapon_data.csv\n行：00129"
     },
@@ -1038,8 +1038,8 @@
     {
         "key": "weapon_data.csv#gravitonbeam$customAncillary",
         "original": "Gravitic effects slow and push target off-course. The effect is minor and is most noticeable vs fighters and missiles.",
-        "translation": "引力效应会使目标减速并偏离航向。这种效应的影响力度并不大，但对战斗机和导弹而言依然较为明显。",
-        "stage": 5,
+        "translation": "引力效应会使目标减速并偏离航向。这种效应的影响力度并不大，但对战机和导弹而言依然较为明显。",
+        "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：weapon_data.csv\n行：00087"
     },
     {
@@ -1794,7 +1794,7 @@
     {
         "key": "weapon_data.csv#kinetic_fragments$customPrimary",
         "original": "Requires the %s hullmod and uses %s fragments per shot. Secondary fragments deal %s kinetic damage per impact.",
-        "translation": "需要 {%s} 舰船插件，每次射击消耗{%s}碎片。次级碎片每次撞击造成{%s}动能伤害。",
+        "translation": "需要 {%s} 船体插件，每次射击消耗{%s}碎片。次级碎片每次撞击造成{%s}动能伤害。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：weapon_data.csv\n行：00127"
     },
@@ -3075,7 +3075,7 @@
     {
         "key": "weapon_data.csv#seeker_fragment$customPrimary",
         "original": "Requires the %s hullmod and uses %s fragments per shot.",
-        "translation": "需要 {%s} 舰船插件，每次射击消耗 {%s} 碎片。",
+        "translation": "需要 {%s} 船体插件，每次射击消耗 {%s} 碎片。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：weapon_data.csv\n行：00126"
     },
@@ -3229,7 +3229,7 @@
     {
         "key": "weapon_data.csv#swarm_launcher$customPrimary",
         "original": "Requires the %s hullmod and uses %s fragments per swarm launched. Can control up to %s swarms concurrently, but will wait to launch new swarms until the existing ones are depleted.",
-        "translation": "需要 {%s} 舰船插件，每次射击消耗 {%s} 碎片。可至多同时维持 {%s} 个集群，只有在当前集群低于此上限时才能发射新的集群。",
+        "translation": "需要 {%s} 船体插件，每次射击消耗 {%s} 碎片。可至多同时维持 {%s} 个集群，只有在当前集群低于此上限时才能发射新的集群。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：weapon_data.csv\n行：00125"
     },
@@ -3467,7 +3467,7 @@
     {
         "key": "weapon_data.csv#unstable_fragment$customPrimary",
         "original": "Requires the %s hullmod and uses %s fragment per shot. Unguided after a brief initial aiming stage.",
-        "translation": "需要 {%s} 舰船插件，每次射击消耗 {%s} 碎片。初始瞄准阶段结束后失去制导能力。",
+        "translation": "需要 {%s} 船体插件，每次射击消耗 {%s} 碎片。初始瞄准阶段结束后失去制导能力。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：weapon_data.csv\n行：00128"
     },
@@ -3586,7 +3586,7 @@
     {
         "key": "weapon_data.csv#voltaic_discharge$customPrimary",
         "original": "Requires the %s hullmod and at least %s active fragments. Fires a barrage of EMP arcs at nearby targets. The arcs always hit.",
-        "translation": "需要 {%s} 舰船插件，拥有 {%s} 碎片时才可启用。对附近的目标产生大量必定会命中的 EMP 电弧。",
+        "translation": "需要 {%s} 船体插件，拥有 {%s} 碎片时才可启用。对附近的目标产生大量必定会命中的 EMP 电弧。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：weapon_data.csv\n行：00130"
     },
