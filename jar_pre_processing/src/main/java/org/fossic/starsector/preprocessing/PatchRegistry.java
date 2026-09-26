@@ -1,6 +1,7 @@
 package org.fossic.starsector.preprocessing;
 
 import org.fossic.starsector.preprocessing.patches.CampaignDateWidthPatch;
+import org.fossic.starsector.preprocessing.patches.CampaignSensorValueAlignmentPatch;
 import org.fossic.starsector.preprocessing.patches.CommodityQuantityWidthPatch;
 import org.fossic.starsector.preprocessing.patches.CampaignEntityTooltipHighlightLayoutPatch;
 import org.fossic.starsector.preprocessing.patches.BitmapFontLogicalNominalPatch;
@@ -98,6 +99,7 @@ public final class PatchRegistry {
                 CommodityQuantityWidthPatch::new,
                 SubmarketTitleWidthPatch::new,
                 CampaignDateWidthPatch::new,
+                CampaignSensorValueAlignmentPatch::new,
                 SaveDateLocalePatch::new,
                 PlanetListColumnWidthPatch::new,
                 StarSystemMapFontPatch::new,
