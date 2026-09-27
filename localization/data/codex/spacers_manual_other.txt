@@ -1,24 +1,24 @@
-CATEGORY gm_cat_other|generic|Other|game_mechanics
+CATEGORY gm_cat_other|generic|其它|game_mechanics
 
 CURRENT_CATEGORY gm_cat_other
 
-BEGIN gm_techs|Tech types
-The tech levels of certain ships - {{Low Tech}}, {{Midline}}, and {{High Tech}} - are not a progression of quality. Rather, they are just different design approaches to combat, and one is not better than the others. More powerful ships usually have a higher deployment point cost.
+BEGIN gm_techs|设计类型
+舰船有三种不同的设计类型：{{低端技术}}、{{中线技术}} 和 {{高新技术}}。这三种设计类型并非质量上的递进关系，它们只是不同的战斗设计理念，彼此并无优劣之分。更强大的舰船通常具有更高的部署点花费。
 
 COLOR Low Tech
-==Low Tech==
+==低端技术==
 RESET
-Heavily armored, slow, using a mix of ballistic and missile weapons. Weaker shields. {{rel:codex_system_burndrive|Burn Drive}}, a common low-tech ship system, provides only forward mobility and allows the ships to chase down and punish faster enemies, but is not much help in pulling back from a bad situation. Larger ships are often vulnerable to being flanked and require support to be effective.
+装甲厚重、航速缓慢，主要装备实弹武器与导弹武器；护盾较弱。{{rel:codex_system_burndrive|烈焰驱动器}} 是一种常见的低端技术舰船战术系统，仅提供向前机动能力，使舰船能追击并压制航速更快的敌人，但在战况不利时难以撤退。大型舰船往往易遭侧翼包抄，需依赖护航单位才能发挥作用。
 
 COLOR Midline
-==Midline==
+==中线技术==
 RESET
-Generally average armor, shields, and mobility. Using a mix of ballistic, energy, and missile weapons. The energy weapons are mostly limited to beams - while the ships can mount other energy weapons, they usually lack the flux dissipation required to make good use of them. Often depend on specialized ships working together to maximize their effectiveness.
+装甲、护盾与机动性普遍处于中等水平；武器配置涵盖实弹、能量与导弹三类。能量武器以光束为主——尽管舰船可搭载其他类型能量武器，但通常因幅能耗散能力不足，而无法高效地发挥作用。常需依靠专业化舰船协同作战，才能最大化整体作战效能。
 
 COLOR High Tech
-==High Tech==
+==高新技术==
 RESET
-Fast, with strong shields and weaker armor. Using a mix of energy and missile weapons, with sufficient flux dissipation to support a wider range of energies. The energy weapons tend to have shorter range, which is compensated by the higher top speed of the ships. Often rely on hit and run tactics and in general thrive in a more chaotic battle environment.
+航速快、护盾强、装甲较弱；武器以能量武器与导弹为主，并具备充足的幅能耗散能力，可支持更广泛类型的能量武器。能量武器射程普遍较短，但凭借舰船更高的最高航速得以弥补。通常采用打了就跑战术，在更为混乱的战场环境中表现相对出色。
 
-All of these are generalizations, and exceptions exist.  
+以上仅为一般性概括，实际存在诸多例外。  
 END
