@@ -48071,9 +48071,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/EvasiveAction$Level3.class#\"+50% armor for damage reduction calculation only\"",
         "original": "+50% armor for damage reduction calculation only",
-        "translation": "+50% 在进行装甲减伤计算时提高的装甲值",
+        "translation": "+50% 在进行装甲伤害减免计算时提高的装甲值",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/EvasiveAction$Level3.class\n常量号：0048\n原始数据：\"+50% armor for damage reduction calculation only\"\n译文数据：\"+50% 在进行装甲减伤计算时提高的装甲值\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/EvasiveAction$Level3.class\n常量号：0048\n原始数据：\"+50% armor for damage reduction calculation only\"\n译文数据：\"+50% 在进行装甲伤害减免计算时提高的装甲值\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/FieldModulation$Level1.class#\"% damage taken by shields\"",
@@ -48715,9 +48715,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/ImpactMitigation$Level5.class#\"Maximum damage reduction by armor increased from 85% to 90%\"",
         "original": "Maximum damage reduction by armor increased from 85% to 90%",
-        "translation": "装甲的最大伤害减免从 85% 提高至 90%",
+        "translation": "最大装甲伤害减免从 85% 提高至 90%",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/ImpactMitigation$Level5.class\n常量号：0052\n原始数据：\"Maximum damage reduction by armor increased from 85% to 90%\"\n译文数据：\"装甲的最大伤害减免从 85% 提高至 90%\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/ImpactMitigation$Level5.class\n常量号：0052\n原始数据：\"Maximum damage reduction by armor increased from 85% to 90%\"\n译文数据：\"最大装甲伤害减免从 85% 提高至 90%\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/ImpactMitigation$Level6.class#\"% for destroyers and frigates\"",
@@ -48736,9 +48736,9 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/ImpactMitigation$Level7.class#\"% hit strength vs armor, for damage reduction calculation only\"",
         "original": "% hit strength vs armor, for damage reduction calculation only",
-        "translation": "% 穿甲力 (仅用于计算伤害减免) ",
+        "translation": "% 穿甲力 (仅用于装甲伤害减免计算) ",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/ImpactMitigation$Level7.class\n常量号：0062\n原始数据：\"% hit strength vs armor, for damage reduction calculation only\"\n译文数据：\"% 穿甲力 (仅用于计算伤害减免) \""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/ImpactMitigation$Level7.class\n常量号：0062\n原始数据：\"% hit strength vs armor, for damage reduction calculation only\"\n译文数据：\"% 穿甲力 (仅用于装甲伤害减免计算) \""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/IndustrialPlanning$Level1.class#\" more unit of all the commodities they produce\"",
@@ -49394,16 +49394,16 @@
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/PolarizedArmor$Level1.class#\"Maximum damage reduction by armor increased from 85% to 90%\"",
         "original": "Maximum damage reduction by armor increased from 85% to 90%",
-        "translation": "装甲的最大伤害减免从 85% 提高至 90%",
+        "translation": "最大装甲伤害减免从 85% 提高至 90%",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/PolarizedArmor$Level1.class\n常量号：0048\n原始数据：\"Maximum damage reduction by armor increased from 85% to 90%\"\n译文数据：\"装甲的最大伤害减免从 85% 提高至 90%\""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/PolarizedArmor$Level1.class\n常量号：0048\n原始数据：\"Maximum damage reduction by armor increased from 85% to 90%\"\n译文数据：\"最大装甲伤害减免从 85% 提高至 90%\""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/PolarizedArmor$Level2.class#\"% armor for damage reduction calculation only, based on current hard flux level*\"",
         "original": "% armor for damage reduction calculation only, based on current hard flux level*",
-        "translation": "% 装甲值 (仅用于计算伤害减免*) ",
+        "translation": "% 装甲值 (仅用于装甲伤害减免计算*) ",
         "stage": 1,
-        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/PolarizedArmor$Level2.class\n常量号：0088\n原始数据：\"% armor for damage reduction calculation only, based on current hard flux level*\"\n译文数据：\"% 装甲值 (仅用于计算伤害减免*) \""
+        "context": "版本：0.98-RC8 词条格式：v2\n文件：starfarer.api.jar\n类：com/fs/starfarer/api/impl/campaign/skills/PolarizedArmor$Level2.class\n常量号：0088\n原始数据：\"% armor for damage reduction calculation only, based on current hard flux level*\"\n译文数据：\"% 装甲值 (仅用于装甲伤害减免计算*) \""
     },
     {
         "key": "starfarer.api.jar:com/fs/starfarer/api/impl/campaign/skills/PolarizedArmor$Level2.class#\"Up to +\"",

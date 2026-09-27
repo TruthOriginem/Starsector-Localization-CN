@@ -2,7 +2,7 @@
     {
         "key": "hull_mods.csv#ablative_armor$desc",
         "original": "An ancient design intended to stop micro-meteorites through sheer volume of material in place, before the advent of \"spaced\" armor.\n\nReduces the effective armor strength for the damage reduction calculation to %s of its actual value. However, ships of this design tend to carry extremely heavy armor.",
-        "translation": "在现代 \"间隙\" 装甲出现之前的一种古老设计，通过纯粹堆砌大量材料以抵御微陨石。\n\n将减少伤害计算的有效装甲强度降低到其实际值的 {%s}。不过，采用这种设计的舰船往往拥有极其厚重的装甲。",
+        "translation": "在现代 \"间隙\" 装甲出现之前的一种古老设计，通过纯粹堆砌大量材料以抵御微陨石。\n\n将装甲伤害减免计算的有效装甲强度降低到其实际值的 {%s}。不过，采用这种设计的舰船往往拥有极其厚重的装甲。",
         "stage": 1,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：hull_mods.csv\n行：00098"
     },
@@ -16,7 +16,7 @@
     {
         "key": "hull_mods.csv#ablative_armor$short",
         "original": "Reduces damage reduction by armor.",
-        "translation": "降低装甲的减伤效果。",
+        "translation": "降低装甲伤害减免效果。",
         "stage": 5,
         "context": "版本：0.98-RC8 词条格式：v2\n文件：hull_mods.csv\n行：00098"
     },

@@ -182,7 +182,7 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 感灵吸引场,high_frequency_attractor,,,,codex_require_related,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.combat.BaseHullMod,一种实验性改造，使得该舰所搭载的裂隙核心可以裹挟能量读数更高的光尘。,发射更强力的光尘。,,graphics/hullmods/high_volition_attractor.png
 烧蚀装甲,ablative_armor,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.AblativeArmor,"在现代 ""间隙"" 装甲出现之前的一种古老设计，通过纯粹堆砌大量材料以抵御微陨石。
 
-将减少伤害计算的有效装甲强度降低到其实际值的 {%s}。不过，采用这种设计的舰船往往拥有极其厚重的装甲。",降低装甲的减伤效果。,,graphics/hullmods/ablative_armor.png
+将装甲伤害减免计算的有效装甲强度降低到其实际值的 {%s}。不过，采用这种设计的舰船往往拥有极其厚重的装甲。",降低装甲伤害减免效果。,,graphics/hullmods/ablative_armor.png
 分布式火控系统,distributed_fire_control,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DistributedFireControl,大部分导致武器系统离线的伤害都发生在外部控制线路和供电线路上。这艘船的武器系统设计布局具备更强的独立运作能力，降低 {%s} 武器系统所受伤害，并降低 {%s} 全船受到的 EMP 损害。,增加武器耐久度并降低受到的 EMP 损害。,,graphics/hullmods/distributed_fire_control2.png
 货舱改装,converted_bay,1,,,,,,,TRUE,,0,0,0,0,data.hullmods.ConvertedCargoBay,该舰的标准货舱已被改装成临时战机甲板。不可靠的简易制造车间只能产出劣质的战机底盘，且大量内部构件都具有轻微缺陷，导致战机航速降低 {%s} 且所受伤害提高 {%s}。,用货舱临时改装成的战机甲板。,,graphics/hullmods/converted_hangar.png
 忠诚改装,andrada_mods,,,,"dmod, codex_require_related",,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.AndradaMods,"在检查早期原型船体时，最高元首批评了人员过道中裸露的管线，指出它们必然会在战斗中对英勇而忠诚的船员们构成危险。
