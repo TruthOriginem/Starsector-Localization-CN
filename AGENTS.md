@@ -109,11 +109,20 @@ ruff format .
 - Git commit message 使用中文。
 - 提交前尽量运行相关脚本或最小验证；涉及汉化结果时，最好复制到游戏目录测试启动。
 
+### 上游更新后的 rebase 与 Jar 重建
+
+- 当上游分支有更新时，`startup-optimization` 等包含独立 Jar 补丁或运行时注入的派生分支在 rebase 后，必须基于更新后的源码和当前分支配置重新运行完整 Jar 生成管线，再导入译文。即使 rebase 没有冲突，或上游只更新版本号，也不能直接沿用旧 Jar 作为本次发布产物。
+- 对使用 `build.py` 的分支，在 `jar_pre_processing/` 下运行 `python -X utf8 build.py jar`，完成 Java 预处理、运行时注入及产物分发；随后在仓库根运行 `python -X utf8 para_tranz/para_tranz_script.py 2` 恢复译文。其他派生分支按其 `jar_pre_processing/README.md` 执行对应的完整 Jar 管线。原生库是否重编按其源码变更决定，不能省略 Jar 管线步骤。
+- 禁止手动合并 Jar 修改，包括逐个合并、替换或移植 `.class` / ZIP 条目，以及拼接上下游 Jar 内容。发生 Jar 二进制冲突时，应先解决源码、配置和映射冲突，再由完整管线重新生成最终 Jar；不能把 Git 某一侧的旧 Jar 直接当作最终产物。
+- 重建后检查产物与译文差异并完成相关验证，再提交生成结果、部署或打包。译文导入若校验失败，立即停止后续流程，待平台修正后重新同步，不得本地绕过校验。
+
 ## 分支和字体
 
 - `master`：主分支，正文字体为兰亭黑体。
 - `font-simsong`：宋体字体分支。
 - `font-zongyi`：综艺体字体分支。
+- `startup-optimization`：包含动态字体、中文输入法及启动优化的实验分支。
+- `legacy-097-miko`、`legacy-097-miko-j23`：**仅存档**的 0.97 历史分支，不再维护。今后“所有分支”等批量操作默认不包含这两个分支，包括同步、版本更新、rebase / merge、重建、测试、推送、部署和打包；只有用户明确点名要求处理历史分支时才操作。
 
 ## 参考链接
 
