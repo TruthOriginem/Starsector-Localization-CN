@@ -18,6 +18,7 @@ public enum PatchGroup {
     FONT_TOKEN_CURSOR("font-token-cursor", PatchGroupKind.OPTIMIZATION),
     FAST_TEXT("fast-text", PatchGroupKind.OPTIMIZATION),
     RESOURCE_LOCKS("resource-locks", PatchGroupKind.OPTIMIZATION),
+    RESOURCE_CONTEXT("resource-context", PatchGroupKind.OPTIMIZATION),
     RESOURCE_STREAM_SAFETY(
             "resource-stream-safety", PatchGroupKind.OPTIMIZATION),
     FAST_PNG("fast-png", PatchGroupKind.OPTIMIZATION),

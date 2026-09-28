@@ -47,6 +47,8 @@ final class PatchRegistryTest {
             "font-definition-cursor-parser",
             "resource-leaf-remove-global-monitor",
             "resource-lookup-short-monitor",
+            "resource-context-isolation",
+            "settings-resource-context",
             "resource-loader-partial-stream-safety",
             "fast-png-image-decode",
             "renderer-highlight-safe-regex",
@@ -91,11 +93,12 @@ final class PatchRegistryTest {
             counts.merge(patch.group(), 1, Integer::sum);
         }
 
-        assertEquals(67, patches.size());
+        assertEquals(69, patches.size());
         assertEquals(16, counts.get(PatchGroup.LOCALIZATION));
         assertEquals(2, counts.get(PatchGroup.IME));
         assertEquals(12, counts.get(PatchGroup.DYNFONT));
         assertEquals(2, counts.get(PatchGroup.RESOURCE_LOCKS));
+        assertEquals(2, counts.get(PatchGroup.RESOURCE_CONTEXT));
         assertEquals(3, counts.get(PatchGroup.RESOURCE_STREAM_SAFETY));
         assertEquals(2, counts.get(PatchGroup.PCM_BULK_READ));
         assertEquals(1, counts.get(PatchGroup.CACHE_MAINTENANCE));
@@ -164,6 +167,20 @@ final class PatchRegistryTest {
         assertTrue(actual.contains("ogg-pcm-decoder-access"));
         assertTrue(actual.contains("ogg-pcm-bulk-preload-read"));
         assertFalse(actual.contains("fast-png-image-decode"));
+    }
+
+    @Test
+    void resourceContextGroupIsIndependentAndAtomic() {
+        List<String> independent = ids(PatchRegistry.patches(
+                PatchSelection.fromOptions("resource-context", List.of(), false)));
+        assertTrue(independent.contains("resource-context-isolation"));
+        assertTrue(independent.contains("settings-resource-context"));
+        assertFalse(independent.contains("resource-lookup-short-monitor"));
+        List<String> disabled = ids(PatchRegistry.patches(
+                PatchSelection.fromOptions("all", List.of("resource-context"), false)));
+        assertFalse(disabled.contains("resource-context-isolation"));
+        assertFalse(disabled.contains("settings-resource-context"));
+        assertTrue(disabled.contains("resource-lookup-short-monitor"));
     }
 
     @Test

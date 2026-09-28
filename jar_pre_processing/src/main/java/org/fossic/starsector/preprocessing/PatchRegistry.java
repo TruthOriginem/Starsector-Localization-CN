@@ -48,6 +48,8 @@ import org.fossic.starsector.preprocessing.patches.RendererHighlightRegexPatch;
 import org.fossic.starsector.preprocessing.patches.ResourceLeafSynchronizationPatch;
 import org.fossic.starsector.preprocessing.patches.ResourceLoaderStreamSafetyPatch;
 import org.fossic.starsector.preprocessing.patches.ResourceLookupSynchronizationPatch;
+import org.fossic.starsector.preprocessing.patches.ResourceContextIsolationPatch;
+import org.fossic.starsector.preprocessing.patches.SettingsResourceContextPatch;
 import org.fossic.starsector.preprocessing.patches.ResourceStablePartitionPatch;
 import org.fossic.starsector.preprocessing.patches.ResourceLoaderStartupProfilePatch;
 import org.fossic.starsector.preprocessing.patches.ResourceStreamDynFontPatch;
@@ -122,6 +124,8 @@ public final class PatchRegistry {
                 FontDefinitionCursorPatch::new,
                 ResourceLeafSynchronizationPatch::new,
                 ResourceLookupSynchronizationPatch::new,
+                ResourceContextIsolationPatch::new,
+                SettingsResourceContextPatch::new,
                 ResourceLoaderStreamSafetyPatch::new,
                 FastPngDecoderPatch::new,
                 RendererHighlightRegexPatch::new,
