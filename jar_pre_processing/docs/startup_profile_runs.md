@@ -1,10 +1,88 @@
 # Starsector 启动 Profiling 基准与运行对比
 
-更新时间：2026-08-02。优化取舍、语义边界和兼容结论见
+更新时间：2026-09-27。优化取舍、语义边界和兼容结论见
 [startup_optimization.md](startup_optimization.md)。本文只保留可横向比较的基准、
 关键 A/B 和当前产物定位；逐次开发过程、重复测试流水和逐轮 JFR 链接已省略。
 
-## 固定测量约定
+## 2026-09-27：资源线程上下文隔离
+
+本次修复及兼容边界见 [资源读取线程上下文隔离](resource_context_isolation.md)。
+这里使用当前测试目录的 **30 个 MOD**，与下面历史 11-mod 基准不可直接比较。
+沿用 `D:\Game\098-RC8-CHS\vmparams` 的 JVM 参数及 8 GiB 堆，`javaw.exe`、
+`launchDirect=true`、1280×720、声音开启；统一使用 UTF-8、同一首帧测量和退出观察器。
+两版逐 entry 比较，只有 `com/fs/util/C.class` 和 `StarfarerSettings$1.class` 不同。
+
+对照关闭 `resource-context`，修复版开启；其他优化均开启，两者均注入 profiling。
+预热后采用 A/B 与 B/A 交错。首组与 Maven 编译重叠，保留为稳定性样本但排除性能统计；
+最后追加一组，两侧再次预热后测量，最终有效 **6 对**。单侧稳定性轮次不用于性能结论。
+
+| 有效对 | 对照 JVM→标题首帧 / s | 修复 JVM→标题首帧 / s |
+| --- | ---: | ---: |
+| 2 | 17.843 | 17.442 |
+| 3 | 17.478 | 17.687 |
+| 4 | 17.470 | 17.804 |
+| 5 | 18.387 | 18.022 |
+| 6 | 18.547 | 18.155 |
+| 7 | 18.287 | 18.182 |
+| 中位数 | **18.065** | **17.913** |
+| CV | 2.39% | 1.48% |
+
+中位数差 **−0.152 s（−0.84%）**，逐对差值中位数 −0.235 s；没有观察到性能回退，
+也不将小于样本波动的差异认定为确定的加速收益。
+两侧暖缓存诊断一致：纹理命中 4,652 项，PCM 命中 1,567 项；Janino 环境指纹失败后
+两侧均回退实时编译。因此本结论不代表 Janino 字节码缓存成功命中时的其他环境。
+
+修复版完成 **20 次暖缓存 + 10 次独立空优化缓存** 启动，全部到达真正标题首帧，
+再由测试观察器延迟 3 秒执行 JVM 正常退出。空缓存每轮使用新的纹理、PCM、Janino
+目录，确认发生缓存重建；没有清空操作系统文件缓存或动态字体缓存，不称为冷机启动。
+各轮日志均为相同的既有 **60 ERROR、0 fatal**，逐条归一化比较未发现新增错误。
+有限启动次数本身不能证明消灭所有偶发问题；确定性回归与压力测试是并发修复的主要证据。
+
+自动化验证：Java **494 项，491 通过、3 跳过、零失败**；跳过项均因 Windows 无创建
+符号链接权限，与这次修复无关。Python 构建测试 **10/10** 通过。实际游戏资源类的
+32,000 次交错读取、异常清理、线程/实例隔离、短锁 I/O 和普通读取分配测试均通过。
+
+另外，`--optimizations resource-context --profiling on` 的独立组合完成一次实际启动，
+验证修复与原版资源锁兼容；最终 `--profiling off` 发布 JAR 也完成标题首帧与正常退出
+检查。发布版本的首帧由临时 Java agent 观察 `Display.update(true)` 后的回调，
+仅在测试进程内挂接，既不改写磁盘 JAR，也不加入发布包。含预热、对照与这两次检查在内，
+本轮共 **44 次实际游戏启动成功**，错误内容均与对照一致。
+
+整包 `-Xverify:all` 在对照与修复版都被原游戏 `new.super` 混淆名称拒绝；不计作
+游戏启动回归，新增补丁使用正常 JVM 校验的 class fixture 验证。测试准备阶段有一次
+漏加 `launchDirect` 停留在启动器，已终止且排除；以上统计仅包括实际加载游戏的样本。
+
+原始证据目录：`%TEMP%/starsector-resource-validation-20260927/`，包含每轮命令、
+启用 MOD 清单、JAR 哈希、原始日志、首帧时间线、构建报告、JUnit 报告、A/B 排除说明、
+`performance-summary.json` 与复跑脚本。发布 JAR 由完整流水线生成，再导入译文；
+关闭 profiling，与修复前内容相比仅两个目标 class 和新增 `ResourceReadContext.class`
+有变化，API JAR 内容没有变化。
+
+### 发布产物读档、操作与另存回归
+
+在 `D:\Game\098-RC8-CHS` 使用上述无 profiling 的发布产物和 30 个 MOD，完成桌面实际操作：
+读取最新 `jn_xyp` 存档，打开舰队、货舱及星系地图，短暂恢复战役运行并观察航行与日期推进；
+随后暂停，选择空白槽另存为 `startup-fix-validation-20260927`，返回主菜单重新读取，
+再次打开舰队界面确认响应正常。原存档目录时间及各文件大小未变，未覆盖原存档。
+
+新存档为 `saves/save_jnxyp_978479604204017662`，`campaign.xml` 与 `descriptor.xml`
+均可完整解析；保存日志到达“完成保存”。三个部署 JAR 的 SHA-256 与 `localization/`
+一致。本轮未挂接首帧观察 agent，不计入上述 44 次自动启动样本或性能统计。
+
+本次启动记录 **57 ERROR、0 FATAL**，ERROR 内容均已见于对照：40 条武器表缺项、
+14 条船体表缺项、1 条 `tooltip_followersDiplomacy` 字符串缺失、1 条 FOB 势力关系
+缺少 `factionid`、1 条以 ERROR 级别输出的“确定获取到了前置mod”提示。
+读档、操作和保存阶段没有 ERROR/FATAL，但并非没有异常：两次读档共出现 8 次
+MagicLib 对 `doom_GC.variant`、`conquest_GC.variant` 的 WARN，附带
+`Weapon spec [null] not found!` 异常；另有 MOD 配置缺项警告。启动还存在 MIRV
+数据缺少 `damage`、在线版本检查失败等 WARN。它们未阻止本次流程完成，不能据此
+声称所有 MOD 功能正常，也未将读档 WARN 与只到标题的对照日志作等价比较。
+本轮覆盖基本战役与存取档，不包括战斗或长时间游玩。
+
+证据目录：`%TEMP%/starsector-save-validation-20260927/`，包含原始日志、启动命令、
+操作前存档清单及 `gameplay-file-log-verification.json`。
+
+## 历史固定测量约定
 
 - 游戏 `0.98a-RC8`，分支 `startup-optimization`；`javaw.exe` 直启、1280×720、
   `startSound=true`、`-Xms8g -Xmx8g -XX:+AlwaysPreTouch`。

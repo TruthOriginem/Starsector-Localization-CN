@@ -1,6 +1,6 @@
 # Starsector 启动优化
 
-更新时间：2026-08-31。本文是启动优化的维护入口，说明总体设计、决策方法、
+更新时间：2026-09-27。本文是启动优化的维护入口，说明总体设计、决策方法、
 优化取舍、兼容边界和后续工作。可复算的基准与关键 A/B 数据单独保存在
 [startup_profile_runs.md](startup_profile_runs.md)。原始游戏版本为 `0.98a-RC8`，实验实现位于
 `startup-optimization` 分支。
@@ -129,7 +129,7 @@ O11 结果通知已撤回，主线程恢复原版 10 ms 轮询；O16/O27 仅保�
 
 | 类别 | 功能组 | 对应项 |
 | --- | --- | --- |
-| 文本/资源 | `fast-text`、`resource-locks`、`resource-stream-safety`、`resource-partition` | O01–O03、O10 及流所有权加固 |
+| 文本/资源 | `fast-text`、`resource-locks`、`resource-context`、`resource-stream-safety`、`resource-partition` | O01–O03、O10、线程上下文隔离及流所有权加固 |
 | CSV/Rules/spec | `csv-error-formatting`、`csv-merge-linear`、`rules-id-index`、`parallel-spec-parse` | O04、O05、O34、O35 |
 | 图像/纹理 | `fast-png`、`texture-pipeline`、`texture-cache` | O06、O08、O18、O20 |
 | 声音 | `pcm-buffer`、`pcm-bulk-read`、`pcm-cache`、`sound-decode-workers` | O14、O15、O21、O22 |
@@ -147,6 +147,11 @@ O11 结果通知已撤回，主线程恢复原版 10 ms 轮询；O16/O27 仅保�
 `janino-bytecode-cache → janino-source-index → janino-cu-dedup`，且
 `janino-bytecode-cache → cache-maintenance`。
 `localization`、`ime`、`dynfont` 和 `profiling` 是可开关的非优化组。
+
+`resource-context` 无依赖，可与原版资源锁或短锁组合；默认随 `all` 启用。
+它隔离 SettingsAPI 的一次性 MOD 选择和跳过 MOD 状态，修复跨线程误消费导致的
+文件存在却报缺失、或读取同名错误文件的问题。根因、兼容边界和验证记录见
+[资源读取线程上下文隔离](resource_context_isolation.md)。
 
 例如只启用纹理缓存必须显式写出完整集合：
 
