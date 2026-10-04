@@ -47,6 +47,7 @@ final class RendererHighlightRegexPatchTest {
 
         new RendererHighlightColorNullPatch().applyAndVerify(renderer, context).requireSuccess();
         new RendererHighlightRegexPatch().applyAndVerify(renderer, context).requireSuccess();
+        new RendererCjkHighlightPatch().applyAndVerify(renderer, context).requireSuccess();
         new RendererDynFontPatch().applyAndVerify(renderer, context).requireSuccess();
 
         assertEquals(1, countCalls(renderer, renderer.name,
