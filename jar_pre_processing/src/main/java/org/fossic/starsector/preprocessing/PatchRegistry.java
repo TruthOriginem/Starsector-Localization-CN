@@ -45,6 +45,7 @@ import org.fossic.starsector.preprocessing.patches.PreloadResultCoordinatorPatch
 import org.fossic.starsector.preprocessing.patches.RendererHighlightColorNullPatch;
 import org.fossic.starsector.preprocessing.patches.RendererDynFontPatch;
 import org.fossic.starsector.preprocessing.patches.RendererHighlightRegexPatch;
+import org.fossic.starsector.preprocessing.patches.RendererCjkHighlightPatch;
 import org.fossic.starsector.preprocessing.patches.ResourceLeafSynchronizationPatch;
 import org.fossic.starsector.preprocessing.patches.ResourceLoaderStreamSafetyPatch;
 import org.fossic.starsector.preprocessing.patches.ResourceLookupSynchronizationPatch;
@@ -129,6 +130,7 @@ public final class PatchRegistry {
                 ResourceLoaderStreamSafetyPatch::new,
                 FastPngDecoderPatch::new,
                 RendererHighlightRegexPatch::new,
+                RendererCjkHighlightPatch::new,
                 RendererDynFontPatch::new,
                 LoadingUtilsTextReadPatch::new,
                 CsvLazyErrorFormattingPatch::new,

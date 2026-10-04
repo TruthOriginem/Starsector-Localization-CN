@@ -52,6 +52,7 @@ final class PatchRegistryTest {
             "resource-loader-partial-stream-safety",
             "fast-png-image-decode",
             "renderer-highlight-safe-regex",
+            "renderer-cjk-highlight",
             "renderer-dynfont-exact-proxy",
             "loading-utils-fast-text-reader",
             "csv-lazy-error-row-formatting",
@@ -93,10 +94,10 @@ final class PatchRegistryTest {
             counts.merge(patch.group(), 1, Integer::sum);
         }
 
-        assertEquals(69, patches.size());
+        assertEquals(70, patches.size());
         assertEquals(16, counts.get(PatchGroup.LOCALIZATION));
         assertEquals(2, counts.get(PatchGroup.IME));
-        assertEquals(12, counts.get(PatchGroup.DYNFONT));
+        assertEquals(13, counts.get(PatchGroup.DYNFONT));
         assertEquals(2, counts.get(PatchGroup.RESOURCE_LOCKS));
         assertEquals(2, counts.get(PatchGroup.RESOURCE_CONTEXT));
         assertEquals(3, counts.get(PatchGroup.RESOURCE_STREAM_SAFETY));
@@ -146,6 +147,7 @@ final class PatchRegistryTest {
         assertFalse(noIme.contains("textfield-ime-hook"));
         assertFalse(noDynfont.contains("resource-stream-dynfont-hook"));
         assertFalse(noDynfont.contains("renderer-dynfont-exact-proxy"));
+        assertFalse(noDynfont.contains("renderer-cjk-highlight"));
         assertTrue(noLocalization.contains("global-ime-focus-hook"));
         assertTrue(noIme.contains("tow-cable-tooltip-width"));
         assertTrue(noDynfont.contains("global-ime-focus-hook"));
