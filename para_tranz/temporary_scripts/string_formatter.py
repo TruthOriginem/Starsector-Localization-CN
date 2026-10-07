@@ -169,6 +169,9 @@ def apply_rules(rules: List[Tuple[str, str]], file: ParatranzJsonFile) -> None:
 
 
 if __name__ == '__main__':
+    from para_tranz.utils.util import configure_logging
+
+    configure_logging()
     pattern = input("请输入要处理的文件名匹配模式(默认为 '**/*')：")
     files = load_json_files(pattern if pattern else '**/*')
     for file in files:

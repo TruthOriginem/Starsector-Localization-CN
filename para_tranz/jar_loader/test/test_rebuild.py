@@ -2,13 +2,13 @@ import json
 import tempfile
 import unittest
 import zipfile
-from contextlib import ExitStack
 from dataclasses import asdict
 from pathlib import Path
 from unittest.mock import patch
 
 from para_tranz.jar_loader import jar_file
-from para_tranz.utils import util
+from para_tranz.jar_loader.constant_table import ConstantTable
+from para_tranz.jar_loader.test.fixtures import make_class
 from para_tranz.utils.mapping import JarMapItem
 
 
@@ -16,19 +16,15 @@ class RebuildJarTest(unittest.TestCase):
     def setUp(self) -> None:
         self.directory = tempfile.TemporaryDirectory()
         self.addCleanup(self.directory.cleanup)
-        self.patches = ExitStack()
-        self.addCleanup(self.patches.close)
         self.root = Path(self.directory.name)
         self.original = self.root / 'original'
         self.target = self.root / 'localization'
         self.output = self.root / 'output'
         for directory in (self.original, self.target, self.output):
             directory.mkdir()
-        self.name = 'starfarer.api.jar'
-        self.entry = 'com/fs/starfarer/api/impl/campaign/world/TTBlackSite.class'
-        source = Path(__file__).resolve().parents[3] / 'original' / self.name
-        with zipfile.ZipFile(source) as archive:
-            self.raw = archive.read(self.entry)
+        self.name = 'test.jar'
+        self.entry = 'example/Test.class'
+        self.raw = make_class()
         self.mapping = JarMapItem(
             type='jar',
             path=self.name,
@@ -41,26 +37,19 @@ class RebuildJarTest(unittest.TestCase):
                 }
             ],
         )
-        for module in (jar_file, util):
-            for key, value in [
-                ('ORIGINAL_PATH', self.original),
-                ('TRANSLATION_PATH', self.target),
-            ]:
-                self.patches.enter_context(patch.object(module, key, value))
-        self.patches.enter_context(patch.object(util, 'PARA_TRANZ_PATH', self.output))
-        self.patches.enter_context(
-            patch.object(jar_file, 'PARA_TRANZ_MAP', [self.mapping])
-        )
         self.write_jar(self.original / self.name, self.raw)
         self.write_jar(self.target / self.name, self.raw)
-        file = jar_file.JavaJarFile(self.name, self.mapping.class_files)
-        try:
-            row = file.get_strings()[0].as_dict()
-        finally:
-            file.close_files()
-        row.update(translation='未知地点', stage=1)
+        row = {
+            'key': 'test.jar:example/Test.class#"Unknown Location":2',
+            'original': 'Unknown Location',
+            'translation': '未知地点',
+            'stage': 1,
+            'context': '版本：0.98-RC8 词条格式：v2\n文件：test.jar\n'
+            '类：example/Test.class\n常量号：0009\n同值序号：2\n'
+            '原始数据："Unknown Location"\n译文数据："Unknown Location"',
+        }
         self.row = row
-        self.json_path = self.output / 'starfarer.api.json'
+        self.json_path = self.output / 'test.json'
         self.json_path.write_text(
             json.dumps([row], ensure_ascii=False), encoding='utf-8'
         )
@@ -70,48 +59,52 @@ class RebuildJarTest(unittest.TestCase):
             archive.writestr(self.entry, contents)
             archive.writestr('resource.txt', b'resource')
 
+    def rebuild(self, mapping=None) -> str:
+        return jar_file.JavaJarFile.rebuild_jar(
+            mapping if mapping is not None else self.mapping,
+            self.original / self.name,
+            self.target / self.name,
+            self.json_path,
+        )
+
     def values(self) -> list[str]:
-        file = jar_file.JavaJarFile(self.name, self.mapping.class_files)
-        try:
-            cls = file.class_files[self.entry]
-            original = cls._get_original_string_constants_mapping()['Unknown Location']
-            translated = cls._get_translation_constants_by_index()
-            return [translated[c.constant_index].string for c in original]
-        finally:
-            file.close_files()
+        with zipfile.ZipFile(self.target / self.name) as archive:
+            table = ConstantTable(archive.read(self.entry))
+        values = {
+            c.constant_index: c.string
+            for c in table.get_utf8_constants_with_string_ref()
+        }
+        self.assertEqual('Other', values[11])
+        return [values[i] for i in (5, 7, 9)]
 
     def test_rebuild_clears_stale_translation_and_is_idempotent(self) -> None:
-        file = jar_file.JavaJarFile(self.name, [{'path': self.entry}])
-        try:
-            cls = file.class_files[self.entry]
-            for c in cls.translation_table.get_utf8_constants_with_string_ref():
-                if c.string == 'Unknown Location':
-                    c.string = '旧译文'
-            file.save_file()
-        finally:
-            file.close_files()
+        self.write_jar(self.target / self.name, make_class(('旧译文',) * 3))
         source_bytes = (self.original / self.name).read_bytes()
-        jar_file.JavaJarFile.rebuild_from_config()
+        self.rebuild()
         self.assertEqual(
             ['Unknown Location', 'Unknown Location', '未知地点'], self.values()
         )
         target = self.target / self.name
         previous = (target.read_bytes(), target.stat().st_mtime_ns)
-        jar_file.JavaJarFile.rebuild_from_config()
+        self.rebuild()
         self.assertEqual(previous, (target.read_bytes(), target.stat().st_mtime_ns))
         self.assertEqual(source_bytes, (self.original / self.name).read_bytes())
 
     def test_missing_target_and_empty_json(self) -> None:
         (self.target / self.name).unlink()
         self.json_path.write_text('[]', encoding='utf-8')
-        jar_file.JavaJarFile.rebuild_from_config()
+        self.rebuild()
         self.assertEqual(['Unknown Location'] * 3, self.values())
 
     def test_loaded_mapping_dataclasses_and_export(self) -> None:
         mapping = JarMapItem.from_dict(asdict(self.mapping))
-        with patch.object(jar_file, 'PARA_TRANZ_MAP', [mapping]):
-            jar_file.JavaJarFile.rebuild_from_config()
-        file = jar_file.JavaJarFile(self.name, self.mapping.class_files)
+        self.rebuild(mapping)
+        file = jar_file.JavaJarFile(
+            self.name,
+            self.mapping.class_files,
+            original_path=self.original / self.name,
+            translation_path=self.target / self.name,
+        )
         try:
             rows = file.get_strings()
             self.assertEqual(1, len(rows))
@@ -121,21 +114,21 @@ class RebuildJarTest(unittest.TestCase):
             file.close_files()
 
     def test_deleted_translation_and_removed_string_restore_original(self) -> None:
-        jar_file.JavaJarFile.rebuild_from_config()
+        self.rebuild()
         self.json_path.write_text('[]', encoding='utf-8')
-        jar_file.JavaJarFile.rebuild_from_config()
+        self.rebuild()
         self.assertEqual(['Unknown Location'] * 3, self.values())
         self.json_path.write_text(json.dumps([self.row]), encoding='utf-8')
-        jar_file.JavaJarFile.rebuild_from_config()
-        self.mapping.class_files[0]['include_strings'] = ['Alpha Site']
-        jar_file.JavaJarFile.rebuild_from_config()
+        self.rebuild()
+        self.mapping.class_files[0]['include_strings'] = ['Other']
+        self.rebuild()
         self.assertEqual(['Unknown Location'] * 3, self.values())
 
     def test_removed_class_restores_original(self) -> None:
         self.mapping.class_files = []
         self.json_path.write_text('[]', encoding='utf-8')
         self.write_jar(self.target / self.name, b'stale class')
-        jar_file.JavaJarFile.rebuild_from_config()
+        self.rebuild()
         with zipfile.ZipFile(self.target / self.name) as archive:
             self.assertEqual(self.raw, archive.read(self.entry))
             self.assertEqual(b'resource', archive.read('resource.txt'))
@@ -143,7 +136,7 @@ class RebuildJarTest(unittest.TestCase):
     def test_missing_json_preserves_target(self) -> None:
         self.json_path.unlink()
         old = (self.target / self.name).read_bytes()
-        jar_file.JavaJarFile.rebuild_from_config()
+        self.rebuild()
         self.assertEqual(old, (self.target / self.name).read_bytes())
 
     def test_failures_preserve_target_and_clean_temporary_files(self) -> None:
@@ -155,7 +148,7 @@ class RebuildJarTest(unittest.TestCase):
                 row = dict(self.row)
                 if failure == 'context':
                     row['context'] = row['context'].replace(
-                        '文件：starfarer.api.jar', '文件：wrong.jar'
+                        '文件：test.jar', '文件：wrong.jar'
                     )
                 self.json_path.write_text(
                     '{' if failure == 'json' else json.dumps([row]), encoding='utf-8'
@@ -168,11 +161,12 @@ class RebuildJarTest(unittest.TestCase):
                         'para_tranz.jar_loader.jar_file.' + function,
                         side_effect=OSError('模拟失败'),
                     ):
-                        with self.assertRaises(Exception):
-                            jar_file.JavaJarFile.rebuild_from_config()
+                        with self.assertRaises(OSError):
+                            self.rebuild()
                 else:
-                    with self.assertRaises(Exception):
-                        jar_file.JavaJarFile.rebuild_from_config()
+                    error = json.JSONDecodeError if failure == 'json' else ValueError
+                    with self.assertRaises(error):
+                        self.rebuild()
                 self.assertEqual(old, target.read_bytes())
                 self.assertEqual([self.name], [p.name for p in self.target.iterdir()])
 
@@ -189,19 +183,19 @@ class RebuildJarTest(unittest.TestCase):
                     '同值序号：2', f'同值序号：{occurrence}'
                 )
                 self.json_path.write_text(json.dumps([row]), encoding='utf-8')
-                jar_file.JavaJarFile.rebuild_from_config()
+                self.rebuild()
                 self.assertEqual(
                     ['Unknown Location', 'Unknown Location', expected], self.values()
                 )
 
     def test_logs_report_success_skip_and_failure(self) -> None:
         with self.assertLogs('JavaJarFile', level='INFO') as logs:
-            jar_file.JavaJarFile.rebuild_from_config()
-            jar_file.JavaJarFile.rebuild_from_config()
+            self.rebuild()
+            self.rebuild()
         self.assertTrue(any('汉化 jar 重建完成' in line for line in logs.output))
         self.assertTrue(any('跳过替换' in line for line in logs.output))
         self.json_path.write_text('{', encoding='utf-8')
         with self.assertLogs('JavaJarFile', level='ERROR') as logs:
             with self.assertRaises(ValueError):
-                jar_file.JavaJarFile.rebuild_from_config()
+                self.rebuild()
         self.assertTrue(any('目标文件未替换' in line for line in logs.output))

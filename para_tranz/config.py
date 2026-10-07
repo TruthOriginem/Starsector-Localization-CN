@@ -2,16 +2,6 @@ import logging
 import os
 from pathlib import Path
 
-# 从项目根目录的 .env 文件中加载环境变量（可选）
-_env_path = Path(__file__).parent.parent / '.env'
-if _env_path.exists():
-    with open(_env_path, encoding='utf-8') as _f:
-        for _line in _f:
-            _line = _line.strip()
-            if _line and not _line.startswith('#') and '=' in _line:
-                _key, _, _value = _line.partition('=')
-                os.environ.setdefault(_key.strip(), _value.strip())
-
 # [日志输出]
 LOG_LEVEL = logging.INFO
 LOG_FILE_PATH = Path(__file__).parent / 'para_tranz_script.log'
@@ -53,7 +43,21 @@ UPDATE_STRING_ALLOW_EMPTY_TRANSLATION = True
 # 在将译文写回csv文件时，是否删除原文为空的译文
 REMOVE_TRANSLATION_WHEN_ORIGINAL_IS_EMPTY = True
 
+
 # [ParaTranz 平台配置]
 # 从 .env 文件中读取，详见 .env.example
-PARATRANZ_PROJECT_ID: int = int(os.environ.get('PARATRANZ_PROJECT_ID', 0))
-PARATRANZ_API_KEY: str = os.environ.get('PARATRANZ_API_KEY', '')
+def __getattr__(name: str):
+    # 只有平台 API 读取凭据时才加载 .env，解析 class 等本地操作无需凭据。
+    if name not in ('PARATRANZ_PROJECT_ID', 'PARATRANZ_API_KEY'):
+        raise AttributeError(name)
+    _env_path = Path(__file__).parent.parent / '.env'
+    if _env_path.exists():
+        with _env_path.open(encoding='utf-8') as stream:
+            for line in stream:
+                line = line.strip()
+                if line and not line.startswith('#') and '=' in line:
+                    key, _, value = line.partition('=')
+                    os.environ.setdefault(key.strip(), value.strip())
+    globals()['PARATRANZ_PROJECT_ID'] = int(os.environ.get('PARATRANZ_PROJECT_ID', 0))
+    globals()['PARATRANZ_API_KEY'] = os.environ.get('PARATRANZ_API_KEY', '')
+    return globals()[name]

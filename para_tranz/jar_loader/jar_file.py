@@ -13,7 +13,7 @@ from para_tranz.config import (
     TRANSLATION_PATH,
 )
 from para_tranz.jar_loader.class_file import JavaClassFile
-from para_tranz.utils.mapping import PARA_TRANZ_MAP, JarMapItem
+from para_tranz.utils.mapping import JarMapItem
 from para_tranz.utils.util import DataFile, String, make_logger, relative_path
 
 
@@ -67,12 +67,15 @@ class JavaJarFile(DataFile):
         type: str = 'jar',
         no_auto_load: bool = False,
         translation_path: Optional[Path] = None,
+        original_path: Optional[Path] = None,
         **kwargs,
     ):
         super().__init__(path, type)
 
         self.path = Path(path)
-        self.original_path = ORIGINAL_PATH / self.path
+        self.original_path = (
+            original_path if original_path is not None else ORIGINAL_PATH / self.path
+        )
         self.translation_path = (
             translation_path
             if translation_path is not None
@@ -256,11 +259,18 @@ class JavaJarFile(DataFile):
 
     @classmethod
     def rebuild_from_config(cls) -> None:
+        from para_tranz.utils.mapping import PARA_TRANZ_MAP
+
         updated = unchanged = skipped = 0
         for item in PARA_TRANZ_MAP:
             if not isinstance(item, JarMapItem):
                 continue
-            result = cls._rebuild_jar(item)
+            result = cls.rebuild_jar(
+                item,
+                ORIGINAL_PATH / item.path,
+                TRANSLATION_PATH / item.path,
+                DataFile(item.path, 'jar').para_tranz_path,
+            )
             if result == 'updated':
                 updated += 1
             elif result == 'unchanged':
@@ -273,28 +283,32 @@ class JavaJarFile(DataFile):
         )
 
     @classmethod
-    def _rebuild_jar(cls, item: JarMapItem) -> str:
-        # 先检查词条文件，不实例化依赖已有汉化 jar 的普通 loader。
-        data_file = DataFile(item.path, 'jar')
-        target = TRANSLATION_PATH / item.path
-        if not data_file.para_tranz_path.exists():
+    def rebuild_jar(
+        cls,
+        item: JarMapItem,
+        original: Path,
+        target: Path,
+        translations: Path,
+    ) -> str:
+        # 单个 Jar 的输入路径显式传入，不读取全局映射，也不依赖已有目标。
+        if not translations.exists():
             cls.logger.info(
                 f'未找到 {item.path} 所对应的 ParaTranz 数据 '
-                f'({relative_path(data_file.para_tranz_path)})，跳过重建，目标文件保持不变'
+                f'({relative_path(translations)})，跳过重建，目标文件保持不变'
             )
             return 'skipped'
 
         cls.logger.info(f'开始重建汉化 jar：{item.path}')
         published = False
         try:
-            strings = DataFile.read_json_strings(data_file.para_tranz_path)
+            strings = DataFile.read_json_strings(translations)
             target.parent.mkdir(parents=True, exist_ok=True)
             # 同盘临时目录保证最终替换不跨文件系统，失败时不改动正式产物。
             with tempfile.TemporaryDirectory(
                 prefix='.jar-rebuild-', dir=target.parent
             ) as directory:
                 temporary = Path(directory) / target.name
-                shutil.copyfile(ORIGINAL_PATH / item.path, temporary)
+                shutil.copyfile(original, temporary)
                 cls.logger.debug(f'jar 重建临时文件：{temporary}')
                 class_files = asdict(item)['class_files']
                 file = cls(
@@ -302,6 +316,7 @@ class JavaJarFile(DataFile):
                     class_files,
                     no_auto_load=True,
                     translation_path=temporary,
+                    original_path=original,
                 )
                 try:
                     for class_info in class_files:
@@ -311,7 +326,7 @@ class JavaJarFile(DataFile):
                             )
                     file.update_strings(strings)
                     cls.logger.info(
-                        f'从 {relative_path(data_file.para_tranz_path)} 加载了 '
+                        f'从 {relative_path(translations)} 加载了 '
                         f'{len(strings)} 个词条，用于重建 {item.path}'
                     )
                     file.save_file()
@@ -334,6 +349,8 @@ class JavaJarFile(DataFile):
 
     @classmethod
     def load_files_from_config(cls) -> Sequence['JavaJarFile']:
+        from para_tranz.utils.mapping import PARA_TRANZ_MAP
+
         cls.logger.info('开始读取游戏jar数据')
         files = [
             cls(**asdict(item))

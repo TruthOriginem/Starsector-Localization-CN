@@ -571,6 +571,9 @@ class JavaClassFile:
 
 
 if __name__ == '__main__':
+    from para_tranz.utils.util import configure_logging
+
+    configure_logging()
     from para_tranz.jar_loader.jar_file import JavaJarFile
 
     fake_jar_file = JavaJarFile(Path(r'starfarer.api.jar'), [])

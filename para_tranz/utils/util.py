@@ -88,27 +88,38 @@ def _init_file_handler() -> None:
     logging.root.addHandler(file_handler)
 
 
-def make_logger(name: str) -> logging.Logger:
-    # 设置日志输出
-    logging.root.setLevel(logging.NOTSET)
-    logger = logging.getLogger(name)
-    logger.setLevel(logging.NOTSET)
+_logging_configured = False
+_logger_names: set[str] = set()
 
+
+def configure_logging() -> None:
+    """由命令入口启用中文控制台及文件日志；模块导入不创建日志文件。"""
+    global _logging_configured
+    _logging_configured = True
+    logging.root.setLevel(logging.NOTSET)
+    _init_file_handler()
+    for name in _logger_names:
+        _configure_logger(logging.getLogger(name))
+
+
+def _configure_logger(logger: logging.Logger) -> None:
+    logger.setLevel(logging.NOTSET)
     if not any(
         getattr(handler, '_para_tranz_stdout', False) for handler in logger.handlers
     ):
-        handle_out = logging.StreamHandler(sys.stdout)
-        handle_out.setLevel(LOG_LEVEL)
-        handle_out.terminator = ''
-        setattr(handle_out, '_para_tranz_stdout', True)
+        handler = logging.StreamHandler(sys.stdout)
+        handler.setLevel(LOG_LEVEL)
+        handler.terminator = ''
+        setattr(handler, '_para_tranz_stdout', True)
+        handler.setFormatter(CustomFormatter())
+        logger.addHandler(handler)
 
-        formatter = CustomFormatter()
 
-        handle_out.setFormatter(formatter)
-        logger.addHandler(handle_out)
-
-    _init_file_handler()
-
+def make_logger(name: str) -> logging.Logger:
+    _logger_names.add(name)
+    logger = logging.getLogger(name)
+    if _logging_configured:
+        _configure_logger(logger)
     return logger
 
 
@@ -353,6 +364,7 @@ class SetEncoder(json.JSONEncoder):
 
 
 if __name__ == '__main__':
+    configure_logging()
     # print(normalize_class_path(
     #     'com/fs/starfarer/renderers/A/OooOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO.class'))
     # print(normalize_class_path('com/fs/starfarer/launcher/opengl/GLModPickerV2.class'))

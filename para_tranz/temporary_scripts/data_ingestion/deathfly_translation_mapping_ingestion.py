@@ -140,6 +140,9 @@ def add_translation_to_exported_strings():
 
 
 if __name__ == '__main__':
+    from para_tranz.utils.util import configure_logging
+
+    configure_logging()
     # 先运行下面这个函数，生成mapping文件
     # convert_deathfly_csv_to_paratranz_mapping()
 

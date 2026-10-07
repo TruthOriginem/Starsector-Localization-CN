@@ -84,6 +84,21 @@ ruff check .
 ruff format .
 ```
 
+### Jar 与命令参数测试
+
+在仓库根目录运行：
+
+```powershell
+python -X utf8 -m unittest discover -s para_tranz/jar_loader/test
+python -X utf8 -m unittest discover -s para_tranz/jar_loader/integration
+```
+
+第一条为隔离单元测试：参数解析直接传入参数列表；Jar 测试在临时目录生成最小 class 和 Jar，
+不需要游戏文件、Java、平台凭据或网络，不改写项目日志和汉化产物。
+第二条为集成测试：检查入口工作流和真实 TTBlackSite 回归，需要项目映射及
+`original/starfarer.api.jar`；只在临时目录重建 Jar，不访问平台。
+核心模块导入不初始化文件日志；脚本入口显式调用 `configure_logging()`，保持中文日志输出。
+
 ## ParaTranz 工作流
 
 核心入口：

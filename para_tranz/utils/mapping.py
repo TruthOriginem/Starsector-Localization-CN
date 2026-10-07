@@ -344,12 +344,21 @@ class ParaTranzMap:
         return merged
 
 
-PARA_TRANZ_MAP = ParaTranzMap()
-PARA_TRANZ_MAP.load()
+def __getattr__(name: str):
+    if name != 'PARA_TRANZ_MAP':
+        raise AttributeError(name)
+    mapping = ParaTranzMap()
+    mapping.load()
+    globals()[name] = mapping
+    return mapping
+
 
 if __name__ == '__main__':
+    from para_tranz.utils.util import configure_logging
+
+    configure_logging()
     # cls1 = ClassFileMapItem(path='path.class', include_strings=['include', 'include'])
     # cls2 = ClassFileMapItem(path='path2.class', include_strings=['include2'])
     # jar = JarMapItem(type='jar', path='path.jar', class_files=[cls1, cls2])
     # print(dict(**dataclasses.asdict(jar)))
-    PARA_TRANZ_MAP.save()
+    __getattr__('PARA_TRANZ_MAP').save()

@@ -34,6 +34,9 @@ def collect_used_chars() -> Set[str]:
 
 
 if __name__ == '__main__':
+    from para_tranz.utils.util import configure_logging
+
+    configure_logging()
     logger.info('开始收集译文中使用的字符')
     used_chars = collect_used_chars()
     logger.info(f'收集完成，共找到{len(used_chars)}个字符')
