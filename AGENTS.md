@@ -34,7 +34,9 @@ ParaTranz 脚本（不带参数运行进入交互式菜单，带数字参数直�
 python -X utf8 para_tranz\para_tranz_script.py
 python -X utf8 para_tranz\para_tranz_script.py 1  # 导出：游戏文件 -> para_tranz/output
 python -X utf8 para_tranz\para_tranz_script.py 2  # 导入：para_tranz/output -> localization
+python -X utf8 para_tranz\para_tranz_script.py 2 --rebuild-jars  # 从预处理原文重新生成汉化 Jar
 python -X utf8 para_tranz\para_tranz_script.py 3  # 下载平台导出并导入，需要 .env
+python -X utf8 para_tranz\para_tranz_script.py 3 --rebuild-jars  # 下载后重新生成汉化 Jar
 python -X utf8 para_tranz\para_tranz_script.py 4 "com.fs.starfarer.api.SomeClass"
 python -X utf8 para_tranz\para_tranz_script.py 5 "search pattern"
 python -X utf8 para_tranz\para_tranz_script.py 6  # 格式化 para_tranz_map.json
@@ -48,6 +50,12 @@ python -X utf8 para_tranz\para_tranz_script.py 6  # 格式化 para_tranz_map.jso
 - `4` 生成类映射：对指定的 jar 内类文件（接受 `starfarer.api.jar:com/.../Foo.class` 或 `com.fs.starfarer.api.Foo` 两种路径格式），提取其中所有字符串并打印可粘贴到 `para_tranz_map.json` 的类文件映射项，用于把新类纳入翻译范围。
 - `5` 搜索字符串：在所有 jar 文件的类中查找指定原文字符串并打印所在类和位置，用于定位某句游戏文本出自哪个类。
 - `6` 格式化映射：对 `para_tranz_map.json` 去重、排序并保存，修改该文件后建议运行一次以校验格式。
+
+选项 `2`、`3` 可加 `--rebuild-jars`：仅对当前映射中的 Jar，以预处理后的
+`original/` 为基底重新应用译文，清除删除词条、缩减白名单或移除类映射后的历史译文残留。
+其他 loader 仍按原流程导入。此选项不执行 Java 编译或 Jar 预处理，不能替代上游更新后的完整
+Jar 生成管线；使用前确保 `original/` 为当前分支的预处理产物。缺少对应 JSON 时跳过，空数组
+则生成未翻译原文；单个 Jar 在临时目录成功生成后才替换正式文件，内容相同不替换。
 
 ### 补充缺失词条流程
 

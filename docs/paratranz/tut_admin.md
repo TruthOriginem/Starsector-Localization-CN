@@ -67,6 +67,25 @@
   - 请注意程序执行过程中的警告`[Warning]`开头的输出内容。
 - 完成！之后可以使用`localization`文件夹中的内容对游戏进行测试，或上传到 git。
 
+### 从预处理原文重新生成汉化 Jar
+
+普通导入会更新已有汉化 Jar 中的译文。删除平台词条或缩减映射白名单后，使用以下命令清理旧译文残留：
+
+```powershell
+python -X utf8 para_tranz/para_tranz_script.py 2 --rebuild-jars
+# 或先下载平台最新数据，再重建导入
+python -X utf8 para_tranz/para_tranz_script.py 3 --rebuild-jars
+```
+
+`--rebuild-jars` 仅对当前映射中的 Jar 生效，以预处理后的 `original/` 为基底应用当前允许的译文；
+其他文件类型仍按原流程导入。此选项不执行 Java 编译或 Jar 预处理，使用前需确保原文 Jar
+是当前分支对应的预处理产物，不能以此替代上游更新后的完整 Jar 生成管线。
+
+缺少对应 ParaTranz JSON 时跳过该 Jar；JSON 为空数组时生成未翻译的原文 Jar。
+每个 Jar 在同盘临时目录完成生成后才替换 `localization/` 中的文件，内容相同则跳过替换。
+类加载、词条校验或文件写入失败会停止导入，保留当前 Jar 的正式文件；此前已经成功更新的其他
+文件不回滚。结束日志会汇总更新、内容未变化及缺少词条文件的数量。
+
 ## 添加新 csv 文件
 该脚本根据`para_tranz_map.json`中的配置，查找并提取csv中需要翻译成的词条。
 该配置文件的格式如下：

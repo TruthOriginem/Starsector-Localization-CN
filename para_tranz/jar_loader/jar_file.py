@@ -1,3 +1,6 @@
+import os
+import shutil
+import tempfile
 import zipfile
 from dataclasses import asdict
 from pathlib import Path
@@ -11,7 +14,7 @@ from para_tranz.config import (
 )
 from para_tranz.jar_loader.class_file import JavaClassFile
 from para_tranz.utils.mapping import PARA_TRANZ_MAP, JarMapItem
-from para_tranz.utils.util import DataFile, String, make_logger
+from para_tranz.utils.util import DataFile, String, make_logger, relative_path
 
 
 def _rewrite_jar(
@@ -29,6 +32,26 @@ def _rewrite_jar(
                 target.writestr(info, contents)
 
 
+def _jar_contents_equal(first: Path, second: Path) -> bool:
+    """比较完整条目内容，忽略压缩方式、时间戳和条目顺序。"""
+    try:
+        with zipfile.ZipFile(first) as left, zipfile.ZipFile(second) as right:
+            # 稳定排序保留同名重复条目的先后顺序。
+            left_entries = sorted(left.infolist(), key=lambda info: info.filename)
+            right_entries = sorted(right.infolist(), key=lambda info: info.filename)
+            if len(left_entries) != len(right_entries):
+                return False
+            for a, b in zip(left_entries, right_entries):
+                if a.filename != b.filename or a.file_size != b.file_size:
+                    return False
+                if left.read(a) != right.read(b):
+                    return False
+            return True
+    except zipfile.BadZipFile:
+        # 旧目标损坏时仍允许用完整的新产物替换。
+        return False
+
+
 class JavaJarFile(DataFile):
     """
     用于表示游戏文件中可以提取原文和译文的jar文件
@@ -43,17 +66,26 @@ class JavaJarFile(DataFile):
         class_files: List[dict],
         type: str = 'jar',
         no_auto_load: bool = False,
+        translation_path: Optional[Path] = None,
         **kwargs,
     ):
         super().__init__(path, type)
 
         self.path = Path(path)
         self.original_path = ORIGINAL_PATH / self.path
-        self.translation_path = TRANSLATION_PATH / self.path
+        self.translation_path = (
+            translation_path
+            if translation_path is not None
+            else TRANSLATION_PATH / self.path
+        )
 
         self.original_file: Optional[zipfile.ZipFile] = None
         self.translation_file: Optional[zipfile.ZipFile] = None
-        self.open_files()
+        try:
+            self.open_files()
+        except Exception:
+            self.close_files()
+            raise
 
         self.class_files: Dict[str, JavaClassFile] = {}
 
@@ -221,6 +253,84 @@ class JavaJarFile(DataFile):
 
         for class_file_info in class_files:
             self.load_class_file(path=class_file_info['path'], override=override_loaded)
+
+    @classmethod
+    def rebuild_from_config(cls) -> None:
+        updated = unchanged = skipped = 0
+        for item in PARA_TRANZ_MAP:
+            if not isinstance(item, JarMapItem):
+                continue
+            result = cls._rebuild_jar(item)
+            if result == 'updated':
+                updated += 1
+            elif result == 'unchanged':
+                unchanged += 1
+            else:
+                skipped += 1
+        cls.logger.info(
+            f'jar 重建导入完成：更新 {updated} 个，内容未变化 {unchanged} 个，'
+            f'缺少词条文件跳过 {skipped} 个'
+        )
+
+    @classmethod
+    def _rebuild_jar(cls, item: JarMapItem) -> str:
+        # 先检查词条文件，不实例化依赖已有汉化 jar 的普通 loader。
+        data_file = DataFile(item.path, 'jar')
+        target = TRANSLATION_PATH / item.path
+        if not data_file.para_tranz_path.exists():
+            cls.logger.info(
+                f'未找到 {item.path} 所对应的 ParaTranz 数据 '
+                f'({relative_path(data_file.para_tranz_path)})，跳过重建，目标文件保持不变'
+            )
+            return 'skipped'
+
+        cls.logger.info(f'开始重建汉化 jar：{item.path}')
+        published = False
+        try:
+            strings = DataFile.read_json_strings(data_file.para_tranz_path)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            # 同盘临时目录保证最终替换不跨文件系统，失败时不改动正式产物。
+            with tempfile.TemporaryDirectory(
+                prefix='.jar-rebuild-', dir=target.parent
+            ) as directory:
+                temporary = Path(directory) / target.name
+                shutil.copyfile(ORIGINAL_PATH / item.path, temporary)
+                cls.logger.debug(f'jar 重建临时文件：{temporary}')
+                class_files = asdict(item)['class_files']
+                file = cls(
+                    item.path,
+                    class_files,
+                    no_auto_load=True,
+                    translation_path=temporary,
+                )
+                try:
+                    for class_info in class_files:
+                        if file.load_class_file(**class_info) is None:
+                            raise ValueError(
+                                f'无法加载映射中的 class 文件：{class_info["path"]}'
+                            )
+                    file.update_strings(strings)
+                    cls.logger.info(
+                        f'从 {relative_path(data_file.para_tranz_path)} 加载了 '
+                        f'{len(strings)} 个词条，用于重建 {item.path}'
+                    )
+                    file.save_file()
+                finally:
+                    file.close_files()
+
+                if target.exists() and _jar_contents_equal(temporary, target):
+                    cls.logger.info(f'{item.path} 重建结果与现有汉化内容一致，跳过替换')
+                    return 'unchanged'
+                os.replace(temporary, target)
+                published = True
+            cls.logger.info(f'汉化 jar 重建完成：{relative_path(target)}')
+            return 'updated'
+        except Exception as e:
+            state = (
+                '目标文件已替换，临时文件清理失败' if published else '目标文件未替换'
+            )
+            cls.logger.error(f'重建 {item.path} 失败，{state}：{e}')
+            raise
 
     @classmethod
     def load_files_from_config(cls) -> Sequence['JavaJarFile']:

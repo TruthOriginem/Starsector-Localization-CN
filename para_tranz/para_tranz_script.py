@@ -37,18 +37,25 @@ def game_to_paratranz() -> None:
     logger.info('ParaTranz 词条导出完成')
 
 
-def paratranz_to_game() -> None:
+def paratranz_to_game(rebuild_jars: bool = False) -> None:
+    if rebuild_jars:
+        logger.info(
+            '已启用 jar 重建导入，将以 original 中的预处理 jar 为基底生成汉化文件'
+        )
     for Loader in loaders:
+        if rebuild_jars and Loader is JavaJarFile:
+            JavaJarFile.rebuild_from_config()
+            continue
         for file in Loader.load_files_from_config():
             file.update_from_json()
             file.save_file()
     logger.info('ParaTranz 词条导入到译文数据完成')
 
 
-def download_and_import_from_paratranz() -> None:
+def download_and_import_from_paratranz(rebuild_jars: bool = False) -> None:
     success = download_paratranz_export()
     if success:
-        paratranz_to_game()
+        paratranz_to_game(rebuild_jars=rebuild_jars)
         game_to_paratranz()
 
 
@@ -84,7 +91,7 @@ def search_string_in_jar_files(pattern: str | None = None) -> None:
 
 def mian() -> None:
     # 支持通过命令行参数直接指定操作，跳过交互式菜单
-    # 用法：python para_tranz_script.py [1|2|4|5]
+    # 用法：python para_tranz_script.py [1|2|3|4|5|6] [参数]
     if len(sys.argv) > 1:
         option = sys.argv[1]
     else:
@@ -100,20 +107,33 @@ def mian() -> None:
         )
         print('5 - 在所有jar文件中查找指定原文字符串')
         print('6 - 对 para_tranz_map.json 进行格式化（去重、排序）')
+        print(
+            '从原文 jar 重新生成汉化：python para_tranz/para_tranz_script.py 2 --rebuild-jars'
+        )
         # 7 - jar版本迁移（未实现）
         option = input('请输入选项数字：')
 
     non_interactive = len(sys.argv) > 1
     arg2 = sys.argv[2] if len(sys.argv) > 2 else None
+    rebuild_jars = False
+    if non_interactive:
+        if option in ('2', '3'):
+            if sys.argv[2:] not in ([], ['--rebuild-jars']):
+                logger.error('导入选项仅支持可选参数 --rebuild-jars')
+                sys.exit(1)
+            rebuild_jars = sys.argv[2:] == ['--rebuild-jars']
+        elif option not in ('4', '5') and '--rebuild-jars' in sys.argv[2:]:
+            logger.error('--rebuild-jars 仅用于选项 2 或 3')
+            sys.exit(1)
     while True:
         if option == '1':
             game_to_paratranz()
             break
         elif option == '2':
-            paratranz_to_game()
+            paratranz_to_game(rebuild_jars=rebuild_jars)
             break
         elif option == '3':
-            download_and_import_from_paratranz()
+            download_and_import_from_paratranz(rebuild_jars=rebuild_jars)
             break
         elif option == '4':
             if non_interactive:
