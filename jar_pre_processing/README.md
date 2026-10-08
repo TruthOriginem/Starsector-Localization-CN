@@ -11,6 +11,14 @@
 
 2. **字符串解耦（jar-string-decoupler）**：调用 `vendor/jar-string-decoupler-1.0.0-all.jar`，将 `.class` 文件中硬编码的字符串常量提取并解耦，使 ParaTranz 的 jar 加载器能够读取、翻译并写回字符串，无需再手动修改字节码。该工具来自[jar-string-decoupler项目](https://github.com/jnxyp/jar-string-decoupler)。
 
+3. **StackMapTable 重建**：字符串解耦会原地重写方法体（替换字符串 LDC 位点），
+   被重写的方法会丢失或留下过期的 StackMapTable 帧表。Java 27+ 的 JVM
+   （含各类 JDK 21+ 优化启动链）对所有类强制校验帧表，任何带分支却没有有效
+   帧表的方法都会在首次执行时抛出 `VerifyError`/`ClassFormatError`，表现为
+   无法加载存档或卡死在加载页。此阶段用 ASM 的 `COMPUTE_FRAMES` 重建全部
+   帧表（层级解析只读取类字节索引，不加载游戏类），使产物在严格校验的 JVM
+   上同样可用；对仅在 Java 8 校验语义下运行的旧链路无任何行为影响。
+
 `fs.common_obf.jar` 和 `fs.sound_obf.jar` 只过第 1 阶段、不做字符串解耦。
 主分支会在前者中修复高亮颜色数组的空值崩溃；后者的产物仍是原版副本。两者都纳入
 分发，以便各变体汉化包能够互相覆盖安装，避免切换版本后残留旧 hook 或运行时类。
