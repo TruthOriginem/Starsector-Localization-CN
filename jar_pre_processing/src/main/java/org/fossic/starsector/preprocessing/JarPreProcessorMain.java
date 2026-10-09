@@ -47,11 +47,12 @@ public final class JarPreProcessorMain {
             decoupler.run(jarName, workspace.patchedJar(jarName), workspace.decoupledJar(jarName));
         }
 
-        // 字符串解耦会原地重写方法体，被重写的方法会丢失或留下过期的
-        // StackMapTable。Java 27+ 的 JVM 强制校验帧表，任何带分支却没有有效
-        // 帧表的方法都会在首次执行时抛出 VerifyError/ClassFormatError，导致
-        // 游戏无法在 JDK 27/28 启动链上加载存档或进入战役。此步骤用 ASM 的
-        // COMPUTE_FRAMES 重建帧表，层级解析只读取类字节索引，不加载游戏类。
+        // 字符串解耦会原地重写方法体并平移后续字节，被重写方法的帧表要么
+        // 丢失、要么仍存在但指向过期位置——后者凭缺帧检测无法发现，因此对
+        // 全部类重建帧表（fail-closed）。普通类虽可用诊断开关跳过校验，但
+        // 该豁免对 -javaagent 改写过的类不生效（一律链接期强制校验），构建
+        // 期重建是唯一稳健位置。v49 旧类一并升 v61（JDK 27+ 忽略其 nest
+        // 属性）。层级解析只读取类字节索引，不加载游戏类。
         StackMapRepair stackMapRepair = new StackMapRepair(workspace);
         for (String jarName : JarWorkspace.jars()) {
             System.out.println("Repairing stack maps for " + jarName);

@@ -7,7 +7,6 @@ import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.tree.AbstractInsnNode;
 import org.objectweb.asm.tree.ClassNode;
-import org.objectweb.asm.tree.FrameNode;
 import org.objectweb.asm.tree.MethodNode;
 
 import java.io.IOException;
@@ -27,18 +26,26 @@ import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
 
 /**
- * 字符串解耦之后的 StackMapTable 修复步骤。
+ * 字符串解耦之后的 StackMapTable 重建步骤。
  *
- * <p>jar-string-decoupler 会原地重写方法体（替换字符串 LDC 位点），被重写的方法
- * 会丢失或留下过期的 StackMapTable。Java 8 时代的 JVM 关闭字节码校验时这无关紧要，
- * 但 Java 27+ 对所有类强制校验（包括运行时由 -javaagent 改写过的类），任何带分支
- * 却没有有效帧表的方法都会在首次执行时抛出 VerifyError / ClassFormatError，
- * 直接导致游戏无法在 JDK 27/28 启动链上运行。
+ * <p>jar-string-decoupler 会原地重写方法体（替换字符串 LDC 位点）并平移后续
+ * 字节，被重写方法的帧表要么整体丢失、要么仍然存在但指向过期位置。消费端
+ * 虽可用 -XX:-BytecodeVerificationLocal/Remote 跳过普通类的校验，但该豁免对
+ * 启动链上被 -javaagent 改写过的类不生效（这类类一律在链接期强制校验），
+ * 且这些诊断开关在高版本 JDK 上随时可能收紧，因此构建期重建帧表是唯一
+ * 稳健的修复位置。
  *
- * <p>修复方式：用 ASM 的 COMPUTE_FRAMES 重建帧表（配合 EXPAND_FRAMES 读取）。
- * 公共父类解析不通过 Class.forName 加载游戏类，而是读取预先建立的全量类字节
- * 索引，避免修复过程中初始化任何游戏类。无法解析层级关系的类保持原样并在
- * 日志中报告，不会写入半成品。
+ * <p>修复方式：对解耦 jar 的全部类用 ASM COMPUTE_FRAMES 重建帧表（配合
+ * EXPAND_FRAMES 读取，同时重算 maxStack/maxLocals），major &lt; 55 的旧版本类
+ * 一并升到 v61——JDK 27+ 忽略 v49 类上的 NestHost/NestMembers，嵌套类私有
+ * 访问会抛 IllegalAccessError。公共父类解析不通过 Class.forName 加载游戏类，
+ * 而是读取预先建立的全量类字节索引，避免修复过程中初始化任何游戏类。
+ *
+ * <p>fail-closed：含 jsr/ret 的类与 package-info/module-info 保持原样（v61
+ * 禁止 jsr/ret，这些类保持旧版本号由旧校验语义正常运行），重建失败的类同样
+ * 保持原样并在日志中报告，绝不写入半成品。该全类重建策略已在 0.98a-RC8
+ * 全部 21 个游戏 jar（约 6700 类）上真机验证，JDK 28 与 JRE 17 双路线均可
+ * 正常启动并读档。
  */
 final class StackMapRepair {
     private final JarWorkspace workspace;
@@ -48,34 +55,48 @@ final class StackMapRepair {
         this.workspace = workspace;
     }
 
-    /** 对单个解耦后的 jar 原地修复帧表，返回被修复的类名列表。 */
+    /** 对单个解耦后的 jar 全量重建帧表，返回被改写的类名列表。 */
     List<String> repairJar(String jarName) throws IOException {
         Path jar = workspace.decoupledJar(jarName);
         buildIndex();
 
         List<String> repaired = new ArrayList<>();
         Map<String, byte[]> replacements = new HashMap<>();
+        int keptAsIs = 0;
         try (ZipFile zipFile = new ZipFile(jar.toFile())) {
             for (ZipEntry entry : zipFile.stream().toList()) {
                 if (entry.isDirectory() || !entry.getName().endsWith(".class")) {
                     continue;
                 }
                 byte[] raw = zipFile.getInputStream(entry).readAllBytes();
-                if (!needsRepair(raw)) {
-                    continue;
-                }
                 String internal = entry.getName()
                         .substring(0, entry.getName().length() - ".class".length());
+                // v61 禁止 jsr/ret；package-info/module-info 无方法体且升级有
+                // ACC_SUPER 历史问题。这些类保持原样即可，旧校验语义完全正常。
+                if (internal.endsWith("package-info") || internal.endsWith("module-info")
+                        || containsJsrOrRet(raw)) {
+                    keptAsIs++;
+                    continue;
+                }
+                byte[] input = classMajor(raw) < 55 ? bumpTo61(raw) : raw;
                 byte[] fixed;
                 try {
-                    fixed = rebuildWithComputedFrames(raw);
+                    // 全类重建：解耦器平移代码后，帧表可能丢失也可能"存在但过期"，
+                    // 仅凭缺帧检测无法发现后者（如 BaseLocation.advance），因此
+                    // 不做选择性跳过；重建失败则保持原类（fail-closed）。
+                    fixed = rebuildWithComputedFrames(input);
                 } catch (Throwable t) {
-                    System.out.println("[stack-map] 跳过 " + internal + "（重建失败: " + t + "）");
+                    System.out.println("[stack-map] 保持原样 " + internal + "（重建失败: " + t + "）");
+                    keptAsIs++;
                     continue;
                 }
                 replacements.put(entry.getName(), fixed);
                 repaired.add(internal);
             }
+        }
+        if (keptAsIs > 0) {
+            System.out.println("[stack-map] " + jarName + ": " + keptAsIs
+                    + " 个类保持原样（jsr/ret、package-info/module-info 或重建失败）");
         }
         if (repaired.isEmpty()) {
             return repaired;
@@ -101,34 +122,35 @@ final class StackMapRepair {
         }
     }
 
-    /** 只要存在"带分支却缺 FrameNode"的方法就判定需要修复。 */
-    static boolean needsRepair(byte[] bytes) {
+    /** 类文件头主版本号（偏移 6-7，大端）。 */
+    static int classMajor(byte[] bytes) {
+        return ((bytes[6] & 0xFF) << 8) | (bytes[7] & 0xFF);
+    }
+
+    /**
+     * 把旧版本类升到 v61（Java 17）。JDK 27+ 忽略 v49 类上的 NestHost/
+     * NestMembers 属性，内部类直接访问外部私有成员时会抛 IllegalAccessError，
+     * 所以必须连版本号一起升级，仅重建帧表不够。
+     */
+    static byte[] bumpTo61(byte[] bytes) {
+        byte[] out = bytes.clone();
+        out[4] = 0;
+        out[5] = 0;
+        out[6] = 0;
+        out[7] = 61;
+        return out;
+    }
+
+    /** 方法体内是否含 jsr/ret 指令（v49 时代的异常处理写法，v61 禁止）。 */
+    static boolean containsJsrOrRet(byte[] bytes) {
         ClassNode node = new ClassNode();
         new ClassReader(bytes).accept(node, 0);
         for (MethodNode method : node.methods) {
-            if (method.instructions.size() == 0) {
-                continue;
-            }
-            boolean hasFrame = false;
-            boolean branched = false;
             for (AbstractInsnNode insn : method.instructions) {
-                if (insn instanceof FrameNode) {
-                    hasFrame = true;
-                }
                 int opcode = insn.getOpcode();
-                if ((opcode >= Opcodes.IFEQ && opcode <= Opcodes.LOOKUPSWITCH)
-                        || opcode == Opcodes.GOTO
-                        || opcode == Opcodes.JSR
-                        || opcode == Opcodes.RET
-                        || opcode == Opcodes.IFNULL
-                        || opcode == Opcodes.IFNONNULL
-                        || opcode == 0xC8   // GOTO_W
-                        || opcode == 0xC9) { // JSR_W
-                    branched = true;
+                if (opcode == Opcodes.JSR || opcode == Opcodes.RET) {
+                    return true;
                 }
-            }
-            if (branched && !hasFrame) {
-                return true;
             }
         }
         return false;
