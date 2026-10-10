@@ -4,12 +4,21 @@ import unittest
 import zipfile
 from dataclasses import asdict
 from pathlib import Path
+from typing import TypedDict
 from unittest.mock import patch
 
 from para_tranz.jar_loader import jar_file
 from para_tranz.jar_loader.constant_table import ConstantTable
 from para_tranz.jar_loader.test.fixtures import make_class
-from para_tranz.utils.mapping import JarMapItem
+from para_tranz.utils.mapping import ClassFileMapItem, JarMapItem
+
+
+class TranslationRow(TypedDict):
+    key: str
+    original: str
+    translation: str
+    stage: int
+    context: str
 
 
 class RebuildJarTest(unittest.TestCase):
@@ -29,17 +38,17 @@ class RebuildJarTest(unittest.TestCase):
             type='jar',
             path=self.name,
             class_files=[
-                {
-                    'path': self.entry,
-                    'include_strings': [
+                ClassFileMapItem(
+                    path=self.entry,
+                    include_strings=[
                         {'val': 'Unknown Location', 'occurs': [2]},
                     ],
-                }
+                )
             ],
         )
         self.write_jar(self.original / self.name, self.raw)
         self.write_jar(self.target / self.name, self.raw)
-        row = {
+        row: TranslationRow = {
             'key': 'test.jar:example/Test.class#"Unknown Location":2',
             'original': 'Unknown Location',
             'translation': '未知地点',
@@ -59,7 +68,7 @@ class RebuildJarTest(unittest.TestCase):
             archive.writestr(self.entry, contents)
             archive.writestr('resource.txt', b'resource')
 
-    def rebuild(self, mapping=None) -> str:
+    def rebuild(self, mapping: JarMapItem | None = None) -> str:
         return jar_file.JavaJarFile.rebuild_jar(
             mapping if mapping is not None else self.mapping,
             self.original / self.name,
@@ -78,7 +87,9 @@ class RebuildJarTest(unittest.TestCase):
         return [values[i] for i in (5, 7, 9)]
 
     def test_rebuild_clears_stale_translation_and_is_idempotent(self) -> None:
-        self.write_jar(self.target / self.name, make_class(('旧译文',) * 3))
+        self.write_jar(
+            self.target / self.name, make_class(('旧译文', '旧译文', '旧译文'))
+        )
         source_bytes = (self.original / self.name).read_bytes()
         self.rebuild()
         self.assertEqual(
@@ -98,10 +109,12 @@ class RebuildJarTest(unittest.TestCase):
 
     def test_loaded_mapping_dataclasses_and_export(self) -> None:
         mapping = JarMapItem.from_dict(asdict(self.mapping))
+        self.assertIsInstance(mapping.class_files[0], ClassFileMapItem)
+        self.assertEqual(self.mapping, mapping)
         self.rebuild(mapping)
         file = jar_file.JavaJarFile(
             self.name,
-            self.mapping.class_files,
+            [asdict(item) for item in mapping.class_files],
             original_path=self.original / self.name,
             translation_path=self.target / self.name,
         )
@@ -120,7 +133,7 @@ class RebuildJarTest(unittest.TestCase):
         self.assertEqual(['Unknown Location'] * 3, self.values())
         self.json_path.write_text(json.dumps([self.row]), encoding='utf-8')
         self.rebuild()
-        self.mapping.class_files[0]['include_strings'] = ['Other']
+        self.mapping.class_files[0].include_strings = ['Other']
         self.rebuild()
         self.assertEqual(['Unknown Location'] * 3, self.values())
 
@@ -144,8 +157,8 @@ class RebuildJarTest(unittest.TestCase):
         old = target.read_bytes()
         for failure in ('json', 'class', 'context', 'write', 'replace'):
             with self.subTest(failure=failure):
-                self.mapping.class_files[0]['path'] = self.entry
-                row = dict(self.row)
+                self.mapping.class_files[0].path = self.entry
+                row = self.row.copy()
                 if failure == 'context':
                     row['context'] = row['context'].replace(
                         '文件：test.jar', '文件：wrong.jar'
@@ -154,7 +167,7 @@ class RebuildJarTest(unittest.TestCase):
                     '{' if failure == 'json' else json.dumps([row]), encoding='utf-8'
                 )
                 if failure == 'class':
-                    self.mapping.class_files[0]['path'] = 'missing.class'
+                    self.mapping.class_files[0].path = 'missing.class'
                 if failure in ('write', 'replace'):
                     function = '_rewrite_jar' if failure == 'write' else 'os.replace'
                     with patch(
@@ -178,7 +191,9 @@ class RebuildJarTest(unittest.TestCase):
             (1, '不应写入', 1, 'Unknown Location'),
         ]:
             with self.subTest(stage=stage, text=text, occurrence=occurrence):
-                row = dict(self.row, stage=stage, translation=text)
+                row = self.row.copy()
+                row['stage'] = stage
+                row['translation'] = text
                 row['context'] = row['context'].replace(
                     '同值序号：2', f'同值序号：{occurrence}'
                 )

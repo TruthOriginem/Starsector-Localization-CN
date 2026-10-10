@@ -3,7 +3,13 @@
 import struct
 
 
-def make_class(values: tuple[str, str, str] = ('Unknown Location',) * 3) -> bytes:
+def make_class(
+    values: tuple[str, str, str] = (
+        'Unknown Location',
+        'Unknown Location',
+        'Unknown Location',
+    ),
+) -> bytes:
     def utf8(value: str) -> bytes:
         data = value.encode('utf-8')
         return b'\x01' + struct.pack('>H', len(data)) + data

@@ -184,7 +184,7 @@ class DataFile:
     @classmethod
     def save_json_files(
         cls,
-        files: List['DataFile'],
+        files: Sequence['DataFile'],
         ensure_ascii: bool = False,
         indent: int = 4,
     ) -> None:

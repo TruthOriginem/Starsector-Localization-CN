@@ -96,7 +96,7 @@ uv run --locked ty check
 uv run --locked ty check json_loader/alexson  # 单独检查子模块
 ```
 
-默认只报告自有代码的诊断，仍解析 alexson 的类型；现有类型错误待逐项修复。
+默认只报告自有代码的诊断，仍解析 alexson 的类型。
 
 ### Jar 与命令参数测试
 

@@ -242,7 +242,7 @@ class JarMapItem(ParaTranzMapItem):
         return None
 
     @classmethod
-    def from_dict(cls, d: dict):
+    def from_dict(cls, d: dict) -> 'JarMapItem':
         d['class_files'] = [
             ClassFileMapItem(
                 path=item['path'],
