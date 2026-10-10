@@ -11,6 +11,25 @@
 
 2. **字符串解耦（jar-string-decoupler）**：调用 `vendor/jar-string-decoupler-1.0.0-all.jar`，将 `.class` 文件中硬编码的字符串常量提取并解耦，使 ParaTranz 的 jar 加载器能够读取、翻译并写回字符串，无需再手动修改字节码。该工具来自[jar-string-decoupler项目](https://github.com/jnxyp/jar-string-decoupler)。
 
+3. **StackMapTable 重建**：字符串解耦会原地重写方法体（替换字符串 LDC 位点）
+   并平移后续字节，被重写方法的帧表要么整体丢失、要么仍然存在但指向过期位置
+   （仅检测"缺帧"会漏掉后者，如 `BaseLocation.advance`）。此阶段对解耦 jar 的
+   **全部类**用 ASM 的 `COMPUTE_FRAMES` 重建帧表（层级解析只读取类字节索引，
+   不加载游戏类），并把 major &lt; 55 的旧类升到 v61——JDK 27+ 忽略 v49 类上的
+   NestHost/NestMembers，嵌套私有访问会抛 `IllegalAccessError`。
+   fail-closed：含 jsr/ret 的类与 package-info/module-info 保持原样（v61 禁止
+   jsr/ret），重建失败的类同样保持原样并报告，绝不写入半成品。该策略已在
+   0.98a-RC8 全部 21 个游戏 jar（约 6700 类）上真机验证，JDK 28 与 JRE 17
+   双路线均可正常启动、进战役、读存档。
+
+   > 为什么必须在构建期做：消费端虽可用 `-XX:-BytecodeVerificationLocal/Remote`
+   > 跳过普通类的校验，但该豁免对启动链上被 `-javaagent` 改写过的类不生效
+   > （这类类一律在链接期强制校验），且这些诊断开关在高版本 JDK 上随时可能
+   > 收紧。若玩家运行时报 `VerifyError`，先用 `javap -v` 对照磁盘字节：报错
+   > 偏移处的指令在磁盘上不存在 = 是启动链上某个 agent 运行时注入的坏帧
+   > （实测案例：Prepatcher 部分结构补丁在非法类名 `A/new` 上合并类型算错），
+   > 与本步骤产物无关。
+
 `fs.common_obf.jar` 和 `fs.sound_obf.jar` 只过第 1 阶段、不做字符串解耦。
 主分支会在前者中修复高亮颜色数组的空值崩溃；后者的产物仍是原版副本。两者都纳入
 分发，以便各变体汉化包能够互相覆盖安装，避免切换版本后残留旧 hook 或运行时类。
