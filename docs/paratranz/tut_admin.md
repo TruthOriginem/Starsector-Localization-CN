@@ -10,7 +10,7 @@
         git submodule update --init
         ```
         > 本项目使用 [alexson](https://github.com/jnxyp/alexson) 作为子模块，用于处理游戏作者 Alex 风格的非标准 JSON 文件（含 `#` 注释、无引号枚举值等），以实现在修改翻译内容时完整保留原文件格式。
-    - 在仓库根目录准备环境并启动脚本：
+    - 进入仓库的 `para_tranz/` 目录，准备环境并启动脚本：
         ```powershell
         uv sync --locked
         uv run paratranz
@@ -32,7 +32,7 @@
 - 从仓库拉取更新，确保存储库文件和脚本为最新版本
   - 命令：`git pull`
   - 如果子模块有更新，还需执行：`git submodule update --init`
-  - 执行 `uv sync --locked` 同步环境。
+  - 在 `para_tranz/` 内执行 `uv sync --locked` 同步环境。
 - 备份 ParaTranz 平台上的最新翻译数据（**在向平台上传数据前必须进行**，以防止平台上的特殊词条状态丢失）
   - 运行脚本，选择`3 - 从 ParaTranz 平台下载最新导出并写回汉化文件`，等待完成
   - 将生成的`para_tranz/output`文件夹内容提交到 git 作为备份
@@ -49,7 +49,7 @@
 
 （日后会尝试将此操作自动化）
 
-- 在仓库根目录运行 `uv run paratranz`。
+- 在 `para_tranz/` 内运行 `uv run paratranz`。
 - 选择`1 - 从原始和汉化文件导出 ParaTranz 词条`，等待程序执行完毕。
   - 请注意程序执行过程中的警告`[Warning]`开头的输出内容。
 - 导出的文件存储在`项目目录/para_tranz/output`，打开该文件夹。
@@ -67,14 +67,14 @@
 
 当翻译完毕后，或是中途需要测试翻译时，需要进行本操作。
 
-- 在仓库根目录运行 `uv run paratranz`。
+- 在 `para_tranz/` 内运行 `uv run paratranz`。
 - 选择`3 - 从 ParaTranz 平台下载最新导出并写回汉化文件`，等待程序执行完毕。
   - 请注意程序执行过程中的警告`[Warning]`开头的输出内容。
 - 完成！之后可以使用`localization`文件夹中的内容对游戏进行测试，或上传到 git。
 
 ### 从预处理原文重新生成汉化 Jar
 
-普通导入会更新已有汉化 Jar 中的译文。删除平台词条或缩减映射白名单后，使用以下命令清理旧译文残留：
+普通导入会更新已有汉化 Jar 中的译文。删除平台词条或缩减映射白名单后，在 `para_tranz/` 内使用以下命令清理旧译文残留：
 
 ```powershell
 uv run paratranz 2 --rebuild-jars

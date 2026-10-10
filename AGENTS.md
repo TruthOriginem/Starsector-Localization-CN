@@ -28,11 +28,11 @@ ParaTranz 项目：[https://paratranz.cn/projects/3489](https://paratranz.cn/pro
 
 ## 常用命令
 
-统一使用 uv 和 Python 3.14.x：`uv sync --locked` 准备环境，`uv run --locked <命令>` 运行工具。
-依赖变更须同步提交 `pyproject.toml` 和 `uv.lock`。
+ParaTranz 在 `para_tranz/` 内使用 uv 和 Python 3.14.x：`uv sync --locked` 准备环境，`uv run --locked <命令>` 运行工具。
+依赖变更须同步提交该目录下的 `pyproject.toml` 和 `uv.lock`。
 
 ParaTranz 脚本（不带参数运行进入交互式菜单，带数字参数直接执行对应操作）。
-在仓库根目录使用 `uv run paratranz`：
+进入 `para_tranz/` 后使用 `uv run paratranz`：
 
 ```powershell
 uv run paratranz
@@ -81,20 +81,21 @@ cd jar_pre_processing
 .\mvnw.cmd compile exec:java
 ```
 
-Lint / format：
+Lint / format（仅检查 `para_tranz/` 自有代码；在 `para_tranz/` 内运行，配置见该目录的 `pyproject.toml`）：
 
 ```powershell
-ruff check .
-ruff format .
+uv run --locked ruff check .
+uv run --locked ruff format --check .
+uv run --locked ruff format .  # 应用格式化
 ```
 
 ### Jar 与命令参数测试
 
-在仓库根目录运行：
+在 `para_tranz/` 内运行：
 
 ```powershell
-python -X utf8 -m unittest discover -s para_tranz/jar_loader/test
-python -X utf8 -m unittest discover -s para_tranz/jar_loader/integration
+uv run --locked python -X utf8 -m unittest discover -s jar_loader/test
+uv run --locked python -X utf8 -m unittest discover -s jar_loader/integration
 ```
 
 第一条为隔离单元测试：参数解析直接传入参数列表；Jar 测试在临时目录生成最小 class 和 Jar，
