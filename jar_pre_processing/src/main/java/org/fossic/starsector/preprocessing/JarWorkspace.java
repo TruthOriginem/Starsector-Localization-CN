@@ -48,7 +48,7 @@ public final class JarWorkspace {
         this.originalDir = repoDir.resolve("original");
         this.localizationDir = repoDir.resolve("localization");
         this.workDir = this.projectDir.resolve("target").resolve("preprocess-work");
-        this.vendorDecoupler = this.projectDir.resolve("vendor").resolve("jar-string-decoupler-1.0.0-all.jar");
+        this.vendorDecoupler = this.projectDir.resolve("vendor").resolve("jar-string-decoupler-1.0.1-all.jar");
     }
 
     public Path workDir() {

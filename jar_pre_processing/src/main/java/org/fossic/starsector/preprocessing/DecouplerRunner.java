@@ -15,7 +15,7 @@ public final class DecouplerRunner {
     public void run(String jarName, Path input, Path output) throws IOException, InterruptedException {
         Path report = workspace.decouplerReport(jarName);
         List<String> command = new ArrayList<>();
-        command.add("java");
+        command.add(Path.of(System.getProperty("java.home"), "bin", "java").toString());
         command.add("-Dfile.encoding=UTF-8");
         command.add("-jar");
         command.add(workspace.vendorDecoupler().toString());
@@ -38,8 +38,9 @@ public final class DecouplerRunner {
 
         Process process = new ProcessBuilder(command)
                 .directory(workspace.workDir().toFile())
-                .inheritIO()
+                .redirectErrorStream(true)
                 .start();
+        process.getInputStream().transferTo(System.out);
         int exit = process.waitFor();
         if (exit != 0) {
             throw new PatchException("jar-string-decoupler failed for " + jarName + " with exit code " + exit);
