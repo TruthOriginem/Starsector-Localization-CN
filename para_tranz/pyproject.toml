@@ -44,3 +44,13 @@ select = ["E", "F", "I"]
 
 [tool.ruff.format]
 quote-style = "single"
+
+[tool.ty.environment]
+python-version = "3.14"
+# para_tranz 是当前目录对应的包；此项仅用于导入解析。
+root = [".."]
+extra-paths = ["json_loader"]
+
+[tool.ty.src]
+include = ["**/*.py", "**/*.pyi"]
+exclude = ["output", "logs", "json_loader/alexson", "**/__pycache__"]
