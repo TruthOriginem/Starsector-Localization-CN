@@ -132,7 +132,8 @@ class CSVParserAlex:
 
             if inQuotes:
                 raise ValueError(
-                    f'Mismatched quotes in the string; last quote: [{"".join(lastQuotedString)}], last added row:\n{lastRowString}',
+                    f'Mismatched quotes in the string; last quote: ['
+                    f'{"".join(lastQuotedString)}], last added row:\n{lastRowString}',
                 )
             else:
                 return resultArray
@@ -171,7 +172,8 @@ def parse_csv_jn(csv_content: str) -> List[dict]:
             else:
                 if cell_quoted:
                     raise ValueError(
-                        f'行 {line_count} 列 {headers[header_index]} 存在多余的引号，位置 {(line_count, pos_in_line)}'
+                        f'行 {line_count} 列 {headers[header_index]} 存在多余的引号，'
+                        f'位置 {(line_count, pos_in_line)}'
                     )
                 in_quote = True
                 cell_quoted = True
@@ -192,7 +194,8 @@ def parse_csv_jn(csv_content: str) -> List[dict]:
                 elif header_index == len(headers) - 1:
                     if in_quote:
                         raise ValueError(
-                            f'行 {line_count} 数据不完整，从 {last_quote_start} 开始的引号未闭合'
+                            f'行 {line_count} 数据不完整，从 {last_quote_start} 开始的'
+                            f'引号未闭合'
                         )
                     data.append(row_data)
                     row_data = {}

@@ -261,7 +261,10 @@ class JsonFile(DataFile):
 
     @property
     def file_name(self) -> str:
-        """完整相对路径，用于生成 ParaTranz key（如 data/config/battle_objectives.json）。"""
+        """完整相对路径，用于生成 ParaTranz key。
+
+        例如 data/config/battle_objectives.json。
+        """
         return str(self.path).replace('\\', '/')
 
     def load_from_file(self) -> None:
@@ -294,7 +297,10 @@ class JsonFile(DataFile):
         return key
 
     def _generate_context(self, json_path: str, is_key_rename: bool = False) -> str:
-        context = f'{EXPORTED_STRING_CONTEXT_PREFIX}源文件：{self.path}\n数据路径：{json_path}'
+        context = (
+            f'{EXPORTED_STRING_CONTEXT_PREFIX}源文件：{self.path}\n'
+            f'数据路径：{json_path}'
+        )
         if is_key_rename:
             context += '\n（词条内容为json key值）'
         return context
@@ -445,7 +451,8 @@ class JsonFile(DataFile):
                                 self.logger.warning(f'重命名 key 失败 {key}：{e}')
                 else:
                     self.logger.warning(
-                        f'在 {self.path} 中没有找到词条 key={key} 对应的位置，未写入译文'
+                        f'在 {self.path} 中没有找到词条 key={key} 对应的位置，未写入译'
+                        f'文'
                     )
             else:
                 parent_segs = exact_segs[:-1]
@@ -459,7 +466,8 @@ class JsonFile(DataFile):
                         trans_parent[last_seg] = AlexsonString(translation)
                     else:
                         self.logger.warning(
-                            f'在 {self.path} 中没有找到词条 key={key} 对应的位置，未写入译文'
+                            f'在 {self.path} 中没有找到词条 key={key} 对应的位置，未写'
+                            f'入译文'
                         )
                 elif isinstance(last_seg, str):
                     if (
@@ -469,7 +477,8 @@ class JsonFile(DataFile):
                         trans_parent[last_seg] = AlexsonString(translation)
                     else:
                         self.logger.warning(
-                            f'在 {self.path} 中没有找到词条 key={key} 对应的位置，未写入译文'
+                            f'在 {self.path} 中没有找到词条 key={key} 对应的位置，未写'
+                            f'入译文'
                         )
 
     def save_file(self) -> None:

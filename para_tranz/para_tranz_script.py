@@ -103,16 +103,16 @@ def main() -> None:
         print('1 - 从原始(original)和汉化(localization)文件导出 ParaTranz 词条')
         print('2 - 将 ParaTranz 词条写回汉化(localization)文件')
         print(
-            '3 - 从 ParaTranz 平台下载最新导出并写回汉化文件（需要在 .env 中配置 API Key）'
+            '3 - 从 ParaTranz 平台下载最新导出并写回汉化文件（需要在 .env 中配置 API '
+            'Key）'
         )
         print(
-            '4 - 对指定类文件，生成包含所有string的类文件映射项(用于添加新类到para_tranz_map.json)'
+            '4 - 对指定类文件，生成包含所有string的类文件映射项(用于添加新类到'
+            'para_tranz_map.json)'
         )
         print('5 - 在所有jar文件中查找指定原文字符串')
         print('6 - 对 para_tranz_map.json 进行格式化（去重、排序）')
-        print(
-            '从原文 jar 重新生成汉化：uv run paratranz 2 --rebuild-jars'
-        )
+        print('从原文 jar 重新生成汉化：uv run paratranz 2 --rebuild-jars')
         # 7 - jar版本迁移（未实现）
         option = input('请输入选项数字：')
 

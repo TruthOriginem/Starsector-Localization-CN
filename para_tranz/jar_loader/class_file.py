@@ -46,8 +46,10 @@ class StringOccurrence:
         只统计被至少一个 StringConstant 直接引用的 UTF-8 常量
         （即 get_utf8_constants_with_string_ref() 返回的条目）。
         注意：若某 UTF-8 常量同时被字段名、方法名等非 String 属性引用（extra_ref），
-        写回时会跳过并 WARNING；这类常量通常是解耦前的共享常量，应从 map 的 occurs 列表中删除。
-        当 occurrence_total > 1 时，occurrence_index 写入 context 和 key；唯一出现时省略。
+        写回时会跳过并 WARNING；这类常量通常是解耦前的共享常量，
+        应从 map 的 occurs 列表中删除。
+        当 occurrence_total > 1 时，occurrence_index 写入 context 和 key；
+        唯一出现时省略。
 
     occurrence_total：同一 class 内该原文被 StringConstant 引用的 UTF-8 常量总数。
     """
@@ -140,11 +142,13 @@ class JavaClassFile:
         # 检查是否为java class文件
         if self.original_bytes[:4] != MAGIC:
             raise ValueError(
-                f'原文jar文件 {self.jar_file.path} 中的 {self.path} 不是有效的 java class 文件'
+                f'原文jar文件 {self.jar_file.path} 中的 {self.path} 不是有效的 java '
+                f'class 文件'
             )
         if self.translation_bytes[:4] != MAGIC:
             raise ValueError(
-                f'译文jar文件 {self.jar_file.path} 中的 {self.path} 不是有效的 java class 文件'
+                f'译文jar文件 {self.jar_file.path} 中的 {self.path} 不是有效的 java '
+                f'class 文件'
             )
 
         # 检查class文件版本
@@ -153,14 +157,16 @@ class JavaClassFile:
             or self.get_original_version() > MAX_CLASS_VER
         ):
             raise ValueError(
-                f'原文jar文件 {self.jar_file.path} 中的 {self.path} 的版本不在1.5-1.7之间'
+                f'原文jar文件 {self.jar_file.path} 中的 {self.path} 的版本不在1.5-1.7'
+                f'之间'
             )
         if (
             self.get_translation_version() < MIN_CLASS_VER
             or self.get_translation_version() > MAX_CLASS_VER
         ):
             raise ValueError(
-                f'译文jar文件 {self.jar_file.path} 中的 {self.path} 的版本不在1.5-1.7之间'
+                f'译文jar文件 {self.jar_file.path} 中的 {self.path} 的版本不在1.5-1.7'
+                f'之间'
             )
 
         # TODO: 添加更多的检查
@@ -193,12 +199,15 @@ class JavaClassFile:
     def _get_original_string_constants_mapping(self) -> Dict[str, List[Utf8Constant]]:
         """
         返回原文 class 中，所有被 StringConstant 引用的 UTF-8 常量，按原文分组。
-        同一原文的常量按 constant_index 升序排列，下标即为该常量的同值序号（occurrence_index）。
+        同一原文的常量按 constant_index 升序排列，
+        下标即为该常量的同值序号（occurrence_index）。
 
-        注意：仅扫描被 StringConstant 引用的 UTF-8 常量（get_utf8_constants_with_string_ref()）。
+        注意：仅扫描被 StringConstant 引用的 UTF-8 常量
+        （get_utf8_constants_with_string_ref()）。
         被字段名等非 String 属性同时引用的常量（extra_ref）也会出现在结果中，
         但 update_strings() 会在写回时检测并跳过，并发出 WARNING。
-        这类常量通常对应解耦前的共享常量，应通过在 map 的 occurs 列表中显式排除对应序号来处理。
+        这类常量通常对应解耦前的共享常量，
+        应通过在 map 的 occurs 列表中显式排除对应序号来处理。
         """
         constants_by_original: Dict[str, List[Utf8Constant]] = {}
 
@@ -243,8 +252,10 @@ class JavaClassFile:
                 )
                 if out_of_range:
                     raise ValueError(
-                        f'在 {self.jar_file.path}:{self.path} 中原文 "{original_string}" '
-                        f'只出现 {len(original_constants)} 次，但 include_strings 指定了序号 {out_of_range}'
+                        f'在 {self.jar_file.path}:{self.path} 中原文 "'
+                        f'{original_string}" '
+                        f'只出现 {len(original_constants)} 次，但 include_strings 指定'
+                        f'了序号 {out_of_range}'
                     )
 
             for occurrence_index, original_constant in enumerate(original_constants):
@@ -260,7 +271,8 @@ class JavaClassFile:
                 except KeyError:
                     self.logger.warning(
                         f'在 {self.jar_file.path}:{self.path} 的译文中未找到'
-                        f'原文 "{original_string}"{self._format_occurrence_index(occurrence_index)}'
+                        f'原文 "{original_string}"'
+                        f'{self._format_occurrence_index(occurrence_index)}'
                         f' 对应的常量编号为 {constant_index} 的字符串，未进行提取'
                     )
                     continue
@@ -282,7 +294,8 @@ class JavaClassFile:
             if rule and rule.occurs is not None:
                 occurs = f'（include_strings 指定同值序号：{sorted(rule.occurs)}）'
             self.logger.warning(
-                f'在 {self.jar_file.path}:{self.path} 中未找到mapping中指定需要提取的字符串 "{s}"{occurs}，未进行提取'
+                f'在 {self.jar_file.path}:{self.path} 中未找到mapping中指定需要提取的'
+                f'字符串 "{s}"{occurs}，未进行提取'
             )
 
         return occurrences
@@ -293,8 +306,8 @@ class JavaClassFile:
         # 生成词条key
         # 唯一原文格式：  jar文件路径:类文件路径.class#"原文内容"
         # 重复原文格式：  jar文件路径:类文件路径.class#"原文内容":同值序号
-        # 同值序号（occurrence_index）仅在 occurrence_total > 1 时传入，见 get_strings()。
-        # key 只用于唯一标识和平台同步；导入时以 context 中的同值序号定位，不从 key 解析。
+        # 同值序号仅在 occurrence_total > 1 时传入，见 get_strings()。
+        # key 只用于唯一标识和平台同步；导入以 context 中的同值序号定位。
         if occurrence_index is None:
             full_key = f'{self.jar_file.path}:{self.path}#"{original_constant.string}"'
         else:
@@ -330,7 +343,10 @@ class JavaClassFile:
 
         if occurrence_index is None:
             return f'{self.jar_file.path}:{new_path}#"{new_string}"@{key_hash}'
-        return f'{self.jar_file.path}:{new_path}#"{new_string}":{occurrence_index}@{key_hash}'
+        return (
+            f'{self.jar_file.path}:{new_path}#"{new_string}":'
+            f'{occurrence_index}@{key_hash}'
+        )
 
     def get_strings(self) -> List[String]:
         strings = []
@@ -421,19 +437,24 @@ class JavaClassFile:
                 EXPORTED_STRING_CONTEXT_PREFIX_PREFIX
             ):
                 self.logger.debug(
-                    f'在 {self.jar_file.path}:{self.path} 中词条 key={s.key} 的词条上下文前缀与当前上下文前缀不匹配，跳过词条'
+                    f'在 {self.jar_file.path}:{self.path} 中词条 key={s.key} 的词条上'
+                    f'下文前缀与当前上下文前缀不匹配，跳过词条'
                 )
                 continue
 
             context = self.parse_jar_string_context(s.context)
             if context.jar_path != str(self.jar_file.path):
                 raise ValueError(
-                    f'词条 key={s.key}{self._format_occurrence_index(context.occurrence_index)} 的上下文 jar 为 {context.jar_path}，'
+                    f'词条 key={s.key}'
+                    f'{self._format_occurrence_index(context.occurrence_index)} 的上下'
+                    f'文 jar 为 {context.jar_path}，'
                     f'但当前正在更新 {self.jar_file.path}'
                 )
             if context.class_path != str(self.path):
                 raise ValueError(
-                    f'词条 key={s.key}{self._format_occurrence_index(context.occurrence_index)} 的上下文 class 为 {context.class_path}，'
+                    f'词条 key={s.key}'
+                    f'{self._format_occurrence_index(context.occurrence_index)} 的上下'
+                    f'文 class 为 {context.class_path}，'
                     f'但当前正在更新 {self.path}'
                 )
 
@@ -441,7 +462,8 @@ class JavaClassFile:
             if include_values and original not in include_values:
                 self.logger.warning(
                     f'在 {self.jar_file.path}:{self.path} 中原文为 "{context.original}"'
-                    f'{self._format_occurrence_index(context.occurrence_index)} 的词条不在 include_strings 中，'
+                    f'{self._format_occurrence_index(context.occurrence_index)} 的词条'
+                    f'不在 include_strings 中，'
                     f'请从平台上删除该词条 key={s.key} 或修改 include_strings'
                 )
                 continue
@@ -455,17 +477,21 @@ class JavaClassFile:
                     and context.occurrence_index not in rule.occurs
                 ):
                     self.logger.warning(
-                        f'在 {self.jar_file.path}:{self.path} 中原文为 "{context.original}"'
+                        f'在 {self.jar_file.path}:{self.path} 中原文为 "'
+                        f'{context.original}"'
                         f'（同值序号：{context.occurrence_index}） 的词条，'
-                        f'该同值序号不在 include_strings 的 occurs 列表 {sorted(rule.occurs)} 中，'
+                        f'该同值序号不在 include_strings 的 occurs 列表 '
+                        f'{sorted(rule.occurs)} 中，'
                         f'请从平台上删除该词条 key={s.key} 或修改 include_strings'
                     )
                     continue
 
             if original not in constants_by_original:
                 self.logger.warning(
-                    f'在 {self.jar_file.path}:{self.path} 中没有找到原文为 "{context.original}"'
-                    f'{self._format_occurrence_index(context.occurrence_index)} 的常量，'
+                    f'在 {self.jar_file.path}:{self.path} 中没有找到原文为 "'
+                    f'{context.original}"'
+                    f'{self._format_occurrence_index(context.occurrence_index)} 的常量'
+                    f'，'
                     f'未写入词条 key={s.key} 的译文'
                 )
                 continue
@@ -474,15 +500,20 @@ class JavaClassFile:
             if context.occurrence_index is None:
                 if len(original_constants) != 1:
                     raise ValueError(
-                        f'词条 key={s.key} 的上下文没有 同值序号，但在 {self.jar_file.path}:{self.path} 中'
-                        f'原文 "{context.original}" 出现了 {len(original_constants)} 次，无法唯一定位'
+                        f'词条 key={s.key} 的上下文没有 同值序号，但在 '
+                        f'{self.jar_file.path}:{self.path} 中'
+                        f'原文 "{context.original}" 出现了 {len(original_constants)} '
+                        f'次，无法唯一定位'
                     )
                 original_constant = original_constants[0]
             else:
                 if context.occurrence_index >= len(original_constants):
                     raise ValueError(
-                        f'词条 key={s.key}{self._format_occurrence_index(context.occurrence_index)} 指定的同值序号越界，'
-                        f'但在 {self.jar_file.path}:{self.path} 中原文 "{context.original}" '
+                        f'词条 key={s.key}'
+                        f'{self._format_occurrence_index(context.occurrence_index)} 指'
+                        f'定的同值序号越界，'
+                        f'但在 {self.jar_file.path}:{self.path} 中原文 "'
+                        f'{context.original}" '
                         f'只出现了 {len(original_constants)} 次'
                     )
                 original_constant = original_constants[context.occurrence_index]
@@ -492,15 +523,17 @@ class JavaClassFile:
             )
             if translation is None:
                 self.logger.warning(
-                    f'在 {self.jar_file.path}:{self.path} 的译文中未找到原文 "{context.original}"'
+                    f'在 {self.jar_file.path}:{self.path} 的译文中未找到原文 "'
+                    f'{context.original}"'
                     f'{self._format_occurrence_index(context.occurrence_index)} 对应的'
-                    f'常量编号为 {original_constant.constant_index} 的字符串，未写入词条 key={s.key}'
+                    f'常量编号为 {original_constant.constant_index} 的字符串，未写入词'
+                    f'条 key={s.key}'
                 )
                 continue
 
             # 如果原文在原文jar中只被常量引用
             if original_constant not in const_ref_by_other_attrs:
-                # 如果译文已被翻译且不为空（这个条件写在里面是因为要优先报出“也被其他非string属性引用”的警告）
+                # 译文已翻译且不为空；放在内层以优先报告非string属性引用警告。
                 if should_write_translation(s, UPDATE_STRING_ALLOW_EMPTY_TRANSLATION):
                     translation.string = s.translation
                     update_success_count += 1
@@ -508,8 +541,10 @@ class JavaClassFile:
                     # 如果词条尚未翻译，且译文文件内容与原文不同，则写入原文
                     if translation.string != context.original:
                         self.logger.warning(
-                            f'在 {self.jar_file.path}:{self.path} 中原文为 "{context.original}"'
-                            f'{self._format_occurrence_index(context.occurrence_index)} 的译文词条尚未翻译，'
+                            f'在 {self.jar_file.path}:{self.path} 中原文为 "'
+                            f'{context.original}"'
+                            f'{self._format_occurrence_index(context.occurrence_index)}'
+                            f' 的译文词条尚未翻译，'
                             f'但译文文件中内容与原文不同，将写入原文'
                         )
                         translation.string = context.original

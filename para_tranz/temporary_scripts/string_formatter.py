@@ -10,14 +10,18 @@ logger = make_logger('StringFormatter')
 
 # 要执行的替换
 CSV_RULES = [
-    # 去除中文句子中的空格，需要替换两次；不匹配前面是"级"或者后面五个字内出现"-"的情况，以免误伤船名
+    # 去除中文句子中的空格，需要替换两次。
+    # 跳过前面是“级”或后面五个字内出现“-”的情况，以免误伤船名。
     (
-        '((?!级)[\u4e00-\u9fa5，。；：？！]) +([\u4e00-\u9fa5，。；：？！])(?!.{0,5}[-])',
+        '((?!级)[\u4e00-\u9fa5，。；：？！]) +'
+        '([\u4e00-\u9fa5，。；：？！])(?!.{0,5}[-])',
         '$1$2',
     ),
-    # 去除中文句子中的空格，需要替换两次；不匹配前面是"级"或者后面五个字内出现"-"的情况，以免误伤船名
+    # 去除中文句子中的空格，需要替换两次。
+    # 跳过前面是“级”或后面五个字内出现“-”的情况，以免误伤船名。
     (
-        '((?!级)[\u4e00-\u9fa5，。；：？！]) +([\u4e00-\u9fa5，。；：？！])(?!.{0,5}[-])',
+        '((?!级)[\u4e00-\u9fa5，。；：？！]) +'
+        '([\u4e00-\u9fa5，。；：？！])(?!.{0,5}[-])',
         '$1$2',
     ),
     # 去除英文标点符号后空格
@@ -42,7 +46,8 @@ CSV_RULES = [
     ('( ?)(\\$[a-zA-Z0-9_\\.]+)( ?)(?=[\u4e00-\u9fa5，。；：？！])', ' $2 '),
     # 人称代词和$shipOrFleet两边不空格
     (
-        r'( ?)(\$.{0,6}([Hh]eOrShe|[Hh]isOrHer|[Hh]imOrHer|[Hh]imOrHerself|[Mm]anOrWoman|[Ss]hipOrFleet))( ?)',
+        '( ?)(\\$.{0,6}([Hh]eOrShe|[Hh]isOrHer|[Hh]imOrHer|[Hh]imOrHerself|[Mm]'
+        'anOrWoman|[Ss]hipOrFleet))( ?)',
         '$2',
     ),
     # 双引号用英文
@@ -98,7 +103,8 @@ JAR_RULES = [
     ('( ?)(\\$[a-zA-Z0-9_\\.]+)( ?)(?=[\u4e00-\u9fa5，。；：？！])', ' $2 '),
     # 人称代词和$shipOrFleet两边不空格
     (
-        r'( ?)(\$.{0,6}([Hh]eOrShe|[Hh]isOrHer|[Hh]imOrHer|[Hh]imOrHerself|[Mm]anOrWoman|[Ss]hipOrFleet))( ?)',
+        '( ?)(\\$.{0,6}([Hh]eOrShe|[Hh]isOrHer|[Hh]imOrHer|[Hh]imOrHerself|[Mm]'
+        'anOrWoman|[Ss]hipOrFleet))( ?)',
         '$2',
     ),
     # 双引号用英文

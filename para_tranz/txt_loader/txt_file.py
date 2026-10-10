@@ -91,7 +91,8 @@ class TxtFile(DataFile):
             return
         if not found:
             self.logger.warning(
-                f'在 {relative_path(self.translation_path)} 中未找到词条 key={key!r}，未写入译文'
+                f'在 {relative_path(self.translation_path)} 中未找到词条 key={key!r}，'
+                f'未写入译文'
             )
 
     def save_file(self) -> None:

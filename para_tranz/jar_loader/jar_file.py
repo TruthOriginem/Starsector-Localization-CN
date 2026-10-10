@@ -149,14 +149,17 @@ class JavaJarFile(DataFile):
                     EXPORTED_STRING_CONTEXT_PREFIX_PREFIX
                 ):
                     self.logger.debug(
-                        f'在 {self.path} 中词条 key={s.key} 的词条上下文前缀与当前上下文前缀不匹配，跳过词条'
+                        f'在 {self.path} 中词条 key={s.key} 的词条上下文前缀与当前上下'
+                        f'文前缀不匹配，跳过词条'
                     )
                     continue
                 raise e
 
             if parsed_context.jar_path != str(self.path):
                 raise ValueError(
-                    f'词条 key={s.key}{JavaClassFile._format_occurrence_index(parsed_context.occurrence_index)} '
+                    f'词条 key={s.key}'
+                    f'{JavaClassFile._format_occurrence_index(parsed_context.occurrence_index)}'
+                    f' '
                     f'的上下文 jar 为 {parsed_context.jar_path}，'
                     f'但当前正在更新 {self.path}'
                 )
@@ -169,13 +172,18 @@ class JavaJarFile(DataFile):
                     EXPORTED_STRING_CONTEXT_PREFIX_PREFIX
                 ):
                     self.logger.debug(
-                        f'在 {self.path} 中词条 key={s.key}{JavaClassFile._format_occurrence_index(parsed_context.occurrence_index)} '
+                        f'在 {self.path} 中词条 key={s.key}'
+                        f'{JavaClassFile._format_occurrence_index(parsed_context.occurrence_index)}'
+                        f' '
                         f'的词条上下文前缀与当前上下文前缀不匹配，跳过词条'
                     )
                 else:
                     self.logger.warning(
-                        f'在更新词条 {s.key}{JavaClassFile._format_occurrence_index(parsed_context.occurrence_index)} 时，'
-                        f'在文件 {self.path} 中找不到类 {class_file_path}。未更新该词条。'
+                        f'在更新词条 {s.key}'
+                        f'{JavaClassFile._format_occurrence_index(parsed_context.occurrence_index)}'
+                        f' 时，'
+                        f'在文件 {self.path} 中找不到类 {class_file_path}。未更新该词'
+                        f'条。'
                     )
                 continue
 
@@ -222,7 +230,8 @@ class JavaJarFile(DataFile):
         path = zipfile.Path(self.original_file, class_file_path)
         if not path.exists():
             raise FileNotFoundError(
-                f'在原始jar文件 {self.original_path} 中找不到class文件 {class_file_path}'
+                f'在原始jar文件 {self.original_path} 中找不到class文件 '
+                f'{class_file_path}'
             )
         return path.read_bytes()
 
@@ -231,7 +240,8 @@ class JavaJarFile(DataFile):
         path = zipfile.Path(self.translation_file, class_file_path)
         if not path.exists():
             raise FileNotFoundError(
-                f'在译文jar文件 {self.translation_path} 中找不到class文件 {class_file_path}'
+                f'在译文jar文件 {self.translation_path} 中找不到class文件 '
+                f'{class_file_path}'
             )
         return path.read_bytes()
 

@@ -28,7 +28,8 @@ def generate_class_mapping_diff_string(
 
     :param target_class_map: 目标类文件映射
     :param source_class_map: 源类文件映射
-    :param extra_ref_strings: 同时被非string属性引用的字符串集合（无法自动写回，用黄色背景标注）
+    :param extra_ref_strings: 同时被非string属性引用的字符串集合
+        （无法自动写回，用黄色背景标注）
 
     :return: 可打印的对比信息，带有ANSI颜色标记
     """
@@ -81,7 +82,8 @@ def generate_class_file_mapping_by_path(
     """
     通过类文件路径查找类，并生成类文件映射项
 
-    :param class_file_path: 类文件路径，格式为：[jar文件路径:]类文件路径[.class]。其中类文件路径可以使用'/'或'.'分隔每个包名和类名
+    :param class_file_path: 类文件路径，格式为：[jar文件路径:]类文件路径[.class]。
+        可以使用'/'或'.'分隔每个包名和类名。
     :return: 类所处的jar文件映射项、生成的类文件映射项、已存在的类文件映射项（如果存在）
     """
 
@@ -174,7 +176,8 @@ def print_class_mapping_result(
             f'以下是与当前存在的映射项的对比'
             f'（{colorize("绿色", GREEN)}=已包含  '
             f'无色=未包含  '
-            f'{colorize("黄色背景", BG_YELLOW)}=同时被非string属性引用，无法自动写回）：'
+            f'{colorize("黄色背景", BG_YELLOW)}=同时被非string属性引用，无法自动写回）'
+            f'：'
         )
         print(
             generate_class_mapping_diff_string(

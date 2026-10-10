@@ -130,7 +130,8 @@ def add_translation_to_exported_strings():
                                 updated_strings.append(string_item)
                         else:
                             logger.warning(
-                                f'类 {klass_name} 中的词条 "{original_text}" 不在对照表中，跳过'
+                                f'类 {klass_name} 中的词条 "{original_text}" 不在对照'
+                                f'表中，跳过'
                             )
                     klass.update_strings(updated_strings)
                 else:

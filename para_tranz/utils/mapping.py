@@ -134,19 +134,22 @@ class ClassFileMapItem:
 
         if not isinstance(item, dict):
             raise ValueError(
-                f'类 {self.path} 的 include_strings 只能包含字符串或对象，发现：{item!r}'
+                f'类 {self.path} 的 include_strings 只能包含字符串或对象，发现：'
+                f'{item!r}'
             )
 
         if set(item.keys()) != {'val', 'occurs'}:
             raise ValueError(
-                f'类 {self.path} 的 include_strings 对象必须只包含 val 和 occurs 字段，发现：{item!r}'
+                f'类 {self.path} 的 include_strings 对象必须只包含 val 和 occurs 字段'
+                f'，发现：{item!r}'
             )
 
         val = item['val']
         occurs = item['occurs']
         if not isinstance(val, str):
             raise ValueError(
-                f'类 {self.path} 的 include_strings 对象 val 必须是字符串，发现：{item!r}'
+                f'类 {self.path} 的 include_strings 对象 val 必须是字符串，发现：'
+                f'{item!r}'
             )
 
         if not isinstance(occurs, list) or len(occurs) == 0:
@@ -162,11 +165,13 @@ class ClassFileMapItem:
                 or occurrence_index < 0
             ):
                 raise ValueError(
-                    f'类 {self.path} 中原文 "{val}" 的 occurs 只能包含非负整数，发现：{occurrence_index!r}'
+                    f'类 {self.path} 中原文 "{val}" 的 occurs 只能包含非负整数，发现：'
+                    f'{occurrence_index!r}'
                 )
             if occurrence_index in occurs_set:
                 raise ValueError(
-                    f'类 {self.path} 中原文 "{val}" 的 occurs 包含重复序号 {occurrence_index}'
+                    f'类 {self.path} 中原文 "{val}" 的 occurs 包含重复序号 '
+                    f'{occurrence_index}'
                 )
             occurs_set.add(occurrence_index)
 

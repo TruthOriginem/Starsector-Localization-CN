@@ -296,7 +296,8 @@ class JavaSourceFile(DataFile):
                 if out_of_range:
                     raise ValueError(
                         f'在 {self.path} 中原文 "{original_string}" '
-                        f'只出现 {len(original_literals)} 次，但 include_strings 指定了序号 {out_of_range}'
+                        f'只出现 {len(original_literals)} 次，但 include_strings 指定'
+                        f'了序号 {out_of_range}'
                     )
 
             for occurrence_index, original_literal in enumerate(original_literals):
@@ -311,7 +312,8 @@ class JavaSourceFile(DataFile):
                 except IndexError:
                     self.logger.warning(
                         f'在 {self.path} 的译文中未找到原文 "{original_string}"'
-                        f'{self._format_occurrence_index(occurrence_index)} 对应的源码序号 '
+                        f'{self._format_occurrence_index(occurrence_index)} 对应的源码'
+                        f'序号 '
                         f'{original_literal.source_index}，未进行提取'
                     )
                     continue
@@ -337,7 +339,8 @@ class JavaSourceFile(DataFile):
             if rule and rule.occurs is not None:
                 occurs = f'（include_strings 指定同值序号：{sorted(rule.occurs)}）'
             self.logger.warning(
-                f'在 {self.path} 中未找到 mapping 中指定需要提取的字符串 "{original}"{occurs}，未进行提取'
+                f'在 {self.path} 中未找到 mapping 中指定需要提取的字符串 "{original}"'
+                f'{occurs}，未进行提取'
             )
 
         return occurrences
@@ -445,22 +448,26 @@ class JavaSourceFile(DataFile):
                 EXPORTED_STRING_CONTEXT_PREFIX_PREFIX
             ):
                 self.logger.debug(
-                    f'在 {self.path} 中词条 key={s.key} 的词条上下文前缀与当前上下文前缀不匹配，跳过词条'
+                    f'在 {self.path} 中词条 key={s.key} 的词条上下文前缀与当前上下文前'
+                    f'缀不匹配，跳过词条'
                 )
                 continue
 
             context = self.parse_java_string_context(s.context)
             if context.path != self._path_key():
                 raise ValueError(
-                    f'词条 key={s.key}{self._format_occurrence_index(context.occurrence_index)} '
-                    f'的上下文 Java 文件为 {context.path}，但当前正在更新 {self._path_key()}'
+                    f'词条 key={s.key}'
+                    f'{self._format_occurrence_index(context.occurrence_index)} '
+                    f'的上下文 Java 文件为 {context.path}，但当前正在更新 '
+                    f'{self._path_key()}'
                 )
 
             rule = include_rules.get(context.original)
             if rule is None:
                 self.logger.warning(
                     f'在 {self.path} 中原文为 "{context.original}"'
-                    f'{self._format_occurrence_index(context.occurrence_index)} 的词条不在 include_strings 中，'
+                    f'{self._format_occurrence_index(context.occurrence_index)} 的词条'
+                    f'不在 include_strings 中，'
                     f'请从平台上删除该词条 key={s.key} 或修改 include_strings'
                 )
                 continue
@@ -468,13 +475,15 @@ class JavaSourceFile(DataFile):
             if rule.occurs is not None:
                 if context.occurrence_index is None:
                     self.logger.warning(
-                        f'词条 key={s.key} 的上下文没有同值序号，但 include_strings 对原文 '
+                        f'词条 key={s.key} 的上下文没有同值序号，但 include_strings 对'
+                        f'原文 '
                         f'"{context.original}" 指定了 occurs，未写入译文'
                     )
                     continue
                 if context.occurrence_index not in rule.occurs:
                     self.logger.warning(
-                        f'词条 key={s.key}{self._format_occurrence_index(context.occurrence_index)} '
+                        f'词条 key={s.key}'
+                        f'{self._format_occurrence_index(context.occurrence_index)} '
                         f'不在 include_strings 指定的 occurs 中，未写入译文'
                     )
                     continue
@@ -482,14 +491,16 @@ class JavaSourceFile(DataFile):
             original_literals = literals_by_original.get(context.original)
             if not original_literals:
                 self.logger.warning(
-                    f'在 {self.path} 中找不到原文 "{context.original}"，未写入词条 key={s.key}'
+                    f'在 {self.path} 中找不到原文 "{context.original}"，未写入词条 key'
+                    f'={s.key}'
                 )
                 continue
 
             if context.occurrence_index is not None:
                 if context.occurrence_index >= len(original_literals):
                     self.logger.warning(
-                        f'词条 key={s.key}{self._format_occurrence_index(context.occurrence_index)} '
+                        f'词条 key={s.key}'
+                        f'{self._format_occurrence_index(context.occurrence_index)} '
                         f'指定的同值序号越界，未写入译文'
                     )
                     continue
@@ -497,7 +508,8 @@ class JavaSourceFile(DataFile):
             else:
                 if len(original_literals) > 1:
                     self.logger.warning(
-                        f'词条 key={s.key} 的上下文没有同值序号，但原文在 {self.path} 中出现 '
+                        f'词条 key={s.key} 的上下文没有同值序号，但原文在 {self.path} '
+                        f'中出现 '
                         f'{len(original_literals)} 次，未写入译文'
                     )
                     continue
@@ -505,14 +517,17 @@ class JavaSourceFile(DataFile):
 
             if original_literal.source_index != context.source_index:
                 self.logger.warning(
-                    f'词条 key={s.key}{self._format_occurrence_index(context.occurrence_index)} '
-                    f'的源码序号从 {context.source_index} 变为 {original_literal.source_index}，'
+                    f'词条 key={s.key}'
+                    f'{self._format_occurrence_index(context.occurrence_index)} '
+                    f'的源码序号从 {context.source_index} 变为 '
+                    f'{original_literal.source_index}，'
                     f'仍按 original 当前定位写入'
                 )
 
             if original_literal.source_index >= len(self.translation_literals):
                 self.logger.warning(
-                    f'在译文文件 {relative_path(self.translation_path)} 中找不到源码序号 '
+                    f'在译文文件 {relative_path(self.translation_path)} 中找不到源码序'
+                    f'号 '
                     f'{original_literal.source_index}，未写入词条 key={s.key}'
                 )
                 continue

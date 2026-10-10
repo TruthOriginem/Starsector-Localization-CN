@@ -102,7 +102,8 @@ class CsvFile(DataFile):
             row_id_str = row_id[0]
         else:
             row_id_str = str(row_id)
-        return f'{self.path.name}#{row_id_str}${column}'  # 词条的id由 文件名-行id-列名 组成
+        # 词条的id由 文件名-行id-列名 组成
+        return f'{self.path.name}#{row_id_str}${column}'
 
     # 将传入的 ParaTranz 词条数据对象中的译文数据合并到现有数据中
     def update_strings(self, strings: List[String]) -> None:
@@ -115,7 +116,8 @@ class CsvFile(DataFile):
                 EXPORTED_STRING_CONTEXT_PREFIX_PREFIX
             ):
                 self.logger.debug(
-                    f'文件 {self.path} 中词条 key={s.key} 的上下文前缀与当前上下文前缀不匹配，跳过词条'
+                    f'文件 {self.path} 中词条 key={s.key} 的上下文前缀与当前上下文前缀'
+                    f'不匹配，跳过词条'
                 )
                 continue
             if row_id in self.translation_id_data and row_id in self.original_id_data:
@@ -123,12 +125,15 @@ class CsvFile(DataFile):
                 if should_write_translation(s):
                     if self.original_id_data[row_id][column] == '':
                         self.logger.warning(
-                            f'文件 {self.path} 中 {self.id_column_name}="{row_id}" 的行中 "{column}" 列原文为空，'
-                            f'但更新的译文数据不为空，未更新该词条。原文可能已删除，请考虑删除该译文词条'
+                            f'文件 {self.path} 中 {self.id_column_name}="{row_id}" 的'
+                            f'行中 "{column}" 列原文为空，'
+                            f'但更新的译文数据不为空，未更新该词条。原文可能已删除，请'
+                            f'考虑删除该译文词条'
                         )
                         if REMOVE_TRANSLATION_WHEN_ORIGINAL_IS_EMPTY:
                             self.logger.warning(
-                                '已设置 REMOVE_TRANSLATION_WHEN_ORIGINAL_IS_EMPTY 为 True，'
+                                '已设置 REMOVE_TRANSLATION_WHEN_ORIGINAL_IS_EMPTY 为 '
+                                'True，'
                                 '将该译文设为空字符串'
                             )
                             self.translation_id_data[row_id][column] = ''
@@ -142,7 +147,8 @@ class CsvFile(DataFile):
                     )
             else:
                 self.logger.warning(
-                    f'在文件 {self.path} 中没有找到 {self.id_column_name}="{row_id}" 的行，未更新该词条。原文可能已删除，请考虑删除该译文词条'
+                    f'在文件 {self.path} 中没有找到 {self.id_column_name}="{row_id}" '
+                    f'的行，未更新该词条。原文可能已删除，请考虑删除该译文词条'
                 )
 
     def validate_before_save(self) -> None:
@@ -152,7 +158,8 @@ class CsvFile(DataFile):
         for row_id, translated_row in self.translation_id_data.items():
             if row_id not in self.original_id_data:
                 raise ValueError(
-                    f'文件 {relative_path(self.translation_path)} 中存在原文文件没有的有效行：'
+                    f'文件 {relative_path(self.translation_path)} 中存在原文文件没有的'
+                    f'有效行：'
                     f'{self.id_column_name}="{row_id}"，请删除该行或同步原文文件'
                 )
             original_row = self.original_id_data[row_id]
@@ -160,7 +167,8 @@ class CsvFile(DataFile):
             for col, translated_value in translated_row.items():
                 if '“' in translated_value or '”' in translated_value:
                     raise ValueError(
-                        f'key="{self.generate_string_key(row_id, col)}" 的词条中译文数据包含中文引号，请移除后再保存'
+                        f'key="{self.generate_string_key(row_id, col)}" 的词条中译文数'
+                        f'据包含中文引号，请移除后再保存'
                     )
             # 选项ID一致性检查：译文 options 列中各选项的ID必须与原文逐一相同，
             # ID 错误会导致游戏内找不到规则报错，或对话路由到错误分支。
@@ -174,8 +182,10 @@ class CsvFile(DataFile):
                 )
                 if original_option_ids != translated_option_ids:
                     raise ValueError(
-                        f'key="{self.generate_string_key(row_id, "options")}" 的译文选项ID '
-                        f'{translated_option_ids} 与原文选项ID {original_option_ids} 不一致，'
+                        f'key="{self.generate_string_key(row_id, "options")}" 的译'
+                        f'文选项ID '
+                        f'{translated_option_ids} 与原文选项ID {original_option_ids} '
+                        f'不一致，'
                         f'请修正译文 options 列中的选项ID'
                     )
 
@@ -190,9 +200,11 @@ class CsvFile(DataFile):
                 )
                 if highlight_command_count > 1:
                     raise ValueError(
-                        f'key="{self.generate_string_key(row_id, "script")}" 的译文script中'
+                        f'key="{self.generate_string_key(row_id, "script")}" 的译'
+                        f'文script中'
                         f'同一段落包含 {highlight_command_count} 条正文高亮命令'
-                        f'(Highlight/SetTextHighlights)，后执行的命令会清除先前命令的高亮，'
+                        f'(Highlight/SetTextHighlights)，后执行的命令会清除先前命令的'
+                        f'高亮，'
                         f'请合并为一条多参数命令'
                     )
 
@@ -206,7 +218,8 @@ class CsvFile(DataFile):
                     )
                     if missing_tokens:
                         self.logger.warning(
-                            f'key="{self.generate_string_key(row_id, col)}" 的词条中译文数据缺失了原文中的token {missing_tokens}，请检查'
+                            f'key="{self.generate_string_key(row_id, col)}" 的词条中译'
+                            f'文数据缺失了原文中的token {missing_tokens}，请检查'
                         )
                     if translated_value and (
                         original_value.count('\n') != translated_value.count('\n')
@@ -221,7 +234,8 @@ class CsvFile(DataFile):
                         ):
                             continue
                         self.logger.warning(
-                            f'key="{self.generate_string_key(row_id, col)}" 的词条中原文行数'
+                            f'key="{self.generate_string_key(row_id, col)}" 的词条中原'
+                            f'文行数'
                             f'({original_value.count(chr(10)) + 1})与译文行数'
                             f'({translated_value.count(chr(10)) + 1})不一致，请检查'
                         )
@@ -253,7 +267,11 @@ class CsvFile(DataFile):
                     }
                     if missing_highlights:
                         self.logger.warning(
-                            f'key="{self.generate_string_key(row_id, "text")}" / "{self.generate_string_key(row_id, "options")}" 的译文数据中缺失了高亮命令目标 {missing_highlights}，请检查译文数据或script列内容(key="{self.generate_string_key(row_id, "script")}")'
+                            f'key="{self.generate_string_key(row_id, "text")}" / "'
+                            f"""{self.generate_string_key(row_id, 'options')}" 的译"""
+                            f'文数据中缺失了高亮命令目标 {missing_highlights}，请检查'
+                            f'译文数据或script列内容(key="'
+                            f"""{self.generate_string_key(row_id, 'script')}")"""
                         )
 
                     # 检查各列中的高亮目标是否被合法字符包围
@@ -271,7 +289,9 @@ class CsvFile(DataFile):
                         )
                         if not_surrounded:
                             self.logger.warning(
-                                f'key="{self.generate_string_key(row_id, col)}" 的译文数据中高亮命令目标 {not_surrounded} 左右存在非英文标点和空格的字符，请检查'
+                                f'key="{self.generate_string_key(row_id, col)}" 的译文'
+                                f'数据中高亮命令目标 {not_surrounded} 左右存在非英文标'
+                                f'点和空格的字符，请检查'
                             )
         self.logger.info(
             f'校验 {relative_path(self.translation_path)} 中的译文数据完成'
@@ -291,7 +311,7 @@ class CsvFile(DataFile):
             csv = reader(f, strict=True)
             real_column_names = csv.__next__()
 
-        # 由于部分csv包含多个空列，在用DictReader读取时会被丢弃，为了与源文件保持一致，在此根据原文件重新添加
+        # 部分csv的空列会被DictReader丢弃；为与源文件保持一致，根据原文件重新添加。
         real_column_index = {
             col: real_column_names.index(col) for col in self.column_names if col
         }
@@ -302,7 +322,7 @@ class CsvFile(DataFile):
             row = ['' for _ in range(len(real_column_names))]
             for col, value in dict_row.items():
                 if col:
-                    # 将csv行内换行的\n替换为\r\n以避免csv写入时整个文件变成\n换行(LF)的问题
+                    # 将csv行内的\n替换为\r\n，避免写入时整个文件变成LF换行。
                     # 将读取csv时使用的^n替换回\\n
                     value = value.replace('^n', '\\n').replace('\n', '\r\n')
                     row[real_column_index[col]] = value
@@ -318,27 +338,34 @@ class CsvFile(DataFile):
             and self.id_column_name not in self.column_names
         ) and (not set(self.id_column_name).issubset(set(self.column_names))):
             raise ValueError(
-                f'从 {self.path} 中未找到指定的id列 "{self.id_column_name}"，请检查配置文件中的设置。可用的列包括： {self.column_names}'
+                f'从 {self.path} 中未找到指定的id列 "{self.id_column_name}"，请检查配'
+                f'置文件中的设置。可用的列包括： {self.column_names}'
             )
         if not set(self.text_column_names).issubset(set(self.column_names)):
             raise ValueError(
-                f'从 {self.path} 中未找到指定的文字列 {self.text_column_names}，请检查配置文件中的设置。可用的列包括： {self.column_names}'
+                f'从 {self.path} 中未找到指定的文字列 {self.text_column_names}，请检查'
+                f'配置文件中的设置。可用的列包括： {self.column_names}'
             )
         # 检查原文与译文数量是否匹配
         if len(self.original_data) != len(self.translation_data):
             self.logger.warning(
-                f'文件 {relative_path(self.path)} 所加载的原文与译文数据量不匹配：加载原文 {len(self.original_data)} 条，译文 {len(self.translation_data)} 条'
+                f'文件 {relative_path(self.path)} 所加载的原文与译文数据量不匹配：加载'
+                f'原文 {len(self.original_data)} 条，译文 {len(self.translation_data)}'
+                f' 条'
             )
         if len(self.original_id_data) != len(self.translation_id_data):
             self.logger.warning(
-                f'文件 {relative_path(self.path)} 所加载的未被注释且不为空的原文与译文数据量不匹配：加载有效原文 {len(self.original_id_data)} 条，有效译文 {len(self.translation_id_data)} 条'
+                f'文件 {relative_path(self.path)} 所加载的未被注释且不为空的原文与译文'
+                f'数据量不匹配：加载有效原文 {len(self.original_id_data)} 条，有效译文'
+                f' {len(self.translation_id_data)} 条'
             )
         extra_translation_ids = set(self.translation_id_data) - set(
             self.original_id_data
         )
         if extra_translation_ids:
             raise ValueError(
-                f'文件 {relative_path(self.translation_path)} 中存在原文文件没有的有效行：'
+                f'文件 {relative_path(self.translation_path)} 中存在原文文件没有的有效'
+                f'行：'
                 f'{sorted(extra_translation_ids)}，请删除这些行或同步原文文件'
             )
 
@@ -348,14 +375,18 @@ class CsvFile(DataFile):
             self.original_path, self.id_column_name
         )
         self.logger.info(
-            f'从 {relative_path(self.original_path)} 中加载了 {len(self.original_data)} 行原文数据，其中未被注释且不为空的行数为 {len(self.original_id_data)}'
+            f'从 {relative_path(self.original_path)} 中加载了 '
+            f'{len(self.original_data)} 行原文数据，其中未被注释且不为空的行数为 '
+            f'{len(self.original_id_data)}'
         )
         if self.translation_path.exists():
             _, self.translation_data, self.translation_id_data = self.load_csv(
                 self.translation_path, self.id_column_name
             )
             self.logger.info(
-                f'从 {relative_path(self.translation_path)} 中加载了 {len(self.translation_data)} 行译文数据，其中未被注释且不为空的行数为 {len(self.translation_id_data)}'
+                f'从 {relative_path(self.translation_path)} 中加载了 '
+                f'{len(self.translation_data)} 行译文数据，其中未被注释且不为空的行数'
+                f'为 {len(self.translation_id_data)}'
             )
 
         self.validate_after_load()
@@ -392,7 +423,8 @@ class CsvFile(DataFile):
                     if row[col] is None:
                         row[col] = ''
                         cls.logger.warning(
-                            f'文件 {path} 第 {i} 行 {id_column_name}="{row_id}" 内的值数量不够，可能是缺少逗号'
+                            f'文件 {path} 第 {i} 行 {id_column_name}="{row_id}" 内的值'
+                            f'数量不够，可能是缺少逗号'
                         )
 
                 first_column = row[columns[0]]
@@ -400,7 +432,8 @@ class CsvFile(DataFile):
                 if not first_column.startswith('#') and any(row_id):
                     if row_id in id_data:
                         raise ValueError(
-                            f'文件 {path} 第 {i} 行 {id_column_name}="{row_id}" 的值在文件中不唯一'
+                            f'文件 {path} 第 {i} 行 {id_column_name}="{row_id}" 的值在'
+                            f'文件中不唯一'
                         )
                     id_data[row_id] = row
                 data.append(row)
@@ -444,4 +477,7 @@ class CsvFile(DataFile):
     # 根据行ID，生成该行的词条上下文内容，用于辅助翻译
     def generate_row_context(self, row: dict) -> str:
         row_num = self.original_data.index(row)
-        return f'{EXPORTED_STRING_CONTEXT_PREFIX}文件：{self.path.name}\n行：{str(row_num + 1).zfill(5)}'
+        return (
+            f'{EXPORTED_STRING_CONTEXT_PREFIX}文件：{self.path.name}\n'
+            f'行：{str(row_num + 1).zfill(5)}'
+        )

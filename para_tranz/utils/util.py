@@ -129,7 +129,9 @@ class String:
     key: str
     original: str
     translation: str
-    stage: int = 0  # 词条翻译状态，0为未翻译，1为已翻译，2为有疑问，3为已校对，5为已审核（二校），9为已锁定，-1为已隐藏
+    # 翻译状态：0未翻译，1已翻译，2有疑问，3已校对，5已审核（二校），
+    # 9已锁定，-1已隐藏。
+    stage: int = 0
     context: str = ''  # 词条的备注信息
 
     def __post_init__(self) -> None:
@@ -218,7 +220,8 @@ class DataFile:
 
             if output_path.exists() and not OVERRIDE_STRING_STATUS:
                 cls.logger.debug(
-                    f'Paratranz 平台数据文件 {relative_path(output_path)} 已存在，从中读取已翻译词条的词条stage状态'
+                    f'Paratranz 平台数据文件 {relative_path(output_path)} 已存在，从中'
+                    f'读取已翻译词条的词条stage状态'
                 )
                 special_stages = (1, 2, 3, 5, 9, -1)
                 existing_stages = {
@@ -229,7 +232,8 @@ class DataFile:
                 for s in strings:
                     if s.key in existing_stages and s.stage != existing_stages[s.key]:
                         cls.logger.debug(
-                            f'更新词条 {s.key} 的stage：{s.stage}->{existing_stages[s.key]}'
+                            f'更新词条 {s.key} 的stage：{s.stage}->'
+                            f'{existing_stages[s.key]}'
                         )
                         s.stage = existing_stages[s.key]
 
@@ -241,7 +245,8 @@ class DataFile:
                 else f'{len(grouped_files)} 个文件'
             )
             cls.logger.info(
-                f'从 {source_text} 中导出了 {len(strings)} 个词条到 {relative_path(output_path)}'
+                f'从 {source_text} 中导出了 {len(strings)} 个词条到 '
+                f'{relative_path(output_path)}'
             )
 
     def update_from_json(self) -> None:
@@ -253,11 +258,13 @@ class DataFile:
             strings = self.read_json_strings(self.para_tranz_path)
             self.update_strings(strings)
             self.logger.info(
-                f'从 {relative_path(self.para_tranz_path)} 加载了 {len(strings)} 个词条到 {relative_path(self.translation_path)}'
+                f'从 {relative_path(self.para_tranz_path)} 加载了 {len(strings)} 个词'
+                f'条到 {relative_path(self.translation_path)}'
             )
         else:
             self.logger.info(
-                f'未找到 {self.path} 所对应的 ParaTranz 数据 ({self.para_tranz_path})，未更新词条'
+                f'未找到 {self.path} 所对应的 ParaTranz 数据 ({self.para_tranz_path})'
+                f'，未更新词条'
             )
 
     def save_file(self) -> None:
@@ -323,7 +330,7 @@ def contains_english(s: str) -> bool:
 
 
 # From processWithWiredChars.py
-# 由于游戏原文文件中可能存在以Windows-1252格式编码的字符（如前后双引号等），所以需要进行转换
+# 转换游戏原文中可能存在的Windows-1252字符（如前后双引号）。
 def replace_weird_chars(s: str) -> str:
     return (
         s.replace('\udc94', '""')
@@ -366,7 +373,4 @@ class SetEncoder(json.JSONEncoder):
 
 if __name__ == '__main__':
     configure_logging()
-    # print(normalize_class_path(
-    #     'com/fs/starfarer/renderers/A/OooOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO.class'))
-    # print(normalize_class_path('com/fs/starfarer/launcher/opengl/GLModPickerV2.class'))
     print(url_encode('submarkets.csv#storage$name'))

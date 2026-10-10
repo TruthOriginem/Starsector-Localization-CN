@@ -20,7 +20,9 @@ handlers = list(logging.root.handlers)
 def audit(event, args):
     if event == 'open' and isinstance(args[0], (str, bytes)):
         name = Path(os.fsdecode(args[0])).name
-        if name in ('.env', 'para_tranz_map.json', 'para_tranz_script.log') or name.endswith('.jar'):
+        if name in (
+            '.env', 'para_tranz_map.json', 'para_tranz_script.log'
+        ) or name.endswith('.jar'):
             raise AssertionError('测试不应访问项目文件：' + str(args[0]))
     if event in ('socket.connect', 'subprocess.Popen'):
         raise AssertionError('测试不应访问网络或启动外部工具')

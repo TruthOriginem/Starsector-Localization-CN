@@ -41,8 +41,8 @@ class ConstantTable:
     用于表示class文件中的常量表
     """
 
-    # TODO: 1. 增加检测同一个UTF8常量是否被多次引用的功能，尤其是被其他非String类型的常量引用
-    # TODO: 2. 考虑将被String引用的常量单独复制并添加到常量表尾部，以避免被其他非String类型的常量引用
+    # TODO: 1. 检测UTF8常量的多次引用，尤其是非String类型的引用。
+    # TODO: 2. 将String引用的常量复制到表尾，避免与非String类型共享。
     # TODO: 3. 分析class文件的剩余部分，找出String被引用的方法名
 
     def __init__(self, class_bytes: bytes) -> None:
