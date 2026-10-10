@@ -203,8 +203,7 @@ final class JarWorkspaceTest {
 
     private static void prepareMinimumRepository(
             Path repository, Path project) throws IOException {
-        Path vendor = project.resolve(
-                "vendor/jar-string-decoupler-1.0.0-all.jar");
+        Path vendor = new JarWorkspace(project).vendorDecoupler();
         Files.createDirectories(vendor.getParent());
         Files.write(vendor, new byte[] {1});
         Path gameData = repository.resolve("game data");
