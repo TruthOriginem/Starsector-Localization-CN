@@ -1,8 +1,9 @@
 import sys
 from os.path import abspath, dirname
 
-# 将父级目录加入到环境变量中，以便从命令行中运行本脚本
-sys.path.append(dirname(dirname(abspath(__file__))))
+# 直接执行文件时使用当前仓库；安装后的命令入口无需修改搜索路径。
+if __name__ == '__main__' and not __package__:
+    sys.path.insert(0, dirname(dirname(abspath(__file__))))
 
 from para_tranz.config import ENABLED_LOADERS
 from para_tranz.csv_loader.csv_file import CsvFile
@@ -90,10 +91,10 @@ def search_string_in_jar_files(pattern: str | None = None) -> None:
     logger.info('字符串查找完成')
 
 
-def mian() -> None:
+def main() -> None:
     configure_logging()
     # 支持通过命令行参数直接指定操作，跳过交互式菜单
-    # 用法：python para_tranz_script.py [1|2|3|4|5|6] [参数]
+    # 用法：uv run paratranz [1|2|3|4|5|6] [参数]
     if len(sys.argv) > 1:
         option = sys.argv[1]
     else:
@@ -110,7 +111,7 @@ def mian() -> None:
         print('5 - 在所有jar文件中查找指定原文字符串')
         print('6 - 对 para_tranz_map.json 进行格式化（去重、排序）')
         print(
-            '从原文 jar 重新生成汉化：python para_tranz/para_tranz_script.py 2 --rebuild-jars'
+            '从原文 jar 重新生成汉化：uv run paratranz 2 --rebuild-jars'
         )
         # 7 - jar版本迁移（未实现）
         option = input('请输入选项数字：')
@@ -148,4 +149,4 @@ def mian() -> None:
 
 
 if __name__ == '__main__':
-    mian()
+    main()

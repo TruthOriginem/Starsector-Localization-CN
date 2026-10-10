@@ -14,9 +14,15 @@ from para_tranz.jar_loader.test.fixtures import make_class
 
 class CliEntryTest(unittest.TestCase):
     def test_rebuild_command_and_logs(self) -> None:
+        self.check_entry(direct=True)
+
+    def test_callable_entry_and_logs(self) -> None:
+        self.check_entry(direct=False)
+
+    def check_entry(self, *, direct: bool) -> None:
         source = Path(__file__).resolve().parents[2]
         with tempfile.TemporaryDirectory() as directory:
-            root = Path(directory)
+            root = Path(directory) / '中文 项目'
             scripts = root / 'para_tranz'
             for path in source.rglob('*.py'):
                 target = scripts / path.relative_to(source)
@@ -31,15 +37,18 @@ class CliEntryTest(unittest.TestCase):
             (root / 'original').mkdir()
             with zipfile.ZipFile(root / 'original/test.jar', 'w') as archive:
                 archive.writestr('example/Test.class', make_class())
+            entry = [sys.executable, '-X', 'utf8']
+            if direct:
+                entry.append(str(scripts / 'para_tranz_script.py'))
+            else:
+                entry.extend(
+                    [
+                        '-c',
+                        'from para_tranz.para_tranz_script import main; main()',
+                    ]
+                )
             result = subprocess.run(
-                [
-                    sys.executable,
-                    '-X',
-                    'utf8',
-                    str(scripts / 'para_tranz_script.py'),
-                    '2',
-                    '--rebuild-jars',
-                ],
+                [*entry, '2', '--rebuild-jars'],
                 cwd=root,
                 capture_output=True,
                 text=True,
@@ -56,3 +65,26 @@ class CliEntryTest(unittest.TestCase):
             for message in ('汉化 jar 重建完成', '程序执行完毕'):
                 self.assertIn(message, result.stdout)
                 self.assertIn(message, log)
+            invalid = subprocess.run(
+                [*entry, 'invalid'],
+                cwd=root,
+                capture_output=True,
+                text=True,
+                encoding='utf-8',
+                timeout=30,
+            )
+            self.assertEqual(1, invalid.returncode, invalid.stdout + invalid.stderr)
+            self.assertIn('无效选项', invalid.stdout)
+            interactive = subprocess.run(
+                entry,
+                input='2\n\n',
+                cwd=root,
+                capture_output=True,
+                text=True,
+                encoding='utf-8',
+                timeout=30,
+            )
+            self.assertEqual(
+                0, interactive.returncode, interactive.stdout + interactive.stderr
+            )
+            self.assertIn('请选择您要进行的操作', interactive.stdout)

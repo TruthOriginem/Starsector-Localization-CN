@@ -32,18 +32,18 @@ ParaTranz 项目：[https://paratranz.cn/projects/3489](https://paratranz.cn/pro
 依赖变更须同步提交 `pyproject.toml` 和 `uv.lock`。
 
 ParaTranz 脚本（不带参数运行进入交互式菜单，带数字参数直接执行对应操作）。
-下列 `python` 命令也可在已激活的项目环境中执行，不要假定 `py` 启动器存在：
+在仓库根目录使用 `uv run paratranz`：
 
 ```powershell
-python -X utf8 para_tranz\para_tranz_script.py
-python -X utf8 para_tranz\para_tranz_script.py 1  # 导出：游戏文件 -> para_tranz/output
-python -X utf8 para_tranz\para_tranz_script.py 2  # 导入：para_tranz/output -> localization
-python -X utf8 para_tranz\para_tranz_script.py 2 --rebuild-jars  # 从预处理原文重新生成汉化 Jar
-python -X utf8 para_tranz\para_tranz_script.py 3  # 下载平台导出并导入，需要 .env
-python -X utf8 para_tranz\para_tranz_script.py 3 --rebuild-jars  # 下载后重新生成汉化 Jar
-python -X utf8 para_tranz\para_tranz_script.py 4 "com.fs.starfarer.api.SomeClass"
-python -X utf8 para_tranz\para_tranz_script.py 5 "search pattern"
-python -X utf8 para_tranz\para_tranz_script.py 6  # 格式化 para_tranz_map.json
+uv run paratranz
+uv run paratranz 1  # 导出：游戏文件 -> para_tranz/output
+uv run paratranz 2  # 导入：para_tranz/output -> localization
+uv run paratranz 2 --rebuild-jars  # 从预处理原文重新生成汉化 Jar
+uv run paratranz 3  # 下载平台导出并导入，需要 .env
+uv run paratranz 3 --rebuild-jars  # 下载后重新生成汉化 Jar
+uv run paratranz 4 "com.fs.starfarer.api.SomeClass"
+uv run paratranz 5 "search pattern"
+uv run paratranz 6  # 格式化 para_tranz_map.json
 ```
 
 子命令说明：

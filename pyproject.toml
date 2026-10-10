@@ -6,9 +6,23 @@ requires-python = ">=3.14,<3.15"
 # 主流程使用标准库；alexson 由 Git 子模块提供。
 dependencies = []
 
-[tool.uv]
-# 当前以仓库脚本运行，不构建或安装项目本身。
-package = false
+[project.scripts]
+paratranz = "para_tranz.para_tranz_script:main"
+
+[build-system]
+requires = ["uv_build==0.11.8"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "para_tranz"
+module-root = ""
+source-exclude = [
+    "para_tranz/output",
+    "para_tranz/logs",
+    "**/*.log",
+    "**/.git",
+    "**/.pytest_cache",
+]
 
 [dependency-groups]
 dev = [

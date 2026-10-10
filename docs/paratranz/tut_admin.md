@@ -13,7 +13,7 @@
     - 在仓库根目录准备环境并启动脚本：
         ```powershell
         uv sync --locked
-        uv run --locked python -X utf8 para_tranz/para_tranz_script.py
+        uv run paratranz
         ```
     - 配置 ParaTranz API Key，以便脚本自动从平台下载数据：
       - 复制项目目录下的`.env.example`为`.env`
@@ -49,7 +49,7 @@
 
 （日后会尝试将此操作自动化）
 
-- 双击打开`项目目录/para_tranz/para_tranz_script.py`。
+- 在仓库根目录运行 `uv run paratranz`。
 - 选择`1 - 从原始和汉化文件导出 ParaTranz 词条`，等待程序执行完毕。
   - 请注意程序执行过程中的警告`[Warning]`开头的输出内容。
 - 导出的文件存储在`项目目录/para_tranz/output`，打开该文件夹。
@@ -67,7 +67,7 @@
 
 当翻译完毕后，或是中途需要测试翻译时，需要进行本操作。
 
-- 双击打开`项目目录/para_tranz/para_tranz_script.py`。
+- 在仓库根目录运行 `uv run paratranz`。
 - 选择`3 - 从 ParaTranz 平台下载最新导出并写回汉化文件`，等待程序执行完毕。
   - 请注意程序执行过程中的警告`[Warning]`开头的输出内容。
 - 完成！之后可以使用`localization`文件夹中的内容对游戏进行测试，或上传到 git。
@@ -77,9 +77,9 @@
 普通导入会更新已有汉化 Jar 中的译文。删除平台词条或缩减映射白名单后，使用以下命令清理旧译文残留：
 
 ```powershell
-python -X utf8 para_tranz/para_tranz_script.py 2 --rebuild-jars
+uv run paratranz 2 --rebuild-jars
 # 或先下载平台最新数据，再重建导入
-python -X utf8 para_tranz/para_tranz_script.py 3 --rebuild-jars
+uv run paratranz 3 --rebuild-jars
 ```
 
 `--rebuild-jars` 仅对当前映射中的 Jar 生效，以预处理后的 `original/` 为基底应用当前允许的译文；
