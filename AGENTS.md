@@ -28,7 +28,11 @@ ParaTranz 项目：[https://paratranz.cn/projects/3489](https://paratranz.cn/pro
 
 ## 常用命令
 
-ParaTranz 脚本（不带参数运行进入交互式菜单，带数字参数直接执行对应操作）。使用本地可用的 Python 3 解释器（如 `python`），不要假定 `py` 启动器存在：
+统一使用 uv 和 Python 3.14.x：`uv sync --locked` 准备环境，`uv run --locked <命令>` 运行工具。
+依赖变更须同步提交 `pyproject.toml` 和 `uv.lock`。
+
+ParaTranz 脚本（不带参数运行进入交互式菜单，带数字参数直接执行对应操作）。
+下列 `python` 命令也可在已激活的项目环境中执行，不要假定 `py` 启动器存在：
 
 ```powershell
 python -X utf8 para_tranz\para_tranz_script.py

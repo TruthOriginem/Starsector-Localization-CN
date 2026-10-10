@@ -1,0 +1,17 @@
+[project]
+name = "starsector-localization-cn"
+version = "0.1.0"
+description = "远行星号中文汉化项目的仓库工具"
+requires-python = ">=3.14,<3.15"
+# 主流程使用标准库；alexson 由 Git 子模块提供。
+dependencies = []
+
+[tool.uv]
+# 当前以仓库脚本运行，不构建或安装项目本身。
+package = false
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.0",
+    "ty>=0.0.86",
+]

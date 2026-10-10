@@ -1,7 +1,6 @@
 # 也不麻烦的数据和版本管理指南
 - 在首次使用之前，您需要：
-    - 安装`Python 3.10`或以上版本。
-      - 可以从 [这里下载](https://www.python.org/downloads/)
+    - 安装 [uv](https://docs.astral.sh/uv/getting-started/installation/)，管理项目所需的 Python 3.14 和依赖。
     - 安装`Git`版本管理系统。
       - 可以从 [这里下载](https://git-scm.com/downloads)
     - 克隆 [远行星号翻译存储库](https://github.com/TruthOriginem/Starsector-Localization-CN) 到本地。
@@ -11,6 +10,11 @@
         git submodule update --init
         ```
         > 本项目使用 [alexson](https://github.com/jnxyp/alexson) 作为子模块，用于处理游戏作者 Alex 风格的非标准 JSON 文件（含 `#` 注释、无引号枚举值等），以实现在修改翻译内容时完整保留原文件格式。
+    - 在仓库根目录准备环境并启动脚本：
+        ```powershell
+        uv sync --locked
+        uv run --locked python -X utf8 para_tranz/para_tranz_script.py
+        ```
     - 配置 ParaTranz API Key，以便脚本自动从平台下载数据：
       - 复制项目目录下的`.env.example`为`.env`
       - 用文本编辑器打开`.env`，填入你的 ParaTranz API Key：
@@ -28,6 +32,7 @@
 - 从仓库拉取更新，确保存储库文件和脚本为最新版本
   - 命令：`git pull`
   - 如果子模块有更新，还需执行：`git submodule update --init`
+  - 执行 `uv sync --locked` 同步环境。
 - 备份 ParaTranz 平台上的最新翻译数据（**在向平台上传数据前必须进行**，以防止平台上的特殊词条状态丢失）
   - 运行脚本，选择`3 - 从 ParaTranz 平台下载最新导出并写回汉化文件`，等待完成
   - 将生成的`para_tranz/output`文件夹内容提交到 git 作为备份
