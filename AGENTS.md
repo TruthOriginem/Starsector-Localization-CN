@@ -98,6 +98,15 @@ uv run --locked ty check json_loader/alexson  # 单独检查子模块
 
 默认只报告自有代码的诊断，仍解析 alexson 的类型。
 
+Git 提交钩子：在仓库根目录运行一次
+`uv run --project para_tranz --locked pre-commit install --config para_tranz/.pre-commit-config.yaml --allow-missing-config`。
+仅暂存的 `para_tranz/` 文件触发上述三项检查，失败会阻止提交，不自动修改文件；新克隆需重新安装。
+旧分支没有此配置时自动跳过；全量手动检查可在仓库根目录运行
+`uv run --project para_tranz --locked pre-commit run --config para_tranz/.pre-commit-config.yaml --all-files`。
+
+[ParaTranz CI](.github/workflows/paratranz-check.yml) 在相关文件的 push / PR 中自动运行
+上述检查及下方两组测试（Windows / Python 3.14，排除存档分支）；全量导入导出仍在本地验证。
+
 ### Jar 与命令参数测试
 
 在 `para_tranz/` 内运行：

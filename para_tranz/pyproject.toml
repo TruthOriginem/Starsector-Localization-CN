@@ -23,6 +23,7 @@ dev-mode-dirs = [".."]
 
 [dependency-groups]
 dev = [
+    "pre-commit>=4.4",
     "ruff>=0.17.0",
     "ty>=0.0.86",
 ]

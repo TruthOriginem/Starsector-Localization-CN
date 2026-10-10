@@ -1,0 +1,23 @@
+minimum_pre_commit_version: '4.4.0'
+default_install_hook_types: [pre-commit]
+default_stages: [pre-commit]
+files: ^para_tranz/
+
+repos:
+  - repo: local
+    hooks:
+      - id: paratranz-lint
+        name: ParaTranz Ruff lint
+        language: unsupported
+        entry: uv run --directory para_tranz --locked ruff check .
+        pass_filenames: false
+      - id: paratranz-format
+        name: ParaTranz Ruff format
+        language: unsupported
+        entry: uv run --directory para_tranz --locked ruff format --check .
+        pass_filenames: false
+      - id: paratranz-types
+        name: ParaTranz ty
+        language: unsupported
+        entry: uv run --directory para_tranz --locked ty check
+        pass_filenames: false

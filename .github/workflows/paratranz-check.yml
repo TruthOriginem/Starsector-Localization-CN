@@ -1,0 +1,73 @@
+name: ParaTranz checks
+
+on:
+  push:
+    branches-ignore: [legacy-097-miko, legacy-097-miko-j23]
+    paths:
+      - 'para_tranz/**'
+      - '!para_tranz/output/**'
+      - '!para_tranz/logs/**'
+      - 'original/starfarer.api.jar'
+      - '.gitmodules'
+      - '.github/workflows/paratranz-check.yml'
+  pull_request:
+    branches-ignore: [legacy-097-miko, legacy-097-miko-j23]
+    paths:
+      - 'para_tranz/**'
+      - '!para_tranz/output/**'
+      - '!para_tranz/logs/**'
+      - 'original/starfarer.api.jar'
+      - '.gitmodules'
+      - '.github/workflows/paratranz-check.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: paratranz-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    env:
+      PYTHONUTF8: '1'
+    defaults:
+      run:
+        shell: pwsh
+        working-directory: para_tranz
+    steps:
+      - name: Checkout
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          submodules: recursive
+          persist-credentials: false
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+        with:
+          working-directory: para_tranz
+          enable-cache: true
+          cache-dependency-glob: |
+            para_tranz/uv.lock
+            para_tranz/pyproject.toml
+            para_tranz/.python-version
+
+      - name: Sync locked environment
+        run: uv sync --locked
+
+      - name: Lint
+        run: uv run --locked ruff check .
+
+      - name: Check formatting
+        run: uv run --locked ruff format --check .
+
+      - name: Check types
+        run: uv run --locked ty check
+
+      - name: Unit tests
+        run: uv run --locked python -X utf8 -m unittest discover -s jar_loader/test
+
+      - name: Integration tests
+        run: uv run --locked python -X utf8 -m unittest discover -s jar_loader/integration
