@@ -107,6 +107,8 @@ python -X utf8 -m unittest discover -s para_tranz/jar_loader/integration
 - `para_tranz/config.py`：路径、loader 开关、ParaTranz API 配置。
 - `para_tranz/para_tranz_map.json`：文件和字符串映射配置。
 - `para_tranz/output/`：导出的 ParaTranz JSON 数据。
+- `para_tranz/utils/cli_args.py`：命令参数解析与分发。
+- `para_tranz/logs/`：运行日志目录，在脚本启动时自动创建。
 
 当前 loader：
 

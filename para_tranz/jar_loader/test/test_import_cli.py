@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import Mock
 
-from para_tranz.cli_args import Command, dispatch_command, parse_args
+from para_tranz.utils.cli_args import Command, dispatch_command, parse_args
 
 
 class ImportCliTest(unittest.TestCase):

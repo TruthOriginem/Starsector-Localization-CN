@@ -4,7 +4,7 @@ from pathlib import Path
 
 # [日志输出]
 LOG_LEVEL = logging.INFO
-LOG_FILE_PATH = Path(__file__).parent / 'para_tranz_script.log'
+LOG_FILE_PATH = Path(__file__).parent / 'logs' / 'para_tranz_script.log'
 
 # [路径配置]
 # 设置游戏原文，译文和Paratranz数据文件路径

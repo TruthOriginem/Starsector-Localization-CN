@@ -25,7 +25,7 @@ def audit(event, args):
     if event in ('socket.connect', 'subprocess.Popen'):
         raise AssertionError('测试不应访问网络或启动外部工具')
 sys.addaudithook(audit)
-from para_tranz.cli_args import parse_args
+from para_tranz.utils.cli_args import parse_args
 from para_tranz.jar_loader import jar_file
 from para_tranz.jar_loader.test.test_rebuild import RebuildJarTest
 assert os.environ == environment

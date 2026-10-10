@@ -79,6 +79,7 @@ def _init_file_handler() -> None:
         return
     _file_handler_initialized = True
 
+    LOG_FILE_PATH.parent.mkdir(parents=True, exist_ok=True)
     file_handler = logging.FileHandler(LOG_FILE_PATH, mode='w', encoding='utf-8')
     file_handler.setLevel(logging.DEBUG)
     file_handler.terminator = ''

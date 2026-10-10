@@ -51,7 +51,8 @@ class CliEntryTest(unittest.TestCase):
                 (root / 'original/test.jar').read_bytes(),
                 (root / 'localization/test.jar').read_bytes(),
             )
-            log = (scripts / 'para_tranz_script.log').read_text(encoding='utf-8')
+            self.assertFalse((scripts / 'para_tranz_script.log').exists())
+            log = (scripts / 'logs/para_tranz_script.log').read_text(encoding='utf-8')
             for message in ('汉化 jar 重建完成', '程序执行完毕'):
                 self.assertIn(message, result.stdout)
                 self.assertIn(message, log)
