@@ -4,7 +4,7 @@
 
 ## 功能
 
-预处理分两个阶段，对 `starfarer.api.jar`、`starfarer_obf.jar`、
+预处理分三个阶段，对 `starfarer.api.jar`、`starfarer_obf.jar`、
 `fs.common_obf.jar` 和 `fs.sound_obf.jar` 依次执行：
 
 1. **ASM 字节码 Patch**：通过 [ASM](https://asm.ow2.io/) 库直接修改 `.class` 文件中的字节码，修复游戏原代码中与中文显示不兼容的逻辑（分隔符、字体、列宽、日期格式等）。各 Patch 的详细说明见下文。
@@ -15,7 +15,11 @@
    校验失败即中止分发。保留原有常量池索引和 class 版本，避免影响翻译 occurrence。
    源码与构建信息见 [vendor/README.md](vendor/README.md)。
 
-`fs.common_obf.jar` 和 `fs.sound_obf.jar` 只过第 1 阶段、不做字符串解耦。
+3. **ASM 检查**：只读检查四个最终 Jar 的基础数据流、栈/局部变量容量、跳转目标帧及
+   未初始化对象引用。全部通过后才分发；失败信息包含 Jar、类、方法和相关 Patch。
+   不加载游戏类、不自动重算帧或容量，也不改写常量池；该检查不等同于完整 JVM 校验。
+
+`fs.common_obf.jar` 和 `fs.sound_obf.jar` 执行 Patch 和最终检查，不做字符串解耦。
 主分支会在前者中修复高亮颜色数组的空值崩溃；后者的产物仍是原版副本。两者都纳入
 分发，以便各变体汉化包能够互相覆盖安装，避免切换版本后残留旧 hook 或运行时类。
 
@@ -95,6 +99,13 @@ jar_pre_processing/
 4. 若需新组，在 `PatchGroup` 中定义稳定 ID、类型和直接依赖。依赖仅用于严格校验，
    不会隐式启用或禁用其它组。
 5. 补充 Registry 顺序、组声明和选择失败路径的单元测试。
+
+优先复用 `AsmUtil`（精确查找）、`MethodEdits`（方法体与局部变量）、`EntryHooks`
+（有限模式的入口返回）、`FrameSupport` 和 `InstructionRanges`。具体业务锚点与数量断言
+仍由 Patch 负责；分配临时变量不会自动修复跨分支的帧，删除帧须维护后续压缩帧语义。
+新增测试应检查 `ClassWriter(0)` 写出的真实结果，再执行可能重算帧的行为 fixture。
+`PatchCompositionTest` 按 Registry 顺序验证默认汉化和禁用全部 Patch 两种配置；
+在本目录运行 `./mvnw.cmd clean test`，组合测试需要 `game data/` 的四个原版 Jar。
 
 ---
 

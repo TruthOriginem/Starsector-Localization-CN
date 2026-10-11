@@ -8,6 +8,8 @@ import org.objectweb.asm.tree.InsnNode;
 import org.objectweb.asm.tree.LdcInsnNode;
 import org.objectweb.asm.tree.MethodInsnNode;
 import org.objectweb.asm.tree.MethodNode;
+import org.objectweb.asm.tree.FieldNode;
+import org.objectweb.asm.tree.VarInsnNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -166,6 +168,7 @@ public final class AsmUtil {
     }
 
     public static AbstractInsnNode nextReal(AbstractInsnNode node) {
+        if (node == null) return null;
         AbstractInsnNode current = node.getNext();
         while (current != null && (current.getType() == AbstractInsnNode.LABEL
                 || current.getType() == AbstractInsnNode.LINE
@@ -173,6 +176,61 @@ public final class AsmUtil {
             current = current.getNext();
         }
         return current;
+    }
+
+    public static AbstractInsnNode previousReal(AbstractInsnNode node) {
+        if (node == null) return null;
+        AbstractInsnNode current = node.getPrevious();
+        while (current != null && (current.getType() == AbstractInsnNode.LABEL
+                || current.getType() == AbstractInsnNode.LINE
+                || current.getType() == AbstractInsnNode.FRAME)) {
+            current = current.getPrevious();
+        }
+        return current;
+    }
+
+    public static AbstractInsnNode requireNextReal(AbstractInsnNode node) {
+        AbstractInsnNode next = nextReal(node);
+        if (next == null) throw new PatchException("目标指令后没有可执行指令");
+        return next;
+    }
+
+    public static <T> T requireOne(List<T> matches, String description) {
+        if (matches.size() != 1) {
+            throw new PatchException(description + " 匹配数异常: " + matches.size() + "（预期 1）");
+        }
+        return matches.get(0);
+    }
+
+    public static MethodNode requireMethod(ClassNode node, String name, String desc) {
+        return requireOne(node.methods.stream().filter(m -> name.equals(m.name) && desc.equals(m.desc)).toList(),
+                node.name + "." + name + desc);
+    }
+
+    public static FieldNode requireField(ClassNode node, String name, String desc) {
+        return requireOne(node.fields.stream().filter(f -> name.equals(f.name) && desc.equals(f.desc)).toList(),
+                node.name + "." + name + ":" + desc);
+    }
+
+    public static List<MethodInsnNode> calls(MethodNode method, String owner, String name, String desc) {
+        List<MethodInsnNode> result = new ArrayList<>();
+        for (AbstractInsnNode instruction : method.instructions) {
+            if (instruction instanceof MethodInsnNode call && owner.equals(call.owner)
+                    && name.equals(call.name) && desc.equals(call.desc)) result.add(call);
+        }
+        return result;
+    }
+
+    public static MethodInsnNode requireCall(MethodNode method, int opcode, String owner, String name, String desc) {
+        return requireOne(calls(method, owner, name, desc).stream().filter(c -> c.getOpcode() == opcode).toList(),
+                method.name + method.desc + " -> " + owner + "." + name + desc);
+    }
+
+    public static VarInsnNode requireVar(AbstractInsnNode node, int opcode, String description) {
+        if (!(node instanceof VarInsnNode variable) || node.getOpcode() != opcode) {
+            throw new PatchException(description + " 指令结构异常");
+        }
+        return variable;
     }
 
 }

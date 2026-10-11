@@ -1,6 +1,7 @@
 package org.fossic.starsector.preprocessing.patches;
 
 import org.fossic.starsector.preprocessing.AsmUtil;
+import org.fossic.starsector.preprocessing.InstructionRanges;
 import org.fossic.starsector.preprocessing.JarPatch;
 import org.fossic.starsector.preprocessing.JarWorkspace;
 import org.fossic.starsector.preprocessing.PatchContext;
@@ -17,7 +18,6 @@ import org.objectweb.asm.tree.MethodNode;
 import org.objectweb.asm.tree.TypeInsnNode;
 import org.objectweb.asm.tree.VarInsnNode;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -206,26 +206,7 @@ public final class CampaignEntityTooltipHighlightLayoutPatch implements JarPatch
     private static InsnList detachRange(
             MethodNode method, AbstractInsnNode start, AbstractInsnNode end,
             PatchContext context) {
-        List<AbstractInsnNode> nodes = new ArrayList<>();
-        AbstractInsnNode current = start;
-        while (current != null) {
-            if (current.getOpcode() < 0) {
-                throw failure(context, "layout block contains metadata or a frame boundary");
-            }
-            nodes.add(current);
-            if (current == end) break;
-            current = current.getNext();
-        }
-        if (nodes.isEmpty() || nodes.get(nodes.size() - 1) != end) {
-            throw failure(context, "layout block end is unreachable");
-        }
-
-        InsnList result = new InsnList();
-        for (AbstractInsnNode node : nodes) {
-            method.instructions.remove(node);
-            result.add(node);
-        }
-        return result;
+        return InstructionRanges.detachStraightLine(method, start, end);
     }
 
     private static boolean sameField(FieldInsnNode left, FieldInsnNode right) {
@@ -267,13 +248,7 @@ public final class CampaignEntityTooltipHighlightLayoutPatch implements JarPatch
 
     private static List<MethodInsnNode> calls(
             MethodNode method, String owner, String name, String desc) {
-        return AsmUtil.instructions(method).stream()
-                .filter(node -> node instanceof MethodInsnNode call
-                        && owner.equals(call.owner)
-                        && name.equals(call.name)
-                        && desc.equals(call.desc))
-                .map(MethodInsnNode.class::cast)
-                .toList();
+        return AsmUtil.calls(method, owner, name, desc);
     }
 
     private static AbstractInsnNode requireOpcode(
@@ -299,19 +274,11 @@ public final class CampaignEntityTooltipHighlightLayoutPatch implements JarPatch
     }
 
     private static AbstractInsnNode previousExecutable(AbstractInsnNode node) {
-        AbstractInsnNode current = node == null ? null : node.getPrevious();
-        while (current != null && current.getOpcode() < 0) {
-            current = current.getPrevious();
-        }
-        return current;
+        return AsmUtil.previousReal(node);
     }
 
     private static AbstractInsnNode nextExecutable(AbstractInsnNode node) {
-        AbstractInsnNode current = node == null ? null : node.getNext();
-        while (current != null && current.getOpcode() < 0) {
-            current = current.getNext();
-        }
-        return current;
+        return AsmUtil.nextReal(node);
     }
 
     private static PatchException failure(PatchContext context, String detail) {
