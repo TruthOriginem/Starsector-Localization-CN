@@ -129,13 +129,7 @@ public final class TopMessageHighlightLayoutPatch implements JarPatch {
     private static List<MethodInsnNode> calls(
             MethodNode method, String owner, String name, String desc
     ) {
-        return AsmUtil.instructions(method).stream()
-                .filter(node -> node instanceof MethodInsnNode call
-                        && owner.equals(call.owner)
-                        && name.equals(call.name)
-                        && desc.equals(call.desc))
-                .map(MethodInsnNode.class::cast)
-                .toList();
+        return AsmUtil.calls(method, owner, name, desc);
     }
 
     private static int indexOf(MethodNode method, AbstractInsnNode target) {
@@ -143,9 +137,7 @@ public final class TopMessageHighlightLayoutPatch implements JarPatch {
     }
 
     private static AbstractInsnNode previousExecutable(AbstractInsnNode node) {
-        AbstractInsnNode current = node == null ? null : node.getPrevious();
-        while (current != null && current.getOpcode() < 0) current = current.getPrevious();
-        return current;
+        return AsmUtil.previousReal(node);
     }
 
     private static PatchException failure(PatchContext context, String detail) {

@@ -21,7 +21,11 @@
 
 3. **运行时类注入**：把随本模块一起编译的运行时类追加进 `starfarer_obf.jar`——中文输入法（`org.fossic.starsector.ime.*`，见 [docs/ime-support.md](docs/ime-support.md)）、动态字体（`org.fossic.starsector.dynfont.*`，见 [docs/dynamic-font.md](docs/dynamic-font.md)）和优化 helper。启动计时 runtime 只有显式启用 `--profiling on` 才会注入；发布默认完全不携带。
 
-`fs.common_obf.jar` 和 `fs.sound_obf.jar` 只过第 1 阶段、不做字符串解耦。
+4. **ASM 检查**：只读检查四个最终 Jar 的基础数据流、栈/局部变量容量、跳转目标帧及
+   未初始化对象引用。全部通过后才分发；失败信息包含 Jar、类、方法和相关 Patch。
+   不加载游戏类、不自动重算帧或容量，也不改写常量池；该检查不等同于完整 JVM 校验。
+
+`fs.common_obf.jar` 和 `fs.sound_obf.jar` 执行 Patch 和最终检查，不做字符串解耦。
 前者始终纳入分发，以便各字体变体互相覆盖安装时能清掉其它分支的动态字体
 hook，避免残留 hook 找不到已被换走的运行时类而导致
 `NoClassDefFoundError`。后者作为声音加载优化的 patch-only 输入/输出；没有相关
@@ -162,6 +166,12 @@ jar_pre_processing/
    不会隐式启用或禁用其它组。
 4. 在 `PatchRegistry` 的有序 catalog 中按原版字节码所需顺序注册工厂。
 5. 补充 Registry 顺序、组声明和选择失败路径的单元测试。
+
+优先复用 `AsmUtil`（精确查找）、`MethodEdits`（方法体与局部变量）、`EntryHooks`
+（有限模式的入口返回）、`FrameSupport` 和 `InstructionRanges`。具体业务锚点与数量断言
+仍由 Patch 负责；分配临时变量不会自动修复跨分支的帧，删除帧须维护后续压缩帧语义。
+新增测试应检查 `ClassWriter(0)` 写出的真实结果，再执行可能重算帧的行为 fixture。
+`PatchCompositionTest` 按 Registry 顺序验证默认、关闭优化、profiling 和重点组合。
 
 ---
 
