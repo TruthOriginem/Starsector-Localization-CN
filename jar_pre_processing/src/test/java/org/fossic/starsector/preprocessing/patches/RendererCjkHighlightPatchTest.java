@@ -187,6 +187,7 @@ final class RendererCjkHighlightPatchTest {
                 new RendererCjkHighlightPatch()
                         .applyAndVerify(n, new PatchContext("fs.common_obf.jar", OWNER + ".class"))
                         .requireSuccess();
+            PatchBytecodeAssertions.verify(n);
             Set<String> methods =
                     Set.of(
                             "o00000(Z[Ljava/lang/String;)V",

@@ -125,7 +125,8 @@ public final class FontDefinitionParserPatch implements JarPatch {
                 false));
         replacement.add(new InsnNode(Opcodes.IRETURN));
         method.instructions.add(replacement);
-        method.maxStack = 3;
+        // nextToken keeps the array and duplicated cursor below the increment constant.
+        method.maxStack = 4;
         method.maxLocals = 0;
     }
 
@@ -142,7 +143,7 @@ public final class FontDefinitionParserPatch implements JarPatch {
                 false));
         replacement.add(new InsnNode(Opcodes.ARETURN));
         method.instructions.add(replacement);
-        method.maxStack = 3;
+        method.maxStack = 4;
         method.maxLocals = 1;
     }
 

@@ -34,6 +34,7 @@ final class RendererDynFontPatchTest {
                 renderer, new PatchContext("fs.common_obf.jar", renderer.name + ".class"));
 
         result.requireSuccess();
+        PatchBytecodeAssertions.verify(renderer);
         assertEquals(12, countCalls(renderer, HOOK, "transform", "(FF)J"));
         assertEquals(1, countCalls(renderer, HOOK, "begin",
                 "(Ljava/lang/Object;Ljava/lang/Object;)V"));

@@ -11,6 +11,8 @@ import org.fossic.starsector.preprocessing.PatchContext;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.tree.ClassNode;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 final class FontDefinitionParserPatchTest {
     private static final String TARGET = "com/fs/graphics/A/D.class";
@@ -42,6 +44,20 @@ final class FontDefinitionParserPatchTest {
                 HELPER,
                 "parseStringToken",
                 "(Ljava/lang/String;Z)Ljava/lang/String;"));
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"()I", "(Z)Ljava/lang/String;"})
+    void standaloneParserPreservesValidStackLimits(String descriptor) throws IOException {
+        ClassNode fontLoader = load();
+        new FontDefinitionParserPatch().applyAndVerify(
+                fontLoader, new PatchContext(JarWorkspace.COMMON_OBF_JAR, TARGET))
+                .requireSuccess();
+        // Test each replacement independently, without the later cursor patch or max recomputation.
+        fontLoader.methods.removeIf(method -> !method.name.equals("super")
+                || !method.desc.equals(descriptor));
+        assertEquals(1, fontLoader.methods.size());
+        PatchBytecodeAssertions.verify(fontLoader);
     }
 
     private static ClassNode load() throws IOException {
