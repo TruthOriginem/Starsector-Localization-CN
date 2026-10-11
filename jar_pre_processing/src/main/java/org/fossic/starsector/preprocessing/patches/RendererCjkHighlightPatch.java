@@ -84,6 +84,8 @@ public final class RendererCjkHighlightPatch implements JarPatch {
                 "numeric suffix guard changed");
         require(from != start && start != end && target != from, "unexpected local alias");
         int packed = allocateRange(m);
+        // findBulk has four one-slot arguments; DUP2 of its long result also needs four slots.
+        m.maxStack = Math.max(m.maxStack, 4);
         InsnList code = display();
         code.add(call("findBulk", "(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)J"));
         unpackStart(code, packed);
@@ -123,6 +125,7 @@ public final class RendererCjkHighlightPatch implements JarPatch {
                         && next(next(add)).getOpcode() == Opcodes.ISUB,
                 "single range end must be inclusive");
         int packed = allocateRange(m);
+        m.maxStack = Math.max(m.maxStack, 4);
         InsnList select = display();
         select.add(new VarInsnNode(Opcodes.ALOAD, 1));
         select.add(new InsnNode(last ? Opcodes.ICONST_1 : Opcodes.ICONST_0));

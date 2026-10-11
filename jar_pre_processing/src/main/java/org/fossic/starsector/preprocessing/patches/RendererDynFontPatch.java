@@ -217,6 +217,7 @@ public final class RendererDynFontPatch implements JarPatch {
         code.add(new InsnNode(Opcodes.ICONST_1));
         code.add(new InsnNode(Opcodes.IRETURN));
         code.add(original);
+        code.add(new org.objectweb.asm.tree.FrameNode(Opcodes.F_SAME, 0, null, 0, null));
         method.instructions.insert(code);
         method.maxStack = Math.max(method.maxStack, 1);
     }
@@ -335,6 +336,7 @@ public final class RendererDynFontPatch implements JarPatch {
                 IMMEDIATE_DRAW + EXACT_SUFFIX, IMMEDIATE_DRAW_DESC, false));
         code.add(new InsnNode(Opcodes.RETURN));
         code.add(useOriginal);
+        code.add(new org.objectweb.asm.tree.FrameNode(Opcodes.F_SAME, 0, null, 0, null));
         original.instructions.insert(code);
         original.maxStack = Math.max(original.maxStack, 2);
     }
