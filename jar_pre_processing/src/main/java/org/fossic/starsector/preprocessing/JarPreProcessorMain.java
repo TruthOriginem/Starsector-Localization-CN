@@ -49,7 +49,7 @@ public final class JarPreProcessorMain {
 
         // 解耦器同步重定位并校验 StackMapTable；所有 jar 成功后才分发。
         // 此后不能重新序列化整个类，否则会合并独立字符串常量、破坏翻译索引。
-        workspace.writeOutputs();
+        verifyAndWriteOutputs(workspace, PatchRegistry.patches(patchSelection));
         Map<String, String> outputHashes = workspace.outputHashes();
         writeReport(
                 workspace,
@@ -58,6 +58,14 @@ public final class JarPreProcessorMain {
                 outputHashes,
                 patchResults);
         System.out.println("Preprocessing complete. Report: " + workspace.preprocessReport());
+    }
+
+    static void verifyAndWriteOutputs(JarWorkspace workspace, List<JarPatch> patches) throws IOException {
+        for (String jar : JarWorkspace.allJars()) {
+            int count = BytecodeVerifier.verifyJar(jar, workspace.finalJar(jar), patches);
+            System.out.println("ASM verified " + jar + ": " + count + " classes");
+        }
+        workspace.writeOutputs();
     }
 
     private static void writeReport(

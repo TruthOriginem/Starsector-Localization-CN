@@ -102,7 +102,7 @@ public final class JarWorkspace {
     }
 
     /** jar 的最终产物：解耦集合取 decoupled，仅 ASM 注入集合取 patched。 */
-    private Path finalJar(String jarName) {
+    public Path finalJar(String jarName) {
         for (String decoupled : jars()) {
             if (decoupled.equals(jarName)) {
                 return decoupledJar(jarName);
