@@ -61,7 +61,7 @@ public final class JarPreProcessorMain {
         System.out.println("Injected runtime classes into " + JarWorkspace.OBF_JAR
                 + ": " + injectedCounts);
 
-        workspace.writeOutputs();
+        verifyAndWriteOutputs(workspace, PatchRegistry.patches(patchSelection));
         // 原生库（ssime.dll / ss_dyn_font.dll）的编译与分发由 build.py 负责，不在本管线内。
 
         Map<String, String> outputHashes = workspace.outputHashes();
@@ -73,6 +73,14 @@ public final class JarPreProcessorMain {
                 patchResults,
                 injectedCounts);
         System.out.println("Preprocessing complete. Report: " + workspace.preprocessReport());
+    }
+
+    static void verifyAndWriteOutputs(JarWorkspace workspace, List<JarPatch> patches) throws IOException {
+        for (String jar : JarWorkspace.allJars()) {
+            int count = BytecodeVerifier.verifyJar(jar, workspace.finalJar(jar), patches);
+            System.out.println("ASM verified " + jar + ": " + count + " classes");
+        }
+        workspace.writeOutputs();
     }
 
     static Map<String, Integer> injectRuntimeClasses(
