@@ -122,9 +122,7 @@ public final class TerrainStatusBarSeparatorPatch implements JarPatch {
     }
 
     private static AbstractInsnNode previousExecutable(AbstractInsnNode node) {
-        AbstractInsnNode current = node == null ? null : node.getPrevious();
-        while (current != null && current.getOpcode() < 0) current = current.getPrevious();
-        return current;
+        return AsmUtil.previousReal(node);
     }
 
     private static PatchException failure(PatchContext context, String detail) {

@@ -163,11 +163,7 @@ public final class WindowDecorationPhysicalResolutionPatch implements JarPatch {
     }
 
     private static AbstractInsnNode nextExecutable(AbstractInsnNode node) {
-        AbstractInsnNode current = node == null ? null : node.getNext();
-        while (current != null && current.getOpcode() < 0) {
-            current = current.getNext();
-        }
-        return current;
+        return AsmUtil.nextReal(node);
     }
 
     private record DimensionRead(
