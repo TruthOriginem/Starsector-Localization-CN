@@ -15,8 +15,13 @@ final class PatchCompositionTest {
 
     @TestFactory Stream<DynamicTest> registryCompositions() {
         return Stream.of(
-                new Configuration("localization", "none", List.of(), false),
-                new Configuration("unpatched", "none", List.of("localization"), false)
+                new Configuration("all", "all", List.of(), false),
+                new Configuration("none", "none", List.of(), false),
+                new Configuration("profiling", "all", List.of(), true),
+                new Configuration("localization", "none", List.of("ime", "dynfont"), false),
+                new Configuration("resource-csv", "resource-locks,resource-context,resource-stream-safety,parallel-spec-parse,fast-text,csv-merge-linear", List.of(), false),
+                new Configuration("font-parser", "font-line-parser", List.of(), false),
+                new Configuration("font-cursor", "font-line-parser,font-token-cursor", List.of(), false)
         ).map(config -> DynamicTest.dynamicTest(config.name(), () -> {
             List<JarPatch> patches = PatchRegistry.patches(PatchSelection.fromOptions(config.optimizations(), config.disabled(), config.profiling()));
             JarRewriter rewriter = new JarRewriter(patches);
