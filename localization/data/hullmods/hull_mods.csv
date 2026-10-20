@@ -143,13 +143,13 @@ In addition, all point-defense weapons deal %s more damage to all targets.","Red
 民用级船体,civgrade,,,,,,,,TRUE,,0,0,0,0,data.hullmods.CivGrade,提高 {%s} 传感器截面，降低 {%s} 传感器探测强度。,提高传感器截面，降低传感器探测强度。,,graphics/hullmods/civilian_grade.png
 高维护需求,high_maintenance,,,,,,,,TRUE,,0,0,0,0,data.hullmods.HighMaintenance,提高 {%s} 的每月维护所需补给。,提高维护成本。,,graphics/hullmods/high_maintenance.png
 能量弹体同调器,coherer,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.EnergyBoltCoherer,<tooltip created in the script>,提高非光束能量武器的基础射程。,,graphics/hullmods/coherer.png
-权衡设计,design_compromises,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DesignCompromises,"这艘船的性能受限于相互矛盾的设计指标，多个尖端项目在设计周期后期才仓促整合，直接影响整体性能。
+权衡设计,design_compromises,,,,,,,,TRUE,,0,0,0,0,com.fs.starfarer.api.impl.hullmods.DesignCompromises,"多个仓促整合上舰的尖端项目在设计周期中互相争夺拉扯设计优先权，直接影响了舰船的性能表现。
 
-舰船的幅能耗散效率与幅能容量因此下降 {%s}。
+包括基础值在内，舰船的幅能散热与幅能容量下降 {%s}。
 
-实弹武器射程缩短 {%s}，导弹武器射速降低 {%s}，能量武器的幅能输出增加 {%s}。
+实弹武器射程缩短 {%s}，导弹武器射速降低 {%s}，能量武器的幅能产生量增加 {%s}。
 
-不过也有可取之处：配备了更多的纳米锻炉产能，即便舰船本身已配备一个战机甲板，仍能额外加装 {%s}，从而使甲板总数达到 {%s} 个。",减少导弹与实弹武器射程，并降低幅能耗散效率 / 幅能容量。,,graphics/hullmods/design_compromises.png
+不过也有可取之处：额外的纳米锻炉产能可以更容易地启用上线。即便舰船本身已配备一个战机甲板，仍能额外加装 {%s}，从而使甲板总数达到 {%s} 个。",减少导弹与实弹武器射程，并降低幅能耗散效率 / 幅能容量。,,graphics/hullmods/design_compromises.png
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
